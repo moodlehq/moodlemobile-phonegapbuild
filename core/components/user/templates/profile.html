@@ -1,0 +1,103 @@
+<ion-view>
+    <ion-nav-title>{{title}}</ion-nav-title>
+    <ion-content padding="true">
+        <mm-loading hide-until="userLoaded">
+            <div class="list" ng-if="user">
+                <div class="item item-avatar">
+                    <img ng-if="user.profileimageurl" ng-src="{{user.profileimageurl}}" mm-external-content>
+                    <img ng-if="!user.profileimageurl" src="img/user-avatar.png" alt="">
+                    <h2><mm-format-text watch="true" clean="true">{{user.fullname}}</mm-format-text></h2>
+                </div>
+                <div class="item item-divider" ng-if="hasContact">
+                    {{ 'mm.user.contact' | translate}}
+                </div>
+                <div class="item" ng-if="user.email">
+                    <h2>{{ 'mm.user.email' | translate}}</h2>
+                    <p>
+                        <a href="mailto:{{user.email}}" mm-browser>
+                            <mm-format-text watch="true" clean="true">{{user.email}}</mm-format-text>
+                        </a>
+                    </p>
+                </div>
+                <div class="item" ng-if="user.phone1">
+                    <h2>{{ 'mm.user.phone1' | translate}}</h2>
+                    <p>
+                        <a href="tel:{{user.phone1}}" mm-browser>
+                            <mm-format-text watch="true" clean="true">{{user.phone1}}</mm-format-text>
+                        </a>
+                    </p>
+                </div>
+                <div class="item" ng-if="user.phone2">
+                    <h2>{{ 'mm.user.phone2' | translate}}</h2>
+                    <p>
+                        <a href="tel:{{user.phone2}}" mm-browser>
+                            <mm-format-text watch="true" clean="true">{{user.phone2}}</mm-format-text>
+                        </a>
+                    </p>
+                </div>
+                <div class="item" ng-if="user.address">
+                    <h2>{{ 'mm.user.address' | translate}}</h2>
+                    <p>
+                        <a ng-if="isAndroid" href="geo:0,0?q={{user.encodedAddress}}" mm-browser>
+                            <mm-format-text watch="true" clean="true">{{user.address}}</mm-format-text>
+                        </a>
+                        <a ng-if="!isAndroid" href="http://maps.google.com?q={{user.encodedAddress}}" mm-browser>
+                            <mm-format-text watch="true" clean="true">{{user.address}}</mm-format-text>
+                        </a>
+                    </p>
+                </div>
+                <div class="item" ng-if="user.city && !user.address">
+                    <h2>{{ 'mm.user.city' | translate}}</h2>
+                    <p>
+                        <mm-format-text watch="true" clean="true">{{user.city}}</mm-format-text>
+                    </p>
+                </div>
+                <div class="item" ng-if="user.country && !user.address">
+                    <h2>{{ 'mm.user.country' | translate}}</h2>
+                    <p>
+                        <mm-format-text watch="true" clean="true">{{user.country}}</mm-format-text>
+                    </p>
+                </div>
+                <div class="item item-divider" ng-if="hasDetails">
+                    {{ 'mm.user.details' | translate}}
+                </div>
+                <div class="item" ng-if="user.url">
+                    <h2>{{ 'mm.user.webpage' | translate}}</h2>
+                    <p>
+                        <a href="{{user.url}}" mm-browser>
+                            <mm-format-text watch="true" clean="true">{{user.url}}</mm-format-text>
+                        </a>
+                    </p>
+                </div>
+                <div class="item" ng-if="user.roles">
+                    <h2>{{ 'mm.user.roles' | translate}}</h2>
+                    <p>
+                        <mm-format-text watch="true" clean="true">{{user.roles}}</mm-format-text>
+                    </p>
+                </div>
+                <div class="item" ng-if="user.interests">
+                    <h2>{{ 'mm.user.interests' | translate}}</h2>
+                    <p>
+                        <mm-format-text watch="true" clean="true">{{user.interests}}</mm-format-text>
+                    </p>
+                </div>
+                <div class="item item-divider" ng-if="user.description">
+                    {{ 'mm.user.description' | translate}}
+                </div>
+                <div class="item item-text-wrap" ng-if="user.description">
+                    <mm-format-text watch="true">{{user.description}}</mm-format-text>
+                </div>
+
+                <div ng-repeat="plugin in plugins" ng-controller="plugin">
+                    <a class="button button-block" ng-click="action($event)">
+                        {{ title | translate }} <ion-spinner class="icon" ng-if="spinner"></ion-spinner>
+                    </a>
+                </div>
+            </div>
+
+            <div ng-if="!user">
+                {{ 'mm.user.detailsnotavailable' | translate }}
+            </div>
+        </mm-loading>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,57 @@
+<ion-side-menus enable-menu-with-back-views="false">
+
+    <ion-side-menu-content>
+
+        <ion-nav-bar class="bar-content">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <ion-nav-view name="site">
+        </ion-nav-view>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+        <div class="bar bar-header bar-side-menu">
+            <div class="item item-avatar">
+                <img ng-src="{{siteinfo.userpictureurl}}" alt="" mm-external-content>
+                <h2>{{siteinfo.fullname}}</h2>
+                <p><mm-format-text>{{siteinfo.sitename}}</mm-format-text></p>
+            </div>
+        </div>
+        <ion-content class="has-side-menu-header">
+            <div class="list dark">
+                <a menu-close class="item item-icon-left" ui-sref="site.mm_courses">
+                    <i class="icon ion-ionic"></i>{{ 'mm.sidemenu.mycourses' | translate}}
+                </a>
+                <a ng-repeat="plugin in plugins" menu-close class="item item-icon-left" ui-sref="{{plugin.state}}">
+                    <i class="icon {{plugin.icon}}"></i> {{plugin.title}}
+                    <span ng-show="plugin.badge > 0" class="badge badge-positive">{{plugin.badge}}</span>
+                </a>
+                <a menu-close class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-browser>
+                    <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
+                </a>
+                <a menu-close class="item item-icon-left" ng-href="{{docsurl}}" mm-browser>
+                    <i class="icon ion-help-buoy"></i>{{ 'mm.sidemenu.help' | translate}}
+                </a>
+                <div class="item item-divider"></div>
+                <a menu-close class="item item-icon-left" ui-sref="site.mm_settings">
+                    <i class="icon ion-gear-b"></i>{{ 'mm.sidemenu.appsettings' | translate}}
+                </a>
+                <a menu-close class="item item-icon-left" ng-click="logout()">
+                    <i class="icon ion-log-out"></i>{{ 'mm.sidemenu.logout' | translate}}
+                </a>
+            </div>
+
+            <!-- For now we won't have pull to refresh caches.
+            <ion-refresher pulling-text="Pull to invalidate caches"
+                on-refresh="invalidateCaches()"
+                refreshing-icon="ion-loading-c"> -->
+
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

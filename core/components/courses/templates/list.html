@@ -1,0 +1,28 @@
+<ion-view view-title="{{ 'mm.courses.mycourses' | translate }}">
+    <ion-content padding="true">
+        <!-- ion-refresher needs to be direct child of ion-content to work with native scrolling -->
+        <ion-refresher pulling-text="{{ 'mm.core.pulltorefresh' | translate }}" ng-if="coursesLoaded" on-refresh="refreshCourses()">
+        </ion-refresher>
+        <mm-loading hide-until="coursesLoaded">
+            <div class="list">
+                <label class="item item-input">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <input type="text" placeholder="{{ 'mm.courses.filter' | translate}}" ng-model="filterText">
+                </label>
+            </div>
+            <div class="list card" ng-repeat="course in courses | filter:{fullname: filterText}">
+                <a class="item" ui-sref="site.mm_course({course: course})">
+                    <mm-format-text watch="true">{{course.fullname}}</mm-format-text>
+                </a>
+                <div class="item item-text-wrap" ng-show="course.summary">
+                    <p><mm-format-text watch="true">{{course.summary}}</mm-format-text></p>
+                </div>
+                <div class="item tabs tabs-icon-left" ng-show="hasPlugins">
+                    <a ng-repeat="plugin in plugins" class="tab-item active" ui-sref="{{plugin.state}}({course: course})">
+                        <i class="icon {{plugin.icon}}"></i> {{plugin.title}}
+                    </a>
+                </div>
+            </div>
+        </mm-loading>
+    </ion-content>
+</ion-view>

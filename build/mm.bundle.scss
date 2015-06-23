@@ -1,0 +1,347 @@
+/**
+ * Core styles for the app.
+ *
+ * Here you will find all the styles that Moodle Mobile creates for you to use, as well
+ * as all the necessary overrides for the app to look nice everywhere.
+ *
+ * Any style that cannot be re-used has to be placed in the its component or addon.
+ *
+ * There should always be a variable for anything that is styleable, but do not
+ * over create variables try to re-use as manu as you can. Always remember to add !default
+ * to your variable declarations to allow a themer to override in app.scss.
+ */
+
+/**
+ * Variables
+ */
+
+// Bar content.
+$bar-content-bg: #f70 !default;
+$bar-content-border: transparent !default;
+$bar-content-text: #fff !default;
+
+// Small avatar ideal for icons.
+$item-media-width: 32px !default;
+$item-media-height: 32px !default;
+
+// Messages.
+$item-message-bg: $stable !default;
+$item-message-note-text: #999 !default;
+$item-message-note-font-size: $font-size-small !default;
+$item-message-mine-bg: rgba(17, 193, 243, .1) !default;
+
+/**
+ * Styles revert.
+ */
+
+em {
+  font-style: italic;
+}
+
+/**
+ * Styles.
+ */
+
+// Default bar.
+.bar-content {
+  @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
+  .button {
+    @include button-style($bar-content-bg, $bar-content-border, $bar-content-bg, $bar-content-border, $bar-content-text);
+    @include button-clear(#fff, $bar-title-font-size);
+  }
+}
+
+// Media item, ideal for icons.
+.item-media {
+  @extend .item-avatar;
+  padding-left: $item-media-width + ($item-padding * 2);
+  min-height: $item-media-width + ($item-padding * 2);
+  > img:first-child {
+    max-width: $item-media-width;
+    max-height: $item-media-height;
+    border-radius: 0;
+  }
+  p {
+    margin: 0px;
+  }
+}
+
+// Message item.
+.item-message {
+  clear: both;
+  max-width: 80%;
+  border-radius: 12px;
+  border-width: 0;
+  padding: 4px 10px;
+  margin: 4px 0;
+  background-color: $item-message-bg;
+  float: left;
+
+  .item-note {
+    color: $item-message-note-text;
+    font-size: $item-message-note-font-size;
+    margin-left: 10px;
+  }
+}
+
+// Defines when an item-message is the user's.
+.item-message-mine {
+  background-color: $item-message-mine-bg;
+  float: right;
+
+  .spinner {
+    float: right;
+    margin-left: 5px;
+    margin-right: -3px;
+    margin-top: 2px;
+    margin-bottom: -2px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+// Split pane.
+.mm-split-pane {
+  @include display-flex();
+  @include align-items(stretch);
+  width: 100%;
+  height: 100%;
+}
+
+.mm-split-pane-menu {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mm-split-pane-content {
+  @include flex(1, 0, auto);
+  position: relative;
+  display: none;
+}
+
+.tablet {
+  .mm-split-pane-menu {
+    @include flex(0, 0, $menu-width);
+    width: $menu-width;
+    border-right: 1px solid #ddd;
+  }
+  .mm-split-pane-content {
+    display: block;
+  }
+}
+
+// Spinners.
+.button-block {
+  .spinner {
+    float: right;
+    padding-top: floor(($button-height + ($button-border-width * 2) + 1 - 28) / 2);
+    line-height: 28px;
+  }
+}
+.item-button-right {
+  > .spinner {
+    // Copied from .item-button-right > .button.
+    @include display-flex();
+    @include align-items(center);
+    position: absolute;
+    top: ceil($item-padding / 2);
+    right: $item-padding;
+    min-width: $item-icon-font-size + ($button-border-width * 2);
+    min-height: $item-icon-font-size + ($button-border-width * 2);
+    font-size: $item-button-font-size;
+    line-height: $item-button-line-height;
+  }
+}
+
+/**
+ * Core directives.
+ */
+.mm-loading-container {
+    width: 100%;
+    text-align: center;
+}
+
+// Algin ion-spinner right
+.spinner-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+
+.mm-language-select {
+  padding-bottom: 14px !important;
+}
+
+// Variables.
+$bar-side-menu-height: 80px !default;
+$bar-side-menu-color: $bar-content-bg !default;
+$bar-side-menu-border-color: $bar-content-border !default;
+$bar-side-menu-text-color: $bar-content-text !default;
+
+// Bar styles
+.bar-side-menu {
+  @include bar-style($bar-side-menu-color, $bar-side-menu-border-color, $bar-side-menu-text-color);
+  height: $bar-side-menu-height !important; // MOBILE-959: Added !important to fix side menu header in iOS.
+  .item {
+    background: transparent;
+    border: none;
+  }
+  .item-avatar {
+    margin-top: 0px !important; // MOBILE-959: Added to fix side menu header in iOS.
+    h2,
+    p {
+      color: $bar-side-menu-text-color;
+    }
+  }
+}
+
+.has-side-menu-header {
+  top: $bar-side-menu-height;
+}
+
+input.mma-files-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none;
+}
+
+/* - User grades table (most of it extracted from MM1)
+-------------------------------------------------------------------------- */
+.mma-grades-table {
+  border-collapse: collapse;
+  line-height: 20px;
+  width: 100%;
+  border-top: 1px solid #eee;
+  tr {
+    border-bottom: 1px solid #eee;
+  }
+  th,
+  td {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+    white-space: normal;
+  }
+  thead th {
+    padding-left: 10px;
+    vertical-align: bottom;
+    font-weight: bold;
+  }
+  tbody th {
+    font-weight: normal;
+  }
+  .item {
+    display: table-cell;
+  }
+  th {
+    &.b1b {
+      padding-left: 20px;
+    }
+    &.item {
+      padding-left: 40px;
+    }
+    &.baggt {
+      padding-left: 40px;
+    }
+    img {
+      margin-left: -20px;
+      float: left;
+    }
+  }
+  .b1l {
+    width: 20px;
+    min-width: 20px;
+  }
+  .b1t,
+  .baggt {
+    font-weight: bold;
+  }
+  .itemcenter {
+    padding-left: 10px;
+    white-space: nowrap;
+  }
+  .feedbacktext {
+    padding-left: 10px;
+    .no-overflow {
+      overflow: auto;
+    }
+  }
+  .dimmed_text,
+  .hidden,
+  .hidden a {
+    color: #aaa;
+  }
+  .oddd1,
+  .oddd3,
+  .evend3 {
+    background-color: #eee;
+    &.b1b,
+    &.b1l {
+      border-top: 1px solid #fff;
+    }
+  }
+  .oddd2,
+  .evend2,
+  .oddd4,
+  .evend4 {
+    background-color: #f9f9f9;
+  }
+  .levelodd {
+    background-color:#eee;
+    &.b1b,
+    &.b1l {
+      border-top: 1px solid #fff;
+    }
+  }
+  .leveleven {
+    background-color: #fff;
+  }
+}
+
+$mma-messages-date-badge: "stable" !default;
+
+// The date displayed in the list.
+.mma-messages-date {
+
+  text-align: center;
+  margin-top: 10px;
+
+  span {
+    @extend .badge;
+    @extend .badge-#{$mma-messages-date-badge};
+  }
+}
+
+.mma-messages-input-inset {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.mma-messages-footer-note {
+    color: $button-light-text;
+    font-size: $font-size-base;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.button.mma-messages-clear-search {
+  top: 0px;
+}
+
+.mma-forum-discussion-link {
+    text-decoration: none;
+}
