@@ -22,11 +22,10 @@
     <gap:platform name="ios" />
     <gap:platform name="android" />
 
-    <content src="index.html"/>
-    <access origin="*"/>
-    <access origin="tel:*" launch-external="yes"/>
-    <access origin="mailto:*" launch-external="yes"/>
-    <access origin="geo:*" launch-external="yes"/>
+    <access origin="*" />
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="mailto:*" launch-external="yes" />
+    <access origin="geo:*" launch-external="yes" />
 
     <preference name="phonegap-version" value="3.7.0" />
     <preference name="orientation"      value="default" />
@@ -37,12 +36,12 @@
     <preference name="prerendered-icon" value="true" />
     <preference name="load-url-timeout" value="60000" />
 
-    <preference name="android-minSdkVersion" value="16"/>
-    <preference name="UIWebViewBounce" value="false"/>
-    <preference name="DisallowOverscroll" value="true"/>
-    <preference name="BackupWebStorage" value="none"/>
-    <preference name="SplashScreen" value="screen"/>
-    <preference name="SplashScreenDelay" value="3000"/>
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
