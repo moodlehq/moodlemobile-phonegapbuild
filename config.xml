@@ -118,7 +118,7 @@
     <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
 
     <gap:config-file platform="android" parent="/manifest">
-         <application android:debuggable="true" />
+         <application android:debuggable="false" />
     </gap:config-file>
 
     <!-- See MOBILE-892 -->
