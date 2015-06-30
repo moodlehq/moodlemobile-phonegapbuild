@@ -39,7 +39,8 @@ angular.module('mm.core')
  * @name $mmSitesManager
  */
 .factory('$mmSitesManager', function($http, $q, $mmSitesFactory, md5, $mmLang, $mmConfig, $mmApp, $mmWS, $mmUtil, $mmFS, $mmEvents,
-                                     mmCoreSitesStore, mmCoreCurrentSiteStore, mmCoreEventLogin, mmCoreEventLogout, $log) {
+            mmCoreSitesStore, mmCoreCurrentSiteStore, mmCoreEventLogin, mmCoreEventLogout, $log, mmCoreEventSiteUpdated,
+            mmCoreEventSiteAdded) {
 
     $log = $log.getInstance('$mmSitesManager');
 
@@ -150,6 +151,8 @@ angular.module('mm.core')
     function checkMobileLocalPlugin(siteurl) {
 
         var deferred = $q.defer();
+
+        delete services[siteurl]; // Delete service stored.
 
         $mmConfig.get('wsextservice').then(function(service) {
 
@@ -270,16 +273,21 @@ angular.module('mm.core')
 
         candidateSite.fetchSiteInfo().then(function(infos) {
             if (isValidMoodleVersion(infos.functions)) {
-                var siteid = self.createSiteID(siteurl, infos.username);
-                // Add site to sites list.
-                self.addSite(siteid, siteurl, token, infos);
-                // Turn candidate site into current site.
-                candidateSite.setId(siteid);
-                candidateSite.setInfo(infos);
-                currentSite = candidateSite;
-                // Store session.
-                self.login(siteid);
-                deferred.resolve();
+                if (typeof infos.downloadfiles == 'undefined' || infos.downloadfiles === 1) {
+                    var siteid = self.createSiteID(infos.siteurl, infos.username);
+                    // Add site to sites list.
+                    self.addSite(siteid, siteurl, token, infos);
+                    // Turn candidate site into current site.
+                    candidateSite.setId(siteid);
+                    candidateSite.setInfo(infos);
+                    currentSite = candidateSite;
+                    // Store session.
+                    self.login(siteid);
+                    $mmEvents.trigger(mmCoreEventSiteAdded);
+                    deferred.resolve();
+                } else {
+                    $mmLang.translateErrorAndReject(deferred, 'mm.login.cannotdownloadfiles');
+                }
             } else {
                 $mmLang.translateErrorAndReject(deferred, 'mm.login.invalidmoodleversion');
             }
@@ -386,10 +394,17 @@ angular.module('mm.core')
         var deferred = $q.defer();
 
         self.getSite(siteid).then(function(site) {
-            currentSite = site;
-            self.login(siteid);
             // Update site info. Resolve the promise even if the update fails.
-            self.updateSiteInfo(siteid).then(deferred.resolve, deferred.resolve);
+            self.updateSiteInfo(siteid).finally(function() {
+                var infos = site.getInfo();
+                if (typeof infos.downloadfiles != 'undefined' && infos.downloadfiles !== 1) {
+                    $mmLang.translateErrorAndReject(deferred, 'mm.login.cannotdownloadfiles');
+                } else {
+                    currentSite = site;
+                    self.login(siteid);
+                    deferred.resolve();
+                }
+            });
         }, deferred.reject);
 
         return deferred.promise;
@@ -675,6 +690,8 @@ angular.module('mm.core')
             var siteid = current_site.siteid;
             $log.debug('Restore session in site '+siteid);
             return self.loadSite(siteid);
+        }, function() {
+            return $q.reject(); // Reject without params.
         });
     };
 
@@ -721,9 +738,26 @@ angular.module('mm.core')
                     siteurl: site.getURL(),
                     token: site.getToken(),
                     infos: infos
+                }).finally(function() {
+                    $mmEvents.trigger(mmCoreEventSiteUpdated);
                 });
             });
         });
+    };
+
+    /**
+     * Updates a site's info.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmSitesManager#updateSiteInfoByUrl
+     * @param {String} siteurl  Site's URL.
+     * @param {String} username Username.
+     * @return {Promise}        A promise to be resolved when the site is updated.
+     */
+    self.updateSiteInfoByUrl = function(siteurl, username) {
+        var siteid = self.createSiteID(siteurl, username);
+        return self.updateSiteInfo(siteid);
     };
 
     return self;

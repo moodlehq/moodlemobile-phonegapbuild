@@ -21,8 +21,7 @@ angular.module('mm.core.login')
  * @ngdoc controller
  * @name mmLoginReconnectCtrl
  */
-.controller('mmLoginReconnectCtrl', function($scope, $state, $stateParams, $mmSitesManager, $mmSite, $mmUtil,
-            $translate, $ionicHistory) {
+.controller('mmLoginReconnectCtrl', function($scope, $state, $stateParams, $mmSitesManager, $mmSite, $mmUtil, $ionicHistory) {
 
     $scope.siteurl = $stateParams.siteurl;
     $scope.credentials = {
@@ -58,8 +57,11 @@ angular.module('mm.core.login')
         $mmSitesManager.getUserToken(siteurl, username, password).then(function(token) {
 
             $mmSitesManager.updateSiteToken(siteurl, username, token).then(function() {
-                delete $scope.credentials; // Delete password from the scope.
-                $state.go('site.mm_courses');
+                // Update site info too because functions might have changed (e.g. unisntall local_mobile).
+                $mmSitesManager.updateSiteInfoByUrl(siteurl, username).finally(function() {
+                    delete $scope.credentials; // Delete password from the scope.
+                    $state.go('site.mm_courses');
+                });
             }, function(error) {
                 // Site deleted? Go back to login page.
                 $mmUtil.showErrorModal('mm.login.errorupdatesite', true);

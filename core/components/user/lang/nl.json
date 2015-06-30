@@ -1,0 +1,17 @@
+{
+    "address": "Adres",
+    "city": "Stad",
+    "contact": "Contact",
+    "country": "Land",
+    "description": "Beschrijving",
+    "details": "Details",
+    "email": "E-mail",
+    "interests": "Interesses",
+    "invaliduser": "Ongeldige gebruiker",
+    "manager": "Beheerder",
+    "phone1": "Telefoon",
+    "phone2": "Mobiele telefoon",
+    "roles": "Rollen",
+    "student": "Leerling",
+    "webpage": "Website"
+}

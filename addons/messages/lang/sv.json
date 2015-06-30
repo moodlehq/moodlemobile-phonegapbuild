@@ -1,0 +1,13 @@
+{
+    "addcontact": "Lägg till kontakt",
+    "blockcontact": "Blockera kontakt",
+    "contactlistempty": "Din kontaktlista är tom.",
+    "contactname": "Namn för kontakt",
+    "contacts": "Kontakter",
+    "messages": "Meddelanden",
+    "nomessages": "Inga avvaktande meddelanden",
+    "removecontact": "Ta bort kontakt",
+    "send": "Sänd",
+    "sendmessage": "Skicka ett meddelande",
+    "unblockcontact": "Ta bort blockering av användare"
+}

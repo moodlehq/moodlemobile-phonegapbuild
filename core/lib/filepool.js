@@ -149,11 +149,12 @@ angular.module('mm.core')
     var self = {},
         extensionRegex = new RegExp('^[a-z0-9]+$'),
         tokenRegex = new RegExp('(\\?|&)token=([A-Za-z0-9]+)'),
-        queueState;
+        queueState,
         urlAttributes = [
             tokenRegex,
             new RegExp('(\\?|&)forcedownload=[0-1]')
-        ];
+        ],
+        revisionRegex = new RegExp('/content/([0-9]+)/');
 
     // Queue status codes.
     var QUEUE_RUNNING = 'mmFilepool:QUEUE_RUNNING',
@@ -168,6 +169,7 @@ angular.module('mm.core')
     self.FILEDOWNLOADED = 'downloaded';
     self.FILEDOWNLOADING = 'downloading';
     self.FILENOTDOWNLOADED = 'notdownloaded';
+    self.FILEOUTDATED = 'outdated';
 
     /**
      * Convenient site DB getter.
@@ -218,6 +220,7 @@ angular.module('mm.core')
      * a successful {@link $mmFilepool#downloadUrl}.
      */
     self.addFileLinkByUrl = function(siteId, fileUrl, component, componentId) {
+        fileUrl = self._removeRevisionFromUrl(fileUrl);
         var fileId = self._getFileIdByUrl(fileUrl);
         return self._addFileLink(siteId, fileId, component, componentId);
     };
@@ -282,8 +285,11 @@ angular.module('mm.core')
         var db = $mmApp.getDB(),
             fileId,
             now = new Date(),
-            link;
+            link,
+            revision;
 
+        revision = self._getRevisionFromUrl(url);
+        url = self._removeRevisionFromUrl(url);
         fileId = self._getFileIdByUrl(url);
         priority = priority || 0;
 
@@ -304,6 +310,10 @@ angular.module('mm.core')
                 if (fileObject.priority < priority) {
                     update = true;
                     fileObject.priority = priority;
+                }
+                if (revision && fileObject.revision != revision) {
+                    update = true;
+                    fileObject.revision = revision;
                 }
 
                 if (link) {
@@ -350,6 +360,7 @@ angular.module('mm.core')
                 added: now.getTime(),
                 priority: priority,
                 url: url,
+                revision: revision,
                 links: link ? [link] : []
             }).then(function(result) {
                 // Check if the queue is running.
@@ -438,9 +449,14 @@ angular.module('mm.core')
      * See {@link $mmFilepool#_getInternalUrlById} for the type of local URL returned.
      */
     self.downloadUrl = function(siteId, fileUrl, ignoreStale, component, componentId) {
-        var fileId = self._getFileIdByUrl(fileUrl),
+        var fileId,
             now = new Date(),
-            promise;
+            promise,
+            revision;
+
+        revision = self._getRevisionFromUrl(fileUrl);
+        fileUrl = self._removeRevisionFromUrl(fileUrl);
+        fileId = self._getFileIdByUrl(fileUrl);
 
         if (!$mmFS.isAvailable()) {
             return $q.reject();
@@ -450,11 +466,11 @@ angular.module('mm.core')
 
             if (typeof fileObject === 'undefined') {
                 // We do not have the file, download and add to pool.
-                return self._downloadForPoolByUrl(siteId, fileUrl);
+                return self._downloadForPoolByUrl(siteId, fileUrl, revision);
 
-            } else if (fileObject.stale && $mmApp.isOnline() && !ignoreStale) {
+            } else if ((fileObject.stale || revision > fileObject.revision) && $mmApp.isOnline() && !ignoreStale) {
                 // The file is outdated, force the download and update it.
-                return self._downloadForPoolByUrl(siteId, fileUrl, fileObject);
+                return self._downloadForPoolByUrl(siteId, fileUrl, revision, fileObject);
             }
 
             // Everything is fine, return the file on disk.
@@ -462,13 +478,13 @@ angular.module('mm.core')
                 return response;
             }, function() {
                 // The file was not found in the pool, weird.
-                return self._downloadForPoolByUrl(siteId, fileUrl, fileObject);
+                return self._downloadForPoolByUrl(siteId, fileUrl, revision, fileObject);
             });
 
         }, function() {
 
             // The file is not in the pool just yet.
-            return self._downloadForPoolByUrl(siteId, fileUrl);
+            return self._downloadForPoolByUrl(siteId, fileUrl, revision);
         });
 
         return promise.then(function(response) {
@@ -488,13 +504,14 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmFilepool#_downloadForPoolByUrl
-     * @param {String} siteId The site ID.
-     * @param {String} fileUrl The file URL.
+     * @param {String} siteId           The site ID.
+     * @param {String} fileUrl          The file URL.
+     * @param {Number} revision         File revision number. Undefined if not applicable.
      * @param {Object} [poolFileObject] When set, the object will be updated, a new entry will not be created.
      * @return {Promise} Resolved with internal URL on success, rejected otherwise.
      * @protected
      */
-    self._downloadForPoolByUrl = function(siteId, fileUrl, poolFileObject) {
+    self._downloadForPoolByUrl = function(siteId, fileUrl, revision, poolFileObject) {
         var fileId = self._getFileIdByUrl(fileUrl),
             filePath = self._getFilePath(siteId, fileId);
 
@@ -510,9 +527,10 @@ angular.module('mm.core')
             data.modified = now.getTime();
             data.stale = false;
             data.url = fileUrl;
+            data.revision = revision;
 
             return self._addFileToPool(siteId, fileId, data).then(function() {
-                return fileEntry.toInternalURL();
+                return fileEntry.toURL();
             });
         });
     };
@@ -560,6 +578,7 @@ angular.module('mm.core')
      * @return {String}        Event name.
      */
     self.getFileEventNameByUrl = function(siteId, fileUrl) {
+        fileUrl = self._removeRevisionFromUrl(fileUrl);
         var fileId = self._getFileIdByUrl(fileUrl);
         return self._getFileEventName(siteId, fileId);
     };
@@ -671,6 +690,11 @@ angular.module('mm.core')
      * there was nothing we could do.
      */
     self._getFileUrlByUrl = function(siteId, fileUrl, mode, component, componentId) {
+        var fileId,
+            revision;
+
+        revision = self._getRevisionFromUrl(fileUrl);
+        fileUrl = self._removeRevisionFromUrl(fileUrl);
         var fileId = self._getFileIdByUrl(fileUrl);
         return self._hasFileInPool(siteId, fileId).then(function(fileObject) {
             var response,
@@ -682,7 +706,7 @@ angular.module('mm.core')
                 self.addToQueueByUrl(siteId, fileUrl, component, componentId);
                 response = fileUrl;
 
-            } else if (fileObject.stale && $mmApp.isOnline()) {
+            } else if ((fileObject.stale || revision > fileObject.revision) && $mmApp.isOnline()) {
                 // The file is outdated, we add to the queue and return real URL.
                 self.addToQueueByUrl(siteId, fileUrl, component, componentId);
                 response = fileUrl;
@@ -742,7 +766,24 @@ angular.module('mm.core')
     };
 
     /**
-     * Returns the file state: FILEDOWNLOADED, FILEDOWNLOADING or FILENOTDOWNLOADED.
+     * Get the path to a file from its URL.
+     *
+     * This does not check if the file exists or not.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFilepool#getFilePathByUrl
+     * @param {String} siteId  The site ID.
+     * @param {String} fileUrl The file URL.
+     * @return {String} The path to the file relative to storage root.
+     */
+    self.getFilePathByUrl = function(siteId, fileUrl) {
+        var fileId = self._getFileIdByUrl(fileUrl);
+        return self._getFilePath(siteId, fileId);
+    };
+
+    /**
+     * Returns the file state: FILEDOWNLOADED, FILEDOWNLOADING, FILENOTDOWNLOADED or FILEOUTDATED.
      *
      * @module mm.core
      * @ngdoc method
@@ -752,12 +793,22 @@ angular.module('mm.core')
      * @return {Promise}       Promise resolved with the file state.
      */
     self.getFileStateByUrl = function(siteId, fileUrl) {
-        var fileId = self._getFileIdByUrl(fileUrl)
+        var fileId,
+            revision;
+
+        revision = self._getRevisionFromUrl(fileUrl);
+        fileUrl = self._removeRevisionFromUrl(fileUrl);
+        fileId = self._getFileIdByUrl(fileUrl);
+
         return self._hasFileInQueue(siteId, fileId).then(function() {
             return self.FILEDOWNLOADING;
         }, function() {
-            return self._hasFileInPool(siteId, fileId).then(function() {
-                return self.FILEDOWNLOADED;
+            return self._hasFileInPool(siteId, fileId).then(function(fileObject) {
+                if (fileObject.stale || revision > fileObject.revision) {
+                    return self.FILEOUTDATED;
+                } else {
+                    return self.FILEDOWNLOADED;
+                }
             }, function() {
                 return self.FILENOTDOWNLOADED;
             });
@@ -806,6 +857,23 @@ angular.module('mm.core')
             });
         }
         return $q.reject();
+    };
+
+    /**
+     * Get the revision number from a file URL.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFilepool#_removeRevisionFromUrl
+     * @param {String} url URL to get the revision number.
+     * @return {String}    Revision number.
+     * @protected
+     */
+    self._getRevisionFromUrl = function(url) {
+        var matches = url.match(revisionRegex);
+        if (matches && typeof matches[1] != 'undefined') {
+            return parseInt(matches[1]);
+        }
     };
 
     /**
@@ -895,6 +963,7 @@ angular.module('mm.core')
      * only if they do not have network access.
      */
     self.invalidateFileByUrl = function(siteId, fileUrl) {
+        fileUrl = self._removeRevisionFromUrl(fileUrl);
         var fileId = self._getFileIdByUrl(fileUrl);
         return getSiteDb(siteId).then(function(db) {
             return db.get(mmFilepoolStore, fileId).then(function(fileObject) {
@@ -1061,6 +1130,7 @@ angular.module('mm.core')
         var siteId = item.siteId,
             fileId = item.fileId,
             fileUrl = item.url,
+            revision = item.revision,
             links = item.links || [];
 
         $log.debug('Processing queue item: ' + siteId + ', ' + fileId);
@@ -1086,7 +1156,7 @@ angular.module('mm.core')
          * Download helper to avoid code duplication.
          */
         function download(siteId, fileUrl, fileObject, links) {
-            return self._downloadForPoolByUrl(siteId, fileUrl, fileObject).then(function() {
+            return self._downloadForPoolByUrl(siteId, fileUrl, revision, fileObject).then(function() {
                 var promise,
                     deferred;
 
@@ -1203,13 +1273,57 @@ angular.module('mm.core')
             var p1, p2, p3;
             p1 = db.remove(mmFilepoolStore, fileId);
             p2 = db.where(mmFilepoolLinksStore, 'fileId', '=', fileId).then(function(entries) {
-                angular.forEach(entries, function(entry) {
-                    db.remove(mmFilepoolLinksStore, entry.id);
-                });
+                return $q.all(entries.map(function(entry) {
+                    return db.remove(mmFilepoolLinksStore, [entry.fileId, entry.component, entry.componentId]);
+                }));
             });
             p3 = $mmFS.removeFile(self._getFilePath(siteId, fileId));
             return $q.all([p1, p2, p3]);
         });
+    };
+
+    /**
+     * Delete all the matching files from a component.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFilepool#removeFilesByComponent
+     * @param {String} siteId        The site ID.
+     * @param {String} component     The component to link the file to.
+     * @param {Number} [componentId] An ID to use in conjunction with the component.
+     * @return {Promise}             Resolved on success. Rejected on failure.
+     */
+    self.removeFilesByComponent = function(siteId, component, componentId) {
+        var where;
+        if (typeof componentId !== 'undefined') {
+            where = ['componentAndId', '=', [component, self._fixComponentId(componentId)]];
+        } else {
+            where = ['component', '=', component];
+        }
+
+        return getSiteDb(siteId).then(function(db) {
+            return db.query(mmFilepoolLinksStore, where);
+        }).then(function(items) {
+            return $q.all(items.map(function(item) {
+                return self._removeFileById(siteId, item.fileId);
+            }));
+        });
+    };
+
+    /**
+     * Removes the revision number from a file URL.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFilepool#_removeRevisionFromUrl
+     * @param {String} url URL to remove the revision number.
+     * @return {String}    URL without revision number.
+     * @protected
+     * @description
+     * The revision is used to know if a file has changed. We remove it from the URL to prevent storing a file per revision.
+     */
+    self._removeRevisionFromUrl = function(url) {
+        return url.replace(revisionRegex, '/content/0/');
     };
 
     return self;

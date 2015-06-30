@@ -64,7 +64,7 @@ angular.module('mm.core')
         return query.length ? query.substr(0, query.length - 1) : query;
     };
 
-    this.$get = function($ionicLoading, $ionicPopup, $translate, $http, $log, $q, $mmLang) {
+    this.$get = function($ionicLoading, $ionicPopup, $translate, $http, $log, $q, $mmLang, $mmFS) {
 
         $log = $log.getInstance('$mmUtil');
 
@@ -237,6 +237,44 @@ angular.module('mm.core')
         };
 
         /**
+         * Get the SRC for to use an iframe.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#getIframeSrc
+         * @param  {Object} files List of files where the key is the path in the iframe,
+         *                        and the value the path to the local file.
+         * @param  {String} index The path of the index file in the iframe.
+         * @return {String}       Local URL to the iframe main page.
+         */
+        self.getIframeSrc = function(files, index) {
+            var iframeDir = 'iframe';
+            return $mmFS.getDir(iframeDir).then(function() {
+                return $mmFS.removeDir(iframeDir);
+            }).catch(function() {
+                // Never mind if the directory does not exist, or could not be removed.
+            }).then(function() {
+                return $mmFS.createDir(iframeDir);
+            }).then(function() {
+                var promises = [];
+                angular.forEach(files, function(localPath, iframePath) {
+                    var promise,
+                        path = iframeDir + '/' + iframePath;
+                    promise = $mmFS.createFile(path).then(function() {
+                        // We call createFile to ensure that the path exists.
+                        return $mmFS.copyFile(localPath, path);
+                    });
+                    promises.push(promise);
+                });
+                return $q.all(promises);
+            }).then(function() {
+                return $mmFS.getFile(iframeDir + '/' + index);
+            }).then(function(file) {
+                return file.toURL();
+            });
+        };
+
+        /**
          * Open a file using platform specific method.
          *
          * node-webkit: Using the default application configured.
@@ -291,28 +329,29 @@ angular.module('mm.core')
 
                 } else if (ionic.Platform.isIOS() && typeof handleDocumentWithURL == 'function') {
 
-                    var fsRoot = $mmFS.getRoot();
-                    // Encode/decode the specific file path, note that a path may contain directories
-                    // with white spaces, special characters...
-                    if (path.indexOf(fsRoot > -1)) {
-                        path = path.replace(fsRoot, "");
-                        path = encodeURIComponent(decodeURIComponent(path));
-                        path = fsRoot + path;
-                    }
+                    $mmFS.getBasePath().then(function(fsRoot) {
+                        // Encode/decode the specific file path, note that a path may contain directories
+                        // with white spaces, special characters...
+                        if (path.indexOf(fsRoot > -1)) {
+                            path = path.replace(fsRoot, "");
+                            path = encodeURIComponent(decodeURIComponent(path));
+                            path = fsRoot + path;
+                        }
 
-                    handleDocumentWithURL(
-                        function() {
-                            $log.debug('File opened with handleDocumentWithURL' + path);
-                        },
-                        function(error) {
-                            $log.debug('Error opening with handleDocumentWithURL' + path);
-                            if(error == 53) {
-                                $log.error('No app that handles this file type.');
-                            }
-                            self.openInBrowser(path);
-                        },
-                        path
-                    );
+                        handleDocumentWithURL(
+                            function() {
+                                $log.debug('File opened with handleDocumentWithURL' + path);
+                            },
+                            function(error) {
+                                $log.debug('Error opening with handleDocumentWithURL' + path);
+                                if(error == 53) {
+                                    $log.error('No app that handles this file type.');
+                                }
+                                self.openInBrowser(path);
+                            },
+                            path
+                        );
+                    });
                 } else {
                     // Last try, launch the file with the browser.
                     self.openInBrowser(path);
@@ -532,6 +571,32 @@ angular.module('mm.core')
          */
         self.timestamp = function() {
             return Math.round(new Date().getTime() / 1000);
+        };
+
+        /**
+         * Return true if the param is false (bool), 0 (number) or "0" (string).
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#isFalseOrZero
+         * @param {Mixed} value Value to check.
+         * @return {Number}     True if value is false, 0 or "0".
+         */
+        self.isFalseOrZero = function(value) {
+            return typeof value != 'undefined' && (value === false || parseInt(value) === 0);
+        };
+
+        /**
+         * Return true if the param is true (bool), 1 (number) or "1" (string).
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#isTrueOrOne
+         * @param {Mixed} value Value to check.
+         * @return {Number}     True if value is true, 1 or "1".
+         */
+        self.isTrueOrOne = function(value) {
+            return typeof value != 'undefined' && (value === true || parseInt(value) === 1);
         };
 
         return self;

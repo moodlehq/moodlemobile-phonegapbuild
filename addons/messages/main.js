@@ -15,6 +15,7 @@
 angular.module('mm.addons.messages', [])
 
 .constant('mmaMessagesPollInterval', 5000)
+.value('mmaMessagesIndexState', 'site.messages')
 
 .config(function($stateProvider) {
 
@@ -45,33 +46,50 @@ angular.module('mm.addons.messages', [])
 
 })
 
-.run(function($mmSideMenuDelegate, $translate, $mmaMessages, $mmUserDelegate, $mmaMessagesHandlers) {
-    var strings = [
-        'mma.messages.messages'
-    ];
+.run(function($mmSideMenuDelegate, $mmaMessages, $mmUserDelegate, $mmaMessagesHandlers, $mmEvents, $state, $injector, $mmUtil,
+            mmCoreEventLogin) {
 
-    $translate(strings).then(function(translations) {
+    $mmSideMenuDelegate.registerPlugin('mmaMessages', function() {
 
-        $mmSideMenuDelegate.registerPlugin('mmaMessages', function() {
+        if (!$mmaMessages.isPluginEnabled()) {
+            return;
+        }
 
-            if (!$mmaMessages.isPluginEnabled()) {
-                return;
-            }
-
-            return $mmaMessages.isMessagingEnabled().then(function() {
-                return {
-                    icon: 'ion-chatbox',
-                    state: 'site.messages',
-                    title: translations['mma.messages.messages']
-                };
-            });
-
+        return $mmaMessages.isMessagingEnabled().then(function() {
+            return {
+                icon: 'ion-chatbox',
+                state: 'site.messages',
+                title: 'mma.messages.messages'
+            };
         });
 
-        $mmUserDelegate.registerPlugin('mmaMessages:sendMessage', $mmaMessagesHandlers.sendMessage);
-        $mmUserDelegate.registerPlugin('mmaMessages:addContact', $mmaMessagesHandlers.addContact);
-        $mmUserDelegate.registerPlugin('mmaMessages:blockContact', $mmaMessagesHandlers.blockContact);
-
     });
+
+    $mmUserDelegate.registerPlugin('mmaMessages:sendMessage', $mmaMessagesHandlers.sendMessage);
+    $mmUserDelegate.registerPlugin('mmaMessages:addContact', $mmaMessagesHandlers.addContact);
+    $mmUserDelegate.registerPlugin('mmaMessages:blockContact', $mmaMessagesHandlers.blockContact);
+
+    // Invalidate messaging enabled WS calls.
+    $mmEvents.on(mmCoreEventLogin, function() {
+        $mmaMessages.invalidateEnabledCache();
+    });
+
+    // Register push notification clicks.
+    try {
+        // Use injector because the delegate belongs to an addon, so it might not exist.
+        var $mmPushNotificationsDelegate = $injector.get('$mmPushNotificationsDelegate');
+        $mmPushNotificationsDelegate.registerHandler('mmaMessages', function(notification) {
+            if ($mmUtil.isFalseOrZero(notification.notif)) {
+                $mmaMessages.isMessagingEnabledForSite(notification.site).then(function() {
+                    $mmaMessages.invalidateDiscussionsCache().finally(function() {
+                        $state.go('redirect', {siteid: notification.site, state: 'site.messages'});
+                    });
+                });
+                return true;
+            }
+        });
+    } catch(ex) {
+        $log.error('Cannot register push notifications handler: delegate not found');
+    }
 
 });

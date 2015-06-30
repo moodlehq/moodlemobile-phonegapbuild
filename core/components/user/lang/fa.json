@@ -1,0 +1,17 @@
+{
+    "address": "آدرس",
+    "city": "شهر",
+    "contact": "مخاطب",
+    "country": "کشور",
+    "description": "توضیحات",
+    "details": "جزئیات",
+    "email": "ایمیل",
+    "interests": "علایق",
+    "invaliduser": "Erabiltzaile baliogabea",
+    "manager": "Kudeatzailea",
+    "phone1": "تلفن",
+    "phone2": "همراه",
+    "roles": "نقش‌ها",
+    "student": "شاگرد",
+    "webpage": "صفحهٔ وب"
+}

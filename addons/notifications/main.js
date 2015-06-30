@@ -31,18 +31,35 @@ angular.module('mm.addons.notifications', [])
     });
 
 })
-.run(function($mmSideMenuDelegate, $translate, $mmaNotifications) {
-    $translate('mma.notifications.notifications').then(function(pluginName) {
-        $mmSideMenuDelegate.registerPlugin('mmaNotifications', function() {
 
-            if ($mmaNotifications.isPluginEnabled()) {
-                return {
-                    icon: 'ion-ios-bell',
-                    state: 'site.notifications',
-                    title: pluginName
-                };
-            }
+.run(function($log, $mmSideMenuDelegate, $mmaNotifications, $mmPushNotificationsDelegate, $mmUtil, $state, $injector) {
+    $log = $log.getInstance('mmaNotifications');
 
-        });
+    $mmSideMenuDelegate.registerPlugin('mmaNotifications', function() {
+        if ($mmaNotifications.isPluginEnabled()) {
+            return {
+                icon: 'ion-ios-bell',
+                state: 'site.notifications',
+                title: 'mma.notifications.notifications'
+            };
+        }
     });
+
+    // Register push notification clicks.
+    try {
+        // Use injector because the delegate belongs to an addon, so it might not exist.
+        var $mmPushNotificationsDelegate = $injector.get('$mmPushNotificationsDelegate');
+        $mmPushNotificationsDelegate.registerHandler('mmaNotifications', function(notification) {
+            if ($mmUtil.isTrueOrOne(notification.notif)) {
+                $mmaNotifications.isPluginEnabledForSite(notification.site).then(function() {
+                    $mmaNotifications.invalidateNotificationsList().finally(function() {
+                        $state.go('redirect', {siteid: notification.site, state: 'site.notifications'});
+                    });
+                });
+                return true;
+            }
+        });
+    } catch(ex) {
+        $log.error('Cannot register push notifications handler: delegate not found');
+    }
 });

@@ -41,7 +41,7 @@ angular.module('mm.addons.mod_url')
      *
      * @module mm.addons.mod_url
      * @ngdoc method
-     * @name $mmaModUrlCourseContentHandler#isEnabled
+     * @name $mmaModUrlCourseContentHandler#getController
      * @param {Object} module The module info.
      * @return {Function}
      */

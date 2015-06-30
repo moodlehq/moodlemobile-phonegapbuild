@@ -1,0 +1,17 @@
+{
+    "address": "Adresse",
+    "city": "Stadt",
+    "contact": "Kontakt",
+    "country": "Land",
+    "description": "Beschreibung",
+    "details": "Details",
+    "email": "E-Mail",
+    "interests": "Persönliche Interessen",
+    "invaliduser": "Ungültige Nutzer\/in",
+    "manager": "Manager\/in",
+    "phone1": "Telefon",
+    "phone2": "Mobil",
+    "roles": "Rollen",
+    "student": "Teilnehmer\/in",
+    "webpage": "Webseite"
+}

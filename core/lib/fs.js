@@ -331,6 +331,24 @@ angular.module('mm.core')
     };
 
     /**
+     * Get file object from a FileEntry.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#getFileSizeFromFileEntry
+     * @param  {String} path Relative path to the file.
+     * @return {Promise}     Promise to be resolved when the size is calculated.
+     */
+    self.getFileObjectFromFileEntry = function(entry) {
+        $log.debug('Get file object of: ' + entry.fullPath);
+        var deferred = $q.defer();
+        entry.file(function(file) {
+            deferred.resolve(file);
+        }, deferred.reject);
+        return deferred.promise;
+    };
+
+    /**
      * Calculate the free space in the disk.
      *
      * @module mm.core
@@ -571,6 +589,22 @@ angular.module('mm.core')
     self.moveFile = function(originalPath, newPath) {
         return self.init().then(function() {
             return $cordovaFile.moveFile(basePath, originalPath, basePath, newPath);
+        });
+    };
+
+    /**
+     * Copy a file.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#copyFile
+     * @param {String} from   Path to the file to move.
+     * @param {String} to     New path of the file.
+     * @return {Promise}      Promise resolved when the entry is copied.
+     */
+    self.copyFile = function(from, to) {
+        return self.init().then(function() {
+            return $cordovaFile.copyFile(basePath, from, basePath, to);
         });
     };
 
