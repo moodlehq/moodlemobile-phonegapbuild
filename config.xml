@@ -36,7 +36,7 @@
     <preference name="prerendered-icon" value="true" />
     <preference name="load-url-timeout" value="60000" />
 
-    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="14" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="none" />
@@ -113,7 +113,7 @@
     <gap:plugin name="nl.x-services.plugins.launchmyapp">
         <param name="URL_SCHEME" value="moodlemobile" />
     </gap:plugin>
-    <gap:plugin name="com.ionic.keyboard" version="1.0.3" />
+    <gap:plugin name="com.ionic.keyboard" />
     <gap:plugin name="de.appplant.cordova.plugin.local-notification"/>
     <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
 
