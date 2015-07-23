@@ -1,0 +1,6 @@
+{
+    "errorgetforum": "Erreur de récupération des données de forum.",
+    "forumnodiscussionsyet": "Il n'y a pas encore de messages dans ce forum",
+    "numdiscussions": "{{numdiscussions}} discussions",
+    "numreplies": "{{numreplies}} réponses"
+}
