@@ -49,15 +49,19 @@ angular.module('mm.addons.remotestyles')
      * @return {Promise}      Promise resolved with the styles.
      */
     self.get = function(siteid) {
-        siteid = siteid || $mmSite.getId();
         var promise;
+
+        siteid = siteid || $mmSite.getId();
+        if (!siteid) {
+            return $q.reject();
+        }
 
         // Downloads a CSS file and remove old files if needed.
         function downloadFileAndRemoveOld(url) {
             return $mmFilepool.getFileStateByUrl(siteid, url).then(function(state) {
-                return state === $mmFilepool.FILEDOWNLOADED;
+                return state !== $mmFilepool.FILENOTDOWNLOADED;
             }).catch(function() {
-                return true; // An error occurred while getting state. Don't delete downloaded file.
+                return true; // An error occurred while getting state (shouldn't happen). Don't delete downloaded file.
             }).then(function(isDownloaded) {
                 if (!isDownloaded) {
                     // File not downloaded, URL has changed or first time. Delete downloaded CSS files.
@@ -105,9 +109,14 @@ angular.module('mm.addons.remotestyles')
      * @name $mmaRemoteStyles#load
      */
     self.load = function() {
-        self.get().then(function(styles) {
-            remoteStylesEl.html(styles);
-        });
+        var siteid = $mmSite.getId();
+        if (siteid) {
+            self.get(siteid).then(function(styles) {
+                if (siteid === $mmSite.getId()) { // Make sure it hasn't logout while retrieving styles.
+                    remoteStylesEl.html(styles);
+                }
+            });
+        }
     };
 
     return self;

@@ -15,8 +15,9 @@
 angular.module('mm.addons.participants', [])
 
 .constant('mmaParticipantsListLimit', 50) // Max of participants to retrieve in each WS call.
+.constant('mmaParticipantsPriority', 600)
 
-.config(function($stateProvider) {
+.config(function($stateProvider, $mmCoursesDelegateProvider, mmaParticipantsPriority) {
 
     $stateProvider
         .state('site.participants', {
@@ -32,14 +33,6 @@ angular.module('mm.addons.participants', [])
             }
         });
 
-})
+    $mmCoursesDelegateProvider.registerNavHandler('mmaParticipants', '$mmaParticipantsCoursesNavHandler', mmaParticipantsPriority);
 
-.run(function($mmCoursesDelegate) {
-    $mmCoursesDelegate.registerPlugin('mmaParticipants', function() {
-        return {
-            icon: 'ion-person-stalker',
-            title: 'mma.participants.participants',
-            state: 'site.participants'
-        };
-    });
 });

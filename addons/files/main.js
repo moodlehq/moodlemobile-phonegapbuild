@@ -16,6 +16,9 @@ angular.module('mm.addons.files', ['mm.core'])
 
 .constant('mmaFilesUploadStateName', 'site.files-upload')
 .constant('mmaFilesSharedFilesStore', 'shared_files')
+.constant('mmaFilesMyComponent', 'mmaFilesMy')
+.constant('mmaFilesSiteComponent', 'mmaFilesSite')
+.value('mmaFilesPriority', 200)
 
 .config(function($stateProvider, mmaFilesUploadStateName) {
 
@@ -74,7 +77,8 @@ angular.module('mm.addons.files', ['mm.core'])
 
 })
 
-.run(function($mmSideMenuDelegate, $q, $mmaFiles, $state, $mmSitesManager, $mmUtil, $mmaFilesHelper, $ionicPlatform) {
+.run(function($mmSideMenuDelegate, $q, $mmaFiles, $state, $mmSitesManager, $mmUtil, $mmaFilesHelper, $ionicPlatform,
+            mmaFilesPriority) {
 
     // Register plugin in side menu.
     $mmSideMenuDelegate.registerPlugin('mmaFiles', function() {
@@ -86,7 +90,7 @@ angular.module('mm.addons.files', ['mm.core'])
             title: 'mma.files.myfiles',
             state: 'site.files'
         };
-    });
+    }, mmaFilesPriority);
 
     // Search for new files shared with the upload (to upload).
     if (ionic.Platform.isIOS()) {

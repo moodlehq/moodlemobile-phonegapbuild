@@ -12,12 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-angular.module('mm.addons.messages', [])
+angular.module('mm.addons.messages', ['mm.core'])
 
+.constant('mmaMessagesDiscussionLoadedEvent', 'mma_messages_discussion_loaded')
+.constant('mmaMessagesDiscussionLeftEvent', 'mma_messages_discussion_left')
 .constant('mmaMessagesPollInterval', 5000)
-.value('mmaMessagesIndexState', 'site.messages')
+.constant('mmaMessagesPriority', 600)
+.constant('mmaMessagesSendMessagePriority', 1000)
+.constant('mmaMessagesAddContactPriority', 800)
+.constant('mmaMessagesBlockContactPriority', 600)
+.constant('mmaMessagesNewMessageEvent', 'mma-messages_new_message')
 
-.config(function($stateProvider) {
+.config(function($stateProvider, $mmUserDelegateProvider, mmaMessagesSendMessagePriority, mmaMessagesAddContactPriority,
+            mmaMessagesBlockContactPriority) {
 
     $stateProvider
 
@@ -25,7 +32,8 @@ angular.module('mm.addons.messages', [])
         url: '/messages',
         views: {
             'site': {
-                templateUrl: 'addons/messages/templates/index.html'
+                templateUrl: 'addons/messages/templates/index.html',
+                controller: 'mmaMessagesIndexCtrl'
             }
         }
     })
@@ -44,18 +52,17 @@ angular.module('mm.addons.messages', [])
         }
     });
 
+    $mmUserDelegateProvider.registerProfileHandler('mmaMessages:sendMessage', '$mmaMessagesHandlers.sendMessage', mmaMessagesSendMessagePriority);
+    $mmUserDelegateProvider.registerProfileHandler('mmaMessages:addContact', '$mmaMessagesHandlers.addContact', mmaMessagesAddContactPriority);
+    $mmUserDelegateProvider.registerProfileHandler('mmaMessages:blockContact', '$mmaMessagesHandlers.blockContact', mmaMessagesBlockContactPriority);
 })
 
-.run(function($mmSideMenuDelegate, $mmaMessages, $mmUserDelegate, $mmaMessagesHandlers, $mmEvents, $state, $injector, $mmUtil,
-            mmCoreEventLogin) {
+.run(function($mmSideMenuDelegate, $mmaMessages, $mmEvents, $state, $mmAddonManager,
+            $mmUtil, mmCoreEventLogin, mmaMessagesPriority) {
 
     $mmSideMenuDelegate.registerPlugin('mmaMessages', function() {
 
-        if (!$mmaMessages.isPluginEnabled()) {
-            return;
-        }
-
-        return $mmaMessages.isMessagingEnabled().then(function() {
+        return $mmaMessages.isPluginEnabled().then(function() {
             return {
                 icon: 'ion-chatbox',
                 state: 'site.messages',
@@ -63,11 +70,7 @@ angular.module('mm.addons.messages', [])
             };
         });
 
-    });
-
-    $mmUserDelegate.registerPlugin('mmaMessages:sendMessage', $mmaMessagesHandlers.sendMessage);
-    $mmUserDelegate.registerPlugin('mmaMessages:addContact', $mmaMessagesHandlers.addContact);
-    $mmUserDelegate.registerPlugin('mmaMessages:blockContact', $mmaMessagesHandlers.blockContact);
+    }, mmaMessagesPriority);
 
     // Invalidate messaging enabled WS calls.
     $mmEvents.on(mmCoreEventLogin, function() {
@@ -75,9 +78,8 @@ angular.module('mm.addons.messages', [])
     });
 
     // Register push notification clicks.
-    try {
-        // Use injector because the delegate belongs to an addon, so it might not exist.
-        var $mmPushNotificationsDelegate = $injector.get('$mmPushNotificationsDelegate');
+    var $mmPushNotificationsDelegate = $mmAddonManager.get('$mmPushNotificationsDelegate');
+    if ($mmPushNotificationsDelegate) {
         $mmPushNotificationsDelegate.registerHandler('mmaMessages', function(notification) {
             if ($mmUtil.isFalseOrZero(notification.notif)) {
                 $mmaMessages.isMessagingEnabledForSite(notification.site).then(function() {
@@ -88,8 +90,6 @@ angular.module('mm.addons.messages', [])
                 return true;
             }
         });
-    } catch(ex) {
-        $log.error('Cannot register push notifications handler: delegate not found');
     }
 
 });

@@ -24,31 +24,52 @@ angular.module('mm.core')
  * Directive to handle files (my files, attachments, etc.). Shows the file name, icon (depending on mimetype) and a button
  * to download/refresh it.
  *
- * Required attributes:
- *     - file: Object with the following attributes:
- *         - filename: Name of the file.
- *         - fileurl: File URL.
+ * Attributes:
+ * @param {Object} file            Required. Object with the following attributes:
+ *                                     'filename': Name of the file.
+ *                                     'fileurl' or 'url': File URL.
+ * @param {String} [component]     Component the file belongs to.
+ * @param {Number} [componentId]   Component ID.
+ * @param {Boolean} [timemodified] If set, the value will be used to check if the file is outdated.
  */
 .directive('mmFile', function($q, $mmUtil, $mmFilepool, $mmSite, $mmApp, $mmEvents) {
 
-    // Convenience function to get the file state and set scope variables based on it.
-    function getState(scope, siteid, fileurl) {
-        return $mmFilepool.getFileStateByUrl(siteid, fileurl).then(function(state) {
+    /**
+     * Convenience function to get the file state and set scope variables based on it.
+     *
+     * @param  {Object} scope          Directive's scope.
+     * @param  {String} siteid         Site ID.
+     * @param  {String} fileurl        File URL.
+     * @param  {Number} [timemodified] File's timemodified.
+     * @return {Void}
+     */
+    function getState(scope, siteid, fileurl, timemodified) {
+        return $mmFilepool.getFileStateByUrl(siteid, fileurl, timemodified).then(function(state) {
             scope.isDownloaded = state === $mmFilepool.FILEDOWNLOADED || state === $mmFilepool.FILEOUTDATED;
             scope.isDownloading = state === $mmFilepool.FILEDOWNLOADING;
             scope.showDownload = state === $mmFilepool.FILENOTDOWNLOADED || state === $mmFilepool.FILEOUTDATED;
         });
     }
 
-    // Convenience function to download a file.
-    function downloadFile(scope, siteid, fileurl, component, componentid) {
+    /**
+     * Convenience function to download a file.
+     *
+     * @param  {Object} scope          Directive's scope.
+     * @param  {String} siteid         Site ID.
+     * @param  {String} fileurl        File URL.
+     * @param  {String} component      Component the file belongs to.
+     * @param  {Number} componentid    Component ID.
+     * @param  {Number} [timemodified] File's timemodified.
+     * @return {Promise}               Promise resolved when file is downloaded.
+     */
+    function downloadFile(scope, siteid, fileurl, component, componentid, timemodified) {
         scope.isDownloading = true;
-        return $mmFilepool.downloadUrl(siteid, fileurl, true, component, componentid).then(function(localUrl) {
-            getState(scope, siteid, fileurl); // Update state.
+        return $mmFilepool.downloadUrl(siteid, fileurl, true, component, componentid, timemodified).then(function(localUrl) {
+            getState(scope, siteid, fileurl, timemodified); // Update state.
             return localUrl;
         }, function() {
-            $mmUtil.showErrorModal('mm.core.errordownloadingfile', true);
-            return getState(scope, siteid, fileurl).then(function() {
+            $mmUtil.showErrorModal('mm.core.errordownloading', true);
+            return getState(scope, siteid, fileurl, timemodified).then(function() {
                 if (scope.isDownloaded) {
                     return localUrl;
                 } else {
@@ -65,22 +86,25 @@ angular.module('mm.core')
             file: '='
         },
         link: function(scope, element, attrs) {
-            var fileurl = $mmSite.fixPluginfileURL(scope.file.fileurl),
+            var fileurl = scope.file.fileurl || scope.file.url,
                 filename = scope.file.filename,
+                timemodified = attrs.timemodified || 0,
                 siteid = $mmSite.getId(),
                 component = attrs.component,
                 componentid = attrs.componentId,
-                eventName = $mmFilepool.getFileEventNameByUrl(siteid, fileurl);
+                observer;
 
             scope.filename = filename;
             scope.fileicon = $mmUtil.getFileIcon(filename);
-            getState(scope, siteid, fileurl);
+            getState(scope, siteid, fileurl, timemodified);
 
-            var observer = $mmEvents.on(eventName, function(data) {
-                getState(scope, siteid, fileurl);
-                if (!data.success) {
-                    $mmUtil.showErrorModal('mm.core.errordownloadingfile', true);
-                }
+            $mmFilepool.getFileEventNameByUrl(siteid, fileurl).then(function(eventName) {
+                observer = $mmEvents.on(eventName, function(data) {
+                    getState(scope, siteid, fileurl, timemodified);
+                    if (!data.success) {
+                        $mmUtil.showErrorModal('mm.core.errordownloading', true);
+                    }
+                });
             });
 
             scope.download = function(e, openAfterDownload) {
@@ -98,20 +122,22 @@ angular.module('mm.core')
 
                 if (openAfterDownload) {
                     // File needs to be opened now. If file needs to be downloaded, skip the queue.
-                    downloadFile(scope, siteid, fileurl, component, componentid).then(function(localUrl) {
+                    downloadFile(scope, siteid, fileurl, component, componentid, timemodified).then(function(localUrl) {
                         $mmUtil.openFile(localUrl);
                     });
                 } else {
                     // File doesn't need to be opened, add it to queue.
                     $mmFilepool.invalidateFileByUrl(siteid, fileurl).finally(function() {
                         scope.isDownloading = true;
-                        $mmFilepool.addToQueueByUrl(siteid, fileurl, component, componentid);
+                        $mmFilepool.addToQueueByUrl(siteid, fileurl, component, componentid, timemodified);
                     });
                 }
             }
 
             scope.$on('$destroy', function() {
-                observer.off();
+                if (observer && observer.off) {
+                    observer.off();
+                }
             });
         }
     };

@@ -23,24 +23,70 @@ angular.module('mm.addons.mod_page')
  */
 .factory('$mmaModPage', function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, mmaModPageComponent) {
     $log = $log.getInstance('$mmaModPage');
+
     var self = {};
 
     /**
-     * Fixes the URL before use.
-     *
-     * This removes the revision when needed, and also fixes the plugin file URL.
+     * Download all the content.
      *
      * @module mm.addons.mod_page
      * @ngdoc method
-     * @name $mmaModPage#_fixUrl
-     * @param  {String} url The URL to be fixed.
-     * @return {String}     The fixed URL.
-     * @protected
+     * @name $mmaModPage#downloadAllContent
+     * @param {Object} module The module object.
+     * @return {Promise}      Promise resolved when all content is downloaded. Data returned is not reliable.
      */
-    self._fixUrl = function(url) {
-        url = self._removeRevisionFromUrl(url);
-        url = $mmSite.fixPluginfileURL(url);
-        return url;
+    self.downloadAllContent = function(module) {
+        var promises = [],
+            siteid = $mmSite.getId();
+
+        angular.forEach(module.contents, function(content) {
+            var url = content.fileurl,
+                timemodified = content.timemodified;
+            if (content.type !== 'file') {
+                return;
+            }
+            promises.push($mmFilepool.downloadUrl(siteid, url, false, mmaModPageComponent, module.id, timemodified));
+        });
+
+        return $q.all(promises);
+    };
+
+    /**
+     * Get event names of files being downloaded.
+     *
+     * @module mm.addons.mod_page
+     * @ngdoc method
+     * @name $mmaModPage#getDownloadingFilesEventNames
+     * @param {Object} module The module object returned by WS.
+     * @return {Promise} Resolved with an array of event names.
+     */
+    self.getDownloadingFilesEventNames = function(module) {
+        var promises = [],
+            eventNames = [],
+            notDownloaded = 0,
+            downloading = 0,
+            outdated = 0,
+            downloaded = 0,
+            fileCount = 0,
+            siteid = $mmSite.getId();
+
+        angular.forEach(module.contents, function(content) {
+            var url = content.fileurl;
+            if (content.type !== 'file') {
+                return;
+            }
+            promises.push($mmFilepool.isFileDownloadingByUrl(siteid, url).then(function() {
+                return $mmFilepool.getFileEventNameByUrl(siteid, url).then(function(eventName) {
+                    eventNames.push(eventName);
+                });
+            }, function() {
+                // Ignore fails.
+            }));
+        });
+
+        return $q.all(promises).then(function() {
+            return eventNames;
+        });
     };
 
     /**
@@ -50,78 +96,19 @@ angular.module('mm.addons.mod_page')
      * @ngdoc method
      * @name $mmaModPage#getFileEventNames
      * @param {Object} module The module object returned by WS.
-     * @return {String[]} Array of $mmEvent names.
+     * @return {Promise} Promise resolved with array of $mmEvent names.
      */
     self.getFileEventNames = function(module) {
-        var eventNames = [];
+        var promises = [];
         angular.forEach(module.contents, function(content) {
-            var url;
+            var url = content.fileurl;
             if (content.type !== 'file') {
                 return;
             }
-            url = self._fixUrl(content.fileurl);
-            eventNames.push($mmFilepool.getFileEventNameByUrl($mmSite.getId(), url));
+            promises.push($mmFilepool.getFileEventNameByUrl($mmSite.getId(), url));
         });
-        return eventNames;
-    };
-
-    /**
-     * Check the status of the files.
-     *
-     * Return those status in order of priority:
-     * - $mmFilepool.FILENOTDOWNLOADED
-     * - $mmFilepool.FILEDOWNLOADING
-     * - $mmFilepool.FILEDOWNLOADED
-     *
-     * @module mm.addons.mod_page
-     * @ngdoc method
-     * @name $mmaModPage#getFilesStatus
-     * @param {Object} module The module object returned by WS.
-     * @return {Promise} Resolved with an object containing the status and a list of event to observe.
-     */
-    self.getFilesStatus = function(module) {
-        var promises = [],
-            eventNames = [],
-            notDownloaded = 0,
-            downloading = 0,
-            downloaded = 0,
-            fileCount = 0;
-
-        angular.forEach(module.contents, function(content) {
-            var url;
-            if (content.type !== 'file') {
-                return;
-            }
-            fileCount++;
-            url = self._fixUrl(content.fileurl);
-            promises.push($mmFilepool.getFileStateByUrl($mmSite.getId(), url).then(function(state) {
-                if (state == $mmFilepool.FILENOTDOWNLOADED) {
-                    notDownloaded++;
-                } else if (state == $mmFilepool.FILEDOWNLOADING) {
-                    downloading++;
-                    eventNames.push($mmFilepool.getFileEventNameByUrl($mmSite.getId(), url));
-                } else if (state == $mmFilepool.FILEDOWNLOADED) {
-                    downloaded++;
-                }
-            }));
-        });
-
-        function prepareResult() {
-            var status = $mmFilepool.FILENOTDOWNLOADED;
-            if (notDownloaded > 0) {
-                status = $mmFilepool.FILENOTDOWNLOADED;
-            } else if (downloading > 0) {
-                status = $mmFilepool.FILEDOWNLOADING;
-            } else if (downloaded == fileCount) {
-                status = $mmFilepool.FILEDOWNLOADED;
-            }
-            return {status: status, eventNames: eventNames};
-        }
-
-        return $q.all(promises).then(function() {
-            return prepareResult();
-        }, function() {
-            return prepareResult();
+        return $q.all(promises).then(function(eventNames) {
+            return eventNames;
         });
     };
 
@@ -144,7 +131,7 @@ angular.module('mm.addons.mod_page')
         // Extract the information about paths from the module contents.
         angular.forEach(contents, function(content) {
             var key,
-                url = self._fixUrl(content.fileurl);
+                url = content.fileurl;
 
             if (self._isMainPage(content)) {
                 // This seems to be the most reliable way to spot the index page.
@@ -172,7 +159,7 @@ angular.module('mm.addons.mod_page')
             } else {
                 // We return the live URL.
                 deferred = $q.defer();
-                deferred.resolve(indexUrl);
+                deferred.resolve($mmSite.fixPluginfileURL(indexUrl));
                 return deferred.promise;
             }
         })();
@@ -239,6 +226,25 @@ angular.module('mm.addons.mod_page')
     };
 
     /**
+     * Report a page as being viewed.
+     *
+     * @module mm.addons.mod_page
+     * @ngdoc method
+     * @name $mmaModPage#logView
+     * @param {String} id Module ID.
+     * @return {Promise}  Promise resolved when the WS call is successful.
+     */
+    self.logView = function(id) {
+        if (id) {
+            var params = {
+                urlid: id
+            };
+            return $mmSite.write('mod_page_view_page', params);
+        }
+        return $q.reject();
+    };
+
+    /**
      * Prefetch the content.
      *
      * @module mm.addons.mod_page
@@ -253,31 +259,9 @@ angular.module('mm.addons.mod_page')
             if (content.type !== 'file') {
                 return;
             }
-            url = self._fixUrl(content.fileurl);
+            url = content.fileurl;
             $mmFilepool.addToQueueByUrl($mmSite.getId(), url, mmaModPageComponent, module.id);
         });
-    };
-
-    /**
-     * Removes the revision number from a file URL.
-     *
-     * @module mm.addons.mod_page
-     * @ngdoc method
-     * @name $mmaModPage#_removeRevisionFromUrl
-     * @param {String} url The a page URL without the revision number.
-     * @return {string}
-     * @protected
-     * @description
-     * The revision is not used when serving the file Moodle, and because we are
-     * caching those files on our side, and by URL, it is better to ignore the
-     * revision number. If we keep the revision number, we'll end up missing the images
-     * at each revision of the module and filling up the filepool for now reason.
-     *
-     * Note that the index page does not use a revision number.
-     */
-    self._removeRevisionFromUrl = function(url) {
-        var revisionRegex = new RegExp('/mod_page/content/[0-9]+/');
-        return url.replace(revisionRegex, '/mod_page/content/0/');
     };
 
     return self;

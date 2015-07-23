@@ -21,12 +21,14 @@ angular.module('mm.addons.participants')
  * @ngdoc controller
  * @name mmaParticipantsListCtrl
  */
-.controller('mmaParticipantsListCtrl', function($scope, $state, $stateParams, $mmUtil, $mmaParticipants, $ionicPlatform, $mmSite) {
+.controller('mmaParticipantsListCtrl', function($scope, $state, $stateParams, $mmUtil, $mmaParticipants, $ionicPlatform, $mmSite,
+            mmUserProfileState) {
     var course = $stateParams.course,
         courseid = course.id;
 
     $scope.participants = [];
     $scope.courseid = courseid;
+    $scope.userStateName = mmUserProfileState;
 
     function fetchParticipants(refresh) {
         var firstToGet = refresh ? 0 : $scope.participants.length;
@@ -39,6 +41,7 @@ angular.module('mm.addons.participants')
             $scope.canLoadMore = data.canLoadMore;
         }, function(message) {
             $mmUtil.showErrorModal(message);
+            $scope.canLoadMore = false; // Set to false to prevent infinite calls with infinite-loading.
         });
     }
 

@@ -21,17 +21,19 @@ angular.module('mm.addons.messages')
  * @ngdoc controller
  * @name mmaMessagesContactsCtrl
  */
-.controller('mmaMessagesContactsCtrl', function($q, $scope, $mmaMessages, $mmSite, $mmUtil) {
+.controller('mmaMessagesContactsCtrl', function($q, $scope, $mmaMessages, $mmSite, $mmUtil, mmUserProfileState) {
 
     var currentUserId = $mmSite.getUserId();
 
     $scope.loaded = false;
     $scope.contactTypes = ['online', 'offline', 'blocked', 'strangers', 'search'];
+    $scope.searchType = 'search';
     $scope.hasContacts = false;
     $scope.canSearch = $mmaMessages.isSearchEnabled();
     $scope.formData = {
         searchString: ''
     };
+    $scope.userStateName = mmUserProfileState;
 
     $scope.refresh = function() {
         $mmaMessages.invalidateAllContactsCache(currentUserId).then(function() {

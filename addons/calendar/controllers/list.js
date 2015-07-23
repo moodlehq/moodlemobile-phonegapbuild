@@ -42,13 +42,6 @@ angular.module('mm.addons.calendar')
         $scope.events = [];
     }
 
-    // Get event ng-href depending on Mobile or Tablet.
-    // We need to use ng-href instead of ui-sref to make it work when list is refreshed.
-    // @todo Adapt to tablet split view when it is implemented.
-    $scope.getUrl = function(id) {
-        return $state.href('site.calendar-event', {id: id});
-    };
-
     // Convenience function that fetches the events and updates the scope.
     function fetchEvents(refresh) {
         if (refresh) {
@@ -69,8 +62,6 @@ angular.module('mm.addons.calendar')
                     return fetchEvents();
                 }
             } else {
-                $scope.eventsLoaded = true;
-                $scope.canLoadMore = true;
                 angular.forEach(events, $mmaCalendar.formatEventData);
                 if (refresh) {
                     $scope.events = events;
@@ -78,15 +69,18 @@ angular.module('mm.addons.calendar')
                     $scope.events = $scope.events.concat(events);
                 }
                 $scope.count = $scope.events.length;
+                $scope.eventsLoaded = true;
+                $scope.canLoadMore = true;
 
                 // Schedule notifications for the events retrieved (might have new events).
                 $mmaCalendar.scheduleEventsNotifications(events);
             }
-        }, function(err) {
-            if (err) {
-                $log.error(err);
+        }, function(error) {
+            if (error) {
+                $mmUtil.showErrorModal(error);
+            } else {
+                $mmUtil.showErrorModal('mma.calendar.errorloadevents', true);
             }
-            $mmUtil.showErrorModal('mma.calendar.errorloadevents', true);
         });
     }
 

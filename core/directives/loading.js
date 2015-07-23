@@ -18,73 +18,69 @@ angular.module('mm.core')
  * Directive to show a loading spinner and message while data is being loaded.
  *
  * @module mm.core
- * @ngdoc provider
+ * @ngdoc directive
  * @name mmLoading
  * @description
  * Usage:
- * <mm-loading message="{{loadingMessage}}" hide-until="dataLoaded">
+ * <mm-loading message="{{loadingMessage}}" hide-until="dataLoaded" loading-padding-top="paddingTop">
  *     <!-- CONTENT TO HIDE UNTIL LOADED -->
  * </mm-loading>
  * This directive will show a ion-spinner with a message and hide all the content until 'dataLoaded' variable is set to true.
  * If 'message' attribute is not set, default message "Loading" is shown.
  * 'message' attribute accepts hardcoded strings, variables, filters, etc. E.g. message="{{ 'mm.core.loading' | translate}}".
+ *
+ * @param {String} [message]           Message to show while loading. If not set, default "Loading" message is shown.
+ * @param {String} hideUntil           Scope variable to determine when should the contents be shown. When the variable is set
+ *                                     to true, the loading is hidden and the contents are shown.
+ * @param {String} [loadingPaddingTop] Padding top to set to loading view. If not set, no padding top is set. This attribute is
+ *                                     meant to be used with dynamic paddings (e.g. to move the loading spinner to the user
+ *                                     scrollTop). Static padding-top should be set using CSS.
  */
 .directive('mmLoading', function($translate) {
-
-    /**
-     * Find 'mm-loading-container' and 'mm-loading-content' divs and place them inside obj.loading and obj.content.
-     *
-     * @param  {Object} element DOM element to find the divs in.
-     * @param  {Object} obj     Object where to place the results.
-     */
-    function findLoadingAndContent(element, obj) {
-        // Seems jqLite doesn't allow selecting by class. Let's search the divs manually.
-        var divs = element.find('div');
-        for (var i = 0; i < divs.length && (typeof(obj.loading) == 'undefined' || typeof(obj.content) == 'undefined'); i++) {
-            var className = divs[i].className;
-            if (className.indexOf('mm-loading-container') > -1) {
-                obj.loading = angular.element(divs[i]);
-            } else if(className.indexOf('mm-loading-content') > -1) {
-                obj.content = angular.element(divs[i]);
-            }
-        }
-    }
-
-    function setMessage(element, message) {
-        var p = element.find('p');
-        for (var i = 0; i < p.length; i++) {
-            var className = p[i].className;
-            if (className.indexOf('mm-loading-message') > -1) {
-                p[i].innerHTML = message;
-            }
-        }
-    }
 
     return {
         restrict: 'E',
         templateUrl: 'core/templates/loading.html',
         transclude: true,
+        scope: {
+            hideUntil: '=?',
+            message: '@?',
+            loadingPaddingTop: '=?'
+        },
         link: function(scope, element, attrs) {
-            var children = {}; // Use an object to store loading and content divs so it can be passed by reference.
+            var el = element[0],
+                loading = angular.element(el.querySelector('.mm-loading-container')),
+                content = angular.element(el.querySelector('.mm-loading-content'));
 
-            if (attrs.message) {
-                setMessage(element, attrs.message);
-            } else {
+            if (!attrs.message) {
                 // Default loading message.
                 $translate('mm.core.loading').then(function(loadingString) {
-                    setMessage(element, loadingString);
+                    scope.message = loadingString;
                 });
             }
 
             if (attrs.hideUntil) {
-                findLoadingAndContent(element, children);
-                scope.$watch(attrs.hideUntil, function(newValue) {
+                scope.$watch('hideUntil', function(newValue) {
                     if (newValue) {
-                        children.loading.addClass('hide');
-                        children.content.removeClass('hide');
+                        loading.addClass('hide');
+                        content.removeClass('hide');
                     } else {
-                        children.content.addClass('hide');
-                        children.loading.removeClass('hide');
+                        content.addClass('hide');
+                        loading.removeClass('hide');
+                    }
+                });
+            }
+
+            if (attrs.loadingPaddingTop) {
+                scope.$watch('loadingPaddingTop', function(newValue) {
+                    // parseInt of an invalid string is NaN, but parseInt('a') == NaN is FALSE and typeof NaN = 'number'.
+                    // That's why we use num >= 0 or num < 0 to check if it's a valid number.
+                    var num = parseInt(newValue);
+                    if (num >= 0 || num < 0) {
+                        loading.css('padding-top', newValue + 'px');
+                    } else if(typeof newValue == 'string') {
+                        // Maybe they set a value like '200px'.
+                        loading.css('padding-top', newValue);
                     }
                 });
             }

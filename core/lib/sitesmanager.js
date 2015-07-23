@@ -46,7 +46,6 @@ angular.module('mm.core')
 
     var self = {},
         services = {},
-        db = $mmApp.getDB(),
         sessionRestored = false,
         currentSite,
         sites = {};
@@ -273,7 +272,7 @@ angular.module('mm.core')
 
         candidateSite.fetchSiteInfo().then(function(infos) {
             if (isValidMoodleVersion(infos.functions)) {
-                if (typeof infos.downloadfiles == 'undefined' || infos.downloadfiles === 1) {
+                if (isValidInfo(infos)) {
                     var siteid = self.createSiteID(infos.siteurl, infos.username);
                     // Add site to sites list.
                     self.addSite(siteid, siteurl, token, infos);
@@ -357,7 +356,17 @@ angular.module('mm.core')
             }
         }
         return false;
-    };
+    }
+
+    /**
+     * Check if site info is valid (downloadfiles enabled).
+     *
+     * @param {Object} infos Site info.
+     * @return {Boolean}     True if the site info is valid, false otherwise.
+     */
+    function isValidInfo(infos) {
+        return typeof infos.downloadfiles == 'undefined' || infos.downloadfiles === 1;
+    }
 
     /**
      * Saves a site in local DB.
@@ -371,7 +380,7 @@ angular.module('mm.core')
      * @param {Object} infos   Site's info.
      */
     self.addSite = function(id, siteurl, token, infos) {
-        db.insert(mmCoreSitesStore, {
+        return $mmApp.getDB().insert(mmCoreSitesStore, {
             id: id,
             siteurl: siteurl,
             token: token,
@@ -394,14 +403,15 @@ angular.module('mm.core')
         var deferred = $q.defer();
 
         self.getSite(siteid).then(function(site) {
+            currentSite = site;
+            self.login(siteid);
             // Update site info. Resolve the promise even if the update fails.
             self.updateSiteInfo(siteid).finally(function() {
                 var infos = site.getInfo();
-                if (typeof infos.downloadfiles != 'undefined' && infos.downloadfiles !== 1) {
+                if (!isValidInfo(infos)) {
                     $mmLang.translateErrorAndReject(deferred, 'mm.login.cannotdownloadfiles');
+                    self.logout();
                 } else {
-                    currentSite = site;
-                    self.login(siteid);
                     deferred.resolve();
                 }
             });
@@ -441,7 +451,7 @@ angular.module('mm.core')
         return self.getSite(siteid).then(function(site) {
             return site.deleteDB().then(function() {
                 delete sites[siteid];
-                return db.remove(mmCoreSitesStore, siteid).then(function() {
+                return $mmApp.getDB().remove(mmCoreSitesStore, siteid).then(function() {
                     return site.deleteFolder();
                 }, function() {
                     // DB remove shouldn't fail, but we'll go ahead even if it does.
@@ -460,7 +470,7 @@ angular.module('mm.core')
      * @return {Promise} Promise to be resolved if there are no sites, and rejected if there is at least one.
      */
     self.hasNoSites = function() {
-        return db.count(mmCoreSitesStore).then(function(count) {
+        return $mmApp.getDB().count(mmCoreSitesStore).then(function(count) {
             if (count > 0) {
                 return $q.reject();
             }
@@ -476,7 +486,7 @@ angular.module('mm.core')
      * @return {Promise} Promise to be resolved if there is at least one site, and rejected if there aren't.
      */
     self.hasSites = function() {
-        return db.count(mmCoreSitesStore).then(function(count) {
+        return $mmApp.getDB().count(mmCoreSitesStore).then(function(count) {
             if (count == 0) {
                 return $q.reject();
             }
@@ -493,21 +503,17 @@ angular.module('mm.core')
      * @return {Promise}
      */
     self.getSite = function(siteId) {
-        var deferred = $q.defer();
-
         if (currentSite && currentSite.getId() === siteId) {
-            deferred.resolve(currentSite);
+            return $q.when(currentSite);
         } else if (typeof sites[siteId] != 'undefined') {
-            deferred.resolve(sites[siteId]);
+            return $q.when(sites[siteId]);
         } else {
-            db.get(mmCoreSitesStore, siteId).then(function(site) {
+            return $mmApp.getDB().get(mmCoreSitesStore, siteId).then(function(site) {
                 var site = $mmSitesFactory.makeSite(siteId, site.siteurl, site.token, site.infos);
                 sites[siteId] = site;
-                deferred.resolve(site);
-            }, deferred.reject);
+                return site;
+            });
         }
-
-        return deferred.promise;
     };
 
     /**
@@ -534,7 +540,7 @@ angular.module('mm.core')
      * @return {Promise} Promise to be resolved when the sites are retrieved.
      */
     self.getSites = function() {
-        return db.getAll(mmCoreSitesStore).then(function(sites) {
+        return $mmApp.getDB().getAll(mmCoreSitesStore).then(function(sites) {
             var formattedSites = [];
             angular.forEach(sites, function(site) {
                 formattedSites.push({
@@ -558,87 +564,12 @@ angular.module('mm.core')
      * @return {Promise} Promise to be resolved when the sites IDs are retrieved.
      */
     self.getSitesIds = function() {
-        return db.getAll(mmCoreSitesStore).then(function(sites) {
+        return $mmApp.getDB().getAll(mmCoreSitesStore).then(function(sites) {
             var ids = [];
             angular.forEach(sites, function(site) {
                 ids.push(site.id);
             });
             return ids;
-        });
-    };
-
-    /**
-     * DANI: I don't like this function in here, but it's the only service that has the needed data.
-     * Maybe a new service?
-     *
-     * This function downloads a file from Moodle. If the file is already downloaded, the function replaces
-     * the www reference with the internal file system reference
-     *
-     * @module mm.core
-     * @ngdoc method
-     * @name $mmSitesManager#getMoodleFilePath
-     * @param  {String} fileurl The file path (usually a url).
-     * @return {Promise}        Promise to be resolved with the downloaded URL.
-     */
-    self.getMoodleFilePath = function (fileurl, courseId, siteId) {
-
-        // This function is used in regexp callbacks, better not to risk!!
-        if (!fileurl) {
-            return $q.reject();
-        }
-
-        if (!courseId) {
-            courseId = 1;
-        }
-
-        if (!siteId) {
-            if (typeof currentSite == 'undefined') {
-                return $q.reject();
-            }
-            siteId = currentSite.getId();
-        }
-
-        return self.getSite(siteId).then(function(site) {
-
-            var downloadURL = site.fixPluginfileURL(fileurl);
-            var extension = "." + fileurl.split('.').pop();
-            if (extension.indexOf(".php") === 0) {
-                extension = "";
-            }
-
-            var filename = md5.createHash(fileurl) + extension;
-
-            var path = {
-                directory: siteId + "/" + courseId,
-                file:      siteId + "/" + courseId + "/" + filename
-            };
-
-            var getFileFromFS = (function() {
-                if ($mmFS.isAvailable()) {
-                    return $mmFS.getFile(path.file);
-                }
-                return $q.reject();
-            })();
-
-            return getFileFromFS.then(function(fileEntry) {
-                // We use toInternalURL so images are loaded in iOS8 using img HTML tags,
-                // with toURL the OS is unable to find the image files.
-                $log.debug('File ' + downloadURL + ' already downloaded.');
-                return fileEntry.toInternalURL();
-            }, function() {
-                if ($mmApp.isOnline()) {
-                    $log.debug('File ' + downloadURL + ' not downloaded. Lets download.');
-                    return $mmWS.downloadFile(downloadURL, path.file).then(function(fileEntry) {
-                        return fileEntry.toInternalURL();
-                    }, function(err) {
-                        return downloadURL;
-                    });
-                } else {
-                    $log.debug('File ' + downloadURL + ' not downloaded, but the device is offline.');
-                    return downloadURL;
-                }
-
-            });
         });
     };
 
@@ -649,13 +580,15 @@ angular.module('mm.core')
      * @ngdoc method
      * @name $mmSitesManager#login
      * @param  {String} siteid ID of the site the user is accessing.
+     * @return {Promise}       Promise resolved when current site is stored.
      */
     self.login = function(siteid) {
-        db.insert(mmCoreCurrentSiteStore, {
+        return $mmApp.getDB().insert(mmCoreCurrentSiteStore, {
             id: 1,
             siteid: siteid
+        }).then(function() {
+            $mmEvents.trigger(mmCoreEventLogin);
         });
-        $mmEvents.trigger(mmCoreEventLogin);
     };
 
     /**
@@ -669,7 +602,7 @@ angular.module('mm.core')
     self.logout = function() {
         currentSite = undefined;
         $mmEvents.trigger(mmCoreEventLogout);
-        return db.remove(mmCoreCurrentSiteStore, 1);
+        return $mmApp.getDB().remove(mmCoreCurrentSiteStore, 1);
     }
 
     /**
@@ -686,7 +619,7 @@ angular.module('mm.core')
         }
         sessionRestored = true;
 
-        return db.get(mmCoreCurrentSiteStore, 1).then(function(current_site) {
+        return $mmApp.getDB().get(mmCoreCurrentSiteStore, 1).then(function(current_site) {
             var siteid = current_site.siteid;
             $log.debug('Restore session in site '+siteid);
             return self.loadSite(siteid);
@@ -711,7 +644,7 @@ angular.module('mm.core')
         return self.getSite(siteid).then(function(site) {
             site.token = token;
 
-            return db.insert(mmCoreSitesStore, {
+            return $mmApp.getDB().insert(mmCoreSitesStore, {
                 id: siteid,
                 siteurl: site.getURL(),
                 token: token,
@@ -733,13 +666,13 @@ angular.module('mm.core')
         return self.getSite(siteid).then(function(site) {
             return site.fetchSiteInfo().then(function(infos) {
                 site.setInfo(infos);
-                return db.insert(mmCoreSitesStore, {
+                return $mmApp.getDB().insert(mmCoreSitesStore, {
                     id: siteid,
                     siteurl: site.getURL(),
                     token: site.getToken(),
                     infos: infos
                 }).finally(function() {
-                    $mmEvents.trigger(mmCoreEventSiteUpdated);
+                    $mmEvents.trigger(mmCoreEventSiteUpdated, siteid);
                 });
             });
         });

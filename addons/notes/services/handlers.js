@@ -39,7 +39,7 @@ angular.module('mm.addons.notes')
         var self = {};
 
         self.isEnabled = function() {
-            return $mmaNotes.isPluginEnabled();
+            return $mmaNotes.isPluginAddNoteEnabled();
         };
 
         self.isEnabledForUser = function(user, courseId) {
@@ -73,20 +73,18 @@ angular.module('mm.addons.notes')
                 };
 
                 $scope.addNote = function(){
+                    var loadingModal = $mmUtil.showModalLoading('mm.core.sending', true);
                     // Freeze the add note button.
                     $scope.processing = true;
 
                     $mmaNotes.addNote(user.id, courseid, $scope.note.publishstate, $scope.note.text).then(function() {
-                        $translate('mma.notes.eventnotecreated').then(function(str) {
-                            $ionicLoading.show({
-                                template: str,
-                                duration: 2000
-                            });
-                        });
+                        $mmUtil.showModal('mm.core.success', 'mma.notes.eventnotecreated');
+                        $scope.closeModal();
                     }, function(error) {
                         $mmUtil.showErrorModal(error);
+                        $scope.processing = false;
                     }).finally(function() {
-                        $scope.closeModal();
+                        loadingModal.dismiss();
                     });
                 };
 
@@ -105,6 +103,67 @@ angular.module('mm.addons.notes')
                 };
             };
 
+        };
+
+        return self;
+    };
+
+    /**
+     * Course nav handler.
+     *
+     * @module mm.addons.notes
+     * @ngdoc method
+     * @name $mmaNotesHandlers#coursesNav
+     */
+    self.coursesNav = function() {
+
+        var self = {};
+
+        /**
+         * Check if handler is enabled.
+         *
+         * @return {Boolean} True if handler is enabled, false otherwise.
+         */
+        self.isEnabled = function() {
+            return $mmaNotes.isPluginViewNotesEnabled();
+        };
+
+        /**
+         * Check if handler is enabled for this course.
+         *
+         * @param {Number} courseId Course ID.
+         * @return {Boolean}        True if handler is enabled, false otherwise.
+         */
+        self.isEnabledForCourse = function(courseId) {
+            return true;
+        };
+
+        /**
+         * Get the controller.
+         *
+         * @param {Number} courseId Course ID.
+         * @return {Object}         Controller.
+         */
+        self.getController = function(courseId) {
+
+            /**
+             * Courses nav handler controller.
+             *
+             * @module mm.addons.notes
+             * @ngdoc controller
+             * @name $mmaNotesHandlers#coursesNav:controller
+             */
+            return function($scope, $state) {
+                $scope.icon = 'ion-ios-list';
+                $scope.title = 'mma.notes.notes';
+                $scope.action = function($event, course) {
+                    $event.preventDefault();
+                    $event.stopPropagation();
+                    $state.go('site.notes-types', {
+                        course: course
+                    });
+                };
+            };
         };
 
         return self;

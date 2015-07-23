@@ -23,7 +23,7 @@ angular.module('mm.core.login', [])
         abstract: true,
         templateUrl: 'core/components/login/templates/base.html',
         cache: false,   // Disable caching to force controller reload.
-        onEnter: function($ionicHistory, $state, $mmSitesManager, $mmSite) {
+        onEnter: function($ionicHistory) {
             // Ensure that there is no history stack when getting here.
             $ionicHistory.clearHistory();
         }
@@ -51,14 +51,7 @@ angular.module('mm.core.login', [])
     .state('mm_login.site', {
         url: '/site',
         templateUrl: 'core/components/login/templates/site.html',
-        controller: 'mmLoginSiteCtrl',
-        onEnter: function($ionicNavBarDelegate, $ionicHistory, $mmSitesManager) {
-            // Don't show back button if there are no sites.
-            $mmSitesManager.hasNoSites().then(function() {
-                $ionicNavBarDelegate.showBackButton(false);
-                $ionicHistory.clearHistory();
-            });
-        }
+        controller: 'mmLoginSiteCtrl'
     })
 
     .state('mm_login.credentials', {
@@ -83,12 +76,13 @@ angular.module('mm.core.login', [])
         cache: false,
         params: {
             siteurl: '',
-            username: ''
+            username: '',
+            infositeurl: ''
         }
     });
 
     // Default redirect to the login page.
-    $urlRouterProvider.otherwise(function($injector, $location) {
+    $urlRouterProvider.otherwise(function($injector) {
         var $state = $injector.get('$state');
         return $state.href('mm_login.init').replace('#', '');
     });
@@ -136,16 +130,14 @@ angular.module('mm.core.login', [])
     });
 
     // Function to handle session expired events.
-    function sessionExpired(data) {
+    function sessionExpired(siteid) {
 
         var siteurl = $mmSite.getURL();
 
         if (typeof(siteurl) !== 'undefined') {
 
-            if (typeof data != 'undefined') {
-                if (data.siteid !== $mmSite.getId()) {
-                    return; // Site that triggered the event is not current site.
-                }
+            if (siteid && siteid !== $mmSite.getId()) {
+                return; // Site that triggered the event is not current site.
             }
 
             // Check authentication method.
@@ -158,7 +150,7 @@ angular.module('mm.core.login', [])
                 } else {
                     var info = $mmSite.getInfo();
                     if (typeof(info) !== 'undefined' && typeof(info.username) !== 'undefined') {
-                        $state.go('mm_login.reconnect', {siteurl: siteurl, username: info.username});
+                        $state.go('mm_login.reconnect', {siteurl: siteurl, username: info.username, infositeurl: info.siteurl});
                     }
                 }
             });

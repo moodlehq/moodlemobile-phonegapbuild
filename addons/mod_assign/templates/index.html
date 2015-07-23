@@ -12,7 +12,7 @@
                 <h2>{{ 'mma.mod_assign.allowsubmissionsfromdate' | translate }}</h2>
                 <p>{{ assign.allowsubmissionsfromdate * 1000 | date:'medium' }}</p>
             </div>
-            <div class="item item-text-wrap">
+            <div class="item item-text-wrap" ng-if="assign.duedate">
                 <h2>{{ 'mma.mod_assign.duedate' | translate }}</h2>
                 <p ng-if="assign.duedate" >{{ assign.duedate * 1000 | date:'medium' }}</p>
                 <p ng-if="!assign.duedate" >{{ 'mma.mod_assign.duedateno' | translate }}</p>
@@ -25,7 +25,7 @@
                 <div class="item item-divider">{{ 'mma.mod_assign.submissions' | translate }}</div>
                 <div ng-repeat="submission in submissions track by $index">
                     <div class="item item-divider" ng-if="$index > 0"></div>
-                    <a class="item item-avatar" ui-sref="{{getUserProfileStateName()}}({courseid: courseid, userid: submission.userid})">
+                    <a class="item item-avatar" ui-sref="{{getUserProfileStateName()}}({courseid: courseid, userid: submission.userid})" title="{{submission.userfullname}}">
                         <img ng-src="{{submission.userprofileimageurl}}" mm-external-content>
                         <p>{{submission.userfullname}}</p>
                         <div class="item-note">{{submission.status}}</div>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div ng-if="!canviewsubmissions">
+            <div ng-if="assign && !canviewsubmissions">
                 <a class="button button-block" ng-href="{{assignurl}}" mm-browser>{{ 'mma.mod_assign.addsubmission' | translate }}</a>
             </div>
         </mm-loading>

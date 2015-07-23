@@ -15,6 +15,7 @@
 angular.module('mm.addons.notifications', [])
 
 .constant('mmaNotificationsListLimit', 20) // Max of notifications to retrieve in each WS call.
+.value('mmaNotificationsPriority', 800)
 
 .config(function($stateProvider) {
 
@@ -32,7 +33,8 @@ angular.module('mm.addons.notifications', [])
 
 })
 
-.run(function($log, $mmSideMenuDelegate, $mmaNotifications, $mmPushNotificationsDelegate, $mmUtil, $state, $injector) {
+.run(function($log, $mmSideMenuDelegate, $mmaNotifications, $mmPushNotificationsDelegate, $mmUtil, $state, $mmAddonManager,
+            mmaNotificationsPriority) {
     $log = $log.getInstance('mmaNotifications');
 
     $mmSideMenuDelegate.registerPlugin('mmaNotifications', function() {
@@ -43,12 +45,11 @@ angular.module('mm.addons.notifications', [])
                 title: 'mma.notifications.notifications'
             };
         }
-    });
+    }, mmaNotificationsPriority);
 
     // Register push notification clicks.
-    try {
-        // Use injector because the delegate belongs to an addon, so it might not exist.
-        var $mmPushNotificationsDelegate = $injector.get('$mmPushNotificationsDelegate');
+    var $mmPushNotificationsDelegate = $mmAddonManager.get('$mmPushNotificationsDelegate');
+    if ($mmPushNotificationsDelegate) {
         $mmPushNotificationsDelegate.registerHandler('mmaNotifications', function(notification) {
             if ($mmUtil.isTrueOrOne(notification.notif)) {
                 $mmaNotifications.isPluginEnabledForSite(notification.site).then(function() {
@@ -59,7 +60,5 @@ angular.module('mm.addons.notifications', [])
                 return true;
             }
         });
-    } catch(ex) {
-        $log.error('Cannot register push notifications handler: delegate not found');
     }
 });
