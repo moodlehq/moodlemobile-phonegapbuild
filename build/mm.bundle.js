@@ -3600,7 +3600,6 @@ angular.module('mm.core')
             getState(scope, siteid, fileurl, timemodified);
             return localUrl;
         }, function() {
-            $mmUtil.showErrorModal('mm.core.errordownloading', true);
             return getState(scope, siteid, fileurl, timemodified).then(function() {
                 if (scope.isDownloaded) {
                     return localUrl;
@@ -5612,7 +5611,7 @@ angular.module('mm.core.user')
             var handlers = [],
                 promises = [];
             angular.forEach(enabledProfileHandlers, function(handler) {
-                var promise = $q.when(handler.instance.isEnabledForUser(user.id, courseId));
+                var promise = $q.when(handler.instance.isEnabledForUser(user, courseId));
                 promise.then(function(enabled) {
                     if (enabled) {
                         handlers.push({
@@ -6598,6 +6597,7 @@ angular.module('mm.addons.calendar')
             } else {
                 $mmUtil.showErrorModal('mma.calendar.errorloadevents', true);
             }
+            $scope.eventsLoaded = true;
         });
     }
     initVars();
@@ -7922,14 +7922,17 @@ angular.module('mm.addons.messages')
                 var obsShow,
                     obsHide,
                     keyboardHeight,
-                    maxInitialScroll = scrollView.getScrollView().__contentHeight - scrollView.getScrollView().__clientHeight;
+                    maxInitialScroll = scrollView.getScrollView().__contentHeight - scrollView.getScrollView().__clientHeight,
+                    initialHeight = $window.innerHeight;
                 obsShow = $mmEvents.on(mmCoreEventKeyboardShow, function(e) {
-                    var heightDifference = $window.outerHeight - $window.innerHeight,
-                        newKeyboardHeight = heightDifference > 50 ? heightDifference : e.keyboardHeight;
-                    if (newKeyboardHeight) {
-                        keyboardHeight = newKeyboardHeight;
-                        scrollView.scrollBy(0, newKeyboardHeight);
-                    }
+                    $timeout(function() {
+                        var heightDifference = initialHeight - $window.innerHeight,
+                            newKeyboardHeight = heightDifference > 50 ? heightDifference : e.keyboardHeight;
+                        if (newKeyboardHeight) {
+                            keyboardHeight = newKeyboardHeight;
+                            scrollView.scrollBy(0, newKeyboardHeight);
+                        }
+                    });
                 });
                 obsHide = $mmEvents.on(mmCoreEventKeyboardHide, function(e) {
                     if (scrollView.getScrollPosition().top >= maxInitialScroll) {
@@ -9140,8 +9143,8 @@ angular.module('mm.addons.mod_book')
 });
 
 angular.module('mm.addons.mod_chat')
-.controller('mmaModChatChatCtrl', function($scope, $stateParams, $mmApp, $mmaModChat, $log, $ionicModal, $mmUtil,
-                                            $ionicScrollDelegate, $timeout, $mmSite, $interval, mmaChatPollInterval) {
+.controller('mmaModChatChatCtrl', function($scope, $stateParams, $mmApp, $mmaModChat, $log, $ionicModal, $mmUtil, $ionicHistory,
+            $ionicScrollDelegate, $timeout, $mmSite, $interval, mmaChatPollInterval) {
     $log = $log.getInstance('mmaModChatChatCtrl');
     var chatId = $stateParams.chatid,
         courseId = $stateParams.courseid,
@@ -9171,6 +9174,8 @@ angular.module('mm.addons.mod_chat')
         $scope.modal.show();
         $mmaModChat.getChatUsers($scope.chatsid).then(function(data) {
             $scope.chatUsers = data.users;
+        }).catch(showError)
+        .finally(function() {
             $scope.usersLoaded = true;
         });
     };
@@ -9185,6 +9190,13 @@ angular.module('mm.addons.mod_chat')
     $scope.isAppOffline = function() {
         return !$mmApp.isOnline();
     };
+    function showError(error) {
+        if (typeof error === 'string') {
+            $mmUtil.showErrorModal(error);
+        } else {
+            $mmUtil.showErrorModal(defaultMessage, 'mm.core.error');
+        }
+    }
     $scope.showDate = function(message, prevMessage) {
         if (!prevMessage) {
             return true;
@@ -9217,11 +9229,7 @@ angular.module('mm.addons.mod_chat')
                 $scope.newMessage.text = '';
             }
         }, function(error) {
-            if (typeof error === 'string') {
-                $mmUtil.showErrorModal(error);
-            } else {
-                $mmUtil.showErrorModal('mm.core.error', true);
-            }
+            showError(error);
         });
     };
     $mmaModChat.loginUser(chatId).then(function(data) {
@@ -9231,13 +9239,10 @@ angular.module('mm.addons.mod_chat')
             return $mmaModChat.getMessagesUserData(messagesInfo.messages, courseId).then(function(messages) {
                 $scope.messages = $scope.messages.concat(messages);
             });
-        });
-    }).catch(function(error) {
-        if (typeof error === 'string') {
-            $mmUtil.showErrorModal(error);
-        } else {
-            $mmUtil.showErrorModal('mm.core.error', true);
-        }
+        }).catch(showError);
+    }, function(error) {
+        showError(error);
+        $ionicHistory.goBack();
     }).finally(function() {
         $scope.loaded = true;
     });
@@ -9265,11 +9270,7 @@ angular.module('mm.addons.mod_chat')
                 });
             }, function(error) {
                 $interval.cancel(polling);
-                if (typeof error === 'string') {
-                    $mmUtil.showErrorModal(error);
-                } else {
-                    $mmUtil.showErrorModal('mm.core.error', true);
-                }
+                showError(error);
             });
         }, mmaChatPollInterval);
     });
@@ -9525,15 +9526,15 @@ angular.module('mm.addons.mod_choice')
         }
         var modal = $mmUtil.showModalLoading('mm.core.sending', true);
         $mmaModChoice.submitResponse(choice.id, responses).then(function() {
-            refreshAllData().finally(function() {
-                modal.dismiss();
-            });
+            return refreshAllData();
         }).catch(function(message) {
             if (message) {
                 $mmUtil.showErrorModal(message);
             } else {
                 $mmUtil.showErrorModal('mma.mod_choice.cannotsubmit', true);
             }
+        }).finally(function() {
+            modal.dismiss();
         });
     };
     $scope.refreshChoice = function() {
