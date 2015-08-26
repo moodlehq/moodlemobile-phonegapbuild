@@ -3,15 +3,15 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.moodle.moodlemobile"
-        versionCode = "2000"
-        version   = "2.0">
-    <name>Moodle Mobile</name>
+        versionCode = "2001"
+        version   = "2.2">
+    <name>netroshd app</name>
 
     <description>
-        Moodle Mobile official app
+        netroshd official app
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
+    <author href="lms.netroshd.ir" email="taheri.mojtaba@yahoo.com">
         Moodle Pty Ltd
     </author>
 
@@ -118,7 +118,7 @@
     <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
 
     <gap:config-file platform="android" parent="/manifest">
-         <application android:debuggable="true" />
+         <application android:debuggable="false" />
     </gap:config-file>
 
     <!-- See MOBILE-892 -->
