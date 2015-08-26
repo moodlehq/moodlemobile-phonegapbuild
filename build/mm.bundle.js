@@ -1727,7 +1727,7 @@ angular.module('mm.core')
         function getCode(store, id) {
         var db = $mmApp.getDB();
         return db.get(store, id).then(function(entry) {
-            return entry.code;
+            return parseInt(entry.code);
         }, function() {
             return db.query(store, undefined, 'code', true).then(function(entries) {
                 var newid = 0;
@@ -1750,7 +1750,8 @@ angular.module('mm.core')
         function getUniqueNotificationId(notificationid, component, siteid) {
         return getSiteCode(siteid).then(function(sitecode) {
             return getComponentCode(component).then(function(componentcode) {
-                return sitecode * 100000000 + componentcode * 10000000 + notificationid;
+                // We use the % operation to keep the number under Android's limit.
+                return (sitecode * 100000000 + componentcode * 10000000 + parseInt(notificationid)) % 2147483647;
             });
         });
     }
@@ -3834,8 +3835,8 @@ angular.module('mm.core')
         priority: 500,
         compile: function(el, attrs) {
             attrs.$set('type',
-                null,               
-                false               
+                null,
+                false
             );
         }
     }
@@ -4089,7 +4090,7 @@ angular.module('mm.core.login', [])
         url: '/mm_login',
         abstract: true,
         templateUrl: 'core/components/login/templates/base.html',
-        cache: false,  
+        cache: false,
         onEnter: function($ionicHistory) {
             $ionicHistory.clearHistory();
         }
@@ -10942,7 +10943,7 @@ angular.module('mm.addons.mod_resource')
 .directive('mmaModResourceHtmlLink', function() {
     return {
         restrict: 'A',
-        priority: 99,  
+        priority: 99,
         link: function(scope, element, attrs) {
             element.on('click', function(event) {
                 var href = element[0].getAttribute('data-href');

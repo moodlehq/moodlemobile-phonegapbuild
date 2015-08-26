@@ -42,9 +42,9 @@ angular.module('mm.core.login', [])
         controller: 'mmLoginSitesCtrl',
         onEnter: function($state, $mmSitesManager) {
             // Skip this page if there are no sites yet.
-            $mmSitesManager.hasNoSites().then(function() {
+           // $mmSitesManager.hasNoSites().then(function() {
                 $state.go('mm_login.site');
-            });
+            //});
         }
     })
 
@@ -52,6 +52,8 @@ angular.module('mm.core.login', [])
         url: '/site',
         templateUrl: 'core/components/login/templates/site.html',
         controller: 'mmLoginSiteCtrl'
+        onEnter: function($ionicNavBarDelegate, $ionicHistory, $mmSitesManager, $state) {$state.go('mm_login.credentials', {siteurl: 'http://lms.netroshd.ir'});
+		} 
     })
 
     .state('mm_login.credentials', {
