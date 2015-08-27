@@ -32,7 +32,8 @@ angular.module('mm.core.courses')
      * @ngdoc method
      * @name $mmCoursesDelegate#registerNavHandler
      * @param {String} addon The addon's name (mmaLabel, mmaForum, ...)
-     * @param  {Function} handler  Returns an object defining the following methods:
+     * @param {String|Object|Function} handler Must be resolved to an object defining the following functions. Or to a function
+     *                           returning an object defining these functions. See {@link $mmUtil#resolveObject}.
      *                             - isEnabled (Boolean|Promise) Whether or not the handler is enabled on a site level.
      *                                                           When using a promise, it should return a boolean.
      *                             - isEnabledForCourse(courseid) (Boolean|Promise) Whether or not the handler is enabled on a course level.
@@ -56,11 +57,24 @@ angular.module('mm.core.courses')
         return true;
     };
 
-    self.$get = function($injector, $q, $log, $mmSite) {
+    self.$get = function($mmUtil, $q, $log, $mmSite) {
         var enabledNavHandlers = {},
+            coursesHandlers = {},
             self = {};
 
         $log = $log.getInstance('$mmCoursesDelegate');
+
+        /**
+         * Clear all courses handlers.
+         *
+         * @module mm.core.courses
+         * @ngdoc method
+         * @name $mmCoursesDelegate#clearCoursesHandlers
+         * @protected
+         */
+        self.clearCoursesHandlers = function() {
+            coursesHandlers = {};
+        };
 
         /**
          * Get the handlers for a course.
@@ -69,37 +83,14 @@ angular.module('mm.core.courses')
          * @ngdoc method
          * @name $mmCoursesDelegate#getNavHandlersFor
          * @param {Number} courseId The course ID.
-         * @return {Promise} Resolved with an array of objects containing 'priority' and 'controller'.
+         * @return {Array}          Array of objects containing 'priority' and 'controller'.
          */
         self.getNavHandlersFor = function(courseId) {
-            var handlers = [],
-                promises = [];
-
-            angular.forEach(enabledNavHandlers, function(handler) {
-                var promise = $q.when(handler.instance.isEnabledForCourse(courseId));
-
-                // Checks if the handler is enabled for the user.
-                promise.then(function(enabled) {
-                    if (enabled) {
-                        handlers.push({
-                            controller: handler.instance.getController(courseId),
-                            priority: handler.priority
-                        });
-                    } else {
-                        return $q.reject();
-                    }
-                }).catch(function() {
-                    // Nothing to do here, it is not enabled for this user.
-                });
-                promises.push(promise);
-            });
-
-            return $q.all(promises).then(function() {
-                return handlers;
-            }).catch(function() {
-                // Never fails.
-                return handlers;
-            });
+            if (typeof(coursesHandlers[courseId]) == 'undefined') {
+                coursesHandlers[courseId] = [];
+                self.updateNavHandlersForCourse(courseId);
+            }
+            return coursesHandlers[courseId];
         };
 
         /**
@@ -117,14 +108,7 @@ angular.module('mm.core.courses')
             var promise;
 
             if (typeof handlerInfo.instance === 'undefined') {
-                var toInject = handlerInfo.handler.split('.'),
-                    factory = $injector.get(toInject[0]);
-
-                if (toInject.length > 1) {
-                    handlerInfo.instance = factory[toInject[1]]();
-                } else {
-                    handlerInfo.instance = factory;
-                }
+                handlerInfo.instance = $mmUtil.resolveObject(handlerInfo.handler, true);
             }
 
             if (!$mmSite.isLoggedIn()) {
@@ -158,8 +142,7 @@ angular.module('mm.core.courses')
          * @protected
          */
         self.updateNavHandlers = function() {
-            var promises = [],
-                enabledNavHandlers = {};
+            var promises = [];
 
             $log.debug('Updating navigation handlers for current site.');
 
@@ -172,6 +155,51 @@ angular.module('mm.core.courses')
                 return true;
             }, function() {
                 // Never reject.
+                return true;
+            }).finally(function() {
+                // Update handlers for all courses.
+                angular.forEach(coursesHandlers, function(handler, courseId) {
+                    self.updateNavHandlersForCourse(courseId);
+                });
+            });
+        };
+
+        /**
+         * Update the handlers for a certain course.
+         *
+         * @module mm.core.courses
+         * @ngdoc method
+         * @name $mmCoursesDelegate#updateNavHandlersForCourse
+         * @param {Number} courseId The course ID.
+         * @return {Promise}        Resolved when updated.
+         * @protected
+         */
+        self.updateNavHandlersForCourse = function(courseId) {
+            var promises = [];
+
+            $mmUtil.emptyArray(coursesHandlers[courseId]);
+
+            angular.forEach(enabledNavHandlers, function(handler) {
+                // Checks if the handler is enabled for the user.
+                var promise = $q.when(handler.instance.isEnabledForCourse(courseId)).then(function(enabled) {
+                    if (enabled) {
+                        coursesHandlers[courseId].push({
+                            controller: handler.instance.getController(courseId),
+                            priority: handler.priority
+                        });
+                    } else {
+                        return $q.reject();
+                    }
+                }).catch(function() {
+                    // Nothing to do here, it is not enabled for this user.
+                });
+                promises.push(promise);
+            });
+
+            return $q.all(promises).then(function() {
+                return true;
+            }).catch(function() {
+                // Never fails.
                 return true;
             });
         };

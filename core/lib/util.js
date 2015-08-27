@@ -64,12 +64,11 @@ angular.module('mm.core')
         return query.length ? query.substr(0, query.length - 1) : query;
     };
 
-    this.$get = function($ionicLoading, $ionicPopup, $translate, $http, $log, $q, $mmLang, $mmFS) {
+    this.$get = function($ionicLoading, $ionicPopup, $injector, $translate, $http, $log, $q, $mmLang, $mmFS, $timeout) {
 
         $log = $log.getInstance('$mmUtil');
 
-        var self = {}, // Use 'self' to be coherent with the rest of services.
-            countries;
+        var self = {}; // Use 'self' to be coherent with the rest of services.
 
         // // Loading all the mimetypes.
         var mimeTypes = {};
@@ -106,6 +105,56 @@ angular.module('mm.core')
             url = url.replace(/\/$/, "");
 
             return url;
+        };
+
+        /**
+         * Resolves an object.
+         *
+         * @description
+         * This is used to resolve what a callback should be when attached to a delegate.
+         * For instance, if the object attached is a function, it is returned as is, but
+         * we also support complex definition of objects. If we receive a string we will parse
+         * it and to inject its service using $injector from Angular.
+         *
+         * Examples:
+         * - (Function): returns the same function.
+         * - (Object): returns the same object.
+         * - '$mmSomething': Injects and returns $mmSomething.
+         * - '$mmSomething.method': Injectes and returns a reference to the function 'method'.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#resolveObject
+         * @param  {Mixed} object String, object or function.
+         * @param  {Boolean} [instantiate=false] When true, if the object resolved is a function, instantiates it.
+         * @return {Object} The reference to the object resolved.
+         */
+        self.resolveObject = function(object, instantiate) {
+            var toInject,
+                resolved;
+
+            instantiate = angular.isUndefined(instantiate) ? false : instantiate;
+
+            if (angular.isFunction(object) || angular.isObject(object)) {
+                resolved = object;
+
+            } else if (angular.isString(object)) {
+                toInject = object.split('.');
+                resolved = $injector.get(toInject[0]);
+
+                if (toInject.length > 1) {
+                    resolved = resolved[toInject[1]];
+                }
+            }
+
+            if (angular.isFunction(resolved) && instantiate) {
+                resolved = resolved();
+            }
+
+            if (typeof resolved === 'undefined') {
+                throw new Error('Unexpected argument passed passed');
+            }
+            return resolved;
         };
 
         /**
@@ -398,8 +447,10 @@ angular.module('mm.core')
          * @name $mmUtil#showErrorModal
          * @param {String} errorMessage    Message to show.
          * @param {Boolean} needsTranslate True if the errorMessage is a $translate key, false otherwise.
+         * @param {Number} [autocloseTime] Number of milliseconds to wait to close the modal.
+         *                                 If not defined, modal won't be automatically closed.
          */
-        self.showErrorModal = function(errorMessage, needsTranslate) {
+        self.showErrorModal = function(errorMessage, needsTranslate, autocloseTime) {
             var errorKey = 'mm.core.error',
                 langKeys = [errorKey];
 
@@ -408,10 +459,18 @@ angular.module('mm.core')
             }
 
             $translate(langKeys).then(function(translations) {
-                $ionicPopup.alert({
+                var popup = $ionicPopup.alert({
                     title: translations[errorKey],
                     template: needsTranslate ? translations[errorMessage] : errorMessage
                 });
+
+                if (typeof autocloseTime != 'undefined' && !isNaN(parseInt(autocloseTime))) {
+                    $timeout(function() {
+                        popup.close();
+                    }, parseInt(autocloseTime));
+                } else {
+                    delete popup;
+                }
             });
         };
 
@@ -471,28 +530,19 @@ angular.module('mm.core')
         };
 
         /**
-         * Get the countries list.
+         * Get country name based on country code.
          *
          * @module mm.core
          * @ngdoc method
-         * @name $mmUtil#getCountries
-         * @return {Promise} Promise to be resolved when the list is retrieved.
+         * @name $mmUtil#getCountryName
+         * @param {String} code Country code (AF, ES, US, ...).
+         * @return {String}     Country name. If the country is not found, return the country code.
          */
-        self.getCountries = function() {
-            var deferred = $q.defer();
+        self.getCountryName = function(code) {
+            var countryKey = 'mm.core.country-' + code,
+                countryName = $translate.instant(countryKey);
 
-            if (typeof(countries) !== 'undefined') {
-                deferred.resolve(countries);
-            } else {
-                self.readJSONFile('core/assets/countries.json').then(function(data) {
-                    countries = data;
-                    deferred.resolve(countries);
-                }, function(){
-                    deferred.resolve();
-                });
-            }
-
-            return deferred.promise;
+            return countryName !== countryKey ? countryName : code;
         };
 
         /**
@@ -630,8 +680,20 @@ angular.module('mm.core')
                 if (secs) {
                     return osecs;
                 }
-                return translations('mm.core.now');
+                return translations['mm.core.now'];
             });
+        };
+
+        /**
+         * Empties an array without losing its reference.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#emptyArray
+         * @param  {Array} array Array to empty.
+         */
+        self.emptyArray = function(array) {
+            array.length = 0; // Empty array without losing its reference.
         };
 
         return self;

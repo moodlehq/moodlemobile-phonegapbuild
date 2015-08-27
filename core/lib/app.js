@@ -90,11 +90,11 @@ angular.module('mm.core')
         return exists;
     }
 
-    this.$get = function($mmDB, $cordovaNetwork, $q, $log) {
+    this.$get = function($mmDB, $cordovaNetwork, $log, $injector, $ionicPlatform) {
 
         $log = $log.getInstance('$mmApp');
 
-        var db = $mmDB.getDB(DBNAME, dbschema, dboptions),
+        var db,
             self = {};
 
         /**
@@ -116,6 +116,10 @@ angular.module('mm.core')
          * @return {Object} App's DB.
          */
         self.getDB = function() {
+            if (typeof db == 'undefined') {
+                db = $mmDB.getDB(DBNAME, dbschema, dboptions);
+            }
+
             return db;
         };
 
@@ -128,6 +132,29 @@ angular.module('mm.core')
          */
         self.getSchema = function() {
             return dbschema;
+        };
+
+        /**
+         * Core init process for the app.
+         *
+         * @description
+         * This should be the first init process of all, no other process should run until we
+         * are certain that the cordova plugins are loaded, which is what $ionicPlatform tells us.
+         * There should not be any logic acting on the database here as the upgrade is
+         * another process and has not run yet at this point.
+         *
+         * Keep this fast.
+         *
+         * Reserved for core use, do not call directly.
+         *
+         * @module mm.core
+         * @ngdoc service
+         * @name $mmApp#initProcess
+         * @protected
+         * @return {Promise}
+         */
+        self.initProcess = function() {
+            return $ionicPlatform.ready();
         };
 
         /**
@@ -164,6 +191,43 @@ angular.module('mm.core')
             var type = $cordovaNetwork.getNetwork();
             var limited = [Connection.CELL_2G, Connection.CELL_3G, Connection.CELL_4G, Connection.CELL];
             return limited.indexOf(type) > -1;
+        };
+
+        /**
+         * Instantly returns if the app is ready.
+         *
+         * To be notified when the app is ready, refer to {@link $mmApp#ready}.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmApp#ready
+         * @return {Boolean} True when it is, false when not.
+         */
+        self.isReady = function() {
+            var promise = $injector.get('$mmInitDelegate').ready();
+            return promise.$$state.status === 1;
+        };
+
+        /**
+         * Resolves when the app is ready.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmApp#ready
+         * @description
+         * This returns a promise that is resolved when the app is initialised.
+         *
+         * Usage:
+         *
+         *    $mmApp.ready().then(function() {
+         *        // What you want to do.
+         *    });
+         *
+         * @return {Promise} Resolved when the app is initialised. Never rejected.
+         */
+        self.ready = function() {
+            // Injects to prevent circular dependencies.
+            return $injector.get('$mmInitDelegate').ready();
         };
 
         return self;

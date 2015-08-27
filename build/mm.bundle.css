@@ -2247,7 +2247,7 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, .item .item-heading, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -2685,12 +2685,8 @@ ion-infinite-scroll {
     color: #666666;
     font-size: 30px;
     color: #666666; }
-  ion-infinite-scroll .icon:before, ion-infinite-scroll .spinner {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
   ion-infinite-scroll:not(.active) .spinner, ion-infinite-scroll:not(.active) .icon:before {
-    -webkit-transform: translate3d(-1000px, 0, 0);
-    transform: translate3d(-1000px, 0, 0); }
+    display: none; }
 
 .overflow-scroll {
   overflow-x: hidden;
@@ -2786,21 +2782,21 @@ cite {
 .text-center {
   text-align: center; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, .item .item-heading, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #000;
   font-weight: 500;
   font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
-  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+  h1 small, h2 small, .item .item-heading small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
     font-weight: normal;
     line-height: 1; }
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1, .h1, h2, .item .item-heading, .h2, h3, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
-  h1:first-child, .h1:first-child, h2:first-child, .h2:first-child, h3:first-child, .h3:first-child {
+  h1:first-child, .h1:first-child, h2:first-child, .item .item-heading:first-child, .h2:first-child, h3:first-child, .h3:first-child {
     margin-top: 0; }
-  h1 + h1, h1 + .h1, h1 + h2, h1 + .h2, h1 + h3, h1 + .h3, .h1 + h1, .h1 + .h1, .h1 + h2, .h1 + .h2, .h1 + h3, .h1 + .h3, h2 + h1, h2 + .h1, h2 + h2, h2 + .h2, h2 + h3, h2 + .h3, .h2 + h1, .h2 + .h1, .h2 + h2, .h2 + .h2, .h2 + h3, .h2 + .h3, h3 + h1, h3 + .h1, h3 + h2, h3 + .h2, h3 + h3, h3 + .h3, .h3 + h1, .h3 + .h1, .h3 + h2, .h3 + .h2, .h3 + h3, .h3 + .h3 {
+  h1 + h1, h1 + .h1, h1 + h2, .item h1 + .item-heading, h1 + .h2, h1 + h3, h1 + .h3, .h1 + h1, .h1 + .h1, .h1 + h2, .item .h1 + .item-heading, .h1 + .h2, .h1 + h3, .h1 + .h3, h2 + h1, .item .item-heading + h1, h2 + .h1, .item .item-heading + .h1, h2 + h2, .item .item-heading + h2, .item h2 + .item-heading, .item .item-heading + .item-heading, h2 + .h2, .item .item-heading + .h2, h2 + h3, .item .item-heading + h3, h2 + .h3, .item .item-heading + .h3, .h2 + h1, .h2 + .h1, .h2 + h2, .item .h2 + .item-heading, .h2 + .h2, .h2 + h3, .h2 + .h3, h3 + h1, h3 + .h1, h3 + h2, .item h3 + .item-heading, h3 + .h2, h3 + h3, h3 + .h3, .h3 + h1, .h3 + .h1, .h3 + h2, .item .h3 + .item-heading, .h3 + .h2, .h3 + h3, .h3 + .h3 {
     margin-top: 10px; }
 
 h4, .h4, h5, .h5, h6, .h6 {
@@ -2810,7 +2806,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 h1, .h1 {
   font-size: 36px; }
 
-h2, .h2 {
+h2, .item .item-heading, .h2 {
   font-size: 30px; }
 
 h3, .h3 {
@@ -2828,7 +2824,7 @@ h6, .h6 {
 h1 small, .h1 small {
   font-size: 24px; }
 
-h2 small, .h2 small {
+h2 small, .item .item-heading small, .h2 small {
   font-size: 18px; }
 
 h3 small, .h3 small, h4 small, .h4 small {
@@ -3033,6 +3029,8 @@ a.subdued {
   right: 0;
   left: 0;
   z-index: 9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px;
   width: 100%;
@@ -4098,6 +4096,13 @@ ion-tabs.tabs-color-active-dark .tab-item {
       -ms-transition: color .2s ease;
       -o-transition: color .2s ease;
       transition: color .2s ease; }
+  .tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active .tab-title, .tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.tab-item-active i, .tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.active .tab-title, .tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.active i, .tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.activated .tab-title, .tabs-top.tabs-striped:not(.tabs-icon-left):not(.tabs-icon-top) .tab-item.activated i {
+    display: block;
+    margin-top: -1px; }
+  .tabs-top.tabs-striped.tabs-icon-left .tab-item {
+    margin-top: 1px; }
+    .tabs-top.tabs-striped.tabs-icon-left .tab-item.tab-item-active .tab-title, .tabs-top.tabs-striped.tabs-icon-left .tab-item.tab-item-active i, .tabs-top.tabs-striped.tabs-icon-left .tab-item.active .tab-title, .tabs-top.tabs-striped.tabs-icon-left .tab-item.active i, .tabs-top.tabs-striped.tabs-icon-left .tab-item.activated .tab-title, .tabs-top.tabs-striped.tabs-icon-left .tab-item.activated i {
+      margin-top: -0.1em; }
 
 /* Allow parent element to have tabs-top */
 /* If you change this, change platform.scss as well */
@@ -4153,11 +4158,11 @@ ion-tabs.tabs-color-active-dark .tab-item {
 
 .tabs-icon-left.tabs .tab-item, .tabs-icon-left > .tabs .tab-item, .tabs-icon-right.tabs .tab-item, .tabs-icon-right > .tabs .tab-item {
   font-size: 10px; }
-  .tabs-icon-left.tabs .tab-item .icon, .tabs-icon-left > .tabs .tab-item .icon, .tabs-icon-right.tabs .tab-item .icon, .tabs-icon-right > .tabs .tab-item .icon {
+  .tabs-icon-left.tabs .tab-item .icon, .tabs-icon-left.tabs .tab-item .tab-title, .tabs-icon-left > .tabs .tab-item .icon, .tabs-icon-left > .tabs .tab-item .tab-title, .tabs-icon-right.tabs .tab-item .icon, .tabs-icon-right.tabs .tab-item .tab-title, .tabs-icon-right > .tabs .tab-item .icon, .tabs-icon-right > .tabs .tab-item .tab-title {
     display: inline-block;
     vertical-align: top;
     margin-top: -.1em; }
-    .tabs-icon-left.tabs .tab-item .icon:before, .tabs-icon-left > .tabs .tab-item .icon:before, .tabs-icon-right.tabs .tab-item .icon:before, .tabs-icon-right > .tabs .tab-item .icon:before {
+    .tabs-icon-left.tabs .tab-item .icon:before, .tabs-icon-left.tabs .tab-item .tab-title:before, .tabs-icon-left > .tabs .tab-item .icon:before, .tabs-icon-left > .tabs .tab-item .tab-title:before, .tabs-icon-right.tabs .tab-item .icon:before, .tabs-icon-right.tabs .tab-item .tab-title:before, .tabs-icon-right > .tabs .tab-item .icon:before, .tabs-icon-right > .tabs .tab-item .tab-title:before {
       font-size: 24px;
       line-height: 49px; }
 
@@ -4611,7 +4616,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   transition: 0.2s opacity linear;
   visibility: hidden;
   opacity: 0; }
-  .loading-container:not(.visible) .icon {
+  .loading-container:not(.visible) .icon, .loading-container:not(.visible) .spinner {
     display: none; }
   .loading-container.visible {
     visibility: visible; }
@@ -4625,7 +4630,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     text-align: center;
     text-overflow: ellipsis;
     font-size: 15px; }
-    .loading-container .loading h1, .loading-container .loading h2, .loading-container .loading h3, .loading-container .loading h4, .loading-container .loading h5, .loading-container .loading h6 {
+    .loading-container .loading h1, .loading-container .loading h2, .loading-container .loading .item .item-heading, .item .loading-container .loading .item-heading, .loading-container .loading h3, .loading-container .loading h4, .loading-container .loading h5, .loading-container .loading h6 {
       color: #fff; }
 
 /**
@@ -4644,7 +4649,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   border-width: 1px;
   border-style: solid;
   font-size: 16px; }
-  .item h2 {
+  .item h2, .item .item-heading {
     margin: 0 0 2px 0;
     font-size: 16px;
     font-weight: normal; }
@@ -4661,7 +4666,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     color: #666;
     font-size: 14px;
     margin-bottom: 2px; }
-  .item h1:last-child, .item h2:last-child, .item h3:last-child, .item h4:last-child, .item h5:last-child, .item h6:last-child, .item p:last-child {
+  .item h1:last-child, .item h2:last-child, .item .item-heading:last-child, .item h3:last-child, .item h4:last-child, .item h5:last-child, .item h6:last-child, .item p:last-child {
     margin-bottom: 0; }
   .item .badge, .item .mma-messages-date span, .mma-messages-date .item span, .item .mma-chat-notice span, .mma-chat-notice .item span {
     display: -webkit-box;
@@ -4752,7 +4757,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     border-color: #000;
     background-color: #262626; }
 
-.item, .item h1, .item h2, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+.item, .item h1, .item h2, .item .item-heading, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content .item .item-heading, .item .item-content .item-heading, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -4780,18 +4785,18 @@ a.item {
   z-index: 2;
   padding: 16px 49px 16px 16px;
   border: none;
-  background-color: white; }
+  background-color: #fff; }
 
 a.item-content {
   display: block;
   color: inherit;
   text-decoration: none; }
 
-.item-text-wrap .item, .item-text-wrap .item-content, .item-text-wrap, .item-text-wrap h1, .item-text-wrap h2, .item-text-wrap h3, .item-text-wrap h4, .item-text-wrap h5, .item-text-wrap h6, .item-text-wrap p, .item-complex.item-text-wrap .item-content, .item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
+.item-text-wrap .item, .item-text-wrap .item-content, .item-text-wrap, .item-text-wrap h1, .item-text-wrap h2, .item-text-wrap .item .item-heading, .item .item-text-wrap .item-heading, .item-text-wrap h3, .item-text-wrap h4, .item-text-wrap h5, .item-text-wrap h6, .item-text-wrap p, .item-complex.item-text-wrap .item-content, .item-body h1, .item-body h2, .item-body .item .item-heading, .item .item-body .item-heading, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
   overflow: visible;
   white-space: normal; }
 
-.item-complex.item-text-wrap, .item-complex.item-text-wrap h1, .item-complex.item-text-wrap h2, .item-complex.item-text-wrap h3, .item-complex.item-text-wrap h4, .item-complex.item-text-wrap h5, .item-complex.item-text-wrap h6, .item-complex.item-text-wrap p {
+.item-complex.item-text-wrap, .item-complex.item-text-wrap h1, .item-complex.item-text-wrap h2, .item-complex.item-text-wrap .item .item-heading, .item .item-complex.item-text-wrap .item-heading, .item-complex.item-text-wrap h3, .item-complex.item-text-wrap h4, .item-complex.item-text-wrap h5, .item-complex.item-text-wrap h6, .item-complex.item-text-wrap p {
   overflow: visible;
   white-space: normal; }
 
@@ -5069,7 +5074,7 @@ a.item-content {
   padding: 16px;
   text-overflow: inherit;
   white-space: normal; }
-  .item-body h1, .item-body h2, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
+  .item-body h1, .item-body h2, .item-body .item .item-heading, .item .item-body .item-heading, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
     margin-top: 16px;
     margin-bottom: 16px; }
 
@@ -6976,6 +6981,9 @@ a.button {
     border-right-width: 1px;
     border-radius: 0px 2px 2px 0px; }
 
+.button-bar > .button-small:before, .button-bar > .button-small .icon:before {
+  line-height: 28px; }
+
 /**
  * Grid
  * --------------------------------------------------
@@ -7517,6 +7525,16 @@ a.button {
   top: 113px; }
 .platform-ios.platform-cordova:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
   top: 157px; }
+.platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) {
+  height: 44px; }
+  .platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
+    margin-top: -1px; }
+  .platform-ios.platform-cordova .popover .bar-header:not(.bar-subheader) > * {
+    margin-top: 0; }
+.platform-ios.platform-cordova .popover .has-header, .platform-ios.platform-cordova .popover .bar-subheader {
+  top: 44px; }
+.platform-ios.platform-cordova .popover .has-subheader {
+  top: 88px; }
 .platform-ios.platform-cordova.status-bar-hide {
   margin-bottom: 20px; }
 
@@ -7884,7 +7902,7 @@ em {
     border: none; }
   .bar-side-menu .item-avatar, .bar-side-menu .item-media {
     margin-top: 0px !important; }
-    .bar-side-menu .item-avatar h2, .bar-side-menu .item-media h2, .bar-side-menu .item-avatar p, .bar-side-menu .item-media p {
+    .bar-side-menu .item-avatar h2, .bar-side-menu .item-media h2, .bar-side-menu .item-avatar .item .item-heading, .item .bar-side-menu .item-avatar .item-heading, .bar-side-menu .item-media .item .item-heading, .item .bar-side-menu .item-media .item-heading, .bar-side-menu .item-avatar p, .bar-side-menu .item-media p {
       color: #fff; }
 
 .has-side-menu-header {

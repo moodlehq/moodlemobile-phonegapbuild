@@ -24,6 +24,7 @@ angular.module('mm.core')
 .constant('mmCoreEventSiteUpdated', 'site_updated')
 .constant('mmCoreEventQueueEmpty', 'filepool_queue_empty')
 .constant('mmCoreEventCompletionModuleViewed', 'completion_module_viewed')
+.constant('mmCoreEventUserDeleted', 'user_deleted')
 
 /**
  * Service to send and listen to events.
@@ -62,7 +63,11 @@ angular.module('mm.core')
         // We don't need to store the observer because the event won't be triggered again.
         if (uniqueEvents[eventName]) {
             callBack(uniqueEventsData[eventName]);
-            return;
+            // Return a fake observer to prevent errors.
+            return {
+                id: -1,
+                off: function() {}
+            };
         }
 
         var observerID;

@@ -1,7 +1,7 @@
 {
   "name": "ionic",
-  "version": "1.0.0",
-  "codename": "uranium-unicorn",
+  "version": "1.0.1",
+  "codename": "vanadium-vaquita",
   "homepage": "https://github.com/driftyco/ionic",
   "authors": [
     "Max Lynch <max@drifty.com>",
@@ -34,13 +34,13 @@
     "angular-sanitize": "1.3.13",
     "angular-ui-router": "0.2.13"
   },
-  "_release": "1.0.0",
+  "_release": "1.0.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.0.0",
-    "commit": "3ea71d863e53b7a8d3d75a2757386fd7124b0653"
+    "tag": "v1.0.1",
+    "commit": "160898db160981d52c4606aef22b2f064b6c2539"
   },
   "_source": "git://github.com/driftyco/ionic-bower.git",
-  "_target": "v1.0.0",
+  "_target": "v1.0.1",
   "_originalSource": "driftyco/ionic-bower"
 }
