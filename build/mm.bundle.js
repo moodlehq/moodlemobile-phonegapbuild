@@ -7918,7 +7918,9 @@ angular.module('mm.addons.frontpage')
         var self = {};
                 self.isEnabled = function() {
             if ($mmaFrontpage.isPluginEnabled()) {
-                return $mmaFrontpage.isPluginEnabled();
+                return $mmaFrontpage.isFrontpageAvailable().then(function() {
+                    return true;
+                });
             }
             return false;
         };
@@ -8843,10 +8845,27 @@ angular.module('mm.addons.messages')
                             });
                         }
                     });
-                    storeUsersFromDiscussions(discussions);
-                    return discussions;
+                    return self.getDiscussionsUserImg(discussions).then(function(discussions) {
+                        storeUsersFromDiscussions(discussions);
+                        return discussions;
+                    });
                 });
             });
+        });
+    };
+        self.getDiscussionsUserImg = function(discussions) {
+        var promises = [];
+        angular.forEach(discussions, function(discussion) {
+            if (!discussion.profileimageurl) {
+                var promise = $mmUser.getProfile(discussion.message.user, 1, true).then(function(user) {
+                    discussion.profileimageurl = user.profileimageurl;
+                }, function() {
+                });
+                promises.push(promise);
+            }
+        });
+        return $q.all(promises).then(function() {
+            return discussions;
         });
     };
         self._getMessages = function(params, presets) {
@@ -10529,11 +10548,12 @@ angular.module('mm.addons.mod_forum')
 }]);
 
 angular.module('mm.addons.mod_imscp')
-.controller('mmaModImscpIndexCtrl', ["$scope", "$stateParams", "$mmUtil", "$mmaModImscp", "$log", "mmaModImscpComponent", "$ionicPopover", "$mmFS", "$q", "$mmCourse", "$mmApp", function($scope, $stateParams, $mmUtil, $mmaModImscp, $log, mmaModImscpComponent,
-            $ionicPopover, $mmFS, $q, $mmCourse, $mmApp) {
+.controller('mmaModImscpIndexCtrl', ["$scope", "$stateParams", "$mmUtil", "$mmaModImscp", "$log", "mmaModImscpComponent", "$ionicPopover", "$timeout", "$q", "$mmCourse", "$mmApp", function($scope, $stateParams, $mmUtil, $mmaModImscp, $log, mmaModImscpComponent,
+            $ionicPopover, $timeout, $q, $mmCourse, $mmApp) {
     $log = $log.getInstance('mmaModImscpIndexCtrl');
     var module = $stateParams.module || {},
-        courseid = $stateParams.courseid;
+        courseid = $stateParams.courseid,
+        currentItem;
     $scope.title = module.name;
     $scope.description = module.description;
     $scope.component = mmaModImscpComponent;
@@ -10541,16 +10561,29 @@ angular.module('mm.addons.mod_imscp')
     $scope.externalUrl = module.url;
     $scope.loaded = false;
     $scope.items = $mmaModImscp.createItemList(module.contents);
-    $scope.previousItem = '';
-    $scope.nextItem = $mmaModImscp.getNextItem($scope.items, $scope.items[0].href);
+    currentItem = $scope.items[0].href;
+    function loadItem(itemId) {
+        currentItem = itemId;
+        $scope.previousItem = $mmaModImscp.getPreviousItem($scope.items, itemId);
+        $scope.nextItem = $mmaModImscp.getNextItem($scope.items, itemId);
+        var src = $mmaModImscp.getFileSrc(module, itemId);
+        if (src === $scope.src) {
+            $scope.src = '';
+            $timeout(function() {
+                $scope.src = src;
+            });
+        } else {
+            $scope.src = src;
+        }
+    }
     function fetchContent() {
         if (module.contents) {
             var downloadFailed = false;
-            return $mmaModImscp.downloadAllContent(module).catch(function(err) {
+            return $mmaModImscp.downloadAllContent(module).catch(function() {
                 downloadFailed = true;
             }).finally(function() {
-                return $mmaModImscp.getIframeSrc(module).then(function(src) {
-                    $scope.src = src;
+                return $mmaModImscp.getIframeSrc(module).then(function() {
+                    loadItem(currentItem);
                     if (downloadFailed && $mmApp.isOnline()) {
                         $mmUtil.showErrorModal('mm.core.errordownloadingsomefiles', true);
                     }
@@ -10570,14 +10603,12 @@ angular.module('mm.addons.mod_imscp')
         $mmaModImscp.invalidateContent(module.id).then(function() {
             return fetchContent();
         }).finally(function() {
-            $scope.loaded = true;
+            $scope.$broadcast('scroll.refreshComplete');
         });
     };
     $scope.loadItem = function(itemId) {
         $scope.popover.hide();
-        $scope.src = $mmaModImscp.getFileSrc(module, itemId);
-        $scope.previousItem = $mmaModImscp.getPreviousItem($scope.items, itemId);
-        $scope.nextItem = $mmaModImscp.getNextItem($scope.items, itemId);
+        loadItem(itemId);
     };
     $scope.getNumberForPadding = function(n) {
         return new Array(n);
@@ -12253,7 +12284,7 @@ angular.module('mm.addons.notifications')
     };
         self.isPluginEnabledForSite = function(siteid) {
         return $mmSitesManager.getSite(siteid).then(function(site) {
-            if (!$mmSite.wsAvailable('core_message_get_messages')) {
+            if (!site.wsAvailable('core_message_get_messages')) {
                 return $q.reject();
             }
         });
