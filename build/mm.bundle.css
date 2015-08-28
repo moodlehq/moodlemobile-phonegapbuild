@@ -3506,7 +3506,7 @@ a.subdued {
   border-top-width: 1px;
   background-size: 0;
   line-height: 49px; }
-  .tabs .tab-item .badge, .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs .tab-item span, .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs .tab-item span {
+  .tabs .tab-item .badge, .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs .tab-item span, .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs .tab-item span {
     background-color: #444;
     color: #f8f8f8; }
   @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -3524,7 +3524,7 @@ a.subdued {
   background-color: #fff;
   background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
   color: #444; }
-  .tabs-light > .tabs .tab-item .badge, .tabs-light > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-light > .tabs .tab-item span, .tabs-light > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-light > .tabs .tab-item span, .tabs.tabs-light .tab-item .badge, .tabs.tabs-light .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-light .tab-item span, .tabs.tabs-light .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-light .tab-item span {
+  .tabs-light > .tabs .tab-item .badge, .tabs-light > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-light > .tabs .tab-item span, .tabs-light > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-light > .tabs .tab-item span, .tabs.tabs-light .tab-item .badge, .tabs.tabs-light .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-light .tab-item span, .tabs.tabs-light .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-light .tab-item span {
     background-color: #444;
     color: #fff; }
 
@@ -3533,7 +3533,7 @@ a.subdued {
   background-color: #f8f8f8;
   background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
   color: #444; }
-  .tabs-stable > .tabs .tab-item .badge, .tabs-stable > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-stable > .tabs .tab-item span, .tabs-stable > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-stable > .tabs .tab-item span, .tabs.tabs-stable .tab-item .badge, .tabs.tabs-stable .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-stable .tab-item span, .tabs.tabs-stable .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-stable .tab-item span {
+  .tabs-stable > .tabs .tab-item .badge, .tabs-stable > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-stable > .tabs .tab-item span, .tabs-stable > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-stable > .tabs .tab-item span, .tabs.tabs-stable .tab-item .badge, .tabs.tabs-stable .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-stable .tab-item span, .tabs.tabs-stable .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-stable .tab-item span {
     background-color: #444;
     color: #f8f8f8; }
 
@@ -3542,7 +3542,7 @@ a.subdued {
   background-color: #387ef5;
   background-image: linear-gradient(0deg, #0c60ee, #0c60ee 50%, transparent 50%);
   color: #fff; }
-  .tabs-positive > .tabs .tab-item .badge, .tabs-positive > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-positive > .tabs .tab-item span, .tabs-positive > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-positive > .tabs .tab-item span, .tabs.tabs-positive .tab-item .badge, .tabs.tabs-positive .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-positive .tab-item span, .tabs.tabs-positive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-positive .tab-item span {
+  .tabs-positive > .tabs .tab-item .badge, .tabs-positive > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-positive > .tabs .tab-item span, .tabs-positive > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-positive > .tabs .tab-item span, .tabs.tabs-positive .tab-item .badge, .tabs.tabs-positive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-positive .tab-item span, .tabs.tabs-positive .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-positive .tab-item span {
     background-color: #fff;
     color: #387ef5; }
 
@@ -3551,7 +3551,7 @@ a.subdued {
   background-color: #11c1f3;
   background-image: linear-gradient(0deg, #0a9dc7, #0a9dc7 50%, transparent 50%);
   color: #fff; }
-  .tabs-calm > .tabs .tab-item .badge, .tabs-calm > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-calm > .tabs .tab-item span, .tabs-calm > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-calm > .tabs .tab-item span, .tabs.tabs-calm .tab-item .badge, .tabs.tabs-calm .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-calm .tab-item span, .tabs.tabs-calm .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-calm .tab-item span {
+  .tabs-calm > .tabs .tab-item .badge, .tabs-calm > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-calm > .tabs .tab-item span, .tabs-calm > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-calm > .tabs .tab-item span, .tabs.tabs-calm .tab-item .badge, .tabs.tabs-calm .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-calm .tab-item span, .tabs.tabs-calm .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-calm .tab-item span {
     background-color: #fff;
     color: #11c1f3; }
 
@@ -3560,7 +3560,7 @@ a.subdued {
   background-color: #ef473a;
   background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);
   color: #fff; }
-  .tabs-assertive > .tabs .tab-item .badge, .tabs-assertive > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-assertive > .tabs .tab-item span, .tabs-assertive > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-assertive > .tabs .tab-item span, .tabs.tabs-assertive .tab-item .badge, .tabs.tabs-assertive .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-assertive .tab-item span, .tabs.tabs-assertive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-assertive .tab-item span {
+  .tabs-assertive > .tabs .tab-item .badge, .tabs-assertive > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-assertive > .tabs .tab-item span, .tabs-assertive > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-assertive > .tabs .tab-item span, .tabs.tabs-assertive .tab-item .badge, .tabs.tabs-assertive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-assertive .tab-item span, .tabs.tabs-assertive .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-assertive .tab-item span {
     background-color: #fff;
     color: #ef473a; }
 
@@ -3569,7 +3569,7 @@ a.subdued {
   background-color: #33cd5f;
   background-image: linear-gradient(0deg, #28a54c, #28a54c 50%, transparent 50%);
   color: #fff; }
-  .tabs-balanced > .tabs .tab-item .badge, .tabs-balanced > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-balanced > .tabs .tab-item span, .tabs-balanced > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-balanced > .tabs .tab-item span, .tabs.tabs-balanced .tab-item .badge, .tabs.tabs-balanced .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-balanced .tab-item span, .tabs.tabs-balanced .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-balanced .tab-item span {
+  .tabs-balanced > .tabs .tab-item .badge, .tabs-balanced > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-balanced > .tabs .tab-item span, .tabs-balanced > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-balanced > .tabs .tab-item span, .tabs.tabs-balanced .tab-item .badge, .tabs.tabs-balanced .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-balanced .tab-item span, .tabs.tabs-balanced .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-balanced .tab-item span {
     background-color: #fff;
     color: #33cd5f; }
 
@@ -3578,7 +3578,7 @@ a.subdued {
   background-color: #ffc900;
   background-image: linear-gradient(0deg, #e6b500, #e6b500 50%, transparent 50%);
   color: #fff; }
-  .tabs-energized > .tabs .tab-item .badge, .tabs-energized > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-energized > .tabs .tab-item span, .tabs-energized > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-energized > .tabs .tab-item span, .tabs.tabs-energized .tab-item .badge, .tabs.tabs-energized .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-energized .tab-item span, .tabs.tabs-energized .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-energized .tab-item span {
+  .tabs-energized > .tabs .tab-item .badge, .tabs-energized > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-energized > .tabs .tab-item span, .tabs-energized > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-energized > .tabs .tab-item span, .tabs.tabs-energized .tab-item .badge, .tabs.tabs-energized .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-energized .tab-item span, .tabs.tabs-energized .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-energized .tab-item span {
     background-color: #fff;
     color: #ffc900; }
 
@@ -3587,7 +3587,7 @@ a.subdued {
   background-color: #886aea;
   background-image: linear-gradient(0deg, #6b46e5, #6b46e5 50%, transparent 50%);
   color: #fff; }
-  .tabs-royal > .tabs .tab-item .badge, .tabs-royal > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-royal > .tabs .tab-item span, .tabs-royal > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-royal > .tabs .tab-item span, .tabs.tabs-royal .tab-item .badge, .tabs.tabs-royal .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-royal .tab-item span, .tabs.tabs-royal .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-royal .tab-item span {
+  .tabs-royal > .tabs .tab-item .badge, .tabs-royal > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-royal > .tabs .tab-item span, .tabs-royal > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-royal > .tabs .tab-item span, .tabs.tabs-royal .tab-item .badge, .tabs.tabs-royal .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-royal .tab-item span, .tabs.tabs-royal .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-royal .tab-item span {
     background-color: #fff;
     color: #886aea; }
 
@@ -3596,7 +3596,7 @@ a.subdued {
   background-color: #444;
   background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);
   color: #fff; }
-  .tabs-dark > .tabs .tab-item .badge, .tabs-dark > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-dark > .tabs .tab-item span, .tabs-dark > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-dark > .tabs .tab-item span, .tabs.tabs-dark .tab-item .badge, .tabs.tabs-dark .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-dark .tab-item span, .tabs.tabs-dark .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-dark .tab-item span {
+  .tabs-dark > .tabs .tab-item .badge, .tabs-dark > .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-dark > .tabs .tab-item span, .tabs-dark > .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs-dark > .tabs .tab-item span, .tabs.tabs-dark .tab-item .badge, .tabs.tabs-dark .tab-item .mma-chat-notice span, .mma-chat-notice .tabs.tabs-dark .tab-item span, .tabs.tabs-dark .tab-item .mma-messages-date span, .mma-messages-date .tabs.tabs-dark .tab-item span {
     background-color: #fff;
     color: #444; }
 
@@ -3611,7 +3611,7 @@ a.subdued {
   border-style: solid;
   border-width: 2px 0 0 0;
   border-color: #444; }
-  .tabs-striped .tab-item.tab-item-active .badge, .tabs-striped .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped .tab-item.tab-item-active span, .tabs-striped .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped .tab-item.tab-item-active span, .tabs-striped .tab-item.active .badge, .tabs-striped .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped .tab-item.active span, .tabs-striped .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped .tab-item.active span, .tabs-striped .tab-item.activated .badge, .tabs-striped .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped .tab-item.activated span, .tabs-striped .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped .tab-item.activated span {
+  .tabs-striped .tab-item.tab-item-active .badge, .tabs-striped .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped .tab-item.tab-item-active span, .tabs-striped .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped .tab-item.tab-item-active span, .tabs-striped .tab-item.active .badge, .tabs-striped .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped .tab-item.active span, .tabs-striped .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped .tab-item.active span, .tabs-striped .tab-item.activated .badge, .tabs-striped .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped .tab-item.activated span, .tabs-striped .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped .tab-item.activated span {
     top: 2px;
     opacity: 1; }
 .tabs-striped.tabs-light .tabs {
@@ -3619,7 +3619,7 @@ a.subdued {
 .tabs-striped.tabs-light .tab-item {
   color: rgba(68, 68, 68, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-light .tab-item .badge, .tabs-striped.tabs-light .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-light .tab-item span, .tabs-striped.tabs-light .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-light .tab-item span {
+  .tabs-striped.tabs-light .tab-item .badge, .tabs-striped.tabs-light .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-light .tab-item span, .tabs-striped.tabs-light .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-light .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-light .tab-item.tab-item-active, .tabs-striped.tabs-light .tab-item.active, .tabs-striped.tabs-light .tab-item.activated {
     margin-top: -2px;
@@ -3627,14 +3627,14 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #444; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-stable .tabs {
   background-color: #f8f8f8; }
 .tabs-striped.tabs-stable .tab-item {
   color: rgba(68, 68, 68, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-stable .tab-item .badge, .tabs-striped.tabs-stable .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-stable .tab-item span, .tabs-striped.tabs-stable .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-stable .tab-item span {
+  .tabs-striped.tabs-stable .tab-item .badge, .tabs-striped.tabs-stable .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-stable .tab-item span, .tabs-striped.tabs-stable .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-stable .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-stable .tab-item.tab-item-active, .tabs-striped.tabs-stable .tab-item.active, .tabs-striped.tabs-stable .tab-item.activated {
     margin-top: -2px;
@@ -3642,14 +3642,14 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #444; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-positive .tabs {
   background-color: #387ef5; }
 .tabs-striped.tabs-positive .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-positive .tab-item .badge, .tabs-striped.tabs-positive .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-positive .tab-item span, .tabs-striped.tabs-positive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-positive .tab-item span {
+  .tabs-striped.tabs-positive .tab-item .badge, .tabs-striped.tabs-positive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-positive .tab-item span, .tabs-striped.tabs-positive .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-positive .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-positive .tab-item.tab-item-active, .tabs-striped.tabs-positive .tab-item.active, .tabs-striped.tabs-positive .tab-item.activated {
     margin-top: -2px;
@@ -3657,14 +3657,14 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #fff; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-calm .tabs {
   background-color: #11c1f3; }
 .tabs-striped.tabs-calm .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-calm .tab-item .badge, .tabs-striped.tabs-calm .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-calm .tab-item span, .tabs-striped.tabs-calm .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-calm .tab-item span {
+  .tabs-striped.tabs-calm .tab-item .badge, .tabs-striped.tabs-calm .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-calm .tab-item span, .tabs-striped.tabs-calm .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-calm .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-calm .tab-item.tab-item-active, .tabs-striped.tabs-calm .tab-item.active, .tabs-striped.tabs-calm .tab-item.activated {
     margin-top: -2px;
@@ -3672,14 +3672,14 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #fff; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-assertive .tabs {
   background-color: #ef473a; }
 .tabs-striped.tabs-assertive .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-assertive .tab-item .badge, .tabs-striped.tabs-assertive .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-assertive .tab-item span, .tabs-striped.tabs-assertive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-assertive .tab-item span {
+  .tabs-striped.tabs-assertive .tab-item .badge, .tabs-striped.tabs-assertive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-assertive .tab-item span, .tabs-striped.tabs-assertive .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-assertive .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-assertive .tab-item.tab-item-active, .tabs-striped.tabs-assertive .tab-item.active, .tabs-striped.tabs-assertive .tab-item.activated {
     margin-top: -2px;
@@ -3687,14 +3687,14 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #fff; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-balanced .tabs {
   background-color: #33cd5f; }
 .tabs-striped.tabs-balanced .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-balanced .tab-item .badge, .tabs-striped.tabs-balanced .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-balanced .tab-item span, .tabs-striped.tabs-balanced .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-balanced .tab-item span {
+  .tabs-striped.tabs-balanced .tab-item .badge, .tabs-striped.tabs-balanced .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-balanced .tab-item span, .tabs-striped.tabs-balanced .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-balanced .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-balanced .tab-item.tab-item-active, .tabs-striped.tabs-balanced .tab-item.active, .tabs-striped.tabs-balanced .tab-item.activated {
     margin-top: -2px;
@@ -3702,14 +3702,14 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #fff; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-energized .tabs {
   background-color: #ffc900; }
 .tabs-striped.tabs-energized .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-energized .tab-item .badge, .tabs-striped.tabs-energized .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-energized .tab-item span, .tabs-striped.tabs-energized .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-energized .tab-item span {
+  .tabs-striped.tabs-energized .tab-item .badge, .tabs-striped.tabs-energized .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-energized .tab-item span, .tabs-striped.tabs-energized .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-energized .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-energized .tab-item.tab-item-active, .tabs-striped.tabs-energized .tab-item.active, .tabs-striped.tabs-energized .tab-item.activated {
     margin-top: -2px;
@@ -3717,14 +3717,14 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #fff; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-royal .tabs {
   background-color: #886aea; }
 .tabs-striped.tabs-royal .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-royal .tab-item .badge, .tabs-striped.tabs-royal .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-royal .tab-item span, .tabs-striped.tabs-royal .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-royal .tab-item span {
+  .tabs-striped.tabs-royal .tab-item .badge, .tabs-striped.tabs-royal .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-royal .tab-item span, .tabs-striped.tabs-royal .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-royal .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-royal .tab-item.tab-item-active, .tabs-striped.tabs-royal .tab-item.active, .tabs-striped.tabs-royal .tab-item.activated {
     margin-top: -2px;
@@ -3732,14 +3732,14 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #fff; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-dark .tabs {
   background-color: #444; }
 .tabs-striped.tabs-dark .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-dark .tab-item .badge, .tabs-striped.tabs-dark .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-dark .tab-item span, .tabs-striped.tabs-dark .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-dark .tab-item span {
+  .tabs-striped.tabs-dark .tab-item .badge, .tabs-striped.tabs-dark .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-dark .tab-item span, .tabs-striped.tabs-dark .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-dark .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-dark .tab-item.tab-item-active, .tabs-striped.tabs-dark .tab-item.active, .tabs-striped.tabs-dark .tab-item.activated {
     margin-top: -2px;
@@ -3747,7 +3747,7 @@ a.subdued {
     border-style: solid;
     border-width: 2px 0 0 0;
     border-color: #fff; }
-.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span {
+.tabs-striped.tabs-top .tab-item.tab-item-active .badge, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.tab-item-active span, .tabs-striped.tabs-top .tab-item.active .badge, .tabs-striped.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.active span, .tabs-striped.tabs-top .tab-item.activated .badge, .tabs-striped.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-top .tab-item.activated span, .tabs-striped.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-top .tab-item.activated span {
   top: 4%; }
 .tabs-striped.tabs-background-light .tabs {
   background-color: #fff;
@@ -3779,118 +3779,118 @@ a.subdued {
 .tabs-striped.tabs-color-light .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-light .tab-item .badge, .tabs-striped.tabs-color-light .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-light .tab-item span, .tabs-striped.tabs-color-light .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-light .tab-item span {
+  .tabs-striped.tabs-color-light .tab-item .badge, .tabs-striped.tabs-color-light .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-light .tab-item span, .tabs-striped.tabs-color-light .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-light .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-light .tab-item.tab-item-active, .tabs-striped.tabs-color-light .tab-item.active, .tabs-striped.tabs-color-light .tab-item.activated {
     margin-top: -2px;
     color: #fff;
     border: 0 solid #fff;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-light .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-light .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-light .tab-item.tab-item-active span, .tabs-striped.tabs-color-light .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-light .tab-item.tab-item-active span, .tabs-striped.tabs-color-light .tab-item.active .badge, .tabs-striped.tabs-color-light .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-light .tab-item.active span, .tabs-striped.tabs-color-light .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-light .tab-item.active span, .tabs-striped.tabs-color-light .tab-item.activated .badge, .tabs-striped.tabs-color-light .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-light .tab-item.activated span, .tabs-striped.tabs-color-light .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-light .tab-item.activated span {
+    .tabs-striped.tabs-color-light .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-light .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-light .tab-item.tab-item-active span, .tabs-striped.tabs-color-light .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-light .tab-item.tab-item-active span, .tabs-striped.tabs-color-light .tab-item.active .badge, .tabs-striped.tabs-color-light .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-light .tab-item.active span, .tabs-striped.tabs-color-light .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-light .tab-item.active span, .tabs-striped.tabs-color-light .tab-item.activated .badge, .tabs-striped.tabs-color-light .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-light .tab-item.activated span, .tabs-striped.tabs-color-light .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-light .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 .tabs-striped.tabs-color-stable .tab-item {
   color: rgba(248, 248, 248, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-stable .tab-item .badge, .tabs-striped.tabs-color-stable .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-stable .tab-item span, .tabs-striped.tabs-color-stable .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-stable .tab-item span {
+  .tabs-striped.tabs-color-stable .tab-item .badge, .tabs-striped.tabs-color-stable .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-stable .tab-item span, .tabs-striped.tabs-color-stable .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-stable .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-stable .tab-item.tab-item-active, .tabs-striped.tabs-color-stable .tab-item.active, .tabs-striped.tabs-color-stable .tab-item.activated {
     margin-top: -2px;
     color: #f8f8f8;
     border: 0 solid #f8f8f8;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-stable .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-stable .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-stable .tab-item.tab-item-active span, .tabs-striped.tabs-color-stable .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-stable .tab-item.tab-item-active span, .tabs-striped.tabs-color-stable .tab-item.active .badge, .tabs-striped.tabs-color-stable .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-stable .tab-item.active span, .tabs-striped.tabs-color-stable .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-stable .tab-item.active span, .tabs-striped.tabs-color-stable .tab-item.activated .badge, .tabs-striped.tabs-color-stable .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-stable .tab-item.activated span, .tabs-striped.tabs-color-stable .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-stable .tab-item.activated span {
+    .tabs-striped.tabs-color-stable .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-stable .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-stable .tab-item.tab-item-active span, .tabs-striped.tabs-color-stable .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-stable .tab-item.tab-item-active span, .tabs-striped.tabs-color-stable .tab-item.active .badge, .tabs-striped.tabs-color-stable .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-stable .tab-item.active span, .tabs-striped.tabs-color-stable .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-stable .tab-item.active span, .tabs-striped.tabs-color-stable .tab-item.activated .badge, .tabs-striped.tabs-color-stable .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-stable .tab-item.activated span, .tabs-striped.tabs-color-stable .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-stable .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 .tabs-striped.tabs-color-positive .tab-item {
   color: rgba(56, 126, 245, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-positive .tab-item .badge, .tabs-striped.tabs-color-positive .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-positive .tab-item span, .tabs-striped.tabs-color-positive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-positive .tab-item span {
+  .tabs-striped.tabs-color-positive .tab-item .badge, .tabs-striped.tabs-color-positive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-positive .tab-item span, .tabs-striped.tabs-color-positive .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-positive .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-positive .tab-item.tab-item-active, .tabs-striped.tabs-color-positive .tab-item.active, .tabs-striped.tabs-color-positive .tab-item.activated {
     margin-top: -2px;
     color: #387ef5;
     border: 0 solid #387ef5;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-positive .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-positive .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-positive .tab-item.tab-item-active span, .tabs-striped.tabs-color-positive .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-positive .tab-item.tab-item-active span, .tabs-striped.tabs-color-positive .tab-item.active .badge, .tabs-striped.tabs-color-positive .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-positive .tab-item.active span, .tabs-striped.tabs-color-positive .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-positive .tab-item.active span, .tabs-striped.tabs-color-positive .tab-item.activated .badge, .tabs-striped.tabs-color-positive .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-positive .tab-item.activated span, .tabs-striped.tabs-color-positive .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-positive .tab-item.activated span {
+    .tabs-striped.tabs-color-positive .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-positive .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-positive .tab-item.tab-item-active span, .tabs-striped.tabs-color-positive .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-positive .tab-item.tab-item-active span, .tabs-striped.tabs-color-positive .tab-item.active .badge, .tabs-striped.tabs-color-positive .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-positive .tab-item.active span, .tabs-striped.tabs-color-positive .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-positive .tab-item.active span, .tabs-striped.tabs-color-positive .tab-item.activated .badge, .tabs-striped.tabs-color-positive .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-positive .tab-item.activated span, .tabs-striped.tabs-color-positive .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-positive .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 .tabs-striped.tabs-color-calm .tab-item {
   color: rgba(17, 193, 243, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-calm .tab-item .badge, .tabs-striped.tabs-color-calm .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-calm .tab-item span, .tabs-striped.tabs-color-calm .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-calm .tab-item span {
+  .tabs-striped.tabs-color-calm .tab-item .badge, .tabs-striped.tabs-color-calm .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-calm .tab-item span, .tabs-striped.tabs-color-calm .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-calm .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-calm .tab-item.tab-item-active, .tabs-striped.tabs-color-calm .tab-item.active, .tabs-striped.tabs-color-calm .tab-item.activated {
     margin-top: -2px;
     color: #11c1f3;
     border: 0 solid #11c1f3;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-calm .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-calm .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-calm .tab-item.tab-item-active span, .tabs-striped.tabs-color-calm .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-calm .tab-item.tab-item-active span, .tabs-striped.tabs-color-calm .tab-item.active .badge, .tabs-striped.tabs-color-calm .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-calm .tab-item.active span, .tabs-striped.tabs-color-calm .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-calm .tab-item.active span, .tabs-striped.tabs-color-calm .tab-item.activated .badge, .tabs-striped.tabs-color-calm .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-calm .tab-item.activated span, .tabs-striped.tabs-color-calm .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-calm .tab-item.activated span {
+    .tabs-striped.tabs-color-calm .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-calm .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-calm .tab-item.tab-item-active span, .tabs-striped.tabs-color-calm .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-calm .tab-item.tab-item-active span, .tabs-striped.tabs-color-calm .tab-item.active .badge, .tabs-striped.tabs-color-calm .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-calm .tab-item.active span, .tabs-striped.tabs-color-calm .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-calm .tab-item.active span, .tabs-striped.tabs-color-calm .tab-item.activated .badge, .tabs-striped.tabs-color-calm .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-calm .tab-item.activated span, .tabs-striped.tabs-color-calm .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-calm .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 .tabs-striped.tabs-color-assertive .tab-item {
   color: rgba(239, 71, 58, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-assertive .tab-item .badge, .tabs-striped.tabs-color-assertive .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-assertive .tab-item span, .tabs-striped.tabs-color-assertive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-assertive .tab-item span {
+  .tabs-striped.tabs-color-assertive .tab-item .badge, .tabs-striped.tabs-color-assertive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-assertive .tab-item span, .tabs-striped.tabs-color-assertive .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-assertive .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-assertive .tab-item.tab-item-active, .tabs-striped.tabs-color-assertive .tab-item.active, .tabs-striped.tabs-color-assertive .tab-item.activated {
     margin-top: -2px;
     color: #ef473a;
     border: 0 solid #ef473a;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-assertive .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-assertive .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-assertive .tab-item.tab-item-active span, .tabs-striped.tabs-color-assertive .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-assertive .tab-item.tab-item-active span, .tabs-striped.tabs-color-assertive .tab-item.active .badge, .tabs-striped.tabs-color-assertive .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-assertive .tab-item.active span, .tabs-striped.tabs-color-assertive .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-assertive .tab-item.active span, .tabs-striped.tabs-color-assertive .tab-item.activated .badge, .tabs-striped.tabs-color-assertive .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-assertive .tab-item.activated span, .tabs-striped.tabs-color-assertive .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-assertive .tab-item.activated span {
+    .tabs-striped.tabs-color-assertive .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-assertive .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-assertive .tab-item.tab-item-active span, .tabs-striped.tabs-color-assertive .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-assertive .tab-item.tab-item-active span, .tabs-striped.tabs-color-assertive .tab-item.active .badge, .tabs-striped.tabs-color-assertive .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-assertive .tab-item.active span, .tabs-striped.tabs-color-assertive .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-assertive .tab-item.active span, .tabs-striped.tabs-color-assertive .tab-item.activated .badge, .tabs-striped.tabs-color-assertive .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-assertive .tab-item.activated span, .tabs-striped.tabs-color-assertive .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-assertive .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 .tabs-striped.tabs-color-balanced .tab-item {
   color: rgba(51, 205, 95, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-balanced .tab-item .badge, .tabs-striped.tabs-color-balanced .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-balanced .tab-item span, .tabs-striped.tabs-color-balanced .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-balanced .tab-item span {
+  .tabs-striped.tabs-color-balanced .tab-item .badge, .tabs-striped.tabs-color-balanced .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-balanced .tab-item span, .tabs-striped.tabs-color-balanced .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-balanced .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-balanced .tab-item.tab-item-active, .tabs-striped.tabs-color-balanced .tab-item.active, .tabs-striped.tabs-color-balanced .tab-item.activated {
     margin-top: -2px;
     color: #33cd5f;
     border: 0 solid #33cd5f;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-balanced .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-balanced .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-balanced .tab-item.tab-item-active span, .tabs-striped.tabs-color-balanced .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-balanced .tab-item.tab-item-active span, .tabs-striped.tabs-color-balanced .tab-item.active .badge, .tabs-striped.tabs-color-balanced .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-balanced .tab-item.active span, .tabs-striped.tabs-color-balanced .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-balanced .tab-item.active span, .tabs-striped.tabs-color-balanced .tab-item.activated .badge, .tabs-striped.tabs-color-balanced .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-balanced .tab-item.activated span, .tabs-striped.tabs-color-balanced .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-balanced .tab-item.activated span {
+    .tabs-striped.tabs-color-balanced .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-balanced .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-balanced .tab-item.tab-item-active span, .tabs-striped.tabs-color-balanced .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-balanced .tab-item.tab-item-active span, .tabs-striped.tabs-color-balanced .tab-item.active .badge, .tabs-striped.tabs-color-balanced .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-balanced .tab-item.active span, .tabs-striped.tabs-color-balanced .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-balanced .tab-item.active span, .tabs-striped.tabs-color-balanced .tab-item.activated .badge, .tabs-striped.tabs-color-balanced .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-balanced .tab-item.activated span, .tabs-striped.tabs-color-balanced .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-balanced .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 .tabs-striped.tabs-color-energized .tab-item {
   color: rgba(255, 201, 0, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-energized .tab-item .badge, .tabs-striped.tabs-color-energized .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-energized .tab-item span, .tabs-striped.tabs-color-energized .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-energized .tab-item span {
+  .tabs-striped.tabs-color-energized .tab-item .badge, .tabs-striped.tabs-color-energized .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-energized .tab-item span, .tabs-striped.tabs-color-energized .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-energized .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-energized .tab-item.tab-item-active, .tabs-striped.tabs-color-energized .tab-item.active, .tabs-striped.tabs-color-energized .tab-item.activated {
     margin-top: -2px;
     color: #ffc900;
     border: 0 solid #ffc900;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-energized .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-energized .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-energized .tab-item.tab-item-active span, .tabs-striped.tabs-color-energized .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-energized .tab-item.tab-item-active span, .tabs-striped.tabs-color-energized .tab-item.active .badge, .tabs-striped.tabs-color-energized .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-energized .tab-item.active span, .tabs-striped.tabs-color-energized .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-energized .tab-item.active span, .tabs-striped.tabs-color-energized .tab-item.activated .badge, .tabs-striped.tabs-color-energized .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-energized .tab-item.activated span, .tabs-striped.tabs-color-energized .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-energized .tab-item.activated span {
+    .tabs-striped.tabs-color-energized .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-energized .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-energized .tab-item.tab-item-active span, .tabs-striped.tabs-color-energized .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-energized .tab-item.tab-item-active span, .tabs-striped.tabs-color-energized .tab-item.active .badge, .tabs-striped.tabs-color-energized .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-energized .tab-item.active span, .tabs-striped.tabs-color-energized .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-energized .tab-item.active span, .tabs-striped.tabs-color-energized .tab-item.activated .badge, .tabs-striped.tabs-color-energized .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-energized .tab-item.activated span, .tabs-striped.tabs-color-energized .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-energized .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 .tabs-striped.tabs-color-royal .tab-item {
   color: rgba(136, 106, 234, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-royal .tab-item .badge, .tabs-striped.tabs-color-royal .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-royal .tab-item span, .tabs-striped.tabs-color-royal .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-royal .tab-item span {
+  .tabs-striped.tabs-color-royal .tab-item .badge, .tabs-striped.tabs-color-royal .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-royal .tab-item span, .tabs-striped.tabs-color-royal .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-royal .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-royal .tab-item.tab-item-active, .tabs-striped.tabs-color-royal .tab-item.active, .tabs-striped.tabs-color-royal .tab-item.activated {
     margin-top: -2px;
     color: #886aea;
     border: 0 solid #886aea;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-royal .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-royal .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-royal .tab-item.tab-item-active span, .tabs-striped.tabs-color-royal .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-royal .tab-item.tab-item-active span, .tabs-striped.tabs-color-royal .tab-item.active .badge, .tabs-striped.tabs-color-royal .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-royal .tab-item.active span, .tabs-striped.tabs-color-royal .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-royal .tab-item.active span, .tabs-striped.tabs-color-royal .tab-item.activated .badge, .tabs-striped.tabs-color-royal .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-royal .tab-item.activated span, .tabs-striped.tabs-color-royal .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-royal .tab-item.activated span {
+    .tabs-striped.tabs-color-royal .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-royal .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-royal .tab-item.tab-item-active span, .tabs-striped.tabs-color-royal .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-royal .tab-item.tab-item-active span, .tabs-striped.tabs-color-royal .tab-item.active .badge, .tabs-striped.tabs-color-royal .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-royal .tab-item.active span, .tabs-striped.tabs-color-royal .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-royal .tab-item.active span, .tabs-striped.tabs-color-royal .tab-item.activated .badge, .tabs-striped.tabs-color-royal .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-royal .tab-item.activated span, .tabs-striped.tabs-color-royal .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-royal .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 .tabs-striped.tabs-color-dark .tab-item {
   color: rgba(68, 68, 68, 0.4);
   opacity: 1; }
-  .tabs-striped.tabs-color-dark .tab-item .badge, .tabs-striped.tabs-color-dark .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-dark .tab-item span, .tabs-striped.tabs-color-dark .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-dark .tab-item span {
+  .tabs-striped.tabs-color-dark .tab-item .badge, .tabs-striped.tabs-color-dark .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-dark .tab-item span, .tabs-striped.tabs-color-dark .tab-item .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-dark .tab-item span {
     opacity: 0.4; }
   .tabs-striped.tabs-color-dark .tab-item.tab-item-active, .tabs-striped.tabs-color-dark .tab-item.active, .tabs-striped.tabs-color-dark .tab-item.activated {
     margin-top: -2px;
     color: #444;
     border: 0 solid #444;
     border-top-width: 2px; }
-    .tabs-striped.tabs-color-dark .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-dark .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-dark .tab-item.tab-item-active span, .tabs-striped.tabs-color-dark .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-dark .tab-item.tab-item-active span, .tabs-striped.tabs-color-dark .tab-item.active .badge, .tabs-striped.tabs-color-dark .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-dark .tab-item.active span, .tabs-striped.tabs-color-dark .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-dark .tab-item.active span, .tabs-striped.tabs-color-dark .tab-item.activated .badge, .tabs-striped.tabs-color-dark .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-dark .tab-item.activated span, .tabs-striped.tabs-color-dark .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-dark .tab-item.activated span {
+    .tabs-striped.tabs-color-dark .tab-item.tab-item-active .badge, .tabs-striped.tabs-color-dark .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-dark .tab-item.tab-item-active span, .tabs-striped.tabs-color-dark .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-dark .tab-item.tab-item-active span, .tabs-striped.tabs-color-dark .tab-item.active .badge, .tabs-striped.tabs-color-dark .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-dark .tab-item.active span, .tabs-striped.tabs-color-dark .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-dark .tab-item.active span, .tabs-striped.tabs-color-dark .tab-item.activated .badge, .tabs-striped.tabs-color-dark .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-striped.tabs-color-dark .tab-item.activated span, .tabs-striped.tabs-color-dark .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-striped.tabs-color-dark .tab-item.activated span {
       top: 2px;
       opacity: 1; }
 
@@ -3942,100 +3942,100 @@ a.subdued {
 .tabs-color-light .tab-item {
   color: rgba(255, 255, 255, 0.4);
   opacity: 1; }
-  .tabs-color-light .tab-item .badge, .tabs-color-light .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-light .tab-item span, .tabs-color-light .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-light .tab-item span {
+  .tabs-color-light .tab-item .badge, .tabs-color-light .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-light .tab-item span, .tabs-color-light .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-light .tab-item span {
     opacity: 0.4; }
   .tabs-color-light .tab-item.tab-item-active, .tabs-color-light .tab-item.active, .tabs-color-light .tab-item.activated {
     color: #fff;
     border: 0 solid #fff; }
-    .tabs-color-light .tab-item.tab-item-active .badge, .tabs-color-light .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-light .tab-item.tab-item-active span, .tabs-color-light .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-light .tab-item.tab-item-active span, .tabs-color-light .tab-item.active .badge, .tabs-color-light .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-light .tab-item.active span, .tabs-color-light .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-light .tab-item.active span, .tabs-color-light .tab-item.activated .badge, .tabs-color-light .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-light .tab-item.activated span, .tabs-color-light .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-light .tab-item.activated span {
+    .tabs-color-light .tab-item.tab-item-active .badge, .tabs-color-light .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-light .tab-item.tab-item-active span, .tabs-color-light .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-light .tab-item.tab-item-active span, .tabs-color-light .tab-item.active .badge, .tabs-color-light .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-light .tab-item.active span, .tabs-color-light .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-light .tab-item.active span, .tabs-color-light .tab-item.activated .badge, .tabs-color-light .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-light .tab-item.activated span, .tabs-color-light .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-light .tab-item.activated span {
       opacity: 1; }
 
 .tabs-color-stable .tab-item {
   color: rgba(248, 248, 248, 0.4);
   opacity: 1; }
-  .tabs-color-stable .tab-item .badge, .tabs-color-stable .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-stable .tab-item span, .tabs-color-stable .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-stable .tab-item span {
+  .tabs-color-stable .tab-item .badge, .tabs-color-stable .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-stable .tab-item span, .tabs-color-stable .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-stable .tab-item span {
     opacity: 0.4; }
   .tabs-color-stable .tab-item.tab-item-active, .tabs-color-stable .tab-item.active, .tabs-color-stable .tab-item.activated {
     color: #f8f8f8;
     border: 0 solid #f8f8f8; }
-    .tabs-color-stable .tab-item.tab-item-active .badge, .tabs-color-stable .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-stable .tab-item.tab-item-active span, .tabs-color-stable .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-stable .tab-item.tab-item-active span, .tabs-color-stable .tab-item.active .badge, .tabs-color-stable .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-stable .tab-item.active span, .tabs-color-stable .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-stable .tab-item.active span, .tabs-color-stable .tab-item.activated .badge, .tabs-color-stable .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-stable .tab-item.activated span, .tabs-color-stable .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-stable .tab-item.activated span {
+    .tabs-color-stable .tab-item.tab-item-active .badge, .tabs-color-stable .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-stable .tab-item.tab-item-active span, .tabs-color-stable .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-stable .tab-item.tab-item-active span, .tabs-color-stable .tab-item.active .badge, .tabs-color-stable .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-stable .tab-item.active span, .tabs-color-stable .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-stable .tab-item.active span, .tabs-color-stable .tab-item.activated .badge, .tabs-color-stable .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-stable .tab-item.activated span, .tabs-color-stable .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-stable .tab-item.activated span {
       opacity: 1; }
 
 .tabs-color-positive .tab-item {
   color: rgba(56, 126, 245, 0.4);
   opacity: 1; }
-  .tabs-color-positive .tab-item .badge, .tabs-color-positive .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-positive .tab-item span, .tabs-color-positive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-positive .tab-item span {
+  .tabs-color-positive .tab-item .badge, .tabs-color-positive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-positive .tab-item span, .tabs-color-positive .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-positive .tab-item span {
     opacity: 0.4; }
   .tabs-color-positive .tab-item.tab-item-active, .tabs-color-positive .tab-item.active, .tabs-color-positive .tab-item.activated {
     color: #387ef5;
     border: 0 solid #387ef5; }
-    .tabs-color-positive .tab-item.tab-item-active .badge, .tabs-color-positive .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-positive .tab-item.tab-item-active span, .tabs-color-positive .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-positive .tab-item.tab-item-active span, .tabs-color-positive .tab-item.active .badge, .tabs-color-positive .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-positive .tab-item.active span, .tabs-color-positive .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-positive .tab-item.active span, .tabs-color-positive .tab-item.activated .badge, .tabs-color-positive .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-positive .tab-item.activated span, .tabs-color-positive .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-positive .tab-item.activated span {
+    .tabs-color-positive .tab-item.tab-item-active .badge, .tabs-color-positive .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-positive .tab-item.tab-item-active span, .tabs-color-positive .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-positive .tab-item.tab-item-active span, .tabs-color-positive .tab-item.active .badge, .tabs-color-positive .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-positive .tab-item.active span, .tabs-color-positive .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-positive .tab-item.active span, .tabs-color-positive .tab-item.activated .badge, .tabs-color-positive .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-positive .tab-item.activated span, .tabs-color-positive .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-positive .tab-item.activated span {
       opacity: 1; }
 
 .tabs-color-calm .tab-item {
   color: rgba(17, 193, 243, 0.4);
   opacity: 1; }
-  .tabs-color-calm .tab-item .badge, .tabs-color-calm .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-calm .tab-item span, .tabs-color-calm .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-calm .tab-item span {
+  .tabs-color-calm .tab-item .badge, .tabs-color-calm .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-calm .tab-item span, .tabs-color-calm .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-calm .tab-item span {
     opacity: 0.4; }
   .tabs-color-calm .tab-item.tab-item-active, .tabs-color-calm .tab-item.active, .tabs-color-calm .tab-item.activated {
     color: #11c1f3;
     border: 0 solid #11c1f3; }
-    .tabs-color-calm .tab-item.tab-item-active .badge, .tabs-color-calm .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-calm .tab-item.tab-item-active span, .tabs-color-calm .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-calm .tab-item.tab-item-active span, .tabs-color-calm .tab-item.active .badge, .tabs-color-calm .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-calm .tab-item.active span, .tabs-color-calm .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-calm .tab-item.active span, .tabs-color-calm .tab-item.activated .badge, .tabs-color-calm .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-calm .tab-item.activated span, .tabs-color-calm .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-calm .tab-item.activated span {
+    .tabs-color-calm .tab-item.tab-item-active .badge, .tabs-color-calm .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-calm .tab-item.tab-item-active span, .tabs-color-calm .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-calm .tab-item.tab-item-active span, .tabs-color-calm .tab-item.active .badge, .tabs-color-calm .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-calm .tab-item.active span, .tabs-color-calm .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-calm .tab-item.active span, .tabs-color-calm .tab-item.activated .badge, .tabs-color-calm .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-calm .tab-item.activated span, .tabs-color-calm .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-calm .tab-item.activated span {
       opacity: 1; }
 
 .tabs-color-assertive .tab-item {
   color: rgba(239, 71, 58, 0.4);
   opacity: 1; }
-  .tabs-color-assertive .tab-item .badge, .tabs-color-assertive .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-assertive .tab-item span, .tabs-color-assertive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-assertive .tab-item span {
+  .tabs-color-assertive .tab-item .badge, .tabs-color-assertive .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-assertive .tab-item span, .tabs-color-assertive .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-assertive .tab-item span {
     opacity: 0.4; }
   .tabs-color-assertive .tab-item.tab-item-active, .tabs-color-assertive .tab-item.active, .tabs-color-assertive .tab-item.activated {
     color: #ef473a;
     border: 0 solid #ef473a; }
-    .tabs-color-assertive .tab-item.tab-item-active .badge, .tabs-color-assertive .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-assertive .tab-item.tab-item-active span, .tabs-color-assertive .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-assertive .tab-item.tab-item-active span, .tabs-color-assertive .tab-item.active .badge, .tabs-color-assertive .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-assertive .tab-item.active span, .tabs-color-assertive .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-assertive .tab-item.active span, .tabs-color-assertive .tab-item.activated .badge, .tabs-color-assertive .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-assertive .tab-item.activated span, .tabs-color-assertive .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-assertive .tab-item.activated span {
+    .tabs-color-assertive .tab-item.tab-item-active .badge, .tabs-color-assertive .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-assertive .tab-item.tab-item-active span, .tabs-color-assertive .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-assertive .tab-item.tab-item-active span, .tabs-color-assertive .tab-item.active .badge, .tabs-color-assertive .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-assertive .tab-item.active span, .tabs-color-assertive .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-assertive .tab-item.active span, .tabs-color-assertive .tab-item.activated .badge, .tabs-color-assertive .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-assertive .tab-item.activated span, .tabs-color-assertive .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-assertive .tab-item.activated span {
       opacity: 1; }
 
 .tabs-color-balanced .tab-item {
   color: rgba(51, 205, 95, 0.4);
   opacity: 1; }
-  .tabs-color-balanced .tab-item .badge, .tabs-color-balanced .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-balanced .tab-item span, .tabs-color-balanced .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-balanced .tab-item span {
+  .tabs-color-balanced .tab-item .badge, .tabs-color-balanced .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-balanced .tab-item span, .tabs-color-balanced .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-balanced .tab-item span {
     opacity: 0.4; }
   .tabs-color-balanced .tab-item.tab-item-active, .tabs-color-balanced .tab-item.active, .tabs-color-balanced .tab-item.activated {
     color: #33cd5f;
     border: 0 solid #33cd5f; }
-    .tabs-color-balanced .tab-item.tab-item-active .badge, .tabs-color-balanced .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-balanced .tab-item.tab-item-active span, .tabs-color-balanced .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-balanced .tab-item.tab-item-active span, .tabs-color-balanced .tab-item.active .badge, .tabs-color-balanced .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-balanced .tab-item.active span, .tabs-color-balanced .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-balanced .tab-item.active span, .tabs-color-balanced .tab-item.activated .badge, .tabs-color-balanced .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-balanced .tab-item.activated span, .tabs-color-balanced .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-balanced .tab-item.activated span {
+    .tabs-color-balanced .tab-item.tab-item-active .badge, .tabs-color-balanced .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-balanced .tab-item.tab-item-active span, .tabs-color-balanced .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-balanced .tab-item.tab-item-active span, .tabs-color-balanced .tab-item.active .badge, .tabs-color-balanced .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-balanced .tab-item.active span, .tabs-color-balanced .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-balanced .tab-item.active span, .tabs-color-balanced .tab-item.activated .badge, .tabs-color-balanced .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-balanced .tab-item.activated span, .tabs-color-balanced .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-balanced .tab-item.activated span {
       opacity: 1; }
 
 .tabs-color-energized .tab-item {
   color: rgba(255, 201, 0, 0.4);
   opacity: 1; }
-  .tabs-color-energized .tab-item .badge, .tabs-color-energized .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-energized .tab-item span, .tabs-color-energized .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-energized .tab-item span {
+  .tabs-color-energized .tab-item .badge, .tabs-color-energized .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-energized .tab-item span, .tabs-color-energized .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-energized .tab-item span {
     opacity: 0.4; }
   .tabs-color-energized .tab-item.tab-item-active, .tabs-color-energized .tab-item.active, .tabs-color-energized .tab-item.activated {
     color: #ffc900;
     border: 0 solid #ffc900; }
-    .tabs-color-energized .tab-item.tab-item-active .badge, .tabs-color-energized .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-energized .tab-item.tab-item-active span, .tabs-color-energized .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-energized .tab-item.tab-item-active span, .tabs-color-energized .tab-item.active .badge, .tabs-color-energized .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-energized .tab-item.active span, .tabs-color-energized .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-energized .tab-item.active span, .tabs-color-energized .tab-item.activated .badge, .tabs-color-energized .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-energized .tab-item.activated span, .tabs-color-energized .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-energized .tab-item.activated span {
+    .tabs-color-energized .tab-item.tab-item-active .badge, .tabs-color-energized .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-energized .tab-item.tab-item-active span, .tabs-color-energized .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-energized .tab-item.tab-item-active span, .tabs-color-energized .tab-item.active .badge, .tabs-color-energized .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-energized .tab-item.active span, .tabs-color-energized .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-energized .tab-item.active span, .tabs-color-energized .tab-item.activated .badge, .tabs-color-energized .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-energized .tab-item.activated span, .tabs-color-energized .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-energized .tab-item.activated span {
       opacity: 1; }
 
 .tabs-color-royal .tab-item {
   color: rgba(136, 106, 234, 0.4);
   opacity: 1; }
-  .tabs-color-royal .tab-item .badge, .tabs-color-royal .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-royal .tab-item span, .tabs-color-royal .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-royal .tab-item span {
+  .tabs-color-royal .tab-item .badge, .tabs-color-royal .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-royal .tab-item span, .tabs-color-royal .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-royal .tab-item span {
     opacity: 0.4; }
   .tabs-color-royal .tab-item.tab-item-active, .tabs-color-royal .tab-item.active, .tabs-color-royal .tab-item.activated {
     color: #886aea;
     border: 0 solid #886aea; }
-    .tabs-color-royal .tab-item.tab-item-active .badge, .tabs-color-royal .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-royal .tab-item.tab-item-active span, .tabs-color-royal .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-royal .tab-item.tab-item-active span, .tabs-color-royal .tab-item.active .badge, .tabs-color-royal .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-royal .tab-item.active span, .tabs-color-royal .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-royal .tab-item.active span, .tabs-color-royal .tab-item.activated .badge, .tabs-color-royal .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-royal .tab-item.activated span, .tabs-color-royal .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-royal .tab-item.activated span {
+    .tabs-color-royal .tab-item.tab-item-active .badge, .tabs-color-royal .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-royal .tab-item.tab-item-active span, .tabs-color-royal .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-royal .tab-item.tab-item-active span, .tabs-color-royal .tab-item.active .badge, .tabs-color-royal .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-royal .tab-item.active span, .tabs-color-royal .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-royal .tab-item.active span, .tabs-color-royal .tab-item.activated .badge, .tabs-color-royal .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-royal .tab-item.activated span, .tabs-color-royal .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-royal .tab-item.activated span {
       opacity: 1; }
 
 .tabs-color-dark .tab-item {
   color: rgba(68, 68, 68, 0.4);
   opacity: 1; }
-  .tabs-color-dark .tab-item .badge, .tabs-color-dark .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-dark .tab-item span, .tabs-color-dark .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-dark .tab-item span {
+  .tabs-color-dark .tab-item .badge, .tabs-color-dark .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-color-dark .tab-item span, .tabs-color-dark .tab-item .mma-messages-date span, .mma-messages-date .tabs-color-dark .tab-item span {
     opacity: 0.4; }
   .tabs-color-dark .tab-item.tab-item-active, .tabs-color-dark .tab-item.active, .tabs-color-dark .tab-item.activated {
     color: #444;
     border: 0 solid #444; }
-    .tabs-color-dark .tab-item.tab-item-active .badge, .tabs-color-dark .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-dark .tab-item.tab-item-active span, .tabs-color-dark .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-dark .tab-item.tab-item-active span, .tabs-color-dark .tab-item.active .badge, .tabs-color-dark .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-dark .tab-item.active span, .tabs-color-dark .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-dark .tab-item.active span, .tabs-color-dark .tab-item.activated .badge, .tabs-color-dark .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-dark .tab-item.activated span, .tabs-color-dark .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-dark .tab-item.activated span {
+    .tabs-color-dark .tab-item.tab-item-active .badge, .tabs-color-dark .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-color-dark .tab-item.tab-item-active span, .tabs-color-dark .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-color-dark .tab-item.tab-item-active span, .tabs-color-dark .tab-item.active .badge, .tabs-color-dark .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-color-dark .tab-item.active span, .tabs-color-dark .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-color-dark .tab-item.active span, .tabs-color-dark .tab-item.activated .badge, .tabs-color-dark .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-color-dark .tab-item.activated span, .tabs-color-dark .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-color-dark .tab-item.activated span {
       opacity: 1; }
 
 ion-tabs.tabs-color-active-light .tab-item {
@@ -4088,9 +4088,9 @@ ion-tabs.tabs-color-active-dark .tab-item {
       margin-top: 1px;
       border-width: 0px 0px 2px 0px !important;
       border-style: solid; }
-      .tabs-top.tabs-striped .tab-item.tab-item-active > .badge, .tabs-top.tabs-striped .mma-messages-date .tab-item.tab-item-active > span, .mma-messages-date .tabs-top.tabs-striped .tab-item.tab-item-active > span, .tabs-top.tabs-striped .mma-chat-notice .tab-item.tab-item-active > span, .mma-chat-notice .tabs-top.tabs-striped .tab-item.tab-item-active > span, .tabs-top.tabs-striped .tab-item.tab-item-active > i, .tabs-top.tabs-striped .tab-item.active > .badge, .tabs-top.tabs-striped .mma-messages-date .tab-item.active > span, .mma-messages-date .tabs-top.tabs-striped .tab-item.active > span, .tabs-top.tabs-striped .mma-chat-notice .tab-item.active > span, .mma-chat-notice .tabs-top.tabs-striped .tab-item.active > span, .tabs-top.tabs-striped .tab-item.active > i, .tabs-top.tabs-striped .tab-item.activated > .badge, .tabs-top.tabs-striped .mma-messages-date .tab-item.activated > span, .mma-messages-date .tabs-top.tabs-striped .tab-item.activated > span, .tabs-top.tabs-striped .mma-chat-notice .tab-item.activated > span, .mma-chat-notice .tabs-top.tabs-striped .tab-item.activated > span, .tabs-top.tabs-striped .tab-item.activated > i {
+      .tabs-top.tabs-striped .tab-item.tab-item-active > .badge, .tabs-top.tabs-striped .mma-chat-notice .tab-item.tab-item-active > span, .mma-chat-notice .tabs-top.tabs-striped .tab-item.tab-item-active > span, .tabs-top.tabs-striped .mma-messages-date .tab-item.tab-item-active > span, .mma-messages-date .tabs-top.tabs-striped .tab-item.tab-item-active > span, .tabs-top.tabs-striped .tab-item.tab-item-active > i, .tabs-top.tabs-striped .tab-item.active > .badge, .tabs-top.tabs-striped .mma-chat-notice .tab-item.active > span, .mma-chat-notice .tabs-top.tabs-striped .tab-item.active > span, .tabs-top.tabs-striped .mma-messages-date .tab-item.active > span, .mma-messages-date .tabs-top.tabs-striped .tab-item.active > span, .tabs-top.tabs-striped .tab-item.active > i, .tabs-top.tabs-striped .tab-item.activated > .badge, .tabs-top.tabs-striped .mma-chat-notice .tab-item.activated > span, .mma-chat-notice .tabs-top.tabs-striped .tab-item.activated > span, .tabs-top.tabs-striped .mma-messages-date .tab-item.activated > span, .mma-messages-date .tabs-top.tabs-striped .tab-item.activated > span, .tabs-top.tabs-striped .tab-item.activated > i {
         margin-top: -1px; }
-    .tabs-top.tabs-striped .tab-item .badge, .tabs-top.tabs-striped .tab-item .mma-messages-date span, .mma-messages-date .tabs-top.tabs-striped .tab-item span, .tabs-top.tabs-striped .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-top.tabs-striped .tab-item span {
+    .tabs-top.tabs-striped .tab-item .badge, .tabs-top.tabs-striped .tab-item .mma-chat-notice span, .mma-chat-notice .tabs-top.tabs-striped .tab-item span, .tabs-top.tabs-striped .tab-item .mma-messages-date span, .mma-messages-date .tabs-top.tabs-striped .tab-item span {
       -webkit-transition: color .2s ease;
       -moz-transition: color .2s ease;
       -ms-transition: color .2s ease;
@@ -4112,7 +4112,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   background-position: bottom;
   border-top-width: 0;
   border-bottom-width: 1px; }
-  .tabs-top > .tabs .tab-item.tab-item-active .badge, .tabs-top > .tabs .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-top > .tabs .tab-item.tab-item-active span, .tabs-top > .tabs .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-top > .tabs .tab-item.tab-item-active span, .tabs-top > .tabs .tab-item.active .badge, .tabs-top > .tabs .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-top > .tabs .tab-item.active span, .tabs-top > .tabs .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-top > .tabs .tab-item.active span, .tabs-top > .tabs .tab-item.activated .badge, .tabs-top > .tabs .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-top > .tabs .tab-item.activated span, .tabs-top > .tabs .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-top > .tabs .tab-item.activated span, .tabs.tabs-top .tab-item.tab-item-active .badge, .tabs.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs.tabs-top .tab-item.tab-item-active span, .tabs.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs.tabs-top .tab-item.tab-item-active span, .tabs.tabs-top .tab-item.active .badge, .tabs.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs.tabs-top .tab-item.active span, .tabs.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs.tabs-top .tab-item.active span, .tabs.tabs-top .tab-item.activated .badge, .tabs.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs.tabs-top .tab-item.activated span, .tabs.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs.tabs-top .tab-item.activated span {
+  .tabs-top > .tabs .tab-item.tab-item-active .badge, .tabs-top > .tabs .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs-top > .tabs .tab-item.tab-item-active span, .tabs-top > .tabs .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs-top > .tabs .tab-item.tab-item-active span, .tabs-top > .tabs .tab-item.active .badge, .tabs-top > .tabs .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs-top > .tabs .tab-item.active span, .tabs-top > .tabs .tab-item.active .mma-messages-date span, .mma-messages-date .tabs-top > .tabs .tab-item.active span, .tabs-top > .tabs .tab-item.activated .badge, .tabs-top > .tabs .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs-top > .tabs .tab-item.activated span, .tabs-top > .tabs .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs-top > .tabs .tab-item.activated span, .tabs.tabs-top .tab-item.tab-item-active .badge, .tabs.tabs-top .tab-item.tab-item-active .mma-chat-notice span, .mma-chat-notice .tabs.tabs-top .tab-item.tab-item-active span, .tabs.tabs-top .tab-item.tab-item-active .mma-messages-date span, .mma-messages-date .tabs.tabs-top .tab-item.tab-item-active span, .tabs.tabs-top .tab-item.active .badge, .tabs.tabs-top .tab-item.active .mma-chat-notice span, .mma-chat-notice .tabs.tabs-top .tab-item.active span, .tabs.tabs-top .tab-item.active .mma-messages-date span, .mma-messages-date .tabs.tabs-top .tab-item.active span, .tabs.tabs-top .tab-item.activated .badge, .tabs.tabs-top .tab-item.activated .mma-chat-notice span, .mma-chat-notice .tabs.tabs-top .tab-item.activated span, .tabs.tabs-top .tab-item.activated .mma-messages-date span, .mma-messages-date .tabs.tabs-top .tab-item.activated span {
     top: 4%; }
 
 .tabs-top ~ .bar-header {
@@ -4178,7 +4178,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
 .tab-item.has-badge {
   position: relative; }
 
-.tab-item .badge, .tab-item .mma-messages-date span, .mma-messages-date .tab-item span, .tab-item .mma-chat-notice span, .mma-chat-notice .tab-item span {
+.tab-item .badge, .tab-item .mma-chat-notice span, .mma-chat-notice .tab-item span, .tab-item .mma-messages-date span, .mma-messages-date .tab-item span {
   position: absolute;
   top: 4%;
   right: 33%;
@@ -4668,7 +4668,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
     margin-bottom: 2px; }
   .item h1:last-child, .item h2:last-child, .item .item-heading:last-child, .item h3:last-child, .item h4:last-child, .item h5:last-child, .item h6:last-child, .item p:last-child {
     margin-bottom: 0; }
-  .item .badge, .item .mma-messages-date span, .mma-messages-date .item span, .item .mma-chat-notice span, .mma-chat-notice .item span {
+  .item .badge, .item .mma-chat-notice span, .mma-chat-notice .item span, .item .mma-messages-date span, .mma-messages-date .item span {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -4678,11 +4678,11 @@ ion-tabs.tabs-color-active-dark .tab-item {
     position: absolute;
     top: 16px;
     right: 32px; }
-  .item.item-button-right .badge, .item.item-button-right .mma-messages-date span, .mma-messages-date .item.item-button-right span, .item.item-button-right .mma-chat-notice span, .mma-chat-notice .item.item-button-right span {
+  .item.item-button-right .badge, .item.item-button-right .mma-chat-notice span, .mma-chat-notice .item.item-button-right span, .item.item-button-right .mma-messages-date span, .mma-messages-date .item.item-button-right span {
     right: 67px; }
-  .item.item-divider .badge, .item.item-divider .mma-messages-date span, .mma-messages-date .item.item-divider span, .item.item-divider .mma-chat-notice span, .mma-chat-notice .item.item-divider span {
+  .item.item-divider .badge, .item.item-divider .mma-chat-notice span, .mma-chat-notice .item.item-divider span, .item.item-divider .mma-messages-date span, .mma-messages-date .item.item-divider span {
     top: 8px; }
-  .item .badge + .badge, .item .mma-messages-date span + .badge, .mma-messages-date .item span + .badge, .item .mma-chat-notice span + .badge, .mma-chat-notice .item span + .badge, .item .mma-messages-date .badge + span, .mma-messages-date .item .badge + span, .item .mma-messages-date span + span, .mma-messages-date .item span + span, .item .mma-chat-notice .badge + span, .mma-chat-notice .item .badge + span, .item .mma-chat-notice span + span, .mma-chat-notice .item span + span {
+  .item .badge + .badge, .item .mma-chat-notice span + .badge, .mma-chat-notice .item span + .badge, .item .mma-messages-date span + .badge, .mma-messages-date .item span + .badge, .item .mma-chat-notice .badge + span, .mma-chat-notice .item .badge + span, .item .mma-chat-notice span + span, .mma-chat-notice .item span + span, .item .mma-messages-date .badge + span, .mma-messages-date .item .badge + span, .item .mma-messages-date span + span, .mma-messages-date .item span + span {
     margin-right: 5px; }
   .item.item-light {
     border-color: #ddd;
@@ -5365,7 +5365,7 @@ a.item-content {
  * Badges
  * --------------------------------------------------
  */
-.badge, .mma-messages-date span, .mma-chat-notice span {
+.badge, .mma-chat-notice span, .mma-messages-date span {
   background-color: transparent;
   color: #AAAAAA;
   z-index: 1;
@@ -5379,38 +5379,38 @@ a.item-content {
   font-weight: bold;
   font-size: 14px;
   line-height: 16px; }
-  .badge:empty, .mma-messages-date span:empty, .mma-chat-notice span:empty {
+  .badge:empty, .mma-chat-notice span:empty, .mma-messages-date span:empty {
     display: none; }
 
-.tabs .tab-item .badge.badge-light, .tabs .tab-item .mma-messages-date span.badge-light, .mma-messages-date .tabs .tab-item span.badge-light, .tabs .tab-item .mma-chat-notice span.badge-light, .mma-chat-notice .tabs .tab-item span.badge-light, .badge.badge-light, .mma-messages-date span.badge-light, .mma-chat-notice span.badge-light {
+.tabs .tab-item .badge.badge-light, .tabs .tab-item .mma-chat-notice span.badge-light, .mma-chat-notice .tabs .tab-item span.badge-light, .tabs .tab-item .mma-messages-date span.badge-light, .mma-messages-date .tabs .tab-item span.badge-light, .badge.badge-light, .mma-chat-notice span.badge-light, .mma-messages-date span.badge-light {
   background-color: #fff;
   color: #444; }
-.tabs .tab-item .badge.badge-stable, .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs .tab-item span, .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs .tab-item span, .badge.badge-stable, .mma-messages-date span, .mma-chat-notice span {
+.tabs .tab-item .badge.badge-stable, .tabs .tab-item .mma-chat-notice span, .mma-chat-notice .tabs .tab-item span, .tabs .tab-item .mma-messages-date span, .mma-messages-date .tabs .tab-item span, .badge.badge-stable, .mma-chat-notice span, .mma-messages-date span {
   background-color: #f8f8f8;
   color: #444; }
-.tabs .tab-item .badge.badge-positive, .tabs .tab-item .mma-messages-date span.badge-positive, .mma-messages-date .tabs .tab-item span.badge-positive, .tabs .tab-item .mma-chat-notice span.badge-positive, .mma-chat-notice .tabs .tab-item span.badge-positive, .badge.badge-positive, .mma-messages-date span.badge-positive, .mma-chat-notice span.badge-positive {
+.tabs .tab-item .badge.badge-positive, .tabs .tab-item .mma-chat-notice span.badge-positive, .mma-chat-notice .tabs .tab-item span.badge-positive, .tabs .tab-item .mma-messages-date span.badge-positive, .mma-messages-date .tabs .tab-item span.badge-positive, .badge.badge-positive, .mma-chat-notice span.badge-positive, .mma-messages-date span.badge-positive {
   background-color: #387ef5;
   color: #fff; }
-.tabs .tab-item .badge.badge-calm, .tabs .tab-item .mma-messages-date span.badge-calm, .mma-messages-date .tabs .tab-item span.badge-calm, .tabs .tab-item .mma-chat-notice span.badge-calm, .mma-chat-notice .tabs .tab-item span.badge-calm, .badge.badge-calm, .mma-messages-date span.badge-calm, .mma-chat-notice span.badge-calm {
+.tabs .tab-item .badge.badge-calm, .tabs .tab-item .mma-chat-notice span.badge-calm, .mma-chat-notice .tabs .tab-item span.badge-calm, .tabs .tab-item .mma-messages-date span.badge-calm, .mma-messages-date .tabs .tab-item span.badge-calm, .badge.badge-calm, .mma-chat-notice span.badge-calm, .mma-messages-date span.badge-calm {
   background-color: #11c1f3;
   color: #fff; }
-.tabs .tab-item .badge.badge-assertive, .tabs .tab-item .mma-messages-date span.badge-assertive, .mma-messages-date .tabs .tab-item span.badge-assertive, .tabs .tab-item .mma-chat-notice span.badge-assertive, .mma-chat-notice .tabs .tab-item span.badge-assertive, .badge.badge-assertive, .mma-messages-date span.badge-assertive, .mma-chat-notice span.badge-assertive {
+.tabs .tab-item .badge.badge-assertive, .tabs .tab-item .mma-chat-notice span.badge-assertive, .mma-chat-notice .tabs .tab-item span.badge-assertive, .tabs .tab-item .mma-messages-date span.badge-assertive, .mma-messages-date .tabs .tab-item span.badge-assertive, .badge.badge-assertive, .mma-chat-notice span.badge-assertive, .mma-messages-date span.badge-assertive {
   background-color: #ef473a;
   color: #fff; }
-.tabs .tab-item .badge.badge-balanced, .tabs .tab-item .mma-messages-date span.badge-balanced, .mma-messages-date .tabs .tab-item span.badge-balanced, .tabs .tab-item .mma-chat-notice span.badge-balanced, .mma-chat-notice .tabs .tab-item span.badge-balanced, .badge.badge-balanced, .mma-messages-date span.badge-balanced, .mma-chat-notice span.badge-balanced {
+.tabs .tab-item .badge.badge-balanced, .tabs .tab-item .mma-chat-notice span.badge-balanced, .mma-chat-notice .tabs .tab-item span.badge-balanced, .tabs .tab-item .mma-messages-date span.badge-balanced, .mma-messages-date .tabs .tab-item span.badge-balanced, .badge.badge-balanced, .mma-chat-notice span.badge-balanced, .mma-messages-date span.badge-balanced {
   background-color: #33cd5f;
   color: #fff; }
-.tabs .tab-item .badge.badge-energized, .tabs .tab-item .mma-messages-date span.badge-energized, .mma-messages-date .tabs .tab-item span.badge-energized, .tabs .tab-item .mma-chat-notice span.badge-energized, .mma-chat-notice .tabs .tab-item span.badge-energized, .badge.badge-energized, .mma-messages-date span.badge-energized, .mma-chat-notice span.badge-energized {
+.tabs .tab-item .badge.badge-energized, .tabs .tab-item .mma-chat-notice span.badge-energized, .mma-chat-notice .tabs .tab-item span.badge-energized, .tabs .tab-item .mma-messages-date span.badge-energized, .mma-messages-date .tabs .tab-item span.badge-energized, .badge.badge-energized, .mma-chat-notice span.badge-energized, .mma-messages-date span.badge-energized {
   background-color: #ffc900;
   color: #fff; }
-.tabs .tab-item .badge.badge-royal, .tabs .tab-item .mma-messages-date span.badge-royal, .mma-messages-date .tabs .tab-item span.badge-royal, .tabs .tab-item .mma-chat-notice span.badge-royal, .mma-chat-notice .tabs .tab-item span.badge-royal, .badge.badge-royal, .mma-messages-date span.badge-royal, .mma-chat-notice span.badge-royal {
+.tabs .tab-item .badge.badge-royal, .tabs .tab-item .mma-chat-notice span.badge-royal, .mma-chat-notice .tabs .tab-item span.badge-royal, .tabs .tab-item .mma-messages-date span.badge-royal, .mma-messages-date .tabs .tab-item span.badge-royal, .badge.badge-royal, .mma-chat-notice span.badge-royal, .mma-messages-date span.badge-royal {
   background-color: #886aea;
   color: #fff; }
-.tabs .tab-item .badge.badge-dark, .tabs .tab-item .mma-messages-date span.badge-dark, .mma-messages-date .tabs .tab-item span.badge-dark, .tabs .tab-item .mma-chat-notice span.badge-dark, .mma-chat-notice .tabs .tab-item span.badge-dark, .badge.badge-dark, .mma-messages-date span.badge-dark, .mma-chat-notice span.badge-dark {
+.tabs .tab-item .badge.badge-dark, .tabs .tab-item .mma-chat-notice span.badge-dark, .mma-chat-notice .tabs .tab-item span.badge-dark, .tabs .tab-item .mma-messages-date span.badge-dark, .mma-messages-date .tabs .tab-item span.badge-dark, .badge.badge-dark, .mma-chat-notice span.badge-dark, .mma-messages-date span.badge-dark {
   background-color: #444;
   color: #fff; }
 
-.button .badge, .button .mma-messages-date span, .mma-messages-date .button span, .button .mma-chat-notice span, .mma-chat-notice .button span {
+.button .badge, .button .mma-chat-notice span, .mma-chat-notice .button span, .button .mma-messages-date span, .mma-messages-date .button span {
   position: relative;
   top: -1px; }
 
@@ -7977,28 +7977,6 @@ input.mma-files-picker {
   .mma-grades-table .leveleven {
     background-color: #fff; }
 
-.mma-messages-date {
-  text-align: center;
-  margin-top: 10px; }
-
-.mma-messages-input-inset {
-  padding-top: 0;
-  padding-left: 0;
-  padding-bottom: 0; }
-
-.mma-messages-footer-note {
-  color: #444;
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
-  width: 100%; }
-
-.button.mma-messages-clear-search {
-  top: 0px; }
-
-.mma-messages-discussion-container {
-  padding-bottom: 15px; }
-
 .mma-book-arrows {
   font-size: 32px; }
 
@@ -8040,6 +8018,28 @@ input.mma-files-picker {
 
 .mma-imscp-arrows {
   font-size: 32px; }
+
+.mma-messages-date {
+  text-align: center;
+  margin-top: 10px; }
+
+.mma-messages-input-inset {
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0; }
+
+.mma-messages-footer-note {
+  color: #444;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  width: 100%; }
+
+.button.mma-messages-clear-search {
+  top: 0px; }
+
+.mma-messages-discussion-container {
+  padding-bottom: 15px; }
 
 .button.active, .button.activated {
   box-shadow: none;
