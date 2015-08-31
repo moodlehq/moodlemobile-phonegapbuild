@@ -104,7 +104,7 @@
     <gap:plugin name="org.apache.cordova.file" />
     <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.globalization" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="cordova-plugin-statusbar" source="npm" />
 
