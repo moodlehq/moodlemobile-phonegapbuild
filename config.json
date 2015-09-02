@@ -1,6 +1,6 @@
 {
     "app_id" : "com.moodle.moodlemobile",
-    "versioncode" : "2002",
+    "versioncode" : "2003",
     "versionname" : "2.1",
     "cache_expiration_time" : 300000,
     "default_lang" : "en",
