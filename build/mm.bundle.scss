@@ -167,7 +167,6 @@ em {
     line-height: $item-button-line-height;
   }
 }
-
 /**
  * Core directives.
  */
@@ -181,10 +180,20 @@ em {
   right: 0;
 }
 
+// mm-format-text can have elements with float. These styles makes sure height is calculated right.
+mm-format-text {
+  display: inline-block;
+  width: 100%;
+}
+
 .mm-loading-container {
     width: 100%;
     text-align: center;
     margin-top: 10px;
+}
+
+.mm-loading-content {
+  height: 100%;
 }
 
 // Align ion-spinner right
@@ -226,11 +235,6 @@ em {
 .iframe-wrapper {
   height: 100%;
   width: 100%;
-}
-
-
-.mm-language-select {
-  padding-bottom: 14px !important;
 }
 
 // Variables.
@@ -400,10 +404,6 @@ $mma-messages-date-badge: "stable" !default;
 .mma-messages-discussion-container {
   padding-bottom: 15px;
 }
-
-.mma-book-arrows {
-    font-size: 32px;
-}
 $mma-chat-notice-badge: "stable" !default;
 
 // The notice displayed in the list.
@@ -456,6 +456,17 @@ $mma-chat-notice-badge: "stable" !default;
 .mma-forum-discussion-link {
     text-decoration: none;
 }
-.mma-imscp-arrows {
-    font-size: 32px;
+
+.mma-imscp-container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.mma-imscp-iframe-container {
+    flex: 1 1 auto;
+    position: relative;
+    .iframe-wrapper {
+      position: absolute;
+    }
 }

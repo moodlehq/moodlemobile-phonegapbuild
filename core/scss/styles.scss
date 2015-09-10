@@ -167,7 +167,6 @@ em {
     line-height: $item-button-line-height;
   }
 }
-
 /**
  * Core directives.
  */
@@ -181,10 +180,20 @@ em {
   right: 0;
 }
 
+// mm-format-text can have elements with float. These styles makes sure height is calculated right.
+mm-format-text {
+  display: inline-block;
+  width: 100%;
+}
+
 .mm-loading-container {
     width: 100%;
     text-align: center;
     margin-top: 10px;
+}
+
+.mm-loading-content {
+  height: 100%;
 }
 
 // Align ion-spinner right

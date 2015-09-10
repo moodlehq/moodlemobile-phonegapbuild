@@ -4227,6 +4227,12 @@ ion-tabs.tabs-color-active-dark .tab-item {
   cursor: default;
   pointer-events: none; }
 
+.nav-bar-tabs-top.hide ~ .view-container .tabs-top .tabs {
+  top: 0; }
+
+.pane[hide-nav-bar="true"] .has-tabs-top {
+  top: 49px; }
+
 /**
  * Menus
  * --------------------------------------------------
@@ -4253,7 +4259,8 @@ ion-tabs.tabs-color-active-dark .tab-item {
   box-shadow: -1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 2px rgba(0, 0, 0, 0.2); }
 
 .menu-open .menu-content .pane, .menu-open .menu-content .scroll-content {
-  pointer-events: none; }
+  pointer-events: none;
+  overflow: hidden; }
 
 .grade-b .menu-content, .grade-c .menu-content {
   -webkit-box-sizing: content-box;
@@ -6438,7 +6445,7 @@ input[type="radio"][disabled], input[type="checkbox"][disabled], input[type="rad
     top: 0;
     bottom: 0;
     right: 0;
-    padding: 14px 48px 16px 16px;
+    padding: 0 48px 0 16px;
     max-width: 65%;
     border: none;
     background: #fff;
@@ -7852,10 +7859,17 @@ em {
   left: 0;
   right: 0; }
 
+mm-format-text {
+  display: inline-block;
+  width: 100%; }
+
 .mm-loading-container {
   width: 100%;
   text-align: center;
   margin-top: 10px; }
+
+.mm-loading-content {
+  height: 100%; }
 
 .spinner-right {
   position: absolute;
@@ -7885,9 +7899,6 @@ em {
 .iframe-wrapper {
   height: 100%;
   width: 100%; }
-
-.mm-language-select {
-  padding-bottom: 14px !important; }
 
 .bar-side-menu {
   border-color: transparent;
@@ -7999,9 +8010,6 @@ input.mma-files-picker {
 .mma-messages-discussion-container {
   padding-bottom: 15px; }
 
-.mma-book-arrows {
-  font-size: 32px; }
-
 .mma-chat-notice {
   text-align: center;
   margin-top: 10px; }
@@ -8038,8 +8046,16 @@ input.mma-files-picker {
 .mma-forum-discussion-link {
   text-decoration: none; }
 
-.mma-imscp-arrows {
-  font-size: 32px; }
+.mma-imscp-container {
+  display: flex;
+  flex-flow: column;
+  height: 100%; }
+
+.mma-imscp-iframe-container {
+  flex: 1 1 auto;
+  position: relative; }
+  .mma-imscp-iframe-container .iframe-wrapper {
+    position: absolute; }
 
 .button.active, .button.activated {
   box-shadow: none;
