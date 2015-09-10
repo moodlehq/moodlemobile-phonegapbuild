@@ -7859,7 +7859,7 @@ em {
   left: 0;
   right: 0; }
 
-mm-format-text {
+.mm-content-with-float {
   display: inline-block;
   width: 100%; }
 
