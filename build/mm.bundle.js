@@ -184,7 +184,7 @@ angular.module('mm.core')
             $stateProvider.state(name, config);
         };
                 self.closeKeyboard = function() {
-            if (cordova && cordova.plugins && cordova.plugins.Keyboard && cordova.plugins.Keyboard.close) {
+            if (typeof cordova != 'undefined' && cordova.plugins && cordova.plugins.Keyboard && cordova.plugins.Keyboard.close) {
                 cordova.plugins.Keyboard.close();
                 return true;
             }
