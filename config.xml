@@ -114,7 +114,7 @@
         <param name="URL_SCHEME" value="moodlemobile" />
     </gap:plugin>
     <gap:plugin name="com.ionic.keyboard" />
-    <gap:plugin name="de.appplant.cordova.plugin.local-notification"/>
+    <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
     <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
 
     <gap:config-file platform="android" parent="/manifest">
@@ -509,6 +509,10 @@
                 </array>
             </dict>
         </array>
+        <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSAllowsArbitraryLoads</key><true/>
+        </dict>
     </gap:config-file>
 
 </widget>
