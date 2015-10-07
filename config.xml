@@ -516,6 +516,10 @@
                 </array>
             </dict>
         </array>
+        <key>NSAppTransportSecurity</key>
+        <dict>
+            <key>NSAllowsArbitraryLoads</key><true/>
+        </dict>
     </gap:config-file>
 
 </widget>
