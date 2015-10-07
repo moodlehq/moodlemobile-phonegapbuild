@@ -226,6 +226,30 @@ em {
   }
 }
 
+.mm-media-adapt-width {
+  max-width: 100%;
+}
+img.mm-media-adapt-width {
+  height: auto;
+}
+
+.mm-adapted-img-container {
+  position: relative;
+}
+.mm-image-viewer-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: black;
+  font-size: 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .5);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
 // Extra attributes to ionic classes to force frames via directive 100% height.
 
 .scroll {
@@ -235,6 +259,26 @@ em {
 .iframe-wrapper {
   height: 100%;
   width: 100%;
+}
+
+/**
+ * This CSS uses adjacent selectors instead of general sibling (~) selectors
+ * for ion radio that are broken in iOS 9 UIWebView.
+ *
+ * To apply the patch, include this CSS after your ionic.css include.
+ */
+  .item-radio input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background: #f7f7f7;
+  }
+
+  .item-radio input:checked + .radio-content .radio-icon {
+    /* show the checkmark icon when its checked */
+    visibility: visible;
+  }
+
+#mm-settings-languagelabel {
+  color: $base-color;
 }
 
 // Variables.
@@ -455,6 +499,22 @@ $mma-chat-notice-badge: "stable" !default;
 
 .mma-forum-discussion-link {
     text-decoration: none;
+}
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
+
+.mma-forum-textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
 }
 
 .mma-imscp-container {
