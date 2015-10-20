@@ -1,0 +1,20 @@
+{
+    "address": "Endereço",
+    "city": "Cidade",
+    "contact": "Contato",
+    "country": "País",
+    "description": "Descrição",
+    "details": "Detalhes",
+    "detailsnotavailable": "Os detalhes desse usuário não estão disponíveis para você.",
+    "editingteacher": "Professor",
+    "email": "Email",
+    "interests": "interesses",
+    "invaliduser": "Usuário inválido.",
+    "manager": "Gerente",
+    "phone1": "Telefone",
+    "phone2": "Celular",
+    "roles": "Papéis",
+    "student": "Estudante",
+    "teacher": "Professor não-editor",
+    "webpage": "Página da internet"
+}

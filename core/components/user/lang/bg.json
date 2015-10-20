@@ -1,0 +1,20 @@
+{
+    "address": "Адрес",
+    "city": "Град",
+    "contact": "Контакти",
+    "country": "Страна",
+    "description": "Описание",
+    "details": "Подробности",
+    "detailsnotavailable": "Детайлите за този потребител не са достъпни за Вас.",
+    "editingteacher": "Учител",
+    "email": "Имейл",
+    "interests": "Интереси",
+    "invaliduser": "Невалиден потребител.",
+    "manager": "Мениждър",
+    "phone1": "Телефон",
+    "phone2": "Мобилен",
+    "roles": "Роли",
+    "student": "Студент",
+    "teacher": "Не-редактиращ учител",
+    "webpage": "Уеб страница"
+}

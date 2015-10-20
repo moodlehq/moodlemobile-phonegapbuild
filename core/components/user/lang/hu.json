@@ -1,0 +1,17 @@
+{
+    "address": "Cím",
+    "city": "Város",
+    "contact": "Kapcsolat",
+    "country": "Ország",
+    "description": "Leírás",
+    "details": "Részletek",
+    "email": "E-mail",
+    "interests": "Érdeklődési kör",
+    "invaliduser": "Érvénytelen felhasználó",
+    "manager": "Igazgató",
+    "phone1": "Telefon",
+    "phone2": "Mobil",
+    "roles": "Szerepek",
+    "student": "Tanuló",
+    "webpage": "Weboldal"
+}

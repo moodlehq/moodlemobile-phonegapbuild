@@ -1,0 +1,13 @@
+<ion-view view-title="{{ 'mm.settings.synchronization' | translate }}" >
+    <ion-content>
+        <ul class="list">
+            <li ng-repeat="site in sites" class="item item-button-right">
+                <p class="item-heading"><mm-format-text>{{site.sitename}}</mm-format-text></p>
+                <p>{{site.fullname}}</p>
+                <button class="button button-icon" ng-click="synchronize(site)" title="{{site.sitename}}" aria-label="{{ 'mm.settings.synchronizenow' | translate }}">
+                    <i class="icon ion-android-sync positive"></i>
+                </button>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

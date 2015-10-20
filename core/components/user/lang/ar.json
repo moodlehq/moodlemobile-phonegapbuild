@@ -1,0 +1,17 @@
+{
+    "address": "العنوان",
+    "city": "المدنية",
+    "contact": "جهة اتصال",
+    "country": "الدولة",
+    "description": "الوصف",
+    "details": "التفاصيل",
+    "email": "البريد الإلكتروني",
+    "interests": "اهتمامات",
+    "invaliduser": "المستخدم غير صحيح",
+    "manager": "مدير",
+    "phone1": "الهاتف",
+    "phone2": "المحمول",
+    "roles": "أدوار",
+    "student": "طالب",
+    "webpage": "صفحة إنترنت"
+}
