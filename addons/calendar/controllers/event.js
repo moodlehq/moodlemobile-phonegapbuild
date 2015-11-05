@@ -46,8 +46,9 @@ angular.module('mm.addons.calendar')
 
             if (e.courseid > 1) {
                 // It's a course event, retrieve the course name.
-                var course = $mmCourses.getStoredCourse(e.courseid);
-                $scope.coursename = course.fullname;
+                $mmCourses.getUserCourse(e.courseid, true).then(function(course) {
+                    $scope.coursename = course.fullname;
+                });
             }
 
         }, function(error) {
@@ -76,13 +77,15 @@ angular.module('mm.addons.calendar')
 
         $mmaCalendar.getEventNotificationTime(eventid).then(function(notificationtime) {
             $scope.notification = { // Use an object, otherwise changes are not reflected.
-                time: notificationtime
+                time: String(notificationtime)
             };
         });
 
         $scope.updateNotificationTime = function() {
-            var time = $scope.notification.time;
-            $mmaCalendar.updateNotificationTime($scope.event, time);
+            var time = parseInt($scope.notification.time);
+            if (!isNaN(time) && $scope.event && $scope.event.id) {
+                $mmaCalendar.updateNotificationTime($scope.event, time);
+            }
         };
     }
 });

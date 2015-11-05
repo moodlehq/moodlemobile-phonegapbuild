@@ -92,7 +92,12 @@ angular.module('mm.addons.mod_chat')
             chatid: chatId
         };
 
-        return $mmSite.write('mod_chat_login_user', params);
+        return $mmSite.write('mod_chat_login_user', params).then(function(response) {
+            if (response.chatsid) {
+                return response.chatsid;
+            }
+            return $q.reject();
+        });
     };
 
     /**
@@ -132,7 +137,12 @@ angular.module('mm.addons.mod_chat')
             beepid: beep
         };
 
-        return $mmSite.write('mod_chat_send_chat_message', params);
+        return $mmSite.write('mod_chat_send_chat_message', params).then(function(response) {
+            if (response.messageid) {
+                return response.messageid;
+            }
+            return $q.reject();
+        });
     };
 
     /**
@@ -171,15 +181,14 @@ angular.module('mm.addons.mod_chat')
         var promises = [];
 
         angular.forEach(messages, function(message) {
-            var promise = $mmUser.getProfile(message.userid, courseid, true);
-            promises.push(promise);
-            promise.then(function(user) {
+            var promise = $mmUser.getProfile(message.userid, courseid, true).then(function(user) {
                 message.userfullname = user.fullname;
                 message.userprofileimageurl = user.profileimageurl;
             }, function() {
                 // Error getting profile. Set default data.
                 message.userfullname = message.userid;
             });
+            promises.push(promise);
         });
         return $q.all(promises).then(function() {
             return messages;

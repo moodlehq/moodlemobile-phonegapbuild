@@ -34,7 +34,7 @@ angular.module('mm.addons.mod_page')
      * @return {Boolean}
      */
     self.isEnabled = function() {
-        return true;
+        return $mmSite.canDownloadFiles();
     };
 
     /**
@@ -135,6 +135,7 @@ angular.module('mm.addons.mod_page')
             downloadBtn = {
                 hidden: true,
                 icon: 'ion-ios-cloud-download',
+                label: 'mm.core.download',
                 action: function(e) {
                     var eventNames;
 
@@ -156,6 +157,7 @@ angular.module('mm.addons.mod_page')
 
             refreshBtn = {
                 icon: 'ion-android-refresh',
+                label: 'mm.core.refresh',
                 hidden: true,
                 action: function(e) {
                     e.preventDefault();
@@ -165,7 +167,7 @@ angular.module('mm.addons.mod_page')
 
                     $mmaModPage.invalidateContent(module.id).then(function() {
                         $mmaModPage.getFileEventNames(module).then(function(eventNames) {
-                            previousState = $mmFilepool.mmFilepool.FILEOUTDATED;
+                            previousState = $mmFilepool.FILEOUTDATED;
                             addObservers(eventNames, false);
                             $mmaModPage.prefetchContent(module);
                             // Store module as dowloading.

@@ -54,6 +54,22 @@ em {
   }
 }
 
+// Define an alternative way to set a heading in an item without using a heading tag.
+// This is done for accessibility reasons when a heading is semantically incorrect.
+.item .item-heading {
+  @extend h2;
+}
+
+// More options fro grids.
+.col-60 {
+  @include flex(0, 0, 60%);
+  max-width: 60%;
+}
+.col-40 {
+  @include flex(0, 0, 40%);
+  max-width: 40%;
+}
+
 // Media item, ideal for icons.
 .item-media {
   @extend .item-avatar;
@@ -161,7 +177,6 @@ em {
     line-height: $item-button-line-height;
   }
 }
-
 /**
  * Core directives.
  */
@@ -175,10 +190,20 @@ em {
   right: 0;
 }
 
+// mm-format-text can have elements with float. These styles makes sure height is calculated right.
+.mm-content-with-float {
+  display: inline-block;
+  width: 100%;
+}
+
 .mm-loading-container {
     width: 100%;
     text-align: center;
     margin-top: 10px;
+}
+
+.mm-loading-content {
+  height: 100%;
 }
 
 // Align ion-spinner right
@@ -211,6 +236,30 @@ em {
   }
 }
 
+.mm-media-adapt-width {
+  max-width: 100%;
+}
+img.mm-media-adapt-width {
+  height: auto;
+}
+
+.mm-adapted-img-container {
+  position: relative;
+}
+.mm-image-viewer-icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: black;
+  font-size: 20px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .5);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
 // Extra attributes to ionic classes to force frames via directive 100% height.
 
 .scroll {
@@ -222,9 +271,24 @@ em {
   width: 100%;
 }
 
+/**
+ * This CSS uses adjacent selectors instead of general sibling (~) selectors
+ * for ion radio that are broken in iOS 9 UIWebView.
+ *
+ * To apply the patch, include this CSS after your ionic.css include.
+ */
+  .item-radio input:checked + .radio-content .item-content {
+    /* style the item content when its checked */
+    background: #f7f7f7;
+  }
 
-.mm-language-select {
-  padding-bottom: 14px !important;
+  .item-radio input:checked + .radio-content .radio-icon {
+    /* show the checkmark icon when its checked */
+    visibility: visible;
+  }
+
+#mm-settings-languagelabel {
+  color: $base-color;
 }
 
 // Variables.
@@ -394,10 +458,6 @@ $mma-messages-date-badge: "stable" !default;
 .mma-messages-discussion-container {
   padding-bottom: 15px;
 }
-
-.mma-book-arrows {
-    font-size: 32px;
-}
 $mma-chat-notice-badge: "stable" !default;
 
 // The notice displayed in the list.
@@ -450,6 +510,57 @@ $mma-chat-notice-badge: "stable" !default;
 .mma-forum-discussion-link {
     text-decoration: none;
 }
-.mma-imscp-arrows {
-    font-size: 32px;
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
+
+.mma-forum-textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+.mma-imscp-container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.mma-imscp-iframe-container {
+    flex: 1 1 auto;
+    position: relative;
+    .iframe-wrapper {
+      position: absolute;
+    }
+}
+
+.mma-mod_survey-darkbg {
+  background-color: $item-divider-bg;
+}
+
+.mma-mod_survey-padding-top {
+  padding-top: 20px;
+}
+
+textarea.mma-mod_survey-textarea {
+  height: 100px;
+  border:1px solid $item-default-border;
+}
+
+select.mma-mod_survey-select {
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: $item-padding * 2;
+  max-width: 100%;
+
+  .mma-mod_survey-defaultoption {
+    display: none;
+  }
 }

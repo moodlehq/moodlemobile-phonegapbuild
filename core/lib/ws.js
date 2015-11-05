@@ -21,7 +21,8 @@ angular.module('mm.core')
  * @ngdoc service
  * @name $mmWS
  */
-.factory('$mmWS', function($http, $q, $log, $mmLang, $cordovaFileTransfer, $mmApp, $mmFS, mmCoreSessionExpired) {
+.factory('$mmWS', function($http, $q, $log, $mmLang, $cordovaFileTransfer, $mmApp, $mmFS, $mmText, mmCoreSessionExpired,
+            mmCoreUserDeleted) {
 
     $log = $log.getInstance('$mmWS');
 
@@ -40,22 +41,22 @@ angular.module('mm.core')
      *                    - wstoken string The Webservice token.
      *                    - wsfunctions array List of functions available on the site.
      *                    - responseExpected boolean Defaults to true. Set to false when the expected response is null.
+     *                    - typeExpected string Defaults to 'object'. Use it when you expect a type that's not an object|array.
      */
     self.call = function(method, data, preSets) {
 
-        var deferred = $q.defer(),
-            siteurl;
+        var siteurl;
 
         data = convertValuesToString(data);
 
-        if (typeof(preSets) === 'undefined' || preSets == null ||
-                typeof(preSets.wstoken) === 'undefined' || typeof(preSets.siteurl) === 'undefined') {
-            $mmLang.translateErrorAndReject(deferred, 'mm.core.unexpectederror');
-            return deferred.promise;
+        if (typeof preSets == 'undefined' || preSets === null ||
+                typeof preSets.wstoken == 'undefined' || typeof preSets.siteurl == 'undefined') {
+            return $mmLang.translateAndReject('mm.core.unexpectederror');
         } else if (!$mmApp.isOnline()) {
-            $mmLang.translateErrorAndReject(deferred, 'mm.core.networkerrormsg');
-            return deferred.promise;
+            return $mmLang.translateAndReject('mm.core.networkerrormsg');
         }
+
+        preSets.typeExpected = preSets.typeExpected || 'object';
 
         data.wsfunction = method;
         data.wstoken = preSets.wstoken;
@@ -63,7 +64,20 @@ angular.module('mm.core')
 
         var ajaxData = data;
 
-        $http.post(siteurl, ajaxData).then(function(data) {
+        return $http.post(siteurl, ajaxData).then(function(data) {
+
+            // Temporary check to report weird usages.
+            if (data && data.headers('Content-Type').indexOf('application/json') == -1 && typeof window.onerror == 'function') {
+                var message = 'Warning: response of type "' + data.headers('Content-Type') + '" received';
+                if (data.data) {
+                    // Attach part of the message. We will remove HTML tags and multiple spaces.
+                    var extra = typeof data.data == 'string' ? data.data : JSON.stringify(data.data);
+                    extra = $mmText.cleanTags(extra, true).replace(/ +(?= )/g,'').substr(0, 60);
+                    message = message + '\n' + extra + '...';
+                }
+                window.onerror(message, '$mmWS', 1);
+            }
+
             // Some moodle web services return null.
             // If the responseExpected value is set then so long as no data
             // is returned, we create a blank object.
@@ -74,24 +88,26 @@ angular.module('mm.core')
             }
 
             if (!data) {
-                $mmLang.translateErrorAndReject(deferred, 'mm.core.cannotconnect');
-                return;
+                return $mmLang.translateAndReject('mm.core.serverconnection');
+            } else if (typeof data != preSets.typeExpected) {
+                $log.warn('Response of type "' + typeof data + '" received, expecting "' + preSets.typeExpected + '"');
+                return $mmLang.translateAndReject('mm.core.errorinvalidresponse');
             }
 
             if (typeof(data.exception) !== 'undefined') {
                 if (data.errorcode == 'invalidtoken' ||
                         (data.errorcode == 'accessexception' && data.message.indexOf('Invalid token - token expired') > -1)) {
                     $log.error("Critical error: " + JSON.stringify(data));
-                    deferred.reject(mmCoreSessionExpired);
+                    return $q.reject(mmCoreSessionExpired);
+                } else if (data.errorcode === 'userdeleted') {
+                    return $q.reject(mmCoreUserDeleted);
                 } else {
-                    deferred.reject(data.message);
+                    return $q.reject(data.message);
                 }
-                return;
             }
 
             if (typeof(data.debuginfo) != 'undefined') {
-                deferred.reject('Error. ' + data.message);
-                return;
+                return $q.reject('Error. ' + data.message);
             }
 
             $log.info('WS: Data received from WS ' + typeof(data));
@@ -100,13 +116,11 @@ angular.module('mm.core')
                 $log.info('WS: Data number of elements '+ data.length);
             }
 
-            deferred.resolve(data);
+            return data;
 
-        }, function(error) {
-            $mmLang.translateErrorAndReject(deferred, 'mm.core.cannotconnect');
+        }, function() {
+            return $mmLang.translateAndReject('mm.core.serverconnection');
         });
-
-        return deferred.promise;
     };
 
     /**
@@ -129,7 +143,7 @@ angular.module('mm.core')
             }
         }
         return result;
-    };
+    }
 
     /**
      * Downloads a file from Moodle using Cordova File API.
@@ -143,11 +157,11 @@ angular.module('mm.core')
     self.downloadFile = function(url, path, background) {
         $log.debug('Downloading file ' + url);
 
-        return $mmFS.getBasePath().then(function(basePath) {
+        return $mmFS.getBasePathToDownload().then(function(basePath) {
             // Use a tmp path to download the file and then move it to final location. This is because if the download fails,
             // the local file is deleted.
             var tmpPath = basePath + path + '.tmp';
-            return $cordovaFileTransfer.download(url, tmpPath, { encodeURI: false }, true).then(function(result) {
+            return $cordovaFileTransfer.download(url, tmpPath, { encodeURI: false }, true).then(function() {
                 return $mmFS.moveFile(path + '.tmp', path).then(function(movedEntry) {
                     $log.debug('Success downloading file ' + url + ' to ' + path);
                     return movedEntry;

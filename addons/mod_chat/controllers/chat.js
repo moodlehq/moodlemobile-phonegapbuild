@@ -63,8 +63,9 @@ angular.module('mm.addons.mod_chat')
         $scope.modal.show();
         $mmaModChat.getChatUsers($scope.chatsid).then(function(data) {
             $scope.chatUsers = data.users;
-        }).catch(showError)
-        .finally(function() {
+        }).catch(function(error) {
+            showError(error, 'mma.mod_chat.errorwhilegettingchatusers');
+        }).finally(function() {
             $scope.usersLoaded = true;
         });
     };
@@ -87,11 +88,11 @@ angular.module('mm.addons.mod_chat')
     };
 
     // Show error modal.
-    function showError(error) {
+    function showError(error, defaultMessage) {
         if (typeof error === 'string') {
             $mmUtil.showErrorModal(error);
         } else {
-            $mmUtil.showErrorModal(defaultMessage, 'mm.core.error');
+            $mmUtil.showErrorModal(defaultMessage, true);
         }
     }
 
@@ -101,26 +102,12 @@ angular.module('mm.addons.mod_chat')
             return true;
         }
 
-        var prevDate = new Date(prevMessage.timestamp * 1000);
-        prevDate.setMilliseconds(0);
-        prevDate.setSeconds(0);
-        prevDate.setMinutes(0);
-        prevDate.setHours(1);
-
-        var d = new Date(message.timestamp * 1000);
-        d.setMilliseconds(0);
-        d.setSeconds(0);
-        d.setMinutes(0);
-        d.setHours(1);
-
-        if (d.getTime() != prevDate.getTime()) {
-            return true;
-        }
+        // Check if day has changed.
+        return !moment(message.timestamp * 1000).isSame(prevMessage.timestamp * 1000, 'day');
     };
 
     // Send a message to the chat.
     $scope.sendMessage = function(text, beep) {
-        var message;
         beep = beep || '';
 
         if (!$mmApp.isOnline()) {
@@ -137,21 +124,27 @@ angular.module('mm.addons.mod_chat')
                 $scope.newMessage.text = '';
             }
         }, function(error) {
-            showError(error);
+            // Only close the keyboard if an error happens, we want the user to be able to send multiple
+            // messages withoutthe keyboard being closed.
+            $mmApp.closeKeyboard();
+
+            showError(error, 'mma.mod_chat.errorwhilesendingmessage');
         });
     };
 
     // Login the user.
-    $mmaModChat.loginUser(chatId).then(function(data) {
-        return $mmaModChat.getLatestMessages(data.chatsid, 0).then(function(messagesInfo) {
-            $scope.chatsid = data.chatsid;
+    $mmaModChat.loginUser(chatId).then(function(chatsid) {
+        return $mmaModChat.getLatestMessages(chatsid, 0).then(function(messagesInfo) {
+            $scope.chatsid = chatsid;
             chatLastTime = messagesInfo.chatnewlasttime;
             return $mmaModChat.getMessagesUserData(messagesInfo.messages, courseId).then(function(messages) {
                 $scope.messages = $scope.messages.concat(messages);
             });
-        }).catch(showError);
+        }).catch(function(message) {
+            showError(message, 'mma.mod_chat.errorwhileretrievingmessages');
+        });
     }, function(error) {
-        showError(error);
+        showError(error, 'mma.mod_chat.errorwhileconnecting');
         $ionicHistory.goBack();
     }).finally(function() {
         $scope.loaded = true;
@@ -190,7 +183,7 @@ angular.module('mm.addons.mod_chat')
                 });
             }, function(error) {
                 $interval.cancel(polling);
-                showError(error);
+                showError(error, 'mma.mod_chat.errorwhileretrievingmessages');
             });
 
         }, mmaChatPollInterval);

@@ -64,12 +64,11 @@ angular.module('mm.core')
         return query.length ? query.substr(0, query.length - 1) : query;
     };
 
-    this.$get = function($ionicLoading, $ionicPopup, $translate, $http, $log, $q, $mmLang, $mmFS) {
+    this.$get = function($ionicLoading, $ionicPopup, $injector, $translate, $http, $log, $q, $mmLang, $mmFS, $timeout) {
 
         $log = $log.getInstance('$mmUtil');
 
-        var self = {}, // Use 'self' to be coherent with the rest of services.
-            countries;
+        var self = {}; // Use 'self' to be coherent with the rest of services.
 
         // // Loading all the mimetypes.
         var mimeTypes = {};
@@ -106,6 +105,56 @@ angular.module('mm.core')
             url = url.replace(/\/$/, "");
 
             return url;
+        };
+
+        /**
+         * Resolves an object.
+         *
+         * @description
+         * This is used to resolve what a callback should be when attached to a delegate.
+         * For instance, if the object attached is a function, it is returned as is, but
+         * we also support complex definition of objects. If we receive a string we will parse
+         * it and to inject its service using $injector from Angular.
+         *
+         * Examples:
+         * - (Function): returns the same function.
+         * - (Object): returns the same object.
+         * - '$mmSomething': Injects and returns $mmSomething.
+         * - '$mmSomething.method': Injectes and returns a reference to the function 'method'.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#resolveObject
+         * @param  {Mixed} object String, object or function.
+         * @param  {Boolean} [instantiate=false] When true, if the object resolved is a function, instantiates it.
+         * @return {Object} The reference to the object resolved.
+         */
+        self.resolveObject = function(object, instantiate) {
+            var toInject,
+                resolved;
+
+            instantiate = angular.isUndefined(instantiate) ? false : instantiate;
+
+            if (angular.isFunction(object) || angular.isObject(object)) {
+                resolved = object;
+
+            } else if (angular.isString(object)) {
+                toInject = object.split('.');
+                resolved = $injector.get(toInject[0]);
+
+                if (toInject.length > 1) {
+                    resolved = resolved[toInject[1]];
+                }
+            }
+
+            if (angular.isFunction(resolved) && instantiate) {
+                resolved = resolved();
+            }
+
+            if (typeof resolved === 'undefined') {
+                throw new Error('Unexpected argument passed passed');
+            }
+            return resolved;
         };
 
         /**
@@ -165,13 +214,55 @@ angular.module('mm.core')
         };
 
         /**
+         * Returns if a URL is downloadable: plugin file OR theme/image.php OR gravatar.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#isDownloadableUrl
+         * @param  {String}  url The URL to test.
+         * @return {Boolean}     True when the URL is downloadable.
+         */
+        self.isDownloadableUrl = function(url) {
+            return self.isPluginFileUrl(url) || self.isThemeImageUrl(url) || self.isGravatarUrl(url);
+        };
+
+        /**
+         * Returns if a URL is a gravatar URL.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#isGravatarUrl
+         * @param  {String}  url The URL to test.
+         * @return {Boolean}     True when the URL is a gravatar URL.
+         */
+        self.isGravatarUrl = function(url) {
+            return url && url.indexOf('gravatar.com/avatar') !== -1;
+        };
+
+        /**
          * Returns if a URL is a pluginfile URL.
          *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#isPluginFileUrl
          * @param  {String}  url The URL to test.
          * @return {Boolean}     True when the URL is a pluginfile URL.
          */
         self.isPluginFileUrl = function(url) {
-            return url && (url.indexOf('/pluginfile.php') !== -1);
+            return url && url.indexOf('/pluginfile.php') !== -1;
+        };
+
+        /**
+         * Returns if a URL is a theme image URL.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#isThemeImageUrl
+         * @param  {String}  url The URL to test.
+         * @return {Boolean}     True when the URL is a theme image URL.
+         */
+        self.isThemeImageUrl = function(url) {
+            return url && url.indexOf('/theme/image.php') !== -1;
         };
 
         /**
@@ -222,7 +313,7 @@ angular.module('mm.core')
             }
 
             // In which way the server is serving the files? Are we using slash parameters?
-            if (url.indexOf('?file=') != -1 || url.indexOf('?forcedownload=') != -1) {
+            if (url.indexOf('?file=') != -1 || url.indexOf('?forcedownload=') != -1 || url.indexOf('?rev=') != -1) {
                 url += '&';
             } else {
                 url += '?';
@@ -250,6 +341,7 @@ angular.module('mm.core')
          * @return {Void}
          */
         self.openFile = function(path) {
+            var deferred = $q.defer();
 
             if (false) {
                 // TODO Restore node-webkit support.
@@ -258,6 +350,7 @@ angular.module('mm.core')
                 // We use the node-webkit shell for open the file (pdf, doc) using the default application configured in the os.
                 // var gui = require('nw.gui');
                 // gui.Shell.openItem(path);
+                deferred.resolve();
 
             } else if (window.plugins) {
                 var extension = self.getFileExtension(path),
@@ -271,21 +364,27 @@ angular.module('mm.core')
                     var iParams = {
                         action: "android.intent.action.VIEW",
                         url: path,
-                        type: mimetype.type
+                        type: mimetype ? mimetype.type : undefined
                     };
 
                     window.plugins.webintent.startActivity(
                         iParams,
                         function() {
                             $log.debug('Intent launched');
+                            deferred.resolve();
                         },
                         function() {
-                            $log.debug('Intent launching failed');
+                            $log.debug('Intent launching failed.');
                             $log.debug('action: ' + iParams.action);
                             $log.debug('url: ' + iParams.url);
                             $log.debug('type: ' + iParams.type);
-                            // This may work in cordova 2.4 and onwards.
-                            window.open(path, '_system');
+
+                            if (!extension || extension.indexOf('/') > -1 || extension.indexOf('\\') > -1) {
+                                // Extension not found.
+                                $mmLang.translateAndRejectDeferred(deferred, 'mm.core.erroropenfilenoextension');
+                            } else {
+                                $mmLang.translateAndRejectDeferred(deferred, 'mm.core.erroropenfilenoapp');
+                            }
                         }
                     );
 
@@ -303,6 +402,7 @@ angular.module('mm.core')
                         handleDocumentWithURL(
                             function() {
                                 $log.debug('File opened with handleDocumentWithURL' + path);
+                                deferred.resolve();
                             },
                             function(error) {
                                 $log.debug('Error opening with handleDocumentWithURL' + path);
@@ -310,19 +410,24 @@ angular.module('mm.core')
                                     $log.error('No app that handles this file type.');
                                 }
                                 self.openInBrowser(path);
+                                deferred.resolve();
                             },
                             path
                         );
-                    });
+                    }, deferred.reject);
                 } else {
                     // Last try, launch the file with the browser.
                     self.openInBrowser(path);
+                    deferred.resolve();
                 }
             } else {
                 // Changing _blank for _system may work in cordova 2.4 and onwards.
                 $log.debug('Opening external file using window.open()');
                 window.open(path, '_blank');
+                deferred.resolve();
             }
+
+            return deferred.promise;
         };
 
         /**
@@ -338,6 +443,21 @@ angular.module('mm.core')
          */
         self.openInBrowser = function(url) {
             window.open(url, '_system');
+        };
+
+        /**
+         * Open a URL using InAppBrowser.
+         *
+         * Do not use for files, refer to {@link $mmUtil#openFile}.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#openInApp
+         * @param  {String} url The URL to open.
+         * @return {Void}
+         */
+        self.openInApp = function(url) {
+            window.open(url, '_blank');
         };
 
         /**
@@ -398,8 +518,10 @@ angular.module('mm.core')
          * @name $mmUtil#showErrorModal
          * @param {String} errorMessage    Message to show.
          * @param {Boolean} needsTranslate True if the errorMessage is a $translate key, false otherwise.
+         * @param {Number} [autocloseTime] Number of milliseconds to wait to close the modal.
+         *                                 If not defined, modal won't be automatically closed.
          */
-        self.showErrorModal = function(errorMessage, needsTranslate) {
+        self.showErrorModal = function(errorMessage, needsTranslate, autocloseTime) {
             var errorKey = 'mm.core.error',
                 langKeys = [errorKey];
 
@@ -408,10 +530,18 @@ angular.module('mm.core')
             }
 
             $translate(langKeys).then(function(translations) {
-                $ionicPopup.alert({
+                var popup = $ionicPopup.alert({
                     title: translations[errorKey],
                     template: needsTranslate ? translations[errorMessage] : errorMessage
                 });
+
+                if (typeof autocloseTime != 'undefined' && !isNaN(parseInt(autocloseTime))) {
+                    $timeout(function() {
+                        popup.close();
+                    }, parseInt(autocloseTime));
+                } else {
+                    delete popup;
+                }
             });
         };
 
@@ -471,28 +601,19 @@ angular.module('mm.core')
         };
 
         /**
-         * Get the countries list.
+         * Get country name based on country code.
          *
          * @module mm.core
          * @ngdoc method
-         * @name $mmUtil#getCountries
-         * @return {Promise} Promise to be resolved when the list is retrieved.
+         * @name $mmUtil#getCountryName
+         * @param {String} code Country code (AF, ES, US, ...).
+         * @return {String}     Country name. If the country is not found, return the country code.
          */
-        self.getCountries = function() {
-            var deferred = $q.defer();
+        self.getCountryName = function(code) {
+            var countryKey = 'mm.core.country-' + code,
+                countryName = $translate.instant(countryKey);
 
-            if (typeof(countries) !== 'undefined') {
-                deferred.resolve(countries);
-            } else {
-                self.readJSONFile('core/assets/countries.json').then(function(data) {
-                    countries = data;
-                    deferred.resolve(countries);
-                }, function(){
-                    deferred.resolve();
-                });
-            }
-
-            return deferred.promise;
+            return countryName !== countryKey ? countryName : code;
         };
 
         /**
@@ -630,8 +751,20 @@ angular.module('mm.core')
                 if (secs) {
                     return osecs;
                 }
-                return translations('mm.core.now');
+                return translations['mm.core.now'];
             });
+        };
+
+        /**
+         * Empties an array without losing its reference.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#emptyArray
+         * @param  {Array} array Array to empty.
+         */
+        self.emptyArray = function(array) {
+            array.length = 0; // Empty array without losing its reference.
         };
 
         return self;

@@ -15,6 +15,7 @@
 angular.module('mm.core', ['pascalprecht.translate'])
 
 .constant('mmCoreSessionExpired', 'mmCoreSessionExpired')
+.constant('mmCoreUserDeleted', 'mmCoreUserDeleted')
 .constant('mmCoreSecondsYear', 31536000)
 .constant('mmCoreSecondsDay', 86400)
 .constant('mmCoreSecondsHour', 3600)
@@ -22,7 +23,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
 
 
 .config(function($stateProvider, $provide, $ionicConfigProvider, $httpProvider, $mmUtilProvider,
-        $mmLogProvider, $compileProvider) {
+        $mmLogProvider, $compileProvider, $mmInitDelegateProvider, mmInitDelegateMaxAddonPriority) {
 
     // Set tabs to bottom on Android.
     $ionicConfigProvider.platform.android.tabs.position('bottom');
@@ -92,11 +93,32 @@ angular.module('mm.core', ['pascalprecht.translate'])
         return angular.isObject(data) && String(data) !== '[object File]' ? $mmUtilProvider.param(data) : data;
     }];
 
-    // Set our own safe protocols, otherwise geo:// is marked as unsafe.
-    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|geo|file):/);
+    // Add some protocols to safe protocols.
+    var list = $compileProvider.aHrefSanitizationWhitelist().source;
+
+    function addProtocolIfMissing(protocol) {
+        if (list.indexOf(protocol) == -1) {
+            list = list.replace('https?', 'https?|' + protocol);
+        }
+    }
+    addProtocolIfMissing('file');
+    addProtocolIfMissing('tel');
+    addProtocolIfMissing('mailto');
+    addProtocolIfMissing('geo');
+    $compileProvider.aHrefSanitizationWhitelist(list);
+
+    // Register the core init process, this should be the very first thing.
+    $mmInitDelegateProvider.registerProcess('mmAppInit', '$mmApp.initProcess', mmInitDelegateMaxAddonPriority + 400, true);
+
+    // Register upgrade check process, this should happen almost before everything else.
+    $mmInitDelegateProvider.registerProcess('mmUpdateManager', '$mmUpdateManager.check', mmInitDelegateMaxAddonPriority + 300, true);
 })
 
-.run(function($ionicPlatform, $ionicBody, $window, $mmEvents, mmCoreEventKeyboardShow, mmCoreEventKeyboardHide) {
+.run(function($ionicPlatform, $ionicBody, $window, $mmEvents, $mmInitDelegate, mmCoreEventKeyboardShow, mmCoreEventKeyboardHide) {
+    // Execute all the init processes.
+    $mmInitDelegate.executeInitProcesses();
+
+    // When the platform is ready.
     $ionicPlatform.ready(function() {
         var checkTablet = function() {
             $ionicBody.enableClass($ionicPlatform.isTablet(), 'tablet');

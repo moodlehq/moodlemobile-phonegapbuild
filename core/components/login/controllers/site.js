@@ -21,7 +21,7 @@ angular.module('mm.core.login')
  * @ngdoc controller
  * @name mmLoginSiteCtrl
  */
-.controller('mmLoginSiteCtrl', function($scope, $state, $mmSitesManager, $mmUtil, $translate, $ionicHistory,
+.controller('mmLoginSiteCtrl', function($scope, $state, $mmSitesManager, $mmUtil, $translate, $ionicHistory, $mmApp,
         $ionicModal, $mmLoginHelper) {
 
     $scope.siteurl = '';
@@ -45,6 +45,8 @@ angular.module('mm.core.login')
 
     $scope.connect = function(url) {
 
+        $mmApp.closeKeyboard();
+
         if (!url) {
             $mmUtil.showErrorModal('mm.login.siteurlrequired', true);
             return;
@@ -54,8 +56,8 @@ angular.module('mm.core.login')
 
         $mmSitesManager.getDemoSiteData(url).then(function(sitedata) {
 
-            $mmSitesManager.getUserToken(sitedata.url, sitedata.username, sitedata.password).then(function(token) {
-                $mmSitesManager.newSite(sitedata.url, token).then(function() {
+            $mmSitesManager.getUserToken(sitedata.url, sitedata.username, sitedata.password).then(function(data) {
+                $mmSitesManager.newSite(data.siteurl, data.token).then(function() {
                     $ionicHistory.nextViewOptions({disableBack: true});
                     $state.go('site.mm_courses');
                 }, function(error) {
@@ -71,6 +73,10 @@ angular.module('mm.core.login')
         }, function() {
             // Not a demo site.
             $mmSitesManager.checkSite(url).then(function(result) {
+
+                if (result.warning) {
+                    $mmUtil.showErrorModal(result.warning, true, 4000);
+                }
 
                 if ($mmLoginHelper.isSSOLoginNeeded(result.code)) {
                     // SSO. User needs to authenticate in a browser.

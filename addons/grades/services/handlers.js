@@ -49,10 +49,10 @@ angular.module('mm.addons.grades')
          * Check if handler is enabled for this course.
          *
          * @param {Number} courseId Course ID.
-         * @return {Boolean}        True if handler is enabled, false otherwise.
+         * @return {Promise}        Promise resolved with true if plugin is enabled, rejected or resolved with false otherwise.
          */
         self.isEnabledForCourse = function(courseId) {
-            return true;
+            return $mmaGrades.isPluginEnabledForCourse(courseId);
         };
 
         /**
@@ -61,7 +61,7 @@ angular.module('mm.addons.grades')
          * @param {Number} courseId Course ID.
          * @return {Object}         Controller.
          */
-        self.getController = function(courseId) {
+        self.getController = function() {
 
             /**
              * Courses nav handler controller.
@@ -111,10 +111,10 @@ angular.module('mm.addons.grades')
          *
          * @param {Object} user     User to check.
          * @param {Number} courseId Course ID.
-         * @return {Boolean}        True if handler is enabled, false otherwise.
+         * @return {Promise}        Promise resolved with true if plugin is enabled, rejected or resolved with false otherwise.
          */
         self.isEnabledForUser = function(user, courseId) {
-            return courseId;
+            return $mmaGrades.isPluginEnabledForCourse(courseId);
         };
 
         /**

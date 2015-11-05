@@ -100,12 +100,11 @@ angular.module('mm.addons.calendar')
 
             angular.forEach(events, function(event) {
                 // Get the event notification time to prevent overriding it in DB.
-                var promise = self.getEventNotificationTime(event.id, siteid);
-                promises.push(promise);
-                promise.then(function(time) {
+                var promise = self.getEventNotificationTime(event.id, siteid).then(function(time) {
                     event.notificationtime = time;
                     return db.insert(mmaCalendarEventsStore, event);
                 });
+                promises.push(promise);
             });
 
             return $q.all(promises);
@@ -129,8 +128,6 @@ angular.module('mm.addons.calendar')
             e.moduleicon = icon;
         }
         e.icon = icon;
-        e.start = new Date(e.timestart * 1000).toLocaleString();
-        e.end = new Date((e.timestart + e.timeduration) * 1000).toLocaleString();
     };
 
     /**
@@ -256,7 +253,7 @@ angular.module('mm.addons.calendar')
             "options[timeend]": end
         };
 
-        return $mmCourses.getUserCourses(refresh, siteid).then(function(courses) {
+        return $mmCourses.getUserCourses(false, siteid).then(function(courses) {
             courses.push({id: 1}); // Add front page.
             angular.forEach(courses, function(course, index) {
                 data["events[courseids][" + index + "]"] = course.id;
@@ -293,7 +290,9 @@ angular.module('mm.addons.calendar')
      * @return {Promise} Promise resolved when the list is invalidated.
      */
     self.invalidateEventsList = function() {
-        return $mmSite.invalidateWsCacheForKeyStartingWith(getEventsCommonCacheKey());
+        var p1 = $mmCourses.invalidateUserCourses(),
+            p2 = $mmSite.invalidateWsCacheForKeyStartingWith(getEventsCommonCacheKey());
+        return $q.all([p1, p2]);
     };
 
     /**
@@ -315,7 +314,7 @@ angular.module('mm.addons.calendar')
      *
      * @module mm.addons.calendar
      * @ngdoc method
-     * @name $mmaCalendar#scheduleEventsNotifications
+     * @name $mmaCalendar#scheduleAllSitesEventsNotifications
      * @param  {Object[]} events Events to schedule.
      * @return {Promise}         Promise resolved when all the notifications have been scheduled.
      */
@@ -326,12 +325,11 @@ angular.module('mm.addons.calendar')
 
                 var promises = [];
                 angular.forEach(siteids, function(siteid) {
-                    var promise = self.getEvents(undefined, undefined, false, siteid); // Get first events. We need to be able to mock site.
-                    promises.push(promise);
-
-                    promise.then(function(events) {
+                    // Get first events.
+                    var promise = self.getEvents(undefined, undefined, false, siteid).then(function(events) {
                         return self.scheduleEventsNotifications(events, siteid);
                     });
+                    promises.push(promise);
                 });
 
                 return $q.all(promises);
@@ -362,6 +360,12 @@ angular.module('mm.addons.calendar')
             if (time === 0) {
                 return $mmLocalNotifications.cancel(event.id, mmaCalendarComponent, siteid); // Cancel if it was scheduled.
             } else {
+                var timeend = (event.timestart + event.timeduration) * 1000;
+                if (timeend <= new Date().getTime()) {
+                    // The event has finished already, don't schedule it.
+                    return $q.when();
+                }
+
                 var dateTriggered = new Date((event.timestart - (time * 60)) * 1000),
                     startDate = new Date(event.timestart * 1000),
                     notification = {
@@ -379,9 +383,7 @@ angular.module('mm.addons.calendar')
                 return $mmLocalNotifications.schedule(notification, mmaCalendarComponent, siteid);
             }
         } else {
-            var deferred = $q.defer();
-            deferred.resolve();
-            return deferred.promise;
+            return $q.when();
         }
     };
 
@@ -403,11 +405,10 @@ angular.module('mm.addons.calendar')
 
         if ($mmLocalNotifications.isAvailable()) {
             angular.forEach(events, function(e) {
-                var promise = self.getEventNotificationTime(e.id, siteid);
-                promises.push(promise);
-                promise.then(function(time) {
+                var promise = self.getEventNotificationTime(e.id, siteid).then(function(time) {
                     return self.scheduleEventNotification(e, time, siteid);
                 });
+                promises.push(promise);
             });
         }
 

@@ -18,9 +18,9 @@ angular.module('mm.addons.files', ['mm.core'])
 .constant('mmaFilesSharedFilesStore', 'shared_files')
 .constant('mmaFilesMyComponent', 'mmaFilesMy')
 .constant('mmaFilesSiteComponent', 'mmaFilesSite')
-.value('mmaFilesPriority', 200)
+.constant('mmaFilesPriority', 200)
 
-.config(function($stateProvider, mmaFilesUploadStateName) {
+.config(function($stateProvider, $mmSideMenuDelegateProvider, mmaFilesUploadStateName, mmaFilesPriority) {
 
     $stateProvider
         .state('site.files', {
@@ -75,36 +75,28 @@ angular.module('mm.addons.files', ['mm.core'])
             }
         });
 
+    // Register side menu addon.
+    $mmSideMenuDelegateProvider.registerNavHandler('mmaFiles', '$mmaFilesHandlers.sideMenuNav', mmaFilesPriority);
+
 })
 
-.run(function($mmSideMenuDelegate, $q, $mmaFiles, $state, $mmSitesManager, $mmUtil, $mmaFilesHelper, $ionicPlatform,
-            mmaFilesPriority) {
-
-    // Register plugin in side menu.
-    $mmSideMenuDelegate.registerPlugin('mmaFiles', function() {
-        if (!$mmaFiles.isPluginEnabled()) {
-            return undefined;
-        }
-        return {
-            icon: 'ion-folder',
-            title: 'mma.files.myfiles',
-            state: 'site.files'
-        };
-    }, mmaFilesPriority);
+.run(function($mmaFiles, $state, $mmSitesManager, $mmUtil, $mmaFilesHelper, $ionicPlatform, $mmApp) {
 
     // Search for new files shared with the upload (to upload).
     if (ionic.Platform.isIOS()) {
         // In iOS we need to manually check if there are new files in the app Inbox folder.
         function searchToUpload() {
-            $mmaFiles.checkIOSNewFiles().then(function(fileEntry) {
-                $mmSitesManager.getSites().then(function(sites) {
-                    if (sites.length == 0) {
-                        $mmUtil.showErrorModal('mma.files.errorreceivefilenosites', true);
-                    } else if (sites.length == 1) {
-                        $mmaFilesHelper.showConfirmAndUploadInSite(fileEntry, sites[0].id);
-                    } else {
-                        $state.go('site.files-choose-site', {file: fileEntry});
-                    }
+            $mmApp.ready().then(function() {
+                $mmaFiles.checkIOSNewFiles().then(function(fileEntry) {
+                    $mmSitesManager.getSites().then(function(sites) {
+                        if (sites.length == 0) {
+                            $mmUtil.showErrorModal('mma.files.errorreceivefilenosites', true);
+                        } else if (sites.length == 1) {
+                            $mmaFilesHelper.showConfirmAndUploadInSite(fileEntry, sites[0].id);
+                        } else {
+                            $state.go('site.files-choose-site', {file: fileEntry});
+                        }
+                    });
                 });
             });
         }

@@ -21,22 +21,42 @@ angular.module('mm.addons.mod_forum')
  * @ngdoc controller
  * @name mmaModForumDiscussionCtrl
  */
-.controller('mmaModForumDiscussionCtrl', function($q, $scope, $stateParams, $mmaModForum, $mmSite, $mmUtil, mmaModForumComponent) {
+.controller('mmaModForumDiscussionCtrl', function($q, $scope, $stateParams, $mmaModForum, $mmSite, $mmUtil, $translate,
+            $ionicScrollDelegate, mmaModForumComponent) {
 
     var discussionid = $stateParams.discussionid,
-        courseid = $stateParams.courseid;
+        courseid = $stateParams.courseid,
+        scrollView;
 
     $scope.component = mmaModForumComponent;
     $scope.courseid = courseid;
+    $scope.newpost = {
+        replyingto: undefined,
+        subject: '',
+        message: ''
+    };
 
     // Convenience function to get forum discussions.
     function fetchPosts() {
         return $mmaModForum.getDiscussionPosts(discussionid).then(function(posts) {
             $scope.discussion = $mmaModForum.extractStartingPost(posts);
             $scope.posts = posts;
+
+            // Set default reply subject.
+            return $translate('mma.mod_forum.re').then(function(strReplyPrefix) {
+                $scope.defaultSubject = strReplyPrefix + ' ' + $scope.discussion.subject;
+                $scope.newpost.subject = $scope.defaultSubject;
+            });
         }, function(message) {
             $mmUtil.showErrorModal(message);
             return $q.reject();
+        });
+    }
+
+    // Refresh posts.
+    function refreshPosts() {
+        return $mmaModForum.invalidateDiscussionPosts(discussionid).finally(function() {
+            return fetchPosts();
         });
     }
 
@@ -51,10 +71,25 @@ angular.module('mm.addons.mod_forum')
 
     // Pull to refresh.
     $scope.refreshPosts = function() {
-        $mmaModForum.invalidateDiscussionPosts(discussionid).finally(function() {
-            fetchPosts().finally(function() {
-                $scope.$broadcast('scroll.refreshComplete');
-            });
+        refreshPosts().finally(function() {
+            $scope.$broadcast('scroll.refreshComplete');
+        });
+    };
+
+    // New post added.
+    $scope.newPostAdded = function() {
+        if (!scrollView) {
+            scrollView = $ionicScrollDelegate.$getByHandle('mmaModForumPostsScroll');
+        }
+        scrollView && scrollView.scrollTop && scrollView.scrollTop();
+
+        $scope.newpost.replyingto = undefined;
+        $scope.newpost.subject = $scope.defaultSubject;
+        $scope.newpost.message = '';
+
+        $scope.discussionLoaded = false;
+        refreshPosts().finally(function() {
+            $scope.discussionLoaded = true;
         });
     };
 });

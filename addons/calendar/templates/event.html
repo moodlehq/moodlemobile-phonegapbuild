@@ -9,7 +9,8 @@
             <article>
                 <ul class="list card">
                     <li class="item item-text-wrap">
-                        {{event.start}}<span ng-if="event.start != event.end"> - {{event.end}}</span>
+                        {{ event.timestart | mmToLocaleString }}
+                        <span ng-if="event.timeduration > 0"> - {{ (event.timestart + event.timeduration) | mmToLocaleString }}</span>
                     </li>
                     <li class="item item-text-wrap">
                         <h2><mm-format-text watch="true">{{event.name}}</mm-format-text></h2>
@@ -22,7 +23,7 @@
                         <img ng-src="{{event.moduleicon}}"> {{event.modulename}}
                     </li>
                     <li class="item item-text-wrap" ng-if="event.description">
-                        <mm-format-text watch="true">{{event.description}}</mm-format-text>
+                        <mm-format-text class="mm-content-with-float" watch="true">{{event.description}}</mm-format-text>
                     </li>
                 </ul>
             </article>

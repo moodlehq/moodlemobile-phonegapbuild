@@ -5,13 +5,16 @@
     "country": "País",
     "description": "Descripció",
     "details": "Detalls",
+    "detailsnotavailable": "No tens accés als detalls d'aquest usuari.",
+    "editingteacher": "Professor",
     "email": "Correu electrònic",
     "interests": "Interessos",
     "invaliduser": "L'usuari no és vàlid",
-    "manager": "Gestor/a",
+    "manager": "Gestor",
     "phone1": "Telèfon",
     "phone2": "Mòbil",
     "roles": "Rols",
     "student": "Estudiant",
+    "teacher": "Professor no editor",
     "webpage": "Pàgina web"
 }

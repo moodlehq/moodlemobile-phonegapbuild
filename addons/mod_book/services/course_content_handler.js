@@ -36,7 +36,7 @@ angular.module('mm.addons.mod_book')
     self.isEnabled = function() {
         var version = $mmSite.getInfo().version;
         // Require Moodle 2.9.
-        return version && (parseInt(version) >= 2015051100);
+        return version && (parseInt(version) >= 2015051100) && $mmSite.canDownloadFiles();
     };
 
     /**
@@ -138,6 +138,7 @@ angular.module('mm.addons.mod_book')
             downloadBtn = {
                 hidden: true,
                 icon: 'ion-ios-cloud-download',
+                label: 'mm.core.download',
                 action: function(e) {
                     var eventNames;
 
@@ -159,6 +160,7 @@ angular.module('mm.addons.mod_book')
 
             refreshBtn = {
                 icon: 'ion-android-refresh',
+                label: 'mm.core.refresh',
                 hidden: true,
                 action: function(e) {
                     e.preventDefault();
