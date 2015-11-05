@@ -21,7 +21,7 @@ angular.module('mm.addons.grades')
  * @ngdoc service
  * @name $mmaGrades
  */
-.factory('$mmaGrades', function($q, $log, $mmSite, $mmText, $ionicPlatform, $translate, $mmCourse) {
+.factory('$mmaGrades', function($q, $log, $mmSite, $mmText, $ionicPlatform, $translate, $mmCourse, $mmCourses) {
 
     $log = $log.getInstance('$mmaGrades');
 
@@ -170,11 +170,10 @@ angular.module('mm.addons.grades')
             promises = [];
 
         columns.forEach(function(column) {
-            var promise = $translate('mma.grades.'+column.name); // Add prefix.
-            promises.push(promise);
-            promise.then(function(translated) {
+            var promise = $translate('mma.grades.'+column.name).then(function(translated) {
                 column.name = translated;
             });
+            promises.push(promise);
         });
 
         return $q.all(promises).then(function() {
@@ -195,6 +194,28 @@ angular.module('mm.addons.grades')
      */
     self.isPluginEnabled = function() {
         return $mmSite.wsAvailable('gradereport_user_get_grades_table');
+    };
+
+    /**
+     * Returns whether or not the grade addon is enabled for a certain course.
+     *
+     * @module mm.addons.grades
+     * @ngdoc method
+     * @name $mmaGrades#isPluginEnabledForCourse
+     * @param {Number} courseId Course ID.
+     * @return {Promise}        Promise resolved with true if plugin is enabled, rejected or resolved with false otherwise.
+     */
+    self.isPluginEnabledForCourse = function(courseId) {
+        if (!courseId) {
+            return $q.reject();
+        }
+
+        return $mmCourses.getUserCourse(courseId, true).then(function(course) {
+            if (course && typeof course.showgrades != 'undefined' && !course.showgrades) {
+                return false;
+            }
+            return true;
+        });
     };
 
     /**

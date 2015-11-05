@@ -21,7 +21,7 @@ angular.module('mm.addons.mod_assign')
  * @ngdoc controller
  * @name mmaModAssignIndexCtrl
  */
-.controller('mmaModAssignIndexCtrl', function($scope, $stateParams, $mmaModAssign, $mmUtil, mmUserProfileState,
+.controller('mmaModAssignIndexCtrl', function($scope, $stateParams, $mmaModAssign, $mmUtil, $translate,
         mmaModAssignComponent, mmaModAssignSubmissionComponent) {
     var module = $stateParams.module || {},
         courseid = $stateParams.courseid;
@@ -33,16 +33,11 @@ angular.module('mm.addons.mod_assign')
     $scope.assignurl = module.url;
     $scope.courseid = courseid;
 
-    // Get user profile state name.
-    $scope.getUserProfileStateName = function() {
-        return mmUserProfileState;
-    };
-
     function fetchAssignment(refresh) {
         // Get assignment data.
         return $mmaModAssign.getAssignment(courseid, module.id, refresh).then(function(assign) {
-            $scope.title = assign.name;
-            $scope.description = assign.intro;
+            $scope.title = assign.name || $scope.title;
+            $scope.description = assign.intro || $scope.description;
             $scope.assign = assign;
 
             // Get assignment submissions.

@@ -3,6 +3,7 @@
     "appname": "Moodle Mobile {{version}}",
     "cacheexpirationtime": "Durée d'échéance du cache (ms)",
     "credits": "Remerciements",
+    "currentlanguage": "Langue active",
     "deletesitefiles": "Voulez-vous vraiment supprimer les fichiers téléchargés depuis ce site ?",
     "deletesitefilestitle": "Supprimer les fichiers de site",
     "development": "Développement",
@@ -19,5 +20,6 @@
     "synchronization": "Synchronisation",
     "synchronizing": "Synchronisation en cours",
     "syncsitesuccess": "Données de site synchronisées et tous les caches vidés.",
-    "total": "Total"
+    "total": "Total",
+    "wificonnection": "Connexion WiFi"
 }

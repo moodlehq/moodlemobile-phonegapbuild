@@ -34,7 +34,7 @@ angular.module('mm.addons.mod_resource')
      * @return {Boolean}
      */
     self.isEnabled = function() {
-        return true;
+        return $mmSite.canDownloadFiles();
     };
 
     /**
@@ -135,6 +135,7 @@ angular.module('mm.addons.mod_resource')
             downloadBtn = {
                 hidden: true,
                 icon: 'ion-ios-cloud-download',
+                label: 'mm.core.download',
                 action: function(e) {
                     var eventNames;
 
@@ -156,6 +157,7 @@ angular.module('mm.addons.mod_resource')
 
             refreshBtn = {
                 icon: 'ion-android-refresh',
+                label: 'mm.core.refresh',
                 hidden: true,
                 action: function(e) {
                     e.preventDefault();
@@ -165,7 +167,7 @@ angular.module('mm.addons.mod_resource')
 
                     $mmaModResource.invalidateContent(module.id).then(function() {
                         $mmaModResource.getFileEventNames(module).then(function(eventNames) {
-                            previousState = $mmFilepool.mmFilepool.FILEOUTDATED;
+                            previousState = $mmFilepool.FILEOUTDATED;
                             addObservers(eventNames, false);
                             $mmaModResource.prefetchContent(module);
                             // Store module as dowloading.

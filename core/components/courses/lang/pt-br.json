@@ -1,5 +1,10 @@
 {
-    "filter": "Filtrar",
-    "frontpage": "Página principal",
-    "mycourses": "Meus cursos"
+    "enrolme": "Inscreva-me",
+    "errorloadcourses": "Um erro ocorreu enquanto os cursos estavam sendo carregados.",
+    "filter": "Filtro",
+    "frontpage": "Primeira página",
+    "mycourses": "Meus cursos",
+    "password": "Senha",
+    "search": "Buscar",
+    "searchcourses": "Buscar cursos"
 }

@@ -21,21 +21,21 @@ angular.module('mm.core.courses')
  * @ngdoc controller
  * @name mmCoursesListCtrl
  */
-.controller('mmCoursesListCtrl', function($scope, $state, $mmCourses, $mmCoursesDelegate, $mmUtil) {
+.controller('mmCoursesListCtrl', function($scope, $mmCourses, $mmCoursesDelegate, $mmUtil, $mmEvents, $mmSite,
+            mmCoursesEventMyCoursesUpdated) {
+
+    $scope.searchEnabled = $mmCourses.isSearchCoursesAvailable();
 
     // Convenience function to fetch courses.
     function fetchCourses(refresh) {
-        return $mmCourses.getUserCourses(refresh).then(function(courses) {
+        return $mmCourses.getUserCourses().then(function(courses) {
             $scope.courses = courses;
             angular.forEach(courses, function(course) {
-                course._handlers = [];
-                $mmCoursesDelegate.getNavHandlersFor(course.id).then(function(handlers) {
-                    course._handlers = handlers;
-                });
+                course._handlers = $mmCoursesDelegate.getNavHandlersFor(course.id, refresh);
             });
             $scope.filterText = ''; // Filter value MUST be set after courses are shown.
         }, function(error) {
-            if (typeof error != 'undefined' && error != '') {
+            if (typeof error != 'undefined' && error !== '') {
                 $mmUtil.showErrorModal(error);
             } else {
                 $mmUtil.showErrorModal('mm.courses.errorloadcourses', true);
@@ -47,8 +47,16 @@ angular.module('mm.core.courses')
     });
 
     $scope.refreshCourses = function() {
-        fetchCourses(true).finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
+        $mmCourses.invalidateUserCourses().finally(function() {
+            fetchCourses(true).finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
         });
     };
+
+    $mmEvents.on(mmCoursesEventMyCoursesUpdated, function(siteid) {
+        if (siteid == $mmSite.getId()) {
+            fetchCourses();
+        }
+    });
 });
