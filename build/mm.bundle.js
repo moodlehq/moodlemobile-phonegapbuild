@@ -1639,6 +1639,17 @@ angular.module('mm.core')
             }
         });
     };
+        self.getBasePathToDownload = function() {
+        return self.init().then(function() {
+            if (ionic.Platform.isIOS()) {
+                return $cordovaFile.checkDir(basePath, '').then(function(dirEntry) {
+                    return dirEntry.toInternalURL();
+                });
+            } else {
+                return basePath;
+            }
+        });
+    };
         self.getTmpFolder = function() {
         return mmFsTmpFolder;
     };
@@ -2365,8 +2376,9 @@ angular.module('mm.core')
         });
         return exists;
     }
-    this.$get = ["$http", "$q", "$mmWS", "$mmDB", "$mmConfig", "$log", "md5", "$mmApp", "$mmLang", "$mmUtil", "$mmFS", "mmCoreWSCacheStore", "mmCoreWSPrefix", "mmCoreSessionExpired", "$mmEvents", "mmCoreEventSessionExpired", "mmCoreUserDeleted", "mmCoreEventUserDeleted", function($http, $q, $mmWS, $mmDB, $mmConfig, $log, md5, $mmApp, $mmLang, $mmUtil, $mmFS, mmCoreWSCacheStore,
-            mmCoreWSPrefix, mmCoreSessionExpired, $mmEvents, mmCoreEventSessionExpired, mmCoreUserDeleted, mmCoreEventUserDeleted) {
+    this.$get = ["$http", "$q", "$mmWS", "$mmDB", "$mmConfig", "$log", "md5", "$mmApp", "$mmLang", "$mmUtil", "$mmFS", "mmCoreWSCacheStore", "mmCoreWSPrefix", "mmCoreSessionExpired", "$mmEvents", "mmCoreEventSessionExpired", "mmCoreUserDeleted", "mmCoreEventUserDeleted", "$mmText", function($http, $q, $mmWS, $mmDB, $mmConfig, $log, md5, $mmApp, $mmLang, $mmUtil, $mmFS, mmCoreWSCacheStore,
+            mmCoreWSPrefix, mmCoreSessionExpired, $mmEvents, mmCoreEventSessionExpired, mmCoreUserDeleted, mmCoreEventUserDeleted,
+            $mmText) {
         $log = $log.getInstance('$mmSite');
                 var deprecatedFunctions = {
             "core_grade_get_definitions": "core_grading_get_definitions",
@@ -2647,12 +2659,20 @@ angular.module('mm.core')
             var release = this.infos.release ? this.infos.release : undefined;
             return $mmUtil.getDocsUrl(release, page);
         };
-                Site.prototype.checkLocalMobilePlugin = function() {
-            var siteurl = this.siteurl;
+                Site.prototype.checkLocalMobilePlugin = function(retrying) {
+            var siteurl = this.siteurl,
+                self = this;
             return $mmConfig.get('wsextservice').then(function(service) {
                 return $http.post(siteurl + '/local/mobile/check.php', {service: service}).then(function(response) {
                     var data = response.data;
-                    if (typeof data == 'undefined' || typeof data.code == 'undefined') {
+                    if (typeof data != 'undefined' && data.errorcode === 'requirecorrectaccess') {
+                        if (!retrying) {
+                            self.siteurl = $mmText.addOrRemoveWWW(siteurl);
+                            return self.checkLocalMobilePlugin(true);
+                        } else {
+                            return $q.reject(data.error);
+                        }
+                    } else if (typeof data == 'undefined' || typeof data.code == 'undefined') {
                         return {code: 0, warning: 'mm.login.localmobileunexpectedresponse'};
                     }
                     var code = parseInt(data.code, 10);
@@ -2824,9 +2844,9 @@ angular.module('mm.core')
     ];
     $mmAppProvider.registerStores(stores);
 }])
-.factory('$mmSitesManager', ["$http", "$q", "$mmSitesFactory", "md5", "$mmLang", "$mmConfig", "$mmApp", "$mmUtil", "$mmEvents", "$state", "$translate", "mmCoreSitesStore", "mmCoreCurrentSiteStore", "mmCoreEventLogin", "mmCoreEventLogout", "$log", "mmCoreWSPrefix", "mmCoreEventSiteUpdated", "mmCoreEventSiteAdded", "mmCoreEventSessionExpired", "mmCoreEventSiteDeleted", function($http, $q, $mmSitesFactory, md5, $mmLang, $mmConfig, $mmApp, $mmUtil, $mmEvents, $state,
+.factory('$mmSitesManager', ["$http", "$q", "$mmSitesFactory", "md5", "$mmLang", "$mmConfig", "$mmApp", "$mmUtil", "$mmEvents", "$state", "$translate", "mmCoreSitesStore", "mmCoreCurrentSiteStore", "mmCoreEventLogin", "mmCoreEventLogout", "$log", "mmCoreWSPrefix", "mmCoreEventSiteUpdated", "mmCoreEventSiteAdded", "mmCoreEventSessionExpired", "mmCoreEventSiteDeleted", "$mmText", function($http, $q, $mmSitesFactory, md5, $mmLang, $mmConfig, $mmApp, $mmUtil, $mmEvents, $state,
             $translate, mmCoreSitesStore, mmCoreCurrentSiteStore, mmCoreEventLogin, mmCoreEventLogout, $log, mmCoreWSPrefix,
-            mmCoreEventSiteUpdated, mmCoreEventSiteAdded, mmCoreEventSessionExpired, mmCoreEventSiteDeleted) {
+            mmCoreEventSiteUpdated, mmCoreEventSiteAdded, mmCoreEventSessionExpired, mmCoreEventSiteDeleted, $mmText) {
     $log = $log.getInstance('$mmSitesManager');
     var self = {},
         services = {},
@@ -2853,7 +2873,8 @@ angular.module('mm.core')
             siteurl = siteurl.replace(/^http(s)?\:\/\//i, protocol);
             return self.siteExists(siteurl).then(function() {
                 var temporarySite = $mmSitesFactory.makeSite(undefined, siteurl);
-                return temporarySite.checkLocalMobilePlugin(siteurl).then(function(data) {
+                return temporarySite.checkLocalMobilePlugin().then(function(data) {
+                    siteurl = temporarySite.getURL();
                     services[siteurl] = data.service;
                     return {siteurl: siteurl, code: data.code, warning: data.warning};
                 });
@@ -2893,12 +2914,11 @@ angular.module('mm.core')
                     return $mmLang.translateAndReject('mm.core.cannotconnect');
                 } else {
                     if (typeof data.token != 'undefined') {
-                        return data.token;
+                        return {token: data.token, siteurl: siteurl};
                     } else {
                         if (typeof data.error != 'undefined') {
                             if (!retry && data.errorcode == "requirecorrectaccess") {
-                                siteurl = siteurl.replace("https://", "https://www.");
-                                siteurl = siteurl.replace("http://", "http://www.");
+                                siteurl = $mmText.addOrRemoveWWW(siteurl);
                                 return self.getUserToken(siteurl, username, password, service, true);
                             } else {
                                 return $q.reject(data.error);
@@ -3237,6 +3257,17 @@ angular.module('mm.core')
             .replace(/"/g, "&quot;")
             .replace(/'/g, "&#039;");
     };
+        self.addOrRemoveWWW = function(url) {
+        if (typeof url == 'string') {
+            if (url.match(/http(s)?:\/\/www\./)) {
+                url = url.replace('www.', '');
+            } else {
+                url = url.replace('https://', 'https://www.');
+                url = url.replace('http://', 'http://www.');
+            }
+        }
+        return url;
+    };
     return self;
 }]);
 
@@ -3528,7 +3559,9 @@ angular.module('mm.core')
             return url;
         };
                 self.openFile = function(path) {
+            var deferred = $q.defer();
             if (false) {
+                deferred.resolve();
             } else if (window.plugins) {
                 var extension = self.getFileExtension(path),
                     mimetype;
@@ -3539,19 +3572,24 @@ angular.module('mm.core')
                     var iParams = {
                         action: "android.intent.action.VIEW",
                         url: path,
-                        type: mimetype.type
+                        type: mimetype ? mimetype.type : undefined
                     };
                     window.plugins.webintent.startActivity(
                         iParams,
                         function() {
                             $log.debug('Intent launched');
+                            deferred.resolve();
                         },
                         function() {
-                            $log.debug('Intent launching failed');
+                            $log.debug('Intent launching failed.');
                             $log.debug('action: ' + iParams.action);
                             $log.debug('url: ' + iParams.url);
                             $log.debug('type: ' + iParams.type);
-                            window.open(path, '_system');
+                            if (!extension || extension.indexOf('/') > -1 || extension.indexOf('\\') > -1) {
+                                $mmLang.translateAndRejectDeferred(deferred, 'mm.core.erroropenfilenoextension');
+                            } else {
+                                $mmLang.translateAndRejectDeferred(deferred, 'mm.core.erroropenfilenoapp');
+                            }
                         }
                     );
                 } else if (ionic.Platform.isIOS() && typeof handleDocumentWithURL == 'function') {
@@ -3564,6 +3602,7 @@ angular.module('mm.core')
                         handleDocumentWithURL(
                             function() {
                                 $log.debug('File opened with handleDocumentWithURL' + path);
+                                deferred.resolve();
                             },
                             function(error) {
                                 $log.debug('Error opening with handleDocumentWithURL' + path);
@@ -3571,17 +3610,21 @@ angular.module('mm.core')
                                     $log.error('No app that handles this file type.');
                                 }
                                 self.openInBrowser(path);
+                                deferred.resolve();
                             },
                             path
                         );
-                    });
+                    }, deferred.reject);
                 } else {
                     self.openInBrowser(path);
+                    deferred.resolve();
                 }
             } else {
                 $log.debug('Opening external file using window.open()');
                 window.open(path, '_blank');
+                deferred.resolve();
             }
+            return deferred.promise;
         };
                 self.openInBrowser = function(url) {
             window.open(url, '_system');
@@ -3756,7 +3799,7 @@ angular.module('mm.core')
 }]);
 
 angular.module('mm.core')
-.factory('$mmWS', ["$http", "$q", "$log", "$mmLang", "$cordovaFileTransfer", "$mmApp", "$mmFS", "mmCoreSessionExpired", "mmCoreUserDeleted", function($http, $q, $log, $mmLang, $cordovaFileTransfer, $mmApp, $mmFS, mmCoreSessionExpired,
+.factory('$mmWS', ["$http", "$q", "$log", "$mmLang", "$cordovaFileTransfer", "$mmApp", "$mmFS", "$mmText", "mmCoreSessionExpired", "mmCoreUserDeleted", function($http, $q, $log, $mmLang, $cordovaFileTransfer, $mmApp, $mmFS, $mmText, mmCoreSessionExpired,
             mmCoreUserDeleted) {
     $log = $log.getInstance('$mmWS');
     var self = {};
@@ -3769,11 +3812,21 @@ angular.module('mm.core')
         } else if (!$mmApp.isOnline()) {
             return $mmLang.translateAndReject('mm.core.networkerrormsg');
         }
+        preSets.typeExpected = preSets.typeExpected || 'object';
         data.wsfunction = method;
         data.wstoken = preSets.wstoken;
         siteurl = preSets.siteurl + '/webservice/rest/server.php?moodlewsrestformat=json';
         var ajaxData = data;
         return $http.post(siteurl, ajaxData).then(function(data) {
+            if (data && data.headers('Content-Type').indexOf('application/json') == -1 && typeof window.onerror == 'function') {
+                var message = 'Warning: response of type "' + data.headers('Content-Type') + '" received';
+                if (data.data) {
+                    var extra = typeof data.data == 'string' ? data.data : JSON.stringify(data.data);
+                    extra = $mmText.cleanTags(extra, true).replace(/ +(?= )/g,'').substr(0, 60);
+                    message = message + '\n' + extra + '...';
+                }
+                window.onerror(message, '$mmWS', 1);
+            }
             if ((!data || !data.data) && !preSets.responseExpected) {
                 data = {};
             } else {
@@ -3781,6 +3834,9 @@ angular.module('mm.core')
             }
             if (!data) {
                 return $mmLang.translateAndReject('mm.core.serverconnection');
+            } else if (typeof data != preSets.typeExpected) {
+                $log.warn('Response of type "' + typeof data + '" received, expecting "' + preSets.typeExpected + '"');
+                return $mmLang.translateAndReject('mm.core.errorinvalidresponse');
             }
             if (typeof(data.exception) !== 'undefined') {
                 if (data.errorcode == 'invalidtoken' ||
@@ -3821,7 +3877,7 @@ angular.module('mm.core')
     }
         self.downloadFile = function(url, path, background) {
         $log.debug('Downloading file ' + url);
-        return $mmFS.getBasePath().then(function(basePath) {
+        return $mmFS.getBasePathToDownload().then(function(basePath) {
             var tmpPath = basePath + path + '.tmp';
             return $cordovaFileTransfer.download(url, tmpPath, { encodeURI: false }, true).then(function() {
                 return $mmFS.moveFile(path + '.tmp', path).then(function(movedEntry) {
@@ -3938,7 +3994,9 @@ angular.module('mm.core')
                     event.preventDefault();
                     event.stopPropagation();
                     if (href.indexOf('cdvfile://') === 0 || href.indexOf('file://') === 0) {
-                        $mmUtil.openFile(href);
+                        $mmUtil.openFile(href).catch(function(error) {
+                            $mmUtil.showErrorModal(error);
+                        });
                     } else {
                         $mmUtil.openInBrowser(href);
                     }
@@ -3949,7 +4007,7 @@ angular.module('mm.core')
 }]);
 
 angular.module('mm.core')
-.directive('mmCompletion', ["$mmSite", "$mmUtil", "$mmText", "$translate", function($mmSite, $mmUtil, $mmText, $translate) {
+.directive('mmCompletion', ["$mmSite", "$mmUtil", "$mmText", "$translate", "$q", function($mmSite, $mmUtil, $mmText, $translate, $q) {
     function showStatus(scope) {
         var langKey,
             moduleName = scope.moduleName || '';
@@ -4003,13 +4061,18 @@ angular.module('mm.core')
                             cmid: scope.completion.cmid,
                             completed: scope.completion.state === 1 ? 0 : 1
                         };
-                    $mmSite.write('core_completion_update_activity_completion_status_manually', params).then(function() {
+                    $mmSite.write('core_completion_update_activity_completion_status_manually', params).then(function(response) {
+                        if (!response.status) {
+                            return $q.reject();
+                        }
                         if (angular.isFunction(scope.afterChange)) {
                             scope.afterChange();
                         }
                     }).catch(function(error) {
                         if (error) {
                             $mmUtil.showErrorModal(error);
+                        } else {
+                            $mmUtil.showErrorModal('mm.core.errorchangecompletion', true);
                         }
                     }).finally(function() {
                         modal.dismiss();
@@ -4151,7 +4214,9 @@ angular.module('mm.core')
                 }
                 if (openAfterDownload) {
                     downloadFile(scope, siteid, fileurl, component, componentid, timemodified).then(function(localUrl) {
-                        $mmUtil.openFile(localUrl);
+                        $mmUtil.openFile(localUrl).catch(function(error) {
+                            $mmUtil.showErrorModal(error);
+                        });
                     });
                 } else {
                     $mmFilepool.invalidateFileByUrl(siteid, fileurl).finally(function() {
@@ -4179,6 +4244,18 @@ angular.module('mm.core')
             if (attrs.shorten && attrs.expandOnClick) {
                 var shortened = $mmText.shortenText($mmText.cleanTags(fullText, false), parseInt(attrs.shorten)),
                     expanded = false;
+                if (shortened.trim() === '') {
+                    var hasContent = false,
+                        meaningfulTags = ['img', 'video', 'audio'];
+                    angular.forEach(meaningfulTags, function(tag) {
+                        if (fullText.indexOf('<'+tag) > -1) {
+                            hasContent = true;
+                        }
+                    });
+                    if (hasContent) {
+                        shortened = $translate.instant('mm.core.clicktohideshow');
+                    }
+                }
                 element.on('click', function(e) {
                     e.preventDefault();
                     e.stopPropagation();
@@ -4361,22 +4438,10 @@ angular.module('mm.core')
         },
         link: function(scope, element, attrs) {
             var el = element[0],
-                loading = angular.element(el.querySelector('.mm-loading-container')),
-                content = angular.element(el.querySelector('.mm-loading-content'));
+                loading = angular.element(el.querySelector('.mm-loading-container'));
             if (!attrs.message) {
                 $translate('mm.core.loading').then(function(loadingString) {
                     scope.message = loadingString;
-                });
-            }
-            if (attrs.hideUntil) {
-                scope.$watch('hideUntil', function(newValue) {
-                    if (newValue) {
-                        loading.addClass('hide');
-                        content.removeClass('hide');
-                    } else {
-                        content.addClass('hide');
-                        loading.removeClass('hide');
-                    }
                 });
             }
             if (attrs.loadingPaddingTop) {
@@ -4631,14 +4696,10 @@ angular.module('mm.core.course', ['mm.core.courses'])
 }]);
 
 angular.module('mm.core.courses', [])
-.value('mmCoursesFrontPage', {
-    'id': 1,
-    'shortname': '',
-    'fullname': '',
-    'enrolledusercount': 0,
-    'idnumber': '',
-    'visible': 1
-})
+.constant('mmCoursesSearchComponent', 'mmCoursesSearch')
+.constant('mmCoursesSearchPerPage', 20)
+.constant('mmCoursesEnrolInvalidKey', 'mmCoursesEnrolInvalidKey')
+.constant('mmCoursesEventMyCoursesUpdated', 'my_courses_updated')
 .config(["$stateProvider", function($stateProvider) {
     $stateProvider
     .state('site.mm_courses', {
@@ -4649,12 +4710,36 @@ angular.module('mm.core.courses', [])
                 controller: 'mmCoursesListCtrl'
             }
         }
+    })
+    .state('site.mm_searchcourses', {
+        url: '/mm_searchcourses',
+        views: {
+            'site': {
+                templateUrl: 'core/components/courses/templates/search.html',
+                controller: 'mmCoursesSearchCtrl'
+            }
+        }
+    })
+    .state('site.mm_viewresult', {
+        url: '/mm_viewresult',
+        params: {
+            course: null
+        },
+        views: {
+            'site': {
+                templateUrl: 'core/components/courses/templates/viewresult.html',
+                controller: 'mmCoursesViewResultCtrl'
+            }
+        }
     });
 }])
-.run(["$mmEvents", "mmCoreEventLogin", "mmCoreEventSiteUpdated", "mmCoreEventLogout", "$mmCoursesDelegate", function($mmEvents, mmCoreEventLogin, mmCoreEventSiteUpdated, mmCoreEventLogout, $mmCoursesDelegate) {
+.run(["$mmEvents", "mmCoreEventLogin", "mmCoreEventSiteUpdated", "mmCoreEventLogout", "$mmCoursesDelegate", "$mmCourses", function($mmEvents, mmCoreEventLogin, mmCoreEventSiteUpdated, mmCoreEventLogout, $mmCoursesDelegate, $mmCourses) {
     $mmEvents.on(mmCoreEventLogin, $mmCoursesDelegate.updateNavHandlers);
     $mmEvents.on(mmCoreEventSiteUpdated, $mmCoursesDelegate.updateNavHandlers);
-    $mmEvents.on(mmCoreEventLogout, $mmCoursesDelegate.clearCoursesHandlers);
+    $mmEvents.on(mmCoreEventLogout, function() {
+        $mmCoursesDelegate.clearCoursesHandlers();
+        $mmCourses.clearCurrentCourses();
+    });
 }]);
 
 angular.module('mm.core.login', [])
@@ -4935,9 +5020,7 @@ angular.module('mm.core.course')
 .controller('mmCourseSectionCtrl', ["$mmCourseDelegate", "$mmCourse", "$mmUtil", "$scope", "$stateParams", "$translate", "$mmSite", "$mmEvents", "$ionicScrollDelegate", "$mmCourses", "$q", "mmCoreEventCompletionModuleViewed", function($mmCourseDelegate, $mmCourse, $mmUtil, $scope, $stateParams, $translate, $mmSite,
             $mmEvents, $ionicScrollDelegate, $mmCourses, $q, mmCoreEventCompletionModuleViewed) {
     var courseid = $stateParams.courseid || 1,
-        sectionid = $stateParams.sectionid || -1,
-        sections = [],
-        course = $mmCourses.getStoredCourse(courseid);
+        sectionid = $stateParams.sectionid || -1;
     $scope.sections = [];
     if (sectionid < 0) {
         $translate('mm.course.allsections').then(function(str) {
@@ -4946,50 +5029,53 @@ angular.module('mm.core.course')
         $scope.summary = null;
     }
     function loadContent(sectionid) {
-        var promise;
-        if (course && course.enablecompletion === false) {
-            promise = $q.when([]);
-        } else {
-            promise = $mmCourse.getActivitiesCompletionStatus(courseid).catch(function() {
-                return [];
-            })
-        }
-        return promise.then(function(statuses) {
-            var promise,
-                sectionnumber;
-            if (sectionid < 0) {
-                sectionnumber = 0;
-                promise = $mmCourse.getSections(courseid);
+        return $mmCourses.getUserCourse(courseid, true).catch(function() {
+        }).then(function(course) {
+            var promise;
+            if (course && course.enablecompletion === false) {
+                promise = $q.when([]);
             } else {
-                sectionnumber = sectionid;
-                promise = $mmCourse.getSection(courseid, sectionid).then(function(section) {
-                    $scope.title = section.name;
-                    $scope.summary = section.summary;
-                    return [section];
+                promise = $mmCourse.getActivitiesCompletionStatus(courseid).catch(function() {
+                    return [];
                 });
             }
-            promise.then(function(sections) {
-                angular.forEach(sections, function(section) {
-                    angular.forEach(section.modules, function(module) {
-                        module._controller =
-                                $mmCourseDelegate.getContentHandlerControllerFor(module.modname, module, courseid, section.id);
-                        var status = statuses[module.id];
-                        if (typeof status != 'undefined') {
-                            module.completionstatus = status;
-                        }
-                    });
-                });
-                $scope.sections = sections;
-                $mmSite.write('core_course_view_course', {
-                    courseid: courseid,
-                    sectionnumber: sectionnumber
-                });
-            }, function(error) {
-                if (error) {
-                    $mmUtil.showErrorModal(error);
+            return promise.then(function(statuses) {
+                var promise,
+                    sectionnumber;
+                if (sectionid < 0) {
+                    sectionnumber = 0;
+                    promise = $mmCourse.getSections(courseid);
                 } else {
-                    $mmUtil.showErrorModal('mm.course.couldnotloadsectioncontent', true);
+                    sectionnumber = sectionid;
+                    promise = $mmCourse.getSection(courseid, sectionid).then(function(section) {
+                        $scope.title = section.name;
+                        $scope.summary = section.summary;
+                        return [section];
+                    });
                 }
+                promise.then(function(sections) {
+                    angular.forEach(sections, function(section) {
+                        angular.forEach(section.modules, function(module) {
+                            module._controller =
+                                    $mmCourseDelegate.getContentHandlerControllerFor(module.modname, module, courseid, section.id);
+                            var status = statuses[module.id];
+                            if (typeof status != 'undefined') {
+                                module.completionstatus = status;
+                            }
+                        });
+                    });
+                    $scope.sections = sections;
+                    $mmSite.write('core_course_view_course', {
+                        courseid: courseid,
+                        sectionnumber: sectionnumber
+                    });
+                }, function(error) {
+                    if (error) {
+                        $mmUtil.showErrorModal(error);
+                    } else {
+                        $mmUtil.showErrorModal('mm.course.couldnotloadsectioncontent', true);
+                    }
+                });
             });
         });
     }
@@ -5038,8 +5124,8 @@ angular.module('mm.core.course')
         courseid = course.id;
     $scope.courseid = courseid;
     $scope.fullname = course.fullname;
-    function loadSections(refresh) {
-        return $mmCourse.getSections(courseid, refresh).then(function(sections) {
+    function loadSections() {
+        return $mmCourse.getSections(courseid).then(function(sections) {
             $translate('mm.course.showall').then(function(str) {
                 var result = [{
                     name: str,
@@ -5056,8 +5142,10 @@ angular.module('mm.core.course')
         });
     }
     $scope.doRefresh = function() {
-        loadSections(true).finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
+        $mmCourse.invalidateSections(courseid).finally(function() {
+            loadSections().finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
         });
     };
     loadSections().finally(function() {
@@ -5448,9 +5536,11 @@ angular.module('mm.core.course')
 });
 
 angular.module('mm.core.courses')
-.controller('mmCoursesListCtrl', ["$scope", "$mmCourses", "$mmCoursesDelegate", "$mmUtil", function($scope, $mmCourses, $mmCoursesDelegate, $mmUtil) {
+.controller('mmCoursesListCtrl', ["$scope", "$mmCourses", "$mmCoursesDelegate", "$mmUtil", "$mmEvents", "$mmSite", "mmCoursesEventMyCoursesUpdated", function($scope, $mmCourses, $mmCoursesDelegate, $mmUtil, $mmEvents, $mmSite,
+            mmCoursesEventMyCoursesUpdated) {
+    $scope.searchEnabled = $mmCourses.isSearchCoursesAvailable();
     function fetchCourses(refresh) {
-        return $mmCourses.getUserCourses(refresh).then(function(courses) {
+        return $mmCourses.getUserCourses().then(function(courses) {
             $scope.courses = courses;
             angular.forEach(courses, function(course) {
                 course._handlers = $mmCoursesDelegate.getNavHandlersFor(course.id, refresh);
@@ -5468,35 +5558,233 @@ angular.module('mm.core.courses')
         $scope.coursesLoaded = true;
     });
     $scope.refreshCourses = function() {
-        fetchCourses(true).finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
+        $mmCourses.invalidateUserCourses().finally(function() {
+            fetchCourses(true).finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
         });
+    };
+    $mmEvents.on(mmCoursesEventMyCoursesUpdated, function(siteid) {
+        if (siteid == $mmSite.getId()) {
+            fetchCourses();
+        }
+    });
+}]);
+
+angular.module('mm.core.courses')
+.controller('mmCoursesSearchCtrl', ["$scope", "$mmCourses", "$q", "$mmUtil", function($scope, $mmCourses, $q, $mmUtil) {
+    var page = 0,
+    	currentSearch = '';
+    $scope.searchText = '';
+    function searchCourses(refresh) {
+        if (refresh) {
+            page = 0;
+        }
+        return $mmCourses.search(currentSearch, page).then(function(response) {
+            if (page === 0) {
+                $scope.courses = response.courses;
+            } else {
+                $scope.courses = $scope.courses.concat(response.courses);
+            }
+            $scope.total = response.total;
+            page++;
+            $scope.canLoadMore = $scope.courses.length < $scope.total;
+        }).catch(function(message) {
+            $scope.canLoadMore = false;
+            if (message) {
+                $mmUtil.showErrorModal(message);
+            } else {
+                $mmUtil.showErrorModal('mma.searchcourses.errorsearching', true);
+            }
+            return $q.reject();
+        });
+    }
+    $scope.search = function(text) {
+        currentSearch = text;
+        $scope.courses = undefined;
+    	var modal = $mmUtil.showModalLoading('mm.core.searching', true);
+    	searchCourses(true).finally(function() {
+            modal.dismiss();
+    	});
+    };
+    $scope.loadMoreResults = function() {
+    	searchCourses();
     };
 }]);
 
 angular.module('mm.core.courses')
-.factory('$mmCourses', ["$q", "$mmSite", "$mmSitesManager", function($q, $mmSite, $mmSitesManager) {
-    var self = {},
-        currentCourses = {};
-    function storeCoursesInMemory(courses) {
-        angular.forEach(courses, function(course) {
-            currentCourses[course.id] = course;
+.controller('mmCoursesViewResultCtrl', ["$scope", "$stateParams", "$mmCourses", "$mmCoursesDelegate", "$mmUtil", "$translate", "$q", "$ionicModal", "$mmEvents", "$mmSite", "mmCoursesSearchComponent", "mmCoursesEnrolInvalidKey", "mmCoursesEventMyCoursesUpdated", function($scope, $stateParams, $mmCourses, $mmCoursesDelegate, $mmUtil, $translate, $q,
+            $ionicModal, $mmEvents, $mmSite, mmCoursesSearchComponent, mmCoursesEnrolInvalidKey, mmCoursesEventMyCoursesUpdated) {
+    var course = $stateParams.course || {},
+        selfEnrolWSAvailable = $mmCourses.isSelfEnrolmentEnabled();
+    $scope.course = course;
+    $scope.title = course.fullname;
+    $scope.component = mmCoursesSearchComponent;
+    if (selfEnrolWSAvailable) {
+        angular.forEach(course.enrollmentmethods, function(method) {
+            if (method === 'self') {
+                $scope.selfEnrolEnabled = true;
+                $scope.enroldata = {
+                    password: ''
+                };
+            }
         });
     }
+    function getCourse(refresh) {
+        return $mmCourses.getUserCourse(course.id).then(function(c) {
+            $scope.isEnrolled = true;
+            return c;
+        }).catch(function() {
+            $scope.isEnrolled = false;
+            return $mmCourses.getCourse(course.id);
+        }).then(function(c) {
+            course.fullname = c.fullname || course.fullname;
+            course.summary = c.summary || course.summary;
+            course._handlers = $mmCoursesDelegate.getNavHandlersFor(course.id, refresh);
+        });
+    }
+    function refreshData() {
+        var p1 = $mmCourses.invalidateUserCourses(),
+            p2 = $mmCourses.invalidateCourse(course.id);
+        return $q.all([p1, p2]).finally(function() {
+            return getCourse(true);
+        });
+    }
+    getCourse().finally(function() {
+        $scope.courseLoaded = true;
+    });
+    $scope.doRefresh = function() {
+        refreshData().finally(function() {
+            $scope.$broadcast('scroll.refreshComplete');
+        });
+    };
+    if ($scope.selfEnrolEnabled) {
+        $ionicModal.fromTemplateUrl('core/components/courses/templates/password-modal.html', {
+            scope: $scope,
+            animation: 'slide-in-up'
+        }).then(function(modal) {
+            $scope.modal = modal;
+            $scope.closeModal = function() {
+                $scope.enroldata.password = '';
+                modal.hide();
+            };
+            $scope.$on('$destroy', function() {
+                modal.remove();
+            });
+        });
+        $scope.enrol = function(password) {
+            var promise;
+            if ($scope.modal.isShown()) {
+                promise = $q.when();
+            } else {
+                promise = $mmUtil.showConfirm($translate('mm.courses.confirmselfenrol'));
+            }
+            promise.then(function() {
+                var modal = $mmUtil.showModalLoading('mm.core.loading', true);
+                $mmCourses.selfEnrol(course.id, password).then(function() {
+                    $scope.closeModal();
+                    $scope.isEnrolled = true;
+                    refreshData().finally(function() {
+                        $mmEvents.trigger(mmCoursesEventMyCoursesUpdated, $mmSite.getId());
+                    });
+                }).catch(function(error) {
+                    if (error) {
+                        if (error.code === mmCoursesEnrolInvalidKey) {
+                            if ($scope.modal.isShown()) {
+                                $mmUtil.showErrorModal(error.message);
+                            } else {
+                                $scope.modal.show();
+                            }
+                        } else if (typeof error == 'string') {
+                            $mmUtil.showErrorModal(error);
+                        }
+                    } else {
+                        $mmUtil.showErrorModal('mm.courses.errorselfenrol', true);
+                    }
+                }).finally(function() {
+                    modal.dismiss();
+                });
+            });
+        };
+    }
+}]);
+
+angular.module('mm.core.courses')
+.factory('$mmCourses', ["$q", "$mmSite", "$log", "$mmSitesManager", "mmCoursesSearchPerPage", "mmCoursesEnrolInvalidKey", function($q, $mmSite, $log, $mmSitesManager, mmCoursesSearchPerPage, mmCoursesEnrolInvalidKey) {
+    $log = $log.getInstance('$mmCourses');
+    var self = {},
+        currentCourses = {};
+        self.clearCurrentCourses = function() {
+        currentCourses = {};
+    };
+        self.getCourse = function(id, siteid) {
+        return self.getCourses([id], siteid).then(function(courses) {
+            if (courses && courses.length > 0) {
+                return courses[0];
+            }
+            return $q.reject();
+        });
+    };
+        self.getCourses = function(ids, siteid) {
+        siteid = siteid || $mmSite.getId();
+        if (!angular.isArray(ids)) {
+            return $q.reject();
+        } else if (ids.length === 0) {
+            return $q.when([]);
+        }
+        return $mmSitesManager.getSite(siteid).then(function(site) {
+            var data = {
+                    options: {
+                        ids: ids
+                    }
+                },
+                preSets = {
+                    cacheKey: getCoursesCacheKey(ids)
+                };
+            return site.read('core_course_get_courses', data, preSets).then(function(courses) {
+                if (typeof courses != 'object' && !angular.isArray(courses)) {
+                    return $q.reject();
+                }
+                return courses;
+            });
+        });
+    };
+        function getCoursesCacheKey(ids) {
+        return 'mmCourses:course:' + JSON.stringify(ids);
+    }
         self.getStoredCourse = function(id) {
+        $log.warn('The function \'getStoredCourse\' is deprecated. Please use \'getUserCourse\' instead');
         return currentCourses[id];
     };
-        self.getUserCourses = function(refresh, siteid) {
+        self.getUserCourse = function(id, preferCache, siteid) {
         siteid = siteid || $mmSite.getId();
+        if (typeof preferCache == 'undefined') {
+            preferCache = false;
+        }
+        return self.getUserCourses(preferCache, siteid).then(function(courses) {
+            var course;
+            angular.forEach(courses, function(c) {
+                if (c.id === id) {
+                    course = c;
+                }
+            });
+            return course ? course : $q.reject();
+        });
+    };
+        self.getUserCourses = function(preferCache, siteid) {
+        siteid = siteid || $mmSite.getId();
+        if (typeof preferCache == 'undefined') {
+            preferCache = false;
+        }
         return $mmSitesManager.getSite(siteid).then(function(site) {
             var userid = site.getUserId(),
-                presets = {},
+                presets = {
+                    cacheKey: getUserCoursesCacheKey(),
+                    omitExpires: preferCache
+                },
                 data = {userid: userid};
             if (typeof userid === 'undefined') {
                 return $q.reject();
-            }
-            if (refresh) {
-                presets.getFromCache = false;
             }
             return site.read('core_enrol_get_users_courses', data, presets).then(function(courses) {
                 if (siteid === $mmSite.getId()) {
@@ -5506,6 +5794,80 @@ angular.module('mm.core.courses')
             });
         });
     };
+        function getUserCoursesCacheKey() {
+        return 'mmCourses:usercourses';
+    }
+        self.invalidateCourse = function(id, siteid) {
+        return self.invalidateCourses([id], siteid);
+    };
+        self.invalidateCourses = function(ids, siteid) {
+        siteid = siteid || $mmSite.getId();
+        return $mmSitesManager.getSite(siteid).then(function(site) {
+            return site.invalidateWsCacheForKey(getCoursesCacheKey(ids));
+        });
+    };
+        self.invalidateUserCourses = function(siteid) {
+        siteid = siteid || $mmSite.getId();
+        return $mmSitesManager.getSite(siteid).then(function(site) {
+            return site.invalidateWsCacheForKey(getUserCoursesCacheKey());
+        });
+    };
+        self.isSearchCoursesAvailable = function() {
+        return $mmSite.wsAvailable('core_course_search_courses');
+    };
+        self.isSelfEnrolmentEnabled = function() {
+        return $mmSite.wsAvailable('enrol_self_enrol_user');
+    };
+        self.search = function(text, page, perpage) {
+        page = page || 0;
+        perpage = perpage || mmCoursesSearchPerPage;
+        var params = {
+                criterianame: 'search',
+                criteriavalue: text,
+                page: page,
+                perpage: perpage
+            }, preSets = {
+                getFromCache: false
+            };
+        return $mmSite.read('core_course_search_courses', params, preSets).then(function(response) {
+            if (typeof response == 'object') {
+                return {total: response.total, courses: response.courses};
+            }
+            return $q.reject();
+        });
+    };
+        self.selfEnrol = function(courseid, password) {
+        if (typeof password == 'undefined') {
+            password = '';
+        }
+        var params = {
+            courseid: courseid,
+            password: password
+        };
+        return $mmSite.write('enrol_self_enrol_user', params).then(function(response) {
+            if (response) {
+                if (response.status) {
+                    return true;
+                } else if (response.warnings && response.warnings.length) {
+                    var message;
+                    angular.forEach(response.warnings, function(warning) {
+                        if (warning.warningcode == '2' || warning.warningcode == '4') {
+                            message = warning.message;
+                        }
+                    });
+                    if (message) {
+                        return $q.reject({code: mmCoursesEnrolInvalidKey, message: message});
+                    }
+                }
+            }
+            return $q.reject();
+        });
+    };
+        function storeCoursesInMemory(courses) {
+        angular.forEach(courses, function(course) {
+            currentCourses[course.id] = angular.copy(course);
+        });
+    }
     return self;
 }]);
 
@@ -5627,8 +5989,8 @@ angular.module('mm.core.login')
             return;
         }
         var modal = $mmUtil.showModalLoading();
-        $mmSitesManager.getUserToken(siteurl, username, password).then(function(token) {
-            $mmSitesManager.newSite(siteurl, token).then(function() {
+        $mmSitesManager.getUserToken(siteurl, username, password).then(function(data) {
+            $mmSitesManager.newSite(data.siteurl, data.token).then(function() {
                 delete $scope.credentials;
                 $ionicHistory.nextViewOptions({disableBack: true});
                 $state.go('site.mm_courses');
@@ -5691,8 +6053,8 @@ angular.module('mm.core.login')
             return;
         }
         var modal = $mmUtil.showModalLoading();
-        $mmSitesManager.getUserToken(siteurl, username, password).then(function(token) {
-            $mmSitesManager.updateSiteToken(infositeurl, username, token).then(function() {
+        $mmSitesManager.getUserToken(siteurl, username, password).then(function(data) {
+            $mmSitesManager.updateSiteToken(infositeurl, username, data.token).then(function() {
                 $mmSitesManager.updateSiteInfoByUrl(infositeurl, username).finally(function() {
                     delete $scope.credentials;
                     $ionicHistory.nextViewOptions({disableBack: true});
@@ -5736,8 +6098,8 @@ angular.module('mm.core.login')
         }
         var modal = $mmUtil.showModalLoading();
         $mmSitesManager.getDemoSiteData(url).then(function(sitedata) {
-            $mmSitesManager.getUserToken(sitedata.url, sitedata.username, sitedata.password).then(function(token) {
-                $mmSitesManager.newSite(sitedata.url, token).then(function() {
+            $mmSitesManager.getUserToken(sitedata.url, sitedata.username, sitedata.password).then(function(data) {
+                $mmSitesManager.newSite(data.siteurl, data.token).then(function() {
                     $ionicHistory.nextViewOptions({disableBack: true});
                     $state.go('site.mm_courses');
                 }, function(error) {
@@ -7260,8 +7622,9 @@ angular.module('mm.addons.calendar')
                 });
             }
             if (e.courseid > 1) {
-                var course = $mmCourses.getStoredCourse(e.courseid);
-                $scope.coursename = course.fullname;
+                $mmCourses.getUserCourse(e.courseid, true).then(function(course) {
+                    $scope.coursename = course.fullname;
+                });
             }
         }, function(error) {
             if (error) {
@@ -7478,7 +7841,7 @@ angular.module('mm.addons.calendar')
             "options[timestart]": start,
             "options[timeend]": end
         };
-        return $mmCourses.getUserCourses(refresh, siteid).then(function(courses) {
+        return $mmCourses.getUserCourses(false, siteid).then(function(courses) {
             courses.push({id: 1});
             angular.forEach(courses, function(course, index) {
                 data["events[courseids][" + index + "]"] = course.id;
@@ -7501,7 +7864,9 @@ angular.module('mm.addons.calendar')
         });
     };
         self.invalidateEventsList = function() {
-        return $mmSite.invalidateWsCacheForKeyStartingWith(getEventsCommonCacheKey());
+        var p1 = $mmCourses.invalidateUserCourses(),
+            p2 = $mmSite.invalidateWsCacheForKeyStartingWith(getEventsCommonCacheKey());
+        return $q.all([p1, p2]);
     };
         self.isAvailable = function() {
         return $mmSite.wsAvailable('core_calendar_get_calendar_events');
@@ -7530,6 +7895,10 @@ angular.module('mm.addons.calendar')
             if (time === 0) {
                 return $mmLocalNotifications.cancel(event.id, mmaCalendarComponent, siteid);
             } else {
+                var timeend = (event.timestart + event.timeduration) * 1000;
+                if (timeend <= new Date().getTime()) {
+                    return $q.when();
+                }
                 var dateTriggered = new Date((event.timestart - (time * 60)) * 1000),
                     startDate = new Date(event.timestart * 1000),
                     notification = {
@@ -7546,9 +7915,7 @@ angular.module('mm.addons.calendar')
                 return $mmLocalNotifications.schedule(notification, mmaCalendarComponent, siteid);
             }
         } else {
-            var deferred = $q.defer();
-            deferred.resolve();
-            return deferred.promise;
+            return $q.when();
         }
     };
         self.scheduleEventsNotifications = function(events, siteid) {
@@ -7608,7 +7975,11 @@ angular.module('mm.addons.coursecompletion')
             $scope.showSelfComplete = $mmaCourseCompletion.isSelfCompletionAvailable() &&
                                         $mmaCourseCompletion.canMarkSelfCompleted(userid, completion);
         }).catch(function(message) {
-            $mmUtil.showErrorModal(message);
+            if (message) {
+                $mmUtil.showErrorModal(message);
+            } else {
+                $mmUtil.showErrorModal('mma.coursecompletion.couldnotloadreport', true);
+            }
         });
     }
     fetchCompletion().finally(function() {
@@ -7705,13 +8076,14 @@ angular.module('mm.addons.coursecompletion')
     };
         self.isPluginViewEnabledForCourse = function(courseId) {
         if (!courseId) {
-            return false;
+            return $q.reject();
         }
-        var course = $mmCourses.getStoredCourse(courseId);
-        if (course && typeof course.enablecompletion != 'undefined' && !course.enablecompletion) {
-            return  false;
-        }
-        return true;
+        return $mmCourses.getUserCourse(courseId, true).then(function(course) {
+            if (course && typeof course.enablecompletion != 'undefined' && !course.enablecompletion) {
+                return false;
+            }
+            return true;
+        });
     };
         self.isSelfCompletionAvailable = function() {
         return $mmSite.wsAvailable('core_completion_mark_course_self_completed');
@@ -7799,7 +8171,7 @@ angular.module('mm.addons.files')
 }]);
 
 angular.module('mm.addons.files')
-.controller('mmaFilesIndexController', ["$scope", "$mmaFiles", "$mmSite", "$mmUtil", "$mmApp", function($scope, $mmaFiles, $mmSite, $mmUtil, $mmApp) {
+.controller('mmaFilesIndexController', ["$scope", "$mmaFiles", "$mmSite", "$mmUtil", "$mmApp", "$state", function($scope, $mmaFiles, $mmSite, $mmUtil, $mmApp, $state) {
     $scope.canAccessFiles = $mmaFiles.canAccessFiles;
     $scope.showPrivateFiles = function() {
         return $mmaFiles.canAccessFiles() && $mmSite.canAccessMyFiles();
@@ -8491,7 +8863,7 @@ angular.module('mm.addons.grades')
 }]);
 
 angular.module('mm.addons.grades')
-.factory('$mmaGrades', ["$q", "$log", "$mmSite", "$mmText", "$ionicPlatform", "$translate", "$mmCourse", function($q, $log, $mmSite, $mmText, $ionicPlatform, $translate, $mmCourse) {
+.factory('$mmaGrades', ["$q", "$log", "$mmSite", "$mmText", "$ionicPlatform", "$translate", "$mmCourse", "$mmCourses", function($q, $log, $mmSite, $mmText, $ionicPlatform, $translate, $mmCourse, $mmCourses) {
     $log = $log.getInstance('$mmaGrades');
     var self = {};
         function formatGradesTable(table, showSimple) {
@@ -8613,6 +8985,17 @@ angular.module('mm.addons.grades')
         self.isPluginEnabled = function() {
         return $mmSite.wsAvailable('gradereport_user_get_grades_table');
     };
+        self.isPluginEnabledForCourse = function(courseId) {
+        if (!courseId) {
+            return $q.reject();
+        }
+        return $mmCourses.getUserCourse(courseId, true).then(function(course) {
+            if (course && typeof course.showgrades != 'undefined' && !course.showgrades) {
+                return false;
+            }
+            return true;
+        });
+    };
         self.getGradesTable = function(courseid, userid, refresh) {
         $log.debug('Get grades for course ' + courseid + ' and user ' + userid);
         var data = {
@@ -8632,7 +9015,7 @@ angular.module('mm.addons.grades')
 }]);
 
 angular.module('mm.addons.grades')
-.factory('$mmaGradesHandlers', ["$mmaGrades", "$state", "$mmCourses", function($mmaGrades, $state, $mmCourses) {
+.factory('$mmaGradesHandlers', ["$mmaGrades", "$state", function($mmaGrades, $state) {
     var self = {};
         self.coursesNav = function() {
         var self = {};
@@ -8640,14 +9023,7 @@ angular.module('mm.addons.grades')
             return $mmaGrades.isPluginEnabled();
         };
                 self.isEnabledForCourse = function(courseId) {
-            if (!courseId) {
-                return false;
-            }
-            var course = $mmCourses.getStoredCourse(courseId);
-            if (course && typeof course.showgrades != 'undefined' && !course.showgrades) {
-                return false;
-            }
-            return true;
+            return $mmaGrades.isPluginEnabledForCourse(courseId);
         };
                 self.getController = function() {
                         return function($scope, $state) {
@@ -8670,14 +9046,7 @@ angular.module('mm.addons.grades')
             return $mmaGrades.isPluginEnabled();
         };
                 self.isEnabledForUser = function(user, courseId) {
-            if (!courseId) {
-                return false;
-            }
-            var course = $mmCourses.getStoredCourse(courseId);
-            if (course && typeof course.showgrades != 'undefined' && !course.showgrades) {
-                return false;
-            }
-            return true;
+            return $mmaGrades.isPluginEnabledForCourse(courseId);
         };
                 self.getController = function(user, courseId) {
                         return function($scope) {
@@ -8695,6 +9064,16 @@ angular.module('mm.addons.grades')
         return self;
     };
     return self;
+}]);
+
+angular.module('mm.addons.messages')
+.filter('mmaMessagesFormat', ["$mmText", function($mmText) {
+  return function(text) {
+    text = text.replace(/-{4,}/ig, '');
+    text = text.replace(/<br \/><br \/>/ig, "<br />");
+    text = $mmText.replaceNewLines(text, '<br />');
+    return text;
+  };
 }]);
 
 angular.module('mm.addons.messages')
@@ -9027,16 +9406,6 @@ angular.module('mm.addons.messages')
             obsLeft.off();
         }
     });
-}]);
-
-angular.module('mm.addons.messages')
-.filter('mmaMessagesFormat', ["$mmText", function($mmText) {
-  return function(text) {
-    text = text.replace(/-{4,}/ig, '');
-    text = text.replace(/<br \/><br \/>/ig, "<br />");
-    text = $mmText.replaceNewLines(text, '<br />');
-    return text;
-  };
 }]);
 
 angular.module('mm.addons.messages')
@@ -9589,7 +9958,7 @@ angular.module('mm.addons.messages')
 }]);
 
 angular.module('mm.addons.mod_assign')
-.controller('mmaModAssignIndexCtrl', ["$scope", "$stateParams", "$mmaModAssign", "$mmUtil", "mmaModAssignComponent", "mmaModAssignSubmissionComponent", function($scope, $stateParams, $mmaModAssign, $mmUtil,
+.controller('mmaModAssignIndexCtrl', ["$scope", "$stateParams", "$mmaModAssign", "$mmUtil", "$translate", "mmaModAssignComponent", "mmaModAssignSubmissionComponent", function($scope, $stateParams, $mmaModAssign, $mmUtil, $translate,
         mmaModAssignComponent, mmaModAssignSubmissionComponent) {
     var module = $stateParams.module || {},
         courseid = $stateParams.courseid;
@@ -10211,8 +10580,9 @@ angular.module('mm.addons.mod_chat')
         $scope.modal.show();
         $mmaModChat.getChatUsers($scope.chatsid).then(function(data) {
             $scope.chatUsers = data.users;
-        }).catch(showError)
-        .finally(function() {
+        }).catch(function(error) {
+            showError(error, 'mma.mod_chat.errorwhilegettingchatusers');
+        }).finally(function() {
             $scope.usersLoaded = true;
         });
     };
@@ -10227,11 +10597,11 @@ angular.module('mm.addons.mod_chat')
     $scope.isAppOffline = function() {
         return !$mmApp.isOnline();
     };
-    function showError(error) {
+    function showError(error, defaultMessage) {
         if (typeof error === 'string') {
             $mmUtil.showErrorModal(error);
         } else {
-            $mmUtil.showErrorModal(defaultMessage, 'mm.core.error');
+            $mmUtil.showErrorModal(defaultMessage, true);
         }
     }
     $scope.showDate = function(message, prevMessage) {
@@ -10241,7 +10611,6 @@ angular.module('mm.addons.mod_chat')
         return !moment(message.timestamp * 1000).isSame(prevMessage.timestamp * 1000, 'day');
     };
     $scope.sendMessage = function(text, beep) {
-        var message;
         beep = beep || '';
         if (!$mmApp.isOnline()) {
             return;
@@ -10255,19 +10624,21 @@ angular.module('mm.addons.mod_chat')
             }
         }, function(error) {
             $mmApp.closeKeyboard();
-            showError(error);
+            showError(error, 'mma.mod_chat.errorwhilesendingmessage');
         });
     };
-    $mmaModChat.loginUser(chatId).then(function(data) {
-        return $mmaModChat.getLatestMessages(data.chatsid, 0).then(function(messagesInfo) {
-            $scope.chatsid = data.chatsid;
+    $mmaModChat.loginUser(chatId).then(function(chatsid) {
+        return $mmaModChat.getLatestMessages(chatsid, 0).then(function(messagesInfo) {
+            $scope.chatsid = chatsid;
             chatLastTime = messagesInfo.chatnewlasttime;
             return $mmaModChat.getMessagesUserData(messagesInfo.messages, courseId).then(function(messages) {
                 $scope.messages = $scope.messages.concat(messages);
             });
-        }).catch(showError);
+        }).catch(function(message) {
+            showError(message, 'mma.mod_chat.errorwhileretrievingmessages');
+        });
     }, function(error) {
-        showError(error);
+        showError(error, 'mma.mod_chat.errorwhileconnecting');
         $ionicHistory.goBack();
     }).finally(function() {
         $scope.loaded = true;
@@ -10296,7 +10667,7 @@ angular.module('mm.addons.mod_chat')
                 });
             }, function(error) {
                 $interval.cancel(polling);
-                showError(error);
+                showError(error, 'mma.mod_chat.errorwhileretrievingmessages');
             });
         }, mmaChatPollInterval);
     });
@@ -10335,7 +10706,7 @@ angular.module('mm.addons.mod_chat')
             if (error) {
                 $mmUtil.showErrorModal(error);
             } else {
-                $mmUtil.showErrorModal('mm.core.error', true);
+                $mmUtil.showErrorModal('mma.mod_chat.errorwhilegettingchatdata', true);
             }
             return $q.reject();
         });
@@ -10390,7 +10761,12 @@ angular.module('mm.addons.mod_chat')
         var params = {
             chatid: chatId
         };
-        return $mmSite.write('mod_chat_login_user', params);
+        return $mmSite.write('mod_chat_login_user', params).then(function(response) {
+            if (response.chatsid) {
+                return response.chatsid;
+            }
+            return $q.reject();
+        });
     };
         self.logView = function(id) {
         if (id) {
@@ -10407,7 +10783,12 @@ angular.module('mm.addons.mod_chat')
             messagetext: message,
             beepid: beep
         };
-        return $mmSite.write('mod_chat_send_chat_message', params);
+        return $mmSite.write('mod_chat_send_chat_message', params).then(function(response) {
+            if (response.messageid) {
+                return response.messageid;
+            }
+            return $q.reject();
+        });
     };
         self.getLatestMessages = function(chatsid, lasttime) {
         var params = {
@@ -10754,7 +11135,7 @@ angular.module('mm.addons.mod_folder')
             if (error) {
                 $mmUtil.showErrorModal(error);
             } else {
-                $mmUtil.showErrorModal('mm.core.unexpectederror', true);
+                $mmUtil.showErrorModal('mma.mod_folder.errorwhilegettingfolder', true);
             }
             if (!$scope.title) {
                 showModuleData(module);
@@ -10992,8 +11373,9 @@ angular.module('mm.addons.mod_forum')
     }
     function refreshData() {
         var promises = [];
+        promises.push($mmaModForum.invalidateForumData(courseid));
         if (forum) {
-            promises.push($mmaModForum.invalidateDiscussionsList(courseid, forum.id));
+            promises.push($mmaModForum.invalidateDiscussionsList(forum.id));
             promises.push($mmGroups.invalidateActivityGroupMode(forum.cmid));
         }
         return $q.all(promises).finally(function() {
@@ -11376,10 +11758,11 @@ angular.module('mm.addons.mod_forum')
         self.invalidateDiscussionPosts = function(discussionid) {
         return $mmSite.invalidateWsCacheForKey(getDiscussionPostsCacheKey(discussionid));
     };
-        self.invalidateDiscussionsList = function(courseid, forumid) {
-        return $mmSite.invalidateWsCacheForKey(getForumDataCacheKey(courseid)).then(function() {
-            return $mmSite.invalidateWsCacheForKey(getDiscussionsListCacheKey(forumid));
-        });
+        self.invalidateDiscussionsList = function(forumid) {
+        return $mmSite.invalidateWsCacheForKey(getDiscussionsListCacheKey(forumid));
+    };
+        self.invalidateForumData = function(courseid) {
+        return $mmSite.invalidateWsCacheForKey(getForumDataCacheKey(courseid));
     };
         self.isCreateDiscussionEnabled = function() {
         return $mmSite.wsAvailable('core_group_get_activity_groupmode') &&
@@ -11430,6 +11813,36 @@ angular.module('mm.addons.mod_forum')
         });
     }
     return self;
+}]);
+
+angular.module('mm.addons.mod_imscp')
+.directive('mmaModImscpBar', ["$ionicModal", function($ionicModal) {
+    return {
+        restrict: 'E',
+        scope: {
+            previous: '=?',
+            next: '=?',
+            action: '=?',
+            description: '=?'
+        },
+        templateUrl: 'addons/mod_imscp/templates/bar.html',
+        link: function(scope) {
+            $ionicModal.fromTemplateUrl('addons/mod_imscp/templates/description.html', {
+                scope: scope,
+                animation: 'slide-in-up'
+            }).then(function(modal) {
+                scope.showDescription = function() {
+                    modal.show();
+                };
+                scope.closeDescription = function() {
+                    modal.hide();
+                };
+                scope.$on('$destroy', function() {
+                    modal.remove();
+                });
+            });
+        }
+    };
 }]);
 
 angular.module('mm.addons.mod_imscp')
@@ -11510,36 +11923,6 @@ angular.module('mm.addons.mod_imscp')
             $mmCourse.checkModuleCompletion(courseid, module.completionstatus);
         });
     });
-}]);
-
-angular.module('mm.addons.mod_imscp')
-.directive('mmaModImscpBar', ["$ionicModal", function($ionicModal) {
-    return {
-        restrict: 'E',
-        scope: {
-            previous: '=?',
-            next: '=?',
-            action: '=?',
-            description: '=?'
-        },
-        templateUrl: 'addons/mod_imscp/templates/bar.html',
-        link: function(scope) {
-            $ionicModal.fromTemplateUrl('addons/mod_imscp/templates/description.html', {
-                scope: scope,
-                animation: 'slide-in-up'
-            }).then(function(modal) {
-                scope.showDescription = function() {
-                    modal.show();
-                };
-                scope.closeDescription = function() {
-                    modal.hide();
-                };
-                scope.$on('$destroy', function() {
-                    modal.remove();
-                });
-            });
-        }
-    };
 }]);
 
 angular.module('mm.addons.mod_imscp')
@@ -12539,9 +12922,12 @@ angular.module('mm.addons.mod_resource')
                         $mmaModResource.logView(module.instance).then(function() {
                             $mmCourse.checkModuleCompletion(courseid, module.completionstatus);
                         });
-                    }).catch(function() {
-                        modal.dismiss();
-                        $mmUtil.showErrorModal('mma.mod_resource.errorwhileloadingthecontent', true);
+                    }).catch(function(error) {
+                        if (error) {
+                            $mmUtil.showErrorModal(error);
+                        } else {
+                            $mmUtil.showErrorModal('mma.mod_resource.errorwhileloadingthecontent', true);
+                        }
                     }).finally(function() {
                         modal.dismiss();
                     });
@@ -12939,7 +13325,7 @@ angular.module('mm.addons.mod_resource')
             promise = $q.when($mmSite.fixPluginfileURL(url));
         }
         return promise.then(function(localUrl) {
-            $mmUtil.openFile(localUrl);
+            return $mmUtil.openFile(localUrl);
         });
     };
         self.prefetchContent = function(module) {
@@ -13233,7 +13619,11 @@ angular.module('mm.addons.mod_survey')
             surveyid: surveyid,
             answers: answers
         };
-        return $mmSite.write('mod_survey_submit_answers', params);
+        return $mmSite.write('mod_survey_submit_answers', params).then(function(response) {
+            if (!response.status) {
+                return $q.reject();
+            }
+        });
     };
     return self;
 }]);

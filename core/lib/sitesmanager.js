@@ -40,7 +40,7 @@ angular.module('mm.core')
  */
 .factory('$mmSitesManager', function($http, $q, $mmSitesFactory, md5, $mmLang, $mmConfig, $mmApp, $mmUtil, $mmEvents, $state,
             $translate, mmCoreSitesStore, mmCoreCurrentSiteStore, mmCoreEventLogin, mmCoreEventLogout, $log, mmCoreWSPrefix,
-            mmCoreEventSiteUpdated, mmCoreEventSiteAdded, mmCoreEventSessionExpired, mmCoreEventSiteDeleted) {
+            mmCoreEventSiteUpdated, mmCoreEventSiteAdded, mmCoreEventSessionExpired, mmCoreEventSiteDeleted, $mmText) {
 
     $log = $log.getInstance('$mmSitesManager');
 
@@ -103,7 +103,8 @@ angular.module('mm.core')
             return self.siteExists(siteurl).then(function() {
                 // Create a temporary site to check if local_mobile is installed.
                 var temporarySite = $mmSitesFactory.makeSite(undefined, siteurl);
-                return temporarySite.checkLocalMobilePlugin(siteurl).then(function(data) {
+                return temporarySite.checkLocalMobilePlugin().then(function(data) {
+                    siteurl = temporarySite.getURL();
                     services[siteurl] = data.service; // No need to store it in DB.
                     return {siteurl: siteurl, code: data.code, warning: data.warning};
                 });
@@ -145,7 +146,8 @@ angular.module('mm.core')
      * @param {String} password  Password.
      * @param {String} [service] Service to use. If not defined, it will be searched in memory.
      * @param {Boolean} retry    We are retrying with a prefixed URL.
-     * @return {Promise}         A promise to be resolved when the token is retrieved.
+     * @return {Promise}         A promise to be resolved when the token is retrieved. If success, returns an object
+     *                           with the token and the siteurl to use.
      */
     self.getUserToken = function(siteurl, username, password, service, retry) {
         retry = retry || false;
@@ -178,14 +180,12 @@ angular.module('mm.core')
                     return $mmLang.translateAndReject('mm.core.cannotconnect');
                 } else {
                     if (typeof data.token != 'undefined') {
-                        return data.token;
+                        return {token: data.token, siteurl: siteurl};
                     } else {
                         if (typeof data.error != 'undefined') {
                             // We only allow one retry (to avoid loops).
                             if (!retry && data.errorcode == "requirecorrectaccess") {
-                                siteurl = siteurl.replace("https://", "https://www.");
-                                siteurl = siteurl.replace("http://", "http://www.");
-
+                                siteurl = $mmText.addOrRemoveWWW(siteurl);
                                 return self.getUserToken(siteurl, username, password, service, true);
                             } else {
                                 return $q.reject(data.error);
