@@ -5758,13 +5758,16 @@ angular.module('mm.core.courses')
     };
         self.getUserCourse = function(id, preferCache, siteid) {
         siteid = siteid || $mmSite.getId();
+        if (!id) {
+            return $q.reject();
+        }
         if (typeof preferCache == 'undefined') {
             preferCache = false;
         }
         return self.getUserCourses(preferCache, siteid).then(function(courses) {
             var course;
             angular.forEach(courses, function(c) {
-                if (c.id === id) {
+                if (c.id == id) {
                     course = c;
                 }
             });
@@ -5939,7 +5942,7 @@ angular.module('mm.core.courses')
                 return true;
             }).finally(function() {
                 angular.forEach(coursesHandlers, function(handler, courseId) {
-                    self.updateNavHandlersForCourse(courseId);
+                    self.updateNavHandlersForCourse(parseInt(courseId));
                 });
             });
         };
@@ -9067,16 +9070,6 @@ angular.module('mm.addons.grades')
 }]);
 
 angular.module('mm.addons.messages')
-.filter('mmaMessagesFormat', ["$mmText", function($mmText) {
-  return function(text) {
-    text = text.replace(/-{4,}/ig, '');
-    text = text.replace(/<br \/><br \/>/ig, "<br />");
-    text = $mmText.replaceNewLines(text, '<br />');
-    return text;
-  };
-}]);
-
-angular.module('mm.addons.messages')
 .controller('mmaMessagesContactsCtrl', ["$scope", "$mmaMessages", "$mmSite", "$mmUtil", "$mmApp", "mmUserProfileState", function($scope, $mmaMessages, $mmSite, $mmUtil, $mmApp, mmUserProfileState) {
     var currentUserId = $mmSite.getUserId();
     $scope.loaded = false;
@@ -9406,6 +9399,16 @@ angular.module('mm.addons.messages')
             obsLeft.off();
         }
     });
+}]);
+
+angular.module('mm.addons.messages')
+.filter('mmaMessagesFormat', ["$mmText", function($mmText) {
+  return function(text) {
+    text = text.replace(/-{4,}/ig, '');
+    text = text.replace(/<br \/><br \/>/ig, "<br />");
+    text = $mmText.replaceNewLines(text, '<br />');
+    return text;
+  };
 }]);
 
 angular.module('mm.addons.messages')
@@ -10703,6 +10706,9 @@ angular.module('mm.addons.mod_chat')
                 });
             }
         }, function(error) {
+            if (!refresh) {
+                return fetchChatData(true);
+            }
             if (error) {
                 $mmUtil.showErrorModal(error);
             } else {
@@ -10853,7 +10859,7 @@ angular.module('mm.addons.mod_choice')
     $scope.description = module.description;
     $scope.moduleurl = module.url;
     $scope.courseid = courseid;
-    function fetchChoiceData() {
+    function fetchChoiceData(refresh) {
         $scope.now = new Date().getTime();
         return $mmaModChoice.getChoice(courseid, module.id).then(function(choicedata) {
             choice = choicedata;
@@ -10868,6 +10874,9 @@ angular.module('mm.addons.mod_choice')
                 return fetchResults();
             });
         }).catch(function(message) {
+            if (!refresh) {
+                return refreshAllData();
+            }
             if (message) {
                 $mmUtil.showErrorModal(message);
             } else {
@@ -10916,7 +10925,7 @@ angular.module('mm.addons.mod_choice')
             p2 = choice ? $mmaModChoice.invalidateOptions(choice.id) : $q.when(),
             p3 = choice ? $mmaModChoice.invalidateResults(choice.id) : $q.when();
         return $q.all([p1, p2, p3]).finally(function() {
-            return fetchChoiceData();
+            return fetchChoiceData(true);
         });
     }
     fetchChoiceData().then(function() {
@@ -11321,22 +11330,24 @@ angular.module('mm.addons.mod_forum')
     $scope.isCreateEnabled = $mmaModForum.isCreateDiscussionEnabled();
     function fetchForumDataAndDiscussions(refresh) {
         return $mmaModForum.getForum(courseid, module.id).then(function(forumdata) {
-            if (forumdata) {
-                forum = forumdata;
-                $scope.title = forum.name || $scope.title;
-                $scope.description = forum.intro || $scope.description;
-                $scope.forum = forum;
-                return $mmGroups.getActivityGroupMode(forum.cmid).then(function(mode) {
-                    usesGroups = mode === $mmGroups.SEPARATEGROUPS || mode === $mmGroups.VISIBLEGROUPS;
-                }).finally(function() {
-                    return fetchDiscussions(refresh);
-                });
+            forum = forumdata;
+            $scope.title = forum.name || $scope.title;
+            $scope.description = forum.intro || $scope.description;
+            $scope.forum = forum;
+            return $mmGroups.getActivityGroupMode(forum.cmid).then(function(mode) {
+                usesGroups = mode === $mmGroups.SEPARATEGROUPS || mode === $mmGroups.VISIBLEGROUPS;
+            }).finally(function() {
+                return fetchDiscussions(refresh);
+            });
+        }, function(message) {
+            if (!refresh) {
+                return refreshData();
+            }
+            if (message) {
+                $mmUtil.showErrorModal(message);
             } else {
                 $mmUtil.showErrorModal('mma.mod_forum.errorgetforum', true);
-                return $q.reject();
             }
-        }, function(message) {
-            $mmUtil.showErrorModal(message);
             $scope.canLoadMore = false;
             return $q.reject();
         });
@@ -11714,7 +11725,10 @@ angular.module('mm.addons.mod_forum')
                     currentForum = forum;
                 }
             });
-            return currentForum;
+            if (currentForum) {
+                return currentForum;
+            }
+            return $q.reject();
         });
     };
         self.getDiscussionPosts = function(discussionid) {
@@ -11816,36 +11830,6 @@ angular.module('mm.addons.mod_forum')
 }]);
 
 angular.module('mm.addons.mod_imscp')
-.directive('mmaModImscpBar', ["$ionicModal", function($ionicModal) {
-    return {
-        restrict: 'E',
-        scope: {
-            previous: '=?',
-            next: '=?',
-            action: '=?',
-            description: '=?'
-        },
-        templateUrl: 'addons/mod_imscp/templates/bar.html',
-        link: function(scope) {
-            $ionicModal.fromTemplateUrl('addons/mod_imscp/templates/description.html', {
-                scope: scope,
-                animation: 'slide-in-up'
-            }).then(function(modal) {
-                scope.showDescription = function() {
-                    modal.show();
-                };
-                scope.closeDescription = function() {
-                    modal.hide();
-                };
-                scope.$on('$destroy', function() {
-                    modal.remove();
-                });
-            });
-        }
-    };
-}]);
-
-angular.module('mm.addons.mod_imscp')
 .controller('mmaModImscpIndexCtrl', ["$scope", "$stateParams", "$mmUtil", "$mmaModImscp", "$log", "mmaModImscpComponent", "$ionicPopover", "$timeout", "$q", "$mmCourse", "$mmApp", function($scope, $stateParams, $mmUtil, $mmaModImscp, $log, mmaModImscpComponent,
             $ionicPopover, $timeout, $q, $mmCourse, $mmApp) {
     $log = $log.getInstance('mmaModImscpIndexCtrl');
@@ -11923,6 +11907,36 @@ angular.module('mm.addons.mod_imscp')
             $mmCourse.checkModuleCompletion(courseid, module.completionstatus);
         });
     });
+}]);
+
+angular.module('mm.addons.mod_imscp')
+.directive('mmaModImscpBar', ["$ionicModal", function($ionicModal) {
+    return {
+        restrict: 'E',
+        scope: {
+            previous: '=?',
+            next: '=?',
+            action: '=?',
+            description: '=?'
+        },
+        templateUrl: 'addons/mod_imscp/templates/bar.html',
+        link: function(scope) {
+            $ionicModal.fromTemplateUrl('addons/mod_imscp/templates/description.html', {
+                scope: scope,
+                animation: 'slide-in-up'
+            }).then(function(modal) {
+                scope.showDescription = function() {
+                    modal.show();
+                };
+                scope.closeDescription = function() {
+                    modal.hide();
+                };
+                scope.$on('$destroy', function() {
+                    modal.remove();
+                });
+            });
+        }
+    };
 }]);
 
 angular.module('mm.addons.mod_imscp')
@@ -12314,7 +12328,7 @@ angular.module('mm.addons.mod_lti')
     $scope.title = module.name;
     $scope.description = module.description;
     $scope.courseid = courseid;
-    function fetchLTI() {
+    function fetchLTI(refresh) {
         return $mmaModLti.getLti(courseid, module.id).then(function(ltidata) {
             lti = ltidata;
             return $mmaModLti.getLtiLaunchData(lti.id).then(function(launchdata) {
@@ -12324,6 +12338,9 @@ angular.module('mm.addons.mod_lti')
                 $scope.isValidUrl = $mmUtil.isValidURL(launchdata.endpoint);
             });
         }).catch(function(message) {
+            if (!refresh) {
+                return refreshAllData();
+            }
             if (message) {
                 $mmUtil.showErrorModal(message);
             } else {
@@ -12336,7 +12353,7 @@ angular.module('mm.addons.mod_lti')
         var p1 = $mmaModLti.invalidateLti(courseid),
             p2 = lti ? $mmaModLti.invalidateLtiLaunchData(lti.id) : $q.when();
         return $q.all([p1, p2]).finally(function() {
-            return fetchLTI();
+            return fetchLTI(true);
         });
     }
     fetchLTI().finally(function() {
@@ -13376,7 +13393,7 @@ angular.module('mm.addons.mod_survey')
     $scope.courseid = courseid;
     $scope.answers = {};
     $scope.isTablet = $ionicPlatform.isTablet();
-    function fetchSurveyData() {
+    function fetchSurveyData(refresh) {
         return $mmaModSurvey.getSurvey(courseid, module.id).then(function(surveydata) {
             survey = surveydata;
             $scope.title = survey.name || $scope.title;
@@ -13386,6 +13403,9 @@ angular.module('mm.addons.mod_survey')
                 return fetchQuestions();
             }
         }).catch(function(message) {
+            if (!refresh) {
+                return refreshAllData();
+            }
             if (message) {
                 $mmUtil.showErrorModal(message);
             } else {
@@ -13411,7 +13431,7 @@ angular.module('mm.addons.mod_survey')
         var p1 = $mmaModSurvey.invalidateSurveyData(courseid),
             p2 = survey ? $mmaModSurvey.invalidateQuestions(survey.id) : $q.when();
         return $q.all([p1, p2]).finally(function() {
-            return fetchSurveyData();
+            return fetchSurveyData(true);
         });
     }
     fetchSurveyData().then(function() {
