@@ -7680,21 +7680,21 @@ em {
 
 .bar-content {
   border-color: transparent;
-  background-color: #f70;
+  background-color: #00478b;
   background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
   color: #fff; }
   .bar-content .title {
     color: #fff; }
   .bar-content .button {
     border-color: transparent;
-    background-color: #f70;
+    background-color: #00478b;
     color: #fff; }
     .bar-content .button:hover {
       color: #fff;
       text-decoration: none; }
     .bar-content .button.active, .bar-content .button.activated {
       border-color: transparent;
-      background-color: #f70;
+      background-color: #00478b;
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
     .bar-content .button.button-clear {
       border-color: transparent;
@@ -7708,7 +7708,7 @@ em {
 
 .bar-side-menu {
   border-color: transparent;
-  background-color: #f70;
+  background-color: #00478b;
   background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
   color: #fff;
   height: 80px !important; }
