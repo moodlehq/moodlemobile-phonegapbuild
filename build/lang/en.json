@@ -151,7 +151,7 @@
     "mm.login.usernamerequired": "Username required",
     "mm.login.webservicesnotenabled": "Web Services are not enabled in your site. Please, contact your Moodle site administrator if you think mobile access should be enabled.",
     "mm.settings.about": "About",
-    "mm.settings.appname": "Moodle Mobile {{version}}",
+    "mm.settings.appname": "Tianjin University e-Learning {{version}}",
     "mm.settings.appready": "App ready",
     "mm.settings.cacheexpirationtime": "Cache expiration time (miliseconds)",
     "mm.settings.cordovadevicemodel": "Cordova Device model",

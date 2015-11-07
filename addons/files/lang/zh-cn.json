@@ -10,9 +10,13 @@
     "myfiles": "我的文件",
     "readingfile": "Odczytywanie pliku",
     "sitefiles": "站点文件",
+	"sitefilesdesc": "e-Learning平台中你可访问的其他文件。",
     "success": "成功",
     "uploadafile": "上传一个文件",
     "uploadfiles": "可以上传文件",
     "uploading": "上传中",
-    "video": "视频"
+    "video": "视频",
+	"myprivatefiles": "私人文件",
+    "myprivatefilesdesc": "e-Learning平台中的私人文件。"
+    
 }

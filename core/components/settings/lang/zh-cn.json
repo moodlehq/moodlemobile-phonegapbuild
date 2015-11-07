@@ -11,6 +11,8 @@
     "license": "许可",
     "settings": "设置",
     "spaceusage": "空间使用情况",
+	"reportinbackground": "自动报告错误",
+	 "synchronization": "同步",
     "success": "成功",
     "total": "总共"
 }
