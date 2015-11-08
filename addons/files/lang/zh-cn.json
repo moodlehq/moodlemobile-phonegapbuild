@@ -1,5 +1,8 @@
 {
-    "confirmuploadfile": "Chcesz wysłać plik {$a}. Czy na pewno chcesz kontynuować?",
+   "audio": "音频",
+    "camera": "相机",   
+	"photoalbums": "照片",
+   "confirmuploadfile": "Chcesz wysłać plik {$a}. Czy na pewno chcesz kontynuować?",
     "downloading": "正在下载...",
     "emptyfilelist": "没有可显示的文件",
     "errorcapturingaudio": "捕捉音频时出错",
