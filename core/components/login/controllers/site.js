@@ -46,7 +46,7 @@ angular.module('mm.core.login')
     $scope.connect = function(url) {
 
         $mmApp.closeKeyboard();
-
+		url='http://glearning.tju.edu.cn';
         if (!url) {
             $mmUtil.showErrorModal('mm.login.siteurlrequired', true);
             return;
