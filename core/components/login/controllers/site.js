@@ -24,7 +24,7 @@ angular.module('mm.core.login')
 .controller('mmLoginSiteCtrl', function($scope, $state, $mmSitesManager, $mmUtil, $translate, $ionicHistory, $mmApp,
         $ionicModal, $mmLoginHelper) {
 
-    $scope.siteurl = '';
+    $scope.siteurl = 'http://glearning.tju.edu.cn';
     $scope.isInvalidUrl = true;
 
     $scope.validate = function(url) {
