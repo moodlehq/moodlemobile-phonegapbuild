@@ -321,7 +321,7 @@
     "mm.login.invalidmoodleversion": "无效的Moodle版本。最低版本要求是：",
     "mm.login.invalidsite": "网站URL是无效的。",
     "mm.login.login": "登录",
-    "mm.login.logininsiterequired": "您需要在浏览器窗口中登录该站点。",
+    "mm.login.logininsiterequired": "您需要在浏览器窗口点“天津大学统一认证系统”登录。",
     "mm.login.mobileservicesnotenabled": "您的站点没有启用移动服务，如果您觉得有必要开启移动接入功能，请与站点管理员联系。",
     "mm.login.password": "密码",
     "mm.login.passwordrequired": "需要密码",
