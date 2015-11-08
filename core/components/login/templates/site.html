@@ -11,8 +11,8 @@
             <input type="url" value="http://glearning.tju.edu.cn" ng-model="siteurl" mm-no-input-validation ng-change="validate(siteurl)" >
           </label>
           <div class="item">
-              <button class="button button-block" ng-click="connect(siteurl)" ng-disabled="isInvalidUrl">{{ 'mm.login.connect' | translate }}</button>
-              <!-- <input type="submit" class="button button-block" value="{{ 'mm.login.connect' | translate }}" > -->
+              <button class="button button-block" ng-click="connect(siteurl)" >{{ 'mm.login.connect' | translate }}</button>
+              <!-- <input type="submit" class="button button-block" value="{{ 'mm.login.connect' | translate }}" > ng-disabled="isInvalidUrl"-->
           </div>
         </form>
       </div>
