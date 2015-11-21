@@ -320,6 +320,7 @@
     "mm.login.invalidaccount": "请检查您的登录信息，或请您的网站管理员检查网站设置。",
     "mm.login.invalidmoodleversion": "无效的Moodle版本。最低版本要求是：",
     "mm.login.invalidsite": "网站URL是无效的。",
+	"mma.mod_resource.openthefile": "打开文件",
     "mm.login.login": "登录",
     "mm.login.logininsiterequired": "您需要在浏览器窗口点“天津大学统一认证系统”登录。",
     "mm.login.mobileservicesnotenabled": "您的站点没有启用移动服务，如果您觉得有必要开启移动接入功能，请与站点管理员联系。",
