@@ -2977,7 +2977,8 @@ angular.module('mm.core')
         return appUsesLocalMobile;
     }
         function validateSiteInfo(infos) {
-        if (!infos.firstname || !infos.lastname) {
+        //if (!infos.firstname || !infos.lastname) {
+		if (!infos.firstname) {
             var moodleLink = '<a mm-browser href="' + infos.siteurl + '">' + infos.siteurl + '</a>';
             return {error: 'mm.core.requireduserdatamissing', params: {'$a': moodleLink}};
         }
