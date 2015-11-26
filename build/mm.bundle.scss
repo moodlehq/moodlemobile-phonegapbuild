@@ -322,16 +322,41 @@ $bar-side-menu-text-color: $bar-content-text !default;
   top: $bar-side-menu-height;
 }
 
-input.mma-files-picker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none;
+$mma-messages-date-badge: "stable" !default;
+
+// The date displayed in the list.
+.mma-messages-date {
+
+  text-align: center;
+  margin-top: 10px;
+
+  span {
+    @extend .badge;
+    @extend .badge-#{$mma-messages-date-badge};
+  }
 }
 
+.mma-messages-input-inset {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.mma-messages-footer-note {
+    color: $button-light-text;
+    font-size: $font-size-base;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.button.mma-messages-clear-search {
+  top: 0px;
+}
+
+.mma-messages-discussion-container {
+  padding-bottom: 15px;
+}
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
 .mma-grades-table {
@@ -427,41 +452,6 @@ input.mma-files-picker {
   }
 }
 
-$mma-messages-date-badge: "stable" !default;
-
-// The date displayed in the list.
-.mma-messages-date {
-
-  text-align: center;
-  margin-top: 10px;
-
-  span {
-    @extend .badge;
-    @extend .badge-#{$mma-messages-date-badge};
-  }
-}
-
-.mma-messages-input-inset {
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 0;
-}
-
-.mma-messages-footer-note {
-    color: $button-light-text;
-    font-size: $font-size-base;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-}
-
-.button.mma-messages-clear-search {
-  top: 0px;
-}
-
-.mma-messages-discussion-container {
-  padding-bottom: 15px;
-}
 $mma-chat-notice-badge: "stable" !default;
 
 // The notice displayed in the list.
@@ -543,6 +533,16 @@ $mma-chat-notice-badge: "stable" !default;
     .iframe-wrapper {
       position: absolute;
     }
+}
+
+input.mma-files-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none;
 }
 
 .mma-mod_survey-darkbg {

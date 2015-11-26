@@ -7981,14 +7981,27 @@ img.mm-media-adapt-width {
 .has-side-menu-header {
   top: 80px; }
 
-input.mma-files-picker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none; }
+.mma-messages-date {
+  text-align: center;
+  margin-top: 10px; }
+
+.mma-messages-input-inset {
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0; }
+
+.mma-messages-footer-note {
+  color: #444;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  width: 100%; }
+
+.button.mma-messages-clear-search {
+  top: 0px; }
+
+.mma-messages-discussion-container {
+  padding-bottom: 15px; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
@@ -8050,28 +8063,6 @@ input.mma-files-picker {
   .mma-grades-table .leveleven {
     background-color: #fff; }
 
-.mma-messages-date {
-  text-align: center;
-  margin-top: 10px; }
-
-.mma-messages-input-inset {
-  padding-top: 0;
-  padding-left: 0;
-  padding-bottom: 0; }
-
-.mma-messages-footer-note {
-  color: #444;
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
-  width: 100%; }
-
-.button.mma-messages-clear-search {
-  top: 0px; }
-
-.mma-messages-discussion-container {
-  padding-bottom: 15px; }
-
 .mma-chat-notice {
   text-align: center;
   margin-top: 10px; }
@@ -8131,6 +8122,15 @@ input.mma-files-picker {
   position: relative; }
   .mma-imscp-iframe-container .iframe-wrapper {
     position: absolute; }
+
+input.mma-files-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none; }
 
 .mma-mod_survey-darkbg {
   background-color: #f5f5f5; }
