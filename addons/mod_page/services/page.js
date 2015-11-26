@@ -36,19 +36,31 @@ angular.module('mm.addons.mod_page')
      * @return {Promise}      Promise resolved when all content is downloaded. Data returned is not reliable.
      */
     self.downloadAllContent = function(module) {
-        var promises = [],
-            siteid = $mmSite.getId();
+        var files = self.getDownloadableFiles(module),
+            revision = $mmFilepool.getRevisionFromFileList(module.contents),
+            timemod = $mmFilepool.getTimemodifiedFromFileList(module.contents);
+        return $mmFilepool.downloadPackage($mmSite.getId(), files, mmaModPageComponent, module.id, revision, timemod);
+    };
+
+    /**
+     * Returns a list of files that can be downloaded.
+     *
+     * @module mm.addons.mod_page
+     * @ngdoc method
+     * @name $mmaModPage#getDownloadableFiles
+     * @param {Object} module The module object returned by WS.
+     * @return {Object[]}     List of files.
+     */
+    self.getDownloadableFiles = function(module) {
+        var files = [];
 
         angular.forEach(module.contents, function(content) {
-            var url = content.fileurl,
-                timemodified = content.timemodified;
-            if (content.type !== 'file') {
-                return;
+            if (self.isFileDownloadable(content)) {
+                files.push(content);
             }
-            promises.push($mmFilepool.downloadUrl(siteid, url, false, mmaModPageComponent, module.id, timemodified));
         });
 
-        return $q.all(promises);
+        return files;
     };
 
     /**
@@ -67,7 +79,7 @@ angular.module('mm.addons.mod_page')
 
         angular.forEach(module.contents, function(content) {
             var url = content.fileurl;
-            if (content.type !== 'file') {
+            if (!self.isFileDownloadable(content)) {
                 return;
             }
             promises.push($mmFilepool.isFileDownloadingByUrl(siteid, url).then(function() {
@@ -97,7 +109,7 @@ angular.module('mm.addons.mod_page')
         var promises = [];
         angular.forEach(module.contents, function(content) {
             var url = content.fileurl;
-            if (content.type !== 'file') {
+            if (!self.isFileDownloadable(content)) {
                 return;
             }
             promises.push($mmFilepool.getFileEventNameByUrl($mmSite.getId(), url));
@@ -202,6 +214,19 @@ angular.module('mm.addons.mod_page')
     };
 
     /**
+     * Check if a file is downloadable. The file param must have a 'type' attribute like in core_course_get_contents response.
+     *
+     * @module mm.addons.mod_page
+     * @ngdoc method
+     * @name $mmaModPage#isFileDownloadable
+     * @param {Object} file File to check.
+     * @return {Boolean}    True if downloadable, false otherwise.
+     */
+    self.isFileDownloadable = function(file) {
+        return file.type === 'file';
+    };
+
+    /**
      * Returns whether the file is the main page of the module.
      *
      * @module mm.addons.mod_page
@@ -232,7 +257,7 @@ angular.module('mm.addons.mod_page')
     self.logView = function(id) {
         if (id) {
             var params = {
-                urlid: id
+                pageid: id
             };
             return $mmSite.write('mod_page_view_page', params);
         }
@@ -246,17 +271,13 @@ angular.module('mm.addons.mod_page')
      * @ngdoc method
      * @name $mmaModPage#prefetchContent
      * @param {Object} module The module object returned by WS.
-     * @return {Void}
+     * @return {Promise}      Promise resolved when all files have been downloaded. Data returned is not reliable.
      */
     self.prefetchContent = function(module) {
-        angular.forEach(module.contents, function(content) {
-            var url;
-            if (content.type !== 'file') {
-                return;
-            }
-            url = content.fileurl;
-            $mmFilepool.addToQueueByUrl($mmSite.getId(), url, mmaModPageComponent, module.id);
-        });
+        var files = self.getDownloadableFiles(module),
+            revision = $mmFilepool.getRevisionFromFileList(module.contents),
+            timemod = $mmFilepool.getTimemodifiedFromFileList(module.contents);
+        return $mmFilepool.prefetchPackage($mmSite.getId(), files, mmaModPageComponent, module.id, revision, timemod);
     };
 
     return self;

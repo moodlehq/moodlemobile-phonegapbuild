@@ -287,6 +287,10 @@ img.mm-media-adapt-width {
     visibility: visible;
   }
 
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
 #mm-settings-languagelabel {
   color: $base-color;
 }
