@@ -5715,7 +5715,7 @@ angular.module('mm.core.login')
 angular.module('mm.core.login')
 .controller('mmLoginSiteCtrl', ["$scope", "$state", "$mmSitesManager", "$mmUtil", "$translate", "$ionicHistory", "$mmApp", "$ionicModal", "$mmLoginHelper", function($scope, $state, $mmSitesManager, $mmUtil, $translate, $ionicHistory, $mmApp,
         $ionicModal, $mmLoginHelper) {
-    $scope.siteurl = 'http://glearning.tju.edu.cn';
+    $scope.siteurl = 'http://211.81.50.167:8080';
     $scope.isInvalidUrl = true;
     $scope.validate = function(url) {
         if (!url) {
