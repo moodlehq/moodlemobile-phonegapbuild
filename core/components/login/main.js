@@ -53,7 +53,7 @@ angular.module('mm.core.login', [])
         templateUrl: 'core/components/login/templates/site.html',
         controller: 'mmLoginSiteCtrl',
 		onEnter: function($state){
-		$state.go('mm_login.credentials',{siteurl:'http://glearning.tju.edu.cn'});
+		$state.go('mm_login.credentials',{siteurl:'http://211.81.50.167:8080'});
 		}
 		
     })

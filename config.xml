@@ -2,17 +2,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "cn.edu.tju.glearning"
+        id        = "cn.edu.tju.soe"
         versionCode = "2005"
         version   = "2.4">
-    <name>天津大学研究生教学平台</name>
+    <name>职教师资资源平台</name>
 
     <description>
         Graduate School of Tianjin University e-Learning app
     </description>
 
-    <author href="http://glearning.tju.edu.cn" email="xiajun@tju.edu.cn">
-        Graduate School of Tianjin University
+    <author href="http://soe.tju.edu.cn" email="xiajun@tju.edu.cn">
+        School of Education Tianjin University
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">

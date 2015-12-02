@@ -1,7 +1,7 @@
 {
     "authenticating": "验证中",
 	 "connecttomoodle": "连接到e-Learning",
-	 "helpmelogin": "<p>输入e-Learning平台地址glearning.tju.edu.cn，点击连接按钮，将会弹出SSO浏览器窗口，请通过“天津大学统一认证系统”登录。</p>",
+	 "helpmelogin": "<p>输入用户名密码登录。</p>",
     "cancel": "取消",
     "connect": "连接",
     "help": "帮助",
