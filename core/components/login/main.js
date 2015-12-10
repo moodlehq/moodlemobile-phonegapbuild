@@ -37,7 +37,7 @@ angular.module('mm.core.login', [])
     })
 
     .state('mm_login.sites', {
-        url: '/sites',
+        url: 'https://learning.int-comp.com',
         templateUrl: 'core/components/login/templates/sites.html',
         controller: 'mmLoginSitesCtrl',
         onEnter: function($state, $mmSitesManager) {
@@ -49,7 +49,7 @@ angular.module('mm.core.login', [])
     })
 
     .state('mm_login.site', {
-        url: '/site',
+        url: 'https://learning.int-comp.com',
         templateUrl: 'core/components/login/templates/site.html',
         controller: 'mmLoginSiteCtrl'
     })
