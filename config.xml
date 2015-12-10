@@ -2,13 +2,13 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
+        id        = "com.int-comp.moodlemobile"
         versionCode = "2007"
         version   = "2.6">
-    <name>Moodle Mobile</name>
+    <name>ICT Mobile</name>
 
     <description>
-        Moodle Mobile official app
+        ICT eLearning Mobile
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
@@ -126,7 +126,7 @@
     <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
 
     <gap:config-file platform="android" parent="/manifest">
-         <application android:debuggable="true" />
+         <application android:debuggable="false" />
     </gap:config-file>
 
     <!-- See MOBILE-892 -->
