@@ -402,7 +402,7 @@
     "mm.login.usernamerequired": "Username obbligatorio",
     "mm.login.webservicesnotenabled": "Nel sito non sono stati abilitati i web service. Per favore contatta l'amministratore del sito per verificare la configurazione.",
     "mm.settings.about": "Informazioni",
-    "mm.settings.appname": "Moodle Mobile {{version}}",
+    "mm.settings.appname": "Learn Moodle {{version}}",
     "mm.settings.cacheexpirationtime": "Durata cache (millisecondi)",
     "mm.settings.credits": "Riconoscimenti",
     "mm.settings.currentlanguage": "Lingua in uso",

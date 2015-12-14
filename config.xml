@@ -2,13 +2,13 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "2007"
-        version   = "2.6">
-    <name>Moodle Mobile</name>
+        id        = "net.moodle.learn"
+        versionCode = "1"
+        version   = "1.0">
+    <name>Learn Moodle</name>
 
     <description>
-        Moodle Mobile official app
+        Learn Moodle
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
@@ -16,7 +16,7 @@
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>2.6</string>
+        <string>1.0</string>
     </gap:config-file>
 
     <gap:platform name="ios" />
@@ -119,7 +119,7 @@
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="net.tunts.webintent" />
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
-        <param name="URL_SCHEME" value="moodlemobile" />
+        <param name="URL_SCHEME" value="learnmoodle" />
     </gap:plugin>
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
     <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />

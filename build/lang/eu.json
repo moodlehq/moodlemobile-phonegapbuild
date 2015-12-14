@@ -361,7 +361,7 @@
     "mm.login.usernamerequired": "Erabiltzailea behar da",
     "mm.login.webservicesnotenabled": "Web zerbitzuak gaitu gabe daude zure gunean. Mesedez zure Moodle gunearen administratzailearen harremanetan jarri zaitez mobile sarbidea gaitu behar dela uste baduzu.",
     "mm.settings.about": "Honi buruz",
-    "mm.settings.appname": "Moodle Mobile {{version}}",
+    "mm.settings.appname": "Learn Moodle {{version}}",
     "mm.settings.cacheexpirationtime": "Cache-aren iraungitze denbora (milisegundotan)",
     "mm.settings.credits": "Kredituak",
     "mm.settings.currentlanguage": "Oraingo hizkuntza",

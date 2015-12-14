@@ -396,7 +396,7 @@
     "mm.login.usernamerequired": "Nombre de usuario obligatorio",
     "mm.login.webservicesnotenabled": "Los Servicios Web no están habilitados en su sitio, por favor, contacte con su administrador de Moodle si piensa que deberían estarlo.",
     "mm.settings.about": "Acerca de",
-    "mm.settings.appname": "Moodle Mobile {{version}}",
+    "mm.settings.appname": "Learn Moodle {{version}}",
     "mm.settings.cacheexpirationtime": "Tiempo de expiración de caché (mili segundos)",
     "mm.settings.credits": "Créditos",
     "mm.settings.currentlanguage": "Idioma actual",

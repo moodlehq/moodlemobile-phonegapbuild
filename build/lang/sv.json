@@ -389,7 +389,7 @@
     "mm.login.usernamerequired": "Användarnamn krävs",
     "mm.login.webservicesnotenabled": "Web Services är inte aktiverat i din webbplats. Vänligen kontakta din Moodleadministrator om du tycker att mobil åtkomst ska aktiveras.",
     "mm.settings.about": "Om",
-    "mm.settings.appname": "Moodle Mobile {{version}}",
+    "mm.settings.appname": "Learn Moodle {{version}}",
     "mm.settings.cacheexpirationtime": "Cache utgångs tid (millisekunder)",
     "mm.settings.currentlanguage": "Nuvarande språk",
     "mm.settings.deletesitefiles": "Är du säker på att du vill ta bort de nedladdade filerna från den här webbplatsen?",

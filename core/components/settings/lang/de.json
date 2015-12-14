@@ -1,6 +1,6 @@
 {
-    "about": "Über Moodle Mobile",
-    "appname": "Moodle Mobile {{version}}",
+    "about": "Über Learn Moodle",
+    "appname": "Learn Moodle {{version}}",
     "cacheexpirationtime": "Speicherdauer im Cache (Millisekunden)",
     "credits": "Dank",
     "currentlanguage": "Aktuelle Sprache",

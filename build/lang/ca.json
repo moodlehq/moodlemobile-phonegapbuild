@@ -393,7 +393,7 @@
     "mm.login.usernamerequired": "El nom d'usuari\/ària és necessari",
     "mm.login.webservicesnotenabled": "Els serveis web no estan habilitats al vostre lloc. Contacteu amb l'administració del vostre lloc Moodle si penseu que s'haurien d'habilitar.",
     "mm.settings.about": "Quant a",
-    "mm.settings.appname": "Moodle Mobile {{version}}",
+    "mm.settings.appname": "Learn Moodle {{version}}",
     "mm.settings.cacheexpirationtime": "Temps de venciment de memòria cau (milisegons)",
     "mm.settings.credits": "Crèdits",
     "mm.settings.currentlanguage": "Idioma actual",

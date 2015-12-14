@@ -393,7 +393,7 @@
     "mm.login.usernamerequired": "Nome de usuário exigido",
     "mm.login.webservicesnotenabled": "Web Services não estão ativados em seu site. Por favor, contate a administradora do seu Moodle se você achar que o acesso móvel deve ser ativado.",
     "mm.settings.about": "Sobre",
-    "mm.settings.appname": "Moodle Mobile {{version}}",
+    "mm.settings.appname": "Learn Moodle {{version}}",
     "mm.settings.cacheexpirationtime": "Tempo de expiração do cache (milisegundos)",
     "mm.settings.credits": "Creditos",
     "mm.settings.currentlanguage": "Idioma em uso",

@@ -394,7 +394,7 @@
     "mm.login.usernamerequired": "Требуется логин",
     "mm.login.webservicesnotenabled": "Сетевые службы не включены на сайте. Пожалуйста, обратитесь к администратору сайта Moodle, если Вы считаете, что мобильный доступ должен быть включен.",
     "mm.settings.about": "О приложении",
-    "mm.settings.appname": "Moodle Mobile {{version}}",
+    "mm.settings.appname": "Learn Moodle {{version}}",
     "mm.settings.cacheexpirationtime": "Срок действия кэша (миллисекунд)",
     "mm.settings.credits": "Разработчики",
     "mm.settings.currentlanguage": "Выбранный язык",
