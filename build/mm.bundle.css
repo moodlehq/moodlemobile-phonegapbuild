@@ -2552,7 +2552,7 @@ body, .ionic-body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  color: #000;
+  color: #212630;
   word-wrap: break-word;
   font-size: 14px;
   font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
@@ -2783,7 +2783,7 @@ cite {
   text-align: center; }
 
 h1, h2, .item .item-heading, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #000;
+  color: #212630;
   font-weight: 500;
   font-family: "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
@@ -7694,7 +7694,7 @@ a.button {
 /**
  * Core styles for the app.
  *
- * Here you will find all the styles that Learn Moodle creates for you to use, as well
+ * Here you will find all the styles that Moodle Mobile creates for you to use, as well
  * as all the necessary overrides for the app to look nice everywhere.
  *
  * Any style that cannot be re-used has to be placed in the its component or addon.
@@ -7717,21 +7717,21 @@ em {
  */
 .bar-content {
   border-color: transparent;
-  background-color: #f70;
+  background-color: #212630;
   background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
   color: #fff; }
   .bar-content .title {
     color: #fff; }
   .bar-content .button {
     border-color: transparent;
-    background-color: #f70;
+    background-color: #212630;
     color: #fff; }
     .bar-content .button:hover {
       color: #fff;
       text-decoration: none; }
     .bar-content .button.active, .bar-content .button.activated {
       border-color: transparent;
-      background-color: #f70;
+      background-color: #212630;
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
     .bar-content .button.button-clear {
       border-color: transparent;
@@ -7960,11 +7960,11 @@ img.mm-media-adapt-width {
   right: 44px; }
 
 #mm-settings-languagelabel {
-  color: #000; }
+  color: #212630; }
 
 .bar-side-menu {
   border-color: transparent;
-  background-color: #f70;
+  background-color: #212630;
   background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
   color: #fff;
   height: 80px !important; }
@@ -7981,27 +7981,14 @@ img.mm-media-adapt-width {
 .has-side-menu-header {
   top: 80px; }
 
-.mma-messages-date {
-  text-align: center;
-  margin-top: 10px; }
-
-.mma-messages-input-inset {
-  padding-top: 0;
-  padding-left: 0;
-  padding-bottom: 0; }
-
-.mma-messages-footer-note {
-  color: #444;
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
-  width: 100%; }
-
-.button.mma-messages-clear-search {
-  top: 0px; }
-
-.mma-messages-discussion-container {
-  padding-bottom: 15px; }
+input.mma-files-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
@@ -8063,6 +8050,28 @@ img.mm-media-adapt-width {
   .mma-grades-table .leveleven {
     background-color: #fff; }
 
+.mma-messages-date {
+  text-align: center;
+  margin-top: 10px; }
+
+.mma-messages-input-inset {
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0; }
+
+.mma-messages-footer-note {
+  color: #444;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  width: 100%; }
+
+.button.mma-messages-clear-search {
+  top: 0px; }
+
+.mma-messages-discussion-container {
+  padding-bottom: 15px; }
+
 .mma-chat-notice {
   text-align: center;
   margin-top: 10px; }
@@ -8123,15 +8132,6 @@ img.mm-media-adapt-width {
   .mma-imscp-iframe-container .iframe-wrapper {
     position: absolute; }
 
-input.mma-files-picker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none; }
-
 .mma-mod_survey-darkbg {
   background-color: #f5f5f5; }
 
@@ -8153,3 +8153,26 @@ select.mma-mod_survey-select {
 .button.active, .button.activated {
   box-shadow: none;
   color: #fff; }
+
+a, mm-format-text a {
+  color: #387ef5;
+  text-decoration: none; }
+
+mm-format-text a:hover {
+  text-decoration: underline; }
+
+mm-format-text .button.activated a {
+  color: #fff; }
+
+.bar-header {
+  background: linear-gradient(to bottom, #252B36, #1B1F27);
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1); }
+
+.bar-content .title, .item-divider h2, .item-divider .item .item-heading, .item .item-divider .item-heading, .item-divider p, a.item h2, a.item .item-heading {
+  color: #ff6500; }
+
+.tabs .tab-item {
+  color: #212630; }
+
+a.item.item-avatar .item-heading, a.item.item-media .item-heading, a.item.item-media h2, a.item.item-media .item-heading {
+  color: #212630; }
