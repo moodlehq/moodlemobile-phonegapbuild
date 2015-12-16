@@ -36,7 +36,7 @@ angular.module('mm.core')
  * @name $mmEvents
  * @module mm.core
  * @description
- * This service allows sending and listening to events in the Learn Moodle app.
+ * This service allows sending and listening to events in the Moodle Mobile app.
  */
 .factory('$mmEvents', function($log, md5) {
 

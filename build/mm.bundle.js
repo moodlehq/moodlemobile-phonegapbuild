@@ -6817,6 +6817,9 @@ angular.module('mm.core.login')
     } else {
         siteChecked = true;
     }
+    $scope.signup = function() {
+        $mmUtil.openInBrowser("https://learn.moodle.net/login/signup.php");
+    }
     $scope.login = function() {
         $mmApp.closeKeyboard();
         var siteurl = $scope.siteurl,
@@ -9705,7 +9708,7 @@ angular.module('mm.addons.frontpage')
                 self.getController = function() {
                         return function($scope) {
                 $scope.icon = 'ion-home';
-                $scope.title = 'mma.frontpage.frontpage';
+                $scope.title = 'mma.frontpage.sitehome';
                 $scope.state = 'site.mm_course-section';
             };
         };

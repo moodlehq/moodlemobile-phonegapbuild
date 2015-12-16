@@ -6537,7 +6537,7 @@ progress {
  */
 .button {
   border-color: #387ef5;
-  background-color: transparent;
+  background-color: #f8f8f8;
   color: #387ef5;
   position: relative;
   display: inline-block;
@@ -8153,6 +8153,34 @@ select.mma-mod_survey-select {
 .button.active, .button.activated {
   box-shadow: none;
   color: #fff; }
+
+.init, .connect, .credentials, .reconnect {
+  background-color: #6e999d;
+  background-image: url("../img/logo.png"), url("../img/bg_2.png");
+  background-repeat: no-repeat;
+  background-position: top 20px center, bottom right;
+  background-size: 260px auto, 50%;
+  padding-top: 65px; }
+  .init .list-inset, .connect .list-inset, .credentials .list-inset, .reconnect .list-inset {
+    background-color: transparent; }
+  .init .item, .connect .item, .credentials .item, .reconnect .item {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+    border-bottom-color: rgba(255, 255, 255, 0.1); }
+  .init .item-input, .connect .item-input, .credentials .item-input, .reconnect .item-input {
+    padding-right: 16px; }
+    .init .item-input input, .connect .item-input input, .credentials .item-input input, .reconnect .item-input input {
+      padding-left: 10px;
+      padding-right: 10px; }
+  .init .item-stacked-label, .connect .item-stacked-label, .credentials .item-stacked-label, .reconnect .item-stacked-label {
+    background-color: rgba(255, 255, 255, 0.4); }
+  .init button, .connect button, .credentials button, .reconnect button {
+    border-color: #b1cdfb; }
+
+.init {
+  background-position: center 45%, bottom right; }
+  .init img {
+    display: none; }
 
 a, mm-format-text a {
   color: #387ef5;
