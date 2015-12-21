@@ -40,29 +40,29 @@ angular.module('mm.core.login', [])
         url: '/sites',
         templateUrl: 'core/components/login/templates/sites.html',
         controller: 'mmLoginSitesCtrl',
-       // onEnter: function($state, $mmSitesManager) {
+      onEnter: function($state, $mmSitesManager) {
             // Skip this page if there are no sites yet.
-         //   $mmSitesManager.hasNoSites().then(function() {
-          //      $state.go('mm_login.site');
-            //});
-        //}
+        $mmSitesManager.hasNoSites().then(function() {
+           $state.go('mm_login.credentials');
+     });
+     }
     })
 
-    .state('mm_login.site', {
+    */*.state('mm_login.site', {
         url: '/site',
         templateUrl: 'core/components/login/templates/site.html',
         controller: 'mmLoginSiteCtrl',
 		onEnter: function($state) {
         $state.go('mm_login.credentials', {siteurl: 'http://e.neu.kz'});
     }
-    })
+    })*/
 
     .state('mm_login.credentials', {
         url: '/cred',
         templateUrl: 'core/components/login/templates/credentials.html',
         controller: 'mmLoginCredentialsCtrl',
         params: {
-            siteurl: ''
+            siteurl: 'http://e.neu.kz'
         },
         onEnter: function($state, $stateParams) {
             // Do not allow access to this page when the URL was not passed.
