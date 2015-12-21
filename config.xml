@@ -3,15 +3,15 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.moodle.moodlemobile"
-        versionCode = "2007"
+        versionCode = "2015"
         version   = "2.6">
-    <name>Moodle Mobile</name>
+    <name>E-NEU Moodle</name>
 
     <description>
-        Moodle Mobile official app
+        E-NEU Moodle mobile App
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
+    <author href="http://e.neu.kz" email="e-neu@newuni.kz">
         Moodle Pty Ltd
     </author>
 
