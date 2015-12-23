@@ -5,10 +5,10 @@
         id        = "kz.moodle.eneu"
         versionCode = "2015"
         version   = "2.7">
-    <name>E-NEU Moodle</name>
+    <name>NEU Moodle</name>
 
     <description>
-        E-NEU Moodle мобильное приложение
+        NEU Moodle мобильное приложение
     </description>
 
     <author href="http://e.neu.kz" email="e-neu@newuni.kz">
