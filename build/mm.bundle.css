@@ -7770,6 +7770,8 @@ em {
     border-radius: 0; }
   .item-media p {
     margin: 0px; }
+  .item-media.item-button-right > .button, .item-media.item-button-right > .spinner {
+    top: 16px; }
 
 .item-message {
   clear: both;

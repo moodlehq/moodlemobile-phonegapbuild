@@ -21,7 +21,7 @@ angular.module('mm.addons.participants')
  * @ngdoc service
  * @name $mmaParticipantsCoursesNavHandler
  */
-.factory('$mmaParticipantsCoursesNavHandler', function() {
+.factory('$mmaParticipantsCoursesNavHandler', function($mmaParticipants, mmCoursesAccessMethods) {
     return {
 
         /**
@@ -36,11 +36,16 @@ angular.module('mm.addons.participants')
         /**
          * Check if handler is enabled for this course.
          *
-         * @param {Number} courseId Course ID.
-         * @return {Boolean}        True if handler is enabled, false otherwise.
+         * @param {Number} courseId   Course ID.
+         * @param {Object} accessData Type of access to the course: default, guest, ...
+         * @return {Boolean|Promise}  Promise resolved  with true if handler is enabled,
+         *                            false or promise rejected or resolved with false otherwise.
          */
-        isEnabledForCourse: function() {
-            return true;
+        isEnabledForCourse: function(courseId, accessData) {
+            if (accessData && accessData.type == mmCoursesAccessMethods.guest) {
+                return false; // Not enabled for guests.
+            }
+            return $mmaParticipants.isPluginEnabledForCourse(courseId);
         },
 
         /**
