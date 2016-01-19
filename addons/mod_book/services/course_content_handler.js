@@ -58,13 +58,15 @@ angular.module('mm.addons.mod_book')
 
             downloadBtn = {
                 hidden: true,
-                icon: 'ion-ios-cloud-download',
+                icon: 'ion-ios-cloud-download-outline',
                 label: 'mm.core.download',
                 action: function(e) {
                     e.preventDefault();
                     e.stopPropagation();
                     $mmaModBook.prefetchContent(module).catch(function() {
-                        $mmUtil.showErrorModal('mm.core.errordownloading', true);
+                        if (!$scope.$$destroyed) {
+                            $mmUtil.showErrorModal('mm.core.errordownloading', true);
+                        }
                     });
                 }
             };
@@ -79,7 +81,9 @@ angular.module('mm.addons.mod_book')
 
                     $mmaModBook.invalidateContent(module.id).finally(function() {
                         $mmaModBook.prefetchContent(module).catch(function() {
-                            $mmUtil.showErrorModal('mm.core.errordownloading', true);
+                            if (!$scope.$$destroyed) {
+                                $mmUtil.showErrorModal('mm.core.errordownloading', true);
+                            }
                         });
                     });
                 }
@@ -114,7 +118,7 @@ angular.module('mm.addons.mod_book')
             });
 
             // Get current status to decide which icon should be shown.
-            $mmCoursePrefetchDelegate.getModuleStatus(module, revision, timemodified).then(showStatus);
+            $mmCoursePrefetchDelegate.getModuleStatus(module, courseid, revision, timemodified).then(showStatus);
 
             $scope.$on('$destroy', function() {
                 statusObserver && statusObserver.off && statusObserver.off();
