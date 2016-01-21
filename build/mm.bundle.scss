@@ -476,26 +476,6 @@ $mma-messages-date-badge: "stable" !default;
 .mma-messages-discussion-container {
   padding-bottom: 15px;
 }
-.mma-mod_choice-user {
-  position: relative;
-  display: inline-block;
-  img {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -20px;
-  }
-  p {
-    display: inline-block;
-    padding-top: 50px;
-  }
-}
-
-.mma-mod_choice-graph-horizontal {
-  height: 50px;
-}
 $mma-chat-notice-badge: "stable" !default;
 
 // The notice displayed in the list.
@@ -524,6 +504,46 @@ $mma-chat-notice-badge: "stable" !default;
     width: 100%;
 }
 
+.mma-mod_choice-user {
+  position: relative;
+  display: inline-block;
+  img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -20px;
+  }
+  p {
+    display: inline-block;
+    padding-top: 50px;
+  }
+}
+
+.mma-mod_choice-graph-horizontal {
+  height: 50px;
+}
+
+.mma-forum-discussion-link {
+    text-decoration: none;
+}
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
+
+.mma-forum-textarea {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
 
 .mma-imscp-container {
     display: flex;
@@ -602,26 +622,6 @@ ion-popover-view {
   padding-bottom: 10px;
 }
 
-
-.mma-forum-discussion-link {
-    text-decoration: none;
-}
-
-.mma-forum-align-right {
-    justify-content: flex-end;
-}
-
-.mma-forum-border {
-    border-color: $item-default-border;
-    border-width: $item-border-width;
-    border-style: solid;
-}
-
-.mma-forum-textarea {
-    width: 100%;
-    height: 200px;
-    resize: none;
-}
 .mma-mod_survey-darkbg {
   background-color: $item-divider-bg;
 }
