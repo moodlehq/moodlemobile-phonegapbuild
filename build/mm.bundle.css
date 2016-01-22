@@ -8110,6 +8110,12 @@ input.mma-files-picker {
 .mma-mod_choice-graph-horizontal {
   height: 50px; }
 
+.mma-imscp-iframe-container {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
+
 .mma-forum-discussion-link {
   text-decoration: none; }
 
@@ -8126,16 +8132,23 @@ input.mma-files-picker {
   height: 200px;
   resize: none; }
 
-.mma-imscp-container {
-  display: flex;
-  flex-flow: column;
-  height: 100%; }
+.mma-mod_survey-darkbg {
+  background-color: #f5f5f5; }
 
-.mma-imscp-iframe-container {
-  flex: 1 1 auto;
-  position: relative; }
-  .mma-imscp-iframe-container .iframe-wrapper {
-    position: absolute; }
+.mma-mod_survey-padding-top {
+  padding-top: 20px; }
+
+textarea.mma-mod_survey-textarea {
+  height: 100px;
+  border: 1px solid #ddd; }
+
+select.mma-mod_survey-select {
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: 32px;
+  max-width: 100%; }
+  select.mma-mod_survey-select .mma-mod_survey-defaultoption {
+    display: none; }
 
 .mma-scorm-level-0 {
   padding-left: 16px; }
@@ -8191,16 +8204,11 @@ input.mma-files-picker {
 .mma-mod-scorm-warning {
   color: #c00; }
 
-.mma-mod-scorm-container {
-  display: flex;
-  flex-flow: column;
-  height: 100%; }
-
 .mma-mod-scorm-iframe-container {
-  flex: 1 1 auto;
-  position: relative; }
-  .mma-mod-scorm-iframe-container .iframe-wrapper {
-    position: absolute; }
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
 
 ion-popover-view {
   /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
@@ -8224,24 +8232,6 @@ ion-popover-view {
 .platform-ios ion-popover-view.mma-scorm-popover {
   padding-top: 10px;
   padding-bottom: 10px; }
-
-.mma-mod_survey-darkbg {
-  background-color: #f5f5f5; }
-
-.mma-mod_survey-padding-top {
-  padding-top: 20px; }
-
-textarea.mma-mod_survey-textarea {
-  height: 100px;
-  border: 1px solid #ddd; }
-
-select.mma-mod_survey-select {
-  background-color: transparent;
-  padding-left: 0px;
-  padding-right: 32px;
-  max-width: 100%; }
-  select.mma-mod_survey-select .mma-mod_survey-defaultoption {
-    display: none; }
 
 .button.active, .button.activated {
   box-shadow: none;
