@@ -15239,6 +15239,14 @@ angular.module('mm.addons.mod_scorm')
     $scope.title = scorm.name;
     $scope.scorm = scorm;
     $scope.loadingToc = true;
+    if (scorm.popup) {
+        if (scorm.width <= 100) {
+            scorm.width = scorm.width + '%';
+        }
+        if (scorm.height <= 100) {
+            scorm.height = scorm.height + '%';
+        }
+    }
     function fetchData() {
         return $mmaModScormSync.waitForSync(scorm.id).then(function() {
             return $mmaModScorm.getAttemptCount(scorm.id).then(function(attemptsData) {
@@ -16722,6 +16730,9 @@ angular.module('mm.addons.mod_scorm')
     }
         self.getScos = function(scormid, organization, ignoreCache) {
         organization = organization || '';
+        if (!$mmSite.isLoggedIn()) {
+            return $q.reject();
+        }
         var params = {
                 scormid: scormid
             },
@@ -16837,6 +16848,9 @@ angular.module('mm.addons.mod_scorm')
             preSets = {
                 cacheKey: getScormDataCacheKey(courseid)
             };
+        if (!$mmSite.isLoggedIn()) {
+            return $q.reject();
+        }
         return $mmSite.read('mod_scorm_get_scorms_by_courses', params, preSets).then(function(response) {
             if (response && response.scorms) {
                 var currentScorm;
@@ -17538,6 +17552,9 @@ angular.module('mm.addons.mod_scorm')
     }
         self.getAttemptCount = function(scormId, userId, ignoreMissing, ignoreCache) {
         userId = userId || $mmSite.getUserId();
+        if (!$mmSite.isLoggedIn()) {
+            return $q.reject();
+        }
         var params = {
                 scormid: scormId,
                 userid: userId,
@@ -17574,6 +17591,9 @@ angular.module('mm.addons.mod_scorm')
         if (ignoreCache) {
             preSets.getFromCache = 0;
             preSets.emergencyCache = 0;
+        }
+        if (!$mmSite.isLoggedIn()) {
+            return $q.reject();
         }
         return $mmSite.read('mod_scorm_get_scorm_user_data', params, preSets).then(function(response) {
             if (response && response.data) {
@@ -17613,6 +17633,9 @@ angular.module('mm.addons.mod_scorm')
         };
         if (!tracks || !tracks.length) {
             return $q.when();
+        }
+        if (!$mmSite.isLoggedIn()) {
+            return $q.reject();
         }
         blockedScorms[scormId] = true;
         return $mmSite.write('mod_scorm_insert_scorm_tracks', params).then(function(response) {
