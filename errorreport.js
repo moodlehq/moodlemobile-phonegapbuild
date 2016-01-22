@@ -21,8 +21,6 @@ var appVersion = '2.9 (2009)',
     errors = [],
     ignoredFiles = ['www/index.html#/site/mod_page', 'www/index.html#/site/mod_resource', 'www/index.html#/site/mm_course-section'];
 
-appVersion += ' Official app';
-
 /**
  * Check if error should be reported in background. If setting is not set, a confirm modal will be shown.
  *
