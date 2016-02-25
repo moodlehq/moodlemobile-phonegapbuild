@@ -21,7 +21,8 @@ angular.module('mm.core.courses')
  * @ngdoc service
  * @name $mmCoursesHandlers
  */
-.factory('$mmCoursesHandlers', function($mmSite, $state, $mmCourses, $q, $mmUtil, $translate, $timeout, mmCoursesEnrolInvalidKey) {
+.factory('$mmCoursesHandlers', function($mmSite, $state, $mmCourses, $q, $mmUtil, $translate, $timeout,
+            mmCoursesEnrolInvalidKey) {
 
     var self = {};
 
@@ -73,7 +74,12 @@ angular.module('mm.core.courses')
                 });
             }).then(function() {
                 modal.dismiss();
-                $state.go('site.mm_course', {courseid: parseInt(courseId)});
+                // Use redirect to make the course the new history root (to avoid "loops" in history).
+                $state.go('redirect', {
+                    siteid: $mmSite.getId(),
+                    state: 'site.mm_course',
+                    params: {courseid: courseId}
+                });
             });
         }
 
@@ -151,41 +157,56 @@ angular.module('mm.core.courses')
         }
 
         /**
-         * Whether or not the handler is enabled for the site.
-         *
-         * @return {Boolean}
-         */
-        self.isEnabled = function() {
-            return true;
-        };
-
-        /**
          * Get actions to perform with the link.
          *
-         * @param {String} url        URL to treat.
-         * @param {Number} [courseId] Course ID related to the URL.
-         * @return {Object[]}         List of actions. See {@link $mmContentLinksDelegate#registerLinkHandler}.
+         * @param {String[]} siteIds Site IDs the URL belongs to.
+         * @param {String} url       URL to treat.
+         * @return {Object[]}        List of actions. See {@link $mmContentLinksDelegate#registerLinkHandler}.
          */
-        self.getActions = function(url, courseId) {
-            // Check if URL belongs to the current site.
-            if ($mmSite.containsUrl(url)) {
-                // Check if it's a course enrol URL.
-                if (url.indexOf('enrol/index.php') > -1 || url.indexOf('course/enrol.php') > -1) {
-                    var matches = url.match(/\.php\?id=(\d*)/); // Get course ID.
-                    if (matches && typeof matches[1] != 'undefined') {
-                        courseId = matches[1];
-                        // Return actions.
-                        return [{
-                            message: 'mm.core.view',
-                            icon: 'ion-eye',
-                            action: function() {
-                                actionEnrol(courseId, url);
+        self.getActions = function(siteIds, url) {
+            // Check if it's a course URL.
+            if (typeof self.handles(url) != 'undefined') {
+                var params = $mmUtil.extractUrlParams(url);
+                if (typeof params.id != 'undefined') {
+                    // Return actions.
+                    return [{
+                        message: 'mm.core.view',
+                        icon: 'ion-eye',
+                        sites: siteIds,
+                        action: function(siteId) {
+                            siteId = siteId || $mmSite.getId();
+                            if (siteId == $mmSite.getId()) {
+                                actionEnrol(parseInt(params.id, 10), url);
+                            } else {
+                                // Use redirect to make the course the new history root (to avoid "loops" in history).
+                                $state.go('redirect', {
+                                    siteid: siteId,
+                                    state: 'site.mm_course',
+                                    params: {courseid: parseInt(params.id, 10)}
+                                });
                             }
-                        }];
-                    }
+                        }
+                    }];
                 }
             }
             return [];
+        };
+
+        /**
+         * Check if the URL is handled by this handler. If so, returns the URL of the site.
+         *
+         * @param  {String} url URL to check.
+         * @return {String}     Site URL. Undefined if the URL doesn't belong to this handler.
+         */
+        self.handles = function(url) {
+            // Accept any of these patterns.
+            var patterns = ['/enrol/index.php', '/course/enrol.php', '/course/view.php'];
+            for (var i = 0; i < patterns.length; i++) {
+                var position = url.indexOf(patterns[i]);
+                if (position > -1) {
+                    return url.substr(0, position);
+                }
+            }
         };
 
         return self;

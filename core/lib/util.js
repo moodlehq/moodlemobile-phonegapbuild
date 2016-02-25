@@ -457,7 +457,30 @@ angular.module('mm.core')
          */
         self.showErrorModal = function(errorMessage, needsTranslate, autocloseTime) {
             var errorKey = 'mm.core.error',
-                langKeys = [errorKey];
+                langKeys = [errorKey],
+                matches;
+
+            if (angular.isObject(errorMessage)) {
+                // We received an object instead of a string. Search for common properties.
+                if (typeof errorMessage.content != 'undefined') {
+                    errorMessage = errorMessage.content;
+                } else if (typeof errorMessage.body != 'undefined') {
+                    errorMessage = errorMessage.body;
+                } else if (typeof errorMessage.message != 'undefined') {
+                    errorMessage = errorMessage.message;
+                } else if (typeof errorMessage.error != 'undefined') {
+                    errorMessage = errorMessage.error;
+                } else {
+                    // No common properties found, just stringify it.
+                    errorMessage = JSON.stringify(errorMessage);
+                }
+
+                // Try to remove tokens from the contents.
+                matches = errorMessage.match(/token"?[=|:]"?(\w*)/, '');
+                if (matches && matches[1]) {
+                    errorMessage = errorMessage.replace(new RegExp(matches[1], 'g'), 'secret');
+                }
+            }
 
             if (needsTranslate) {
                 langKeys.push(errorMessage);
@@ -886,6 +909,9 @@ angular.module('mm.core')
          * 7.toFixed(2) -> 7.00
          * roundToDecimals(7, 2) -> 7
          *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#roundToDecimals
          * @param  {Float}  number       Float to round.
          * @param  {Number} [decimals=2] Number of decimals. By default, 2.
          * @return {Float}               Rounded number.
@@ -897,6 +923,66 @@ angular.module('mm.core')
 
             var multiplier = Math.pow(10, decimals);
             return Math.round(parseFloat(number) * multiplier) / multiplier;
+        };
+
+        /**
+         * Extracts the parameters from a URL and stores them in an object.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#extractUrlParams
+         * @param  {String} url URL to treat.
+         * @return {Object}     Object with the params.
+         */
+        self.extractUrlParams = function(url) {
+            var regex = /[?&]+([^=&]+)=?([^&]*)?/gi,
+                params = {};
+            url.replace(regex, function(match, key, value) {
+                params[key] = value !== undefined ? value : '';
+            });
+            return params;
+        };
+
+        /**
+         * Given an HTML, searched all links and media and tries to restore original sources using the paths object.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#restoreSourcesInHtml
+         * @param  {String} html         HTML code.
+         * @param  {Object} paths        Object linking URLs in the html code with the real URLs to use.
+         * @param  {Function} [anchorFn] Function to call with each anchor. Optional.
+         * @return {String}              Treated HTML code.
+         */
+        self.restoreSourcesInHtml = function(html, paths, anchorFn) {
+            var div = angular.element('<div>'),
+                media;
+            div.html(html);
+
+            // Treat img, audio, video and source.
+            media = div[0].querySelectorAll('img, video, audio, source');
+            angular.forEach(media, function(el) {
+                var src = paths[decodeURIComponent(el.getAttribute('src'))];
+                if (typeof src !== 'undefined') {
+                    el.setAttribute('src', src);
+                }
+            });
+
+            // We do the same for links.
+            angular.forEach(div.find('a'), function(anchor) {
+                var href = decodeURIComponent(anchor.getAttribute('href')),
+                    url = paths[href];
+
+                if (typeof url !== 'undefined') {
+                    anchor.setAttribute('href', url);
+
+                    if (angular.isFunction(anchorFn)) {
+                        anchorFn(anchor, href);
+                    }
+                }
+            });
+
+            return div.html();
         };
 
         return self;

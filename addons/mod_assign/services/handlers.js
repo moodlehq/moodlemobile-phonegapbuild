@@ -21,7 +21,7 @@ angular.module('mm.addons.mod_assign')
  * @ngdoc service
  * @name $mmaModAssignHandlers
  */
-.factory('$mmaModAssignHandlers', function($mmCourse, $mmaModAssign, $state, $mmSite) {
+.factory('$mmaModAssignHandlers', function($mmCourse, $mmaModAssign, $state, $q, $mmContentLinksHelper) {
     var self = {};
 
     /**
@@ -38,7 +38,7 @@ angular.module('mm.addons.mod_assign')
         /**
          * Whether or not the handler is enabled for the site.
          *
-         * @return {Boolean}
+         * @return {Promise}
          */
         self.isEnabled = function() {
             return $mmaModAssign.isPluginEnabled();
@@ -56,8 +56,10 @@ angular.module('mm.addons.mod_assign')
                 $scope.title = module.name;
                 $scope.icon = $mmCourse.getModuleIconSrc('assign');
                 $scope.action = function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
+                    if (e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    }
                     $state.go('site.mod_assign', {module: module, courseid: courseid});
                 };
             };
@@ -78,40 +80,49 @@ angular.module('mm.addons.mod_assign')
         var self = {};
 
         /**
-         * Whether or not the handler is enabled for the site.
+         * Whether or not the handler is enabled for a certain site.
          *
-         * @return {Boolean}
+         * @param  {String} siteId     Site ID.
+         * @param  {Number} [courseId] Course ID related to the URL.
+         * @return {Promise}           Promise resolved with true if enabled.
          */
-        self.isEnabled = function() {
-            return $mmaModAssign.isPluginEnabled();
-        };
+        function isEnabled(siteId, courseId) {
+            return $mmaModAssign.isPluginEnabled(siteId).then(function(enabled) {
+                if (!enabled) {
+                    return false;
+                }
+                return courseId || $mmCourse.canGetModuleWithoutCourseId(siteId);
+            });
+        }
 
         /**
          * Get actions to perform with the link.
          *
+         * @param {String[]} siteIds  Site IDs the URL belongs to.
          * @param {String} url        URL to treat.
-         * @param {Number} [courseid] Course ID related to the URL.
-         * @return {Object[]}         List of actions. See {@link $mmContentLinksDelegate#registerLinkHandler}.
+         * @param {Number} [courseId] Course ID related to the URL.
+         * @return {Promise}          Promise resolved with the list of actions.
+         *                            See {@link $mmContentLinksDelegate#registerLinkHandler}.
          */
-        self.getActions = function(url, courseid) {
-            // Check it's an assign URL from the current site.
-            if (courseid && $mmSite.containsUrl(url) && url.indexOf('/mod/assign/') > -1) {
-                var matches = url.match(/view\.php\?id=(\d*)/); // Get assignment ID.
-                if (matches && typeof matches[1] != 'undefined') {
-                    // Return actions.
-                    return [{
-                        message: 'mm.core.view',
-                        icon: 'ion-eye',
-                        action: function() {
-                            $state.go('site.mod_assign', {
-                                courseid: courseid,
-                                module: {id: matches[1]}
-                            });
-                        }
-                    }];
-                }
+        self.getActions = function(siteIds, url, courseId) {
+            // Check it's an assign URL.
+            if (typeof self.handles(url) != 'undefined') {
+                return $mmContentLinksHelper.treatModuleIndexUrl(siteIds, url, isEnabled, courseId);
             }
-            return [];
+            return $q.when([]);
+        };
+
+        /**
+         * Check if the URL is handled by this handler. If so, returns the URL of the site.
+         *
+         * @param  {String} url URL to check.
+         * @return {String}     Site URL. Undefined if the URL doesn't belong to this handler.
+         */
+        self.handles = function(url) {
+            var position = url.indexOf('/mod/assign/view.php');
+            if (position > -1) {
+                return url.substr(0, position);
+            }
         };
 
         return self;

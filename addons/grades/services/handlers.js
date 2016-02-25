@@ -21,7 +21,7 @@ angular.module('mm.addons.grades')
  * @ngdoc service
  * @name $mmaGradesHandlers
  */
-.factory('$mmaGradesHandlers', function($mmaGrades, $state, mmCoursesAccessMethods) {
+.factory('$mmaGradesHandlers', function($mmaGrades, $state, $mmUtil, $mmContentLinksHelper, mmCoursesAccessMethods) {
 
     var self = {};
 
@@ -39,7 +39,7 @@ angular.module('mm.addons.grades')
         /**
          * Check if handler is enabled.
          *
-         * @return {Boolean} True if handler is enabled, false otherwise.
+         * @return {Promise} Promise resolved with true if handler is enabled, false otherwise.
          */
         self.isEnabled = function() {
             return $mmaGrades.isPluginEnabled();
@@ -104,7 +104,7 @@ angular.module('mm.addons.grades')
         /**
          * Check if handler is enabled.
          *
-         * @return {Boolean} True if handler is enabled, false otherwise.
+         * @return {Promise} Promise resolved with true if handler is enabled, false otherwise.
          */
         self.isEnabled = function() {
             return $mmaGrades.isPluginEnabled();
@@ -150,6 +150,87 @@ angular.module('mm.addons.grades')
                 };
             };
 
+        };
+
+        return self;
+    };
+
+    /**
+     * Content links handler.
+     *
+     * @module mm.addons.grades
+     * @ngdoc method
+     * @name $mmaGradesHandlers#linksHandler
+     */
+    self.linksHandler = function() {
+
+        var self = {};
+
+        /**
+         * Whether or not the handler is enabled for a certain site and course.
+         *
+         * @param  {String} siteId   Site ID.
+         * @param  {Number} courseId Course ID.
+         * @return {Promise}         Promise resolved with true if enabled.
+         */
+        function isEnabled(siteId, courseId) {
+            return $mmaGrades.isPluginEnabled(siteId).then(function(enabled) {
+                if (enabled) {
+                    return $mmaGrades.isPluginEnabledForCourse(courseId, siteId);
+                }
+            });
+        }
+
+        /**
+         * Get actions to perform with the link.
+         *
+         * @param {String[]} siteIds Site IDs the URL belongs to.
+         * @param {String} url       URL to treat.
+         * @return {Object[]}        Promise resolved with the list of actions.
+         *                           See {@link $mmContentLinksDelegate#registerLinkHandler}.
+         */
+        self.getActions = function(siteIds, url) {
+            // Check it's a grade URL.
+            if (typeof self.handles(url) != 'undefined') {
+                var params = $mmUtil.extractUrlParams(url);
+                if (typeof params.id != 'undefined') {
+                    var courseId = parseInt(params.id, 10);
+                    // Pass false because all sites should have the same siteurl.
+                    return $mmContentLinksHelper.filterSupportedSites(siteIds, isEnabled, false, courseId).then(function(ids) {
+                        if (!ids.length) {
+                            return [];
+                        } else {
+                            // Return actions.
+                            return [{
+                                message: 'mm.core.view',
+                                icon: 'ion-eye',
+                                sites: ids,
+                                action: function(siteId) {
+                                    var stateParams = {
+                                        course: {id: courseId},
+                                        userid: parseInt(params.userid, 10)
+                                    };
+                                    $mmContentLinksHelper.goInSite('site.grades', stateParams, siteId);
+                                }
+                            }];
+                        }
+                    });
+                }
+            }
+            return [];
+        };
+
+        /**
+         * Check if the URL is handled by this handler. If so, returns the URL of the site.
+         *
+         * @param  {String} url URL to check.
+         * @return {String}     Site URL. Undefined if the URL doesn't belong to this handler.
+         */
+        self.handles = function(url) {
+            var position = url.indexOf('/grade/report/user/index.php');
+            if (position > -1) {
+                return url.substr(0, position);
+            }
         };
 
         return self;

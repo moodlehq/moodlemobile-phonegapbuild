@@ -8092,6 +8092,13 @@ input.mma-files-picker {
 .mma-messages-discussion-container {
   padding-bottom: 15px; }
 
+.button.button-icon.mma-messages-delete-button {
+  min-height: auto;
+  line-height: initial; }
+  .button.button-icon.mma-messages-delete-button:before {
+    font-size: 100%;
+    line-height: initial; }
+
 .mma-chat-notice {
   text-align: center;
   margin-top: 10px; }
