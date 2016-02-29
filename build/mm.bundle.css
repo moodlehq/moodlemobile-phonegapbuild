@@ -8093,7 +8093,7 @@ input.mma-files-picker {
   padding-bottom: 15px; }
 
 .button.button-icon.mma-messages-delete-button {
-  min-height: auto;
+  min-height: initial;
   line-height: initial; }
   .button.button-icon.mma-messages-delete-button:before {
     font-size: 100%;
