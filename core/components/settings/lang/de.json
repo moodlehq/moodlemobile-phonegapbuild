@@ -1,6 +1,6 @@
 {
     "about": "Über Moodle Mobile",
-    "appname": "Moodle Mobile {{version}}",
+    "appname": "Harvest Moodle Mobile {{version}}",
     "cacheexpirationtime": "Speicherdauer im Cache (Millisekunden)",
     "cordovadevicemodel": "Cordova Device Model",
     "cordovadeviceosversion": "Cordova Device OS Version",
