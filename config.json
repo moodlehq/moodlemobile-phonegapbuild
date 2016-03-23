@@ -1,5 +1,5 @@
 {
-    "app_id" : "com.moodle.moodlemobile",
+    "app_id" : "tw.edu.ksu.moodle",
     "versioncode" : "2010",
     "versionname" : "2.9",
     "cache_expiration_time" : 300000,
@@ -8,7 +8,7 @@
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "demo_sites": {},
-    "siteurl": "https://moodle.ksu.edu.tw",
+    "siteurl": "http://moodle.ksu.edu.tw",
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile"
 }
