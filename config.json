@@ -8,7 +8,7 @@
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "demo_sites": {},
-    "siteurl": "http://moodle.ksu.edu.tw",
+    "siteurl": "https://moodle.ksu.edu.tw",
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile"
 }
