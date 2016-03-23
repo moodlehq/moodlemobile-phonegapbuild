@@ -1,6 +1,8 @@
 {
     "authenticating": "認證中",
     "cancel": "取消",
+    "credentials": "身份認證",
+    "credentialsdescription": "請輸入您的帳號密碼來登入 ",
     "connect": "連結",
     "help": "協助",
     "invalidaccount": "請檢查您的登人資料或請您的網站管理員檢查網站設定。",
