@@ -1,6 +1,6 @@
 {
     "app_id" : "tw.edu.ksu.moodle",
-    "versioncode" : "20160324001",
+    "versioncode" : "v20160324001",
     "versionname" : "2.9",
     "cache_expiration_time" : 300000,
     "default_lang" : "zh-tw",
