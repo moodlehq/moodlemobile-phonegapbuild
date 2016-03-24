@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "tw.edu.ksu.moodle"
-        versionCode = "v20160324001"
+        versionCode = "2016032401"
         version   = "2.9.1">
     <name>崑山網路大學</name>
 
