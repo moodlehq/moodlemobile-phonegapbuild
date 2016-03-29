@@ -339,6 +339,8 @@
     "mm.login.username": "帳號",
     "mm.login.usernamerequired": "需要帳號",
     "mm.login.webservicesnotenabled": "您的網站沒有啟用Web服務。如果您想用行動裝置連線，請聯繫您的Moodle網站管理員。",
+    "mm.login.credentials": "登入資訊",
+    "mm.login.credentialsdescription": "請輸入您的帳號密碼進行登入 ",
     "mm.settings.about": "關於",
     "mm.settings.cacheexpirationtime": "快取到期時間(毫秒)",
     "mm.settings.currentlanguage": "選定語言",
