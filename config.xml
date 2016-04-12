@@ -3,8 +3,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "edu.au.harvest.lms"
-        versionCode = "6.0"
-        version   = "6.0">
+        versionCode = "7.0"
+        version   = "7.0">
     <name>Moodle Mobile</name>
 
     <description>
