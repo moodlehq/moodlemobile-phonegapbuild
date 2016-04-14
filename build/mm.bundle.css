@@ -7800,7 +7800,7 @@ em {
       width: 16px;
       height: 16px; }
 
-.item.item-disabled {
+.item.item-disabled, .platform-android .item.item-disabled {
   color: #999; }
 
 .mm-split-pane {
@@ -7962,6 +7962,14 @@ mm-navigation-bar .col {
 .mm-has-navigation-bar .iframe-wrapper {
   top: 47px; }
 
+.mm-bar-button-image, .bar .button.mm-bar-button-image {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 31px;
+  max-height: 31px;
+  border-radius: 50%; }
+
 /**
  * This CSS uses adjacent selectors instead of general sibling (~) selectors
  * for ion radio that are broken in iOS 9 UIWebView.
@@ -8115,6 +8123,12 @@ input.mma-files-picker {
   margin: 0;
   width: 100%; }
 
+.mma-chat-send-form {
+  width: 100%; }
+
+.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
+  margin: 0; }
+
 .mma-mod_choice-user {
   position: relative;
   display: inline-block; }
@@ -8242,6 +8256,45 @@ select.mma-mod_survey-select {
   max-width: 100%; }
   select.mma-mod_survey-select .mma-mod_survey-defaultoption {
     display: none; }
+
+.wiki-toc {
+  border: 1px solid #bbb;
+  background: #eee;
+  margin: 16px;
+  padding: 8px; }
+
+.wiki-toc-title {
+  color: #666;
+  font-size: 1.1em;
+  font-variant: small-caps;
+  text-align: center; }
+
+.wiki-toc-section {
+  padding: 0;
+  margin: 2px 8px; }
+
+.wiki-toc-section-2 {
+  padding-left: 12px; }
+
+.wiki-toc-section-3 {
+  padding-left: 24px; }
+
+.mm-site_mod_wiki .wiki_newentry {
+  color: red;
+  font-style: italic; }
+
+/* Hide edit section links */
+a.wiki_edit_section {
+  display: none; }
+
+.mma-mod_wiki-subwiki-picker .item-divider {
+  font-weight: bold; }
+
+.mma-mod_wiki-subwiki-picker .item.item-selected {
+  background-color: #eee; }
+
+.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
+  font-size: 24px; }
 
 .button.active, .button.activated {
   box-shadow: none;

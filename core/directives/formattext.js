@@ -209,9 +209,10 @@ angular.module('mm.core')
                 dom = angular.element('<div>').html(formatted); // Convert the content into DOM.
 
             // Walk through the content to find the links and add our directive to it.
-            // Important: We need to look for links first because in 'img' we add new links without mm-browser.
+            // Important: We need to look for links first because in 'img' we add new links without mm-link.
             angular.forEach(dom.find('a'), function(anchor) {
-                anchor.setAttribute('mm-browser', '');
+                anchor.setAttribute('mm-link', '');
+                anchor.setAttribute('capture-link', true);
                 addExternalContent(anchor, component, componentId, siteId);
             });
 
@@ -240,6 +241,8 @@ angular.module('mm.core')
             });
             angular.forEach(dom.find('video'), function(el) {
                 treatMedia(el, component, componentId, siteId);
+                // Set data-tap-disabled="true" to make controls work in Android (see MOBILE-1452).
+                el.setAttribute('data-tap-disabled', true);
             });
             angular.forEach(dom.find('iframe'), addMediaAdaptClass);
 

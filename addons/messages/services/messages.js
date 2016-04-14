@@ -232,13 +232,15 @@ angular.module('mm.addons.messages')
 
     /**
      * Get the name of the events of a discussion.
+     * These events aren't used anymore, please just listen to mmaMessagesNewMessageEvent.
      *
      * @param  {Number} userid User ID of the discussion.
      * @return {String}        Name of the event.
+     * @deprecated since version 2.10
      */
     self.getDiscussionEventName = function(userid) {
         return mmaMessagesNewMessageEvent + '_' + $mmSite.getUserId() + '_' + userid;
-    }
+    };
 
     /**
      * Return the current user's discussion with another user.
@@ -859,6 +861,8 @@ angular.module('mm.addons.messages')
     self.unblockContact = function(userId) {
         return $mmSite.write('core_message_unblock_contacts', {
             userids: [ userId ]
+        }, {
+            responseExpected: false
         }).then(function() {
             return self.invalidateAllContactsCache($mmSite.getUserId());
         });
