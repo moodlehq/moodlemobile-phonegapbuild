@@ -19,7 +19,6 @@
         <string>3.4.0</string>
     </gap:config-file>
 
-    <gap:platform name="ios" />
     <gap:platform name="android" />
 
     <access origin="*" />
