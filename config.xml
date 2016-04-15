@@ -20,7 +20,6 @@
     </gap:config-file>
 
     <gap:platform name="ios" />
-    <gap:platform name="android" />
 
     <access origin="*" />
     <access origin="tel:*" launch-external="yes" />
