@@ -509,7 +509,7 @@
     "mma.mod_url.accessurl": "Access the URL",
     "mma.mod_url.pointingtourl": "URL this resource points to",
     "mma.mod_wiki.errorloadingpage": "An error occured while loading page.",
-    "mma.mod_wiki.errornowikiavailable": "There's no wiki available to be shown.",
+    "mma.mod_wiki.errornowikiavailable": "This wiki does not have any content yet.",
     "mma.mod_wiki.gowikihome": "Go Wiki home",
     "mma.mod_wiki.map": "Map",
     "mma.mod_wiki.notingroup": "Not in group",
