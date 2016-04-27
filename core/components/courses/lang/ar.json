@@ -1,5 +1,12 @@
 {
+    "enrolme": "سجلني",
     "filter": "فلتر",
     "frontpage": "الصفحة الرئيسية",
-    "mycourses": "مقرراتي"
+    "mycourses": "مقرراتي",
+    "nocourses": "لا يوجد معلومات لمقرر دراسي ليتم اظهرها",
+    "nosearchresults": "لا توجد نتائج لهذا البحث",
+    "notenroled": "أنت لست مسجلاً كطالب في هذا المقرر",
+    "password": "كلمة المرور",
+    "search": "بحث",
+    "searchcourses": "بحث مقررات دراسية"
 }

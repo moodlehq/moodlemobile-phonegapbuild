@@ -1,6 +1,7 @@
 {
     "authenticating": "Authenticeren",
     "cancel": "Annuleer",
+    "cannotdownloadfiles": "Het downloaden van bestanden is uitgeschakeld in je mobiele service. De app kan niet werken met deze instelling uitgeschakeld. Contacteer je Moodle sitebeheerder.",
     "confirmdeletesite": "Weet je zeker dat je de site {{sitename}} wil verwijderen?",
     "connect": "Verbinden!",
     "connecttomoodle": "Verbinden met Moodle",
@@ -14,6 +15,7 @@
     "invalidaccount": "Controleer je logingegevens of vraag je site-beheerder om de site-configuratie te controleren.",
     "invalidmoodleversion": "Ongeldige Moodleversie. De vereiste minimumversie is:",
     "invalidsite": "Deze site-URL is niet geldig.",
+    "localmobileunexpectedresponse": "Moodle Mobile Additional Features Check gaf een onverwacht antwoord. Je zult aanmelden via de standaard Mobile service.",
     "login": "Login",
     "loginbutton": "Login!",
     "logininsiterequired": "Je dient via een browser in te loggen op je Moodle site",

@@ -22,14 +22,15 @@ angular.module('mm.addons.mod_chat')
  * @name mmaModChatChatCtrl
  */
 .controller('mmaModChatChatCtrl', function($scope, $stateParams, $mmApp, $mmaModChat, $log, $ionicModal, $mmUtil, $ionicHistory,
-            $ionicScrollDelegate, $timeout, $mmSite, $interval, mmaChatPollInterval) {
+            $ionicScrollDelegate, $timeout, $mmSite, $interval, mmaChatPollInterval, $q) {
 
     $log = $log.getInstance('mmaModChatChatCtrl');
 
     var chatId = $stateParams.chatid,
         courseId = $stateParams.courseid,
         title = $stateParams.title,
-        polling;
+        chatLastTime = 0,
+        pollingRunning = false;
 
     $scope.loaded = false;
     $scope.title = title;
@@ -42,7 +43,6 @@ angular.module('mm.addons.mod_chat')
     $scope.newMessage = {
         text: ''
     };
-    chatLastTime = 0;
 
     // Chat users modal.
     $ionicModal.fromTemplateUrl('addons/mod_chat/templates/users.html', {
@@ -63,8 +63,9 @@ angular.module('mm.addons.mod_chat')
         $scope.modal.show();
         $mmaModChat.getChatUsers($scope.chatsid).then(function(data) {
             $scope.chatUsers = data.users;
-        }).catch(showError)
-        .finally(function() {
+        }).catch(function(error) {
+            showError(error, 'mma.mod_chat.errorwhilegettingchatusers');
+        }).finally(function() {
             $scope.usersLoaded = true;
         });
     };
@@ -86,13 +87,69 @@ angular.module('mm.addons.mod_chat')
         return !$mmApp.isOnline();
     };
 
+    // Convenience function to login the user.
+    function loginUser() {
+        return $mmaModChat.loginUser(chatId).then(function(chatsid) {
+            $scope.chatsid = chatsid;
+        });
+    }
+
+    // Convenience function to get chat messages.
+    function getMessages() {
+        return $mmaModChat.getLatestMessages($scope.chatsid, chatLastTime).then(function(messagesInfo) {
+            chatLastTime = messagesInfo.chatnewlasttime;
+            return $mmaModChat.getMessagesUserData(messagesInfo.messages, courseId).then(function(messages) {
+                $scope.messages = $scope.messages.concat(messages);
+            });
+        });
+    }
+
     // Show error modal.
-    function showError(error) {
+    function showError(error, defaultMessage) {
         if (typeof error === 'string') {
             $mmUtil.showErrorModal(error);
         } else {
-            $mmUtil.showErrorModal(defaultMessage, 'mm.core.error');
+            $mmUtil.showErrorModal(defaultMessage, true);
         }
+        return $q.reject();
+    }
+
+    // Start the polling to get chat messages periodically.
+    function startPolling() {
+        // We already have the polling in place.
+        if ($scope.polling) {
+            return;
+        }
+
+        // Start polling.
+        $scope.polling = $interval(getMessagesInterval, mmaChatPollInterval);
+    }
+
+    // Convenience function to be called every certain time to get chat messages.
+    function getMessagesInterval() {
+        $log.debug('Polling for messages');
+        if (!$mmApp.isOnline() || pollingRunning) {
+            // Obviously we cannot check for new messages when the app is offline.
+            return $q.reject();
+        }
+
+        pollingRunning = true;
+
+        return getMessages().catch(function() {
+            // Try to login, it might have failed because the session expired.
+            return loginUser().then(function() {
+                return getMessages();
+            }).catch(function(error) {
+                // Fail again. Stop polling if needed.
+                if ($scope.polling) {
+                    $interval.cancel($scope.polling);
+                    $scope.polling = undefined;
+                }
+                return showError(error, 'mma.mod_chat.errorwhileretrievingmessages');
+            });
+        }).finally(function() {
+            pollingRunning = false;
+        });
     }
 
     // Check if the date should be displayed between messages (when the day changes at midnight for example).
@@ -107,7 +164,6 @@ angular.module('mm.addons.mod_chat')
 
     // Send a message to the chat.
     $scope.sendMessage = function(text, beep) {
-        var message;
         beep = beep || '';
 
         if (!$mmApp.isOnline()) {
@@ -123,26 +179,37 @@ angular.module('mm.addons.mod_chat')
             if (beep === '') {
                 $scope.newMessage.text = '';
             }
+            getMessagesInterval(); // Update messages to show the sent message.
         }, function(error) {
             // Only close the keyboard if an error happens, we want the user to be able to send multiple
             // messages withoutthe keyboard being closed.
             $mmApp.closeKeyboard();
 
-            showError(error);
+            showError(error, 'mma.mod_chat.errorwhilesendingmessage');
+        });
+    };
+
+    $scope.reconnect = function() {
+        var modal = $mmUtil.showModalLoading();
+
+        // Call startPolling would take a while for the first execution, so we'll execute it manually to check if it works now.
+        return getMessagesInterval().then(function() {
+            // It works, start the polling again.
+            startPolling();
+        }).finally(function() {
+            modal.dismiss();
         });
     };
 
     // Login the user.
-    $mmaModChat.loginUser(chatId).then(function(data) {
-        return $mmaModChat.getLatestMessages(data.chatsid, 0).then(function(messagesInfo) {
-            $scope.chatsid = data.chatsid;
-            chatLastTime = messagesInfo.chatnewlasttime;
-            return $mmaModChat.getMessagesUserData(messagesInfo.messages, courseId).then(function(messages) {
-                $scope.messages = $scope.messages.concat(messages);
-            });
-        }).catch(showError);
+    loginUser().then(function() {
+        return getMessages().then(function() {
+            startPolling();
+        }).catch(function(error) {
+            return showError(error, 'mma.mod_chat.errorwhileretrievingmessages');
+        });
     }, function(error) {
-        showError(error);
+        showError(error, 'mma.mod_chat.errorwhileconnecting');
         $ionicHistory.goBack();
     }).finally(function() {
         $scope.loaded = true;
@@ -159,39 +226,11 @@ angular.module('mm.addons.mod_chat')
         }
     };
 
-    // Set up the polling on a view enter, this allows for the user to go back and resume the polling.
-    $scope.$on('$ionicView.enter', function() {
-        // Strange case, we already have the polling in place.
-        if (polling) {
-            return;
-        }
-
-        // Start polling.
-        polling = $interval(function() {
-            $log.debug('Polling for messages');
-            if (!$mmApp.isOnline()) {
-                // Obviously we cannot check for new messages when the app is offline.
-                return;
-            }
-
-            $mmaModChat.getLatestMessages($scope.chatsid, chatLastTime).then(function(data) {
-                chatLastTime = data.chatnewlasttime;
-                $mmaModChat.getMessagesUserData(data.messages, courseId).then(function(messages) {
-                    $scope.messages = $scope.messages.concat(messages);
-                });
-            }, function(error) {
-                $interval.cancel(polling);
-                showError(error);
-            });
-
-        }, mmaChatPollInterval);
-    });
-
     // Removing the polling as we leave the page.
-    $scope.$on('$ionicView.leave', function(e) {
-        if (polling) {
+    $scope.$on('$ionicView.leave', function() {
+        if ($scope.polling) {
             $log.debug('Cancelling polling for conversation');
-            $interval.cancel(polling);
+            $interval.cancel($scope.polling);
         }
     });
 

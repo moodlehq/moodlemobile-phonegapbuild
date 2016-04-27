@@ -14,6 +14,8 @@
 
 angular.module('mm.addons.mod_folder', ['mm.core'])
 
+.constant('mmaModFolderComponent', 'mmaModFolder')
+
 .config(function($stateProvider) {
 
     $stateProvider
@@ -36,6 +38,8 @@ angular.module('mm.addons.mod_folder', ['mm.core'])
 
 })
 
-.config(function($mmCourseDelegateProvider) {
-    $mmCourseDelegateProvider.registerContentHandler('mmaModFolder', 'folder', '$mmaModFolderCourseContentHandler');
+.config(function($mmCourseDelegateProvider, $mmCoursePrefetchDelegateProvider, $mmContentLinksDelegateProvider) {
+    $mmCourseDelegateProvider.registerContentHandler('mmaModFolder', 'folder', '$mmaModFolderHandlers.courseContent');
+    $mmCoursePrefetchDelegateProvider.registerPrefetchHandler('mmaModFolder', 'folder', '$mmaModFolderPrefetchHandler');
+    $mmContentLinksDelegateProvider.registerLinkHandler('mmaModFolder', '$mmaModFolderHandlers.linksHandler');
 });

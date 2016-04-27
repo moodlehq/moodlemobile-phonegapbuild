@@ -175,6 +175,10 @@ angular.module('mm.addons.calendar')
      * @return {Promise}   Promise resolved when the event data is retrieved.
      */
     self.getEventFromLocalDb = function(id) {
+        if (!$mmSite.isLoggedIn()) {
+            // Not logged in, we can't get the site DB. User logged out or session expired while an operation was ongoing.
+            return $q.reject();
+        }
         return $mmSite.getDb().get(mmaCalendarEventsStore, id);
     };
 
@@ -253,7 +257,7 @@ angular.module('mm.addons.calendar')
             "options[timeend]": end
         };
 
-        return $mmCourses.getUserCourses(refresh, siteid).then(function(courses) {
+        return $mmCourses.getUserCourses(false, siteid).then(function(courses) {
             courses.push({id: 1}); // Add front page.
             angular.forEach(courses, function(course, index) {
                 data["events[courseids][" + index + "]"] = course.id;
@@ -290,7 +294,9 @@ angular.module('mm.addons.calendar')
      * @return {Promise} Promise resolved when the list is invalidated.
      */
     self.invalidateEventsList = function() {
-        return $mmSite.invalidateWsCacheForKeyStartingWith(getEventsCommonCacheKey());
+        var p1 = $mmCourses.invalidateUserCourses(),
+            p2 = $mmSite.invalidateWsCacheForKeyStartingWith(getEventsCommonCacheKey());
+        return $q.all([p1, p2]);
     };
 
     /**
@@ -312,7 +318,7 @@ angular.module('mm.addons.calendar')
      *
      * @module mm.addons.calendar
      * @ngdoc method
-     * @name $mmaCalendar#scheduleEventsNotifications
+     * @name $mmaCalendar#scheduleAllSitesEventsNotifications
      * @param  {Object[]} events Events to schedule.
      * @return {Promise}         Promise resolved when all the notifications have been scheduled.
      */
@@ -358,6 +364,12 @@ angular.module('mm.addons.calendar')
             if (time === 0) {
                 return $mmLocalNotifications.cancel(event.id, mmaCalendarComponent, siteid); // Cancel if it was scheduled.
             } else {
+                var timeend = (event.timestart + event.timeduration) * 1000;
+                if (timeend <= new Date().getTime()) {
+                    // The event has finished already, don't schedule it.
+                    return $q.when();
+                }
+
                 var dateTriggered = new Date((event.timestart - (time * 60)) * 1000),
                     startDate = new Date(event.timestart * 1000),
                     notification = {
@@ -375,9 +387,7 @@ angular.module('mm.addons.calendar')
                 return $mmLocalNotifications.schedule(notification, mmaCalendarComponent, siteid);
             }
         } else {
-            var deferred = $q.defer();
-            deferred.resolve();
-            return deferred.promise;
+            return $q.when();
         }
     };
 
@@ -420,6 +430,11 @@ angular.module('mm.addons.calendar')
      * @return {Promise}      Promise resolved when the notification is updated.
      */
     self.updateNotificationTime = function(event, time) {
+        if (!$mmSite.isLoggedIn()) {
+            // Not logged in, we can't get the site DB. User logged out or session expired while an operation was ongoing.
+            return $q.reject();
+        }
+
         var db = $mmSite.getDb();
 
         event.notificationtime = time;

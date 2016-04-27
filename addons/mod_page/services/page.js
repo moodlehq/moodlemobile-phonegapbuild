@@ -21,7 +21,7 @@ angular.module('mm.addons.mod_page')
  * @ngdoc service
  * @name $mmaModPage
  */
-.factory('$mmaModPage', function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, mmaModPageComponent) {
+.factory('$mmaModPage', function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, $mmSitesManager, $mmUtil, mmaModPageComponent) {
     $log = $log.getInstance('$mmaModPage');
 
     var self = {};
@@ -36,19 +36,31 @@ angular.module('mm.addons.mod_page')
      * @return {Promise}      Promise resolved when all content is downloaded. Data returned is not reliable.
      */
     self.downloadAllContent = function(module) {
-        var promises = [],
-            siteid = $mmSite.getId();
+        var files = self.getDownloadableFiles(module),
+            revision = $mmFilepool.getRevisionFromFileList(module.contents),
+            timemod = $mmFilepool.getTimemodifiedFromFileList(module.contents);
+        return $mmFilepool.downloadPackage($mmSite.getId(), files, mmaModPageComponent, module.id, revision, timemod);
+    };
+
+    /**
+     * Returns a list of files that can be downloaded.
+     *
+     * @module mm.addons.mod_page
+     * @ngdoc method
+     * @name $mmaModPage#getDownloadableFiles
+     * @param {Object} module The module object returned by WS.
+     * @return {Object[]}     List of files.
+     */
+    self.getDownloadableFiles = function(module) {
+        var files = [];
 
         angular.forEach(module.contents, function(content) {
-            var url = content.fileurl,
-                timemodified = content.timemodified;
-            if (content.type !== 'file') {
-                return;
+            if (self.isFileDownloadable(content)) {
+                files.push(content);
             }
-            promises.push($mmFilepool.downloadUrl(siteid, url, false, mmaModPageComponent, module.id, timemodified));
         });
 
-        return $q.all(promises);
+        return files;
     };
 
     /**
@@ -67,7 +79,7 @@ angular.module('mm.addons.mod_page')
 
         angular.forEach(module.contents, function(content) {
             var url = content.fileurl;
-            if (content.type !== 'file') {
+            if (!self.isFileDownloadable(content)) {
                 return;
             }
             promises.push($mmFilepool.isFileDownloadingByUrl(siteid, url).then(function() {
@@ -97,7 +109,7 @@ angular.module('mm.addons.mod_page')
         var promises = [];
         angular.forEach(module.contents, function(content) {
             var url = content.fileurl;
-            if (content.type !== 'file') {
+            if (!self.isFileDownloadable(content)) {
                 return;
             }
             promises.push($mmFilepool.getFileEventNameByUrl($mmSite.getId(), url));
@@ -118,8 +130,7 @@ angular.module('mm.addons.mod_page')
      * @return {Promise}
      */
     self.getPageHtml = function(contents, moduleId) {
-        var deferred = $q.defer(),
-            indexUrl,
+        var indexUrl,
             paths = {},
             promise;
 
@@ -153,9 +164,7 @@ angular.module('mm.addons.mod_page')
                 return $mmFilepool.downloadUrl($mmSite.getId(), indexUrl, false, mmaModPageComponent, moduleId);
             } else {
                 // We return the live URL.
-                deferred = $q.defer();
-                deferred.resolve($mmSite.fixPluginfileURL(indexUrl));
-                return deferred.promise;
+                return $q.when($mmSite.fixPluginfileURL(indexUrl));
             }
         })();
 
@@ -166,23 +175,8 @@ angular.module('mm.addons.mod_page')
                     return $q.reject();
                 } else {
                     // Now that we have the content, we update the SRC to point back to
-                    // the external resource. That will be caught by mm-format-text.
-                    var html = angular.element('<div>');
-                    html.html(response.data);
-                    angular.forEach(html.find('img'), function(img) {
-                        var src = paths[decodeURIComponent(img.getAttribute('src'))];
-                        if (typeof src !== 'undefined') {
-                            img.setAttribute('src', src);
-                        }
-                    });
-                    // We do the same for links.
-                    angular.forEach(html.find('a'), function(anchor) {
-                        var href = paths[decodeURIComponent(anchor.getAttribute('href'))];
-                        if (typeof href !== 'undefined') {
-                            anchor.setAttribute('href', href);
-                        }
-                    });
-                    return html.html();
+                    // the external resource. That will b caught by mm-format-text.
+                    return $mmUtil.restoreSourcesInHtml(response.data, paths);
                 }
             });
         });
@@ -199,6 +193,19 @@ angular.module('mm.addons.mod_page')
      */
     self.invalidateContent = function(moduleId) {
         return $mmFilepool.invalidateFilesByComponent($mmSite.getId(), mmaModPageComponent, moduleId);
+    };
+
+    /**
+     * Check if a file is downloadable. The file param must have a 'type' attribute like in core_course_get_contents response.
+     *
+     * @module mm.addons.mod_page
+     * @ngdoc method
+     * @name $mmaModPage#isFileDownloadable
+     * @param {Object} file File to check.
+     * @return {Boolean}    True if downloadable, false otherwise.
+     */
+    self.isFileDownloadable = function(file) {
+        return file.type === 'file';
     };
 
     /**
@@ -221,6 +228,23 @@ angular.module('mm.addons.mod_page')
     };
 
     /**
+     * Check if page plugin is enabled in a certain site.
+     *
+     * @module mm.addons.mod_page
+     * @ngdoc method
+     * @name $mmaModPage#isPluginEnabled
+     * @param  {String} [siteId] Site ID. If not defined, current site.
+     * @return {Promise}         Promise resolved with true if plugin is enabled, rejected or resolved with false otherwise.
+     */
+    self.isPluginEnabled = function(siteId) {
+        siteId = siteId || $mmSite.getId();
+
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.canDownloadFiles();
+        });
+    };
+
+    /**
      * Report a page as being viewed.
      *
      * @module mm.addons.mod_page
@@ -232,7 +256,7 @@ angular.module('mm.addons.mod_page')
     self.logView = function(id) {
         if (id) {
             var params = {
-                urlid: id
+                pageid: id
             };
             return $mmSite.write('mod_page_view_page', params);
         }
@@ -246,17 +270,13 @@ angular.module('mm.addons.mod_page')
      * @ngdoc method
      * @name $mmaModPage#prefetchContent
      * @param {Object} module The module object returned by WS.
-     * @return {Void}
+     * @return {Promise}      Promise resolved when all files have been downloaded. Data returned is not reliable.
      */
     self.prefetchContent = function(module) {
-        angular.forEach(module.contents, function(content) {
-            var url;
-            if (content.type !== 'file') {
-                return;
-            }
-            url = content.fileurl;
-            $mmFilepool.addToQueueByUrl($mmSite.getId(), url, mmaModPageComponent, module.id);
-        });
+        var files = self.getDownloadableFiles(module),
+            revision = $mmFilepool.getRevisionFromFileList(module.contents),
+            timemod = $mmFilepool.getTimemodifiedFromFileList(module.contents);
+        return $mmFilepool.prefetchPackage($mmSite.getId(), files, mmaModPageComponent, module.id, revision, timemod);
     };
 
     return self;

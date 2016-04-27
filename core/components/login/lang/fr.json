@@ -1,6 +1,7 @@
 {
     "authenticating": "Authentification",
     "cancel": "Annuler",
+    "cannotdownloadfiles": "Le téléchargement des fichiers est désactivé sur votre Moodle et l'app ne peut pas fonctionner si ce réglage est désactivé. Veuillez contacter l'administrateur de la plateforme.",
     "confirmdeletesite": "Voulez-vous vraiment supprimer la plateforme {{sitename}} ?",
     "connect": "Connecter !",
     "connecttomoodle": "Connexion à Moodle",
@@ -14,6 +15,7 @@
     "invalidaccount": "Veuillez vérifier vos données de connexion ou demander à l'administrateur de votre site de vérifier sa configuration.",
     "invalidmoodleversion": "Version de Moodle non valide. La version minimale requise est :",
     "invalidsite": "Cette URL n'est pas valide.",
+    "localmobileunexpectedresponse": "La vérification des fonctionnalités additionnelles de Moodle Mobile a envoyé une réponse inattendue. Vous allez être connecté au moyen du service mobile standard.",
     "login": "Connexion",
     "loginbutton": "Se connecter !",
     "logininsiterequired": "Vous devez vous connecter au moyen d'un navigateur.",

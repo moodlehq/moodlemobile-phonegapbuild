@@ -1,7 +1,10 @@
 {
+    "cannotsubmitsurvey": "מתנצלים, היתה בעיה בהגשת הסקר שלך. אנא נסה שוב.",
     "clicktocontinue": "לחץ כאן כדי להמשיך",
+    "errorgetsurvey": "שגיאה בטעינת מידע אודות הסקר.",
     "ifoundthat": "מצאתי ש-",
     "ipreferthat": "אני מעדיף ש-",
-    "responses": "תשובות",
-    "results": "תוצאות"
+    "responses": "תגובות",
+    "results": "תוצאות",
+    "surveycompletednograph": "השלמת את הסקר."
 }

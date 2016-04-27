@@ -21,7 +21,7 @@ angular.module('mm.addons.mod_book')
  * @ngdoc service
  * @name $mmaModBook
  */
-.factory('$mmaModBook', function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, mmaModBookComponent) {
+.factory('$mmaModBook', function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, $mmSitesManager, $mmUtil, mmaModBookComponent) {
     $log = $log.getInstance('$mmaModBook');
 
     var self = {};
@@ -36,19 +36,10 @@ angular.module('mm.addons.mod_book')
      * @return {Promise}      Promise resolved when all content is downloaded. Data returned is not reliable.
      */
     self.downloadAllContent = function(module) {
-        var promises = [],
-            siteid = $mmSite.getId();
-
-        angular.forEach(module.contents, function(content) {
-            var url = content.fileurl,
-                timemodified = content.timemodified;
-            if (content.type !== 'file') {
-                return;
-            }
-            promises.push($mmFilepool.downloadUrl(siteid, url, false, mmaModBookComponent, module.id, timemodified));
-        });
-
-        return $q.all(promises);
+        var files = self.getDownloadableFiles(module),
+            revision = $mmFilepool.getRevisionFromFileList(module.contents),
+            timemod = $mmFilepool.getTimemodifiedFromFileList(module.contents);
+        return $mmFilepool.downloadPackage($mmSite.getId(), files, mmaModBookComponent, module.id, revision, timemod);
     };
 
     /**
@@ -67,7 +58,7 @@ angular.module('mm.addons.mod_book')
 
         angular.forEach(module.contents, function(content) {
             var url = content.fileurl;
-            if (content.type !== 'file') {
+            if (!self.isFileDownloadable(content)) {
                 return;
             }
             promises.push($mmFilepool.isFileDownloadingByUrl(siteid, url).then(function() {
@@ -97,7 +88,7 @@ angular.module('mm.addons.mod_book')
         var promises = [];
         angular.forEach(module.contents, function(content) {
             var url = content.fileurl;
-            if (content.type !== 'file') {
+            if (!self.isFileDownloadable(content)) {
                 return;
             }
             promises.push($mmFilepool.getFileEventNameByUrl($mmSite.getId(), url));
@@ -107,6 +98,26 @@ angular.module('mm.addons.mod_book')
         });
     };
 
+    /**
+     * Returns a list of files that can be downloaded.
+     *
+     * @module mm.addons.mod_book
+     * @ngdoc method
+     * @name $mmaModBook#getDownloadableFiles
+     * @param {Object} module The module object returned by WS.
+     * @return {Object[]}     List of files.
+     */
+    self.getDownloadableFiles = function(module) {
+        var files = [];
+
+        angular.forEach(module.contents, function(content) {
+            if (self.isFileDownloadable(content)) {
+                files.push(content);
+            }
+        });
+
+        return files;
+    };
 
     /**
      * Get the book toc as an array.
@@ -119,6 +130,9 @@ angular.module('mm.addons.mod_book')
      * @protected
      */
     self.getToc = function(contents) {
+        if (!contents || !contents.length) {
+            return [];
+        }
         return JSON.parse(contents[0].content);
     };
 
@@ -157,6 +171,9 @@ angular.module('mm.addons.mod_book')
      * @protected
      */
     self.getFirstChapter = function(chapters) {
+        if (!chapters || !chapters.length) {
+            return;
+        }
         return chapters[0].id;
     };
 
@@ -215,52 +232,27 @@ angular.module('mm.addons.mod_book')
      * @module mm.addons.mod_book
      * @ngdoc method
      * @name $mmaModBook#getChapterContent
-     * @param {Object} contents     The module contents.
+     * @param {Object} contentsMap  Contents map returned by $mmaModBook#getContentsMap.
      * @param {String} chapterId    Chapter to retrieve.
      * @param {Integer} moduleId    The module ID.
      * @return {Promise}
      */
-    self.getChapterContent = function(contents, chapterId, moduleId) {
-        var deferred = $q.defer(),
-            indexUrl,
-            paths = {},
+    self.getChapterContent = function(contentsMap, chapterId, moduleId) {
+        var indexUrl = contentsMap[chapterId] ? contentsMap[chapterId].indexUrl : undefined,
             promise;
 
-        // Extract the information about paths from the module contents.
-        angular.forEach(contents, function(content) {
-            if (content.type == 'file') {
-                var key,
-                    url = content.fileurl;
+        if (!indexUrl) {
+            // If ever that happens.
+            $log.debug('Could not locate the index chapter');
+            return $q.reject();
+        }
 
-                if (!indexUrl && content.filename == 'index.html') {
-                    // First chapter, we don't have a chapter id.
-                    if (content.filepath == "/" + chapterId + "/") {
-                        indexUrl = url;
-                    }
-                } else {
-                    key = content.filename;
-                    paths[key] = url;
-                }
-            }
-        });
-
-        // Promise handling when we are in a browser.
-        promise = (function() {
-            var deferred;
-            if (!indexUrl) {
-                // If ever that happens.
-                $log.debug('Could not locate the index chapter');
-                return $q.reject();
-            } else if ($mmFS.isAvailable()) {
-                // The file system is available.
-                return $mmFilepool.downloadUrl($mmSite.getId(), indexUrl, false, mmaModBookComponent, moduleId);
-            } else {
-                // We return the live URL.
-                deferred = $q.defer();
-                deferred.resolve($mmSite.fixPluginfileURL(indexUrl));
-                return deferred.promise;
-            }
-        })();
+        if ($mmFS.isAvailable()) {
+            promise = $mmFilepool.downloadUrl($mmSite.getId(), indexUrl, false, mmaModBookComponent, moduleId);
+        } else {
+            // We return the live URL.
+            return $q.when($mmSite.fixPluginfileURL(indexUrl));
+        }
 
         return promise.then(function(url) {
             // Fetch the URL content.
@@ -270,25 +262,60 @@ angular.module('mm.addons.mod_book')
                 } else {
                     // Now that we have the content, we update the SRC to point back to
                     // the external resource. That will be caught by mm-format-text.
-                    var html = angular.element('<div>');
-                    html.html(response.data);
-                    angular.forEach(html.find('img'), function(img) {
-                        var src = paths[decodeURIComponent(img.getAttribute('src'))];
-                        if (typeof src !== 'undefined') {
-                            img.setAttribute('src', src);
-                        }
-                    });
-                    // We do the same for links.
-                    angular.forEach(html.find('a'), function(anchor) {
-                        var href = paths[decodeURIComponent(anchor.getAttribute('href'))];
-                        if (typeof href !== 'undefined') {
-                            anchor.setAttribute('href', href);
-                        }
-                    });
-                    return html.html();
+                    return $mmUtil.restoreSourcesInHtml(response.data, contentsMap[chapterId].paths);
                 }
             });
         });
+    };
+
+    /**
+     * Convert an array of book contents into an object where contents are organized in chapters.
+     * Each chapter has an indexUrl and the list of contents in that chapter.
+     *
+     * @module mm.addons.mod_book
+     * @ngdoc method
+     * @name $mmaModBook#getContentsMap
+     * @param {Object} contents The module contents.
+     * @return {Object}         Contents map.
+     */
+    self.getContentsMap = function(contents) {
+        var map = {};
+
+        angular.forEach(contents, function(content) {
+            if (self.isFileDownloadable(content)) {
+                var chapter,
+                    matches,
+                    split,
+                    filepathIsChapter;
+
+                // Search the chapter number in the filepath.
+                matches = content.filepath.match(/\/(\d+)\//);
+                if (matches && matches[1]) {
+                    chapter = matches[1];
+                    filepathIsChapter = content.filepath == '/' + chapter + '/';
+
+                    // Init the chapter if it's not defined yet.
+                    map[chapter] = map[chapter] || { paths: {} };
+
+                    if (content.filename == 'index.html' && filepathIsChapter) {
+                        map[chapter].indexUrl = content.fileurl;
+                    } else {
+                        if (filepathIsChapter) {
+                            // It's a file in the root folder OR the WS isn't returning the filepath as it should (MDL-53671).
+                            // Try to get the path to the file from the URL.
+                            split = content.fileurl.split('mod_book/chapter' + content.filepath);
+                            key = split[1] || content.filename; // Use filename if we couldn't find the path.
+                        } else {
+                            // Remove the chapter folder from the path and add the filename.
+                            key = content.filepath.replace('/' + chapter + '/', '') + content.filename;
+                        }
+                        map[chapter].paths[key] = content.fileurl;
+                    }
+                }
+            }
+        });
+
+        return map;
     };
 
     /**
@@ -305,6 +332,38 @@ angular.module('mm.addons.mod_book')
     };
 
     /**
+     * Check if a file is downloadable. The file param must have a 'type' attribute like in core_course_get_contents response.
+     *
+     * @module mm.addons.mod_book
+     * @ngdoc method
+     * @name $mmaModBook#isFileDownloadable
+     * @param {Object} file File to check.
+     * @return {Boolean}    True if downloadable, false otherwise.
+     */
+    self.isFileDownloadable = function(file) {
+        return file.type === 'file';
+    };
+
+    /**
+     * Return whether or not the plugin is enabled.
+     *
+     * @module mm.addons.mod_book
+     * @ngdoc method
+     * @name $mmaModBook#isPluginEnabled
+     * @param  {String} [siteId] Site ID. If not defined, current site.
+     * @return {Promise}         Promise resolved with true if plugin is enabled, rejected or resolved with false otherwise.
+     */
+    self.isPluginEnabled = function(siteId) {
+        siteId = siteId || $mmSite.getId();
+
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            var version = site.getInfo().version;
+            // Require Moodle 2.9.
+            return version && (parseInt(version) >= 2015051100) && site.canDownloadFiles();
+        });
+    };
+
+    /**
      * Report a book as being viewed.
      *
      * @module mm.addons.mod_book
@@ -316,7 +375,7 @@ angular.module('mm.addons.mod_book')
     self.logView = function(id) {
         if (id) {
             var params = {
-                urlid: id
+                bookid: id
             };
             return $mmSite.write('mod_book_view_book', params);
         }
@@ -330,17 +389,13 @@ angular.module('mm.addons.mod_book')
      * @ngdoc method
      * @name $mmaModBook#prefetchContent
      * @param {Object} module The module object returned by WS.
-     * @return {Void}
+     * @return {Promise}      Promise resolved when all content is downloaded. Data returned is not reliable.
      */
     self.prefetchContent = function(module) {
-        angular.forEach(module.contents, function(content) {
-            var url;
-            if (content.type !== 'file') {
-                return;
-            }
-            url = content.fileurl;
-            $mmFilepool.addToQueueByUrl($mmSite.getId(), url, mmaModBookComponent, module.id);
-        });
+        var files = self.getDownloadableFiles(module),
+            revision = $mmFilepool.getRevisionFromFileList(module.contents),
+            timemod = $mmFilepool.getTimemodifiedFromFileList(module.contents);
+        return $mmFilepool.prefetchPackage($mmSite.getId(), files, mmaModBookComponent, module.id, revision, timemod);
     };
 
     return self;

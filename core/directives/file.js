@@ -28,11 +28,13 @@ angular.module('mm.core')
  * @param {Object} file            Required. Object with the following attributes:
  *                                     'filename': Name of the file.
  *                                     'fileurl' or 'url': File URL.
+ *                                     'filesize': Optional. Size of the file.
  * @param {String} [component]     Component the file belongs to.
  * @param {Number} [componentId]   Component ID.
  * @param {Boolean} [timemodified] If set, the value will be used to check if the file is outdated.
  */
-.directive('mmFile', function($q, $mmUtil, $mmFilepool, $mmSite, $mmApp, $mmEvents) {
+.directive('mmFile', function($q, $mmUtil, $mmFilepool, $mmSite, $mmApp, $mmEvents, $mmFS, mmCoreDownloaded, mmCoreDownloading,
+            mmCoreNotDownloaded, mmCoreOutdated) {
 
     /**
      * Convenience function to get the file state and set scope variables based on it.
@@ -46,9 +48,9 @@ angular.module('mm.core')
     function getState(scope, siteid, fileurl, timemodified) {
         return $mmFilepool.getFileStateByUrl(siteid, fileurl, timemodified).then(function(state) {
             var canDownload = $mmSite.canDownloadFiles();
-            scope.isDownloaded = state === $mmFilepool.FILEDOWNLOADED || state === $mmFilepool.FILEOUTDATED;
-            scope.isDownloading = canDownload && state === $mmFilepool.FILEDOWNLOADING;
-            scope.showDownload = canDownload && (state === $mmFilepool.FILENOTDOWNLOADED || state === $mmFilepool.FILEOUTDATED);
+            scope.isDownloaded = state === mmCoreDownloaded || state === mmCoreOutdated;
+            scope.isDownloading = canDownload && state === mmCoreDownloading;
+            scope.showDownload = canDownload && (state === mmCoreNotDownloaded || state === mmCoreOutdated);
         });
     }
 
@@ -93,6 +95,7 @@ angular.module('mm.core')
         link: function(scope, element, attrs) {
             var fileurl = scope.file.fileurl || scope.file.url,
                 filename = scope.file.filename,
+                filesize = scope.file.filesize,
                 timemodified = attrs.timemodified || 0,
                 siteid = $mmSite.getId(),
                 component = attrs.component,
@@ -100,7 +103,7 @@ angular.module('mm.core')
                 observer;
 
             scope.filename = filename;
-            scope.fileicon = $mmUtil.getFileIcon(filename);
+            scope.fileicon = $mmFS.getFileIcon(filename);
             getState(scope, siteid, fileurl, timemodified);
 
             $mmFilepool.getFileEventNameByUrl(siteid, fileurl).then(function(eventName) {
@@ -115,6 +118,7 @@ angular.module('mm.core')
             scope.download = function(e, openAfterDownload) {
                 e.preventDefault();
                 e.stopPropagation();
+                var promise;
 
                 if (scope.isDownloading) {
                     return;
@@ -128,16 +132,22 @@ angular.module('mm.core')
                 if (openAfterDownload) {
                     // File needs to be opened now. If file needs to be downloaded, skip the queue.
                     downloadFile(scope, siteid, fileurl, component, componentid, timemodified).then(function(localUrl) {
-                        $mmUtil.openFile(localUrl);
+                        $mmUtil.openFile(localUrl).catch(function(error) {
+                            $mmUtil.showErrorModal(error);
+                        });
                     });
                 } else {
-                    // File doesn't need to be opened, add it to queue.
-                    $mmFilepool.invalidateFileByUrl(siteid, fileurl).finally(function() {
-                        scope.isDownloading = true;
-                        $mmFilepool.addToQueueByUrl(siteid, fileurl, component, componentid, timemodified);
+                    // File doesn't need to be opened (it's a prefetch). Show confirm modal if file size is defined and it's big.
+                    promise = filesize ? $mmUtil.confirmDownloadSize(filesize) : $q.when();
+                    promise.then(function() {
+                        // User confirmed, add the file to queue.
+                        $mmFilepool.invalidateFileByUrl(siteid, fileurl).finally(function() {
+                            scope.isDownloading = true;
+                            $mmFilepool.addToQueueByUrl(siteid, fileurl, component, componentid, timemodified);
+                        });
                     });
                 }
-            }
+            };
 
             scope.$on('$destroy', function() {
                 if (observer && observer.off) {

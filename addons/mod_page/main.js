@@ -36,6 +36,8 @@ angular.module('mm.addons.mod_page', ['mm.core'])
 
 })
 
-.config(function($mmCourseDelegateProvider) {
-    $mmCourseDelegateProvider.registerContentHandler('mmaModPage', 'page', '$mmaModPageCourseContentHandler');
+.config(function($mmCourseDelegateProvider, $mmCoursePrefetchDelegateProvider, $mmContentLinksDelegateProvider) {
+    $mmCourseDelegateProvider.registerContentHandler('mmaModPage', 'page', '$mmaModPageHandlers.courseContent');
+    $mmCoursePrefetchDelegateProvider.registerPrefetchHandler('mmaModPage', 'page', '$mmaModPagePrefetchHandler');
+    $mmContentLinksDelegateProvider.registerLinkHandler('mmaModPage', '$mmaModPageHandlers.linksHandler');
 });

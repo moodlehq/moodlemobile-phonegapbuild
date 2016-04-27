@@ -5464,6 +5464,13 @@ a.item-content {
       transition: opacity 0.4s ease-in;
       opacity: 1; }
 
+.slider-slide.ng-enter, .slider-slide.ng-leave, .slider-slide.ng-animate, .slider-pager-page.ng-enter, .slider-pager-page.ng-leave, .slider-pager-page.ng-animate {
+  -webkit-transition: none !important;
+  transition: none !important; }
+.slider-slide.ng-animate, .slider-pager-page.ng-animate {
+  -webkit-animation: none 0s;
+  animation: none 0s; }
+
 .scroll-refresher {
   position: absolute;
   top: -60px;
@@ -5531,7 +5538,12 @@ a.item-content {
   -webkit-overflow-scrolling: touch;
   width: 100%; }
   .overflow-scroll > .scroll.overscroll {
-    position: fixed; }
+    position: fixed;
+    right: 0;
+    left: 0; }
+
+.overflow-scroll.padding > .scroll.overscroll {
+  padding: 10px; }
 
 @-webkit-keyframes refresh-spin {
   0% {
@@ -6252,22 +6264,12 @@ input[type="radio"][disabled], input[type="checkbox"][disabled], input[type="rad
   /* hide any radio button inputs elements (the ugly circles) */
   position: absolute;
   left: -9999px; }
-  .item-radio input:checked ~ .item-content {
+  .item-radio input:checked + .radio-content .item-content {
     /* style the item content when its checked */
     background: #f7f7f7; }
-  .item-radio input:checked ~ .radio-icon {
+  .item-radio input:checked + .radio-content .radio-icon {
     /* show the checkmark icon when its checked */
     visibility: visible; }
-
-.platform-android.grade-b .item-radio, .platform-android.grade-c .item-radio {
-  -webkit-animation: androidCheckedbugfix infinite 1s; }
-
-@-webkit-keyframes androidCheckedbugfix {
-  from {
-    padding: 0; }
-
-  to {
-    padding: 0; } }
 
 /**
  * Range
@@ -7768,6 +7770,8 @@ em {
     border-radius: 0; }
   .item-media p {
     margin: 0px; }
+  .item-media.item-button-right > .button, .item-media.item-button-right > .spinner {
+    top: 16px; }
 
 .item-message {
   clear: both;
@@ -7795,6 +7799,9 @@ em {
     .item-message-mine .spinner svg {
       width: 16px;
       height: 16px; }
+
+.item.item-disabled, .platform-android .item.item-disabled {
+  color: #999; }
 
 .mm-split-pane {
   display: -webkit-box;
@@ -7870,8 +7877,8 @@ em {
  */
 .mm-iframe {
   position: relative;
-  height: 100%;
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -7933,12 +7940,35 @@ img.mm-media-adapt-width {
   text-align: center;
   line-height: 30px; }
 
+mm-navigation-bar .row {
+  padding-top: 0px;
+  padding-bottom: 0px; }
+mm-navigation-bar .col {
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
 .scroll {
   height: 100%; }
 
 .iframe-wrapper {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+  width: auto;
+  position: absolute !important; }
+
+.mm-has-navigation-bar .iframe-wrapper {
+  top: 47px; }
+
+.mm-bar-button-image, .bar .button.mm-bar-button-image {
+  padding: 0;
+  width: 100%;
   height: 100%;
-  width: 100%; }
+  max-width: 31px;
+  max-height: 31px;
+  border-radius: 50%; }
 
 /**
  * This CSS uses adjacent selectors instead of general sibling (~) selectors
@@ -7953,6 +7983,9 @@ img.mm-media-adapt-width {
 .item-radio input:checked + .radio-content .radio-icon {
   /* show the checkmark icon when its checked */
   visibility: visible; }
+
+.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
+  right: 44px; }
 
 #mm-settings-languagelabel {
   color: #000; }
@@ -8067,6 +8100,13 @@ input.mma-files-picker {
 .mma-messages-discussion-container {
   padding-bottom: 15px; }
 
+.button.button-icon.mma-messages-delete-button {
+  min-height: initial;
+  line-height: initial; }
+  .button.button-icon.mma-messages-delete-button:before {
+    font-size: 100%;
+    line-height: initial; }
+
 .mma-chat-notice {
   text-align: center;
   margin-top: 10px; }
@@ -8082,6 +8122,12 @@ input.mma-files-picker {
   text-align: center;
   margin: 0;
   width: 100%; }
+
+.mma-chat-send-form {
+  width: 100%; }
+
+.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
+  margin: 0; }
 
 .mma-mod_choice-user {
   position: relative;
@@ -8116,16 +8162,82 @@ input.mma-files-picker {
   height: 200px;
   resize: none; }
 
-.mma-imscp-container {
-  display: flex;
-  flex-flow: column;
-  height: 100%; }
+.mma-scorm-level-0 {
+  padding-left: 16px; }
 
-.mma-imscp-iframe-container {
-  flex: 1 1 auto;
-  position: relative; }
-  .mma-imscp-iframe-container .iframe-wrapper {
-    position: absolute; }
+.mma-scorm-level-1 {
+  padding-left: 31px; }
+
+.mma-scorm-level-2 {
+  padding-left: 46px; }
+
+.mma-scorm-level-3 {
+  padding-left: 61px; }
+
+.mma-scorm-level-4 {
+  padding-left: 76px; }
+
+.mma-scorm-level-5 {
+  padding-left: 91px; }
+
+.mma-scorm-level-6 {
+  padding-left: 106px; }
+
+.mma-scorm-level-7 {
+  padding-left: 121px; }
+
+.mma-scorm-level-8 {
+  padding-left: 136px; }
+
+.mma-scorm-level-9 {
+  padding-left: 151px; }
+
+.mma-scorm-level-10 {
+  padding-left: 166px; }
+
+.mma-scorm-level-11 {
+  padding-left: 181px; }
+
+.mma-scorm-level-12 {
+  padding-left: 196px; }
+
+.mma-scorm-level-13 {
+  padding-left: 211px; }
+
+.mma-scorm-level-14 {
+  padding-left: 226px; }
+
+.mma-scorm-level-15 {
+  padding-left: 241px; }
+
+.mma-mod-scorm-checkbox-padding {
+  padding: 5px 10px; }
+
+.mma-mod-scorm-warning {
+  color: #c00; }
+
+ion-popover-view {
+  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
+  /* Decrease items padding in popover. */ }
+  ion-popover-view.mma-scorm-popover {
+    height: auto;
+    max-height: 80%;
+    overflow: scroll; }
+    ion-popover-view.mma-scorm-popover ion-content {
+      position: relative; }
+    ion-popover-view.mma-scorm-popover::-webkit-scrollbar {
+      display: none; }
+    ion-popover-view.mma-scorm-popover p.padding {
+      margin: 0px;
+      /* Don't add margins to p with padding inside the TOC. */ }
+  ion-popover-view .mma-scorm-popover-item {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+/* Fix popover styles in iOS. */
+.platform-ios ion-popover-view.mma-scorm-popover {
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .mma-mod_survey-darkbg {
   background-color: #f5f5f5; }
@@ -8144,6 +8256,45 @@ select.mma-mod_survey-select {
   max-width: 100%; }
   select.mma-mod_survey-select .mma-mod_survey-defaultoption {
     display: none; }
+
+.wiki-toc {
+  border: 1px solid #bbb;
+  background: #eee;
+  margin: 16px;
+  padding: 8px; }
+
+.wiki-toc-title {
+  color: #666;
+  font-size: 1.1em;
+  font-variant: small-caps;
+  text-align: center; }
+
+.wiki-toc-section {
+  padding: 0;
+  margin: 2px 8px; }
+
+.wiki-toc-section-2 {
+  padding-left: 12px; }
+
+.wiki-toc-section-3 {
+  padding-left: 24px; }
+
+.mm-site_mod_wiki .wiki_newentry {
+  color: red;
+  font-style: italic; }
+
+/* Hide edit section links */
+a.wiki_edit_section {
+  display: none; }
+
+.mma-mod_wiki-subwiki-picker .item-divider {
+  font-weight: bold; }
+
+.mma-mod_wiki-subwiki-picker .item.item-selected {
+  background-color: #eee; }
+
+.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
+  font-size: 24px; }
 
 .button.active, .button.activated {
   box-shadow: none;

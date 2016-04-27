@@ -1,6 +1,7 @@
 {
     "authenticating": "Autenticazione in corso",
     "cancel": "Annulla",
+    "cannotdownloadfiles": "Lo scaricamento dei file è disabilitato nel servizio Mobile. l'app non può funzionare con questa impostazione disabilitata, per favore contatta l'amministratore dle sito.",
     "confirmdeletesite": "Sei sicuro di eliminare il sito {{sitename}}?",
     "connect": "Collegati!",
     "connecttomoodle": "Collegati a Moodle",
@@ -14,6 +15,7 @@
     "invalidaccount": "Verificare le proprie credenziali o chiedere all'amministratore del sito di controllare la configurazione del sito.",
     "invalidmoodleversion": "Versione di Moodle non valida. La versione minima richiesta:",
     "invalidsite": "L'URL del sito non è valida",
+    "localmobileunexpectedresponse": "Il controllo delle Moodle Mobile Additional Feature ha restituito una risposta inattesa, sarai autenticato tramite i servizi Mobile standard.",
     "login": "Login",
     "loginbutton": "Login!",
     "logininsiterequired": "Devi autenticarti usando una finestra browser",

@@ -6,5 +6,6 @@
     "duedate": "עד לתאריך",
     "duedateno": "אין תאריך הגשה",
     "submissions": "הגשות",
+    "userwithid": "משתמש עם מספר-זיהוי {{id}}",
     "viewsubmission": "צפיה בהגשה"
 }

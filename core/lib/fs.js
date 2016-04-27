@@ -24,19 +24,53 @@ angular.module('mm.core')
  * @description
  * This service handles the interaction with the FileSystem.
  */
-.factory('$mmFS', function($ionicPlatform, $cordovaFile, $log, $q, mmFsSitesFolder, mmFsTmpFolder) {
+.factory('$mmFS', function($ionicPlatform, $cordovaFile, $log, $q, $http, $cordovaZip, mmFsSitesFolder, mmFsTmpFolder) {
 
     $log = $log.getInstance('$mmFS');
 
     var self = {},
         initialized = false,
-        basePath = '';
+        basePath = '',
+        isHTMLAPI = false,
+        mimeTypes = {};
+
+    // Loading all the mimetypes.
+    $http.get('core/assets/mimetypes.json').then(function(response) {
+        mimeTypes = response.data;
+    }, function() {
+        // It failed, never mind...
+    });
 
     // Formats to read a file.
     self.FORMATTEXT         = 0;
     self.FORMATDATAURL      = 1;
     self.FORMATBINARYSTRING = 2;
     self.FORMATARRAYBUFFER  = 3;
+
+    /**
+     * Sets basePath to use with HTML API. Reserved for core use.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#setHTMLBasePath
+     * @param {String} path Base path to use.
+     */
+    self.setHTMLBasePath = function(path) {
+        isHTMLAPI = true;
+        basePath = path;
+    };
+
+    /**
+     * Checks if we're using HTML API.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#usesHTMLAPI
+     * @return {Boolean} True if uses HTML API, false otherwise.
+     */
+    self.usesHTMLAPI = function() {
+        return isHTMLAPI;
+    };
 
     /**
      * Initialize basePath based on the OS if it's not initialized already.
@@ -61,7 +95,7 @@ angular.module('mm.core')
                 basePath = cordova.file.externalApplicationStorageDirectory;
             } else if (ionic.Platform.isIOS()) {
                 basePath = cordova.file.documentsDirectory;
-            } else {
+            } else if (!self.isAvailable() || basePath === '') {
                 $log.error('Error getting device OS.');
                 deferred.reject();
                 return;
@@ -81,7 +115,7 @@ angular.module('mm.core')
      * @return {Boolean} True when cordova is initialised.
      */
     self.isAvailable = function() {
-        return (typeof cordova !== 'undefined' && typeof cordova.file !== 'undefined');
+        return typeof window.resolveLocalFileSystemURL !== 'undefined' && typeof FileTransfer !== 'undefined';
     };
 
     /**
@@ -357,7 +391,7 @@ angular.module('mm.core')
      * @return {Promise} Promise resolved with the estimated free space in bytes.
      */
     self.calculateFreeSpace = function() {
-        if (ionic.Platform.isIOS()) {
+        if (ionic.Platform.isIOS() || isHTMLAPI) {
             // getFreeDiskSpace doesn't work on iOS. See https://tracker.moodle.org/browse/MOBILE-956.
             // Ugly fix: request a file system instance with a minimum size until we get an error.
 
@@ -510,6 +544,11 @@ angular.module('mm.core')
         return self.init().then(function() {
             // Create file (and parent folders) to prevent errors.
             return self.createFile(path).then(function(fileEntry) {
+                if (isHTMLAPI && typeof data == 'string') {
+                    // We need to write Blobs.
+                    var type = self.getMimeType(self.getFileExtension(path));
+                    data = new Blob([data], {type: type || 'text/plain'});
+                }
                 return $cordovaFile.writeFile(basePath, path, data, true).then(function() {
                     return fileEntry;
                 });
@@ -565,6 +604,30 @@ angular.module('mm.core')
     };
 
     /**
+     * Get the base path where the application files are stored in the format to be used for downloads.
+     * iOS: Internal URL (cdvfile://).
+     * Others: basePath (file://)
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#getBasePathToDownload
+     * @return {Promise} Promise to be resolved when the base path is retrieved.
+     */
+    self.getBasePathToDownload = function() {
+        return self.init().then(function() {
+            if (ionic.Platform.isIOS()) {
+                // In iOS we want the internal URL (cdvfile://localhost/persistent/...).
+                return $cordovaFile.checkDir(basePath, '').then(function(dirEntry) {
+                    return dirEntry.toInternalURL();
+                });
+            } else {
+                // In the other platforms we use the basePath as it is (file://...).
+                return basePath;
+            }
+        });
+    };
+
+    /**
      * Get temporary directory path.
      *
      * @module mm.core
@@ -588,7 +651,32 @@ angular.module('mm.core')
      */
     self.moveFile = function(originalPath, newPath) {
         return self.init().then(function() {
-            return $cordovaFile.moveFile(basePath, originalPath, basePath, newPath);
+            if (isHTMLAPI) {
+                // In Cordova API we need to calculate the longest matching path to make it work.
+                // $cordovaFile.moveFile('a/', 'b/c.ext', 'a/', 'b/d.ext') doesn't work.
+                // cordovaFile.moveFile('a/b/', 'c.ext', 'a/b/', 'd.ext') works.
+                var commonPath = basePath,
+                    dirsA = originalPath.split('/'),
+                    dirsB = newPath.split('/');
+
+                for (var i = 0; i < dirsA.length; i++) {
+                    var dir = dirsA[i];
+                    if (dirsB[i] === dir) {
+                        // Found a common folder, add it to common path and remove it from each specific path.
+                        dir = dir + '/';
+                        commonPath = self.concatenatePaths(commonPath, dir);
+                        originalPath = originalPath.replace(dir, '');
+                        newPath = newPath.replace(dir, '');
+                    } else {
+                        // Folder doesn't match, stop searching.
+                        break;
+                    }
+                }
+
+                return $cordovaFile.moveFile(commonPath, originalPath, commonPath, newPath);
+            } else {
+                return $cordovaFile.moveFile(basePath, originalPath, basePath, newPath);
+            }
         });
     };
 
@@ -604,15 +692,40 @@ angular.module('mm.core')
      */
     self.copyFile = function(from, to) {
         return self.init().then(function() {
-            // Check if to contains a directory.
-            var toFile = self.getFileAndDirectoryFromPath(to);
-            if (toFile.directory == '') {
-                return $cordovaFile.copyFile(basePath, from, basePath, to);
+            if (isHTMLAPI) {
+                // In Cordova API we need to calculate the longest matching path to make it work.
+                // $cordovaFile.copyFile('a/', 'b/c.ext', 'a/', 'b/d.ext') doesn't work.
+                // cordovaFile.copyFile('a/b/', 'c.ext', 'a/b/', 'd.ext') works.
+                var commonPath = basePath,
+                    dirsA = from.split('/'),
+                    dirsB = to.split('/');
+
+                for (var i = 0; i < dirsA.length; i++) {
+                    var dir = dirsA[i];
+                    if (dirsB[i] === dir) {
+                        // Found a common folder, add it to common path and remove it from each specific path.
+                        dir = dir + '/';
+                        commonPath = self.concatenatePaths(commonPath, dir);
+                        from = from.replace(dir, '');
+                        to = to.replace(dir, '');
+                    } else {
+                        // Folder doesn't match, stop searching.
+                        break;
+                    }
+                }
+
+                return $cordovaFile.copyFile(commonPath, from, commonPath, to);
             } else {
-                // Ensure directory is created.
-                return self.createDir(toFile.directory).then(function() {
+                // Check if to contains a directory.
+                var toFile = self.getFileAndDirectoryFromPath(to);
+                if (toFile.directory == '') {
                     return $cordovaFile.copyFile(basePath, from, basePath, to);
-                });
+                } else {
+                    // Ensure directory is created.
+                    return self.createDir(toFile.directory).then(function() {
+                        return $cordovaFile.copyFile(basePath, from, basePath, to);
+                    });
+                }
             }
         });
     };
@@ -665,6 +778,148 @@ angular.module('mm.core')
         } else {
             return leftPath + rightPath;
         }
+    };
+
+    /**
+     * Get the internal URL of a file.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#getInternalURL
+     * @param  {Object} fileEntry File Entry.
+     * @return {String}           Internal URL.
+     */
+    self.getInternalURL = function(fileEntry) {
+        if (isHTMLAPI) {
+            // HTML API doesn't implement toInternalURL.
+            return fileEntry.toURL();
+        }
+        return fileEntry.toInternalURL();
+    };
+
+    /**
+     * Get a file icon URL based on its file name.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmUtil#getFileIcon
+     * @param  {String} The name of the file.
+     * @return {String} The path to a file icon.
+     */
+    self.getFileIcon = function(filename) {
+        var ext = self.getFileExtension(filename),
+            icon;
+
+        if (ext && mimeTypes[ext] && mimeTypes[ext].icon) {
+            icon = mimeTypes[ext].icon + '-64.png';
+        } else {
+            icon = 'unknown-64.png';
+        }
+
+        return 'img/files/' + icon;
+    };
+
+    /**
+     * Get the folder icon URL.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmUtil#getFolderIcon
+     * @return {String} The path to a folder icon.
+     */
+    self.getFolderIcon = function() {
+        return 'img/files/folder-64.png';
+    };
+
+    /**
+     * Returns the file extension of a file.
+     *
+     * When the file does not have an extension, it returns undefined.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmUtil#getFileExtension
+     * @param  {string} filename The file name.
+     * @return {string}          The lowercased extension, or undefined.
+     */
+    self.getFileExtension = function(filename) {
+        var dot = filename.lastIndexOf("."),
+            ext;
+
+        if (dot > -1) {
+            ext = filename.substr(dot + 1).toLowerCase();
+        }
+
+        return ext;
+    };
+
+    /**
+     * Get the mimetype of an extension. Returns undefined if not found.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmUtil#allPromises
+     * @param  {String} extension Extension.
+     * @return {String}           Mimetype.
+     */
+    self.getMimeType = function(extension) {
+        if (mimeTypes[extension] && mimeTypes[extension].type) {
+            return mimeTypes[extension].type;
+        }
+    };
+
+    /**
+     * Remove the extension from a path (if any).
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#removeExtension
+     * @param  {String} path Path.
+     * @return {String}      Path without extension.
+     */
+    self.removeExtension = function(path) {
+        var index = path.lastIndexOf('.');
+        if (index > -1) {
+            return path.substr(0, index); // Remove extension.
+        }
+        return path;
+    };
+
+    /**
+     * Adds the basePath to a path if it doesn't have it already.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#addBasePathIfNeeded
+     * @param {String} path Path to treat.
+     * @return {String}     Path with basePath added.
+     */
+    self.addBasePathIfNeeded = function(path) {
+        if (path.indexOf(basePath) > -1) {
+            return path;
+        } else {
+            return self.concatenatePaths(basePath, path);
+        }
+    };
+
+    /**
+     * Unzips a file.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#unzipFile
+     * @param  {String} path         Path to the ZIP file.
+     * @param  {String} [destFolder] Path to the destination folder. If not defined, a new folder will be created with the
+     *                               same location and name as the ZIP file (without extension).
+     * @return {Promise}             Promise resolved when the file is unzipped.
+     */
+    self.unzipFile = function(path, destFolder) {
+        // Get the source file.
+        return self.getFile(path).then(function(fileEntry) {
+            // If destFolder is not set, use same location as ZIP file. We need to use ansolute paths (including basePath).
+            destFolder = self.addBasePathIfNeeded(destFolder || self.removeExtension(path));
+            return $cordovaZip.unzip(fileEntry.toURL(), destFolder);
+        });
     };
 
     return self;

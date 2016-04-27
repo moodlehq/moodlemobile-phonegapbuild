@@ -14,13 +14,14 @@
 
 angular.module('mm.core.courses', [])
 
-.value('mmCoursesFrontPage', {
-    'id': 1,
-    'shortname': '',
-    'fullname': '',
-    'enrolledusercount': 0,
-    'idnumber': '',
-    'visible': 1
+.constant('mmCoursesSearchComponent', 'mmCoursesSearch')
+.constant('mmCoursesSearchPerPage', 20) // Max of courses per page when searching courses.
+.constant('mmCoursesEnrolInvalidKey', 'mmCoursesEnrolInvalidKey')
+.constant('mmCoursesEventMyCoursesUpdated', 'my_courses_updated')
+.constant('mmCoursesEventMyCoursesRefreshed', 'my_courses_refreshed') // User refreshed My Courses.
+.constant('mmCoursesAccessMethods', {
+     guest: 'guest',
+     default: 'default'
 })
 
 .config(function($stateProvider) {
@@ -35,12 +36,42 @@ angular.module('mm.core.courses', [])
                 controller: 'mmCoursesListCtrl'
             }
         }
+    })
+
+    .state('site.mm_searchcourses', {
+        url: '/mm_searchcourses',
+        views: {
+            'site': {
+                templateUrl: 'core/components/courses/templates/search.html',
+                controller: 'mmCoursesSearchCtrl'
+            }
+        }
+    })
+
+    .state('site.mm_viewresult', {
+        url: '/mm_viewresult',
+        params: {
+            course: null
+        },
+        views: {
+            'site': {
+                templateUrl: 'core/components/courses/templates/viewresult.html',
+                controller: 'mmCoursesViewResultCtrl'
+            }
+        }
     });
 
 })
 
-.run(function($mmEvents, mmCoreEventLogin, mmCoreEventSiteUpdated, mmCoreEventLogout, $mmCoursesDelegate) {
+.config(function($mmContentLinksDelegateProvider) {
+    $mmContentLinksDelegateProvider.registerLinkHandler('mmCourses', '$mmCoursesHandlers.linksHandler');
+})
+
+.run(function($mmEvents, mmCoreEventLogin, mmCoreEventSiteUpdated, mmCoreEventLogout, $mmCoursesDelegate, $mmCourses) {
     $mmEvents.on(mmCoreEventLogin, $mmCoursesDelegate.updateNavHandlers);
     $mmEvents.on(mmCoreEventSiteUpdated, $mmCoursesDelegate.updateNavHandlers);
-    $mmEvents.on(mmCoreEventLogout, $mmCoursesDelegate.clearCoursesHandlers);
+    $mmEvents.on(mmCoreEventLogout, function() {
+        $mmCoursesDelegate.clearCoursesHandlers();
+        $mmCourses.clearCurrentCourses();
+    });
 });

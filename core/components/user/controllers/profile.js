@@ -21,7 +21,8 @@ angular.module('mm.core.user')
  * @ngdoc controller
  * @name mmaParticipantsProfileCtrl
  */
-.controller('mmUserProfileCtrl', function($scope, $stateParams, $mmUtil, $mmUser, $mmUserDelegate, $mmSite, $q) {
+.controller('mmUserProfileCtrl', function($scope, $stateParams, $mmUtil, $mmUser, $mmUserDelegate, $mmSite, $q, $translate,
+            $mmEvents, mmUserEventProfileRefreshed) {
 
     var courseid = $stateParams.courseid,
         userid   = $stateParams.userid;
@@ -46,8 +47,11 @@ angular.module('mm.core.user')
             $scope.hasContact = user.email || user.phone1 || user.phone2 || user.city || user.country || user.address;
             $scope.hasDetails = user.url || user.roles || user.interests;
 
+            $scope.isLoadingHandlers = true;
             $mmUserDelegate.getProfileHandlersFor(user, courseid).then(function(handlers) {
                 $scope.profileHandlers = handlers;
+            }).finally(function() {
+                $scope.isLoadingHandlers = false;
             });
         }, function(message) {
             $scope.user = false;
@@ -60,15 +64,18 @@ angular.module('mm.core.user')
 
     fetchUserData().then(function() {
         // Add log in Moodle.
-        $mmSite.write('core_user_view_user_profile', {
+        return $mmSite.write('core_user_view_user_profile', {
             userid: userid,
             courseid: courseid
+        }).catch(function(error) {
+            $scope.isDeleted = error === $translate.instant('mm.core.userdeleted');
         });
     }).finally(function() {
         $scope.userLoaded = true;
     });
 
     $scope.refreshUser = function() {
+        $mmEvents.trigger(mmUserEventProfileRefreshed, {courseid: courseid, userid: userid});
         $mmUser.invalidateUserCache(userid).finally(function() {
             fetchUserData().finally(function() {
                 $scope.$broadcast('scroll.refreshComplete');

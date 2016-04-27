@@ -21,6 +21,15 @@ angular.module('mm.core', ['pascalprecht.translate'])
 .constant('mmCoreSecondsHour', 3600)
 .constant('mmCoreSecondsMinute', 60)
 
+// States for downloading files/modules.
+.constant('mmCoreDownloaded', 'downloaded')
+.constant('mmCoreDownloading', 'downloading')
+.constant('mmCoreNotDownloaded', 'notdownloaded')
+.constant('mmCoreOutdated', 'outdated')
+.constant('mmCoreNotDownloadable', 'notdownloadable')
+
+.constant('mmCoreWifiDownloadThreshold', 104857600) // 100MB.
+.constant('mmCoreDownloadThreshold', 10485760) // 10MB.
 
 .config(function($stateProvider, $provide, $ionicConfigProvider, $httpProvider, $mmUtilProvider,
         $mmLogProvider, $compileProvider, $mmInitDelegateProvider, mmInitDelegateMaxAddonPriority) {
@@ -52,6 +61,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
                 state: null,
                 params: null
             },
+            cache: false,
             controller: function($scope, $state, $stateParams, $mmSite, $mmSitesManager, $ionicHistory) {
 
                 $ionicHistory.nextViewOptions({disableBack: true});
@@ -94,18 +104,25 @@ angular.module('mm.core', ['pascalprecht.translate'])
     }];
 
     // Add some protocols to safe protocols.
-    var list = $compileProvider.aHrefSanitizationWhitelist().source;
-
-    function addProtocolIfMissing(protocol) {
+    function addProtocolIfMissing(list, protocol) {
         if (list.indexOf(protocol) == -1) {
             list = list.replace('https?', 'https?|' + protocol);
         }
+        return list;
     }
-    addProtocolIfMissing('file');
-    addProtocolIfMissing('tel');
-    addProtocolIfMissing('mailto');
-    addProtocolIfMissing('geo');
-    $compileProvider.aHrefSanitizationWhitelist(list);
+
+    var hreflist = $compileProvider.aHrefSanitizationWhitelist().source,
+        imglist = $compileProvider.imgSrcSanitizationWhitelist().source;
+
+    hreflist = addProtocolIfMissing(hreflist, 'file');
+    hreflist = addProtocolIfMissing(hreflist, 'tel');
+    hreflist = addProtocolIfMissing(hreflist, 'mailto');
+    hreflist = addProtocolIfMissing(hreflist, 'geo');
+    hreflist = addProtocolIfMissing(hreflist, 'filesystem'); // For HTML5 FileSystem.
+    imglist = addProtocolIfMissing(imglist, 'filesystem'); // For HTML5 FileSystem.
+
+    $compileProvider.aHrefSanitizationWhitelist(hreflist);
+    $compileProvider.imgSrcSanitizationWhitelist(imglist);
 
     // Register the core init process, this should be the very first thing.
     $mmInitDelegateProvider.registerProcess('mmAppInit', '$mmApp.initProcess', mmInitDelegateMaxAddonPriority + 400, true);

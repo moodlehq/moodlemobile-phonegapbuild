@@ -1,6 +1,6 @@
 {
   "name": "angular-md5",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "angular-md5.js",
   "description": "A md5 crypto component for Angular.js",
   "author": [
@@ -9,6 +9,9 @@
       "email": "github@gdi2290.com",
       "url": "www.gdi2290.com"
     }
+  ],
+  "contributors": [
+    "Benjamin Orozco <benoror@gmail.com>"
   ],
   "keywords": [
     "PatrickJS",
@@ -32,13 +35,13 @@
     "angular": "*"
   },
   "homepage": "https://github.com/gdi2290/angular-md5",
-  "_release": "0.1.7",
+  "_release": "0.1.8",
   "_resolution": {
     "type": "version",
-    "tag": "v0.1.7",
-    "commit": "9ab48b3a7911ba19c86670040ae7ded6fd2b14f7"
+    "tag": "v0.1.8",
+    "commit": "32bc7f6e12b350ff327ba117e9cb812c69fb2456"
   },
   "_source": "git://github.com/gdi2290/angular-md5.git",
-  "_target": ">=0.1.7",
+  "_target": "0.1.8",
   "_originalSource": "angular-md5"
 }

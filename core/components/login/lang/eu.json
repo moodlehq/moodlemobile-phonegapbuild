@@ -15,6 +15,7 @@
     "invalidaccount": "Zure erabiltzaile eta pasahitza egiaztatu itzazu edo zure guneko administratzaileari guneko ezarpenak egiaztatzeko eskatu.",
     "invalidmoodleversion": "Moodle bertsio baliogabea. Gutxieneko bertsioa hurrengoa da:",
     "invalidsite": "Guneko URLa ez da zuzena",
+    "localmobileunexpectedresponse": "Moodle Mobile-ko Funtzio Aurreratuen kontrolak ezusteko erantzuna eman du, Mobile zerbitzu estandarra erabilita autentifikatuko zaitugu.",
     "login": "Saioa hasi",
     "loginbutton": "Hasi saioa!",
     "logininsiterequired": "Gunean web-nabigatzaile baten bidez sartu behar zara.",
@@ -30,7 +31,7 @@
     "siteinmaintenance": "Zure gunea mantenu-moduan dago",
     "siteurl": "Gunearen URLa",
     "siteurlrequired": "Gunearen URLa behar da <i>http://www.zuremoodlegunea.abc edo https://www.zuremoodlegunea.efg</i> adibidez",
-    "username": "Erabiltzailea",
+    "username": "Erabiltzailea-izena",
     "usernamerequired": "Erabiltzailea behar da",
     "webservicesnotenabled": "Web zerbitzuak gaitu gabe daude zure gunean. Mesedez zure Moodle gunearen administratzailearen harremanetan jarri zaitez mobile sarbidea gaitu behar dela uste baduzu."
 }

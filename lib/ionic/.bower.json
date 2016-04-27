@@ -1,7 +1,7 @@
 {
   "name": "ionic",
-  "version": "1.1.0",
-  "codename": "xenon-xerus",
+  "version": "1.1.1",
+  "codename": "yttrium-yeti",
   "homepage": "https://github.com/driftyco/ionic",
   "authors": [
     "Max Lynch <max@drifty.com>",
@@ -34,13 +34,13 @@
     "angular-sanitize": "1.4.3",
     "angular-ui-router": "0.2.13"
   },
-  "_release": "1.1.0",
+  "_release": "1.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.1.0",
-    "commit": "e3a8ca9d747335867c51a50f48e206dd16c5fbfd"
+    "tag": "v1.1.1",
+    "commit": "cfd7acef85e3717a5093c213e761970ec524130b"
   },
   "_source": "git://github.com/driftyco/ionic-bower.git",
-  "_target": "v1.1.0",
+  "_target": "v1.1.1",
   "_originalSource": "driftyco/ionic-bower"
 }
