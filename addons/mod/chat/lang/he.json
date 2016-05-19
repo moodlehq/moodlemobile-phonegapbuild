@@ -1,0 +1,15 @@
+{
+    "beep": "ציפצוף",
+    "currentusers": "משתמשים נוכחיים",
+    "enterchat": "הקליקו כאן כדי להיכנס לרב-שיח הנוכחי",
+    "entermessage": "הזנת ההודעה שלך",
+    "errorwhilesendingmessage": "שגיאה התרחשה בעת שליחת המסר, יש לנסות שוב מאוחר יותר.",
+    "messagebeepsyou": "{{$a}} מנסה ליצור קשר איתך עכשיו",
+    "messageenter": "{{$a}} נכנס/ה לרב-שיח עכשיו",
+    "messageexit": "{{$a}} עזב/ה את הרב-שיח עכשיו",
+    "mustbeonlinetosendmessages": "עליך להיות מחובר בכדי לשלוח הודעות.",
+    "nomessages": "אין הודעות עדיין",
+    "send": "שליחה",
+    "sessionstart": "מפגש הרב-שיח הבא יתחיל בעוד {{$a}}",
+    "talk": "דברו"
+}

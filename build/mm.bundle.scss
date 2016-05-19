@@ -24,6 +24,9 @@ $bar-content-text: #fff !default;
 $item-media-width: 32px !default;
 $item-media-height: 32px !default;
 
+// Howto tips.
+$item-howto-color: #d9edf7 !default;
+
 // Messages.
 $item-message-bg: $stable !default;
 $item-message-note-text: #999 !default;
@@ -35,6 +38,14 @@ $completion-img-width: 24px !default;
 
 // Disabled items.
 $item-disabled-color: #999 !default;
+
+// Warnings (red).
+$mm-warning-color: #c00 !default;
+
+// Timer variables.
+$mm-timer-warn-color:     #f00 !default;
+$mm-timer-color:          #fff !default;
+$mm-timer-iterations:     15 !default;
 
 /**
  * Styles revert.
@@ -63,7 +74,16 @@ em {
   @extend h2;
 }
 
-// More options fro grids.
+.item.item-text-wrap .item-heading {
+  overflow: visible;
+  white-space: normal;
+}
+
+// More options for grids.
+.col-65 {
+  @include flex(0, 0, 65%);
+  max-width: 65%;
+}
 .col-60 {
   @include flex(0, 0, 60%);
   max-width: 60%;
@@ -90,6 +110,24 @@ em {
     > .button,
     > .spinner {
       top: $item-padding;
+    }
+  }
+}
+
+// Howto tips.
+.item.item-howto {
+  padding-bottom: 12px;
+  padding: 9px;
+  margin-bottom: 12px;
+  background-color: $item-howto-color;
+  border-color: $item-howto-color;
+  color: #666;
+
+  &.item-icon-left {
+    padding-left: 35px;
+
+    .icon {
+      left: 4px;
     }
   }
 }
@@ -287,6 +325,24 @@ mm-navigation-bar {
   }
 }
 
+// Accessibility: text 'seen' by screen readers but not visual users.
+.accesshide {
+  position: absolute;
+  left: -10000px;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+// When using .item and .row in the same element, .row's padding prevails. Use this class to keep .item's padding.
+.item.row.mm-item-padding {
+  padding: $item-padding;
+}
+
+// Red color for paragraphs.
+p.mm-warning {
+  color: $mm-warning-color;
+}
+
 // Extra attributes to ionic classes to force frames via directive 100% height.
 
 .scroll {
@@ -318,6 +374,37 @@ mm-navigation-bar {
   border-radius: 50%;
 }
 
+.badge.badge-inline {
+  display: inline;
+  position: relative;
+  top: initial;
+  right: initial;
+}
+
+// Timer.
+mm-timer {
+  display: block;
+}
+
+// Style timer in items.
+.item mm-timer.mm-timer, mm-timer.mm-timer.item {
+  p, span, label {
+    color: $item-default-text;
+    font-size: $item-font-size;
+  }
+}
+
+// Create the timer warning colors. Go from $mm-timer-color to $mm-timer-warn-color.
+@for $i from 0 through $mm-timer-iterations {
+  mm-timer.mm-timer.mm-timer-timeleft-#{$i} {
+    background-color: mix($mm-timer-color, $mm-timer-warn-color, ($i / $mm-timer-iterations) * 100);
+  }
+}
+
+.mm-monospaced {
+  font-family: Andale Mono,Monaco,Courier New,DejaVu Sans Mono,monospace;
+}
+
 /**
  * This CSS uses adjacent selectors instead of general sibling (~) selectors
  * for ion radio that are broken in iOS 9 UIWebView.
@@ -338,6 +425,111 @@ mm-navigation-bar {
 .item.item-button-right .badge.mm-course-download{
   right: $spinner-width + $item-padding;
 }
+
+$mm-question-correct-color:         #468847 !default;
+$mm-question-incorrect-color:       #b94a48 !default;
+$mm-question-state-correct-color:   #cfc !default;
+$mm-question-state-partial-color:   #ffa !default;
+$mm-question-state-incorrect-color: #fcc !default;
+$mm-question-warning-color:         #c00 !default;
+
+.mm-question-textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+}
+
+.mm-question-answer-correct,
+select.mm-question-answer-correct,
+input.mm-question-answer-correct,
+input[readonly]:not(.cloned-text-input).mm-question-answer-correct,
+textarea.mm-question-answer-correct,
+textarea[readonly]:not(.cloned-text-input).mm-question-answer-correct,
+label.mm-question-answer-correct,
+li.mm-question-answer-correct,
+.mm-question-answer-correct p,
+.mm-question-answer-correct input,
+.mm-question-answer-correct select,
+.mm-question-answer-correct .item-radio input:checked + .radio-content .item-content,
+.mm-question-comment,
+.mm-question-comment p {
+  color: $mm-question-correct-color;
+  background-color: #dff0d8;
+}
+
+.mm-question-answer-incorrect,
+select.mm-question-answer-incorrect,
+input.mm-question-answer-incorrect,
+input[readonly]:not(.cloned-text-input).mm-question-answer-incorrect,
+textarea.mm-question-answer-incorrect,
+textarea[readonly]:not(.cloned-text-input).mm-question-answer-incorrect,
+label.mm-question-answer-incorrect,
+li.mm-question-answer-incorrect,
+.mm-question-answer-incorrect p,
+.mm-question-answer-incorrect input,
+.mm-question-answer-incorrect select,
+.mm-question-answer-incorrect .item-radio input:checked + .radio-content .item-content,
+.mm-question-incorrect,
+.mm-question-incorrect p {
+  color: $mm-question-incorrect-color;
+  background-color: #f2dede;
+}
+
+.mm-question-feedback-container {
+  background-color: #fcf8e3;
+  color: #8a6d3b;
+
+  .specificfeedback, .rightanswer, .im-feedback, .feedback, .generalfeedback {
+    margin: 0 0 .5em;
+  }
+
+  .correctness {
+    display: inline-block;
+    padding: 2px 4px;
+    font-weight: bold;
+    line-height: 14px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: #999;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    &.incorrect {
+      background-color: $mm-question-incorrect-color;
+    }
+    &.correct {
+      background-color: $mm-question-correct-color;
+    }
+  }
+}
+
+.mm-question-feedback-inline {
+  display: inline-block;
+}
+
+.mm-question-feedback-padding {
+  padding: 8px 35px 8px 14px;
+}
+
+.item,
+.platform-android .item,
+.platform-ios .item {
+  &.mm-question-correct {
+    background-color: $mm-question-state-correct-color;
+  }
+  &.mm-question-partiallycorrect {
+    background-color: $mm-question-state-partial-color;
+  }
+  &.mm-question-notanswered,
+  &.mm-question-incorrect {
+    background-color: $mm-question-state-incorrect-color;
+  }
+}
+
+.mm-question-warning, p.mm-question-warning, .item .mm-question-warning {
+  color: $mm-question-warning-color;
+}
+
 #mm-settings-languagelabel {
   color: $base-color;
 }
@@ -594,6 +786,80 @@ $mma-chat-notice-badge: "stable" !default;
     resize: none;
 }
 
+$mma-mod-quiz-warning-color:      #c00 !default;
+$mma-mod-quiz-highlight-color:    #d9edf7 !default;
+$mma-mod-quiz-alternate-color:    #fbfbfb !default;
+$mma-mod-quiz-conecterr-color:    #fcc !default;
+$mma-mod-quiz-selected-color:     #666 !default;
+
+p.mma-mod-quiz-warning {
+  color: $mma-mod-quiz-warning-color;
+}
+
+.mm-site_mod_quiz, .mm-site_mod_quiz-player {
+  .row {
+    min-height: $button-height + $grid-padding-width + 5px;
+
+    .button.button-block {
+      margin: 0;
+    }
+  }
+}
+
+.item.mma-mod-quiz-highlighted,
+.platform-android .item.mma-mod-quiz-highlighted,
+.platform-ios .item.mma-mod-quiz-highlighted,
+.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
+  background-color: $mma-mod-quiz-highlight-color;
+}
+
+.mma-quiz-textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+}
+
+// Remove padding-top and bottom from navigation bar to minimize height used.
+.mma-mod-quiz-subheader {
+  .row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .col {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .mm-timer {
+    line-height: $button-bar-button-height
+  }
+}
+
+// Alternate background color in rows.
+.mma-mod-quiz-table .row:nth-child(odd) {
+  background-color: $mma-mod-quiz-alternate-color;
+}
+
+.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
+  background-color: $mma-mod-quiz-conecterr-color;
+}
+
+.mm-site_mod_quiz-review .item {
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.item.mma-mod-quiz-selected,
+.platform-android .item.mma-mod-quiz-selected,
+.platform-ios .item.mma-mod-quiz-selected,
+.mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
+  border: 3px solid $mma-mod-quiz-selected-color;
+  &:not(.mma-mod-quiz-last-of-page) {
+    border-bottom: 0;
+  }
+}
+
+
 $mma-mod-scorm-level-margin:		25px !default;
 $mma-mod-scorm-warning-color:		#c00 !default;
 
@@ -721,3 +987,409 @@ a.wiki_edit_section {
 .mma-mod_wiki-subwiki-picker .item.item-selected .icon {
   font-size: 24px;
 }
+
+$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
+$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
+$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
+
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold;
+}
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-judgementok-color;
+}
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-slightly-color;
+}
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-confident-color;
+}
+
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+// Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddimageortext-container {
+  mm-loading {
+    position: absolute;
+    left: 50%;
+  }
+
+  .qtext {
+    margin-bottom: 0.5em;
+    display: block;
+  }
+
+  div.droparea img {
+    border: 1px solid #000000;
+    max-width: 100%;
+  }
+
+  .draghome {
+    vertical-align: top;
+    margin: 5px;
+    visibility : hidden;
+  }
+  .draghome img {
+    display: block;
+  }
+
+  div.draghome {
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #B0C4DE;
+    display:inline-block;
+    height: auto;
+    width: auto;
+    zoom: 1;
+  }
+
+  .group1 {
+    background-color: #FFFFFF;
+  }
+  .group2 {
+    background-color: #B0C4DE;
+  }
+  .group3 {
+    background-color: #DCDCDC;
+  }
+  .group4 {
+    background-color: #D8BFD8;
+  }
+  .group5 {
+    background-color: #87CEFA;
+  }
+  .group6 {
+    background-color: #DAA520;
+  }
+  .group7 {
+    background-color: #FFD700;
+  }
+  .group8 {
+    background-color: #F0E68C;
+  }
+  .drag {
+    border: 1px solid black;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .dragitems.readonly .drag {
+    cursor: auto;
+  }
+  .dragitems>div {
+    clear: both;
+  }
+  .dragitems {
+    cursor: pointer;
+  }
+  .dragitems.readonly {
+    cursor: auto;
+  }
+  .drag img {
+    display: block;
+  }
+
+  div.ddarea {
+    text-align : center;
+    position: relative;
+  }
+  .dropbackground {
+    margin:0 auto;
+  }
+  .dropzone {
+    border: 1px solid black;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+  }
+  .readonly .dropzone {
+    cursor: auto;
+  }
+
+  div.dragitems div.draghome, div.dragitems div.drag {
+    font:13px/1.231 arial,helvetica,clean,sans-serif;
+  }
+  .drag.beingdragged {
+    z-index: 3;
+    box-shadow: 3px 3px 4px #000;
+  }
+}
+// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddmarker-container {
+  mm-loading {
+    position: absolute;
+    left: 50%;
+  }
+
+  .qtext {
+    margin-bottom: 0.5em;
+    display: block;
+  }
+
+  div.droparea img  {
+    border: 1px solid #000;
+    max-width: 100%;
+  }
+
+  .draghome img, .draghome span {
+    visibility: hidden;
+  }
+
+  .dragitems .dragitem {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .dropzones {
+    position: absolute;
+  }
+  .dropzones svg {
+    z-index: 3;
+  }
+
+  .dragitem.beingdragged .markertext {
+    z-index: 5;
+    box-shadow: 3px 3px 4px #000;
+  }
+  .dragitems .draghome {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .dragitems.readonly .dragitem {
+    cursor: auto;
+  }
+  div.ddarea {
+    text-align: center;
+  }
+  div.ddarea .markertexts {
+    min-height: 80px;
+    position: absolute;
+    text-align: left;
+  }
+  .dropbackground {
+    margin: 0 auto;
+  }
+
+  div.dragitems div.draghome, div.dragitems div.dragitem,
+  div.draghome, div.drag {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  }
+  div.dragitems span.markertext,
+  div.markertexts span.markertext{
+    margin: 0 5px;
+    z-index: 2;
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+    display: inline-block;
+    zoom: 1;
+    border-radius: 10px;
+  }
+  div.markertexts span.markertext {
+    z-index: 3;
+    background-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: khaki;
+    position: absolute;
+  }
+  span.wrongpart {
+    background-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: khaki;
+    padding: 5px;
+    border-radius: 10px;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    margin: 5px;
+    display: inline-block;
+  }
+  div.dragitems img.target {
+    position: absolute;
+    left: -7px; /* This must be half the size of the target image, minus 0.5. */
+    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
+  }
+  div.dragitems div.draghome img.target {
+    display: none;
+  }
+}
+// Style ddwtos content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddwtos-container {
+  .qtext {
+      margin-bottom: 0.5em;
+      display: block;
+  }
+
+  .draghome {
+      margin-bottom: 1em;
+  }
+
+  .answertext {
+      margin-bottom: 0.5em;
+  }
+
+  .drop {
+      display: inline-block;
+      text-align: center;
+      border: 1px solid #000000;
+      margin-bottom: 2px;
+  }
+  .draghome, .drag {
+      display: inline-block;
+      text-align: center;
+      background: transparent;
+      border: 0;
+  }
+  .draghome, .drag.unplaced{
+      border: 1px solid #000000;
+  }
+  .draghome {
+      visibility: hidden;
+  }
+  .drag {
+      z-index: 2;
+  }
+  .drag.selected {
+      z-index: 3;
+      box-shadow: 3px 3px 4px #000;
+  }
+
+  .drop.selected {
+      border-color: #0a0;
+      box-shadow: 0 0 5px 5px rgba(255, 255, 150, 1);
+  }
+
+  &.notreadonly .drag,
+  &.notreadonly .draghome,
+  &.notreadonly .drop,
+  &.notreadonly .answercontainer {
+      cursor: pointer;
+  }
+
+  &.readonly .drag,
+  &.readonly .draghome,
+  &.readonly .drop,
+  &.readonly .answercontainer {
+      cursor: default;
+  }
+
+  span.incorrect {
+      background-color: #faa;
+  }
+  span.correct {
+      background-color: #afa;
+  }
+
+  .group1 {
+      background-color: #FFFFFF;
+  }
+  .group2 {
+      background-color: #DCDCDC;
+  }
+  .group3 {
+      background-color: #B0C4DE;
+  }
+  .group4 {
+      background-color: #D8BFD8;
+  }
+  .group5 {
+      background-color: #87CEFA;
+  }
+  .group6 {
+      background-color: #DAA520;
+  }
+  .group7 {
+      background-color: #FFD700;
+  }
+  .group8 {
+      background-color: #F0E68C;
+  }
+
+  sub, sup {
+      font-size: 80%;
+      position: relative;
+      vertical-align: baseline;
+  }
+  sup {
+      top: -0.4em;
+  }
+  sub {
+      bottom: -0.2em;
+  }
+}
+
+
+
+
+// Style gapselect content a bit. All these styles are copied from Moodle.
+.mma-qtype-gapselect-container {
+  p {
+    margin: 0 0 .5em;
+  }
+
+  select {
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+}
+
+
+// Style multianswer content a bit. All these styles are copied from Moodle.
+.mma-qtype-multianswer-container {
+  p {
+    margin: 0 0 .5em;
+  }
+
+  .answer div.r0, .answer div.r1 {
+    padding: 0.3em;
+  }
+
+  table {
+    width: 100%;
+    display: table;
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  td {
+    display: table-cell;
+  }
+
+  input, select {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 4px 6px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  select {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  input[type="radio"], input[type="checkbox"] {
+    margin-top: -4px;
+    margin-right: 7px;
+  }
+}
+

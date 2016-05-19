@@ -15,7 +15,7 @@
 
     </ion-side-menu-content>
 
-    <ion-side-menu side="left">
+    <ion-side-menu side="left" id="mm-side-menu-left">
         <header>
             <div class="bar bar-header bar-side-menu">
                 <div class="item item-avatar">
@@ -28,7 +28,7 @@
         <ion-content class="has-side-menu-header mm-sidemenu-menu">
             <nav>
                 <ul class="list dark">
-                    <li>
+                    <li class="mm-mycourses-handler">
                         <a menu-close class="item item-icon-left" ui-sref="site.mm_courses" title="{{ 'mm.sidemenu.mycourses' | translate}}">
                             <i class="icon ion-ionic"></i>{{ 'mm.sidemenu.mycourses' | translate}}
                         </a>
@@ -36,7 +36,7 @@
                     <li class="item text-center" ng-if="(!handlers || !handlers.length) && !areNavHandlersLoaded()">
                         <ion-spinner></ion-spinner>
                     </li>
-                    <li ng-repeat="handler in handlers | orderBy:'-priority'" ng-controller="handler.controller" >
+                    <li ng-repeat="handler in handlers | orderBy:'-priority'" ng-controller="handler.controller" class="mm-sidemenu-handler {{class}}">
                         <a menu-close class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}">
                             <i class="icon {{icon}}"></i> {{title | translate}}
                             <span ng-show="badge > 0" class="badge badge-positive">{{badge}}</span>
@@ -66,11 +66,10 @@
                 </ul>
             </nav>
 
-            <!-- For now we won't have pull to refresh caches.
-            <ion-refresher pulling-text="Pull to invalidate caches"
-                on-refresh="invalidateCaches()"
-                refreshing-icon="ion-loading-c"> -->
-
         </ion-content>
+    </ion-side-menu>
+
+    <ion-side-menu side="right" id="mm-side-menu-right" is-enabled="rightSideMenu && rightSideMenu.show">
+        <ng-include ng-if="rightSideMenu && rightSideMenu.show" src="rightSideMenu.template"></ng-include>
     </ion-side-menu>
 </ion-side-menus>

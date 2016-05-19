@@ -23,7 +23,27 @@ angular.module('mm.core')
  */
 .factory('$mmText', function($q, $mmLang, $translate) {
 
-    var self = {};
+    var self = {},
+        extensionRegex = new RegExp('^[a-z0-9]+$');
+
+    /**
+     * Given a list of sentences, build a message with all of them wrapped in <p>.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmText#buildMessage
+     * @param  {String[]} messages Messages to show.
+     * @return {String}            Message with all the messages.
+     */
+    self.buildMessage = function(messages) {
+        var result = '';
+        angular.forEach(messages, function(message) {
+            if (message) {
+                result = result + '<p>' + message + '</p>';
+            }
+        });
+        return result;
+    };
 
     /**
      * Convert size in bytes into human readable format
@@ -230,6 +250,31 @@ angular.module('mm.core')
     };
 
     /**
+     * Decode an escaped HTML text. This implementation is based on PHP's htmlspecialchars_decode.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmText#decodeHTML
+     * @param  {String} text Text to decode.
+     * @return {String}      Decoded text.
+     */
+    self.decodeHTML = function(text) {
+        if (typeof text == 'undefined' || text === null || (typeof text == 'number' && isNaN(text))) {
+            return '';
+        } else if (typeof text != 'string') {
+            return '' + text;
+        }
+
+        return text
+            .replace(/&amp;/g, '&')
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&quot;/g, '"')
+            .replace(/&#039;/g, "'")
+            .replace(/&nbsp;/g, ' ');
+    };
+
+    /**
      * Add or remove 'www' from a URL. The url needs to have http or https protocol.
      *
      * @module mm.core
@@ -320,6 +365,56 @@ angular.module('mm.core')
             filename = filename.substr(0, filename.indexOf('?'));
         }
         return filename;
+    };
+
+    /**
+     * Guess the extension of a file from its URL.
+     *
+     * This is very weak and unreliable.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmText#guessExtensionFromUrl
+     * @param {String} fileUrl The file URL.
+     * @return {String}        The lowercased extension without the dot, or undefined.
+     */
+    self.guessExtensionFromUrl = function(fileUrl) {
+        var split = fileUrl.split('.'),
+            candidate,
+            extension,
+            position;
+
+        if (split.length > 1) {
+            candidate = split.pop().toLowerCase();
+            // Remove params if any.
+            position = candidate.indexOf('?');
+            if (position > -1) {
+                candidate = candidate.substr(0, position);
+            }
+
+            if (extensionRegex.test(candidate)) {
+                extension = candidate;
+            }
+        }
+
+        return extension;
+    };
+
+    /**
+     * If a number has only 1 digit, add a leading zero to it.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmText#twoDigits
+     * @param  {Number|String} num Number to convert.
+     * @return {String}            Number with leading zeros.
+     */
+    self.twoDigits = function(num) {
+        if (num < 10) {
+            return '0' + num;
+        } else {
+            return '' + num; // Convert to string for coherence.
+        }
     };
 
     return self;
