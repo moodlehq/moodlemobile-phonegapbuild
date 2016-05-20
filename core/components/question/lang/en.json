@@ -1,0 +1,21 @@
+{
+	"answer": "Answer",
+	"answersaved": "Answer saved",
+	"certainty": "Certainty",
+	"complete": "Complete",
+	"correct": "Correct",
+	"errorattachmentsnotsupported": "The application doesn't support attaching files to answers yet.",
+	"errorquestionnotsupported": "This type of question isn't supported by the app in your site: {{$a}}.",
+	"feedback": "Feedback",
+	"howtodraganddrop": "Tap to select then tap to drop.",
+	"incorrect": "Incorrect",
+	"information": "Information",
+	"invalidanswer": "Incomplete answer",
+	"notanswered": "Not answered",
+	"notyetanswered": "Not yet answered",
+	"partiallycorrect": "Partially correct",
+	"questionmessage": "Question {{$a}}: {{$b}}",
+	"questionno": "Question {{$a}}",
+	"requiresgrading": "Requires grading",
+	"unknown": "Cannot determine status"
+}

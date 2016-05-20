@@ -31,7 +31,7 @@ angular.module('mm.core')
  * Attributes accepted:
  *     - siteid: Reference to the site ID if different than the site the user is connected to.
  */
-.directive('mmExternalContent', function($log, $mmFilepool, $mmSite, $mmSitesManager, $mmUtil, $q) {
+.directive('mmExternalContent', function($log, $mmFilepool, $mmSite, $mmSitesManager, $mmUtil, $q, $mmApp) {
     $log = $log.getInstance('mmExternalContent');
 
     /**
@@ -79,7 +79,7 @@ angular.module('mm.core')
         // Get the webservice pluginfile URL, we ignore failures here.
         return $mmSitesManager.getSite(siteId).then(function(site) {
             if (!site.canDownloadFiles() && $mmUtil.isPluginFileUrl(url)) {
-                dom.remove(); // Remove element since it'll be broken.
+                angular.element(dom).remove(); // Remove element since it'll be broken.
                 return $q.reject();
             }
 
@@ -98,6 +98,27 @@ angular.module('mm.core')
                     addSource(dom, finalUrl);
                 } else {
                     dom.setAttribute(targetAttr, finalUrl);
+                }
+
+                // Set events to download big files (not downloaded automatically).
+                if (finalUrl.indexOf('http') === 0 &&
+                            (dom.tagName == 'VIDEO' || dom.tagName == 'AUDIO' || dom.tagName == 'A' || dom.tagName == 'SOURCE')) {
+                    var eventName = dom.tagName == 'A' ? 'click' : 'play';
+
+                    if (dom.tagName == 'SOURCE') {
+                        dom = $mmUtil.closest(dom, 'video,audio');
+                        if (!dom) {
+                            return;
+                        }
+                    }
+
+                    angular.element(dom).on(eventName, function() {
+                        // User played media or opened a downloadable link.
+                        // Download the file if in wifi and it hasn't been downloaded already (for big files).
+                        if (!$mmApp.isNetworkAccessLimited()) {
+                            fn(siteId, url, component, componentId, undefined, false);
+                        }
+                    });
                 }
             });
         });

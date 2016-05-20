@@ -1,0 +1,11 @@
+{
+    "addsubmission": "Abgabe hinzufügen",
+    "allowsubmissionsfromdate": "Abgabebeginn",
+    "attemptnumber": "Nummer des Versuchs",
+    "cutoffdate": "Verlängertes Abgabeende",
+    "duedate": "Abgabeende",
+    "duedateno": "Kein Abgabeende",
+    "submissions": "Abgegebene Aufgaben",
+    "userwithid": "Nutzer/in mit ID {{id}}",
+    "viewsubmission": "Abgabe anzeigen"
+}

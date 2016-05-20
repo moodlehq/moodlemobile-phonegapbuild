@@ -1,0 +1,11 @@
+{
+    "addsubmission": "Lägg till inskickat bidrag",
+    "allowsubmissionsfromdate": "Tillåt inlämning från",
+    "attemptnumber": "Försök nummer",
+    "cutoffdate": "Avstängningsdatum",
+    "duedate": "Stoppdatum/tid",
+    "duedateno": "Inget stoppdatum/tid",
+    "submissions": "Inskickade uppgifter",
+    "userwithid": "Användare men Id {{id}}",
+    "viewsubmission": "Visa inlämning"
+}

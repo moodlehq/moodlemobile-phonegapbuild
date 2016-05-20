@@ -176,7 +176,6 @@ angular.module('mm.core')
     $log = $log.getInstance('$mmFilepool');
 
     var self = {},
-        extensionRegex = new RegExp('^[a-z0-9]+$'),
         tokenRegex = new RegExp('(\\?|&)token=([A-Za-z0-9]+)'),
         queueState,
         urlAttributes = [
@@ -336,103 +335,109 @@ angular.module('mm.core')
             return $q.reject();
         }
 
-        return self._fixPluginfileURL(siteId, fileUrl).then(function(fileUrl) {
-
-            timemodified = timemodified || 0;
-            revision = self.getRevisionFromUrl(fileUrl);
-            fileId = self._getFileIdByUrl(fileUrl);
-            priority = priority || 0;
-
-            // Set up the component.
-            if (typeof component !== 'undefined') {
-                link = {
-                    component: component,
-                    componentId: componentId
-                };
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            if (!site.canDownloadFiles()) {
+                return $q.reject();
             }
 
-            // Retrieve the queue deferred now if it exists to prevent errors if file is removed from queue
-            // while we're checking if the file is in queue.
-            queueDeferred = self._getQueueDeferred(siteId, fileId, false);
+            return self._fixPluginfileURL(siteId, fileUrl).then(function(fileUrl) {
 
-            return db.get(mmFilepoolQueueStore, [siteId, fileId]).then(function(fileObject) {
-                var foundLink = false,
-                    update = false;
+                timemodified = timemodified || 0;
+                revision = self.getRevisionFromUrl(fileUrl);
+                fileId = self._getFileIdByUrl(fileUrl);
+                priority = priority || 0;
 
-                if (fileObject) {
-                    // We already have the file in queue, we update the priority and links.
-                    if (fileObject.priority < priority) {
-                        update = true;
-                        fileObject.priority = priority;
-                    }
-                    if (revision && fileObject.revision !== revision) {
-                        update = true;
-                        fileObject.revision = revision;
-                    }
-                    if (timemodified && fileObject.timemodified !== timemodified) {
-                        update = true;
-                        fileObject.timemodified = timemodified;
-                    }
-                    if (filePath && fileObject.path !== filePath) {
-                        update = true;
-                        fileObject.path = filePath;
-                    }
-
-                    if (link) {
-                        // We need to add the new link if it does not exist yet.
-                        angular.forEach(fileObject.links, function(fileLink) {
-                            if (fileLink.component == link.component && fileLink.componentId == link.componentId) {
-                                foundLink = true;
-                            }
-                        });
-                        if (!foundLink) {
-                            update = true;
-                            fileObject.links.push(link);
-                        }
-                    }
-
-                    if (update) {
-                        // Update only when required.
-                        $log.debug('Updating file ' + fileId + ' which is already in queue');
-                        return db.insert(mmFilepoolQueueStore, fileObject).then(function() {
-                            return self._getQueuePromise(siteId, fileId);
-                        });
-                    }
-
-                    $log.debug('File ' + fileId + ' already in queue and does not require update');
-                    if (queueDeferred) {
-                        // If we were able to retrieve the queue deferred before we use that one, since the file download
-                        // might have finished now and the deferred wouldn't be in the array anymore.
-                        return queueDeferred.promise;
-                    } else {
-                        return self._getQueuePromise(siteId, fileId);
-                    }
-                } else {
-                    return addToQueue();
+                // Set up the component.
+                if (typeof component !== 'undefined') {
+                    link = {
+                        component: component,
+                        componentId: componentId
+                    };
                 }
-            }, function() {
-                // Unsure why we could not get the record, let's add to the queue anyway.
-                return addToQueue();
-            });
 
-            function addToQueue() {
-                $log.debug('Adding ' + fileId + ' to the queue');
-                return db.insert(mmFilepoolQueueStore, {
-                    siteId: siteId,
-                    fileId: fileId,
-                    added: now.getTime(),
-                    priority: priority,
-                    url: fileUrl,
-                    revision: revision,
-                    timemodified: timemodified,
-                    path: filePath,
-                    links: link ? [link] : []
-                }).then(function() {
-                    // Check if the queue is running.
-                    self.checkQueueProcessing();
-                    return self._getQueuePromise(siteId, fileId);
+                // Retrieve the queue deferred now if it exists to prevent errors if file is removed from queue
+                // while we're checking if the file is in queue.
+                queueDeferred = self._getQueueDeferred(siteId, fileId, false);
+
+                return db.get(mmFilepoolQueueStore, [siteId, fileId]).then(function(fileObject) {
+                    var foundLink = false,
+                        update = false;
+
+                    if (fileObject) {
+                        // We already have the file in queue, we update the priority and links.
+                        if (fileObject.priority < priority) {
+                            update = true;
+                            fileObject.priority = priority;
+                        }
+                        if (revision && fileObject.revision !== revision) {
+                            update = true;
+                            fileObject.revision = revision;
+                        }
+                        if (timemodified && fileObject.timemodified !== timemodified) {
+                            update = true;
+                            fileObject.timemodified = timemodified;
+                        }
+                        if (filePath && fileObject.path !== filePath) {
+                            update = true;
+                            fileObject.path = filePath;
+                        }
+
+                        if (link) {
+                            // We need to add the new link if it does not exist yet.
+                            angular.forEach(fileObject.links, function(fileLink) {
+                                if (fileLink.component == link.component && fileLink.componentId == link.componentId) {
+                                    foundLink = true;
+                                }
+                            });
+                            if (!foundLink) {
+                                update = true;
+                                fileObject.links.push(link);
+                            }
+                        }
+
+                        if (update) {
+                            // Update only when required.
+                            $log.debug('Updating file ' + fileId + ' which is already in queue');
+                            return db.insert(mmFilepoolQueueStore, fileObject).then(function() {
+                                return self._getQueuePromise(siteId, fileId);
+                            });
+                        }
+
+                        $log.debug('File ' + fileId + ' already in queue and does not require update');
+                        if (queueDeferred) {
+                            // If we were able to retrieve the queue deferred before we use that one, since the file download
+                            // might have finished now and the deferred wouldn't be in the array anymore.
+                            return queueDeferred.promise;
+                        } else {
+                            return self._getQueuePromise(siteId, fileId);
+                        }
+                    } else {
+                        return addToQueue();
+                    }
+                }, function() {
+                    // Unsure why we could not get the record, let's add to the queue anyway.
+                    return addToQueue();
                 });
-            }
+
+                function addToQueue() {
+                    $log.debug('Adding ' + fileId + ' to the queue');
+                    return db.insert(mmFilepoolQueueStore, {
+                        siteId: siteId,
+                        fileId: fileId,
+                        added: now.getTime(),
+                        priority: priority,
+                        url: fileUrl,
+                        revision: revision,
+                        timemodified: timemodified,
+                        path: filePath,
+                        links: link ? [link] : []
+                    }).then(function() {
+                        // Check if the queue is running.
+                        self.checkQueueProcessing();
+                        return self._getQueuePromise(siteId, fileId);
+                    });
+                }
+            });
         });
     };
 
@@ -610,7 +615,7 @@ angular.module('mm.core')
             deleted = false;
 
         // Set package as downloading.
-        dwnPromise = self.storePackageStatus(siteId, component, componentId, mmCoreDownloading, revision, timemod).then(function() {
+        dwnPromise = self.storePackageStatus(siteId, component, componentId, mmCoreDownloading).then(function() {
             var promises = [],
                 deferred = $q.defer(),
                 packageLoaded = 0; // Use a deferred to be able to use notify.
@@ -1232,7 +1237,7 @@ angular.module('mm.core')
         // part of the file name. Also, we need the mimetype to open the file with web intents. The easiest way to
         // provide such information is to keep the extension in the file ID. Developers should not care about it,
         // but as we are using the file ID in the file path, devs and system can guess it.
-        candidate = self._guessExtensionFromUrl(url);
+        candidate = $mmText.guessExtensionFromUrl(url);
         if (candidate && candidate !== 'php') {
             extension = '.' + candidate;
         }
@@ -1268,7 +1273,7 @@ angular.module('mm.core')
             // web intents. The easiest way to provide such information is to keep the extension
             // in the file ID. Developers should not care about it, but as we are using the
             // file ID in the file path, devs and system can guess it.
-            candidate = self._guessExtensionFromUrl(url);
+            candidate = $mmText.guessExtensionFromUrl(url);
             if (candidate && candidate !== 'php') {
                 extension = '.' + candidate;
             }
@@ -1693,33 +1698,6 @@ angular.module('mm.core')
      */
     self.getUrlByUrl = function(siteId, fileUrl, component, componentId, timemodified, checkSize) {
         return self._getFileUrlByUrl(siteId, fileUrl, 'url', component, componentId, timemodified, checkSize);
-    };
-
-    /**
-     * Guess the extension of a file from its URL.
-     *
-     * This is very weak and unreliable.
-     *
-     * @module mm.core
-     * @ngdoc method
-     * @name $mmFilepool#_guessExtensionFromUrl
-     * @param {String} fileUrl The file URL.
-     * @return {String} The lowercased extension without the dot, or undefined.
-     * @protected
-     */
-    self._guessExtensionFromUrl = function(fileUrl) {
-        var split = fileUrl.split('.'),
-            candidate,
-            extension;
-
-        if (split.length > 1) {
-            candidate = split.pop().toLowerCase();
-            if (extensionRegex.test(candidate)) {
-                extension = candidate;
-            }
-        }
-
-        return extension;
     };
 
     /**
@@ -2344,23 +2322,52 @@ angular.module('mm.core')
     };
 
     /**
+     * Convenience function to check if a file should be downloaded before opening it.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFilepool#shouldDownloadBeforeOpen
+     * @param  {String} url  File online URL.
+     * @param  {Number} size File size.
+     * @return {Promise}     Promise resolved if should download before open, rejected otherwise.
+     * @description
+     * Convenience function to check if a file should be downloaded before opening it.
+     *
+     * The default behaviour in the app is to download first and then open the local file in the following cases:
+     *     - The file is small (less than mmFilepoolDownloadThreshold).
+     *     - The file cannot be streamed.
+     * If the file is big and can be streamed, the promise returned by this function will be rejected.
+     */
+    self.shouldDownloadBeforeOpen = function(url, size) {
+        if (size >= 0 && size <= mmFilepoolDownloadThreshold) {
+            // The file is small, download it.
+            return $q.when();
+        }
+
+        return $mmUtil.getMimeType(url).then(function(mimetype) {
+            // If the file is streaming (audio or video) we reject.
+            if (mimetype.indexOf('video') != -1 || mimetype.indexOf('audio') != -1) {
+                return $q.reject();
+            }
+        });
+    };
+
+    /**
      * Store package status.
      *
      * @module mm.core
      * @ngdoc method
      * @name $mmFilepool#storePackageStatus
-     * @param {String} siteId           Site ID.
-     * @param {String} component        Package's component.
-     * @param {Number} [componentId]    An ID to use in conjunction with the component.
-     * @param {String} status           New package status.
-     * @param {Number} [revision=0]     Package's revision.
-     * @param {Number} [timemodified=0] Package's timemodified.
-     * @return {Promise}                Promise resolved when status is stored.
+     * @param {String} siteId         Site ID.
+     * @param {String} component      Package's component.
+     * @param {Number} [componentId]  An ID to use in conjunction with the component.
+     * @param {String} status         New package status.
+     * @param {Number} [revision]     Package's revision. If not provided, try to use the current value.
+     * @param {Number} [timemodified] Package's timemodified. If not provided, try to use the current value.
+     * @return {Promise}              Promise resolved when status is stored.
      */
     self.storePackageStatus = function(siteId, component, componentId, status, revision, timemodified) {
         $log.debug('Set status \'' + status + '\' for package ' + component + ' ' + componentId);
-        revision = revision || 0;
-        timemodified = timemodified || 0;
 
         return $mmSitesManager.getSite(siteId).then(function(site) {
             var db = site.getDb(),
@@ -2368,10 +2375,20 @@ angular.module('mm.core')
 
             // Search current status to set it as previous status.
             return db.get(mmFilepoolPackagesStore, packageId).then(function(entry) {
+                if (typeof revision == 'undefined') {
+                    revision = entry.revision;
+                }
+                if (typeof timemodified == 'undefined') {
+                    timemodified = entry.timemodified;
+                }
+
                 return entry.status;
-            }, function() {
+            }).catch(function() {
                 return undefined; // No previous status.
             }).then(function(previousStatus) {
+                revision = revision || 0;
+                timemodified = timemodified || 0;
+
                 var promise;
                 if (previousStatus === status) {
                     // The package already has this status, no need to change it.

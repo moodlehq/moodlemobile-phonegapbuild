@@ -1,0 +1,11 @@
+{
+    "addsubmission": "Afegeix la tramesa",
+    "allowsubmissionsfromdate": "Permet trameses des de",
+    "attemptnumber": "Número d'intent",
+    "cutoffdate": "Data límit",
+    "duedate": "Data de venciment",
+    "duedateno": "Sense data de venciment",
+    "submissions": "Trameses",
+    "userwithid": "Usuari amb Id {{id}}",
+    "viewsubmission": "Visualitza la tramesa"
+}
