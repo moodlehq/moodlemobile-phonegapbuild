@@ -490,7 +490,7 @@
     "mma.mod_chat.messageexit": "{{$a}} opuścił czat",
     "mma.mod_chat.nomessages": "Brak wiadomości",
     "mma.mod_chat.send": "Wyślij",
-    "mma.mod_chat.sessionstart": "Sesja czatu rozpocznie się za:  {$ a}",
+    "mma.mod_chat.sessionstart": "Sesja czatu rozpocznie się za:  {{$a}}",
     "mma.mod_chat.talk": "Dyskusja",
     "mma.mod_choice.cannotsubmit": "Wystąpił problem podczas zatwierdzania twojego wyboru. Proszę spróbuj ponownie.",
     "mma.mod_choice.choiceoptions": "Opcje wyboru odpowiedzi",

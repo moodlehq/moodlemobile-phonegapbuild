@@ -662,7 +662,7 @@
     "mma.mod_choice.noresultsviewable": "Emaitzak ezin dira orain ikusi",
     "mma.mod_choice.notopenyet": "Barkatu, baina jarduera hau ez dago erabiltzeko moduan {{$a}} arte.",
     "mma.mod_choice.numberofuser": "Partaide-kopurua",
-    "mma.mod_choice.numberofuserinpercentage": "Partaideen ehunekoa",
+    "mma.mod_choice.numberofuserinpercentage": "Partaide-kopurua ehunekotan",
     "mma.mod_choice.previewonly": "Hau jarduera honen aukeren aurrebista bat besterik ez da. Ezingo duzu zure kontsulta bidali {{$a}} arte.",
     "mma.mod_choice.removemychoice": "Ezabatu nire aukera",
     "mma.mod_choice.responses": "Erantzunak",

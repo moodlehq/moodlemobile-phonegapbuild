@@ -570,6 +570,7 @@
     "mma.mod_quiz.marks": "Marks",
     "mma.mod_quiz.mustbesubmittedby": "This attempt must be submitted by {{$a}}.",
     "mma.mod_quiz.noquestions": "No questions have been added yet",
+    "mma.mod_quiz.noreviewattempt": "You are not allowed to review this attempt.",
     "mma.mod_quiz.notyetgraded": "Not yet graded",
     "mma.mod_quiz.opentoc": "Open navigation popover.",
     "mma.mod_quiz.outof": "{{$a.grade}} out of {{$a.maxgrade}}",

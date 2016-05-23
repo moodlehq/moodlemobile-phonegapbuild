@@ -693,7 +693,7 @@
     "mma.mod_choice.notopenyet": "Lo sentimos, esta actividad no estará disponible hasta {{$a}}",
     "mma.mod_choice.numberofuser": "Número de participantes",
     "mma.mod_choice.numberofuserinpercentage": "Porcentaje de participantes",
-    "mma.mod_choice.previewonly": "Esto es una previsualización de las opciones disponibles para esta actividad. No puedes enviar tu opción hasta {{$a}}.",
+    "mma.mod_choice.previewonly": "Esta es solamente una previsualización de las opciones disponibles para esta actividad. No podrá enviar su respuesta a la consulta hasta el {{$a}}.",
     "mma.mod_choice.removemychoice": "Eliminar mi elección",
     "mma.mod_choice.responses": "Respuestas",
     "mma.mod_choice.responsesresultgraphdescription": "{{number}}% de los usuarios han escogido la opción: {{text}}.",
