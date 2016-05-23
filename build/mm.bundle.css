@@ -8159,15 +8159,6 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 .has-side-menu-header {
   top: 80px; }
 
-input.mma-files-picker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none; }
-
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
 .mma-grades-table {
@@ -8227,6 +8218,15 @@ input.mma-files-picker {
       border-top: 1px solid #fff; }
   .mma-grades-table .leveleven {
     background-color: #fff; }
+
+input.mma-files-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none; }
 
 .mma-messages-date {
   text-align: center;
