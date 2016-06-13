@@ -790,6 +790,7 @@
     "mma.mod_quiz.marks": "Points",
     "mma.mod_quiz.mustbesubmittedby": "Cette tentative doit être envoyée avant {{$a}}.",
     "mma.mod_quiz.noquestions": "Aucune question n'a été encore ajoutée",
+    "mma.mod_quiz.noreviewattempt": "Vous n'êtes pas autorisé à relire cette tentative.",
     "mma.mod_quiz.notyetgraded": "Pas encore évalué",
     "mma.mod_quiz.opentoc": "Ouvrir la navigation",
     "mma.mod_quiz.outof": "{{$a.grade}} sur {{$a.maxgrade}}",

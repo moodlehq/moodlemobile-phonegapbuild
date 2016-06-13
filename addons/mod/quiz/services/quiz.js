@@ -811,7 +811,7 @@ angular.module('mm.addons.mod_quiz')
                 });
 
                 if (quizEntry) {
-                    if (quizEntry.feedback.content) {
+                    if (quizEntry.feedback && quizEntry.feedback.content) {
                         result.feedback = $mmText.decodeHTML(quizEntry.feedback.content).trim();
                     } else {
                         result.feedback = '';
@@ -1907,6 +1907,21 @@ angular.module('mm.addons.mod_quiz')
             // All WS were introduced at the same time so checking one is enough.
             return site.wsAvailable('mod_quiz_get_attempt_review');
         });
+    };
+
+    /**
+     * Check if a question is blocked.
+     *
+     * @module mm.addons.mod_quiz
+     * @ngdoc method
+     * @name $mmaModQuiz#isQuestionBlocked
+     * @param  {Object} question Question.
+     * @return {Boolean}         True if blocked, false otherwise.
+     */
+    self.isQuestionBlocked = function(question) {
+        var div = document.createElement('div');
+        div.innerHTML = question.html;
+        return !!div.querySelector('.mod_quiz-blocked_question_warning');
     };
 
     /**

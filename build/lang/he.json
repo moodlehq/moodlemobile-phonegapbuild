@@ -685,6 +685,7 @@
     "mma.mod_quiz.marks": "נקודות",
     "mma.mod_quiz.mustbesubmittedby": "יש צורך להגיש את נסיון מענה זה",
     "mma.mod_quiz.noquestions": "בשלב זה, יש להוסיף שאלות לבוחן על מנת שאפשר יהיה להציג אותו בפני התלמידים",
+    "mma.mod_quiz.noreviewattempt": "אין הרשאה לצפות בנסיון מענה זה",
     "mma.mod_quiz.notyetgraded": "לא ניתן ציון עדיין",
     "mma.mod_quiz.outof": "{{$a.grade}} מתוך מקסימום של {{$a.maxgrade}}",
     "mma.mod_quiz.outofpercent": "{{$a.grade}}  מתוך הציון המירבי  {{$a.maxgrade}}({{$a.percent}}%)",

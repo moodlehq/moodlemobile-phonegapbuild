@@ -791,6 +791,7 @@
     "mma.mod_quiz.marks": "Puntos",
     "mma.mod_quiz.mustbesubmittedby": "Este intento debe ser enviado para {{$a}}.",
     "mma.mod_quiz.noquestions": "Aún no se han agregado preguntas",
+    "mma.mod_quiz.noreviewattempt": "Usted no tiene permiso para revisar este intento.",
     "mma.mod_quiz.notyetgraded": "Sin calificar aún",
     "mma.mod_quiz.opentoc": "Abrir ventanilla de navegación.",
     "mma.mod_quiz.outof": "{{$a.grade}} de un total de {{$a.maxgrade}}",

@@ -541,6 +541,7 @@
     "mma.mod_quiz.marks": "得分",
     "mma.mod_quiz.mustbesubmittedby": "這作答應該由{{$a}}提交",
     "mma.mod_quiz.noquestions": "尚未加入題目",
+    "mma.mod_quiz.noreviewattempt": "你不被允許重新檢視作答結果",
     "mma.mod_quiz.notyetgraded": "還沒被計分過",
     "mma.mod_quiz.outof": "{{$a.grade}}分（滿分為{{$a.maxgrade}}分）",
     "mma.mod_quiz.outofpercent": "得分{{$a.grade}}/配分{{$a.maxgrade}}({{$a.percent}}%)",

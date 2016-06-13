@@ -754,6 +754,7 @@
     "mma.mod_quiz.marks": "Body",
     "mma.mod_quiz.mustbesubmittedby": "Tento pokus musí být odeslán nejpozději {{$a}}.",
     "mma.mod_quiz.noquestions": "Dosud nebyly vloženy žádné úlohy.",
+    "mma.mod_quiz.noreviewattempt": "Nemůžete revidovat tento pokus.",
     "mma.mod_quiz.notyetgraded": "Dosud nehodnoceno",
     "mma.mod_quiz.outof": "{{$a.grade}} z možných {{$a.maxgrade}}",
     "mma.mod_quiz.outofpercent": "{{$a.grade}} z možných {{$a.maxgrade}} ({{$a.percent}}%)",

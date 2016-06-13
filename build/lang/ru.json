@@ -676,6 +676,7 @@
     "mma.mod_quiz.marks": "Баллы",
     "mma.mod_quiz.mustbesubmittedby": "Эта попытка должна быть отправлена до {{$a}}.",
     "mma.mod_quiz.noquestions": "Пока не добавлено ни одного вопроса",
+    "mma.mod_quiz.noreviewattempt": "Вам не разрешен просмотр этой попытки.",
     "mma.mod_quiz.notyetgraded": "Еще не оценено",
     "mma.mod_quiz.outof": "{{$a.grade}} из {{$a.maxgrade}}",
     "mma.mod_quiz.outofpercent": "{{$a.grade}} из {{$a.maxgrade}} ({{$a.percent}}%)",

@@ -763,6 +763,7 @@
     "mma.mod_quiz.marks": "Poäng",
     "mma.mod_quiz.mustbesubmittedby": "Detta försöket måste skickas in av {{$a}}.",
     "mma.mod_quiz.noquestions": "Inga frågor har ännu lagts till",
+    "mma.mod_quiz.noreviewattempt": "Du har inte rätt att granska det här försöket. ",
     "mma.mod_quiz.notyetgraded": "Ännu inte betygssatta",
     "mma.mod_quiz.outof": "av ett maximum på",
     "mma.mod_quiz.outofpercent": "{{$a.grade}} av ett maximum på {{$a.maxgrade}} ({{$a.percent}}%)",

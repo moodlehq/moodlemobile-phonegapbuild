@@ -542,6 +542,7 @@
     "mma.mod_quiz.marks": "Pontok",
     "mma.mod_quiz.mustbesubmittedby": "A próbálkozást {{$a}} időpontig le kell adni.",
     "mma.mod_quiz.noquestions": "Nincs még hozzáadva kérdés",
+    "mma.mod_quiz.noreviewattempt": "Ezt a próbálkozást nem ellenőrizheti.",
     "mma.mod_quiz.notyetgraded": "Még nincs lepontozva",
     "mma.mod_quiz.outof": "{{$a.grade}} a maximum {{$a.maxgrade}} közül",
     "mma.mod_quiz.outofpercent": "{{$a.grade}} a maximum {{$a.maxgrade}} közül ({{$a.percent}}%)",

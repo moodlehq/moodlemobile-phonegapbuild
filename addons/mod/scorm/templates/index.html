@@ -9,7 +9,7 @@
         <mm-loading hide-until="scormLoaded">
 	        <mm-course-mod-description description="description"></mm-course-mod-description>
 	        <p ng-if="scorm.warningmessage">{{ scorm.warningmessage }}</p>
-	        <div ng-if="!scorm.warningmessage">
+	        <div ng-if="allDataLoaded && !scorm.warningmessage">
 	        	<!-- Attempts status -->
 	        	<div class="card" ng-if="scorm.displayattemptstatus || Object.keys(scorm.offlineAttempts).length">
 	        		<div class="item item-divider">{{ 'mma.mod_scorm.attempts' | translate }}</div>
@@ -59,7 +59,7 @@
 	                    <div class="input-label" id="mma-scorm-organizationslabel">
 	                        {{ 'mma.mod_scorm.organizations' | translate }}
 	                    </div>
-	                    <select ng-model="currentOrganization.identifier" ng-options="org.identifier as org.title for org in organizations" ng-change="loadOrg()" aria-labelledby="mma-scorm-organizationslabel">
+	                    <select ng-model="currentOrganization.identifier" ng-options="org.identifier as org.title for org in organizations" ng-change="loadOrg()" aria-labelledby="mma-scorm-organizationslabel" mm-ios-select-fix>
 	                    </select>
 	                </div>
 	                <div class="item text-center" ng-if="scorm.displaycoursestructure && loadingToc">

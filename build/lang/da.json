@@ -484,6 +484,7 @@
     "mma.mod_quiz.marks": "Point",
     "mma.mod_quiz.mustbesubmittedby": "Svaret skal indsendes senest {{$a}}",
     "mma.mod_quiz.noquestions": "Der er ikke tilføjet nogen spørgsmål  endnu",
+    "mma.mod_quiz.noreviewattempt": "Du har ikke tilladelse til at gennemse denne besvarelse.",
     "mma.mod_quiz.notyetgraded": "Ikke vurderet endnu",
     "mma.mod_quiz.outof": "{{$a.grade}} ud af {{$a.maxgrade}}",
     "mma.mod_quiz.outofpercent": "{{$a.grade}} ud af et maksimum på {{$a.maxgrade}} ({{$a.percent}}%)",

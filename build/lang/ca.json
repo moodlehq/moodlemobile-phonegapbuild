@@ -789,6 +789,7 @@
     "mma.mod_quiz.marks": "Punts",
     "mma.mod_quiz.mustbesubmittedby": "Aquest intent s'ha d'enviar abans de {{$a}}.",
     "mma.mod_quiz.noquestions": "Encara no s'han afegit preguntes",
+    "mma.mod_quiz.noreviewattempt": "No teniu permís per revisar aquest intent.",
     "mma.mod_quiz.notyetgraded": "Encara no s'ha avaluat",
     "mma.mod_quiz.opentoc": "Obre la navegació per preguntes.",
     "mma.mod_quiz.outof": "{{$a.grade}} d'un màxim de {{$a.maxgrade}}",

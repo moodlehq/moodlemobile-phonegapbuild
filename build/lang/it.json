@@ -741,6 +741,7 @@
     "mma.mod_quiz.marks": "Punteggio",
     "mma.mod_quiz.mustbesubmittedby": "Questo tentativo deve essere inviato entro {{$a}}.",
     "mma.mod_quiz.noquestions": "Ancora non sono state aggiunte domande",
+    "mma.mod_quiz.noreviewattempt": "Non hai il privilegio di rivedere questo tentativo.",
     "mma.mod_quiz.notyetgraded": "Non ancora valutato",
     "mma.mod_quiz.outof": "{{$a.grade}} su un massimo di {{$a.maxgrade}}",
     "mma.mod_quiz.outofpercent": "{{$a.grade}} su un massimo di {{$a.maxgrade}} ({{$a.percent}}%)",

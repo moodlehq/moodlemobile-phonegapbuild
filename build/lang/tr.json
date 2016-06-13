@@ -519,6 +519,7 @@
     "mma.mod_quiz.marks": "Puanlar",
     "mma.mod_quiz.mustbesubmittedby": "Bu uygulama {{$a}} tarafından gönderilmelidir.",
     "mma.mod_quiz.noquestions": "Henüz bir soru eklenmemiş",
+    "mma.mod_quiz.noreviewattempt": "Bu uygulamayı gözden geçirmek için izniniz yok.",
     "mma.mod_quiz.notyetgraded": "Henüz puanlanmadı",
     "mma.mod_quiz.outof": "{{$a.maxgrade}} üzerinden {{$a.grade}}",
     "mma.mod_quiz.outofpercent": "Maksimum {{$a.maxgrade}} üzerinden {{$a.grade}} (%{{$a.percent}})",

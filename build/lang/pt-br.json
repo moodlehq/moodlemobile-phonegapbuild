@@ -764,6 +764,7 @@
     "mma.mod_quiz.marks": "Notas",
     "mma.mod_quiz.mustbesubmittedby": "Esta tentativa precisa ser enviada até {{$a}}.",
     "mma.mod_quiz.noquestions": "Ainda não foi inserida nenhuma pergunta",
+    "mma.mod_quiz.noreviewattempt": "Você não tem permissão para revisar esta tentativa.",
     "mma.mod_quiz.notyetgraded": "Ainda não avaliado",
     "mma.mod_quiz.outof": "{{$a.grade}} de um máximo de {{$a.maxgrade}}",
     "mma.mod_quiz.outofpercent": "{{$a.grade}} de um máximo de {{$a.maxgrade}}({{$a.percent}}%)",
