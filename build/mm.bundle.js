@@ -14082,11 +14082,15 @@ angular.module('mm.addons.files')
     };
     $scope.canDownload = $mmSite.canDownloadFiles;
     $scope.add = function() {
-        if (!$mmApp.isOnline()) {
-            $mmUtil.showErrorModal('mma.files.errormustbeonlinetoupload', true);
-        } else {
-            $state.go('site.files-upload');
-        }
+        $mmaFiles.versionCanUploadFiles().then(function(canUpload) {
+            if (!canUpload) {
+                $mmUtil.showErrorModal('mma.files.erroruploadnotworking', true);
+            } else if (!$mmApp.isOnline()) {
+                $mmUtil.showErrorModal('mma.files.errormustbeonlinetoupload', true);
+            } else {
+                $state.go('site.files-upload');
+            }
+        });
     };
 }]);
 
@@ -14144,11 +14148,15 @@ angular.module('mm.addons.files')
         return (root === 'my' && !path && $mmSite.canUploadFiles());
     };
     $scope.add = function() {
-        if (!$mmApp.isOnline()) {
-            $mmUtil.showErrorModal('mma.files.errormustbeonlinetoupload', true);
-        } else {
-            $state.go('site.files-upload', {root: root, path: path});
-        }
+        $mmaFiles.versionCanUploadFiles().then(function(canUpload) {
+            if (!canUpload) {
+                $mmUtil.showErrorModal('mma.files.erroruploadnotworking', true);
+            } else if (!$mmApp.isOnline()) {
+                $mmUtil.showErrorModal('mma.files.errormustbeonlinetoupload', true);
+            } else {
+                $state.go('site.files-upload', {root: root, path: path});
+            }
+        });
     };
 }]);
 
@@ -14230,6 +14238,13 @@ angular.module('mm.addons.files')
         };
         self.canAccessFiles = function() {
         return $mmSite.wsAvailable('core_files_get_files');
+    };
+        self.versionCanUploadFiles = function(siteId) {
+        siteId = siteId || $mmSite.getId();
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            var version = site.getInfo().version;
+            return version && (parseInt(version) != 2016052300);
+        });
     };
         self.checkIOSNewFiles = function() {
         var deferred = $q.defer();
@@ -15009,16 +15024,6 @@ angular.module('mm.addons.grades')
 }]);
 
 angular.module('mm.addons.messages')
-.filter('mmaMessagesFormat', ["$mmText", function($mmText) {
-  return function(text) {
-    text = text.replace(/-{4,}/ig, '');
-    text = text.replace(/<br \/><br \/>/ig, "<br />");
-    text = $mmText.replaceNewLines(text, '<br />');
-    return text;
-  };
-}]);
-
-angular.module('mm.addons.messages')
 .controller('mmaMessagesContactsCtrl', ["$scope", "$mmaMessages", "$mmSite", "$mmUtil", "$mmApp", "mmUserProfileState", "$translate", function($scope, $mmaMessages, $mmSite, $mmUtil, $mmApp, mmUserProfileState, $translate) {
     var currentUserId = $mmSite.getUserId(),
         searchingMessage = $translate.instant('mm.core.searching'),
@@ -15404,6 +15409,16 @@ angular.module('mm.addons.messages')
             obsLeft.off();
         }
     });
+}]);
+
+angular.module('mm.addons.messages')
+.filter('mmaMessagesFormat', ["$mmText", function($mmText) {
+  return function(text) {
+    text = text.replace(/-{4,}/ig, '');
+    text = text.replace(/<br \/><br \/>/ig, "<br />");
+    text = $mmText.replaceNewLines(text, '<br />');
+    return text;
+  };
 }]);
 
 angular.module('mm.addons.messages')
@@ -23438,6 +23453,7 @@ angular.module('mm.addons.mod_quiz')
         });
     }
     function goToAutoReview() {
+        $mmCourse.checkModuleCompletion(courseId, module.completionstatus);
         var attemptId = autoReview.attemptId;
         if (quizAccessInfo.canreviewmyattempts) {
             return $mmaModQuiz.getAttemptReview(attemptId, -1).then(function() {
@@ -23445,7 +23461,6 @@ angular.module('mm.addons.mod_quiz')
             }).catch(function() {
             });
         }
-        $mmCourse.checkModuleCompletion(courseId, module.completionstatus);
         return $q.when();
     }
     function openQuiz() {
@@ -26889,7 +26904,7 @@ angular.module('mm.addons.mod_scorm')
     };
     $scope.modenormal = $mmaModScorm.MODENORMAL;
     $scope.modebrowse = $mmaModScorm.MODEBROWSE;
-    function fetchScormData(refresh) {
+    function fetchScormData(refresh, checkCompletion) {
         return $mmaModScorm.getScorm(courseid, module.id, module.url).then(function(scormData) {
             scorm = scormData;
             $scope.title = scorm.name || $scope.title;
@@ -26909,6 +26924,9 @@ angular.module('mm.addons.mod_scorm')
                 $mmaModScormHelper.getScormReadableSyncTime(scorm.id).then(function(syncTime) {
                     $scope.syncTime = syncTime;
                 });
+                if (checkCompletion) {
+                    $mmCourse.checkModuleCompletion(courseid, module.completionstatus);
+                }
                 return $mmaModScorm.getAttemptCount(scorm.id).then(function(attemptsData) {
                     attempts = attemptsData;
                     $scope.showSyncButton = attempts.offline.length;
@@ -27060,14 +27078,14 @@ angular.module('mm.addons.mod_scorm')
             $scope.statusMessage = '';
         }
     }
-    function refreshData(dontForceSync) {
+    function refreshData(dontForceSync, checkCompletion) {
         var promises = [];
         promises.push($mmaModScorm.invalidateScormData(courseid));
         if (scorm) {
             promises.push($mmaModScorm.invalidateAllScormData(scorm.id));
         }
         return $q.all(promises).finally(function() {
-            return fetchScormData(!dontForceSync);
+            return fetchScormData(!dontForceSync, checkCompletion);
         });
     }
     function downloadScormPackage() {
@@ -27109,9 +27127,6 @@ angular.module('mm.addons.mod_scorm')
                 var message = $mmText.buildMessage(data.warnings);
                 if (message) {
                     $mmUtil.showErrorModal(message);
-                }
-                if (data.attemptFinished) {
-                    $mmCourse.checkModuleCompletion(courseid, module.completionstatus);
                 }
             }
         }).catch(function(err) {
@@ -27168,7 +27183,7 @@ angular.module('mm.addons.mod_scorm')
         syncScorm(false, true).then(function() {
             $scope.scormLoaded = false;
             scrollView.scrollTop();
-            refreshData(true).finally(function() {
+            refreshData(true, true).finally(function() {
                 $scope.scormLoaded = true;
             });
         }).finally(function() {
@@ -27187,7 +27202,7 @@ angular.module('mm.addons.mod_scorm')
             $scope.scormLoaded = false;
             scrollView.scrollTop();
             $timeout(function() {
-                refreshData().finally(function() {
+                refreshData(false, true).finally(function() {
                     $scope.scormLoaded = true;
                 });
             }, 500);
@@ -27197,12 +27212,9 @@ angular.module('mm.addons.mod_scorm')
         if (data && data.siteid == $mmSite.getId() && data.scormid == scorm.id) {
             $scope.scormLoaded = false;
             scrollView.scrollTop();
-            fetchScormData().finally(function() {
+            fetchScormData(false, true).finally(function() {
                 $scope.scormLoaded = true;
             });
-            if (data.attemptFinished) {
-                $mmCourse.checkModuleCompletion(courseid, module.completionstatus);
-            }
         }
     });
     $scope.$on('$destroy', function() {

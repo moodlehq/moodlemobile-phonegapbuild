@@ -8504,6 +8504,77 @@ a.wiki_edit_section {
   font-weight: bold;
   font-size: 16px; }
 
+.mma-qtype-ddimageortext-container mm-loading {
+  position: absolute;
+  left: 50%; }
+.mma-qtype-ddimageortext-container .qtext {
+  margin-bottom: 0.5em;
+  display: block; }
+.mma-qtype-ddimageortext-container div.droparea img {
+  border: 1px solid #000000;
+  max-width: 100%; }
+.mma-qtype-ddimageortext-container .draghome {
+  vertical-align: top;
+  margin: 5px;
+  visibility: hidden; }
+.mma-qtype-ddimageortext-container .draghome img {
+  display: block; }
+.mma-qtype-ddimageortext-container div.draghome {
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: #B0C4DE;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  zoom: 1; }
+.mma-qtype-ddimageortext-container .group1 {
+  background-color: #FFFFFF; }
+.mma-qtype-ddimageortext-container .group2 {
+  background-color: #B0C4DE; }
+.mma-qtype-ddimageortext-container .group3 {
+  background-color: #DCDCDC; }
+.mma-qtype-ddimageortext-container .group4 {
+  background-color: #D8BFD8; }
+.mma-qtype-ddimageortext-container .group5 {
+  background-color: #87CEFA; }
+.mma-qtype-ddimageortext-container .group6 {
+  background-color: #DAA520; }
+.mma-qtype-ddimageortext-container .group7 {
+  background-color: #FFD700; }
+.mma-qtype-ddimageortext-container .group8 {
+  background-color: #F0E68C; }
+.mma-qtype-ddimageortext-container .drag {
+  border: 1px solid black;
+  cursor: pointer;
+  z-index: 2; }
+.mma-qtype-ddimageortext-container .dragitems.readonly .drag {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container .dragitems > div {
+  clear: both; }
+.mma-qtype-ddimageortext-container .dragitems {
+  cursor: pointer; }
+.mma-qtype-ddimageortext-container .dragitems.readonly {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container .drag img {
+  display: block; }
+.mma-qtype-ddimageortext-container div.ddarea {
+  text-align: center;
+  position: relative; }
+.mma-qtype-ddimageortext-container .dropbackground {
+  margin: 0 auto; }
+.mma-qtype-ddimageortext-container .dropzone {
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer; }
+.mma-qtype-ddimageortext-container .readonly .dropzone {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container div.dragitems div.draghome, .mma-qtype-ddimageortext-container div.dragitems div.drag {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif; }
+.mma-qtype-ddimageortext-container .drag.beingdragged {
+  z-index: 3;
+  box-shadow: 3px 3px 4px #000; }
+
 .mma-qtype-ddmarker-container mm-loading {
   position: absolute;
   left: 50%; }
@@ -8576,77 +8647,6 @@ a.wiki_edit_section {
   /* In other words, this works for a 15x15 cross-hair. */ }
 .mma-qtype-ddmarker-container div.dragitems div.draghome img.target {
   display: none; }
-
-.mma-qtype-ddimageortext-container mm-loading {
-  position: absolute;
-  left: 50%; }
-.mma-qtype-ddimageortext-container .qtext {
-  margin-bottom: 0.5em;
-  display: block; }
-.mma-qtype-ddimageortext-container div.droparea img {
-  border: 1px solid #000000;
-  max-width: 100%; }
-.mma-qtype-ddimageortext-container .draghome {
-  vertical-align: top;
-  margin: 5px;
-  visibility: hidden; }
-.mma-qtype-ddimageortext-container .draghome img {
-  display: block; }
-.mma-qtype-ddimageortext-container div.draghome {
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: #B0C4DE;
-  display: inline-block;
-  height: auto;
-  width: auto;
-  zoom: 1; }
-.mma-qtype-ddimageortext-container .group1 {
-  background-color: #FFFFFF; }
-.mma-qtype-ddimageortext-container .group2 {
-  background-color: #B0C4DE; }
-.mma-qtype-ddimageortext-container .group3 {
-  background-color: #DCDCDC; }
-.mma-qtype-ddimageortext-container .group4 {
-  background-color: #D8BFD8; }
-.mma-qtype-ddimageortext-container .group5 {
-  background-color: #87CEFA; }
-.mma-qtype-ddimageortext-container .group6 {
-  background-color: #DAA520; }
-.mma-qtype-ddimageortext-container .group7 {
-  background-color: #FFD700; }
-.mma-qtype-ddimageortext-container .group8 {
-  background-color: #F0E68C; }
-.mma-qtype-ddimageortext-container .drag {
-  border: 1px solid black;
-  cursor: pointer;
-  z-index: 2; }
-.mma-qtype-ddimageortext-container .dragitems.readonly .drag {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container .dragitems > div {
-  clear: both; }
-.mma-qtype-ddimageortext-container .dragitems {
-  cursor: pointer; }
-.mma-qtype-ddimageortext-container .dragitems.readonly {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container .drag img {
-  display: block; }
-.mma-qtype-ddimageortext-container div.ddarea {
-  text-align: center;
-  position: relative; }
-.mma-qtype-ddimageortext-container .dropbackground {
-  margin: 0 auto; }
-.mma-qtype-ddimageortext-container .dropzone {
-  border: 1px solid black;
-  position: absolute;
-  z-index: 1;
-  cursor: pointer; }
-.mma-qtype-ddimageortext-container .readonly .dropzone {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container div.dragitems div.draghome, .mma-qtype-ddimageortext-container div.dragitems div.drag {
-  font: 13px/1.231 arial, helvetica, clean, sans-serif; }
-.mma-qtype-ddimageortext-container .drag.beingdragged {
-  z-index: 3;
-  box-shadow: 3px 3px 4px #000; }
 
 .mma-qtype-ddwtos-container .qtext {
   margin-bottom: 0.5em;

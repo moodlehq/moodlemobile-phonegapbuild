@@ -377,6 +377,7 @@
     "mma.files.errornoapp": "You don't have an app installed to perform this action.",
     "mma.files.errorreadingfile": "Error reading file.",
     "mma.files.errorreceivefilenosites": "There are no sites stored. Please add a site before trying to upload a file.",
+    "mma.files.erroruploadnotworking": "Unfortunately it is currently not possible to upload files to your site.",
     "mma.files.errorwhiledownloading": "An error occured while trying to download the file.",
     "mma.files.errorwhileuploading": "An error occured during the file upload.",
     "mma.files.errorwhilerecordingaudio": "An error occured while trying to record audio.",
