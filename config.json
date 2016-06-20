@@ -8,8 +8,6 @@
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "siteurl": "https://www.proventuresindia.com/provlms",
-    "presets" : {"url": "https://www.proventuresindia.com/provlms", "username": ""},
-    "demo_sites": "",
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile"
 }
