@@ -154,3 +154,10 @@ angular.module('mm.core', ['pascalprecht.translate'])
         });
     });
 });
+onEnter: function($state) {
+
+        $state.go('mm_login.credentials', {siteurl: 'http://mymoodle.com'});
+
+    }
+
+})
