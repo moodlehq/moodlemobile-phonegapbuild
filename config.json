@@ -10,5 +10,6 @@
     "demo_sites": "",
     "gcmpn": "694767596569",
     "siteurl":"https://www.proventuresindia.com/provlms",
+    "presets":{"url":"https://www.proventuresindia.com/provlms","username":""},
     "customurlscheme": "moodlemobile"
 }
