@@ -1,0 +1,91 @@
+This files describes API changes in the Moodle Mobile app,
+information provided here is intended especially for developers.
+
+=== 3.1.1 ===
+
+ * checkTime parameter was removed from the syncQuiz function in the mmaModQuizIndexCtrl controller. We don't check for time anymore.
+
+=== 3.1.0 ===
+
+ * A new param "single" is passed to the prefetch functions of handlers registered in $mmCoursePrefetchDelegateProvider. Please notice that the download of sections will always send false/undefined, if you use this function somewhere else to download a single module then you should pass single=true.
+ * Activity modules have been moved from addons/mod_* to addons/mod/*.
+
+=== 3.0 ===
+
+ * The function $mmaModBook#getChapterContent now requires to receive the result of $mmaModBook#getContentsMap instead of module.contents.
+ * The events obtained using $mmaMessages#getDiscussionEventName are deprecated. Now you should just use the event mmaMessagesNewMessageEvent and you will receive the site ID and user ID as parameters.
+ * Directive "mm-browser" has been renamed to "mm-link" to be more coherent with its functionality.
+
+=== 2.9 ===
+
+ * Most of the functions from $mmaModScormOnline, $mmaModScormOffline, $mmaModScorm, $mmaModScormSync and $mmaModScormHelper now have a new param siteId to determine the site to affect. If you use any of these services please make sure you still pass the right parameters.
+ * Now filepool tries to use the files names instead of just using a hash. If you used the functions "getFilePathByUrl" or "getDirectoryUrlByUrl" to store package files, you should now use "getPackageDirPathByUrl" and "getPackageDirUrlByUrl" instead.
+ * A new directive "mm-state-class" has been created to allow a better customization of the app using remote CSS. You should add this directive to the ion-content in your views.
+
+=== 2.8 ===
+
+ * $mmModuleActionsDelegate has been renamed to $mmContentLinksDelegate to make it more generic. The specification of this delegate has changed, please look at its documentation to adapt your handlers.
+ * State site.mm_course now requires a courseid parameter instead of course.
+ * The parameters of the following $mmCoursePrefetchDelegate's functions have changed, now they also require a courseid: getDownloadSize, getModuleStatus, prefetchAll and getModulesStatus.
+ * New Phonegap plugin installed. Please run:
+    ionic plugin add cordova-plugin-zip
+        or
+    ionic state restore
+ * mmaModImscpBar directive has been moved to core. Now it's named mmNavigationBar.
+
+=== 2.7 ===
+
+ * JSzip installed. Please run:
+    bower update
+ * The following functions have been moved from $mmUtil to $mmFS: getFileIcon, getFolderIcon and getFileExtension.
+ * The values from config.json are no longer stored in $mmConfig. Now they are inside an AngularJS constant called mmCoreConfigConstants.
+ * The function $mmSitesManager#getDemoSiteData isn't asynchronous anymore.
+ * Fixed site URL is now supported via config.json. If you modified the code to use a fixed site URL we suggest you to remove the changes and add a property 'siteurl' to the config.json file instead.
+ * The function isEnabledForCourse implemented by $mmCoursesDelegate handlers now receives a new attribute accessData that indicates the type of access to the course.
+
+=== 2.6 ===
+
+ * Ionic updated to 1.1.1. Please run:
+    bower update
+ * $mmFilepool FILEDOWNLOADED, FILEDOWNLOADING, FILENOTDOWNLOADED and FILEOUTDATED have been deprecated. Please use mmCoreDownloaded, mmCoreDownloading, mmCoreNotDownloaded and mmCoreOutdated instead.
+ * mmCoreCourseModulesStore store has been deprecated. Please use mmFilepoolPackagesStore instead.
+ * The following functions from $mmCourse have been removed: clearAllModulesStatus, getModulePreviousStatus, getModuleStatus, getRevisionFromContents, getTimemodifiedFromContents, isModuleOutdated, storeModuleStatus, setModulePreviousStatus. The following functions have been added to $mmFilepool instead: clearAllPackagesStatus, getPackagePreviousStatus, getPackageStatus, getRevisionFromFileList, getTimemodifiedFromFileList, setPackagePreviousStatus and storePackageStatus.
+
+=== 2.5 ===
+
+ * $mmCourses#getStoredCourse function has been deprecated. New function $mmCourses#getUserCourse function should be used instead.
+ * $mmCourses#getUserCourses parameters have changed, now the first parameter is 'preferCache' instead of 'refresh'. The new function $mmCourses#invalidateUserCourses needs to be used to refresh the list.
+ * $mmSitesManager#getUserToken now returns an object with 'siteurl' and 'token' instead of just returning the token.
+
+=== 2.3 ===
+
+ * MomentJS installed. Please run:
+    bower update
+ * Notifications from a site not shown once a site is deleted.
+ * Error reporting removed in development version.
+ * Now using npm Cordova plugins when possible. Please run:
+    ionic state restore
+    ionic plugin add https://github.com/Tunts/WebIntent https://github.com/ti8m/DocumentHandler cordova-plugin-customurlscheme --variable URL_SCHEME=moodlemobile
+ * Added a hook to allow requests without SSL on iOS9: hooks/after_prepare/020_add_ios_transport_security.js. Please give the hook executable permissions and run:
+    npm install
+ * New event mmaModForumNewDiscussionEvent triggered when a forum discussion is created using the app.
+ * New event mmCoreEventSiteDeleted triggered when a site is deleted.
+
+=== 2.2 ===
+
+ * Upgrade to Cordova 5.2.
+ * Ionic updated to v1.1. Please run:
+    bower update
+ * Now using a fork of local notifications plugin: cordova-plugin-local-notifications-mm. Please run:
+    ionic state restore
+ * Added an angular script to make the app work on iOS9.
+ * $mmGroups#getUserGroups now accepts 'userid' parameter to retrieve groups from any user.
+
+=== 2.1 ===
+
+ * Ionic updated to v1.0.1. Please run:
+    bower update
+ * Added gulp-slash and gulp-ng-annotate to npm dependencies. Please run:
+    npm install
+ * Included error reporting feature.
+ * New event mmCoreEventUserDeleted triggered when we detect that a user has been deleted.
