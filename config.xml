@@ -117,9 +117,6 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
 
-    <gap:plugin name="phonegap-plugin-push" source="npm" >
-        <param name="SENDER_ID" value="694767596569" />
-    </gap:plugin>
     <gap:plugin name="net.tunts.webintent" />
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
         <param name="URL_SCHEME" value="moodlemobile" />
