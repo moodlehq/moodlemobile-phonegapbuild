@@ -33,12 +33,14 @@ angular.module('mm.core')
  *               E.g. 50% of an element with 1000px width = 500 characters.
  *               If the element has no width it'll use 100 characters. If the attribute is empty it'll use 30% width.
  *     -expand-on-click: Indicate if contents should be expanded on click (undo shorten). Only applied if "shorten" is set.
+ *     -expand-title: Page title to used in expanded/fullview. Default: Description.
  *     -fullview-on-click: Indicate if should open a new state with the full contents on click. Only applied if "shorten" is set.
+ *     -newlines-on-fullview: Indicate if new lines should be replaced by <br> on fullview.
  *     -not-adapt-img: True if we don't want to adapt images to the screen size and add the "openfullimage" icon.
  *     -watch: True if the variable used inside the directive should be watched for changes. If the variable data is retrieved
  *             asynchronously, this value must be set to true, or the directive should be inside a ng-if, ng-repeat or similar.
  */
-.directive('mmFormatText', function($interpolate, $mmText, $compile, $translate, $state) {
+.directive('mmFormatText', function($interpolate, $mmText, $compile, $translate) {
 
     var extractVariableRegex = new RegExp('{{([^|]+)(|.*)?}}', 'i'),
         tagsToIgnore = ['AUDIO', 'VIDEO', 'BUTTON', 'INPUT', 'SELECT', 'TEXTAREA', 'A'];
@@ -171,10 +173,8 @@ angular.module('mm.core')
                             }
                         } else {
                             // Open a new state with the interpolated contents.
-                            $state.go('site.mm_textviewer', {
-                                title: $translate.instant('mm.core.description'),
-                                content: text
-                            });
+                            $mmText.expandText(attrs.expandTitle || $translate.instant('mm.core.description'), text,
+                                attrs.newlinesOnFullview);
                         }
                     }
                 });
@@ -255,6 +255,14 @@ angular.module('mm.core')
                 });
             }
 
+            // Handle buttons with inner links.
+            angular.forEach(dom[0].querySelectorAll('.button'), function(button) {
+                // Check if it has a link inside.
+                if (button.querySelector('a')) {
+                    angular.element(button).addClass('mm-button-with-inner-link');
+                }
+            });
+
             return dom.html();
         });
     }
@@ -298,7 +306,7 @@ angular.module('mm.core')
     }
 
     return {
-        restrict: 'E',
+        restrict: 'EA',
         scope: true,
         link: function(scope, element, attrs) {
             element.addClass('hide'); // Hide contents until they're treated.

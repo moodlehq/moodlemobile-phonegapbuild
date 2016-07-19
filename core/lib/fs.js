@@ -24,7 +24,7 @@ angular.module('mm.core')
  * @description
  * This service handles the interaction with the FileSystem.
  */
-.factory('$mmFS', function($ionicPlatform, $cordovaFile, $log, $q, $http, $cordovaZip, mmFsSitesFolder, mmFsTmpFolder) {
+.factory('$mmFS', function($ionicPlatform, $cordovaFile, $log, $q, $http, $cordovaZip, $mmText, mmFsSitesFolder, mmFsTmpFolder) {
 
     $log = $log.getInstance('$mmFS');
 
@@ -32,11 +32,19 @@ angular.module('mm.core')
         initialized = false,
         basePath = '',
         isHTMLAPI = false,
-        mimeTypes = {};
+        extToMime = {},
+        mimeToExt = {};
 
-    // Loading all the mimetypes.
+    // Loading extensions to mimetypes file.
     $http.get('core/assets/mimetypes.json').then(function(response) {
-        mimeTypes = response.data;
+        extToMime = response.data;
+    }, function() {
+        // It failed, never mind...
+    });
+
+    // Loading mimetypes to extensions file.
+    $http.get('core/assets/mimetoext.json').then(function(response) {
+        mimeToExt = response.data;
     }, function() {
         // It failed, never mind...
     });
@@ -128,6 +136,8 @@ angular.module('mm.core')
      * @return {Promise}      Promise to be resolved when the file is retrieved.
      */
     self.getFile = function(path) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
         return self.init().then(function() {
             $log.debug('Get file: '+path);
             return $cordovaFile.checkFile(basePath, path);
@@ -144,6 +154,8 @@ angular.module('mm.core')
      * @return {Promise}      Promise to be resolved when the directory is retrieved.
      */
     self.getDir = function(path) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
         return self.init().then(function() {
             $log.debug('Get directory: '+path);
             return $cordovaFile.checkDir(basePath, path);
@@ -173,6 +185,8 @@ angular.module('mm.core')
      * @return {Promise}              Promise to be resolved when the dir/file is created.
      */
     function create(isDirectory, path, failIfExists, base) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
         return self.init().then(function() {
             base = base || basePath;
 
@@ -242,6 +256,8 @@ angular.module('mm.core')
      * @return {Promise}         Promise to be resolved when the directory is deleted.
      */
     self.removeDir = function(path) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
         return self.init().then(function() {
             $log.debug('Remove directory: ' + path);
             return $cordovaFile.removeRecursively(basePath, path);
@@ -258,10 +274,27 @@ angular.module('mm.core')
      * @return {Promise}         Promise to be resolved when the file is deleted.
      */
     self.removeFile = function(path) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
         return self.init().then(function() {
             $log.debug('Remove file: ' + path);
             return $cordovaFile.removeFile(basePath, path);
         });
+    };
+
+    /**
+     * Removes a file given its FileEntry.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#removeFileByFileEntry
+     * @param  {Object} fileEntry File Entry.
+     * @return {Promise}          Promise resolved when the file is deleted.
+     */
+    self.removeFileByFileEntry = function(fileEntry) {
+        var deferred = $q.defer();
+        fileEntry.remove(deferred.resolve, deferred.reject);
+        return deferred.promise;
     };
 
     /**
@@ -274,6 +307,9 @@ angular.module('mm.core')
      * @return {Promise}     Promise to be resolved when the contents are retrieved.
      */
     self.getDirectoryContents = function(path) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
+
         $log.debug('Get contents of dir: ' + path);
         return self.getDir(path).then(function(dirEntry) {
 
@@ -342,6 +378,9 @@ angular.module('mm.core')
      * @return {Promise}     Promise to be resolved when the size is calculated.
      */
     self.getDirectorySize = function(path) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
+
         $log.debug('Get size of dir: ' + path);
         return self.getDir(path).then(function(dirEntry) {
            return getSize(dirEntry);
@@ -358,6 +397,9 @@ angular.module('mm.core')
      * @return {Promise}     Promise to be resolved when the size is calculated.
      */
     self.getFileSize = function(path) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
+
         $log.debug('Get size of file: ' + path);
         return self.getFile(path).then(function(fileEntry) {
            return getSize(fileEntry);
@@ -416,7 +458,7 @@ angular.module('mm.core')
                     });
 
                     return deferred.promise;
-                };
+                }
 
                 // General calculation, base 1MB and increasing factor 1.3.
                 calculateByRequest(1048576, 1.3).then(function(size) {
@@ -467,6 +509,8 @@ angular.module('mm.core')
      * @return {Promise}        Promise to be resolved when the file is read.
      */
     self.readFile = function(path, format) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
         format = format || self.FORMATTEXT;
         $log.debug('Read file ' + path + ' with format '+format);
         switch (format) {
@@ -540,6 +584,8 @@ angular.module('mm.core')
      * @return {Promise}      Promise to be resolved when the file is written.
      */
     self.writeFile = function(path, data) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
         $log.debug('Write file: ' + path);
         return self.init().then(function() {
             // Create file (and parent folders) to prevent errors.
@@ -644,12 +690,16 @@ angular.module('mm.core')
      *
      * @module mm.core
      * @ngdoc method
-     * @name $mmFS#moveEntry
+     * @name $mmFS#moveFile
      * @param {String} originalPath Path to the file to move.
      * @param {String} newPath      New path of the file.
      * @return {Promise}            Promise resolved when the entry is moved.
      */
     self.moveFile = function(originalPath, newPath) {
+        // Paths cannot start with "/".
+        originalPath = self.removeStartingSlash(originalPath);
+        newPath = self.removeStartingSlash(newPath);
+
         return self.init().then(function() {
             if (isHTMLAPI) {
                 // In Cordova API we need to calculate the longest matching path to make it work.
@@ -691,6 +741,10 @@ angular.module('mm.core')
      * @return {Promise}      Promise resolved when the entry is copied.
      */
     self.copyFile = function(from, to) {
+        // Paths cannot start with "/".
+        from = self.removeStartingSlash(from);
+        to = self.removeStartingSlash(to);
+
         return self.init().then(function() {
             if (isHTMLAPI) {
                 // In Cordova API we need to calculate the longest matching path to make it work.
@@ -768,6 +822,12 @@ angular.module('mm.core')
      * @return {String}          Concatenated path.
      */
     self.concatenatePaths = function(leftPath, rightPath) {
+        if (!leftPath) {
+            return rightPath;
+        } else if (!rightPath) {
+            return leftPath;
+        }
+
         var lastCharLeft = leftPath.slice(-1),
             firstCharRight = rightPath.charAt(0);
 
@@ -810,8 +870,8 @@ angular.module('mm.core')
         var ext = self.getFileExtension(filename),
             icon;
 
-        if (ext && mimeTypes[ext] && mimeTypes[ext].icon) {
-            icon = mimeTypes[ext].icon + '-64.png';
+        if (ext && extToMime[ext] && extToMime[ext].icon) {
+            icon = extToMime[ext].icon + '-64.png';
         } else {
             icon = 'unknown-64.png';
         }
@@ -838,7 +898,7 @@ angular.module('mm.core')
      *
      * @module mm.core
      * @ngdoc method
-     * @name $mmUtil#getFileExtension
+     * @name $mmFS#getFileExtension
      * @param  {string} filename The file name.
      * @return {string}          The lowercased extension, or undefined.
      */
@@ -858,14 +918,39 @@ angular.module('mm.core')
      *
      * @module mm.core
      * @ngdoc method
-     * @name $mmUtil#allPromises
+     * @name $mmFS#getMimeType
      * @param  {String} extension Extension.
      * @return {String}           Mimetype.
      */
     self.getMimeType = function(extension) {
-        if (mimeTypes[extension] && mimeTypes[extension].type) {
-            return mimeTypes[extension].type;
+        if (extToMime[extension] && extToMime[extension].type) {
+            return extToMime[extension].type;
         }
+    };
+
+    /**
+     * Get the extension of a mimetype. Returns undefined if not found.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#getExtension
+     * @param  {String} mimetype  Mimetype.
+     * @param  {String} [url]     URL of the file. Tt will be used if there's more than one possible extension.
+     * @return {String}           Extension.
+     */
+    self.getExtension = function(mimetype, url) {
+        var extensions = mimeToExt[mimetype];
+        if (extensions && extensions.length) {
+            if (extensions.length > 1 && url) {
+                // There's more than one possible extension. Check if the URL has extension.
+                var candidate = $mmText.guessExtensionFromUrl(url);
+                if (extensions.indexOf(candidate) != -1) {
+                    return candidate;
+                }
+            }
+            return extensions[0];
+        }
+        return undefined;
     };
 
     /**
@@ -903,6 +988,23 @@ angular.module('mm.core')
     };
 
     /**
+     * Remove the base path from a path. If basePath isn't found, return false.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#removeBasePath
+     * @param {String} path Path to treat.
+     * @return {Mixed}     Path without basePath if basePath was found, false otherwise.
+     */
+    self.removeBasePath = function(path) {
+        if (path.indexOf(basePath) > -1) {
+            return path.replace(basePath, '');
+        } else {
+            return false;
+        }
+    };
+
+    /**
      * Unzips a file.
      *
      * @module mm.core
@@ -914,9 +1016,12 @@ angular.module('mm.core')
      * @return {Promise}             Promise resolved when the file is unzipped.
      */
     self.unzipFile = function(path, destFolder) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
+
         // Get the source file.
         return self.getFile(path).then(function(fileEntry) {
-            // If destFolder is not set, use same location as ZIP file. We need to use ansolute paths (including basePath).
+            // If destFolder is not set, use same location as ZIP file. We need to use absolute paths (including basePath).
             destFolder = self.addBasePathIfNeeded(destFolder || self.removeExtension(path));
             return $cordovaZip.unzip(fileEntry.toURL(), destFolder);
         });
@@ -944,6 +1049,179 @@ angular.module('mm.core')
                 return self.writeFile(path, content);
             }
         });
+    };
+
+    /**
+     * Get a file/dir metadata given the file's entry.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#getMetadata
+     * @param  {Object} fileEntry FileEntry retrieved from $mmFS#getFile or similar.
+     * @return {Promise}          Promise resolved with metadata.
+     */
+    self.getMetadata = function(fileEntry) {
+        if (!fileEntry || !fileEntry.getMetadata) {
+            return $q.reject();
+        }
+
+        var deferred = $q.defer();
+        fileEntry.getMetadata(deferred.resolve, deferred.reject);
+        return deferred.promise;
+    };
+
+    /**
+     * Get a file/dir metadata given the path.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#getMetadataFromPath
+     * @param  {String} path   Path to the file/dir.
+     * @param  {Boolean} isDir True if directory, false if file.
+     * @return {Promise}       Promise resolved with metadata.
+     */
+    self.getMetadataFromPath = function(path, isDir) {
+        // Paths cannot start with "/".
+        path = self.removeStartingSlash(path);
+
+        var fn = isDir ? self.getDir : self.getFile;
+        return fn(path).then(function(entry) {
+            return self.getMetadata(entry);
+        });
+    };
+
+    /**
+     * Remove the starting slash of a path if it's there. E.g. '/sites/filepool' -> 'sites/filepool'.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#removeStartingSlash
+     * @param  {String} path Path.
+     * @return {String}      Path without a slash in the first position.
+     */
+    self.removeStartingSlash = function(path) {
+        if (path[0] == '/') {
+            return path.substr(1);
+        }
+        return path;
+    };
+
+    /**
+     * Convenience function to copy or move an external file.
+     *
+     * @param  {String} from  Absolute path to the file to copy/move.
+     * @param  {String} to    Relative new path of the file (inside the app folder).
+     * @param  {Boolean} copy True to copy, false to move.
+     * @return {Promise}      Promise resolved when the entry is copied/moved.
+     */
+    function copyOrMoveExternalFile(from, to, copy) {
+        // Get the file to copy/move.
+        return self.getExternalFile(from).then(function(fileEntry) {
+            // Create the destination dir if it doesn't exist.
+            var dirAndFile = self.getFileAndDirectoryFromPath(to);
+            return self.createDir(dirAndFile.directory).then(function(dirEntry) {
+                // Now copy/move the file.
+                var deferred = $q.defer();
+                if (copy) {
+                    fileEntry.copyTo(dirEntry, dirAndFile.name, deferred.resolve, deferred.reject);
+                } else {
+                    fileEntry.moveTo(dirEntry, dirAndFile.name, deferred.resolve, deferred.reject);
+                }
+                return deferred.promise;
+            });
+        });
+    }
+
+    /**
+     * Copy a file from outside of the app folder to somewhere inside the app folder.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#copyExternalFile
+     * @param {String} from Absolute path to the file to copy.
+     * @param {String} to   Relative new path of the file (inside the app folder).
+     * @return {Promise}    Promise resolved when the entry is copied.
+     */
+    self.copyExternalFile = function(from, to) {
+        return copyOrMoveExternalFile(from, to, true);
+    };
+
+    /**
+     * Move a file from outside of the app folder to somewhere inside the app folder.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#moveExternalFile
+     * @param {String} from Absolute path to the file to move.
+     * @param {String} to   Relative new path of the file (inside the app folder).
+     * @return {Promise}    Promise resolved when the entry is moved.
+     */
+    self.moveExternalFile = function(from, to) {
+        return copyOrMoveExternalFile(from, to, false);
+    };
+
+    /**
+     * Get a unique file name inside a folder, adding numbers to the file name if needed.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#getUniqueNameInFolder
+     * @param  {String} dirPath      Path to the destination folder.
+     * @param  {String} fileName     File name that wants to be used.
+     * @param  {String} [defaultExt] Default extension to use if no extension found in the file.
+     * @return {Promise}             Promise resolved with the unique file name.
+     */
+    self.getUniqueNameInFolder = function(dirPath, fileName, defaultExt) {
+        // Get existing files in the folder.
+        return self.getDirectoryContents(dirPath).then(function(entries) {
+            var files = {},
+                fileNameWithoutExtension = self.removeExtension(fileName),
+                extension = self.getFileExtension(fileName) || defaultExt,
+                newName,
+                number = 1;
+
+            // Index the files by name.
+            angular.forEach(entries, function(entry) {
+                files[entry.name] = entry;
+            });
+
+            // Format extension.
+            if (extension) {
+                extension = '.' + extension;
+            } else {
+                extension = '';
+            }
+
+            newName = fileNameWithoutExtension + extension;
+            if (typeof files[newName] == 'undefined') {
+                // No file with the same name.
+                return newName;
+            } else {
+                // Repeated name. Add a number until we find a free name.
+                do {
+                    newName = fileNameWithoutExtension + '(' + number + ')' + extension;
+                    number++;
+                } while (typeof files[newName] != 'undefined');
+
+                // Ask the user what he wants to do.
+                return newName;
+            }
+        }).catch(function() {
+            // Folder doesn't exist, name is unique.
+            return fileName;
+        });
+    };
+
+    /**
+     * Remove app temporary folder.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmFS#clearTmpFolder
+     * @return {Promise} Promise resolved when done.
+     */
+    self.clearTmpFolder = function() {
+        return self.removeDir(mmFsTmpFolder);
     };
 
     return self;

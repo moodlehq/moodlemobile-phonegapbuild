@@ -66,12 +66,15 @@ angular.module('mm.core')
     };
 
     this.$get = function($ionicLoading, $ionicPopup, $injector, $translate, $http, $log, $q, $mmLang, $mmFS, $timeout, $mmApp,
-                $mmText, mmCoreWifiDownloadThreshold, mmCoreDownloadThreshold, $ionicScrollDelegate, $mmWS, $cordovaInAppBrowser) {
+                $mmText, mmCoreWifiDownloadThreshold, mmCoreDownloadThreshold, $ionicScrollDelegate, $mmWS, $cordovaInAppBrowser,
+                $mmConfig, mmCoreSettingsRichTextEditor) {
 
         $log = $log.getInstance('$mmUtil');
 
         var self = {}, // Use 'self' to be coherent with the rest of services.
-            matchesFn;
+            matchesFn,
+            inputSupportKeyboard = ['date', 'datetime', 'datetime-local', 'email', 'month', 'number', 'password',
+                'search', 'tel', 'text', 'time', 'url', 'week'];
 
         /**
          * Formats a URL, trim, lowercase, etc...
@@ -555,6 +558,39 @@ angular.module('mm.core')
         };
 
         /**
+         * Displays a loading modal window using a certain template.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#showModalLoadingWithTemplate
+         * @param {String} [template] Template to use in the modal.
+         * @param {Object} [options]  Options. See http://ionicframework.com/docs/api/service/$ionicLoading/
+         * @return {Object}           Object with a 'dismiss' function to close the modal.
+         * @description
+         * Usage:
+         *     var modal = $mmUtil.showModalLoadingWithTemplate(template);
+         *     ...
+         *     modal.dismiss();
+         */
+        self.showModalLoadingWithTemplate = function(template, options) {
+            options = options || {};
+
+            if (!template) {
+                template = "<ion-spinner></ion-spinner><p>{{'mm.core.loading' | translate}}</p>";
+            }
+
+            options.template = template;
+
+            $ionicLoading.show(options);
+
+            return {
+                dismiss: function() {
+                    $ionicLoading.hide();
+                }
+            };
+        };
+
+        /**
          * Show a modal with an error message.
          *
          * @module mm.core
@@ -641,11 +677,17 @@ angular.module('mm.core')
          * @module mm.core
          * @ngdoc method
          * @name $mmUtil#showConfirm
-         * @param  {Mixed} template Template to show in the modal body. Can be a string or a promise.
-         * @return {Promise}        Promise resolved if the user confirms and rejected if he cancels.
+         * @param  {Mixed} template   Template to show in the modal body. Can be a string or a promise.
+         * @param  {String} [title]   Title of the modal.
+         * @param  {Object} [options] More options. See http://ionicframework.com/docs/api/service/$ionicPopup/
+         * @return {Promise}          Promise resolved if the user confirms and rejected if he cancels.
          */
-        self.showConfirm = function(template, title) {
-            return $ionicPopup.confirm({template: template, title: title}).then(function(confirmed) {
+        self.showConfirm = function(template, title, options) {
+            options = options || {};
+
+            options.template = template;
+            options.title = title;
+            return $ionicPopup.confirm(options).then(function(confirmed) {
                 if (!confirmed) {
                     return $q.reject();
                 }
@@ -849,6 +891,48 @@ angular.module('mm.core')
                 }
                 return translations['mm.core.now'];
             });
+        };
+
+        /**
+         * Returns hours, minutes and seconds in a human readable format
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#formatDuration
+         * @param  {Integer} duration       Duration in seconds
+         * @param  {Integer} [precission]   Number of elements to have in precission. 0 or undefined to full precission.
+         * @return {String}                 Full Human readable duration formatted
+         */
+        self.formatDuration = function(duration, precission) {
+            eventDuration = moment.duration(duration, 'seconds');
+
+            if (!precission) {
+                precission = 5;
+            }
+
+            durationString = "";
+            if (precission && eventDuration.years() > 0) {
+                durationString += " " + moment.duration(eventDuration.years(), 'years').humanize();
+                precission--;
+            }
+            if (precission && eventDuration.months() > 0) {
+                durationString += " " + moment.duration(eventDuration.months(), 'months').humanize();
+                precission--;
+            }
+            if (precission && eventDuration.days() > 0) {
+                durationString += " " + moment.duration(eventDuration.days(), 'days').humanize();
+                precission--;
+            }
+            if (precission && eventDuration.hours() > 0) {
+                durationString += " " + moment.duration(eventDuration.hours(), 'hours').humanize();
+                precission--;
+            }
+            if (precission && eventDuration.minutes() > 0) {
+                durationString += " " + moment.duration(eventDuration.minutes(), 'minutes').humanize();
+                precission--;
+            }
+
+            return durationString.trim();
         };
 
         /**
@@ -1494,6 +1578,82 @@ angular.module('mm.core')
 
             ];
             return error && localErrors.indexOf(error) == -1;
+        };
+
+        /**
+         * Focus an element and open keyboard.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#focusElement
+         * @param  {Object} el DOM element to focus.
+         * @return {Void}
+         */
+        self.focusElement = function(el) {
+            if (el && el.focus) {
+                el.focus();
+                if (ionic.Platform.isAndroid() && self.supportsInputKeyboard(el)) {
+                    // On some Android versions the keyboard doesn't open automatically.
+                    $mmApp.openKeyboard();
+                }
+            }
+        };
+
+        /**
+         * Check if an element supports input via keyboard.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#supportsInputKeyboard
+         * @param  {Object} el DOM element to check.
+         * @return {Boolean}   True if supports input using keyboard.
+         */
+        self.supportsInputKeyboard = function(el) {
+            return el && !el.disabled && (el.tagName.toLowerCase() == 'textarea' ||
+                (el.tagName.toLowerCase() == 'input' && inputSupportKeyboard.indexOf(el.type) != -1));
+        };
+
+        /**
+         * Check if rich text editor is supported in the platform.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#isRichTextEditorSupported
+         * @return {Boolean} True if supported, false otherwise.
+         */
+        self.isRichTextEditorSupported = function() {
+            // Enabled for all platforms different from iOS and Android.
+            if (!ionic.Platform.isIOS() && !ionic.Platform.isAndroid()) {
+                return true;
+            }
+
+            // Check Android version >= 4.4
+            if (ionic.Platform.isAndroid() && ionic.Platform.version() >= 4.4) {
+                return true;
+            }
+
+            // Check iOS version > 6
+            if (ionic.Platform.isIOS() && ionic.Platform.version() > 6) {
+                return true;
+            }
+
+            return false;
+        };
+
+        /**
+         * Check if rich text editor is enabled.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#isRichTextEditorEnabled
+         * @return {Promise} Promise resolved with boolean: true if enabled, false otherwise.
+         */
+        self.isRichTextEditorEnabled = function() {
+            if (self.isRichTextEditorSupported()) {
+                return $mmConfig.get(mmCoreSettingsRichTextEditor, true);
+            }
+
+            return $q.when(false);
         };
 
         return self;

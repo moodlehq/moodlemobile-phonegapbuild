@@ -1,21 +1,9 @@
 {
-    "audio": "صوتي",
-    "camera": "الكاميرا",
-    "chooseaccountuploadfile": "اختر حساب لكي تقوم برفع الملف إليه",
-    "downloading": "يتم التحميل",
+    "couldnotloadfiles": "لا يمكن تحميل قائمة الملفات",
     "emptyfilelist": "لا يوجد ملفات للعرض",
-    "errorcapturingaudio": "خطأ في التقاط الصوت",
-    "errorcapturingimage": "خطأ في التقاط الصورة",
-    "errorcapturingvideo": "خطأ في التقاط الفيديو",
-    "errorreadingfile": "خطأ في قراءة الملف",
-    "file": "ملف",
-    "fileuploaded": "الملف الذي تم رفعه",
     "myfiles": "ملفاتي",
     "myprivatefiles": "ملفاتي الخاصة",
     "sitefiles": "ملفات الموقع",
     "success": "تم بنجاح",
-    "uploadafile": "إرفع ملف",
-    "uploadfiles": "إرفع ملفات",
-    "uploading": "تحميل",
-    "video": "فيديو"
+    "uploadfiles": "إرسل ملفات التغذية الراجعة"
 }

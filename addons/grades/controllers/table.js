@@ -21,34 +21,49 @@ angular.module('mm.addons.grades')
  * @ngdoc controller
  * @name mmaGradesTableCtrl
  */
-.controller('mmaGradesTableCtrl', function($scope, $stateParams, $mmUtil, $mmaGrades, $mmSite) {
+.controller('mmaGradesTableCtrl', function($scope, $stateParams, $mmUtil, $mmaGrades, $mmSite, $mmaGradesHelper, $state) {
 
     var course = $stateParams.course || {},
-        courseid = course.id,
-        userid = $stateParams.userid || $mmSite.getUserId();
+        courseId = course.id,
+        userId = $stateParams.userid || $mmSite.getUserId();
 
-    function fetchGrades(refresh) {
-        return $mmaGrades.getGradesTable(courseid, userid, refresh).then(function(table) {
-            $scope.gradesTable = table;
+    function fetchGrades() {
+        return $mmaGrades.getGradesTable(courseId, userId).then(function(table) {
+            table = $mmaGradesHelper.formatGradesTable(table);
+            return $mmaGradesHelper.translateGradesTable(table).then(function(table) {
+                $scope.gradesTable = table;
+            });
         }, function(message) {
             $mmUtil.showErrorModal(message);
             $scope.errormessage = message;
         });
     }
+
     fetchGrades().then(function() {
         // Add log in Moodle.
         $mmSite.write('gradereport_user_view_grade_report', {
-            courseid: courseid,
-            userid: userid
+            courseid: courseId,
+            userid: userId
         });
-    })
-    .finally(function() {
+    }).finally(function() {
         $scope.gradesLoaded = true;
     });
 
+    $scope.expandGradeInfo = function(gradeid) {
+        if (gradeid) {
+            $state.go('site.grade', {
+                courseid: courseId,
+                userid: userId,
+                gradeid: gradeid
+            });
+        }
+    };
+
     $scope.refreshGrades = function() {
-        fetchGrades(true).finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
+        $mmaGrades.invalidateGradesTableData(courseId, userId).finally(function() {
+            fetchGrades().finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
         });
     };
 });

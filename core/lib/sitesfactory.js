@@ -404,6 +404,7 @@ angular.module('mm.core')
          *                                        flag the cache entry, it doesn't affect the data retrieved in this call.
          *                    - getCacheUsingCacheKey (boolean) True if it should retrieve cached data by cacheKey,
          *                                        false if it should get the data based on the params passed (usual behavior).
+         *                    - filter boolean (true) True to filter WS response (moodlewssettingfilter), false otherwise.
          * @param {Boolean} retrying True if we're retrying the call for some reason. This is to prevent infinite loops.
          * @return {Promise}
          * @description
@@ -442,8 +443,8 @@ angular.module('mm.core')
             preSets.wstoken = site.token;
             preSets.siteurl = site.siteurl;
 
-            // Enable text filtering.
-            data.moodlewssettingfilter = true;
+            // Enable text filtering by default.
+            data.moodlewssettingfilter = preSets.filter === false ? false : true;
 
             return getFromCache(site, method, data, preSets).catch(function() {
                 // Do not pass those options to the core WS factory.
@@ -542,6 +543,15 @@ angular.module('mm.core')
          * @return {Promise}
          */
         Site.prototype.uploadFile = function(uri, options) {
+            if (!options.fileArea) {
+                if (parseInt(this.infos.version, 10) >= 2016052300) {
+                    // From Moodle 3.1 only draft is allowed.
+                    options.fileArea = 'draft';
+                } else {
+                    options.fileArea = 'private';
+                }
+            }
+
             return $mmWS.uploadFile(uri, options, {
                 siteurl: this.siteurl,
                 token: this.token
@@ -733,17 +743,28 @@ angular.module('mm.core')
         };
 
         /**
-         * Check if local_mobile has been installed in Moodle but the app is not using it.
+         * Check if local_mobile has been installed in Moodle.
          *
-         * @return {Promise} Promise resolved it local_mobile was added, rejected otherwise.
+         * @return {Boolean} If App is able to use local_mobile plugin.
          */
-        Site.prototype.checkIfLocalMobileInstalledAndNotUsed = function() {
+        Site.prototype.checkIfAppUsesLocalMobile = function() {
             var appUsesLocalMobile = false;
             angular.forEach(this.infos.functions, function(func) {
                 if (func.name.indexOf(mmCoreWSPrefix) != -1) {
                     appUsesLocalMobile = true;
                 }
             });
+
+            return appUsesLocalMobile;
+        };
+
+        /**
+         * Check if local_mobile has been installed in Moodle but the app is not using it.
+         *
+         * @return {Promise} Promise resolved it local_mobile was added, rejected otherwise.
+         */
+        Site.prototype.checkIfLocalMobileInstalledAndNotUsed = function() {
+            var appUsesLocalMobile = this.checkIfAppUsesLocalMobile();
 
             if (appUsesLocalMobile) {
                 // App already uses local_mobile, it wasn't added.

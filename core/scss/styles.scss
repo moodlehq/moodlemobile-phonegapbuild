@@ -47,6 +47,12 @@ $mm-timer-warn-color:     #f00 !default;
 $mm-timer-color:          #fff !default;
 $mm-timer-iterations:     15 !default;
 
+// Text with icon.
+$mm-text-with-icon-height: 22px !default;
+
+// Smaller button icon.
+$mm-button-icon-small-height: 22px !default;
+
 /**
  * Styles revert.
  */
@@ -108,6 +114,7 @@ em {
   }
   &.item-button-right {
     > .button,
+    > .buttons,
     > .spinner {
       top: $item-padding;
     }
@@ -175,6 +182,25 @@ em {
   color: $item-disabled-color;
 }
 
+.user-with-avatar {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 4px;
+  padding-left: 56px;
+  min-height: 48px;
+}
+.user-with-avatar > img:first-child {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    max-width: 40px;
+    max-height: 40px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
 // Split pane.
 .mm-split-pane {
   @include display-flex();
@@ -230,6 +256,19 @@ em {
     line-height: $item-button-line-height;
   }
 }
+
+// Buttons.
+.item-button-right,
+a.item.item-button-right,
+button.item.item-button-right {
+  &.item-2-button-right {
+    padding-right: $item-padding * 7;
+  }
+  &.item-3-button-right {
+    padding-right: $item-padding * 10;
+  }
+}
+
 /**
  * Core directives.
  */
@@ -249,6 +288,19 @@ em {
   width: 100%;
 }
 
+// Fix lists styles in mm-format-text.
+mm-format-text, *[mm-format-text] {
+  ul, ol {
+    -webkit-padding-start: 40px;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+}
+
 .mm-loading-container {
     width: 100%;
     text-align: center;
@@ -257,6 +309,10 @@ em {
 
 .mm-loading-content {
   height: 100%;
+}
+
+mm-loading.mm-loading-noheight .mm-loading-content {
+  height: auto;
 }
 
 // Align ion-spinner right
@@ -375,10 +431,11 @@ p.mm-warning {
 }
 
 .badge.badge-inline {
-  display: inline;
+  display: inline-block;
   position: relative;
   top: initial;
   right: initial;
+  white-space: normal;
 }
 
 // Timer.
@@ -405,6 +462,74 @@ mm-timer {
   font-family: Andale Mono,Monaco,Courier New,DejaVu Sans Mono,monospace;
 }
 
+// Context Menu
+
+.popover.mm-context-menu {
+  width: 320px;
+}
+
+// Inline icons and inputs.
+
+.mm-text-with-icon-right {
+  line-height: $mm-text-with-icon-height;
+  .icon {
+    font-size: $mm-text-with-icon-height;
+    padding: 0 5px;
+    color: $positive;
+  }
+}
+
+.mm-full-width {
+  width: 100%;
+}
+
+.item-input-inset.mm-input-inset-no-padding {
+  padding: 0;
+}
+
+.button.mm-button-icon-small {
+  padding: 0 3px;
+  min-height: $mm-button-icon-small-height;
+
+  .icon:before {
+    font-size: $mm-button-icon-small-height;
+  }
+}
+
+.item-input-wrapper ~ .button.mm-button-icon-small {
+  margin-left: 5px;
+}
+
+// This is to allow clicks in links inside buttons.
+.mm-button-with-inner-link, .button.mm-button-with-inner-link {
+  &:after {
+    display: none;
+  }
+}
+
+// Squared checkboxes.
+.checkbox input:before, .checkbox-icon:before {
+  border-radius: 0;
+}
+
+.item-title {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 5px;
+
+  input {
+    font-size: 20px;
+    line-height: 22px;
+    width: 100%;
+  }
+}
+
+.item-noborder {
+  border: 0;
+  padding: 0;
+}
+
 /**
  * This CSS uses adjacent selectors instead of general sibling (~) selectors
  * for ion radio that are broken in iOS 9 UIWebView.
@@ -420,3 +545,155 @@ mm-timer {
     /* show the checkmark icon when its checked */
     visibility: visible;
   }
+
+/** Hide PTR when slowly released */
+.scroll-refresher .ionic-refresher-content.ionic-refresher-with-text {
+  bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hidden-phone {
+    display: none !important;
+  }
+}
+/**
+ * RichTextEditor.
+ */
+
+.mm-textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+}
+
+.item.mm-item-has-rich-text-editor {
+  padding: 0;
+  display: block;
+
+  .input-label, .mm-textarea {
+    padding-left: $item-padding;
+  }
+}
+
+.mm-rich-text-editor-container {
+
+  .cke.cke_chrome {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .cke_bottom.cke_expanded {
+    height: auto;
+  }
+
+  .cke_bottom .cke_path {
+    display: none;
+    float: none;
+    margin: 0;
+  }
+
+  .cke_bottom.cke_expanded .cke_path {
+    display: block;
+  }
+
+  textarea.cke_source {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+
+.mm-rich-text-editor-container,
+.cke_inner.cke_maximized {
+
+  .cke_bottom {
+    padding: 0;
+    border-color: #ddd;
+    box-shadow: none;
+    background: #F2F2F2;
+    height: 30px;
+  }
+
+  .cke_button:first-child, .cke_button:last-child {
+    border-radius: 0;
+  }
+
+  .cke_button,
+  a.cke_combo_button,
+  .cke_toolbox_collapser {
+    background: white;
+    background-image: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    padding: 5px 8px;
+    border-radius: 0;
+    border: 0;
+    margin: 1px;
+  }
+
+  a.cke_combo_button {
+    min-height: 26px;
+    padding: 1px;
+  }
+
+  .cke_button:hover,
+  a.cke_combo_button:hover,
+  .cke_combo_off a.cke_combo_button:hover,
+  .cke_toolbox_collapser:hover {
+    background-image: radial-gradient(ellipse at center, #ffffff 60%,#dfdfdf 100%);
+    background-color: #ebebeb;
+  }
+
+  .cke_button:active,
+  a.cke_combo_button:active,
+  .cke_toolbox_collapser:active {
+    background-image: radial-gradient(ellipse at center, #ffffff 50%, #dfdfdf 100%);
+    background-color: #ebebeb;
+    border: 0;
+  }
+
+  .cke_toolgroup {
+    margin: 0;
+    border: 0;
+    background: none;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .cke_toolbar_separator,
+  .cke_toolbar_break {
+    clear: none;
+    display: none;
+  }
+
+  .cke_toolbox_collapser {
+    padding-top: 9px;
+    padding-bottom: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .cke_toolbox_main {
+    margin-right: 30px;
+    float: left;
+    display: block !important;
+  }
+
+  .cke_button__source_label {
+    display: none;
+  }
+}
+
+.cke_inner.cke_maximized {
+  .cke_bottom {
+    height: auto;
+  }
+
+  .cke_toolbox_collapser {
+    display: none;
+  }
+
+  .cke_toolbox_main {
+    margin: 0;
+  }
+}

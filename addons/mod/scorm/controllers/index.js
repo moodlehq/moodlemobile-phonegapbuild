@@ -24,7 +24,7 @@ angular.module('mm.addons.mod_scorm')
 .controller('mmaModScormIndexCtrl', function($scope, $stateParams, $mmaModScorm, $mmUtil, $q, $mmCourse, $ionicScrollDelegate,
             $mmCoursePrefetchDelegate, $mmaModScormHelper, $mmEvents, $mmSite, $state, mmCoreOutdated, mmCoreNotDownloaded,
             mmCoreDownloading, mmaModScormComponent, mmCoreEventPackageStatusChanged, $ionicHistory, mmaModScormEventAutomSynced,
-            $mmaModScormSync, $timeout, $mmText) {
+            $mmaModScormSync, $timeout, $mmText, $translate) {
 
     var module = $stateParams.module || {},
         courseid = $stateParams.courseid,
@@ -43,6 +43,7 @@ angular.module('mm.addons.mod_scorm')
     $scope.scormOptions = {
         mode: $mmaModScorm.MODENORMAL
     };
+    $scope.refreshIcon = 'spinner';
 
     $scope.modenormal = $mmaModScorm.MODENORMAL;
     $scope.modebrowse = $mmaModScorm.MODEBROWSE;
@@ -359,6 +360,7 @@ angular.module('mm.addons.mod_scorm')
         });
     }).finally(function() {
         $scope.scormLoaded = true;
+        $scope.refreshIcon = 'ion-refresh';
     });
 
     // Load a organization's TOC.
@@ -369,9 +371,13 @@ angular.module('mm.addons.mod_scorm')
     };
 
     $scope.refreshScorm = function() {
-        refreshData().finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
-        });
+        if ($scope.scormLoaded) {
+            $scope.refreshIcon = 'spinner';
+            refreshData().finally(function() {
+                $scope.refreshIcon = 'ion-refresh';
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        }
     };
 
     // Open a SCORM. It will download the SCORM package if it's not downloaded or it has changed.
@@ -414,13 +420,20 @@ angular.module('mm.addons.mod_scorm')
         syncScorm(false, true).then(function() {
             // Refresh the data.
             $scope.scormLoaded = false;
+            $scope.refreshIcon = 'spinner';
             scrollView.scrollTop();
             refreshData(true, true).finally(function() {
                 $scope.scormLoaded = true;
+                $scope.refreshIcon = 'ion-refresh';
             });
         }).finally(function() {
             modal.dismiss();
         });
+    };
+
+    // Context Menu Description action.
+    $scope.expandDescription = function() {
+        $mmText.expandText($translate.instant('mm.core.description'), $scope.description);
     };
 
     // Update data when we come back from the player since it's probable that it has changed.
@@ -437,11 +450,13 @@ angular.module('mm.addons.mod_scorm')
         var forwardView = $ionicHistory.forwardView();
         if (forwardView && forwardView.stateName === 'site.mod_scorm-player') {
             $scope.scormLoaded = false;
+            $scope.refreshIcon = 'spinner';
             scrollView.scrollTop();
             // Add a delay to make sure the player has started the last writing calls so we can detect conflicts.
             $timeout(function() {
                 refreshData(false, true).finally(function() {
                     $scope.scormLoaded = true;
+                    $scope.refreshIcon = 'ion-refresh';
                 });
             }, 500);
         }
@@ -451,9 +466,11 @@ angular.module('mm.addons.mod_scorm')
     var syncObserver = $mmEvents.on(mmaModScormEventAutomSynced, function(data) {
         if (data && data.siteid == $mmSite.getId() && data.scormid == scorm.id) {
             $scope.scormLoaded = false;
+            $scope.refreshIcon = 'spinner';
             scrollView.scrollTop();
             fetchScormData(false, true).finally(function() {
                 $scope.scormLoaded = true;
+                $scope.refreshIcon = 'ion-refresh';
             });
         }
     });

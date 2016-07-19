@@ -16,6 +16,18 @@ angular.module('mm.addons.mod_assign', ['mm.core'])
 
 .constant('mmaModAssignComponent', 'mmaModAssign')
 .constant('mmaModAssignSubmissionComponent', 'mmaModAssignSubmission')
+.constant('mmaModAssignSubmissionStatusNew', 'new')
+.constant('mmaModAssignSubmissionStatusReopened', 'reopened')
+.constant('mmaModAssignSubmissionStatusDraft', 'draft')
+.constant('mmaModAssignSubmissionStatusSubmitted', 'submitted')
+.constant('mmaModAssignAttemptReopenMethodNone', 'none')
+.constant('mmaModAssignUnlimitedAttempts', -1)
+.constant('mmaModAssignGradingStatusGraded', 'graded')
+.constant('mmaModAssignGradingStatusNotGraded', 'notgraded')
+.constant('mmaModMarkingWorkflowStateReleased', 'released')
+.constant('mmaModAssignSubmissionInvalidatedEvent', 'mma_mod_assign_submission_invalidated')
+.constant('mmaModAssignSubmissionSavedEvent', 'mma_mod_assign_submission_saved')
+.constant('mmaModAssignSubmittedForGradingEvent', 'mma_mod_assign_submitted_for_grading')
 
 .config(function($stateProvider) {
 
@@ -35,22 +47,74 @@ angular.module('mm.addons.mod_assign', ['mm.core'])
         }
     })
 
-    .state('site.mod_assign-submission', {
-        url: '/mod_assign-submission',
+    .state('site.mod_assign-description', {
+        url: '/mod_assign-description',
         params: {
-            submission: null
+            assignid: null,
+            description: null,
+            files: null
+
         },
         views: {
             'site': {
-                controller: 'mmaModAssignSubmissionCtrl',
-                templateUrl: 'addons/mod/assign/templates/submission.html'
+                controller: 'mmaModAssignDescriptionCtrl',
+                templateUrl: 'addons/mod/assign/templates/description.html'
+            }
+        }
+    })
+
+    .state('site.mod_assign-submission-list', {
+        url: '/mod_assign-submission-list',
+        params: {
+            moduleid: null,
+            modulename: null,
+            sid: null,
+            courseid: null
+        },
+        views: {
+            'site': {
+                controller: 'mmaModAssignSubmissionListCtrl',
+                templateUrl: 'addons/mod/assign/templates/submissionlist.html'
+            }
+        }
+    })
+
+    .state('site.mod_assign-submission', {
+        url: '/mod_assign-submission',
+        params: {
+            submitid: null,
+            blindid: null,
+            moduleid: null,
+            courseid: null
+        },
+        views: {
+            'site': {
+                controller: 'mmaModAssignSubmissionReviewCtrl',
+                templateUrl: 'addons/mod/assign/templates/submissionreview.html'
+            }
+        }
+    })
+
+    .state('site.mod_assign-submission-edit', {
+        url: '/mod_assign-submission-edit',
+        params: {
+            moduleid: null,
+            courseid: null,
+            userid: null,
+            blindid: null
+        },
+        views: {
+            'site': {
+                controller: 'mmaModAssignEditCtrl',
+                templateUrl: 'addons/mod/assign/templates/edit.html'
             }
         }
     });
 
 })
 
-.config(function($mmCourseDelegateProvider, $mmContentLinksDelegateProvider) {
+.config(function($mmCourseDelegateProvider, $mmContentLinksDelegateProvider, $mmCoursePrefetchDelegateProvider) {
     $mmCourseDelegateProvider.registerContentHandler('mmaModAssign', 'assign', '$mmaModAssignHandlers.courseContent');
     $mmContentLinksDelegateProvider.registerLinkHandler('mmaModAssign', '$mmaModAssignHandlers.linksHandler');
+    $mmCoursePrefetchDelegateProvider.registerPrefetchHandler('mmaModAssign', 'assign', '$mmaModAssignPrefetchHandler');
 });

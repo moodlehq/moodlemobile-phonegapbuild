@@ -95,12 +95,33 @@ angular.module('mm.addons.mod_quiz')
     };
 
     /**
+     * Invalidates WS calls needed to determine module status.
+     *
+     * @module mm.addons.mod_quiz
+     * @ngdoc method
+     * @name $mmaModQuizPrefetchHandler#invalidateModule
+     * @param  {Object} module   Module to invalidate.
+     * @param  {Number} courseId Course ID the module belongs to.
+     * @return {Promise}         Promise resolved when done.
+     */
+    self.invalidateModule = function(module, courseId) {
+        return $mmaModQuiz.getQuizIdFromModule(module, courseId).then(function(quizId) {
+            var promises = [];
+
+            promises.push($mmaModQuiz.invalidateQuizData(courseId));
+            promises.push($mmaModQuiz.invalidateUserAttemptsForUser(quizId));
+
+            return $q.all(promises);
+        });
+    };
+
+    /**
      * Check if a quiz is downloadable.
      *
      * @module mm.addons.mod_quiz
      * @ngdoc method
      * @name $mmaModQuizPrefetchHandler#isDownloadable
-     * @param {Object} module    Module to get the timemodified.
+     * @param {Object} module    Module to check.
      * @param {Number} courseId  Course ID the module belongs to.
      * @return {Promise}         Promise resolved with true if downloadable, resolved with false otherwise.
      */

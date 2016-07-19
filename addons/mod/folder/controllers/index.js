@@ -21,22 +21,24 @@ angular.module('mm.addons.mod_folder')
  * @ngdoc controller
  * @name mmaModFolderIndexCtrl
  */
-.controller('mmaModFolderIndexCtrl', function($scope, $stateParams, $mmaModFolder, $mmCourse, $mmUtil, $q) {
+.controller('mmaModFolderIndexCtrl', function($scope, $stateParams, $mmaModFolder, $mmCourse, $mmUtil, $q, $mmText, $translate) {
     var module = $stateParams.module || {},
         courseid = $stateParams.courseid,
         sectionid = $stateParams.sectionid,
         path = $stateParams.path;
 
+    $scope.description = module.description;
+    $scope.moduleUrl = module.url;
+    $scope.refreshIcon = 'spinner';
+
     // Convenience function to set scope data using module.
     function showModuleData(module) {
         $scope.title = module.name;
-        $scope.description = module.description;
         if (path) {
             // Subfolder.
             $scope.contents = module.contents;
         } else {
             $scope.contents = $mmaModFolder.formatContents(module.contents);
-            $scope.moduleurl = module.url;
         }
     }
 
@@ -64,6 +66,7 @@ angular.module('mm.addons.mod_folder')
         showModuleData(module);
         $scope.folderLoaded = true;
         $scope.canReload = false;
+        $scope.refreshIcon = 'ion-refresh';
     } else {
         fetchFolder().then(function() {
             $mmaModFolder.logView(module.instance).then(function() {
@@ -72,14 +75,24 @@ angular.module('mm.addons.mod_folder')
         }).finally(function() {
             $scope.folderLoaded = true;
             $scope.canReload = true;
+            $scope.refreshIcon = 'ion-refresh';
         });
     }
 
+    // Context Menu Description action.
+    $scope.expandDescription = function() {
+        $mmText.expandText($translate.instant('mm.core.description'), $scope.description);
+    };
+
     $scope.refreshFolder = function() {
-        $mmCourse.invalidateModule(module.id).finally(function() {
-            fetchFolder().finally(function() {
-                $scope.$broadcast('scroll.refreshComplete');
+        if ($scope.canReload) {
+            $scope.refreshIcon = 'spinner';
+            $mmCourse.invalidateModule(module.id).finally(function() {
+                fetchFolder().finally(function() {
+                    $scope.refreshIcon = 'ion-refresh';
+                    $scope.$broadcast('scroll.refreshComplete');
+                });
             });
-        });
+        }
     };
 });

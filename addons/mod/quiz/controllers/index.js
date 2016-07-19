@@ -46,6 +46,7 @@ angular.module('mm.addons.mod_quiz')
     $scope.moduleUrl = module.url;
     $scope.isTablet = $ionicPlatform.isTablet();
     $scope.courseId = courseId;
+    $scope.refreshIcon = 'spinner';
 
     // Convenience function to get Quiz data.
     function fetchQuizData(refresh) {
@@ -68,7 +69,7 @@ angular.module('mm.addons.mod_quiz')
         }).then(function() {
             if ($mmaModQuiz.isQuizOffline(quiz)) {
                 // Try to sync the quiz.
-                return syncQuiz(!refresh, false).catch(function() {
+                return syncQuiz(false).catch(function() {
                     // Ignore errors, keep getting data even if sync fails.
                     autoReview = undefined;
                 });
@@ -315,9 +316,8 @@ angular.module('mm.addons.mod_quiz')
     }
 
     // Tries to synchronize the current quiz.
-    function syncQuiz(checkTime, showErrors) {
-        var promise = checkTime ? $mmaModQuizSync.syncQuizIfNeeded(quiz, true) : $mmaModQuizSync.syncQuiz(quiz, true);
-        return promise.then(function(data) {
+    function syncQuiz(showErrors) {
+        return $mmaModQuizSync.syncQuiz(quiz, true).then(function(data) {
             if (data) {
                 var message = $mmText.buildMessage(data.warnings);
                 if (message) {
@@ -403,13 +403,18 @@ angular.module('mm.addons.mod_quiz')
         });
     }).finally(function() {
         $scope.quizLoaded = true;
+        $scope.refreshIcon = 'ion-refresh';
     });
 
     // Pull to refresh.
     $scope.refreshQuiz = function() {
-        refreshData().finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
-        });
+        if ($scope.quizLoaded) {
+            $scope.refreshIcon = 'spinner';
+            refreshData().finally(function() {
+                $scope.refreshIcon = 'ion-refresh';
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        }
     };
 
     // Synchronize the quiz.
@@ -420,12 +425,14 @@ angular.module('mm.addons.mod_quiz')
         }
 
         $scope.showSpinner = true;
-        syncQuiz(false, true).then(function() {
+        syncQuiz(true).then(function() {
             // Refresh the data.
             $scope.quizLoaded = false;
+            $scope.refreshIcon = 'spinner';
             scrollView.scrollTop();
             refreshData(true).finally(function() {
                 $scope.quizLoaded = true;
+                $scope.refreshIcon = 'ion-refresh';
             });
         }).finally(function() {
             $scope.showSpinner = false;
@@ -461,6 +468,12 @@ angular.module('mm.addons.mod_quiz')
         }
     };
 
+    // Context Menu Description action.
+    $scope.expandDescription = function() {
+        $mmText.expandText($translate.instant('mm.core.description'), $scope.description);
+    };
+
+
     // Update data when we come back from the player since the attempt status could have changed.
     // We want to skip the first $ionicView.enter event because it's when the view is created.
     var skip = true;
@@ -482,10 +495,12 @@ angular.module('mm.addons.mod_quiz')
 
             // Refresh data.
             $scope.quizLoaded = false;
+            $scope.refreshIcon = 'spinner';
             scrollView.scrollTop();
             promise.then(function() {
                 refreshData().finally(function() {
                     $scope.quizLoaded = true;
+                    $scope.refreshIcon = 'ion-refresh';
                 });
             });
         } else {
@@ -509,9 +524,11 @@ angular.module('mm.addons.mod_quiz')
     var syncObserver = $mmEvents.on(mmaModQuizEventAutomSynced, function(data) {
         if (data && data.siteid == $mmSite.getId() && data.quizid == quiz.id) {
             $scope.quizLoaded = false;
+            $scope.refreshIcon = 'spinner';
             scrollView.scrollTop();
             fetchQuizData().finally(function() {
                 $scope.quizLoaded = true;
+                $scope.refreshIcon = 'ion-refresh';
             });
 
             if (data.attemptFinished) {

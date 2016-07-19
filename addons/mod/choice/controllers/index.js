@@ -22,7 +22,7 @@ angular.module('mm.addons.mod_choice')
  * @name mmaModChoiceIndexCtrl
  * @todo Delete answer if user can update the answer, show selected if choice is closed (WS returns empty options).
  */
-.controller('mmaModChoiceIndexCtrl', function($scope, $stateParams, $mmaModChoice, $mmUtil, $q, $mmCourse, $translate) {
+.controller('mmaModChoiceIndexCtrl', function($scope, $stateParams, $mmaModChoice, $mmUtil, $q, $mmCourse, $translate, $mmText) {
     var module = $stateParams.module || {},
         courseid = $stateParams.courseid,
         choice,
@@ -30,8 +30,9 @@ angular.module('mm.addons.mod_choice')
 
     $scope.title = module.name;
     $scope.description = module.description;
-    $scope.moduleurl = module.url;
+    $scope.moduleUrl = module.url;
     $scope.courseid = courseid;
+    $scope.refreshIcon = 'spinner';
 
     // Convenience function to get choice data.
     function fetchChoiceData(refresh) {
@@ -128,6 +129,7 @@ angular.module('mm.addons.mod_choice')
         });
     }).finally(function() {
         $scope.choiceLoaded = true;
+        $scope.refreshIcon = 'ion-refresh';
     });
 
     // Save options selected.
@@ -184,10 +186,19 @@ angular.module('mm.addons.mod_choice')
         });
     };
 
+    // Context Menu Description action.
+    $scope.expandDescription = function() {
+        $mmText.expandText($translate.instant('mm.core.description'), $scope.description);
+    };
+
     // Pull to refresh.
     $scope.refreshChoice = function() {
-        refreshAllData().finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
-        });
+        if ($scope.choiceLoaded) {
+            $scope.refreshIcon = 'spinner';
+            refreshAllData().finally(function() {
+                $scope.refreshIcon = 'ion-refresh';
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        }
     };
 });
