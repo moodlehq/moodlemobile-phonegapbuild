@@ -8608,6 +8608,17 @@ p.mma-mod-assign-warning {
   margin: 0;
   width: auto; }
 
+.mma-forum-discussion-link {
+  text-decoration: none; }
+
+.mma-forum-align-right {
+  justify-content: flex-end; }
+
+.mma-forum-border {
+  border-color: #ddd;
+  border-width: 1px;
+  border-style: solid; }
+
 .mma-chat-notice {
   text-align: center;
   margin-top: 10px; }
@@ -8647,17 +8658,6 @@ p.mma-mod-assign-warning {
 .mma-mod_choice-graph-horizontal {
   height: 50px; }
 
-.mma-forum-discussion-link {
-  text-decoration: none; }
-
-.mma-forum-align-right {
-  justify-content: flex-end; }
-
-.mma-forum-border {
-  border-color: #ddd;
-  border-width: 1px;
-  border-style: solid; }
-
 p.mma-mod-quiz-warning {
   color: #c00; }
 
@@ -8696,6 +8696,24 @@ p.mma-mod-quiz-warning {
   border: 3px solid #666; }
   .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-android .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-ios .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .mma-mod-quiz-table .item.row.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page) {
     border-bottom: 0; }
+
+.mma-mod_survey-darkbg {
+  background-color: #f5f5f5; }
+
+.mma-mod_survey-padding-top {
+  padding-top: 20px; }
+
+textarea.mma-mod_survey-textarea {
+  height: 100px;
+  border: 1px solid #ddd; }
+
+select.mma-mod_survey-select {
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: 32px;
+  max-width: 100%; }
+  select.mma-mod_survey-select .mma-mod_survey-defaultoption {
+    display: none; }
 
 .mma-scorm-level-0 {
   padding-left: 16px; }
@@ -8774,24 +8792,6 @@ ion-popover-view {
   padding-top: 10px;
   padding-bottom: 10px; }
 
-.mma-mod_survey-darkbg {
-  background-color: #f5f5f5; }
-
-.mma-mod_survey-padding-top {
-  padding-top: 20px; }
-
-textarea.mma-mod_survey-textarea {
-  height: 100px;
-  border: 1px solid #ddd; }
-
-select.mma-mod_survey-select {
-  background-color: transparent;
-  padding-left: 0px;
-  padding-right: 32px;
-  max-width: 100%; }
-  select.mma-mod_survey-select .mma-mod_survey-defaultoption {
-    display: none; }
-
 .wiki-toc {
   border: 1px solid #bbb;
   background: #eee;
@@ -8830,25 +8830,6 @@ select.mma-mod_survey-select {
 
 .mma-mod_wiki-subwiki-picker .item.item-selected .icon {
   font-size: 24px; }
-
-.qbehaviour_deferredcbm_actual_percentage {
-  font-weight: bold; }
-
-.qbehaviour_deferredcbm_judgementok {
-  font-weight: bold;
-  color: #080; }
-
-.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
-  font-weight: bold;
-  color: #600; }
-
-.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
-  font-weight: bold;
-  color: #c00; }
-
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
-  font-weight: bold;
-  font-size: 16px; }
 
 .mma-qtype-ddimageortext-container mm-loading {
   position: absolute;
@@ -9098,6 +9079,25 @@ select.mma-mod_survey-select {
 .mma-qtype-multianswer-container input[type="radio"], .mma-qtype-multianswer-container input[type="checkbox"] {
   margin-top: -4px;
   margin-right: 7px; }
+
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold; }
+
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: #080; }
+
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: #600; }
+
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: #c00; }
+
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+  font-weight: bold;
+  font-size: 16px; }
 
 .button.active, .button.activated {
   box-shadow: none;

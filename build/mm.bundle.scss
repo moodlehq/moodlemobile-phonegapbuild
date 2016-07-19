@@ -1270,6 +1270,20 @@ p.mma-mod-assign-warning {
   }
 }
 
+
+.mma-forum-discussion-link {
+    text-decoration: none;
+}
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
 $mma-chat-notice-badge: "stable" !default;
 
 // The notice displayed in the list.
@@ -1324,20 +1338,6 @@ $mma-chat-notice-badge: "stable" !default;
 
 .mma-mod_choice-graph-horizontal {
   height: 50px;
-}
-
-.mma-forum-discussion-link {
-    text-decoration: none;
-}
-
-.mma-forum-align-right {
-    justify-content: flex-end;
-}
-
-.mma-forum-border {
-    border-color: $item-default-border;
-    border-width: $item-border-width;
-    border-style: solid;
 }
 
 $mma-mod-quiz-warning-color:      #c00 !default;
@@ -1413,6 +1413,30 @@ p.mma-mod-quiz-warning {
   }
 }
 
+.mma-mod_survey-darkbg {
+  background-color: $item-divider-bg;
+}
+
+.mma-mod_survey-padding-top {
+  padding-top: 20px;
+}
+
+textarea.mma-mod_survey-textarea {
+  height: 100px;
+  border:1px solid $item-default-border;
+}
+
+select.mma-mod_survey-select {
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: $item-padding * 2;
+  max-width: 100%;
+
+  .mma-mod_survey-defaultoption {
+    display: none;
+  }
+}
+
 
 $mma-mod-scorm-level-margin:		25px !default;
 $mma-mod-scorm-warning-color:		#c00 !default;
@@ -1460,30 +1484,6 @@ ion-popover-view {
 .platform-ios ion-popover-view.mma-scorm-popover {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.mma-mod_survey-darkbg {
-  background-color: $item-divider-bg;
-}
-
-.mma-mod_survey-padding-top {
-  padding-top: 20px;
-}
-
-textarea.mma-mod_survey-textarea {
-  height: 100px;
-  border:1px solid $item-default-border;
-}
-
-select.mma-mod_survey-select {
-  background-color: transparent;
-  padding-left: 0px;
-  padding-right: $item-padding * 2;
-  max-width: 100%;
-
-  .mma-mod_survey-defaultoption {
-    display: none;
-  }
 }
 
 $mma-mod-wiki-toc-level-padding:    12px !default;
@@ -1540,32 +1540,6 @@ $mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
 
 .mma-mod_wiki-subwiki-picker .item.item-selected .icon {
   font-size: 24px;
-}
-
-
-$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
-$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
-$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
-
-.qbehaviour_deferredcbm_actual_percentage {
-  font-weight: bold;
-}
-.qbehaviour_deferredcbm_judgementok {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-judgementok-color;
-}
-.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-slightly-color;
-}
-.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-confident-color;
-}
-
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
-	font-weight: bold;
-	font-size: 16px;
 }
 
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
@@ -1956,3 +1930,29 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 }
 
+
+
+$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
+$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
+$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
+
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold;
+}
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-judgementok-color;
+}
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-slightly-color;
+}
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-confident-color;
+}
+
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+	font-weight: bold;
+	font-size: 16px;
+}
