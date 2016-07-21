@@ -51,6 +51,7 @@
     "mm.core.erroropenpopup": "This activity is trying to open a popup. This is not supported in this app.",
     "mm.core.errorrenamefile": "Error renaming the file. Please try again.",
     "mm.core.filename": "Filename",
+    "mm.core.filenameexist": "File name already exists: {{$a}}",
     "mm.core.folder": "Folder",
     "mm.core.fullnameandsitename": "{{fullname}} ({{sitename}})",
     "mm.core.help": "Help",
