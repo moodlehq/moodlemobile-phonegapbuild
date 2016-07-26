@@ -638,6 +638,7 @@
     "mma.mod_quiz.confirmstart": "هذا الاختبار محدد بوقت {{$a}}. سوف يبدأ العد التنازلي للوقت من لحظة البدأ في المحاولة والتي يجب أن ترسل قبل انتهاء الوقت المحدد لها. هل أنت متأكد أنك تريد بدأ الاختبارالآن؟",
     "mma.mod_quiz.confirmstartheader": "اختبار مؤقت",
     "mma.mod_quiz.continueattemptquiz": "إستمر في آخر محاولة",
+    "mma.mod_quiz.continuepreview": "استمر اخر معاينة",
     "mma.mod_quiz.errordownloading": "خطأ عن تنزيل البيانات المطلوبة",
     "mma.mod_quiz.errorgetquiz": "خطأ عند الحصول على بيانات الاختبار",
     "mma.mod_quiz.feedback": "تعليق",

@@ -553,6 +553,7 @@
     "mma.mod_quiz.confirmclose": "Når du har afleveret, kan du ikke længere ændre dine svar i dette forsøg.",
     "mma.mod_quiz.connectionerror": "Har mistet forbindelse til netværket. (Autosave slog fejl).\n\nNoter alle svar, der er skrevet på denne side i løbet af de sidste par minutter, og prøv så at genoprette forbindelsen.\n\nNår forbindelsen er genoprettet, skulle dine svar være gemt, og denne besked forsvinder.",
     "mma.mod_quiz.continueattemptquiz": "Fortsæt fra sidste forsøg",
+    "mma.mod_quiz.continuepreview": "Fortsæt sidste gennemsyn",
     "mma.mod_quiz.feedback": "Tilbagemelding",
     "mma.mod_quiz.finishattemptdots": "Afslut quizzen...",
     "mma.mod_quiz.grade": "Karakter",

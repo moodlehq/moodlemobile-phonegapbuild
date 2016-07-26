@@ -8105,6 +8105,9 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 .mm-monospaced {
   font-family: Andale Mono,Monaco,Courier New,DejaVu Sans Mono,monospace; }
 
+.mm-bold {
+  font-weight: bold; }
+
 .popover.mm-context-menu {
   width: 320px; }
 
@@ -8132,6 +8135,9 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 
 .mm-button-with-inner-link:after, .button.mm-button-with-inner-link:after {
   display: none; }
+
+mm-format-text audio, mm-format-text video, mm-format-text a, mm-format-text iframe {
+  pointer-events: auto; }
 
 .checkbox input:before, .checkbox-icon:before {
   border-radius: 0; }

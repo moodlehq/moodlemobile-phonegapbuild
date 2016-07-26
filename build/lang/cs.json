@@ -904,6 +904,7 @@
     "mma.mod_quiz.confirmstartheader": "Test s limitem",
     "mma.mod_quiz.connectionerror": "Ztráta připojení k síti, automatické ukládání selhalo.\n\nPoznamenejte si odpovědi na této stránce a pokuste se znovu připojit.\n\nPokud se spojení samo obnoví, vaše odpovědi budou uloženy a tato zpráva zmizí.",
     "mma.mod_quiz.continueattemptquiz": "Pokračovat v posledním pokusu",
+    "mma.mod_quiz.continuepreview": "Pokračovat v poslední prohlídce",
     "mma.mod_quiz.errorbehaviournotsupported": "Tento test nelze v aplikaci spustit, protože chování není aplikací podporováno:",
     "mma.mod_quiz.errordownloading": "Chyba při stahování požadovaných dat.",
     "mma.mod_quiz.errorgetattempt": "Chyba při získávání dat pokusu.",

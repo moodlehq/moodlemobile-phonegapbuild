@@ -800,6 +800,7 @@
     "mma.mod_quiz.confirmclose": "Behin saiakera itxitakoan ezingo duzu bertako erantzunetan aldaketarik egin.",
     "mma.mod_quiz.connectionerror": "Galdu egin da sarearen konexioa (Ez du berez gordeko)\n\nGorde idatziz azken minutuetan orri honetan egin dituzun erantzunak eta ondoren saiatu berriz konektatzen.\n\nKonexioa berriz ezartzen denean, zure erantzunak gordetzeko modua izango da eta mezu hau desagertu egingo da.",
     "mma.mod_quiz.continueattemptquiz": "Jarraitu azken saiakerarekin",
+    "mma.mod_quiz.continuepreview": "Jarraitu aurreko aurrebistarekin",
     "mma.mod_quiz.feedback": "Feedbacka",
     "mma.mod_quiz.finishattemptdots": "Amaitu saiakera...",
     "mma.mod_quiz.grade": "Nota",

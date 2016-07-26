@@ -761,6 +761,7 @@
     "mma.mod_quiz.confirmclose": "אתה עומד להגיש באופן סופי את ניסיון מענה זה. מרגע שהגשת וסיימת את ניסיון המענה לא תוכל לשנות את תשובותיך.",
     "mma.mod_quiz.confirmstartheader": "בוחן מתוזמן",
     "mma.mod_quiz.continueattemptquiz": "המשך נסיון המענה האחרון שלך",
+    "mma.mod_quiz.continuepreview": "המשך בצפיה המוקדמת האחרונה",
     "mma.mod_quiz.feedback": "משוב",
     "mma.mod_quiz.finishattemptdots": "סיום נסיון מענה...",
     "mma.mod_quiz.grade": "ציון",
