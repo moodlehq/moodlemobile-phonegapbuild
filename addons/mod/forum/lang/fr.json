@@ -1,0 +1,21 @@
+{
+    "addanewdiscussion": "Ajouter une discussion",
+    "cannotadddiscussion": "Pour créer une discussion dans ce forum, vous devez être membre d'un groupe.",
+    "cannotadddiscussionall": "Vous n'avez pas les droits d'accès requis pour lancer une nouvelle discussion pour tous les participants.",
+    "cannotcreatediscussion": "Impossible de créer une nouvelle discussion",
+    "couldnotadd": "Impossible d'ajouter votre message à cause d'une erreur indéterminée",
+    "discussionsubscription": "Abonnement à la discussion",
+    "erroremptymessage": "Un message ne peut pas être vide",
+    "erroremptysubject": "L'objet d'un message ne peut pas être vide",
+    "errorgetforum": "Erreur de récupération des données de forum.",
+    "errorgetgroups": "Erreur lors de l'obtention des réglages de groupe.",
+    "forumnodiscussionsyet": "Il n'y a pas encore de message dans ce forum",
+    "group": "Groupe",
+    "message": "Message",
+    "numdiscussions": "{{numdiscussions}} discussions",
+    "numreplies": "{{numreplies}} réponses",
+    "posttoforum": "Envoyer",
+    "re": "Re:",
+    "reply": "Répondre",
+    "subject": "Sujet"
+}

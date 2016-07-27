@@ -23,9 +23,40 @@ angular.module('mm.addons.notes')
  * @ngdoc service
  * @name $mmaNotesHandlers
  */
-.factory('$mmaNotesHandlers', function($mmaNotes, $mmSite, $mmApp, $ionicModal, $mmUtil, mmCoursesAccessMethods) {
+.factory('$mmaNotesHandlers', function($mmaNotes, $mmSite, $mmApp, $ionicModal, $mmUtil, $q, mmCoursesAccessMethods) {
 
-    var self = {};
+    // We use "caches" to decrease network usage.
+    var self = {},
+        addNoteEnabledCache = {},
+        coursesNavEnabledCache = {};
+
+    /**
+     * Clear add note cache.
+     * If a courseId is specified, it will only delete the entry for that course.
+     *
+     * @module mm.addons.notes
+     * @ngdoc method
+     * @name $mmaNotesHandlers#clearAddNoteCache
+     * @param  {Number} [courseId] Course ID.
+     */
+    self.clearAddNoteCache = function(courseId) {
+        if (courseId) {
+            delete addNoteEnabledCache[courseId];
+        } else {
+            addNoteEnabledCache = {};
+        }
+    };
+
+    /**
+     * Clear courses nav cache.
+     *
+     * @module mm.addons.notes
+     * @ngdoc method
+     * @name $mmaNotesHandlers#clearCoursesNavCache
+     */
+    self.clearCoursesNavCache = function() {
+        coursesNavEnabledCache = {};
+    };
 
     /**
      * Add a note handler.
@@ -52,17 +83,26 @@ angular.module('mm.addons.notes')
          *
          * @param {Object} user     User to check.
          * @param {Number} courseId Course ID.
-         * @return {Boolean}        True if handler is enabled, false otherwise.
+         * @return {Promise}        Promise resolved with true if enabled, resolved with false otherwise.
          */
         self.isEnabledForUser = function(user, courseId) {
             // Active course required.
-            return courseId && user.id != $mmSite.getUserId();
+            if (!courseId || user.id == $mmSite.getUserId()) {
+                return $q.when(false);
+            }
+            if (typeof addNoteEnabledCache[courseId] != 'undefined') {
+                return addNoteEnabledCache[courseId];
+            }
+            return $mmaNotes.isPluginAddNoteEnabledForCourse(courseId).then(function(enabled) {
+                addNoteEnabledCache[courseId] = enabled;
+                return enabled;
+            });
         };
 
         /**
          * Get the controller.
          *
-         * @param {Object} user     Course ID.
+         * @param {Object} user     User.
          * @param {Number} courseId Course ID.
          * @return {Object}         Controller.
          */
@@ -79,6 +119,7 @@ angular.module('mm.addons.notes')
 
                 // Button title.
                 $scope.title = 'mma.notes.addnewnote';
+                $scope.class = 'mma-notes-add-handler';
 
                 $ionicModal.fromTemplateUrl('addons/notes/templates/add.html', {
                     scope: $scope,
@@ -161,7 +202,13 @@ angular.module('mm.addons.notes')
             if (accessData && accessData.type == mmCoursesAccessMethods.guest) {
                 return false; // Not enabled for guests.
             }
-            return true;
+            if (typeof coursesNavEnabledCache[courseId] != 'undefined') {
+                return coursesNavEnabledCache[courseId];
+            }
+            return $mmaNotes.isPluginViewNotesEnabledForCourse(courseId).then(function(enabled) {
+                coursesNavEnabledCache[courseId] = enabled;
+                return enabled;
+            });
         };
 
         /**
@@ -182,6 +229,7 @@ angular.module('mm.addons.notes')
             return function($scope, $state) {
                 $scope.icon = 'ion-ios-list';
                 $scope.title = 'mma.notes.notes';
+                $scope.class = 'mma-notes-view-handler';
                 $scope.action = function($event, course) {
                     $event.preventDefault();
                     $event.stopPropagation();
@@ -196,4 +244,15 @@ angular.module('mm.addons.notes')
     };
 
     return self;
+})
+
+.run(function($mmaNotesHandlers, $mmEvents, mmCoreEventLogout, mmCoursesEventMyCoursesRefreshed, mmUserEventProfileRefreshed) {
+    $mmEvents.on(mmCoreEventLogout, function() {
+        $mmaNotesHandlers.clearAddNoteCache();
+        $mmaNotesHandlers.clearCoursesNavCache();
+    });
+    $mmEvents.on(mmCoursesEventMyCoursesRefreshed, $mmaNotesHandlers.clearCoursesNavCache);
+    $mmEvents.on(mmUserEventProfileRefreshed, function(data) {
+        $mmaNotesHandlers.clearAddNoteCache(data.courseid);
+    });
 });

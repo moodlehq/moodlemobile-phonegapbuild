@@ -14,6 +14,9 @@
 
 angular.module('mm.core')
 
+// 30s timeout for $http requests and promises.
+.constant('mmWSTimeout', 30000)
+
 /**
  * Web service module.
  *
@@ -21,12 +24,14 @@ angular.module('mm.core')
  * @ngdoc service
  * @name $mmWS
  */
-.factory('$mmWS', function($http, $q, $log, $mmLang, $cordovaFileTransfer, $mmApp, $mmFS, $mmText, mmCoreSessionExpired,
-            mmCoreUserDeleted) {
+.factory('$mmWS', function($http, $q, $log, $mmLang, $cordovaFileTransfer, $mmApp, $mmFS, mmCoreSessionExpired,
+            mmCoreUserDeleted, $translate, $window, md5, $timeout, mmWSTimeout) {
 
     $log = $log.getInstance('$mmWS');
 
-    var self = {};
+    var self = {},
+        mimeTypeCache = {}, // A "cache" to store file mimetypes to prevent performing too many HEAD requests.
+        ongoingCalls = {};
 
     /**
      * A wrapper function for a moodle WebService call.
@@ -39,9 +44,9 @@ angular.module('mm.core')
      * @param {Object} preSets Extra settings and information.
      *                    - siteurl string The site URL.
      *                    - wstoken string The Webservice token.
-     *                    - wsfunctions array List of functions available on the site.
      *                    - responseExpected boolean Defaults to true. Set to false when the expected response is null.
      *                    - typeExpected string Defaults to 'object'. Use it when you expect a type that's not an object|array.
+     * @return {Promise} Promise resolved with the response data in success and rejected with the error message if it fails.
      */
     self.call = function(method, data, preSets) {
 
@@ -57,6 +62,9 @@ angular.module('mm.core')
         }
 
         preSets.typeExpected = preSets.typeExpected || 'object';
+        if (typeof preSets.responseExpected == 'undefined') {
+            preSets.responseExpected = true;
+        }
 
         data.wsfunction = method;
         data.wstoken = preSets.wstoken;
@@ -64,52 +72,116 @@ angular.module('mm.core')
 
         var ajaxData = data;
 
-        return $http.post(siteurl, ajaxData).then(function(data) {
+        var promise = getPromiseHttp('post', preSets.siteurl, ajaxData);
 
-            // Some moodle web services return null.
-            // If the responseExpected value is set then so long as no data
-            // is returned, we create a blank object.
-            if ((!data || !data.data) && !preSets.responseExpected) {
-                data = {};
-            } else {
-                data = data.data;
-            }
+        if (!promise) {
+            promise = $http.post(siteurl, ajaxData, {timeout: mmWSTimeout}).then(function(data) {
 
-            if (!data) {
-                return $mmLang.translateAndReject('mm.core.serverconnection');
-            } else if (typeof data != preSets.typeExpected) {
-                $log.warn('Response of type "' + typeof data + '" received, expecting "' + preSets.typeExpected + '"');
-                return $mmLang.translateAndReject('mm.core.errorinvalidresponse');
-            }
-
-            if (typeof(data.exception) !== 'undefined') {
-                if (data.errorcode == 'invalidtoken' ||
-                        (data.errorcode == 'accessexception' && data.message.indexOf('Invalid token - token expired') > -1)) {
-                    $log.error("Critical error: " + JSON.stringify(data));
-                    return $q.reject(mmCoreSessionExpired);
-                } else if (data.errorcode === 'userdeleted') {
-                    return $q.reject(mmCoreUserDeleted);
+                // Some moodle web services return null.
+                // If the responseExpected value is set then so long as no data
+                // is returned, we create a blank object.
+                if ((!data || !data.data) && !preSets.responseExpected) {
+                    data = {};
                 } else {
-                    return $q.reject(data.message);
+                    data = data.data;
                 }
-            }
 
-            if (typeof(data.debuginfo) != 'undefined') {
-                return $q.reject('Error. ' + data.message);
-            }
+                if (!data) {
+                    return $mmLang.translateAndReject('mm.core.serverconnection');
+                } else if (typeof data != preSets.typeExpected) {
+                    $log.warn('Response of type "' + typeof data + '" received, expecting "' + preSets.typeExpected + '"');
+                    return $mmLang.translateAndReject('mm.core.errorinvalidresponse');
+                }
 
-            $log.info('WS: Data received from WS ' + typeof(data));
+                if (typeof(data.exception) !== 'undefined') {
+                    if (data.errorcode == 'invalidtoken' ||
+                            (data.errorcode == 'accessexception' && data.message.indexOf('Invalid token - token expired') > -1)) {
+                        $log.error("Critical error: " + JSON.stringify(data));
+                        return $q.reject(mmCoreSessionExpired);
+                    } else if (data.errorcode === 'userdeleted') {
+                        return $q.reject(mmCoreUserDeleted);
+                    } else {
+                        return $q.reject(data.message);
+                    }
+                }
 
-            if (typeof(data) == 'object' && typeof(data.length) != 'undefined') {
-                $log.info('WS: Data number of elements '+ data.length);
-            }
+                if (typeof(data.debuginfo) != 'undefined') {
+                    return $q.reject('Error. ' + data.message);
+                }
 
-            return data;
+                $log.info('WS: Data received from WS ' + typeof(data));
 
-        }, function() {
-            return $mmLang.translateAndReject('mm.core.serverconnection');
-        });
+                if (typeof(data) == 'object' && typeof(data.length) != 'undefined') {
+                    $log.info('WS: Data number of elements '+ data.length);
+                }
+
+                return data;
+            }, function() {
+                return $mmLang.translateAndReject('mm.core.serverconnection');
+            });
+
+            setPromiseHttp(promise, 'post', preSets.siteurl, ajaxData);
+        }
+
+        return promise;
     };
+
+    /**
+     * Save promise on the cache.
+     *
+     * @param {Promise} promise     to be saved
+     * @param {String}  method      Method of the HTTP request.
+     * @param {String}  url         Base URL of the HTTP request.
+     * @param {Object}  [params]    Params of the HTTP request.
+     */
+    function setPromiseHttp(promise, method, url, params) {
+        var deletePromise,
+            queueItemId = getQueueItemId(method, url, params);
+
+        ongoingCalls[queueItemId] = promise;
+
+        // HTTP not finished, but we should delete the promise after timeout.
+        deletePromise = $timeout(function() {
+            delete ongoingCalls[queueItemId];
+        }, mmWSTimeout);
+
+        // HTTP finished, delete from ongoing.
+        ongoingCalls[queueItemId].finally(function() {
+            delete ongoingCalls[queueItemId];
+
+            $timeout.cancel(deletePromise);
+        });
+    }
+
+    /**
+     * Get a promise from the cache.
+     *
+     * @param {String}  method      Method of the HTTP request.
+     * @param {String}  url         Base URL of the HTTP request.
+     * @param {Object}  [params]    Params of the HTTP request.
+     */
+    function getPromiseHttp(method, url, params) {
+        var queueItemId = getQueueItemId(method, url, params);
+        if (typeof ongoingCalls[queueItemId] != 'undefined') {
+            return ongoingCalls[queueItemId];
+        }
+
+        return false;
+    }
+
+    /**
+     * Get the unique queue item id of the cache for a HTTP request.
+     *
+     * @param {String}  method      Method of the HTTP request.
+     * @param {String}  url         Base URL of the HTTP request.
+     * @param {Object}  [params]    Params of the HTTP request.
+     */
+    function getQueueItemId(method, url, params) {
+        if (params) {
+            url += '###' + serializeParams(params);
+        }
+        return method + '#' + md5.createHash(url);
+    }
 
     /**
      * Converts an objects values to strings where appropriate.
@@ -137,28 +209,59 @@ angular.module('mm.core')
      * Downloads a file from Moodle using Cordova File API.
      * @todo Use Web Workers.
      *
-     * @param {String}   url        Download url.
-     * @param {String}   path       Local path to store the file.
-     * @param {Boolean}  background True if this function should be executed in background using Web Workers.
-     * @return {Promise}            The success returns the fileEntry, the reject will contain the error object.
+     * @param {String}   url            Download url.
+     * @param {String}   path           Local path to store the file.
+     * @param {Boolean}  addExtension   True if extension need to be added to the final path.
+     * @return {Promise}                The success returns the fileEntry, the reject will contain the error object.
      */
-    self.downloadFile = function(url, path, background) {
+    self.downloadFile = function(url, path, addExtension) {
         $log.debug('Downloading file ' + url);
 
-        return $mmFS.getBasePathToDownload().then(function(basePath) {
-            // Use a tmp path to download the file and then move it to final location. This is because if the download fails,
-            // the local file is deleted.
-            var tmpPath = basePath + path + '.tmp';
-            return $cordovaFileTransfer.download(url, tmpPath, { encodeURI: false }, true).then(function() {
-                return $mmFS.moveFile(path + '.tmp', path).then(function(movedEntry) {
-                    $log.debug('Success downloading file ' + url + ' to ' + path);
-                    return movedEntry;
+        // Use a tmp path to download the file and then move it to final location.This is because if the download fails,
+        // the local file is deleted.
+        var tmpPath = path + '.tmp';
+
+        // Create the tmp file as an empty file.
+        return $mmFS.createFile(tmpPath).then(function(fileEntry) {
+            return $cordovaFileTransfer.download(url, fileEntry.toURL(), { encodeURI: false }, true).then(function() {
+                var promise;
+
+                if (addExtension) {
+                    ext = $mmFS.getFileExtension(path);
+
+                    if (!ext) {
+                        promise = self.getRemoteFileMimeType(url).then(function(mime) {
+                            var ext;
+                            if (mime) {
+                                ext = $mmFS.getExtension(mime, url);
+                                if (ext) {
+                                    path += '.' + ext;
+                                }
+                                return ext;
+                            }
+                            return false;
+                        });
+                    } else {
+                        promise = $q.when(ext);
+                    }
+                } else {
+                    promise = $q.when("");
+                }
+
+                return promise.then(function(extension) {
+                    return $mmFS.moveFile(tmpPath, path).then(function(movedEntry) {
+                        // Save the extension.
+                        movedEntry.extension = extension;
+                        movedEntry.path = path;
+                        $log.debug('Success downloading file ' + url + ' to ' + path);
+                        return movedEntry;
+                    });
                 });
-            }, function(err) {
-                $log.error('Error downloading ' + url + ' to ' + path);
-                $log.error(JSON.stringify(err));
-                return $q.reject(err);
             });
+        }).catch(function(err) {
+            $log.error('Error downloading ' + url + ' to ' + path);
+            $log.error(JSON.stringify(err));
+            return $q.reject(err);
         });
     };
 
@@ -169,22 +272,28 @@ angular.module('mm.core')
      * @ngdoc method
      * @name $mmWS#uploadFile
      * @param {Object} uri File URI.
-     * @param {Object} options File settings: fileKey, fileName and mimeType.
-     * @param {Object} presets Contains siteurl and token.
+     * @param {Object} options File settings: fileKey, fileName, mimeType, fileArea and itemId.
+     * @param {Object} preSets Contains siteurl and token.
      * @return {Promise}
      */
-    self.uploadFile = function(uri, options, presets) {
+    self.uploadFile = function(uri, options, preSets) {
         $log.debug('Trying to upload file: ' + uri);
 
+        if (!uri || !options || !preSets) {
+            return $q.reject();
+        }
+
         var ftOptions = {},
-            deferred = $q.defer();
+            uploadUrl = preSets.siteurl + '/webservice/upload.php';
 
         ftOptions.fileKey = options.fileKey;
         ftOptions.fileName = options.fileName;
         ftOptions.httpMethod = 'POST';
         ftOptions.mimeType = options.mimeType;
         ftOptions.params = {
-            token: presets.token
+            token: preSets.token,
+            filearea: options.fileArea || 'draft',
+            itemid: options.itemId || 0
         };
         ftOptions.chunkedMode = false;
         ftOptions.headers = {
@@ -192,18 +301,235 @@ angular.module('mm.core')
         };
 
         $log.debug('Initializing upload');
-        $cordovaFileTransfer.upload(presets.siteurl + '/webservice/upload.php', uri, ftOptions, true).then(function(success) {
-            $log.debug('Successfully uploaded file');
-            deferred.resolve(success);
-        }, function(error) {
-            $log.error('Error while uploading file: ' + error.exception);
-            deferred.reject(error);
-        }, function(progress) {
-            deferred.notify(progress);
-        });
+        return $cordovaFileTransfer.upload(uploadUrl, uri, ftOptions, true).then(function(success) {
+            var data = success.response;
+            try {
+                data = JSON.parse(data);
+            } catch(err) {
+                $log.error('Error parsing response:', err, data);
+                return $mmLang.translateAndReject('mm.core.errorinvalidresponse');
+            }
 
-        return deferred.promise;
+            if (!data) {
+                return $mmLang.translateAndReject('mm.core.serverconnection');
+            } else if (typeof data != 'object') {
+                $log.warn('Upload file: Response of type "' + typeof data + '" received, expecting "object"');
+                return $mmLang.translateAndReject('mm.core.errorinvalidresponse');
+            }
+
+            if (typeof data.exception !== 'undefined') {
+                return $q.reject(data.message);
+            } else if (typeof data.error !== 'undefined') {
+                return $q.reject(data.error);
+            }
+
+            // We uploaded only 1 file, so we only return the first file returned.
+            $log.debug('Successfully uploaded file');
+            return data[0];
+        }, function(error) {
+            $log.error('Error while uploading file', error.exception);
+            return $mmLang.translateAndReject('mm.core.serverconnection');
+        });
     };
+
+    /**
+     * Perform a HEAD request to get the size of a remote file.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmWS#getRemoteFileSize
+     * @param {Object} url File URL.
+     * @return {Promise}   Promise resolved with the size or -1 if failure.
+     */
+    self.getRemoteFileSize = function(url) {
+        var promise = getPromiseHttp('head', url);
+
+        if (!promise) {
+            promise = $http.head(url, {timeout: mmWSTimeout}).then(function(data) {
+                var size = parseInt(data.headers('Content-Length'), 10);
+
+                if (size) {
+                    return size;
+                }
+                return -1;
+            }).catch(function() {
+                return -1;
+            });
+
+            setPromiseHttp(promise, 'head', url);
+        }
+
+        return promise;
+    };
+
+    /**
+     * Perform a HEAD request to get the mimetype of a remote file.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmWS#getRemoteFileMimeType
+     * @param  {Object} url          File URL.
+     * @param  {Boolean} ignoreCache True to ignore cache, false otherwise.
+     * @return {Promise}             Promise resolved with the mimetype or '' if failure.
+     */
+    self.getRemoteFileMimeType = function(url, ignoreCache) {
+        if (mimeTypeCache[url] && !ignoreCache) {
+            return $q.when(mimeTypeCache[url]);
+        }
+
+        var promise = getPromiseHttp('head', url);
+
+        if (!promise) {
+            promise = $http.head(url, {timeout: mmWSTimeout}).then(function(data) {
+                var mimeType = data.headers('Content-Type');
+                mimeTypeCache[url] = mimeType;
+
+                return mimeType || '';
+            }).catch(function() {
+                return '';
+            });
+
+            setPromiseHttp(promise, 'head', url);
+        }
+
+        return promise;
+    };
+
+    /**
+     * A wrapper function for a synchronous Moodle WebService call.
+     * Warning: This function should only be used if synchronous is a must. It's recommended to use $mmWS#call.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmWS#syncCall
+     * @param {string} method The WebService method to be called.
+     * @param {Object} data Arguments to pass to the method.
+     * @param {Object} preSets Extra settings and information.
+     *                    - siteurl string The site URL.
+     *                    - wstoken string The Webservice token.
+     *                    - responseExpected boolean Defaults to true. Set to false when the expected response is null.
+     *                    - typeExpected string Defaults to 'object'. Use it when you expect a type that's not an object|array.
+     * @return {Mixed} Request response. If the request fails, returns an object with 'error'=true and 'message' properties.
+     */
+    self.syncCall = function(method, data, preSets) {
+        var siteurl,
+            xhr,
+            errorResponse = {
+                error: true,
+                message: ''
+            };
+
+        data = convertValuesToString(data);
+
+        if (typeof preSets == 'undefined' || preSets === null ||
+                typeof preSets.wstoken == 'undefined' || typeof preSets.siteurl == 'undefined') {
+            errorResponse.message = $translate.instant('mm.core.unexpectederror');
+            return errorResponse;
+        } else if (!$mmApp.isOnline()) {
+            errorResponse.message = $translate.instant('mm.core.networkerrormsg');
+            return errorResponse;
+        }
+
+        preSets.typeExpected = preSets.typeExpected || 'object';
+        if (typeof preSets.responseExpected == 'undefined') {
+            preSets.responseExpected = true;
+        }
+
+        data.wsfunction = method;
+        data.wstoken = preSets.wstoken;
+        siteurl = preSets.siteurl + '/webservice/rest/server.php?moodlewsrestformat=json';
+
+        // Serialize data.
+        data = serializeParams(data);
+
+        // Perform sync request using XMLHttpRequest.
+        xhr = new $window.XMLHttpRequest();
+        xhr.open('post', siteurl, false);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8');
+
+        xhr.send(data);
+
+        // Get response.
+        data = ('response' in xhr) ? xhr.response : xhr.responseText;
+
+        // Check status.
+        xhr.status = Math.max(xhr.status === 1223 ? 204 : xhr.status, 0);
+        if (xhr.status < 200 || xhr.status >= 300) {
+            // Request failed.
+            errorResponse.message = data;
+            return errorResponse;
+        }
+
+        // Treat response.
+        try {
+            data = JSON.parse(data);
+        } catch(ex) {}
+
+        // Some moodle web services return null.
+        // If the responseExpected value is set then so long as no data is returned, we create a blank object.
+        if ((!data || !data.data) && !preSets.responseExpected) {
+            data = {};
+        }
+
+        if (!data) {
+            errorResponse.message = $translate.instant('mm.core.serverconnection');
+        } else if (typeof data != preSets.typeExpected) {
+            $log.warn('Response of type "' + typeof data + '" received, expecting "' + preSets.typeExpected + '"');
+            errorResponse.message = $translate.instant('mm.core.errorinvalidresponse');
+        }
+
+        if (typeof data.exception != 'undefined' || typeof data.debuginfo != 'undefined') {
+            errorResponse.message = data.message;
+        }
+
+        if (errorResponse.message !== '') {
+            return errorResponse;
+        }
+
+        $log.info('Synchronous: Data received from WS ' + typeof data);
+
+        if (typeof(data) == 'object' && typeof(data.length) != 'undefined') {
+            $log.info('Synchronous: Data number of elements '+ data.length);
+        }
+
+        return data;
+    };
+
+    /**
+     * Serialize an object to be used in a request.
+     *
+     * @param  {Object} obj Object to serialize.
+     * @return {String}     Serialization of the object.
+     */
+    function serializeParams(obj) {
+        var query = '', name, value, fullSubName, subName, subValue, innerObj, i;
+
+        for (name in obj) {
+            value = obj[name];
+
+            if (value instanceof Array) {
+                for (i = 0; i < value.length; ++i) {
+                    subValue = value[i];
+                    fullSubName = name + '[' + i + ']';
+                    innerObj = {};
+                    innerObj[fullSubName] = subValue;
+                    query += serializeParams(innerObj) + '&';
+                }
+            }
+            else if (value instanceof Object) {
+                for (subName in value) {
+                    subValue = value[subName];
+                    fullSubName = name + '[' + subName + ']';
+                    innerObj = {};
+                    innerObj[fullSubName] = subValue;
+                    query += serializeParams(innerObj) + '&';
+                }
+            }
+            else if (value !== undefined && value !== null) query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
+        }
+
+        return query.length ? query.substr(0, query.length - 1) : query;
+    }
 
     return self;
 

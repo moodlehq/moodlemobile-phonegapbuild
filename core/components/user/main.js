@@ -14,9 +14,10 @@
 
 angular.module('mm.core.user', [])
 
+.constant('mmUserEventProfileRefreshed', 'user_profile_refreshed') // User refreshed an user profile.
 .value('mmUserProfileState', 'site.mm_user-profile')
 
-.config(function($stateProvider) {
+.config(function($stateProvider, $mmContentLinksDelegateProvider) {
 
     $stateProvider
 
@@ -34,11 +35,16 @@ angular.module('mm.core.user', [])
             }
         });
 
+    // Register content links handler.
+    $mmContentLinksDelegateProvider.registerLinkHandler('mmUser', '$mmUserHandlers.linksHandler');
+
 })
 
-.run(function($mmEvents, mmCoreEventLogin, mmCoreEventSiteUpdated, $mmUserDelegate, $mmSite, mmCoreEventUserDeleted, $mmUser) {
+.run(function($mmEvents, mmCoreEventLogin, mmCoreEventSiteUpdated, $mmUserDelegate, $mmSite, mmCoreEventUserDeleted, $mmUser,
+            mmCoreEventRemoteAddonsLoaded) {
     $mmEvents.on(mmCoreEventLogin, $mmUserDelegate.updateProfileHandlers);
     $mmEvents.on(mmCoreEventSiteUpdated, $mmUserDelegate.updateProfileHandlers);
+    $mmEvents.on(mmCoreEventRemoteAddonsLoaded, $mmUserDelegate.updateProfileHandlers);
 
     $mmEvents.on(mmCoreEventUserDeleted, function(data) {
         if (data.siteid && data.siteid === $mmSite.getId() && data.params) {

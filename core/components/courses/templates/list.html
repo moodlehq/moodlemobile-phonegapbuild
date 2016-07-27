@@ -1,11 +1,11 @@
 <ion-view view-title="{{ 'mm.courses.mycourses' | translate }}">
-    <ion-content padding="true">
+    <ion-content padding="true" mm-state-class>
         <!-- ion-refresher needs to be direct child of ion-content to work with native scrolling -->
         <ion-refresher pulling-text="{{ 'mm.core.pulltorefresh' | translate }}" ng-if="coursesLoaded" on-refresh="refreshCourses()">
         </ion-refresher>
         <mm-loading hide-until="coursesLoaded">
-            <section ng-repeat="course in courses | filter:{fullname: filterText}" class="list card">
-                <a class="item" ui-sref="site.mm_course({courseid: course.id})" title="{{course.fullname}}">
+            <section ng-repeat="course in courses" class="list card">
+                <a class="item" ui-sref="site.mm_course({courseid: course.id, coursefullname: course.fullname})" title="{{course.fullname}}">
                     <h2><mm-format-text watch="true">{{course.fullname}}</mm-format-text></h2>
                 </a>
                 <div class="item item-text-wrap" ng-show="course.summary">
@@ -16,7 +16,7 @@
                     </p>
                 </div>
                 <div class="item tabs tabs-icon-left" ng-show="course._handlers && course._handlers.length">
-                    <a ng-repeat="handler in course._handlers | orderBy:'-priority'" ng-controller="handler.controller" ng-click="action($event, course)" class="tab-item active" title="{{title | translate}}">
+                    <a ng-repeat="handler in course._handlers | orderBy:'-priority'" ng-controller="handler.controller" ng-click="action($event, course)" class="tab-item active mm-courses-handler {{class}}" title="{{title | translate}}">
                         <i class="icon {{icon}}"></i> {{title | translate}}
                     </a>
                 </div>

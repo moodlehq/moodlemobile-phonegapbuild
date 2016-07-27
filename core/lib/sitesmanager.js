@@ -86,7 +86,7 @@ angular.module('mm.core')
         // formatURL adds the protocol if is missing.
         siteurl = $mmUtil.formatURL(siteurl);
 
-        if (siteurl.indexOf('://localhost') == -1 && !$mmUtil.isValidURL(siteurl)) {
+        if (!$mmUtil.isValidURL(siteurl)) {
             return $mmLang.translateAndReject('mm.login.invalidsite');
         } else if (!$mmApp.isOnline()) {
             return $mmLang.translateAndReject('mm.core.networkerrormsg');
@@ -97,7 +97,14 @@ angular.module('mm.core')
             // Now, replace the siteurl with the protocol.
             siteurl = siteurl.replace(/^http(s)?\:\/\//i, protocol);
 
-            return self.siteExists(siteurl).then(function() {
+            return self.siteExists(siteurl).catch(function() {
+                // Site doesn't exist. Try to add or remove 'www'.
+                var treatedUrl = $mmText.addOrRemoveWWW(siteurl);
+                return self.siteExists(treatedUrl).then(function() {
+                    // Success, use this new URL as site url.
+                    siteurl = treatedUrl;
+                });
+            }).then(function() {
                 // Create a temporary site to check if local_mobile is installed.
                 var temporarySite = $mmSitesFactory.makeSite(undefined, siteurl);
                 return temporarySite.checkLocalMobilePlugin().then(function(data) {
@@ -128,8 +135,12 @@ angular.module('mm.core')
      * @return {Promise}        A promise to be resolved if the site exists.
      */
     self.siteExists = function(siteurl) {
-        // We pass fake parameters to make CORS work (without params, the script stops before allowing CORS).
-        return $http.get(siteurl + '/login/token.php?username=a&password=b&service=c', {timeout: 30000});
+        var url = siteurl + '/login/token.php';
+        if (!ionic.Platform.isWebView()) {
+            // We pass fake parameters to make CORS work (without params, the script stops before allowing CORS).
+            url = url + '?username=a&password=b&service=c';
+        }
+        return $http.get(url, {timeout: 30000});
     };
 
     /**
@@ -218,7 +229,7 @@ angular.module('mm.core')
                     currentSite = candidateSite;
                     // Store session.
                     self.login(siteid);
-                    $mmEvents.trigger(mmCoreEventSiteAdded);
+                    $mmEvents.trigger(mmCoreEventSiteAdded, siteid);
                 } else {
                     return $translate(validation.error, validation.params).then(function(error) {
                         return $q.reject(error);
@@ -318,7 +329,7 @@ angular.module('mm.core')
      */
     function validateSiteInfo(infos) {
         if (!infos.firstname || !infos.lastname) {
-            var moodleLink = '<a mm-browser href="' + infos.siteurl + '">' + infos.siteurl + '</a>';
+            var moodleLink = '<a mm-link href="' + infos.siteurl + '">' + infos.siteurl + '</a>';
             return {error: 'mm.core.requireduserdatamissing', params: {'$a': moodleLink}};
         }
         return true;
@@ -467,7 +478,10 @@ angular.module('mm.core')
      * @return {Promise}
      */
     self.getSite = function(siteId) {
-        if (currentSite && currentSite.getId() === siteId) {
+        if (!siteId) {
+            // Site ID not valid, reject.
+            return $q.reject();
+        } else if (currentSite && currentSite.getId() === siteId) {
             return $q.when(currentSite);
         } else if (typeof sites[siteId] != 'undefined') {
             return $q.when(sites[siteId]);
@@ -501,19 +515,22 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmSitesManager#getSites
-     * @return {Promise} Promise to be resolved when the sites are retrieved.
+     * @param {String[]} [ids] IDs of the sites to get. If not defined, return all sites.
+     * @return {Promise}       Promise to be resolved when the sites are retrieved.
      */
-    self.getSites = function() {
+    self.getSites = function(ids) {
         return $mmApp.getDB().getAll(mmCoreSitesStore).then(function(sites) {
             var formattedSites = [];
             angular.forEach(sites, function(site) {
-                formattedSites.push({
-                    id: site.id,
-                    siteurl: site.siteurl,
-                    fullname: site.infos.fullname,
-                    sitename: site.infos.sitename,
-                    avatar: site.infos.userpictureurl
-                });
+                if (!ids || ids.indexOf(site.id) > -1) {
+                    formattedSites.push({
+                        id: site.id,
+                        siteurl: site.siteurl,
+                        fullname: site.infos.fullname,
+                        sitename: site.infos.sitename,
+                        avatar: site.infos.userpictureurl
+                    });
+                }
             });
             return formattedSites;
         });
@@ -565,9 +582,10 @@ angular.module('mm.core')
      */
     self.logout = function() {
         currentSite = undefined;
-        $mmEvents.trigger(mmCoreEventLogout);
-        return $mmApp.getDB().remove(mmCoreCurrentSiteStore, 1);
-    }
+        return $mmApp.getDB().remove(mmCoreCurrentSiteStore, 1).finally(function() {
+            $mmEvents.trigger(mmCoreEventLogout);
+        });
+    };
 
     /**
      * Restores the session to the previous one so the user doesn't has to login everytime the app is started.
@@ -655,6 +673,76 @@ angular.module('mm.core')
     self.updateSiteInfoByUrl = function(siteurl, username) {
         var siteid = self.createSiteID(siteurl, username);
         return self.updateSiteInfo(siteid);
+    };
+
+    /**
+     * Get the site IDs a URL belongs to.
+     * Someone can have more than one account in the same site, that's why this function returns an array of IDs.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmSitesManager#getSitesUrls
+     * @param {String} url         URL to check.
+     * @param {Boolean} prioritize True if it should prioritize current site. If the URL belongs to current site then it won't
+     *                             check any other site, it will only return current site.
+     * @param {String} [username]  If set, it will return only the sites where the current user has this username.
+     * @return {Promise}           Promise resolved with the site IDs (array).
+     */
+    self.getSiteIdsFromUrl = function(url, prioritize, username) {
+        // Check current site first, it has priority over the rest of sites.
+        if (prioritize && currentSite && currentSite.containsUrl(url)) {
+            if (!username || currentSite.getInfo().username == username) {
+                return $q.when([currentSite.getId()]);
+            }
+        }
+
+        // Check if URL has http(s) protocol.
+        if (!url.match(/^https?:\/\//i)) {
+            // URL doesn't have http(s) protocol. Check if it has any protocol.
+            if (url.match(/^[^:]{2,10}:\/\//i)) {
+                // It has some protocol. Return empty array.
+                return $q.when([]);
+            } else {
+                // No protocol, probably a relative URL. Return current site.
+                if (currentSite) {
+                    return $q.when([currentSite.getId()]);
+                } else {
+                    return $q.when([]);
+                }
+            }
+        }
+
+        return $mmApp.getDB().getAll(mmCoreSitesStore).then(function(sites) {
+            var ids = [];
+            angular.forEach(sites, function(site) {
+                if (!sites[site.id]) {
+                    sites[site.id] = $mmSitesFactory.makeSite(site.id, site.siteurl, site.token, site.infos);
+                }
+                if (sites[site.id].containsUrl(url)) {
+                    if (!username || sites[site.id].getInfo().username == username) {
+                        ids.push(site.id);
+                    }
+                }
+            });
+            return ids;
+        }).catch(function() {
+            // Shouldn't happen.
+            return [];
+        });
+    };
+
+    /**
+     * Get the site ID stored in DB ad current site.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmSitesManager#getStoredCurrentSiteId
+     * @return {Promise} Promise resolved with the site ID.
+     */
+    self.getStoredCurrentSiteId = function() {
+        return $mmApp.getDB().get(mmCoreCurrentSiteStore, 1).then(function(current_site) {
+            return current_site.siteid;
+        });
     };
 
     return self;

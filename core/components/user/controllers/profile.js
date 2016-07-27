@@ -21,7 +21,8 @@ angular.module('mm.core.user')
  * @ngdoc controller
  * @name mmaParticipantsProfileCtrl
  */
-.controller('mmUserProfileCtrl', function($scope, $stateParams, $mmUtil, $mmUser, $mmUserDelegate, $mmSite, $q, $translate) {
+.controller('mmUserProfileCtrl', function($scope, $stateParams, $mmUtil, $mmUser, $mmUserDelegate, $mmSite, $q, $translate,
+            $mmEvents, mmUserEventProfileRefreshed) {
 
     var courseid = $stateParams.courseid,
         userid   = $stateParams.userid;
@@ -44,7 +45,8 @@ angular.module('mm.core.user')
             $scope.user = user;
             $scope.title = user.fullname;
             $scope.hasContact = user.email || user.phone1 || user.phone2 || user.city || user.country || user.address;
-            $scope.hasDetails = user.url || user.roles || user.interests;
+            $scope.hasCourseDetails = user.roles;
+            $scope.hasDetails = user.url || user.interests || (user.customfields && user.customfields.length > 0);
 
             $scope.isLoadingHandlers = true;
             $mmUserDelegate.getProfileHandlersFor(user, courseid).then(function(handlers) {
@@ -74,6 +76,7 @@ angular.module('mm.core.user')
     });
 
     $scope.refreshUser = function() {
+        $mmEvents.trigger(mmUserEventProfileRefreshed, {courseid: courseid, userid: userid});
         $mmUser.invalidateUserCache(userid).finally(function() {
             fetchUserData().finally(function() {
                 $scope.$broadcast('scroll.refreshComplete');

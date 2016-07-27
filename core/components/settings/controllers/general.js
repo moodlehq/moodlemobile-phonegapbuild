@@ -21,8 +21,9 @@ angular.module('mm.core.settings')
  * @ngdoc controller
  * @name mmSettingsGeneralCtrl
  */
-.controller('mmSettingsGeneralCtrl', function($scope, $mmLang, $ionicHistory, $mmEvents, mmCoreEventLanguageChanged,
-            mmCoreSettingsReportInBackground, mmCoreConfigConstants) {
+.controller('mmSettingsGeneralCtrl', function($scope, $mmLang, $ionicHistory, $mmEvents, $mmConfig, mmCoreEventLanguageChanged,
+            mmCoreSettingsReportInBackground, mmCoreConfigConstants, mmCoreSettingsDownloadSection, mmCoreSettingsRichTextEditor,
+            $mmUtil) {
 
     $scope.langs = mmCoreConfigConstants.languages;
 
@@ -37,6 +38,25 @@ angular.module('mm.core.settings')
             $mmEvents.trigger(mmCoreEventLanguageChanged);
         });
     };
+
+    $mmConfig.get(mmCoreSettingsDownloadSection, true).then(function(downloadSectionEnabled) {
+        $scope.downloadSection = downloadSectionEnabled;
+    });
+
+    $scope.downloadSectionChanged = function(downloadSection) {
+        $mmConfig.set(mmCoreSettingsDownloadSection, downloadSection);
+    };
+
+    $scope.rteSupported = $mmUtil.isRichTextEditorSupported();
+    if ($scope.rteSupported) {
+        $mmConfig.get(mmCoreSettingsRichTextEditor, true).then(function(richTextEditorEnabled) {
+            $scope.richTextEditor = richTextEditorEnabled;
+        });
+
+        $scope.richTextEditorChanged = function(richTextEditor) {
+            $mmConfig.set(mmCoreSettingsRichTextEditor, richTextEditor);
+        };
+    }
 
     if (localStorage && localStorage.getItem && localStorage.setItem) {
         $scope.showReport = true;

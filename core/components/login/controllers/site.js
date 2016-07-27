@@ -25,23 +25,6 @@ angular.module('mm.core.login')
         $ionicModal, $mmLoginHelper) {
 
     $scope.siteurl = '';
-    $scope.isInvalidUrl = true;
-
-    $scope.validate = function(url) {
-        if (!url) {
-            $scope.isInvalidUrl = true;
-            return;
-        }
-
-        if ($mmSitesManager.getDemoSiteData(url)) {
-            // Is demo site.
-            $scope.isInvalidUrl = false;
-        } else {
-            // formatURL adds the protocol if is missing.
-            var formattedurl = $mmUtil.formatURL(url);
-            $scope.isInvalidUrl = formattedurl.indexOf('://localhost') == -1 && !$mmUtil.isValidURL(formattedurl);
-        }
-    };
 
     $scope.connect = function(url) {
 
@@ -60,7 +43,7 @@ angular.module('mm.core.login')
             $mmSitesManager.getUserToken(sitedata.url, sitedata.username, sitedata.password).then(function(data) {
                 $mmSitesManager.newSite(data.siteurl, data.token).then(function() {
                     $ionicHistory.nextViewOptions({disableBack: true});
-                    $state.go('site.mm_courses');
+                    return $mmLoginHelper.goToSiteInitialPage();
                 }, function(error) {
                     $mmUtil.showErrorModal(error);
                 }).finally(function() {
@@ -82,7 +65,7 @@ angular.module('mm.core.login')
                 if ($mmLoginHelper.isSSOLoginNeeded(result.code)) {
                     // SSO. User needs to authenticate in a browser.
                     $mmUtil.showConfirm($translate('mm.login.logininsiterequired')).then(function() {
-                        $mmLoginHelper.openBrowserForSSOLogin(result.siteurl);
+                        $mmLoginHelper.openBrowserForSSOLogin(result.siteurl, result.code);
                     });
                 } else {
                     $state.go('mm_login.credentials', {siteurl: result.siteurl});

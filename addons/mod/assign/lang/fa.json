@@ -1,0 +1,13 @@
+{
+    "addsubmission": "اضافه کردن تکلیف",
+    "duedate": "مهلت تحویل",
+    "duedateno": "بدون موعد",
+    "editsubmission": "ویرایش پاسخ من",
+    "feedback": "اظهار نظر",
+    "graded": "تصحیح شده",
+    "numwords": "{{$a}} کلمه",
+    "savechanges": "ذخیرهٔ تغییرات",
+    "submissions": "تکالیف تحویل داده شده",
+    "submissionstatus_marked": "تصحیح شده",
+    "submitassignment": "تحویل تکلیف"
+}

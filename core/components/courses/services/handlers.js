@@ -21,7 +21,8 @@ angular.module('mm.core.courses')
  * @ngdoc service
  * @name $mmCoursesHandlers
  */
-.factory('$mmCoursesHandlers', function($mmSite, $state, $mmCourses, $q, $mmUtil, $translate, $timeout, mmCoursesEnrolInvalidKey) {
+.factory('$mmCoursesHandlers', function($mmSite, $state, $mmCourses, $q, $mmUtil, $translate, $timeout, $mmCourse,
+            mmCoursesEnrolInvalidKey) {
 
     var self = {};
 
@@ -34,7 +35,12 @@ angular.module('mm.core.courses')
      */
     self.linksHandler = function() {
 
-        var self = {};
+        var self = {},
+            patterns = [
+                /(\/enrol\/index\.php)|(\/course\/enrol\.php)/, // Enrol in course.
+                /\/course\/view\.php/, // View course.
+                /\/course\/?(index\.php.*)?$/ // My courses.
+            ];
 
         /**
          * Action to perform when an enrol link is clicked.
@@ -44,36 +50,56 @@ angular.module('mm.core.courses')
          * @return {Void}
          */
         function actionEnrol(courseId, url) {
-            var modal = $mmUtil.showModalLoading();
+            var modal = $mmUtil.showModalLoading(),
+                isEnrolUrl = url.indexOf(patterns[0]) > -1 || url.indexOf(patterns[1]) > -1;
 
             // Check if user is enrolled in the course.
             $mmCourses.getUserCourse(courseId).catch(function() {
                 // User is not enrolled in the course. Check if can self enrol.
                 return canSelfEnrol(courseId).then(function() {
+                    var promise;
                     modal.dismiss();
-                    return selfEnrol(courseId).catch(function() {
-                        if (typeof error == 'string') {
-                            $mmUtil.showErrorModal(error);
-                        }
-                        return $q.reject();
+
+                    // The user can self enrol. If it's not a enrolment URL we'll ask for confirmation.
+                    promise = isEnrolUrl ? $q.when() : $mmUtil.showConfirm($translate('mm.courses.confirmselfenrol'));
+
+                    return promise.then(function() {
+                        // Enrol URL or user confirmed.
+                        return selfEnrol(courseId).catch(function(error) {
+                            if (typeof error == 'string') {
+                                $mmUtil.showErrorModal(error);
+                            }
+                            return $q.reject();
+                        });
+                    }, function() {
+                        // User cancelled. Check if the user can view the course contents (guest access or similar).
+                        return $mmCourse.getSections(courseId);
                     });
                 }, function(error) {
-                    // Error. Show error message and allow the user to open the link in browser.
-                    modal.dismiss();
-                    if (typeof error != 'string') {
-                        error = $translate.instant('mm.courses.notenroled');
-                    }
+                    // Can't self enrol. Check if the user can view the course contents (guest access or similar).
+                    return $mmCourse.getSections(courseId).catch(function() {
+                        // Error. Show error message and allow the user to open the link in browser.
+                        modal.dismiss();
+                        if (typeof error != 'string') {
+                            error = $translate.instant('mm.courses.notenroled');
+                        }
 
-                    var body = $translate('mm.core.twoparagraphs',
-                                    {p1: error, p2: $translate.instant('mm.core.confirmopeninbrowser')});
-                    $mmUtil.showConfirm(body).then(function() {
-                        $mmUtil.openInBrowser(url);
+                        var body = $translate('mm.core.twoparagraphs',
+                                        {p1: error, p2: $translate.instant('mm.core.confirmopeninbrowser')});
+                        $mmUtil.showConfirm(body).then(function() {
+                            $mmUtil.openInBrowser(url);
+                        });
+                        return $q.reject();
                     });
-                    return $q.reject();
                 });
             }).then(function() {
                 modal.dismiss();
-                $state.go('site.mm_course', {courseid: parseInt(courseId)});
+                // Use redirect to make the course the new history root (to avoid "loops" in history).
+                $state.go('redirect', {
+                    siteid: $mmSite.getId(),
+                    state: 'site.mm_course',
+                    params: {courseid: courseId}
+                });
             });
         }
 
@@ -151,41 +177,74 @@ angular.module('mm.core.courses')
         }
 
         /**
-         * Whether or not the handler is enabled for the site.
-         *
-         * @return {Boolean}
-         */
-        self.isEnabled = function() {
-            return true;
-        };
-
-        /**
          * Get actions to perform with the link.
          *
-         * @param {String} url        URL to treat.
-         * @param {Number} [courseId] Course ID related to the URL.
-         * @return {Object[]}         List of actions. See {@link $mmContentLinksDelegate#registerLinkHandler}.
+         * @param {String[]} siteIds Site IDs the URL belongs to.
+         * @param {String} url       URL to treat.
+         * @return {Object[]}        List of actions. See {@link $mmContentLinksDelegate#registerLinkHandler}.
          */
-        self.getActions = function(url, courseId) {
-            // Check if URL belongs to the current site.
-            if ($mmSite.containsUrl(url)) {
-                // Check if it's a course enrol URL.
-                if (url.indexOf('enrol/index.php') > -1 || url.indexOf('course/enrol.php') > -1) {
-                    var matches = url.match(/\.php\?id=(\d*)/); // Get course ID.
-                    if (matches && typeof matches[1] != 'undefined') {
-                        courseId = matches[1];
+        self.getActions = function(siteIds, url) {
+            // Check if it's a course URL.
+            if (typeof self.handles(url) != 'undefined') {
+                if (url.search(patterns[2]) > -1) {
+                    // My courses. Return actions.
+                    return [{
+                        message: 'mm.core.view',
+                        icon: 'ion-eye',
+                        sites: siteIds,
+                        action: function(siteId) {
+                            // Use redirect to go to history root.
+                            $state.go('redirect', {
+                                siteid: siteId || $mmSite.getId(),
+                                state: 'site.mm_courses'
+                            });
+                        }
+                    }];
+                } else {
+                    // Course view or enrol.
+                    var params = $mmUtil.extractUrlParams(url),
+                        courseId = parseInt(params.id, 10);
+                    if (courseId && courseId != 1) {
                         // Return actions.
                         return [{
                             message: 'mm.core.view',
                             icon: 'ion-eye',
-                            action: function() {
-                                actionEnrol(courseId, url);
+                            sites: siteIds,
+                            action: function(siteId) {
+                                siteId = siteId || $mmSite.getId();
+                                if (siteId == $mmSite.getId()) {
+                                    actionEnrol(courseId, url);
+                                } else {
+                                    // Use redirect to make the course the new history root (to avoid "loops" in history).
+                                    $state.go('redirect', {
+                                        siteid: siteId,
+                                        state: 'site.mm_course',
+                                        params: {courseid: courseId}
+                                    });
+                                }
                             }
                         }];
                     }
                 }
             }
+
             return [];
+        };
+
+        /**
+         * Check if the URL is handled by this handler. If so, returns the URL of the site.
+         *
+         * @param  {String} url URL to check.
+         * @return {String}     Site URL. Undefined if the URL doesn't belong to this handler.
+         */
+        self.handles = function(url) {
+            // Accept any of these patterns.
+            for (var i = 0; i < patterns.length; i++) {
+                var position = url.search(patterns[i]);
+                if (position > -1) {
+                    return url.substr(0, position);
+                }
+            }
         };
 
         return self;

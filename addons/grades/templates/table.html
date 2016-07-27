@@ -1,5 +1,5 @@
 <ion-view view-title="{{ 'mma.grades.grades' | translate }}">
-    <ion-content>
+    <ion-content mm-state-class>
         <!-- ion-refresher needs to be direct child of ion-content to work with native scrolling -->
         <ion-refresher pulling-text="{{ 'mm.core.pulltorefresh' | translate }}" ng-if="gradesLoaded && gradesTable" on-refresh="refreshGrades()">
         </ion-refresher>
@@ -7,12 +7,14 @@
             <div ng-if="gradesTable" class="card">
                 <table cellspacing="0" cellpadding="0" class="mma-grades-table">
                     <thead>
-                        <th ng-repeat="column in gradesTable.columns track by $index" id="{{column.id}}" class="header" colspan="{{column.width}}">
-                            {{column.name | translate}}
-                        </th>
+                        <tr>
+                            <th ng-repeat="column in gradesTable.columns track by $index" id="{{column.id}}" class="header" ng-class="{'hidden-phone': !column.showAlways}"" colspan="{{column.width}}">
+                                {{column.name | translate}}
+                            </th>
+                        </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat="myrow in gradesTable.rows track by $index" ng-bind-html="myrow"></tr>
+                        <tr ng-repeat="myrow in gradesTable.rows track by $index" ng-bind-html="myrow.text" ng-click="expandGradeInfo(myrow.id)"></tr>
                     </tbody>
                 </table>
             </div>

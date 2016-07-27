@@ -61,6 +61,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
                 state: null,
                 params: null
             },
+            cache: false,
             controller: function($scope, $state, $stateParams, $mmSite, $mmSitesManager, $ionicHistory) {
 
                 $ionicHistory.nextViewOptions({disableBack: true});
@@ -119,6 +120,8 @@ angular.module('mm.core', ['pascalprecht.translate'])
     hreflist = addProtocolIfMissing(hreflist, 'geo');
     hreflist = addProtocolIfMissing(hreflist, 'filesystem'); // For HTML5 FileSystem.
     imglist = addProtocolIfMissing(imglist, 'filesystem'); // For HTML5 FileSystem.
+    imglist = addProtocolIfMissing(imglist, 'file');
+    imglist = addProtocolIfMissing(imglist, 'cdvfile');
 
     $compileProvider.aHrefSanitizationWhitelist(hreflist);
     $compileProvider.imgSrcSanitizationWhitelist(imglist);
@@ -128,6 +131,9 @@ angular.module('mm.core', ['pascalprecht.translate'])
 
     // Register upgrade check process, this should happen almost before everything else.
     $mmInitDelegateProvider.registerProcess('mmUpdateManager', '$mmUpdateManager.check', mmInitDelegateMaxAddonPriority + 300, true);
+
+    // Register clear app tmp folder.
+    $mmInitDelegateProvider.registerProcess('mmFSClearTmp', '$mmFS.clearTmpFolder', mmInitDelegateMaxAddonPriority + 150, false);
 })
 
 .run(function($ionicPlatform, $ionicBody, $window, $mmEvents, $mmInitDelegate, mmCoreEventKeyboardShow, mmCoreEventKeyboardHide) {

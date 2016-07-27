@@ -1,0 +1,12 @@
+{
+    "cannoteditpage": "Non puoi modificare questa pagina",
+    "createpage": "Crea pagina",
+    "editingpage": "Modifica pagina '{{$a}}'",
+    "map": "Mappa",
+    "newpagehdr": "Nuova pagina",
+    "newpagetitle": "Titolo nuova pagina",
+    "nocontent": "Questa pagina non ha contenuti",
+    "notingroup": "Non è in un gruppo",
+    "pagename": "Nome pagina",
+    "wrongversionlock": "Un altro utente ha modificato questa pagina mentre la stavi modificando anche tu. Le tue modifiche son ora obsolete."
+}

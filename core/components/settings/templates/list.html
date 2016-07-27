@@ -1,6 +1,6 @@
 <ion-view view-title="{{ 'mm.settings.settings' | translate }}">
     <mm-split-view component="mmCoreSettingsIndex">
-        <ion-content>
+        <ion-content mm-state-class>
             <ul class="list">
                 <li>
                     <a class="item" mm-split-view-link="site.mm_settings-general" title="{{ 'mm.settings.general' | translate }}">
@@ -15,6 +15,11 @@
                 <li>
                     <a class="item" mm-split-view-link="site.mm_settings-synchronization" title="{{ 'mm.settings.synchronization' | translate }}">
                         {{ 'mm.settings.synchronization' | translate }}
+                    </a>
+                </li>
+                <li>
+                    <a class="item" ng-if="isIOS" mm-split-view-link="site.sharedfiles-list({manage: true})" title="{{ 'mm.sharedfiles.sharedfiles' | translate }}">
+                        {{ 'mm.sharedfiles.sharedfiles' | translate }}
                     </a>
                 </li>
                 <li>
