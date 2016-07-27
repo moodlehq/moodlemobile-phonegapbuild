@@ -3,8 +3,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "net.moodle.learn"
-        versionCode = "2"
-        version   = "1.1">
+        versionCode = "3"
+        version   = "1.2">
     <name>Learn Moodle</name>
 
     <description>
@@ -30,10 +30,11 @@
     <allow-navigation href="cdvfile:*" />
     <allow-navigation href="content:*" />
     <allow-navigation href="data:*" />
+    <allow-navigation href="*" />
 
     <allow-intent href="*" />
 
-    <preference name="phonegap-version" value="cli-5.2.0" />
+    <preference name="phonegap-version" value="cli-6.1.0" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
@@ -53,7 +54,7 @@
     </feature>
 
     <preference name="AndroidPersistentFileLocation"    value="Compatibility" />
-    <preference name="iosPersistentFileLocation"        value="Compatibility" />
+    <preference name="iosPersistentFileLocation" value="Compatibility" />
 
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
@@ -116,18 +117,21 @@
     <gap:plugin name="cordova-plugin-globalization" source="npm" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
-    <gap:plugin name="cordova-plugin-statusbar" source="npm" />
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" version="1.0.0" />
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" version="2.1.2" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
 
-    <gap:plugin name="com.phonegap.plugins.pushplugin" />
+    <gap:plugin name="phonegap-plugin-push" source="npm" version="1.7.0">
+        <param name="SENDER_ID" value="learn-moodle-1159" />
+    </gap:plugin>
     <gap:plugin name="net.tunts.webintent" />
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
         <param name="URL_SCHEME" value="learnmoodle" />
     </gap:plugin>
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
-    <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" source="npm" />
     <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
+    <gap:plugin name="cordova-plugin-zip" source="npm" />
 
     <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="true" />
