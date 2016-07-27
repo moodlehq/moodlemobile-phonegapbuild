@@ -617,6 +617,7 @@
     "mma.mod_quiz.confirmclose": "Zakończenie podejścia. Jeżeli zakończysz to podejście, nie będziesz mógł zmienić swoich odpowiedzi.",
     "mma.mod_quiz.connectionerror": "Utracono połączenie. (Automatyczny zapis nie powiódł się).\n\nZanotuj wszystkie odpowiedzi jakich udzieliłeś na tej stronie w ciągu ostatnich kilku minut i spróbuj połączyć się z siecią ponownie.\n\nKiedy połączenie zostanie nawiązane twoje odpowiedzi zostaną zapisane a ten komunikat zniknie.",
     "mma.mod_quiz.continueattemptquiz": "Kontynuuj ostatnie podejście",
+    "mma.mod_quiz.continuepreview": "Kontynuuj ostatni podgląd",
     "mma.mod_quiz.feedback": "Informacja zwrotna",
     "mma.mod_quiz.finishattemptdots": "Zakończ próbę ...",
     "mma.mod_quiz.grade": "Ocena",

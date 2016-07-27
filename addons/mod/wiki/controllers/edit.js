@@ -37,15 +37,16 @@ angular.module('mm.addons.mod_wiki')
         groupId,
         userId,
         rteEnabled,
-        subwikiFiles;
+        subwikiFiles,
+        renewLockInterval;
 
     $scope.saveAndGoParams = false; // See $ionicView.afterLeave.
     $scope.component = mmaModWikiComponent;
     $scope.componentId = module.id;
 
     $scope.page = {
-        title: $stateParams.pagetitle,
-        content: ""
+        title: $stateParams.pagetitle ? $stateParams.pagetitle.replace(/\+/g, " ") : null,
+        text: ""
     };
 
     $scope.canEditTitle = !$stateParams.pagetitle;
@@ -54,13 +55,16 @@ angular.module('mm.addons.mod_wiki')
         $translate.instant('mma.mod_wiki.newpagehdr');
 
     $scope.save = function() {
-        var text = $scope.page.text;
+        var text = $scope.page.text,
+            promise,
+            modal = $mmUtil.showModalLoading('mm.core.sending', true);
+
         if (rteEnabled) {
             text = $mmText.restorePluginfileUrls(text, subwikiFiles);
         }
 
         if (editing) {
-            return $mmaModWiki.editPage(pageId, text, section).then(function() {
+            promise = $mmaModWiki.editPage(pageId, text, section).then(function() {
                 // Invalidate page since it changed.
                 return $mmaModWiki.invalidatePage(pageId).then(function() {
                     return gotoPage();
@@ -71,7 +75,7 @@ angular.module('mm.addons.mod_wiki')
                 return $mmUtil.showModal('mm.core.notice', 'mma.mod_wiki.titleshouldnotbeempty');
             }
 
-            return $mmaModWiki.newPage(subwikiId, $scope.page.title, text).then(function(createdId) {
+            promise = $mmaModWiki.newPage(subwikiId, $scope.page.title, text).then(function(createdId) {
                 pageId = createdId;
 
                 return $mmaModWiki.getPageContents(pageId).then(function(pageContents) {
@@ -84,6 +88,18 @@ angular.module('mm.addons.mod_wiki')
                 });
             });
         }
+
+        return promise.catch(function(message) {
+            if (message) {
+                $mmUtil.showErrorModal(message);
+            } else {
+                $mmUtil.showErrorModal('Error saving wiki data.');
+            }
+
+            return $ionicHistory.goBack();
+        }).finally(function() {
+            modal.dismiss();
+        });
     };
 
     // Just ask to confirm the lost of data.
@@ -180,7 +196,7 @@ angular.module('mm.addons.mod_wiki')
                     version = editContents.version;
 
                     if (canEdit) {
-                        $interval(function() {
+                        renewLockInterval = $interval(function() {
                             renewLock();
                         }, mmaModWikiRenewLockTimeout * 1000);
                     }
@@ -268,5 +284,6 @@ angular.module('mm.addons.mod_wiki')
         // Restore original back functions.
         unregisterHardwareBack();
         $rootScope.$ionicGoBack = originalBackFunction;
+        $interval.cancel(renewLockInterval);
     });
 });

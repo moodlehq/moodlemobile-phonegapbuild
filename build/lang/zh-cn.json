@@ -614,6 +614,7 @@
     "mma.mod_quiz.confirmstartheader": "限时测验",
     "mma.mod_quiz.connectionerror": "网络连接断开（自动保存失败）。\n\n请记录下最近几分钟在本页面所键入的答题结果，然后尝试重新连接。\n\n一旦连接被重新建立，你的答题结果将会被自动保存，同时这个消息会消失。",
     "mma.mod_quiz.continueattemptquiz": "继续上次答题",
+    "mma.mod_quiz.continuepreview": "继续上次预览",
     "mma.mod_quiz.feedback": "反馈",
     "mma.mod_quiz.finishattemptdots": "结束答题…",
     "mma.mod_quiz.grade": "成绩",

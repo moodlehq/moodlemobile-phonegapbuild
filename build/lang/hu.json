@@ -618,6 +618,7 @@
     "mma.mod_quiz.confirmstartheader": "Időkorlátos teszt",
     "mma.mod_quiz.connectionerror": "A hálózati kapcsolat megszűnt (az automatikus mentés nem sikerült).\n\nJegyezze fel az oldalon megadott esetleges válaszokat, majd próbáljon meg újból kapcsolódni.\n\nHa sikerül. válaszainak mentése után ez az üzenet eltűnik.",
     "mma.mod_quiz.continueattemptquiz": "Utolsó próbálkozás folytatása",
+    "mma.mod_quiz.continuepreview": "Utolsó megtekintés folytatása",
     "mma.mod_quiz.feedback": "Visszajelzés",
     "mma.mod_quiz.finishattemptdots": "Próbálkozás befejezése...",
     "mma.mod_quiz.grade": "Pont",

@@ -593,6 +593,7 @@
     "mma.mod_quiz.confirmstartheader": "Teste com limite de tempo",
     "mma.mod_quiz.connectionerror": "Ligação à rede perdida (gravação automática falhou).\n\nAnote quaisquer respostas inseridas nesta página nos últimos minutos e tente ligar novamente à rede.\n\nQuando a ligação for restabelecida, as suas respostas devem ser guardadas e esta mensagem irá desaparecer.",
     "mma.mod_quiz.continueattemptquiz": "Continuar a última tentativa",
+    "mma.mod_quiz.continuepreview": "Continuar a última pré-visualização",
     "mma.mod_quiz.feedback": "Feedback",
     "mma.mod_quiz.finishattemptdots": "Terminar tentativa",
     "mma.mod_quiz.grade": "Nota",

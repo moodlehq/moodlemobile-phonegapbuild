@@ -617,6 +617,7 @@
     "mma.mod_quiz.confirmstartheader": "計時的測驗",
     "mma.mod_quiz.connectionerror": "網路連結中斷。(自動儲存失敗)\n\n系統會紀錄最後幾分鐘在這一頁所做的任何回應，然後嘗試重新連結。\n\n一旦重新建立起連結，你的回應將會被儲存，且這一訊息將會消失。",
     "mma.mod_quiz.continueattemptquiz": "繼續上一次作答",
+    "mma.mod_quiz.continuepreview": "繼續上一次的預覽",
     "mma.mod_quiz.feedback": "回饋",
     "mma.mod_quiz.finishattemptdots": "完成作答....",
     "mma.mod_quiz.grade": "分數",

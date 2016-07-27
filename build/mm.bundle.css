@@ -8105,6 +8105,9 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 .mm-monospaced {
   font-family: Andale Mono,Monaco,Courier New,DejaVu Sans Mono,monospace; }
 
+.mm-bold {
+  font-weight: bold; }
+
 .popover.mm-context-menu {
   width: 320px; }
 
@@ -8132,6 +8135,9 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 
 .mm-button-with-inner-link:after, .button.mm-button-with-inner-link:after {
   display: none; }
+
+mm-format-text audio, mm-format-text video, mm-format-text a, mm-format-text iframe {
+  pointer-events: auto; }
 
 .checkbox input:before, .checkbox-icon:before {
   border-radius: 0; }
@@ -8260,6 +8266,15 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 .item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
   right: 44px; }
 
+input.mm-fileuploader-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none; }
+
 .mm-question-textarea {
   width: 100%;
   height: 250px;
@@ -8317,14 +8332,8 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 .mm-question-warning, p.mm-question-warning, .item .mm-question-warning {
   color: #c00; }
 
-input.mm-fileuploader-picker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none; }
+#mm-settings-languagelabel {
+  color: #212630; }
 
 .bar-side-menu {
   border-color: transparent;
@@ -8344,9 +8353,6 @@ input.mm-fileuploader-picker {
 
 .has-side-menu-header {
   top: 80px; }
-
-#mm-settings-languagelabel {
-  color: #212630; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
@@ -8994,6 +9000,19 @@ select.mma-mod_survey-select {
 .mma-qtype-ddmarker-container div.dragitems div.draghome img.target {
   display: none; }
 
+.mma-qtype-gapselect-container p {
+  margin: 0 0 .5em; }
+.mma-qtype-gapselect-container select {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+
 .mma-qtype-ddwtos-container .qtext {
   margin-bottom: 0.5em;
   display: block; }
@@ -9055,19 +9074,6 @@ select.mma-mod_survey-select {
   top: -0.4em; }
 .mma-qtype-ddwtos-container sub {
   bottom: -0.2em; }
-
-.mma-qtype-gapselect-container p {
-  margin: 0 0 .5em; }
-.mma-qtype-gapselect-container select {
-  height: 30px;
-  line-height: 30px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 4px 6px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 10px; }
 
 .mma-qtype-match-container select {
   padding: 0 36px 0 0;

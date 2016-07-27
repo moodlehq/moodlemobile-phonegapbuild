@@ -22,7 +22,7 @@ angular.module('mm.addons.mod_assign')
  * @name $mmaModAssignSubmissionFileHandler
  */
 .factory('$mmaModAssignSubmissionFileHandler', function($mmaModAssignSubmissionFileSession, $mmaModAssign, $mmSite, $q,
-            $mmaModAssignHelper, $mmWS, $mmFS, $mmFilepool) {
+            $mmaModAssignHelper, $mmWS, $mmFS, $mmFilepool, $mmUtil, mmaModAssignComponent) {
 
     var self = {};
 
@@ -180,6 +180,20 @@ angular.module('mm.addons.mod_assign')
     };
 
     /**
+     * Get files used by this plugin.
+     * The files returned by this function will be prefetched when the user prefetches the assign.
+     *
+     * @param  {Object} assign     Assignment.
+     * @param  {Object} submission Submission to check data.
+     * @param  {Object} plugin     Plugin.
+     * @param  {String} [siteId]   Site ID. If not defined, current site.
+     * @return {Promise}           Promise resolved when prefetch is done.
+     */
+    self.getPluginFiles = function(assign, submission, plugin, siteId) {
+        return $mmaModAssign.getSubmissionPluginAttachments(plugin);
+    };
+
+    /**
      * Check if the submission data has changed for this plugin.
      *
      * @param  {Object} assign     Assignment.
@@ -224,7 +238,12 @@ angular.module('mm.addons.mod_assign')
 
         if (self.hasDataChanged(assign, submission, plugin, inputData)) {
             // Data has changed, we need to upload new files and re-upload all the existing files.
-            var currentFiles = $mmaModAssignSubmissionFileSession.getFiles(assign.id);
+            var currentFiles = $mmaModAssignSubmissionFileSession.getFiles(assign.id),
+                error = $mmUtil.hasRepeatedFilenames(currentFiles);
+
+            if (error) {
+                return $q.reject(error);
+            }
 
             return $mmaModAssignHelper.uploadFiles(assign.id, currentFiles, siteId).then(function(itemId) {
                 pluginData.files_filemanager = itemId;

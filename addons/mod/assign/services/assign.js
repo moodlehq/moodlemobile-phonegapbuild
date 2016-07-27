@@ -169,6 +169,20 @@ angular.module('mm.addons.mod_assign')
     };
 
     /**
+     * Get the submission object from an attempt.
+     *
+     * @module mm.addons.mod_assign
+     * @ngdoc method
+     * @name $mmaModAssign#getSubmissionObjectFromAttempt
+     * @param  {Object} assign  Assign.
+     * @param  {Object} attempt Attempt.
+     * @return {Object}         Submission object.
+     */
+    self.getSubmissionObjectFromAttempt = function(assign, attempt) {
+        return assign.teamsubmission ? attempt.teamsubmission : attempt.submission;
+    };
+
+    /**
      * Get attachments of a submission Submission.
      *
      * @module mm.addons.mod_assign
@@ -618,6 +632,19 @@ angular.module('mm.addons.mod_assign')
     };
 
     /**
+     * Check if assignments plugin prefetch is enabled in a certain site.
+     *
+     * @module mm.addons.mod_assign
+     * @ngdoc method
+     * @name $mmaModAssign#isPrefetchEnabled
+     * @return {Boolean}         if plugin prefetch is enabled.
+     */
+    self.isPrefetchEnabled = function() {
+        return $mmSite.wsAvailable('mod_assign_get_assignments') && $mmSite.wsAvailable('mod_assign_get_submissions') &&
+            $mmSite.wsAvailable('mod_assign_get_submission_status');
+    };
+
+    /**
      * Check if save and submit assignments is enabled in site.
      *
      * @module mm.addons.mod_assign
@@ -729,7 +756,7 @@ angular.module('mm.addons.mod_assign')
         return $mmSite.write('mod_assign_save_submission', params).then(function(warnings) {
             if (warnings && warnings.length) {
                 // The WebService returned warnings, reject.
-                return $q.reject(warnings[0].message);
+                return $q.reject(warnings[0].item);
             }
         });
     };
