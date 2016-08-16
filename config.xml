@@ -8,11 +8,11 @@
     <name>Applied Education Mobile 3pm</name>
 
     <description>
-        Moodle Mobile official app
+        Student App for Applied Education
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Pty Ltd
+    <author href="https://appliededucation.edu.au" email="info@appliededucation.edu.au">
+        Applied Education
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
