@@ -9,5 +9,5 @@
     "wsextservice" : "local_mobile",
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile"
-    "presets" : {"url": "http://online.appliededucation.edu.au", "username": ""},
+    "presets":{"url": "http://online.appliededucation.edu.au", "username": ""},
 }
