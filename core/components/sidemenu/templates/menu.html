@@ -37,14 +37,19 @@
                         <ion-spinner></ion-spinner>
                     </li>
                     <li ng-repeat="handler in handlers | orderBy:'-priority'" ng-controller="handler.controller" class="mm-sidemenu-handler {{class}}">
-                        <a menu-close class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}">
-                            <i class="icon {{icon}}"></i> {{title | translate}}
+                        <a menu-close class="item item-icon-left" ui-sref="{{state}}" title="{{title | translate}}">
+                            <i class="icon {{icon}}"></i> {{title | translate}}
                             <span ng-show="badge > 0" class="badge badge-positive">{{badge}}</span>
                         </a>
                     </li>
                     <li>
                         <a menu-close class="item item-icon-left" ng-href="{{siteinfo.siteurl}}" mm-link title="{{ 'mm.sidemenu.website' | translate}}">
                             <i class="icon ion-earth"></i>{{ 'mm.sidemenu.website' | translate}}
+                        </a>
+                    </li>
+                    <li>
+                        <a menu-close class="item item-icon-left" ng-href="{{docsurl}}" mm-link title="{{ 'mm.sidemenu.help' | translate}}">
+                            <i class="icon ion-help-buoy"></i>{{ 'mm.sidemenu.help' | translate}}
                         </a>
                     </li>
                     <li class="item item-divider"></li>
