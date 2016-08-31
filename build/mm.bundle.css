@@ -26405,5 +26405,5 @@ ion-content.mm-site_mod_book table a:hover,a.autolink.glossary:hover
 	cursor:pointer;text-decoration:none;color:#365d7e;outline:none;
 }
 a.autolink.glossary:hover{cursor:help;}
-ol{margin:0 0 10px 2.5em; display:block; padding:0px;}
-ol li{margin-bottom:5px;list-style-type:decimal; padding-left:10px;}
+//ol{margin:0 0 10px 2.5em; display:block; padding:0px;}
+//ol li{margin-bottom:5px;list-style-type:decimal; padding-left:10px;}
