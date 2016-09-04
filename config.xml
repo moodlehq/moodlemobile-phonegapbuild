@@ -2,17 +2,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "2014"
-        version   = "3.1.2">
-    <name>Moodle Mobile</name>
+        id        = "com.amideastonline.mobile"
+        versionCode = "2016"
+        version   = "1.0">
+    <name>AMIDEAST Online Mobile</name>
 
     <description>
-        Moodle Mobile official app
+        AMIDEAST Online official app
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Pty Ltd
+    <author href="http://amideastonline.org" email="admin@amideastonline.org">
+        AMIDEAST, Ins
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
@@ -34,7 +34,7 @@
 
     <allow-intent href="*" />
 
-    <preference name="phonegap-version" value="cli-6.1.0" />
+    <preference name="phonegap-version" value="cli-6.3.0" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
@@ -62,6 +62,7 @@
     <icon src="resources/android/icon/icon-72-hdpi.png"       gap:platform="android"    gap:density="hdpi" />
     <icon src="resources/android/icon/icon-96-xhdpi.png"      gap:platform="android"    gap:density="xhdpi" />
     <icon src="resources/android/icon/icon-144-xxhdpi.png"    gap:platform="android"    gap:density="xxhdpi" />
+    <icon src="resources/android/icon/icon-148-xxxhdpi.png"    gap:platform="android"    gap:density="xxxhdpi" />
 
     <icon src="resources/ios/icon/icon-small.png"         gap:platform="ios"      width="29" height="29" />
     <icon src="resources/ios/icon/icon-small@2x.png"      gap:platform="ios"      width="58" height="58" />
