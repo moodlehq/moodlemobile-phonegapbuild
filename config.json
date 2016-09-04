@@ -7,7 +7,7 @@
     "languages": {"ar": "عربي", "bg": "Български", "ca": "Català", "cs": "Ceština", "da": "Dansk", "de": "Deutsch","en": "English", "es": "Español", "es-mx": "Español - México", "eu": "Euskara", "fa": "?????", "fr" : "Français", "he" : "?????", "hu": "magyar", "it": "Italiano", "ja": "???","nl": "Nederlands", "pl": "Polski", "pt-br": "Português - Brasil", "pt": "Português - Portugal", "ro": "Româna", "ru": "???????", "sv": "Svenska", "tr" : "Türkçe", "zh-cn" : "????", "zh-tw" : "????"},
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
-    "presets" : {"url": "http://amideastonline.org", "username": ""},
+    "siteurl": "http://amideastonline.org",
     "gcmpn": "694767596569",
     "customurlscheme" : "moodlemobile"
 }
