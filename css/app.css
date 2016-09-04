@@ -3440,7 +3440,8 @@ a.subdued {
   border-bottom-width: 1px; }
   .bar-header.has-tabs-top {
     border-bottom-width: 0px;
-    background-image: none; }
+    background-image: none;
+    background-color: #064f96;}
 
 .tabs-top .bar-header {
   border-bottom-width: 0px;
