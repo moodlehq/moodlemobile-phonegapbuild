@@ -9,5 +9,5 @@
     "wsextservice" : "local_mobile",
     "presets" : {"url": "http://amideastonline.org", "username": ""},
     "gcmpn": "694767596569",
-    "customurlscheme" :" moodlemobile"
+    "customurlscheme" : "moodlemobile"
 }
