@@ -446,7 +446,7 @@ angular.module('mm.core')
                 $mmWS.getRemoteFileMimeType(url).then(function(mimetype) {
                     if (!mimetype) {
                         // Couldn't retireve mimetype. Try to guess it.
-                        extension = $mmText.guessExtensionFromUrl(url);
+                        extension = $mmFS.guessExtensionFromUrl(url);
                         mimetype = $mmFS.getMimeType(extension);
                     }
 
@@ -500,7 +500,7 @@ angular.module('mm.core')
             return $mmWS.getRemoteFileMimeType(url).then(function(mimetype) {
                 if (!mimetype) {
                     // Couldn't retireve mimetype. Try to guess it.
-                    extension = $mmText.guessExtensionFromUrl(url);
+                    extension = $mmFS.guessExtensionFromUrl(url);
                     mimetype = $mmFS.getMimeType(extension);
                 }
                 return mimetype || '';
@@ -524,7 +524,8 @@ angular.module('mm.core')
          */
         self.showModalLoading = function(text, needsTranslate) {
             var modalClosed = false,
-                modalShown = false;
+                modalShown = false,
+                showModalPromise;
 
             if (!text) {
                 text = 'mm.core.loading';
@@ -537,7 +538,15 @@ angular.module('mm.core')
                         template:   '<ion-spinner></ion-spinner>' +
                                     '<p>'+text+'</p>'
                     });
-                    modalShown = true;
+
+                    // Leave some delay before setting modalShown to true.
+                    // @todo In Ionic 1.3.1 $ionicLoading returns a promise, we should use that promise instead of a delay.
+                    showModalPromise = $timeout(function() {
+                        showModalPromise = null;
+                        if (!modalClosed) {
+                            modalShown = true;
+                        }
+                    }, 200);
                 }
             }
 
@@ -550,7 +559,13 @@ angular.module('mm.core')
             return {
                 dismiss: function() {
                     modalClosed = true;
-                    if (modalShown) {
+                    if (showModalPromise) {
+                        // Modal is being shown. Wait for it to be shown and hide it.
+                        showModalPromise.finally(function() {
+                            $ionicLoading.hide();
+                        });
+                    } else if (modalShown) {
+                        // Modal shown, hide it.
                         $ionicLoading.hide();
                     }
                 }
@@ -1051,7 +1066,8 @@ angular.module('mm.core')
          * @module mm.core
          * @ngdoc method
          * @name $mmUtil#confirmDownloadSize
-         * @param {Number} size                 Size to download (in bytes).
+         * @param {Object|Number} sizeCalc      Containing size to download (in bytes) and a boolean to indicate if its
+         *                                      totaly or partialy calculated.
          * @param {String} [message]            Code of the message to show. Default: 'mm.course.confirmdownload'.
          * @param {String} [unknownsizemessage] Code of the message to show if size is unknown.
          *                                      Default: 'mm.course.confirmdownloadunknownsize'.
@@ -1059,21 +1075,56 @@ angular.module('mm.core')
          * @param {Number} [limitedThreshold]   Threshold to show confirm in limited connection. Default: mmCoreDownloadThreshold.
          * @return {Promise}                   Promise resolved when the user confirms or if no confirm needed.
          */
-        self.confirmDownloadSize = function(size, message, unknownsizemessage, wifiThreshold, limitedThreshold) {
+        self.confirmDownloadSize = function(sizeCalc, message, unknownsizemessage, wifiThreshold, limitedThreshold) {
             wifiThreshold = typeof wifiThreshold == 'undefined' ? mmCoreWifiDownloadThreshold : wifiThreshold;
             limitedThreshold = typeof limitedThreshold == 'undefined' ? mmCoreDownloadThreshold : limitedThreshold;
-            message = message || 'mm.course.confirmdownload';
-            unknownsizemessage = unknownsizemessage || 'mm.course.confirmdownloadunknownsize';
 
-            if (size <= 0) {
-                // Seems size was unable to be calculated. Show a warning.
-                return self.showConfirm($translate(unknownsizemessage));
+            // Backward compatibility conversion.
+            if (typeof sizeCalc == 'number') {
+                sizeCalc = {size: sizeCalc, total: false};
             }
-            else if (size >= wifiThreshold || ($mmApp.isNetworkAccessLimited() && size >= limitedThreshold)) {
-                var readableSize = $mmText.bytesToSize(size, 2);
+
+            if (sizeCalc.size < 0 || (sizeCalc.size == 0 && !sizeCalc.total)) {
+                // Seems size was unable to be calculated. Show a warning.
+                unknownsizemessage = unknownsizemessage || 'mm.course.confirmdownloadunknownsize';
+                return self.showConfirm($translate(unknownsizemessage));
+            } else if (!sizeCalc.total) {
+                // Filesize is only partial.
+                var readableSize = $mmText.bytesToSize(sizeCalc.size, 2);
+                return self.showConfirm($translate('mm.course.confirmpartialdownloadsize', {size: readableSize}));
+            } else if (sizeCalc.size >= wifiThreshold || ($mmApp.isNetworkAccessLimited() && sizeCalc.size >= limitedThreshold)) {
+                message = message || 'mm.course.confirmdownload';
+                var readableSize = $mmText.bytesToSize(sizeCalc.size, 2);
                 return self.showConfirm($translate(message, {size: readableSize}));
             }
             return $q.when();
+        };
+
+        /**
+         * Sum the filesizes from a list of files checking if the size will be partial or totally calculated.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#sumFileSizes
+         * @param  {Array} files  List of files to sum its filesize.
+         * @return {Object}       With the file size and a boolean to indicate if it is the total size or only partial.
+         */
+        self.sumFileSizes = function(files) {
+            var results = {
+                size: 0,
+                total: true
+            };
+
+            angular.forEach(files, function(file) {
+                if (typeof file.filesize == 'undefined') {
+                    // We don't have the file size, cannot calculate its total size.
+                    results.total = false;
+                } else {
+                    results.size += file.filesize;
+                }
+            });
+
+            return results;
         };
 
         /**
@@ -1456,12 +1507,31 @@ angular.module('mm.core')
 
             angular.forEach(elements, function(element) {
                 var url = element.tagName === 'A' ? element.href : element.src;
-                if (url && self.isDownloadableUrl(url)) {
+                if (url && self.isDownloadableUrl(url) && urls.indexOf(url) == -1) {
                     urls.push(url);
                 }
             });
 
             return urls;
+        };
+
+        /**
+         * Extract the downloadable URLs from an HTML and returns them in fake file objects.
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#extractDownloadableFilesFromHtmlAsFakeFileObjects
+         * @param  {String} html HTML code.
+         * @return {Object[]}    List of fake file objects with file URLs.
+         */
+        self.extractDownloadableFilesFromHtmlAsFakeFileObjects = function(html) {
+            var urls = self.extractDownloadableFilesFromHtml(html);
+            // Convert them to fake file objects.
+            return urls.map(function(url) {
+                return {
+                    fileurl: url
+                };
+            });
         };
 
         /**
@@ -1574,8 +1644,9 @@ angular.module('mm.core')
                 $translate.instant('mm.core.unexpectederror'),
                 $translate.instant('mm.core.networkerrormsg'),
                 $translate.instant('mm.core.serverconnection'),
-                $translate.instant('mm.core.errorinvalidresponse')
-
+                $translate.instant('mm.core.errorinvalidresponse'),
+                $translate.instant('mm.core.sitemaintenance'),
+                $translate.instant('mm.core.upgraderunning')
             ];
             return error && localErrors.indexOf(error) == -1;
         };
@@ -1629,11 +1700,6 @@ angular.module('mm.core')
 
             // Check Android version >= 4.4
             if (ionic.Platform.isAndroid() && ionic.Platform.version() >= 4.4) {
-                return true;
-            }
-
-            // Check iOS version > 6
-            if (ionic.Platform.isIOS() && ionic.Platform.version() > 6) {
                 return true;
             }
 

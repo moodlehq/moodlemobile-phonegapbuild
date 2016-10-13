@@ -24,7 +24,35 @@ angular.module('mm.core.course')
 .factory('$mmCourseHelper', function($q, $mmCoursePrefetchDelegate, $mmFilepool, $mmUtil, $mmCourse, $mmSite, $state,
             mmCoreNotDownloaded, mmCoreOutdated, mmCoreDownloading, mmCoreCourseAllSectionsId, $mmText, $translate) {
 
-    var self = {};
+    var self = {},
+        calculateSectionStatus = false;
+
+
+    /**
+     * Get the current value to show section status and allow section downloads.
+     *
+     * @module mm.core.course
+     * @ngdoc method
+     * @name $mmCourseHelper#isDownloadSectionsEnabled
+     * @return {Boolean}    If section status and downloads are enabled.
+     */
+    self.isDownloadSectionsEnabled = function() {
+        return calculateSectionStatus;
+    };
+
+
+    /**
+     * Set the current value to show section status and allow section downloads.
+     *
+     * @module mm.core.course
+     * @ngdoc method
+     * @name $mmCourseHelper#setDownloadSectionsEnabled
+     * @param {Boolean}     status  If section status and downloads are enabled.
+     */
+    self.setDownloadSectionsEnabled = function(status) {
+        calculateSectionStatus = status;
+        return calculateSectionStatus;
+    };
 
     /**
      * Calculate the status of a section.
@@ -155,16 +183,21 @@ angular.module('mm.core.course')
             sizePromise = $mmCoursePrefetchDelegate.getDownloadSize(section.modules, courseid);
         } else {
             var promises = [],
-                size = 0;
+                results = {
+                    size: 0,
+                    total: true
+                };
+
             angular.forEach(sections, function(s) {
                 if (s.id != mmCoreCourseAllSectionsId) {
                     promises.push($mmCoursePrefetchDelegate.getDownloadSize(s.modules, courseid).then(function(sectionsize) {
-                        size = size + sectionsize;
+                        results.total = results.total && sectionsize.total;
+                        results.size += sectionsize.size;
                     }));
                 }
             });
             sizePromise = $q.all(promises).then(function() {
-                return size;
+                return results;
             });
         }
 
@@ -418,22 +451,35 @@ angular.module('mm.core.course')
      * @module mm.core.course
      * @ngdoc method
      * @name $mmCourseHelper#prefetchModule
-     * @param  {Object} scope    Scope.
-     * @param  {Object} service  Service implementing 'invalidateContent' and 'prefetchContent'.
-     * @param  {Object} module   Module to download.
-     * @param  {Number} size     Size of the module.
-     * @param  {Boolean} refresh True if refreshing, false otherwise.
-     * @return {Promise}         Promise resolved when downloaded.
+     * @param  {Object} scope       Scope.
+     * @param  {Object} service     Service implementing 'invalidateContent' and 'prefetch'.
+     * @param  {Object} module      Module to download.
+     * @param  {Object|Number} size Containing size to download (in bytes) and a boolean to indicate if its totaly or
+     *                              partialy calculated.
+     * @param  {Boolean} refresh    True if refreshing, false otherwise.
+     * @param  {Number}  courseId   Course ID of the module.
+     * @return {Promise}            Promise resolved when downloaded.
      */
-    self.prefetchModule = function(scope, service, module, size, refresh) {
+    self.prefetchModule = function(scope, service, module, size, refresh, courseId) {
         // Show confirmation if needed.
         return $mmUtil.confirmDownloadSize(size).then(function() {
             // Invalidate content if refreshing and download the data.
-            var promise = refresh ? service.invalidateContent(module.id) : $q.when();
+            var promise = refresh ? service.invalidateContent(module.id, courseId) : $q.when();
             return promise.catch(function() {
                 // Ignore errors.
             }).then(function() {
-                return service.prefetchContent(module).catch(function() {
+                var promise;
+
+                if (service.prefetch) {
+                    promise = service.prefetch(module, courseId);
+                } else if (service.prefetchContent) {
+                    // Check 'prefetchContent' for backwards compatibility.
+                    promise = service.prefetchContent(module, courseId);
+                } else {
+                    return $q.reject();
+                }
+
+                return promise.catch(function() {
                     if (!scope.$$destroyed) {
                         $mmUtil.showErrorModal('mm.core.errordownloading', true);
                     }
@@ -528,4 +574,10 @@ angular.module('mm.core.course')
     };
 
     return self;
+})
+
+.run(function($mmEvents, mmCoreEventLogout, $mmCourseHelper) {
+    $mmEvents.on(mmCoreEventLogout, function() {
+        $mmCourseHelper.setDownloadSectionsEnabled(false);
+    });
 });

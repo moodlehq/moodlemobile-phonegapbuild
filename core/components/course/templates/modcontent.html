@@ -2,17 +2,27 @@
     <ion-nav-title><mm-format-text watch="true">{{ title }}</mm-format-text></ion-nav-title>
     <ion-nav-buttons side="secondary">
         <mm-context-menu>
-            <mm-context-menu-item priority="900" ng-if="url" href="{{url}}" content="{{ 'mm.core.openinbrowser' | translate }}" icon-action="ion-share"></mm-context-menu-item>
-            <mm-context-menu-item priority="800" ng-if="description" content="{{'mm.core.moduleintro' | translate }}" action="expandDescription()" icon-action="ion-arrow-right-c"></mm-context-menu-item>
+            <mm-context-menu-item priority="900" ng-if="url" href="url" content="'mm.core.openinbrowser' | translate" icon-action="'ion-share'"></mm-context-menu-item>
+            <mm-context-menu-item priority="800" ng-if="description" content="'mm.core.moduleintro' | translate" action="expandDescription()" icon-action="'ion-arrow-right-c'"></mm-context-menu-item>
         </mm-context-menu>
     </ion-nav-buttons>
     <ion-content padding="true" mm-state-class>
         <mm-course-mod-description description="description"></mm-course-mod-description>
         <div class="card">
-            <h2 class="item-body">{{ 'mm.course.whoops' | translate }}</h2>
-            <p ng-if="url" class="item-body">{{ 'mm.course.activitynotyetviewablegothere' | translate }}</p>
-            <p ng-if="!url" class="item-body">{{ 'mm.course.activitynotyetviewable' | translate }}</p>
+            <div class="item-body">
+                <h2>{{ 'mm.core.whoops' | translate }}</h2>
+                <p>{{ 'mm.course.activitynotyetviewable' | translate }}</p>
+            </div>
         </div>
-        <a ng-if="url" href="{{ url }}" mm-link class="button button-block icon-right ion-share">{{ 'mm.course.gotothesite' | translate }}</a>
+        <a ng-if="url" href="{{ url }}" mm-link class="button button-block icon-right ion-share">{{ 'mm.core.openinbrowser' | translate }}</a>
+        <div class="card">
+            <div class="item item-text-wrap">
+                <h2>{{ 'mm.core.whyisthishappening' | translate }}</h2>
+                <p ng-if="isSupportedByTheApp && !isRemoteAddon">{{ 'mm.course.activitynotyetviewablesiteupgradeneeded' | translate }}</p>
+                <p ng-if="!isSupportedByTheApp && !isRemoteAddon">{{ 'mm.course.activitynotyetviewableinapp' | translate:{$a: moduleName} }}</p>
+                <p ng-if="!isSupportedByTheApp && isRemoteAddon">{{ 'mm.course.activitynotyetviewableremoteaddon' | translate }}</p>
+            </div>
+        </div>
+
     </ion-content>
 </ion-view>

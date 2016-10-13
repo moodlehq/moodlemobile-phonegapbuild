@@ -274,7 +274,21 @@
         color: $color;
       }
     }
+
   }
+
+  &.tabs-striped.#{$style} {
+    .tab-item {
+      &.tab-item-active,
+      &.active,
+      &.activated {
+        border-color: $color;
+        color: $color;
+      }
+    }
+
+  }
+
 }
 
 ion-tabs {
@@ -523,6 +537,6 @@ ion-tabs {
   top: 0
 }
 .pane[hide-nav-bar="true"] .has-tabs-top{
-  top:49px
+  top:$tabs-height
 }
 

@@ -35,6 +35,25 @@ angular.module('mm.core.login')
     var self = {};
 
     /**
+     * Show a confirm modal if needed and open a browser to perform SSO login.
+     *
+     * @module mm.core.login
+     * @ngdoc method
+     * @name $mmLoginHelper#confirmAndOpenBrowserForSSOLogin
+     * @param {String} siteurl     URL of the site where the SSO login will be performed.
+     * @param {Number} typeOfLogin mmLoginSSOCode or mmLoginSSOInAppCode
+     */
+    self.confirmAndOpenBrowserForSSOLogin = function(siteurl, typeOfLogin) {
+        // Show confirm only if it's needed. Treat "false" (string) as false to prevent typing errors.
+        var skipConfirmation = mmCoreConfigConstants.skipssoconfirmation && mmCoreConfigConstants.skipssoconfirmation !== 'false',
+            promise = skipConfirmation ? $q.when() : $mmUtil.showConfirm($translate('mm.login.logininsiterequired'));
+
+        promise.then(function() {
+            self.openBrowserForSSOLogin(siteurl, typeOfLogin);
+        });
+    };
+
+    /**
      * Go to the view to add a new site.
      * If a fixed URL is configured, go to credentials instead.
      *
@@ -65,7 +84,11 @@ angular.module('mm.core.login')
             // Configured to go to Site Home. Check if plugin is installed in the app.
             var $mmaFrontpage = $mmAddonManager.get('$mmaFrontpage');
             if ($mmaFrontpage) {
-                return $state.go('site.mm_course-section');
+                return $mmaFrontpage.isFrontpageAvailable().then(function() {
+                    return $state.go('site.mm_course-section');
+                }).catch(function() {
+                    return $state.go('site.mm_courses');
+                });
             }
         }
 
@@ -209,6 +232,29 @@ angular.module('mm.core.login')
             return deferred.promise;
         } else {
             return $mmSitesManager.newSite(siteurl, token);
+        }
+    };
+
+    /**
+     * Convenient helper to handle get User Token error. It redirects to change password page ig forcepassword is set.
+     *
+     * @module mm.core.login
+     * @ngdoc method
+     * @name $mmLoginHelper#treatUserTokenError
+     * @param {String}          siteurl  Site URL to construct change password URL.
+     * @param {Object|String}   error    Error object containing errorcode and error message.
+     */
+    self.treatUserTokenError = function(siteurl, error) {
+        if (typeof error == 'string') {
+            $mmUtil.showErrorModal(error);
+        } else if (error.errorcode == 'forcepasswordchangenotice') {
+            var message = error.error + "<br>" + $translate.instant('mm.login.visitchangepassword');
+            $mmUtil.showConfirm(message, $translate.instant('mm.core.notice')).then(function() {
+                var changepasswordurl = siteurl + "/login/change_password.php";
+                $mmUtil.openInApp(changepasswordurl);
+            });
+        } else {
+            $mmUtil.showErrorModal(error.error);
         }
     };
 

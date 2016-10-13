@@ -21,8 +21,8 @@ angular.module('mm.core.login')
  * @ngdoc controller
  * @name mmLoginSiteCtrl
  */
-.controller('mmLoginSiteCtrl', function($scope, $state, $mmSitesManager, $mmUtil, $translate, $ionicHistory, $mmApp,
-        $ionicModal, $mmLoginHelper) {
+.controller('mmLoginSiteCtrl', function($scope, $state, $mmSitesManager, $mmUtil, $ionicHistory, $mmApp, $ionicModal, $ionicPopup,
+        $mmLoginHelper, $q) {
 
     $scope.siteurl = '';
 
@@ -51,7 +51,7 @@ angular.module('mm.core.login')
                 });
             }, function(error) {
                 modal.dismiss();
-                $mmUtil.showErrorModal(error);
+                $mmLoginHelper.treatUserTokenError(sitedata.url, error);
             });
 
         } else {
@@ -64,15 +64,12 @@ angular.module('mm.core.login')
 
                 if ($mmLoginHelper.isSSOLoginNeeded(result.code)) {
                     // SSO. User needs to authenticate in a browser.
-                    $mmUtil.showConfirm($translate('mm.login.logininsiterequired')).then(function() {
-                        $mmLoginHelper.openBrowserForSSOLogin(result.siteurl, result.code);
-                    });
+                    $mmLoginHelper.confirmAndOpenBrowserForSSOLogin(result.siteurl, result.code);
                 } else {
                     $state.go('mm_login.credentials', {siteurl: result.siteurl});
                 }
-
             }, function(error) {
-                $mmUtil.showErrorModal(error);
+                showLoginIssue(url, error);
             }).finally(function() {
                 modal.dismiss();
             });
@@ -83,6 +80,23 @@ angular.module('mm.core.login')
     $mmUtil.getDocsUrl().then(function(docsurl) {
         $scope.docsurl = docsurl;
     });
+
+    // Show an error that aims people to solve the issue.
+    function showLoginIssue(siteurl, issue) {
+        $scope.siteurl = siteurl;
+        $scope.issue = issue;
+        var popup = $ionicPopup.show({
+            templateUrl:  'core/components/login/templates/login-issue.html',
+            scope: $scope
+        });
+
+        $scope.closePopup = function() {
+            popup.close();
+        };
+        return popup.then(function() {
+            return $q.reject();
+        });
+    }
 
     // Setup help modal.
     $ionicModal.fromTemplateUrl('core/components/login/templates/help-modal.html', {

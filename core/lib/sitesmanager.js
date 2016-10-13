@@ -97,12 +97,21 @@ angular.module('mm.core')
             // Now, replace the siteurl with the protocol.
             siteurl = siteurl.replace(/^http(s)?\:\/\//i, protocol);
 
-            return self.siteExists(siteurl).catch(function() {
+            return self.siteExists(siteurl).catch(function(error) {
+                if (error.errorcode && error.errorcode == 'enablewsdescription') {
+                    return $q.reject(error.error);
+                }
+
                 // Site doesn't exist. Try to add or remove 'www'.
                 var treatedUrl = $mmText.addOrRemoveWWW(siteurl);
                 return self.siteExists(treatedUrl).then(function() {
                     // Success, use this new URL as site url.
                     siteurl = treatedUrl;
+                }).catch(function(error) {
+                    if (error.errorcode && error.errorcode == 'enablewsdescription') {
+                        return $q.reject(error.error);
+                    }
+                    return $q.reject(error);
                 });
             }).then(function() {
                 // Create a temporary site to check if local_mobile is installed.
@@ -119,7 +128,7 @@ angular.module('mm.core')
                     // Retry without HTTPS.
                     return self.checkSite(siteurl, "http://");
                 } else{
-                    return $mmLang.translateAndReject('mm.core.cannotconnect');
+                    return $mmLang.translateAndReject('mm.login.checksiteversion');
                 }
             });
         }
@@ -135,12 +144,22 @@ angular.module('mm.core')
      * @return {Promise}        A promise to be resolved if the site exists.
      */
     self.siteExists = function(siteurl) {
-        var url = siteurl + '/login/token.php';
-        if (!ionic.Platform.isWebView()) {
-            // We pass fake parameters to make CORS work (without params, the script stops before allowing CORS).
-            url = url + '?username=a&password=b&service=c';
-        }
-        return $http.get(url, {timeout: 30000});
+        var data = {
+            username: 'a',
+            password: 'b',
+            service: determineService(siteurl)
+        };
+
+        return $http.post(siteurl + '/login/token.php', data, {timeout: 30000}).then(function(data) {
+            data = data.data;
+
+            if (data.errorcode && data.errorcode == 'enablewsdescription') {
+                return $q.reject({errorcode: data.errorcode, error: data.error});
+            } else if (data.error && data.error == 'Web services must be enabled in Advanced features.') {
+                return $q.reject({errorcode: 'enablewsdescription', error: data.error});
+            }
+            return $q.when();
+        });
     };
 
     /**
@@ -189,6 +208,8 @@ angular.module('mm.core')
                         if (!retry && data.errorcode == "requirecorrectaccess") {
                             siteurl = $mmText.addOrRemoveWWW(siteurl);
                             return self.getUserToken(siteurl, username, password, service, true);
+                        } else if (typeof data.errorcode != 'undefined') {
+                            return $q.reject({error: data.error, errorcode: data.errorcode});
                         } else {
                             return $q.reject(data.error);
                         }
@@ -474,13 +495,12 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmSitesManager#getSite
-     * @param  {Number} siteId The site ID.
+     * @param  {Number} [siteId] The site ID. If not defined, current site (if available).
      * @return {Promise}
      */
     self.getSite = function(siteId) {
         if (!siteId) {
-            // Site ID not valid, reject.
-            return $q.reject();
+            return currentSite ? $q.when(currentSite) : $q.reject();
         } else if (currentSite && currentSite.getId() === siteId) {
             return $q.when(currentSite);
         } else if (typeof sites[siteId] != 'undefined') {
@@ -500,7 +520,7 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmSitesManager#getSiteDb
-     * @param  {Number} siteId The site ID.
+     * @param  {Number} [siteId] The site ID. If not defined, current site (if available).
      * @return {Promise}
      */
     self.getSiteDb = function(siteId) {
@@ -581,9 +601,11 @@ angular.module('mm.core')
      * @return {Promise} Promise to be resolved when the user is logged out.
      */
     self.logout = function() {
+        var siteId = currentSite.getId();
+
         currentSite = undefined;
         return $mmApp.getDB().remove(mmCoreCurrentSiteStore, 1).finally(function() {
-            $mmEvents.trigger(mmCoreEventLogout);
+            $mmEvents.trigger(mmCoreEventLogout, siteId);
         });
     };
 

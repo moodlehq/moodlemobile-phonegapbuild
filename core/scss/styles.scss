@@ -39,8 +39,11 @@ $completion-img-width: 24px !default;
 // Disabled items.
 $item-disabled-color: #999 !default;
 
-// Warnings (red).
-$mm-warning-color: #c00 !default;
+// Warnings (energized).
+$mm-warning-color: $energized !default;
+
+// Errors (red).
+$mm-error-color: #c00 !default;
 
 // Timer variables.
 $mm-timer-warn-color:     #f00 !default;
@@ -54,6 +57,38 @@ $mm-text-with-icon-height: 22px !default;
 $mm-button-icon-small-height: 22px !default;
 
 /**
+ * App Branding
+ */
+.mm-bglogo {
+  background-color: white; /* Change this to add a bg image or change color */
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.mm-logo {
+  background-image: url('../img/moodle.png'); /* Change logo here */
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.mm-logo:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-top: 120px; /* Change this to place spinner under the logo (usually double of the logo size) */
+}
+
+/**
  * Styles revert.
  */
 
@@ -64,6 +99,10 @@ em {
 /**
  * Styles.
  */
+
+.item-stacked-label{
+  background-color: $item-default-bg;
+}
 
 // Default bar.
 .bar-content {
@@ -153,14 +192,20 @@ em {
   .item-note {
     color: $item-message-note-text;
     font-size: $item-message-note-font-size;
-    margin-left: 10px;
+    margin-left: 20px;
   }
+}
+
+.item-message .item-content {
+  background-color: $item-message-bg;
+  padding: 0;
 }
 
 // Defines when an item-message is the user's.
 .item-message-mine {
   background-color: $item-message-mine-bg;
   float: right;
+  max-width: 80%;
 
   .spinner {
     float: right;
@@ -176,10 +221,44 @@ em {
   }
 }
 
+.item-message-mine .item-content {
+  background-color: transparent;
+  padding: 0;
+}
+
 // Defines a "disabled" item.
 .item.item-disabled,
 .platform-android .item.item-disabled {
   color: $item-disabled-color;
+}
+
+// Avoid adding too much padding.
+.item-complex .item-checkbox .item-content {
+  padding: 0;
+}
+
+// Large centered avatar.
+.item-avatar-center {
+    @extend .item-avatar;
+    text-align: center;
+    padding-left: 16px;
+    &.item-complex .item-content {
+        text-align: center;
+        padding-left: 49px;
+    }
+    > img:first-child,
+    &.item-complex .item-content > img:first-child,
+    img.avatar {
+        position: static;
+        width: 100px;
+        height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+        margin-bottom: 10px;
+        border-radius : 50%;
+        padding: 4px;
+        border: 1px solid #ddd;
+    }
 }
 
 .user-with-avatar {
@@ -394,9 +473,21 @@ mm-navigation-bar {
   padding: $item-padding;
 }
 
-// Red color for paragraphs.
-p.mm-warning {
-  color: $mm-warning-color;
+p.mm-error {
+  color: $mm-error-color;
+}
+
+.mm-warning {
+  border-bottom: 3px solid $mm-warning-color;
+  padding: $card-padding;
+  box-shadow: $card-box-shadow;
+  margin: 20px 10px;
+  background-color: #fff;
+
+  i.icon:before {
+      color: $mm-warning-color;
+      font-size: 125%;
+  }
 }
 
 // Extra attributes to ionic classes to force frames via directive 100% height.
@@ -539,6 +630,12 @@ mm-format-text {
 .item-noborder {
   border: 0;
   padding: 0;
+}
+
+.padding .mm-searchbox .item-input-inset {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /**
@@ -706,5 +803,57 @@ mm-format-text {
 
   .cke_toolbox_main {
     margin: 0;
+  }
+}
+
+// InApp notifications.
+
+.mm-inapp-notification-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  opacity: 0;
+  margin-top: -130px;
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+
+  &.active {
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  &.hide {
+    opacity: 0;
+    margin-top: -130px;
+    display: block;
+    pointer-events: none;
+  }
+
+  .mm-inapp-notification {
+    position: static;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    margin-left: auto  !important;
+    margin-right: auto  !important;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 2px 0;
+
+    .scroll-content {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      left: auto;
+      right: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .mm-inapp-notification-backdrop .mm-inapp-notification {
+    margin-left: 6px !important;
+    margin-right: 6px !important;
   }
 }

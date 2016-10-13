@@ -24,7 +24,6 @@ angular.module('mm.core')
 .factory('$mmText', function($q, $mmLang, $translate, $state) {
 
     var self = {},
-        extensionRegex = new RegExp('^[a-z0-9]+$'),
         element = document.createElement('div'); // Fake element to use in some functions, to prevent re-creating it each time.
 
     /**
@@ -168,17 +167,21 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmText#expandText
-     * @param  {String} title Title of the new state.
-     * @param  {String} text  Content of the text to be expanded.
-     * @param  {Boolean} replaceLineBreaks  Replace line breaks by br tag. Default: false.
+     * @param  {String} title              Title of the new state.
+     * @param  {String} text               Content of the text to be expanded.
+     * @param  {Boolean} replaceLineBreaks Replace line breaks by br tag. Default: false.
+     * @param  {String} [component]        Component to link the embedded files to.
+     * @param  {Mixed} [componentId]       An ID to use in conjunction with the component.
      */
-    self.expandText = function(title, text, replaceLineBreaks) {
+    self.expandText = function(title, text, replaceLineBreaks, component, componentId) {
         if (text.length > 0) {
             // Open a new state with the interpolated contents.
             $state.go('site.mm_textviewer', {
                 title: title,
                 content: text,
-                replacelinebreaks: replaceLineBreaks
+                replacelinebreaks: replaceLineBreaks,
+                component: component,
+                componentId: componentId
             });
         }
     };
@@ -384,39 +387,6 @@ angular.module('mm.core')
     };
 
     /**
-     * Guess the extension of a file from its URL.
-     *
-     * This is very weak and unreliable.
-     *
-     * @module mm.core
-     * @ngdoc method
-     * @name $mmText#guessExtensionFromUrl
-     * @param {String} fileUrl The file URL.
-     * @return {String}        The lowercased extension without the dot, or undefined.
-     */
-    self.guessExtensionFromUrl = function(fileUrl) {
-        var split = fileUrl.split('.'),
-            candidate,
-            extension,
-            position;
-
-        if (split.length > 1) {
-            candidate = split.pop().toLowerCase();
-            // Remove params if any.
-            position = candidate.indexOf('?');
-            if (position > -1) {
-                candidate = candidate.substr(0, position);
-            }
-
-            if (extensionRegex.test(candidate)) {
-                extension = candidate;
-            }
-        }
-
-        return extension;
-    };
-
-    /**
      * If a number has only 1 digit, add a leading zero to it.
      *
      * @module mm.core
@@ -528,6 +498,48 @@ angular.module('mm.core')
             }
         }
         return text;
+    };
+
+    /**
+     * Get the protocol from a URL.
+     * E.g. http://www.google.com returns 'http'.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmText#getUrlProtocol
+     * @param  {String} url URL to treat.
+     * @return {String}     Protocol, undefined if no protocol found.
+     */
+    self.getUrlProtocol = function(url) {
+        if (!url) {
+            return;
+        }
+
+        var matches = url.match(/^([^\/:\.\?]*):\/\//);
+        if (matches && matches[1]) {
+            return matches[1];
+        }
+    };
+
+    /**
+     * Get the scheme from a URL. Please notice that, if a URL has protocol, it will return the protocol.
+     * E.g. javascript:doSomething() returns 'javascript'.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmText#getUrlScheme
+     * @param  {String} url URL to treat.
+     * @return {String}     Scheme, undefined if no scheme found.
+     */
+    self.getUrlScheme = function(url) {
+        if (!url) {
+            return;
+        }
+
+        var matches = url.match(/^([a-z][a-z0-9+\-.]*):/);
+        if (matches && matches[1]) {
+            return matches[1];
+        }
     };
 
     return self;

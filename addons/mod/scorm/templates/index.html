@@ -2,16 +2,17 @@
     <ion-nav-title><mm-format-text watch="true">{{ title }}</mm-format-text></ion-nav-title>
     <ion-nav-buttons side="secondary">
         <mm-context-menu>
-            <mm-context-menu-item priority="900" ng-if="moduleUrl" href="{{moduleUrl}}" content="{{ 'mm.core.openinbrowser' | translate }}" icon-action="ion-share"></mm-context-menu-item>
-            <mm-context-menu-item priority="800" ng-if="description" content="{{'mm.core.moduleintro' | translate }}" action="expandDescription()" icon-action="ion-arrow-right-c"></mm-context-menu-item>
-            <mm-context-menu-item priority="700" content="{{'mm.core.refresh' | translate }}" action="refreshScorm()" icon-action="{{refreshIcon}}" icon-action="ion-refresh" close-on-click="false"></mm-context-menu-item>
+            <mm-context-menu-item priority="900" ng-if="moduleUrl" href="moduleUrl" content="'mm.core.openinbrowser' | translate" icon-action="'ion-share'"></mm-context-menu-item>
+            <mm-context-menu-item priority="800" ng-if="description" content="'mm.core.moduleintro' | translate" action="expandDescription()" icon-action="'ion-arrow-right-c'"></mm-context-menu-item>
+            <mm-context-menu-item priority="700" ng-if="scormLoaded && !hasOffline && isOnline" content="'mm.core.refresh' | translate" action="refreshScorm(false)" icon-action="refreshIcon" close-on-click="false" close-when-done="true"></mm-context-menu-item>
+            <mm-context-menu-item priority="600" ng-if="scormLoaded && hasOffline && isOnline" content="'mm.settings.synchronizenow' | translate" action="refreshScorm(true)" icon-action="syncIcon" close-on-click="false" close-when-done="true"></mm-context-menu-item>
         </mm-context-menu>
     </ion-nav-buttons>
     <ion-content padding="true" delegate-handle="mmaModScormIndexScroll" mm-state-class>
-    	<ion-refresher pulling-text="{{ 'mm.core.pulltorefresh' | translate }}" ng-if="scormLoaded" on-refresh="refreshScorm()">
+    	<ion-refresher pulling-text="{{ 'mm.core.pulltorefresh' | translate }}" ng-if="scormLoaded" on-refresh="refreshScorm(false)">
         </ion-refresher>
         <mm-loading hide-until="scormLoaded">
-	        <mm-course-mod-description description="description"></mm-course-mod-description>
+	        <mm-course-mod-description watch="true" description="description" component="{{component}}" component-id="{{componentId}}"></mm-course-mod-description>
 	        <p ng-if="scorm.warningmessage">{{ scorm.warningmessage }}</p>
 	        <div ng-if="allDataLoaded && !scorm.warningmessage">
 	        	<!-- Attempts status -->
@@ -53,9 +54,9 @@
 	                </div>
 	            </div>
                 <!-- Synchronize button -->
-            	<div class="item item-text-wrap" ng-if="!errorMessage && showSyncButton">
-                    <button class="button button-block" ng-click="sync()">{{ 'mm.settings.synchronizenow' | translate }}</button>
-            	</div>
+                <div class="mm-warning" ng-if="!errorMessage && hasOffline">
+                    <i class="icon ion-alert-circled padding"></i> {{ 'mm.core.hasdatatosync' | translate:{$a: moduleName} }}
+                </div>
 	            <!-- TOC -->
 	            <div class="card" ng-if="(scorm.displaycoursestructure && organizations.length) || (organizations && organizations.length > 1)">
 	        		<div class="item item-divider">{{ 'mma.mod_scorm.contents' | translate }}</div>
@@ -106,12 +107,9 @@
                 		</p>
                 	</div>
                		<!-- Create new attempt -->
-                	<div class="item item-checkbox item-checkbox-right" ng-if="!scorm.forcenewattempt && scorm.numAttempts > 0 && !scorm.incomplete && scorm.attemptsLeft > 0">
-	                    <p class="item-heading">{{ 'mma.mod_scorm.newattempt' | translate }}</p>
-	                    <label class="checkbox">
-	                        <input type="checkbox" ng-model="scormOptions.newAttempt">
-	                    </label>
-                	</div>
+                    <ion-checkbox ng-if="!scorm.forcenewattempt && scorm.numAttempts > 0 && !scorm.incomplete && scorm.attemptsLeft > 0" class="item-text-wrap item-checkbox-right" ng-model="scormOptions.newAttempt">
+                        <p class="item-heading">{{ 'mma.mod_scorm.newattempt' | translate }}</p>
+                    </ion-checkbox>
                 	<div class="item item-text-wrap" ng-if="!downloading">
                 		<p ng-if="statusMessage">{{ statusMessage | translate }}</p>
 	                    <button class="button button-block">{{ 'mma.mod_scorm.enter' | translate }}</button>

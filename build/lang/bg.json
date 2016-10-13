@@ -352,6 +352,7 @@
     "mm.core.unlimited": "Неограничен",
     "mm.core.userdeleted": "Тази потребителска регистрация е изтрита",
     "mm.core.userdetails": "Информация за потребителя",
+    "mm.core.users": "Потребители",
     "mm.core.view": "Изглед",
     "mm.core.viewprofile": "Разглеждане на профила",
     "mm.core.yes": "Да",
@@ -659,7 +660,9 @@
     "mma.mod_forum.cannotadddiscussionall": "Нямате разрешение да добавяте нова тема за всички участници.",
     "mma.mod_forum.cannotcreatediscussion": "Не може да се създаде нова дискусия",
     "mma.mod_forum.couldnotadd": "Вашето мнение не можа да се добави поради неизвестна грешка.",
+    "mma.mod_forum.discussion": "Обсъждане",
     "mma.mod_forum.discussionsubscription": "Абониране за обсъждането",
+    "mma.mod_forum.edit": "Редактиране",
     "mma.mod_forum.erroremptymessage": "Мнението не може да бъде празно",
     "mma.mod_forum.erroremptysubject": "Темата на мнението не може да бъде празна.",
     "mma.mod_forum.forumnodiscussionsyet": "Няма теми за обсъждане в този форум",
@@ -760,6 +763,7 @@
     "mma.mod_wiki.map": "Карта",
     "mma.mod_wiki.newpagetitle": "Заглавие на новата страница",
     "mma.mod_wiki.notingroup": "Извинете, но трябва да сте част от групата за да видите тази дейност.",
+    "mma.mod_wiki.page": "Страница",
     "mma.mod_wiki.pagename": "Име на страница",
     "mma.mod_wiki.wrongversionlock": "Друг потребител редактира тази страница докато Вие редактирахте и Вашата редакция вече е остаряла."
 }

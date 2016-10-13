@@ -79,7 +79,8 @@ angular.module('mm.core.login', [])
         params: {
             siteurl: '',
             username: '',
-            infositeurl: ''
+            infositeurl: '',
+            siteid: ''
         }
     });
 
@@ -199,8 +200,12 @@ angular.module('mm.core.login', [])
                     var info = $mmSite.getInfo();
                     if (typeof(info) !== 'undefined' && typeof(info.username) !== 'undefined') {
                         $ionicHistory.nextViewOptions({disableBack: true});
-                        $state.go('mm_login.reconnect',
-                                        {siteurl: result.siteurl, username: info.username, infositeurl: info.siteurl});
+                        $state.go('mm_login.reconnect', {
+                            siteurl: result.siteurl,
+                            username: info.username,
+                            infositeurl: info.siteurl,
+                            siteid: $mmSite.getId()
+                        });
                     }
                 }
             });
@@ -212,6 +217,10 @@ angular.module('mm.core.login', [])
         var ssoScheme = mmCoreConfigConstants.customurlscheme + '://token=';
         if (url.indexOf(ssoScheme) == -1) {
             return false;
+        }
+        if ($mmApp.isSSOAuthenticationOngoing()) {
+            // Authentication ongoing, probably duplicated request.
+            return true;
         }
 
         // App opened using custom URL scheme. Probably an SSO authentication.

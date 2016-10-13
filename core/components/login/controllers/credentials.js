@@ -22,7 +22,7 @@ angular.module('mm.core.login')
  * @name mmLoginCredentialsCtrl
  */
 .controller('mmLoginCredentialsCtrl', function($scope, $state, $stateParams, $mmSitesManager, $mmUtil, $ionicHistory, $mmApp,
-            $q, $mmLoginHelper, $translate, $mmContentLinksDelegate, $mmContentLinksHelper) {
+            $q, $mmLoginHelper, $mmContentLinksDelegate, $mmContentLinksHelper) {
 
     $scope.siteurl = $stateParams.siteurl;
     $scope.credentials = {
@@ -53,9 +53,7 @@ angular.module('mm.core.login')
 
                 // Check that there's no SSO authentication ongoing and the view hasn't changed.
                 if (!$mmApp.isSSOAuthenticationOngoing() && !$scope.$$destroyed) {
-                    $mmUtil.showConfirm($translate('mm.login.logininsiterequired')).then(function() {
-                        $mmLoginHelper.openBrowserForSSOLogin(result.siteurl, result.code);
-                    });
+                    $mmLoginHelper.confirmAndOpenBrowserForSSOLogin(result.siteurl, result.code);
                 }
             } else {
                 $scope.isBrowserSSO = false;
@@ -131,7 +129,7 @@ angular.module('mm.core.login')
                 }
             });
         }).catch(function(error) {
-            $mmUtil.showErrorModal(error);
+            $mmLoginHelper.treatUserTokenError(siteurl, error);
         }).finally(function() {
             modal.dismiss();
         });
