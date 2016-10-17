@@ -859,41 +859,6 @@ mm-format-text {
 }
 
 
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
-}
-input.mm-fileuploader-picker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none;
-}
-
-
-.mm-mm_login_sites {
-  .item-thumbnail-left .item-content {
-    padding-top: 16px;
-  }
-
-  .avatar {
-    margin: 0;
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    border-radius : 50%;
-    padding: 4px;
-    border: 1px solid #ddd;
-  }
-
-  .card {
-    margin: 15px 10px;
-  }
-}
-
 $mm-question-correct-color:         #468847 !default;
 $mm-question-incorrect-color:       #b94a48 !default;
 $mm-question-state-correct-color:   #cfc !default;
@@ -1012,6 +977,41 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
+
+.mm-mm_login_sites {
+  .item-thumbnail-left .item-content {
+    padding-top: 16px;
+  }
+
+  .avatar {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius : 50%;
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+
+  .card {
+    margin: 15px 10px;
+  }
+}
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
+input.mm-fileuploader-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none;
+}
+
 #mm-settings-languagelabel {
   color: $base-color;
 }
@@ -1041,6 +1041,92 @@ $bar-side-menu-text-color: $bar-content-text !default;
 
 .has-side-menu-header {
   top: $bar-side-menu-height;
+}
+
+$mma-messages-date-badge: "stable" !default;
+
+// The date displayed in the list.
+.mma-messages-date {
+
+  text-align: center;
+  margin-top: 10px;
+
+  span {
+    @extend .badge;
+    @extend .badge-#{$mma-messages-date-badge};
+  }
+}
+
+.mma-messages-input-inset {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.mma-messages-footer-note {
+    color: $button-light-text;
+    font-size: $font-size-base;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.button.mma-messages-clear-search {
+  top: 0px;
+}
+
+.mma-messages-discussion-container {
+  padding-bottom: 15px;
+}
+
+.button.button-icon.mma-messages-delete-button {
+  min-height: initial;
+  line-height: initial;
+  &:before {
+    font-size: 100%;
+    line-height: initial;
+  }
+}
+
+.mma-messages-send-message-bar {
+  width: 100%;
+}
+.mm-site_messages-discussion {
+  .list-left-editing .item-message.item-left-editable,
+  .item-left-editing.item-message.item-left-editable {
+    max-width: calc(80% + 35px);
+    -moz-transition: max-width ease-in-out 125ms;
+    -o-transition: max-width ease-in-out 125ms;
+    -webkit-transition: max-width ease-in-out 125ms;
+    transition: max-width ease-in-out 125ms;
+  }
+
+  .list-left-editing .item-left-editable .item-content,
+  .item-left-editing.item-left-editable .item-content {
+    -webkit-transform: none;
+    transform: none;
+    padding-left: 35px;
+    -moz-transition: padding-left ease-in-out 125ms;
+    -o-transition: padding-left ease-in-out 125ms;
+    -webkit-transition: padding-right ease-in-out 125ms;
+    transition: padding-left ease-in-out 125ms;
+    background-color: transparent;
+  }
+
+  .list-left-editing .item-left-editable.item-message-mine .item-content,
+  .item-left-editing.item-left-editable.item-message-mine .item-content {
+    padding-left: 0;
+    padding-right: 35px;
+    -moz-transition: padding-right ease-in-out 125ms;
+    -o-transition: padding-right ease-in-out 125ms;
+    -webkit-transition: right-right ease-in-out 125ms;
+    transition: padding-right ease-in-out 125ms;
+  }
+
+  .item-message-mine .item-left-edit.visible.active {
+    right: 0;
+    left: initial;
+  }
 }
 
 
@@ -1139,27 +1225,28 @@ $bar-side-menu-text-color: $bar-content-text !default;
   }
 }
 
-$mma-messages-date-badge: "stable" !default;
+$mma-chat-notice-badge: "stable" !default;
 
-// The date displayed in the list.
-.mma-messages-date {
+// The notice displayed in the list.
+.mma-chat-notice {
 
   text-align: center;
   margin-top: 10px;
 
   span {
     @extend .badge;
-    @extend .badge-#{$mma-messages-date-badge};
+    @extend .badge-#{$mma-chat-notice-badge};
+    white-space: normal;
   }
 }
 
-.mma-messages-input-inset {
+.mma-chat-input-inset {
     padding-top: 0;
     padding-left: 0;
     padding-bottom: 0;
 }
 
-.mma-messages-footer-note {
+.mma-chat-footer-note {
     color: $button-light-text;
     font-size: $font-size-base;
     text-align: center;
@@ -1167,61 +1254,128 @@ $mma-messages-date-badge: "stable" !default;
     width: 100%;
 }
 
-.button.mma-messages-clear-search {
-  top: 0px;
-}
-
-.mma-messages-discussion-container {
-  padding-bottom: 15px;
-}
-
-.button.button-icon.mma-messages-delete-button {
-  min-height: initial;
-  line-height: initial;
-  &:before {
-    font-size: 100%;
-    line-height: initial;
-  }
-}
-
-.mma-messages-send-message-bar {
+.mma-chat-send-form {
   width: 100%;
 }
-.mm-site_messages-discussion {
-  .list-left-editing .item-message.item-left-editable,
-  .item-left-editing.item-message.item-left-editable {
-    max-width: calc(80% + 35px);
-    -moz-transition: max-width ease-in-out 125ms;
-    -o-transition: max-width ease-in-out 125ms;
-    -webkit-transition: max-width ease-in-out 125ms;
-    transition: max-width ease-in-out 125ms;
-  }
 
-  .list-left-editing .item-left-editable .item-content,
-  .item-left-editing.item-left-editable .item-content {
-    -webkit-transform: none;
-    transform: none;
-    padding-left: 35px;
-    -moz-transition: padding-left ease-in-out 125ms;
-    -o-transition: padding-left ease-in-out 125ms;
-    -webkit-transition: padding-right ease-in-out 125ms;
-    transition: padding-left ease-in-out 125ms;
-    background-color: transparent;
+.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
+  margin: 0;
+}
+.mma-mod_choice-user {
+  position: relative;
+  display: inline-block;
+  img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -20px;
   }
-
-  .list-left-editing .item-left-editable.item-message-mine .item-content,
-  .item-left-editing.item-left-editable.item-message-mine .item-content {
-    padding-left: 0;
-    padding-right: 35px;
-    -moz-transition: padding-right ease-in-out 125ms;
-    -o-transition: padding-right ease-in-out 125ms;
-    -webkit-transition: right-right ease-in-out 125ms;
-    transition: padding-right ease-in-out 125ms;
+  p {
+    display: inline-block;
+    padding-top: 50px;
   }
+}
 
-  .item-message-mine .item-left-edit.visible.active {
-    right: 0;
-    left: initial;
+.mma-mod_choice-graph-horizontal {
+  height: 50px;
+}
+
+.mma-forum-discussion-link {
+    text-decoration: none;
+}
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
+
+.mm-site_mod_forum-discussion .card.highlight .item.item-avatar {
+    background-color: $stable;
+    font-weight: bold;
+}
+
+.mm-site_mod_forum-discussion .card.highlight .item.item-avatar h2 {
+    font-weight: bold;
+}
+
+
+$mma-mod-quiz-warning-color:      #c00 !default;
+$mma-mod-quiz-highlight-color:    #d9edf7 !default;
+$mma-mod-quiz-alternate-color:    #fbfbfb !default;
+$mma-mod-quiz-conecterr-color:    #fcc !default;
+$mma-mod-quiz-selected-color:     #666 !default;
+
+p.mma-mod-quiz-warning {
+  color: $mma-mod-quiz-warning-color;
+}
+
+.mm-site_mod_quiz, .mm-site_mod_quiz-player {
+  .row {
+    min-height: $button-height + $grid-padding-width + 5px;
+
+    .button.button-block {
+      margin: 0;
+    }
+  }
+}
+
+.item.mma-mod-quiz-highlighted,
+.platform-android .item.mma-mod-quiz-highlighted,
+.platform-ios .item.mma-mod-quiz-highlighted,
+.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
+  background-color: $mma-mod-quiz-highlight-color;
+}
+
+.mma-quiz-textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+}
+
+// Remove padding-top and bottom from navigation bar to minimize height used.
+.mma-mod-quiz-subheader {
+  .row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .col {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .mm-timer {
+    line-height: $button-bar-button-height
+  }
+}
+
+// Alternate background color in rows.
+.mma-mod-quiz-table .row:nth-child(odd) {
+  background-color: $mma-mod-quiz-alternate-color;
+}
+
+.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
+  background-color: $mma-mod-quiz-conecterr-color;
+}
+
+.mm-site_mod_quiz-review .item {
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.item.mma-mod-quiz-selected,
+.platform-android .item.mma-mod-quiz-selected,
+.platform-ios .item.mma-mod-quiz-selected,
+.mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
+  border: 3px solid $mma-mod-quiz-selected-color;
+  &:not(.mma-mod-quiz-last-of-page) {
+    border-bottom: 0;
   }
 }
 
@@ -1490,159 +1644,6 @@ p.mma-mod-assign-warning {
   .score input {
       margin: 0;
       width: auto;
-  }
-}
-
-$mma-chat-notice-badge: "stable" !default;
-
-// The notice displayed in the list.
-.mma-chat-notice {
-
-  text-align: center;
-  margin-top: 10px;
-
-  span {
-    @extend .badge;
-    @extend .badge-#{$mma-chat-notice-badge};
-  }
-}
-
-.mma-chat-input-inset {
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 0;
-}
-
-.mma-chat-footer-note {
-    color: $button-light-text;
-    font-size: $font-size-base;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-}
-
-.mma-chat-send-form {
-  width: 100%;
-}
-
-.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
-  margin: 0;
-}
-.mma-mod_choice-user {
-  position: relative;
-  display: inline-block;
-  img {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -20px;
-  }
-  p {
-    display: inline-block;
-    padding-top: 50px;
-  }
-}
-
-.mma-mod_choice-graph-horizontal {
-  height: 50px;
-}
-
-.mma-forum-discussion-link {
-    text-decoration: none;
-}
-
-.mma-forum-align-right {
-    justify-content: flex-end;
-}
-
-.mma-forum-border {
-    border-color: $item-default-border;
-    border-width: $item-border-width;
-    border-style: solid;
-}
-
-.mm-site_mod_forum-discussion .card.highlight .item.item-avatar {
-    background-color: $stable;
-    font-weight: bold;
-}
-
-.mm-site_mod_forum-discussion .card.highlight .item.item-avatar h2 {
-    font-weight: bold;
-}
-
-
-$mma-mod-quiz-warning-color:      #c00 !default;
-$mma-mod-quiz-highlight-color:    #d9edf7 !default;
-$mma-mod-quiz-alternate-color:    #fbfbfb !default;
-$mma-mod-quiz-conecterr-color:    #fcc !default;
-$mma-mod-quiz-selected-color:     #666 !default;
-
-p.mma-mod-quiz-warning {
-  color: $mma-mod-quiz-warning-color;
-}
-
-.mm-site_mod_quiz, .mm-site_mod_quiz-player {
-  .row {
-    min-height: $button-height + $grid-padding-width + 5px;
-
-    .button.button-block {
-      margin: 0;
-    }
-  }
-}
-
-.item.mma-mod-quiz-highlighted,
-.platform-android .item.mma-mod-quiz-highlighted,
-.platform-ios .item.mma-mod-quiz-highlighted,
-.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
-  background-color: $mma-mod-quiz-highlight-color;
-}
-
-.mma-quiz-textarea {
-  width: 100%;
-  height: 250px;
-  resize: none;
-}
-
-// Remove padding-top and bottom from navigation bar to minimize height used.
-.mma-mod-quiz-subheader {
-  .row {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .col {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .mm-timer {
-    line-height: $button-bar-button-height
-  }
-}
-
-// Alternate background color in rows.
-.mma-mod-quiz-table .row:nth-child(odd) {
-  background-color: $mma-mod-quiz-alternate-color;
-}
-
-.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
-  background-color: $mma-mod-quiz-conecterr-color;
-}
-
-.mm-site_mod_quiz-review .item {
-  h3 {
-    font-size: 18px;
-  }
-}
-
-.item.mma-mod-quiz-selected,
-.platform-android .item.mma-mod-quiz-selected,
-.platform-ios .item.mma-mod-quiz-selected,
-.mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
-  border: 3px solid $mma-mod-quiz-selected-color;
-  &:not(.mma-mod-quiz-last-of-page) {
-    border-bottom: 0;
   }
 }
 
