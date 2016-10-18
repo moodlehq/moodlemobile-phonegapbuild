@@ -8385,6 +8385,9 @@ em {
 /**
  * Styles.
  */
+.mm-big {
+  font-size: 115%; }
+
 .item-stacked-label {
   background-color: white; }
 
@@ -9017,6 +9020,32 @@ mm-format-text audio, mm-format-text video, mm-format-text a, mm-format-text ifr
     margin-left: 6px !important;
     margin-right: 6px !important; } }
 
+.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
+  right: 44px; }
+
+input.mm-fileuploader-picker {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none; }
+
+.mm-mm_login_sites .item-thumbnail-left .item-content {
+  padding-top: 16px; }
+.mm-mm_login_sites .avatar {
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid #ddd; }
+.mm-mm_login_sites .card {
+  margin: 15px 10px; }
+
 .mm-question-textarea {
   width: 100%;
   height: 250px;
@@ -9074,32 +9103,6 @@ mm-format-text audio, mm-format-text video, mm-format-text a, mm-format-text ifr
 .mm-question-warning, p.mm-question-warning, .item .mm-question-warning {
   color: #c00; }
 
-.mm-mm_login_sites .item-thumbnail-left .item-content {
-  padding-top: 16px; }
-.mm-mm_login_sites .avatar {
-  margin: 0;
-  width: 80px;
-  height: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  border-radius: 50%;
-  padding: 4px;
-  border: 1px solid #ddd; }
-.mm-mm_login_sites .card {
-  margin: 15px 10px; }
-
-.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
-  right: 44px; }
-
-input.mm-fileuploader-picker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none; }
-
 #mm-settings-languagelabel {
   color: #000; }
 
@@ -9121,64 +9124,6 @@ input.mm-fileuploader-picker {
 
 .has-side-menu-header {
   top: 80px; }
-
-.mma-messages-date {
-  text-align: center;
-  margin-top: 10px; }
-
-.mma-messages-input-inset {
-  padding-top: 0;
-  padding-left: 0;
-  padding-bottom: 0; }
-
-.mma-messages-footer-note {
-  color: #444;
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
-  width: 100%; }
-
-.button.mma-messages-clear-search {
-  top: 0px; }
-
-.mma-messages-discussion-container {
-  padding-bottom: 15px; }
-
-.button.button-icon.mma-messages-delete-button {
-  min-height: initial;
-  line-height: initial; }
-  .button.button-icon.mma-messages-delete-button:before {
-    font-size: 100%;
-    line-height: initial; }
-
-.mma-messages-send-message-bar {
-  width: 100%; }
-
-.mm-site_messages-discussion .list-left-editing .item-message.item-left-editable, .mm-site_messages-discussion .item-left-editing.item-message.item-left-editable {
-  max-width: calc(80% + 35px);
-  -moz-transition: max-width ease-in-out 125ms;
-  -o-transition: max-width ease-in-out 125ms;
-  -webkit-transition: max-width ease-in-out 125ms;
-  transition: max-width ease-in-out 125ms; }
-.mm-site_messages-discussion .list-left-editing .item-left-editable .item-content, .mm-site_messages-discussion .item-left-editing.item-left-editable .item-content {
-  -webkit-transform: none;
-  transform: none;
-  padding-left: 35px;
-  -moz-transition: padding-left ease-in-out 125ms;
-  -o-transition: padding-left ease-in-out 125ms;
-  -webkit-transition: padding-right ease-in-out 125ms;
-  transition: padding-left ease-in-out 125ms;
-  background-color: transparent; }
-.mm-site_messages-discussion .list-left-editing .item-left-editable.item-message-mine .item-content, .mm-site_messages-discussion .item-left-editing.item-left-editable.item-message-mine .item-content {
-  padding-left: 0;
-  padding-right: 35px;
-  -moz-transition: padding-right ease-in-out 125ms;
-  -o-transition: padding-right ease-in-out 125ms;
-  -webkit-transition: right-right ease-in-out 125ms;
-  transition: padding-right ease-in-out 125ms; }
-.mm-site_messages-discussion .item-message-mine .item-left-edit.visible.active {
-  right: 0;
-  left: initial; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
@@ -9240,103 +9185,63 @@ input.mm-fileuploader-picker {
   .mma-grades-table .leveleven {
     background-color: #fff; }
 
-.mma-chat-notice {
+.mma-messages-date {
   text-align: center;
   margin-top: 10px; }
-  .mma-chat-notice span {
-    white-space: normal; }
 
-.mma-chat-input-inset {
+.mma-messages-input-inset {
   padding-top: 0;
   padding-left: 0;
   padding-bottom: 0; }
 
-.mma-chat-footer-note {
+.mma-messages-footer-note {
   color: #444;
   font-size: 14px;
   text-align: center;
   margin: 0;
   width: 100%; }
 
-.mma-chat-send-form {
+.button.mma-messages-clear-search {
+  top: 0px; }
+
+.mma-messages-discussion-container {
+  padding-bottom: 15px; }
+
+.button.button-icon.mma-messages-delete-button {
+  min-height: initial;
+  line-height: initial; }
+  .button.button-icon.mma-messages-delete-button:before {
+    font-size: 100%;
+    line-height: initial; }
+
+.mma-messages-send-message-bar {
   width: 100%; }
 
-.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
-  margin: 0; }
-
-.mma-mod_choice-user {
-  position: relative;
-  display: inline-block; }
-  .mma-mod_choice-user img {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -20px; }
-  .mma-mod_choice-user p {
-    display: inline-block;
-    padding-top: 50px; }
-
-.mma-mod_choice-graph-horizontal {
-  height: 50px; }
-
-.mma-forum-discussion-link {
-  text-decoration: none; }
-
-.mma-forum-align-right {
-  justify-content: flex-end; }
-
-.mma-forum-border {
-  border-color: #ddd;
-  border-width: 1px;
-  border-style: solid; }
-
-.mm-site_mod_forum-discussion .card.highlight .item.item-avatar, .mm-site_mod_forum-discussion .card.highlight .item.item-media, .mm-site_mod_forum-discussion .card.highlight .item.item-avatar-center {
-  background-color: #f5f5f5;
-  font-weight: bold; }
-
-.mm-site_mod_forum-discussion .card.highlight .item.item-avatar h2, .mm-site_mod_forum-discussion .card.highlight .item.item-media h2, .mm-site_mod_forum-discussion .card.highlight .item.item-avatar-center h2, .mm-site_mod_forum-discussion .card.highlight .item.item-avatar .item-heading, .mm-site_mod_forum-discussion .card.highlight .item.item-media .item-heading, .mm-site_mod_forum-discussion .card.highlight .item.item-avatar-center .item-heading {
-  font-weight: bold; }
-
-p.mma-mod-quiz-warning {
-  color: #c00; }
-
-.mm-site_mod_quiz .row, .mm-site_mod_quiz-player .row {
-  min-height: 57px; }
-  .mm-site_mod_quiz .row .button.button-block, .mm-site_mod_quiz-player .row .button.button-block {
-    margin: 0; }
-
-.item.mma-mod-quiz-highlighted, .platform-android .item.mma-mod-quiz-highlighted, .platform-ios .item.mma-mod-quiz-highlighted, .mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
-  background-color: #d9edf7; }
-
-.mma-quiz-textarea {
-  width: 100%;
-  height: 250px;
-  resize: none; }
-
-.mma-mod-quiz-subheader .row {
-  padding-top: 0px;
-  padding-bottom: 0px; }
-.mma-mod-quiz-subheader .col {
-  padding-top: 0px;
-  padding-bottom: 0px; }
-.mma-mod-quiz-subheader .mm-timer {
-  line-height: 32px; }
-
-.mma-mod-quiz-table .row:nth-child(odd) {
-  background-color: #fbfbfb; }
-
-.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
-  background-color: #fcc; }
-
-.mm-site_mod_quiz-review .item h3 {
-  font-size: 18px; }
-
-.item.mma-mod-quiz-selected, .platform-android .item.mma-mod-quiz-selected, .platform-ios .item.mma-mod-quiz-selected, .mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
-  border: 3px solid #666; }
-  .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-android .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-ios .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .mma-mod-quiz-table .item.row.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page) {
-    border-bottom: 0; }
+.mm-site_messages-discussion .list-left-editing .item-message.item-left-editable, .mm-site_messages-discussion .item-left-editing.item-message.item-left-editable {
+  max-width: calc(80% + 35px);
+  -moz-transition: max-width ease-in-out 125ms;
+  -o-transition: max-width ease-in-out 125ms;
+  -webkit-transition: max-width ease-in-out 125ms;
+  transition: max-width ease-in-out 125ms; }
+.mm-site_messages-discussion .list-left-editing .item-left-editable .item-content, .mm-site_messages-discussion .item-left-editing.item-left-editable .item-content {
+  -webkit-transform: none;
+  transform: none;
+  padding-left: 35px;
+  -moz-transition: padding-left ease-in-out 125ms;
+  -o-transition: padding-left ease-in-out 125ms;
+  -webkit-transition: padding-right ease-in-out 125ms;
+  transition: padding-left ease-in-out 125ms;
+  background-color: transparent; }
+.mm-site_messages-discussion .list-left-editing .item-left-editable.item-message-mine .item-content, .mm-site_messages-discussion .item-left-editing.item-left-editable.item-message-mine .item-content {
+  padding-left: 0;
+  padding-right: 35px;
+  -moz-transition: padding-right ease-in-out 125ms;
+  -o-transition: padding-right ease-in-out 125ms;
+  -webkit-transition: right-right ease-in-out 125ms;
+  transition: padding-right ease-in-out 125ms; }
+.mm-site_messages-discussion .item-message-mine .item-left-edit.visible.active {
+  right: 0;
+  left: initial; }
 
 .mm-site_mod_assign div.latesubmission {
   background-color: #efcfcf; }
@@ -9508,6 +9413,104 @@ p.mma-mod-assign-warning {
 .gradingform_guide .score input {
   margin: 0;
   width: auto; }
+
+.mma-chat-notice {
+  text-align: center;
+  margin-top: 10px; }
+  .mma-chat-notice span {
+    white-space: normal; }
+
+.mma-chat-input-inset {
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0; }
+
+.mma-chat-footer-note {
+  color: #444;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  width: 100%; }
+
+.mma-chat-send-form {
+  width: 100%; }
+
+.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
+  margin: 0; }
+
+.mma-mod_choice-user {
+  position: relative;
+  display: inline-block; }
+  .mma-mod_choice-user img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    left: 50%;
+    margin-left: -20px; }
+  .mma-mod_choice-user p {
+    display: inline-block;
+    padding-top: 50px; }
+
+.mma-mod_choice-graph-horizontal {
+  height: 50px; }
+
+.mma-forum-discussion-link {
+  text-decoration: none; }
+
+.mma-forum-align-right {
+  justify-content: flex-end; }
+
+.mma-forum-border {
+  border-color: #ddd;
+  border-width: 1px;
+  border-style: solid; }
+
+.mm-site_mod_forum-discussion .card.highlight .item.item-avatar, .mm-site_mod_forum-discussion .card.highlight .item.item-media, .mm-site_mod_forum-discussion .card.highlight .item.item-avatar-center {
+  background-color: #f5f5f5;
+  font-weight: bold; }
+
+.mm-site_mod_forum-discussion .card.highlight .item.item-avatar h2, .mm-site_mod_forum-discussion .card.highlight .item.item-media h2, .mm-site_mod_forum-discussion .card.highlight .item.item-avatar-center h2, .mm-site_mod_forum-discussion .card.highlight .item.item-avatar .item-heading, .mm-site_mod_forum-discussion .card.highlight .item.item-media .item-heading, .mm-site_mod_forum-discussion .card.highlight .item.item-avatar-center .item-heading {
+  font-weight: bold; }
+
+p.mma-mod-quiz-warning {
+  color: #c00; }
+
+.mm-site_mod_quiz .row, .mm-site_mod_quiz-player .row {
+  min-height: 57px; }
+  .mm-site_mod_quiz .row .button.button-block, .mm-site_mod_quiz-player .row .button.button-block {
+    margin: 0; }
+
+.item.mma-mod-quiz-highlighted, .platform-android .item.mma-mod-quiz-highlighted, .platform-ios .item.mma-mod-quiz-highlighted, .mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
+  background-color: #d9edf7; }
+
+.mma-quiz-textarea {
+  width: 100%;
+  height: 250px;
+  resize: none; }
+
+.mma-mod-quiz-subheader .row {
+  padding-top: 0px;
+  padding-bottom: 0px; }
+.mma-mod-quiz-subheader .col {
+  padding-top: 0px;
+  padding-bottom: 0px; }
+.mma-mod-quiz-subheader .mm-timer {
+  line-height: 32px; }
+
+.mma-mod-quiz-table .row:nth-child(odd) {
+  background-color: #fbfbfb; }
+
+.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
+  background-color: #fcc; }
+
+.mm-site_mod_quiz-review .item h3 {
+  font-size: 18px; }
+
+.item.mma-mod-quiz-selected, .platform-android .item.mma-mod-quiz-selected, .platform-ios .item.mma-mod-quiz-selected, .mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
+  border: 3px solid #666; }
+  .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-android .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-ios .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .mma-mod-quiz-table .item.row.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page) {
+    border-bottom: 0; }
 
 .mma-scorm-level-0 {
   padding-left: 16px; }
