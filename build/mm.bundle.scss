@@ -621,6 +621,7 @@ mm-format-text {
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
   padding: 5px;
+  background-color: white;
 
   input {
     font-size: 20px;
@@ -808,6 +809,18 @@ mm-format-text {
   }
 }
 
+// Disable textarea copy to prevent errors in iOS.
+
+.previous-input-focus.mm-textarea, .cloned-text-input + textarea.mm-textarea {
+  width: 100%;
+  position: relative !important;
+  left: 0px;
+}
+
+input[type="text"].cloned-text-input, textarea.cloned-text-input{
+  display: none;
+}
+
 // InApp notifications.
 
 .mm-inapp-notification-backdrop {
@@ -925,6 +938,7 @@ li.mm-question-answer-correct,
 .mm-question-comment,
 .mm-question-comment p {
   color: $mm-question-correct-color;
+  -webkit-text-fill-color: $mm-question-correct-color; /* Override iOS / Android font color change */
   background-color: #dff0d8;
 }
 
@@ -950,6 +964,7 @@ li.mm-question-answer-incorrect,
 .mm-question-incorrect,
 .mm-question-incorrect p {
   color: $mm-question-incorrect-color;
+  -webkit-text-fill-color: $mm-question-incorrect-color; /* Override iOS / Android font color change */
   background-color: #f2dede;
 }
 
@@ -957,6 +972,11 @@ li.mm-question-answer-incorrect,
 .mm-question-answer-incorrect .checkbox input:disabled:checked + .checkbox-icon:before {
   background-color: $mm-question-incorrect-color;
   border-color: $mm-question-incorrect-color;
+}
+
+.mm-question-answer-correct input:disabled,
+.mm-question-answer-incorrect input:disabled {
+  opacity: 1;
 }
 
 .mm-question-feedback-container {

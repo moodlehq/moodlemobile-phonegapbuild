@@ -619,7 +619,7 @@
     "mma.mod_choice.full": "(كامل)",
     "mma.mod_choice.noresultsviewable": "حالياً لا يمكن معاينة النتائج",
     "mma.mod_choice.notopenyet": "عذرا، هذا النشاط سيكون متوفر في {{$a}}",
-    "mma.mod_choice.numberofuser": "عدد المستخدمين",
+    "mma.mod_choice.numberofuser": "عدد المشاركين",
     "mma.mod_choice.numberofuserinpercentage": "عدد المستخدمين كنسبة",
     "mma.mod_choice.removemychoice": "استبعد خياري",
     "mma.mod_choice.responses": "إجابات",

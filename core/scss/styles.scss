@@ -621,6 +621,7 @@ mm-format-text {
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
   padding: 5px;
+  background-color: white;
 
   input {
     font-size: 20px;
@@ -806,6 +807,18 @@ mm-format-text {
   .cke_toolbox_main {
     margin: 0;
   }
+}
+
+// Disable textarea copy to prevent errors in iOS.
+
+.previous-input-focus.mm-textarea, .cloned-text-input + textarea.mm-textarea {
+  width: 100%;
+  position: relative !important;
+  left: 0px;
+}
+
+input[type="text"].cloned-text-input, textarea.cloned-text-input{
+  display: none;
 }
 
 // InApp notifications.

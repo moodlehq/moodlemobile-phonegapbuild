@@ -8859,7 +8859,8 @@ mm-format-text audio, mm-format-text video, mm-format-text a, mm-format-text ifr
   border: 0;
   border-bottom: 1px solid #ddd;
   margin-bottom: 10px;
-  padding: 5px; }
+  padding: 5px;
+  background-color: white; }
   .item-title input {
     font-size: 20px;
     line-height: 22px;
@@ -8981,6 +8982,14 @@ mm-format-text audio, mm-format-text video, mm-format-text a, mm-format-text ifr
 .cke_inner.cke_maximized .cke_toolbox_main {
   margin: 0; }
 
+.previous-input-focus.mm-textarea, .cloned-text-input + textarea.mm-textarea {
+  width: 100%;
+  position: relative !important;
+  left: 0px; }
+
+input[type="text"].cloned-text-input, textarea.cloned-text-input {
+  display: none; }
+
 .mm-inapp-notification-backdrop {
   position: fixed;
   top: 0;
@@ -9053,6 +9062,8 @@ input.mm-fileuploader-picker {
 
 .mm-question-answer-correct, select.mm-question-answer-correct, input.mm-question-answer-correct, input[readonly]:not(.cloned-text-input).mm-question-answer-correct, textarea.mm-question-answer-correct, textarea[readonly]:not(.cloned-text-input).mm-question-answer-correct, label.mm-question-answer-correct, li.mm-question-answer-correct, .mm-question-answer-correct p, .mm-question-answer-correct input, .mm-question-answer-correct select, .mm-question-answer-correct .item-radio input:checked + .radio-content .item-content, .mm-question-answer-correct.item-radio input:checked + .radio-content .item-content, .mm-question-comment, .mm-question-comment p {
   color: #468847;
+  -webkit-text-fill-color: #468847;
+  /* Override iOS / Android font color change */
   background-color: #dff0d8; }
 
 .mm-question-answer-correct .checkbox input:disabled:checked:before, .mm-question-answer-correct .checkbox input:disabled:checked + .checkbox-icon:before {
@@ -9061,11 +9072,16 @@ input.mm-fileuploader-picker {
 
 .mm-question-answer-incorrect, select.mm-question-answer-incorrect, input.mm-question-answer-incorrect, input[readonly]:not(.cloned-text-input).mm-question-answer-incorrect, textarea.mm-question-answer-incorrect, textarea[readonly]:not(.cloned-text-input).mm-question-answer-incorrect, label.mm-question-answer-incorrect, li.mm-question-answer-incorrect, .mm-question-answer-incorrect p, .mm-question-answer-incorrect input, .mm-question-answer-incorrect select, .mm-question-answer-incorrect .item-radio input:checked + .radio-content .item-content, .mm-question-answer-incorrect.item-radio input:checked + .radio-content .item-content, .mm-question-incorrect, .mm-question-incorrect p {
   color: #b94a48;
+  -webkit-text-fill-color: #b94a48;
+  /* Override iOS / Android font color change */
   background-color: #f2dede; }
 
 .mm-question-answer-incorrect .checkbox input:disabled:checked:before, .mm-question-answer-incorrect .checkbox input:disabled:checked + .checkbox-icon:before {
   background-color: #b94a48;
   border-color: #b94a48; }
+
+.mm-question-answer-correct input:disabled, .mm-question-answer-incorrect input:disabled {
+  opacity: 1; }
 
 .mm-question-feedback-container {
   background-color: #fcf8e3;
