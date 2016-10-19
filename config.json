@@ -8,6 +8,7 @@
     "languages": { "en": "English" },
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
+    "siteurl": "http://lms.vjec.ac.in/",
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile"
 }
