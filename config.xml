@@ -2,17 +2,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "2015"
+        id        = "com.vjec.moodlemobile"
+        versionCode = "2016"
         version   = "3.1.3">
-    <name>Moodle Mobile</name>
+    <name>VJEC mLMS</name>
 
     <description>
-        Moodle Mobile official app
+       Vimal Jyothi LMS Mobile APP
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Pty Ltd
+    <author href="http://www.vjec.ac.in" email="midhuntp@vjec.ac.in">
+       Midhun TP
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
