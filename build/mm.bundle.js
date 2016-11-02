@@ -43629,8 +43629,8 @@ angular.module('mm.addons.mod_quiz')
 angular.module('mm.core')
 
 .constant('mmCoreConfigConstants', {
-    "app_id" : "com.baljagat.baljagatmobile",
-    "appname": "Baljagat mobile",
+    "app_id" : "com.moodle.moodlemobile",
+    "appname": "Moodle Mobile",
     "versioncode" : "2015",
     "versionname" : "3.1.3",
     "cache_expiration_time" : 300000,
