@@ -14,7 +14,7 @@
     <author href="http://www.baljagat.in" email="baljagat@gmail.com">
         Anil Sonune
     </author>
-
+	<preference name="prerendered-icon" value="true"/>
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
         <string>3.1.3</string>
     </gap:config-file>
