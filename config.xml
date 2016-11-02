@@ -55,7 +55,7 @@
 
     <preference name="AndroidPersistentFileLocation"    value="Compatibility" />
     <preference name="iosPersistentFileLocation"        value="Compatibility" />
-
+	<preference name="prerendered-icon" value="true"/>
     <icon src="icon.png" />
     <icon src="resources/android/icon/icon-36-ldpi.png"       gap:platform="android"    gap:density="ldpi" />
     <icon src="resources/android/icon/icon-48-mdpi.png"       gap:platform="android"    gap:density="mdpi" />
