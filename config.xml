@@ -2,13 +2,13 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "20150"
-        version   = "3.1.3">
-    <name>Moodle Mobile</name>
+        id        = "com.8technologies"
+        versionCode = "1"
+        version   = "1.0">
+    <name>8technologies</name>
 
     <description>
-        Moodle Mobile official app
+       8technologies education app
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
