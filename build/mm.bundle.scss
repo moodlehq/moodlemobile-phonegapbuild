@@ -926,10 +926,6 @@ input[type="text"].cloned-text-input, textarea.cloned-text-input{
   }
 }
 
-
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
-}
 input.mm-fileuploader-picker {
   position: absolute;
   top: 0;
@@ -941,25 +937,8 @@ input.mm-fileuploader-picker {
 }
 
 
-.mm-mm_login_sites {
-  .item-thumbnail-left .item-content {
-    padding-top: 16px;
-  }
-
-  .avatar {
-    margin: 0;
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    border-radius : 50%;
-    padding: 4px;
-    border: 1px solid #ddd;
-  }
-
-  .card {
-    margin: 15px 10px;
-  }
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
 }
 
 $mm-question-correct-color:         #468847 !default;
@@ -1087,6 +1066,27 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
+
+.mm-mm_login_sites {
+  .item-thumbnail-left .item-content {
+    padding-top: 16px;
+  }
+
+  .avatar {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius : 50%;
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+
+  .card {
+    margin: 15px 10px;
+  }
+}
 #mm-settings-languagelabel {
   color: $base-color;
 }
