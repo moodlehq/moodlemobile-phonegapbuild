@@ -25,12 +25,13 @@ angular.module('mm.core.course')
             $mmEvents, $ionicScrollDelegate, $mmCourses, $q, mmCoreEventCompletionModuleViewed, $controller,
             $mmCoursePrefetchDelegate, $mmCourseHelper) {
 
-    // Default values are course 1 (front page) and all sections.
-    var courseId = $stateParams.cid || 1,
+    // Default values are Site Home and all sections.
+    var siteHomeId = $mmSite.getInfo().siteid || 1,
+        courseId = $stateParams.cid || siteHomeId,
         sectionId = $stateParams.sectionid || -1,
         moduleId = $stateParams.mid;
 
-    $scope.sitehome = (courseId === 1); // Are we visiting the site home?
+    $scope.sitehome = (courseId === siteHomeId); // Are we visiting the site home?
     $scope.sections = []; // Reset scope.sections, otherwise an error is shown in console with tablet view.
 
     if (sectionId < 0) {
@@ -110,10 +111,12 @@ angular.module('mm.core.course')
                     $scope.sections = sections;
                     $scope.hasContent = hasContent;
 
-                    // Add log in Moodle.
-                    $mmSite.write('core_course_view_course', {
-                        courseid: courseId
-                    });
+                    // Add log in Moodle. The 'section' attribute was added in Moodle 3.2 so maybe it isn't available.
+                    if (sectionId > 0 && sections[0] && typeof sections[0].section != 'undefined') {
+                        $mmCourse.logView(courseId, sections[0].section);
+                    } else {
+                        $mmCourse.logView(courseId);
+                    }
                 }, function(error) {
                     if (error) {
                         $mmUtil.showErrorModal(error);

@@ -119,6 +119,9 @@ em {
 // This is done for accessibility reasons when a heading is semantically incorrect.
 .item .item-heading {
   @extend h2;
+  &.padding {
+    @extend .padding;
+  }
 }
 
 .item.item-text-wrap .item-heading {
@@ -260,7 +263,30 @@ em {
         border-radius : 50%;
         padding: 4px;
         border: 1px solid #ddd;
+
+        &.no-border-radius {
+          border-radius: 0%;
+        }
     }
+}
+
+/* Show buttons as tabs */
+.tabs.tabs-free {
+  position: initial;
+  background: transparent;
+  border: 0;
+  margin-bottom: 0;
+
+  .tab-item {
+    margin-top: -1px;
+    max-width: initial;
+
+    &.active, &.activated {
+      margin-top: -1px;
+      border-top-width: 0;
+      border-bottom-width: 3px;
+    }
+  }
 }
 
 .user-with-avatar {
@@ -584,6 +610,25 @@ mm-timer {
   padding: 0;
 }
 
+.item-input-inset.item-stacked-label .item-input-wrapper.item-select {
+  display: block;
+
+  select {
+    background: transparent;
+    padding: 12px;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+    direction: ltr;
+    line-height: 14px;
+  }
+}
+
+.item-input-inset .item-input-wrapper input {
+  width: 100%;
+}
+
 .button.mm-button-icon-small {
   padding: 0 3px;
   min-height: $mm-button-icon-small-height;
@@ -639,6 +684,14 @@ mm-format-text {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
+}
+
+.item.mm-course-handlers {
+  padding: 6px 2px;
+
+  .tabs {
+    background: white;
+  }
 }
 
 /**
@@ -1250,7 +1303,8 @@ $mma-messages-date-badge: "stable" !default;
 
 $mma-mod-assign-warning-color:      #c00 !default;
 
-.mm-site_mod_assign {
+.mm-site_mod_assign,
+.mm-site_mod_assign-submission {
 
   div.latesubmission {
     background-color: #efcfcf;
@@ -1586,13 +1640,13 @@ $mma-chat-notice-badge: "stable" !default;
     border-style: solid;
 }
 
-.mm-site_mod_forum-discussion .card.highlight .item.item-avatar {
+.mm-site_mod_forum-discussion .card.highlight .item.item-heading {
     background-color: $stable;
     font-weight: bold;
-}
 
-.mm-site_mod_forum-discussion .card.highlight .item.item-avatar h2 {
-    font-weight: bold;
+    h2 {
+        font-weight: bold;
+    }
 }
 
 

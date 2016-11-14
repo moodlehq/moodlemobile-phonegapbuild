@@ -32,10 +32,11 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmUtilProvider#param
-     * @param  {Object} obj Object to serialize.
+     * @param  {Object}     obj Object to serialize.
+     * @param  {Boolean}    [addNull=false] Add null values to the serialized as empty parameters.
      * @return {String}     Serialization of the object.
      */
-    self.param = function(obj) {
+    self.param = function(obj, addNull) {
         var query = '', name, value, fullSubName, subName, subValue, innerObj, i;
 
         for (name in obj) {
@@ -49,8 +50,7 @@ angular.module('mm.core')
                     innerObj[fullSubName] = subValue;
                     query += self.param(innerObj) + '&';
                 }
-            }
-            else if (value instanceof Object) {
+            } else if (value instanceof Object) {
                 for (subName in value) {
                     subValue = value[subName];
                     fullSubName = name + '[' + subName + ']';
@@ -58,8 +58,9 @@ angular.module('mm.core')
                     innerObj[fullSubName] = subValue;
                     query += self.param(innerObj) + '&';
                 }
+            } else if (addNull || (value !== undefined && value !== null)) {
+                query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
             }
-            else if (value !== undefined && value !== null) query += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
         }
 
         return query.length ? query.substr(0, query.length - 1) : query;
@@ -1150,6 +1151,72 @@ angular.module('mm.core')
             }
             return '';
         };
+
+        /**
+         * Given a float, prints it nicely.
+         * Localized floats must not be used in calculations!
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#formatFloat
+         * @see adapted from format_float function on moodlelib.php
+         * @param  {Mixed}  float           The float to print
+         * @return {String}  locale float
+         */
+        self.formatFloat = function(float) {
+            if (typeof float == "undefined") {
+                return '';
+            }
+
+            var localeSeparator = $translate.instant('mm.core.decsep');
+
+            // Convert float to string.
+            float += '';
+            return float.replace('.', localeSeparator);
+        }
+
+        /**
+         * Converts locale specific floating point/comma number back to standard PHP float value
+         * Do NOT try to do any math operations before this conversion on any user submitted floats!
+         *
+         * @module mm.core
+         * @ngdoc method
+         * @name $mmUtil#unformatFloat
+         * @see adapted from unformat_float function on moodlelib.php
+         * @param  {Mixed}  localeFloat Locale aware float representation
+         * @return {Mixed}  float|string|bool - false if bad format. Empty string if empty value or the parsed float if not.
+         */
+        self.unformatFloat = function(localeFloat) {
+            // Bad format on input type number.
+            if (typeof localeFloat == "undefined") {
+                return false;
+            }
+
+            // Empty (but not zero).
+            if (localeFloat == null) {
+                return "";
+            }
+
+            // Convert float to string.
+            localeFloat += '';
+            localeFloat = localeFloat.trim();
+
+            if (localeFloat == "") {
+                return "";
+            }
+
+            var localeSeparator = $translate.instant('mm.core.decsep');
+
+            localeFloat = localeFloat.replace(' ', ''); // No spaces - those might be used as thousand separators.
+            localeFloat = localeFloat.replace(localeSeparator, '.');
+
+            localeFloat = parseFloat(localeFloat);
+            // Bad format.
+            if (isNaN(localeFloat)) {
+                return false;
+            }
+            return localeFloat;
+        }
 
         /**
          * Serialize an object to be used in a request.

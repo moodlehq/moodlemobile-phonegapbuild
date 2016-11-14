@@ -22,11 +22,21 @@ angular.module('mm.addons.mod_assign')
  * @name mmaModAssignSubmissionListCtrl
  */
 .controller('mmaModAssignSubmissionListCtrl', function($scope, $stateParams, $mmaModAssign, $mmUtil, $translate, $q,
-        mmaModAssignComponent, mmaModAssignSubmissionInvalidatedEvent) {
+        mmaModAssignComponent, mmaModAssignSubmissionInvalidatedEvent, mmaModAssignSubmissionStatusSubmitted,
+        mmaModAssignNeedGrading) {
 
-    var courseId = $stateParams.courseid;
+    var courseId = $stateParams.courseid,
+        selectedStatus = $stateParams.status;
 
-    $scope.title = $stateParams.modulename;
+    if (selectedStatus) {
+        if (selectedStatus == mmaModAssignNeedGrading) {
+            $scope.title = $translate.instant('mma.mod_assign.numberofsubmissionsneedgrading');
+        } else {
+            $scope.title = $translate.instant('mma.mod_assign.submissionstatus_' + selectedStatus);
+        }
+    } else {
+        $scope.title = $translate.instant('mma.mod_assign.numberofparticipants');
+    }
     $scope.assignComponent = mmaModAssignComponent;
     $scope.courseId = courseId;
     $scope.moduleId = $stateParams.moduleid;
@@ -58,16 +68,36 @@ angular.module('mm.addons.mod_assign')
                 }).finally(function() {
                     return $mmaModAssign.getSubmissionsUserData(data.submissions, courseId, assign.id, blindMarking, participants)
                             .then(function(submissions) {
-                        angular.forEach(submissions, function(submission, index) {
-                            submission.statusTranslated = $translate.instant('mma.mod_assign.submissionstatus_' +
-                                submission.status);
-                            submission.statusClass = $mmaModAssign.getSubmissionStatusClass(submission.status);
 
-                            if ($stateParams.sid == submission.submitid) {
-                                $scope.submissionToLoad = index + 1;
+                        var searchStatus = mmaModAssignNeedGrading == selectedStatus ?
+                                mmaModAssignSubmissionStatusSubmitted : selectedStatus,
+                            promises = [];
+
+                        $scope.submissions = [];
+                        angular.forEach(submissions, function(submission) {
+                            if (!searchStatus || searchStatus == submission.status) {
+                                var promise;
+
+                                if (mmaModAssignNeedGrading == selectedStatus) {
+                                    promise = $mmaModAssign.needsSubmissionToBeGraded(submission, assign.id);
+                                } else {
+                                    promise = $q.when(true);
+                                }
+                                promises.push(promise.then(function(add) {
+                                    if (!add) {
+                                        return;
+                                    }
+                                    submission.statusTranslated = $translate.instant('mma.mod_assign.submissionstatus_' +
+                                        submission.status);
+                                    submission.statusClass = $mmaModAssign.getSubmissionStatusClass(submission.status);
+                                    submission.gradingStatusTranslationId =
+                                        $mmaModAssign.getSubmissionGradingStatusTranslationId(submission.gradingstatus);
+                                    submission.gradingClass = $mmaModAssign.getSubmissionGradingStatusClass(submission.gradingstatus);
+                                    $scope.submissions.push(submission);
+                                }));
                             }
                         });
-                        $scope.submissions = submissions;
+                        return $q.all(promises);
                     });
                 });
             });

@@ -41,7 +41,7 @@ angular.module('mm.core')
 .factory('$mmSitesManager', function($http, $q, $mmSitesFactory, md5, $mmLang, $mmApp, $mmUtil, $mmEvents, $state,
             $translate, mmCoreSitesStore, mmCoreCurrentSiteStore, mmCoreEventLogin, mmCoreEventLogout, $log, mmCoreWSPrefix,
             mmCoreEventSiteUpdated, mmCoreEventSiteAdded, mmCoreEventSessionExpired, mmCoreEventSiteDeleted, $mmText,
-            mmCoreConfigConstants) {
+            mmCoreConfigConstants, mmLoginSSOCode, mmLoginSSOInAppCode) {
 
     $log = $log.getInstance('$mmSitesManager');
 
@@ -90,21 +90,21 @@ angular.module('mm.core')
         } else if (!$mmApp.isOnline()) {
             return $mmLang.translateAndReject('mm.core.networkerrormsg');
         } else {
-            protocol = protocol || "https://";
+            protocol = protocol || 'https://';
 
-            return checkSite(siteurl, protocol, false).catch(function(error) {
-                // Do not continue checking if WS are not enabled.
-                if (error.errorcode && error.errorcode == 'enablewsdescription') {
+            return checkSite(siteurl, protocol).catch(function(error) {
+                // Do not continue checking if a critical error happened.
+                if (error.critical) {
                     return $q.reject(error.error);
                 }
 
                 // Retry with the other protocol.
-                var checkPromise = protocol == "https://" ? checkSite(siteurl, "http://", error) :
-                                                            checkSite(siteurl, "https://", error);
-
-                return checkPromise.catch(function(error){
+                protocol = protocol == 'https://' ? 'http://' : 'https://';
+                return checkSite(siteurl, protocol).catch(function(secondError){
                     // Site doesn't exist.
-                    if (error.error) {
+                    if (secondError.error) {
+                        return $q.reject(secondError.error);
+                    } else if (error.error) {
                         return $q.reject(error.error);
                     }
                     return $mmLang.translateAndReject('mm.login.checksiteversion');
@@ -119,21 +119,21 @@ angular.module('mm.core')
      *
      * @param {String} siteurl       URL of the site to check.
      * @param {String} protocol      Protocol to use. If not defined, use https.
-     * @param {Object} previousError Previous error to get the most important error information among checks.
      * @return {Promise}        A promise to be resolved when the site is checked. Resolve params:
      *                            {Number} code      Code to identify the authentication method to use.
      *                            {String} siteurl   Site url to use (might have changed during the process).
      *                            {String} [warning] Code of the warning message to show to the user.
+     *                            {String} service   Service used.
+     *                            {Object} [config]  Site public config (if available).
      */
-    function checkSite(siteurl, protocol, previousError) {
+    function checkSite(siteurl, protocol) {
         // Now, replace the siteurl with the protocol.
         siteurl = siteurl.replace(/^http(s)?\:\/\//i, protocol);
 
         return self.siteExists(siteurl).catch(function(error) {
-            previousError = error.error ? error : previousError;
             // Do not continue checking if WS are not enabled.
             if (error.errorcode && error.errorcode == 'enablewsdescription') {
-                return $q.reject(previousError);
+                return rejectWithCriticalError(error.error, error.errorcode);
             }
 
             // Site doesn't exist. Try to add or remove 'www'.
@@ -141,24 +141,70 @@ angular.module('mm.core')
             return self.siteExists(treatedUrl).then(function() {
                 // Success, use this new URL as site url.
                 siteurl = treatedUrl;
-            }).catch(function(error) {
+            }).catch(function(secondError) {
                 // Do not continue checking if WS are not enabled.
-                if (error.errorcode && error.errorcode == 'enablewsdescription') {
-                    return $q.reject(error);
+                if (secondError.errorcode && secondError.errorcode == 'enablewsdescription') {
+                    return rejectWithCriticalError(secondError.error, secondError.errorcode);
                 }
 
-                previousError = error.error ? error : previousError;
-                return $q.reject(previousError);
+                error = secondError || error;
+                return $q.reject({error: error.error ? error.error : error});
             });
         }).then(function() {
             // Create a temporary site to check if local_mobile is installed.
             var temporarySite = $mmSitesFactory.makeSite(undefined, siteurl);
             return temporarySite.checkLocalMobilePlugin().then(function(data) {
-                siteurl = temporarySite.getURL();
+                data.service = data.service || mmCoreConfigConstants.wsservice;
                 services[siteurl] = data.service; // No need to store it in DB.
-                return {siteurl: siteurl, code: data.code, warning: data.warning};
+
+                if (data.coresupported || (data.code != mmLoginSSOCode && data.code != mmLoginSSOInAppCode)) {
+                    // SSO using local_mobile not needed, try to get the site public config.
+                    return temporarySite.getPublicConfig().then(function(config) {
+
+                        // Check that the user can authenticate.
+                        if (!config.enablewebservices) {
+                            return rejectWithCriticalError($translate.instant('mm.login.webservicesnotenabled'));
+                        } else if (!config.enablemobilewebservice) {
+                            return rejectWithCriticalError($translate.instant('mm.login.mobileservicesnotenabled'));
+                        } else if (config.maintenanceenabled) {
+                            var message = $translate.instant('mm.core.sitemaintenance');
+                            if (config.maintenancemessage) {
+                                message += config.maintenancemessage;
+                            }
+                            return rejectWithCriticalError(message);
+                        }
+
+                        // Everything ok.
+                        if (data.code === 0) {
+                            data.code = config.typeoflogin;
+                        }
+                        data.config = config;
+                        return data;
+                    }, function(error) {
+                        // Error, check if not supported.
+                        if (error.available === 1) {
+                            // Service supported but an error happened. Return error.
+                            return $q.reject({error: error.error});
+                        }
+
+                        return data;
+                    });
+                }
+
+                return data;
+            }).then(function(data) {
+                siteurl = temporarySite.getURL();
+                return {siteurl: siteurl, code: data.code, warning: data.warning, service: data.service, config: data.config};
             });
         });
+
+        function rejectWithCriticalError(message, errorCode) {
+            return $q.reject({
+                error: message,
+                errorcode: errorCode,
+                critical: true
+            });
+        }
     }
 
     /**
@@ -171,11 +217,14 @@ angular.module('mm.core')
      * @return {Promise}        A promise to be resolved if the site exists.
      */
     self.siteExists = function(siteurl) {
-        var data = {
-            username: 'a',
-            password: 'b',
-            service: determineService(siteurl)
-        };
+        var data = {};
+
+        if (!ionic.Platform.isWebView()) {
+            // Send fake parameters for CORS. This is only needed in browser.
+            data.username = 'a';
+            data.password = 'b';
+            data.service = 'c';
+        }
 
         return $http.post(siteurl + '/login/token.php', data, {timeout: 30000, responseType: 'json'}).then(function(data) {
             data = data.data;
@@ -202,7 +251,7 @@ angular.module('mm.core')
      * @param {String} [service] Service to use. If not defined, it will be searched in memory.
      * @param {Boolean} retry    We are retrying with a prefixed URL.
      * @return {Promise}         A promise to be resolved when the token is retrieved. If success, returns an object
-     *                           with the token and the siteurl to use.
+     *                           with the token, private token and the siteurl to use.
      */
     self.getUserToken = function(siteurl, username, password, service, retry) {
         retry = retry || false;
@@ -229,7 +278,7 @@ angular.module('mm.core')
                 return $mmLang.translateAndReject('mm.core.cannotconnect');
             } else {
                 if (typeof data.token != 'undefined') {
-                    return {token: data.token, siteurl: siteurl};
+                    return {token: data.token, siteurl: siteurl, privatetoken: data.privatetoken};
                 } else {
                     if (typeof data.error != 'undefined') {
                         // We only allow one retry (to avoid loops).
@@ -257,13 +306,15 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmSitesManager#newSite
-     * @param {String} siteurl  The site url.
-     * @param {String} token    User's token.
-     * @return {Promise}        A promise to be resolved when the site is added and the user is authenticated.
+     * @param  {String} siteurl        The site url.
+     * @param  {String} token          User's token.
+     * @param  {String} [privateToken] User's private token.
+     * @return {Promise}               A promise to be resolved when the site is added and the user is authenticated.
      */
-    self.newSite = function(siteurl, token) {
+    self.newSite = function(siteurl, token, privateToken) {
+        privateToken = privateToken || '';
 
-        var candidateSite = $mmSitesFactory.makeSite(undefined, siteurl, token);
+        var candidateSite = $mmSitesFactory.makeSite(undefined, siteurl, token, undefined, privateToken);
 
         return candidateSite.fetchSiteInfo().then(function(infos) {
             if (isValidMoodleVersion(infos)) {
@@ -271,7 +322,7 @@ angular.module('mm.core')
                 if (validation === true) {
                     var siteid = self.createSiteID(infos.siteurl, infos.username);
                     // Add site to sites list.
-                    self.addSite(siteid, siteurl, token, infos);
+                    self.addSite(siteid, siteurl, token, infos, privateToken);
                     // Turn candidate site into current site.
                     candidateSite.setId(siteid);
                     candidateSite.setInfo(infos);
@@ -390,17 +441,21 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmSitesManager#addSite
-     * @param {String} id      Site ID.
-     * @param {String} siteurl Site URL.
-     * @param {String} token   User's token in the site.
-     * @param {Object} infos   Site's info.
+     * @param  {String} id             Site ID.
+     * @param  {String} siteurl        Site URL.
+     * @param  {String} token          User's token in the site.
+     * @param  {Object} infos          Site's info.
+     * @param  {String} [privateToken] User's private token.
+     * @return {Promise}               Promise resolved when done.
      */
-    self.addSite = function(id, siteurl, token, infos) {
+    self.addSite = function(id, siteurl, token, infos, privateToken) {
+        privateToken = privateToken || '';
         return $mmApp.getDB().insert(mmCoreSitesStore, {
             id: id,
             siteurl: siteurl,
             token: token,
-            infos: infos
+            infos: infos,
+            privatetoken: privateToken
         });
     };
 
@@ -541,7 +596,7 @@ angular.module('mm.core')
             return $q.when(sites[siteId]);
         } else {
             return $mmApp.getDB().get(mmCoreSitesStore, siteId).then(function(data) {
-                var site = $mmSitesFactory.makeSite(siteId, data.siteurl, data.token, data.infos);
+                var site = $mmSitesFactory.makeSite(siteId, data.siteurl, data.token, data.infos, data.privatetoken);
                 sites[siteId] = site;
                 return site;
             });
@@ -560,6 +615,21 @@ angular.module('mm.core')
     self.getSiteDb = function(siteId) {
         return self.getSite(siteId).then(function(site) {
             return site.getDb();
+        });
+    };
+
+    /**
+     * Returns the site home ID of a site.
+     *
+     * @module mm.core
+     * @ngdoc method
+     * @name $mmSitesManager#getSiteHomeId
+     * @param  {Number} [siteId] The site ID. If not defined, current site (if available).
+     * @return {Promise}         Promise resolved with site home ID.
+     */
+    self.getSiteHomeId = function(siteId) {
+        return self.getSite(siteId).then(function(site) {
+            return site.getInfo().siteid || 1;
         });
     };
 
@@ -676,14 +746,15 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmSitesManager#updateSiteToken
-     * @param {String} siteUrl  Site's URL.
-     * @param {String} username Username.
-     * @param {String} token    User's new token.
-     * @return {Promise}        A promise to be resolved when the site is updated.
+     * @param  {String} siteUrl        Site's URL.
+     * @param  {String} username       Username.
+     * @param  {String} token          User's new token.
+     * @param  {String} [privateToken] User's private token.
+     * @return {Promise}               A promise to be resolved when the site is updated.
      */
-    self.updateSiteToken = function(siteUrl, username, token) {
+    self.updateSiteToken = function(siteUrl, username, token, privateToken) {
         var siteId = self.createSiteID(siteUrl, username);
-        return self.updateSiteTokenBySiteId(siteId, token);
+        return self.updateSiteTokenBySiteId(siteId, token, privateToken);
     };
 
     /**
@@ -692,19 +763,23 @@ angular.module('mm.core')
      * @module mm.core
      * @ngdoc method
      * @name $mmSitesManager#updateSiteTokenBySiteId
-     * @param {String} siteId   Site Id.
-     * @param {String} token    User's new token.
-     * @return {Promise}        A promise to be resolved when the site is updated.
+     * @param  {String} siteId         Site Id.
+     * @param  {String} token          User's new token.
+     * @param  {String} [privateToken] User's private token.
+     * @return {Promise}               A promise to be resolved when the site is updated.
      */
-    self.updateSiteTokenBySiteId = function(siteId, token) {
+    self.updateSiteTokenBySiteId = function(siteId, token, privateToken) {
+        privateToken = privateToken || '';
         return self.getSite(siteId).then(function(site) {
             site.token = token;
+            site.privatetoken = privateToken;
 
             return $mmApp.getDB().insert(mmCoreSitesStore, {
                 id: siteId,
                 siteurl: site.getURL(),
                 token: token,
-                infos: site.getInfo()
+                infos: site.getInfo(),
+                privatetoken: privateToken
             });
         });
     };
@@ -726,7 +801,8 @@ angular.module('mm.core')
                     id: siteid,
                     siteurl: site.getURL(),
                     token: site.getToken(),
-                    infos: infos
+                    infos: infos,
+                    privatetoken: site.getPrivateToken()
                 }).finally(function() {
                     $mmEvents.trigger(mmCoreEventSiteUpdated, siteid);
                 });
@@ -790,7 +866,7 @@ angular.module('mm.core')
             var ids = [];
             angular.forEach(sites, function(site) {
                 if (!sites[site.id]) {
-                    sites[site.id] = $mmSitesFactory.makeSite(site.id, site.siteurl, site.token, site.infos);
+                    sites[site.id] = $mmSitesFactory.makeSite(site.id, site.siteurl, site.token, site.infos, site.privatetoken);
                 }
                 if (sites[site.id].containsUrl(url)) {
                     if (!username || sites[site.id].getInfo().username == username) {

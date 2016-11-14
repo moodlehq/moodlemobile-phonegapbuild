@@ -21,10 +21,12 @@ angular.module('mm.addons.mod_assign', ['mm.core'])
 .constant('mmaModAssignSubmissionStatusDraft', 'draft')
 .constant('mmaModAssignSubmissionStatusSubmitted', 'submitted')
 .constant('mmaModAssignAttemptReopenMethodNone', 'none')
+.constant('mmaModAssignAttemptReopenMethodManual', 'manual')
 .constant('mmaModAssignUnlimitedAttempts', -1)
 .constant('mmaModAssignGradingStatusGraded', 'graded')
 .constant('mmaModAssignGradingStatusNotGraded', 'notgraded')
 .constant('mmaModMarkingWorkflowStateReleased', 'released')
+.constant('mmaModAssignNeedGrading', 'needgrading')
 .constant('mmaModAssignSubmissionInvalidatedEvent', 'mma_mod_assign_submission_invalidated')
 .constant('mmaModAssignSubmissionSavedEvent', 'mma_mod_assign_submission_saved')
 .constant('mmaModAssignSubmittedForGradingEvent', 'mma_mod_assign_submitted_for_grading')
@@ -69,9 +71,9 @@ angular.module('mm.addons.mod_assign', ['mm.core'])
     .state('site.mod_assign-submission-list', {
         url: '/mod_assign-submission-list',
         params: {
+            status: null,
             moduleid: null,
             modulename: null,
-            sid: null,
             courseid: null
         },
         views: {
@@ -88,7 +90,8 @@ angular.module('mm.addons.mod_assign', ['mm.core'])
             submitid: null,
             blindid: null,
             moduleid: null,
-            courseid: null
+            courseid: null,
+            showSubmission: null
         },
         views: {
             'site': {
