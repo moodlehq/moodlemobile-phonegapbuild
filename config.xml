@@ -2,17 +2,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "2015"
-        version   = "3.1.3">
-    <name>Moodle Mobile</name>
+        id        = "com.saegis.online"
+        versionCode = "2016"
+        version   = "1.0">
+    <name>SaegisOnline</name>
 
     <description>
-        Moodle Mobile official app
+        SaegisOnline Official Mobile app
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Pty Ltd
+    <author href="http://online.saegis.edu.lk" email="bwalallawita@gmail.com">
+        Bimsara Walallawita
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
