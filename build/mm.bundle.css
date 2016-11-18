@@ -9068,6 +9068,9 @@ input[type="text"].cloned-text-input, textarea.cloned-text-input {
     margin-left: 6px !important;
     margin-right: 6px !important; } }
 
+.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
+  right: 44px; }
+
 input.mm-fileuploader-picker {
   position: absolute;
   top: 0;
@@ -9077,8 +9080,19 @@ input.mm-fileuploader-picker {
   opacity: 0;
   outline: none; }
 
-.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
-  right: 44px; }
+.mm-mm_login_sites .item-thumbnail-left .item-content {
+  padding-top: 16px; }
+.mm-mm_login_sites .avatar {
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid #ddd; }
+.mm-mm_login_sites .card {
+  margin: 15px 10px; }
 
 .mm-question-textarea {
   width: 100%;
@@ -9143,20 +9157,6 @@ input.mm-fileuploader-picker {
 
 .mm-question-warning, p.mm-question-warning, .item .mm-question-warning {
   color: #c00; }
-
-.mm-mm_login_sites .item-thumbnail-left .item-content {
-  padding-top: 16px; }
-.mm-mm_login_sites .avatar {
-  margin: 0;
-  width: 80px;
-  height: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  border-radius: 50%;
-  padding: 4px;
-  border: 1px solid #ddd; }
-.mm-mm_login_sites .card {
-  margin: 15px 10px; }
 
 #mm-settings-languagelabel {
   color: #000; }
