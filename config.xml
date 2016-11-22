@@ -121,13 +121,13 @@
     <gap:plugin name="phonegap-plugin-push" source="npm" version="1.7.0">
         <param name="SENDER_ID" value="694767596569" />
     </gap:plugin>
-    <gap:plugin name="net.tunts.webintent" />
+    <gap:plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git" source="git" />
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
         <param name="URL_SCHEME" value="moodlemobile" />
     </gap:plugin>
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
     <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
-    <gap:plugin name="ch.ti8m.documenthandler" version="0.2.1" />
+    <gap:plugin name="ch.ti8m.documenthandler"  spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
     <gap:plugin name="cordova-plugin-zip" source="npm" />
 
     <gap:config-file platform="android" parent="/manifest">
