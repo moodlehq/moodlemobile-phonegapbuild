@@ -177,9 +177,13 @@ em {
   &.item-icon-left {
     padding-left: 35px;
 
-    .icon {
+    .icon:first-child {
       left: 4px;
     }
+  }
+
+  &.item-icon-right {
+    @extend .item-icon-right;
   }
 }
 
@@ -610,7 +614,11 @@ mm-timer {
   padding: 0;
 }
 
-.item-input-inset.item-stacked-label .item-input-wrapper.item-select {
+.item-input {
+  padding: 16px;
+}
+
+.item-input.item-stacked-label .item-input-wrapper.item-select {
   display: block;
 
   select {
@@ -625,8 +633,10 @@ mm-timer {
   }
 }
 
-.item-input-inset .item-input-wrapper input {
+.item-input-inset .item-input-wrapper input,
+.item-input .item-input-wrapper input {
   width: 100%;
+  background: transparent;
 }
 
 .button.mm-button-icon-small {
@@ -926,6 +936,51 @@ input[type="text"].cloned-text-input, textarea.cloned-text-input{
   }
 }
 
+// Toggles with relative positioning.
+
+.item-toggle-relative {
+  .item.item-toggle {
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+
+    .toggle {
+      position: relative;
+      top: 0px;
+      right: 0px;
+    }
+  }
+}
+
+// Spinner aligned right.
+
+ion-spinner.mm-spinner-right {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.item-toggle.has-spinner-right {
+  .mm-spinner-right {
+    top: ($item-padding / 2) + 2; // Same top as toggle.
+    right: 5px;
+  }
+
+  .toggle {
+    right: $item-padding + 19px;
+  }
+}
+
+// If the item-toggle is nested inside another item then the spinner can be aligned to the right.
+.item .item-toggle.has-spinner-right {
+  .mm-spinner-right {
+    right: 0px;
+  }
+
+  .toggle {
+    right: $item-padding + 14px;
+  }
+}
 
 .item.item-button-right .badge.mm-course-download{
   right: $spinner-width + $item-padding;
