@@ -425,7 +425,6 @@
     "mma.mod_assign.gradedon": "Bedømt",
     "mma.mod_assign.gradeoutof": "Bedømmelse af {{$a}}",
     "mma.mod_assign.gradingstatus": "Vurderingsstatus",
-    "mma.mod_assign.gradingsummary": "Bedømmelsesopsummering",
     "mma.mod_assign.groupsubmissionsettings": "Indstillinger for gruppeaflevering",
     "mma.mod_assign.hiddenuser": "Deltager",
     "mma.mod_assign.latesubmissions": "Forsinkede opgaveafleveringer",

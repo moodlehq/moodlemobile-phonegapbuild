@@ -525,7 +525,6 @@
     "mma.mod_assign.gradedon": "Beoordeeld op",
     "mma.mod_assign.gradeoutof": "Cijfer op {{$a}}",
     "mma.mod_assign.gradingstatus": "Beoordelingsstatus",
-    "mma.mod_assign.gradingsummary": "Samenvatting beoordeling",
     "mma.mod_assign.groupsubmissionsettings": "Instellingen groepswerk",
     "mma.mod_assign.hiddenuser": "Deelnemer",
     "mma.mod_assign.latesubmissions": "Te late inzendingen",

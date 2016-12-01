@@ -525,7 +525,6 @@
     "mma.mod_assign.gradedon": "Calificado en",
     "mma.mod_assign.gradeoutof": "Calificación sobre {{$a}}",
     "mma.mod_assign.gradingstatus": "Estatus de calificación",
-    "mma.mod_assign.gradingsummary": "Sumario de calificaciones",
     "mma.mod_assign.groupsubmissionsettings": "Configuraciones de entrega por grupo",
     "mma.mod_assign.hiddenuser": "Participante",
     "mma.mod_assign.latesubmissions": "Envíos retrasados",

@@ -457,7 +457,6 @@
     "mma.mod_assign.gradedon": "Avaliado em",
     "mma.mod_assign.gradeoutof": "Nota (de 0 a {{$a}})",
     "mma.mod_assign.gradingstatus": "Estado da avaliação",
-    "mma.mod_assign.gradingsummary": "Estado da atividade",
     "mma.mod_assign.groupsubmissionsettings": "Configurações das submissões de Grupo",
     "mma.mod_assign.hiddenuser": "Participante",
     "mma.mod_assign.latesubmissions": "Submissões com atraso",

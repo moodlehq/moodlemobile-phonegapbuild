@@ -395,7 +395,6 @@
     "mma.mod_assign.gradedon": "הציון ניתן על",
     "mma.mod_assign.gradeoutof": "ציון מתוך {{$a}}",
     "mma.mod_assign.gradingstatus": "מצב מתן הציון",
-    "mma.mod_assign.gradingsummary": "סיכום בדיקת הציונים",
     "mma.mod_assign.groupsubmissionsettings": "הגדרות הגשה בקבוצות",
     "mma.mod_assign.hiddenuser": "משתתף:",
     "mma.mod_assign.latesubmissions": "הגשות באיחור",

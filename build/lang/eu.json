@@ -457,7 +457,6 @@
     "mma.mod_assign.gradedon": "Noiz kalifikatua",
     "mma.mod_assign.gradeoutof": "Kalifikazioa ({{$a}}-(e)ra arte)",
     "mma.mod_assign.gradingstatus": "Kalifikazioaren egoera",
-    "mma.mod_assign.gradingsummary": "Kalifikazioen laburpena",
     "mma.mod_assign.groupsubmissionsettings": "Taldeko bidalketen ezarpenak",
     "mma.mod_assign.hiddenuser": "Partaidea",
     "mma.mod_assign.latesubmissions": "Epez kanpoko bidalketak",

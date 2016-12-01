@@ -466,7 +466,6 @@
     "mma.mod_assign.gradedon": "Data di valutazione",
     "mma.mod_assign.gradeoutof": "Punteggio (su {{$a}})",
     "mma.mod_assign.gradingstatus": "Stato valutazione",
-    "mma.mod_assign.gradingsummary": "Riepilogo delle valutazioni",
     "mma.mod_assign.groupsubmissionsettings": "Impostazioni consegna di gruppo",
     "mma.mod_assign.hiddenuser": "Partecipante",
     "mma.mod_assign.latesubmissions": "Consegne in ritardo",

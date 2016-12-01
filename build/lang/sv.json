@@ -456,7 +456,6 @@
     "mma.mod_assign.gradedon": "Betygssatt den",
     "mma.mod_assign.gradeoutof": "Betyg ur {{$a}}",
     "mma.mod_assign.gradingstatus": "Betygssättningsstatus",
-    "mma.mod_assign.gradingsummary": "Betygssammanställning",
     "mma.mod_assign.groupsubmissionsettings": "Gruppinlämning inställningar",
     "mma.mod_assign.hiddenuser": "Deltagare",
     "mma.mod_assign.latesubmissions": "Sen inlämning",

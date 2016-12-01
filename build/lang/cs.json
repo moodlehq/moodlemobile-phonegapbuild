@@ -525,7 +525,6 @@
     "mma.mod_assign.gradedon": "Hodnoceno na",
     "mma.mod_assign.gradeoutof": "Hodnoceno z {{$a}}",
     "mma.mod_assign.gradingstatus": "Stav hodnocení",
-    "mma.mod_assign.gradingsummary": "Souhrn hodnocení",
     "mma.mod_assign.groupsubmissionsettings": "Nastavení skupinového řešení",
     "mma.mod_assign.hiddenuser": "Účastník",
     "mma.mod_assign.latesubmissions": "Zpožděné odevzdané úkoly",

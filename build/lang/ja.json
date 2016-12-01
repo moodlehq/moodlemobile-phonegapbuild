@@ -284,7 +284,6 @@
     "mma.mod_assign.gradedon": "評定日時",
     "mma.mod_assign.gradeoutof": "{{$a}} 点中の評点",
     "mma.mod_assign.gradingstatus": "評定ステータス",
-    "mma.mod_assign.gradingsummary": "評定概要",
     "mma.mod_assign.groupsubmissionsettings": "グループ提出設定",
     "mma.mod_assign.hiddenuser": "参加者",
     "mma.mod_assign.latesubmissions": "提出期限後の提出",

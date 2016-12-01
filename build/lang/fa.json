@@ -239,7 +239,6 @@
     "mma.mod_assign.gradedon": "تاریخ ثبت نمره",
     "mma.mod_assign.gradeoutof": "نمره از {{$a}}",
     "mma.mod_assign.gradingstatus": "وضعیت تصحیح",
-    "mma.mod_assign.gradingsummary": "خلاصه نمره‌دهی",
     "mma.mod_assign.hiddenuser": "شاگرد شماره",
     "mma.mod_assign.markingworkflowstateinreview": "درحال بازبینی",
     "mma.mod_assign.markingworkflowstatenotmarked": "نمره داده نشده است",

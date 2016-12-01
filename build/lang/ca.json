@@ -470,7 +470,6 @@
     "mma.mod_assign.gradedon": "Qualificat el",
     "mma.mod_assign.gradeoutof": "Qualificació sobre {{$a}}",
     "mma.mod_assign.gradingstatus": "Estat de la qualificació",
-    "mma.mod_assign.gradingsummary": "Resum de la qualificació",
     "mma.mod_assign.groupsubmissionsettings": "Paràmetres de la tramesa en grup",
     "mma.mod_assign.hiddenuser": "Participant",
     "mma.mod_assign.latesubmissions": "Trameses fora de termini",

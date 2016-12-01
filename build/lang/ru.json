@@ -383,7 +383,6 @@
     "mma.mod_assign.gradedon": "Оценено в",
     "mma.mod_assign.gradeoutof": "Оценка из {{$a}}",
     "mma.mod_assign.gradingstatus": "Состояние оценивания",
-    "mma.mod_assign.gradingsummary": "Резюме оценивания",
     "mma.mod_assign.groupsubmissionsettings": "Настройки представления работ группы",
     "mma.mod_assign.hiddenuser": "Участник",
     "mma.mod_assign.latesubmissions": "Поступившие представления",

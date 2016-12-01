@@ -282,7 +282,6 @@
     "mma.mod_assign.gradedon": "Osztályozás időpontja",
     "mma.mod_assign.gradeoutof": "{{$a}} pontból",
     "mma.mod_assign.gradingstatus": "Osztályozás állapota",
-    "mma.mod_assign.gradingsummary": "Osztályozási összesítő",
     "mma.mod_assign.groupsubmissionsettings": "Csoportos leadás beállításai",
     "mma.mod_assign.hiddenuser": "Résztvevő",
     "mma.mod_assign.latesubmissions": "Későn leadott munkák",

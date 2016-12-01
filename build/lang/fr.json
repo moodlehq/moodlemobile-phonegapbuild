@@ -497,7 +497,6 @@
     "mma.mod_assign.gradedon": "Évalué le",
     "mma.mod_assign.gradeoutof": "Note sur {{$a}}",
     "mma.mod_assign.gradingstatus": "Statut de l'évaluation",
-    "mma.mod_assign.gradingsummary": "Résumé de l'évaluation",
     "mma.mod_assign.groupsubmissionsettings": "Réglages de remises en groupe",
     "mma.mod_assign.hiddenuser": "Participant",
     "mma.mod_assign.latesubmissions": "Devoirs en retard",

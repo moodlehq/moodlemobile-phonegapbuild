@@ -8541,10 +8541,12 @@ em {
   position: initial;
   background: transparent;
   border: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  margin-top: 10px; }
   .tabs.tabs-free .tab-item {
     margin-top: -1px;
-    max-width: initial; }
+    max-width: initial;
+    font-size: 120%; }
     .tabs.tabs-free .tab-item.active, .tabs.tabs-free .tab-item.activated {
       margin-top: -1px;
       border-top-width: 0;
@@ -8556,7 +8558,8 @@ em {
   display: block;
   padding: 4px;
   padding-left: 56px;
-  min-height: 48px; }
+  min-height: 48px;
+  text-decoration: none; }
 
 .user-with-avatar > img:first-child {
   position: absolute;
@@ -8642,6 +8645,17 @@ em {
 .item-button-right.item-3-button-right, a.item.item-button-right.item-3-button-right, button.item.item-button-right.item-3-button-right {
   padding-right: 160px; }
 
+.item-button-right > .buttons.buttons-vertical {
+  flex-direction: column;
+  align-items: flex-end; }
+
+.button.button-block {
+  line-height: 28px;
+  padding-top: 7px;
+  padding-bottom: 7px; }
+  .button.button-block .icon:before, .button.button-block.icon:before, .button.button-block.icon-left:before, .button.button-block.icon-right:before {
+    line-height: 28px; }
+
 /**
  * Core directives.
  */
@@ -8671,7 +8685,8 @@ mm-format-text ol, *[mm-format-text] ol {
   margin-top: 10px; }
 
 .mm-loading-content {
-  height: 100%; }
+  padding-bottom: 1px;
+  /* This makes height be real */ }
 
 mm-loading.mm-loading-noheight .mm-loading-content {
   height: auto; }
@@ -8750,7 +8765,16 @@ p.mm-error {
     font-size: 125%; }
 
 .scroll {
-  height: 100%; }
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0; }
+  .scroll.padding > .card:first-child, .scroll.padding .mm-loading-content > .card:first-child, .scroll.padding .scroll-refresher > .card:first-child {
+    margin-top: 10px; }
+
+.padding .scroll, .item .item-heading.padding .scroll {
+  padding: 10px; }
 
 .iframe-wrapper {
   top: 0;
@@ -8856,20 +8880,19 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 .item-input-inset.mm-input-inset-no-padding {
   padding: 0; }
 
-.item-input {
+.item-input.item-stacked-label {
   padding: 16px; }
-
-.item-input.item-stacked-label .item-input-wrapper.item-select {
-  display: block; }
-  .item-input.item-stacked-label .item-input-wrapper.item-select select {
-    background: transparent;
-    padding: 12px;
-    margin: 0;
-    width: 100%;
-    position: relative;
-    max-width: 100%;
-    direction: ltr;
-    line-height: 14px; }
+  .item-input.item-stacked-label .item-input-wrapper.item-select {
+    display: block; }
+    .item-input.item-stacked-label .item-input-wrapper.item-select select {
+      background: transparent;
+      padding: 12px;
+      margin: 0;
+      width: 100%;
+      position: relative;
+      max-width: 100%;
+      direction: ltr;
+      line-height: 14px; }
 
 .item-input-inset .item-input-wrapper input, .item-input .item-input-wrapper input {
   width: 100%;
@@ -9030,7 +9053,7 @@ mm-format-text audio, mm-format-text video, mm-format-text a, mm-format-text ifr
   position: relative !important;
   left: 0px; }
 
-input[type="text"].cloned-text-input, textarea.cloned-text-input {
+textarea.cloned-text-input {
   display: none; }
 
 .mm-inapp-notification-backdrop {
@@ -9096,6 +9119,13 @@ ion-spinner.mm-spinner-right {
   right: 0px; }
 .item .item-toggle.has-spinner-right .toggle {
   right: 30px; }
+
+.item-borderless.item-toggle {
+  padding-left: 0;
+  padding-bottom: 5px;
+  padding-top: 5px; }
+  .item-borderless.item-toggle .toggle {
+    top: 0; }
 
 .item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
   right: 44px; }
@@ -9208,6 +9238,11 @@ input.mm-fileuploader-picker {
 
 .has-side-menu-header {
   top: 80px; }
+
+.foreground-ion-edit.ion-edit:before {
+  position: relative;
+  left: 105px;
+  bottom: 15px; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */

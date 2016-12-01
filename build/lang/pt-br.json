@@ -473,7 +473,6 @@
     "mma.mod_assign.gradedon": "Avaliado em",
     "mma.mod_assign.gradeoutof": "Nota até {{$a}}",
     "mma.mod_assign.gradingstatus": "Status da avaliação",
-    "mma.mod_assign.gradingsummary": "Sumário de avaliação",
     "mma.mod_assign.groupsubmissionsettings": "Configurações de envio em grupo",
     "mma.mod_assign.hiddenuser": "Participante",
     "mma.mod_assign.latesubmissions": "Submissões atrasadas",

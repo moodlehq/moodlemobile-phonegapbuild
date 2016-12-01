@@ -328,7 +328,6 @@
     "mma.mod_assign.gradedon": "Оценено на",
     "mma.mod_assign.gradeoutof": "Оценка до {{$a}}",
     "mma.mod_assign.gradingstatus": "Състояние на оценяването",
-    "mma.mod_assign.gradingsummary": "Обобщение на оценките",
     "mma.mod_assign.groupsubmissionsettings": "Настройки за групово предаване",
     "mma.mod_assign.hiddenuser": "Участник",
     "mma.mod_assign.latesubmissions": "Закъснели предавания",

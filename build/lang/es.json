@@ -447,7 +447,6 @@
     "mma.mod_assign.gradedon": "Calificado sobre",
     "mma.mod_assign.gradeoutof": "Calificación sobre {{$a}}",
     "mma.mod_assign.gradingstatus": "Estado de la calificación",
-    "mma.mod_assign.gradingsummary": "Sumario de calificaciones",
     "mma.mod_assign.groupsubmissionsettings": "Configuración de entrega por grupo",
     "mma.mod_assign.hiddenuser": "Participante",
     "mma.mod_assign.latesubmissions": "Entrega fuera de plazo",

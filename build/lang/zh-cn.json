@@ -271,7 +271,6 @@
     "mma.mod_assign.gradedon": "评分时间",
     "mma.mod_assign.gradeoutof": "成绩（满分 {{$a}} ）",
     "mma.mod_assign.gradingstatus": "评分状态",
-    "mma.mod_assign.gradingsummary": "作业评分情况汇总",
     "mma.mod_assign.groupsubmissionsettings": "分组提交设置",
     "mma.mod_assign.hiddenuser": "参与者",
     "mma.mod_assign.latesubmissions": "迟交的作业",

@@ -282,7 +282,6 @@
     "mma.mod_assign.gradedon": "評分標準",
     "mma.mod_assign.gradeoutof": "得分(配分{{$a}})",
     "mma.mod_assign.gradingstatus": "評分狀態",
-    "mma.mod_assign.gradingsummary": "評閱摘要",
     "mma.mod_assign.groupsubmissionsettings": "群組繳交作業設定",
     "mma.mod_assign.hiddenuser": "參與者",
     "mma.mod_assign.latesubmissions": "遲交的作業",

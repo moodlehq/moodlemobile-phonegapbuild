@@ -276,7 +276,6 @@
     "mma.mod_assign.gradedon": "Ocenione dnia",
     "mma.mod_assign.gradeoutof": "Ocena z max. {{$a}}",
     "mma.mod_assign.gradingstatus": "Stan oceniania",
-    "mma.mod_assign.gradingsummary": "Podsumowanie",
     "mma.mod_assign.groupsubmissionsettings": "Ustawienia zadań grupowych",
     "mma.mod_assign.hiddenuser": "Uczestnik",
     "mma.mod_assign.latesubmissions": "Zadania oddane po terminie",
