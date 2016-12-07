@@ -9161,6 +9161,9 @@ ion-spinner.mm-spinner-right {
   .item-borderless.item-toggle .toggle {
     top: 0; }
 
+.platform-ios video::cue {
+  font-size: 12px; }
+
 .item .mm-input-footnote {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -9429,29 +9432,24 @@ input.mm-fileuploader-picker {
   right: 0;
   left: initial; }
 
-.mma-chat-notice {
-  text-align: center;
-  margin-top: 10px; }
-  .mma-chat-notice span {
-    white-space: normal; }
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold; }
 
-.mma-chat-input-inset {
-  padding-top: 0;
-  padding-left: 0;
-  padding-bottom: 0; }
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: #080; }
 
-.mma-chat-footer-note {
-  color: #444;
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
-  width: 100%; }
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: #600; }
 
-.mma-chat-send-form {
-  width: 100%; }
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: #c00; }
 
-.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
-  margin: 0; }
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+  font-weight: bold;
+  font-size: 16px; }
 
 .mm-site_mod_assign div.latesubmission, .mm-site_mod_assign-submission div.latesubmission {
   background-color: #efcfcf; }
@@ -9623,6 +9621,30 @@ p.mma-mod-assign-warning {
 .gradingform_guide .score input {
   margin: 0;
   width: auto; }
+
+.mma-chat-notice {
+  text-align: center;
+  margin-top: 10px; }
+  .mma-chat-notice span {
+    white-space: normal; }
+
+.mma-chat-input-inset {
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0; }
+
+.mma-chat-footer-note {
+  color: #444;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  width: 100%; }
+
+.mma-chat-send-form {
+  width: 100%; }
+
+.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
+  margin: 0; }
 
 .mma-mod_choice-user {
   position: relative;
@@ -9831,96 +9853,6 @@ select.mma-mod_survey-select {
 .mma-mod_wiki-subwiki-picker .item.item-selected .icon {
   font-size: 24px; }
 
-.qbehaviour_deferredcbm_actual_percentage {
-  font-weight: bold; }
-
-.qbehaviour_deferredcbm_judgementok {
-  font-weight: bold;
-  color: #080; }
-
-.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
-  font-weight: bold;
-  color: #600; }
-
-.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
-  font-weight: bold;
-  color: #c00; }
-
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
-  font-weight: bold;
-  font-size: 16px; }
-
-.mma-qtype-ddimageortext-container mm-loading {
-  position: absolute;
-  left: 50%; }
-.mma-qtype-ddimageortext-container .qtext {
-  margin-bottom: 0.5em;
-  display: block; }
-.mma-qtype-ddimageortext-container div.droparea img {
-  border: 1px solid #000000;
-  max-width: 100%; }
-.mma-qtype-ddimageortext-container .draghome {
-  vertical-align: top;
-  margin: 5px;
-  visibility: hidden; }
-.mma-qtype-ddimageortext-container .draghome img {
-  display: block; }
-.mma-qtype-ddimageortext-container div.draghome {
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: #B0C4DE;
-  display: inline-block;
-  height: auto;
-  width: auto;
-  zoom: 1; }
-.mma-qtype-ddimageortext-container .group1 {
-  background-color: #FFFFFF; }
-.mma-qtype-ddimageortext-container .group2 {
-  background-color: #B0C4DE; }
-.mma-qtype-ddimageortext-container .group3 {
-  background-color: #DCDCDC; }
-.mma-qtype-ddimageortext-container .group4 {
-  background-color: #D8BFD8; }
-.mma-qtype-ddimageortext-container .group5 {
-  background-color: #87CEFA; }
-.mma-qtype-ddimageortext-container .group6 {
-  background-color: #DAA520; }
-.mma-qtype-ddimageortext-container .group7 {
-  background-color: #FFD700; }
-.mma-qtype-ddimageortext-container .group8 {
-  background-color: #F0E68C; }
-.mma-qtype-ddimageortext-container .drag {
-  border: 1px solid black;
-  cursor: pointer;
-  z-index: 2; }
-.mma-qtype-ddimageortext-container .dragitems.readonly .drag {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container .dragitems > div {
-  clear: both; }
-.mma-qtype-ddimageortext-container .dragitems {
-  cursor: pointer; }
-.mma-qtype-ddimageortext-container .dragitems.readonly {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container .drag img {
-  display: block; }
-.mma-qtype-ddimageortext-container div.ddarea {
-  text-align: center;
-  position: relative; }
-.mma-qtype-ddimageortext-container .dropbackground {
-  margin: 0 auto; }
-.mma-qtype-ddimageortext-container .dropzone {
-  border: 1px solid black;
-  position: absolute;
-  z-index: 1;
-  cursor: pointer; }
-.mma-qtype-ddimageortext-container .readonly .dropzone {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container div.dragitems div.draghome, .mma-qtype-ddimageortext-container div.dragitems div.drag {
-  font: 13px/1.231 arial, helvetica, clean, sans-serif; }
-.mma-qtype-ddimageortext-container .drag.beingdragged {
-  z-index: 3;
-  box-shadow: 3px 3px 4px #000; }
-
 .mma-qtype-ddmarker-container mm-loading {
   position: absolute;
   left: 50%; }
@@ -9993,6 +9925,77 @@ select.mma-mod_survey-select {
   /* In other words, this works for a 15x15 cross-hair. */ }
 .mma-qtype-ddmarker-container div.dragitems div.draghome img.target {
   display: none; }
+
+.mma-qtype-ddimageortext-container mm-loading {
+  position: absolute;
+  left: 50%; }
+.mma-qtype-ddimageortext-container .qtext {
+  margin-bottom: 0.5em;
+  display: block; }
+.mma-qtype-ddimageortext-container div.droparea img {
+  border: 1px solid #000000;
+  max-width: 100%; }
+.mma-qtype-ddimageortext-container .draghome {
+  vertical-align: top;
+  margin: 5px;
+  visibility: hidden; }
+.mma-qtype-ddimageortext-container .draghome img {
+  display: block; }
+.mma-qtype-ddimageortext-container div.draghome {
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: #B0C4DE;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  zoom: 1; }
+.mma-qtype-ddimageortext-container .group1 {
+  background-color: #FFFFFF; }
+.mma-qtype-ddimageortext-container .group2 {
+  background-color: #B0C4DE; }
+.mma-qtype-ddimageortext-container .group3 {
+  background-color: #DCDCDC; }
+.mma-qtype-ddimageortext-container .group4 {
+  background-color: #D8BFD8; }
+.mma-qtype-ddimageortext-container .group5 {
+  background-color: #87CEFA; }
+.mma-qtype-ddimageortext-container .group6 {
+  background-color: #DAA520; }
+.mma-qtype-ddimageortext-container .group7 {
+  background-color: #FFD700; }
+.mma-qtype-ddimageortext-container .group8 {
+  background-color: #F0E68C; }
+.mma-qtype-ddimageortext-container .drag {
+  border: 1px solid black;
+  cursor: pointer;
+  z-index: 2; }
+.mma-qtype-ddimageortext-container .dragitems.readonly .drag {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container .dragitems > div {
+  clear: both; }
+.mma-qtype-ddimageortext-container .dragitems {
+  cursor: pointer; }
+.mma-qtype-ddimageortext-container .dragitems.readonly {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container .drag img {
+  display: block; }
+.mma-qtype-ddimageortext-container div.ddarea {
+  text-align: center;
+  position: relative; }
+.mma-qtype-ddimageortext-container .dropbackground {
+  margin: 0 auto; }
+.mma-qtype-ddimageortext-container .dropzone {
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer; }
+.mma-qtype-ddimageortext-container .readonly .dropzone {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container div.dragitems div.draghome, .mma-qtype-ddimageortext-container div.dragitems div.drag {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif; }
+.mma-qtype-ddimageortext-container .drag.beingdragged {
+  z-index: 3;
+  box-shadow: 3px 3px 4px #000; }
 
 .mma-qtype-ddwtos-container .qtext {
   margin-bottom: 0.5em;
