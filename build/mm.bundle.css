@@ -8724,6 +8724,16 @@ mm-format-text ol, *[mm-format-text] ol {
 mm-loading.mm-loading-noheight .mm-loading-content {
   height: auto; }
 
+mm-loading.mm-loading-center {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block; }
+  mm-loading.mm-loading-center .mm-loading-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+
 .spinner-right {
   position: absolute;
   top: 8px;
@@ -9119,7 +9129,7 @@ textarea.cloned-text-input {
     margin-right: auto  !important;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     padding: 2px 0; }
-    .mm-inapp-notification-backdrop .mm-inapp-notification .scroll-content {
+    .mm-inapp-notification-backdrop .mm-inapp-notification .scroll-content, .mm-inapp-notification-backdrop .mm-inapp-notification .scroll {
       position: relative;
       top: auto;
       bottom: auto;
@@ -9198,6 +9208,9 @@ ion-spinner.mm-spinner-right {
     padding: 4px;
     color: #c00;
     font-size: 12px; }
+
+.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
+  right: 44px; }
 
 input.mm-fileuploader-picker {
   position: absolute;
@@ -9307,9 +9320,6 @@ input.mm-fileuploader-picker {
 
 .has-side-menu-header {
   top: 80px; }
-
-.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
-  right: 44px; }
 
 .foreground-ion-edit.ion-edit:before {
   position: relative;
