@@ -110,7 +110,11 @@
     <gap:splash src="resources/ios/splash/Default~iphone.png"             gap:platform="ios" width="320" height="480"/>
 
     <gap:plugin name="cordova-plugin-camera" source="npm" />
-    <gap:plugin name="cordova-plugin-media-capture" source="npm" />
+    <gap:plugin name="cordova-plugin-media-capture" source="npm">
+        <param name="CAMERA_USAGE_DESCRIPTION" value="the app would like to access your camera to let you take a photo"/>
+        <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="the app would like to access your photo library to let you pick a photo"/>
+        <param name="MICROPHONE_USAGE_DESCRIPTION" value="the app would like to access your microphone to let you record an audio"/>
+    </gap:plugin>
     <gap:plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-file" source="npm" />
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
