@@ -1118,6 +1118,11 @@ ion-spinner.mm-spinner-right {
   }
 }
 
+// Ionic overrides italic font-style, apply it again.
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+
 
 .item.item-button-right .badge.mm-course-download{
   right: $spinner-width + $item-padding;

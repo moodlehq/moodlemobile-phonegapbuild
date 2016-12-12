@@ -635,6 +635,7 @@
     "mma.mod_assign.grade": "Grade",
     "mma.mod_assign.graded": "Graded",
     "mma.mod_assign.gradedby": "Graded by",
+    "mma.mod_assign.gradenotsynced": "Grade not synced",
     "mma.mod_assign.gradedon": "Graded on",
     "mma.mod_assign.gradeoutof": "Grade out of {{$a}}",
     "mma.mod_assign.gradingstatus": "Grading status",

@@ -9209,6 +9209,9 @@ ion-spinner.mm-spinner-right {
     color: #c00;
     font-size: 12px; }
 
+i, cite, em, var, address, dfn {
+  font-style: italic; }
+
 .item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
   right: 44px; }
 
