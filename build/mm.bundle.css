@@ -8748,17 +8748,28 @@ mm-loading.mm-loading-center {
   border-color: #ccc;
   background-color: #D9D9D9; }
 
-.item.item-text-wrap.item-completion {
-  padding-right: 106px; }
+.mm-module-buttons {
+  float: right;
+  width: 42px;
+  height: 30px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  margin-left: 2px;
+  position: relative;
+  text-align: center; }
+  .mm-module-buttons.mm-button-completion {
+    margin-left: 50px; }
+  .mm-module-buttons .spinner {
+    bottom: -12px;
+    right: 7px;
+    position: absolute; }
 
 .mm-completion-container {
   position: absolute;
-  top: 50%;
-  right: 8px;
-  margin-right: 66px;
-  margin-top: -12px; }
+  top: 0;
+  right: 42px;
+  padding: 12px; }
   .mm-completion-container img {
-    float: right;
     width: 24px; }
 
 .mm-media-adapt-width {
@@ -8768,7 +8779,8 @@ img.mm-media-adapt-width {
   height: auto; }
 
 .mm-adapted-img-container {
-  position: relative; }
+  position: relative;
+  display: inline-block; }
 
 .mm-image-viewer-icon {
   position: absolute;
@@ -8928,6 +8940,9 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 .item-input-inset.mm-input-inset-no-padding {
   padding: 0; }
 
+.item-input.mm-item-input-padding-right {
+  padding-right: 16px; }
+
 .item-input.item-stacked-label {
   padding: 16px; }
   .item-input.item-stacked-label .item-input-wrapper.item-select {
@@ -9019,8 +9034,16 @@ mm-format-text audio, mm-format-text video, mm-format-text a, mm-format-text ifr
  */
 .mm-textarea {
   width: 100%;
-  height: 200px;
   resize: none; }
+  .mm-textarea[mm-auto-rows] {
+    height: auto;
+    line-height: 18px;
+    padding: 5px; }
+  .mm-textarea:not([mm-auto-rows]) {
+    height: 200px; }
+
+.item-input-wrapper .mm-textarea {
+  background: transparent; }
 
 .item.mm-item-has-rich-text-editor {
   padding: 0;
@@ -9217,8 +9240,17 @@ ion-spinner.mm-spinner-right {
 i, cite, em, var, address, dfn {
   font-style: italic; }
 
-.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
-  right: 44px; }
+.bar-footer.bar-footer-adjustable {
+  height: auto; }
+
+.item.item-input .mm-show-password-container, .card .item.item-input .mm-show-password-container, .list-inset .item.item-input .mm-show-password-container, .padding > .list .item.item-input .mm-show-password-container, .padding-horizontal > .list .item.item-input .mm-show-password-container {
+  padding: 0px;
+  width: 100%; }
+  .item.item-input .mm-show-password-container input, .card .item.item-input .mm-show-password-container input, .list-inset .item.item-input .mm-show-password-container input, .padding > .list .item.item-input .mm-show-password-container input, .padding-horizontal > .list .item.item-input .mm-show-password-container input {
+    padding-right: 0px; }
+  .item.item-input .mm-show-password-container button, .card .item.item-input .mm-show-password-container button, .list-inset .item.item-input .mm-show-password-container button, .padding > .list .item.item-input .mm-show-password-container button, .padding-horizontal > .list .item.item-input .mm-show-password-container button {
+    margin-left: 10.66667px;
+    padding: 0 6px; }
 
 input.mm-fileuploader-picker {
   position: absolute;
@@ -9228,6 +9260,69 @@ input.mm-fileuploader-picker {
   min-height: 100%;
   opacity: 0;
   outline: none; }
+
+/* - User grades table (most of it extracted from MM1)
+-------------------------------------------------------------------------- */
+.mm-grades-table {
+  border-collapse: collapse;
+  line-height: 20px;
+  width: 100%;
+  border-top: 1px solid #eee; }
+  .mm-grades-table tr {
+    border-bottom: 1px solid #eee; }
+  .mm-grades-table th, .mm-grades-table td {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+    white-space: normal; }
+  .mm-grades-table thead th {
+    padding-left: 10px;
+    vertical-align: bottom;
+    font-weight: bold; }
+  .mm-grades-table tbody th {
+    font-weight: normal; }
+  .mm-grades-table .item {
+    display: table-cell; }
+  .mm-grades-table th.b1b {
+    padding-left: 20px; }
+  .mm-grades-table th.item {
+    padding-left: 40px; }
+  .mm-grades-table th.baggt {
+    padding-left: 40px; }
+  .mm-grades-table th img {
+    margin-left: -20px;
+    float: left; }
+  .mm-grades-table .b1l {
+    width: 20px;
+    min-width: 20px; }
+  .mm-grades-table .b1t, .mm-grades-table .baggt {
+    font-weight: bold; }
+  .mm-grades-table .itemcenter {
+    padding-left: 10px;
+    white-space: nowrap; }
+  .mm-grades-table .feedbacktext {
+    padding-left: 10px; }
+    .mm-grades-table .feedbacktext .no-overflow {
+      overflow: auto; }
+  .mm-grades-table .dimmed_text, .mm-grades-table .hidden, .mm-grades-table .hidden a {
+    color: #aaa; }
+  .mm-grades-table .oddd1, .mm-grades-table .oddd3, .mm-grades-table .evend3 {
+    background-color: #eee; }
+    .mm-grades-table .oddd1.b1b, .mm-grades-table .oddd1.b1l, .mm-grades-table .oddd3.b1b, .mm-grades-table .oddd3.b1l, .mm-grades-table .evend3.b1b, .mm-grades-table .evend3.b1l {
+      border-top: 1px solid #fff; }
+  .mm-grades-table .oddd2, .mm-grades-table .evend2, .mm-grades-table .oddd4, .mm-grades-table .evend4 {
+    background-color: #f9f9f9; }
+  .mm-grades-table .levelodd {
+    background-color: #eee; }
+    .mm-grades-table .levelodd.b1b, .mm-grades-table .levelodd.b1l {
+      border-top: 1px solid #fff; }
+  .mm-grades-table .leveleven {
+    background-color: #fff; }
+
+.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
+  right: 44px; }
 
 .mm-mm_login_sites .item-thumbnail-left .item-content {
   padding-top: 16px; }
@@ -9333,66 +9428,6 @@ input.mm-fileuploader-picker {
   position: relative;
   left: 105px;
   bottom: 15px; }
-
-/* - User grades table (most of it extracted from MM1)
--------------------------------------------------------------------------- */
-.mma-grades-table {
-  border-collapse: collapse;
-  line-height: 20px;
-  width: 100%;
-  border-top: 1px solid #eee; }
-  .mma-grades-table tr {
-    border-bottom: 1px solid #eee; }
-  .mma-grades-table th, .mma-grades-table td {
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    vertical-align: top;
-    white-space: normal; }
-  .mma-grades-table thead th {
-    padding-left: 10px;
-    vertical-align: bottom;
-    font-weight: bold; }
-  .mma-grades-table tbody th {
-    font-weight: normal; }
-  .mma-grades-table .item {
-    display: table-cell; }
-  .mma-grades-table th.b1b {
-    padding-left: 20px; }
-  .mma-grades-table th.item {
-    padding-left: 40px; }
-  .mma-grades-table th.baggt {
-    padding-left: 40px; }
-  .mma-grades-table th img {
-    margin-left: -20px;
-    float: left; }
-  .mma-grades-table .b1l {
-    width: 20px;
-    min-width: 20px; }
-  .mma-grades-table .b1t, .mma-grades-table .baggt {
-    font-weight: bold; }
-  .mma-grades-table .itemcenter {
-    padding-left: 10px;
-    white-space: nowrap; }
-  .mma-grades-table .feedbacktext {
-    padding-left: 10px; }
-    .mma-grades-table .feedbacktext .no-overflow {
-      overflow: auto; }
-  .mma-grades-table .dimmed_text, .mma-grades-table .hidden, .mma-grades-table .hidden a {
-    color: #aaa; }
-  .mma-grades-table .oddd1, .mma-grades-table .oddd3, .mma-grades-table .evend3 {
-    background-color: #eee; }
-    .mma-grades-table .oddd1.b1b, .mma-grades-table .oddd1.b1l, .mma-grades-table .oddd3.b1b, .mma-grades-table .oddd3.b1l, .mma-grades-table .evend3.b1b, .mma-grades-table .evend3.b1l {
-      border-top: 1px solid #fff; }
-  .mma-grades-table .oddd2, .mma-grades-table .evend2, .mma-grades-table .oddd4, .mma-grades-table .evend4 {
-    background-color: #f9f9f9; }
-  .mma-grades-table .levelodd {
-    background-color: #eee; }
-    .mma-grades-table .levelodd.b1b, .mma-grades-table .levelodd.b1l {
-      border-top: 1px solid #fff; }
-  .mma-grades-table .leveleven {
-    background-color: #fff; }
 
 .mma-messages-date {
   text-align: center;
@@ -9873,6 +9908,77 @@ select.mma-mod_survey-select {
   font-weight: bold;
   font-size: 16px; }
 
+.mma-qtype-ddimageortext-container mm-loading {
+  position: absolute;
+  left: 50%; }
+.mma-qtype-ddimageortext-container .qtext {
+  margin-bottom: 0.5em;
+  display: block; }
+.mma-qtype-ddimageortext-container div.droparea img {
+  border: 1px solid #000000;
+  max-width: 100%; }
+.mma-qtype-ddimageortext-container .draghome {
+  vertical-align: top;
+  margin: 5px;
+  visibility: hidden; }
+.mma-qtype-ddimageortext-container .draghome img {
+  display: block; }
+.mma-qtype-ddimageortext-container div.draghome {
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: #B0C4DE;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  zoom: 1; }
+.mma-qtype-ddimageortext-container .group1 {
+  background-color: #FFFFFF; }
+.mma-qtype-ddimageortext-container .group2 {
+  background-color: #B0C4DE; }
+.mma-qtype-ddimageortext-container .group3 {
+  background-color: #DCDCDC; }
+.mma-qtype-ddimageortext-container .group4 {
+  background-color: #D8BFD8; }
+.mma-qtype-ddimageortext-container .group5 {
+  background-color: #87CEFA; }
+.mma-qtype-ddimageortext-container .group6 {
+  background-color: #DAA520; }
+.mma-qtype-ddimageortext-container .group7 {
+  background-color: #FFD700; }
+.mma-qtype-ddimageortext-container .group8 {
+  background-color: #F0E68C; }
+.mma-qtype-ddimageortext-container .drag {
+  border: 1px solid black;
+  cursor: pointer;
+  z-index: 2; }
+.mma-qtype-ddimageortext-container .dragitems.readonly .drag {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container .dragitems > div {
+  clear: both; }
+.mma-qtype-ddimageortext-container .dragitems {
+  cursor: pointer; }
+.mma-qtype-ddimageortext-container .dragitems.readonly {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container .drag img {
+  display: block; }
+.mma-qtype-ddimageortext-container div.ddarea {
+  text-align: center;
+  position: relative; }
+.mma-qtype-ddimageortext-container .dropbackground {
+  margin: 0 auto; }
+.mma-qtype-ddimageortext-container .dropzone {
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer; }
+.mma-qtype-ddimageortext-container .readonly .dropzone {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container div.dragitems div.draghome, .mma-qtype-ddimageortext-container div.dragitems div.drag {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif; }
+.mma-qtype-ddimageortext-container .drag.beingdragged {
+  z-index: 3;
+  box-shadow: 3px 3px 4px #000; }
+
 .mma-qtype-ddmarker-container mm-loading {
   position: absolute;
   left: 50%; }
@@ -9945,77 +10051,6 @@ select.mma-mod_survey-select {
   /* In other words, this works for a 15x15 cross-hair. */ }
 .mma-qtype-ddmarker-container div.dragitems div.draghome img.target {
   display: none; }
-
-.mma-qtype-ddimageortext-container mm-loading {
-  position: absolute;
-  left: 50%; }
-.mma-qtype-ddimageortext-container .qtext {
-  margin-bottom: 0.5em;
-  display: block; }
-.mma-qtype-ddimageortext-container div.droparea img {
-  border: 1px solid #000000;
-  max-width: 100%; }
-.mma-qtype-ddimageortext-container .draghome {
-  vertical-align: top;
-  margin: 5px;
-  visibility: hidden; }
-.mma-qtype-ddimageortext-container .draghome img {
-  display: block; }
-.mma-qtype-ddimageortext-container div.draghome {
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: #B0C4DE;
-  display: inline-block;
-  height: auto;
-  width: auto;
-  zoom: 1; }
-.mma-qtype-ddimageortext-container .group1 {
-  background-color: #FFFFFF; }
-.mma-qtype-ddimageortext-container .group2 {
-  background-color: #B0C4DE; }
-.mma-qtype-ddimageortext-container .group3 {
-  background-color: #DCDCDC; }
-.mma-qtype-ddimageortext-container .group4 {
-  background-color: #D8BFD8; }
-.mma-qtype-ddimageortext-container .group5 {
-  background-color: #87CEFA; }
-.mma-qtype-ddimageortext-container .group6 {
-  background-color: #DAA520; }
-.mma-qtype-ddimageortext-container .group7 {
-  background-color: #FFD700; }
-.mma-qtype-ddimageortext-container .group8 {
-  background-color: #F0E68C; }
-.mma-qtype-ddimageortext-container .drag {
-  border: 1px solid black;
-  cursor: pointer;
-  z-index: 2; }
-.mma-qtype-ddimageortext-container .dragitems.readonly .drag {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container .dragitems > div {
-  clear: both; }
-.mma-qtype-ddimageortext-container .dragitems {
-  cursor: pointer; }
-.mma-qtype-ddimageortext-container .dragitems.readonly {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container .drag img {
-  display: block; }
-.mma-qtype-ddimageortext-container div.ddarea {
-  text-align: center;
-  position: relative; }
-.mma-qtype-ddimageortext-container .dropbackground {
-  margin: 0 auto; }
-.mma-qtype-ddimageortext-container .dropzone {
-  border: 1px solid black;
-  position: absolute;
-  z-index: 1;
-  cursor: pointer; }
-.mma-qtype-ddimageortext-container .readonly .dropzone {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container div.dragitems div.draghome, .mma-qtype-ddimageortext-container div.dragitems div.drag {
-  font: 13px/1.231 arial, helvetica, clean, sans-serif; }
-.mma-qtype-ddimageortext-container .drag.beingdragged {
-  z-index: 3;
-  box-shadow: 3px 3px 4px #000; }
 
 .mma-qtype-ddwtos-container .qtext {
   margin-bottom: 0.5em;

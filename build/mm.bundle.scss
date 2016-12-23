@@ -33,9 +33,6 @@ $item-message-note-text: #999 !default;
 $item-message-note-font-size: $font-size-small !default;
 $item-message-mine-bg: rgba(17, 193, 243, .1) !default;
 
-// Completion
-$completion-img-width: 24px !default;
-
 // Disabled items.
 $item-disabled-color: #999 !default;
 
@@ -58,6 +55,9 @@ $mm-button-icon-small-height: 22px !default;
 
 // Required inputs asterisk color.
 $mm-input-required-asterisk-color: #ff4136 !default;
+
+// Item padding.
+$item-input-padding: 16px !default;
 
 /**
  * App Branding
@@ -493,21 +493,36 @@ mm-loading.mm-loading-center {
   background-color: #D9D9D9;
 }
 
-.item.item-text-wrap.item-completion { // Add .item and .item-text-wrap to give more priority to the rule, otherwise it's overridden by Ionic styles.
-  padding-right: $item-icon-font-size + ($button-border-width * 2) + $item-padding * 3 + $completion-img-width;
+.mm-module-buttons {
+  float: right;
+  width: $button-height;
+  height: 30px;
+  margin-top: - ($button-padding);
+  margin-bottom: $button-padding;
+  margin-left: 2px;
+  position: relative;
+  text-align: center;
+
+  &.mm-button-completion {
+    margin-left: $button-icon-size + ($button-padding * 2) + 2;
+  }
+
+  .spinner {
+    bottom: - ($button-padding);
+    right: 7px;
+    position: absolute;
+  }
 }
 
 .mm-completion-container {
   // Based on .item-checkbox .checkbox and .item-checkbox.item-checkbox-right
   position: absolute;
-  top: 50%;
-  right: $item-padding / 2;
-  margin-right: $item-icon-font-size + ($button-border-width * 2) + ($item-padding * 2);
-  margin-top: ($completion-img-width / 2) * -1;
+  top: 0;
+  right: $button-height;
+  padding: $button-padding;
 
   img {
-    float: right;
-    width: $completion-img-width;
+    width: $button-icon-size;
   }
 }
 
@@ -520,7 +535,9 @@ img.mm-media-adapt-width {
 
 .mm-adapted-img-container {
   position: relative;
+  display: inline-block;
 }
+
 .mm-image-viewer-icon {
   position: absolute;
   right: 10px;
@@ -684,8 +701,12 @@ mm-timer {
   padding: 0;
 }
 
+.item-input.mm-item-input-padding-right {
+  padding-right: $item-input-padding;
+}
+
 .item-input.item-stacked-label {
-  padding: 16px;
+  padding: $item-input-padding;
 
   .item-input-wrapper.item-select {
     display: block;
@@ -811,8 +832,20 @@ mm-format-text {
 
 .mm-textarea {
   width: 100%;
-  height: 200px;
   resize: none;
+
+  &[mm-auto-rows] {
+    height: auto;
+    line-height: 18px;
+    padding: 5px;
+  }
+  &:not([mm-auto-rows]) {
+    height: 200px;
+  }
+}
+
+.item-input-wrapper .mm-textarea {
+  background: transparent;
 }
 
 .item.mm-item-has-rich-text-editor {
@@ -1130,10 +1163,31 @@ i, cite, em, var, address, dfn {
     font-style: italic;
 }
 
-
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
+// Footer with auto height.
+.bar-footer.bar-footer-adjustable {
+  height: auto;
 }
+
+// Show password styles.
+.item,
+.card .item,
+.list-inset .item,
+.padding > .list .item,
+.padding-horizontal > .list .item {
+  &.item-input .mm-show-password-container {
+    padding: 0px;
+    width: 100%;
+
+    input {
+      padding-right: 0px;
+    }
+    button {
+      margin-left: ($item-padding / 3) * 2;
+      padding: 0 $button-clear-padding;
+    }
+  }
+}
+
 input.mm-fileuploader-picker {
   position: absolute;
   top: 0;
@@ -1144,6 +1198,105 @@ input.mm-fileuploader-picker {
   outline: none;
 }
 
+/* - User grades table (most of it extracted from MM1)
+-------------------------------------------------------------------------- */
+.mm-grades-table {
+  border-collapse: collapse;
+  line-height: 20px;
+  width: 100%;
+  border-top: 1px solid #eee;
+  tr {
+    border-bottom: 1px solid #eee;
+  }
+  th,
+  td {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+    white-space: normal;
+  }
+  thead th {
+    padding-left: 10px;
+    vertical-align: bottom;
+    font-weight: bold;
+  }
+  tbody th {
+    font-weight: normal;
+  }
+  .item {
+    display: table-cell;
+  }
+  th {
+    &.b1b {
+      padding-left: 20px;
+    }
+    &.item {
+      padding-left: 40px;
+    }
+    &.baggt {
+      padding-left: 40px;
+    }
+    img {
+      margin-left: -20px;
+      float: left;
+    }
+  }
+  .b1l {
+    width: 20px;
+    min-width: 20px;
+  }
+  .b1t,
+  .baggt {
+    font-weight: bold;
+  }
+  .itemcenter {
+    padding-left: 10px;
+    white-space: nowrap;
+  }
+  .feedbacktext {
+    padding-left: 10px;
+    .no-overflow {
+      overflow: auto;
+    }
+  }
+  .dimmed_text,
+  .hidden,
+  .hidden a {
+    color: #aaa;
+  }
+  .oddd1,
+  .oddd3,
+  .evend3 {
+    background-color: #eee;
+    &.b1b,
+    &.b1l {
+      border-top: 1px solid #fff;
+    }
+  }
+  .oddd2,
+  .evend2,
+  .oddd4,
+  .evend4 {
+    background-color: #f9f9f9;
+  }
+  .levelodd {
+    background-color:#eee;
+    &.b1b,
+    &.b1l {
+      border-top: 1px solid #fff;
+    }
+  }
+  .leveleven {
+    background-color: #fff;
+  }
+}
+
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
 
 .mm-mm_login_sites {
   .item-thumbnail-left .item-content {
@@ -1327,101 +1480,6 @@ $bar-side-menu-text-color: $bar-content-text !default;
     position: relative;
     left: 105px;
     bottom: 15px;
-}
-
-/* - User grades table (most of it extracted from MM1)
--------------------------------------------------------------------------- */
-.mma-grades-table {
-  border-collapse: collapse;
-  line-height: 20px;
-  width: 100%;
-  border-top: 1px solid #eee;
-  tr {
-    border-bottom: 1px solid #eee;
-  }
-  th,
-  td {
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    vertical-align: top;
-    white-space: normal;
-  }
-  thead th {
-    padding-left: 10px;
-    vertical-align: bottom;
-    font-weight: bold;
-  }
-  tbody th {
-    font-weight: normal;
-  }
-  .item {
-    display: table-cell;
-  }
-  th {
-    &.b1b {
-      padding-left: 20px;
-    }
-    &.item {
-      padding-left: 40px;
-    }
-    &.baggt {
-      padding-left: 40px;
-    }
-    img {
-      margin-left: -20px;
-      float: left;
-    }
-  }
-  .b1l {
-    width: 20px;
-    min-width: 20px;
-  }
-  .b1t,
-  .baggt {
-    font-weight: bold;
-  }
-  .itemcenter {
-    padding-left: 10px;
-    white-space: nowrap;
-  }
-  .feedbacktext {
-    padding-left: 10px;
-    .no-overflow {
-      overflow: auto;
-    }
-  }
-  .dimmed_text,
-  .hidden,
-  .hidden a {
-    color: #aaa;
-  }
-  .oddd1,
-  .oddd3,
-  .evend3 {
-    background-color: #eee;
-    &.b1b,
-    &.b1l {
-      border-top: 1px solid #fff;
-    }
-  }
-  .oddd2,
-  .evend2,
-  .oddd4,
-  .evend4 {
-    background-color: #f9f9f9;
-  }
-  .levelodd {
-    background-color:#eee;
-    &.b1b,
-    &.b1l {
-      border-top: 1px solid #fff;
-    }
-  }
-  .leveleven {
-    background-color: #fff;
-  }
 }
 
 $mma-messages-date-badge: "stable" !default;
@@ -2088,108 +2146,6 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
 	font-size: 16px;
 }
 
-// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
-.mma-qtype-ddmarker-container {
-  mm-loading {
-    position: absolute;
-    left: 50%;
-  }
-
-  .qtext {
-    margin-bottom: 0.5em;
-    display: block;
-  }
-
-  div.droparea img  {
-    border: 1px solid #000;
-    max-width: 100%;
-  }
-
-  .draghome img, .draghome span {
-    visibility: hidden;
-  }
-
-  .dragitems .dragitem {
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
-  }
-
-  .dropzones {
-    position: absolute;
-  }
-  .dropzones svg {
-    z-index: 3;
-  }
-
-  .dragitem.beingdragged .markertext {
-    z-index: 5;
-    box-shadow: 3px 3px 4px #000;
-  }
-  .dragitems .draghome {
-    margin: 10px;
-    display: inline-block;
-  }
-
-  .dragitems.readonly .dragitem {
-    cursor: auto;
-  }
-  div.ddarea {
-    text-align: center;
-  }
-  div.ddarea .markertexts {
-    min-height: 80px;
-    position: absolute;
-    text-align: left;
-  }
-  .dropbackground {
-    margin: 0 auto;
-  }
-
-  div.dragitems div.draghome, div.dragitems div.dragitem,
-  div.draghome, div.drag {
-    font: 13px/1.231 arial,helvetica,clean,sans-serif;
-  }
-  div.dragitems span.markertext,
-  div.markertexts span.markertext{
-    margin: 0 5px;
-    z-index: 2;
-    background-color: white;
-    border: 2px solid black;
-    padding: 5px;
-    display: inline-block;
-    zoom: 1;
-    border-radius: 10px;
-  }
-  div.markertexts span.markertext {
-    z-index: 3;
-    background-color: yellow;
-    border-style: solid;
-    border-width: 2px;
-    border-color: khaki;
-    position: absolute;
-  }
-  span.wrongpart {
-    background-color: yellow;
-    border-style: solid;
-    border-width: 2px;
-    border-color: khaki;
-    padding: 5px;
-    border-radius: 10px;
-    filter: alpha(opacity=60);
-    opacity: 0.6;
-    margin: 5px;
-    display: inline-block;
-  }
-  div.dragitems img.target {
-    position: absolute;
-    left: -7px; /* This must be half the size of the target image, minus 0.5. */
-    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
-  }
-  div.dragitems div.draghome img.target {
-    display: none;
-  }
-}
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
 .mma-qtype-ddimageortext-container {
   mm-loading {
@@ -2294,6 +2250,108 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   .drag.beingdragged {
     z-index: 3;
     box-shadow: 3px 3px 4px #000;
+  }
+}
+// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddmarker-container {
+  mm-loading {
+    position: absolute;
+    left: 50%;
+  }
+
+  .qtext {
+    margin-bottom: 0.5em;
+    display: block;
+  }
+
+  div.droparea img  {
+    border: 1px solid #000;
+    max-width: 100%;
+  }
+
+  .draghome img, .draghome span {
+    visibility: hidden;
+  }
+
+  .dragitems .dragitem {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .dropzones {
+    position: absolute;
+  }
+  .dropzones svg {
+    z-index: 3;
+  }
+
+  .dragitem.beingdragged .markertext {
+    z-index: 5;
+    box-shadow: 3px 3px 4px #000;
+  }
+  .dragitems .draghome {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .dragitems.readonly .dragitem {
+    cursor: auto;
+  }
+  div.ddarea {
+    text-align: center;
+  }
+  div.ddarea .markertexts {
+    min-height: 80px;
+    position: absolute;
+    text-align: left;
+  }
+  .dropbackground {
+    margin: 0 auto;
+  }
+
+  div.dragitems div.draghome, div.dragitems div.dragitem,
+  div.draghome, div.drag {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  }
+  div.dragitems span.markertext,
+  div.markertexts span.markertext{
+    margin: 0 5px;
+    z-index: 2;
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+    display: inline-block;
+    zoom: 1;
+    border-radius: 10px;
+  }
+  div.markertexts span.markertext {
+    z-index: 3;
+    background-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: khaki;
+    position: absolute;
+  }
+  span.wrongpart {
+    background-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: khaki;
+    padding: 5px;
+    border-radius: 10px;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    margin: 5px;
+    display: inline-block;
+  }
+  div.dragitems img.target {
+    position: absolute;
+    left: -7px; /* This must be half the size of the target image, minus 0.5. */
+    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
+  }
+  div.dragitems div.draghome img.target {
+    display: none;
   }
 }
 // Style ddwtos content a bit. Almost all these styles are copied from Moodle.
