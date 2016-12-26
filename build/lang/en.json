@@ -332,6 +332,7 @@
     "mm.login.signupplugindisabled": "{{$a}} is not enabled.",
     "mm.login.siteaddress": "Site address",
     "mm.login.siteinmaintenance": "Your site is in maintenance mode",
+    "mm.login.sitepolicynotagreederror": "Site policy not agreed.",
     "mm.login.siteurl": "Site URL",
     "mm.login.siteurlrequired": "Site URL required, i.e <i>http://www.yourmoodlesite.abc or https://www.yourmoodlesite.efg</i>",
     "mm.login.startsignup": "Create new account",

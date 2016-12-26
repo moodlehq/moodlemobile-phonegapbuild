@@ -9252,6 +9252,9 @@ i, cite, em, var, address, dfn {
     margin-left: 10.66667px;
     padding: 0 6px; }
 
+.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
+  right: 44px; }
+
 input.mm-fileuploader-picker {
   position: absolute;
   top: 0;
@@ -9321,9 +9324,6 @@ input.mm-fileuploader-picker {
   .mm-grades-table .leveleven {
     background-color: #fff; }
 
-.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
-  right: 44px; }
-
 .mm-mm_login_sites .item-thumbnail-left .item-content {
   padding-top: 16px; }
 .mm-mm_login_sites .avatar {
@@ -9337,6 +9337,9 @@ input.mm-fileuploader-picker {
   border: 1px solid #ddd; }
 .mm-mm_login_sites .card {
   margin: 15px 10px; }
+
+.mm-login-sitepolicy-iframe {
+  height: 300px; }
 
 .mm-question-textarea {
   width: 100%;

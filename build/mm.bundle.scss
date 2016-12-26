@@ -1188,6 +1188,10 @@ i, cite, em, var, address, dfn {
   }
 }
 
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
 input.mm-fileuploader-picker {
   position: absolute;
   top: 0;
@@ -1294,10 +1298,6 @@ input.mm-fileuploader-picker {
 }
 
 
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
-}
-
 .mm-mm_login_sites {
   .item-thumbnail-left .item-content {
     padding-top: 16px;
@@ -1318,6 +1318,11 @@ input.mm-fileuploader-picker {
     margin: 15px 10px;
   }
 }
+
+.mm-login-sitepolicy-iframe {
+  height: 300px;
+}
+
 
 $mm-question-correct-color:         #468847 !default;
 $mm-question-incorrect-color:       #b94a48 !default;
