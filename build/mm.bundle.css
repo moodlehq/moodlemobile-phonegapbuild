@@ -9319,6 +9319,26 @@ input.mm-fileuploader-picker {
   opacity: 0;
   outline: none; }
 
+.mm-mm_login_sites .item-thumbnail-left .item-content {
+  padding-top: 16px; }
+.mm-mm_login_sites .avatar {
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid #ddd; }
+.mm-mm_login_sites .card {
+  margin: 15px 10px; }
+
+.mm-login-sitepolicy-iframe {
+  height: 300px; }
+
+#mm-settings-languagelabel {
+  color: #000; }
+
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
 .mm-grades-table {
@@ -9378,23 +9398,6 @@ input.mm-fileuploader-picker {
       border-top: 1px solid #fff; }
   .mm-grades-table .leveleven {
     background-color: #fff; }
-
-.mm-mm_login_sites .item-thumbnail-left .item-content {
-  padding-top: 16px; }
-.mm-mm_login_sites .avatar {
-  margin: 0;
-  width: 80px;
-  height: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  border-radius: 50%;
-  padding: 4px;
-  border: 1px solid #ddd; }
-.mm-mm_login_sites .card {
-  margin: 15px 10px; }
-
-.mm-login-sitepolicy-iframe {
-  height: 300px; }
 
 .mm-question-textarea {
   width: 100%;
@@ -9459,9 +9462,6 @@ input.mm-fileuploader-picker {
 
 .mm-question-warning, p.mm-question-warning, .item .mm-question-warning {
   color: #c00; }
-
-#mm-settings-languagelabel {
-  color: #000; }
 
 .bar-side-menu {
   border-color: transparent;
@@ -9954,96 +9954,6 @@ select.mma-mod_survey-select {
 .mma-mod_wiki-subwiki-picker .item.item-selected .icon {
   font-size: 24px; }
 
-.qbehaviour_deferredcbm_actual_percentage {
-  font-weight: bold; }
-
-.qbehaviour_deferredcbm_judgementok {
-  font-weight: bold;
-  color: #080; }
-
-.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
-  font-weight: bold;
-  color: #600; }
-
-.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
-  font-weight: bold;
-  color: #c00; }
-
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
-  font-weight: bold;
-  font-size: 16px; }
-
-.mma-qtype-ddimageortext-container mm-loading {
-  position: absolute;
-  left: 50%; }
-.mma-qtype-ddimageortext-container .qtext {
-  margin-bottom: 0.5em;
-  display: block; }
-.mma-qtype-ddimageortext-container div.droparea img {
-  border: 1px solid #000000;
-  max-width: 100%; }
-.mma-qtype-ddimageortext-container .draghome {
-  vertical-align: top;
-  margin: 5px;
-  visibility: hidden; }
-.mma-qtype-ddimageortext-container .draghome img {
-  display: block; }
-.mma-qtype-ddimageortext-container div.draghome {
-  border: 1px solid black;
-  cursor: pointer;
-  background-color: #B0C4DE;
-  display: inline-block;
-  height: auto;
-  width: auto;
-  zoom: 1; }
-.mma-qtype-ddimageortext-container .group1 {
-  background-color: #FFFFFF; }
-.mma-qtype-ddimageortext-container .group2 {
-  background-color: #B0C4DE; }
-.mma-qtype-ddimageortext-container .group3 {
-  background-color: #DCDCDC; }
-.mma-qtype-ddimageortext-container .group4 {
-  background-color: #D8BFD8; }
-.mma-qtype-ddimageortext-container .group5 {
-  background-color: #87CEFA; }
-.mma-qtype-ddimageortext-container .group6 {
-  background-color: #DAA520; }
-.mma-qtype-ddimageortext-container .group7 {
-  background-color: #FFD700; }
-.mma-qtype-ddimageortext-container .group8 {
-  background-color: #F0E68C; }
-.mma-qtype-ddimageortext-container .drag {
-  border: 1px solid black;
-  cursor: pointer;
-  z-index: 2; }
-.mma-qtype-ddimageortext-container .dragitems.readonly .drag {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container .dragitems > div {
-  clear: both; }
-.mma-qtype-ddimageortext-container .dragitems {
-  cursor: pointer; }
-.mma-qtype-ddimageortext-container .dragitems.readonly {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container .drag img {
-  display: block; }
-.mma-qtype-ddimageortext-container div.ddarea {
-  text-align: center;
-  position: relative; }
-.mma-qtype-ddimageortext-container .dropbackground {
-  margin: 0 auto; }
-.mma-qtype-ddimageortext-container .dropzone {
-  border: 1px solid black;
-  position: absolute;
-  z-index: 1;
-  cursor: pointer; }
-.mma-qtype-ddimageortext-container .readonly .dropzone {
-  cursor: auto; }
-.mma-qtype-ddimageortext-container div.dragitems div.draghome, .mma-qtype-ddimageortext-container div.dragitems div.drag {
-  font: 13px/1.231 arial, helvetica, clean, sans-serif; }
-.mma-qtype-ddimageortext-container .drag.beingdragged {
-  z-index: 3;
-  box-shadow: 3px 3px 4px #000; }
-
 .mma-qtype-ddmarker-container mm-loading {
   position: absolute;
   left: 50%; }
@@ -10116,6 +10026,77 @@ select.mma-mod_survey-select {
   /* In other words, this works for a 15x15 cross-hair. */ }
 .mma-qtype-ddmarker-container div.dragitems div.draghome img.target {
   display: none; }
+
+.mma-qtype-ddimageortext-container mm-loading {
+  position: absolute;
+  left: 50%; }
+.mma-qtype-ddimageortext-container .qtext {
+  margin-bottom: 0.5em;
+  display: block; }
+.mma-qtype-ddimageortext-container div.droparea img {
+  border: 1px solid #000000;
+  max-width: 100%; }
+.mma-qtype-ddimageortext-container .draghome {
+  vertical-align: top;
+  margin: 5px;
+  visibility: hidden; }
+.mma-qtype-ddimageortext-container .draghome img {
+  display: block; }
+.mma-qtype-ddimageortext-container div.draghome {
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: #B0C4DE;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  zoom: 1; }
+.mma-qtype-ddimageortext-container .group1 {
+  background-color: #FFFFFF; }
+.mma-qtype-ddimageortext-container .group2 {
+  background-color: #B0C4DE; }
+.mma-qtype-ddimageortext-container .group3 {
+  background-color: #DCDCDC; }
+.mma-qtype-ddimageortext-container .group4 {
+  background-color: #D8BFD8; }
+.mma-qtype-ddimageortext-container .group5 {
+  background-color: #87CEFA; }
+.mma-qtype-ddimageortext-container .group6 {
+  background-color: #DAA520; }
+.mma-qtype-ddimageortext-container .group7 {
+  background-color: #FFD700; }
+.mma-qtype-ddimageortext-container .group8 {
+  background-color: #F0E68C; }
+.mma-qtype-ddimageortext-container .drag {
+  border: 1px solid black;
+  cursor: pointer;
+  z-index: 2; }
+.mma-qtype-ddimageortext-container .dragitems.readonly .drag {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container .dragitems > div {
+  clear: both; }
+.mma-qtype-ddimageortext-container .dragitems {
+  cursor: pointer; }
+.mma-qtype-ddimageortext-container .dragitems.readonly {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container .drag img {
+  display: block; }
+.mma-qtype-ddimageortext-container div.ddarea {
+  text-align: center;
+  position: relative; }
+.mma-qtype-ddimageortext-container .dropbackground {
+  margin: 0 auto; }
+.mma-qtype-ddimageortext-container .dropzone {
+  border: 1px solid black;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer; }
+.mma-qtype-ddimageortext-container .readonly .dropzone {
+  cursor: auto; }
+.mma-qtype-ddimageortext-container div.dragitems div.draghome, .mma-qtype-ddimageortext-container div.dragitems div.drag {
+  font: 13px/1.231 arial, helvetica, clean, sans-serif; }
+.mma-qtype-ddimageortext-container .drag.beingdragged {
+  z-index: 3;
+  box-shadow: 3px 3px 4px #000; }
 
 .mma-qtype-ddwtos-container .qtext {
   margin-bottom: 0.5em;
@@ -10221,3 +10202,22 @@ select.mma-mod_survey-select {
 .mma-qtype-multianswer-container input[type="radio"], .mma-qtype-multianswer-container input[type="checkbox"] {
   margin-top: -4px;
   margin-right: 7px; }
+
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold; }
+
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: #080; }
+
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: #600; }
+
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: #c00; }
+
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+  font-weight: bold;
+  font-size: 16px; }
