@@ -275,10 +275,10 @@ em {
     &.item-complex .item-content > img:first-child,
     img.avatar {
         position: static;
-        width: 100px;
-        height: 100px;
-        max-width: 100px;
-        max-height: 100px;
+        width: 90px;
+        height: 90px;
+        max-width: 90px;
+        max-height: 90px;
         margin-bottom: 10px;
         border-radius : 50%;
         padding: 4px;
@@ -378,7 +378,7 @@ em {
   .spinner {
     position: absolute;
     right: $button-padding;
-    padding-top: floor(($button-height + ($button-border-width * 2) + 1 - 28) / 2);
+    padding-top: 0;
     line-height: 28px;
   }
 }
@@ -766,14 +766,50 @@ mm-timer {
   padding-right: 0;
 }
 
-.item.mm-course-handlers {
+.item.mm-not-clickable {
+  cursor: default;
+
+  &[ng-click]:hover {
+    cursor: default;
+  }
+
+  &.activated {
+    border-color: $item-default-border;
+    background-color: $item-default-bg;
+  }
+}
+
+.item.mm-tab-handlers,
+.mm-tab-handlers {
   padding: 6px 2px;
 
   .tabs {
     background: white;
+    border: 0;
+  }
+  .tabs-icon-round {
+    color: $positive;
+
+    .tab-item.activated {
+      opacity: 0.7;
+    }
+
+    .icon {
+      border-radius: 50%;
+      max-width: 32px;
+      font-size: 22px;
+      line-height: 32px;
+      color: white;
+      background-color: $positive;
+      margin-bottom: 5px;
+
+      &:before {
+        line-height: 32px;
+      }
+    }
   }
 
-  .mm-loading-course-handlers {
+  .mm-loading-handlers {
     padding: 7px;
     padding-bottom: 6px;
   }
@@ -1153,16 +1189,22 @@ i, cite, em, var, address, dfn {
 .list-inset .item,
 .padding > .list .item,
 .padding-horizontal > .list .item {
-  &.item-input .mm-show-password-container {
-    padding: 0px;
-    width: 100%;
+
+  &.item-input {
+    padding-right: $item-padding;
 
     input {
       padding-right: 0px;
     }
-    .button {
-      margin-left: ($item-padding / 3) * 2;
-      padding: 0 $button-clear-padding;
+
+    .mm-show-password-container {
+      padding: 0px;
+      width: 100%;
+
+      .button {
+        margin-left: ($item-padding / 3) * 2;
+        padding: 0 $button-clear-padding;
+      }
     }
   }
 }
@@ -1252,12 +1294,12 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         left: 0;
         right: 0;
         bottom: 0;
-        background: -moz-linear-gradient(top, transparent calc(100% - 50px), white calc(100% - 15px));
-        background: -webkit-gradient(left top, left bottom, color-stop(calc(100% - 50px), transparent), color-stop(calc(100% - 15px), white));
-        background: -webkit-linear-gradient(top, transparent calc(100% - 50px), white calc(100% - 15px));
-        background: -o-linear-gradient(top, transparent calc(100% - 50px), white calc(100% - 15px));
-        background: -ms-linear-gradient(top, transparent calc(100% - 50px), white calc(100% - 15px));
-        background: linear-gradient(to bottom, transparent calc(100% - 50px), white calc(100% - 15px));
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) calc(100% - 50px), white calc(100% - 15px));
+        background: -webkit-gradient(left top, left bottom, color-stop(calc(100% - 50px), rgba(255, 255, 255, 0)), color-stop(calc(100% - 15px), white));
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) calc(100% - 50px), white calc(100% - 15px));
+        background: -o-linear-gradient(top, rgba(255, 255, 255, 0) calc(100% - 50px), white calc(100% - 15px));
+        background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) calc(100% - 50px), white calc(100% - 15px));
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(100% - 50px), white calc(100% - 15px));
         z-index: 1000;
       }
     }
@@ -1268,6 +1310,10 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
 .item.item-button-right .badge.mm-course-download{
   right: $spinner-width + $item-padding;
 }
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+    margin-top: 16px;
+}
 input.mm-fileuploader-picker {
   position: absolute;
   top: 0;
@@ -1276,36 +1322,6 @@ input.mm-fileuploader-picker {
   min-height: 100%;
   opacity: 0;
   outline: none;
-}
-
-
-.mm-mm_login_sites {
-  .item-thumbnail-left .item-content {
-    padding-top: 16px;
-  }
-
-  .avatar {
-    margin: 0;
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    border-radius : 50%;
-    padding: 4px;
-    border: 1px solid #ddd;
-  }
-
-  .card {
-    margin: 15px 10px;
-  }
-}
-
-.mm-login-sitepolicy-iframe {
-  height: 300px;
-}
-
-#mm-settings-languagelabel {
-  color: $base-color;
 }
 
 /* - User grades table (most of it extracted from MM1)
@@ -1401,6 +1417,32 @@ input.mm-fileuploader-picker {
   .leveleven {
     background-color: #fff;
   }
+}
+
+
+.mm-mm_login_sites {
+  .item-thumbnail-left .item-content {
+    padding-top: 16px;
+  }
+
+  .avatar {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius : 50%;
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+
+  .card {
+    margin: 15px 10px;
+  }
+}
+
+.mm-login-sitepolicy-iframe {
+  height: 300px;
 }
 
 
@@ -1529,6 +1571,10 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
+#mm-settings-languagelabel {
+  color: $base-color;
+}
+
 // Variables.
 $bar-side-menu-height: 80px !default;
 $bar-side-menu-color: $bar-content-bg !default;
@@ -1563,6 +1609,10 @@ $bar-side-menu-text-color: $bar-content-text !default;
     bottom: 15px;
 }
 
+.mm-site_mm_user-profile .mm-tab-handlers {
+    padding-bottom: 16px;
+}
+
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
         min-height: 55px;
@@ -1571,6 +1621,18 @@ $bar-side-menu-text-color: $bar-content-text !default;
         img {
             top: 11px;
             left: 11px;
+        }
+    }
+
+    .mm-frontpageitemnews {
+        img {
+            max-width: 30px;
+            max-height: 30px;
+        }
+
+        .mm-module-buttons {
+            width: 30px;
+            height: 22px;
         }
     }
 }
@@ -1658,6 +1720,11 @@ $mma-messages-date-badge: "stable" !default;
     right: 0;
     left: initial;
   }
+}
+
+.mma-messages-showprevious-spinner-container {
+  width: 100%;
+  text-align: center;
 }
 
 
@@ -1965,25 +2032,26 @@ $mma-chat-notice-badge: "stable" !default;
 .mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
   margin: 0;
 }
-.mma-mod_choice-user {
-  position: relative;
-  display: inline-block;
-  img {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    left: 50%;
-    margin-left: -20px;
+.mm-site_mod_choice {
+  .chart {
+    max-width: 400px;
+    margin: 0 auto;
   }
-  p {
-    display: inline-block;
-    padding-top: 50px;
-  }
-}
 
-.mma-mod_choice-graph-horizontal {
-  height: 50px;
+  @media (min-width: 767px) {
+    .col {
+      border-left: $item-border-width solid $item-default-border;
+
+      &.item, .chart-item {
+        margin-top: 0;
+        border-top: 0;
+      }
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
 }
 
 .mma-forum-discussion-link {
@@ -2212,108 +2280,32 @@ $mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
   font-size: 24px;
 }
 
-// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
-.mma-qtype-ddmarker-container {
-  mm-loading {
-    position: absolute;
-    left: 50%;
-  }
 
-  .qtext {
-    margin-bottom: 0.5em;
-    display: block;
-  }
+$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
+$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
+$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
 
-  div.droparea img  {
-    border: 1px solid #000;
-    max-width: 100%;
-  }
-
-  .draghome img, .draghome span {
-    visibility: hidden;
-  }
-
-  .dragitems .dragitem {
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
-  }
-
-  .dropzones {
-    position: absolute;
-  }
-  .dropzones svg {
-    z-index: 3;
-  }
-
-  .dragitem.beingdragged .markertext {
-    z-index: 5;
-    box-shadow: 3px 3px 4px #000;
-  }
-  .dragitems .draghome {
-    margin: 10px;
-    display: inline-block;
-  }
-
-  .dragitems.readonly .dragitem {
-    cursor: auto;
-  }
-  div.ddarea {
-    text-align: center;
-  }
-  div.ddarea .markertexts {
-    min-height: 80px;
-    position: absolute;
-    text-align: left;
-  }
-  .dropbackground {
-    margin: 0 auto;
-  }
-
-  div.dragitems div.draghome, div.dragitems div.dragitem,
-  div.draghome, div.drag {
-    font: 13px/1.231 arial,helvetica,clean,sans-serif;
-  }
-  div.dragitems span.markertext,
-  div.markertexts span.markertext{
-    margin: 0 5px;
-    z-index: 2;
-    background-color: white;
-    border: 2px solid black;
-    padding: 5px;
-    display: inline-block;
-    zoom: 1;
-    border-radius: 10px;
-  }
-  div.markertexts span.markertext {
-    z-index: 3;
-    background-color: yellow;
-    border-style: solid;
-    border-width: 2px;
-    border-color: khaki;
-    position: absolute;
-  }
-  span.wrongpart {
-    background-color: yellow;
-    border-style: solid;
-    border-width: 2px;
-    border-color: khaki;
-    padding: 5px;
-    border-radius: 10px;
-    filter: alpha(opacity=60);
-    opacity: 0.6;
-    margin: 5px;
-    display: inline-block;
-  }
-  div.dragitems img.target {
-    position: absolute;
-    left: -7px; /* This must be half the size of the target image, minus 0.5. */
-    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
-  }
-  div.dragitems div.draghome img.target {
-    display: none;
-  }
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold;
 }
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-judgementok-color;
+}
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-slightly-color;
+}
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-confident-color;
+}
+
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+	font-weight: bold;
+	font-size: 16px;
+}
+
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
 .mma-qtype-ddimageortext-container {
   mm-loading {
@@ -2418,6 +2410,108 @@ $mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
   .drag.beingdragged {
     z-index: 3;
     box-shadow: 3px 3px 4px #000;
+  }
+}
+// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddmarker-container {
+  mm-loading {
+    position: absolute;
+    left: 50%;
+  }
+
+  .qtext {
+    margin-bottom: 0.5em;
+    display: block;
+  }
+
+  div.droparea img  {
+    border: 1px solid #000;
+    max-width: 100%;
+  }
+
+  .draghome img, .draghome span {
+    visibility: hidden;
+  }
+
+  .dragitems .dragitem {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .dropzones {
+    position: absolute;
+  }
+  .dropzones svg {
+    z-index: 3;
+  }
+
+  .dragitem.beingdragged .markertext {
+    z-index: 5;
+    box-shadow: 3px 3px 4px #000;
+  }
+  .dragitems .draghome {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .dragitems.readonly .dragitem {
+    cursor: auto;
+  }
+  div.ddarea {
+    text-align: center;
+  }
+  div.ddarea .markertexts {
+    min-height: 80px;
+    position: absolute;
+    text-align: left;
+  }
+  .dropbackground {
+    margin: 0 auto;
+  }
+
+  div.dragitems div.draghome, div.dragitems div.dragitem,
+  div.draghome, div.drag {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  }
+  div.dragitems span.markertext,
+  div.markertexts span.markertext{
+    margin: 0 5px;
+    z-index: 2;
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+    display: inline-block;
+    zoom: 1;
+    border-radius: 10px;
+  }
+  div.markertexts span.markertext {
+    z-index: 3;
+    background-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: khaki;
+    position: absolute;
+  }
+  span.wrongpart {
+    background-color: yellow;
+    border-style: solid;
+    border-width: 2px;
+    border-color: khaki;
+    padding: 5px;
+    border-radius: 10px;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    margin: 5px;
+    display: inline-block;
+  }
+  div.dragitems img.target {
+    position: absolute;
+    left: -7px; /* This must be half the size of the target image, minus 0.5. */
+    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
+  }
+  div.dragitems div.draghome img.target {
+    display: none;
   }
 }
 // Style ddwtos content a bit. Almost all these styles are copied from Moodle.
@@ -2600,29 +2694,3 @@ $mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
   }
 }
 
-
-
-$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
-$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
-$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
-
-.qbehaviour_deferredcbm_actual_percentage {
-  font-weight: bold;
-}
-.qbehaviour_deferredcbm_judgementok {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-judgementok-color;
-}
-.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-slightly-color;
-}
-.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-confident-color;
-}
-
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
-	font-weight: bold;
-	font-size: 16px;
-}
