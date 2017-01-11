@@ -1287,6 +1287,10 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         }
       }
 
+      &.mm-expand-in-fullview .mm-show-more:after {
+        content: $ionicon-var-chevron-right;
+      }
+
       &:before {
         content: '';
         height: 100%;
@@ -1330,9 +1334,11 @@ input.mm-fileuploader-picker {
   border-collapse: collapse;
   line-height: 20px;
   width: 100%;
-  border-top: 1px solid #eee;
+  border-top: 1px solid $item-light-border;
+  font-size: 16px;
+  color: $item-stable-text;
   tr {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $item-light-border;
   }
   th,
   td {
@@ -1378,7 +1384,8 @@ input.mm-fileuploader-picker {
     font-weight: bold;
   }
   .itemcenter {
-    padding-left: 10px;
+    @extend .item;
+    padding: 10px;
     white-space: nowrap;
   }
   .feedbacktext {
@@ -1394,35 +1401,43 @@ input.mm-fileuploader-picker {
   }
   .oddd1,
   .oddd3,
-  .evend3 {
-    background-color: #eee;
-    &.b1b,
-    &.b1l {
-      border-top: 1px solid #fff;
-    }
+  .evend3,
+  .levelodd {
+    background-color: $item-divider-bg;
   }
   .oddd2,
   .evend2,
   .oddd4,
   .evend4 {
-    background-color: #f9f9f9;
-  }
-  .levelodd {
-    background-color:#eee;
-    &.b1b,
-    &.b1l {
-      border-top: 1px solid #fff;
-    }
+    background-color: $item-stable-bg;
   }
   .leveleven {
-    background-color: #fff;
+    background-color: $item-light-bg;
+  }
+  .column-leader {
+    border-left: 1px solid $item-light-border;
+    border-top: 1px solid $item-light-border;
+    border-bottom: 1px solid $item-light-border;
+    &.level1 {
+      border-left: 0;
+    }
+  }
+  .column-itemname {
+    border-right: 1px solid $item-light-border;
+    border-top: 1px solid $item-light-border;
+    border-bottom: 1px solid $item-light-border;
   }
 }
 
 
 .mm-mm_login_sites {
   .item-thumbnail-left .item-content {
-    padding-top: 16px;
+    padding-top: $item-padding;
+    padding-right: $item-padding;
+  }
+
+  .list-left-editing .item-thumbnail-left .item-content {
+    padding-right: (ceil( ($item-padding * 3) + ($item-padding / 3) ) - 5);
   }
 
   .avatar {
@@ -1434,10 +1449,6 @@ input.mm-fileuploader-picker {
     border-radius : 50%;
     padding: 4px;
     border: 1px solid #ddd;
-  }
-
-  .card {
-    margin: 15px 10px;
   }
 }
 
@@ -1571,10 +1582,6 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
-#mm-settings-languagelabel {
-  color: $base-color;
-}
-
 // Variables.
 $bar-side-menu-height: 80px !default;
 $bar-side-menu-color: $bar-content-bg !default;
@@ -1600,6 +1607,10 @@ $bar-side-menu-text-color: $bar-content-text !default;
 
 .has-side-menu-header {
   top: $bar-side-menu-height;
+}
+
+#mm-settings-languagelabel {
+  color: $base-color;
 }
 
 
@@ -1635,6 +1646,9 @@ $bar-side-menu-text-color: $bar-content-text !default;
             height: 22px;
         }
     }
+}
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
 }
 $mma-messages-date-badge: "stable" !default;
 

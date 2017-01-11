@@ -2247,7 +2247,7 @@
  * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
  * http://cssreset.com
  */
-html, body, div, span, applet, object, iframe, h1, h2, .item .item-heading, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, .item .item-heading, .mm-grades-table .itemcenter .item-heading, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, i, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, fieldset, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -2801,21 +2801,21 @@ cite {
 .text-center {
   text-align: center; }
 
-h1, h2, .item .item-heading, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, .item .item-heading, .mm-grades-table .itemcenter .item-heading, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #000;
   font-weight: 500;
   font-family: '-apple-system', "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
   line-height: 1.2; }
-  h1 small, h2 small, .item .item-heading small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+  h1 small, h2 small, .item .item-heading small, .mm-grades-table .itemcenter .item-heading small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
     font-weight: normal;
     line-height: 1; }
 
-h1, .h1, h2, .item .item-heading, .h2, h3, .h3 {
+h1, .h1, h2, .item .item-heading, .mm-grades-table .itemcenter .item-heading, .h2, h3, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
-  h1:first-child, .h1:first-child, h2:first-child, .item .item-heading:first-child, .h2:first-child, h3:first-child, .h3:first-child {
+  h1:first-child, .h1:first-child, h2:first-child, .item .item-heading:first-child, .mm-grades-table .itemcenter .item-heading:first-child, .h2:first-child, h3:first-child, .h3:first-child {
     margin-top: 0; }
-  h1 + h1, h1 + .h1, h1 + h2, .item h1 + .item-heading, h1 + .h2, h1 + h3, h1 + .h3, .h1 + h1, .h1 + .h1, .h1 + h2, .item .h1 + .item-heading, .h1 + .h2, .h1 + h3, .h1 + .h3, h2 + h1, .item .item-heading + h1, h2 + .h1, .item .item-heading + .h1, h2 + h2, .item .item-heading + h2, .item h2 + .item-heading, .item .item-heading + .item-heading, h2 + .h2, .item .item-heading + .h2, h2 + h3, .item .item-heading + h3, h2 + .h3, .item .item-heading + .h3, .h2 + h1, .h2 + .h1, .h2 + h2, .item .h2 + .item-heading, .h2 + .h2, .h2 + h3, .h2 + .h3, h3 + h1, h3 + .h1, h3 + h2, .item h3 + .item-heading, h3 + .h2, h3 + h3, h3 + .h3, .h3 + h1, .h3 + .h1, .h3 + h2, .item .h3 + .item-heading, .h3 + .h2, .h3 + h3, .h3 + .h3 {
+  h1 + h1, h1 + .h1, h1 + h2, .item h1 + .item-heading, .mm-grades-table .itemcenter h1 + .item-heading, h1 + .h2, h1 + h3, h1 + .h3, .h1 + h1, .h1 + .h1, .h1 + h2, .item .h1 + .item-heading, .mm-grades-table .itemcenter .h1 + .item-heading, .h1 + .h2, .h1 + h3, .h1 + .h3, h2 + h1, .item .item-heading + h1, .mm-grades-table .itemcenter .item-heading + h1, h2 + .h1, .item .item-heading + .h1, .mm-grades-table .itemcenter .item-heading + .h1, h2 + h2, .item .item-heading + h2, .mm-grades-table .itemcenter .item-heading + h2, .item h2 + .item-heading, .item .item-heading + .item-heading, .mm-grades-table .itemcenter h2 + .item-heading, .mm-grades-table .itemcenter .item-heading + .item-heading, h2 + .h2, .item .item-heading + .h2, .mm-grades-table .itemcenter .item-heading + .h2, h2 + h3, .item .item-heading + h3, .mm-grades-table .itemcenter .item-heading + h3, h2 + .h3, .item .item-heading + .h3, .mm-grades-table .itemcenter .item-heading + .h3, .h2 + h1, .h2 + .h1, .h2 + h2, .item .h2 + .item-heading, .mm-grades-table .itemcenter .h2 + .item-heading, .h2 + .h2, .h2 + h3, .h2 + .h3, h3 + h1, h3 + .h1, h3 + h2, .item h3 + .item-heading, .mm-grades-table .itemcenter h3 + .item-heading, h3 + .h2, h3 + h3, h3 + .h3, .h3 + h1, .h3 + .h1, .h3 + h2, .item .h3 + .item-heading, .mm-grades-table .itemcenter .h3 + .item-heading, .h3 + .h2, .h3 + h3, .h3 + .h3 {
     margin-top: 10px; }
 
 h4, .h4, h5, .h5, h6, .h6 {
@@ -2825,7 +2825,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 h1, .h1 {
   font-size: 36px; }
 
-h2, .item .item-heading, .h2 {
+h2, .item .item-heading, .mm-grades-table .itemcenter .item-heading, .h2 {
   font-size: 30px; }
 
 h3, .h3 {
@@ -2843,7 +2843,7 @@ h6, .h6 {
 h1 small, .h1 small {
   font-size: 24px; }
 
-h2 small, .item .item-heading small, .h2 small {
+h2 small, .item .item-heading small, .mm-grades-table .itemcenter .item-heading small, .h2 small {
   font-size: 18px; }
 
 h3 small, .h3 small, h4 small, .h4 small {
@@ -4259,7 +4259,7 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   .tab-item.tab-item-active.tab-item-dark, .tab-item.active.tab-item-dark, .tab-item.activated.tab-item-dark {
     color: #444; }
 
-.item.tabs {
+.item.tabs, .mm-grades-table .tabs.itemcenter {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -4267,7 +4267,7 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   display: -ms-flexbox;
   display: flex;
   padding: 0; }
-  .item.tabs .icon:before {
+  .item.tabs .icon:before, .mm-grades-table .tabs.itemcenter .icon:before {
     position: relative; }
 
 .tab-item.disabled, .tab-item[disabled] {
@@ -4432,9 +4432,9 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   opacity: 0; }
-  .popover .item:first-child {
+  .popover .item:first-child, .popover .mm-grades-table .itemcenter:first-child, .mm-grades-table .popover .itemcenter:first-child {
     border-top: 0; }
-  .popover .item:last-child {
+  .popover .item:last-child, .popover .mm-grades-table .itemcenter:last-child, .mm-grades-table .popover .itemcenter:last-child {
     border-bottom: 0; }
   .popover.popover-bottom {
     margin-top: -12px; }
@@ -4498,7 +4498,7 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   margin-top: -32px;
   background-color: #fafafa;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35); }
-  .platform-android .popover .item {
+  .platform-android .popover .item, .platform-android .popover .mm-grades-table .itemcenter, .mm-grades-table .platform-android .popover .itemcenter {
     border-color: #fafafa;
     background-color: #fafafa;
     color: #4d4d4d; }
@@ -4691,14 +4691,14 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
     text-align: center;
     text-overflow: ellipsis;
     font-size: 15px; }
-    .loading-container .loading h1, .loading-container .loading h2, .loading-container .loading .item .item-heading, .item .loading-container .loading .item-heading, .loading-container .loading h3, .loading-container .loading h4, .loading-container .loading h5, .loading-container .loading h6 {
+    .loading-container .loading h1, .loading-container .loading h2, .loading-container .loading .item .item-heading, .item .loading-container .loading .item-heading, .loading-container .loading .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .loading-container .loading .item-heading, .loading-container .loading h3, .loading-container .loading h4, .loading-container .loading h5, .loading-container .loading h6 {
       color: #fff; }
 
 /**
  * Items
  * --------------------------------------------------
  */
-.item {
+.item, .mm-grades-table .itemcenter {
   border-color: #ddd;
   background-color: white;
   color: #444;
@@ -4710,26 +4710,26 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
   border-width: 1px;
   border-style: solid;
   font-size: 16px; }
-  .item h2, .item .item-heading {
+  .item h2, .mm-grades-table .itemcenter h2, .item .item-heading, .mm-grades-table .itemcenter .item-heading {
     margin: 0 0 2px 0;
     font-size: 16px;
     font-weight: normal; }
-  .item h3 {
+  .item h3, .mm-grades-table .itemcenter h3 {
     margin: 0 0 4px 0;
     font-size: 14px; }
-  .item h4 {
+  .item h4, .mm-grades-table .itemcenter h4 {
     margin: 0 0 4px 0;
     font-size: 12px; }
-  .item h5, .item h6 {
+  .item h5, .mm-grades-table .itemcenter h5, .item h6, .mm-grades-table .itemcenter h6 {
     margin: 0 0 3px 0;
     font-size: 10px; }
-  .item p {
+  .item p, .mm-grades-table .itemcenter p {
     color: #666;
     font-size: 14px;
     margin-bottom: 2px; }
-  .item h1:last-child, .item h2:last-child, .item .item-heading:last-child, .item h3:last-child, .item h4:last-child, .item h5:last-child, .item h6:last-child, .item p:last-child {
+  .item h1:last-child, .mm-grades-table .itemcenter h1:last-child, .item h2:last-child, .mm-grades-table .itemcenter h2:last-child, .item .item-heading:last-child, .mm-grades-table .itemcenter .item-heading:last-child, .item h3:last-child, .mm-grades-table .itemcenter h3:last-child, .item h4:last-child, .mm-grades-table .itemcenter h4:last-child, .item h5:last-child, .mm-grades-table .itemcenter h5:last-child, .item h6:last-child, .mm-grades-table .itemcenter h6:last-child, .item p:last-child, .mm-grades-table .itemcenter p:last-child {
     margin-bottom: 0; }
-  .item .badge, .item .mma-messages-date span, .mma-messages-date .item span, .item .mma-chat-notice span, .mma-chat-notice .item span {
+  .item .badge, .mm-grades-table .itemcenter .badge, .item .mma-messages-date span, .mma-messages-date .item span, .mm-grades-table .itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .itemcenter span, .item .mma-chat-notice span, .mma-chat-notice .item span, .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .itemcenter span {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -4739,124 +4739,124 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
     position: absolute;
     top: 16px;
     right: 32px; }
-  .item.item-button-right .badge, .item.item-button-right .mma-messages-date span, .mma-messages-date .item.item-button-right span, .item.item-button-right .mma-chat-notice span, .mma-chat-notice .item.item-button-right span {
+  .item.item-button-right .badge, .mm-grades-table .item-button-right.itemcenter .badge, .item.item-button-right .mma-messages-date span, .mma-messages-date .item.item-button-right span, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span, .item.item-button-right .mma-chat-notice span, .mma-chat-notice .item.item-button-right span, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span {
     right: 67px; }
-  .item.item-divider .badge, .item.item-divider .mma-messages-date span, .mma-messages-date .item.item-divider span, .item.item-divider .mma-chat-notice span, .mma-chat-notice .item.item-divider span {
+  .item.item-divider .badge, .mm-grades-table .item-divider.itemcenter .badge, .item.item-divider .mma-messages-date span, .mma-messages-date .item.item-divider span, .mm-grades-table .item-divider.itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .item-divider.itemcenter span, .item.item-divider .mma-chat-notice span, .mma-chat-notice .item.item-divider span, .mm-grades-table .item-divider.itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .item-divider.itemcenter span {
     top: 8px; }
-  .item .badge + .badge, .item .mma-messages-date span + .badge, .mma-messages-date .item span + .badge, .item .mma-chat-notice span + .badge, .mma-chat-notice .item span + .badge, .item .mma-messages-date .badge + span, .mma-messages-date .item .badge + span, .item .mma-messages-date span + span, .mma-messages-date .item span + span, .item .mma-chat-notice .badge + span, .mma-chat-notice .item .badge + span, .item .mma-chat-notice span + span, .mma-chat-notice .item span + span {
+  .item .badge + .badge, .mm-grades-table .itemcenter .badge + .badge, .item .mma-messages-date span + .badge, .mma-messages-date .item span + .badge, .mm-grades-table .itemcenter .mma-messages-date span + .badge, .mma-messages-date .mm-grades-table .itemcenter span + .badge, .item .mma-chat-notice span + .badge, .mma-chat-notice .item span + .badge, .mm-grades-table .itemcenter .mma-chat-notice span + .badge, .mma-chat-notice .mm-grades-table .itemcenter span + .badge, .item .mma-messages-date .badge + span, .mma-messages-date .item .badge + span, .mm-grades-table .itemcenter .mma-messages-date .badge + span, .mma-messages-date .mm-grades-table .itemcenter .badge + span, .item .mma-messages-date span + span, .mma-messages-date .item span + span, .mm-grades-table .itemcenter .mma-messages-date span + span, .mma-messages-date .mm-grades-table .itemcenter span + span, .item .mma-chat-notice .badge + span, .mma-chat-notice .item .badge + span, .mm-grades-table .itemcenter .mma-chat-notice .badge + span, .mma-chat-notice .mm-grades-table .itemcenter .badge + span, .item .mma-chat-notice span + span, .mma-chat-notice .item span + span, .mm-grades-table .itemcenter .mma-chat-notice span + span, .mma-chat-notice .mm-grades-table .itemcenter span + span {
     margin-right: 5px; }
-  .item.item-light {
+  .item.item-light, .mm-grades-table .item-light.itemcenter {
     border-color: #ddd;
     background-color: #fff;
     color: #444; }
-  .item.item-stable {
+  .item.item-stable, .mm-grades-table .item-stable.itemcenter {
     border-color: #b2b2b2;
     background-color: #f5f5f5;
     color: #444; }
-  .item.item-positive {
+  .item.item-positive, .mm-grades-table .item-positive.itemcenter {
     border-color: #0c60ee;
     background-color: #387ef5;
     color: #fff; }
-  .item.item-calm {
+  .item.item-calm, .mm-grades-table .item-calm.itemcenter {
     border-color: #0a9dc7;
     background-color: #11c1f3;
     color: #fff; }
-  .item.item-assertive {
+  .item.item-assertive, .mm-grades-table .item-assertive.itemcenter {
     border-color: #e42112;
     background-color: #ef473a;
     color: #fff; }
-  .item.item-balanced {
+  .item.item-balanced, .mm-grades-table .item-balanced.itemcenter {
     border-color: #28a54c;
     background-color: #33cd5f;
     color: #fff; }
-  .item.item-energized {
+  .item.item-energized, .mm-grades-table .item-energized.itemcenter {
     border-color: #e6b500;
     background-color: #ffc900;
     color: #fff; }
-  .item.item-royal {
+  .item.item-royal, .mm-grades-table .item-royal.itemcenter {
     border-color: #6b46e5;
     background-color: #886aea;
     color: #fff; }
-  .item.item-dark {
+  .item.item-dark, .mm-grades-table .item-dark.itemcenter {
     border-color: #111;
     background-color: #444;
     color: #fff; }
-  .item[ng-click]:hover {
+  .item[ng-click]:hover, .mm-grades-table [ng-click].itemcenter:hover {
     cursor: pointer; }
 
-.list-borderless .item, .item-borderless {
+.list-borderless .item, .list-borderless .mm-grades-table .itemcenter, .mm-grades-table .list-borderless .itemcenter, .item-borderless {
   border-width: 0; }
 
-.item.active, .item.activated, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .item .item-content.activated {
+.item.active, .mm-grades-table .active.itemcenter, .item.activated, .mm-grades-table .activated.itemcenter, .item-complex.active .item-content, .item-complex.activated .item-content, .item .item-content.active, .mm-grades-table .itemcenter .item-content.active, .item .item-content.activated, .mm-grades-table .itemcenter .item-content.activated {
   border-color: #ccc;
   background-color: #D9D9D9; }
-  .item.active.item-complex > .item-content, .item.activated.item-complex > .item-content, .item-complex.active .item-content.item-complex > .item-content, .item-complex.activated .item-content.item-complex > .item-content, .item .item-content.active.item-complex > .item-content, .item .item-content.activated.item-complex > .item-content {
+  .item.active.item-complex > .item-content, .mm-grades-table .active.item-complex.itemcenter > .item-content, .item.activated.item-complex > .item-content, .mm-grades-table .activated.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-complex > .item-content, .item-complex.activated .item-content.item-complex > .item-content, .item .item-content.active.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-complex > .item-content, .item .item-content.activated.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-complex > .item-content {
     border-color: #ccc;
     background-color: #D9D9D9; }
-  .item.active.item-light, .item.activated.item-light, .item-complex.active .item-content.item-light, .item-complex.activated .item-content.item-light, .item .item-content.active.item-light, .item .item-content.activated.item-light {
+  .item.active.item-light, .mm-grades-table .active.item-light.itemcenter, .item.activated.item-light, .mm-grades-table .activated.item-light.itemcenter, .item-complex.active .item-content.item-light, .item-complex.activated .item-content.item-light, .item .item-content.active.item-light, .mm-grades-table .itemcenter .item-content.active.item-light, .item .item-content.activated.item-light, .mm-grades-table .itemcenter .item-content.activated.item-light {
     border-color: #ccc;
     background-color: #fafafa; }
-    .item.active.item-light.item-complex > .item-content, .item.activated.item-light.item-complex > .item-content, .item-complex.active .item-content.item-light.item-complex > .item-content, .item-complex.activated .item-content.item-light.item-complex > .item-content, .item .item-content.active.item-light.item-complex > .item-content, .item .item-content.activated.item-light.item-complex > .item-content {
+    .item.active.item-light.item-complex > .item-content, .mm-grades-table .active.item-light.item-complex.itemcenter > .item-content, .item.activated.item-light.item-complex > .item-content, .mm-grades-table .activated.item-light.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-light.item-complex > .item-content, .item-complex.activated .item-content.item-light.item-complex > .item-content, .item .item-content.active.item-light.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-light.item-complex > .item-content, .item .item-content.activated.item-light.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-light.item-complex > .item-content {
       border-color: #ccc;
       background-color: #fafafa; }
-  .item.active.item-stable, .item.activated.item-stable, .item-complex.active .item-content.item-stable, .item-complex.activated .item-content.item-stable, .item .item-content.active.item-stable, .item .item-content.activated.item-stable {
+  .item.active.item-stable, .mm-grades-table .active.item-stable.itemcenter, .item.activated.item-stable, .mm-grades-table .activated.item-stable.itemcenter, .item-complex.active .item-content.item-stable, .item-complex.activated .item-content.item-stable, .item .item-content.active.item-stable, .mm-grades-table .itemcenter .item-content.active.item-stable, .item .item-content.activated.item-stable, .mm-grades-table .itemcenter .item-content.activated.item-stable {
     border-color: #a2a2a2;
     background-color: #e5e5e5; }
-    .item.active.item-stable.item-complex > .item-content, .item.activated.item-stable.item-complex > .item-content, .item-complex.active .item-content.item-stable.item-complex > .item-content, .item-complex.activated .item-content.item-stable.item-complex > .item-content, .item .item-content.active.item-stable.item-complex > .item-content, .item .item-content.activated.item-stable.item-complex > .item-content {
+    .item.active.item-stable.item-complex > .item-content, .mm-grades-table .active.item-stable.item-complex.itemcenter > .item-content, .item.activated.item-stable.item-complex > .item-content, .mm-grades-table .activated.item-stable.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-stable.item-complex > .item-content, .item-complex.activated .item-content.item-stable.item-complex > .item-content, .item .item-content.active.item-stable.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-stable.item-complex > .item-content, .item .item-content.activated.item-stable.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-stable.item-complex > .item-content {
       border-color: #a2a2a2;
       background-color: #e5e5e5; }
-  .item.active.item-positive, .item.activated.item-positive, .item-complex.active .item-content.item-positive, .item-complex.activated .item-content.item-positive, .item .item-content.active.item-positive, .item .item-content.activated.item-positive {
+  .item.active.item-positive, .mm-grades-table .active.item-positive.itemcenter, .item.activated.item-positive, .mm-grades-table .activated.item-positive.itemcenter, .item-complex.active .item-content.item-positive, .item-complex.activated .item-content.item-positive, .item .item-content.active.item-positive, .mm-grades-table .itemcenter .item-content.active.item-positive, .item .item-content.activated.item-positive, .mm-grades-table .itemcenter .item-content.activated.item-positive {
     border-color: #0c60ee;
     background-color: #0c60ee; }
-    .item.active.item-positive.item-complex > .item-content, .item.activated.item-positive.item-complex > .item-content, .item-complex.active .item-content.item-positive.item-complex > .item-content, .item-complex.activated .item-content.item-positive.item-complex > .item-content, .item .item-content.active.item-positive.item-complex > .item-content, .item .item-content.activated.item-positive.item-complex > .item-content {
+    .item.active.item-positive.item-complex > .item-content, .mm-grades-table .active.item-positive.item-complex.itemcenter > .item-content, .item.activated.item-positive.item-complex > .item-content, .mm-grades-table .activated.item-positive.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-positive.item-complex > .item-content, .item-complex.activated .item-content.item-positive.item-complex > .item-content, .item .item-content.active.item-positive.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-positive.item-complex > .item-content, .item .item-content.activated.item-positive.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-positive.item-complex > .item-content {
       border-color: #0c60ee;
       background-color: #0c60ee; }
-  .item.active.item-calm, .item.activated.item-calm, .item-complex.active .item-content.item-calm, .item-complex.activated .item-content.item-calm, .item .item-content.active.item-calm, .item .item-content.activated.item-calm {
+  .item.active.item-calm, .mm-grades-table .active.item-calm.itemcenter, .item.activated.item-calm, .mm-grades-table .activated.item-calm.itemcenter, .item-complex.active .item-content.item-calm, .item-complex.activated .item-content.item-calm, .item .item-content.active.item-calm, .mm-grades-table .itemcenter .item-content.active.item-calm, .item .item-content.activated.item-calm, .mm-grades-table .itemcenter .item-content.activated.item-calm {
     border-color: #0a9dc7;
     background-color: #0a9dc7; }
-    .item.active.item-calm.item-complex > .item-content, .item.activated.item-calm.item-complex > .item-content, .item-complex.active .item-content.item-calm.item-complex > .item-content, .item-complex.activated .item-content.item-calm.item-complex > .item-content, .item .item-content.active.item-calm.item-complex > .item-content, .item .item-content.activated.item-calm.item-complex > .item-content {
+    .item.active.item-calm.item-complex > .item-content, .mm-grades-table .active.item-calm.item-complex.itemcenter > .item-content, .item.activated.item-calm.item-complex > .item-content, .mm-grades-table .activated.item-calm.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-calm.item-complex > .item-content, .item-complex.activated .item-content.item-calm.item-complex > .item-content, .item .item-content.active.item-calm.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-calm.item-complex > .item-content, .item .item-content.activated.item-calm.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-calm.item-complex > .item-content {
       border-color: #0a9dc7;
       background-color: #0a9dc7; }
-  .item.active.item-assertive, .item.activated.item-assertive, .item-complex.active .item-content.item-assertive, .item-complex.activated .item-content.item-assertive, .item .item-content.active.item-assertive, .item .item-content.activated.item-assertive {
+  .item.active.item-assertive, .mm-grades-table .active.item-assertive.itemcenter, .item.activated.item-assertive, .mm-grades-table .activated.item-assertive.itemcenter, .item-complex.active .item-content.item-assertive, .item-complex.activated .item-content.item-assertive, .item .item-content.active.item-assertive, .mm-grades-table .itemcenter .item-content.active.item-assertive, .item .item-content.activated.item-assertive, .mm-grades-table .itemcenter .item-content.activated.item-assertive {
     border-color: #e42112;
     background-color: #e42112; }
-    .item.active.item-assertive.item-complex > .item-content, .item.activated.item-assertive.item-complex > .item-content, .item-complex.active .item-content.item-assertive.item-complex > .item-content, .item-complex.activated .item-content.item-assertive.item-complex > .item-content, .item .item-content.active.item-assertive.item-complex > .item-content, .item .item-content.activated.item-assertive.item-complex > .item-content {
+    .item.active.item-assertive.item-complex > .item-content, .mm-grades-table .active.item-assertive.item-complex.itemcenter > .item-content, .item.activated.item-assertive.item-complex > .item-content, .mm-grades-table .activated.item-assertive.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-assertive.item-complex > .item-content, .item-complex.activated .item-content.item-assertive.item-complex > .item-content, .item .item-content.active.item-assertive.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-assertive.item-complex > .item-content, .item .item-content.activated.item-assertive.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-assertive.item-complex > .item-content {
       border-color: #e42112;
       background-color: #e42112; }
-  .item.active.item-balanced, .item.activated.item-balanced, .item-complex.active .item-content.item-balanced, .item-complex.activated .item-content.item-balanced, .item .item-content.active.item-balanced, .item .item-content.activated.item-balanced {
+  .item.active.item-balanced, .mm-grades-table .active.item-balanced.itemcenter, .item.activated.item-balanced, .mm-grades-table .activated.item-balanced.itemcenter, .item-complex.active .item-content.item-balanced, .item-complex.activated .item-content.item-balanced, .item .item-content.active.item-balanced, .mm-grades-table .itemcenter .item-content.active.item-balanced, .item .item-content.activated.item-balanced, .mm-grades-table .itemcenter .item-content.activated.item-balanced {
     border-color: #28a54c;
     background-color: #28a54c; }
-    .item.active.item-balanced.item-complex > .item-content, .item.activated.item-balanced.item-complex > .item-content, .item-complex.active .item-content.item-balanced.item-complex > .item-content, .item-complex.activated .item-content.item-balanced.item-complex > .item-content, .item .item-content.active.item-balanced.item-complex > .item-content, .item .item-content.activated.item-balanced.item-complex > .item-content {
+    .item.active.item-balanced.item-complex > .item-content, .mm-grades-table .active.item-balanced.item-complex.itemcenter > .item-content, .item.activated.item-balanced.item-complex > .item-content, .mm-grades-table .activated.item-balanced.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-balanced.item-complex > .item-content, .item-complex.activated .item-content.item-balanced.item-complex > .item-content, .item .item-content.active.item-balanced.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-balanced.item-complex > .item-content, .item .item-content.activated.item-balanced.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-balanced.item-complex > .item-content {
       border-color: #28a54c;
       background-color: #28a54c; }
-  .item.active.item-energized, .item.activated.item-energized, .item-complex.active .item-content.item-energized, .item-complex.activated .item-content.item-energized, .item .item-content.active.item-energized, .item .item-content.activated.item-energized {
+  .item.active.item-energized, .mm-grades-table .active.item-energized.itemcenter, .item.activated.item-energized, .mm-grades-table .activated.item-energized.itemcenter, .item-complex.active .item-content.item-energized, .item-complex.activated .item-content.item-energized, .item .item-content.active.item-energized, .mm-grades-table .itemcenter .item-content.active.item-energized, .item .item-content.activated.item-energized, .mm-grades-table .itemcenter .item-content.activated.item-energized {
     border-color: #e6b500;
     background-color: #e6b500; }
-    .item.active.item-energized.item-complex > .item-content, .item.activated.item-energized.item-complex > .item-content, .item-complex.active .item-content.item-energized.item-complex > .item-content, .item-complex.activated .item-content.item-energized.item-complex > .item-content, .item .item-content.active.item-energized.item-complex > .item-content, .item .item-content.activated.item-energized.item-complex > .item-content {
+    .item.active.item-energized.item-complex > .item-content, .mm-grades-table .active.item-energized.item-complex.itemcenter > .item-content, .item.activated.item-energized.item-complex > .item-content, .mm-grades-table .activated.item-energized.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-energized.item-complex > .item-content, .item-complex.activated .item-content.item-energized.item-complex > .item-content, .item .item-content.active.item-energized.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-energized.item-complex > .item-content, .item .item-content.activated.item-energized.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-energized.item-complex > .item-content {
       border-color: #e6b500;
       background-color: #e6b500; }
-  .item.active.item-royal, .item.activated.item-royal, .item-complex.active .item-content.item-royal, .item-complex.activated .item-content.item-royal, .item .item-content.active.item-royal, .item .item-content.activated.item-royal {
+  .item.active.item-royal, .mm-grades-table .active.item-royal.itemcenter, .item.activated.item-royal, .mm-grades-table .activated.item-royal.itemcenter, .item-complex.active .item-content.item-royal, .item-complex.activated .item-content.item-royal, .item .item-content.active.item-royal, .mm-grades-table .itemcenter .item-content.active.item-royal, .item .item-content.activated.item-royal, .mm-grades-table .itemcenter .item-content.activated.item-royal {
     border-color: #6b46e5;
     background-color: #6b46e5; }
-    .item.active.item-royal.item-complex > .item-content, .item.activated.item-royal.item-complex > .item-content, .item-complex.active .item-content.item-royal.item-complex > .item-content, .item-complex.activated .item-content.item-royal.item-complex > .item-content, .item .item-content.active.item-royal.item-complex > .item-content, .item .item-content.activated.item-royal.item-complex > .item-content {
+    .item.active.item-royal.item-complex > .item-content, .mm-grades-table .active.item-royal.item-complex.itemcenter > .item-content, .item.activated.item-royal.item-complex > .item-content, .mm-grades-table .activated.item-royal.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-royal.item-complex > .item-content, .item-complex.activated .item-content.item-royal.item-complex > .item-content, .item .item-content.active.item-royal.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-royal.item-complex > .item-content, .item .item-content.activated.item-royal.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-royal.item-complex > .item-content {
       border-color: #6b46e5;
       background-color: #6b46e5; }
-  .item.active.item-dark, .item.activated.item-dark, .item-complex.active .item-content.item-dark, .item-complex.activated .item-content.item-dark, .item .item-content.active.item-dark, .item .item-content.activated.item-dark {
+  .item.active.item-dark, .mm-grades-table .active.item-dark.itemcenter, .item.activated.item-dark, .mm-grades-table .activated.item-dark.itemcenter, .item-complex.active .item-content.item-dark, .item-complex.activated .item-content.item-dark, .item .item-content.active.item-dark, .mm-grades-table .itemcenter .item-content.active.item-dark, .item .item-content.activated.item-dark, .mm-grades-table .itemcenter .item-content.activated.item-dark {
     border-color: #000;
     background-color: #262626; }
-    .item.active.item-dark.item-complex > .item-content, .item.activated.item-dark.item-complex > .item-content, .item-complex.active .item-content.item-dark.item-complex > .item-content, .item-complex.activated .item-content.item-dark.item-complex > .item-content, .item .item-content.active.item-dark.item-complex > .item-content, .item .item-content.activated.item-dark.item-complex > .item-content {
+    .item.active.item-dark.item-complex > .item-content, .mm-grades-table .active.item-dark.item-complex.itemcenter > .item-content, .item.activated.item-dark.item-complex > .item-content, .mm-grades-table .activated.item-dark.item-complex.itemcenter > .item-content, .item-complex.active .item-content.item-dark.item-complex > .item-content, .item-complex.activated .item-content.item-dark.item-complex > .item-content, .item .item-content.active.item-dark.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.active.item-dark.item-complex > .item-content, .item .item-content.activated.item-dark.item-complex > .item-content, .mm-grades-table .itemcenter .item-content.activated.item-dark.item-complex > .item-content {
       border-color: #000;
       background-color: #262626; }
 
-.item, .item h1, .item h2, .item .item-heading, .item h3, .item h4, .item h5, .item h6, .item p, .item-content, .item-content h1, .item-content h2, .item-content .item .item-heading, .item .item-content .item-heading, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
+.item, .mm-grades-table .itemcenter, .item h1, .mm-grades-table .itemcenter h1, .item h2, .mm-grades-table .itemcenter h2, .item .item-heading, .mm-grades-table .itemcenter .item-heading, .item h3, .mm-grades-table .itemcenter h3, .item h4, .mm-grades-table .itemcenter h4, .item h5, .mm-grades-table .itemcenter h5, .item h6, .mm-grades-table .itemcenter h6, .item p, .mm-grades-table .itemcenter p, .item-content, .item-content h1, .item-content h2, .item-content .item .item-heading, .item .item-content .item-heading, .item-content .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .item-content .item-heading, .item-content h3, .item-content h4, .item-content h5, .item-content h6, .item-content p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-a.item {
+a.item, .mm-grades-table a.itemcenter {
   color: inherit;
   text-decoration: none; }
-  a.item:hover, a.item:focus {
+  a.item:hover, .mm-grades-table a.itemcenter:hover, a.item:focus, .mm-grades-table a.itemcenter:focus {
     text-decoration: none; }
 
 /**
@@ -4868,7 +4868,7 @@ a.item {
  * Basically .item-complex removes any default settings which
  * .item added, so that .item-content looks them as just .item.
  */
-.item-complex, a.item.item-complex, button.item.item-complex {
+.item-complex, a.item.item-complex, .mm-grades-table a.item-complex.itemcenter, button.item.item-complex, .mm-grades-table button.item-complex.itemcenter {
   padding: 0; }
 
 .item-complex .item-content, .item-radio .item-content {
@@ -4883,11 +4883,11 @@ a.item-content {
   color: inherit;
   text-decoration: none; }
 
-.item-text-wrap .item, .item-text-wrap .item-content, .item-text-wrap, .item-text-wrap h1, .item-text-wrap h2, .item-text-wrap .item .item-heading, .item .item-text-wrap .item-heading, .item-text-wrap h3, .item-text-wrap h4, .item-text-wrap h5, .item-text-wrap h6, .item-text-wrap p, .item-complex.item-text-wrap .item-content, .item-body h1, .item-body h2, .item-body .item .item-heading, .item .item-body .item-heading, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
+.item-text-wrap .item, .item-text-wrap .mm-grades-table .itemcenter, .mm-grades-table .item-text-wrap .itemcenter, .item-text-wrap .item-content, .item-text-wrap, .item-text-wrap h1, .item-text-wrap h2, .item-text-wrap .item .item-heading, .item .item-text-wrap .item-heading, .item-text-wrap .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .item-text-wrap .item-heading, .item-text-wrap h3, .item-text-wrap h4, .item-text-wrap h5, .item-text-wrap h6, .item-text-wrap p, .item-complex.item-text-wrap .item-content, .item-body h1, .item-body h2, .item-body .item .item-heading, .item .item-body .item-heading, .item-body .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .item-body .item-heading, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
   overflow: visible;
   white-space: normal; }
 
-.item-complex.item-text-wrap, .item-complex.item-text-wrap h1, .item-complex.item-text-wrap h2, .item-complex.item-text-wrap .item .item-heading, .item .item-complex.item-text-wrap .item-heading, .item-complex.item-text-wrap h3, .item-complex.item-text-wrap h4, .item-complex.item-text-wrap h5, .item-complex.item-text-wrap h6, .item-complex.item-text-wrap p {
+.item-complex.item-text-wrap, .item-complex.item-text-wrap h1, .item-complex.item-text-wrap h2, .item-complex.item-text-wrap .item .item-heading, .item .item-complex.item-text-wrap .item-heading, .item-complex.item-text-wrap .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .item-complex.item-text-wrap .item-heading, .item-complex.item-text-wrap h3, .item-complex.item-text-wrap h4, .item-complex.item-text-wrap h5, .item-complex.item-text-wrap h6, .item-complex.item-text-wrap p {
   overflow: visible;
   white-space: normal; }
 
@@ -4986,7 +4986,7 @@ a.item-content {
  * Item Icons
  * --------------------------------------------------
  */
-.item-icon-left .icon, .item-icon-right .icon, .item.item-howto.item-icon-right .icon {
+.item-icon-left .icon, .item-icon-right .icon, .item.item-howto.item-icon-right .icon, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -5002,12 +5002,12 @@ a.item-content {
   top: 0;
   height: 100%;
   font-size: 32px; }
-  .item-icon-left .icon:before, .item-icon-right .icon:before, .item.item-howto.item-icon-right .icon:before {
+  .item-icon-left .icon:before, .item-icon-right .icon:before, .item.item-howto.item-icon-right .icon:before, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon:before {
     display: block;
     width: 32px;
     text-align: center; }
 
-.item .fill-icon {
+.item .fill-icon, .mm-grades-table .itemcenter .fill-icon {
   min-width: 30px;
   min-height: 30px;
   font-size: 28px; }
@@ -5022,12 +5022,12 @@ a.item-content {
   .item-complex.item-icon-left .item-content {
     padding-left: 54px; }
 
-.item-icon-right, .item.item-howto.item-icon-right {
+.item-icon-right, .item.item-howto.item-icon-right, .mm-grades-table .item-howto.item-icon-right.itemcenter {
   padding-right: 54px; }
-  .item-icon-right .icon, .item.item-howto.item-icon-right .icon {
+  .item-icon-right .icon, .item.item-howto.item-icon-right .icon, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon {
     right: 11px; }
 
-.item-complex.item-icon-right, .item-complex.item.item-howto.item-icon-right {
+.item-complex.item-icon-right, .item-complex.item.item-howto.item-icon-right, .mm-grades-table .item-complex.item-howto.item-icon-right.itemcenter {
   padding-right: 0; }
   .item-complex.item-icon-right .item-content {
     padding-right: 54px; }
@@ -5038,14 +5038,14 @@ a.item-content {
 .item-icon-left.item-icon-right .icon:last-child, .item-icon-left .item-delete .icon {
   left: auto; }
 
-.item-icon-left .icon-accessory, .item-icon-right .icon-accessory, .item.item-howto.item-icon-right .icon-accessory {
+.item-icon-left .icon-accessory, .item-icon-right .icon-accessory, .item.item-howto.item-icon-right .icon-accessory, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon-accessory {
   color: #ccc;
   font-size: 16px; }
 
 .item-icon-left .icon-accessory {
   left: 3px; }
 
-.item-icon-right .icon-accessory, .item.item-howto.item-icon-right .icon-accessory {
+.item-icon-right .icon-accessory, .item.item-howto.item-icon-right .icon-accessory, .mm-grades-table .item-howto.item-icon-right.itemcenter .icon-accessory {
   right: 3px; }
 
 /**
@@ -5086,7 +5086,7 @@ a.item-content {
     font-size: 18px;
     line-height: 32px; }
 
-.item-button-right, a.item.item-button-right, button.item.item-button-right {
+.item-button-right, a.item.item-button-right, .mm-grades-table a.item-button-right.itemcenter, button.item.item-button-right, .mm-grades-table button.item-button-right.itemcenter {
   padding-right: 80px; }
 
 .item-button-right > .button, .item-button-right .item-content > .button, .item-button-right > .buttons, .item-button-right .item-content > .buttons {
@@ -5197,7 +5197,7 @@ a.item-content {
   padding: 16px;
   text-overflow: inherit;
   white-space: normal; }
-  .item-body h1, .item-body h2, .item-body .item .item-heading, .item .item-body .item-heading, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
+  .item-body h1, .item-body h2, .item-body .item .item-heading, .item .item-body .item-heading, .item-body .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .item-body .item-heading, .item-body h3, .item-body h4, .item-body h5, .item-body h6, .item-body p {
     margin-top: 16px;
     margin-bottom: 16px; }
 
@@ -5444,44 +5444,44 @@ a.item-content {
   padding-top: 1px;
   padding-bottom: 1px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
-  .card .item {
+  .card .item, .card .mm-grades-table .itemcenter, .mm-grades-table .card .itemcenter {
     border-left: 0;
     border-right: 0; }
-  .card .item:first-child {
+  .card .item:first-child, .card .mm-grades-table .itemcenter:first-child, .mm-grades-table .card .itemcenter:first-child {
     border-top: 0; }
-  .card .item:last-child {
+  .card .item:last-child, .card .mm-grades-table .itemcenter:last-child, .mm-grades-table .card .itemcenter:last-child {
     border-bottom: 0; }
 
-.padding .card, .item .item-heading.padding .card, .padding .list-inset, .item .item-heading.padding .list-inset {
+.padding .card, .item .item-heading.padding .card, .mm-grades-table .itemcenter .item-heading.padding .card, .padding .list-inset, .item .item-heading.padding .list-inset, .mm-grades-table .itemcenter .item-heading.padding .list-inset {
   margin-left: 0;
   margin-right: 0; }
 
-.card .item:first-child, .list-inset .item:first-child, .padding > .list .item:first-child {
+.card .item:first-child, .card .mm-grades-table .itemcenter:first-child, .mm-grades-table .card .itemcenter:first-child, .list-inset .item:first-child, .list-inset .mm-grades-table .itemcenter:first-child, .mm-grades-table .list-inset .itemcenter:first-child, .padding > .list .item:first-child, .padding > .list .mm-grades-table .itemcenter:first-child, .mm-grades-table .padding > .list .itemcenter:first-child {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px; }
-  .card .item:first-child .item-content, .list-inset .item:first-child .item-content, .padding > .list .item:first-child .item-content {
+  .card .item:first-child .item-content, .card .mm-grades-table .itemcenter:first-child .item-content, .mm-grades-table .card .itemcenter:first-child .item-content, .list-inset .item:first-child .item-content, .list-inset .mm-grades-table .itemcenter:first-child .item-content, .mm-grades-table .list-inset .itemcenter:first-child .item-content, .padding > .list .item:first-child .item-content, .padding > .list .mm-grades-table .itemcenter:first-child .item-content, .mm-grades-table .padding > .list .itemcenter:first-child .item-content {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px; }
-.card .item:last-child, .list-inset .item:last-child, .padding > .list .item:last-child {
+.card .item:last-child, .card .mm-grades-table .itemcenter:last-child, .mm-grades-table .card .itemcenter:last-child, .list-inset .item:last-child, .list-inset .mm-grades-table .itemcenter:last-child, .mm-grades-table .list-inset .itemcenter:last-child, .padding > .list .item:last-child, .padding > .list .mm-grades-table .itemcenter:last-child, .mm-grades-table .padding > .list .itemcenter:last-child {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px; }
-  .card .item:last-child .item-content, .list-inset .item:last-child .item-content, .padding > .list .item:last-child .item-content {
+  .card .item:last-child .item-content, .card .mm-grades-table .itemcenter:last-child .item-content, .mm-grades-table .card .itemcenter:last-child .item-content, .list-inset .item:last-child .item-content, .list-inset .mm-grades-table .itemcenter:last-child .item-content, .mm-grades-table .list-inset .itemcenter:last-child .item-content, .padding > .list .item:last-child .item-content, .padding > .list .mm-grades-table .itemcenter:last-child .item-content, .mm-grades-table .padding > .list .itemcenter:last-child .item-content {
     border-bottom-right-radius: 2px;
     border-bottom-left-radius: 2px; }
 
-.card .item:last-child, .list-inset .item:last-child {
+.card .item:last-child, .card .mm-grades-table .itemcenter:last-child, .mm-grades-table .card .itemcenter:last-child, .list-inset .item:last-child, .list-inset .mm-grades-table .itemcenter:last-child, .mm-grades-table .list-inset .itemcenter:last-child {
   margin-bottom: -1px; }
 
-.card .item, .list-inset .item, .padding > .list .item, .padding-horizontal > .list .item {
+.card .item, .card .mm-grades-table .itemcenter, .mm-grades-table .card .itemcenter, .list-inset .item, .list-inset .mm-grades-table .itemcenter, .mm-grades-table .list-inset .itemcenter, .padding > .list .item, .padding > .list .mm-grades-table .itemcenter, .mm-grades-table .padding > .list .itemcenter, .padding-horizontal > .list .item, .padding-horizontal > .list .mm-grades-table .itemcenter, .mm-grades-table .padding-horizontal > .list .itemcenter {
   margin-right: 0;
   margin-left: 0; }
-  .card .item.item-input input, .list-inset .item.item-input input, .padding > .list .item.item-input input, .padding-horizontal > .list .item.item-input input {
+  .card .item.item-input input, .card .mm-grades-table .item-input.itemcenter input, .mm-grades-table .card .item-input.itemcenter input, .list-inset .item.item-input input, .list-inset .mm-grades-table .item-input.itemcenter input, .mm-grades-table .list-inset .item-input.itemcenter input, .padding > .list .item.item-input input, .padding > .list .mm-grades-table .item-input.itemcenter input, .mm-grades-table .padding > .list .item-input.itemcenter input, .padding-horizontal > .list .item.item-input input, .padding-horizontal > .list .mm-grades-table .item-input.itemcenter input, .mm-grades-table .padding-horizontal > .list .item-input.itemcenter input {
     padding-right: 44px; }
 
-.padding-left > .list .item {
+.padding-left > .list .item, .padding-left > .list .mm-grades-table .itemcenter, .mm-grades-table .padding-left > .list .itemcenter {
   margin-left: 0; }
 
-.padding-right > .list .item {
+.padding-right > .list .item, .padding-right > .list .mm-grades-table .itemcenter, .mm-grades-table .padding-right > .list .itemcenter {
   margin-right: 0; }
 
 /**
@@ -8009,7 +8009,7 @@ a.button {
  * Content Padding
  * --------------------------------------------------
  */
-.padding, .item .item-heading.padding {
+.padding, .item .item-heading.padding, .mm-grades-table .itemcenter .item-heading.padding {
   padding: 10px; }
 
 .padding-top, .padding-vertical {
@@ -8451,7 +8451,7 @@ em {
       border-color: transparent;
       background: none; }
 
-.item.item-text-wrap .item-heading {
+.item.item-text-wrap .item-heading, .mm-grades-table .item-text-wrap.itemcenter .item-heading {
   overflow: visible;
   white-space: normal; }
 
@@ -8494,16 +8494,16 @@ em {
   .item-media.item-button-right > .button, .item-media.item-button-right > .buttons, .item-media.item-button-right > .spinner {
     top: 16px; }
 
-.item.item-howto {
+.item.item-howto, .mm-grades-table .item-howto.itemcenter {
   padding-bottom: 12px;
   padding: 9px;
   margin-bottom: 12px;
   background-color: #d9edf7;
   border-color: #d9edf7;
   color: #666; }
-  .item.item-howto.item-icon-left {
+  .item.item-howto.item-icon-left, .mm-grades-table .item-howto.item-icon-left.itemcenter {
     padding-left: 35px; }
-    .item.item-howto.item-icon-left .icon:first-child {
+    .item.item-howto.item-icon-left .icon:first-child, .mm-grades-table .item-howto.item-icon-left.itemcenter .icon:first-child {
       left: 4px; }
 
 .item-message {
@@ -8544,7 +8544,7 @@ em {
   background-color: transparent;
   padding: 0; }
 
-.item.item-disabled, .platform-android .item.item-disabled {
+.item.item-disabled, .mm-grades-table .item-disabled.itemcenter, .platform-android .item.item-disabled, .platform-android .mm-grades-table .item-disabled.itemcenter, .mm-grades-table .platform-android .item-disabled.itemcenter {
   color: #999; }
 
 .item-complex .item-checkbox .item-content {
@@ -8682,9 +8682,9 @@ em {
   font-size: 18px;
   line-height: 32px; }
 
-.item-button-right.item-2-button-right, a.item.item-button-right.item-2-button-right, button.item.item-button-right.item-2-button-right {
+.item-button-right.item-2-button-right, a.item.item-button-right.item-2-button-right, .mm-grades-table a.item-button-right.item-2-button-right.itemcenter, button.item.item-button-right.item-2-button-right, .mm-grades-table button.item-button-right.item-2-button-right.itemcenter {
   padding-right: 112px; }
-.item-button-right.item-3-button-right, a.item.item-button-right.item-3-button-right, button.item.item-button-right.item-3-button-right {
+.item-button-right.item-3-button-right, a.item.item-button-right.item-3-button-right, .mm-grades-table a.item-button-right.item-3-button-right.itemcenter, button.item.item-button-right.item-3-button-right, .mm-grades-table button.item-button-right.item-3-button-right.itemcenter {
   padding-right: 160px; }
 
 .item-button-right > .buttons.buttons-vertical {
@@ -8737,7 +8737,7 @@ mm-loading.mm-loading-center {
   top: 8px;
   right: 16px; }
 
-.mm-split-item-selected, .mm-split-item-selected .item {
+.mm-split-item-selected, .mm-split-item-selected .item, .mm-split-item-selected .mm-grades-table .itemcenter, .mm-grades-table .mm-split-item-selected .itemcenter {
   border-color: #ccc;
   background-color: #D9D9D9; }
 
@@ -8801,7 +8801,7 @@ mm-navigation-bar .col {
   font-weight: normal;
   font-size: 1em; }
 
-.item.row.mm-item-padding {
+.item.row.mm-item-padding, .mm-grades-table .row.mm-item-padding.itemcenter {
   padding: 16px; }
 
 p.mm-error {
@@ -8826,7 +8826,7 @@ p.mm-error {
   .scroll.padding > .card:first-child, .scroll.padding .mm-loading-content > .card:first-child, .scroll.padding .scroll-refresher > .card:first-child {
     margin-top: 10px; }
 
-.padding .scroll, .item .item-heading.padding .scroll {
+.padding .scroll, .item .item-heading.padding .scroll, .mm-grades-table .itemcenter .item-heading.padding .scroll {
   padding: 10px; }
 
 .iframe-wrapper {
@@ -8859,7 +8859,7 @@ p.mm-error {
 mm-timer {
   display: block; }
 
-.item mm-timer.mm-timer p, .item mm-timer.mm-timer span, .item mm-timer.mm-timer label, mm-timer.mm-timer.item p, mm-timer.mm-timer.item span, mm-timer.mm-timer.item label {
+.item mm-timer.mm-timer p, .mm-grades-table .itemcenter mm-timer.mm-timer p, .item mm-timer.mm-timer span, .mm-grades-table .itemcenter mm-timer.mm-timer span, .item mm-timer.mm-timer label, .mm-grades-table .itemcenter mm-timer.mm-timer label, mm-timer.mm-timer.item p, .mm-grades-table mm-timer.mm-timer.itemcenter p, mm-timer.mm-timer.item span, .mm-grades-table mm-timer.mm-timer.itemcenter span, mm-timer.mm-timer.item label, .mm-grades-table mm-timer.mm-timer.itemcenter label {
   color: #444;
   font-size: 16px; }
 
@@ -8989,24 +8989,24 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
   padding-left: 0;
   padding-right: 0; }
 
-.item.mm-not-clickable {
+.item.mm-not-clickable, .mm-grades-table .mm-not-clickable.itemcenter {
   cursor: default; }
-  .item.mm-not-clickable[ng-click]:hover {
+  .item.mm-not-clickable[ng-click]:hover, .mm-grades-table .mm-not-clickable[ng-click].itemcenter:hover {
     cursor: default; }
-  .item.mm-not-clickable.activated {
+  .item.mm-not-clickable.activated, .mm-grades-table .mm-not-clickable.activated.itemcenter {
     border-color: #ddd;
     background-color: white; }
 
-.item.mm-tab-handlers, .mm-tab-handlers {
+.item.mm-tab-handlers, .mm-grades-table .mm-tab-handlers.itemcenter, .mm-tab-handlers {
   padding: 6px 2px; }
-  .item.mm-tab-handlers .tabs, .mm-tab-handlers .tabs {
+  .item.mm-tab-handlers .tabs, .mm-grades-table .mm-tab-handlers.itemcenter .tabs, .mm-tab-handlers .tabs {
     background: white;
     border: 0; }
-  .item.mm-tab-handlers .tabs-icon-round, .mm-tab-handlers .tabs-icon-round {
+  .item.mm-tab-handlers .tabs-icon-round, .mm-grades-table .mm-tab-handlers.itemcenter .tabs-icon-round, .mm-tab-handlers .tabs-icon-round {
     color: #387ef5; }
-    .item.mm-tab-handlers .tabs-icon-round .tab-item.activated, .mm-tab-handlers .tabs-icon-round .tab-item.activated {
+    .item.mm-tab-handlers .tabs-icon-round .tab-item.activated, .mm-grades-table .mm-tab-handlers.itemcenter .tabs-icon-round .tab-item.activated, .mm-tab-handlers .tabs-icon-round .tab-item.activated {
       opacity: 0.7; }
-    .item.mm-tab-handlers .tabs-icon-round .icon, .mm-tab-handlers .tabs-icon-round .icon {
+    .item.mm-tab-handlers .tabs-icon-round .icon, .mm-grades-table .mm-tab-handlers.itemcenter .tabs-icon-round .icon, .mm-tab-handlers .tabs-icon-round .icon {
       border-radius: 50%;
       max-width: 32px;
       font-size: 22px;
@@ -9014,9 +9014,9 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
       color: white;
       background-color: #387ef5;
       margin-bottom: 5px; }
-      .item.mm-tab-handlers .tabs-icon-round .icon:before, .mm-tab-handlers .tabs-icon-round .icon:before {
+      .item.mm-tab-handlers .tabs-icon-round .icon:before, .mm-grades-table .mm-tab-handlers.itemcenter .tabs-icon-round .icon:before, .mm-tab-handlers .tabs-icon-round .icon:before {
         line-height: 32px; }
-  .item.mm-tab-handlers .mm-loading-handlers, .mm-tab-handlers .mm-loading-handlers {
+  .item.mm-tab-handlers .mm-loading-handlers, .mm-grades-table .mm-tab-handlers.itemcenter .mm-loading-handlers, .mm-tab-handlers .mm-loading-handlers {
     padding: 7px;
     padding-bottom: 6px; }
 
@@ -9058,10 +9058,10 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
 .item-input-wrapper .mm-textarea {
   background: transparent; }
 
-.item.mm-item-has-rich-text-editor {
+.item.mm-item-has-rich-text-editor, .mm-grades-table .mm-item-has-rich-text-editor.itemcenter {
   padding: 0;
   display: block; }
-  .item.mm-item-has-rich-text-editor .input-label, .item.mm-item-has-rich-text-editor .mm-textarea {
+  .item.mm-item-has-rich-text-editor .input-label, .mm-grades-table .mm-item-has-rich-text-editor.itemcenter .input-label, .item.mm-item-has-rich-text-editor .mm-textarea, .mm-grades-table .mm-item-has-rich-text-editor.itemcenter .mm-textarea {
     padding-left: 16px; }
 
 .mm-rich-text-editor-container .cke.cke_chrome {
@@ -9182,11 +9182,11 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
     margin-left: 6px !important;
     margin-right: 6px !important; } }
 
-.item-toggle-relative .item.item-toggle {
+.item-toggle-relative .item.item-toggle, .item-toggle-relative .mm-grades-table .item-toggle.itemcenter, .mm-grades-table .item-toggle-relative .item-toggle.itemcenter {
   padding: 0px;
   margin-top: 0px;
   margin-left: 0px; }
-  .item-toggle-relative .item.item-toggle .toggle {
+  .item-toggle-relative .item.item-toggle .toggle, .item-toggle-relative .mm-grades-table .item-toggle.itemcenter .toggle, .mm-grades-table .item-toggle-relative .item-toggle.itemcenter .toggle {
     position: relative;
     top: 0px;
     right: 0px; }
@@ -9202,9 +9202,9 @@ ion-spinner.mm-spinner-right {
 .item-toggle.has-spinner-right .toggle {
   right: 35px; }
 
-.item .item-toggle.has-spinner-right .mm-spinner-right {
+.item .item-toggle.has-spinner-right .mm-spinner-right, .mm-grades-table .itemcenter .item-toggle.has-spinner-right .mm-spinner-right {
   right: 0px; }
-.item .item-toggle.has-spinner-right .toggle {
+.item .item-toggle.has-spinner-right .toggle, .mm-grades-table .itemcenter .item-toggle.has-spinner-right .toggle {
   right: 30px; }
 
 .item-borderless.item-toggle {
@@ -9217,7 +9217,7 @@ ion-spinner.mm-spinner-right {
 .platform-ios video::cue {
   font-size: 12px; }
 
-.item .mm-input-footnote {
+.item .mm-input-footnote, .mm-grades-table .itemcenter .mm-input-footnote {
   padding-top: 10px;
   padding-bottom: 10px;
   font-style: italic; }
@@ -9236,11 +9236,11 @@ ion-spinner.mm-spinner-right {
 /**
  * Form validation.
  */
-.item.mm-input-has-errors input, .item .mm-input-has-errors input {
+.item.mm-input-has-errors input, .mm-grades-table .mm-input-has-errors.itemcenter input, .item .mm-input-has-errors input, .mm-grades-table .itemcenter .mm-input-has-errors input {
   border-bottom: 1px solid #c00; }
-.item.mm-input-has-errors .checkbox-icon, .item.mm-input-has-errors textarea, .item .mm-input-has-errors .checkbox-icon, .item .mm-input-has-errors textarea {
+.item.mm-input-has-errors .checkbox-icon, .mm-grades-table .mm-input-has-errors.itemcenter .checkbox-icon, .item.mm-input-has-errors textarea, .mm-grades-table .mm-input-has-errors.itemcenter textarea, .item .mm-input-has-errors .checkbox-icon, .mm-grades-table .itemcenter .mm-input-has-errors .checkbox-icon, .item .mm-input-has-errors textarea, .mm-grades-table .itemcenter .mm-input-has-errors textarea {
   border: 1px solid #c00; }
-.item.mm-input-has-errors.mm-item-has-rich-text-editor .mm-rich-text-editor-container, .item.mm-input-has-errors .mm-item-has-rich-text-editor .mm-rich-text-editor-container, .item .mm-input-has-errors.mm-item-has-rich-text-editor .mm-rich-text-editor-container, .item .mm-input-has-errors .mm-item-has-rich-text-editor .mm-rich-text-editor-container {
+.item.mm-input-has-errors.mm-item-has-rich-text-editor .mm-rich-text-editor-container, .mm-grades-table .mm-input-has-errors.mm-item-has-rich-text-editor.itemcenter .mm-rich-text-editor-container, .item.mm-input-has-errors .mm-item-has-rich-text-editor .mm-rich-text-editor-container, .mm-grades-table .mm-input-has-errors.itemcenter .mm-item-has-rich-text-editor .mm-rich-text-editor-container, .item .mm-input-has-errors.mm-item-has-rich-text-editor .mm-rich-text-editor-container, .mm-grades-table .itemcenter .mm-input-has-errors.mm-item-has-rich-text-editor .mm-rich-text-editor-container, .item .mm-input-has-errors .mm-item-has-rich-text-editor .mm-rich-text-editor-container, .mm-grades-table .itemcenter .mm-input-has-errors .mm-item-has-rich-text-editor .mm-rich-text-editor-container {
   border: 1px solid #c00; }
 
 .mm-input-error-container {
@@ -9256,14 +9256,14 @@ i, cite, em, var, address, dfn {
 .bar-footer.bar-footer-adjustable {
   height: auto; }
 
-.item.item-input, .card .item.item-input, .list-inset .item.item-input, .padding > .list .item.item-input, .padding-horizontal > .list .item.item-input {
+.item.item-input, .mm-grades-table .item-input.itemcenter, .card .item.item-input, .card .mm-grades-table .item-input.itemcenter, .mm-grades-table .card .item-input.itemcenter, .list-inset .item.item-input, .list-inset .mm-grades-table .item-input.itemcenter, .mm-grades-table .list-inset .item-input.itemcenter, .padding > .list .item.item-input, .padding > .list .mm-grades-table .item-input.itemcenter, .mm-grades-table .padding > .list .item-input.itemcenter, .padding-horizontal > .list .item.item-input, .padding-horizontal > .list .mm-grades-table .item-input.itemcenter, .mm-grades-table .padding-horizontal > .list .item-input.itemcenter {
   padding-right: 16px; }
-  .item.item-input input, .card .item.item-input input, .list-inset .item.item-input input, .padding > .list .item.item-input input, .padding-horizontal > .list .item.item-input input {
+  .item.item-input input, .mm-grades-table .item-input.itemcenter input, .card .item.item-input input, .card .mm-grades-table .item-input.itemcenter input, .mm-grades-table .card .item-input.itemcenter input, .list-inset .item.item-input input, .list-inset .mm-grades-table .item-input.itemcenter input, .mm-grades-table .list-inset .item-input.itemcenter input, .padding > .list .item.item-input input, .padding > .list .mm-grades-table .item-input.itemcenter input, .mm-grades-table .padding > .list .item-input.itemcenter input, .padding-horizontal > .list .item.item-input input, .padding-horizontal > .list .mm-grades-table .item-input.itemcenter input, .mm-grades-table .padding-horizontal > .list .item-input.itemcenter input {
     padding-right: 0px; }
-  .item.item-input .mm-show-password-container, .card .item.item-input .mm-show-password-container, .list-inset .item.item-input .mm-show-password-container, .padding > .list .item.item-input .mm-show-password-container, .padding-horizontal > .list .item.item-input .mm-show-password-container {
+  .item.item-input .mm-show-password-container, .mm-grades-table .item-input.itemcenter .mm-show-password-container, .card .item.item-input .mm-show-password-container, .card .mm-grades-table .item-input.itemcenter .mm-show-password-container, .mm-grades-table .card .item-input.itemcenter .mm-show-password-container, .list-inset .item.item-input .mm-show-password-container, .list-inset .mm-grades-table .item-input.itemcenter .mm-show-password-container, .mm-grades-table .list-inset .item-input.itemcenter .mm-show-password-container, .padding > .list .item.item-input .mm-show-password-container, .padding > .list .mm-grades-table .item-input.itemcenter .mm-show-password-container, .mm-grades-table .padding > .list .item-input.itemcenter .mm-show-password-container, .padding-horizontal > .list .item.item-input .mm-show-password-container, .padding-horizontal > .list .mm-grades-table .item-input.itemcenter .mm-show-password-container, .mm-grades-table .padding-horizontal > .list .item-input.itemcenter .mm-show-password-container {
     padding: 0px;
     width: 100%; }
-    .item.item-input .mm-show-password-container .button, .card .item.item-input .mm-show-password-container .button, .list-inset .item.item-input .mm-show-password-container .button, .padding > .list .item.item-input .mm-show-password-container .button, .padding-horizontal > .list .item.item-input .mm-show-password-container .button {
+    .item.item-input .mm-show-password-container .button, .mm-grades-table .item-input.itemcenter .mm-show-password-container .button, .card .item.item-input .mm-show-password-container .button, .card .mm-grades-table .item-input.itemcenter .mm-show-password-container .button, .mm-grades-table .card .item-input.itemcenter .mm-show-password-container .button, .list-inset .item.item-input .mm-show-password-container .button, .list-inset .mm-grades-table .item-input.itemcenter .mm-show-password-container .button, .mm-grades-table .list-inset .item-input.itemcenter .mm-show-password-container .button, .padding > .list .item.item-input .mm-show-password-container .button, .padding > .list .mm-grades-table .item-input.itemcenter .mm-show-password-container .button, .mm-grades-table .padding > .list .item-input.itemcenter .mm-show-password-container .button, .padding-horizontal > .list .item.item-input .mm-show-password-container .button, .padding-horizontal > .list .mm-grades-table .item-input.itemcenter .mm-show-password-container .button, .mm-grades-table .padding-horizontal > .list .item-input.itemcenter .mm-show-password-container .button {
       margin-left: 10.66667px;
       padding: 0 6px; }
 
@@ -9317,6 +9317,8 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
           content: "\f123";
           margin-left: 10px;
           color: #ccc; }
+      mm-format-text[max-height].mm-text-formatted.mm-shortened.mm-expand-in-fullview .mm-show-more:after, *[mm-format-text][max-height].mm-text-formatted.mm-shortened.mm-expand-in-fullview .mm-show-more:after {
+        content: "\f125"; }
       mm-format-text[max-height].mm-text-formatted.mm-shortened:before, *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before {
         content: '';
         height: 100%;
@@ -9332,7 +9334,7 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(100% - 50px), white calc(100% - 15px));
         z-index: 1000; }
 
-.item.item-button-right .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download {
+.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
   right: 44px; }
 
 .mm-course-module-handler mm-format-text + mm-format-text {
@@ -9353,9 +9355,11 @@ input.mm-fileuploader-picker {
   border-collapse: collapse;
   line-height: 20px;
   width: 100%;
-  border-top: 1px solid #eee; }
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  color: #444; }
   .mm-grades-table tr {
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #ddd; }
   .mm-grades-table th, .mm-grades-table td {
     text-align: left;
     padding-top: 10px;
@@ -9369,11 +9373,11 @@ input.mm-fileuploader-picker {
     font-weight: bold; }
   .mm-grades-table tbody th {
     font-weight: normal; }
-  .mm-grades-table .item {
+  .mm-grades-table .item, .mm-grades-table .itemcenter {
     display: table-cell; }
   .mm-grades-table th.b1b {
     padding-left: 20px; }
-  .mm-grades-table th.item {
+  .mm-grades-table th.item, .mm-grades-table th.itemcenter {
     padding-left: 40px; }
   .mm-grades-table th.baggt {
     padding-left: 40px; }
@@ -9386,7 +9390,7 @@ input.mm-fileuploader-picker {
   .mm-grades-table .b1t, .mm-grades-table .baggt {
     font-weight: bold; }
   .mm-grades-table .itemcenter {
-    padding-left: 10px;
+    padding: 10px;
     white-space: nowrap; }
   .mm-grades-table .feedbacktext {
     padding-left: 10px; }
@@ -9394,21 +9398,28 @@ input.mm-fileuploader-picker {
       overflow: auto; }
   .mm-grades-table .dimmed_text, .mm-grades-table .hidden, .mm-grades-table .hidden a {
     color: #aaa; }
-  .mm-grades-table .oddd1, .mm-grades-table .oddd3, .mm-grades-table .evend3 {
-    background-color: #eee; }
-    .mm-grades-table .oddd1.b1b, .mm-grades-table .oddd1.b1l, .mm-grades-table .oddd3.b1b, .mm-grades-table .oddd3.b1l, .mm-grades-table .evend3.b1b, .mm-grades-table .evend3.b1l {
-      border-top: 1px solid #fff; }
+  .mm-grades-table .oddd1, .mm-grades-table .oddd3, .mm-grades-table .evend3, .mm-grades-table .levelodd {
+    background-color: #f1f1f1; }
   .mm-grades-table .oddd2, .mm-grades-table .evend2, .mm-grades-table .oddd4, .mm-grades-table .evend4 {
-    background-color: #f9f9f9; }
-  .mm-grades-table .levelodd {
-    background-color: #eee; }
-    .mm-grades-table .levelodd.b1b, .mm-grades-table .levelodd.b1l {
-      border-top: 1px solid #fff; }
+    background-color: #f5f5f5; }
   .mm-grades-table .leveleven {
     background-color: #fff; }
+  .mm-grades-table .column-leader {
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+    .mm-grades-table .column-leader.level1 {
+      border-left: 0; }
+  .mm-grades-table .column-itemname {
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
 
 .mm-mm_login_sites .item-thumbnail-left .item-content {
-  padding-top: 16px; }
+  padding-top: 16px;
+  padding-right: 16px; }
+.mm-mm_login_sites .list-left-editing .item-thumbnail-left .item-content {
+  padding-right: 49px; }
 .mm-mm_login_sites .avatar {
   margin: 0;
   width: 80px;
@@ -9418,8 +9429,6 @@ input.mm-fileuploader-picker {
   border-radius: 50%;
   padding: 4px;
   border: 1px solid #ddd; }
-.mm-mm_login_sites .card {
-  margin: 15px 10px; }
 
 .mm-login-sitepolicy-iframe {
   height: 300px; }
@@ -9478,18 +9487,15 @@ input.mm-fileuploader-picker {
 .mm-question-feedback-padding {
   padding: 8px 35px 8px 14px; }
 
-.item.mm-question-correct, .platform-android .item.mm-question-correct, .platform-ios .item.mm-question-correct {
+.item.mm-question-correct, .mm-grades-table .mm-question-correct.itemcenter, .platform-android .item.mm-question-correct, .platform-android .mm-grades-table .mm-question-correct.itemcenter, .mm-grades-table .platform-android .mm-question-correct.itemcenter, .platform-ios .item.mm-question-correct, .platform-ios .mm-grades-table .mm-question-correct.itemcenter, .mm-grades-table .platform-ios .mm-question-correct.itemcenter {
   background-color: #cfc; }
-.item.mm-question-partiallycorrect, .platform-android .item.mm-question-partiallycorrect, .platform-ios .item.mm-question-partiallycorrect {
+.item.mm-question-partiallycorrect, .mm-grades-table .mm-question-partiallycorrect.itemcenter, .platform-android .item.mm-question-partiallycorrect, .platform-android .mm-grades-table .mm-question-partiallycorrect.itemcenter, .mm-grades-table .platform-android .mm-question-partiallycorrect.itemcenter, .platform-ios .item.mm-question-partiallycorrect, .platform-ios .mm-grades-table .mm-question-partiallycorrect.itemcenter, .mm-grades-table .platform-ios .mm-question-partiallycorrect.itemcenter {
   background-color: #ffa; }
-.item.mm-question-notanswered, .item.mm-question-incorrect, .platform-android .item.mm-question-notanswered, .platform-android .item.mm-question-incorrect, .platform-ios .item.mm-question-notanswered, .platform-ios .item.mm-question-incorrect {
+.item.mm-question-notanswered, .mm-grades-table .mm-question-notanswered.itemcenter, .item.mm-question-incorrect, .mm-grades-table .mm-question-incorrect.itemcenter, .platform-android .item.mm-question-notanswered, .platform-android .mm-grades-table .mm-question-notanswered.itemcenter, .mm-grades-table .platform-android .mm-question-notanswered.itemcenter, .platform-android .item.mm-question-incorrect, .platform-android .mm-grades-table .mm-question-incorrect.itemcenter, .mm-grades-table .platform-android .mm-question-incorrect.itemcenter, .platform-ios .item.mm-question-notanswered, .platform-ios .mm-grades-table .mm-question-notanswered.itemcenter, .mm-grades-table .platform-ios .mm-question-notanswered.itemcenter, .platform-ios .item.mm-question-incorrect, .platform-ios .mm-grades-table .mm-question-incorrect.itemcenter, .mm-grades-table .platform-ios .mm-question-incorrect.itemcenter {
   background-color: #fcc; }
 
-.mm-question-warning, p.mm-question-warning, .item .mm-question-warning {
+.mm-question-warning, p.mm-question-warning, .item .mm-question-warning, .mm-grades-table .itemcenter .mm-question-warning {
   color: #c00; }
-
-#mm-settings-languagelabel {
-  color: #000; }
 
 .bar-side-menu {
   border-color: transparent;
@@ -9499,16 +9505,19 @@ input.mm-fileuploader-picker {
   height: 80px !important; }
   .bar-side-menu .title {
     color: #fff; }
-  .bar-side-menu .item {
+  .bar-side-menu .item, .bar-side-menu .mm-grades-table .itemcenter, .mm-grades-table .bar-side-menu .itemcenter {
     background: transparent;
     border: none; }
   .bar-side-menu .item-avatar, .bar-side-menu .item-media, .bar-side-menu .item-avatar-center {
     margin-top: 0px !important; }
-    .bar-side-menu .item-avatar h2, .bar-side-menu .item-media h2, .bar-side-menu .item-avatar-center h2, .bar-side-menu .item-avatar .item .item-heading, .item .bar-side-menu .item-avatar .item-heading, .bar-side-menu .item-media .item .item-heading, .item .bar-side-menu .item-media .item-heading, .bar-side-menu .item-avatar-center .item .item-heading, .item .bar-side-menu .item-avatar-center .item-heading, .bar-side-menu .item-avatar p, .bar-side-menu .item-media p, .bar-side-menu .item-avatar-center p {
+    .bar-side-menu .item-avatar h2, .bar-side-menu .item-media h2, .bar-side-menu .item-avatar-center h2, .bar-side-menu .item-avatar .item .item-heading, .item .bar-side-menu .item-avatar .item-heading, .bar-side-menu .item-media .item .item-heading, .item .bar-side-menu .item-media .item-heading, .bar-side-menu .item-avatar-center .item .item-heading, .item .bar-side-menu .item-avatar-center .item-heading, .bar-side-menu .item-avatar .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .bar-side-menu .item-avatar .item-heading, .bar-side-menu .item-media .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .bar-side-menu .item-media .item-heading, .bar-side-menu .item-avatar-center .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .bar-side-menu .item-avatar-center .item-heading, .bar-side-menu .item-avatar p, .bar-side-menu .item-media p, .bar-side-menu .item-avatar-center p {
       color: #fff; }
 
 .has-side-menu-header {
   top: 80px; }
+
+#mm-settings-languagelabel {
+  color: #000; }
 
 .foreground-ion-edit.ion-edit:before {
   position: relative;
@@ -9530,6 +9539,9 @@ input.mm-fileuploader-picker {
 .mm-site_frontpage .mm-frontpageitemnews .mm-module-buttons {
   width: 30px;
   height: 22px; }
+
+.mm-site_coursesgrades .item .badge, .mm-site_coursesgrades .mm-grades-table .itemcenter .badge, .mm-grades-table .mm-site_coursesgrades .itemcenter .badge, .mm-site_coursesgrades .item .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
+  right: 16px; }
 
 .mma-messages-date {
   text-align: center;
@@ -9794,7 +9806,7 @@ p.mma-mod-assign-warning {
 @media (min-width: 767px) {
   .mm-site_mod_choice .col {
     border-left: 1px solid #ddd; }
-    .mm-site_mod_choice .col.item, .mm-site_mod_choice .col .chart-item {
+    .mm-site_mod_choice .col.item, .mm-site_mod_choice .mm-grades-table .col.itemcenter, .mm-grades-table .mm-site_mod_choice .col.itemcenter, .mm-site_mod_choice .col .chart-item {
       margin-top: 0;
       border-top: 0; }
     .mm-site_mod_choice .col:first-child {
@@ -9811,10 +9823,10 @@ p.mma-mod-assign-warning {
   border-width: 1px;
   border-style: solid; }
 
-.mm-site_mod_forum-discussion .card.highlight .item.item-heading {
+.mm-site_mod_forum-discussion .card.highlight .item.item-heading, .mm-site_mod_forum-discussion .card.highlight .mm-grades-table .item-heading.itemcenter, .mm-grades-table .mm-site_mod_forum-discussion .card.highlight .item-heading.itemcenter {
   background-color: #f5f5f5;
   font-weight: bold; }
-  .mm-site_mod_forum-discussion .card.highlight .item.item-heading h2, .mm-site_mod_forum-discussion .card.highlight .item.item-heading .item-heading {
+  .mm-site_mod_forum-discussion .card.highlight .item.item-heading h2, .mm-site_mod_forum-discussion .card.highlight .mm-grades-table .item-heading.itemcenter h2, .mm-grades-table .mm-site_mod_forum-discussion .card.highlight .item-heading.itemcenter h2, .mm-site_mod_forum-discussion .card.highlight .item.item-heading .item-heading, .mm-site_mod_forum-discussion .card.highlight .mm-grades-table .item-heading.itemcenter .item-heading, .mm-grades-table .mm-site_mod_forum-discussion .card.highlight .item-heading.itemcenter .item-heading {
     font-weight: bold; }
 
 p.mma-mod-quiz-warning {
@@ -9825,7 +9837,7 @@ p.mma-mod-quiz-warning {
   .mm-site_mod_quiz .row .button.button-block, .mm-site_mod_quiz-player .row .button.button-block {
     margin: 0; }
 
-.item.mma-mod-quiz-highlighted, .platform-android .item.mma-mod-quiz-highlighted, .platform-ios .item.mma-mod-quiz-highlighted, .mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
+.item.mma-mod-quiz-highlighted, .mm-grades-table .mma-mod-quiz-highlighted.itemcenter, .platform-android .item.mma-mod-quiz-highlighted, .platform-android .mm-grades-table .mma-mod-quiz-highlighted.itemcenter, .mm-grades-table .platform-android .mma-mod-quiz-highlighted.itemcenter, .platform-ios .item.mma-mod-quiz-highlighted, .platform-ios .mm-grades-table .mma-mod-quiz-highlighted.itemcenter, .mm-grades-table .platform-ios .mma-mod-quiz-highlighted.itemcenter, .mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted, .mma-mod-quiz-table .mm-grades-table .row.mma-mod-quiz-highlighted.itemcenter, .mm-grades-table .mma-mod-quiz-table .row.mma-mod-quiz-highlighted.itemcenter {
   background-color: #d9edf7; }
 
 .mma-quiz-textarea {
@@ -9848,12 +9860,12 @@ p.mma-mod-quiz-warning {
 .mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
   background-color: #fcc; }
 
-.mm-site_mod_quiz-review .item h3 {
+.mm-site_mod_quiz-review .item h3, .mm-site_mod_quiz-review .mm-grades-table .itemcenter h3, .mm-grades-table .mm-site_mod_quiz-review .itemcenter h3 {
   font-size: 18px; }
 
-.item.mma-mod-quiz-selected, .platform-android .item.mma-mod-quiz-selected, .platform-ios .item.mma-mod-quiz-selected, .mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
+.item.mma-mod-quiz-selected, .mm-grades-table .mma-mod-quiz-selected.itemcenter, .platform-android .item.mma-mod-quiz-selected, .platform-android .mm-grades-table .mma-mod-quiz-selected.itemcenter, .mm-grades-table .platform-android .mma-mod-quiz-selected.itemcenter, .platform-ios .item.mma-mod-quiz-selected, .platform-ios .mm-grades-table .mma-mod-quiz-selected.itemcenter, .mm-grades-table .platform-ios .mma-mod-quiz-selected.itemcenter, .mma-mod-quiz-table .item.row.mma-mod-quiz-selected, .mma-mod-quiz-table .mm-grades-table .row.mma-mod-quiz-selected.itemcenter, .mm-grades-table .mma-mod-quiz-table .row.mma-mod-quiz-selected.itemcenter {
   border: 3px solid #666; }
-  .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-android .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-ios .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .mma-mod-quiz-table .item.row.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page) {
+  .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .mm-grades-table .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .platform-android .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-android .mm-grades-table .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .mm-grades-table .platform-android .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .platform-ios .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-ios .mm-grades-table .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .mm-grades-table .platform-ios .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .mma-mod-quiz-table .item.row.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .mma-mod-quiz-table .mm-grades-table .row.mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .mm-grades-table .mma-mod-quiz-table .row.mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page) {
     border-bottom: 0; }
 
 .mma-scorm-level-0 {
@@ -9921,7 +9933,7 @@ ion-popover-view {
       position: relative; }
     ion-popover-view.mma-scorm-popover::-webkit-scrollbar {
       display: none; }
-    ion-popover-view.mma-scorm-popover p.padding, ion-popover-view.mma-scorm-popover .item p.item-heading.padding, .item ion-popover-view.mma-scorm-popover p.item-heading.padding {
+    ion-popover-view.mma-scorm-popover p.padding, ion-popover-view.mma-scorm-popover .item p.item-heading.padding, .item ion-popover-view.mma-scorm-popover p.item-heading.padding, ion-popover-view.mma-scorm-popover .mm-grades-table .itemcenter p.item-heading.padding, .mm-grades-table .itemcenter ion-popover-view.mma-scorm-popover p.item-heading.padding {
       margin: 0px;
       /* Don't add margins to p with padding inside the TOC. */ }
   ion-popover-view .mma-scorm-popover-item {
@@ -9984,10 +9996,10 @@ select.mma-mod_survey-select {
 .mma-mod_wiki-subwiki-picker .item-divider {
   font-weight: bold; }
 
-.mma-mod_wiki-subwiki-picker .item.item-selected {
+.mma-mod_wiki-subwiki-picker .item.item-selected, .mma-mod_wiki-subwiki-picker .mm-grades-table .item-selected.itemcenter, .mm-grades-table .mma-mod_wiki-subwiki-picker .item-selected.itemcenter {
   background-color: #eee; }
 
-.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
+.mma-mod_wiki-subwiki-picker .item.item-selected .icon, .mma-mod_wiki-subwiki-picker .mm-grades-table .item-selected.itemcenter .icon, .mm-grades-table .mma-mod_wiki-subwiki-picker .item-selected.itemcenter .icon {
   font-size: 24px; }
 
 .qbehaviour_deferredcbm_actual_percentage {
@@ -10005,7 +10017,7 @@ select.mma-mod_survey-select {
   font-weight: bold;
   color: #c00; }
 
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .mm-grades-table .mma-qbehaviour-deferredcbm-certainty-title.itemcenter, .item.mma-qbehaviour-deferredcbm-certainty-title p, .mm-grades-table .mma-qbehaviour-deferredcbm-certainty-title.itemcenter p {
   font-weight: bold;
   font-size: 16px; }
 
