@@ -139,6 +139,17 @@ em {
   white-space: normal;
 }
 
+.item h1:first-child,
+.item h2:first-child,
+.item .item-heading:first-child,
+.item h3:first-child,
+.item h4:first-child,
+.item h5:first-child,
+.item h6:first-child,
+.item p:first-child {
+    margin-top: 0;
+}
+
 // More options for grids.
 .col-65 {
   @include flex(0, 0, 65%);
@@ -215,7 +226,7 @@ em {
   }
 
   mm-format-text > p:only-child {
-    display: inline-block;
+    display: inline;
   }
 }
 
@@ -609,6 +620,10 @@ p.mm-error {
   height: auto;
   width: auto;
   position: absolute !important; // Position fixed causes problems in Android 4.1-4.3.
+}
+
+.mm-zoom-pane {
+  height: 100%;
 }
 
 .mm-has-navigation-bar {
@@ -1330,11 +1345,14 @@ input.mm-fileuploader-picker {
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
+.mm-grades-container {
+  padding-right: 2px;
+}
+
 .mm-grades-table {
   border-collapse: collapse;
   line-height: 20px;
   width: 100%;
-  border-top: 1px solid $item-light-border;
   font-size: 16px;
   color: $item-stable-text;
   tr {
@@ -1365,10 +1383,10 @@ input.mm-fileuploader-picker {
       padding-left: 20px;
     }
     &.item {
-      padding-left: 40px;
+      padding-left: 30px;
     }
     &.baggt {
-      padding-left: 40px;
+      padding-left: 30px;
     }
     img {
       margin-left: -20px;
@@ -1376,8 +1394,8 @@ input.mm-fileuploader-picker {
     }
   }
   .b1l {
-    width: 20px;
-    min-width: 20px;
+    width: 10px;
+    min-width: 10px;
   }
   .b1t,
   .baggt {
@@ -1582,6 +1600,10 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
+#mm-settings-languagelabel {
+  color: $base-color;
+}
+
 // Variables.
 $bar-side-menu-height: 80px !default;
 $bar-side-menu-color: $bar-content-bg !default;
@@ -1609,8 +1631,10 @@ $bar-side-menu-text-color: $bar-content-text !default;
   top: $bar-side-menu-height;
 }
 
-#mm-settings-languagelabel {
-  color: $base-color;
+.mm-sidemenu-menu {
+  .item .badge {
+    right: 16px;
+  }
 }
 
 
@@ -1653,7 +1677,8 @@ $bar-side-menu-text-color: $bar-content-text !default;
 $mma-messages-date-badge: "stable" !default;
 
 // The date displayed in the list.
-.mma-messages-date {
+.mma-messages-date,
+.mma-messages-unreadfrom {
 
   text-align: center;
   margin-top: 10px;
@@ -1662,6 +1687,10 @@ $mma-messages-date-badge: "stable" !default;
     @extend .badge;
     @extend .badge-#{$mma-messages-date-badge};
   }
+}
+
+.mma-messages-unreadfrom {
+  color: $positive;
 }
 
 .mma-messages-input-inset {
@@ -2082,14 +2111,29 @@ $mma-chat-notice-badge: "stable" !default;
     border-style: solid;
 }
 
-.mm-site_mod_forum-discussion .card.highlight .item.item-heading {
-    background-color: $stable;
-    font-weight: bold;
+.mm-site_mod_forum, .mm-site_mod_forum-discussion {
+    .item.item-heading {
+        padding-bottom: 2px;
 
-    h2 {
-        font-weight: bold;
+        .mm-subject {
+            font-size: 90%;
+        }
+
+        .item-note {
+            font-size: 80%;
+            margin-left: 5px;
+        }
+    }
+
+    .card.highlight .item.item-heading {
+        background-color: $stable;
+
+        h2 {
+            font-weight: bold;
+        }
     }
 }
+
 
 
 $mma-mod-quiz-warning-color:      #c00 !default;
