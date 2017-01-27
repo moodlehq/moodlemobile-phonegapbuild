@@ -17896,6 +17896,49 @@ angular.module('mm.core.textviewer')
     }
 }]);
 
+angular.module('mm.core')
+.directive('mmUserLink', ["$state", "mmUserProfileState", function($state, mmUserProfileState) {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            element.on('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                $state.go(mmUserProfileState, {courseid: attrs.courseid, userid: attrs.userid});
+            });
+        }
+    };
+}]);
+
+angular.module('mm.core.user')
+.directive('mmUserProfileField', ["$mmUserProfileFieldsDelegate", "$compile", function($mmUserProfileFieldsDelegate, $compile) {
+    return {
+        restrict: 'E',
+        scope: {
+            field: '=',
+            signup: '@?',
+            edit: '@?',
+            model: '=?',
+            registerAuth: '@?',
+            scrollHandle: '@?',
+        },
+        templateUrl: 'core/components/user/templates/userprofilefield.html',
+        link: function(scope, element) {
+            var field = scope.field,
+                fieldContainer = element[0].querySelector('.mm-userprofilefield-container');
+            scope.signup = scope.signup && scope.signup !== 'false';
+            scope.edit = scope.edit && scope.edit !== 'false';
+            if (field && fieldContainer) {
+                var directive = $mmUserProfileFieldsDelegate.getDirectiveForField(field, scope.signup, scope.registerAuth);
+                if (directive) {
+                    fieldContainer.setAttribute(directive, '');
+                    $compile(fieldContainer)(scope);
+                }
+            }
+        }
+    };
+}]);
+
 angular.module('mm.core.user')
 .controller('mmUserAboutCtrl', ["$scope", "$stateParams", "$mmUtil", "$mmUser", "$q", "$mmEvents", "$mmCourses", "mmUserEventProfileRefreshed", function($scope, $stateParams, $mmUtil, $mmUser, $q, $mmEvents, $mmCourses,
             mmUserEventProfileRefreshed) {
@@ -18029,49 +18072,6 @@ angular.module('mm.core.user')
     $scope.$on('$destroy', function() {
         obsRefreshed && obsRefreshed.off && obsRefreshed.off();
     });
-}]);
-
-angular.module('mm.core')
-.directive('mmUserLink', ["$state", "mmUserProfileState", function($state, mmUserProfileState) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            element.on('click', function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                $state.go(mmUserProfileState, {courseid: attrs.courseid, userid: attrs.userid});
-            });
-        }
-    };
-}]);
-
-angular.module('mm.core.user')
-.directive('mmUserProfileField', ["$mmUserProfileFieldsDelegate", "$compile", function($mmUserProfileFieldsDelegate, $compile) {
-    return {
-        restrict: 'E',
-        scope: {
-            field: '=',
-            signup: '@?',
-            edit: '@?',
-            model: '=?',
-            registerAuth: '@?',
-            scrollHandle: '@?',
-        },
-        templateUrl: 'core/components/user/templates/userprofilefield.html',
-        link: function(scope, element) {
-            var field = scope.field,
-                fieldContainer = element[0].querySelector('.mm-userprofilefield-container');
-            scope.signup = scope.signup && scope.signup !== 'false';
-            scope.edit = scope.edit && scope.edit !== 'false';
-            if (field && fieldContainer) {
-                var directive = $mmUserProfileFieldsDelegate.getDirectiveForField(field, scope.signup, scope.registerAuth);
-                if (directive) {
-                    fieldContainer.setAttribute(directive, '');
-                    $compile(fieldContainer)(scope);
-                }
-            }
-        }
-    };
 }]);
 
 angular.module('mm.core.user')
@@ -19988,6 +19988,79 @@ angular.module('mm.addons.userprofilefield_textarea', ['mm.core'])
 }]);
 
 angular.module('mm.addons.mod_assign')
+.directive('mmaModAssignFeedbackEditpdf', ["$mmaModAssign", function($mmaModAssign) {
+    return {
+        restrict: 'A',
+        priority: 100,
+        templateUrl: 'addons/mod/assign/feedback/editpdf/template.html',
+        link: function(scope) {
+            if (!scope.plugin) {
+                return;
+            }
+            scope.files = $mmaModAssign.getSubmissionPluginAttachments(scope.plugin);
+        }
+    };
+}]);
+
+angular.module('mm.addons.mod_assign')
+.factory('$mmaModAssignFeedbackEditpdfHandler', ["$mmaModAssign", "$mmFilepool", "$q", "mmaModAssignComponent", function($mmaModAssign, $mmFilepool, $q, mmaModAssignComponent) {
+    var self = {};
+        self.isEnabled = function() {
+        return true;
+    };
+        self.getDirectiveName = function() {
+        return 'mma-mod-assign-feedback-editpdf';
+    };
+        self.getPluginFiles = function(assign, submission, plugin, siteId) {
+        return $mmaModAssign.getSubmissionPluginAttachments(plugin);
+    };
+    return self;
+}])
+.run(["$mmAddonManager", function($mmAddonManager) {
+    var $mmaModAssignFeedbackDelegate = $mmAddonManager.get('$mmaModAssignFeedbackDelegate');
+    if ($mmaModAssignFeedbackDelegate) {
+        $mmaModAssignFeedbackDelegate.registerHandler('mmaModAssignFeedbackEditpdf', 'editpdf',
+                '$mmaModAssignFeedbackEditpdfHandler');
+    }
+}]);
+
+angular.module('mm.addons.mod_assign')
+.directive('mmaModAssignFeedbackFile', ["$mmaModAssign", function($mmaModAssign) {
+    return {
+        restrict: 'A',
+        priority: 100,
+        templateUrl: 'addons/mod/assign/feedback/file/template.html',
+        link: function(scope) {
+            if (!scope.plugin) {
+                return;
+            }
+            scope.files = $mmaModAssign.getSubmissionPluginAttachments(scope.plugin);
+        }
+    };
+}]);
+
+angular.module('mm.addons.mod_assign')
+.factory('$mmaModAssignFeedbackFileHandler', ["$mmaModAssign", "$mmFilepool", "$q", "mmaModAssignComponent", function($mmaModAssign, $mmFilepool, $q, mmaModAssignComponent) {
+    var self = {};
+        self.isEnabled = function() {
+        return true;
+    };
+        self.getDirectiveName = function() {
+        return 'mma-mod-assign-feedback-file';
+    };
+        self.getPluginFiles = function(assign, submission, plugin, siteId) {
+        return $mmaModAssign.getSubmissionPluginAttachments(plugin);
+    };
+    return self;
+}])
+.run(["$mmAddonManager", function($mmAddonManager) {
+    var $mmaModAssignFeedbackDelegate = $mmAddonManager.get('$mmaModAssignFeedbackDelegate');
+    if ($mmaModAssignFeedbackDelegate) {
+        $mmaModAssignFeedbackDelegate.registerHandler('mmaModAssignFeedbackFile', 'file', '$mmaModAssignFeedbackFileHandler');
+    }
+}]);
+
+angular.module('mm.addons.mod_assign')
 .directive('mmaModAssignFeedbackComments', ["$mmaModAssign", "$mmText", "$mmUtil", "$q", "$mmaModAssignFeedbackCommentsHandler", "$mmEvents", "mmaModAssignFeedbackSavedEvent", "$mmSite", "$mmaModAssignOffline", function($mmaModAssign, $mmText, $mmUtil, $q, $mmaModAssignFeedbackCommentsHandler,
         $mmEvents, mmaModAssignFeedbackSavedEvent, $mmSite, $mmaModAssignOffline) {
     function getContents(scope, rteEnabled) {
@@ -20134,79 +20207,6 @@ angular.module('mm.addons.mod_assign')
     if ($mmaModAssignFeedbackDelegate) {
         $mmaModAssignFeedbackDelegate.registerHandler('mmaModAssignFeedbackComments', 'comments',
                 '$mmaModAssignFeedbackCommentsHandler');
-    }
-}]);
-
-angular.module('mm.addons.mod_assign')
-.directive('mmaModAssignFeedbackEditpdf', ["$mmaModAssign", function($mmaModAssign) {
-    return {
-        restrict: 'A',
-        priority: 100,
-        templateUrl: 'addons/mod/assign/feedback/editpdf/template.html',
-        link: function(scope) {
-            if (!scope.plugin) {
-                return;
-            }
-            scope.files = $mmaModAssign.getSubmissionPluginAttachments(scope.plugin);
-        }
-    };
-}]);
-
-angular.module('mm.addons.mod_assign')
-.factory('$mmaModAssignFeedbackEditpdfHandler', ["$mmaModAssign", "$mmFilepool", "$q", "mmaModAssignComponent", function($mmaModAssign, $mmFilepool, $q, mmaModAssignComponent) {
-    var self = {};
-        self.isEnabled = function() {
-        return true;
-    };
-        self.getDirectiveName = function() {
-        return 'mma-mod-assign-feedback-editpdf';
-    };
-        self.getPluginFiles = function(assign, submission, plugin, siteId) {
-        return $mmaModAssign.getSubmissionPluginAttachments(plugin);
-    };
-    return self;
-}])
-.run(["$mmAddonManager", function($mmAddonManager) {
-    var $mmaModAssignFeedbackDelegate = $mmAddonManager.get('$mmaModAssignFeedbackDelegate');
-    if ($mmaModAssignFeedbackDelegate) {
-        $mmaModAssignFeedbackDelegate.registerHandler('mmaModAssignFeedbackEditpdf', 'editpdf',
-                '$mmaModAssignFeedbackEditpdfHandler');
-    }
-}]);
-
-angular.module('mm.addons.mod_assign')
-.directive('mmaModAssignFeedbackFile', ["$mmaModAssign", function($mmaModAssign) {
-    return {
-        restrict: 'A',
-        priority: 100,
-        templateUrl: 'addons/mod/assign/feedback/file/template.html',
-        link: function(scope) {
-            if (!scope.plugin) {
-                return;
-            }
-            scope.files = $mmaModAssign.getSubmissionPluginAttachments(scope.plugin);
-        }
-    };
-}]);
-
-angular.module('mm.addons.mod_assign')
-.factory('$mmaModAssignFeedbackFileHandler', ["$mmaModAssign", "$mmFilepool", "$q", "mmaModAssignComponent", function($mmaModAssign, $mmFilepool, $q, mmaModAssignComponent) {
-    var self = {};
-        self.isEnabled = function() {
-        return true;
-    };
-        self.getDirectiveName = function() {
-        return 'mma-mod-assign-feedback-file';
-    };
-        self.getPluginFiles = function(assign, submission, plugin, siteId) {
-        return $mmaModAssign.getSubmissionPluginAttachments(plugin);
-    };
-    return self;
-}])
-.run(["$mmAddonManager", function($mmAddonManager) {
-    var $mmaModAssignFeedbackDelegate = $mmAddonManager.get('$mmaModAssignFeedbackDelegate');
-    if ($mmaModAssignFeedbackDelegate) {
-        $mmaModAssignFeedbackDelegate.registerHandler('mmaModAssignFeedbackFile', 'file', '$mmaModAssignFeedbackFileHandler');
     }
 }]);
 
@@ -20675,25 +20675,6 @@ angular.module('mm.addons.mod_assign')
 }]);
 
 angular.module('mm.addons.mod_quiz')
-.factory('$mmaQuizAccessIpAddressHandler', function() {
-    var self = {};
-        self.isEnabled = function() {
-        return true;
-    };
-        self.isPreflightCheckRequired = function(quiz, attempt, prefetch, siteId) {
-        return false;
-    };
-    return self;
-})
-.run(["$mmAddonManager", function($mmAddonManager) {
-    var $mmaModQuizAccessRulesDelegate = $mmAddonManager.get('$mmaModQuizAccessRulesDelegate');
-    if ($mmaModQuizAccessRulesDelegate) {
-        $mmaModQuizAccessRulesDelegate.registerHandler('mmaQuizAccessIpAddress', 'quizaccess_ipaddress',
-                                '$mmaQuizAccessIpAddressHandler');
-    }
-}]);
-
-angular.module('mm.addons.mod_quiz')
 .factory('$mmaQuizAccessDelayBetweenAttemptsHandler', function() {
     var self = {};
         self.isEnabled = function() {
@@ -20709,6 +20690,25 @@ angular.module('mm.addons.mod_quiz')
     if ($mmaModQuizAccessRulesDelegate) {
         $mmaModQuizAccessRulesDelegate.registerHandler('mmaQuizAccessDelayBetweenAttempts', 'quizaccess_delaybetweenattempts',
                                 '$mmaQuizAccessDelayBetweenAttemptsHandler');
+    }
+}]);
+
+angular.module('mm.addons.mod_quiz')
+.factory('$mmaQuizAccessIpAddressHandler', function() {
+    var self = {};
+        self.isEnabled = function() {
+        return true;
+    };
+        self.isPreflightCheckRequired = function(quiz, attempt, prefetch, siteId) {
+        return false;
+    };
+    return self;
+})
+.run(["$mmAddonManager", function($mmAddonManager) {
+    var $mmaModQuizAccessRulesDelegate = $mmAddonManager.get('$mmaModQuizAccessRulesDelegate');
+    if ($mmaModQuizAccessRulesDelegate) {
+        $mmaModQuizAccessRulesDelegate.registerHandler('mmaQuizAccessIpAddress', 'quizaccess_ipaddress',
+                                '$mmaQuizAccessIpAddressHandler');
     }
 }]);
 
@@ -22950,6 +22950,82 @@ angular.module('mm.addons.files')
 }]);
 
 angular.module('mm.addons.frontpage')
+.controller('mmaFrontpageCtrl', ["$mmCourse", "$mmUtil", "$scope", "$stateParams", "$mmSite", "$q", "$mmCoursePrefetchDelegate", "$mmCourseHelper", function($mmCourse, $mmUtil, $scope, $stateParams, $mmSite, $q, $mmCoursePrefetchDelegate,
+            $mmCourseHelper) {
+    var courseId = $mmSite.getSiteHomeId(),
+        moduleId = $stateParams.moduleid,
+        sectionsLoaded;
+    $scope.items = [];
+    $scope.sectionHasContent = $mmCourseHelper.sectionHasContent;
+    function loadContent() {
+        $scope.hasContent = false;
+        return $mmSite.getConfig().catch(function() {
+            return $q.when({
+                numsections: 1
+            });
+        }).then(function(config) {
+            if (config.frontpageloggedin) {
+                var frontpageItems = [
+                        'mma-frontpage-item-news',
+                        false,
+                        'mma-frontpage-item-categories',
+                        false,
+                        'mma-frontpage-item-categories',
+                        'mma-frontpage-item-enrolled-course-list',
+                        'mma-frontpage-item-all-course-list',
+                        'mma-frontpage-item-course-search'
+                    ],
+                    items = config.frontpageloggedin.split(',');
+                $scope.items = [];
+                angular.forEach(items, function (itemNumber) {
+                    var item = frontpageItems[parseInt(itemNumber, 10)];
+                    if (!item || $scope.items.indexOf(item) >= 0) {
+                        return;
+                    }
+                    $scope.hasContent = true;
+                    $scope.items.push(item);
+                });
+            }
+            return $mmCourse.getSections(courseId, false, true).then(function(sections) {
+                sectionsLoaded = sections;
+                if (config.numsections && sections.length > 0) {
+                    $scope.section = sections.pop();
+                } else {
+                    $scope.section = false;
+                }
+                if (sections.length > 0) {
+                    $scope.block = sections.pop();
+                } else {
+                    $scope.block = false;
+                }
+                $scope.hasContent = $mmCourseHelper.addContentHandlerControllerForSectionModules([$scope.section, $scope.block],
+                    courseId, moduleId, false, $scope) || $scope.hasContent;
+                $mmCourse.logView(courseId);
+            }, function(error) {
+                $mmUtil.showErrorModalDefault(error, 'mm.course.couldnotloadsectioncontent', true);
+            });
+        });
+    }
+    loadContent().finally(function() {
+        $scope.frontpageLoaded = true;
+    });
+    $scope.doRefresh = function() {
+        var promises = [];
+        promises.push($mmCourse.invalidateSections(courseId));
+        promises.push($mmSite.invalidateConfig());
+        if (sectionsLoaded) {
+            var modules = $mmCourseHelper.getSectionsModules(sectionsLoaded);
+            promises.push($mmCoursePrefetchDelegate.invalidateModules(modules, courseId));
+        }
+        $q.all(promises).finally(function() {
+            loadContent().finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        });
+    };
+}]);
+
+angular.module('mm.addons.frontpage')
 .directive('mmaFrontpageItem', ["$compile", function($compile) {
     return {
         restrict: 'E',
@@ -23051,82 +23127,6 @@ angular.module('mm.addons.frontpage')
                 }
             });
         }
-    };
-}]);
-
-angular.module('mm.addons.frontpage')
-.controller('mmaFrontpageCtrl', ["$mmCourse", "$mmUtil", "$scope", "$stateParams", "$mmSite", "$q", "$mmCoursePrefetchDelegate", "$mmCourseHelper", function($mmCourse, $mmUtil, $scope, $stateParams, $mmSite, $q, $mmCoursePrefetchDelegate,
-            $mmCourseHelper) {
-    var courseId = $mmSite.getSiteHomeId(),
-        moduleId = $stateParams.moduleid,
-        sectionsLoaded;
-    $scope.items = [];
-    $scope.sectionHasContent = $mmCourseHelper.sectionHasContent;
-    function loadContent() {
-        $scope.hasContent = false;
-        return $mmSite.getConfig().catch(function() {
-            return $q.when({
-                numsections: 1
-            });
-        }).then(function(config) {
-            if (config.frontpageloggedin) {
-                var frontpageItems = [
-                        'mma-frontpage-item-news',
-                        false,
-                        'mma-frontpage-item-categories',
-                        false,
-                        'mma-frontpage-item-categories',
-                        'mma-frontpage-item-enrolled-course-list',
-                        'mma-frontpage-item-all-course-list',
-                        'mma-frontpage-item-course-search'
-                    ],
-                    items = config.frontpageloggedin.split(',');
-                $scope.items = [];
-                angular.forEach(items, function (itemNumber) {
-                    var item = frontpageItems[parseInt(itemNumber, 10)];
-                    if (!item || $scope.items.indexOf(item) >= 0) {
-                        return;
-                    }
-                    $scope.hasContent = true;
-                    $scope.items.push(item);
-                });
-            }
-            return $mmCourse.getSections(courseId, false, true).then(function(sections) {
-                sectionsLoaded = sections;
-                if (config.numsections && sections.length > 0) {
-                    $scope.section = sections.pop();
-                } else {
-                    $scope.section = false;
-                }
-                if (sections.length > 0) {
-                    $scope.block = sections.pop();
-                } else {
-                    $scope.block = false;
-                }
-                $scope.hasContent = $mmCourseHelper.addContentHandlerControllerForSectionModules([$scope.section, $scope.block],
-                    courseId, moduleId, false, $scope) || $scope.hasContent;
-                $mmCourse.logView(courseId);
-            }, function(error) {
-                $mmUtil.showErrorModalDefault(error, 'mm.course.couldnotloadsectioncontent', true);
-            });
-        });
-    }
-    loadContent().finally(function() {
-        $scope.frontpageLoaded = true;
-    });
-    $scope.doRefresh = function() {
-        var promises = [];
-        promises.push($mmCourse.invalidateSections(courseId));
-        promises.push($mmSite.invalidateConfig());
-        if (sectionsLoaded) {
-            var modules = $mmCourseHelper.getSectionsModules(sectionsLoaded);
-            promises.push($mmCoursePrefetchDelegate.invalidateModules(modules, courseId));
-        }
-        $q.all(promises).finally(function() {
-            loadContent().finally(function() {
-                $scope.$broadcast('scroll.refreshComplete');
-            });
-        });
     };
 }]);
 
@@ -24096,9 +24096,10 @@ angular.module('mm.addons.messages')
 }]);
 
 angular.module('mm.addons.messages')
-.controller('mmaMessagesDiscussionsCtrl', ["$scope", "$mmUtil", "$mmaMessages", "$rootScope", "$mmEvents", "$mmSite", "$ionicPlatform", "mmCoreSplitViewLoad", "mmaMessagesNewMessageEvent", "$mmAddonManager", "mmaMessagesReadChangedEvent", function($scope, $mmUtil, $mmaMessages, $rootScope, $mmEvents, $mmSite, $ionicPlatform,
-            mmCoreSplitViewLoad, mmaMessagesNewMessageEvent, $mmAddonManager, mmaMessagesReadChangedEvent) {
-    var newMessagesObserver, readChangedObserver,
+.controller('mmaMessagesDiscussionsCtrl', ["$scope", "$mmUtil", "$mmaMessages", "$rootScope", "$mmEvents", "$mmSite", "$ionicPlatform", "mmCoreSplitViewLoad", "mmaMessagesNewMessageEvent", "$mmAddonManager", "mmaMessagesReadChangedEvent", "mmaMessagesReadCronEvent", function($scope, $mmUtil, $mmaMessages, $rootScope, $mmEvents, $mmSite, $ionicPlatform,
+            mmCoreSplitViewLoad, mmaMessagesNewMessageEvent, $mmAddonManager, mmaMessagesReadChangedEvent,
+            mmaMessagesReadCronEvent) {
+    var newMessagesObserver, readChangedObserver, cronObserver,
         siteId = $mmSite.getId(),
         discussions,
         $mmPushNotificationsDelegate = $mmAddonManager.get('$mmPushNotificationsDelegate'),
@@ -24114,11 +24115,7 @@ angular.module('mm.addons.messages')
             });
             $scope.discussions = discussionsSorted;
         }, function(error) {
-            if (typeof error === 'string') {
-                $mmUtil.showErrorModal(error);
-            } else {
-                $mmUtil.showErrorModal('mma.messages.errorwhileretrievingdiscussions', true);
-            }
+            $mmUtil.showErrorModalDefault(error, 'mma.messages.errorwhileretrievingdiscussions', true);
         }).finally(function() {
             $scope.loaded = true;
         });
@@ -24130,6 +24127,7 @@ angular.module('mm.addons.messages')
     }
     $scope.refresh = function() {
         refreshData().finally(function() {
+            $mmEvents.trigger(mmaMessagesReadChangedEvent, {siteid: siteId});
             $scope.$broadcast('scroll.refreshComplete');
         });
     };
@@ -24160,6 +24158,11 @@ angular.module('mm.addons.messages')
             }
         }
     });
+    cronObserver = $mmEvents.on(mmaMessagesReadCronEvent, function(data) {
+        if (data && (data.siteid == siteId || !data.siteid)) {
+            refreshData();
+        }
+    });
     if ($mmPushNotificationsDelegate) {
         $mmPushNotificationsDelegate.registerReceiveHandler('mmaMessages:discussions', function(notification) {
             if ($mmUtil.isFalseOrZero(notification.notif)) {
@@ -24177,6 +24180,7 @@ angular.module('mm.addons.messages')
     $scope.$on('$destroy', function() {
         newMessagesObserver && newMessagesObserver.off && newMessagesObserver.off();
         readChangedObserver && readChangedObserver.off && readChangedObserver.off();
+        cronObserver && cronObserver.off && cronObserver.off();
         if ($mmPushNotificationsDelegate) {
             $mmPushNotificationsDelegate.unregisterReceiveHandler('mmaMessages:discussions');
         }
@@ -27094,40 +27098,6 @@ angular.module('mm.addons.qbehaviour_manualgraded')
     return self;
 }]);
 
-angular.module('mm.addons.qtype_calculatedmulti')
-.directive('mmaQtypeCalculatedMulti', ["$log", "$mmQuestionHelper", function($log, $mmQuestionHelper) {
-	$log = $log.getInstance('mmaQtypeCalculatedMulti');
-    return {
-        restrict: 'A',
-        priority: 100,
-        templateUrl: 'addons/qtype/multichoice/template.html',
-        link: function(scope) {
-        	$mmQuestionHelper.multiChoiceDirective(scope, $log);
-        }
-    };
-}]);
-
-angular.module('mm.addons.qtype_calculatedmulti')
-.factory('$mmaQtypeCalculatedMultiHandler', ["$mmaQtypeMultichoiceHandler", function($mmaQtypeMultichoiceHandler) {
-    var self = {};
-        self.isCompleteResponse = function(question, answers) {
-        return $mmaQtypeMultichoiceHandler.isCompleteResponseSingle(answers);
-    };
-        self.isEnabled = function() {
-        return true;
-    };
-        self.isGradableResponse = function(question, answers) {
-        return $mmaQtypeMultichoiceHandler.isGradableResponseSingle(answers);
-    };
-        self.isSameResponse = function(question, prevAnswers, newAnswers) {
-        return $mmaQtypeMultichoiceHandler.isSameResponseSingle(prevAnswers, newAnswers);
-    };
-        self.getDirectiveName = function(question) {
-        return 'mma-qtype-calculated-multi';
-    };
-    return self;
-}]);
-
 angular.module('mm.addons.qtype_calculated')
 .directive('mmaQtypeCalculated', ["$log", "$mmQuestionHelper", function($log, $mmQuestionHelper) {
 	$log = $log.getInstance('mmaQtypeCalculated');
@@ -27158,6 +27128,40 @@ angular.module('mm.addons.qtype_calculated')
     };
         self.getDirectiveName = function(question) {
         return 'mma-qtype-calculated';
+    };
+    return self;
+}]);
+
+angular.module('mm.addons.qtype_calculatedmulti')
+.directive('mmaQtypeCalculatedMulti', ["$log", "$mmQuestionHelper", function($log, $mmQuestionHelper) {
+	$log = $log.getInstance('mmaQtypeCalculatedMulti');
+    return {
+        restrict: 'A',
+        priority: 100,
+        templateUrl: 'addons/qtype/multichoice/template.html',
+        link: function(scope) {
+        	$mmQuestionHelper.multiChoiceDirective(scope, $log);
+        }
+    };
+}]);
+
+angular.module('mm.addons.qtype_calculatedmulti')
+.factory('$mmaQtypeCalculatedMultiHandler', ["$mmaQtypeMultichoiceHandler", function($mmaQtypeMultichoiceHandler) {
+    var self = {};
+        self.isCompleteResponse = function(question, answers) {
+        return $mmaQtypeMultichoiceHandler.isCompleteResponseSingle(answers);
+    };
+        self.isEnabled = function() {
+        return true;
+    };
+        self.isGradableResponse = function(question, answers) {
+        return $mmaQtypeMultichoiceHandler.isGradableResponseSingle(answers);
+    };
+        self.isSameResponse = function(question, prevAnswers, newAnswers) {
+        return $mmaQtypeMultichoiceHandler.isSameResponseSingle(prevAnswers, newAnswers);
+    };
+        self.getDirectiveName = function(question) {
+        return 'mma-qtype-calculated-multi';
     };
     return self;
 }]);
@@ -29458,52 +29462,6 @@ angular.module('mm.addons.userprofilefield_checkbox')
     return self;
 });
 
-angular.module('mm.addons.userprofilefield_menu')
-.directive('mmaUserProfileFieldMenu', ["$log", function($log) {
-    $log = $log.getInstance('mmaUserProfileFieldMenu');
-    return {
-        restrict: 'A',
-        priority: 100,
-        templateUrl: 'addons/userprofilefield/menu/template.html',
-        link: function(scope, element) {
-            var field = scope.field;
-            if (field && scope.edit && scope.model) {
-                field.modelName = 'profile_field_' + field.shortname;
-                if (field.param1) {
-                    field.options = field.param1.split(/\r\n|\r|\n/g);
-                } else {
-                    field.options = [];
-                }
-                if (typeof field.defaultdata != 'undefined' && typeof scope.model[field.modelName] == 'undefined') {
-                    scope.model[field.modelName] = field.defaultdata;
-                }
-            }
-        }
-    };
-}]);
-
-angular.module('mm.addons.userprofilefield_menu')
-.factory('$mmaUserProfileFieldMenuHandler', function() {
-    var self = {};
-        self.isEnabled = function() {
-        return true;
-    };
-        self.getData = function(field, signup, registerAuth, model) {
-        var name = 'profile_field_' + field.shortname;
-        if (model[name]) {
-            return {
-                type: 'menu',
-                name: name,
-                value: model[name]
-            };
-        }
-    };
-        self.getDirectiveName = function(field) {
-        return 'mma-user-profile-field-menu';
-    };
-    return self;
-});
-
 angular.module('mm.addons.userprofilefield_datetime')
 .directive('mmaUserProfileFieldDatetime', ["$log", function($log) {
     $log = $log.getInstance('mmaUserProfileFieldDatetime');
@@ -29565,6 +29523,52 @@ angular.module('mm.addons.userprofilefield_datetime')
     };
         self.getDirectiveName = function(field) {
         return 'mma-user-profile-field-datetime';
+    };
+    return self;
+});
+
+angular.module('mm.addons.userprofilefield_menu')
+.directive('mmaUserProfileFieldMenu', ["$log", function($log) {
+    $log = $log.getInstance('mmaUserProfileFieldMenu');
+    return {
+        restrict: 'A',
+        priority: 100,
+        templateUrl: 'addons/userprofilefield/menu/template.html',
+        link: function(scope, element) {
+            var field = scope.field;
+            if (field && scope.edit && scope.model) {
+                field.modelName = 'profile_field_' + field.shortname;
+                if (field.param1) {
+                    field.options = field.param1.split(/\r\n|\r|\n/g);
+                } else {
+                    field.options = [];
+                }
+                if (typeof field.defaultdata != 'undefined' && typeof scope.model[field.modelName] == 'undefined') {
+                    scope.model[field.modelName] = field.defaultdata;
+                }
+            }
+        }
+    };
+}]);
+
+angular.module('mm.addons.userprofilefield_menu')
+.factory('$mmaUserProfileFieldMenuHandler', function() {
+    var self = {};
+        self.isEnabled = function() {
+        return true;
+    };
+        self.getData = function(field, signup, registerAuth, model) {
+        var name = 'profile_field_' + field.shortname;
+        if (model[name]) {
+            return {
+                type: 'menu',
+                name: name,
+                value: model[name]
+            };
+        }
+    };
+        self.getDirectiveName = function(field) {
+        return 'mma-user-profile-field-menu';
     };
     return self;
 });
@@ -35355,6 +35359,132 @@ angular.module('mm.addons.mod_folder')
 }]);
 
 angular.module('mm.addons.mod_forum')
+.directive('mmaModForumDiscussionPost', ["$mmaModForum", "$mmUtil", "$translate", "$q", "$mmaModForumOffline", "$mmSyncBlock", "mmaModForumComponent", "$mmaModForumSync", function($mmaModForum, $mmUtil, $translate, $q, $mmaModForumOffline, $mmSyncBlock,
+        mmaModForumComponent, $mmaModForumSync) {
+    return {
+        restrict: 'E',
+        scope: {
+            post: '=',
+            courseid: '=',
+            discussionId: '=',
+            title: '=',
+            subject: '=',
+            component: '=',
+            componentId: '=',
+            newpost: '=',
+            showdivider: '=?',
+            titleimportant: '=?',
+            unread: '=?',
+            onpostchange: '&?',
+            defaultsubject: '=?',
+            scrollHandle: '@?'
+        },
+        templateUrl: 'addons/mod/forum/templates/discussionpost.html',
+        transclude: true,
+        link: function(scope) {
+            var syncId;
+            scope.isReplyEnabled = $mmaModForum.isReplyPostEnabled();
+            scope.uniqueid = scope.post.id ? 'reply' + scope.post.id : 'edit' + scope.post.parent;
+            scope.showReply = function() {
+                scope.newpost.replyingto = scope.post.id;
+                scope.newpost.editing = 'reply' + scope.post.id;
+                scope.newpost.isEditing = false;
+                scope.newpost.subject = scope.defaultsubject || '';
+                scope.newpost.text = '';
+            };
+            scope.editReply = function() {
+                syncId = $mmaModForumSync.getDiscussionSyncId(scope.discussionId);
+                $mmSyncBlock.blockOperation(mmaModForumComponent, syncId);
+                scope.newpost.replyingto = scope.post.parent;
+                scope.newpost.editing = 'edit' + scope.post.parent;
+                scope.newpost.isEditing = true;
+                scope.newpost.subject = scope.post.subject;
+                scope.newpost.text = scope.post.message;
+            };
+            scope.reply = function() {
+                if (!scope.newpost.subject) {
+                    $mmUtil.showErrorModal('mma.mod_forum.erroremptysubject', true);
+                    return;
+                }
+                if (!scope.newpost.text) {
+                    $mmUtil.showErrorModal('mma.mod_forum.erroremptymessage', true);
+                    return;
+                }
+                var message = scope.newpost.text,
+                    modal = $mmUtil.showModalLoading('mm.core.sending', true);
+                $mmUtil.isRichTextEditorEnabled().then(function(enabled) {
+                    if (!enabled) {
+                        if (message.indexOf('<p>') == -1) {
+                            message = '<p>' + message + '</p>';
+                        }
+                        message = message.replace(/\n/g, '<br>');
+                    }
+                    return $mmaModForum.getForum(scope.courseid, scope.componentId).then(function(forum) {
+                        return $mmaModForum.replyPost(scope.newpost.replyingto, scope.discussionId, forum.id, forum.name,
+                                scope.courseid, scope.newpost.subject, message).then(function() {
+                            if (scope.onpostchange) {
+                                scope.onpostchange();
+                            }
+                        });
+                    }).catch(function(message) {
+                        if (message) {
+                            $mmUtil.showErrorModal(message);
+                        } else {
+                            $mmUtil.showErrorModal('mma.mod_forum.couldnotadd', true);
+                        }
+                    });
+                }).finally(function() {
+                    modal.dismiss();
+                    if (syncId) {
+                        $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
+                    }
+                });
+            };
+            scope.cancel = function() {
+                var promise;
+                if ((!scope.newpost.subject || scope.newpost.subject == scope.defaultsubject) && !scope.newpost.text) {
+                    promise = $q.when();
+                } else {
+                    promise = $mmUtil.showConfirm($translate('mm.core.areyousure'));
+                }
+                promise.then(function() {
+                    scope.newpost.replyingto = undefined;
+                    scope.newpost.editing = undefined;
+                    scope.newpost.subject = scope.defaultsubject || '';
+                    scope.newpost.text = '';
+                    scope.newpost.isEditing = false;
+                });
+                if (syncId) {
+                    $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
+                }
+            };
+            scope.discard = function() {
+                $mmUtil.showConfirm($translate('mm.core.areyousure')).then(function() {
+                    return $mmaModForumOffline.deleteReply(scope.post.parent).finally(function() {
+                        scope.newpost.replyingto = undefined;
+                        scope.newpost.editing = undefined;
+                        scope.newpost.subject = scope.defaultsubject || '';
+                        scope.newpost.text = '';
+                        scope.newpost.isEditing = false;
+                        if (scope.onpostchange) {
+                            scope.onpostchange();
+                        }
+                    });
+                });
+                if (syncId) {
+                    $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
+                }
+            };
+            scope.$on('$destroy', function(){
+                if (syncId) {
+                    $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
+                }
+            });
+        }
+    };
+}]);
+
+angular.module('mm.addons.mod_forum')
 .controller('mmaModForumDiscussionCtrl', ["$q", "$scope", "$stateParams", "$mmaModForum", "$mmSite", "$mmUtil", "$translate", "$mmEvents", "$ionicScrollDelegate", "mmaModForumComponent", "mmaModForumReplyDiscussionEvent", "$mmaModForumOffline", "$mmaModForumSync", "mmaModForumAutomSyncedEvent", "mmaModForumManualSyncedEvent", "$mmApp", "$ionicPlatform", "mmCoreEventOnlineStatusChanged", function($q, $scope, $stateParams, $mmaModForum, $mmSite, $mmUtil, $translate, $mmEvents,
             $ionicScrollDelegate, mmaModForumComponent, mmaModForumReplyDiscussionEvent, $mmaModForumOffline, $mmaModForumSync,
             mmaModForumAutomSyncedEvent, mmaModForumManualSyncedEvent, $mmApp, $ionicPlatform, mmCoreEventOnlineStatusChanged) {
@@ -36026,132 +36156,6 @@ angular.module('mm.addons.mod_forum')
             $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
         }
     });
-}]);
-
-angular.module('mm.addons.mod_forum')
-.directive('mmaModForumDiscussionPost', ["$mmaModForum", "$mmUtil", "$translate", "$q", "$mmaModForumOffline", "$mmSyncBlock", "mmaModForumComponent", "$mmaModForumSync", function($mmaModForum, $mmUtil, $translate, $q, $mmaModForumOffline, $mmSyncBlock,
-        mmaModForumComponent, $mmaModForumSync) {
-    return {
-        restrict: 'E',
-        scope: {
-            post: '=',
-            courseid: '=',
-            discussionId: '=',
-            title: '=',
-            subject: '=',
-            component: '=',
-            componentId: '=',
-            newpost: '=',
-            showdivider: '=?',
-            titleimportant: '=?',
-            unread: '=?',
-            onpostchange: '&?',
-            defaultsubject: '=?',
-            scrollHandle: '@?'
-        },
-        templateUrl: 'addons/mod/forum/templates/discussionpost.html',
-        transclude: true,
-        link: function(scope) {
-            var syncId;
-            scope.isReplyEnabled = $mmaModForum.isReplyPostEnabled();
-            scope.uniqueid = scope.post.id ? 'reply' + scope.post.id : 'edit' + scope.post.parent;
-            scope.showReply = function() {
-                scope.newpost.replyingto = scope.post.id;
-                scope.newpost.editing = 'reply' + scope.post.id;
-                scope.newpost.isEditing = false;
-                scope.newpost.subject = scope.defaultsubject || '';
-                scope.newpost.text = '';
-            };
-            scope.editReply = function() {
-                syncId = $mmaModForumSync.getDiscussionSyncId(scope.discussionId);
-                $mmSyncBlock.blockOperation(mmaModForumComponent, syncId);
-                scope.newpost.replyingto = scope.post.parent;
-                scope.newpost.editing = 'edit' + scope.post.parent;
-                scope.newpost.isEditing = true;
-                scope.newpost.subject = scope.post.subject;
-                scope.newpost.text = scope.post.message;
-            };
-            scope.reply = function() {
-                if (!scope.newpost.subject) {
-                    $mmUtil.showErrorModal('mma.mod_forum.erroremptysubject', true);
-                    return;
-                }
-                if (!scope.newpost.text) {
-                    $mmUtil.showErrorModal('mma.mod_forum.erroremptymessage', true);
-                    return;
-                }
-                var message = scope.newpost.text,
-                    modal = $mmUtil.showModalLoading('mm.core.sending', true);
-                $mmUtil.isRichTextEditorEnabled().then(function(enabled) {
-                    if (!enabled) {
-                        if (message.indexOf('<p>') == -1) {
-                            message = '<p>' + message + '</p>';
-                        }
-                        message = message.replace(/\n/g, '<br>');
-                    }
-                    return $mmaModForum.getForum(scope.courseid, scope.componentId).then(function(forum) {
-                        return $mmaModForum.replyPost(scope.newpost.replyingto, scope.discussionId, forum.id, forum.name,
-                                scope.courseid, scope.newpost.subject, message).then(function() {
-                            if (scope.onpostchange) {
-                                scope.onpostchange();
-                            }
-                        });
-                    }).catch(function(message) {
-                        if (message) {
-                            $mmUtil.showErrorModal(message);
-                        } else {
-                            $mmUtil.showErrorModal('mma.mod_forum.couldnotadd', true);
-                        }
-                    });
-                }).finally(function() {
-                    modal.dismiss();
-                    if (syncId) {
-                        $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
-                    }
-                });
-            };
-            scope.cancel = function() {
-                var promise;
-                if ((!scope.newpost.subject || scope.newpost.subject == scope.defaultsubject) && !scope.newpost.text) {
-                    promise = $q.when();
-                } else {
-                    promise = $mmUtil.showConfirm($translate('mm.core.areyousure'));
-                }
-                promise.then(function() {
-                    scope.newpost.replyingto = undefined;
-                    scope.newpost.editing = undefined;
-                    scope.newpost.subject = scope.defaultsubject || '';
-                    scope.newpost.text = '';
-                    scope.newpost.isEditing = false;
-                });
-                if (syncId) {
-                    $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
-                }
-            };
-            scope.discard = function() {
-                $mmUtil.showConfirm($translate('mm.core.areyousure')).then(function() {
-                    return $mmaModForumOffline.deleteReply(scope.post.parent).finally(function() {
-                        scope.newpost.replyingto = undefined;
-                        scope.newpost.editing = undefined;
-                        scope.newpost.subject = scope.defaultsubject || '';
-                        scope.newpost.text = '';
-                        scope.newpost.isEditing = false;
-                        if (scope.onpostchange) {
-                            scope.onpostchange();
-                        }
-                    });
-                });
-                if (syncId) {
-                    $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
-                }
-            };
-            scope.$on('$destroy', function(){
-                if (syncId) {
-                    $mmSyncBlock.unblockOperation(mmaModForumComponent, syncId);
-                }
-            });
-        }
-    };
 }]);
 
 angular.module('mm.addons.mod_forum')
@@ -47153,6 +47157,914 @@ angular.module('mm.addons.mod_url')
 }]);
 
 angular.module('mm.addons.mod_wiki')
+.controller('mmaModWikiEditCtrl', ["$q", "$scope", "$stateParams", "$mmUtil", "$state", "$mmaModWiki", "$translate", "$ionicHistory", "$mmCourse", "mmaModWikiRenewLockTimeout", "$interval", "$mmText", "$mmaModWikiOffline", "$mmEvents", "$mmLang", "$mmSite", "mmaModWikiComponent", "mmaModWikiPageCreatedEvent", "$mmaModWikiSync", "$mmSyncBlock", function($q, $scope, $stateParams, $mmUtil, $state, $mmaModWiki, $translate, $ionicHistory,
+        $mmCourse, mmaModWikiRenewLockTimeout, $interval, $mmText, $mmaModWikiOffline, $mmEvents, $mmLang, $mmSite,
+        mmaModWikiComponent, mmaModWikiPageCreatedEvent, $mmaModWikiSync, $mmSyncBlock) {
+    var module = $stateParams.module || {},
+        courseId = $stateParams.courseid,
+        subwikiId = $stateParams.subwikiid || null,
+        wikiId = null,
+        pageId = $stateParams.pageid || null,
+        section = $stateParams.section || null,
+        originalContent = null,
+        editing = false,
+        version = false,
+        groupId,
+        userId,
+        rteEnabled,
+        subwikiFiles,
+        renewLockInterval,
+        editOffline = false;
+    $mmUtil.blockLeaveView($scope, cancel);
+    $scope.saveAndGoParams = false;
+    $scope.component = mmaModWikiComponent;
+    $scope.componentId = module.id;
+    $scope.page = {
+        title: $stateParams.pagetitle ? $stateParams.pagetitle.replace(/\+/g, " ") : null,
+        text: ""
+    };
+    $scope.canEditTitle = !$stateParams.pagetitle;
+    $scope.title = $scope.page.title ? $translate.instant('mma.mod_wiki.editingpage', {'$a': $scope.page.title}) :
+        $translate.instant('mma.mod_wiki.newpagehdr');
+    if (subwikiId) {
+        $mmSyncBlock.blockOperation(mmaModWikiComponent, subwikiId);
+    }
+    $scope.save = function() {
+        var text = $scope.page.text,
+            promise,
+            modal = $mmUtil.showModalLoading('mm.core.sending', true);
+        if (rteEnabled) {
+            text = $mmText.restorePluginfileUrls(text, subwikiFiles);
+        }
+        if (editing) {
+            promise = $mmaModWiki.editPage(pageId, text, section).then(function() {
+                return $mmaModWiki.invalidatePage(pageId).then(function() {
+                    return gotoPage();
+                });
+            });
+        } else {
+            if (!$scope.page.title) {
+                return $mmUtil.showModal('mm.core.notice', 'mma.mod_wiki.titleshouldnotbeempty');
+            }
+            if (!editOffline) {
+                promise = $mmaModWikiOffline.getNewPage(subwikiId, $scope.page.title).then(function() {
+                    return $mmLang.translateAndReject('mma.mod_wiki.pageexists');
+                }, function() {
+                });
+            } else {
+                promise = $q.when();
+            }
+            promise = promise.then(function() {
+                var instanceId = module && module.instance;
+                return $mmaModWiki.newPage(subwikiId, $scope.page.title, text, instanceId).then(function(createdId) {
+                    if (createdId) {
+                        pageId = createdId;
+                        return $mmaModWiki.getPageContents(pageId).then(function(pageContents) {
+                            wikiId = pageContents.wikiid;
+                            subwikiId = pageContents.subwikiid;
+                            return $mmaModWiki.invalidateSubwikiPages(pageContents.wikiid).then(function() {
+                                return gotoPage();
+                            });
+                        }).finally(function() {
+                            $mmEvents.trigger(mmaModWikiPageCreatedEvent, {
+                                pageid: pageId,
+                                subwikiid: subwikiId,
+                                pagetitle: $scope.page.title,
+                                siteid: $mmSite.getId()
+                            });
+                        });
+                    } else {
+                        return gotoNewOfflinePage();
+                    }
+                });
+            });
+        }
+        return promise.catch(function(message) {
+            if (message) {
+                $mmUtil.showErrorModal(message);
+            } else {
+                $mmUtil.showErrorModal('Error saving wiki data.');
+            }
+        }).finally(function() {
+            modal.dismiss();
+        });
+    };
+    function cancel() {
+        if ((originalContent == $scope.page.text) || (!editing && !$scope.page.text && !$scope.page.title)) {
+            return $q.when();
+        } else {
+            return $mmUtil.showConfirm($translate('mm.core.confirmcanceledit'));
+        }
+    }
+    function gotoPage() {
+        return retrieveModuleInfo(wikiId).then(function() {
+            var openPage = false;
+            if (!editing && editOffline && backViewPageIsDifferentOffline()) {
+                openPage = true;
+            } else if (!editOffline && backViewIsDifferentPageOnline()) {
+                openPage = true;
+            }
+            if (openPage) {
+                $scope.saveAndGoParams = {
+                    module: module,
+                    moduleid: module.id,
+                    courseid: courseId,
+                    pageid: pageId,
+                    pagetitle: $scope.page.title,
+                    wikiid: wikiId,
+                    subwikiid: subwikiId
+                };
+            }
+            return $ionicHistory.goBack();
+        }).catch(function() {
+            return $ionicHistory.goBack();
+        });
+    }
+    function gotoNewOfflinePage() {
+        if (courseId && (module.id || wikiId)) {
+            if (!editOffline || backViewPageIsDifferentOffline()) {
+                $scope.saveAndGoParams = {
+                    module: module,
+                    moduleid: module.id,
+                    courseid: courseId,
+                    pageid: null,
+                    pagetitle: $scope.page.title,
+                    wikiid: wikiId,
+                    subwikiid: subwikiId
+                };
+            }
+        } else {
+            $mmUtil.showModal('mm.core.success','mm.core.datastoredoffline');
+        }
+        return $ionicHistory.goBack();
+    }
+    function backViewIsDifferentPageOnline() {
+        var backView = $ionicHistory.backView();
+        return !editing || backView.stateName != 'site.mod_wiki' || backView.stateParams.moduleid != module.id ||
+                    backView.stateParams.pageid != pageId;
+    }
+    function backViewPageIsDifferentOffline() {
+        var backView = $ionicHistory.backView();
+        return backView.stateName != 'site.mod_wiki' || backView.stateParams.moduleid != module.id ||
+                    backView.stateParams.subwikiid != subwikiId || backView.stateParams.pagetitle != $scope.page.title;
+    }
+    function renewLock() {
+        $mmaModWiki.getPageForEditing(pageId, section, true).then(function(response) {
+            if (response.version && version != response.version) {
+                $scope.wrongVersionLock = true;
+            }
+        });
+    }
+    function fetchWikiPageData() {
+        var promise, canEdit = false;
+        if ($mmaModWiki.isPluginEnabledForEditing()) {
+            if (pageId) {
+                $scope.canEditTitle = false;
+                editing = true;
+                editOffline = false;
+                promise = $mmaModWiki.getPageContents(pageId).then(function(pageContents) {
+                    $scope.page.title = pageContents.title;
+                    wikiId = pageContents.wikiid;
+                    subwikiId = pageContents.subwikiid;
+                    $scope.title = $translate.instant('mma.mod_wiki.editingpage', {'$a': $scope.page.title});
+                    canEdit = pageContents.caneditpage;
+                    groupId = pageContents.groupid;
+                    userId = pageContents.userid;
+                    return $mmaModWikiSync.waitForSync(subwikiId);
+                }).then(function() {
+                    return $mmUtil.isRichTextEditorEnabled();
+                }).then(function(enabled) {
+                    rteEnabled = enabled;
+                    if (enabled) {
+                        return $mmaModWiki.getSubwikiFiles(wikiId, groupId, userId);
+                    }
+                }).then(function(files) {
+                    subwikiFiles = files;
+                    return $mmaModWiki.getPageForEditing(pageId, section);
+                }).then(function(editContents) {
+                    if (rteEnabled) {
+                        $scope.page.text = $mmText.replacePluginfileUrls(editContents.content, subwikiFiles);
+                    } else {
+                        $scope.page.text = editContents.content;
+                    }
+                    originalContent = $scope.page.text;
+                    version = editContents.version;
+                    if (canEdit) {
+                        renewLockInterval = $interval(function() {
+                            renewLock();
+                        }, mmaModWikiRenewLockTimeout * 1000);
+                    }
+                }).finally(function() {
+                    $scope.wikiLoaded = true;
+                });
+            } else {
+                promise = $mmaModWikiSync.waitForSync(subwikiId);
+                if ($scope.page.title) {
+                    promise = promise.then(function() {
+                        return $mmaModWikiOffline.getNewPage(subwikiId, $scope.page.title);
+                    }).then(function(page) {
+                        $scope.page.text = page.cachedcontent;
+                        originalContent = $scope.page.text;
+                        editOffline = true;
+                    }).catch(function() {
+                        editOffline = false;
+                    });
+                } else {
+                    editOffline = false;
+                }
+                promise.then(function() {
+                    $scope.wikiLoaded = true;
+                    editing = false;
+                    canEdit = !!subwikiId;
+                });
+            }
+        } else {
+            promise = $q.when();
+            canEdit = false;
+        }
+        return promise.catch(function(message) {
+            if (message) {
+                $mmUtil.showErrorModal(message);
+            } else {
+                $mmUtil.showErrorModal('Error getting wiki data.');
+            }
+            return $ionicHistory.goBack();
+        }).finally(function() {
+            if (!canEdit) {
+                $mmUtil.showModal('mm.core.notice', 'mma.mod_wiki.cannoteditpage').then(function() {
+                    $ionicHistory.goBack();
+                });
+            }
+        });
+    }
+    function retrieveModuleInfo(wikiId) {
+        if (module.id && courseId) {
+            return $q.when();
+        }
+        var promise = module.id ? $q.when(module) : $mmCourse.getModuleBasicInfoByInstance(wikiId, 'wiki');
+        return promise.then(function(info) {
+            module = info;
+            $scope.componentId = module.id;
+            if (!courseId && module.course) {
+                courseId = module.course;
+            } else if (!courseId) {
+                return $mmCourseHelper.getModuleCourseIdByInstance(wikiId, 'wiki').then(function(course) {
+                    courseId = course;
+                });
+            }
+            return $q.when();
+        });
+    }
+    $scope.firstRender = function() {
+        originalContent = $scope.page.text;
+    };
+    $scope.$on('$ionicView.afterLeave', function(event) {
+        if (event.targetScope.saveAndGoParams) {
+            return $state.go('site.mod_wiki', event.targetScope.saveAndGoParams);
+        }
+    });
+    fetchWikiPageData().then(function() {
+        if (subwikiId && !$scope.$$destroyed) {
+            $mmSyncBlock.blockOperation(mmaModWikiComponent, subwikiId);
+        }
+    }).finally(function() {
+        $scope.wikiLoaded = true;
+    });
+    $scope.$on('$destroy', function() {
+        $interval.cancel(renewLockInterval);
+        if (subwikiId) {
+            $mmSyncBlock.unblockOperation(mmaModWikiComponent, subwikiId);
+        }
+    });
+}]);
+
+angular.module('mm.addons.mod_wiki')
+.controller('mmaModWikiIndexCtrl', ["$q", "$scope", "$stateParams", "$mmCourse", "$mmUser", "$mmGroups", "$ionicPopover", "$mmUtil", "$state", "$mmSite", "$mmaModWiki", "$ionicTabsDelegate", "$ionicHistory", "$translate", "mmaModWikiSubwikiPagesLoaded", "$mmCourseHelper", "$mmText", "mmaModWikiComponent", "$mmEvents", "$ionicScrollDelegate", "$mmaModWikiOffline", "mmaModWikiPageCreatedEvent", "mmaModWikiSubwikiAutomSyncedEvent", "$mmaModWikiSync", "mmaModWikiManualSyncedEvent", "$mmApp", "mmCoreEventOnlineStatusChanged", function($q, $scope, $stateParams, $mmCourse, $mmUser, $mmGroups, $ionicPopover, $mmUtil, $state,
+        $mmSite, $mmaModWiki, $ionicTabsDelegate, $ionicHistory, $translate, mmaModWikiSubwikiPagesLoaded, $mmCourseHelper,
+        $mmText, mmaModWikiComponent, $mmEvents, $ionicScrollDelegate,
+        $mmaModWikiOffline, mmaModWikiPageCreatedEvent, mmaModWikiSubwikiAutomSyncedEvent, $mmaModWikiSync,
+        mmaModWikiManualSyncedEvent, $mmApp, mmCoreEventOnlineStatusChanged) {
+    var module = $stateParams.module || {},
+        courseId = $stateParams.courseid,
+        action = $stateParams.action || 'page',
+        currentPage = $stateParams.pageid || false,
+        pageTitle = $stateParams.pagetitle,
+        isCurrentView = true,
+        popover, wiki, currentSubwiki, loadedSubwikis, tabsDelegate, onlineObserver,
+        currentPageObj, newPageObserver, syncObserver, syncObserverManual, scrollView, ignoreManualSyncEvent;
+    $scope.title = pageTitle || module.name;
+    $scope.description = module.description;
+    $scope.mainpage = !currentPage && !pageTitle;
+    $scope.moduleUrl = module.url;
+    $scope.courseId = courseId;
+    $scope.component = mmaModWikiComponent;
+    $scope.canEdit = false;
+    $scope.subwikiData = {
+        selected: 0,
+        subwikis: [],
+        count: 0
+    };
+    $scope.refreshIcon = 'spinner';
+    $scope.syncIcon = 'spinner';
+    $scope.pageStr = $translate.instant('mma.mod_wiki.page');
+    $scope.moduleName = $mmCourse.translateModuleName('wiki');
+    $scope.tabsDelegateName = 'mmaModWikiTabs_'+(module.id || 0) + '_' + (currentPage || 0) + '_' +  new Date().getTime();
+    tabsDelegate = $ionicTabsDelegate.$getByHandle($scope.tabsDelegateName);
+    $scope.showSubwikiPicker = function(e) {
+        popover.show(e);
+    };
+    $scope.goHomeWiki = function(e) {
+        var backTimes = getHistoryBackCounter();
+        $ionicHistory.goBack(backTimes);
+    };
+    $scope.gotoPage = function(page) {
+        if (!page.id) {
+            if (currentPage || !pageTitle || page.title != pageTitle) {
+                var stateParams = {
+                    module: module,
+                    moduleid: module.id,
+                    courseid: courseId,
+                    pagetitle: page.title,
+                    pageid: null,
+                    wikiid: wiki.id,
+                    subwikiid: page.subwikiid,
+                    action: 'page'
+                };
+                return $state.go('site.mod_wiki', stateParams);
+            }
+        } else if (currentPage != page.id) {
+            return fetchPageContents(page.id).then(function(page) {
+                var stateParams = {
+                    module: module,
+                    moduleid: module.id,
+                    courseid: courseId,
+                    pageid: page.id,
+                    pagetitle: page.title,
+                    wikiid: page.wikiid,
+                    subwikiid: page.subwikiid,
+                    action: 'page'
+                };
+                return $state.go('site.mod_wiki', stateParams);
+            });
+        }
+        tabsDelegate.select(0);
+    };
+    $scope.gotoEditPage = function() {
+        if (currentPageObj && $scope.canEdit) {
+            var stateParams = {
+                module: module,
+                moduleid: module.id,
+                courseid: courseId,
+                pageid: currentPageObj.id,
+                pagetitle: currentPageObj.title,
+                subwikiid: currentPageObj.subwikiid
+            };
+            return $state.go('site.mod_wiki-edit', stateParams);
+        }
+    };
+    $scope.gotoNewPage = function() {
+        if (currentPageObj && $scope.canEdit) {
+            var stateParams = {
+                module: module,
+                moduleid: module.id,
+                courseid: courseId,
+                subwikiid: currentPageObj.subwikiid
+            };
+            return $state.go('site.mod_wiki-edit', stateParams);
+        }
+    };
+    $scope.gotoSubwiki = function(subwikiId) {
+        if (subwikiId > 0) {
+            popover.hide();
+            if (subwikiId != currentSubwiki.id) {
+                var stateParams = {
+                    module: module,
+                    moduleid: module.id,
+                    courseid: courseId,
+                    pageid: null,
+                    pagetitle: null,
+                    wikiid: wiki.id,
+                    subwikiid: subwikiId,
+                    action: tabsDelegate.selectedIndex() == 0 ? 'page' : 'map'
+                };
+                return $state.go('site.mod_wiki', stateParams);
+            }
+        }
+    };
+    function fetchWikiData(refresh, sync, showErrors) {
+        $scope.isOnline = $mmApp.isOnline();
+        var id = module.id || $stateParams.wikiid,
+            paramName = module.id ? 'coursemodule' : 'id';
+        return $mmaModWiki.getWiki(courseId, id, paramName).then(function(wikiData) {
+            wiki = wikiData;
+            $scope.wiki = wiki;
+            if (sync) {
+                return syncWiki(showErrors).catch(function() {
+                });
+            }
+        }).then(function() {
+            if ($scope.pageWarning) {
+                return $q.reject();
+            }
+            var promise;
+            if (isCurrentView) {
+                $scope.showHomeButton = getHistoryBackCounter() < 0;
+            }
+            if (!module.url) {
+                promise = $mmCourse.getModule(wiki.coursemodule, wiki.course, null, true);
+            } else {
+                module.instance = wiki.id;
+                promise = $q.when(module);
+            }
+            return promise.then(function(mod) {
+                module = mod;
+                $scope.title = $scope.title || wiki.title;
+                $scope.description = wiki.intro || module.description;
+                $scope.moduleUrl = module.url;
+                $scope.componentId = module.id;
+                return $mmGroups.getActivityGroupMode(wiki.coursemodule).then(function(groupmode) {
+                    if (groupmode === $mmGroups.SEPARATEGROUPS || groupmode === $mmGroups.VISIBLEGROUPS) {
+                        promise = $mmGroups.getActivityAllowedGroups(wiki.coursemodule);
+                    } else {
+                        promise = $q.when([]);
+                    }
+                    return promise.then(function(userGroups) {
+                        return fetchSubwikis(wiki.id).then(function() {
+                            var subwikiList = $mmaModWiki.getSubwikiList(wiki.id);
+                            if (!subwikiList) {
+                                return createSubwikiList(userGroups);
+                            }
+                            $scope.subwikiData.count = subwikiList.count;
+                            $scope.subwikiData.selected = $stateParams.subwikiid || subwikiList.selected;
+                            $scope.subwikiData.subwikis = subwikiList.subwikis;
+                            return $q.when();
+                        });
+                    }).then(function() {
+                        if ($scope.subwikiData.count > 1) {
+                            handleSubwikiPopover();
+                        }
+                        if (!refresh) {
+                            tabsDelegate.select(action == 'map' ? 1 : 0);
+                        }
+                        if (!$scope.subwikiData.selected || $scope.subwikiData.count <= 0) {
+                            return $q.reject($translate.instant('mma.mod_wiki.errornowikiavailable'));
+                        }
+                    }).then(function() {
+                        return fetchWikiPage();
+                    }).then(function() {
+                        $mmCourseHelper.fillContextMenu($scope, module, courseId, refresh, mmaModWikiComponent);
+                    });
+                });
+            });
+        }).catch(function(message) {
+            if ($scope.pageWarning) {
+                return $q.reject();
+            }
+            if (!refresh && !wiki) {
+                return refreshAllData(sync, showErrors);
+            }
+            if (message) {
+                $mmUtil.showErrorModal(message);
+            } else {
+                $mmUtil.showErrorModal('Error getting wiki data.');
+            }
+            return $q.reject();
+        });
+    }
+    $scope.expandDescription = function() {
+        $mmText.expandText($translate.instant('mm.core.description'), $scope.description, false, mmaModWikiComponent, module.id);
+    };
+    $scope.removeFiles = function() {
+        $mmCourseHelper.confirmAndRemove(module, courseId);
+    };
+    $scope.prefetch = function() {
+        $mmCourseHelper.contextMenuPrefetch($scope, module, courseId);
+    };
+    function handleSubwikiPopover() {
+        $ionicPopover.fromTemplateUrl('addons/mod/wiki/templates/subwiki_picker.html', {
+            scope: $scope
+        }).then(function(po) {
+            popover = po;
+        });
+    }
+    function createSubwikiList(userGroups) {
+        var subwikiList = [],
+            promises = [],
+            userGroupsIds = [],
+            allParticipants = false,
+            myGroups = false,
+            multiLevelList = false,
+            currentUserId = $mmSite.getUserId() || false,
+            allParticipantsTitle = $translate.instant('mm.core.allparticipants'),
+            nonInGroupTitle = $translate.instant('mma.mod_wiki.notingroup'),
+            myGroupsTitle = $translate.instant('mm.core.mygroups'),
+            otherGroupsTitle = $translate.instant('mm.core.othergroups');
+        $scope.subwikiData.subwikis = [];
+        $scope.subwikiData.selected = $stateParams.subwikiid || false;
+        $scope.subwikiData.count = 0;
+        if (userGroups.length > 0) {
+            userGroupsIds = userGroups.map(function(g) {
+                return g.id;
+            });
+        }
+        angular.forEach(loadedSubwikis, function(subwiki) {
+            var groupIdx,
+                promise,
+                groupId = parseInt(subwiki.groupid, 10),
+                groupLabel = "",
+                userId = parseInt(subwiki.userid, 10);
+            if (groupId == 0 && userId == 0) {
+                if (!allParticipants) {
+                    subwikiList.unshift({
+                        name: allParticipantsTitle,
+                        id: subwiki.id,
+                        group: -1,
+                        groupLabel: ""
+                    });
+                    allParticipants = true;
+                }
+            } else {
+                if (groupId != 0 && userGroupsIds.length > 0) {
+                    groupIdx = userGroupsIds.indexOf(groupId);
+                    if (groupIdx > -1) {
+                        groupLabel = userGroups[groupIdx].name;
+                    }
+                } else {
+                    groupLabel = nonInGroupTitle;
+                }
+                if (userId != 0) {
+                    promise = $mmUser.getProfile(userId, null, true).then(function(user) {
+                        subwikiList.push({
+                            name: user.fullname,
+                            id: subwiki.id,
+                            group: groupId,
+                            groupLabel: groupLabel
+                        });
+                    });
+                    promises.push(promise);
+                    if (!multiLevelList && groupId != 0) {
+                        multiLevelList = true;
+                    }
+                } else {
+                    subwikiList.push({
+                        name: groupLabel,
+                        id: subwiki.id,
+                        group: groupId,
+                        groupLabel: groupLabel,
+                        canedit: subwiki.canedit
+                    });
+                    myGroups = true;
+                }
+            }
+            if (!$stateParams.subwikiid && subwiki.id > 0 &&
+                ((userId > 0 && currentUserId == userId) || !$scope.subwikiData.selected)) {
+                $scope.subwikiData.selected = subwiki.id;
+            }
+        });
+        return $q.all(promises).then(function() {
+            var groupValue = -1,
+                grouping;
+            subwikiList.sort(function(a, b) {
+                return a.group - b.group;
+            });
+            $scope.subwikiData.count = subwikiList.length;
+            if (multiLevelList) {
+                for (var i in subwikiList) {
+                    var subwiki = subwikiList[i];
+                    if (subwiki.group !== groupValue) {
+                        grouping = {label: subwiki.groupLabel, subwikis: []};
+                        groupValue = subwiki.group;
+                        $scope.subwikiData.subwikis.push(grouping);
+                    }
+                    grouping.subwikis.push(subwiki);
+                }
+            } else if (myGroups) {
+                var noGrouping = {label: "", subwikis: []},
+                    myGroupsGrouping = {label: myGroupsTitle, subwikis: []},
+                    otherGroupsGrouping = {label: otherGroupsTitle, subwikis: []};
+                for (var i in subwikiList) {
+                    var subwiki = subwikiList[i];
+                    if (typeof subwiki.canedit == 'undefined') {
+                        noGrouping.subwikis.push(subwiki);
+                    } else if(subwiki.canedit) {
+                        myGroupsGrouping.subwikis.push(subwiki);
+                    } else {
+                        otherGroupsGrouping.subwikis.push(subwiki);
+                    }
+                }
+                if (noGrouping.subwikis.length > 0) {
+                    $scope.subwikiData.subwikis.push(noGrouping);
+                }
+                if (myGroupsGrouping.subwikis.length > 0) {
+                    $scope.subwikiData.subwikis.push(myGroupsGrouping);
+                }
+                if (otherGroupsGrouping.subwikis.length > 0) {
+                    $scope.subwikiData.subwikis.push(otherGroupsGrouping);
+                }
+            } else {
+                $scope.subwikiData.subwikis.push({label: "", subwikis: subwikiList});
+            }
+            $mmaModWiki.setSubwikiList(wiki.id, $scope.subwikiData.subwikis, $scope.subwikiData.count, $scope.subwikiData.selected);
+        });
+    }
+    function getHistoryBackCounter() {
+        var view, historyInstance, backTimes = 0,
+            backViewId = $ionicHistory.currentView().backViewId;
+        if (!wiki.id) {
+            return 0;
+        }
+        while (backViewId) {
+            view = $ionicHistory.viewHistory().views[backViewId];
+            if (view.stateName != 'site.mod_wiki') {
+                break;
+            }
+            historyInstance = view.stateParams.wikiid ? view.stateParams.wikiid : view.stateParams.module.instance;
+            if (historyInstance && historyInstance == wiki.id) {
+                backTimes--;
+            } else {
+                break;
+            }
+            backViewId = view.backViewId;
+        }
+        return backTimes;
+    }
+    function fetchSubwikis(wikiId) {
+        return $mmaModWiki.getSubwikis(wikiId).then(function(subwikis) {
+            loadedSubwikis = subwikis;
+            var subwikiIds = subwikis.map(function(subwiki) {
+                return subwiki.id;
+            });
+            return $mmaModWikiOffline.subwikisHaveOfflineData(subwikiIds).then(function(hasOffline) {
+                $scope.wikiHasOffline = hasOffline;
+            });
+        });
+    }
+    function fetchWikiPage() {
+        currentSubwiki = false;
+        angular.forEach(loadedSubwikis, function(subwiki) {
+            if (!currentSubwiki && subwiki.id == $scope.subwikiData.selected) {
+                currentSubwiki = subwiki;
+            }
+        });
+        if (!currentSubwiki) {
+            return $q.reject();
+        }
+        $scope.subwikiData.selected = currentSubwiki.id;
+        return fetchSubwikiPages(currentSubwiki).then(function() {
+            return fetchPageContents(currentPage).then(function(pageContents) {
+                $scope.title = pageContents.title;
+                $scope.subwikiData.selected = pageContents.subwikiid;
+                $scope.pageContent = replaceEditLinks(pageContents.cachedcontent);
+                $scope.canEdit = pageContents.caneditpage && $mmaModWiki.isPluginEnabledForEditing();
+                currentPageObj = pageContents;
+            });
+        });
+    }
+    function replaceEditLinks(content) {
+        content = content.trim();
+        if (content.length > 0) {
+            var url = $mmSite.getURL();
+            content = content.replace(/href="edit\.php/g, 'href="'+url+'/mod/wiki/edit.php');
+        }
+        return content;
+    }
+    function fetchSubwikiPages(subwiki) {
+        return $mmaModWiki.getSubwikiPages(subwiki.wikiid, subwiki.groupid, subwiki.userid).then(function(subwikiPages) {
+            if (!currentPage && !pageTitle) {
+                angular.forEach(subwikiPages, function(subwikiPage) {
+                    if (!currentPage && subwikiPage.firstpage) {
+                        currentPage = subwikiPage.id;
+                    }
+                });
+            }
+            return $mmaModWikiOffline.getSubwikiNewPages(subwiki.id).then(function(offlinePages) {
+                if (!currentPage && !pageTitle) {
+                    angular.forEach(offlinePages, function(subwikiPage) {
+                        if (!currentPage && subwikiPage.title == wiki.firstpagetitle) {
+                            currentPage = subwikiPage.id;
+                        }
+                    });
+                }
+                $scope.subwikiPages = $mmaModWiki.sortPagesByTitle(subwikiPages.concat(offlinePages));
+                $scope.$broadcast(mmaModWikiSubwikiPagesLoaded, $scope.subwikiPages);
+                if (!currentPage && !pageTitle) {
+                    return $q.reject();
+                }
+            });
+        });
+    }
+    function fetchPageContents(pageId) {
+        if (!pageId && pageTitle) {
+            $scope.pageIsOffline = true;
+            return $mmaModWikiOffline.getNewPage(currentSubwiki.id, pageTitle).then(function(offlinePage) {
+                if (!newPageObserver) {
+                    newPageObserver = $mmEvents.on(mmaModWikiPageCreatedEvent, function(data) {
+                        if (data.siteid == $mmSite.getId() && data.subwikiid == currentSubwiki.id && data.pagetitle == pageTitle) {
+                            currentPage = data.pageid;
+                            showSpinnerAndFetch(false, true).then(function() {
+                                $mmaModWiki.logPageView(currentPage);
+                            });
+                            newPageObserver.off && newPageObserver.off();
+                            newPageObserver = false;
+                        }
+                    });
+                }
+                return offlinePage;
+            }).catch(function() {
+                return $q.reject();
+            });
+        }
+        $scope.pageIsOffline = false;
+        return $mmaModWiki.getPageContents(pageId);
+    }
+    function refreshAllData(sync, showErrors) {
+        var promises = [$mmaModWiki.invalidateWikiData(courseId)];
+        if (wiki) {
+            promises.push($mmaModWiki.invalidateSubwikis(wiki.id));
+            promises.push($mmGroups.invalidateActivityAllowedGroups(wiki.coursemodule));
+            promises.push($mmGroups.invalidateActivityGroupMode(wiki.coursemodule));
+        }
+        if (currentSubwiki) {
+            promises.push($mmaModWiki.invalidateSubwikiPages(currentSubwiki.wikiid));
+            promises.push($mmaModWiki.invalidateSubwikiFiles(currentSubwiki.wikiid));
+        }
+        if (currentPage) {
+            promises.push($mmaModWiki.invalidatePage(currentPage));
+        }
+        return $q.all(promises).finally(function() {
+            return fetchWikiData(true, sync, showErrors);
+        });
+    }
+    function showSpinnerAndFetch(refresh, sync, showErrors) {
+        var promise;
+        $scope.wikiLoaded = false;
+        $scope.refreshIcon = 'spinner';
+        $scope.syncIcon = 'spinner';
+        scrollTop();
+        promise = refresh ? refreshAllData(sync, showErrors) : fetchWikiData(true, sync, showErrors);
+        return promise.finally(function() {
+            $scope.wikiLoaded = true;
+            $scope.refreshIcon = 'ion-refresh';
+            $scope.syncIcon = 'ion-loop';
+        });
+    }
+    function scrollTop() {
+        if (!scrollView) {
+            scrollView = $ionicScrollDelegate.$getByHandle('mmaModWikiIndexScroll');
+        }
+        scrollView && scrollView.scrollTop && scrollView.scrollTop();
+    }
+    fetchWikiData(false, true, false).then(function() {
+        if (!currentPage && !pageTitle) {
+            $mmaModWiki.logView(wiki.id).then(function() {
+                $mmCourse.checkModuleCompletion(courseId, module.completionstatus);
+            });
+        } else if (currentPage) {
+            $mmaModWiki.logPageView(currentPage);
+        }
+    }).finally(function() {
+        $scope.wikiLoaded = true;
+        $scope.refreshIcon = 'ion-refresh';
+        $scope.syncIcon = 'ion-loop';
+    });
+    $scope.refreshWiki = function(showErrors) {
+        if ($scope.wikiLoaded) {
+            $scope.refreshIcon = 'spinner';
+            $scope.syncIcon = 'spinner';
+            return refreshAllData(true, showErrors).finally(function() {
+                $scope.refreshIcon = 'ion-refresh';
+                $scope.syncIcon = 'ion-loop';
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        }
+    };
+    function syncWiki(showErrors) {
+        return $mmaModWikiSync.syncWiki(wiki.id, courseId, wiki.coursemodule).then(function(result) {
+            result.wikiid = wiki.id;
+            if (result.updated) {
+                ignoreManualSyncEvent = true;
+                $mmEvents.trigger(mmaModWikiManualSyncedEvent, result);
+            }
+            if (result.warnings && result.warnings.length) {
+                $mmUtil.showErrorModal($mmText.buildMessage(result.warnings));
+            }
+            if (currentSubwiki) {
+                checkPageCreatedOrDiscarded(result.subwikis[currentSubwiki.id]);
+            }
+            return result.updated;
+        }).catch(function(error) {
+            if (showErrors) {
+                if (error) {
+                    $mmUtil.showErrorModal(error);
+                } else {
+                    $mmUtil.showErrorModal('mm.core.errorsync', true);
+                }
+            }
+            return $q.reject();
+        });
+    }
+    function checkPageCreatedOrDiscarded(data) {
+        if (!currentPage && data) {
+            var page,
+                pageId;
+            for (var i = 0, len = data.created.length; i < len; i++) {
+                page = data.created[i];
+                if (page.title == pageTitle) {
+                    pageId = page.pageid;
+                    break;
+                }
+            }
+            if (pageId) {
+                currentPage = pageId;
+            } else {
+                for (i = 0, len = data.discarded.length; i < len; i++) {
+                    page = data.discarded[i];
+                    if (page.title == pageTitle) {
+                        $scope.pageWarning = page.warning;
+                        $scope.pageContent = '';
+                        $scope.pageIsOffline = false;
+                        $scope.wikiHasOffline = false;
+                    }
+                }
+            }
+        }
+    }
+    var skip = true;
+    $scope.$on('$ionicView.enter', function() {
+        isCurrentView = true;
+        if (skip) {
+            skip = false;
+            return;
+        }
+        var forwardView = $ionicHistory.forwardView();
+        if (forwardView && forwardView.stateName === 'site.mod_wiki-edit') {
+            showSpinnerAndFetch(false, true);
+        }
+    });
+    $scope.$on('$ionicView.beforeLeave', function() {
+        isCurrentView = false;
+    });
+    onlineObserver = $mmEvents.on(mmCoreEventOnlineStatusChanged, function(online) {
+        $scope.isOnline = online;
+    });
+    syncObserver = $mmEvents.on(mmaModWikiSubwikiAutomSyncedEvent, function(data) {
+        if (data && currentSubwiki && data.siteid == $mmSite.getId() && data.subwikiid == currentSubwiki.id) {
+            if (isCurrentView && data.warnings && data.warnings.length) {
+                $mmUtil.showErrorModal($mmText.buildMessage(data.warnings));
+            }
+            checkPageCreatedOrDiscarded(data);
+            if (!$scope.pageWarning) {
+                showSpinnerAndFetch(true, false);
+            }
+        }
+    });
+    syncObserverManual = $mmEvents.on(mmaModWikiManualSyncedEvent, function(data) {
+        if (data && wiki && data.siteid == $mmSite.getId() && data.wikiid == wiki.id) {
+            if (ignoreManualSyncEvent) {
+                ignoreManualSyncEvent = false;
+                return;
+            }
+            if (currentSubwiki) {
+                checkPageCreatedOrDiscarded(data.subwikis[currentSubwiki.id]);
+            }
+            if (!$scope.pageWarning) {
+                showSpinnerAndFetch(false, false);
+            }
+        }
+    });
+    $scope.$on('$destroy', function() {
+        popover && popover.remove();
+        newPageObserver && newPageObserver.off && newPageObserver.off();
+        syncObserver && syncObserver.off && syncObserver.off();
+        syncObserverManual && syncObserverManual.off && syncObserverManual.off();
+        onlineObserver && onlineObserver.off && onlineObserver.off();
+    });
+}]);
+
+angular.module('mm.addons.mod_wiki')
+.controller('mmaModWikiMapCtrl', ["$scope", "mmaModWikiSubwikiPagesLoaded", function($scope, mmaModWikiSubwikiPagesLoaded) {
+    $scope.map = [];
+    $scope.constructMap = function(subwikiPages) {
+        var initialLetter = false,
+            letter = {};
+        $scope.map = [];
+        angular.forEach(subwikiPages, function(page) {
+            if (page.title.charAt(0).toLocaleUpperCase() !== initialLetter) {
+                initialLetter = page.title.charAt(0).toLocaleUpperCase();
+                letter = {label: initialLetter, pages: []};
+                $scope.map.push(letter);
+            }
+            letter.pages.push(page);
+        });
+    };
+    var obsLoaded = $scope.$on(mmaModWikiSubwikiPagesLoaded, function(event, subwikiPages) {
+        $scope.constructMap(subwikiPages);
+    });
+    $scope.constructMap($scope.subwikiPages);
+    $scope.$on('$destroy', obsLoaded);
+}]);
+
+angular.module('mm.addons.mod_wiki')
 .factory('$mmaModWikiHandlers', ["$mmCourse", "$mmaModWiki", "$state", "$mmContentLinksHelper", "$mmCourseHelper", "$mmUtil", "$q", "mmaModWikiComponent", "$mmaModWikiPrefetchHandler", "mmCoreDownloading", "mmCoreNotDownloaded", "mmCoreEventPackageStatusChanged", "mmCoreOutdated", "$mmCoursePrefetchDelegate", "$mmSite", "$mmEvents", "$mmaModWikiSync", function($mmCourse, $mmaModWiki, $state, $mmContentLinksHelper, $mmCourseHelper, $mmUtil, $q,
         mmaModWikiComponent, $mmaModWikiPrefetchHandler, mmCoreDownloading, mmCoreNotDownloaded, mmCoreEventPackageStatusChanged,
         mmCoreOutdated, $mmCoursePrefetchDelegate, $mmSite, $mmEvents, $mmaModWikiSync) {
@@ -48273,914 +49185,6 @@ angular.module('mm.addons.mod_wiki')
         });
     };
     return self;
-}]);
-
-angular.module('mm.addons.mod_wiki')
-.controller('mmaModWikiEditCtrl', ["$q", "$scope", "$stateParams", "$mmUtil", "$state", "$mmaModWiki", "$translate", "$ionicHistory", "$mmCourse", "mmaModWikiRenewLockTimeout", "$interval", "$mmText", "$mmaModWikiOffline", "$mmEvents", "$mmLang", "$mmSite", "mmaModWikiComponent", "mmaModWikiPageCreatedEvent", "$mmaModWikiSync", "$mmSyncBlock", function($q, $scope, $stateParams, $mmUtil, $state, $mmaModWiki, $translate, $ionicHistory,
-        $mmCourse, mmaModWikiRenewLockTimeout, $interval, $mmText, $mmaModWikiOffline, $mmEvents, $mmLang, $mmSite,
-        mmaModWikiComponent, mmaModWikiPageCreatedEvent, $mmaModWikiSync, $mmSyncBlock) {
-    var module = $stateParams.module || {},
-        courseId = $stateParams.courseid,
-        subwikiId = $stateParams.subwikiid || null,
-        wikiId = null,
-        pageId = $stateParams.pageid || null,
-        section = $stateParams.section || null,
-        originalContent = null,
-        editing = false,
-        version = false,
-        groupId,
-        userId,
-        rteEnabled,
-        subwikiFiles,
-        renewLockInterval,
-        editOffline = false;
-    $mmUtil.blockLeaveView($scope, cancel);
-    $scope.saveAndGoParams = false;
-    $scope.component = mmaModWikiComponent;
-    $scope.componentId = module.id;
-    $scope.page = {
-        title: $stateParams.pagetitle ? $stateParams.pagetitle.replace(/\+/g, " ") : null,
-        text: ""
-    };
-    $scope.canEditTitle = !$stateParams.pagetitle;
-    $scope.title = $scope.page.title ? $translate.instant('mma.mod_wiki.editingpage', {'$a': $scope.page.title}) :
-        $translate.instant('mma.mod_wiki.newpagehdr');
-    if (subwikiId) {
-        $mmSyncBlock.blockOperation(mmaModWikiComponent, subwikiId);
-    }
-    $scope.save = function() {
-        var text = $scope.page.text,
-            promise,
-            modal = $mmUtil.showModalLoading('mm.core.sending', true);
-        if (rteEnabled) {
-            text = $mmText.restorePluginfileUrls(text, subwikiFiles);
-        }
-        if (editing) {
-            promise = $mmaModWiki.editPage(pageId, text, section).then(function() {
-                return $mmaModWiki.invalidatePage(pageId).then(function() {
-                    return gotoPage();
-                });
-            });
-        } else {
-            if (!$scope.page.title) {
-                return $mmUtil.showModal('mm.core.notice', 'mma.mod_wiki.titleshouldnotbeempty');
-            }
-            if (!editOffline) {
-                promise = $mmaModWikiOffline.getNewPage(subwikiId, $scope.page.title).then(function() {
-                    return $mmLang.translateAndReject('mma.mod_wiki.pageexists');
-                }, function() {
-                });
-            } else {
-                promise = $q.when();
-            }
-            promise = promise.then(function() {
-                var instanceId = module && module.instance;
-                return $mmaModWiki.newPage(subwikiId, $scope.page.title, text, instanceId).then(function(createdId) {
-                    if (createdId) {
-                        pageId = createdId;
-                        return $mmaModWiki.getPageContents(pageId).then(function(pageContents) {
-                            wikiId = pageContents.wikiid;
-                            subwikiId = pageContents.subwikiid;
-                            return $mmaModWiki.invalidateSubwikiPages(pageContents.wikiid).then(function() {
-                                return gotoPage();
-                            });
-                        }).finally(function() {
-                            $mmEvents.trigger(mmaModWikiPageCreatedEvent, {
-                                pageid: pageId,
-                                subwikiid: subwikiId,
-                                pagetitle: $scope.page.title,
-                                siteid: $mmSite.getId()
-                            });
-                        });
-                    } else {
-                        return gotoNewOfflinePage();
-                    }
-                });
-            });
-        }
-        return promise.catch(function(message) {
-            if (message) {
-                $mmUtil.showErrorModal(message);
-            } else {
-                $mmUtil.showErrorModal('Error saving wiki data.');
-            }
-        }).finally(function() {
-            modal.dismiss();
-        });
-    };
-    function cancel() {
-        if ((originalContent == $scope.page.text) || (!editing && !$scope.page.text && !$scope.page.title)) {
-            return $q.when();
-        } else {
-            return $mmUtil.showConfirm($translate('mm.core.confirmcanceledit'));
-        }
-    }
-    function gotoPage() {
-        return retrieveModuleInfo(wikiId).then(function() {
-            var openPage = false;
-            if (!editing && editOffline && backViewPageIsDifferentOffline()) {
-                openPage = true;
-            } else if (!editOffline && backViewIsDifferentPageOnline()) {
-                openPage = true;
-            }
-            if (openPage) {
-                $scope.saveAndGoParams = {
-                    module: module,
-                    moduleid: module.id,
-                    courseid: courseId,
-                    pageid: pageId,
-                    pagetitle: $scope.page.title,
-                    wikiid: wikiId,
-                    subwikiid: subwikiId
-                };
-            }
-            return $ionicHistory.goBack();
-        }).catch(function() {
-            return $ionicHistory.goBack();
-        });
-    }
-    function gotoNewOfflinePage() {
-        if (courseId && (module.id || wikiId)) {
-            if (!editOffline || backViewPageIsDifferentOffline()) {
-                $scope.saveAndGoParams = {
-                    module: module,
-                    moduleid: module.id,
-                    courseid: courseId,
-                    pageid: null,
-                    pagetitle: $scope.page.title,
-                    wikiid: wikiId,
-                    subwikiid: subwikiId
-                };
-            }
-        } else {
-            $mmUtil.showModal('mm.core.success','mm.core.datastoredoffline');
-        }
-        return $ionicHistory.goBack();
-    }
-    function backViewIsDifferentPageOnline() {
-        var backView = $ionicHistory.backView();
-        return !editing || backView.stateName != 'site.mod_wiki' || backView.stateParams.moduleid != module.id ||
-                    backView.stateParams.pageid != pageId;
-    }
-    function backViewPageIsDifferentOffline() {
-        var backView = $ionicHistory.backView();
-        return backView.stateName != 'site.mod_wiki' || backView.stateParams.moduleid != module.id ||
-                    backView.stateParams.subwikiid != subwikiId || backView.stateParams.pagetitle != $scope.page.title;
-    }
-    function renewLock() {
-        $mmaModWiki.getPageForEditing(pageId, section, true).then(function(response) {
-            if (response.version && version != response.version) {
-                $scope.wrongVersionLock = true;
-            }
-        });
-    }
-    function fetchWikiPageData() {
-        var promise, canEdit = false;
-        if ($mmaModWiki.isPluginEnabledForEditing()) {
-            if (pageId) {
-                $scope.canEditTitle = false;
-                editing = true;
-                editOffline = false;
-                promise = $mmaModWiki.getPageContents(pageId).then(function(pageContents) {
-                    $scope.page.title = pageContents.title;
-                    wikiId = pageContents.wikiid;
-                    subwikiId = pageContents.subwikiid;
-                    $scope.title = $translate.instant('mma.mod_wiki.editingpage', {'$a': $scope.page.title});
-                    canEdit = pageContents.caneditpage;
-                    groupId = pageContents.groupid;
-                    userId = pageContents.userid;
-                    return $mmaModWikiSync.waitForSync(subwikiId);
-                }).then(function() {
-                    return $mmUtil.isRichTextEditorEnabled();
-                }).then(function(enabled) {
-                    rteEnabled = enabled;
-                    if (enabled) {
-                        return $mmaModWiki.getSubwikiFiles(wikiId, groupId, userId);
-                    }
-                }).then(function(files) {
-                    subwikiFiles = files;
-                    return $mmaModWiki.getPageForEditing(pageId, section);
-                }).then(function(editContents) {
-                    if (rteEnabled) {
-                        $scope.page.text = $mmText.replacePluginfileUrls(editContents.content, subwikiFiles);
-                    } else {
-                        $scope.page.text = editContents.content;
-                    }
-                    originalContent = $scope.page.text;
-                    version = editContents.version;
-                    if (canEdit) {
-                        renewLockInterval = $interval(function() {
-                            renewLock();
-                        }, mmaModWikiRenewLockTimeout * 1000);
-                    }
-                }).finally(function() {
-                    $scope.wikiLoaded = true;
-                });
-            } else {
-                promise = $mmaModWikiSync.waitForSync(subwikiId);
-                if ($scope.page.title) {
-                    promise = promise.then(function() {
-                        return $mmaModWikiOffline.getNewPage(subwikiId, $scope.page.title);
-                    }).then(function(page) {
-                        $scope.page.text = page.cachedcontent;
-                        originalContent = $scope.page.text;
-                        editOffline = true;
-                    }).catch(function() {
-                        editOffline = false;
-                    });
-                } else {
-                    editOffline = false;
-                }
-                promise.then(function() {
-                    $scope.wikiLoaded = true;
-                    editing = false;
-                    canEdit = !!subwikiId;
-                });
-            }
-        } else {
-            promise = $q.when();
-            canEdit = false;
-        }
-        return promise.catch(function(message) {
-            if (message) {
-                $mmUtil.showErrorModal(message);
-            } else {
-                $mmUtil.showErrorModal('Error getting wiki data.');
-            }
-            return $ionicHistory.goBack();
-        }).finally(function() {
-            if (!canEdit) {
-                $mmUtil.showModal('mm.core.notice', 'mma.mod_wiki.cannoteditpage').then(function() {
-                    $ionicHistory.goBack();
-                });
-            }
-        });
-    }
-    function retrieveModuleInfo(wikiId) {
-        if (module.id && courseId) {
-            return $q.when();
-        }
-        var promise = module.id ? $q.when(module) : $mmCourse.getModuleBasicInfoByInstance(wikiId, 'wiki');
-        return promise.then(function(info) {
-            module = info;
-            $scope.componentId = module.id;
-            if (!courseId && module.course) {
-                courseId = module.course;
-            } else if (!courseId) {
-                return $mmCourseHelper.getModuleCourseIdByInstance(wikiId, 'wiki').then(function(course) {
-                    courseId = course;
-                });
-            }
-            return $q.when();
-        });
-    }
-    $scope.firstRender = function() {
-        originalContent = $scope.page.text;
-    };
-    $scope.$on('$ionicView.afterLeave', function(event) {
-        if (event.targetScope.saveAndGoParams) {
-            return $state.go('site.mod_wiki', event.targetScope.saveAndGoParams);
-        }
-    });
-    fetchWikiPageData().then(function() {
-        if (subwikiId && !$scope.$$destroyed) {
-            $mmSyncBlock.blockOperation(mmaModWikiComponent, subwikiId);
-        }
-    }).finally(function() {
-        $scope.wikiLoaded = true;
-    });
-    $scope.$on('$destroy', function() {
-        $interval.cancel(renewLockInterval);
-        if (subwikiId) {
-            $mmSyncBlock.unblockOperation(mmaModWikiComponent, subwikiId);
-        }
-    });
-}]);
-
-angular.module('mm.addons.mod_wiki')
-.controller('mmaModWikiIndexCtrl', ["$q", "$scope", "$stateParams", "$mmCourse", "$mmUser", "$mmGroups", "$ionicPopover", "$mmUtil", "$state", "$mmSite", "$mmaModWiki", "$ionicTabsDelegate", "$ionicHistory", "$translate", "mmaModWikiSubwikiPagesLoaded", "$mmCourseHelper", "$mmText", "mmaModWikiComponent", "$mmEvents", "$ionicScrollDelegate", "$mmaModWikiOffline", "mmaModWikiPageCreatedEvent", "mmaModWikiSubwikiAutomSyncedEvent", "$mmaModWikiSync", "mmaModWikiManualSyncedEvent", "$mmApp", "mmCoreEventOnlineStatusChanged", function($q, $scope, $stateParams, $mmCourse, $mmUser, $mmGroups, $ionicPopover, $mmUtil, $state,
-        $mmSite, $mmaModWiki, $ionicTabsDelegate, $ionicHistory, $translate, mmaModWikiSubwikiPagesLoaded, $mmCourseHelper,
-        $mmText, mmaModWikiComponent, $mmEvents, $ionicScrollDelegate,
-        $mmaModWikiOffline, mmaModWikiPageCreatedEvent, mmaModWikiSubwikiAutomSyncedEvent, $mmaModWikiSync,
-        mmaModWikiManualSyncedEvent, $mmApp, mmCoreEventOnlineStatusChanged) {
-    var module = $stateParams.module || {},
-        courseId = $stateParams.courseid,
-        action = $stateParams.action || 'page',
-        currentPage = $stateParams.pageid || false,
-        pageTitle = $stateParams.pagetitle,
-        isCurrentView = true,
-        popover, wiki, currentSubwiki, loadedSubwikis, tabsDelegate, onlineObserver,
-        currentPageObj, newPageObserver, syncObserver, syncObserverManual, scrollView, ignoreManualSyncEvent;
-    $scope.title = pageTitle || module.name;
-    $scope.description = module.description;
-    $scope.mainpage = !currentPage && !pageTitle;
-    $scope.moduleUrl = module.url;
-    $scope.courseId = courseId;
-    $scope.component = mmaModWikiComponent;
-    $scope.canEdit = false;
-    $scope.subwikiData = {
-        selected: 0,
-        subwikis: [],
-        count: 0
-    };
-    $scope.refreshIcon = 'spinner';
-    $scope.syncIcon = 'spinner';
-    $scope.pageStr = $translate.instant('mma.mod_wiki.page');
-    $scope.moduleName = $mmCourse.translateModuleName('wiki');
-    $scope.tabsDelegateName = 'mmaModWikiTabs_'+(module.id || 0) + '_' + (currentPage || 0) + '_' +  new Date().getTime();
-    tabsDelegate = $ionicTabsDelegate.$getByHandle($scope.tabsDelegateName);
-    $scope.showSubwikiPicker = function(e) {
-        popover.show(e);
-    };
-    $scope.goHomeWiki = function(e) {
-        var backTimes = getHistoryBackCounter();
-        $ionicHistory.goBack(backTimes);
-    };
-    $scope.gotoPage = function(page) {
-        if (!page.id) {
-            if (currentPage || !pageTitle || page.title != pageTitle) {
-                var stateParams = {
-                    module: module,
-                    moduleid: module.id,
-                    courseid: courseId,
-                    pagetitle: page.title,
-                    pageid: null,
-                    wikiid: wiki.id,
-                    subwikiid: page.subwikiid,
-                    action: 'page'
-                };
-                return $state.go('site.mod_wiki', stateParams);
-            }
-        } else if (currentPage != page.id) {
-            return fetchPageContents(page.id).then(function(page) {
-                var stateParams = {
-                    module: module,
-                    moduleid: module.id,
-                    courseid: courseId,
-                    pageid: page.id,
-                    pagetitle: page.title,
-                    wikiid: page.wikiid,
-                    subwikiid: page.subwikiid,
-                    action: 'page'
-                };
-                return $state.go('site.mod_wiki', stateParams);
-            });
-        }
-        tabsDelegate.select(0);
-    };
-    $scope.gotoEditPage = function() {
-        if (currentPageObj && $scope.canEdit) {
-            var stateParams = {
-                module: module,
-                moduleid: module.id,
-                courseid: courseId,
-                pageid: currentPageObj.id,
-                pagetitle: currentPageObj.title,
-                subwikiid: currentPageObj.subwikiid
-            };
-            return $state.go('site.mod_wiki-edit', stateParams);
-        }
-    };
-    $scope.gotoNewPage = function() {
-        if (currentPageObj && $scope.canEdit) {
-            var stateParams = {
-                module: module,
-                moduleid: module.id,
-                courseid: courseId,
-                subwikiid: currentPageObj.subwikiid
-            };
-            return $state.go('site.mod_wiki-edit', stateParams);
-        }
-    };
-    $scope.gotoSubwiki = function(subwikiId) {
-        if (subwikiId > 0) {
-            popover.hide();
-            if (subwikiId != currentSubwiki.id) {
-                var stateParams = {
-                    module: module,
-                    moduleid: module.id,
-                    courseid: courseId,
-                    pageid: null,
-                    pagetitle: null,
-                    wikiid: wiki.id,
-                    subwikiid: subwikiId,
-                    action: tabsDelegate.selectedIndex() == 0 ? 'page' : 'map'
-                };
-                return $state.go('site.mod_wiki', stateParams);
-            }
-        }
-    };
-    function fetchWikiData(refresh, sync, showErrors) {
-        $scope.isOnline = $mmApp.isOnline();
-        var id = module.id || $stateParams.wikiid,
-            paramName = module.id ? 'coursemodule' : 'id';
-        return $mmaModWiki.getWiki(courseId, id, paramName).then(function(wikiData) {
-            wiki = wikiData;
-            $scope.wiki = wiki;
-            if (sync) {
-                return syncWiki(showErrors).catch(function() {
-                });
-            }
-        }).then(function() {
-            if ($scope.pageWarning) {
-                return $q.reject();
-            }
-            var promise;
-            if (isCurrentView) {
-                $scope.showHomeButton = getHistoryBackCounter() < 0;
-            }
-            if (!module.url) {
-                promise = $mmCourse.getModule(wiki.coursemodule, wiki.course, null, true);
-            } else {
-                module.instance = wiki.id;
-                promise = $q.when(module);
-            }
-            return promise.then(function(mod) {
-                module = mod;
-                $scope.title = $scope.title || wiki.title;
-                $scope.description = wiki.intro || module.description;
-                $scope.moduleUrl = module.url;
-                $scope.componentId = module.id;
-                return $mmGroups.getActivityGroupMode(wiki.coursemodule).then(function(groupmode) {
-                    if (groupmode === $mmGroups.SEPARATEGROUPS || groupmode === $mmGroups.VISIBLEGROUPS) {
-                        promise = $mmGroups.getActivityAllowedGroups(wiki.coursemodule);
-                    } else {
-                        promise = $q.when([]);
-                    }
-                    return promise.then(function(userGroups) {
-                        return fetchSubwikis(wiki.id).then(function() {
-                            var subwikiList = $mmaModWiki.getSubwikiList(wiki.id);
-                            if (!subwikiList) {
-                                return createSubwikiList(userGroups);
-                            }
-                            $scope.subwikiData.count = subwikiList.count;
-                            $scope.subwikiData.selected = $stateParams.subwikiid || subwikiList.selected;
-                            $scope.subwikiData.subwikis = subwikiList.subwikis;
-                            return $q.when();
-                        });
-                    }).then(function() {
-                        if ($scope.subwikiData.count > 1) {
-                            handleSubwikiPopover();
-                        }
-                        if (!refresh) {
-                            tabsDelegate.select(action == 'map' ? 1 : 0);
-                        }
-                        if (!$scope.subwikiData.selected || $scope.subwikiData.count <= 0) {
-                            return $q.reject($translate.instant('mma.mod_wiki.errornowikiavailable'));
-                        }
-                    }).then(function() {
-                        return fetchWikiPage();
-                    }).then(function() {
-                        $mmCourseHelper.fillContextMenu($scope, module, courseId, refresh, mmaModWikiComponent);
-                    });
-                });
-            });
-        }).catch(function(message) {
-            if ($scope.pageWarning) {
-                return $q.reject();
-            }
-            if (!refresh && !wiki) {
-                return refreshAllData(sync, showErrors);
-            }
-            if (message) {
-                $mmUtil.showErrorModal(message);
-            } else {
-                $mmUtil.showErrorModal('Error getting wiki data.');
-            }
-            return $q.reject();
-        });
-    }
-    $scope.expandDescription = function() {
-        $mmText.expandText($translate.instant('mm.core.description'), $scope.description, false, mmaModWikiComponent, module.id);
-    };
-    $scope.removeFiles = function() {
-        $mmCourseHelper.confirmAndRemove(module, courseId);
-    };
-    $scope.prefetch = function() {
-        $mmCourseHelper.contextMenuPrefetch($scope, module, courseId);
-    };
-    function handleSubwikiPopover() {
-        $ionicPopover.fromTemplateUrl('addons/mod/wiki/templates/subwiki_picker.html', {
-            scope: $scope
-        }).then(function(po) {
-            popover = po;
-        });
-    }
-    function createSubwikiList(userGroups) {
-        var subwikiList = [],
-            promises = [],
-            userGroupsIds = [],
-            allParticipants = false,
-            myGroups = false,
-            multiLevelList = false,
-            currentUserId = $mmSite.getUserId() || false,
-            allParticipantsTitle = $translate.instant('mm.core.allparticipants'),
-            nonInGroupTitle = $translate.instant('mma.mod_wiki.notingroup'),
-            myGroupsTitle = $translate.instant('mm.core.mygroups'),
-            otherGroupsTitle = $translate.instant('mm.core.othergroups');
-        $scope.subwikiData.subwikis = [];
-        $scope.subwikiData.selected = $stateParams.subwikiid || false;
-        $scope.subwikiData.count = 0;
-        if (userGroups.length > 0) {
-            userGroupsIds = userGroups.map(function(g) {
-                return g.id;
-            });
-        }
-        angular.forEach(loadedSubwikis, function(subwiki) {
-            var groupIdx,
-                promise,
-                groupId = parseInt(subwiki.groupid, 10),
-                groupLabel = "",
-                userId = parseInt(subwiki.userid, 10);
-            if (groupId == 0 && userId == 0) {
-                if (!allParticipants) {
-                    subwikiList.unshift({
-                        name: allParticipantsTitle,
-                        id: subwiki.id,
-                        group: -1,
-                        groupLabel: ""
-                    });
-                    allParticipants = true;
-                }
-            } else {
-                if (groupId != 0 && userGroupsIds.length > 0) {
-                    groupIdx = userGroupsIds.indexOf(groupId);
-                    if (groupIdx > -1) {
-                        groupLabel = userGroups[groupIdx].name;
-                    }
-                } else {
-                    groupLabel = nonInGroupTitle;
-                }
-                if (userId != 0) {
-                    promise = $mmUser.getProfile(userId, null, true).then(function(user) {
-                        subwikiList.push({
-                            name: user.fullname,
-                            id: subwiki.id,
-                            group: groupId,
-                            groupLabel: groupLabel
-                        });
-                    });
-                    promises.push(promise);
-                    if (!multiLevelList && groupId != 0) {
-                        multiLevelList = true;
-                    }
-                } else {
-                    subwikiList.push({
-                        name: groupLabel,
-                        id: subwiki.id,
-                        group: groupId,
-                        groupLabel: groupLabel,
-                        canedit: subwiki.canedit
-                    });
-                    myGroups = true;
-                }
-            }
-            if (!$stateParams.subwikiid && subwiki.id > 0 &&
-                ((userId > 0 && currentUserId == userId) || !$scope.subwikiData.selected)) {
-                $scope.subwikiData.selected = subwiki.id;
-            }
-        });
-        return $q.all(promises).then(function() {
-            var groupValue = -1,
-                grouping;
-            subwikiList.sort(function(a, b) {
-                return a.group - b.group;
-            });
-            $scope.subwikiData.count = subwikiList.length;
-            if (multiLevelList) {
-                for (var i in subwikiList) {
-                    var subwiki = subwikiList[i];
-                    if (subwiki.group !== groupValue) {
-                        grouping = {label: subwiki.groupLabel, subwikis: []};
-                        groupValue = subwiki.group;
-                        $scope.subwikiData.subwikis.push(grouping);
-                    }
-                    grouping.subwikis.push(subwiki);
-                }
-            } else if (myGroups) {
-                var noGrouping = {label: "", subwikis: []},
-                    myGroupsGrouping = {label: myGroupsTitle, subwikis: []},
-                    otherGroupsGrouping = {label: otherGroupsTitle, subwikis: []};
-                for (var i in subwikiList) {
-                    var subwiki = subwikiList[i];
-                    if (typeof subwiki.canedit == 'undefined') {
-                        noGrouping.subwikis.push(subwiki);
-                    } else if(subwiki.canedit) {
-                        myGroupsGrouping.subwikis.push(subwiki);
-                    } else {
-                        otherGroupsGrouping.subwikis.push(subwiki);
-                    }
-                }
-                if (noGrouping.subwikis.length > 0) {
-                    $scope.subwikiData.subwikis.push(noGrouping);
-                }
-                if (myGroupsGrouping.subwikis.length > 0) {
-                    $scope.subwikiData.subwikis.push(myGroupsGrouping);
-                }
-                if (otherGroupsGrouping.subwikis.length > 0) {
-                    $scope.subwikiData.subwikis.push(otherGroupsGrouping);
-                }
-            } else {
-                $scope.subwikiData.subwikis.push({label: "", subwikis: subwikiList});
-            }
-            $mmaModWiki.setSubwikiList(wiki.id, $scope.subwikiData.subwikis, $scope.subwikiData.count, $scope.subwikiData.selected);
-        });
-    }
-    function getHistoryBackCounter() {
-        var view, historyInstance, backTimes = 0,
-            backViewId = $ionicHistory.currentView().backViewId;
-        if (!wiki.id) {
-            return 0;
-        }
-        while (backViewId) {
-            view = $ionicHistory.viewHistory().views[backViewId];
-            if (view.stateName != 'site.mod_wiki') {
-                break;
-            }
-            historyInstance = view.stateParams.wikiid ? view.stateParams.wikiid : view.stateParams.module.instance;
-            if (historyInstance && historyInstance == wiki.id) {
-                backTimes--;
-            } else {
-                break;
-            }
-            backViewId = view.backViewId;
-        }
-        return backTimes;
-    }
-    function fetchSubwikis(wikiId) {
-        return $mmaModWiki.getSubwikis(wikiId).then(function(subwikis) {
-            loadedSubwikis = subwikis;
-            var subwikiIds = subwikis.map(function(subwiki) {
-                return subwiki.id;
-            });
-            return $mmaModWikiOffline.subwikisHaveOfflineData(subwikiIds).then(function(hasOffline) {
-                $scope.wikiHasOffline = hasOffline;
-            });
-        });
-    }
-    function fetchWikiPage() {
-        currentSubwiki = false;
-        angular.forEach(loadedSubwikis, function(subwiki) {
-            if (!currentSubwiki && subwiki.id == $scope.subwikiData.selected) {
-                currentSubwiki = subwiki;
-            }
-        });
-        if (!currentSubwiki) {
-            return $q.reject();
-        }
-        $scope.subwikiData.selected = currentSubwiki.id;
-        return fetchSubwikiPages(currentSubwiki).then(function() {
-            return fetchPageContents(currentPage).then(function(pageContents) {
-                $scope.title = pageContents.title;
-                $scope.subwikiData.selected = pageContents.subwikiid;
-                $scope.pageContent = replaceEditLinks(pageContents.cachedcontent);
-                $scope.canEdit = pageContents.caneditpage && $mmaModWiki.isPluginEnabledForEditing();
-                currentPageObj = pageContents;
-            });
-        });
-    }
-    function replaceEditLinks(content) {
-        content = content.trim();
-        if (content.length > 0) {
-            var url = $mmSite.getURL();
-            content = content.replace(/href="edit\.php/g, 'href="'+url+'/mod/wiki/edit.php');
-        }
-        return content;
-    }
-    function fetchSubwikiPages(subwiki) {
-        return $mmaModWiki.getSubwikiPages(subwiki.wikiid, subwiki.groupid, subwiki.userid).then(function(subwikiPages) {
-            if (!currentPage && !pageTitle) {
-                angular.forEach(subwikiPages, function(subwikiPage) {
-                    if (!currentPage && subwikiPage.firstpage) {
-                        currentPage = subwikiPage.id;
-                    }
-                });
-            }
-            return $mmaModWikiOffline.getSubwikiNewPages(subwiki.id).then(function(offlinePages) {
-                if (!currentPage && !pageTitle) {
-                    angular.forEach(offlinePages, function(subwikiPage) {
-                        if (!currentPage && subwikiPage.title == wiki.firstpagetitle) {
-                            currentPage = subwikiPage.id;
-                        }
-                    });
-                }
-                $scope.subwikiPages = $mmaModWiki.sortPagesByTitle(subwikiPages.concat(offlinePages));
-                $scope.$broadcast(mmaModWikiSubwikiPagesLoaded, $scope.subwikiPages);
-                if (!currentPage && !pageTitle) {
-                    return $q.reject();
-                }
-            });
-        });
-    }
-    function fetchPageContents(pageId) {
-        if (!pageId && pageTitle) {
-            $scope.pageIsOffline = true;
-            return $mmaModWikiOffline.getNewPage(currentSubwiki.id, pageTitle).then(function(offlinePage) {
-                if (!newPageObserver) {
-                    newPageObserver = $mmEvents.on(mmaModWikiPageCreatedEvent, function(data) {
-                        if (data.siteid == $mmSite.getId() && data.subwikiid == currentSubwiki.id && data.pagetitle == pageTitle) {
-                            currentPage = data.pageid;
-                            showSpinnerAndFetch(false, true).then(function() {
-                                $mmaModWiki.logPageView(currentPage);
-                            });
-                            newPageObserver.off && newPageObserver.off();
-                            newPageObserver = false;
-                        }
-                    });
-                }
-                return offlinePage;
-            }).catch(function() {
-                return $q.reject();
-            });
-        }
-        $scope.pageIsOffline = false;
-        return $mmaModWiki.getPageContents(pageId);
-    }
-    function refreshAllData(sync, showErrors) {
-        var promises = [$mmaModWiki.invalidateWikiData(courseId)];
-        if (wiki) {
-            promises.push($mmaModWiki.invalidateSubwikis(wiki.id));
-            promises.push($mmGroups.invalidateActivityAllowedGroups(wiki.coursemodule));
-            promises.push($mmGroups.invalidateActivityGroupMode(wiki.coursemodule));
-        }
-        if (currentSubwiki) {
-            promises.push($mmaModWiki.invalidateSubwikiPages(currentSubwiki.wikiid));
-            promises.push($mmaModWiki.invalidateSubwikiFiles(currentSubwiki.wikiid));
-        }
-        if (currentPage) {
-            promises.push($mmaModWiki.invalidatePage(currentPage));
-        }
-        return $q.all(promises).finally(function() {
-            return fetchWikiData(true, sync, showErrors);
-        });
-    }
-    function showSpinnerAndFetch(refresh, sync, showErrors) {
-        var promise;
-        $scope.wikiLoaded = false;
-        $scope.refreshIcon = 'spinner';
-        $scope.syncIcon = 'spinner';
-        scrollTop();
-        promise = refresh ? refreshAllData(sync, showErrors) : fetchWikiData(true, sync, showErrors);
-        return promise.finally(function() {
-            $scope.wikiLoaded = true;
-            $scope.refreshIcon = 'ion-refresh';
-            $scope.syncIcon = 'ion-loop';
-        });
-    }
-    function scrollTop() {
-        if (!scrollView) {
-            scrollView = $ionicScrollDelegate.$getByHandle('mmaModWikiIndexScroll');
-        }
-        scrollView && scrollView.scrollTop && scrollView.scrollTop();
-    }
-    fetchWikiData(false, true, false).then(function() {
-        if (!currentPage && !pageTitle) {
-            $mmaModWiki.logView(wiki.id).then(function() {
-                $mmCourse.checkModuleCompletion(courseId, module.completionstatus);
-            });
-        } else if (currentPage) {
-            $mmaModWiki.logPageView(currentPage);
-        }
-    }).finally(function() {
-        $scope.wikiLoaded = true;
-        $scope.refreshIcon = 'ion-refresh';
-        $scope.syncIcon = 'ion-loop';
-    });
-    $scope.refreshWiki = function(showErrors) {
-        if ($scope.wikiLoaded) {
-            $scope.refreshIcon = 'spinner';
-            $scope.syncIcon = 'spinner';
-            return refreshAllData(true, showErrors).finally(function() {
-                $scope.refreshIcon = 'ion-refresh';
-                $scope.syncIcon = 'ion-loop';
-                $scope.$broadcast('scroll.refreshComplete');
-            });
-        }
-    };
-    function syncWiki(showErrors) {
-        return $mmaModWikiSync.syncWiki(wiki.id, courseId, wiki.coursemodule).then(function(result) {
-            result.wikiid = wiki.id;
-            if (result.updated) {
-                ignoreManualSyncEvent = true;
-                $mmEvents.trigger(mmaModWikiManualSyncedEvent, result);
-            }
-            if (result.warnings && result.warnings.length) {
-                $mmUtil.showErrorModal($mmText.buildMessage(result.warnings));
-            }
-            if (currentSubwiki) {
-                checkPageCreatedOrDiscarded(result.subwikis[currentSubwiki.id]);
-            }
-            return result.updated;
-        }).catch(function(error) {
-            if (showErrors) {
-                if (error) {
-                    $mmUtil.showErrorModal(error);
-                } else {
-                    $mmUtil.showErrorModal('mm.core.errorsync', true);
-                }
-            }
-            return $q.reject();
-        });
-    }
-    function checkPageCreatedOrDiscarded(data) {
-        if (!currentPage && data) {
-            var page,
-                pageId;
-            for (var i = 0, len = data.created.length; i < len; i++) {
-                page = data.created[i];
-                if (page.title == pageTitle) {
-                    pageId = page.pageid;
-                    break;
-                }
-            }
-            if (pageId) {
-                currentPage = pageId;
-            } else {
-                for (i = 0, len = data.discarded.length; i < len; i++) {
-                    page = data.discarded[i];
-                    if (page.title == pageTitle) {
-                        $scope.pageWarning = page.warning;
-                        $scope.pageContent = '';
-                        $scope.pageIsOffline = false;
-                        $scope.wikiHasOffline = false;
-                    }
-                }
-            }
-        }
-    }
-    var skip = true;
-    $scope.$on('$ionicView.enter', function() {
-        isCurrentView = true;
-        if (skip) {
-            skip = false;
-            return;
-        }
-        var forwardView = $ionicHistory.forwardView();
-        if (forwardView && forwardView.stateName === 'site.mod_wiki-edit') {
-            showSpinnerAndFetch(false, true);
-        }
-    });
-    $scope.$on('$ionicView.beforeLeave', function() {
-        isCurrentView = false;
-    });
-    onlineObserver = $mmEvents.on(mmCoreEventOnlineStatusChanged, function(online) {
-        $scope.isOnline = online;
-    });
-    syncObserver = $mmEvents.on(mmaModWikiSubwikiAutomSyncedEvent, function(data) {
-        if (data && currentSubwiki && data.siteid == $mmSite.getId() && data.subwikiid == currentSubwiki.id) {
-            if (isCurrentView && data.warnings && data.warnings.length) {
-                $mmUtil.showErrorModal($mmText.buildMessage(data.warnings));
-            }
-            checkPageCreatedOrDiscarded(data);
-            if (!$scope.pageWarning) {
-                showSpinnerAndFetch(true, false);
-            }
-        }
-    });
-    syncObserverManual = $mmEvents.on(mmaModWikiManualSyncedEvent, function(data) {
-        if (data && wiki && data.siteid == $mmSite.getId() && data.wikiid == wiki.id) {
-            if (ignoreManualSyncEvent) {
-                ignoreManualSyncEvent = false;
-                return;
-            }
-            if (currentSubwiki) {
-                checkPageCreatedOrDiscarded(data.subwikis[currentSubwiki.id]);
-            }
-            if (!$scope.pageWarning) {
-                showSpinnerAndFetch(false, false);
-            }
-        }
-    });
-    $scope.$on('$destroy', function() {
-        popover && popover.remove();
-        newPageObserver && newPageObserver.off && newPageObserver.off();
-        syncObserver && syncObserver.off && syncObserver.off();
-        syncObserverManual && syncObserverManual.off && syncObserverManual.off();
-        onlineObserver && onlineObserver.off && onlineObserver.off();
-    });
-}]);
-
-angular.module('mm.addons.mod_wiki')
-.controller('mmaModWikiMapCtrl', ["$scope", "mmaModWikiSubwikiPagesLoaded", function($scope, mmaModWikiSubwikiPagesLoaded) {
-    $scope.map = [];
-    $scope.constructMap = function(subwikiPages) {
-        var initialLetter = false,
-            letter = {};
-        $scope.map = [];
-        angular.forEach(subwikiPages, function(page) {
-            if (page.title.charAt(0).toLocaleUpperCase() !== initialLetter) {
-                initialLetter = page.title.charAt(0).toLocaleUpperCase();
-                letter = {label: initialLetter, pages: []};
-                $scope.map.push(letter);
-            }
-            letter.pages.push(page);
-        });
-    };
-    var obsLoaded = $scope.$on(mmaModWikiSubwikiPagesLoaded, function(event, subwikiPages) {
-        $scope.constructMap(subwikiPages);
-    });
-    $scope.constructMap($scope.subwikiPages);
-    $scope.$on('$destroy', obsLoaded);
 }]);
 
 angular.module('mm.core')
