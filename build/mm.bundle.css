@@ -8451,7 +8451,7 @@ em {
       border-color: transparent;
       background: none; }
 
-.item.item-text-wrap .item-heading, .mm-grades-table .item-text-wrap.itemcenter .item-heading {
+.item.item-text-wrap .item-heading, .mm-grades-table .item-text-wrap.itemcenter .item-heading, p.item-text-wrap {
   overflow: visible;
   white-space: normal; }
 
@@ -8771,7 +8771,7 @@ mm-loading.mm-loading-center {
 .mm-media-adapt-width {
   max-width: 100%; }
 
-img.mm-media-adapt-width {
+.mm-enabled-media-adapt img.mm-media-adapt-width, img.mm-media-adapt-width-enabled {
   height: auto; }
 
 .mm-adapted-img-container {
@@ -8965,6 +8965,15 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
   min-height: 22px; }
   .button.mm-button-icon-small .icon:before {
     font-size: 22px; }
+
+.button.icon:before {
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 30px; }
+.button.icon.button-small:before {
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 20px; }
 
 .item-input-wrapper ~ .button.mm-button-icon-small {
   margin-left: 5px; }
@@ -9183,6 +9192,17 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
       left: auto;
       right: auto; }
 
+.mm-toast {
+  pointer-events: none;
+  bottom: 100px;
+  -ms-flex-align: flex-end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end; }
+  .mm-toast .loading {
+    padding: 10px 20px;
+    border-radius: 25px; }
+
 @media only screen and (max-width: 400px) {
   .mm-inapp-notification-backdrop .mm-inapp-notification {
     margin-left: 6px !important;
@@ -9340,20 +9360,40 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(100% - 50px), white calc(100% - 15px));
         z-index: 1000; }
 
+.item.active mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .mm-grades-table .active.itemcenter mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .item.active *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .mm-grades-table .active.itemcenter *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .item.activated mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .mm-grades-table .activated.itemcenter mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .item.activated *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .mm-grades-table .activated.itemcenter *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .item-complex.active .item-content mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .item-complex.active .item-content *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .item-complex.activated .item-content mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .item-complex.activated .item-content *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .item .item-content.active mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .mm-grades-table .itemcenter .item-content.active mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .item .item-content.active *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .mm-grades-table .itemcenter .item-content.active *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .item .item-content.activated mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .mm-grades-table .itemcenter .item-content.activated mm-format-text[max-height].mm-text-formatted.mm-shortened:before, .item .item-content.activated *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before, .mm-grades-table .itemcenter .item-content.activated *[mm-format-text][max-height].mm-text-formatted.mm-shortened:before {
+  background: -moz-linear-gradient(top, rgba(217, 217, 217, 0) calc(100% - 50px), #D9D9D9 calc(100% - 15px));
+  background: -webkit-gradient(left top, left bottom, color-stop(calc(100% - 50px), rgba(217, 217, 217, 0)), color-stop(calc(100% - 15px), #D9D9D9));
+  background: -webkit-linear-gradient(top, rgba(217, 217, 217, 0) calc(100% - 50px), #D9D9D9 calc(100% - 15px));
+  background: -o-linear-gradient(top, rgba(217, 217, 217, 0) calc(100% - 50px), #D9D9D9 calc(100% - 15px));
+  background: -ms-linear-gradient(top, rgba(217, 217, 217, 0) calc(100% - 50px), #D9D9D9 calc(100% - 15px));
+  background: linear-gradient(to bottom, rgba(217, 217, 217, 0) calc(100% - 50px), #D9D9D9 calc(100% - 15px)); }
+
+.action-sheet-open .modal-backdrop.active {
+  z-index: 20; }
+  .action-sheet-open .modal-backdrop.active .modal {
+    pointer-events: auto; }
+
 .item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-messages-unreadfrom span.mm-course-download, .mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-unreadfrom span.mm-course-download, .mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
   right: 44px; }
 
 .mm-course-module-handler mm-format-text + mm-format-text {
   margin-top: 16px; }
 
-input.mm-fileuploader-picker {
+mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
+  padding: 8px; }
+
+.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
+  margin-top: 0; }
+
+.mm-fileuploader-file-handler input {
   position: absolute;
   top: 0;
   right: 0;
   min-width: 100%;
   min-height: 100%;
   opacity: 0;
-  outline: none; }
+  outline: none;
+  z-index: 100; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
@@ -9532,8 +9572,9 @@ input.mm-fileuploader-picker {
 
 .foreground-ion-edit.ion-edit:before {
   position: relative;
-  left: 105px;
-  bottom: 15px; }
+  left: 120px;
+  bottom: 15px;
+  font-size: 24px; }
 
 .mm-site_mm_user-profile .mm-tab-handlers {
   padding-bottom: 16px; }
@@ -9888,6 +9929,24 @@ p.mma-mod-quiz-warning {
   .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .mm-grades-table .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .platform-android .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-android .mm-grades-table .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .mm-grades-table .platform-android .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .platform-ios .item.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .platform-ios .mm-grades-table .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .mm-grades-table .platform-ios .mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .mma-mod-quiz-table .item.row.mma-mod-quiz-selected:not(.mma-mod-quiz-last-of-page), .mma-mod-quiz-table .mm-grades-table .row.mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page), .mm-grades-table .mma-mod-quiz-table .row.mma-mod-quiz-selected.itemcenter:not(.mma-mod-quiz-last-of-page) {
     border-bottom: 0; }
 
+.mma-mod_survey-darkbg {
+  background-color: #f1f1f1; }
+
+.mma-mod_survey-padding-top {
+  padding-top: 20px; }
+
+textarea.mma-mod_survey-textarea {
+  height: 100px;
+  border: 1px solid #ddd; }
+
+select.mma-mod_survey-select {
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: 32px;
+  max-width: 100%; }
+  select.mma-mod_survey-select .mma-mod_survey-defaultoption {
+    display: none; }
+
 .mma-scorm-level-0 {
   padding-left: 16px; }
 
@@ -9964,24 +10023,6 @@ ion-popover-view {
 .platform-ios ion-popover-view.mma-scorm-popover {
   padding-top: 10px;
   padding-bottom: 10px; }
-
-.mma-mod_survey-darkbg {
-  background-color: #f1f1f1; }
-
-.mma-mod_survey-padding-top {
-  padding-top: 20px; }
-
-textarea.mma-mod_survey-textarea {
-  height: 100px;
-  border: 1px solid #ddd; }
-
-select.mma-mod_survey-select {
-  background-color: transparent;
-  padding-left: 0px;
-  padding-right: 32px;
-  max-width: 100%; }
-  select.mma-mod_survey-select .mma-mod_survey-defaultoption {
-    display: none; }
 
 .wiki-toc {
   border: 1px solid #bbb;
