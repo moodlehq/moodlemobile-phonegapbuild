@@ -897,6 +897,9 @@ mm-timer {
 }
 
 .item.mm-item-has-rich-text-editor {
+  &.item-input {
+    padding: 0;
+  }
   padding: 0;
   display: block;
 
@@ -1843,623 +1846,6 @@ $mma-messages-date-badge: "stable" !default;
 .mm-site_coursesgrades .item .badge {
   right: 16px;
 }
-
-$mma-mod-assign-warning-color:      #c00 !default;
-
-.mm-site_mod_assign,
-.mm-site_mod_assign-submission {
-
-  div.latesubmission {
-    background-color: #efcfcf;
-  }
-
-  div.earlysubmission {
-    background-color: #cfefcf;
-  }
-
-  div.submissioneditable {
-    color: red;
-  }
-}
-
-p.mma-mod-assign-warning {
-  color: $mma-mod-assign-warning-color;
-}
-
-/** Grading */
-.mm-grading-summary .advancedgrade {
-  display: none;
-}
-
-.gradingform_rubric {
-  overflow: auto;
-  padding-bottom: 1.5em;
-
-  .criterion {
-    border: 1px solid #DDD;
-    overflow: hidden;
-
-    &.even {
-      background: #F0F0F0;
-    }
-
-    .description,
-    .levels,
-    .remark,
-    .levels .level {
-      vertical-align: top;
-    }
-
-    .description,
-    .remark,
-    .levels .level {
-      padding: 3px;
-    }
-
-    .description {
-      width: 150px;
-      font-weight: bold;
-    }
-
-    .levels table {
-      width: 100%;
-      height: 100%;
-    }
-
-    .levels,
-    .levels table,
-    .levels table tbody {
-      padding: 0;
-      margin: 0;
-    }
-
-    .levels .level {
-      border-left: 1px solid #DDD;
-      max-width: 150px;
-    }
-
-    .levels .level .level-wrapper {
-      position: relative;
-    }
-
-    .levels .level.last {
-      border-right: 1px solid #DDD;
-    }
-
-    .levels .level .score {
-      font-style: italic;
-      color: #575;
-      font-weight: bold;
-      margin-top: 5px;
-      white-space: nowrap;
-    }
-
-    .levels .level .score .scorevalue {
-      padding-right: 5px;
-    }
-
-    .levels .level.currentchecked {
-      background: #fff0f0;
-    }
-
-    .levels .level.checked {
-      background: #d0ffd0;
-    }
-
-    .description.error,
-    .levels .level .definition.error,
-    .levels .level .score.error {
-      background: #FFDDDD;
-    }
-
-    .levels.error {
-      border: 1px solid red;
-    }
-  }
-
-  .options .optionsheading {
-    font-weight: bold;
-    font-size: 1.1em;
-    padding-bottom: 5px;
-  }
-  .options .option {
-    padding-bottom: 2px;
-  }
-  .options .option label {
-    margin-left: 5px;
-  }
-  .options .option .value {
-    margin-left: 5px;
-    font-weight: bold;
-  }
-
-  .plainvalue.empty {
-    font-style: italic;
-    color: #AAA;
-  }
-
-  .criteria {
-    height:100%;
-  }
-}
-
-.gradingform_rubric-regrade {
-  padding: 10px;
-  background: #FFDDDD;
-  border: 1px solid #F00;
-  margin-bottom: 10px;
-}
-.gradingform_rubric-restored {
-  padding: 10px;
-  background: #FFFFDD;
-  border: 1px solid #FF0;
-  margin-bottom: 10px;
-}
-.gradingform_rubric-error {
-  color: red;
-  font-weight: bold;
-}
-
-
-.gradingform_guide-regrade {padding:10px;background:#FFDDDD;border:1px solid #F00;margin-bottom:10px;}
-.gradingform_guide-restored {padding:10px;background:#FFFFDD;border:1px solid #FF0;margin-bottom:10px;}
-.gradingform_guide-error {color:red;font-weight:bold;}
-
-.gradingform_guide {
-  .hidden {
-    display: none;
-  }
-
-  td {
-    padding: 8px;
-  }
-
-  .criterion {
-    border: 1px solid #DDD;
-    overflow: hidden;
-
-    .description,
-    .remark {
-      vertical-align: top;
-    }
-
-    &.even {
-      background: #F0F0F0;
-    }
-
-    .description {
-      width: 100%;
-    }
-    .description .criterionname {
-      font-weight: bold;
-    }
-    label {
-      display: block;
-      font-weight: bold;
-      padding-right: 5px;
-    }
-    .description.error {
-      background: #FFDDDD;
-    }
-  }
-
-  .criterionnamelabel {
-    display: none;
-  }
-  .criterionshortname {
-    font-weight: bold;
-  }
-
-  .plainvalue.empty {
-    font-style: italic;
-    color: #AAA;
-  }
-  .plainvalue.editname {
-    font-weight: bold;
-  }
-
-  .options {
-    .optionsheading {
-      font-weight: bold;
-      font-size: 1.1em;
-      padding-bottom: 5px;
-    }
-    .option {
-      padding-bottom:2px;
-    }
-    .option label {
-      margin-left: 5px;
-    }
-    .option .value {
-      margin-left: 5px;
-      font-weight: bold;
-    }
-  }
-
-  .commentheader  {
-    font-weight: bold;
-    font-size: 1.1em;
-    padding-bottom:5px;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  .descriptionreadonly {
-      vertical-align: top;
-  }
-
-  .criteriondescriptionmarkers {
-    width: 300px;
-  }
-
-  .markingguideremark {
-      margin: 0;
-      width: 100%;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-  }
-  .criteriondescriptionscore {
-    display: inline;
-  }
-  .score label {
-      display: block;
-  }
-  .score input {
-      margin: 0;
-      width: auto;
-  }
-}
-
-$mma-chat-notice-badge: "stable" !default;
-
-// The notice displayed in the list.
-.mma-chat-notice {
-
-  text-align: center;
-  margin-top: 10px;
-
-  span {
-    @extend .badge;
-    @extend .badge-#{$mma-chat-notice-badge};
-    white-space: normal;
-  }
-}
-
-.mma-chat-input-inset {
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 0;
-}
-
-.mma-chat-footer-note {
-    color: $button-light-text;
-    font-size: $font-size-base;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-}
-
-.mma-chat-send-form {
-  width: 100%;
-}
-
-.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
-  margin: 0;
-}
-.mm-site_mod_choice {
-  .chart {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 767px) {
-    .col {
-      border-left: $item-border-width solid $item-default-border;
-
-      &.item, .chart-item {
-        margin-top: 0;
-        border-top: 0;
-      }
-
-      &:first-child {
-        border-left: 0;
-      }
-    }
-  }
-}
-
-.mma-forum-discussion-link {
-    text-decoration: none;
-}
-
-.mma-forum-align-right {
-    justify-content: flex-end;
-}
-
-.mma-forum-border {
-    border-color: $item-default-border;
-    border-width: $item-border-width;
-    border-style: solid;
-}
-
-.mm-site_mod_forum, .mm-site_mod_forum-discussion {
-    .item.item-heading {
-        padding-bottom: 2px;
-
-        .mm-subject {
-            font-size: 90%;
-        }
-
-        .item-note {
-            font-size: 80%;
-            margin-left: 5px;
-        }
-    }
-
-    .card.highlight .item.item-heading {
-        background-color: $stable;
-
-        h2 {
-            font-weight: bold;
-        }
-    }
-}
-
-.mm-nest-cards {
-    .mm-nested-card {
-        padding: 0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        margin: 1px 10px 0px;
-        border-radius: 0;
-        background-color: #fff;
-
-        .item {
-            border-left: 0;
-            border-right: 0;
-        }
-    }
-
-    .item-divider {
-        display: none;
-    }
-
-    .mm-nested {
-        margin-left: 10px;
-    }
-}
-
-
-$mma-mod-quiz-warning-color:      #c00 !default;
-$mma-mod-quiz-highlight-color:    #d9edf7 !default;
-$mma-mod-quiz-alternate-color:    #fbfbfb !default;
-$mma-mod-quiz-conecterr-color:    #fcc !default;
-$mma-mod-quiz-selected-color:     #666 !default;
-
-p.mma-mod-quiz-warning {
-  color: $mma-mod-quiz-warning-color;
-}
-
-.mm-site_mod_quiz, .mm-site_mod_quiz-player {
-  .row {
-    min-height: $button-height + $grid-padding-width + 5px;
-
-    .button.button-block {
-      margin: 0;
-    }
-  }
-}
-
-.item.mma-mod-quiz-highlighted,
-.platform-android .item.mma-mod-quiz-highlighted,
-.platform-ios .item.mma-mod-quiz-highlighted,
-.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
-  background-color: $mma-mod-quiz-highlight-color;
-}
-
-.mma-quiz-textarea {
-  width: 100%;
-  height: 250px;
-  resize: none;
-}
-
-// Remove padding-top and bottom from navigation bar to minimize height used.
-.mma-mod-quiz-subheader {
-  .row {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .col {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .mm-timer {
-    line-height: $button-bar-button-height
-  }
-}
-
-// Alternate background color in rows.
-.mma-mod-quiz-table .row:nth-child(odd) {
-  background-color: $mma-mod-quiz-alternate-color;
-}
-
-.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
-  background-color: $mma-mod-quiz-conecterr-color;
-}
-
-.mm-site_mod_quiz-review .item {
-  h3 {
-    font-size: 18px;
-  }
-}
-
-.item.mma-mod-quiz-selected,
-.platform-android .item.mma-mod-quiz-selected,
-.platform-ios .item.mma-mod-quiz-selected,
-.mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
-  border: 3px solid $mma-mod-quiz-selected-color;
-  &:not(.mma-mod-quiz-last-of-page) {
-    border-bottom: 0;
-  }
-}
-
-
-$mma-mod-scorm-level-margin:		25px !default;
-$mma-mod-scorm-warning-color:		#c00 !default;
-
-@for $i from 0 through 15 {
-  .mma-scorm-level-#{$i} {
-    padding-left: $item-padding + 15px * $i
-  }
-}
-
-.mma-mod-scorm-checkbox-padding {
-  padding: 5px 10px;
-}
-
-.mma-mod-scorm-warning {
-  color: $mma-mod-scorm-warning-color;
-}
-
-ion-popover-view {
-  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
-  &.mma-scorm-popover {
-    height: auto;
-    max-height: 80%;
-    overflow: scroll;
-
-    ion-content {
-      position: relative;
-    }
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    p.padding {
-      margin: 0px; /* Don't add margins to p with padding inside the TOC. */
-    }
-  }
-
-  /* Decrease items padding in popover. */
-  .mma-scorm-popover-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-/* Fix popover styles in iOS. */
-.platform-ios ion-popover-view.mma-scorm-popover {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.mma-mod_survey-darkbg {
-  background-color: $item-divider-bg;
-}
-
-.mma-mod_survey-padding-top {
-  padding-top: 20px;
-}
-
-textarea.mma-mod_survey-textarea {
-  height: 100px;
-  border:1px solid $item-default-border;
-}
-
-select.mma-mod_survey-select {
-  background-color: transparent;
-  padding-left: 0px;
-  padding-right: $item-padding * 2;
-  max-width: 100%;
-
-  .mma-mod_survey-defaultoption {
-    display: none;
-  }
-}
-
-$mma-mod-wiki-toc-level-padding:    12px !default;
-$mma-mod-wiki-newentry-link-color:   red !default;
-$mma-mod-wiki-toc-title-color:   #666 !default;
-$mma-mod-wiki-toc-border-color:   #bbb !default;
-$mma-mod-wiki-toc-background-color:   #eee !default;
-$mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
-
-.wiki-toc {
-  border: 1px solid $mma-mod-wiki-toc-border-color;
-  background: $mma-mod-wiki-toc-background-color;
-  margin: 16px;
-  padding: 8px;
-}
-
-.wiki-toc-title {
-  color: $mma-mod-wiki-toc-title-color;
-  font-size: 1.1em;
-  font-variant: small-caps;
-  text-align: center;
-}
-
-.wiki-toc-section {
-  padding: 0;
-  margin: 2px 8px;
-}
-
-.wiki-toc-section-2 {
-  padding-left: $mma-mod-wiki-toc-level-padding;
-}
-
-.wiki-toc-section-3 {
-  padding-left: $mma-mod-wiki-toc-level-padding * 2;
-}
-
-.mm-site_mod_wiki .wiki_newentry {
-  color: $mma-mod-wiki-newentry-link-color;
-  font-style: italic;
-}
-
-/* Hide edit section links */
-.mma-mod_wiki-noedit a.wiki_edit_section {
-  display: none;
-}
-
-.mma-mod_wiki-subwiki-picker .item-divider {
-  font-weight: bold;
-}
-
-.mma-mod_wiki-subwiki-picker .item.item-selected {
-  background-color: $mma-mod-wiki-subwiki-selected-background-color;
-}
-
-.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
-  font-size: 24px;
-}
-
-
-$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
-$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
-$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
-
-.qbehaviour_deferredcbm_actual_percentage {
-  font-weight: bold;
-}
-.qbehaviour_deferredcbm_judgementok {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-judgementok-color;
-}
-.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-slightly-color;
-}
-.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-confident-color;
-}
-
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
-	font-weight: bold;
-	font-size: 16px;
-}
-
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
 .mma-qtype-ddimageortext-container {
   mm-loading {
@@ -2848,3 +2234,620 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 }
 
+
+
+$mma-mod-assign-warning-color:      #c00 !default;
+
+.mm-site_mod_assign,
+.mm-site_mod_assign-submission {
+
+  div.latesubmission {
+    background-color: #efcfcf;
+  }
+
+  div.earlysubmission {
+    background-color: #cfefcf;
+  }
+
+  div.submissioneditable {
+    color: red;
+  }
+}
+
+p.mma-mod-assign-warning {
+  color: $mma-mod-assign-warning-color;
+}
+
+/** Grading */
+.mm-grading-summary .advancedgrade {
+  display: none;
+}
+
+.gradingform_rubric {
+  overflow: auto;
+  padding-bottom: 1.5em;
+
+  .criterion {
+    border: 1px solid #DDD;
+    overflow: hidden;
+
+    &.even {
+      background: #F0F0F0;
+    }
+
+    .description,
+    .levels,
+    .remark,
+    .levels .level {
+      vertical-align: top;
+    }
+
+    .description,
+    .remark,
+    .levels .level {
+      padding: 3px;
+    }
+
+    .description {
+      width: 150px;
+      font-weight: bold;
+    }
+
+    .levels table {
+      width: 100%;
+      height: 100%;
+    }
+
+    .levels,
+    .levels table,
+    .levels table tbody {
+      padding: 0;
+      margin: 0;
+    }
+
+    .levels .level {
+      border-left: 1px solid #DDD;
+      max-width: 150px;
+    }
+
+    .levels .level .level-wrapper {
+      position: relative;
+    }
+
+    .levels .level.last {
+      border-right: 1px solid #DDD;
+    }
+
+    .levels .level .score {
+      font-style: italic;
+      color: #575;
+      font-weight: bold;
+      margin-top: 5px;
+      white-space: nowrap;
+    }
+
+    .levels .level .score .scorevalue {
+      padding-right: 5px;
+    }
+
+    .levels .level.currentchecked {
+      background: #fff0f0;
+    }
+
+    .levels .level.checked {
+      background: #d0ffd0;
+    }
+
+    .description.error,
+    .levels .level .definition.error,
+    .levels .level .score.error {
+      background: #FFDDDD;
+    }
+
+    .levels.error {
+      border: 1px solid red;
+    }
+  }
+
+  .options .optionsheading {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+  }
+  .options .option {
+    padding-bottom: 2px;
+  }
+  .options .option label {
+    margin-left: 5px;
+  }
+  .options .option .value {
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  .plainvalue.empty {
+    font-style: italic;
+    color: #AAA;
+  }
+
+  .criteria {
+    height:100%;
+  }
+}
+
+.gradingform_rubric-regrade {
+  padding: 10px;
+  background: #FFDDDD;
+  border: 1px solid #F00;
+  margin-bottom: 10px;
+}
+.gradingform_rubric-restored {
+  padding: 10px;
+  background: #FFFFDD;
+  border: 1px solid #FF0;
+  margin-bottom: 10px;
+}
+.gradingform_rubric-error {
+  color: red;
+  font-weight: bold;
+}
+
+
+.gradingform_guide-regrade {padding:10px;background:#FFDDDD;border:1px solid #F00;margin-bottom:10px;}
+.gradingform_guide-restored {padding:10px;background:#FFFFDD;border:1px solid #FF0;margin-bottom:10px;}
+.gradingform_guide-error {color:red;font-weight:bold;}
+
+.gradingform_guide {
+  .hidden {
+    display: none;
+  }
+
+  td {
+    padding: 8px;
+  }
+
+  .criterion {
+    border: 1px solid #DDD;
+    overflow: hidden;
+
+    .description,
+    .remark {
+      vertical-align: top;
+    }
+
+    &.even {
+      background: #F0F0F0;
+    }
+
+    .description {
+      width: 100%;
+    }
+    .description .criterionname {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      padding-right: 5px;
+    }
+    .description.error {
+      background: #FFDDDD;
+    }
+  }
+
+  .criterionnamelabel {
+    display: none;
+  }
+  .criterionshortname {
+    font-weight: bold;
+  }
+
+  .plainvalue.empty {
+    font-style: italic;
+    color: #AAA;
+  }
+  .plainvalue.editname {
+    font-weight: bold;
+  }
+
+  .options {
+    .optionsheading {
+      font-weight: bold;
+      font-size: 1.1em;
+      padding-bottom: 5px;
+    }
+    .option {
+      padding-bottom:2px;
+    }
+    .option label {
+      margin-left: 5px;
+    }
+    .option .value {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+  }
+
+  .commentheader  {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom:5px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .descriptionreadonly {
+      vertical-align: top;
+  }
+
+  .criteriondescriptionmarkers {
+    width: 300px;
+  }
+
+  .markingguideremark {
+      margin: 0;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  .criteriondescriptionscore {
+    display: inline;
+  }
+  .score label {
+      display: block;
+  }
+  .score input {
+      margin: 0;
+      width: auto;
+  }
+}
+
+$mma-chat-notice-badge: "stable" !default;
+
+// The notice displayed in the list.
+.mma-chat-notice {
+
+  text-align: center;
+  margin-top: 10px;
+
+  span {
+    @extend .badge;
+    @extend .badge-#{$mma-chat-notice-badge};
+    white-space: normal;
+  }
+}
+
+.mma-chat-input-inset {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.mma-chat-footer-note {
+    color: $button-light-text;
+    font-size: $font-size-base;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.mma-chat-send-form {
+  width: 100%;
+}
+
+.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
+  margin: 0;
+}
+.mm-site_mod_choice {
+  .chart {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 767px) {
+    .col {
+      border-left: $item-border-width solid $item-default-border;
+
+      &.item, .chart-item {
+        margin-top: 0;
+        border-top: 0;
+      }
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
+}
+
+$mma-mod-quiz-warning-color:      #c00 !default;
+$mma-mod-quiz-highlight-color:    #d9edf7 !default;
+$mma-mod-quiz-alternate-color:    #fbfbfb !default;
+$mma-mod-quiz-conecterr-color:    #fcc !default;
+$mma-mod-quiz-selected-color:     #666 !default;
+
+p.mma-mod-quiz-warning {
+  color: $mma-mod-quiz-warning-color;
+}
+
+.mm-site_mod_quiz, .mm-site_mod_quiz-player {
+  .row {
+    min-height: $button-height + $grid-padding-width + 5px;
+
+    .button.button-block {
+      margin: 0;
+    }
+  }
+}
+
+.item.mma-mod-quiz-highlighted,
+.platform-android .item.mma-mod-quiz-highlighted,
+.platform-ios .item.mma-mod-quiz-highlighted,
+.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
+  background-color: $mma-mod-quiz-highlight-color;
+}
+
+.mma-quiz-textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+}
+
+// Remove padding-top and bottom from navigation bar to minimize height used.
+.mma-mod-quiz-subheader {
+  .row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .col {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .mm-timer {
+    line-height: $button-bar-button-height
+  }
+}
+
+// Alternate background color in rows.
+.mma-mod-quiz-table .row:nth-child(odd) {
+  background-color: $mma-mod-quiz-alternate-color;
+}
+
+.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
+  background-color: $mma-mod-quiz-conecterr-color;
+}
+
+.mm-site_mod_quiz-review .item {
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.item.mma-mod-quiz-selected,
+.platform-android .item.mma-mod-quiz-selected,
+.platform-ios .item.mma-mod-quiz-selected,
+.mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
+  border: 3px solid $mma-mod-quiz-selected-color;
+  &:not(.mma-mod-quiz-last-of-page) {
+    border-bottom: 0;
+  }
+}
+
+
+$mma-mod-scorm-level-margin:		25px !default;
+$mma-mod-scorm-warning-color:		#c00 !default;
+
+@for $i from 0 through 15 {
+  .mma-scorm-level-#{$i} {
+    padding-left: $item-padding + 15px * $i
+  }
+}
+
+.mma-mod-scorm-checkbox-padding {
+  padding: 5px 10px;
+}
+
+.mma-mod-scorm-warning {
+  color: $mma-mod-scorm-warning-color;
+}
+
+ion-popover-view {
+  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
+  &.mma-scorm-popover {
+    height: auto;
+    max-height: 80%;
+    overflow: scroll;
+
+    ion-content {
+      position: relative;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    p.padding {
+      margin: 0px; /* Don't add margins to p with padding inside the TOC. */
+    }
+  }
+
+  /* Decrease items padding in popover. */
+  .mma-scorm-popover-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Fix popover styles in iOS. */
+.platform-ios ion-popover-view.mma-scorm-popover {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mma-mod_survey-darkbg {
+  background-color: $item-divider-bg;
+}
+
+.mma-mod_survey-padding-top {
+  padding-top: 20px;
+}
+
+textarea.mma-mod_survey-textarea {
+  height: 100px;
+  border:1px solid $item-default-border;
+}
+
+select.mma-mod_survey-select {
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: $item-padding * 2;
+  max-width: 100%;
+
+  .mma-mod_survey-defaultoption {
+    display: none;
+  }
+}
+
+$mma-mod-wiki-toc-level-padding:    12px !default;
+$mma-mod-wiki-newentry-link-color:   red !default;
+$mma-mod-wiki-toc-title-color:   #666 !default;
+$mma-mod-wiki-toc-border-color:   #bbb !default;
+$mma-mod-wiki-toc-background-color:   #eee !default;
+$mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
+
+.wiki-toc {
+  border: 1px solid $mma-mod-wiki-toc-border-color;
+  background: $mma-mod-wiki-toc-background-color;
+  margin: 16px;
+  padding: 8px;
+}
+
+.wiki-toc-title {
+  color: $mma-mod-wiki-toc-title-color;
+  font-size: 1.1em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.wiki-toc-section {
+  padding: 0;
+  margin: 2px 8px;
+}
+
+.wiki-toc-section-2 {
+  padding-left: $mma-mod-wiki-toc-level-padding;
+}
+
+.wiki-toc-section-3 {
+  padding-left: $mma-mod-wiki-toc-level-padding * 2;
+}
+
+.mm-site_mod_wiki .wiki_newentry {
+  color: $mma-mod-wiki-newentry-link-color;
+  font-style: italic;
+}
+
+/* Hide edit section links */
+.mma-mod_wiki-noedit a.wiki_edit_section {
+  display: none;
+}
+
+.mma-mod_wiki-subwiki-picker .item-divider {
+  font-weight: bold;
+}
+
+.mma-mod_wiki-subwiki-picker .item.item-selected {
+  background-color: $mma-mod-wiki-subwiki-selected-background-color;
+}
+
+.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
+  font-size: 24px;
+}
+
+
+.mma-forum-discussion-link {
+    text-decoration: none;
+}
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
+
+.mm-site_mod_forum, .mm-site_mod_forum-discussion {
+    .item.item-heading {
+        padding-bottom: 2px;
+
+        .mm-subject {
+            font-size: 90%;
+        }
+
+        .item-note {
+            font-size: 80%;
+            margin-left: 5px;
+        }
+    }
+
+    .card.highlight .item.item-heading {
+        background-color: $stable;
+
+        h2 {
+            font-weight: bold;
+        }
+    }
+}
+
+.mm-nest-cards {
+    .mm-nested-card {
+        padding: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        margin: 1px 10px 0px;
+        border-radius: 0;
+        background-color: #fff;
+
+        .item {
+            border-left: 0;
+            border-right: 0;
+        }
+    }
+
+    .item-divider {
+        display: none;
+    }
+
+    .mm-nested {
+        margin-left: 10px;
+    }
+}
+
+
+$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
+$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
+$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
+
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold;
+}
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-judgementok-color;
+}
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-slightly-color;
+}
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-confident-color;
+}
+
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+	font-weight: bold;
+	font-size: 16px;
+}
