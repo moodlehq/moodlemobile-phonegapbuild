@@ -10,7 +10,7 @@
     "wsextservice" : "local_mobile",
     "gcmpn": "webanywhere.sdemo",
     "customurlscheme": "moodlemobile",
-    "siteurl": "http://sdemo.webanywhere.co.uk",
+    "siteurl": "http://sdemo.webanywhere.co.uk/",
     "skipssoconfirmation": "false",
     "forcedefaultlanguage": "false"
 }
