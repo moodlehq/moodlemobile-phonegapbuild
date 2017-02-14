@@ -3,17 +3,15 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.moodle.moodlemobile"
-        versionCode = "20160"
-        version   = "3.2.0">
-    <name>Moodle Mobile</name>
+        versionCode = "2017021403"
+        version   = "1.0.3">
+    <name>Webanywhere Mobile App</name>
 
     <description>
-        Moodle Mobile official app
+        Webanywhere Demo Mobile app
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Pty Ltd
-    </author>
+    <author href="http://www.webanywhere.com" email="martin@webanywhere.co.uk">Martin Asling</author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
         <string>3.2.0</string>
