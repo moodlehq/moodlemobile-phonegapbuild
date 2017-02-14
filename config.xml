@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
+        id        = "uk.co.webanywhere.sdemo"
         versionCode = "2017021403"
         version   = "1.0.3">
     <name>Webanywhere Mobile App</name>
