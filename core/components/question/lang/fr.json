@@ -1,0 +1,16 @@
+{
+    "answer": "Réponse",
+    "complete": "Complet",
+    "correct": "Correct",
+    "errorattachmentsnotsupported": "L'application ne permet pas encore d'annexer des fichiers aux réponses.",
+    "errorinlinefilesnotsupported": "L'app ne permet pas encore la modification de fichiers en ligne.",
+    "errorquestionnotsupported": "Ce type de question n'est pas supporté par l'app : {{$a}}.",
+    "feedback": "Feedback",
+    "howtodraganddrop": "Tapoter pour sélectionner, puis tapoter pour déposer.",
+    "incorrect": "Incorrect",
+    "notanswered": "Pas encore répondu",
+    "notyetanswered": "Pas encore répondu",
+    "partiallycorrect": "Partiellement correct",
+    "questionmessage": "Question {{$a}} : {{$b}}",
+    "unknown": "Impossible de déterminer l'état"
+}

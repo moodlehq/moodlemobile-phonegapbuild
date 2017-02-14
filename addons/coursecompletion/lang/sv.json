@@ -1,0 +1,21 @@
+{
+    "complete": "Komplett",
+    "completecourse": "",
+    "completed": "Fullföljt",
+    "completiondate": "Datum för fullföljande",
+    "couldnotloadreport": "Det gick inte att läsa in rapporten för fullföljande av kursen, vänligen försök igen senare .",
+    "coursecompletion": "Fullföljande av kurs",
+    "criteria": "Villkor",
+    "criteriagroup": "Villkor grupp",
+    "criteriarequiredall": "Alla villkor nedan måste vara uppfyllda",
+    "criteriarequiredany": "Något villkor nedan måste vara uppfylld",
+    "inprogress": "Pågående",
+    "manualselfcompletion": "Manuell fullföljande av deltagare",
+    "notyetstarted": "Ännu inte börjat",
+    "pending": "Avvaktar",
+    "required": "Obligatorisk",
+    "requiredcriteria": "Obligatorisk villkor",
+    "requirement": "Krav",
+    "status": "Status",
+    "viewcoursereport": "Visa kursrapport"
+}

@@ -1,0 +1,16 @@
+{
+    "answer": "Antwoord",
+    "complete": "Voltooid",
+    "correct": "Juist",
+    "errorattachmentsnotsupported": "De applicatie ondersteunt nog geen blijlagen bij antwoorden.",
+    "errorinlinefilesnotsupported": "Deze applicatie ondersteunt het inline bewerken van bestanden nog niet.",
+    "errorquestionnotsupported": "Dit vraagtype wordt nog niet ondersteund door de app: {{$a}}.",
+    "feedback": "Feedback",
+    "howtodraganddrop": "Tik om te selecteren en tik om neer te zetten.",
+    "incorrect": "Niet juist",
+    "notanswered": "Nog niet beantwoord",
+    "notyetanswered": "Nog niet beantwoord",
+    "partiallycorrect": "Gedeeltelijk juist",
+    "questionmessage": "Vraag  {{$a}}: {{$b}}",
+    "unknown": "Kan status niet bepalen"
+}

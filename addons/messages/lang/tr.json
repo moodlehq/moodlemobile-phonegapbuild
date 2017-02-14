@@ -1,0 +1,15 @@
+{
+    "addcontact": "Rehbere ekle",
+    "blockcontact": "Kişiyi engelle",
+    "blocknoncontacts": "Tanımadığım kullanıcıları engelle",
+    "contactlistempty": "Kişi listeniz şu anda boş",
+    "contactname": "Adı",
+    "contacts": "Kişiler",
+    "messages": "Mesaj(lar)",
+    "nomessages": "Yeni mesaj yok",
+    "nousersfound": "Kullanıcı bulunamadı",
+    "removecontact": "Kişiyi kaldır",
+    "send": "Gönder",
+    "sendmessage": "Mesaj gönder",
+    "unblockcontact": "Engeli kaldır"
+}
