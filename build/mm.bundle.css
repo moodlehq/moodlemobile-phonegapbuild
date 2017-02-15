@@ -9203,7 +9203,8 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
   align-items: flex-end; }
   .mm-toast .loading {
     padding: 10px 20px;
-    border-radius: 25px; }
+    border-radius: 25px;
+    margin: 0 10px; }
 
 @media only screen and (max-width: 400px) {
   .mm-inapp-notification-backdrop .mm-inapp-notification {
@@ -9318,6 +9319,7 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   display: block;
   position: relative;
   width: 100%;
+  overflow: hidden;
   /* Force display inline */ }
   mm-format-text[max-height].inline, *[mm-format-text][max-height].inline {
     display: inline-block;
@@ -9340,7 +9342,9 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         position: absolute;
         bottom: 0;
         right: 0;
-        z-index: 1001; }
+        z-index: 1001;
+        background-color: white;
+        padding-left: 10px; }
         mm-format-text[max-height].mm-text-formatted.mm-shortened .mm-show-more:after, *[mm-format-text][max-height].mm-text-formatted.mm-shortened .mm-show-more:after {
           content: "\f123";
           margin-left: 10px;
@@ -9374,6 +9378,18 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   z-index: 20; }
   .action-sheet-open .modal-backdrop.active .modal {
     pointer-events: auto; }
+
+.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-messages-unreadfrom span.mm-course-download, .mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-unreadfrom span.mm-course-download, .mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
+  right: 44px; }
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px; }
+
+mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
+  padding: 8px; }
+
+.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
+  margin-top: 0; }
 
 .mm-fileuploader-file-handler input {
   position: absolute;
@@ -9452,18 +9468,6 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
     border-right: 1px solid #ddd;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd; }
-
-.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-messages-unreadfrom span.mm-course-download, .mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-unreadfrom span.mm-course-download, .mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
-  right: 44px; }
-
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px; }
-
-mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
-  padding: 8px; }
-
-.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
-  margin-top: 0; }
 
 .mm-mm_login_sites .item-thumbnail-left .item-content {
   padding-top: 16px;
@@ -9896,7 +9900,7 @@ p.mma-mod-assign-warning {
   padding: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  margin: 1px 10px 0px;
+  margin: 1px 10px 10px;
   border-radius: 0;
   background-color: #fff; }
   .mm-nest-cards .mm-nested-card .item, .mm-nest-cards .mm-nested-card .mm-grades-table .itemcenter, .mm-grades-table .mm-nest-cards .mm-nested-card .itemcenter {
@@ -9906,6 +9910,11 @@ p.mma-mod-assign-warning {
   display: none; }
 .mm-nest-cards .mm-nested {
   margin-left: 10px; }
+  .mm-nest-cards .mm-nested > article:nth-child(even) > .mm-nested-card > mma-mod-forum-discussion-post > .item-heading {
+    background: #eee; }
+.mm-nest-cards .mma-forum-reply-edit {
+  padding: 0;
+  border: 0; }
 
 p.mma-mod-quiz-warning {
   color: #c00; }

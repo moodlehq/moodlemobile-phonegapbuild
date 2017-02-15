@@ -1099,6 +1099,7 @@ mm-timer {
   .loading {
     padding: 10px 20px;
     border-radius: 25px;
+    margin: 0 10px;
   }
 }
 
@@ -1295,6 +1296,7 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   display: block;
   position: relative;
   width: 100%;
+  overflow: hidden;
 
   /* Force display inline */
   &.inline {
@@ -1328,6 +1330,8 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         bottom: 0;
         right: 0;
         z-index: 1001;
+        background-color: white;
+        padding-left: 10px;
 
         &:after {
           @extend .ion;
@@ -1386,6 +1390,23 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   .modal {
     pointer-events: auto;
   }
+}
+
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px;
+}
+
+mm-course-mod-description .card .item {
+  padding: $item-padding / 2;
+}
+
+.padding mm-course-mod-description .card {
+  margin-top: 0;
 }
 
 .mm-fileuploader-file-handler {
@@ -1503,23 +1524,6 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
     border-top: 1px solid $item-light-border;
     border-bottom: 1px solid $item-light-border;
   }
-}
-
-
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
-}
-
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px;
-}
-
-mm-course-mod-description .card .item {
-  padding: $item-padding / 2;
-}
-
-.padding mm-course-mod-description .card {
-  margin-top: 0;
 }
 
 
@@ -1723,6 +1727,7 @@ $bar-side-menu-text-color: $bar-content-text !default;
 .mm-site_mm_user-profile .mm-tab-handlers {
     padding-bottom: 16px;
 }
+
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
         min-height: 55px;
@@ -1749,7 +1754,6 @@ $bar-side-menu-text-color: $bar-content-text !default;
 .mm-site_coursesgrades .item .badge {
   right: 16px;
 }
-
 $mma-messages-date-badge: "stable" !default;
 
 // The date displayed in the list.
@@ -2215,7 +2219,7 @@ $mma-chat-notice-badge: "stable" !default;
         padding: 0;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
         overflow: hidden;
-        margin: 1px 10px 0px;
+        margin: 1px 10px 10px;
         border-radius: 0;
         background-color: #fff;
 
@@ -2231,6 +2235,15 @@ $mma-chat-notice-badge: "stable" !default;
 
     .mm-nested {
         margin-left: 10px;
+
+        &>article:nth-child(even)>.mm-nested-card>mma-mod-forum-discussion-post>.item-heading {
+            background: #eee;
+        }
+    }
+
+    .mma-forum-reply-edit {
+        padding: 0;
+        border: 0
     }
 }
 
