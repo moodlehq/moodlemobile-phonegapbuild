@@ -9,6 +9,7 @@
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "presets" : {"url": "http://isea-got.in", "username": "demo"},
+    "siteurl": "http://isea-got.in",
     "sync_ws_on" : true,
 "sync_css_on" : true,
 "sync_cron": 300000,
