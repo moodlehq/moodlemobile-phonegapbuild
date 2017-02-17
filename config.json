@@ -9,8 +9,19 @@
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "presets" : {"url": "http://isea-got.in", "username": ""},
+    "sync_ws_on" : true,
+"sync_css_on" : true,
+"sync_cron": 300000,
+"sync_ws" : 300000,
+"sync_css" : 3600000,
+"log_length" : 100,
+"dev_debug": false,
+"extra_js": [],
+"demo_sites": [],
+"notifications_enabled": true,
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile",
     "skipssoconfirmation": "false",
     "forcedefaultlanguage": "false"
+    "reportbugmail": "mobile@moodle.com"
 }
