@@ -421,6 +421,7 @@
     "mm.settings.navigatorlanguage": "Navigator language",
     "mm.settings.navigatoruseragent": "Navigator userAgent",
     "mm.settings.networkstatus": "Internet connection status",
+    "mm.settings.privacypolicy": "Privacy policy",
     "mm.settings.processorsettings": "Processor settings",
     "mm.settings.reportinbackground": "Report errors automatically",
     "mm.settings.settings": "Settings",

@@ -8549,6 +8549,8 @@ em {
 
 .item.item-disabled, .mm-grades-table .item-disabled.itemcenter, .platform-android .item.item-disabled, .platform-android .mm-grades-table .item-disabled.itemcenter, .mm-grades-table .platform-android .item-disabled.itemcenter {
   color: #999; }
+  .item.item-disabled h2, .mm-grades-table .item-disabled.itemcenter h2, .item.item-disabled .item-heading, .mm-grades-table .item-disabled.itemcenter .item-heading, .platform-android .item.item-disabled h2, .platform-android .mm-grades-table .item-disabled.itemcenter h2, .mm-grades-table .platform-android .item-disabled.itemcenter h2, .platform-android .item.item-disabled .item-heading, .platform-android .mm-grades-table .item-disabled.itemcenter .item-heading, .mm-grades-table .platform-android .item-disabled.itemcenter .item-heading {
+    color: #999; }
 
 .item-complex .item-checkbox .item-content {
   padding: 0; }
