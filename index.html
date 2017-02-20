@@ -21,6 +21,37 @@
     <script src="lib/angular-ckeditor/angular-ckeditor.js"></script>
     <script src="lib/angular-messages/angular-messages.js"></script>
     <script src="build/mm.bundle.js"></script>
+    <script>
+var admobid = {};
+if( /(android)/i.test(navigator.userAgent) ) { 
+    admobid = { // for Android
+        banner: 'ca-app-pub-8871136577207939/7772784807',
+        interstitial: 'ca-app-pub-8871136577207939/6296051605'
+    };
+} else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+    admobid = { // for iOS
+        banner: 'ca-app-pub-8871136577207939/7772784807',
+        interstitial: 'ca-app-pub-8871136577207939/6296051605'
+    };
+} else {
+    admobid = { // for Windows Phone
+        banner: 'ca-app-pub-8871136577207939/7772784807',
+        interstitial: 'ca-app-pub-8871136577207939/6296051605'
+    };
+}
+
+function initApp() {
+    if (AdMob) {
+        AdMob.createBanner({
+            adId : admobid.banner,
+            position : AdMob.AD_POSITION.BOTTOM_CENTER,
+            autoShow : true
+        });
+    }
+}
+
+document.addEventListener('deviceready', initApp, false);
+</script>
     <style></style> <!-- Empty style to make easier to test styles using Inspector. -->
   </head>
   <body ng-app="mm">
