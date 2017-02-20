@@ -14,6 +14,7 @@
 
 // Dependencies will be automatically added here, the following line must declare ionic as first dependency
 // and should not be split into multiple lines, see gulpfile.js.
+onDeviceReady: function() {
 angular.module('mm', ['ionic', 'ngCordova', 'angular-md5', 'pascalprecht.translate', 'ngAria', 'oc.lazyLoad', 'ckeditor',
             'ngMessages'])
 
@@ -27,3 +28,40 @@ angular.module('mm', ['ionic', 'ngCordova', 'angular-md5', 'pascalprecht.transla
 		}
 	});
 });
+
+
+ var admobid = {};
+    if( /(android)/i.test(navigator.userAgent) ) { // for android
+        admobid = {
+            banner: 'ca-app-pub-8871136577207939/7772784807',
+            interstitial: 'ca-app-pub-8871136577207939/6296051605'
+        };
+    } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
+        admobid = {
+            banner: 'ca-app-pub-8871136577207939/7772784807',
+            interstitial: 'ca-app-pub-8871136577207939/6296051605'
+        };
+    } else { // for windows phone
+        admobid = {
+            banner: 'ca-app-pub-8871136577207939/7772784807',
+            interstitial: 'ca-app-pub-8871136577207939/6296051605'
+        };
+    }
+
+
+    // It will display smart banner at top center, using the default options
+    if(AdMob) AdMob.createBanner( {
+    adId: admobid.banner, 
+    position: AdMob.AD_POSITION.TOP_CENTER, 
+    autoShow: true } );
+
+    // Prepare and load ad resource in background, e.g. at begining of game level
+    if(AdMob) AdMob.prepareInterstitial( {adId:admobid.interstitial, autoShow:false} );
+
+    // Show the interstitial later, e.g. at end of game level
+    if(AdMob) AdMob.showInterstitial();
+
+
+	
+	
+}
