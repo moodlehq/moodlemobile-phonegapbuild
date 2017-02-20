@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "ke.ac.spu.elearning"
-        versionCode = "2017-01"
+        versionCode = "201701"
         version   = "1.0.1">
     <name>SPU Elearning</name>
 
