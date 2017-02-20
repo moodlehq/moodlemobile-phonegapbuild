@@ -10,7 +10,7 @@
     "wsextservice" : "local_mobile",
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile",
-    "siteurl": "http://elearning.spu.ac.ke",
+    "siteurl": "http://elearning.spu.ac.ke/",
     "skipssoconfirmation": "false",
     "forcedefaultlanguage": "false"
 }
