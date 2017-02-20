@@ -1,7 +1,7 @@
 {
     "app_id" : "ke.ac.spu.elearning",
     "appname": "SPU Elearning",
-    "versioncode" : "2017-01",
+    "versioncode" : "201701",
     "versionname" : "1.0.1",
     "cache_expiration_time" : 300000,
     "default_lang" : "en",
