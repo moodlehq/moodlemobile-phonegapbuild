@@ -34,6 +34,15 @@
                             <i class="icon ion-ionic"></i>{{ 'mm.sidemenu.mycourses' | translate}}
                         </a>
                     </li>  
+                    <!-- START: ADDITION 06/Jan/2017 - add side menu "site home" -->
+                    
+                    <li>
+                        <a menu-close class="item item-icon-left ng-binding" ui-sref="site.mm_course-section" title="Site home" href="#/site/mm_course-section">
+                            <i class="icon ion-home"></i>{{ 'mm.sidemenu.news' | translate}}
+                        </a>
+                    </li>
+
+                <!-- END: ADDITION 06/Jan/2017 --> 
                     
                     <li class="item text-center" ng-if="(!handlers || !handlers.length) && !areNavHandlersLoaded()">
                         <ion-spinner></ion-spinner>
