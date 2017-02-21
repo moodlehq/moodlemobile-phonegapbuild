@@ -801,6 +801,7 @@
     "mma.mod_glossary.browsemode": "Browse entries",
     "mma.mod_glossary.byalphabet": "Alphabetically",
     "mma.mod_glossary.byauthor": "Group by author",
+    "mma.mod_glossary.bycategory": "Group by category",
     "mma.mod_glossary.bynewestfirst": "Newest first",
     "mma.mod_glossary.byrecentlyupdated": "Recently updated",
     "mma.mod_glossary.bysearch": "Search",
