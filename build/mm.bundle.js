@@ -1920,7 +1920,7 @@ angular.module('mm.core')
         self._getFileIdByUrl = function(fileUrl) {
         var url = self._removeRevisionFromUrl(fileUrl),
             filename;
-        url = $mmText.decodeHTML(decodeURIComponent(url));
+        url = $mmText.decodeHTML($mmText.decodeURIComponent(url));
         if (url.indexOf('/webservice/pluginfile') !== -1) {
             angular.forEach(urlAttributes, function(regex) {
                 url = url.replace(regex, '');
@@ -2885,7 +2885,7 @@ angular.module('mm.core')
         }
     };
         self.normalizeFileName = function(filename) {
-        filename = decodeURIComponent(filename);
+        filename = $mmText.decodeURIComponent(filename);
         return filename;
     };
         self.readFile = function(path, format) {
@@ -3230,7 +3230,7 @@ angular.module('mm.core')
                 extension = self.getFileExtension(fileName) || defaultExt,
                 newName,
                 number = 1;
-            fileNameWithoutExtension = $mmText.removeSpecialCharactersForFiles(decodeURIComponent(fileNameWithoutExtension));
+            fileNameWithoutExtension = $mmText.removeSpecialCharactersForFiles($mmText.decodeURIComponent(fileNameWithoutExtension));
             angular.forEach(entries, function(entry) {
                 files[entry.name] = entry;
             });
@@ -3250,7 +3250,7 @@ angular.module('mm.core')
                 return newName;
             }
         }).catch(function() {
-            return $mmText.removeSpecialCharactersForFiles(decodeURIComponent(fileName));
+            return $mmText.removeSpecialCharactersForFiles($mmText.decodeURIComponent(fileName));
         });
     };
         self.clearTmpFolder = function() {
@@ -5815,7 +5815,7 @@ angular.module('mm.core')
             }
         }
         return false;
-    }
+    };
         self.stripUnicode = function(text) {
         var stripped = "";
         for (var x = 0; x < text.length; x++) {
@@ -5824,6 +5824,20 @@ angular.module('mm.core')
             }
         }
         return stripped;
+    };
+        self.decodeURI = function(uri) {
+        try {
+            return decodeURI(uri);
+        } catch(ex) {
+        }
+        return uri;
+    };
+        self.decodeURIComponent = function(uri) {
+        try {
+            return decodeURIComponent(uri);
+        } catch(ex) {
+        }
+        return uri;
     };
     return self;
 }]);
@@ -6313,7 +6327,7 @@ angular.module('mm.core')
                     $mmFS.getBasePath().then(function(fsRoot) {
                         if (path.indexOf(fsRoot > -1)) {
                             path = path.replace(fsRoot, "");
-                            path = encodeURIComponent(decodeURIComponent(path));
+                            path = encodeURIComponent($mmText.decodeURIComponent(path));
                             path = fsRoot + path;
                         }
                         handleDocumentWithURL(
@@ -6608,6 +6622,9 @@ angular.module('mm.core')
                 self.timestamp = function() {
             return Math.round(Date.now() / 1000);
         };
+                self.readableTimestamp = function() {
+            return moment(Date.now()).format('YYYYMMDDHHmmSS');
+        };
                 self.isFalseOrZero = function(value) {
             return typeof value != 'undefined' && (value === false || value === "false" || parseInt(value) === 0);
         };
@@ -6893,19 +6910,19 @@ angular.module('mm.core')
             div.html(html);
             media = div[0].querySelectorAll('img, video, audio, source, track');
             angular.forEach(media, function(el) {
-                var src = paths[decodeURIComponent(el.getAttribute('src'))];
+                var src = paths[$mmText.decodeURIComponent(el.getAttribute('src'))];
                 if (typeof src !== 'undefined') {
                     el.setAttribute('src', src);
                 }
                 if (el.tagName == 'VIDEO' && el.getAttribute('poster')) {
-                    src = paths[decodeURIComponent(el.getAttribute('poster'))];
+                    src = paths[$mmText.decodeURIComponent(el.getAttribute('poster'))];
                     if (typeof src !== 'undefined') {
                         el.setAttribute('poster', src);
                     }
                 }
             });
             angular.forEach(div.find('a'), function(anchor) {
-                var href = decodeURIComponent(anchor.getAttribute('href')),
+                var href = $mmText.decodeURIComponent(anchor.getAttribute('href')),
                     url = paths[href];
                 if (typeof url !== 'undefined') {
                     anchor.setAttribute('href', url);
@@ -15117,7 +15134,7 @@ angular.module('mm.core.fileuploader')
 });
 
 angular.module('mm.core.fileuploader')
-.factory('$mmFileUploader', ["$mmSite", "$mmFS", "$q", "$timeout", "$log", "$mmSitesManager", "$mmFilepool", function($mmSite, $mmFS, $q, $timeout, $log, $mmSitesManager, $mmFilepool) {
+.factory('$mmFileUploader', ["$mmSite", "$mmFS", "$q", "$timeout", "$log", "$mmSitesManager", "$mmFilepool", "$mmUtil", function($mmSite, $mmFS, $q, $timeout, $log, $mmSitesManager, $mmFilepool, $mmUtil) {
     $log = $log.getInstance('$mmFileUploader');
     var self = {};
         self.storeFilesToUpload = function(folderPath, files) {
@@ -15170,15 +15187,27 @@ angular.module('mm.core.fileuploader')
     };
         self.uploadImage = function(uri, isFromAlbum) {
         $log.debug('Uploading an image');
-        var options = {};
-        if (typeof uri == 'undefined' || uri === ''){
+        var options = {
+                fileName: 'image_' + $mmUtil.readableTimestamp() + '.jpg',
+                mimeType: 'image/jpeg'
+            },
+            fileName,
+            extension;
+        if (typeof uri == 'undefined' || uri === '') {
             $log.debug('Received invalid URI in $mmFileUploader.uploadImage()');
             return $q.reject();
         }
+        if (isFromAlbum) {
+            fileName = $mmFS.getFileAndDirectoryFromPath(uri).name;
+            fileName = fileName.replace(/(\.[^\.]*)\?[^\.]*$/, '$1');
+            extension = $mmFS.getFileExtension(fileName);
+            if (extension) {
+                options.fileName = fileName;
+                options.mimeType = $mmFS.getMimeType(extension);
+            }
+        }
         options.deleteAfterUpload = !isFromAlbum;
         options.fileKey = 'file';
-        options.fileName = 'image_' + new Date().getTime() + '.jpg';
-        options.mimeType = 'image/jpeg';
         return self.uploadFile(uri, options);
     };
         self.uploadMedia = function(mediaFile) {
@@ -15187,7 +15216,7 @@ angular.module('mm.core.fileuploader')
             filename = mediaFile.name,
             split;
         split = filename.split('.');
-        split[0] += '_' + new Date().getTime();
+        split[0] += '_' + $mmUtil.readableTimestamp();
         filename = split.join('.');
         options.fileKey = null;
         options.fileName = filename;
@@ -35012,8 +35041,8 @@ angular.module('mm.addons.mod_book')
 });
 
 angular.module('mm.addons.mod_book')
-.factory('$mmaModBook', ["$mmFilepool", "$mmSite", "$mmFS", "$http", "$log", "$q", "$mmSitesManager", "$mmUtil", "mmaModBookComponent", "$mmCourse", function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, $mmSitesManager, $mmUtil, mmaModBookComponent,
-            $mmCourse) {
+.factory('$mmaModBook', ["$mmFilepool", "$mmSite", "$mmFS", "$http", "$log", "$q", "$mmSitesManager", "$mmUtil", "mmaModBookComponent", "$mmCourse", "$mmText", function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, $mmSitesManager, $mmUtil, mmaModBookComponent,
+            $mmCourse, $mmText) {
     $log = $log.getInstance('$mmaModBook');
     var self = {};
         function getBookDataCacheKey(courseId) {
@@ -35138,7 +35167,7 @@ angular.module('mm.addons.mod_book')
                         } else {
                             key = content.filepath.replace('/' + chapter + '/', '') + content.filename;
                         }
-                        map[chapter].paths[decodeURIComponent(key)] = content.fileurl;
+                        map[chapter].paths[$mmText.decodeURIComponent(key)] = content.fileurl;
                     }
                 }
             }
@@ -41444,7 +41473,8 @@ angular.module('mm.addons.mod_page')
 }]);
 
 angular.module('mm.addons.mod_page')
-.factory('$mmaModPage', ["$mmFilepool", "$mmSite", "$mmFS", "$http", "$log", "$q", "$mmSitesManager", "$mmUtil", "mmaModPageComponent", function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, $mmSitesManager, $mmUtil, mmaModPageComponent) {
+.factory('$mmaModPage', ["$mmFilepool", "$mmSite", "$mmFS", "$http", "$log", "$q", "$mmSitesManager", "$mmUtil", "$mmText", "mmaModPageComponent", function($mmFilepool, $mmSite, $mmFS, $http, $log, $q, $mmSitesManager, $mmUtil, $mmText,
+            mmaModPageComponent) {
     $log = $log.getInstance('$mmaModPage');
     var self = {};
         self.getPageHtml = function(contents, moduleId) {
@@ -41461,7 +41491,7 @@ angular.module('mm.addons.mod_page')
                 if (content.filepath !== '/') {
                     key = content.filepath.substr(1) + key;
                 }
-                paths[decodeURIComponent(key)] = url;
+                paths[$mmText.decodeURIComponent(key)] = url;
             }
         });
         promise = (function() {
@@ -44924,8 +44954,8 @@ angular.module('mm.addons.mod_resource')
 }]);
 
 angular.module('mm.addons.mod_resource')
-.factory('$mmaModResource', ["$mmFilepool", "$mmSite", "$mmUtil", "$mmFS", "$http", "$log", "$q", "$sce", "$mmApp", "$mmSitesManager", "mmaModResourceComponent", "mmCoreNotDownloaded", "mmCoreDownloading", "mmCoreDownloaded", function($mmFilepool, $mmSite, $mmUtil, $mmFS, $http, $log, $q, $sce, $mmApp, $mmSitesManager,
-            mmaModResourceComponent, mmCoreNotDownloaded, mmCoreDownloading, mmCoreDownloaded) {
+.factory('$mmaModResource', ["$mmFilepool", "$mmSite", "$mmUtil", "$mmFS", "$http", "$log", "$q", "$sce", "$mmApp", "$mmSitesManager", "$mmText", "mmaModResourceComponent", "mmCoreNotDownloaded", "mmCoreDownloading", "mmCoreDownloaded", function($mmFilepool, $mmSite, $mmUtil, $mmFS, $http, $log, $q, $sce, $mmApp, $mmSitesManager,
+            $mmText, mmaModResourceComponent, mmCoreNotDownloaded, mmCoreDownloading, mmCoreDownloaded) {
     $log = $log.getInstance('$mmaModResource');
     var self = {};
         self.getIframeSrc = function(module) {
@@ -44961,7 +44991,7 @@ angular.module('mm.addons.mod_resource')
             } else if (typeof target === 'undefined' && index === 0) {
                 indexUrl = url;
             } else {
-                paths[decodeURIComponent(fullpath)] = url;
+                paths[$mmText.decodeURIComponent(fullpath)] = url;
             }
         });
         promise = (function() {
@@ -49527,11 +49557,7 @@ angular.module('mm.addons.mod_wiki')
             });
         }
         return promise.catch(function(message) {
-            if (message) {
-                $mmUtil.showErrorModal(message);
-            } else {
-                $mmUtil.showErrorModal('Error saving wiki data.');
-            }
+            $mmUtil.showErrorModalDefault(message, 'Error saving wiki data.');
         }).finally(function() {
             modal.dismiss();
         });
@@ -49561,7 +49587,9 @@ angular.module('mm.addons.mod_wiki')
                     pageid: pageId,
                     pagetitle: $scope.page.title,
                     wikiid: wikiId,
-                    subwikiid: subwikiId
+                    subwikiid: subwikiId,
+                    userid: userId,
+                    groupid: groupId
                 };
             }
             return $ionicHistory.goBack();
@@ -49579,11 +49607,13 @@ angular.module('mm.addons.mod_wiki')
                     pageid: null,
                     pagetitle: $scope.page.title,
                     wikiid: wikiId,
-                    subwikiid: subwikiId
+                    subwikiid: subwikiId,
+                    userid: userId,
+                    groupid: groupId
                 };
             }
         } else {
-            $mmUtil.showModal('mm.core.success','mm.core.datastoredoffline');
+            $mmUtil.showModal('mm.core.success', 'mm.core.datastoredoffline');
         }
         return $ionicHistory.goBack();
     }
@@ -49593,9 +49623,19 @@ angular.module('mm.addons.mod_wiki')
                     backView.stateParams.pageid != pageId;
     }
     function backViewPageIsDifferentOffline() {
-        var backView = $ionicHistory.backView();
-        return backView.stateName != 'site.mod_wiki' || backView.stateParams.moduleid != module.id ||
-                    backView.stateParams.subwikiid != subwikiId || backView.stateParams.pagetitle != $scope.page.title;
+        var backView = $ionicHistory.backView(),
+            backViewParams = backView.stateParams;
+        if (backView.stateName != 'site.mod_wiki' || backViewParams.moduleid != module.id || backViewParams.wikiid != wikiId ||
+                backViewParams.pagetitle != $scope.page.title) {
+            return true;
+        }
+        var backSubwikiId = parseInt(backViewParams.subwikiid, 10) || 0;
+        if (backSubwikiId > 0 && subwikiId > 0) {
+            return backSubwikiId != subwikiId;
+        }
+        var backUserId = parseInt(backViewParams.userid, 10) || 0,
+            backGroupId = parseInt(backViewParams.groupid, 10) || 0;
+        return userId != backUserId || groupId != backGroupId;
     }
     function renewLock() {
         $mmaModWiki.getPageForEditing(pageId, section, true).then(function(response) {
@@ -49921,9 +49961,10 @@ angular.module('mm.addons.mod_wiki')
                                 return createSubwikiList(userGroups);
                             }
                             $scope.subwikiData.count = subwikiList.count;
-                            $scope.subwikiData.subwikiSelected = $stateParams.subwikiid || subwikiList.subwikiSelected;
-                            $scope.subwikiData.userSelected = $stateParams.userid || subwikiList.userSelected;
-                            $scope.subwikiData.groupSelected = $stateParams.groupid || subwikiList.groupSelected;
+                            setSelectedWiki($stateParams.subwikiid, $stateParams.userid, $stateParams.groupid);
+                            if (!isAnySubwikiSelected()) {
+                                setSelectedWiki(subwikiList.subwikiSelected, subwikiList.userSelected, subwikiList.groupSelected);
+                            }
                             $scope.subwikiData.subwikis = subwikiList.subwikis;
                             return $q.when();
                         });
@@ -49934,7 +49975,7 @@ angular.module('mm.addons.mod_wiki')
                         if (!refresh) {
                             tabsDelegate.select(action == 'map' ? 1 : 0);
                         }
-                        if ($scope.subwikiData.subwikiSelected === false || $scope.subwikiData.count <= 0) {
+                        if (!isAnySubwikiSelected() || $scope.subwikiData.count <= 0) {
                             return $q.reject($translate.instant('mma.mod_wiki.errornowikiavailable'));
                         }
                     }).then(function() {
@@ -49976,18 +50017,15 @@ angular.module('mm.addons.mod_wiki')
             promises = [],
             userGroupsIds = [],
             allParticipants = false,
-            myGroups = false,
+            showMyGroupsLabel = false,
             multiLevelList = false,
             currentUserId = $mmSite.getUserId() || false,
             allParticipantsTitle = $translate.instant('mm.core.allparticipants'),
             nonInGroupTitle = $translate.instant('mma.mod_wiki.notingroup'),
             myGroupsTitle = $translate.instant('mm.core.mygroups'),
-            otherGroupsTitle = $translate.instant('mm.core.othergroups'),
-            selectedUserId = false;
+            otherGroupsTitle = $translate.instant('mm.core.othergroups');
         $scope.subwikiData.subwikis = [];
-        $scope.subwikiData.subwikiSelected = $stateParams.subwikiid || false;
-        $scope.subwikiData.userSelected =  $stateParams.userid || false;
-        $scope.subwikiData.groupSelected =  $stateParams.groupid || false;
+        setSelectedWiki($stateParams.subwikiid, $stateParams.userid, $stateParams.groupid);
         $scope.subwikiData.count = 0;
         if (userGroups.length > 0) {
             userGroupsIds = userGroups.map(function(g) {
@@ -50045,15 +50083,7 @@ angular.module('mm.addons.mod_wiki')
                         groupLabel: groupLabel,
                         canedit: subwiki.canedit
                     });
-                    myGroups = true;
-                }
-            }
-            if (!$stateParams.subwikiid && ((userId > 0 && currentUserId == userId) || !$scope.subwikiData.subwikiSelected ||
-                    $scope.subwikiData.subwikiSelected < 1)) {
-                if (!$scope.subwikiData.userSelected || $scope.subwikiData.userSelected != currentUserId) {
-                    $scope.subwikiData.subwikiSelected = subwiki.id;
-                    $scope.subwikiData.userSelected = userId;
-                    $scope.subwikiData.groupSelected = groupId;
+                    showMyGroupsLabel = true;
                 }
             }
         });
@@ -50064,6 +50094,53 @@ angular.module('mm.addons.mod_wiki')
                 return a.group - b.group;
             });
             $scope.subwikiData.count = subwikiList.length;
+            if ((!$stateParams.subwikiid || (!$stateParams.userid && !$stateParams.groupid)) && !isAnySubwikiSelected() &&
+                    subwikiList.length > 0) {
+                var firstCanEdit = false;
+                    candidateNoFirstPage = false,
+                    candidateFirstPage = false;
+                for (var x in subwikiList) {
+                    var subwiki = subwikiList[x];
+                    if (subwiki.canedit) {
+                        var candidateSubwikiId = false;
+                        if (subwiki.user > 0) {
+                            if (currentUserId == subwiki.user) {
+                                candidateSubwikiId = subwiki.id;
+                            }
+                        } else if (subwiki.group > 0) {
+                            if (showMyGroupsLabel) {
+                                candidateSubwikiId = subwiki.id;
+                            }
+                        } else if (subwiki.id > 0) {
+                            candidateSubwikiId = subwiki.id;
+                        }
+                        if (candidateSubwikiId !== false) {
+                            if (candidateSubwikiId > 0) {
+                                candidateFirstPage = x;
+                                break;
+                            } else if (candidateNoFirstPage === false) {
+                                candidateNoFirstPage = x;
+                            }
+                        } else if (firstCanEdit === false) {
+                            firstCanEdit = x;
+                        }
+                    }
+                }
+                var subWikiToTake;
+                if (candidateFirstPage !== false) {
+                    subWikiToTake = candidateFirstPage;
+                } else if (candidateNoFirstPage !== false) {
+                    subWikiToTake = candidateNoFirstPage;
+                } else if (firstCanEdit !== false) {
+                    subWikiToTake = firstCanEdit;
+                } else {
+                    subWikiToTake = 0;
+                }
+                if (typeof subwikiList[subWikiToTake] != "undefined") {
+                    setSelectedWiki(subwikiList[subWikiToTake].id, subwikiList[subWikiToTake].user,
+                        subwikiList[subWikiToTake].group);
+                }
+            }
             if (multiLevelList) {
                 for (var i in subwikiList) {
                     var subwiki = subwikiList[i];
@@ -50074,7 +50151,7 @@ angular.module('mm.addons.mod_wiki')
                     }
                     grouping.subwikis.push(subwiki);
                 }
-            } else if (myGroups) {
+            } else if (showMyGroupsLabel) {
                 var noGrouping = {label: "", subwikis: []},
                     myGroupsGrouping = {label: myGroupsTitle, subwikis: []},
                     otherGroupsGrouping = {label: otherGroupsTitle, subwikis: []};
@@ -50082,7 +50159,7 @@ angular.module('mm.addons.mod_wiki')
                     var subwiki = subwikiList[i];
                     if (typeof subwiki.canedit == 'undefined') {
                         noGrouping.subwikis.push(subwiki);
-                    } else if(subwiki.canedit) {
+                    } else if (subwiki.canedit) {
                         myGroupsGrouping.subwikis.push(subwiki);
                     } else {
                         otherGroupsGrouping.subwikis.push(subwiki);
@@ -50134,31 +50211,23 @@ angular.module('mm.addons.mod_wiki')
         });
     }
     function fetchWikiPage() {
-        var groupId, userId, subwikiId;
         currentSubwiki = false;
-        angular.forEach(loadedSubwikis, function(subwiki) {
-            subwikiId = parseInt(subwiki.id, 10);
-            userId = parseInt(subwiki.userid, 10);
-            groupId = parseInt(subwiki.groupid, 10);
-            if (!currentSubwiki && subwikiId == $scope.subwikiData.subwikiSelected && userId == $scope.subwikiData.userSelected  &&
-                    groupId == $scope.subwikiData.groupSelected) {
-                currentSubwiki = subwiki;
+        for (var x in loadedSubwikis) {
+            if ($scope.isSubwikiSelected(loadedSubwikis[x])) {
+                currentSubwiki = loadedSubwikis[x];
+                break;
             }
-        });
+        }
         if (!currentSubwiki) {
             return $q.reject();
         }
-        $scope.subwikiData.subwikiSelected = parseInt(currentSubwiki.id, 10);
-        $scope.subwikiData.userSelected = parseInt(currentSubwiki.userid, 10);
-        $scope.subwikiData.groupSelected = parseInt(currentSubwiki.groupid, 10);
+        setSelectedWiki(currentSubwiki.id, currentSubwiki.userid, currentSubwiki.groupid);
         return fetchSubwikiPages(currentSubwiki).then(function() {
             $scope.canEdit = currentSubwiki.canedit && $mmaModWiki.isPluginEnabledForEditing();
             return fetchPageContents(currentPage).then(function(pageContents) {
                 if (pageContents) {
                     $scope.title = pageContents.title;
-                    $scope.subwikiData.subwikiSelected = parseInt(pageContents.subwikiid, 10);
-                    $scope.subwikiData.userSelected = parseInt(pageContents.userid, 10);
-                    $scope.subwikiData.groupSelected = parseInt(pageContents.groupid, 10);
+                    setSelectedWiki(pageContents.subwikiid, pageContents.userid, pageContents.groupid);
                     $scope.pageContent = replaceEditLinks(pageContents.cachedcontent);
                     $scope.canEdit = pageContents.caneditpage && $mmaModWiki.isPluginEnabledForEditing();
                     currentPageObj = pageContents;
@@ -50185,10 +50254,11 @@ angular.module('mm.addons.mod_wiki')
             }
             return $mmaModWikiOffline.getSubwikiNewPages(subwiki.id, subwiki.wikiid, subwiki.userid, subwiki.groupid)
                     .then(function(offlinePages) {
-                if (!currentPage && !pageTitle) {
+                if (!currentPage) {
+                    var searchTitle = pageTitle ? pageTitle : wiki.firstpagetitle;
                     angular.forEach(offlinePages, function(subwikiPage) {
-                        if (!currentPage && subwikiPage.title == wiki.firstpagetitle) {
-                            currentPage = subwikiPage.id;
+                        if (!currentPage && subwikiPage.title == searchTitle) {
+                            pageTitle = subwikiPage.title;
                         }
                     });
                 }
@@ -50202,7 +50272,7 @@ angular.module('mm.addons.mod_wiki')
     }
     function fetchPageContents(pageId) {
         if (!pageId) {
-            var title = title || wiki.firstpagetitle;
+            var title = pageTitle || wiki.firstpagetitle;
             return $mmaModWikiOffline.getNewPage(title, currentSubwiki.id, currentSubwiki.wikiid, currentSubwiki.userid,
                     currentSubwiki.groupid).then(function(offlinePage) {
                 $scope.pageIsOffline = true;
@@ -50378,6 +50448,24 @@ angular.module('mm.addons.mod_wiki')
             }
         }
     });
+    function setSelectedWiki(subwiki, user, group) {
+        $scope.subwikiData.subwikiSelected = (subwiki = parseInt(subwiki, 10)) > 0 ? subwiki : 0;
+        $scope.subwikiData.userSelected = parseInt(user, 10) || 0;
+        $scope.subwikiData.groupSelected = parseInt(group, 10) || 0;
+    }
+    $scope.isSubwikiSelected = function(subwiki) {
+        var subwikiId = parseInt(subwiki.id, 10) || 0;
+        if (subwikiId > 0 && $scope.subwikiData.subwikiSelected > 0) {
+            return subwikiId == $scope.subwikiData.subwikiSelected;
+        }
+        var userId = parseInt(subwiki.user, 10) || parseInt(subwiki.userid, 10) || 0,
+            groupId = parseInt(subwiki.group, 10) || parseInt(subwiki.groupid, 10) || 0;
+        return userId == $scope.subwikiData.userSelected && groupId == $scope.subwikiData.groupSelected;
+    };
+    function isAnySubwikiSelected() {
+        return $scope.subwikiData.subwikiSelected > 0 || $scope.subwikiData.userSelected > 0 ||
+            $scope.subwikiData.groupSelected > 0;
+    }
     $scope.$on('$destroy', function() {
         popover && popover.remove();
         newPageObserver && newPageObserver.off && newPageObserver.off();
@@ -50411,9 +50499,9 @@ angular.module('mm.addons.mod_wiki')
 }]);
 
 angular.module('mm.addons.mod_wiki')
-.factory('$mmaModWikiHandlers', ["$mmCourse", "$mmaModWiki", "$state", "$mmContentLinksHelper", "$mmCourseHelper", "$mmUtil", "$q", "mmaModWikiComponent", "$mmaModWikiPrefetchHandler", "mmCoreDownloading", "mmCoreNotDownloaded", "mmCoreEventPackageStatusChanged", "mmCoreOutdated", "$mmCoursePrefetchDelegate", "$mmSite", "$mmEvents", "$mmaModWikiSync", "$mmContentLinkHandlerFactory", function($mmCourse, $mmaModWiki, $state, $mmContentLinksHelper, $mmCourseHelper, $mmUtil, $q,
+.factory('$mmaModWikiHandlers', ["$mmCourse", "$mmaModWiki", "$state", "$mmContentLinksHelper", "$mmCourseHelper", "$mmUtil", "$q", "mmaModWikiComponent", "$mmaModWikiPrefetchHandler", "mmCoreDownloading", "mmCoreNotDownloaded", "mmCoreEventPackageStatusChanged", "mmCoreOutdated", "$mmCoursePrefetchDelegate", "$mmSite", "$mmEvents", "$mmaModWikiSync", "$mmContentLinkHandlerFactory", "$mmText", function($mmCourse, $mmaModWiki, $state, $mmContentLinksHelper, $mmCourseHelper, $mmUtil, $q,
         mmaModWikiComponent, $mmaModWikiPrefetchHandler, mmCoreDownloading, mmCoreNotDownloaded, mmCoreEventPackageStatusChanged,
-        mmCoreOutdated, $mmCoursePrefetchDelegate, $mmSite, $mmEvents, $mmaModWikiSync, $mmContentLinkHandlerFactory) {
+        mmCoreOutdated, $mmCoursePrefetchDelegate, $mmSite, $mmEvents, $mmaModWikiSync, $mmContentLinkHandlerFactory, $mmText) {
     var self = {};
         self.courseContent = function() {
         var self = {};
@@ -50581,7 +50669,7 @@ angular.module('mm.addons.mod_wiki')
         courseId = courseId || params.courseid || params.cid;
         var section = "";
         if (typeof params.section != 'undefined') {
-            section = decodeURIComponent(params.section.replace(/\+/g, ' '));
+            section = $mmText.decodeURIComponent(params.section.replace(/\+/g, ' '));
         }
         return [{
             action: function(siteId) {
@@ -51094,12 +51182,14 @@ angular.module('mm.addons.mod_wiki')
                     content: content,
                     contentformat: 'html'
                 };
-            if (subwikiId) {
+            subwikiId = parseInt(subwikiId, 10) || 0;
+            wikiId = parseInt(wikiId, 10) > 0 ? parseInt(wikiId, 10) : 0;
+            if (subwikiId && subwikiId > 0) {
                 params.subwikiid = subwikiId;
             } else if (wikiId) {
                 params.wikiid = wikiId;
-                params.userid = userId || 0;
-                params.groupid = groupId || 0;
+                params.userid = parseInt(userId, 10) > 0 ? parseInt(userId, 10) : 0;
+                params.groupid = parseInt(groupId, 10) > 0 ? parseInt(groupId, 10) : 0;
             }
             return site.write('mod_wiki_new_page', params).catch(function(error) {
                 return $q.reject({
@@ -51254,10 +51344,10 @@ angular.module('mm.addons.mod_wiki')
     var self = {};
         self.deleteNewPage = function(title, subwikiId, wikiId, userId, groupId,  siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            subwikiId = parseInt(subwikiId, 10) || 0;
-            wikiId = parseInt(wikiId, 10) || 0;
-            userId = parseInt(userId, 10) || 0;
-            groupId = parseInt(groupId, 10) || 0;
+            subwikiId = (subwikiId = parseInt(subwikiId, 10)) > 0 ? subwikiId : 0;
+            wikiId = (wikiId = parseInt(wikiId, 10)) > 0 ? wikiId : 0;
+            userId = (userId = parseInt(userId, 10)) > 0 ? userId : 0;
+            groupId = (groupId = parseInt(groupId, 10)) > 0 ? groupId : 0;
             return site.getDb().remove(mmaModWikiNewPagesStore, [subwikiId, wikiId, userId, groupId, title]);
         });
     };
@@ -51268,19 +51358,19 @@ angular.module('mm.addons.mod_wiki')
     };
         self.getNewPage = function(title, subwikiId, wikiId, userId, groupId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            subwikiId = parseInt(subwikiId, 10) || 0;
-            wikiId = parseInt(wikiId, 10) || 0;
-            userId = parseInt(userId, 10) || 0;
-            groupId = parseInt(groupId, 10) || 0;
+            subwikiId = (subwikiId = parseInt(subwikiId, 10)) > 0 ? subwikiId : 0;
+            wikiId = (wikiId = parseInt(wikiId, 10)) > 0 ? wikiId : 0;
+            userId = (userId = parseInt(userId, 10)) > 0 ? userId : 0;
+            groupId = (groupId = parseInt(groupId, 10)) > 0 ? groupId : 0;
             return site.getDb().get(mmaModWikiNewPagesStore, [subwikiId, wikiId, userId, groupId, title]);
         });
     };
         self.getSubwikiNewPages = function(subwikiId, wikiId, userId, groupId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            subwikiId = parseInt(subwikiId, 10) || 0;
-            wikiId = parseInt(wikiId, 10) || 0;
-            userId = parseInt(userId, 10) || 0;
-            groupId = parseInt(groupId, 10) || 0;
+            subwikiId = (subwikiId = parseInt(subwikiId, 10)) > 0 ? subwikiId : 0;
+            wikiId = (wikiId = parseInt(wikiId, 10)) > 0 ? wikiId : 0;
+            userId = (userId = parseInt(userId, 10)) > 0 ? userId : 0;
+            groupId = (groupId = parseInt(groupId, 10)) > 0 ? groupId : 0;
             return site.getDb().whereEqual(mmaModWikiNewPagesStore, 'subwikiWikiUserGroup', [subwikiId, wikiId, userId, groupId]);
         });
     };
@@ -51304,10 +51394,10 @@ angular.module('mm.addons.mod_wiki')
                 entry = {
                     title: title,
                     cachedcontent: content,
-                    subwikiid: parseInt(subwikiId, 10) || 0,
-                    wikiid: parseInt(wikiId, 10) || 0,
-                    userid: parseInt(userId, 10) || 0,
-                    groupid: parseInt(groupId, 10) || 0,
+                    subwikiid: (subwikiId = parseInt(subwikiId, 10)) > 0 ? subwikiId : 0,
+                    wikiid: (wikiId = parseInt(wikiId, 10)) > 0 ? wikiId : 0,
+                    userid: (userId = parseInt(userId, 10)) > 0 ? userId : 0,
+                    groupid: (groupId = parseInt(groupId, 10)) > 0 ? groupId : 0,
                     contentformat: 'html',
                     timecreated: now,
                     timemodified: now,
@@ -51500,13 +51590,14 @@ angular.module('mm.addons.mod_wiki')
         });
     };
     self.subwikiBlockId = function(subwikiId, wikiId, userId, groupId) {
+        subwikiId = parseInt(subwikiId, 10) || 0;
         if (subwikiId && subwikiId > 0) {
-            return parseInt(subwikiId, 10) || 0;
+            return subwikiId;
         }
+        wikiId = (wikiId = parseInt(wikiId, 10)) > 0 ? wikiId : 0;
         if(wikiId) {
-            wikiId = parseInt(wikiId, 10) || 0;
-            userId = parseInt(userId, 10) || 0;
-            groupId = parseInt(groupId, 10) || 0;
+            userId = parseInt(userId, 10) > 0 ? parseInt(userId, 10) : 0;
+            groupId = parseInt(groupId, 10) > 0 ? parseInt(groupId, 10) : 0;
             return wikiId + ':' + userId + ':' + groupId;
         }
         return false;
