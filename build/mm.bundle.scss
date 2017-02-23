@@ -1395,6 +1395,14 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   }
 }
 
+// Disable action sheet if loading is active.
+.action-sheet-open .backdrop-loading.active {
+  z-index: 21;
+}
+.action-sheet-open.loading-active .action-sheet-backdrop {
+  pointer-events: none;
+}
+
 
 .item.item-button-right .badge.mm-course-download{
   right: $spinner-width + $item-padding;
