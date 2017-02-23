@@ -8926,7 +8926,16 @@ mm-timer.mm-timer.mm-timer-timeleft-15 {
   font-weight: bold; }
 
 .popover.mm-context-menu {
-  width: 320px; }
+  width: 320px;
+  max-width: 100%; }
+
+.popup-container.mm-nohead .popup-head {
+  display: none; }
+
+.popup-container.mm-bigpopup .popup {
+  width: 90%;
+  width: calc(100% - 20px);
+  max-width: none; }
 
 .mm-text-with-icon-right {
   line-height: 22px; }

@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-angular.module('mm', ['ionic', 'mm.core', 'mm.core.comments', 'mm.core.contentlinks', 'mm.core.course', 'mm.core.courses', 'mm.core.fileuploader', 'mm.core.grades', 'mm.core.login', 'mm.core.question', 'mm.core.settings', 'mm.core.sharedfiles', 'mm.core.sidemenu', 'mm.core.textviewer', 'mm.core.user', 'mm.addons.badges', 'mm.addons.calendar', 'mm.addons.competency', 'mm.addons.coursecompletion', 'mm.addons.files', 'mm.addons.frontpage', 'mm.addons.grades', 'mm.addons.messageoutput', 'mm.addons.messages', 'mm.addons.notes', 'mm.addons.notifications', 'mm.addons.participants', 'mm.addons.pushnotifications', 'mm.addons.remotestyles', 'mm.addons.messageoutput_airnotifier', 'mm.addons.mod_assign', 'mm.addons.mod_book', 'mm.addons.mod_chat', 'mm.addons.mod_choice', 'mm.addons.mod_folder', 'mm.addons.mod_forum', 'mm.addons.mod_glossary', 'mm.addons.mod_imscp', 'mm.addons.mod_label', 'mm.addons.mod_lti', 'mm.addons.mod_page', 'mm.addons.mod_quiz', 'mm.addons.mod_resource', 'mm.addons.mod_scorm', 'mm.addons.mod_survey', 'mm.addons.mod_url', 'mm.addons.mod_wiki', 'mm.addons.qbehaviour_adaptive', 'mm.addons.qbehaviour_adaptivenopenalty', 'mm.addons.qbehaviour_deferredcbm', 'mm.addons.qbehaviour_deferredfeedback', 'mm.addons.qbehaviour_immediatecbm', 'mm.addons.qbehaviour_informationitem', 'mm.addons.qbehaviour_immediatefeedback', 'mm.addons.qbehaviour_interactive', 'mm.addons.qbehaviour_interactivecountback', 'mm.addons.qbehaviour_manualgraded', 'mm.addons.qtype_calculated', 'mm.addons.qtype_calculatedmulti', 'mm.addons.qtype_calculatedsimple', 'mm.addons.qtype_ddimageortext', 'mm.addons.qtype_ddmarker', 'mm.addons.qtype_ddwtos', 'mm.addons.qtype_description', 'mm.addons.qtype_essay', 'mm.addons.qtype_gapselect', 'mm.addons.qtype_match', 'mm.addons.qtype_multianswer', 'mm.addons.qtype_multichoice', 'mm.addons.qtype_numerical', 'mm.addons.qtype_randomsamatch', 'mm.addons.qtype_shortanswer', 'mm.addons.qtype_truefalse', 'mm.addons.userprofilefield_checkbox', 'mm.addons.userprofilefield_datetime', 'mm.addons.userprofilefield_menu', 'mm.addons.userprofilefield_text', 'mm.addons.userprofilefield_textarea', 'ngCordova', 'angular-md5', 'pascalprecht.translate', 'ngAria', 'oc.lazyLoad', 'ckeditor',
+angular.module('mm', ['ionic', 'mm.core', 'mm.core.comments', 'mm.core.contentlinks', 'mm.core.course', 'mm.core.courses', 'mm.core.fileuploader', 'mm.core.grades', 'mm.core.login', 'mm.core.question', 'mm.core.settings', 'mm.core.sharedfiles', 'mm.core.sidemenu', 'mm.core.textviewer', 'mm.core.user', 'mm.addons.badges', 'mm.addons.calendar', 'mm.addons.competency', 'mm.addons.coursecompletion', 'mm.addons.files', 'mm.addons.frontpage', 'mm.addons.grades', 'mm.addons.messageoutput', 'mm.addons.messages', 'mm.addons.notes', 'mm.addons.notifications', 'mm.addons.participants', 'mm.addons.pushnotifications', 'mm.addons.remotestyles', 'mm.addons.messageoutput_airnotifier', 'mm.addons.mod_assign', 'mm.addons.mod_book', 'mm.addons.mod_chat', 'mm.addons.mod_choice', 'mm.addons.mod_folder', 'mm.addons.mod_forum', 'mm.addons.mod_glossary', 'mm.addons.mod_imscp', 'mm.addons.mod_label', 'mm.addons.mod_lti', 'mm.addons.mod_page', 'mm.addons.mod_quiz', 'mm.addons.mod_resource', 'mm.addons.mod_scorm', 'mm.addons.mod_survey', 'mm.addons.mod_url', 'mm.addons.mod_wiki', 'mm.addons.qbehaviour_adaptive', 'mm.addons.qbehaviour_adaptivenopenalty', 'mm.addons.qbehaviour_deferredcbm', 'mm.addons.qbehaviour_deferredfeedback', 'mm.addons.qbehaviour_immediatecbm', 'mm.addons.qbehaviour_immediatefeedback', 'mm.addons.qbehaviour_informationitem', 'mm.addons.qbehaviour_interactive', 'mm.addons.qbehaviour_interactivecountback', 'mm.addons.qbehaviour_manualgraded', 'mm.addons.qtype_calculated', 'mm.addons.qtype_calculatedmulti', 'mm.addons.qtype_calculatedsimple', 'mm.addons.qtype_ddimageortext', 'mm.addons.qtype_ddmarker', 'mm.addons.qtype_ddwtos', 'mm.addons.qtype_description', 'mm.addons.qtype_essay', 'mm.addons.qtype_gapselect', 'mm.addons.qtype_match', 'mm.addons.qtype_multianswer', 'mm.addons.qtype_multichoice', 'mm.addons.qtype_numerical', 'mm.addons.qtype_randomsamatch', 'mm.addons.qtype_shortanswer', 'mm.addons.qtype_truefalse', 'mm.addons.userprofilefield_checkbox', 'mm.addons.userprofilefield_datetime', 'mm.addons.userprofilefield_menu', 'mm.addons.userprofilefield_text', 'mm.addons.userprofilefield_textarea', 'ngCordova', 'angular-md5', 'pascalprecht.translate', 'ngAria', 'oc.lazyLoad', 'ckeditor',
             'ngMessages'])
 .run(["$ionicPlatform", function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -6578,6 +6578,9 @@ angular.module('mm.core')
             options = options || {};
             options.template = addFormatTextIfNeeded(template);
             options.title = title;
+            if (!title) {
+                options.cssClass = 'mm-nohead';
+            }
             return $ionicPopup.confirm(options).then(function(confirmed) {
                 if (!confirmed) {
                     return $q.reject();
@@ -6805,6 +6808,20 @@ angular.module('mm.core')
                 });
             });
             return deferred.promise;
+        };
+                self.promiseWorks = function(promise) {
+            return promise.then(function() {
+                return true;
+            }).catch(function() {
+                return false;
+            });
+        };
+                self.promiseFails = function(promise) {
+            return promise.then(function() {
+                return false;
+            }).catch(function() {
+                return true;
+            });
         };
                 self.basicLeftCompare = function(itemA, itemB, maxLevels, level, undefinedIsNull) {
             level = level || 0;
@@ -8597,7 +8614,7 @@ angular.module('mm.core')
                         $mmUtil.showErrorModal(error);
                     });
                 } else {
-                    promise = fileSize ? $mmUtil.confirmDownloadSize(fileSize) : $q.when();
+                    promise = fileSize ? $mmUtil.confirmDownloadSize({size: fileSize, total: true}) : $q.when();
                     promise.then(function() {
                         $mmFilepool.invalidateFileByUrl(siteId, fileUrl).finally(function() {
                             scope.isDownloading = true;
@@ -16744,7 +16761,8 @@ angular.module('mm.core.login')
         $scope.issue = issue;
         var popup = $ionicPopup.show({
             templateUrl:  'core/components/login/templates/login-issue.html',
-            scope: $scope
+            scope: $scope,
+            cssClass: 'mm-nohead mm-bigpopup'
         });
         $scope.closePopup = function() {
             popup.close();
@@ -21393,16 +21411,16 @@ angular.module('mm.addons.qbehaviour_immediatecbm', ['mm.core'])
     			'$mmaQbehaviourImmediateCBMHandler');
 }]);
 
-angular.module('mm.addons.qbehaviour_informationitem', ['mm.core'])
-.config(["$mmQuestionBehaviourDelegateProvider", function($mmQuestionBehaviourDelegateProvider) {
-    $mmQuestionBehaviourDelegateProvider.registerHandler('mmaQbehaviourInformationItem', 'informationitem',
-    			'$mmaQbehaviourInformationItemHandler');
-}]);
-
 angular.module('mm.addons.qbehaviour_immediatefeedback', ['mm.core'])
 .config(["$mmQuestionBehaviourDelegateProvider", function($mmQuestionBehaviourDelegateProvider) {
     $mmQuestionBehaviourDelegateProvider.registerHandler('mmaQbehaviourImmediateFeedback', 'immediatefeedback',
     			'$mmaQbehaviourImmediateFeedbackHandler');
+}]);
+
+angular.module('mm.addons.qbehaviour_informationitem', ['mm.core'])
+.config(["$mmQuestionBehaviourDelegateProvider", function($mmQuestionBehaviourDelegateProvider) {
+    $mmQuestionBehaviourDelegateProvider.registerHandler('mmaQbehaviourInformationItem', 'informationitem',
+    			'$mmaQbehaviourInformationItemHandler');
 }]);
 
 angular.module('mm.addons.qbehaviour_interactive', ['mm.core'])
@@ -22685,6 +22703,480 @@ angular.module('mm.addons.badges')
     return self;
 }]);
 
+angular.module('mm.addons.calendar')
+.controller('mmaCalendarEventCtrl', ["$scope", "$log", "$stateParams", "$mmaCalendar", "$mmUtil", "$mmCourse", "$mmCourses", "$translate", "$mmLocalNotifications", function($scope, $log, $stateParams, $mmaCalendar, $mmUtil, $mmCourse, $mmCourses, $translate,
+        $mmLocalNotifications) {
+    $log = $log.getInstance('mmaCalendarEventCtrl');
+    var eventid = parseInt($stateParams.id);
+    function fetchEvent(refresh) {
+        return $mmaCalendar.getEvent(eventid, refresh).then(function(e) {
+            $mmaCalendar.formatEventData(e);
+            $scope.event = e;
+            $scope.title = e.name;
+            if (e.moduleicon) {
+                var name = $mmCourse.translateModuleName(e.modulename);
+                if (name.indexOf('mm.core.mod') === -1) {
+                    e.modulename = name;
+                }
+            }
+            if (e.courseid > 1) {
+                $mmCourses.getUserCourse(e.courseid, true).then(function(course) {
+                    $scope.coursename = course.fullname;
+                });
+            }
+        }, function(error) {
+            if (error) {
+                $mmUtil.showErrorModal(error);
+            } else {
+                $mmUtil.showErrorModal('mma.calendar.errorloadevent', true);
+            }
+        });
+    }
+    fetchEvent().finally(function() {
+        $scope.eventLoaded = true;
+    });
+    $scope.refreshEvent = function() {
+        fetchEvent(true).finally(function() {
+            $scope.$broadcast('scroll.refreshComplete');
+        });
+    };
+    $scope.notificationsEnabled = $mmLocalNotifications.isAvailable();
+    if ($scope.notificationsEnabled) {
+        $mmaCalendar.getEventNotificationTimeOption(eventid).then(function(notificationtime) {
+            $scope.notification = {
+                time: String(notificationtime)
+            };
+        });
+        $mmaCalendar.getDefaultNotificationTime().then(function(defaultTime) {
+            if (defaultTime === 0) {
+                $scope.defaultTimeReadable = $translate.instant('mm.settings.disabled');
+            } else {
+                $scope.defaultTimeReadable = moment.duration(defaultTime * 60 * 1000).humanize();
+            }
+        });
+        $scope.updateNotificationTime = function() {
+            var time = parseInt($scope.notification.time, 10);
+            if (!isNaN(time) && $scope.event && $scope.event.id) {
+                $mmaCalendar.updateNotificationTime($scope.event, time);
+            }
+        };
+    }
+}]);
+
+angular.module('mm.addons.calendar')
+.controller('mmaCalendarListCtrl', ["$scope", "$stateParams", "$log", "$state", "$mmaCalendar", "$mmUtil", "$ionicHistory", "$mmEvents", "mmaCalendarDaysInterval", "$ionicScrollDelegate", "$mmLocalNotifications", "$mmCourses", "mmaCalendarDefaultNotifTimeChangedEvent", "$ionicPopover", "$q", "$translate", function($scope, $stateParams, $log, $state, $mmaCalendar, $mmUtil, $ionicHistory, $mmEvents,
+        mmaCalendarDaysInterval, $ionicScrollDelegate, $mmLocalNotifications, $mmCourses, mmaCalendarDefaultNotifTimeChangedEvent,
+        $ionicPopover, $q, $translate) {
+    $log = $log.getInstance('mmaCalendarListCtrl');
+    var daysLoaded,
+        emptyEventsTimes,
+        scrollView = $ionicScrollDelegate.$getByHandle('mmaCalendarEventsListScroll'),
+        obsDefaultTimeChange,
+        popover,
+        allCourses = {
+            id: -1,
+            fullname: $translate.instant('mm.core.fulllistofcourses')
+        };
+    if ($stateParams.eventid) {
+        $ionicHistory.clearHistory();
+        $state.go('site.calendar-event', {id: $stateParams.eventid});
+    }
+    function initVars() {
+        daysLoaded = 0;
+        emptyEventsTimes = 0;
+        $scope.events = [];
+    }
+    function fetchData(refresh) {
+        initVars();
+        return loadCourses().then(function() {
+            return fetchEvents(refresh);
+        });
+    }
+    function fetchEvents(refresh) {
+        return $mmaCalendar.getEvents(daysLoaded, mmaCalendarDaysInterval, refresh).then(function(events) {
+            daysLoaded += mmaCalendarDaysInterval;
+            if (events.length === 0) {
+                emptyEventsTimes++;
+                if (emptyEventsTimes > 5) {
+                    $scope.canLoadMore = false;
+                    $scope.eventsLoaded = true;
+                } else {
+                    return fetchEvents();
+                }
+            } else {
+                angular.forEach(events, $mmaCalendar.formatEventData);
+                if (refresh) {
+                    $scope.events = events;
+                } else {
+                    $scope.events = $scope.events.concat(events);
+                }
+                $scope.eventsLoaded = true;
+                $scope.canLoadMore = true;
+                $mmaCalendar.scheduleEventsNotifications(events);
+            }
+            scrollView.resize();
+        }, function(error) {
+            if (error) {
+                $mmUtil.showErrorModal(error);
+            } else {
+                $mmUtil.showErrorModal('mma.calendar.errorloadevents', true);
+            }
+            $scope.eventsLoaded = true;
+            $scope.canLoadMore = false;
+        });
+    }
+    function loadCourses() {
+        return $mmCourses.getUserCourses(false).then(function(courses) {
+            courses.unshift(allCourses);
+            $scope.courses = courses;
+        });
+    }
+    $scope.filter = {
+        courseid: -1,
+    };
+    $scope.notificationsEnabled = $mmLocalNotifications.isAvailable();
+    fetchData();
+    $ionicPopover.fromTemplateUrl('addons/calendar/templates/course_picker.html', {
+        scope: $scope
+    }).then(function(po) {
+        popover = po;
+        $scope.pickCourse = function(event) {
+            popover.show(event);
+        };
+        $scope.coursePicked = function() {
+            popover.hide();
+            scrollView.scrollTop();
+        };
+    });
+    $scope.loadMoreEvents = function() {
+        fetchEvents().finally(function() {
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+        });
+    };
+    $scope.refreshEvents = function() {
+        var promises = [];
+        promises.push($mmCourses.invalidateUserCourses());
+        promises.push($mmaCalendar.invalidateEventsList());
+        return $q.all(promises).finally(function() {
+            fetchData(true).finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+        });
+    };
+    $scope.openSettings = function() {
+        $state.go('site.calendar-settings');
+    };
+    $scope.filterEvent = function(event) {
+        if ($scope.filter.courseid == -1) {
+            return true;
+        }
+        return event.courseid === 1 || event.courseid == $scope.filter.courseid;
+    };
+    if ($scope.notificationsEnabled) {
+        obsDefaultTimeChange = $mmEvents.on(mmaCalendarDefaultNotifTimeChangedEvent, function() {
+            $mmaCalendar.scheduleEventsNotifications($scope.events);
+        });
+    }
+    $scope.$on('$destroy', function() {
+        obsDefaultTimeChange && obsDefaultTimeChange.off && obsDefaultTimeChange.off();
+        popover && popover.remove();
+    });
+}]);
+
+angular.module('mm.addons.calendar')
+.controller('mmaCalendarSettingsCtrl', ["$scope", "$mmaCalendar", "$mmEvents", "$mmSite", "mmaCalendarDefaultNotifTimeChangedEvent", function($scope, $mmaCalendar, $mmEvents, $mmSite,
+            mmaCalendarDefaultNotifTimeChangedEvent) {
+    $mmaCalendar.getDefaultNotificationTime().then(function(time) {
+        $scope.defaultTime = String(time);
+    });
+    $scope.updateDefaultTime = function(newTime) {
+        $mmaCalendar.setDefaultNotificationTime(newTime);
+        $mmEvents.trigger(mmaCalendarDefaultNotifTimeChangedEvent, {siteid: $mmSite.getId(), time: newTime});
+    };
+}]);
+
+angular.module('mm.addons.calendar')
+.constant('mmaCalendarEventsStore', 'calendar_events')
+.config(["$mmSitesFactoryProvider", "mmaCalendarEventsStore", function($mmSitesFactoryProvider, mmaCalendarEventsStore) {
+    var stores = [
+        {
+            name: mmaCalendarEventsStore,
+            keyPath: 'id',
+            indexes: [
+                {
+                    name: 'notificationtime'
+                }
+            ]
+        }
+    ];
+    $mmSitesFactoryProvider.registerStores(stores);
+}])
+.factory('$mmaCalendar', ["$log", "$q", "$mmSite", "$mmUtil", "$mmCourses", "$mmGroups", "$mmCourse", "$mmLocalNotifications", "$mmSitesManager", "mmCoreSecondsDay", "mmaCalendarDaysInterval", "mmaCalendarEventsStore", "mmaCalendarDefaultNotifTime", "mmaCalendarComponent", "mmaCalendarDefaultNotifTimeSetting", "$mmConfig", function($log, $q, $mmSite, $mmUtil, $mmCourses, $mmGroups, $mmCourse, $mmLocalNotifications,
+        $mmSitesManager, mmCoreSecondsDay, mmaCalendarDaysInterval, mmaCalendarEventsStore, mmaCalendarDefaultNotifTime,
+        mmaCalendarComponent, mmaCalendarDefaultNotifTimeSetting, $mmConfig) {
+    $log = $log.getInstance('$mmaCalendar');
+    var self = {},
+        calendarImgPath = 'addons/calendar/img/',
+        eventicons = {
+            'course': calendarImgPath + 'courseevent.svg',
+            'group': calendarImgPath + 'groupevent.svg',
+            'site': calendarImgPath + 'siteevent.svg',
+            'user': calendarImgPath + 'userevent.svg'
+        };
+        function getEventsListCacheKey(daysToStart, daysInterval) {
+        return 'mmaCalendar:events:' + daysToStart + ':' + daysInterval;
+    }
+        function getEventCacheKey(id) {
+        return 'mmaCalendar:events:' + id;
+    }
+        function getEventsCommonCacheKey() {
+        return 'mmaCalendar:events:';
+    }
+        function storeEventsInLocalDB(events, siteId) {
+        siteId = siteId || $mmSite.getId();
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            var promises = [],
+                db = site.getDb();
+            angular.forEach(events, function(event) {
+                promises.push(self.getEventFromLocalDb(event.id, siteId).catch(function() {
+                    return {};
+                }).then(function(e) {
+                    if (typeof e.notificationtime != 'undefined') {
+                        event.notificationtime = e.notificationtime;
+                    }
+                    return db.insert(mmaCalendarEventsStore, event);
+                }));
+            });
+            return $q.all(promises);
+        });
+    }
+        self.formatEventData = function(e) {
+        var icon = self.getEventIcon(e.eventtype);
+        if (icon === '') {
+            icon = $mmCourse.getModuleIconSrc(e.modulename);
+            e.moduleicon = icon;
+        }
+        e.icon = icon;
+    };
+        self.getAllEventsFromLocalDb = function(siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.getDb().getAll(mmaCalendarEventsStore);
+        });
+    };
+        self.getDefaultNotificationTime = function(siteId) {
+        siteId = siteId || $mmSite.getId();
+        var key = mmaCalendarDefaultNotifTimeSetting + '#' + siteId;
+        return $mmConfig.get(key, mmaCalendarDefaultNotifTime);
+    };
+        self.getEvent = function(id, refresh) {
+        var presets = {},
+            data = {
+                "options[userevents]": 0,
+                "options[siteevents]": 0,
+                "events[eventids][0]": id
+            };
+        presets.cacheKey = getEventCacheKey(id);
+        if (refresh) {
+            presets.getFromCache = false;
+        }
+        return $mmSite.read('core_calendar_get_calendar_events', data, presets).then(function(response) {
+            var e = response.events[0];
+            if (e) {
+                return e;
+            } else {
+                return self.getEventFromLocalDb(id);
+            }
+        }, function() {
+            return self.getEventFromLocalDb(id);
+        });
+    };
+        self.getEventFromLocalDb = function(id, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.getDb().get(mmaCalendarEventsStore, id);
+        });
+    };
+        self.getEventIcon = function(type) {
+        return eventicons[type] || '';
+    };
+        self.getEventNotificationTime = function(id, siteId) {
+        siteId = siteId || $mmSite.getId();
+        return self.getEventNotificationTimeOption(id, siteId).then(function(time) {
+            if (time == -1) {
+                return self.getDefaultNotificationTime(siteId);
+            }
+            return time;
+        });
+    };
+        self.getEventNotificationTimeOption = function(id, siteId) {
+        siteId = siteId || $mmSite.getId();
+        return self.getEventFromLocalDb(id, siteId).then(function(e) {
+            if (typeof e.notificationtime != 'undefined') {
+                return e.notificationtime;
+            }
+            return -1;
+        }, function() {
+            return -1;
+        });
+    };
+        self.getEvents = function(daysToStart, daysInterval, refresh, siteId) {
+        daysToStart = daysToStart || 0;
+        daysInterval = daysInterval || mmaCalendarDaysInterval;
+        siteId = siteId || $mmSite.getId();
+         var now = $mmUtil.timestamp(),
+            start = now + (mmCoreSecondsDay * daysToStart),
+            end = start + (mmCoreSecondsDay * daysInterval);
+        var data = {
+            "options[userevents]": 1,
+            "options[siteevents]": 1,
+            "options[timestart]": start,
+            "options[timeend]": end
+        };
+        return $mmCourses.getUserCourses(false, siteId).then(function(courses) {
+            courses.push({id: 1});
+            angular.forEach(courses, function(course, index) {
+                data["events[courseids][" + index + "]"] = course.id;
+            });
+            return $mmGroups.getUserGroups(courses, refresh, siteId).then(function(groups) {
+                angular.forEach(groups, function(group, index) {
+                    data["events[groupids][" + index + "]"] = group.id;
+                });
+                return $mmSitesManager.getSite(siteId).then(function(site) {
+                    var preSets = {
+                        cacheKey: getEventsListCacheKey(daysToStart, daysInterval),
+                        getCacheUsingCacheKey: true
+                    };
+                    return site.read('core_calendar_get_calendar_events', data, preSets).then(function(response) {
+                        storeEventsInLocalDB(response.events, siteId);
+                        return response.events;
+                    });
+                });
+            });
+        });
+    };
+        self.invalidateEventsList = function() {
+        var p1 = $mmCourses.invalidateUserCourses(),
+            p2 = $mmSite.invalidateWsCacheForKeyStartingWith(getEventsCommonCacheKey());
+        return $q.all([p1, p2]);
+    };
+        self.isAvailable = function() {
+        return $mmSite.wsAvailable('core_calendar_get_calendar_events');
+    };
+        self.isDisabled = function(siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return self.isDisabledInSite(site);
+        });
+    };
+        self.isDisabledInSite = function(site) {
+        site = site || $mmSite;
+        return site.isFeatureDisabled('$mmSideMenuDelegate_mmaCalendar');
+    };
+        self.scheduleAllSitesEventsNotifications = function() {
+        if ($mmLocalNotifications.isAvailable()) {
+            return $mmSitesManager.getSitesIds().then(function(siteIds) {
+                var promises = [];
+                angular.forEach(siteIds, function(siteId) {
+                    promises.push(self.isDisabled(siteId).then(function(disabled) {
+                        if (!disabled) {
+                            return self.getEvents(undefined, undefined, false, siteId).then(function(events) {
+                                return self.scheduleEventsNotifications(events, siteId);
+                            });
+                        }
+                    }));
+                });
+                return $q.all(promises);
+            });
+        } else {
+            return $q.when();
+        }
+    };
+        self.scheduleEventNotification = function(event, time, siteId) {
+        siteId = siteId || $mmSite.getId();
+        if ($mmLocalNotifications.isAvailable()) {
+            if (time === 0) {
+                return $mmLocalNotifications.cancel(event.id, mmaCalendarComponent, siteId);
+            }
+            var promise = time == -1 ? self.getDefaultNotificationTime(siteId) : $q.when(time);
+            return promise.then(function(time) {
+                var timeend = (event.timestart + event.timeduration) * 1000;
+                if (timeend <= new Date().getTime()) {
+                    return $q.when();
+                }
+                var dateTriggered = new Date((event.timestart - (time * 60)) * 1000),
+                    startDate = new Date(event.timestart * 1000),
+                    notification = {
+                        id: event.id,
+                        title: event.name,
+                        text: startDate.toLocaleString(),
+                        at: dateTriggered,
+                        data: {
+                            eventid: event.id,
+                            siteid: siteId
+                        }
+                    };
+                return $mmLocalNotifications.schedule(notification, mmaCalendarComponent, siteId);
+            });
+        } else {
+            return $q.when();
+        }
+    };
+        self.scheduleEventsNotifications = function(events, siteId) {
+        siteId = siteId || $mmSite.getId();
+        var promises = [];
+        if ($mmLocalNotifications.isAvailable()) {
+            angular.forEach(events, function(e) {
+                var promise = self.getEventNotificationTime(e.id, siteId).then(function(time) {
+                    return self.scheduleEventNotification(e, time, siteId);
+                });
+                promises.push(promise);
+            });
+        }
+        return $q.all(promises);
+    };
+        self.setDefaultNotificationTime = function(time, siteId) {
+        siteId = siteId || $mmSite.getId();
+        var key = mmaCalendarDefaultNotifTimeSetting + '#' + siteId;
+        return $mmConfig.set(key, time);
+    };
+        self.storeEventInLocalDb = function(event, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.getDb().insert(mmaCalendarEventsStore, event);
+        });
+    };
+        self.updateNotificationTime = function(event, time) {
+        if (!$mmSite.isLoggedIn()) {
+            return $q.reject();
+        }
+        var db = $mmSite.getDb();
+        event.notificationtime = time;
+        return db.insert(mmaCalendarEventsStore, event).then(function() {
+            return self.scheduleEventNotification(event, time);
+        });
+    };
+    return self;
+}]);
+
+angular.module('mm.addons.calendar')
+.factory('$mmaCalendarHandlers', ["$log", "$mmaCalendar", function($log, $mmaCalendar) {
+    $log = $log.getInstance('$mmaCalendarHandlers');
+    var self = {};
+        self.sideMenuNav = function() {
+        var self = {};
+                self.isEnabled = function() {
+            return $mmaCalendar.isAvailable();
+        };
+                self.getController = function() {
+                        return function($scope) {
+                $scope.icon = 'ion-calendar';
+                $scope.title = 'mma.calendar.calendarevents';
+                $scope.state = 'site.calendar';
+                $scope.class = 'mma-calendar-handler';
+            };
+        };
+        return self;
+    };
+    return self;
+}]);
+
 angular.module('mm.addons.competency')
 .controller('mmaCompetenciesListCtrl', ["$scope", "$mmaCompetency", "$mmUtil", "$stateParams", "$state", "$ionicPlatform", "$q", "$translate", "$mmaCompetencyHelper", function($scope, $mmaCompetency, $mmUtil, $stateParams, $state, $ionicPlatform, $q,
     $translate, $mmaCompetencyHelper) {
@@ -23428,480 +23920,6 @@ angular.module('mm.addons.competency')
             user.profileimageurl = user.profileimageurl || true;
             return user;
         });
-    };
-    return self;
-}]);
-
-angular.module('mm.addons.calendar')
-.controller('mmaCalendarEventCtrl', ["$scope", "$log", "$stateParams", "$mmaCalendar", "$mmUtil", "$mmCourse", "$mmCourses", "$translate", "$mmLocalNotifications", function($scope, $log, $stateParams, $mmaCalendar, $mmUtil, $mmCourse, $mmCourses, $translate,
-        $mmLocalNotifications) {
-    $log = $log.getInstance('mmaCalendarEventCtrl');
-    var eventid = parseInt($stateParams.id);
-    function fetchEvent(refresh) {
-        return $mmaCalendar.getEvent(eventid, refresh).then(function(e) {
-            $mmaCalendar.formatEventData(e);
-            $scope.event = e;
-            $scope.title = e.name;
-            if (e.moduleicon) {
-                var name = $mmCourse.translateModuleName(e.modulename);
-                if (name.indexOf('mm.core.mod') === -1) {
-                    e.modulename = name;
-                }
-            }
-            if (e.courseid > 1) {
-                $mmCourses.getUserCourse(e.courseid, true).then(function(course) {
-                    $scope.coursename = course.fullname;
-                });
-            }
-        }, function(error) {
-            if (error) {
-                $mmUtil.showErrorModal(error);
-            } else {
-                $mmUtil.showErrorModal('mma.calendar.errorloadevent', true);
-            }
-        });
-    }
-    fetchEvent().finally(function() {
-        $scope.eventLoaded = true;
-    });
-    $scope.refreshEvent = function() {
-        fetchEvent(true).finally(function() {
-            $scope.$broadcast('scroll.refreshComplete');
-        });
-    };
-    $scope.notificationsEnabled = $mmLocalNotifications.isAvailable();
-    if ($scope.notificationsEnabled) {
-        $mmaCalendar.getEventNotificationTimeOption(eventid).then(function(notificationtime) {
-            $scope.notification = {
-                time: String(notificationtime)
-            };
-        });
-        $mmaCalendar.getDefaultNotificationTime().then(function(defaultTime) {
-            if (defaultTime === 0) {
-                $scope.defaultTimeReadable = $translate.instant('mm.settings.disabled');
-            } else {
-                $scope.defaultTimeReadable = moment.duration(defaultTime * 60 * 1000).humanize();
-            }
-        });
-        $scope.updateNotificationTime = function() {
-            var time = parseInt($scope.notification.time, 10);
-            if (!isNaN(time) && $scope.event && $scope.event.id) {
-                $mmaCalendar.updateNotificationTime($scope.event, time);
-            }
-        };
-    }
-}]);
-
-angular.module('mm.addons.calendar')
-.controller('mmaCalendarListCtrl', ["$scope", "$stateParams", "$log", "$state", "$mmaCalendar", "$mmUtil", "$ionicHistory", "$mmEvents", "mmaCalendarDaysInterval", "$ionicScrollDelegate", "$mmLocalNotifications", "$mmCourses", "mmaCalendarDefaultNotifTimeChangedEvent", "$ionicPopover", "$q", "$translate", function($scope, $stateParams, $log, $state, $mmaCalendar, $mmUtil, $ionicHistory, $mmEvents,
-        mmaCalendarDaysInterval, $ionicScrollDelegate, $mmLocalNotifications, $mmCourses, mmaCalendarDefaultNotifTimeChangedEvent,
-        $ionicPopover, $q, $translate) {
-    $log = $log.getInstance('mmaCalendarListCtrl');
-    var daysLoaded,
-        emptyEventsTimes,
-        scrollView = $ionicScrollDelegate.$getByHandle('mmaCalendarEventsListScroll'),
-        obsDefaultTimeChange,
-        popover,
-        allCourses = {
-            id: -1,
-            fullname: $translate.instant('mm.core.fulllistofcourses')
-        };
-    if ($stateParams.eventid) {
-        $ionicHistory.clearHistory();
-        $state.go('site.calendar-event', {id: $stateParams.eventid});
-    }
-    function initVars() {
-        daysLoaded = 0;
-        emptyEventsTimes = 0;
-        $scope.events = [];
-    }
-    function fetchData(refresh) {
-        initVars();
-        return loadCourses().then(function() {
-            return fetchEvents(refresh);
-        });
-    }
-    function fetchEvents(refresh) {
-        return $mmaCalendar.getEvents(daysLoaded, mmaCalendarDaysInterval, refresh).then(function(events) {
-            daysLoaded += mmaCalendarDaysInterval;
-            if (events.length === 0) {
-                emptyEventsTimes++;
-                if (emptyEventsTimes > 5) {
-                    $scope.canLoadMore = false;
-                    $scope.eventsLoaded = true;
-                } else {
-                    return fetchEvents();
-                }
-            } else {
-                angular.forEach(events, $mmaCalendar.formatEventData);
-                if (refresh) {
-                    $scope.events = events;
-                } else {
-                    $scope.events = $scope.events.concat(events);
-                }
-                $scope.eventsLoaded = true;
-                $scope.canLoadMore = true;
-                $mmaCalendar.scheduleEventsNotifications(events);
-            }
-            scrollView.resize();
-        }, function(error) {
-            if (error) {
-                $mmUtil.showErrorModal(error);
-            } else {
-                $mmUtil.showErrorModal('mma.calendar.errorloadevents', true);
-            }
-            $scope.eventsLoaded = true;
-            $scope.canLoadMore = false;
-        });
-    }
-    function loadCourses() {
-        return $mmCourses.getUserCourses(false).then(function(courses) {
-            courses.unshift(allCourses);
-            $scope.courses = courses;
-        });
-    }
-    $scope.filter = {
-        courseid: -1,
-    };
-    $scope.notificationsEnabled = $mmLocalNotifications.isAvailable();
-    fetchData();
-    $ionicPopover.fromTemplateUrl('addons/calendar/templates/course_picker.html', {
-        scope: $scope
-    }).then(function(po) {
-        popover = po;
-        $scope.pickCourse = function(event) {
-            popover.show(event);
-        };
-        $scope.coursePicked = function() {
-            popover.hide();
-            scrollView.scrollTop();
-        };
-    });
-    $scope.loadMoreEvents = function() {
-        fetchEvents().finally(function() {
-            $scope.$broadcast('scroll.infiniteScrollComplete');
-        });
-    };
-    $scope.refreshEvents = function() {
-        var promises = [];
-        promises.push($mmCourses.invalidateUserCourses());
-        promises.push($mmaCalendar.invalidateEventsList());
-        return $q.all(promises).finally(function() {
-            fetchData(true).finally(function() {
-                $scope.$broadcast('scroll.refreshComplete');
-            });
-        });
-    };
-    $scope.openSettings = function() {
-        $state.go('site.calendar-settings');
-    };
-    $scope.filterEvent = function(event) {
-        if ($scope.filter.courseid == -1) {
-            return true;
-        }
-        return event.courseid === 1 || event.courseid == $scope.filter.courseid;
-    };
-    if ($scope.notificationsEnabled) {
-        obsDefaultTimeChange = $mmEvents.on(mmaCalendarDefaultNotifTimeChangedEvent, function() {
-            $mmaCalendar.scheduleEventsNotifications($scope.events);
-        });
-    }
-    $scope.$on('$destroy', function() {
-        obsDefaultTimeChange && obsDefaultTimeChange.off && obsDefaultTimeChange.off();
-        popover && popover.remove();
-    });
-}]);
-
-angular.module('mm.addons.calendar')
-.controller('mmaCalendarSettingsCtrl', ["$scope", "$mmaCalendar", "$mmEvents", "$mmSite", "mmaCalendarDefaultNotifTimeChangedEvent", function($scope, $mmaCalendar, $mmEvents, $mmSite,
-            mmaCalendarDefaultNotifTimeChangedEvent) {
-    $mmaCalendar.getDefaultNotificationTime().then(function(time) {
-        $scope.defaultTime = String(time);
-    });
-    $scope.updateDefaultTime = function(newTime) {
-        $mmaCalendar.setDefaultNotificationTime(newTime);
-        $mmEvents.trigger(mmaCalendarDefaultNotifTimeChangedEvent, {siteid: $mmSite.getId(), time: newTime});
-    };
-}]);
-
-angular.module('mm.addons.calendar')
-.constant('mmaCalendarEventsStore', 'calendar_events')
-.config(["$mmSitesFactoryProvider", "mmaCalendarEventsStore", function($mmSitesFactoryProvider, mmaCalendarEventsStore) {
-    var stores = [
-        {
-            name: mmaCalendarEventsStore,
-            keyPath: 'id',
-            indexes: [
-                {
-                    name: 'notificationtime'
-                }
-            ]
-        }
-    ];
-    $mmSitesFactoryProvider.registerStores(stores);
-}])
-.factory('$mmaCalendar', ["$log", "$q", "$mmSite", "$mmUtil", "$mmCourses", "$mmGroups", "$mmCourse", "$mmLocalNotifications", "$mmSitesManager", "mmCoreSecondsDay", "mmaCalendarDaysInterval", "mmaCalendarEventsStore", "mmaCalendarDefaultNotifTime", "mmaCalendarComponent", "mmaCalendarDefaultNotifTimeSetting", "$mmConfig", function($log, $q, $mmSite, $mmUtil, $mmCourses, $mmGroups, $mmCourse, $mmLocalNotifications,
-        $mmSitesManager, mmCoreSecondsDay, mmaCalendarDaysInterval, mmaCalendarEventsStore, mmaCalendarDefaultNotifTime,
-        mmaCalendarComponent, mmaCalendarDefaultNotifTimeSetting, $mmConfig) {
-    $log = $log.getInstance('$mmaCalendar');
-    var self = {},
-        calendarImgPath = 'addons/calendar/img/',
-        eventicons = {
-            'course': calendarImgPath + 'courseevent.svg',
-            'group': calendarImgPath + 'groupevent.svg',
-            'site': calendarImgPath + 'siteevent.svg',
-            'user': calendarImgPath + 'userevent.svg'
-        };
-        function getEventsListCacheKey(daysToStart, daysInterval) {
-        return 'mmaCalendar:events:' + daysToStart + ':' + daysInterval;
-    }
-        function getEventCacheKey(id) {
-        return 'mmaCalendar:events:' + id;
-    }
-        function getEventsCommonCacheKey() {
-        return 'mmaCalendar:events:';
-    }
-        function storeEventsInLocalDB(events, siteId) {
-        siteId = siteId || $mmSite.getId();
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            var promises = [],
-                db = site.getDb();
-            angular.forEach(events, function(event) {
-                promises.push(self.getEventFromLocalDb(event.id, siteId).catch(function() {
-                    return {};
-                }).then(function(e) {
-                    if (typeof e.notificationtime != 'undefined') {
-                        event.notificationtime = e.notificationtime;
-                    }
-                    return db.insert(mmaCalendarEventsStore, event);
-                }));
-            });
-            return $q.all(promises);
-        });
-    }
-        self.formatEventData = function(e) {
-        var icon = self.getEventIcon(e.eventtype);
-        if (icon === '') {
-            icon = $mmCourse.getModuleIconSrc(e.modulename);
-            e.moduleicon = icon;
-        }
-        e.icon = icon;
-    };
-        self.getAllEventsFromLocalDb = function(siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().getAll(mmaCalendarEventsStore);
-        });
-    };
-        self.getDefaultNotificationTime = function(siteId) {
-        siteId = siteId || $mmSite.getId();
-        var key = mmaCalendarDefaultNotifTimeSetting + '#' + siteId;
-        return $mmConfig.get(key, mmaCalendarDefaultNotifTime);
-    };
-        self.getEvent = function(id, refresh) {
-        var presets = {},
-            data = {
-                "options[userevents]": 0,
-                "options[siteevents]": 0,
-                "events[eventids][0]": id
-            };
-        presets.cacheKey = getEventCacheKey(id);
-        if (refresh) {
-            presets.getFromCache = false;
-        }
-        return $mmSite.read('core_calendar_get_calendar_events', data, presets).then(function(response) {
-            var e = response.events[0];
-            if (e) {
-                return e;
-            } else {
-                return self.getEventFromLocalDb(id);
-            }
-        }, function() {
-            return self.getEventFromLocalDb(id);
-        });
-    };
-        self.getEventFromLocalDb = function(id, siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().get(mmaCalendarEventsStore, id);
-        });
-    };
-        self.getEventIcon = function(type) {
-        return eventicons[type] || '';
-    };
-        self.getEventNotificationTime = function(id, siteId) {
-        siteId = siteId || $mmSite.getId();
-        return self.getEventNotificationTimeOption(id, siteId).then(function(time) {
-            if (time == -1) {
-                return self.getDefaultNotificationTime(siteId);
-            }
-            return time;
-        });
-    };
-        self.getEventNotificationTimeOption = function(id, siteId) {
-        siteId = siteId || $mmSite.getId();
-        return self.getEventFromLocalDb(id, siteId).then(function(e) {
-            if (typeof e.notificationtime != 'undefined') {
-                return e.notificationtime;
-            }
-            return -1;
-        }, function() {
-            return -1;
-        });
-    };
-        self.getEvents = function(daysToStart, daysInterval, refresh, siteId) {
-        daysToStart = daysToStart || 0;
-        daysInterval = daysInterval || mmaCalendarDaysInterval;
-        siteId = siteId || $mmSite.getId();
-         var now = $mmUtil.timestamp(),
-            start = now + (mmCoreSecondsDay * daysToStart),
-            end = start + (mmCoreSecondsDay * daysInterval);
-        var data = {
-            "options[userevents]": 1,
-            "options[siteevents]": 1,
-            "options[timestart]": start,
-            "options[timeend]": end
-        };
-        return $mmCourses.getUserCourses(false, siteId).then(function(courses) {
-            courses.push({id: 1});
-            angular.forEach(courses, function(course, index) {
-                data["events[courseids][" + index + "]"] = course.id;
-            });
-            return $mmGroups.getUserGroups(courses, refresh, siteId).then(function(groups) {
-                angular.forEach(groups, function(group, index) {
-                    data["events[groupids][" + index + "]"] = group.id;
-                });
-                return $mmSitesManager.getSite(siteId).then(function(site) {
-                    var preSets = {
-                        cacheKey: getEventsListCacheKey(daysToStart, daysInterval),
-                        getCacheUsingCacheKey: true
-                    };
-                    return site.read('core_calendar_get_calendar_events', data, preSets).then(function(response) {
-                        storeEventsInLocalDB(response.events, siteId);
-                        return response.events;
-                    });
-                });
-            });
-        });
-    };
-        self.invalidateEventsList = function() {
-        var p1 = $mmCourses.invalidateUserCourses(),
-            p2 = $mmSite.invalidateWsCacheForKeyStartingWith(getEventsCommonCacheKey());
-        return $q.all([p1, p2]);
-    };
-        self.isAvailable = function() {
-        return $mmSite.wsAvailable('core_calendar_get_calendar_events');
-    };
-        self.isDisabled = function(siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return self.isDisabledInSite(site);
-        });
-    };
-        self.isDisabledInSite = function(site) {
-        site = site || $mmSite;
-        return site.isFeatureDisabled('$mmSideMenuDelegate_mmaCalendar');
-    };
-        self.scheduleAllSitesEventsNotifications = function() {
-        if ($mmLocalNotifications.isAvailable()) {
-            return $mmSitesManager.getSitesIds().then(function(siteIds) {
-                var promises = [];
-                angular.forEach(siteIds, function(siteId) {
-                    promises.push(self.isDisabled(siteId).then(function(disabled) {
-                        if (!disabled) {
-                            return self.getEvents(undefined, undefined, false, siteId).then(function(events) {
-                                return self.scheduleEventsNotifications(events, siteId);
-                            });
-                        }
-                    }));
-                });
-                return $q.all(promises);
-            });
-        } else {
-            return $q.when();
-        }
-    };
-        self.scheduleEventNotification = function(event, time, siteId) {
-        siteId = siteId || $mmSite.getId();
-        if ($mmLocalNotifications.isAvailable()) {
-            if (time === 0) {
-                return $mmLocalNotifications.cancel(event.id, mmaCalendarComponent, siteId);
-            }
-            var promise = time == -1 ? self.getDefaultNotificationTime(siteId) : $q.when(time);
-            return promise.then(function(time) {
-                var timeend = (event.timestart + event.timeduration) * 1000;
-                if (timeend <= new Date().getTime()) {
-                    return $q.when();
-                }
-                var dateTriggered = new Date((event.timestart - (time * 60)) * 1000),
-                    startDate = new Date(event.timestart * 1000),
-                    notification = {
-                        id: event.id,
-                        title: event.name,
-                        text: startDate.toLocaleString(),
-                        at: dateTriggered,
-                        data: {
-                            eventid: event.id,
-                            siteid: siteId
-                        }
-                    };
-                return $mmLocalNotifications.schedule(notification, mmaCalendarComponent, siteId);
-            });
-        } else {
-            return $q.when();
-        }
-    };
-        self.scheduleEventsNotifications = function(events, siteId) {
-        siteId = siteId || $mmSite.getId();
-        var promises = [];
-        if ($mmLocalNotifications.isAvailable()) {
-            angular.forEach(events, function(e) {
-                var promise = self.getEventNotificationTime(e.id, siteId).then(function(time) {
-                    return self.scheduleEventNotification(e, time, siteId);
-                });
-                promises.push(promise);
-            });
-        }
-        return $q.all(promises);
-    };
-        self.setDefaultNotificationTime = function(time, siteId) {
-        siteId = siteId || $mmSite.getId();
-        var key = mmaCalendarDefaultNotifTimeSetting + '#' + siteId;
-        return $mmConfig.set(key, time);
-    };
-        self.storeEventInLocalDb = function(event, siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().insert(mmaCalendarEventsStore, event);
-        });
-    };
-        self.updateNotificationTime = function(event, time) {
-        if (!$mmSite.isLoggedIn()) {
-            return $q.reject();
-        }
-        var db = $mmSite.getDb();
-        event.notificationtime = time;
-        return db.insert(mmaCalendarEventsStore, event).then(function() {
-            return self.scheduleEventNotification(event, time);
-        });
-    };
-    return self;
-}]);
-
-angular.module('mm.addons.calendar')
-.factory('$mmaCalendarHandlers', ["$log", "$mmaCalendar", function($log, $mmaCalendar) {
-    $log = $log.getInstance('$mmaCalendarHandlers');
-    var self = {};
-        self.sideMenuNav = function() {
-        var self = {};
-                self.isEnabled = function() {
-            return $mmaCalendar.isAvailable();
-        };
-                self.getController = function() {
-                        return function($scope) {
-                $scope.icon = 'ion-calendar';
-                $scope.title = 'mma.calendar.calendarevents';
-                $scope.state = 'site.calendar';
-                $scope.class = 'mma-calendar-handler';
-            };
-        };
-        return self;
     };
     return self;
 }]);
@@ -27579,27 +27597,6 @@ angular.module('mm.addons.notes')
 }]);
 
 angular.module('mm.addons.notifications')
-.directive('mmaNotificationsActions', ["$log", "$mmContentLinksDelegate", function($log, $mmContentLinksDelegate) {
-    $log = $log.getInstance('mmaNotificationsActions');
-    function link(scope) {
-        if (scope.contexturl) {
-            $mmContentLinksDelegate.getActionsFor(scope.contexturl, scope.courseid).then(function(actions) {
-                scope.actions = actions;
-            });
-        }
-    }
-    return {
-        link: link,
-        restrict: 'E',
-        scope: {
-            contexturl: '=',
-            courseid: '='
-        },
-        templateUrl: 'addons/notifications/templates/actions.html',
-    };
-}]);
-
-angular.module('mm.addons.notifications')
 .controller('mmaNotificationsListCtrl', ["$scope", "$mmUtil", "$mmaNotifications", "mmaNotificationsListLimit", "$mmAddonManager", "mmUserProfileState", "$q", "$mmEvents", "$mmSite", "mmaNotificationsReadChangedEvent", "mmaNotificationsReadCronEvent", "$state", function($scope, $mmUtil, $mmaNotifications, mmaNotificationsListLimit, $mmAddonManager,
             mmUserProfileState, $q, $mmEvents, $mmSite, mmaNotificationsReadChangedEvent, mmaNotificationsReadCronEvent, $state) {
     var readCount = 0,
@@ -27818,6 +27815,27 @@ angular.module('mm.addons.notifications')
             updatePreferences();
         }
     });
+}]);
+
+angular.module('mm.addons.notifications')
+.directive('mmaNotificationsActions', ["$log", "$mmContentLinksDelegate", function($log, $mmContentLinksDelegate) {
+    $log = $log.getInstance('mmaNotificationsActions');
+    function link(scope) {
+        if (scope.contexturl) {
+            $mmContentLinksDelegate.getActionsFor(scope.contexturl, scope.courseid).then(function(actions) {
+                scope.actions = actions;
+            });
+        }
+    }
+    return {
+        link: link,
+        restrict: 'E',
+        scope: {
+            contexturl: '=',
+            courseid: '='
+        },
+        templateUrl: 'addons/notifications/templates/actions.html',
+    };
 }]);
 
 angular.module('mm.addons.notifications')
@@ -39208,7 +39226,7 @@ angular.module('mm.addons.mod_glossary')
                 definition = $mmText.formatHtmlLines(definition);
             }
             attachments = $scope.attachments;
-            if (attachments.length) {
+            if (!!attachments.length) {
                 return $mmaModGlossaryHelper.uploadOrStoreFiles(glossaryId, concept, timecreated, attachments, false)
                         .catch(function() {
                     saveOffline = true;
@@ -39235,7 +39253,7 @@ angular.module('mm.addons.mod_glossary')
             if (saveOffline) {
                 var promise;
                 if (entry && !allowDuplicateEntries) {
-                    promise = $mmaModGlossary.isConceptUsed(glossaryId, concept).then(function() {
+                    promise = $mmaModGlossary.isConceptUsed(glossaryId, concept, entry.timecreated).then(function() {
                         return $mmLang.translateAndReject('mma.mod_glossary.errconceptalreadyexists');
                     }, function() {
                     });
@@ -39249,7 +39267,7 @@ angular.module('mm.addons.mod_glossary')
                 });
             } else {
                 return $mmaModGlossary.addEntry(glossaryId, concept, definition, courseId, options, attach, undefined,
-                    entry, !attachments.length);
+                    entry, !attachments.length, !allowDuplicateEntries);
             }
         }).then(function(entryId) {
             if (entryId) {
@@ -40017,7 +40035,8 @@ angular.module('mm.addons.mod_glossary')
             return result;
         });
     };
-        self.addEntry = function(glossaryId, concept, definition, courseId, options, attach, siteId, discardEntry, allowOffline) {
+        self.addEntry = function(glossaryId, concept, definition, courseId, options, attach, siteId, discardEntry, allowOffline,
+            checkDuplicates) {
         siteId = siteId || $mmSite.getId();
         if (!$mmApp.isOnline() && allowOffline) {
             return storeOffline();
@@ -40036,7 +40055,9 @@ angular.module('mm.addons.mod_glossary')
             });
         });
         function storeOffline() {
-            return self.isConceptUsed(glossaryId, concept, siteId).then(function(used) {
+            var timecreated = discardEntry && discardEntry.timecreated,
+                duplicatesPromise = checkDuplicates ? self.isConceptUsed(glossaryId, concept, timecreated, siteId) : $q.when(false);
+            return duplicatesPromise.then(function(used) {
                 if (used) {
                     return $mmLang.translateAndReject('mma.mod_glossary.errconceptalreadyexists');
                 }
@@ -40090,8 +40111,8 @@ angular.module('mm.addons.mod_glossary')
             });
         }
     };
-        self.isConceptUsed = function(glossaryId, concept, siteId) {
-        return $mmaModGlossaryOffline.isConceptUsed(glossaryId, concept, siteId).then(function(exists) {
+        self.isConceptUsed = function(glossaryId, concept, timecreated, siteId) {
+        return $mmaModGlossaryOffline.isConceptUsed(glossaryId, concept, timecreated, siteId).then(function(exists) {
             if (exists) {
                 return true;
             }
@@ -40162,7 +40183,7 @@ angular.module('mm.addons.mod_glossary')
     ];
     $mmSitesFactoryProvider.registerStores(stores);
 }])
-.factory('$mmaModGlossaryOffline', ["$mmSitesManager", "$log", "mmaModGlossaryAddEntryStore", "$mmFS", "$q", function($mmSitesManager, $log, mmaModGlossaryAddEntryStore, $mmFS, $q) {
+.factory('$mmaModGlossaryOffline', ["$mmSitesManager", "$log", "mmaModGlossaryAddEntryStore", "$mmFS", "$q", "$mmUtil", function($mmSitesManager, $log, mmaModGlossaryAddEntryStore, $mmFS, $q, $mmUtil) {
     $log = $log.getInstance('$mmaModGlossaryOffline');
     var self = {};
         self.deleteAddEntry = function(glossaryId, concept, timecreated, siteId) {
@@ -40186,11 +40207,17 @@ angular.module('mm.addons.mod_glossary')
             return site.getDb().whereEqual(mmaModGlossaryAddEntryStore, 'glossaryAndUser', [glossaryId, userId]);
         });
     };
-        self.isConceptUsed = function(glossaryId, concept, siteId) {
+        self.isConceptUsed = function(glossaryId, concept, timecreated, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             return site.getDb().whereEqual(mmaModGlossaryAddEntryStore, 'glossaryAndConcept', [glossaryId, concept])
                     .then(function(entries) {
-                return !!entries.length;
+                if (!!entries.length) {
+                    if (entries.length > 1 || !timecreated) {
+                        return true;
+                    }
+                    return $mmUtil.promiseFails(self.getAddEntry(glossaryId, concept, timecreated, siteId));
+                }
+                return false;
             });
         }).catch(function() {
             return false;
