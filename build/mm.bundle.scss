@@ -59,6 +59,9 @@ $mm-input-required-asterisk-color: #ff4136 !default;
 // Item padding.
 $item-input-padding: 16px !default;
 
+// Rich text editor.
+$mm-rte-min-height: 80px !default;
+
 /**
  * App Branding
  */
@@ -966,6 +969,7 @@ mm-timer {
   }
   &:not([mm-auto-rows]) {
     height: 200px;
+    min-height: $mm-rte-min-height;
   }
 }
 
@@ -1010,6 +1014,10 @@ mm-timer {
   textarea.cke_source {
     padding: 20px;
     box-sizing: border-box;
+  }
+
+  .cke_contents {
+    min-height: $mm-rte-min-height;
   }
 }
 
@@ -1830,29 +1838,6 @@ $bar-side-menu-text-color: $bar-content-text !default;
 .mm-site_mm_user-profile .mm-tab-handlers {
     padding-bottom: 16px;
 }
-.mm-site_frontpage {
-    .mma-frontpage-item-container .item-media {
-        min-height: 55px;
-        padding-left: 54px;
-
-        img {
-            top: 11px;
-            left: 11px;
-        }
-    }
-
-    .mm-frontpageitemnews {
-        img {
-            max-width: 30px;
-            max-height: 30px;
-        }
-
-        .mm-module-buttons {
-            width: 30px;
-            height: 22px;
-        }
-    }
-}
 
 $mma-messages-date-badge: "stable" !default;
 
@@ -1950,6 +1935,29 @@ $mma-messages-date-badge: "stable" !default;
   text-align: center;
 }
 
+.mm-site_frontpage {
+    .mma-frontpage-item-container .item-media {
+        min-height: 55px;
+        padding-left: 54px;
+
+        img {
+            top: 11px;
+            left: 11px;
+        }
+    }
+
+    .mm-frontpageitemnews {
+        img {
+            max-width: 30px;
+            max-height: 30px;
+        }
+
+        .mm-module-buttons {
+            width: 30px;
+            height: 22px;
+        }
+    }
+}
 .mm-site_coursesgrades .item .badge {
   right: 16px;
 }
