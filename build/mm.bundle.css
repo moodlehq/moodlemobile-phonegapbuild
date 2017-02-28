@@ -9670,6 +9670,22 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
 .mm-site_mm_user-profile .mm-tab-handlers {
   padding-bottom: 16px; }
 
+.mm-site_frontpage .mma-frontpage-item-container .item-media {
+  min-height: 55px;
+  padding-left: 54px; }
+  .mm-site_frontpage .mma-frontpage-item-container .item-media img {
+    top: 11px;
+    left: 11px; }
+.mm-site_frontpage .mm-frontpageitemnews img {
+  max-width: 30px;
+  max-height: 30px; }
+.mm-site_frontpage .mm-frontpageitemnews .mm-module-buttons {
+  width: 30px;
+  height: 22px; }
+
+.mm-site_coursesgrades .item .badge, .mm-site_coursesgrades .mm-grades-table .itemcenter .badge, .mm-grades-table .mm-site_coursesgrades .itemcenter .badge, .mm-site_coursesgrades .item .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-messages-unreadfrom span, .mma-messages-unreadfrom .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-unreadfrom span, .mma-messages-unreadfrom .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-unreadfrom span, .mma-messages-unreadfrom .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
+  right: 16px; }
+
 .mma-messages-date, .mma-messages-unreadfrom {
   text-align: center;
   margin-top: 10px; }
@@ -9734,22 +9750,6 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
 .mma-messages-showprevious-spinner-container {
   width: 100%;
   text-align: center; }
-
-.mm-site_frontpage .mma-frontpage-item-container .item-media {
-  min-height: 55px;
-  padding-left: 54px; }
-  .mm-site_frontpage .mma-frontpage-item-container .item-media img {
-    top: 11px;
-    left: 11px; }
-.mm-site_frontpage .mm-frontpageitemnews img {
-  max-width: 30px;
-  max-height: 30px; }
-.mm-site_frontpage .mm-frontpageitemnews .mm-module-buttons {
-  width: 30px;
-  height: 22px; }
-
-.mm-site_coursesgrades .item .badge, .mm-site_coursesgrades .mm-grades-table .itemcenter .badge, .mm-grades-table .mm-site_coursesgrades .itemcenter .badge, .mm-site_coursesgrades .item .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-messages-unreadfrom span, .mma-messages-unreadfrom .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-unreadfrom span, .mma-messages-unreadfrom .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-unreadfrom span, .mma-messages-unreadfrom .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
-  right: 16px; }
 
 .mm-site_mod_assign div.latesubmission, .mm-site_mod_assign-submission div.latesubmission {
   background-color: #efcfcf; }
@@ -10205,6 +10205,19 @@ select.mma-mod_survey-select {
   font-weight: bold;
   font-size: 16px; }
 
+.mma-qtype-gapselect-container p {
+  margin: 0 0 .5em; }
+.mma-qtype-gapselect-container select {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+
 .mma-qtype-ddimageortext-container mm-loading {
   position: absolute;
   left: 50%; }
@@ -10275,6 +10288,40 @@ select.mma-mod_survey-select {
 .mma-qtype-ddimageortext-container .drag.beingdragged {
   z-index: 3;
   box-shadow: 3px 3px 4px #000; }
+
+.mma-qtype-match-container .item-select select, .mma-qtype-match-container .item-select .mm-select-fix {
+  padding: 0 36px 0 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
+
+.mma-qtype-multianswer-container p {
+  margin: 0 0 .5em; }
+.mma-qtype-multianswer-container .answer div.r0, .mma-qtype-multianswer-container .answer div.r1 {
+  padding: 0.3em; }
+.mma-qtype-multianswer-container table {
+  width: 100%;
+  display: table; }
+.mma-qtype-multianswer-container tr {
+  display: table-row; }
+.mma-qtype-multianswer-container td {
+  display: table-cell; }
+.mma-qtype-multianswer-container input, .mma-qtype-multianswer-container select {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 4px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+.mma-qtype-multianswer-container select {
+  height: 30px;
+  line-height: 30px; }
+.mma-qtype-multianswer-container input[type="radio"], .mma-qtype-multianswer-container input[type="checkbox"] {
+  margin-top: -4px;
+  margin-right: 7px; }
 
 .mma-qtype-ddmarker-container mm-loading {
   position: absolute;
@@ -10410,50 +10457,3 @@ select.mma-mod_survey-select {
   top: -0.4em; }
 .mma-qtype-ddwtos-container sub {
   bottom: -0.2em; }
-
-.mma-qtype-gapselect-container p {
-  margin: 0 0 .5em; }
-.mma-qtype-gapselect-container select {
-  height: 30px;
-  line-height: 30px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 4px 6px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 10px; }
-
-.mma-qtype-match-container .item-select select, .mma-qtype-match-container .item-select .mm-select-fix {
-  padding: 0 36px 0 0;
-  max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column; }
-
-.mma-qtype-multianswer-container p {
-  margin: 0 0 .5em; }
-.mma-qtype-multianswer-container .answer div.r0, .mma-qtype-multianswer-container .answer div.r1 {
-  padding: 0.3em; }
-.mma-qtype-multianswer-container table {
-  width: 100%;
-  display: table; }
-.mma-qtype-multianswer-container tr {
-  display: table-row; }
-.mma-qtype-multianswer-container td {
-  display: table-cell; }
-.mma-qtype-multianswer-container input, .mma-qtype-multianswer-container select {
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 4px 6px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin-bottom: 10px; }
-.mma-qtype-multianswer-container select {
-  height: 30px;
-  line-height: 30px; }
-.mma-qtype-multianswer-container input[type="radio"], .mma-qtype-multianswer-container input[type="checkbox"] {
-  margin-top: -4px;
-  margin-right: 7px; }
