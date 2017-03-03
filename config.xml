@@ -5,7 +5,7 @@
         id        = "com.moodle.moodlemobile"
         versionCode = "20170"
         version   = "3.2.1">
-    <name>Moodle Mobile</name>
+    <name>MyPrivateGuru Mobile</name>
 
     <description>
         MyPrivateGuru  official app
