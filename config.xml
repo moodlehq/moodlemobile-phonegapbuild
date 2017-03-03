@@ -4,7 +4,7 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.myprivateguru.moodlemobile"
         versionCode = "20170"
-        version   = "3.2.1">
+        version   = "3.2.2">
     <name>MyPrivateGuru</name>
 
     <description>
