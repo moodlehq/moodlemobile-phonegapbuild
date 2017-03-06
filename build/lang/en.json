@@ -494,7 +494,7 @@
     "mm.courses.notenroled": "You are not enrolled in this course",
     "mm.courses.notenrollable": "You can not enrol yourself in this course.",
     "mm.courses.password": "Enrolment key",
-    "mm.courses.search": "Search",
+    "mm.courses.search": "Search e.g. Physics ",
     "mm.courses.searchcourses": "Search courses",
     "mm.courses.searchcoursesadvice": "You can use the search courses button to access as guest or enrol yourself in courses that allow it.",
     "mm.courses.selfenrolment": "Self-enrolment",
