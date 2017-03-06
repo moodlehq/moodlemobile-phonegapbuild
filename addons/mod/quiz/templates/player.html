@@ -20,7 +20,7 @@
         <!-- </div> -->
     <!-- </ion-header-bar> -->
 	
-	ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
+	<ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
         <div class="row">
             <!-- <div class="col col-20"> -->
                 <!-- <a class="button button-icon icon ion-arrow-left-b" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)" title="{{ 'mm.core.previous' | translate }}"></a> -->
@@ -100,7 +100,7 @@
             </section>
         </mm-loading>
     </ion-content>
-	ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
+	<ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
         <div class="row">
             <div class="col col-20">
                 <a class="button button-icon icon ion-arrow-left-b" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)" title="{{ 'mm.core.previous' | translate }}"></a>
