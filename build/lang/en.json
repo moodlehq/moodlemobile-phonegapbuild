@@ -407,7 +407,7 @@
     "mm.core.requireduserdatamissing": "This user lacks some required profile data. Please, fill this data in your Moodle and try again.<br>{{$a}}",
     "mm.core.retry": "Retry",
     "mm.core.save": "Save",
-    "mm.core.search": "Search",
+    "mm.core.search": "e.g.English",
     "mm.core.searching": "Searching",
     "mm.core.sec": "sec",
     "mm.core.secs": "secs",
