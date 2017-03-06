@@ -56,6 +56,19 @@
                     </section>
                 </div>
             </form>
+			<ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
+        <div class="row">
+            <div class="col col-20">
+                <a class="button button-icon icon ion-arrow-left-b" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)" title="{{ 'mm.core.previous' | translate }}"></a>
+            </div>
+            <div class="col col-60 text-center">
+                <mm-timer ng-if="endTime" end-time="endTime" finished="timeUp()" timer-text="{{ 'mma.mod_quiz.timeleft' | translate }}"></mm-timer>
+            </div>
+            <div class="col col-20 text-right">
+                <a class="button button-icon icon ion-arrow-right-b" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" title="{{ 'mm.core.next' | translate }}"></a>
+            </div>
+        </div>
+		</ion-header-bar>
             <!-- Summary -->
             <div ng-if="!quizAborted && showSummary && summaryQuestions && summaryQuestions.length" class="card mma-mod-quiz-table">
                 <div class="item item-divider">
@@ -100,18 +113,6 @@
             </section>
         </mm-loading>
     </ion-content>
-	<ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
-        <div class="row">
-            <div class="col col-20">
-                <a class="button button-icon icon ion-arrow-left-b" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)" title="{{ 'mm.core.previous' | translate }}"></a>
-            </div>
-            <div class="col col-60 text-center">
-                <mm-timer ng-if="endTime" end-time="endTime" finished="timeUp()" timer-text="{{ 'mma.mod_quiz.timeleft' | translate }}"></mm-timer>
-            </div>
-            <div class="col col-20 text-right">
-                <a class="button button-icon icon ion-arrow-right-b" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" title="{{ 'mm.core.next' | translate }}"></a>
-            </div>
-        </div>
-    </ion-header-bar>
+	
 	
 </ion-view>
