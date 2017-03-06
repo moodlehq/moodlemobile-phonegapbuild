@@ -75,19 +75,7 @@
                     </p>
                 </div>
 				
-				<ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
-        <div class="row">
-            <div class="col col-20">
-                <a class="button button-icon icon ion-arrow-left-b" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)" title="{{ 'mm.core.previous' | translate }}"></a>
-            </div>
-            <div class="col col-60 text-center">
-                <mm-timer ng-if="endTime" end-time="endTime" finished="timeUp()" timer-text="{{ 'mma.mod_quiz.timeleft' | translate }}"></mm-timer>
-            </div>
-            <div class="col col-20 text-right">
-                <a class="button button-icon icon ion-arrow-right-b" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" title="{{ 'mm.core.next' | translate }}"></a>
-            </div>
-        </div>
-		</ion-header-bar>
+				
 				
 				
                 <div class="item" ng-if="canReturn">
@@ -106,6 +94,20 @@
                     <a class="button button-block" ng-click="finishAttempt()">{{ 'mma.mod_quiz.submitallandfinish' | translate }}</a>
                 </div>
             </div>
+			
+			<ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
+        <div class="row">
+            <div class="col col-20">
+                <a class="button button-icon icon ion-arrow-left-b" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)" title="{{ 'mm.core.previous' | translate }}"></a>
+            </div>
+            <div class="col col-60 text-center">
+                <mm-timer ng-if="endTime" end-time="endTime" finished="timeUp()" timer-text="{{ 'mma.mod_quiz.timeleft' | translate }}"></mm-timer>
+            </div>
+            <div class="col col-20 text-right">
+                <a class="button button-icon icon ion-arrow-right-b" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" title="{{ 'mm.core.next' | translate }}"></a>
+            </div>
+        </div>
+		</ion-header-bar>
             <!-- Quiz aborted -->
             <section class="card" ng-if="attempt && ((!questions.length && !showSummary) || quizAborted)">
                 <div class="item item-text-wrap">
