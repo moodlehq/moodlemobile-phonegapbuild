@@ -41,9 +41,19 @@
                         <mm-question class="item item-complex item-text-wrap" question="question" abort="abortQuiz()" button-clicked="behaviourButtonClicked(name, value)" component="component" component-id="quiz.coursemodule" attempt-id="attempt.id" offline-enabled="{{offline}}" scroll-handle="mmaModQuizPlayerScroll"></mm-question>
                     </section>
                 </div>
+				<div class="row">
 				    <div class="item item-input padding" >
-        <button class="button button-block" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)">{{ 'mma.mod_quiz.gotosummary' | translate }}</button>
-    </div>
+					<button class="button button-block" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)">{{ 'mma.mod_quiz.previous' | translate }}
+					</button>
+					</div>
+					<div class="col col-20 text-right">
+                <button class="button button-block" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" >{{ 'mma.mod_quiz.next' | translate }}
+				</button>
+            </div>
+					
+					
+					
+				</div>
 				
             </form>
             <!-- Summary -->
