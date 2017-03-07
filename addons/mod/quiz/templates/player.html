@@ -24,6 +24,8 @@
             <div class="list padding" ng-if="!attempt">
                 <button class="button button-block" ng-click="start()">{{ 'mma.mod_quiz.startattempt' | translate }}</button>
             </div>
+			
+			
             <!-- Questions -->
             <form name="mma-mod_quiz-player-form" ng-if="questions.length && !quizAborted && !showSummary">
                 <div ng-repeat="question in questions">
@@ -39,6 +41,10 @@
                         <mm-question class="item item-complex item-text-wrap" question="question" abort="abortQuiz()" button-clicked="behaviourButtonClicked(name, value)" component="component" component-id="quiz.coursemodule" attempt-id="attempt.id" offline-enabled="{{offline}}" scroll-handle="mmaModQuizPlayerScroll"></mm-question>
                     </section>
                 </div>
+				    <div class="item item-input padding" >
+        <button class="button button-block" ng-click="attemptQuiz()">{{ 'mma.mod_quiz.gotosummary' | translate }}</button>
+    </div>
+				
             </form>
             <!-- Summary -->
             <div ng-if="!quizAborted && showSummary && summaryQuestions && summaryQuestions.length" class="card mma-mod-quiz-table">
