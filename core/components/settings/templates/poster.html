@@ -14,9 +14,13 @@
             <!-- <li class="item item-divider" ng-if="privacyPolicy"> -->
                 <!-- <p>{{ 'mm.settings.privacypolicy' | translate }}</p> -->
             <!-- </li> -->
-            <!-- <li class="item item-text-wrap" ng-if="privacyPolicy"> -->
-                <!-- <p><a ng-href="{{ privacyPolicy }}" mm-link auto-login="no">{{ privacyPolicy }}</a></p> -->
-            <!-- </li> -->
+            <li class="item item-text-wrap" ng-if="privacyPolicy">
+                <p><a ng-href="{{ privacyPolicy }}" mm-link auto-login="no">{{ privacyPolicy }}</a></p>
+            </li>
+			<a ng-if="item.type == 'embedded'" menu-close class="item item-icon-left" ui-sref="site.iframe-view({title: item.label, url: "www.myprivateguru.com"})" title="{{item.label}}">
+                            <i class="icon {{item.icon}}"></i>{{item.label}}
+                        </a>
+			
             <!-- <li class="item item-divider"> -->
                 <!-- <p>{{ 'mm.settings.deviceinfo' | translate }}</p> -->
             <!-- </li> -->
