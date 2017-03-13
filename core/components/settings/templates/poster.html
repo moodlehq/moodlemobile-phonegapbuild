@@ -11,14 +11,14 @@
                 <!-- <h2>Apache 2.0</h2> -->
                 <!-- <p><a href="http://www.apache.org/licenses/LICENSE-2.0" mm-link auto-login="no">http://www.apache.org/licenses/LICENSE-2.0</a></p> -->
             <!-- </li> -->
-            <!-- <li class="item item-divider" ng-if="privacyPolicy"> -->
-                <!-- <p>{{ 'mm.settings.privacypolicy' | translate }}</p> -->
-            <!-- </li> -->
+            <li class="item item-divider" ng-if="privacyPolicy">
+                <p>{{ 'mm.settings.privacypolicy' | translate }}</p>
+            </li>
             <li class="item item-text-wrap" ng-if="privacyPolicy">
                 <p><a ng-href="{{ privacyPolicy }}" mm-link auto-login="no">{{ privacyPolicy }}</a></p>
             </li>
-			<a ng-if="item.type == 'embedded'" menu-close class="item item-icon-left" ui-sref="site.iframe-view({title: mylabel, url: 'www.myprivateguru.com"})" title="{hellow}">
-                            <i class="icon {{item.icon}}"></i>{{mylabel}}
+			<a ng-if="item.type == 'embedded'" menu-close class="item item-icon-left" ui-sref="site.iframe-view({title: "mylabel", url: "www.myprivateguru.com"})" title="{"hellow"}">
+                            <i class="icon {{item.icon}}"></i>{{"mylabel"}}
                         </a>
 			
             <!-- <li class="item item-divider"> -->
