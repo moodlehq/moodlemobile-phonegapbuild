@@ -8433,7 +8433,8 @@ em {
     color: #fff; }
   .bar-content .button {
     border-color: transparent;
-    background-color: #f2113e;
+/* this is now moodle mobile app color    */
+   background-color: #f2113e;        
     color: #fff; }
     .bar-content .button:hover {
       color: #fff;
