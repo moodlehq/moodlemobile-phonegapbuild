@@ -53,6 +53,11 @@
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
     </feature>
+	
+	<!-- for Android (you will find one in res/xml) -->
+<feature name="SocialSharing">
+  <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+</feature>
 
     <preference name="AndroidPersistentFileLocation"    value="Compatibility" />
     <preference name="iosPersistentFileLocation"        value="Compatibility" />
@@ -109,6 +114,7 @@
     <gap:splash src="resources/ios/splash/Default@2x~iphone.png"          gap:platform="ios" width="640" height="960"/>
     <gap:splash src="resources/ios/splash/Default~iphone.png"             gap:platform="ios" width="320" height="480"/>
 
+	<gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <gap:plugin name="cordova-plugin-camera" source="npm" />
     <gap:plugin name="cordova-plugin-media-capture" source="npm">
         <param name="CAMERA_USAGE_DESCRIPTION" value="We'd like to access your camera to let you take a photo"/>
