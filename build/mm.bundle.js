@@ -11147,7 +11147,7 @@ angular.module('mm.core.settings', [])
         url: '/mm_poster',
         views: {
             'site': {
-                templateUrl: 'core/components/settings/templates/poster.html',
+                templateUrl: 'core/components/settings/templates/poster1.html',
                 // controller: 'mmSettingsPosterCtrl'
             }
         }
