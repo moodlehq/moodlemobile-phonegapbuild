@@ -664,6 +664,7 @@
     "mm.settings.general": "General",
     "mm.settings.language": "Language",
     "mm.settings.license": "License",
+	"mm.settings.update": "Update",
     "mm.settings.localnotifavailable": "Local notifications available",
     "mm.settings.locationhref": "Webview URL",
     "mm.settings.loggedin": "Online",
