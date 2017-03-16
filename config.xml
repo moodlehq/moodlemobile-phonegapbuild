@@ -5,10 +5,10 @@
         id        = "com.trajectory.mobilelms"
         versionCode = "1"
         version   = "1.0">
-    <name>Trajectory </name>
+    <name>Trajectory Education </name>
 
     <description>
-        Trajectory Education app
+        Trajectory Education official app
     </description>
 
     <author href="http://trajectoryeducation.com" email="info@trajectoryeducation.com">
