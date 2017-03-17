@@ -700,7 +700,7 @@
     "mm.sharedfiles.sharedfiles": "Shared files",
     "mm.sharedfiles.successstorefile": "File successfully stored. Now you can select this file to upload it to your private files or attach it in some activities.",
     "mm.sidemenu.appsettings": "App settings",
-	"mm.sidemenu.poster": "Update",
+	"mm.sidemenu.poster": "Add Post",
     "mm.sidemenu.changesite": "Change site",
     "mm.sidemenu.help": "Help",
     "mm.sidemenu.logout": "Log out",
