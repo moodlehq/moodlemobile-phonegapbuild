@@ -1110,7 +1110,10 @@
     "mma.mod_quiz.overallfeedback": "Overall feedback",
     "mma.mod_quiz.overdue": "Overdue",
     "mma.mod_quiz.overduemustbesubmittedby": "This attempt is now overdue. It should already have been submitted. If you would like this quiz to be graded, you must submit it by {{$a}}. If you do not submit it by then, no marks from this attempt will be counted.",
-    "mma.mod_quiz.preview": "Preview",
+    "mma.mod_quiz.previous": "Previous",
+	"mma.mod_quiz.next": "Next",
+	
+	"mma.mod_quiz.preview": "Preview",
     "mma.mod_quiz.previewquiznow": "Preview quiz now",
     "mma.mod_quiz.question": "Question",
     "mma.mod_quiz.quizpassword": "Quiz password",
