@@ -16,11 +16,8 @@
 // Using JS confirm function we are sure that the user get notified in a Mobile device.
 // This script should be added at the begining of the index.html and it should only use native javascript functions.
 
-<<<<<<< HEAD
-var appVersion = '0.2 (2017)',
-=======
-var appVersion = '3.2.1 (2017)',
->>>>>>> refs/remotes/moodlehq/master
+
+var appVersion = '0.3 (2017)',
     reportInBackgroundName = 'mmCoreReportInBackground',
     errors = [],
     ignoredFiles = ['www/index.html#/site/mod_page', 'www/index.html#/site/mod_resource', 'www/index.html#/site/mm_course-section'];

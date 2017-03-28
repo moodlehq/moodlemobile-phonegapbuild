@@ -2,17 +2,10 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-<<<<<<< HEAD
         id        = "com.moodle.sunlearn"
         versionCode = "2017"
-        version   = "0.2">
+        version   = "0.3">
     <name>SUNLearn</name>
-=======
-        id        = "com.moodle.moodlemobile"
-        versionCode = "20170"
-        version   = "3.2.1">
-    <name>Moodle Mobile</name>
->>>>>>> refs/remotes/moodlehq/master
 
     <description>
         SUNLearn Mobile official app
@@ -23,11 +16,7 @@
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-<<<<<<< HEAD
-        <string>0.2</string>
-=======
-        <string>3.2.1</string>
->>>>>>> refs/remotes/moodlehq/master
+        <string>0.3</string>
     </gap:config-file>
 
     <gap:platform name="ios" />
