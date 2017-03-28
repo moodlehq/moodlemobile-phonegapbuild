@@ -2,10 +2,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
         id        = "com.moodle.sunlearn"
         versionCode = "2017"
         version   = "0.2">
     <name>SUNLearn</name>
+=======
+        id        = "com.moodle.moodlemobile"
+        versionCode = "20170"
+        version   = "3.2.1">
+    <name>Moodle Mobile</name>
+>>>>>>> refs/remotes/moodlehq/master
 
     <description>
         SUNLearn Mobile official app
@@ -16,7 +23,11 @@
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
+<<<<<<< HEAD
         <string>0.2</string>
+=======
+        <string>3.2.1</string>
+>>>>>>> refs/remotes/moodlehq/master
     </gap:config-file>
 
     <gap:platform name="ios" />
@@ -34,7 +45,7 @@
 
     <allow-intent href="*" />
 
-    <preference name="phonegap-version" value="cli-6.3.0" />
+    <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
@@ -124,8 +135,10 @@
     <gap:plugin name="cordova-plugin-statusbar" source="npm" version="2.1.2" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <gap:plugin name="cordova-universal-clipboard" source="npm" />
+    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
 
-    <gap:plugin name="phonegap-plugin-push" source="npm" version="1.7.0">
+    <gap:plugin name="phonegap-plugin-push" source="npm" version="1.9.2">
         <param name="SENDER_ID" value="694767596569" />
     </gap:plugin>
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
