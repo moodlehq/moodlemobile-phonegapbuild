@@ -1,4 +1,5 @@
 {
+    "activitydisabled": "Votre institution a désactivé cette activité dans l'App mobile.",
     "activitynotyetviewable": "Cette activité n'est pas encore accessible via l'app.",
     "activitynotyetviewablegothere": "Cette activité ou ressource n'est pas encore accessible via l'app ; cliquer sur le bouton ci-dessous pour y accéder sur la plateforme.",
     "activitynotyetviewableinapp": "L'activité {{$a}} sera bientôt supportée.",

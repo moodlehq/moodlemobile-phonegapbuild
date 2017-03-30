@@ -1,4 +1,5 @@
 {
+    "activitydisabled": "Zure erakundeak jarduera hau mobile app-an desgaitu du.",
     "activitynotyetviewable": "Jarduera hau oraindik ezin da app-ean ikusi.",
     "activitynotyetviewablegothere": "Jarduera edo baliabide hau oraindik ezin da app-ean ikusi, sakatu beheko botoia gunearen bidez sartzeko.",
     "activitynotyetviewableinapp": "{{$a}} jarduera onartzeko lanean ari gara.",

@@ -12,6 +12,7 @@
     "errorwhileretrievingcontacts": "A apărut o eroare în găsirea contactelor pe server.",
     "errorwhileretrievingdiscussions": "A apărut o eroare în găsirea conversațiilor de pe server.",
     "errorwhileretrievingmessages": "A apărut o eroare în găsirea mesajelor de pe server.",
+    "message": "Conținut mesaj",
     "messagenotsent": "Mesajul nu a fost expediat, vă rugăm să încercați mai târziu.",
     "messages": "Mesaje",
     "mustbeonlinetosendmessages": "Trebuie să fiți online pentru a putea trimite mesaje",

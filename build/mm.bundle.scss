@@ -16,7 +16,7 @@
  */
 
 // Bar content.
-$bar-content-bg: #abcc59 !default;
+$bar-content-bg: #a28265 !default;
 $bar-content-border: transparent !default;
 $bar-content-text: #fff !default;
 
@@ -59,11 +59,14 @@ $mm-input-required-asterisk-color: #ff4136 !default;
 // Item padding.
 $item-input-padding: 16px !default;
 
+// Rich text editor.
+$mm-rte-min-height: 80px !default;
+
 /**
  * App Branding
  */
 .mm-bglogo {
-  background-color: white; /* Change this to add a bg image or change color */
+  background-image: url('../img/background.png'); /* Change this to add a bg image or change color */
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
@@ -134,7 +137,8 @@ em {
   }
 }
 
-.item.item-text-wrap .item-heading {
+.item.item-text-wrap .item-heading,
+p.item-text-wrap {
   overflow: visible;
   white-space: normal;
 }
@@ -154,14 +158,21 @@ em {
 .col-65 {
   @include flex(0, 0, 65%);
   max-width: 65%;
+  width: 65%;
 }
 .col-60 {
   @include flex(0, 0, 60%);
+  width: 60%;
   max-width: 60%;
 }
 .col-40 {
   @include flex(0, 0, 40%);
   max-width: 40%;
+  width: 40%;
+}
+//pane
+.pane {
+background-color: tan;
 }
 
 // Media item, ideal for icons.
@@ -262,45 +273,17 @@ em {
 
 // Defines a "disabled" item.
 .item.item-disabled,
+.item-toggle[disabled],
 .platform-android .item.item-disabled {
   color: $item-disabled-color;
+  h2 {
+    color: $item-disabled-color;
+  }
 }
 
 // Avoid adding too much padding.
 .item-complex .item-checkbox .item-content {
   padding: 0;
-}
-
-// Large centered logo.
-.item-logo-center {
-    text-align: center;
-    padding-left: 16px;
-
-    &.item-complex .item-content {
-        text-align: center;
-        padding-left: 49px;
-    }
-
-    > img:first-child,
-    &.item-complex .item-content > img:first-child,
-    img.logo {
-        position: static;
-        width: 200px;
-        height: 200px;
-        max-width: 200px;
-        max-height: 200px;
-        margin-bottom: 10px;
-        padding: 4px;
-	        
-        &.logo-full {
-          border-radius: 2%;
-          border: 0;
-          max-width: 100%;
-          max-height: 200px;
-          width: auto;
-          height: auto;
-        }
-    }
 }
 
 // Large centered avatar.
@@ -558,7 +541,9 @@ mm-loading.mm-loading-center {
 .mm-media-adapt-width {
   max-width: 100%;
 }
-img.mm-media-adapt-width {
+
+.mm-enabled-media-adapt img.mm-media-adapt-width,
+img.mm-media-adapt-width-enabled {
   height: auto;
 }
 
@@ -603,7 +588,7 @@ mm-navigation-bar {
 
 // When using .item and .row in the same element, .row's padding prevails. Use this class to keep .item's padding.
 .item.row.mm-item-padding {
-  padding: $item-padding;
+  padding: $item-padding / 2;
 }
 
 p.mm-error {
@@ -616,10 +601,25 @@ p.mm-error {
   box-shadow: $card-box-shadow;
   margin: 20px 10px;
   background-color: #fff;
+  position: relative;
+  padding-left: $item-padding * 3;
+  text-align: left;
 
-  i.icon:before {
-      color: $mm-warning-color;
-      font-size: 125%;
+  i.icon {
+    @include display-flex();
+    @include align-items(center);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    font-size: ceil(($item-icon-font-size / 4) * 3);
+    left: ceil($item-padding / 4);
+    color: $mm-warning-color;
+
+    &:before {
+      display: block;
+      width: ceil(($item-icon-font-size / 4) * 3);
+      text-align: center;
+    }
   }
 }
 
@@ -713,6 +713,39 @@ mm-timer {
 
 .popover.mm-context-menu {
   width: 320px;
+  max-width: 100%;
+}
+
+.popup-container .popup-title
+
+
+.mm-icon-with-badge {
+  position: relative;
+
+  .icon {
+    font-size: $button-large-icon-size;
+  }
+
+  .mm-icon-badge {
+    width: auto;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    top: -18px;
+    right: -8px;
+    color: red;
+    font-size: $button-large-icon-size / 2;
+  }
+}
+
+.popup-container.mm-nohead .popup-head {
+  display: none;
+}
+
+.popup-container.mm-bigpopup .popup {
+  width: 90%; // Fallback of calc.
+  width: calc(100% - 20px);
+  max-width: none;
 }
 
 // Inline icons and inputs.
@@ -757,6 +790,28 @@ mm-timer {
   }
 }
 
+.item-select .mm-select-fix {
+  // Taken from .item-select select.
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 ($item-padding * 3) 0 $item-padding;
+  max-width: 65%;
+  width: 100%;
+  border: none;
+  background: $item-default-bg;
+  color: #333;
+  text-indent: .01px;
+  white-space: nowrap;
+  font-size: $font-size-base;
+  cursor: pointer;
+  direction: rtl; // right align the select text
+
+  pointer-events: none;
+}
+
+
 .item-input-inset .item-input-wrapper input,
 .item-input .item-input-wrapper input {
   width: 100%;
@@ -769,6 +824,21 @@ mm-timer {
 
   .icon:before {
     font-size: $mm-button-icon-small-height;
+  }
+}
+
+// Increase size for buttons with only an icon inside.
+.button.icon {
+  &:before {
+    padding-left: 4px;
+    padding-right: 4px;
+    font-size: 30px;
+  }
+
+  &.button-small:before {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 20px;
   }
 }
 
@@ -903,6 +973,7 @@ mm-timer {
   }
   &:not([mm-auto-rows]) {
     height: 200px;
+    min-height: $mm-rte-min-height;
   }
 }
 
@@ -911,11 +982,15 @@ mm-timer {
 }
 
 .item.mm-item-has-rich-text-editor {
+  &.item-input {
+    padding: 0;
+  }
   padding: 0;
   display: block;
 
   .input-label, .mm-textarea {
     padding-left: $item-padding;
+    padding-top: $item-padding/2;
   }
 }
 
@@ -943,6 +1018,10 @@ mm-timer {
   textarea.cke_source {
     padding: 20px;
     box-sizing: border-box;
+  }
+
+  .cke_contents {
+    min-height: $mm-rte-min-height;
   }
 }
 
@@ -1099,6 +1178,21 @@ mm-timer {
   }
 }
 
+.mm-toast {
+  pointer-events: none;
+  bottom: 100px;
+  -ms-flex-align: flex-end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
+  align-items: flex-end;
+
+  .loading {
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 0 10px;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .mm-inapp-notification-backdrop .mm-inapp-notification {
     margin-left: 6px !important;
@@ -1159,6 +1253,17 @@ ion-spinner.mm-spinner-right {
 
   .toggle {
     top: 0;
+  }
+}
+
+.card .item-border,
+.item-border {
+  &:first-child {
+    border-top: $item-border-width solid $item-light-border;
+  }
+
+  &:last-child {
+    border-bottom: $item-border-width solid $item-light-border;
   }
 }
 
@@ -1292,6 +1397,7 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   display: block;
   position: relative;
   width: 100%;
+  overflow: hidden;
 
   /* Force display inline */
   &.inline {
@@ -1325,6 +1431,8 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         bottom: 0;
         right: 0;
         z-index: 1001;
+        background-color: white;
+        padding-left: 10px;
 
         &:after {
           @extend .ion;
@@ -1357,22 +1465,76 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   }
 }
 
+.item.active,
+.item.activated,
+.item-complex.active .item-content,
+.item-complex.activated .item-content,
+.item .item-content.active,
+.item .item-content.activated {
+
+  mm-format-text[max-height], *[mm-format-text][max-height] {
+    // This is to allow clicking on activated areas and have background the same color.
+    &.mm-text-formatted.mm-shortened {
+      .mm-show-more {
+        background-color: $item-default-active-bg;
+      }
+
+      &:before {
+        background: -moz-linear-gradient(top, rgba($item-default-active-bg, 0) calc(100% - 50px), $item-default-active-bg calc(100% - 15px));
+        background: -webkit-gradient(left top, left bottom, color-stop(calc(100% - 50px), rgba($item-default-active-bg, 0)), color-stop(calc(100% - 15px), $item-default-active-bg));
+        background: -webkit-linear-gradient(top, rgba($item-default-active-bg, 0) calc(100% - 50px), $item-default-active-bg calc(100% - 15px));
+        background: -o-linear-gradient(top, rgba($item-default-active-bg, 0) calc(100% - 50px), $item-default-active-bg calc(100% - 15px));
+        background: -ms-linear-gradient(top, rgba($item-default-active-bg, 0) calc(100% - 50px), $item-default-active-bg calc(100% - 15px));
+        background: linear-gradient(to bottom, rgba($item-default-active-bg, 0) calc(100% - 50px), $item-default-active-bg calc(100% - 15px));
+      }
+    }
+  }
+}
+
+// Position modals over action sheet. This means that modals will ALWAYS be over action sheet (in Ionic it's the opposite).
+.action-sheet-open .modal-backdrop.active {
+  z-index: 20;
+  .modal {
+    pointer-events: auto;
+  }
+}
+
+// Disable action sheet if loading is active.
+.action-sheet-open .backdrop-loading.active {
+  z-index: 21;
+}
+.action-sheet-open.loading-active .action-sheet-backdrop {
+  pointer-events: none;
+}
+
 
 .item.item-button-right .badge.mm-course-download{
   right: $spinner-width + $item-padding;
 }
 
 .mm-course-module-handler mm-format-text + mm-format-text {
-    margin-top: 16px;
+  margin-top: 16px;
 }
-input.mm-fileuploader-picker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none;
+
+mm-course-mod-description .card .item {
+  padding: $item-padding / 2;
+}
+
+.padding mm-course-mod-description .card {
+  margin-top: 0;
+}
+
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+    }
 }
 
 /* - User grades table (most of it extracted from MM1)
@@ -1489,29 +1651,17 @@ input.mm-fileuploader-picker {
   .list-left-editing .item-thumbnail-left .item-content {
     padding-right: (ceil( ($item-padding * 3) + ($item-padding / 3) ) - 5);
   }
-  
 
- .avatar {
+  .avatar {
     margin: 0;
     width: 80px;
     height: 80px;
     max-width: 80px;
     max-height: 80px;
+    border-radius : 50%;
     padding: 4px;
-	border-radius: 50%;
-		 }
-		 
-
-.logo {
-    margin: 0;
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    padding: 4px;
-	text-align: center;
-	 }
- 
+    border: 1px solid #ddd;
+  }
 }
 
 .mm-login-sitepolicy-iframe {
@@ -1684,8 +1834,9 @@ $bar-side-menu-text-color: $bar-content-text !default;
 
 .foreground-ion-edit.ion-edit:before {
     position: relative;
-    left: 105px;
+    left: 120px;
     bottom: 15px;
+    font-size: 24px;
 }
 
 .mm-site_mm_user-profile .mm-tab-handlers {
@@ -1812,600 +1963,6 @@ $mma-messages-date-badge: "stable" !default;
 .mma-messages-showprevious-spinner-container {
   width: 100%;
   text-align: center;
-}
-
-
-$mma-mod-assign-warning-color:      #c00 !default;
-
-.mm-site_mod_assign,
-.mm-site_mod_assign-submission {
-
-  div.latesubmission {
-    background-color: #efcfcf;
-  }
-
-  div.earlysubmission {
-    background-color: #cfefcf;
-  }
-
-  div.submissioneditable {
-    color: red;
-  }
-}
-
-p.mma-mod-assign-warning {
-  color: $mma-mod-assign-warning-color;
-}
-
-/** Grading */
-.mm-grading-summary .advancedgrade {
-  display: none;
-}
-
-.gradingform_rubric {
-  overflow: auto;
-  padding-bottom: 1.5em;
-
-  .criterion {
-    border: 1px solid #DDD;
-    overflow: hidden;
-
-    &.even {
-      background: #F0F0F0;
-    }
-
-    .description,
-    .levels,
-    .remark,
-    .levels .level {
-      vertical-align: top;
-    }
-
-    .description,
-    .remark,
-    .levels .level {
-      padding: 3px;
-    }
-
-    .description {
-      width: 150px;
-      font-weight: bold;
-    }
-
-    .levels table {
-      width: 100%;
-      height: 100%;
-    }
-
-    .levels,
-    .levels table,
-    .levels table tbody {
-      padding: 0;
-      margin: 0;
-    }
-
-    .levels .level {
-      border-left: 1px solid #DDD;
-      max-width: 150px;
-    }
-
-    .levels .level .level-wrapper {
-      position: relative;
-    }
-
-    .levels .level.last {
-      border-right: 1px solid #DDD;
-    }
-
-    .levels .level .score {
-      font-style: italic;
-      color: #575;
-      font-weight: bold;
-      margin-top: 5px;
-      white-space: nowrap;
-    }
-
-    .levels .level .score .scorevalue {
-      padding-right: 5px;
-    }
-
-    .levels .level.currentchecked {
-      background: #fff0f0;
-    }
-
-    .levels .level.checked {
-      background: #d0ffd0;
-    }
-
-    .description.error,
-    .levels .level .definition.error,
-    .levels .level .score.error {
-      background: #FFDDDD;
-    }
-
-    .levels.error {
-      border: 1px solid red;
-    }
-  }
-
-  .options .optionsheading {
-    font-weight: bold;
-    font-size: 1.1em;
-    padding-bottom: 5px;
-  }
-  .options .option {
-    padding-bottom: 2px;
-  }
-  .options .option label {
-    margin-left: 5px;
-  }
-  .options .option .value {
-    margin-left: 5px;
-    font-weight: bold;
-  }
-
-  .plainvalue.empty {
-    font-style: italic;
-    color: #AAA;
-  }
-
-  .criteria {
-    height:100%;
-  }
-}
-
-.gradingform_rubric-regrade {
-  padding: 10px;
-  background: #FFDDDD;
-  border: 1px solid #F00;
-  margin-bottom: 10px;
-}
-.gradingform_rubric-restored {
-  padding: 10px;
-  background: #FFFFDD;
-  border: 1px solid #FF0;
-  margin-bottom: 10px;
-}
-.gradingform_rubric-error {
-  color: red;
-  font-weight: bold;
-}
-
-
-.gradingform_guide-regrade {padding:10px;background:#FFDDDD;border:1px solid #F00;margin-bottom:10px;}
-.gradingform_guide-restored {padding:10px;background:#FFFFDD;border:1px solid #FF0;margin-bottom:10px;}
-.gradingform_guide-error {color:red;font-weight:bold;}
-
-.gradingform_guide {
-  .hidden {
-    display: none;
-  }
-
-  td {
-    padding: 8px;
-  }
-
-  .criterion {
-    border: 1px solid #DDD;
-    overflow: hidden;
-
-    .description,
-    .remark {
-      vertical-align: top;
-    }
-
-    &.even {
-      background: #F0F0F0;
-    }
-
-    .description {
-      width: 100%;
-    }
-    .description .criterionname {
-      font-weight: bold;
-    }
-    label {
-      display: block;
-      font-weight: bold;
-      padding-right: 5px;
-    }
-    .description.error {
-      background: #FFDDDD;
-    }
-  }
-
-  .criterionnamelabel {
-    display: none;
-  }
-  .criterionshortname {
-    font-weight: bold;
-  }
-
-  .plainvalue.empty {
-    font-style: italic;
-    color: #AAA;
-  }
-  .plainvalue.editname {
-    font-weight: bold;
-  }
-
-  .options {
-    .optionsheading {
-      font-weight: bold;
-      font-size: 1.1em;
-      padding-bottom: 5px;
-    }
-    .option {
-      padding-bottom:2px;
-    }
-    .option label {
-      margin-left: 5px;
-    }
-    .option .value {
-      margin-left: 5px;
-      font-weight: bold;
-    }
-  }
-
-  .commentheader  {
-    font-weight: bold;
-    font-size: 1.1em;
-    padding-bottom:5px;
-  }
-
-  table {
-    width: 100%;
-  }
-
-  .descriptionreadonly {
-      vertical-align: top;
-  }
-
-  .criteriondescriptionmarkers {
-    width: 300px;
-  }
-
-  .markingguideremark {
-      margin: 0;
-      width: 100%;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-  }
-  .criteriondescriptionscore {
-    display: inline;
-  }
-  .score label {
-      display: block;
-  }
-  .score input {
-      margin: 0;
-      width: auto;
-  }
-}
-
-$mma-chat-notice-badge: "stable" !default;
-
-// The notice displayed in the list.
-.mma-chat-notice {
-
-  text-align: center;
-  margin-top: 10px;
-
-  span {
-    @extend .badge;
-    @extend .badge-#{$mma-chat-notice-badge};
-    white-space: normal;
-  }
-}
-
-.mma-chat-input-inset {
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 0;
-}
-
-.mma-chat-footer-note {
-    color: $button-light-text;
-    font-size: $font-size-base;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-}
-
-.mma-chat-send-form {
-  width: 100%;
-}
-
-.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
-  margin: 0;
-}
-.mm-site_mod_choice {
-  .chart {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 767px) {
-    .col {
-      border-left: $item-border-width solid $item-default-border;
-
-      &.item, .chart-item {
-        margin-top: 0;
-        border-top: 0;
-      }
-
-      &:first-child {
-        border-left: 0;
-      }
-    }
-  }
-}
-
-.mma-forum-discussion-link {
-    text-decoration: none;
-}
-
-.mma-forum-align-right {
-    justify-content: flex-end;
-}
-
-.mma-forum-border {
-    border-color: $item-default-border;
-    border-width: $item-border-width;
-    border-style: solid;
-}
-
-.mm-site_mod_forum, .mm-site_mod_forum-discussion {
-    .item.item-heading {
-        padding-bottom: 2px;
-
-        .mm-subject {
-            font-size: 90%;
-        }
-
-        .item-note {
-            font-size: 80%;
-            margin-left: 5px;
-        }
-    }
-
-    .card.highlight .item.item-heading {
-        background-color: $stable;
-
-        h2 {
-            font-weight: bold;
-        }
-    }
-}
-
-
-
-$mma-mod-quiz-warning-color:      #c00 !default;
-$mma-mod-quiz-highlight-color:    #d9edf7 !default;
-$mma-mod-quiz-alternate-color:    #fbfbfb !default;
-$mma-mod-quiz-conecterr-color:    #fcc !default;
-$mma-mod-quiz-selected-color:     #666 !default;
-
-p.mma-mod-quiz-warning {
-  color: $mma-mod-quiz-warning-color;
-}
-
-.mm-site_mod_quiz, .mm-site_mod_quiz-player {
-  .row {
-    min-height: $button-height + $grid-padding-width + 5px;
-
-    .button.button-block {
-      margin: 0;
-    }
-  }
-}
-
-.item.mma-mod-quiz-highlighted,
-.platform-android .item.mma-mod-quiz-highlighted,
-.platform-ios .item.mma-mod-quiz-highlighted,
-.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
-  background-color: $mma-mod-quiz-highlight-color;
-}
-
-.mma-quiz-textarea {
-  width: 100%;
-  height: 250px;
-  resize: none;
-}
-
-// Remove padding-top and bottom from navigation bar to minimize height used.
-.mma-mod-quiz-subheader {
-  .row {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .col {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .mm-timer {
-    line-height: $button-bar-button-height
-  }
-}
-
-// Alternate background color in rows.
-.mma-mod-quiz-table .row:nth-child(odd) {
-  background-color: $mma-mod-quiz-alternate-color;
-}
-
-.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
-  background-color: $mma-mod-quiz-conecterr-color;
-}
-
-.mm-site_mod_quiz-review .item {
-  h3 {
-    font-size: 18px;
-  }
-}
-
-.item.mma-mod-quiz-selected,
-.platform-android .item.mma-mod-quiz-selected,
-.platform-ios .item.mma-mod-quiz-selected,
-.mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
-  border: 3px solid $mma-mod-quiz-selected-color;
-  &:not(.mma-mod-quiz-last-of-page) {
-    border-bottom: 0;
-  }
-}
-
-
-$mma-mod-scorm-level-margin:		25px !default;
-$mma-mod-scorm-warning-color:		#c00 !default;
-
-@for $i from 0 through 15 {
-  .mma-scorm-level-#{$i} {
-    padding-left: $item-padding + 15px * $i
-  }
-}
-
-.mma-mod-scorm-checkbox-padding {
-  padding: 5px 10px;
-}
-
-.mma-mod-scorm-warning {
-  color: $mma-mod-scorm-warning-color;
-}
-
-ion-popover-view {
-  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
-  &.mma-scorm-popover {
-    height: auto;
-    max-height: 80%;
-    overflow: scroll;
-
-    ion-content {
-      position: relative;
-    }
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    p.padding {
-      margin: 0px; /* Don't add margins to p with padding inside the TOC. */
-    }
-  }
-
-  /* Decrease items padding in popover. */
-  .mma-scorm-popover-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-/* Fix popover styles in iOS. */
-.platform-ios ion-popover-view.mma-scorm-popover {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.mma-mod_survey-darkbg {
-  background-color: $item-divider-bg;
-}
-
-.mma-mod_survey-padding-top {
-  padding-top: 20px;
-}
-
-textarea.mma-mod_survey-textarea {
-  height: 100px;
-  border:1px solid $item-default-border;
-}
-
-select.mma-mod_survey-select {
-  background-color: transparent;
-  padding-left: 0px;
-  padding-right: $item-padding * 2;
-  max-width: 100%;
-
-  .mma-mod_survey-defaultoption {
-    display: none;
-  }
-}
-
-$mma-mod-wiki-toc-level-padding:    12px !default;
-$mma-mod-wiki-newentry-link-color:   red !default;
-$mma-mod-wiki-toc-title-color:   #666 !default;
-$mma-mod-wiki-toc-border-color:   #bbb !default;
-$mma-mod-wiki-toc-background-color:   #eee !default;
-$mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
-
-.wiki-toc {
-  border: 1px solid $mma-mod-wiki-toc-border-color;
-  background: $mma-mod-wiki-toc-background-color;
-  margin: 16px;
-  padding: 8px;
-}
-
-.wiki-toc-title {
-  color: $mma-mod-wiki-toc-title-color;
-  font-size: 1.1em;
-  font-variant: small-caps;
-  text-align: center;
-}
-
-.wiki-toc-section {
-  padding: 0;
-  margin: 2px 8px;
-}
-
-.wiki-toc-section-2 {
-  padding-left: $mma-mod-wiki-toc-level-padding;
-}
-
-.wiki-toc-section-3 {
-  padding-left: $mma-mod-wiki-toc-level-padding * 2;
-}
-
-.mm-site_mod_wiki .wiki_newentry {
-  color: $mma-mod-wiki-newentry-link-color;
-  font-style: italic;
-}
-
-/* Hide edit section links */
-.mma-mod_wiki-noedit a.wiki_edit_section {
-  display: none;
-}
-
-.mma-mod_wiki-subwiki-picker .item-divider {
-  font-weight: bold;
-}
-
-.mma-mod_wiki-subwiki-picker .item.item-selected {
-  background-color: $mma-mod-wiki-subwiki-selected-background-color;
-}
-
-.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
-  font-size: 24px;
-}
-
-
-$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
-$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
-$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
-
-.qbehaviour_deferredcbm_actual_percentage {
-  font-weight: bold;
-}
-.qbehaviour_deferredcbm_judgementok {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-judgementok-color;
-}
-.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-slightly-color;
-}
-.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-confident-color;
-}
-
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
-	font-weight: bold;
-	font-size: 16px;
 }
 
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
@@ -2724,14 +2281,6 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
 
 
 
-// Style match content a bit.
-.mma-qtype-match-container {
-  select {
-    padding: 0 36px 0 0;
-    max-width: 100%;
-  }
-}
-
 // Style gapselect content a bit. All these styles are copied from Moodle.
 .mma-qtype-gapselect-container {
   p {
@@ -2751,6 +2300,19 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 }
 
+
+// Style match content a bit.
+.mma-qtype-match-container .item-select {
+  select,
+  .mm-select-fix {
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+  }
+}
 
 // Style multianswer content a bit. All these styles are copied from Moodle.
 .mma-qtype-multianswer-container {
@@ -2796,3 +2358,649 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 }
 
+
+
+$mma-mod-assign-warning-color:      #c00 !default;
+
+.mm-site_mod_assign,
+.mm-site_mod_assign-submission {
+
+  div.latesubmission {
+    background-color: #efcfcf;
+  }
+
+  div.earlysubmission {
+    background-color: #cfefcf;
+  }
+
+  div.submissioneditable {
+    color: red;
+  }
+}
+
+p.mma-mod-assign-warning {
+  color: $mma-mod-assign-warning-color;
+}
+
+/** Grading */
+.mm-grading-summary .advancedgrade {
+  display: none;
+}
+
+.gradingform_rubric {
+  overflow: auto;
+  padding-bottom: 1.5em;
+
+  .criterion {
+    border: 1px solid #DDD;
+    overflow: hidden;
+
+    &.even {
+      background: #F0F0F0;
+    }
+
+    .description,
+    .levels,
+    .remark,
+    .levels .level {
+      vertical-align: top;
+    }
+
+    .description,
+    .remark,
+    .levels .level {
+      padding: 3px;
+    }
+
+    .description {
+      width: 150px;
+      font-weight: bold;
+    }
+
+    .levels table {
+      width: 100%;
+      height: 100%;
+    }
+
+    .levels,
+    .levels table,
+    .levels table tbody {
+      padding: 0;
+      margin: 0;
+    }
+
+    .levels .level {
+      border-left: 1px solid #DDD;
+      max-width: 150px;
+    }
+
+    .levels .level .level-wrapper {
+      position: relative;
+    }
+
+    .levels .level.last {
+      border-right: 1px solid #DDD;
+    }
+
+    .levels .level .score {
+      font-style: italic;
+      color: #575;
+      font-weight: bold;
+      margin-top: 5px;
+      white-space: nowrap;
+    }
+
+    .levels .level .score .scorevalue {
+      padding-right: 5px;
+    }
+
+    .levels .level.currentchecked {
+      background: #fff0f0;
+    }
+
+    .levels .level.checked {
+      background: #d0ffd0;
+    }
+
+    .description.error,
+    .levels .level .definition.error,
+    .levels .level .score.error {
+      background: #FFDDDD;
+    }
+
+    .levels.error {
+      border: 1px solid red;
+    }
+  }
+
+  .options .optionsheading {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+  }
+  .options .option {
+    padding-bottom: 2px;
+  }
+  .options .option label {
+    margin-left: 5px;
+  }
+  .options .option .value {
+    margin-left: 5px;
+    font-weight: bold;
+  }
+
+  .plainvalue.empty {
+    font-style: italic;
+    color: #AAA;
+  }
+
+  .criteria {
+    height:100%;
+  }
+}
+
+.gradingform_rubric-regrade {
+  padding: 10px;
+  background: #FFDDDD;
+  border: 1px solid #F00;
+  margin-bottom: 10px;
+}
+.gradingform_rubric-restored {
+  padding: 10px;
+  background: #FFFFDD;
+  border: 1px solid #FF0;
+  margin-bottom: 10px;
+}
+.gradingform_rubric-error {
+  color: red;
+  font-weight: bold;
+}
+
+
+.gradingform_guide-regrade {padding:10px;background:#FFDDDD;border:1px solid #F00;margin-bottom:10px;}
+.gradingform_guide-restored {padding:10px;background:#FFFFDD;border:1px solid #FF0;margin-bottom:10px;}
+.gradingform_guide-error {color:red;font-weight:bold;}
+
+.gradingform_guide {
+  .hidden {
+    display: none;
+  }
+
+  td {
+    padding: 8px;
+  }
+
+  .criterion {
+    border: 1px solid #DDD;
+    overflow: hidden;
+
+    .description,
+    .remark {
+      vertical-align: top;
+    }
+
+    &.even {
+      background: #F0F0F0;
+    }
+
+    .description {
+      width: 100%;
+    }
+    .description .criterionname {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      padding-right: 5px;
+    }
+    .description.error {
+      background: #FFDDDD;
+    }
+  }
+
+  .criterionnamelabel {
+    display: none;
+  }
+  .criterionshortname {
+    font-weight: bold;
+  }
+
+  .plainvalue.empty {
+    font-style: italic;
+    color: #AAA;
+  }
+  .plainvalue.editname {
+    font-weight: bold;
+  }
+
+  .options {
+    .optionsheading {
+      font-weight: bold;
+      font-size: 1.1em;
+      padding-bottom: 5px;
+    }
+    .option {
+      padding-bottom:2px;
+    }
+    .option label {
+      margin-left: 5px;
+    }
+    .option .value {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+  }
+
+  .commentheader  {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom:5px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .descriptionreadonly {
+      vertical-align: top;
+  }
+
+  .criteriondescriptionmarkers {
+    width: 300px;
+  }
+
+  .markingguideremark {
+      margin: 0;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  .criteriondescriptionscore {
+    display: inline;
+  }
+  .score label {
+      display: block;
+  }
+  .score input {
+      margin: 0;
+      width: auto;
+  }
+}
+
+$mma-chat-notice-badge: "stable" !default;
+
+// The notice displayed in the list.
+.mma-chat-notice {
+
+  text-align: center;
+  margin-top: 10px;
+
+  span {
+    @extend .badge;
+    @extend .badge-#{$mma-chat-notice-badge};
+    white-space: normal;
+  }
+}
+
+.mma-chat-input-inset {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+
+.mma-chat-footer-note {
+    color: $button-light-text;
+    font-size: $font-size-base;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.mma-chat-send-form {
+  width: 100%;
+}
+
+.mma-chat-reconnect-button, .button.mma-chat-reconnect-button {
+  margin: 0;
+}
+
+.mma-mod_chat-users-modal {
+  .item-complex .item-avatar {
+    padding-bottom: 0;
+
+    .tabs {
+      border: 0;
+    }
+  }
+}
+.mm-site_mod_choice {
+  .chart {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 767px) {
+    .col {
+      border-left: $item-border-width solid $item-default-border;
+
+      &.item, .chart-item {
+        margin-top: 0;
+        border-top: 0;
+      }
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
+}
+
+.mma-forum-discussion-link {
+    text-decoration: none;
+}
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
+
+.mma-forum-reply-edit {
+    padding: $item-padding/2;
+}
+
+.mm-site_mod_forum, .mm-site_mod_forum-discussion {
+    .item.item-heading {
+        padding-bottom: 2px;
+
+        .mm-subject {
+            font-size: 90%;
+        }
+
+        .item-note {
+            font-size: 80%;
+            margin-left: 5px;
+        }
+    }
+
+    .card.highlight .item.item-heading {
+        background-color: $stable;
+
+        h2 {
+            font-weight: bold;
+        }
+    }
+}
+
+.mm-nest-cards {
+    .mm-nested-card {
+        padding: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        margin: 1px 10px 10px;
+        border-radius: 0;
+        background-color: #fff;
+
+        .item {
+            border-left: 0;
+            border-right: 0;
+        }
+        .item-media:first-child {
+            border-top: 0;
+        }
+        .item-media:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .item-divider {
+        display: none;
+    }
+
+    .mm-nested {
+        margin-left: 10px;
+
+        &>article:nth-child(even)>.mm-nested-card>mma-mod-forum-discussion-post>.item-heading {
+            background: #eee;
+        }
+    }
+
+    .mma-forum-reply-edit {
+        padding: 0;
+        border: 0
+    }
+}
+
+
+$mma-mod-quiz-warning-color:      #c00 !default;
+$mma-mod-quiz-highlight-color:    #d9edf7 !default;
+$mma-mod-quiz-alternate-color:    #fbfbfb !default;
+$mma-mod-quiz-conecterr-color:    #fcc !default;
+$mma-mod-quiz-selected-color:     #666 !default;
+
+p.mma-mod-quiz-warning {
+  color: $mma-mod-quiz-warning-color;
+}
+
+.mm-site_mod_quiz, .mm-site_mod_quiz-player {
+  .row {
+    min-height: $button-height + $grid-padding-width + 5px;
+
+    .button.button-block {
+      margin: 0;
+    }
+  }
+}
+
+.item.mma-mod-quiz-highlighted,
+.platform-android .item.mma-mod-quiz-highlighted,
+.platform-ios .item.mma-mod-quiz-highlighted,
+.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
+  background-color: $mma-mod-quiz-highlight-color;
+}
+
+.mma-quiz-textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+}
+
+// Remove padding-top and bottom from navigation bar to minimize height used.
+.mma-mod-quiz-subheader {
+  .row {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .col {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .mm-timer {
+    line-height: $button-bar-button-height
+  }
+}
+
+// Alternate background color in rows.
+.mma-mod-quiz-table .row:nth-child(odd) {
+  background-color: $mma-mod-quiz-alternate-color;
+}
+
+.mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
+  background-color: $mma-mod-quiz-conecterr-color;
+}
+
+.mm-site_mod_quiz-review .item {
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.item.mma-mod-quiz-selected,
+.platform-android .item.mma-mod-quiz-selected,
+.platform-ios .item.mma-mod-quiz-selected,
+.mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
+  border: 3px solid $mma-mod-quiz-selected-color;
+  &:not(.mma-mod-quiz-last-of-page) {
+    border-bottom: 0;
+  }
+}
+
+.mma-mod_survey-darkbg {
+  background-color: $item-divider-bg;
+}
+
+.mma-mod_survey-padding-top {
+  padding-top: 20px;
+}
+
+textarea.mma-mod_survey-textarea {
+  height: 100px;
+  border:1px solid $item-default-border;
+}
+
+select.mma-mod_survey-select {
+  background-color: transparent;
+  padding-left: 0px;
+  padding-right: $item-padding * 2;
+  max-width: 100%;
+
+  .mma-mod_survey-defaultoption {
+    display: none;
+  }
+}
+
+
+$mma-mod-scorm-level-margin:		25px !default;
+$mma-mod-scorm-warning-color:		#c00 !default;
+
+@for $i from 0 through 15 {
+  .mma-scorm-level-#{$i} {
+    padding-left: $item-padding + 15px * $i
+  }
+}
+
+.mma-mod-scorm-checkbox-padding {
+  padding: 5px 10px;
+}
+
+.mma-mod-scorm-warning {
+  color: $mma-mod-scorm-warning-color;
+}
+
+ion-popover-view {
+  /* Adapt popover to content's height. The popover's ion-content needs to disable Ionic scroll. */
+  &.mma-scorm-popover {
+    height: auto;
+    max-height: 80%;
+    overflow: scroll;
+
+    ion-content {
+      position: relative;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    p.padding {
+      margin: 0px; /* Don't add margins to p with padding inside the TOC. */
+    }
+  }
+
+  /* Decrease items padding in popover. */
+  .mma-scorm-popover-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Fix popover styles in iOS. */
+.platform-ios ion-popover-view.mma-scorm-popover {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+$mma-mod-wiki-toc-level-padding:    12px !default;
+$mma-mod-wiki-newentry-link-color:   red !default;
+$mma-mod-wiki-toc-title-color:   #666 !default;
+$mma-mod-wiki-toc-border-color:   #bbb !default;
+$mma-mod-wiki-toc-background-color:   #eee !default;
+$mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
+
+.wiki-toc {
+  border: 1px solid $mma-mod-wiki-toc-border-color;
+  background: $mma-mod-wiki-toc-background-color;
+  margin: 16px;
+  padding: 8px;
+}
+
+.wiki-toc-title {
+  color: $mma-mod-wiki-toc-title-color;
+  font-size: 1.1em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+.wiki-toc-section {
+  padding: 0;
+  margin: 2px 8px;
+}
+
+.wiki-toc-section-2 {
+  padding-left: $mma-mod-wiki-toc-level-padding;
+}
+
+.wiki-toc-section-3 {
+  padding-left: $mma-mod-wiki-toc-level-padding * 2;
+}
+
+.mm-site_mod_wiki .wiki_newentry {
+  color: $mma-mod-wiki-newentry-link-color;
+  font-style: italic;
+}
+
+/* Hide edit section links */
+.mma-mod_wiki-noedit a.wiki_edit_section {
+  display: none;
+}
+
+.mma-mod_wiki-subwiki-picker .item-divider {
+  font-weight: bold;
+}
+
+.mma-mod_wiki-subwiki-picker .item.item-selected {
+  background-color: $mma-mod-wiki-subwiki-selected-background-color;
+}
+
+.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
+  font-size: 24px;
+}
+
+
+$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
+$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
+$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
+
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold;
+}
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-judgementok-color;
+}
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-slightly-color;
+}
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-confident-color;
+}
+
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+	font-weight: bold;
+	font-size: 16px;
+}

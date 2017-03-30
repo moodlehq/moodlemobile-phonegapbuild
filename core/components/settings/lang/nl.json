@@ -1,7 +1,7 @@
 {
     "about": "Over",
     "appname": "Moodle Mobile {{version}}",
-    "appready": "App klaar.",
+    "appready": "App klaar",
     "cacheexpirationtime": "Cache verlooptijd (milliseconden)",
     "cannotsyncoffline": "Kan offline geen bestanden synchroniseren.",
     "cannotsyncwithoutwifi": "Kan nu niet synchroniseren omdat er volgens je huidige instellingen alleen over Wi-Fi gesynchroniseerd mag worden. Maak verbinding met een Wi-Fi-netwerk.",

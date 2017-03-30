@@ -1,4 +1,5 @@
 {
+    "activitydisabled": "Für diese Website ist die Aktivität in der App deaktiviert.",
     "activitynotyetviewable": "Diese Aktivität kann bisher nicht in der App angezeigt werden.",
     "activitynotyetviewablegothere": "Die Aktivität oder das Material kann bisher in der App nicht angezeigt werden. Tippen Sie auf die Taste, um die Website im Browser anzuzeigen.",
     "activitynotyetviewableinapp": "Wir arbeiten daran, die Aktivität {{$a}} zu unterstützen.",
@@ -10,7 +11,7 @@
     "confirmdownload": "Möchten Sie wirklich {{size}} herunterladen?",
     "confirmdownloadsection": "Möchten Sie wirklich {{size}} herunterladen?",
     "confirmdownloadunknownsize": "Die Datenmenge kann nicht berechnet werden. Möchten Sie wirklich herunterladen?",
-    "confirmpartialdownloadsize": "Sie sind dabei, <strong>mindestens</ strong> {{size}} herunterzuladen. Sind Sie sicher, dass Sie fortfahren wollen?",
+    "confirmpartialdownloadsize": "Möchten Sie wirklich {{size}} herunterladen?",
     "contents": "Inhalte",
     "couldnotloadsectioncontent": "Die Abschnittsinhalte konnten nicht geladen werden. Versuchen Sie es später noch einmal.",
     "couldnotloadsections": "Die Abschnitte konnten nicht geladen werden. Versuchen Sie es später noch einmal.",

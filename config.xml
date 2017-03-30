@@ -4,7 +4,7 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "uk.co.webanywhere.sdemo"
         versionCode = "2017021403"
-        version   = "1.0.3">
+        version   = "1.1.0">
     <name>Webanywhere Mobile App</name>
 
     <description>

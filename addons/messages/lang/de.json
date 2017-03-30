@@ -1,6 +1,7 @@
 {
     "addcontact": "Kontakt hinzufügen",
     "blockcontact": "Kontakt blockieren",
+    "blockcontactconfirm": "Sie werden von diesem Kontakt keine Mitteilungen mehr empfangen.",
     "blocknoncontacts": "Unbekannte Personen sperren",
     "contactlistempty": "Die Kontaktliste ist leer.",
     "contactname": "Name",
@@ -12,14 +13,18 @@
     "errorwhileretrievingcontacts": "Fehler beim Lesen der Kontakte vom Server",
     "errorwhileretrievingdiscussions": "Fehler beim Lesen der Themen vom Server",
     "errorwhileretrievingmessages": "Fehler beim Empfang der Mitteilungen vom Server",
+    "loadpreviousmessages": "Vorherige Mitteilungen laden",
+    "message": "Mitteilung",
     "messagenotsent": "Die Mitteilung wurde nicht gesendet. Versuchen Sie es später noch einmal.",
     "messagepreferences": "Nachrichteneinstellungen",
     "messages": "Nachrichten",
     "mustbeonlinetosendmessages": "Sie müssen online sein, um Mitteilungen zu senden",
-    "newmessage": "Mitteilung schreiben ...",
+    "newmessage": "Neue Mitteilung ...",
+    "newmessages": "Neue Mitteilungen",
     "nomessages": "Keine Mitteilungen",
     "nousersfound": "Keine Personen gefunden",
     "removecontact": "Kontakt entfernen",
+    "removecontactconfirm": "Der Kontakt wird aus Ihrer Kontaktliste gelöscht.",
     "send": "Senden",
     "sendmessage": "Nachricht senden",
     "type_blocked": "Blockiert",
@@ -28,5 +33,5 @@
     "type_search": "Suchergebnisse",
     "type_strangers": "Andere Personen",
     "unblockcontact": "Kontakt freigeben",
-    "warningmessagenotsent": "Keine Mitteilung(en) an {{user}} gesendet. {{error}}"
+    "warningmessagenotsent": "Keine Mitteilung an {{user}} gesendet. {{error}}"
 }

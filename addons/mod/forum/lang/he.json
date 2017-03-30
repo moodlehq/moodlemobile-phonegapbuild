@@ -14,10 +14,15 @@
     "forumnodiscussionsyet": "עדיין לא קיימים נושאי דיונים בפורום זה.",
     "group": "קבוצה",
     "message": "הודעה",
+    "modeflatnewestfirst": "הצגת תגובות בצורה שטוחה, החדשות ביותר ראשונות",
+    "modeflatoldestfirst": "הצגת תגובות בצורה שטוחה, הישנות ביותר ראשונות",
+    "modenested": "הצגת תגובות באופן מקונן",
     "numdiscussions": "{{numdiscussions}} דיונים",
     "numreplies": "{{numreplies}} תגובות",
     "posttoforum": "שליחת הודעה לפורום",
     "re": "תשובה ל:",
     "reply": "תגובה",
-    "subject": "נושא"
+    "subject": "נושא",
+    "unread": "לא נקרא",
+    "unreadpostsnumber": "{{$a}} הודעות שלא נקראו"
 }

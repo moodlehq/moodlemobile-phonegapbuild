@@ -142,6 +142,11 @@ angular.module('mm.addons.mod_assign')
                     return $q.when();
                 }
 
+                if (!scope.$$destroyed) {
+                    // Block the assignment.
+                    $mmSyncBlock.blockOperation(mmaModAssignComponent, assign.id);
+                }
+
                 scope.gradeInfo = gradeInfo;
                 if (gradeInfo.advancedgrading && gradeInfo.advancedgrading[0] &&
                         typeof gradeInfo.advancedgrading[0].method != 'undefined') {
@@ -222,7 +227,8 @@ angular.module('mm.addons.mod_assign')
                     originalGrades.applyToAll = true;
                 }
                 if (assign.markingworkflow && scope.grade.gradingStatus) {
-                    scope.workflowStatusTranslationId =  getSubmissionGradingStatusTranslationId(scope.grade.gradingStatus);
+                    scope.workflowStatusTranslationId =
+                        $mmaModAssign.getSubmissionGradingStatusTranslationId(scope.grade.gradingStatus);
                 }
 
                 if (!scope.feedback) {
@@ -296,6 +302,8 @@ angular.module('mm.addons.mod_assign')
             var isBlind = !!blindId,
                 assign;
 
+            scope.previousAttempt = false;
+
             if (!submitId) {
                 submitId = $mmSite.getUserId();
                 isBlind = false;
@@ -308,11 +316,6 @@ angular.module('mm.addons.mod_assign')
                     promises = [];
 
                 scope.assign = assign;
-
-                if (!scope.$$destroyed) {
-                    // Block the assignment.
-                    $mmSyncBlock.blockOperation(mmaModAssignComponent, assign.id);
-                }
 
                 if (assign.allowsubmissionsfromdate && assign.allowsubmissionsfromdate >= time) {
                     scope.fromDate = moment(assign.allowsubmissionsfromdate * 1000)
@@ -351,7 +354,13 @@ angular.module('mm.addons.mod_assign')
                     scope.submissionStatusAvailable = true;
 
                     scope.lastAttempt = response.lastattempt;
-                    scope.previousAttempts = response.previousattempts;
+                    if (response.previousattempts && response.previousattempts.length > 0) {
+                        var previousAttempts = response.previousattempts.sort(function(a, b) {
+                            return a.attemptnumber - b.attemptnumber;
+                        });
+                        scope.previousAttempt = previousAttempts[previousAttempts.length - 1];
+                    }
+
                     scope.membersToSubmit = [];
                     if (response.lastattempt) {
                         scope.canSubmit = !scope.isSubmittedForGrading && !scope.submittedOffline &&
@@ -426,7 +435,13 @@ angular.module('mm.addons.mod_assign')
                         if (scope.userSubmission) {
                             if (!assign.teamsubmission || !response.lastattempt.submissiongroup ||
                                     !assign.preventsubmissionnotingroup) {
-                                scope.submissionPlugins = scope.userSubmission.plugins;
+                                if (scope.previousAttempt && scope.previousAttempt.submission.plugins &&
+                                        scope.userSubmission.status == mmaModAssignSubmissionStatusReopened) {
+                                    // Get latest attempt if avalaible.
+                                    scope.submissionPlugins = scope.previousAttempt.submission.plugins;
+                                } else {
+                                    scope.submissionPlugins = scope.userSubmission.plugins;
+                                }
                             }
                         }
                     }
@@ -515,11 +530,7 @@ angular.module('mm.addons.mod_assign')
                     });
                 });
             }).catch(function(message) {
-                if (message) {
-                    $mmUtil.showErrorModal(message);
-                } else {
-                    $mmUtil.showErrorModal('Error getting assigment data.');
-                }
+                $mmUtil.showErrorModalDefault(message, 'Error getting assigment data.');
                 return $q.reject();
             }).finally(function() {
                 scope.loaded = true;
@@ -589,7 +600,7 @@ angular.module('mm.addons.mod_assign')
                 obsManualSync && obsManualSync.off && obsManualSync.off();
                 obsSubmitGrade && obsSubmitGrade.off && obsSubmitGrade.off();
 
-                if (scope.assign) {
+                if (scope.assign && scope.isGrading) {
                     $mmSyncBlock.unblockOperation(mmaModAssignComponent, scope.assign.id);
                 }
             });
@@ -613,15 +624,14 @@ angular.module('mm.addons.mod_assign')
                     return;
                 }
 
-                if (!scope.previousAttempts || !scope.previousAttempts.length) {
+                if (!scope.previousAttempt) {
                     // Cannot access previous attempts, just go to edit.
                     scope.goToEdit();
                     return;
                 }
 
                 var modal = $mmUtil.showModalLoading(),
-                    previousAttempt = scope.previousAttempts[scope.previousAttempts.length - 1],
-                    previousSubmission = $mmaModAssign.getSubmissionObjectFromAttempt(scope.assign, previousAttempt);
+                    previousSubmission = $mmaModAssign.getSubmissionObjectFromAttempt(scope.assign, scope.previousAttempt);
 
                 $mmaModAssignHelper.getSubmissionSizeForCopy(scope.assign, previousSubmission).catch(function() {
                     // Error calculating size, return -1.

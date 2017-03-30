@@ -1,4 +1,5 @@
 {
+    "activitydisabled": "La vostra organització ha desactivat aquesta activitat a l'app mòbil.",
     "activitynotyetviewable": "Aquesta activitat encara no es pot visualitzar a l'aplicació.",
     "activitynotyetviewablegothere": "Aquest tipus d'activitat o recurs encara no està disponible per ser visualitzat des de l'aplicació, cliqueu al botó de més avall per accedir-hi des del web.",
     "activitynotyetviewableinapp": "Estem treballant per donar suport a l'activitat {{$a}}.",

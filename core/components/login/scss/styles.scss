@@ -8,29 +8,17 @@
   .list-left-editing .item-thumbnail-left .item-content {
     padding-right: (ceil( ($item-padding * 3) + ($item-padding / 3) ) - 5);
   }
-  
 
- .avatar {
+  .avatar {
     margin: 0;
     width: 80px;
     height: 80px;
     max-width: 80px;
     max-height: 80px;
+    border-radius : 50%;
     padding: 4px;
-	border-radius: 50%;
-		 }
-		 
-
-.logo {
-    margin: 0;
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    padding: 4px;
-	text-align: center;
-	 }
- 
+    border: 1px solid #ddd;
+  }
 }
 
 .mm-login-sitepolicy-iframe {

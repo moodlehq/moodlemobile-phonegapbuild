@@ -14,10 +14,19 @@
     "forumnodiscussionsyet": "Não existem tópicos neste fórum ainda",
     "group": "Grupo",
     "message": "Mensagem",
+    "modeflatnewestfirst": "Mostrar respostas começando pela mais recente",
+    "modeflatoldestfirst": "Mostrar respostas começando pela mais antiga",
+    "modenested": "Mostrar respostas aninhadas",
     "numdiscussions": "{{numdiscussions}} discussões",
     "numreplies": "{{numreplies}} respostas",
     "posttoforum": "Enviar mensagem ao fórum",
     "re": "Re:",
+    "refreshdiscussions": "Atualizar discussões",
+    "refreshposts": "Atualizar as postagens da discussão",
     "reply": "Responder",
-    "subject": "Assunto"
+    "sortnewestfirst": "Exibir os mais novos primeiro",
+    "sortoldestfirst": "Exibir os mais velhos primeiro",
+    "subject": "Assunto",
+    "unread": "Não lida",
+    "unreadpostsnumber": "{{$a}} mensagens não lidas"
 }
