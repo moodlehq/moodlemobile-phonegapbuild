@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /**
  * This file will be the head of all the other SCSS files in the project.
  *
@@ -8387,7 +8387,7 @@ a.button {
   bottom: 0; }
 
 .mm-logo {
-  background-image: url('../img/moodle.png');
+  background-image: url('../img/skillsBreeder.png');
   /* Change logo here */
   background-repeat: no-repeat;
   background-position: center center;
