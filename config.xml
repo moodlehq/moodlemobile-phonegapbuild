@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "uk.co.webanywhere.sdemo"
-        versionCode = "2017021403"
+        versionCode = "2017033000"
         version   = "1.1.0">
     <name>Webanywhere Mobile App</name>
 
