@@ -5,18 +5,18 @@
         id        = "com.moodle.moodlemobile"
         versionCode = "20170"
         version   = "3.2.1">
-    <name>Moodle Mobile</name>
+    <name>PEDCO Móvil</name>
 
     <description>
-        Moodle Mobile official app
+        ¡PEDCO en tu celular!
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Pty Ltd
+    <author href="http://sti.uncoma.edu.ar" email="plataforma@dti.uncoma.edu.ar">
+        Diseño y Entornos Virtuales - Subsecretaría de Tecnologías de la Información
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>3.2.1</string>
+        <string>1</string>
     </gap:config-file>
 
     <gap:platform name="ios" />
