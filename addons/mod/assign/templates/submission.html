@@ -93,7 +93,7 @@
                 <a ng-if="!hasOffline && (!userSubmission || !userSubmission.status || userSubmission.status == statusNew)" class="button button-block" ng-click="goToEdit()">{{ 'mma.mod_assign.addsubmission' | translate }}</a>
                 <!-- If reopened, show addfromprevious and addnewattempt. -->
                 <a ng-if="!hasOffline && userSubmission && userSubmission.status == statusReopened" class="button button-block" ng-click="copyPrevious()">{{ 'mma.mod_assign.addnewattemptfromprevious' | translate }}</a>
-                <a ng-if="userSubmission && userSubmission.status == statusReopened" class="button button-block" ng-click="goToEdit()">{{ 'mma.mod_assign.addnewattempt' | translate }}</a>
+                <a ng-if="!hasOffline && userSubmission && userSubmission.status == statusReopened" class="button button-block" ng-click="goToEdit()">{{ 'mma.mod_assign.addnewattempt' | translate }}</a>
                 <!-- Else show editsubmission. -->
                 <a ng-if="!hasOffline && userSubmission && userSubmission.status && userSubmission.status != statusNew && userSubmission.status != statusReopened" class="button button-block" ng-click="goToEdit()">{{ 'mma.mod_assign.editsubmission' | translate }}</a>
             </div>
@@ -211,7 +211,7 @@
             </a>
         </div>
 
-        <div class="mm-warning" ng-if="isGrading && !canSaveGrades">
+        <div class="mm-warning-card-icon" ng-if="isGrading && !canSaveGrades">
             <i class="icon ion-alert-circled padding"></i> {{ 'mma.mod_assign.cannotgradefromapp' | translate:{$a: moduleName} }}
             <a ng-if="gradeUrl" href="{{ gradeUrl }}" mm-link class="button button-block icon-right ion-share">{{ 'mm.core.openinbrowser' | translate }}</a>
         </div>
