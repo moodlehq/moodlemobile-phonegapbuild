@@ -2614,7 +2614,7 @@ angular.module('mm.core')
         if (size >= 0 && size <= mmFilepoolDownloadThreshold) {
             return $q.when();
         }
-        return $mmUtil.getMimeType(url).then(function(mimetype) {
+        return $mmUtil.getMimeTypeFromUrl(url).then(function(mimetype) {
             if (mimetype.indexOf('video') != -1 || mimetype.indexOf('audio') != -1) {
                 return $q.reject();
             }
@@ -6543,12 +6543,12 @@ angular.module('mm.core')
         self.openOnlineFile = function(url) {
             var deferred = $q.defer();
             if (ionic.Platform.isAndroid() && window.plugins && window.plugins.webintent) {
-                var extension,
-                    iParams;
-                $mmWS.getRemoteFileMimeType(url).then(function(mimetype) {
+                var iParams;
+                self.getMimeTypeFromUrl(url).catch(function() {
+                }).then(function(mimetype) {
                     if (!mimetype) {
-                        extension = $mmFS.guessExtensionFromUrl(url);
-                        mimetype = $mmFS.getMimeType(extension);
+                        $mmLang.translateAndRejectDeferred(deferred, 'mm.core.erroropenfilenoextension');
+                        return;
                     }
                     iParams = {
                         action: "android.intent.action.VIEW",
@@ -6566,11 +6566,7 @@ angular.module('mm.core')
                             $log.debug('action: ' + iParams.action);
                             $log.debug('url: ' + iParams.url);
                             $log.debug('type: ' + iParams.type);
-                            if (!extension || extension.indexOf('/') > -1 || extension.indexOf('\\') > -1) {
-                                $mmLang.translateAndRejectDeferred(deferred, 'mm.core.erroropenfilenoextension');
-                            } else {
-                                $mmLang.translateAndRejectDeferred(deferred, 'mm.core.erroropenfilenoapp');
-                            }
+                            $mmLang.translateAndRejectDeferred(deferred, 'mm.core.erroropenfilenoapp');
                         }
                     );
                 });
@@ -6582,11 +6578,16 @@ angular.module('mm.core')
             return deferred.promise;
         };
         self.getMimeType = function(url) {
+            $log.warn('$mmUtil#getMimeType is deprecated. Use $mmUtil#getMimeTypeFromUrl instead');
+            return self.getMimeTypeFromUrl(url);
+        };
+        self.getMimeTypeFromUrl = function(url) {
+            var extension = $mmFS.guessExtensionFromUrl(url),
+                mimetype = $mmFS.getMimeType(extension);
+            if (mimetype) {
+                return $q.when(mimetype);
+            }
             return $mmWS.getRemoteFileMimeType(url).then(function(mimetype) {
-                if (!mimetype) {
-                    extension = $mmFS.guessExtensionFromUrl(url);
-                    mimetype = $mmFS.getMimeType(extension);
-                }
                 return mimetype || '';
             });
         };
@@ -8671,8 +8672,8 @@ angular.module('mm.core')
 }]);
 
 angular.module('mm.core')
-.directive('mmFile', ["$q", "$mmUtil", "$mmFilepool", "$mmSite", "$mmApp", "$mmEvents", "$mmFS", "mmCoreDownloaded", "mmCoreDownloading", "mmCoreNotDownloaded", "mmCoreOutdated", function($q, $mmUtil, $mmFilepool, $mmSite, $mmApp, $mmEvents, $mmFS, mmCoreDownloaded, mmCoreDownloading,
-            mmCoreNotDownloaded, mmCoreOutdated) {
+.directive('mmFile', ["$q", "$mmUtil", "$mmFilepool", "$mmSite", "$mmApp", "$mmEvents", "$mmFS", "mmCoreDownloaded", "mmCoreDownloading", "mmCoreNotDownloaded", "mmCoreOutdated", "$mmLang", function($q, $mmUtil, $mmFilepool, $mmSite, $mmApp, $mmEvents, $mmFS, mmCoreDownloaded, mmCoreDownloading,
+            mmCoreNotDownloaded, mmCoreOutdated, $mmLang) {
     function getState(scope, siteId, fileUrl, timeModified, alwaysDownload) {
         return $mmFilepool.getFileStateByUrl(siteId, fileUrl, timeModified).then(function(state) {
             var canDownload = $mmSite.canDownloadFiles();
@@ -8724,7 +8725,7 @@ angular.module('mm.core')
                         if (isWifi && isOnline) {
                             downloadFile(scope, siteId, fileUrl, component, componentId, timeModified, alwaysDownload);
                         }
-                        if (isDownloading|| !scope.isDownloaded || isOnline) {
+                        if (isDownloading || !scope.isDownloaded || isOnline) {
                             return fixedUrl;
                         } else {
                             return $mmFilepool.getUrlByUrl(siteId, fileUrl, component, componentId, timeModified);
@@ -8740,7 +8741,22 @@ angular.module('mm.core')
                 return;
             }
             if (url.indexOf('http') === 0) {
-                return $mmUtil.openOnlineFile(url);
+                return $mmUtil.openOnlineFile(url).catch(function(error) {
+                    if (!$mmFS.isAvailable()) {
+                        return $q.reject(error);
+                    }
+                    var subPromise;
+                    if (scope.isDownloading) {
+                        subPromise = $mmLang.translateAndReject('mm.core.erroropenfiledownloading');
+                    } else if (status === mmCoreNotDownloaded) {
+                        subPromise = downloadFile(scope, siteId, fileUrl, component, componentId, timeModified, alwaysDownload);
+                    } else {
+                        subPromise = $mmFilepool.getInternalUrlByUrl(siteId, fileUrl);
+                    }
+                    return subPromise.then(function(url) {
+                        return $mmUtil.openFile(url);
+                    });
+                });
             } else {
                 return $mmUtil.openFile(url);
             }
@@ -17041,7 +17057,7 @@ angular.module('mm.core.login')
                 return $q.reject();
             }
             $scope.sitePolicy = settings.sitepolicy;
-            return $mmUtil.getMimeType($scope.sitePolicy).then(function(mimeType) {
+            return $mmUtil.getMimeTypeFromUrl($scope.sitePolicy).then(function(mimeType) {
                 var extension = $mmFS.getExtension(mimeType, $scope.sitePolicy);
                 $scope.showInline = extension == 'html' || extension == 'html';
                 if ($scope.showInline) {
@@ -49274,9 +49290,11 @@ angular.module('mm.addons.mod_resource')
             component = mmaModResourceComponent,
             url = contents[0].fileurl,
             fixedUrl = $mmSite.fixPluginfileURL(url),
+            status,
             promise;
         if ($mmFS.isAvailable()) {
-            promise = $mmFilepool.getPackageStatus(siteId, component, moduleId, revision, timeMod).then(function(status) {
+            promise = $mmFilepool.getPackageStatus(siteId, component, moduleId, revision, timeMod).then(function(stat) {
+                status = stat;
                 var isWifi = !$mmApp.isNetworkAccessLimited(),
                     isOnline = $mmApp.isOnline();
                 if (status === mmCoreDownloaded) {
@@ -49306,11 +49324,29 @@ angular.module('mm.addons.mod_resource')
         } else {
             promise = $q.when(fixedUrl);
         }
-        return promise.then(function(url) {
-            if (url.indexOf('http') === 0) {
-                return $mmUtil.openOnlineFile(url);
+        return promise.then(function(path) {
+            if (path.indexOf('http') === 0) {
+                return $mmUtil.openOnlineFile(path).catch(function(error) {
+                    if (!$mmFS.isAvailable()) {
+                        return $q.reject(error);
+                    }
+                    var subPromise;
+                    if (status === mmCoreDownloading) {
+                        subPromise = $mmLang.translateAndReject('mm.core.erroropenfiledownloading');
+                    } else if (status === mmCoreNotDownloaded) {
+                        subPromise = $mmFilepool.downloadPackage(siteId, files, component, moduleId, revision, timeMod)
+                                .then(function() {
+                            return $mmFilepool.getInternalUrlByUrl(siteId, url);
+                        });
+                    } else {
+                        subPromise = $mmFilepool.getInternalUrlByUrl(siteId, url);
+                    }
+                    return subPromise.then(function(path) {
+                        return $mmUtil.openFile(path);
+                    });
+                });
             } else {
-                return $mmUtil.openFile(url);
+                return $mmUtil.openFile(path);
             }
         });
     };
