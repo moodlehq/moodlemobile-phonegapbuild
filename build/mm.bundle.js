@@ -45725,7 +45725,7 @@ angular.module('mm.addons.mod_page')
 }]);
 
 angular.module('mm.addons.mod_page')
-.factory('$mmaModPagePrefetchHandler', ["$mmPrefetchFactory", "mmaModPageComponent", "$mmaModPage", "$mmCourse", function($mmPrefetchFactory, mmaModPageComponent, $mmaModPage, $mmCourse) {
+.factory('$mmaModPagePrefetchHandler', ["$mmPrefetchFactory", "mmaModPageComponent", "$mmaModPage", "$mmCourse", "$q", function($mmPrefetchFactory, mmaModPageComponent, $mmaModPage, $mmCourse, $q) {
     var self = $mmPrefetchFactory.createPrefetchHandler(mmaModPageComponent, true);
     self.updatesNames = /^configuration$|^.*files$/;
     self.invalidateContent = function(moduleId, courseId) {
