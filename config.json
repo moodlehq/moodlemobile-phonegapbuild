@@ -8,7 +8,7 @@
     "languages": {"sv": "Svenska"},
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
-    "presets" : {"url": "http://www.fotokurs-online.se", "username": ""},
+    "presets" : {"url": "http://www.fotokurs-online.se/login/index.php", "username": ""},
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile",
     "siteurl": "http://www.fotokurs-online.se/login/index.php",
