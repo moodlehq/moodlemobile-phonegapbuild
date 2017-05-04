@@ -16,19 +16,19 @@
  */
 
 // Bar content.
-$bar-content-bg: #f70 !default;
+$bar-content-bg: $mm-color !default;
 $bar-content-border: transparent !default;
-$bar-content-text: #fff !default;
+$bar-content-text: $white !default;
 
 // Small avatar ideal for icons.
 $item-media-width: 32px !default;
 $item-media-height: 32px !default;
 
 // Messages.
-$item-message-bg: $stable !default;
-$item-message-note-text: #999 !default;
+$item-message-bg: $white !default;
+$item-message-note-text: $gray-dark !default;
 $item-message-note-font-size: $font-size-small !default;
-$item-message-mine-bg: rgba(17, 193, 243, .1) !default;
+$item-message-mine-bg: $turquoise-light !default;
 
 // Disabled items.
 $item-disabled-color: #999 !default;
@@ -37,11 +37,11 @@ $item-disabled-color: #999 !default;
 $mm-warning-color: $energized !default; // Energized / yellow.
 $mm-success-color: $balanced !default; // Balanced / green.
 $mm-info-color: $positive !default; // Positive / blue.
-$mm-error-color: #c00 !default; // Red.
+$mm-error-color: $assertive !default; // Red.
 
 // Timer variables.
-$mm-timer-warn-color:     #f00 !default;
-$mm-timer-color:          #fff !default;
+$mm-timer-warn-color:     $assertive !default;
+$mm-timer-color:          $white !default;
 $mm-timer-iterations:     15 !default;
 
 // Text with icon.
@@ -51,13 +51,10 @@ $mm-text-with-icon-height: 22px !default;
 $mm-button-icon-small-height: 22px !default;
 
 // Required inputs asterisk color.
-$mm-input-required-asterisk-color: #ff4136 !default;
+$mm-input-required-asterisk-color: $red !default;
 
 // Item padding.
 $item-input-padding: 16px !default;
-
-// Rich text editor.
-$mm-rte-min-height: 80px !default;
 
 /**
  * App Branding
@@ -121,7 +118,7 @@ em {
   @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
   .button {
     @include button-style($bar-content-bg, $bar-content-border, $bar-content-bg, $bar-content-border, $bar-content-text);
-    @include button-clear(#fff, $bar-title-font-size);
+    @include button-clear($white, $bar-title-font-size);
   }
 }
 
@@ -206,15 +203,6 @@ p.item-text-wrap {
     font-size: $item-message-note-font-size;
     margin-left: 20px;
   }
-
-  mm-format-text > p:only-child {
-    display: inline;
-  }
-}
-
-.item-message .item-content {
-  background-color: $item-message-bg;
-  padding: 0;
 }
 
 // Defines when an item-message is the user's.
@@ -237,7 +225,8 @@ p.item-text-wrap {
   }
 }
 
-.item-message-mine .item-content {
+.item-message .item-content,
+.item-message-mine .item-content{
   background-color: transparent;
   padding: 0;
 }
@@ -285,7 +274,7 @@ p.item-text-wrap {
           border-radius: 2%;
           border: 0;
           max-width: 100%;
-          max-height: 200px;
+          max-height: 160px;
           width: auto;
           height: auto;
         }
@@ -298,20 +287,26 @@ p.item-text-wrap {
 }
 
 /* Show buttons as tabs */
+@include tabs-striped-color('mm-tabs-color', $mm-color);
+@include tabs-color('mm-tabs-color', $mm-color);
+
 .tabs.tabs-free {
   position: initial;
-  background: transparent;
+  background: white;
   border: 0;
-  margin-bottom: 0;
-  margin-top: 10px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2);
 
   .tab-item {
-    margin-top: -1px;
+    color: $gray-dark;
+    margin-top: 0;
     max-width: initial;
     font-size: 120%;
 
     &.active, &.activated {
-      margin-top: -1px;
+      color: $black;
+      margin-top: 0;
       border-top-width: 0;
       border-bottom-width: 3px;
     }
@@ -472,8 +467,17 @@ mm-loading.mm-loading-center {
 }
 
 .mm-split-item-selected, .mm-split-item-selected .item {
-  border-color: #ccc;
-  background-color: #D9D9D9;
+  background-color: $gray-light;
+  border-left: 5px solid $mm-color-light;
+  padding-left: $item-padding - 4;
+
+  &.item-avatar,
+  &.item-avatar-left {
+    padding-left: $item-avatar-width + ($item-padding * 2) - 4;
+    > img:first-child {
+      left: $item-padding - 4;
+    }
+  }
 }
 
 .mm-module-buttons {
@@ -527,7 +531,7 @@ img.mm-media-adapt-width-enabled {
   position: absolute;
   right: 10px;
   bottom: 10px;
-  color: black;
+  color: $black;
   font-size: 20px;
   border-radius: 5px;
   background: rgba(255, 255, 255, .5);
@@ -537,7 +541,7 @@ img.mm-media-adapt-width-enabled {
   line-height: 30px;
 
   i.icon:before {
-    color: black !important;
+    color: $black !important;
   }
 }
 
@@ -583,7 +587,7 @@ mm-navigation-bar {
   padding: $card-padding;
   box-shadow: $card-box-shadow;
   margin: 20px 10px;
-  background-color: #fff;
+  background-color: $white;
   position: relative;
   text-align: left;
 
@@ -618,7 +622,7 @@ mm-navigation-bar {
   padding: $card-padding;
   box-shadow: $card-box-shadow;
   margin: 20px 10px;
-  background-color: #fff;
+  background-color: $white;
   position: relative;
   padding-left: $item-padding * 3;
   text-align: left;
@@ -875,6 +879,22 @@ mm-timer {
   }
 }
 
+.item-select.mm-full-width-centered {
+  display: inline;
+
+  select {
+    max-width: 100%;
+    background: transparent;
+    direction: ltr;
+    text-indent: 0;
+    margin: 0 auto;
+    padding: $item-input-padding ($item-input-padding*3) $item-input-padding $item-input-padding;
+    line-height: 14px;
+    border: 0;
+    position: relative;
+  }
+}
+
 .item-select .mm-select-fix {
   // Taken from .item-select select.
   position: absolute;
@@ -1019,6 +1039,10 @@ input[type="radio"].mm-radio {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
+
+  .item-input-wrapper {
+    background: white;
+  }
 }
 
 .item.mm-not-clickable {
@@ -1094,168 +1118,6 @@ input[type="radio"].mm-radio {
 @media only screen and (max-width: 768px) {
   .hidden-phone {
     display: none !important;
-  }
-}
-/**
- * RichTextEditor.
- */
-
-.mm-textarea {
-  width: 100%;
-  resize: none;
-
-  &[mm-auto-rows] {
-    height: auto;
-    line-height: 18px;
-    padding: 5px;
-  }
-  &:not([mm-auto-rows]) {
-    height: 200px;
-    min-height: $mm-rte-min-height;
-  }
-}
-
-.item-input-wrapper .mm-textarea {
-  background: transparent;
-}
-
-.item.mm-item-has-rich-text-editor {
-  &.item-input {
-    padding: 0;
-  }
-  padding: 0;
-  display: block;
-
-  .input-label, .mm-textarea {
-    padding-left: $item-padding;
-    padding-top: $item-padding/2;
-  }
-}
-
-.mm-rich-text-editor-container {
-
-  .cke.cke_chrome {
-    border: 0;
-    box-shadow: none;
-  }
-
-  .cke_bottom.cke_expanded {
-    height: auto;
-  }
-
-  .cke_bottom .cke_path {
-    display: none;
-    float: none;
-    margin: 0;
-  }
-
-  .cke_bottom.cke_expanded .cke_path {
-    display: block;
-  }
-
-  textarea.cke_source {
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .cke_contents {
-    min-height: $mm-rte-min-height;
-  }
-}
-
-.mm-rich-text-editor-container,
-.cke_inner.cke_maximized {
-
-  .cke_bottom {
-    padding: 0;
-    border-color: #ddd;
-    box-shadow: none;
-    background: #F2F2F2;
-    height: 30px;
-  }
-
-  .cke_button:first-child, .cke_button:last-child {
-    border-radius: 0;
-  }
-
-  .cke_button,
-  a.cke_combo_button,
-  .cke_toolbox_collapser {
-    background: white;
-    background-image: none;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-    padding: 5px 8px;
-    border-radius: 0;
-    border: 0;
-    margin: 1px;
-  }
-
-  a.cke_combo_button {
-    min-height: 26px;
-    padding: 1px;
-  }
-
-  .cke_button:hover,
-  a.cke_combo_button:hover,
-  .cke_combo_off a.cke_combo_button:hover,
-  .cke_toolbox_collapser:hover {
-    background-image: radial-gradient(ellipse at center, #ffffff 60%,#dfdfdf 100%);
-    background-color: #ebebeb;
-  }
-
-  .cke_button:active,
-  a.cke_combo_button:active,
-  .cke_toolbox_collapser:active {
-    background-image: radial-gradient(ellipse at center, #ffffff 50%, #dfdfdf 100%);
-    background-color: #ebebeb;
-    border: 0;
-  }
-
-  .cke_toolgroup {
-    margin: 0;
-    border: 0;
-    background: none;
-    background-image: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .cke_toolbar_separator,
-  .cke_toolbar_break {
-    clear: none;
-    display: none;
-  }
-
-  .cke_toolbox_collapser {
-    padding-top: 9px;
-    padding-bottom: 8px;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  .cke_toolbox_main {
-    margin-right: 30px;
-    float: left;
-    display: block !important;
-  }
-
-  .cke_button__source_label {
-    display: none;
-  }
-}
-
-.cke_inner.cke_maximized {
-  .cke_bottom {
-    height: auto;
-  }
-
-  .cke_toolbox_collapser {
-    display: none;
-  }
-
-  .cke_toolbox_main {
-    margin: 0;
   }
 }
 
@@ -1513,24 +1375,147 @@ i, cite, em, var, address, dfn {
   }
 }
 
-/** Format Text */
-mm-format-text, *[mm-format-text] {
-  audio, video, a, iframe {
+// Position modals over action sheet. This means that modals will ALWAYS be over action sheet (in Ionic it's the opposite).
+.action-sheet-open .modal-backdrop.active {
+  z-index: 20;
+  .modal {
     pointer-events: auto;
-  }
-
-  // Fix lists styles in mm-format-text.
-  ul, ol {
-    -webkit-padding-start: 40px;
-  }
-  ul {
-    list-style: disc;
-  }
-  ol {
-    list-style: decimal;
   }
 }
 
+// Disable action sheet if loading is active.
+.action-sheet-open .backdrop-loading.active {
+  z-index: 21;
+}
+.action-sheet-open.loading-active .action-sheet-backdrop {
+  pointer-events: none;
+}
+
+.item-divider .item-note {
+  color: $gray-dark;
+}
+
+
+.mm-empty-box {
+  padding-top: $item-padding;
+  text-align: center;
+  color: $dark;
+
+  .icon {
+    font-size: 120px;
+  }
+  img {
+    height: 125px;
+    width: 145px;
+  }
+  p {
+    font-size: 120%;
+  }
+  .icon + p, img + p {
+    padding-top: $item-padding;
+  }
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+
+  &[value]::-webkit-progress-bar {
+    background-color: $gray-light;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  &[value]::-webkit-progress-value {
+    background-color: $mm-color-light;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
+}
+
+.mm-progress-text {
+  margin-left: 10px;
+}
+
+.padding > .button.button-block:only-child {
+  margin-bottom: 0;
+}
+
+.atto_image_preview {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.atto_image_preview_box {
+    max-height: 200px;
+    margin-bottom: 1em;
+    overflow: auto;
+}
+
+.editor_atto_content img {
+    cursor: pointer;
+}
+
+.atto_image_size {
+    display: inline-block;
+}
+
+.atto_image_size input[type=checkbox] {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.atto_image_size input[type=text] {
+    width: 3em;
+}
+
+.atto_image_size label {
+    display: inline-block;
+}
+
+.atto_image_button_text-top {
+    vertical-align: text-top;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_middle {
+    vertical-align: middle;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_text-bottom {
+    vertical-align: text-bottom;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_text-top.img-responsive,
+.atto_image_button_middle.img-responsive,
+.atto_image_button_text-bottom.img-responsive {
+    /* If the image is display: block then linking the image to URLs won't work. */
+    display: inline-block;
+    max-width: calc(100% - 1em);
+}
+
+/*rtl:begin:ignore*/
+.atto_image_button_left {
+    float: left;
+    margin: 0 0.5em 0 0;
+    max-width: calc(100% - 1em);
+}
+
+.atto_image_button_right {
+    float: right;
+    margin: 0 0 0 0.5em;
+    max-width: calc(100% - 1em);
+}
+/*rtl:end:ignore*/
+/**
+ * In this file we will reset ionic styles that can bother online html.
+ */
+
+/** Format Text */
 mm-format-text[max-height], *[mm-format-text][max-height] {
   display: block;
   position: relative;
@@ -1629,22 +1614,206 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   }
 }
 
-// Position modals over action sheet. This means that modals will ALWAYS be over action sheet (in Ionic it's the opposite).
-.action-sheet-open .modal-backdrop.active {
-  z-index: 20;
-  .modal {
+mm-format-text, *[mm-format-text] {
+  audio, video, a, iframe {
     pointer-events: auto;
+  }
+
+  // Fix lists styles in mm-format-text.
+  ul, ol {
+    -webkit-padding-start: 40px;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+
+  .badge {
+    position: initial !important;
   }
 }
 
-// Disable action sheet if loading is active.
-.action-sheet-open .backdrop-loading.active {
-  z-index: 21;
-}
-.action-sheet-open.loading-active .action-sheet-backdrop {
-  pointer-events: none;
+// Message item.
+.item-message {
+  mm-format-text > p:only-child {
+    display: inline;
+  }
 }
 
+.item mm-format-text,
+.item *[mm-format-text] {
+  p {
+    color: inherit;
+  }
+}
+
+/**
+ * Textarea related css.
+ */
+
+// Rich text editor.
+$mm-rte-min-height: 80px !default;
+
+.mm-textarea {
+  width: 100%;
+  resize: none;
+
+  &[mm-auto-rows] {
+    height: auto;
+    line-height: 18px;
+    padding: 5px;
+  }
+  &:not([mm-auto-rows]) {
+    height: 200px;
+    min-height: $mm-rte-min-height;
+  }
+}
+
+.item-input-wrapper .mm-textarea {
+  background: transparent;
+}
+
+.item.mm-item-has-rich-text-editor {
+  &.item-input {
+    padding: 0;
+  }
+  padding: 0;
+  display: block;
+
+  .input-label, .mm-textarea {
+    padding-left: $item-padding;
+    padding-top: $item-padding/2;
+  }
+}
+
+.mm-rich-text-editor-container {
+
+  .cke.cke_chrome {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .cke_bottom.cke_expanded {
+    height: auto;
+  }
+
+  .cke_bottom .cke_path {
+    display: none;
+    float: none;
+    margin: 0;
+  }
+
+  .cke_bottom.cke_expanded .cke_path {
+    display: block;
+  }
+
+  textarea.cke_source {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .cke_contents {
+    min-height: $mm-rte-min-height;
+  }
+}
+
+.mm-rich-text-editor-container,
+.cke_inner.cke_maximized {
+
+  .cke_bottom {
+    padding: 0;
+    border-color: #ddd;
+    box-shadow: none;
+    background: #F2F2F2;
+    height: 30px;
+  }
+
+  .cke_button:first-child, .cke_button:last-child {
+    border-radius: 0;
+  }
+
+  .cke_button,
+  a.cke_combo_button,
+  .cke_toolbox_collapser {
+    background: white;
+    background-image: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    padding: 5px 8px;
+    border-radius: 0;
+    border: 0;
+    margin: 1px;
+  }
+
+  a.cke_combo_button {
+    min-height: 26px;
+    padding: 1px;
+  }
+
+  .cke_button:hover,
+  a.cke_combo_button:hover,
+  .cke_combo_off a.cke_combo_button:hover,
+  .cke_toolbox_collapser:hover {
+    background-image: radial-gradient(ellipse at center, #ffffff 60%,#dfdfdf 100%);
+    background-color: #ebebeb;
+  }
+
+  .cke_button:active,
+  a.cke_combo_button:active,
+  .cke_toolbox_collapser:active {
+    background-image: radial-gradient(ellipse at center, #ffffff 50%, #dfdfdf 100%);
+    background-color: #ebebeb;
+    border: 0;
+  }
+
+  .cke_toolgroup {
+    margin: 0;
+    border: 0;
+    background: none;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .cke_toolbar_separator,
+  .cke_toolbar_break {
+    clear: none;
+    display: none;
+  }
+
+  .cke_toolbox_collapser {
+    padding-top: 9px;
+    padding-bottom: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .cke_toolbox_main {
+    margin-right: 30px;
+    float: left;
+    display: block !important;
+  }
+
+  .cke_button__source_label {
+    display: none;
+  }
+}
+
+.cke_inner.cke_maximized {
+  .cke_bottom {
+    height: auto;
+  }
+
+  .cke_toolbox_collapser {
+    display: none;
+  }
+
+  .cke_toolbox_main {
+    margin: 0;
+  }
+}
 
 .item.item-button-right .badge.mm-course-download{
   right: $spinner-width + $item-padding;
@@ -1660,6 +1829,118 @@ mm-course-mod-description .card .item {
 
 .padding mm-course-mod-description .card {
   margin-top: 0;
+}
+
+$chart-size: 70px;
+$doughnut-border-size: 15px;
+$doughnut-dasharray: 173;
+$doughnut-empty-colour: $gray-light;
+$doughnut-fill-colour: $orange-light;
+$doughnut-border-colour:  $gray-medium;
+$doughnut-text-colour: $gray-dark;
+
+.item-course {
+  >.icon, >ion-spinner {
+    height: 32px + ($item-padding /2);
+    width: 32px + ($item-padding /2);
+    right: 0;
+    top: 6px;
+    color: $doughnut-text-colour;
+    position: absolute;
+  }
+}
+
+.item-progress {
+  @extend .item-avatar;
+  padding-left: $chart-size + ($item-padding * 2);
+  min-height: $chart-size + ($item-padding * 2);
+  >.progress-chart-container {
+    max-width: $chart-size;
+    max-height: $chart-size;
+    position: absolute;
+    top: $item-padding;
+    left: $item-padding;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
+
+.progress-chart-container {
+  height: $chart-size;
+  width: $chart-size;
+
+  .progress-doughnut {
+    position: relative;
+    height: $chart-size;
+    width: $chart-size;
+    background-clip: padding-box;
+    border: $doughnut-border-size solid $doughnut-empty-colour;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    .progress-text {
+      position: absolute;
+      top: 50%;
+      /*rtl:ignore*/
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $doughnut-text-colour;
+    }
+
+    .progress-indicator {
+      position: absolute;
+      top: ($doughnut-border-size * -1);
+      left: ($doughnut-border-size * -1);
+      height: $chart-size;
+      width: $chart-size;
+
+      svg {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .circle {
+          stroke-width: $doughnut-border-size;
+          stroke: $doughnut-fill-colour;
+          fill: none;
+          stroke-dasharray: $doughnut-dasharray;
+          stroke-dashoffset: $doughnut-dasharray;
+          transform: rotate(-90deg);
+          transform-origin: center center;
+
+          @for $i from 1 through 100 {
+              &.percent-#{$i} {
+                  stroke-dashoffset: $doughnut-dasharray - ($i / 100 * $doughnut-dasharray);
+              }
+          }
+        }
+      }
+    }
+  }
+
+  .no-progress {
+    height: $chart-size;
+    width: $chart-size;
+    background-color: $doughnut-empty-colour;
+    border-radius: 50%;
+    position: relative;
+    border: 0.5px solid $doughnut-border-colour;
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      /*rtl:ignore*/
+      left: 50%;
+      margin: 0;
+      transform: translate(-42%, -50%);
+      color: #fff;
+      height: ($chart-size / 2) + 10px;
+      width: ($chart-size / 2) + 10px;
+      font-size: ($chart-size / 2) + 10px;
+    }
+  }
 }
 
 .mm-fileuploader-file-handler {
@@ -1679,6 +1960,7 @@ mm-course-mod-description .card .item {
 -------------------------------------------------------------------------- */
 .mm-grades-container {
   padding-right: 2px;
+  background: white;
 }
 
 .mm-grades-table {
@@ -1806,13 +2088,47 @@ mm-course-mod-description .card .item {
   height: 300px;
 }
 
+.mm-oauth-icon, .button.mm-oauth-icon, .button-bar > .button.mm-oauth-icon {
+  padding: 0 4px;
 
-$mm-question-correct-color:         #468847 !default;
-$mm-question-incorrect-color:       #b94a48 !default;
-$mm-question-state-correct-color:   #cfc !default;
-$mm-question-state-partial-color:   #ffa !default;
-$mm-question-state-incorrect-color: #fcc !default;
-$mm-question-warning-color:         #c00 !default;
+  > img, > span {
+    max-height: $item-icon-font-size;
+    max-width: $item-icon-font-size;
+    vertical-align: middle;
+  }
+  > span {
+    margin-left: 5px;
+  }
+}
+
+.mm-mm_login_credentials, .mm-mm_login_reconnect {
+  .mm-ioninput-password {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mm-oauth-icon, .button.mm-oauth-icon, .button-bar > .button.mm-oauth-icon {
+    &:not(:only-child) > span {
+      display: none;
+    }
+  }
+}
+
+
+$mm-question-correct-color:         $green-dark !default;
+$mm-question-correct-color-bg:      $green-lighter !default;
+$mm-question-incorrect-color:       $red !default;
+$mm-question-incorrect-color-bg:    $red-lighter !default;
+$mm-question-feedback-color:        $yellow-darker !default;
+$mm-question-feedback-color-bg:     $yellow-lighter !default;
+
+$mm-question-state-correct-color:   $green-lighter !default;
+$mm-question-state-partial-color:   $yellow-lighter !default;
+$mm-question-state-incorrect-color: $red-lighter !default;
+
+$mm-question-warning-color:         $red !default;
 
 .mm-question-textarea {
   width: 100%;
@@ -1837,7 +2153,7 @@ li.mm-question-answer-correct,
 .mm-question-comment p {
   color: $mm-question-correct-color;
   -webkit-text-fill-color: $mm-question-correct-color; /* Override iOS / Android font color change */
-  background-color: #dff0d8;
+  background-color: $mm-question-correct-color-bg;
 }
 
 .mm-question-answer-correct .checkbox input:disabled:checked:before,
@@ -1863,7 +2179,7 @@ li.mm-question-answer-incorrect,
 .mm-question-incorrect p {
   color: $mm-question-incorrect-color;
   -webkit-text-fill-color: $mm-question-incorrect-color; /* Override iOS / Android font color change */
-  background-color: #f2dede;
+  background-color: $mm-question-incorrect-color-bg;
 }
 
 .mm-question-answer-incorrect .checkbox input:disabled:checked:before,
@@ -1877,9 +2193,10 @@ li.mm-question-answer-incorrect,
   opacity: 1;
 }
 
-.mm-question-feedback-container {
-  background-color: #fcf8e3;
-  color: #8a6d3b;
+.mm-question-feedback-container,
+.mm-question-feedback-container p {
+  background-color: $mm-question-feedback-color-bg;
+  color: $mm-question-feedback-color;
 
   .specificfeedback, .rightanswer, .im-feedback, .feedback, .generalfeedback {
     margin: 0 0 .5em;
@@ -1890,17 +2207,17 @@ li.mm-question-answer-incorrect,
     padding: 2px 4px;
     font-weight: bold;
     line-height: 14px;
-    color: #fff;
+    color: $white;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-    background-color: #999;
+    background-color: $gray-medium;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 
     &.incorrect {
-      background-color: $mm-question-incorrect-color;
+      background-color: $red;
     }
     &.correct {
-      background-color: $mm-question-correct-color;
+      background-color: $green;
     }
   }
 }
@@ -2103,6 +2420,58 @@ $mma-messages-date-badge: "stable" !default;
   text-align: center;
 }
 
+@media only screen and (min-width: $grid-responsive-sm-break) {
+  .mm-course-grid {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    mm-course-list-progress {
+      padding: 0 ($padding-base-horizontal / 2);
+      margin: 0;
+      max-width: 50%;
+      width: 50%;
+      display: flex;
+
+      .card {
+        width: 100%;
+        align-items: stretch;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+    }
+  }
+}
+
+.mm-timelinesort {
+  float: right;
+}
+
+.mm-timelinetitle {
+  float: left;
+}
+
+.mm-site_myoverview {
+  mm-course-list-progress .card {
+    margin-top: 0;
+
+    h5 {
+      margin-left: 10px;
+    }
+    .list.block .item {
+      border-top: $item-border-width solid $item-light-border;
+      border-bottom: $item-border-width solid $item-light-border;
+    }
+    .list.block:last-child .item {
+      border-bottom: 0;
+    }
+  }
+}
 
 $mma-mod-assign-warning-color:      #c00 !default;
 
@@ -2512,7 +2881,7 @@ $mma-chat-notice-badge: "stable" !default;
         overflow: hidden;
         margin: 1px 10px 10px;
         border-radius: 0;
-        background-color: #fff;
+        background-color: $white;
 
         .item {
             border-left: 0;
@@ -2534,7 +2903,7 @@ $mma-chat-notice-badge: "stable" !default;
         margin-left: 10px;
 
         &>article:nth-child(even)>.mm-nested-card>mma-mod-forum-discussion-post>.item-heading {
-            background: #eee;
+            background: $gray-light;
         }
     }
 
@@ -2564,11 +2933,11 @@ $mma-chat-notice-badge: "stable" !default;
 }
 
 
-$mma-mod-quiz-warning-color:      #c00 !default;
-$mma-mod-quiz-highlight-color:    #d9edf7 !default;
+$mma-mod-quiz-warning-color:      $red !default;
+$mma-mod-quiz-highlight-color:    $blue-lighter !default;
 $mma-mod-quiz-alternate-color:    #fbfbfb !default;
-$mma-mod-quiz-conecterr-color:    #fcc !default;
-$mma-mod-quiz-selected-color:     #666 !default;
+$mma-mod-quiz-conecterr-color:    $red-lighter !default;
+$mma-mod-quiz-selected-color:     $blue-lighter !default;
 
 // Deprecated use mm-error-item instead.
 p.mma-mod-quiz-warning {
@@ -2632,12 +3001,12 @@ p.mma-mod-quiz-warning {
 .platform-android .item.mma-mod-quiz-selected,
 .platform-ios .item.mma-mod-quiz-selected,
 .mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
-  border: 3px solid $mma-mod-quiz-selected-color;
-  &:not(.mma-mod-quiz-last-of-page) {
-    border-bottom: 0;
-  }
+  background: $mma-mod-quiz-selected-color;
 }
 
+#mma-mod-quiz-toc .item {
+  border-color: $gray-medium;
+}
 
 $mma-mod-scorm-level-margin:		25px !default;
 $mma-mod-scorm-warning-color:		#c00 !default;
@@ -2718,59 +3087,63 @@ ion-popover-view {
 }
 
 $mma-mod-wiki-toc-level-padding:    12px !default;
-$mma-mod-wiki-newentry-link-color:   red !default;
-$mma-mod-wiki-toc-title-color:   #666 !default;
-$mma-mod-wiki-toc-border-color:   #bbb !default;
-$mma-mod-wiki-toc-background-color:   #eee !default;
-$mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
+$mma-mod-wiki-newentry-link-color:  $red !default;
+$mma-mod-wiki-toc-title-color:      $gray-dark !default;
+$mma-mod-wiki-toc-border-color:     $gray-medium !default;
+$mma-mod-wiki-toc-background-color: $gray-light !default;
+$mma-mod-wiki-subwiki-selected-background-color:   $gray-light !default;
 
-.wiki-toc {
-  border: 1px solid $mma-mod-wiki-toc-border-color;
-  background: $mma-mod-wiki-toc-background-color;
-  margin: 16px;
-  padding: 8px;
-}
+.mm-site_mod_wiki {
+  background-color: white;
 
-.wiki-toc-title {
-  color: $mma-mod-wiki-toc-title-color;
-  font-size: 1.1em;
-  font-variant: small-caps;
-  text-align: center;
-}
+  .wiki-toc {
+    border: 1px solid $mma-mod-wiki-toc-border-color;
+    background: $mma-mod-wiki-toc-background-color;
+    margin: 16px;
+    padding: 8px;
+  }
 
-.wiki-toc-section {
-  padding: 0;
-  margin: 2px 8px;
-}
+  .wiki-toc-title {
+    color: $mma-mod-wiki-toc-title-color;
+    font-size: 1.1em;
+    font-variant: small-caps;
+    text-align: center;
+  }
 
-.wiki-toc-section-2 {
-  padding-left: $mma-mod-wiki-toc-level-padding;
-}
+  .wiki-toc-section {
+    padding: 0;
+    margin: 2px 8px;
+  }
 
-.wiki-toc-section-3 {
-  padding-left: $mma-mod-wiki-toc-level-padding * 2;
-}
+  .wiki-toc-section-2 {
+    padding-left: $mma-mod-wiki-toc-level-padding;
+  }
 
-.mm-site_mod_wiki .wiki_newentry {
-  color: $mma-mod-wiki-newentry-link-color;
-  font-style: italic;
-}
+  .wiki-toc-section-3 {
+    padding-left: $mma-mod-wiki-toc-level-padding * 2;
+  }
 
-/* Hide edit section links */
-.mma-mod_wiki-noedit a.wiki_edit_section {
-  display: none;
-}
+  .wiki_newentry {
+    color: $mma-mod-wiki-newentry-link-color;
+    font-style: italic;
+  }
 
-.mma-mod_wiki-subwiki-picker .item-divider {
-  font-weight: bold;
-}
+  /* Hide edit section links */
+  .mma-mod_wiki-noedit a.wiki_edit_section {
+    display: none;
+  }
 
-.mma-mod_wiki-subwiki-picker .item.item-selected {
-  background-color: $mma-mod-wiki-subwiki-selected-background-color;
-}
+  .mma-mod_wiki-subwiki-picker .item-divider {
+    font-weight: bold;
+  }
 
-.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
-  font-size: 24px;
+  .mma-mod_wiki-subwiki-picker .item.item-selected {
+    background-color: $mma-mod-wiki-subwiki-selected-background-color;
+  }
+
+  .mma-mod_wiki-subwiki-picker .item.item-selected .icon {
+    font-size: 24px;
+  }
 }
 
 
@@ -2812,7 +3185,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.droparea img {
-    border: 1px solid #000000;
+    border: 1px solid $gray-dark;
     max-width: 100%;
   }
 
@@ -2826,7 +3199,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.draghome {
-    border: 1px solid black;
+    border: 1px solid $gray-dark;
     cursor: pointer;
     background-color: #B0C4DE;
     display:inline-block;
@@ -2860,7 +3233,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     background-color: #F0E68C;
   }
   .drag {
-    border: 1px solid black;
+    border: 1px solid $gray-dark;
     cursor: pointer;
     z-index: 2;
   }
@@ -2888,7 +3261,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     margin:0 auto;
   }
   .dropzone {
-    border: 1px solid black;
+    border: 1px solid $gray-dark;
     position: absolute;
     z-index: 1;
     cursor: pointer;
@@ -2902,7 +3275,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
   .drag.beingdragged {
     z-index: 3;
-    box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px $gray-dark;
   }
 }
 // Style ddmarker content a bit. Almost all these styles are copied from Moodle.
@@ -2918,7 +3291,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.droparea img  {
-    border: 1px solid #000;
+    border: 1px solid $gray-dark;
     max-width: 100%;
   }
 
@@ -2941,7 +3314,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
 
   .dragitem.beingdragged .markertext {
     z-index: 5;
-    box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px $gray-dark;
   }
   .dragitems .draghome {
     margin: 10px;
@@ -2972,7 +3345,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     margin: 0 5px;
     z-index: 2;
     background-color: white;
-    border: 2px solid black;
+    border: 2px solid $gray-dark;
     padding: 5px;
     display: inline-block;
     zoom: 1;
@@ -2980,17 +3353,17 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
   div.markertexts span.markertext {
     z-index: 3;
-    background-color: yellow;
+    background-color: $yellow-lighter;
     border-style: solid;
     border-width: 2px;
-    border-color: khaki;
+    border-color: $yellow;
     position: absolute;
   }
   span.wrongpart {
-    background-color: yellow;
+    background-color: $yellow-lighter;
     border-style: solid;
     border-width: 2px;
-    border-color: khaki;
+    border-color: $yellow;
     padding: 5px;
     border-radius: 10px;
     filter: alpha(opacity=60);
@@ -3025,8 +3398,9 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   .drop {
       display: inline-block;
       text-align: center;
-      border: 1px solid #000000;
+      border: 1px solid $gray-dark;
       margin-bottom: 2px;
+      border-radius: 5px;
   }
   .draghome, .drag {
       display: inline-block;
@@ -3035,22 +3409,24 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
       border: 0;
   }
   .draghome, .drag.unplaced{
-      border: 1px solid #000000;
+      border: 1px solid $gray-dark;
+      border-radius: 5px;
   }
   .draghome {
       visibility: hidden;
   }
   .drag {
       z-index: 2;
+      border-radius: 5px;
   }
   .drag.selected {
       z-index: 3;
-      box-shadow: 3px 3px 4px #000;
+      box-shadow: 3px 3px 4px $gray-dark;
   }
 
   .drop.selected {
-      border-color: #0a0;
-      box-shadow: 0 0 5px 5px rgba(255, 255, 150, 1);
+      border-color: $yellow-lighter;
+      box-shadow: 0 0 5px 5px $yellow-lighter;
   }
 
   &.notreadonly .drag,
@@ -3058,6 +3434,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   &.notreadonly .drop,
   &.notreadonly .answercontainer {
       cursor: pointer;
+      border-radius: 5px;
   }
 
   &.readonly .drag,
@@ -3068,10 +3445,10 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   span.incorrect {
-      background-color: #faa;
+      background-color: $red-lighter;
   }
   span.correct {
-      background-color: #afa;
+      background-color: $green-lighter;
   }
 
   .group1 {
