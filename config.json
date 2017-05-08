@@ -11,7 +11,7 @@
 "wsextservice" : "local_mobile",
 "gcmpn": "694767596569",
 "customurlscheme": "moodlemobile",
-"presets" : {"url": "http://fotokurs-online.se", "username": ""},
+"siteurl": "http://www.fotokurs-online.se",
 "sync_ws_on" : true,
 "sync_css_on" : true,
 "sync_cron": 300000,
