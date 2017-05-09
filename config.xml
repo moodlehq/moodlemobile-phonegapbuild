@@ -2,21 +2,21 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
+        id        = "com.fotokurs-online.mobile"
         versionCode = "20170"
-        version   = "3.2.1">
-    <name>Moodle Mobile</name>
+        version   = "1.0">
+    <name>Fotokurs by Mästerfoto</name>
 
     <description>
-        Moodle Mobile official app
+        Fotokurs by Mästerfoto official app
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Pty Ltd
+    <author href="http://www.fotokurs-online.se" email="kontakt@fotokurs-online.se">
+        Fotokurs by Mästerfoto
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>3.2.1</string>
+        <string>1.0</string>
     </gap:config-file>
 
     <gap:platform name="ios" />
