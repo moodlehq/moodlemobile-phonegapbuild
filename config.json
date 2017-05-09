@@ -19,7 +19,7 @@
 "sync_css" : 3600000,
 "event_notif_on": true,
 "skipssoconfirmation": "false",
-"forcedefaultlanguage": "false",
+"forcedefaultlanguage": "true",
 "notifications_enabled": true,
 "privacypolicy": "https://moodle.org/mod/page/view.php?id=8148"
 }
