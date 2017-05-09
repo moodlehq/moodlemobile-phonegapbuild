@@ -123,6 +123,34 @@ angular.module('mm.core', ['pascalprecht.translate'])
     $httpProvider.defaults.transformRequest = [function(data) {
         return angular.isObject(data) && String(data) !== '[object File]' ? $mmUtilProvider.param(data) : data;
     }];
+    $httpProvider.defaults.transformResponse = [function(data, headers) {
+        if (angular.isString(data)) {
+            var JSON_PROTECTION_PREFIX = /^\)\]\}',?\n/,
+                tempData = data.replace(JSON_PROTECTION_PREFIX, '').trim();
+            if (tempData) {
+                var contentType = headers('Content-Type');
+                if ((contentType && (contentType.indexOf('application/json') === 0)) || isJsonLike(tempData, contentType)) {
+                    try {
+                        data = angular.fromJson(tempData);
+                    } catch(ex) {
+                    }
+                }
+            }
+        }
+        return data;
+        function isJsonLike(str, contentType) {
+            if (contentType && contentType.indexOf('text/rtf') != -1) {
+                return false;
+            }
+            var JSON_START = /^\[|^\{(?!\{)/,
+                JSON_ENDS = {
+                  '[': /]$/,
+                  '{': /}$/
+                },
+                jsonStart = str.match(JSON_START);
+            return jsonStart && JSON_ENDS[jsonStart[0]].test(str);
+        }
+    }];
     function addProtocolIfMissing(list, protocol) {
         if (list.indexOf(protocol) == -1) {
             list = list.replace('https?', 'https?|' + protocol);
@@ -1394,7 +1422,9 @@ angular.module('mm.core')
         queueState,
         urlAttributes = [
             tokenRegex,
-            new RegExp('(\\?|&)forcedownload=[0-1]')
+            new RegExp('(\\?|&)forcedownload=[0-1]'),
+            new RegExp('(\\?|&)preview=[A-Za-z0-9]+'),
+            new RegExp('(\\?|&)offline=[0-1]', 'g')
         ],
         revisionRegex = new RegExp('/content/([0-9]+)/'),
         queueDeferreds = {}, 
@@ -1447,13 +1477,10 @@ angular.module('mm.core')
         });
     };
     self.addFilesToQueueByUrl = function(siteId, files, component, componentId) {
-        var promises = [];
-        angular.forEach(files, function(file) {
-            promises.push(self.addToQueueByUrl(siteId, file.url || file.fileurl, component, componentId, file.timemodified));
-        });
-        return $q.all(promises);
+        return self.downloadOrPrefetchFiles(siteId, files, true, false, component, componentId);
     };
-    self.addToQueueByUrl = function(siteId, fileUrl, component, componentId, timemodified, filePath, priority) {
+    self.addToQueueByUrl = function(siteId, fileUrl, component, componentId, timemodified, filePath, priority, options) {
+        options = options || {};
         var db = $mmApp.getDB(),
             fileId,
             now = new Date(),
@@ -1499,6 +1526,14 @@ angular.module('mm.core')
                             update = true;
                             fileObject.path = filePath;
                         }
+                        if (fileObject.isexternalfile !== options.isexternalfile) {
+                            update = true;
+                            fileObject.isexternalfile = options.isexternalfile;
+                        }
+                        if (fileObject.repositorytype !== options.repositorytype) {
+                            update = true;
+                            fileObject.repositorytype = options.repositorytype;
+                        }
                         if (link) {
                             angular.forEach(fileObject.links, function(fileLink) {
                                 if (fileLink.component == link.component && fileLink.componentId == link.componentId) {
@@ -1538,6 +1573,8 @@ angular.module('mm.core')
                         url: fileUrl,
                         revision: revision,
                         timemodified: timemodified,
+                        isexternalfile: options.isexternalfile,
+                        repositorytype: options.repositorytype,
                         path: filePath,
                         links: link ? [link] : []
                     }).then(function() {
@@ -1610,6 +1647,23 @@ angular.module('mm.core')
         }
         return current;
     };
+    self.downloadOrPrefetchFiles = function(siteId, files, prefetch, ignoreStale, component, componentId) {
+        var promises = [];
+        angular.forEach(files, function(file) {
+            var url = file.url || file.fileurl,
+                timemodified = file.timemodified,
+                options = {
+                    isexternalfile: file.isexternalfile,
+                    repositorytype: file.repositorytype
+                };
+            if (prefetch) {
+                promises.push(self.addToQueueByUrl(siteId, url, component, componentId, timemodified, undefined, 0, options));
+            } else {
+                promises.push(self.downloadUrl(siteId, url, ignoreStale, component, componentId, timemodified, undefined, options));
+            }
+        });
+        return $mmUtil.allPromises(promises);
+    };
     self._downloadOrPrefetchPackage = function(siteId, fileList, prefetch, component, componentId, revision, timemod, dirPath) {
         var packageId = self.getPackageId(component, componentId);
         if (packagesPromises[siteId] && packagesPromises[siteId][packageId]) {
@@ -1629,7 +1683,11 @@ angular.module('mm.core')
                 var path,
                     promise,
                     fileLoaded = 0,
-                    fileUrl = file.url || file.fileurl;
+                    fileUrl = file.url || file.fileurl,
+                    options = {
+                        isexternalfile: file.isexternalfile,
+                        repositorytype: file.repositorytype
+                    };
                 if (dirPath) {
                     path = file.filename;
                     if (file.filepath !== '/') {
@@ -1638,9 +1696,9 @@ angular.module('mm.core')
                     path = $mmFS.concatenatePaths(dirPath, path);
                 }
                 if (prefetch) {
-                    promise = self.addToQueueByUrl(siteId, fileUrl, component, componentId, file.timemodified, path);
+                    promise = self.addToQueueByUrl(siteId, fileUrl, component, componentId, file.timemodified, path, options);
                 } else {
-                    promise = self.downloadUrl(siteId, fileUrl, false, component, componentId, file.timemodified, path);
+                    promise = self.downloadUrl(siteId, fileUrl, false, component, componentId, file.timemodified, path, options);
                 }
                 promises.push(promise.then(undefined, undefined, function(progress) {
                     if (progress && progress.loaded) {
@@ -1674,25 +1732,26 @@ angular.module('mm.core')
     self.downloadPackage = function(siteId, fileList, component, componentId, revision, timemodified, dirPath) {
         return self._downloadOrPrefetchPackage(siteId, fileList, false, component, componentId, revision, timemodified, dirPath);
     };
-    self.downloadUrl = function(siteId, fileUrl, ignoreStale, component, componentId, timemodified, filePath) {
+    self.downloadUrl = function(siteId, fileUrl, ignoreStale, component, componentId, timemodified, filePath, options) {
+        options = options || {};
         var fileId,
-            revision,
             promise;
         if ($mmFS.isAvailable()) {
             return self._fixPluginfileURL(siteId, fileUrl).then(function(fixedUrl) {
                 fileUrl = fixedUrl;
-                timemodified = timemodified || 0;
-                revision = self.getRevisionFromUrl(fileUrl);
+                options.timemodified = timemodified || 0;
+                options.revision = self.getRevisionFromUrl(fileUrl);
                 fileId = self._getFileIdByUrl(fileUrl);
                 return self._restoreOldFileIfNeeded(siteId, fileId, fileUrl, filePath);
             }).then(function() {
                 return self._hasFileInPool(siteId, fileId).then(function(fileObject) {
                     if (typeof fileObject === 'undefined') {
                         self._notifyFileDownloading(siteId, fileId);
-                        return self._downloadForPoolByUrl(siteId, fileUrl, revision, timemodified, filePath);
-                    } else if (self._isFileOutdated(fileObject, revision, timemodified) && $mmApp.isOnline() && !ignoreStale) {
+                        return self._downloadForPoolByUrl(siteId, fileUrl, options, filePath);
+                    } else if (self._isFileOutdated(fileObject, options.revision, options.timemodified) &&
+                                $mmApp.isOnline() && !ignoreStale) {
                         self._notifyFileDownloading(siteId, fileId);
-                        return self._downloadForPoolByUrl(siteId, fileUrl, revision, timemodified, filePath, fileObject);
+                        return self._downloadForPoolByUrl(siteId, fileUrl, options, filePath, fileObject);
                     }
                     if (filePath) {
                         promise = self._getInternalUrlByPath(filePath);
@@ -1703,11 +1762,11 @@ angular.module('mm.core')
                         return response;
                     }, function() {
                         self._notifyFileDownloading(siteId, fileId);
-                        return self._downloadForPoolByUrl(siteId, fileUrl, revision, timemodified, filePath, fileObject);
+                        return self._downloadForPoolByUrl(siteId, fileUrl, options, filePath, fileObject);
                     });
                 }, function() {
                     self._notifyFileDownloading(siteId, fileId);
-                    return self._downloadForPoolByUrl(siteId, fileUrl, revision, timemodified, filePath);
+                    return self._downloadForPoolByUrl(siteId, fileUrl, options, filePath);
                 })
                 .then(function(response) {
                     if (typeof component !== 'undefined') {
@@ -1724,7 +1783,8 @@ angular.module('mm.core')
             return $q.reject();
         }
     };
-    self._downloadForPoolByUrl = function(siteId, fileUrl, revision, timemodified, filePath, poolFileObject) {
+    self._downloadForPoolByUrl = function(siteId, fileUrl, options, filePath, poolFileObject) {
+        options = options || {};
         var fileId = self._getFileIdByUrl(fileUrl),
             extension = $mmFS.guessExtensionFromUrl(fileUrl),
             addExtension = typeof filePath == "undefined",
@@ -1752,8 +1812,10 @@ angular.module('mm.core')
                     data.downloaded = now.getTime();
                     data.stale = false;
                     data.url = fileUrl;
-                    data.revision = revision;
-                    data.timemodified = timemodified;
+                    data.revision = options.revision;
+                    data.timemodified = options.timemodified;
+                    data.isexternalfile = options.isexternalfile;
+                    data.repositorytype = options.repositorytype;
                     data.path = fileEntry.path;
                     data.extension = fileEntry.extension;
                     return self._addFileToPool(siteId, fileId, data).then(function() {
@@ -1959,7 +2021,9 @@ angular.module('mm.core')
         }
         return md5.createHash('url:' + url) + extension;
     };
-    self._getFileUrlByUrl = function(siteId, fileUrl, mode, component, componentId, timemodified, checkSize, downloadUnknown) {
+    self._getFileUrlByUrl = function(siteId, fileUrl, mode, component, componentId, timemodified, checkSize, downloadUnknown,
+                options) {
+        options = options || {};
         var fileId,
             revision;
         if (typeof checkSize == 'undefined') {
@@ -2024,14 +2088,14 @@ angular.module('mm.core')
                     }
                     if (sizeUnknown) {
                         if (downloadUnknown && isWifi) {
-                            self.addToQueueByUrl(siteId, fileUrl, component, componentId, timemodified);
+                            self.addToQueueByUrl(siteId, fileUrl, component, componentId, timemodified, undefined, 0, options);
                         }
                     } else if (size <= mmFilepoolDownloadThreshold || (isWifi && size <= mmFilepoolWifiDownloadThreshold)) {
-                        self.addToQueueByUrl(siteId, fileUrl, component, componentId, timemodified);
+                        self.addToQueueByUrl(siteId, fileUrl, component, componentId, timemodified, undefined, 0, options);
                     }
                 });
             } else {
-                self.addToQueueByUrl(siteId, fileUrl, component, componentId, timemodified);
+                self.addToQueueByUrl(siteId, fileUrl, component, componentId, timemodified, undefined, 0, options);
             }
         }
     };
@@ -2218,8 +2282,9 @@ angular.module('mm.core')
             return parseInt(matches[1]);
         }
     };
-    self.getSrcByUrl = function(siteId, fileUrl, component, componentId, timemodified, checkSize, downloadUnknown) {
-        return self._getFileUrlByUrl(siteId, fileUrl, 'src', component, componentId, timemodified, checkSize, downloadUnknown);
+    self.getSrcByUrl = function(siteId, fileUrl, component, componentId, timemodified, checkSize, downloadUnknown, options) {
+        return self._getFileUrlByUrl(siteId, fileUrl, 'src', component, componentId,
+                timemodified, checkSize, downloadUnknown, options);
     };
     self.getTimemodifiedFromFileList = function(files) {
         var timemod = 0;
@@ -2230,8 +2295,9 @@ angular.module('mm.core')
         });
         return timemod;
     };
-    self.getUrlByUrl = function(siteId, fileUrl, component, componentId, timemodified, checkSize, downloadUnknown) {
-        return self._getFileUrlByUrl(siteId, fileUrl, 'url', component, componentId, timemodified, checkSize, downloadUnknown);
+    self.getUrlByUrl = function(siteId, fileUrl, component, componentId, timemodified, checkSize, downloadUnknown, options) {
+        return self._getFileUrlByUrl(siteId, fileUrl, 'url', component, componentId,
+                timemodified, checkSize, downloadUnknown, options);
     };
     self._guessFilenameFromUrl = function(fileUrl) {
         var filename = '';
@@ -2368,14 +2434,18 @@ angular.module('mm.core')
         var siteId = item.siteId,
             fileId = item.fileId,
             fileUrl = item.url,
-            revision = item.revision,
-            timemodified = item.timemodified,
+            options = {
+                revision: item.revision,
+                timemodified: item.timemodified,
+                isexternalfile: item.isexternalfile,
+                repositorytype: item.repositorytype
+            },
             filePath = item.path,
             links = item.links || [];
         $log.debug('Processing queue item: ' + siteId + ', ' + fileId);
         return getSiteDb(siteId).then(function(db) {
             return db.get(mmFilepoolStore, fileId).then(function(fileObject) {
-                if (fileObject && !self._isFileOutdated(fileObject, revision, timemodified)) {
+                if (fileObject && !self._isFileOutdated(fileObject, options.revision, options.timemodified)) {
                     $log.debug('Queued file already in store, ignoring...');
                     self._addFileLinks(siteId, fileId, links);
                     self._removeFromQueue(siteId, fileId).finally(function() {
@@ -2397,7 +2467,7 @@ angular.module('mm.core')
         });
         function download(siteId, fileUrl, fileObject, links) {
             return self._restoreOldFileIfNeeded(siteId, fileId, fileUrl, filePath).then(function() {
-                return self._downloadForPoolByUrl(siteId, fileUrl, revision, timemodified, filePath, fileObject).then(function() {
+                return self._downloadForPoolByUrl(siteId, fileUrl, options, filePath, fileObject).then(function() {
                     var promise;
                     self._addFileLinks(siteId, fileId, links);
                     promise = self._removeFromQueue(siteId, fileId);
@@ -3156,6 +3226,11 @@ angular.module('mm.core')
             return extToMime[extension].type;
         }
     };
+    self.getExtensionType = function(extension) {
+        if (extToMime[extension] && extToMime[extension].string) {
+            return extToMime[extension].string;
+        }
+    };
     self.guessExtensionFromUrl = function(fileUrl) {
         var split = fileUrl.split('.'),
             candidate,
@@ -3330,6 +3405,20 @@ angular.module('mm.core')
             return $q.all(promises);
         }).catch(function() {
         });
+    };
+    self.isExtensionInGroup = function(extension, groups) {
+        if (groups && groups.length && extToMime[extension] && extToMime[extension].groups) {
+            for (var i = 0; i < extToMime[extension].groups.length; i++) {
+                var group = extToMime[extension].groups[i];
+                if (groups.indexOf(group) != -1) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    };
+    self.canBeEmbedded = function(extension) {
+        return self.isExtensionInGroup(extension, ['web_image', 'web_video', 'web_audio']);
     };
     return self;
 }]);
@@ -6473,7 +6562,7 @@ angular.module('mm.core')
             } else {
                 url += '?';
             }
-            url += 'token=' + token;
+            url += 'token=' + token + '&offline=1';
             if (url.indexOf('/webservice/pluginfile') == -1) {
                 url = url.replace('/pluginfile', '/webservice/pluginfile');
             }
@@ -7866,24 +7955,27 @@ angular.module('mm.core')
         return result;
     }
     self.downloadFile = function(url, path, addExtension) {
-        $log.debug('Downloading file ' + url, path, addExtension);
+        $log.debug('Downloading file', url, path, addExtension);
         var tmpPath = path + '.tmp';
         return $mmFS.createFile(tmpPath).then(function(fileEntry) {
             return $cordovaFileTransfer.download(url, fileEntry.toURL(), { encodeURI: false }, true).then(function() {
                 var promise;
                 if (addExtension) {
                     ext = $mmFS.getFileExtension(path);
-                    if (!ext) {
+                    if (!ext || ext == 'gdoc' || ext == 'gsheet' || ext == 'gslides' || ext == 'gdraw') {
                         promise = self.getRemoteFileMimeType(url).then(function(mime) {
-                            var ext;
+                            var remoteExt;
                             if (mime) {
-                                ext = $mmFS.getExtension(mime, url);
-                                if (ext) {
-                                    path += '.' + ext;
+                                remoteExt = $mmFS.getExtension(mime, url);
+                                if (remoteExt && (!ext || mime != 'application/json')) {
+                                    if (ext) {
+                                        path = $mmFS.removeExtension(path);
+                                    }
+                                    path += '.' + remoteExt;
+                                    return remoteExt;
                                 }
-                                return ext;
                             }
-                            return false;
+                            return ext;
                         });
                     } else {
                         promise = $q.when(ext);
@@ -8598,7 +8690,7 @@ angular.module('mm.core')
                 }
             };
         }
-        if (!url || !$mmUtil.isDownloadableUrl(url)) {
+        if (!url || !url.match(/^https?:\/\//i) || (dom.tagName === 'A' && !$mmUtil.isDownloadableUrl(url))) {
             $log.debug('Ignoring non-downloadable URL: ' + url);
             if (dom.tagName === 'SOURCE') {
                 addSource(dom, url);
@@ -8712,7 +8804,8 @@ angular.module('mm.core')
             return $q.reject();
         }
         scope.isDownloading = true;
-        return $mmFilepool.downloadUrl(siteId, fileUrl, false, component, componentId, timeModified).then(function(localUrl) {
+        return $mmFilepool.downloadUrl(siteId, fileUrl, false, component, componentId, timeModified, undefined, scope.file)
+                .then(function(localUrl) {
             return localUrl;
         }).catch(function() {
             return getState(scope, siteId, fileUrl, timeModified, alwaysDownload).then(function() {
@@ -8732,7 +8825,7 @@ angular.module('mm.core')
                 var isWifi = !$mmApp.isNetworkAccessLimited(),
                     isOnline = $mmApp.isOnline();
                 if (scope.isDownloaded && !scope.showDownload) {
-                    return $mmFilepool.getUrlByUrl(siteId, fileUrl, component, componentId, timeModified);
+                    return $mmFilepool.getUrlByUrl(siteId, fileUrl, component, componentId, timeModified, false, false, scope.file);
                 } else {
                     if (!isOnline && !scope.isDownloaded) {
                         return $q.reject();
@@ -8751,7 +8844,8 @@ angular.module('mm.core')
                         if (isDownloading || !scope.isDownloaded || isOnline) {
                             return fixedUrl;
                         } else {
-                            return $mmFilepool.getUrlByUrl(siteId, fileUrl, component, componentId, timeModified);
+                            return $mmFilepool.getUrlByUrl(siteId, fileUrl, component, componentId, timeModified,
+                                    false, false, scope.file);
                         }
                     });
                 }
@@ -8809,6 +8903,9 @@ angular.module('mm.core')
             if (!fileName) {
                 return;
             }
+            if (scope.file.isexternalfile) {
+                alwaysDownload = true; 
+            }
             scope.filename = fileName;
             scope.fileicon = $mmFS.getFileIcon(fileName);
             if (canDownload) {
@@ -8840,7 +8937,8 @@ angular.module('mm.core')
                     promise.then(function() {
                         $mmFilepool.invalidateFileByUrl(siteId, fileUrl).finally(function() {
                             scope.isDownloading = true;
-                            $mmFilepool.addToQueueByUrl(siteId, fileUrl, component, componentId, timeModified).catch(function() {
+                            $mmFilepool.addToQueueByUrl(siteId, fileUrl, component, componentId, timeModified,
+                                    undefined, 0, scope.file).catch(function() {
                                 $mmUtil.showErrorModal('mm.core.errordownloading', true);
                             });
                         });
@@ -13401,7 +13499,7 @@ angular.module('mm.core')
                         handler.prefetch(module);
                     }
                 } else if (handler.determineStatus) {
-                    return handler.determineStatus(status, canCheck);
+                    return handler.determineStatus(status, canCheck, module);
                 }
             }
             return status;
@@ -13761,7 +13859,7 @@ angular.module('mm.core')
                         return self.determineModuleStatus(module, status, true, canCheck);
                     }
                     return $mmFilepool.getPackageCurrentStatus(siteid, handler.component, module.id).then(function(status) {
-                        status = handler.determineStatus ? handler.determineStatus(status, canCheck) : status;
+                        status = handler.determineStatus ? handler.determineStatus(status, canCheck, module) : status;
                         if (status == mmCoreNotDownloaded || status == mmCoreOutdated || status == mmCoreDownloading) {
                             self.updateStatusCache(handler.component, module.id, status);
                             return self.determineModuleStatus(module, status, true, canCheck);
@@ -14098,16 +14196,8 @@ angular.module('mm.core.course')
                             contentFiles = that.getContentDownloadableFiles(module),
                             promises = [];
                         if (dirPath) {
-                            angular.forEach(introFiles, function(file) {
-                                var fileUrl = file.url || file.fileurl;
-                                if (prefetch) {
-                                    promises.push($mmFilepool.addToQueueByUrl(siteId, fileUrl,
-                                            that.component, module.id, file.timemodified));
-                                } else {
-                                    promises.push($mmFilepool.downloadUrl(siteId, fileUrl, false,
-                                            that.component, module.id, file.timemodified));
-                                }
-                            });
+                            promises.push($mmFilepool.downloadOrPrefetchFiles(siteId, introFiles, prefetch, false,
+                                    that.component, module.id));
                             promises.push(downloadFn(siteId, contentFiles, that.component,
                                     module.id, data.revision, data.timemod, dirPath));
                         } else {
@@ -15751,7 +15841,8 @@ angular.module('mm.core.fileuploader')
             fileName;
         if (file.filename && !file.name) {
             fileName = file.filename;
-            promise = $mmFilepool.downloadUrl(siteId, file.fileurl, false, component, componentId).then(function(path) {
+            promise = $mmFilepool.downloadUrl(siteId, file.url || file.fileurl, false, component, componentId,
+                    file.timemodified, undefined, file).then(function(path) {
                 return $mmFS.getExternalFile(path);
             });
         } else {
@@ -36126,13 +36217,8 @@ angular.module('mm.addons.mod_assign')
             subPromises.push(prefetchSubmissions(assign, courseId, module.id, siteId, userId));
             subPromises.push($mmCourseHelper.getModuleCourseIdByInstance(assign.id, 'assign', siteId));
             subPromises.push(self.getFiles(module, courseId, siteId).then(function(files) {
-                var filePromises = [];
                 revision = self.getRevision(module, courseId);
-                angular.forEach(files, function(file) {
-                    var url = file.fileurl;
-                    filePromises.push($mmFilepool.addToQueueByUrl(siteId, url, self.component, module.id, file.timemodified));
-                });
-                return $q.all(filePromises);
+                return $mmFilepool.addFilesToQueueByUrl(siteId, files, self.component, module.id);
             }));
             return $q.all(subPromises);
         }));
@@ -38052,9 +38138,7 @@ angular.module('mm.addons.mod_choice')
         return $mmaModChoice.getChoice(courseId, module.id).then(function(choice) {
             var promises = [],
                 files = self.getIntroFilesFromInstance(module, choice);
-            angular.forEach(files, function(file) {
-                promises.push($mmFilepool.addToQueueByUrl(siteId, file.fileurl, self.component, module.id, file.timemodified));
-            });
+            promises.push($mmFilepool.addFilesToQueueByUrl(siteId, files, self.component, module.id));
             promises.push($mmaModChoice.getOptions(choice.id));
             promises.push($mmaModChoice.getResults(choice.id).then(function(options) {
                 var subPromises = [];
@@ -42878,9 +42962,7 @@ angular.module('mm.addons.mod_forum')
                     }
                 }
             });
-            angular.forEach(files, function(file) {
-                promises.push($mmFilepool.addToQueueByUrl(siteId, file.fileurl, self.component, module.id, file.timemodified));
-            });
+            promises.push($mmFilepool.addFilesToQueueByUrl(siteId, files, self.component, module.id));
             promises.push(prefetchGroupsInfo(forum, courseId, canCreateDiscussions));
             return $q.all(promises);
         }).then(function() {
@@ -44515,9 +44597,7 @@ angular.module('mm.addons.mod_glossary')
                     userIds.push(entry.userid);
                 });
                 promises.push($mmUser.prefetchProfiles(userIds, courseId, siteId));
-                angular.forEach(files, function(file) {
-                    promises.push($mmFilepool.addToQueueByUrl(siteId, file.fileurl, self.component, module.id, file.timemodified));
-                });
+                promises.push($mmFilepool.addFilesToQueueByUrl(siteId, files, self.component, module.id));
                 return $q.all(promises);
             }));
             revision = self.getRevision(module, courseId);
@@ -48269,17 +48349,13 @@ angular.module('mm.addons.mod_lesson')
                 attempt = accessInfo.attemptscount;
             files = lesson.mediafiles || [];
             files = files.concat(self.getIntroFilesFromInstance(module, lesson));
-            angular.forEach(files, function(file) {
-                var url = file.url || file.fileurl;
-                promises.push($mmFilepool.addToQueueByUrl(siteId, url, self.component, module.id, file.timemodified));
-            });
+            promises.push($mmFilepool.addFilesToQueueByUrl(siteId, files, self.component, module.id));
             promises.push($mmaModLesson.getPages(lesson.id, password, false, true, siteId).then(function(pages) {
                 var subPromises = [];
                 angular.forEach(pages, function(data) {
                     subPromises.push($mmaModLesson.getPageData(lesson, data.page.id, password, false, true, false,
                             true, undefined, undefined, siteId).then(function(pageData) {
-                        var filePromises = [],
-                            pageFiles = pageData.contentfiles || [];
+                        var pageFiles = pageData.contentfiles || [];
                         angular.forEach(pageData.answers, function(answer) {
                             if (answer.answerfiles && answer.answerfiles.length) {
                                 pageFiles = pageFiles.concat(answer.answerfiles);
@@ -48288,11 +48364,7 @@ angular.module('mm.addons.mod_lesson')
                                 pageFiles = pageFiles.concat(answer.responsefiles);
                             }
                         });
-                        angular.forEach(pageFiles, function(file) {
-                            var url = file.url || file.fileurl;
-                            filePromises.push($mmFilepool.addToQueueByUrl(siteId, url, self.component, module.id, file.timemodified));
-                        });
-                        return $q.all(filePromises);
+                        return $mmFilepool.addFilesToQueueByUrl(siteId, pageFiles, self.component, module.id);
                     }));
                 });
                 return $q.all(subPromises);
@@ -50444,10 +50516,7 @@ angular.module('mm.addons.mod_quiz')
             promises.push($mmaModQuiz.getAttemptAccessInformation(quiz.id, 0, false, true, siteId).then(function(info) {
                 attemptAccessInfo = info;
             }));
-            angular.forEach(introFiles, function(file) {
-                var url = file.fileurl;
-                promises.push($mmFilepool.addToQueueByUrl(siteId, url, self.component, module.id, file.timemodified));
-            });
+            promises.push($mmFilepool.addFilesToQueueByUrl(siteId, introFiles, self.component, module.id));
             return $q.all(promises);
         }).then(function() {
             var attempt = attempts[attempts.length - 1];
@@ -51997,8 +52066,8 @@ angular.module('mm.addons.mod_quiz')
 }]);
 
 angular.module('mm.addons.mod_resource')
-.controller('mmaModResourceIndexCtrl', ["$scope", "$stateParams", "$mmUtil", "$mmaModResource", "$log", "$mmApp", "$mmCourse", "$timeout", "$mmText", "$translate", "mmaModResourceComponent", "$mmaModResourcePrefetchHandler", "$mmCourseHelper", "$mmaModResourceHelper", function($scope, $stateParams, $mmUtil, $mmaModResource, $log, $mmApp, $mmCourse, $timeout,
-        $mmText, $translate, mmaModResourceComponent, $mmaModResourcePrefetchHandler, $mmCourseHelper, $mmaModResourceHelper) {
+.controller('mmaModResourceIndexCtrl', ["$scope", "$stateParams", "$mmUtil", "$mmaModResource", "$log", "$mmApp", "$mmCourse", "$timeout", "$mmText", "$translate", "mmaModResourceComponent", "$mmaModResourcePrefetchHandler", "$mmCourseHelper", "$mmaModResourceHelper", "$q", function($scope, $stateParams, $mmUtil, $mmaModResource, $log, $mmApp, $mmCourse, $timeout,
+        $mmText, $translate, mmaModResourceComponent, $mmaModResourcePrefetchHandler, $mmCourseHelper, $mmaModResourceHelper, $q) {
     $log = $log.getInstance('mmaModResourceIndexCtrl');
     var module = $stateParams.module || {},
         courseId = $stateParams.courseid;
@@ -52016,6 +52085,16 @@ angular.module('mm.addons.mod_resource')
             if (!module.contents || !module.contents.length) {
                 return $q.reject();
             }
+            if ($scope.canGetResource) {
+                return $mmaModResource.getResourceData(courseId, module.id).catch(function() {
+                });
+            } else {
+                return $mmCourse.getModule(module.id, courseId).catch(function() {
+                });
+            }
+        }).then(function(mod) {
+            $scope.title = mod.name;
+            $scope.description = mod.intro || mod.description;
             if ($mmaModResource.isDisplayedInIframe(module)) {
                 $scope.mode = 'iframe';
                 var downloadFailed = false;
@@ -52036,24 +52115,17 @@ angular.module('mm.addons.mod_resource')
                         }
                     });
                 });
+            } else if ($mmaModResource.isDisplayedEmbedded(module, mod.display)) {
+                $scope.mode = 'embedded';
+                return $mmaModResource.getEmbeddedHtml(module).then(function(html) {
+                    $scope.content = html;
+                });
             } else {
                 $scope.mode = 'external';
                 $scope.open = function() {
                     $mmaModResourceHelper.openFile(module, courseId);
                 };
             }
-        }).then(function() {
-            var promise;
-            if ($scope.canGetResource) {
-                promise = $mmaModResource.getResourceData(courseId, module.id);
-            } else {
-                promise = $mmCourse.getModule(module.id, courseId);
-            }
-            return promise.then(function(mod) {
-                $scope.title = mod.name;
-                $scope.description = mod.intro || mod.description;
-            }).catch(function() {
-            });
         }).then(function() {
             $mmCourseHelper.fillContextMenu($scope, module, courseId, refresh, mmaModResourceComponent);
         }).catch(function(error) {
@@ -52174,6 +52246,8 @@ angular.module('mm.addons.mod_resource')
                     } else {
                         $scope.icon = $mmCourse.getModuleIconSrc('resource');
                     }
+                }).finally(function() {
+                    $mmCoursePrefetchDelegate.getModuleStatus(module, courseId).then(showStatus);
                 });
                 $scope.action = function(e) {
                     if (e) {
@@ -52207,6 +52281,7 @@ angular.module('mm.addons.mod_resource')
                     });
                 }
                 function showStatus(status) {
+                    status = $mmaModResourcePrefetchHandler.determineStatus(status, false, module);
                     if (status) {
                         $scope.spinner = status === mmCoreDownloading;
                         downloadBtn.hidden = status !== mmCoreNotDownloaded;
@@ -52220,7 +52295,6 @@ angular.module('mm.addons.mod_resource')
                         showStatus(data.status);
                     }
                 });
-                $mmCoursePrefetchDelegate.getModuleStatus(module, courseId).then(showStatus);
                 $scope.$on('$destroy', function() {
                     statusObserver && statusObserver.off && statusObserver.off();
                 });
@@ -52250,9 +52324,15 @@ angular.module('mm.addons.mod_resource')
     return self;
 }]);
 angular.module('mm.addons.mod_resource')
-.factory('$mmaModResourcePrefetchHandler', ["$mmaModResource", "$mmSite", "$mmFilepool", "$mmPrefetchFactory", "$q", "mmaModResourceComponent", "$mmCourse", function($mmaModResource, $mmSite, $mmFilepool, $mmPrefetchFactory, $q,
-            mmaModResourceComponent, $mmCourse) {
+.factory('$mmaModResourcePrefetchHandler', ["$mmaModResource", "$mmSite", "$mmFilepool", "$mmPrefetchFactory", "$q", "mmaModResourceComponent", "$mmCourse", "mmCoreDownloaded", "mmCoreOutdated", function($mmaModResource, $mmSite, $mmFilepool, $mmPrefetchFactory, $q,
+            mmaModResourceComponent, $mmCourse, mmCoreDownloaded, mmCoreOutdated) {
     var self = $mmPrefetchFactory.createPrefetchHandler(mmaModResourceComponent, true);
+    self.determineStatus = function(status, canCheck, module) {
+        if (status === mmCoreDownloaded && $mmaModResource.hasExternalFile(module)) {
+            return mmCoreOutdated;
+        }
+        return status;
+    };
     self.download = function(module, courseId, single) {
         return downloadOrPrefetch(module, courseId, false);
     };
@@ -52287,6 +52367,33 @@ angular.module('mm.addons.mod_resource')
             $mmText, mmaModResourceComponent, mmCoreNotDownloaded, mmCoreDownloading, mmCoreDownloaded, $mmCourse) {
     $log = $log.getInstance('$mmaModResource');
     var self = {};
+    self.DISPLAY_AUTO = 0;
+    self.DISPLAY_EMBED = 1;
+    self.DISPLAY_FRAME = 2;
+    self.DISPLAY_NEW = 3;
+    self.DISPLAY_DOWNLOAD = 4;
+    self.DISPLAY_OPEN = 5;
+    self.DISPLAY_POPUP = 6;
+    self.getEmbeddedHtml = function(module) {
+        if (!module.contents || !module.contents.length) {
+            return $q.reject();
+        }
+        var file = module.contents[0],
+            ext = $mmFS.getFileExtension(file.filename);
+        return treatResourceMainFile(file, module.id).then(function(result) {
+            var type = $mmFS.getExtensionType(ext),
+                mimeType = $mmFS.getMimeType(ext);
+            if (type == 'image') {
+                return '<img src="' + result.path + '"></img>';
+            } else if (type == 'audio' || type == 'video') {
+                return '<' + type + ' controls title="' + file.filename +'"" src="' + result.path + '">' +
+                    '<source src="' + result.path + '" type="' + mimeType + '">' +
+                    '</' + type +'>';
+            } else {
+                return '';
+            }
+        });
+    };
     self.getIframeSrc = function(module) {
         if (!module.contents.length) {
             return $q.reject();
@@ -52350,12 +52457,23 @@ angular.module('mm.addons.mod_resource')
             });
         });
     };
-    self.isDisplayedInIframe = function(module) {
-        if (!module.contents.length) {
+    self.hasExternalFile = function(module) {
+        return module && module.contents && module.contents[0] && module.contents[0].isexternalfile;
+    };
+    self.isDisplayedEmbedded = function(module, display) {
+        if (!module.contents.length || !$mmFS.isAvailable()) {
             return false;
         }
         var ext = $mmFS.getFileExtension(module.contents[0].filename);
-        return (ext === 'htm' || ext === 'html') && $mmFS.isAvailable();
+        return (display == self.DISPLAY_EMBED || display == self.DISPLAY_AUTO) && $mmFS.canBeEmbedded(ext);
+    };
+    self.isDisplayedInIframe = function(module) {
+        if (!module.contents.length || !$mmFS.isAvailable()) {
+            return false;
+        }
+        var ext = $mmFS.getFileExtension(module.contents[0].filename),
+            mimetype = $mmFS.getMimeType(ext);
+        return mimetype == 'text/html';
     };
     self.isDisplayedInline = function(module) {
         return self.isDisplayedInIframe(module);
@@ -52378,60 +52496,22 @@ angular.module('mm.addons.mod_resource')
         if (!contents || !contents.length) {
             return $q.reject();
         }
-        var files = [contents[0]],
-            siteId = $mmSite.getId(),
-            revision = $mmFilepool.getRevisionFromFileList(files),
-            timeMod = $mmFilepool.getTimemodifiedFromFileList(files),
-            component = mmaModResourceComponent,
-            url = contents[0].fileurl,
-            fixedUrl = $mmSite.fixPluginfileURL(url),
-            status,
-            promise;
-        if ($mmFS.isAvailable()) {
-            promise = $mmFilepool.getPackageStatus(siteId, component, moduleId, revision, timeMod).then(function(stat) {
-                status = stat;
-                var isWifi = !$mmApp.isNetworkAccessLimited(),
-                    isOnline = $mmApp.isOnline();
-                if (status === mmCoreDownloaded) {
-                    return $mmFilepool.getUrlByUrl(siteId, url, component, moduleId, timeMod, false);
-                } else if (status === mmCoreDownloading) {
-                    return fixedUrl;
-                } else {
-                    if (!isOnline && status === mmCoreNotDownloaded) {
-                        return $q.reject();
-                    }
-                    return $mmFilepool.shouldDownloadBeforeOpen(fixedUrl, contents[0].filesize).then(function() {
-                        return $mmFilepool.downloadPackage(siteId, files, component, moduleId, revision, timeMod).then(function() {
-                            return $mmFilepool.getUrlByUrl(siteId, url, component, moduleId, timeMod, false);
-                        });
-                    }, function() {
-                        if (isWifi && isOnline) {
-                            $mmFilepool.downloadPackage(siteId, files, component, moduleId, revision, timeMod);
-                        }
-                        if (status === mmCoreNotDownloaded || isOnline) {
-                            return fixedUrl;
-                        } else {
-                            return $mmFilepool.getUrlByUrl(siteId, url, component, moduleId, timeMod, false);
-                        }
-                    });
-                }
-            });
-        } else {
-            promise = $q.when(fixedUrl);
-        }
-        return promise.then(function(path) {
-            if (path.indexOf('http') === 0) {
-                return $mmUtil.openOnlineFile(path).catch(function(error) {
+        var siteId = $mmSite.getId(),
+            file = contents[0],
+            files = [file];
+        return treatResourceMainFile(file, moduleId).then(function(result) {
+            if (result.path.indexOf('http') === 0) {
+                return $mmUtil.openOnlineFile(result.path).catch(function(error) {
                     if (!$mmFS.isAvailable()) {
                         return $q.reject(error);
                     }
                     var subPromise;
-                    if (status === mmCoreDownloading) {
+                    if (result.status === mmCoreDownloading) {
                         subPromise = $mmLang.translateAndReject('mm.core.erroropenfiledownloading');
-                    } else if (status === mmCoreNotDownloaded) {
-                        subPromise = $mmFilepool.downloadPackage(siteId, files, component, moduleId, revision, timeMod)
-                                .then(function() {
-                            return $mmFilepool.getInternalUrlByUrl(siteId, url);
+                    } else if (result.status === mmCoreNotDownloaded) {
+                        subPromise = $mmFilepool.downloadPackage(siteId, files, mmaModResourceComponent,
+                                moduleId, result.revision, result.timemodified).then(function() {
+                            return $mmFilepool.getInternalUrlByUrl(siteId, file.fileurl);
                         });
                     } else {
                         subPromise = $mmFilepool.getInternalUrlByUrl(siteId, url);
@@ -52441,7 +52521,7 @@ angular.module('mm.addons.mod_resource')
                     });
                 });
             } else {
-                return $mmUtil.openFile(path);
+                return $mmUtil.openFile(result.path);
             }
         });
     };
@@ -52491,6 +52571,56 @@ angular.module('mm.addons.mod_resource')
         promises.push($mmCourse.invalidateModule(moduleId, siteId));
         return $mmUtil.allPromises(promises);
     };
+    function treatResourceMainFile(file, moduleId) {
+        var files = [file],
+            siteId = $mmSite.getId(),
+            revision = $mmFilepool.getRevisionFromFileList(files),
+            timeMod = $mmFilepool.getTimemodifiedFromFileList(files),
+            component = mmaModResourceComponent,
+            url = file.fileurl,
+            fixedUrl = $mmSite.fixPluginfileURL(url),
+            result = {
+                fixedurl: fixedUrl,
+                revision: revision,
+                timemodified: timeMod
+            };
+        if ($mmFS.isAvailable()) {
+            return $mmFilepool.getPackageStatus(siteId, component, moduleId, revision, timeMod).then(function(status) {
+                result.status = status;
+                var isWifi = !$mmApp.isNetworkAccessLimited(),
+                    isOnline = $mmApp.isOnline();
+                if (status === mmCoreDownloaded) {
+                    return $mmFilepool.getInternalUrlByUrl(siteId, url);
+                } else if (status === mmCoreDownloading) {
+                    return fixedUrl;
+                } else {
+                    if (!isOnline && status === mmCoreNotDownloaded) {
+                        return $q.reject();
+                    }
+                    return $mmFilepool.shouldDownloadBeforeOpen(fixedUrl, file.filesize).then(function() {
+                        return $mmFilepool.downloadPackage(siteId, files, component, moduleId, revision, timeMod).then(function() {
+                            return $mmFilepool.getInternalUrlByUrl(siteId, url);
+                        });
+                    }, function() {
+                        if (isWifi && isOnline) {
+                            $mmFilepool.downloadPackage(siteId, files, component, moduleId, revision, timeMod);
+                        }
+                        if (status === mmCoreNotDownloaded || isOnline) {
+                            return fixedUrl;
+                        } else {
+                            return $mmFilepool.getUrlByUrl(siteId, url, component, moduleId, timeMod, false, false, file);
+                        }
+                    });
+                }
+            }).then(function(path) {
+                result.path = path;
+                return result;
+            });
+        } else {
+            result.path = fixedUrl;
+            return $q.when(result);
+        }
+    }
     return self;
 }]);
 
@@ -53982,16 +54112,9 @@ angular.module('mm.addons.mod_scorm')
             promises.push(self.downloadWSData(scorm, siteId).catch(function() {
             }));
             promises.push(self._downloadOrPrefetchPackage(scorm, prefetch, siteId).then(undefined, undefined, deferred.notify));
-            angular.forEach(introFiles, function(file) {
-                var promise;
-                if (prefetch) {
-                    promise = $mmFilepool.addToQueueByUrl(siteId, file.fileurl, self.component, module.id, file.timemodified);
-                } else {
-                    promise = $mmFilepool.downloadUrl(siteId, file.fileurl, false, self.component, module.id, file.timemodified);
-                }
-                promises.push(promise.catch(function() {
-                }));
-            });
+            promises.push($mmFilepool.downloadOrPrefetchFiles(siteId, introFiles, prefetch, false, self.component, module.id)
+                    .catch(function() {
+            }));
             return $q.all(promises);
         }).then(function() {
             deferred.resolve({
@@ -56325,9 +56448,7 @@ angular.module('mm.addons.mod_survey')
             var promises = [],
                 files = self.getIntroFilesFromInstance(module, survey);
             timemod = $mmFilepool.getTimemodifiedFromFileList(files);
-            angular.forEach(files, function(file) {
-                promises.push($mmFilepool.addToQueueByUrl(siteId, file.fileurl, component, module.id, file.timemodified));
-            });
+            promises.push($mmFilepool.addFilesToQueueByUrl(siteId, files, self.component, module.id));
             if (!survey.surveydone) {
                 promises.push($mmaModSurvey.getQuestions(survey.id));
             }
@@ -58341,13 +58462,8 @@ angular.module('mm.addons.mod_wiki')
                 }));
                 promises.push($mmCourse.getModuleBasicInfo(module.id, siteId));
                 promises.push(self.getFiles(module, courseId, siteId).then(function (files) {
-                    var filePromises = [];
                     revision = $mmFilepool.getRevisionFromFileList(files);
-                    angular.forEach(files, function(file) {
-                        var url = file.fileurl;
-                        filePromises.push($mmFilepool.addToQueueByUrl(siteId, url, self.component, module.id, file.timemodified));
-                    });
-                    return $q.all(filePromises);
+                    return $mmFilepool.addFilesToQueueByUrl(siteId, files, self.component, module.id);
                 }));
                 promises.push(self.getTimemodified(module, courseId, siteId).then(function(timemodified) {
                     timemod = timemodified;
