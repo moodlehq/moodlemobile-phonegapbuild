@@ -13131,10 +13131,10 @@ p.mma-mod-assign-warning {
     .mm-site_mod_choice .col:first-child {
       border-left: 0; } }
 
-.mm-site_mod_feedback-analysis ul {
+.mm-site_mod_feedback .mm-analysis ul {
   font-size: 14px; }
 
-.mm-site_mod_feedback-analysis .item .chart, .mm-site_mod_feedback-analysis .mm-grades-table .itemcenter .chart, .mm-grades-table .mm-site_mod_feedback-analysis .itemcenter .chart {
+.mm-site_mod_feedback .mm-analysis .item .chart, .mm-site_mod_feedback .mm-analysis .mm-grades-table .itemcenter .chart, .mm-grades-table .mm-site_mod_feedback .mm-analysis .itemcenter .chart {
   max-width: 500px;
   margin: 0 auto; }
 

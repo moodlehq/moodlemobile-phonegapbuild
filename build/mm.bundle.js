@@ -459,10 +459,13 @@ angular.module('mm.core')
         };
     this.registerStore = function(store) {
         if (typeof(store.name) === 'undefined') {
-            console.log('$mmApp: Error: store name is undefined.');
+            console.error('$mmApp: Error: store name is undefined.');
+            return;
+        } else if (typeof store.keyPath  === 'undefined' || !store.keyPath) {
+            console.error('$mmApp: Error: store ' + store.name + ' keyPath is invalid.');
             return;
         } else if (storeExists(store.name)) {
-            console.log('$mmApp: Error: store ' + store.name + ' is already defined.');
+            console.error('$mmApp: Error: store ' + store.name + ' is already defined.');
             return;
         }
         dbschema.stores.push(store);
@@ -1006,20 +1009,42 @@ angular.module('mm.core')
         }
         return deferred.promise;
     }
-    function getCompoundIndex(db, storeName, index) {
+    function getStoreFromName(db, storeName) {
         var stores = db.getSchema().stores;
         for (var x in stores) {
             if (stores[x].name == storeName) {
-                var indexes = stores[x].indexes;
-                for (var y in indexes) {
-                    if (indexes[y].name == index) {
-                        return indexes[y].keyPath;
-                    }
-                }
-                return false;
+                return stores[x];
             }
         }
         return false;
+    }
+    function getCompoundIndex(db, storeName, index) {
+        var store = getStoreFromName(db, storeName);
+        if (store) {
+            var indexes = store.indexes;
+            for (var y in indexes) {
+                if (indexes[y].name == index) {
+                    return indexes[y].keyPath;
+                }
+            }
+        }
+        return false;
+    }
+    function checkKeyPathIsPresent(db, storeName, value) {
+        var store = getStoreFromName(db, storeName);
+        if (store) {
+            keyPath = Array.isArray(store.keyPath) ? store.keyPath : [store.keyPath];
+            for (var x in keyPath) {
+                var val = value[keyPath[x]];
+                if (typeof val == "undefined" || val === null || (typeof val == "number" && isNaN(val))) {
+                    var error = "Value inserted does not have key " + keyPath[x] + " required on store " + storeName;
+                    if (typeof sendErrorReport == 'function') {
+                        sendErrorReport(error);
+                    }
+                    throw new Error(error);
+                }
+            }
+        }
     }
     function filterWhereList(list, fields, values, indexNum) {
         if (list.length == 0 || fields.length < indexNum || values.length < indexNum) {
@@ -1066,6 +1091,7 @@ angular.module('mm.core')
         var deferred = $q.defer(),
             query;
         try {
+            checkKeyPathIsPresent(db, store, values);
             query = db.from(store);
             query = applyWhere(query, where);
             query.patch(values).then(deferred.resolve, deferred.reject);
@@ -1104,16 +1130,24 @@ angular.module('mm.core')
                     return callCount(db, store, where);
                 },
                 insert: function(store, value, id) {
-                    return callDBFunction(db, 'put', store, value, id);
+                    try {
+                        checkKeyPathIsPresent(db, store, value);
+                        return callDBFunction(db, 'put', store, value, id);
+                    } catch(ex) {
+                        $log.error('Error executing function put to DB ' + db.getName());
+                        $log.error(ex.name + ': ' + ex.message);
+                    }
+                    return false;
                 },
                 insertSync: function(store, value) {
                     if (db) {
                         try {
+                            checkKeyPathIsPresent(db, store, value);
                             db.put(store, value);
                             return true;
                         } catch(ex) {
-                            $log.error('Error executing function sync put to DB '+db.getName());
-                            $log.error(ex.name+': '+ex.message);
+                            $log.error('Error executing function sync put to DB ' + db.getName());
+                            $log.error(ex.name + ': ' + ex.message);
                         }
                     }
                     return false;
@@ -3424,7 +3458,7 @@ angular.module('mm.core')
 }]);
 
 angular.module('mm.core')
-.factory('$mmGroups', ["$log", "$q", "$mmSite", "$mmSitesManager", function($log, $q, $mmSite, $mmSitesManager) {
+.factory('$mmGroups', ["$log", "$q", "$mmSite", "$mmSitesManager", "$translate", function($log, $q, $mmSite, $mmSitesManager, $translate) {
     $log = $log.getInstance('$mmGroups');
     var self = {};
     self.NOGROUPS       = 0;
@@ -3454,6 +3488,35 @@ angular.module('mm.core')
     function getActivityAllowedGroupsCacheKey(cmId, userId) {
         return 'mmGroups:allowedgroups:' + cmId + ':' + userId;
     }
+    self.getActivityGroupInfo = function(cmId, addAllParts, userId, siteId) {
+        if (typeof addAllParts == 'undefined') {
+            addAllParts = true;
+        }
+        var groupInfo = {
+            groups: []
+        };
+        return self.getActivityGroupMode(cmId, siteId).then(function(groupMode) {
+            groupInfo.separateGroups = groupMode === self.SEPARATEGROUPS;
+            groupInfo.visibleGroups = groupMode === self.VISIBLEGROUPS;
+            if (groupInfo.separateGroups || groupInfo.visibleGroups) {
+                return self.getActivityAllowedGroups(cmId, userId, siteId);
+            }
+            return [];
+        }).then(function (groups) {
+            if (groups.length <= 0) {
+                groupInfo.separateGroups = false;
+                groupInfo.visibleGroups = false;
+            } else {
+                if (addAllParts) {
+                    groupInfo.groups = [
+                        {'id': 0, 'name': $translate.instant('mm.core.allparticipants')}
+                    ];
+                }
+                groupInfo.groups = groupInfo.groups.concat(groups);
+            }
+            return groupInfo;
+        });
+    };
     self.getActivityGroupMode = function(cmId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             var params = {
@@ -3529,12 +3592,22 @@ angular.module('mm.core')
             });
         });
     };
-    self.invalidateActivityAllowedGroups = function(cmid, userid) {
-        userid = userid || $mmSite.getUserId();
-        return $mmSite.invalidateWsCacheForKey(getActivityAllowedGroupsCacheKey(cmid, userid));
+    self.invalidateActivityAllowedGroups = function(cmId, userId, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            userId = userId || site.getUserId();
+            return site.invalidateWsCacheForKey(getActivityAllowedGroupsCacheKey(cmId, userId));
+        });
     };
-    self.invalidateActivityGroupMode = function(cmid) {
-        return $mmSite.invalidateWsCacheForKey(getActivityGroupModeCacheKey(cmid));
+    self.invalidateActivityGroupMode = function(cmId, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.invalidateWsCacheForKey(getActivityGroupModeCacheKey(cmId));
+        });
+    };
+    self.invalidateActivityGroupInfo = function(cmId, userId, siteId) {
+        var promises = [];
+        promises.push(self.invalidateActivityAllowedGroups(cmId, userId, siteId));
+        promises.push(self.invalidateActivityGroupMode(cmId, siteId));
+        return $q.all(promises);
     };
     return self;
 }]);
@@ -4202,10 +4275,13 @@ angular.module('mm.core')
         supportWhereEqual;
     this.registerStore = function(store) {
         if (typeof(store.name) === 'undefined') {
-            console.log('$mmSite: Error: store name is undefined.');
+            console.error('$mmSite: Error: store name is undefined.');
+            return;
+        } else if (typeof store.keyPath  === 'undefined' || !store.keyPath) {
+            console.error('$mmSite: Error: store ' + store.name + ' keyPath is invalid.');
             return;
         } else if (storeExists(store.name)) {
-            console.log('$mmSite: Error: store ' + store.name + ' is already defined.');
+            console.error('$mmSite: Error: store ' + store.name + ' is already defined.');
             return;
         }
         store.indexes = getIndexes(store.indexes);
@@ -17693,17 +17769,9 @@ angular.module('mm.core.login')
             return false;
         }
         loginUrl += '&oauthsso=' + params.id;
-        if ((provider.name && provider.name.match(/google/i)) || (provider.iconurl && provider.iconurl.match(/google/i))) {
-            $mmUtil.openInBrowser(loginUrl);
-            if (navigator.app) {
-                navigator.app.exitApp();
-            }
-        } else {
-            var options = {
-                clearsessioncache: 'yes', 
-                closebuttoncaption: $translate.instant('mm.login.cancel'),
-            };
-            $mmUtil.openInApp(loginUrl, options);
+        $mmUtil.openInBrowser(loginUrl);
+        if (navigator.app) {
+            navigator.app.exitApp();
         }
         return true;
     };
@@ -21619,7 +21687,8 @@ angular.module('mm.addons.mod_feedback', ["chart.js"])
             module: null,
             moduleid: null, 
             courseid: null,
-            group: null
+            group: null,
+            tab: null
         },
         views: {
             'site': {
@@ -21641,22 +21710,6 @@ angular.module('mm.addons.mod_feedback', ["chart.js"])
             'site': {
                 controller: 'mmaModFeedbackFormCtrl',
                 templateUrl: 'addons/mod/feedback/templates/form.html'
-            }
-        }
-    })
-    .state('site.mod_feedback-analysis', {
-        url: '/mod_feedback-analysis',
-        params: {
-            feedbackid: null,
-            courseid: null,
-            module: null,
-            moduleid: null, 
-            group: null
-        },
-        views: {
-            'site': {
-                controller: 'mmaModFeedbackAnalysisCtrl',
-                templateUrl: 'addons/mod/feedback/templates/analysis.html'
             }
         }
     })
@@ -38164,191 +38217,6 @@ angular.module('mm.addons.mod_choice')
 }]);
 
 angular.module('mm.addons.mod_feedback')
-.controller('mmaModFeedbackAnalysisCtrl', ["$scope", "$stateParams", "$mmaModFeedback", "$mmUtil", "$q", "$mmCourse", "$mmText", "$mmApp", "mmaModFeedbackComponent", "$mmEvents", "$translate", "$mmGroups", "mmCoreEventOnlineStatusChanged", "$mmaModFeedbackHelper", "$ionicHistory", function($scope, $stateParams, $mmaModFeedback, $mmUtil, $q, $mmCourse, $mmText, $mmApp,
-            mmaModFeedbackComponent, $mmEvents, $translate, $mmGroups, mmCoreEventOnlineStatusChanged, $mmaModFeedbackHelper,
-            $ionicHistory) {
-    var feedbackId = $stateParams.feedbackid,
-        module = $stateParams.module || {},
-        courseId = $stateParams.courseid,
-        feedback;
-    $scope.title = $stateParams.title;
-    $scope.moduleUrl = module.url;
-    $scope.moduleName = $mmCourse.translateModuleName('feedback');
-    $scope.courseId = courseId;
-    $scope.refreshIcon = 'spinner';
-    $scope.component = mmaModFeedbackComponent;
-    $scope.componentId = module.id;
-    $scope.selectedGroup = $stateParams.group || 0;
-    $scope.chartOptions = {
-        'legend': {
-            'display': true,
-            'position': 'bottom',
-            'labels': {
-                'generateLabels': function(chart) {
-                    var data = chart.data;
-                    if (data.labels.length && data.labels.length) {
-                        var datasets = data.datasets[0];
-                        return data.labels.map(function(label, i) {
-                            return {
-                                text: label + ': ' + datasets.data[i],
-                                fillStyle: datasets.backgroundColor[i],
-                                datasetIndex: i
-                            };
-                        });
-                    } else {
-                        return [];
-                    }
-                }
-            }
-        }
-    };
-    function fetchFeedbackAnalysisData(refresh, showErrors) {
-        $scope.isOnline = $mmApp.isOnline();
-        return $mmaModFeedback.getFeedback(courseId, module.id).then(function(feedbackData) {
-            feedback = feedbackData;
-            $scope.title = feedback.name || $scope.title;
-            $scope.description = feedback.intro;
-            $scope.feedback = feedback;
-            return $mmaModFeedback.getFeedbackAccessInformation(feedback.id);
-        }).then(function(accessData) {
-            $scope.access = accessData;
-            if (accessData.canviewanalysis) {
-                return $mmaModFeedbackHelper.getFeedbackGroupInfo(feedback.coursemodule).then(function(groupInfo) {
-                    $scope.groupInfo = groupInfo;
-                    return $scope.setGroup($scope.selectedGroup);
-                });
-            } else {
-                $ionicHistory.goBack();
-            }
-        }).catch(function(message) {
-            if (!refresh) {
-                return refreshAllData();
-            }
-            $mmUtil.showErrorModalDefault(message, 'mm.course.errorgetmodule', true);
-            return $q.reject();
-        }).finally(function(){
-            $scope.feedbackLoaded = true;
-        });
-    }
-    $scope.setGroup = function(groupId) {
-        $scope.selectedGroup = groupId;
-        return $mmaModFeedback.getAnalysis(feedback.id, groupId).then(function(analysis) {
-            var number = 1;
-            $scope.items = analysis.itemsdata.map(function(item) {
-                item.item.data = item.data;
-                item = item.item;
-                item.number = number++;
-                if (item.data && item.data.length) {
-                    return parseAnalysisInfo(item);
-                }
-                return false;
-            }).filter(function(item) {
-                return item;
-            });
-            $scope.warning = "";
-            if (analysis.warnings.length) {
-                for (var x in analysis.warnings) {
-                    var warning = analysis.warnings[x];
-                    if (warning.warningcode == 'insufficientresponsesforthisgroup') {
-                        $scope.warning = warning.message;
-                    }
-                }
-            }
-            $scope.feedback.completedCount = analysis.completedcount;
-            $scope.feedback.itemsCount = analysis.itemscount;
-        });
-    };
-    function parseAnalysisInfo(item) {
-        switch (item.typ) {
-            case 'numeric':
-                item.average = item.data.reduce(function (prev, current) {
-                    return prev + current;
-                }) / item.data.length;
-                item.template = 'numeric';
-                break;
-            case 'info':
-                item.data = item.data.map(function(dataItem) {
-                    dataItem = $mmText.parseJSON(dataItem);
-                    return typeof dataItem.show != "undefined" ? dataItem.show : false;
-                }).filter(function(dataItem) {
-                    return dataItem;
-                });
-            case 'textfield':
-            case 'textarea':
-                item.template = 'list';
-                break;
-            case 'multichoicerated':
-            case 'multichoice':
-                item.data = item.data.map(function(dataItem) {
-                    dataItem = $mmText.parseJSON(dataItem);
-                    return typeof dataItem.answertext != "undefined" ? dataItem : false;
-                }).filter(function(dataItem) {
-                    return dataItem;
-                });
-                item.labels = item.data.map(function(dataItem) {
-                    dataItem.quotient = parseFloat(dataItem.quotient * 100).toFixed(2);
-                    var label = "";
-                    if (typeof dataItem.value != "undefined") {
-                        label = '(' + dataItem.value + ') ';
-                    }
-                    label += dataItem.answertext;
-                    label += dataItem.quotient > 0 ? ' (' + dataItem.quotient + '%)' : "";
-                    return label;
-                });
-                item.chartData = item.data.map(function(dataItem) {
-                    return dataItem.answercount;
-                });
-                if (item.typ == 'multichoicerated') {
-                    item.average = item.data.reduce(function (prev, current) {
-                        return prev + current.avg;
-                    }, 0.0);
-                }
-                var subtype = item.presentation.charAt(0);
-                item.single = subtype != 'c';
-                item.template = 'chart';
-                break;
-        }
-        return item;
-    }
-    function refreshAllData(showErrors) {
-        var promises = [];
-        promises.push($mmaModFeedback.invalidateFeedbackData(courseId));
-        if (feedback) {
-            promises.push($mmaModFeedback.invalidateFeedbackAccessInformationData(feedback.id));
-            promises.push($mmaModFeedback.invalidateAnalysisData(feedback.id));
-            promises.push($mmGroups.invalidateActivityAllowedGroups(feedback.coursemodule));
-            promises.push($mmGroups.invalidateActivityGroupMode(feedback.coursemodule));
-        }
-        return $q.all(promises).finally(function() {
-            return fetchFeedbackAnalysisData(true, showErrors);
-        });
-    }
-    fetchFeedbackAnalysisData().finally(function() {
-        $scope.refreshIcon = 'ion-refresh';
-    });
-    $scope.expandDescription = function() {
-        $mmText.expandText($translate.instant('mm.core.description'), $scope.description, false, mmaModFeedbackComponent, module.id);
-    };
-    $scope.refreshFeedback = function(showErrors) {
-        if ($scope.feedbackLoaded) {
-            $scope.refreshIcon = 'spinner';
-            return refreshAllData(showErrors).finally(function() {
-                $scope.refreshIcon = 'ion-refresh';
-                $scope.$broadcast('scroll.refreshComplete');
-            });
-        }
-    };
-    $scope.openFeature = function(feature) {
-        $mmaModFeedbackHelper.openFeature(feature, module, courseId, $scope.selectedGroup);
-    };
-    onlineObserver = $mmEvents.on(mmCoreEventOnlineStatusChanged, function(online) {
-        $scope.isOnline = online;
-    });
-    $scope.$on('$destroy', function() {
-        onlineObserver && onlineObserver.off && onlineObserver.off();
-    });
-}]);
-angular.module('mm.addons.mod_feedback')
 .controller('mmaModFeedbackAttemptCtrl', ["$scope", "$stateParams", "$mmaModFeedback", "$mmUtil", "$q", "$mmText", "$ionicHistory", "$mmaModFeedbackHelper", "mmaModFeedbackComponent", function($scope, $stateParams, $mmaModFeedback, $mmUtil, $q, $mmText, $ionicHistory,
             $mmaModFeedbackHelper, mmaModFeedbackComponent) {
     var feedbackId = $stateParams.feedbackid || 0;
@@ -38408,15 +38276,8 @@ angular.module('mm.addons.mod_feedback')
             feedback = feedbackData;
             $scope.title = feedback.name || $scope.title;
             $scope.feedback = feedback;
-            return $mmaModFeedback.getFeedbackAccessInformation(feedback.id, $scope.offline, true).catch(function(error) {
-                if (!$scope.offline && !$mmUtil.isWebServiceError(error)) {
-                    $scope.offline = true;
-                    return $mmaModFeedback.getFeedbackAccessInformation(feedback.id, true);
-                }
-                return $q.reject(error);
-            });
+            return fetchAccessData();
         }).then(function(accessData) {
-            $scope.access = accessData;
             if (!$scope.preview && accessData.cansubmit && !accessData.isempty) {
                 return typeof currentPage == "undefined" ? $mmaModFeedback.getResumePage(feedback.id, $scope.offline, true) :
                     $q.when(currentPage);
@@ -38440,6 +38301,18 @@ angular.module('mm.addons.mod_feedback')
         }).finally(function() {
             $scope.feedbackLoaded = true;
         });
+    }
+    function fetchAccessData() {
+        return $mmaModFeedback.getFeedbackAccessInformation(feedback.id, $scope.offline, true).catch(function(error) {
+            if (!$scope.offline && !$mmUtil.isWebServiceError(error)) {
+                $scope.offline = true;
+                return $mmaModFeedback.getFeedbackAccessInformation(feedback.id, true);
+            }
+            return $q.reject(error);
+         }).then(function(accessData) {
+            $scope.access = accessData;
+            return accessData;
+         });
     }
     function fetchFeedbackPageData(page) {
         var promise;
@@ -38493,8 +38366,12 @@ angular.module('mm.addons.mod_feedback')
                     $scope.completionPageContents = response.completionpagecontents;
                     siteAfterSubmit = response.siteaftersubmit;
                     submitted = true;
-                    $mmaModFeedback.invalidateFeedbackAccessInformationData(feedback.id);
-                    $mmaModFeedback.invalidateResumePageData(feedback.id);
+                    var promises = [];
+                    promises.push($mmaModFeedback.invalidateFeedbackAccessInformationData(feedback.id));
+                    promises.push($mmaModFeedback.invalidateResumePageData(feedback.id));
+                    return $q.all(promises).then(function () {
+                        return fetchAccessData();
+                    });
                 } else if (isNaN(jumpTo) || jumpTo == currentPage) {
                     return $q.when();
                 } else {
@@ -38557,8 +38434,9 @@ angular.module('mm.addons.mod_feedback')
             modal.dismiss();
         });
     };
-    $scope.openFeature = function(feature) {
-        $mmaModFeedbackHelper.openFeature(feature, module, courseId);
+    $scope.showAnalysis = function(feature) {
+        submitted = 'analysis';
+        $mmaModFeedbackHelper.openFeature('analysis', module, courseId);
     };
     fetchFeedbackFormData();
     function scrollTop() {
@@ -38574,7 +38452,8 @@ angular.module('mm.addons.mod_feedback')
     });
     $scope.$on('$destroy', function() {
         if (submitted) {
-            $mmEvents.trigger(mmaModFeedbackEventFormSubmitted, {feedbackId: feedback.id});
+            var tab = submitted = 'analysis' ? 'analysis' : 'overview';
+            $mmEvents.trigger(mmaModFeedbackEventFormSubmitted, {feedbackId: feedback.id, tab: tab});
         }
         onlineObserver && onlineObserver.off && onlineObserver.off();
     });
@@ -38588,7 +38467,11 @@ angular.module('mm.addons.mod_feedback')
         courseId = $stateParams.courseid,
         feedback,
         onlineObserver,
-        obsSubmitted;
+        obsSubmitted,
+        analysisLoaded = false,
+        overviewLoaded = false;
+    $scope.DISPLAY_OVERVIEW = 'overview';
+    $scope.DISPLAY_ANALYSIS = 'analysis';
     $scope.title = module.name;
     $scope.description = module.description;
     $scope.moduleUrl = module.url;
@@ -38599,6 +38482,38 @@ angular.module('mm.addons.mod_feedback')
     $scope.component = mmaModFeedbackComponent;
     $scope.componentId = module.id;
     $scope.selectedGroup = $stateParams.group || 0;
+    $scope.selectedTab = $stateParams.tab || $scope.DISPLAY_OVERVIEW;
+    $scope.overview = {};
+    $scope.tabSwitched = false;
+    $scope.chartOptions = {
+        'legend': {
+            'display': true,
+            'position': 'bottom',
+            'labels': {
+                'generateLabels': function(chart) {
+                    var data = chart.data;
+                    if (data.labels.length && data.labels.length) {
+                        var datasets = data.datasets[0];
+                        return data.labels.map(function(label, i) {
+                            return {
+                                text: label + ': ' + datasets.data[i],
+                                fillStyle: datasets.backgroundColor[i],
+                                datasetIndex: i
+                            };
+                        });
+                    } else {
+                        return [];
+                    }
+                }
+            }
+        }
+    };
+    function fetchGroupInfo(module) {
+        return $mmGroups.getActivityGroupInfo(module).then(function(groupInfo) {
+            $scope.groupInfo = groupInfo;
+            return $scope.setGroup($scope.selectedGroup);
+        });
+    }
     function fetchFeedbackData(refresh, sync, showErrors) {
         $scope.isOnline = $mmApp.isOnline();
         return $mmaModFeedback.getFeedback(courseId, module.id).then(function(feedbackData) {
@@ -38613,24 +38528,11 @@ angular.module('mm.addons.mod_feedback')
         }).then(function() {
             return $mmaModFeedback.getFeedbackAccessInformation(feedback.id);
         }).then(function(accessData) {
-            var promises = [];
             $scope.access = accessData;
-            if (accessData.cancomplete && accessData.cansubmit && accessData.isopen) {
-                promises.push($mmaModFeedback.getResumePage(feedback.id).then(function(goPage) {
-                    $scope.goPage = goPage > 0 ? goPage : false;
-                }));
+            if ($scope.selectedTab == $scope.DISPLAY_ANALYSIS) {
+                return fetchFeedbackAnalysisData(accessData);
             }
-            if (accessData.canedititems) {
-                feedback.timeopen = parseInt(feedback.timeopen) * 1000 || false;
-                feedback.openTimeReadable = feedback.timeopen ? moment(feedback.timeopen).format('LLL') : false;
-                feedback.timeclose = parseInt(feedback.timeclose) * 1000 || false;
-                feedback.closeTimeReadable = feedback.timeclose ? moment(feedback.timeclose).format('LLL') : false;
-                promises.push($mmaModFeedbackHelper.getFeedbackGroupInfo(feedback.coursemodule).then(function(groupInfo) {
-                    $scope.groupInfo = groupInfo;
-                    return $scope.setGroup($scope.selectedGroup);
-                }));
-            }
-            return $q.all(promises);
+            return fetchFeedbackOverviewData(accessData);
         }).then(function() {
             $mmCourseHelper.fillContextMenu($scope, module, courseId, refresh, mmaModFeedbackComponent);
             return $mmaModFeedbackOffline.hasFeedbackOfflineData(feedback.id).then(function(hasOffline) {
@@ -38644,6 +38546,39 @@ angular.module('mm.addons.mod_feedback')
             return $q.reject();
         }).finally(function(){
             $scope.feedbackLoaded = true;
+            $scope.tabSwitched = true;
+        });
+    }
+    function fetchFeedbackOverviewData(accessData) {
+        var promises = [];
+        if (accessData.cancomplete && accessData.cansubmit && accessData.isopen) {
+            promises.push($mmaModFeedback.getResumePage(feedback.id).then(function(goPage) {
+                $scope.goPage = goPage > 0 ? goPage : false;
+            }));
+        }
+        if (accessData.canedititems) {
+            $scope.overview.timeopen = parseInt(feedback.timeopen) * 1000 || false;
+            $scope.overview.openTimeReadable = $scope.overview.timeopen ?
+                moment($scope.overview.timeopen).format('LLL') : false;
+            $scope.overview.timeclose = parseInt(feedback.timeclose) * 1000 || false;
+            $scope.overview.closeTimeReadable = $scope.overview.timeclose ?
+                moment($scope.overview.timeclose).format('LLL') : false;
+            promises.push(fetchGroupInfo(feedback.coursemodule));
+        }
+        return $q.all(promises).finally(function(){
+            overviewLoaded = true;
+        });
+    }
+    function fetchFeedbackAnalysisData(accessData) {
+        var promise;
+        if (accessData.canviewanalysis) {
+            promise = fetchGroupInfo(feedback.coursemodule);
+        } else {
+            $scope.setTab($scope.DISPLAY_OVERVIEW);
+            promise = $q.when();
+        }
+        return promise.finally(function(){
+            analysisLoaded = true;
         });
     }
     $scope.setGroup = function(groupId) {
@@ -38651,18 +38586,103 @@ angular.module('mm.addons.mod_feedback')
         return $mmaModFeedback.getAnalysis(feedback.id, groupId).then(function(analysis) {
             $scope.feedback.completedCount = analysis.completedcount;
             $scope.feedback.itemsCount = analysis.itemscount;
+            if ($scope.selectedTab == $scope.DISPLAY_ANALYSIS) {
+                var number = 1;
+                $scope.items = analysis.itemsdata.map(function(item) {
+                    item.item.data = item.data;
+                    item = item.item;
+                    item.number = number++;
+                    if (item.data && item.data.length) {
+                        return parseAnalysisInfo(item);
+                    }
+                    return false;
+                }).filter(function(item) {
+                    return item;
+                });
+                $scope.warning = "";
+                if (analysis.warnings.length) {
+                    for (var x in analysis.warnings) {
+                        var warning = analysis.warnings[x];
+                        if (warning.warningcode == 'insufficientresponsesforthisgroup') {
+                            $scope.warning = warning.message;
+                        }
+                    }
+                }
+            }
         });
     };
+    $scope.setTab = function(tab) {
+        $scope.selectedTab = tab == $scope.DISPLAY_OVERVIEW ? $scope.DISPLAY_OVERVIEW : $scope.DISPLAY_ANALYSIS;
+        if (($scope.selectedTab == $scope.DISPLAY_OVERVIEW && !overviewLoaded) ||
+                ($scope.selectedTab == $scope.DISPLAY_ANALYSIS && !analysisLoaded)) {
+            $scope.tabSwitched = false;
+            return fetchFeedbackData(false, false, true);
+        }
+    };
+    function parseAnalysisInfo(item) {
+        switch (item.typ) {
+            case 'numeric':
+                item.average = item.data.reduce(function (prev, current) {
+                    return prev + current;
+                }) / item.data.length;
+                item.template = 'numeric';
+                break;
+            case 'info':
+                item.data = item.data.map(function(dataItem) {
+                    dataItem = $mmText.parseJSON(dataItem);
+                    return typeof dataItem.show != "undefined" ? dataItem.show : false;
+                }).filter(function(dataItem) {
+                    return dataItem;
+                });
+            case 'textfield':
+            case 'textarea':
+                item.template = 'list';
+                break;
+            case 'multichoicerated':
+            case 'multichoice':
+                item.data = item.data.map(function(dataItem) {
+                    dataItem = $mmText.parseJSON(dataItem);
+                    return typeof dataItem.answertext != "undefined" ? dataItem : false;
+                }).filter(function(dataItem) {
+                    return dataItem;
+                });
+                item.labels = item.data.map(function(dataItem) {
+                    dataItem.quotient = parseFloat(dataItem.quotient * 100).toFixed(2);
+                    var label = "";
+                    if (typeof dataItem.value != "undefined") {
+                        label = '(' + dataItem.value + ') ';
+                    }
+                    label += dataItem.answertext;
+                    label += dataItem.quotient > 0 ? ' (' + dataItem.quotient + '%)' : "";
+                    return label;
+                });
+                item.chartData = item.data.map(function(dataItem) {
+                    return dataItem.answercount;
+                });
+                if (item.typ == 'multichoicerated') {
+                    item.average = item.data.reduce(function (prev, current) {
+                        return prev + current.avg;
+                    }, 0.0);
+                }
+                var subtype = item.presentation.charAt(0);
+                item.single = subtype != 'c';
+                item.template = 'chart';
+                break;
+        }
+        return item;
+    }
     function refreshAllData(sync, showErrors) {
         var promises = [];
         promises.push($mmaModFeedback.invalidateFeedbackData(courseId));
         if (feedback) {
             promises.push($mmaModFeedback.invalidateFeedbackAccessInformationData(feedback.id));
             promises.push($mmaModFeedback.invalidateAnalysisData(feedback.id));
-            promises.push($mmaModFeedback.invalidateResumePageData(feedback.id));
             promises.push($mmGroups.invalidateActivityAllowedGroups(feedback.coursemodule));
             promises.push($mmGroups.invalidateActivityGroupMode(feedback.coursemodule));
+            promises.push($mmaModFeedback.invalidateResumePageData(feedback.id));
         }
+        analysisLoaded = false;
+        overviewLoaded = false;
         return $q.all(promises).finally(function() {
             return fetchFeedbackData(true, sync, showErrors);
         });
@@ -38722,7 +38742,14 @@ angular.module('mm.addons.mod_feedback')
     };
     obsSubmitted = $mmEvents.on(mmaModFeedbackEventFormSubmitted, function(data) {
         if (data.feedbackId === feedback.id) {
-            fetchFeedbackData(true);
+            analysisLoaded = false;
+            overviewLoaded = false;
+            $scope.feedbackLoaded = false;
+            if (data.tab != $scope.selectedTab) {
+                $scope.setTab(data.tab);
+            } else {
+                fetchFeedbackData(true);
+            }
         }
     });
     onlineObserver = $mmEvents.on(mmCoreEventOnlineStatusChanged, function(online) {
@@ -38757,7 +38784,7 @@ angular.module('mm.addons.mod_feedback')
             page = 0;
             $scope.total = 0;
             $scope.users = [];
-            return $mmaModFeedbackHelper.getFeedbackGroupInfo(feedback.coursemodule).then(function(groupInfo) {
+            return $mmGroups.getActivityGroupInfo(feedback.coursemodule).then(function(groupInfo) {
                 $scope.groupInfo = groupInfo;
                 return loadGroupUsers($scope.selectedGroup);
             });
@@ -38802,8 +38829,7 @@ angular.module('mm.addons.mod_feedback')
         promises.push($mmaModFeedback.invalidateFeedbackData(courseId));
         if (feedback) {
             promises.push($mmaModFeedback.invalidateNonRespondentsData(feedback.id));
-            promises.push($mmGroups.invalidateActivityAllowedGroups(feedback.coursemodule));
-            promises.push($mmGroups.invalidateActivityGroupMode(feedback.coursemodule));
+            promises.push($mmGroups.invalidateActivityGroupInfo(feedback.coursemodule));
         }
         return $q.all(promises).finally(function() {
             return fetchFeedbackRespondentsData(true);
@@ -38855,7 +38881,7 @@ angular.module('mm.addons.mod_feedback')
             $scope.responses.totalanonattempts = 0;
             $scope.responses.attempts = [];
             $scope.responses.anonattempts = [];
-            return $mmaModFeedbackHelper.getFeedbackGroupInfo(feedback.coursemodule).then(function(groupInfo) {
+            return $mmGroups.getActivityGroupInfo(feedback.coursemodule).then(function(groupInfo) {
                 $scope.groupInfo = groupInfo;
                 return loadGroupAttempts($scope.selectedGroup);
             });
@@ -38907,8 +38933,7 @@ angular.module('mm.addons.mod_feedback')
         promises.push($mmaModFeedback.invalidateFeedbackData(courseId));
         if (feedback) {
             promises.push($mmaModFeedback.invalidateResponsesAnalysisData(feedback.id));
-            promises.push($mmGroups.invalidateActivityAllowedGroups(feedback.coursemodule));
-            promises.push($mmGroups.invalidateActivityGroupMode(feedback.coursemodule));
+            promises.push($mmGroups.invalidateActivityGroupInfo(feedback.coursemodule));
         }
         return $q.all(promises).finally(function() {
             return fetchFeedbackRespondentsData(true);
@@ -39893,9 +39918,10 @@ angular.module('mm.addons.mod_feedback')
                         module: module,
                         moduleid: module.id,
                         feedbackid: module.instance,
-                        courseid: module.course
+                        courseid: module.course,
+                        tab: 'analysis'
                     };
-                    return $mmContentLinksHelper.goInSite('site.mod_feedback-analysis', stateParams, siteId);
+                    return $mmContentLinksHelper.goInSite('site.mod_feedback', stateParams, siteId);
                 }).finally(function() {
                     modal.dismiss();
                 });
@@ -40040,44 +40066,23 @@ angular.module('mm.addons.mod_feedback')
         MODE_RESPONSETIME = 1,
         MODE_COURSE = 2,
         MODE_CATEGORY = 3;
-    self.getFeedbackGroupInfo = function(cmId) {
-        var groupInfo = {};
-        return $mmGroups.getActivityGroupMode(cmId).then(function(groupMode) {
-            if (groupMode === $mmGroups.SEPARATEGROUPS || groupMode === $mmGroups.VISIBLEGROUPS) {
-                groupInfo.separateGroups = groupMode === $mmGroups.SEPARATEGROUPS;
-                groupInfo.visibleGroups = groupMode === $mmGroups.VISIBLEGROUPS;
-                return $mmGroups.getActivityAllowedGroups(cmId);
-            }
-            return [];
-        }).then(function (groups) {
-            if (groups.length <= 0) {
-                groupInfo.separateGroups = false;
-                groupInfo.visibleGroups = false;
-            } else {
-                groupInfo.groups = [
-                    {'id': 0, 'name': $translate.instant('mm.core.allparticipants')}
-                ];
-                groupInfo.groups = groupInfo.groups.concat(groups);
-            }
-            return groupInfo;
-        });
-    };
     self.openFeature = function(feature, module, courseId, group) {
-        var pageName = feature ? 'site.mod_feedback-' + feature : 'site.mod_feedback',
+        var pageName = feature && feature != "analysis" ? 'site.mod_feedback-' + feature : 'site.mod_feedback';
             backTimes = 0;
-        if (!feature || feature == "analysis") {
+        var stateParams = {
+            module: module,
+            moduleid: module.id,
+            courseid: courseId,
+            feedbackid: module.instance,
+            group: group || 0
+        };
+        if (pageName == 'site.mod_feedback') {
+            stateParams.tab = feature == "analysis" ? 'analysis' : 'overview';
             backTimes = getHistoryBackCounter(pageName, module.instance);
         }
         if (backTimes < 0) {
             $ionicHistory.goBack(backTimes);
         } else {
-            var stateParams = {
-                module: module,
-                moduleid: module.id,
-                courseid: courseId,
-                feedbackid: module.instance,
-                group: group || 0
-            };
             $state.go(pageName, stateParams);
         }
         function getHistoryBackCounter(pageName, feedbackId) {
@@ -40270,7 +40275,7 @@ angular.module('mm.addons.mod_feedback')
                     answered = false;
                 answered = !!value;
                 responses[name] = 1;
-                responses.recaptcha_challenge_field = itemData.captcha.challengehash;
+                responses.recaptcha_challenge_field = itemData.captcha && itemData.captcha.challengehash;
                 responses.recaptcha_response_field = value;
                 responses.recaptcha_element = 'dummyvalue';
                 if (itemData.required && !answered) {
@@ -40378,17 +40383,29 @@ angular.module('mm.addons.mod_feedback')
                 var p2 = [];
                 if (accessData.canedititems || accessData.canviewreports) {
                     p2.push($mmaModFeedback.getAnalysis(feedback.id, undefined, siteId));
-                    p2.push($mmGroups.getActivityAllowedGroupsIfEnabled(feedback.coursemodule, undefined, siteId).then(function(groups) {
+                    p2.push($mmGroups.getActivityGroupInfo(feedback.coursemodule, true, undefined, siteId)
+                            .then(function(groupInfo) {
                         var p3 = [],
                             userIds = [];
-                        angular.forEach(groups, function(group) {
+                        if (!groupInfo.groups || groupInfo.groups.length == 0) {
+                            groupInfo.groups = [{id: 0}];
+                        }
+                        angular.forEach(groupInfo.groups, function(group) {
                             p3.push($mmaModFeedback.getAnalysis(feedback.id, group.id, siteId));
-                            p3.push($mmaModFeedback.getAllResponsesAnalysis(feedback.id, group.id, siteId).then(function(responses) {
-                                userIds.push(responses.userid);
+                            p3.push($mmaModFeedback.getAllResponsesAnalysis(feedback.id, group.id, siteId)
+                                    .then(function(responses) {
+                                angular.forEach(responses.attempts, function(attempt) {
+                                    userIds.push(attempt.userid);
+                                });
                             }));
-                            p3.push($mmaModFeedback.getAllNonRespondents(feedback.id, group.id, siteId).then(function(responses) {
-                                userIds.push(responses.userid);
-                            }));
+                            if (!accessData.isanonymous) {
+                                p3.push($mmaModFeedback.getAllNonRespondents(feedback.id, group.id, siteId)
+                                        .then(function(responses) {
+                                    angular.forEach(responses.users, function(user) {
+                                        userIds.push(user.userid);
+                                    });
+                                }));
+                            }
                         });
                         return $q.all(p3).then(function() {
                             return $mmUser.prefetchProfiles(userIds, courseId, siteId);
