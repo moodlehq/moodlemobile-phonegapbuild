@@ -15,23 +15,15 @@
  * Variables
  */
 
-// Bar content.
-$bar-content-bg: $mm-color !default;
-$bar-content-border: transparent !default;
-$bar-content-text: $white !default;
-
 // Small avatar ideal for icons.
 $item-media-width: 32px !default;
 $item-media-height: 32px !default;
 
 // Messages.
-$item-message-bg: $white !default;
-$item-message-note-text: $gray-dark !default;
+$item-message-bg: $gray-lighter !default;
+$item-message-note-text: $gray-darker !default;
 $item-message-note-font-size: $font-size-small !default;
-$item-message-mine-bg: $turquoise-light !default;
-
-// Disabled items.
-$item-disabled-color: #999 !default;
+$item-message-mine-bg: $blue-light !default;
 
 // Messages boxes.
 $mm-warning-color: $energized !default; // Energized / yellow.
@@ -60,32 +52,39 @@ $item-input-padding: 16px !default;
  * App Branding
  */
 .mm-bglogo {
-  background-color: white; /* Change this to add a bg image or change color */
+  background-color: #ff5c00; /* Change this to add a bg image or change color */
+  background: -webkit-radial-gradient(#ff7600, #ff5c00);
+  background: radial-gradient(#ff7600, #ff5c00);
   background-repeat: no-repeat;
   background-position: center center;
-  width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
-}
-
-.mm-logo {
-  background-image: url('../img/moodle.png'); /* Change logo here */
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-}
-
-.mm-logo:before {
-  content: '';
-  display: inline-block;
+  left: 0;
+  right: 0;
   height: 100%;
-  vertical-align: middle;
-  margin-top: 120px; /* Change this to place spinner under the logo (usually double of the logo size) */
+  width: 100%;
+  display: table;
+
+  .mm-logo {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  img {
+    width: 60%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .spinner {
+    color: white;
+    stroke: white;
+    fill: white;
+  }
 }
 
 /**
@@ -99,6 +98,10 @@ em {
 /**
  * Styles.
  */
+
+a.button {
+  line-height: $button-height + 5px - ($button-border-width * 2);
+}
 
 .mm-big   { font-size: 115%; }
 
@@ -118,7 +121,7 @@ em {
   @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
   .button {
     @include button-style($bar-content-bg, $bar-content-border, $bar-content-bg, $bar-content-border, $bar-content-text);
-    @include button-clear($white, $bar-title-font-size);
+    @include button-clear($bar-content-text, $bar-title-font-size);
   }
 }
 
@@ -303,7 +306,7 @@ p.item-text-wrap {
   box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2);
 
   .tab-item {
-    color: $gray-dark;
+    color: $gray-darker;
     margin-top: 0;
     max-width: initial;
     font-size: 120%;
@@ -362,6 +365,7 @@ p.item-text-wrap {
   .mm-split-pane-menu {
     @include flex(0, 0, $menu-width);
     width: $menu-width;
+    margin-right: 2px;
   }
   .mm-split-pane-content {
     display: block;
@@ -444,12 +448,22 @@ button.item.item-button-right {
 }
 
 .scroll > .padding > mm-loading > .mm-loading-container,
-.scroll > mm-loading > .mm-loading-container {
+.scroll > mm-loading > .mm-loading-container,
+.mm-loading-center .mm-loading-container {
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  transform: translateY(-50%);
+  height: 100%;
+  display: table;
+  z-index: -1;
+
+  .mm-loading-spinner {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
 }
 
 .mm-loading-content {
@@ -458,19 +472,6 @@ button.item.item-button-right {
 
 mm-loading.mm-loading-noheight .mm-loading-content {
   height: auto;
-}
-
-mm-loading.mm-loading-center {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-
-  .mm-loading-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
 }
 
 // Align ion-spinner right
@@ -797,6 +798,12 @@ p.mm-error { // Deprecated, use one of the above mm-error classes.
   text-align: left;
 }
 
+.badge-positive, .badge-calm, .badge-balanced, .badge-energize, .badge-assertive, .badge-royal, badge-dark {
+  a {
+    color: white;
+  }
+}
+
 // Timer.
 mm-timer {
   display: block;
@@ -1062,14 +1069,14 @@ input[type="radio"].mm-radio {
   padding: 0;
 }
 
-.padding .mm-searchbox .item-input-inset {
+.padding mm-searchbox .item-input-inset {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
+}
 
-  .item-input-wrapper {
-    background: white;
-  }
+mm-searchbox .item-input-inset .item-input-wrapper {
+  background: white;
 }
 
 .item.mm-not-clickable {
@@ -1144,6 +1151,12 @@ input[type="radio"].mm-radio {
 
 @media only screen and (max-width: 768px) {
   .hidden-phone {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .hidden-tablet {
     display: none !important;
   }
 }
@@ -1419,19 +1432,40 @@ i, cite, em, var, address, dfn {
 }
 
 .item-divider .item-note {
-  color: $gray-dark;
+  color: $gray-darker;
 }
 
 
 .mm-empty-box {
-  padding: $item-padding;
-  text-align: center;
-  color: $dark;
   position: absolute;
-  top: 50%;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  transform: translateY(-65%);
+  display: table;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  clear: both;
+
+  .mm-empty-box-content {
+    color: $dark;
+    margin: 0;
+    padding: $item-padding;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &.mm-empty-box-inline {
+    position: relative;
+    top: initial;
+    left: initial;
+    right: initial;
+    z-index: initial;
+  }
 
   .icon {
     font-size: 120px;
@@ -1452,6 +1486,8 @@ progress {
   -webkit-appearance: none;
   appearance: none;
   height: 5px;
+  margin: 15px 0;
+  padding: 0;
 
   &[value]::-webkit-progress-bar {
     background-color: $gray-light;
@@ -1477,15 +1513,18 @@ h2.invert {
   color: $white;
 }
 
-.mm-center-view .scroll {
-  margin: 0 auto;
-  max-width: 600px;
-  display: table !important;
-  width: 100% !important;
-  height: 100% !important;
-  .mm-view-content {
-    display: table-cell;
-    vertical-align: middle;
+
+@media only screen and (min-width: 430px) {
+  .mm-center-view .scroll {
+    margin: 0 auto;
+    max-width: 600px;
+    display: table !important;
+    width: 100% !important;
+    height: 100% !important;
+    .mm-view-content {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 }
 
@@ -1589,7 +1628,7 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
     }
 
     &.mm-shortened {
-      color: #777;
+      color: $gray-darker;
       overflow: hidden;
       min-height: 50px;
 
@@ -1602,7 +1641,7 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         bottom: 0;
         right: 0;
         z-index: 1001;
-        background-color: white;
+        background-color: $white;
         padding-left: 10px;
 
         &:after {
@@ -1687,13 +1726,6 @@ mm-format-text, *[mm-format-text] {
 .item-message {
   mm-format-text > p:only-child {
     display: inline;
-  }
-}
-
-.item mm-format-text,
-.item *[mm-format-text] {
-  p {
-    color: inherit;
   }
 }
 
@@ -1884,8 +1916,8 @@ $doughnut-border-size: 15px;
 $doughnut-dasharray: 173;
 $doughnut-empty-colour: $gray-light;
 $doughnut-fill-colour: $orange-light;
-$doughnut-border-colour:  $gray-medium;
-$doughnut-text-colour: $gray-dark;
+$doughnut-border-colour:  $gray-dark;
+$doughnut-text-colour: $gray-darker;
 
 .item-course {
   >.icon, >ion-spinner {
@@ -1926,13 +1958,12 @@ $doughnut-text-colour: $gray-dark;
     border: $doughnut-border-size solid $doughnut-empty-colour;
     border-radius: 50%;
     box-sizing: border-box;
+    display: table;
 
     .progress-text {
-      position: absolute;
-      top: 50%;
-      /*rtl:ignore*/
-      left: 50%;
-      transform: translate(-50%, -50%);
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
       color: $doughnut-text-colour;
     }
 
@@ -1983,7 +2014,7 @@ $doughnut-text-colour: $gray-dark;
       left: 50%;
       margin: 0;
       transform: translate(-42%, -50%);
-      color: #fff;
+      color: $white;
       height: ($chart-size / 2) + 10px;
       width: ($chart-size / 2) + 10px;
       font-size: ($chart-size / 2) + 10px;
@@ -1991,6 +2022,10 @@ $doughnut-text-colour: $gray-dark;
   }
 }
 
+.mm-site_mm_coursescategories .item-icon-left,
+mm-course-list-item .item-icon-left {
+  color: $black;
+}
 .mm-fileuploader-file-handler {
     input {
         position: absolute;
@@ -2146,27 +2181,40 @@ $doughnut-text-colour: $gray-dark;
   }
   > span {
     margin-left: 5px;
-    color: $gray-dark;
+    color: $gray-darker;
   }
 }
 
-.mm-mm_login_credentials, .mm-mm_login_reconnect {
+.mm-mm_login_credentials, .mm-mm_login_reconnect, .mm-mm_login_site {
   .mm-ioninput-password {
     padding-top: 0;
     padding-bottom: 0;
   }
+  background: -webkit-radial-gradient(white, $gray-light);
+  background: radial-gradient(white, $gray-light);
+
+  img {
+    max-width: 100%;
+  }
+
+  .box {
+    padding: 16px;
+    background: $white;
+    border: 1px solid $item-default-border;
+  }
 }
 
-$mm-question-correct-color:         $green-dark !default;
-$mm-question-correct-color-bg:      $green-lighter !default;
-$mm-question-incorrect-color:       $red !default;
-$mm-question-incorrect-color-bg:    $red-lighter !default;
-$mm-question-feedback-color:        $yellow-darker !default;
-$mm-question-feedback-color-bg:     $yellow-lighter !default;
 
-$mm-question-state-correct-color:   $green-lighter !default;
-$mm-question-state-partial-color:   $yellow-lighter !default;
-$mm-question-state-incorrect-color: $red-lighter !default;
+$mm-question-correct-color:         $green-dark !default;
+$mm-question-correct-color-bg:      $green-light !default;
+$mm-question-incorrect-color:       $red !default;
+$mm-question-incorrect-color-bg:    $red-light !default;
+$mm-question-feedback-color:        $yellow-dark !default;
+$mm-question-feedback-color-bg:     $yellow-light !default;
+
+$mm-question-state-correct-color:   $green-light !default;
+$mm-question-state-partial-color:   $yellow-light !default;
+$mm-question-state-incorrect-color: $red-light !default;
 
 $mm-question-warning-color:         $red !default;
 
@@ -2249,7 +2297,7 @@ li.mm-question-answer-incorrect,
     line-height: 14px;
     color: $white;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-    background-color: $gray-medium;
+    background-color: $gray-dark;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 
@@ -2349,6 +2397,10 @@ $bar-side-menu-text-color: $bar-content-text !default;
         }
     }
 
+    .mma-frontpage-item-container {
+        color: $black;
+    }
+
     .mm-frontpageitemnews {
         img {
             max-width: 30px;
@@ -2418,6 +2470,8 @@ $mma-messages-date-badge: "stable" !default;
   width: 100%;
 }
 .mm-site_messages-discussion {
+  background: $white;
+
   .list-left-editing .item-message.item-left-editable,
   .item-left-editing.item-message.item-left-editable {
     max-width: calc(80% + 35px);
@@ -2513,7 +2567,7 @@ $mma-messages-date-badge: "stable" !default;
   }
 }
 
-$mma-mod-assign-warning-color:      #c00 !default;
+$mma-mod-assign-warning-color: $red !default;
 
 .mm-site_mod_assign,
 .mm-site_mod_assign-submission {
@@ -2527,8 +2581,8 @@ $mma-mod-assign-warning-color:      #c00 !default;
     @extend .mm-success-item;
   }
 
-  div.submissioneditable {
-    color: red;
+  div.submissioneditable p {
+    color: $red;
   }
 }
 
@@ -2546,11 +2600,11 @@ p.mma-mod-assign-warning {
   padding-bottom: 1.5em;
 
   .criterion {
-    border: 1px solid #DDD;
+    border: 1px solid $item-default-border;
     overflow: hidden;
 
     &.even {
-      background: #F0F0F0;
+      background: $gray-lighter;
     }
 
     .description,
@@ -2584,7 +2638,7 @@ p.mma-mod-assign-warning {
     }
 
     .levels .level {
-      border-left: 1px solid #DDD;
+      border-left: 1px solid $item-default-border;
       max-width: 150px;
     }
 
@@ -2593,12 +2647,12 @@ p.mma-mod-assign-warning {
     }
 
     .levels .level.last {
-      border-right: 1px solid #DDD;
+      border-right: 1px solid $item-default-border;
     }
 
     .levels .level .score {
       font-style: italic;
-      color: #575;
+      color: $green-dark;
       font-weight: bold;
       margin-top: 5px;
       white-space: nowrap;
@@ -2613,7 +2667,7 @@ p.mma-mod-assign-warning {
     }
 
     .levels .level.checked {
-      background: #d0ffd0;
+      background: $green-light;
     }
 
     .description.error,
@@ -2623,7 +2677,7 @@ p.mma-mod-assign-warning {
     }
 
     .levels.error {
-      border: 1px solid red;
+      border: 1px solid $red;
     }
   }
 
@@ -2650,13 +2704,14 @@ p.mma-mod-assign-warning {
 
   .criteria {
     height:100%;
+    background: $white;
   }
 }
 
 .gradingform_rubric-regrade {
   padding: 10px;
   background: #FFDDDD;
-  border: 1px solid #F00;
+  border: 1px solid $red;
   margin-bottom: 10px;
 }
 .gradingform_rubric-restored {
@@ -2666,7 +2721,7 @@ p.mma-mod-assign-warning {
   margin-bottom: 10px;
 }
 .gradingform_rubric-error {
-  color: red;
+  color: $red;
   font-weight: bold;
 }
 
@@ -2685,7 +2740,7 @@ p.mma-mod-assign-warning {
   }
 
   .criterion {
-    border: 1px solid #DDD;
+    border: 1px solid $item-default-border;
     overflow: hidden;
 
     .description,
@@ -2694,7 +2749,7 @@ p.mma-mod-assign-warning {
     }
 
     &.even {
-      background: #F0F0F0;
+      background: $gray-lighter;
     }
 
     .description {
@@ -2983,12 +3038,36 @@ $mma-chat-notice-badge: "stable" !default;
   font-size: 14px;
 }
 
+.mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
+  .item.row {
+    padding: 0;
+
+    .col-33, .col-50 {
+      border-color: $item-default-border;
+      border-style: solid;
+      &:not(:first-child) {
+        border-left-width: $item-border-width;
+      }
+    }
+  }
+}
+
+.mm-site_mod_lesson-userattempt {
+  .mma-mod_lesson-contentpage {
+    padding: 0;
+    .row {
+      padding: 0;
+    }
+  }
+}
+
 
 $mma-mod-quiz-warning-color:      $red !default;
-$mma-mod-quiz-highlight-color:    $blue-lighter !default;
-$mma-mod-quiz-alternate-color:    #fbfbfb !default;
-$mma-mod-quiz-conecterr-color:    $red-lighter !default;
-$mma-mod-quiz-selected-color:     $blue-lighter !default;
+$mma-mod-quiz-highlight-bgcolor:  $blue-light !default;
+$mma-mod-quiz-highlight-color:    $blue-dark !default;
+$mma-mod-quiz-alternate-color:    $gray-lighter !default;
+$mma-mod-quiz-conecterr-color:    $red-light !default;
+$mma-mod-quiz-selected-color:     $blue-light !default;
 
 // Deprecated use mm-error-item instead.
 p.mma-mod-quiz-warning {
@@ -3008,8 +3087,10 @@ p.mma-mod-quiz-warning {
 .item.mma-mod-quiz-highlighted,
 .platform-android .item.mma-mod-quiz-highlighted,
 .platform-ios .item.mma-mod-quiz-highlighted,
-.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
-  background-color: $mma-mod-quiz-highlight-color;
+.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted,
+.item.mma-mod-quiz-highlighted p {
+  background-color: $mma-mod-quiz-highlight-bgcolor;
+  color: $mma-mod-quiz-highlight-color;
 }
 
 .mma-quiz-textarea {
@@ -3056,11 +3137,11 @@ p.mma-mod-quiz-warning {
 }
 
 #mma-mod-quiz-toc .item {
-  border-color: $gray-medium;
+  border-color: $gray-dark;
 }
 
 $mma-mod-scorm-level-margin:		25px !default;
-$mma-mod-scorm-warning-color:		#c00 !default;
+$mma-mod-scorm-warning-color:		$red !default;
 
 @for $i from 0 through 15 {
   .mma-scorm-level-#{$i} {
@@ -3139,8 +3220,8 @@ ion-popover-view {
 
 $mma-mod-wiki-toc-level-padding:    12px !default;
 $mma-mod-wiki-newentry-link-color:  $red !default;
-$mma-mod-wiki-toc-title-color:      $gray-dark !default;
-$mma-mod-wiki-toc-border-color:     $gray-medium !default;
+$mma-mod-wiki-toc-title-color:      $gray-darker !default;
+$mma-mod-wiki-toc-border-color:     $gray-dark !default;
 $mma-mod-wiki-toc-background-color: $gray-light !default;
 $mma-mod-wiki-subwiki-selected-background-color:   $gray-light !default;
 
@@ -3198,9 +3279,9 @@ $mma-mod-wiki-subwiki-selected-background-color:   $gray-light !default;
 }
 
 
-$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
-$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
-$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
+$mma-qbehaviour-deferredcbm-judgementok-color:  $green-dark !default;
+$mma-qbehaviour-deferredcbm-slightly-color:     $red-dark !default;
+$mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 
 .qbehaviour_deferredcbm_actual_percentage {
   font-weight: bold;
@@ -3236,7 +3317,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.droparea img {
-    border: 1px solid $gray-dark;
+    border: 1px solid $gray-darker;
     max-width: 100%;
   }
 
@@ -3250,7 +3331,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.draghome {
-    border: 1px solid $gray-dark;
+    border: 1px solid $gray-darker;
     cursor: pointer;
     background-color: #B0C4DE;
     display:inline-block;
@@ -3260,10 +3341,10 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   .group1 {
-    background-color: #FFFFFF;
+    background-color: $white;
   }
   .group2 {
-    background-color: #B0C4DE;
+    background-color: $blue-light;
   }
   .group3 {
     background-color: #DCDCDC;
@@ -3284,7 +3365,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     background-color: #F0E68C;
   }
   .drag {
-    border: 1px solid $gray-dark;
+    border: 1px solid $gray-darker;
     cursor: pointer;
     z-index: 2;
   }
@@ -3312,7 +3393,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     margin:0 auto;
   }
   .dropzone {
-    border: 1px solid $gray-dark;
+    border: 1px solid $gray-darker;
     position: absolute;
     z-index: 1;
     cursor: pointer;
@@ -3326,7 +3407,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
   .drag.beingdragged {
     z-index: 3;
-    box-shadow: 3px 3px 4px $gray-dark;
+    box-shadow: 3px 3px 4px $gray-darker;
   }
 }
 // Style ddmarker content a bit. Almost all these styles are copied from Moodle.
@@ -3342,7 +3423,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.droparea img  {
-    border: 1px solid $gray-dark;
+    border: 1px solid $gray-darker;
     max-width: 100%;
   }
 
@@ -3365,7 +3446,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
 
   .dragitem.beingdragged .markertext {
     z-index: 5;
-    box-shadow: 3px 3px 4px $gray-dark;
+    box-shadow: 3px 3px 4px $gray-darker;
   }
   .dragitems .draghome {
     margin: 10px;
@@ -3395,8 +3476,8 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   div.markertexts span.markertext{
     margin: 0 5px;
     z-index: 2;
-    background-color: white;
-    border: 2px solid $gray-dark;
+    background-color: $white;
+    border: 2px solid $gray-darker;
     padding: 5px;
     display: inline-block;
     zoom: 1;
@@ -3404,14 +3485,14 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
   div.markertexts span.markertext {
     z-index: 3;
-    background-color: $yellow-lighter;
+    background-color: $yellow-light;
     border-style: solid;
     border-width: 2px;
     border-color: $yellow;
     position: absolute;
   }
   span.wrongpart {
-    background-color: $yellow-lighter;
+    background-color: $yellow-light;
     border-style: solid;
     border-width: 2px;
     border-color: $yellow;
@@ -3449,7 +3530,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   .drop {
       display: inline-block;
       text-align: center;
-      border: 1px solid $gray-dark;
+      border: 1px solid $gray-darker;
       margin-bottom: 2px;
       border-radius: 5px;
   }
@@ -3460,7 +3541,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
       border: 0;
   }
   .draghome, .drag.unplaced{
-      border: 1px solid $gray-dark;
+      border: 1px solid $gray-darker;
       border-radius: 5px;
   }
   .draghome {
@@ -3472,12 +3553,12 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
   .drag.selected {
       z-index: 3;
-      box-shadow: 3px 3px 4px $gray-dark;
+      box-shadow: 3px 3px 4px $gray-darker;
   }
 
   .drop.selected {
-      border-color: $yellow-lighter;
-      box-shadow: 0 0 5px 5px $yellow-lighter;
+      border-color: $yellow-light;
+      box-shadow: 0 0 5px 5px $yellow-light;
   }
 
   &.notreadonly .drag,
@@ -3496,20 +3577,20 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   span.incorrect {
-      background-color: $red-lighter;
+      background-color: $red-light;
   }
   span.correct {
-      background-color: $green-lighter;
+      background-color: $green-light;
   }
 
   .group1 {
-      background-color: #FFFFFF;
+      background-color: $white;
   }
   .group2 {
       background-color: #DCDCDC;
   }
   .group3 {
-      background-color: #B0C4DE;
+      background-color: $blue-light;
   }
   .group4 {
       background-color: #D8BFD8;
@@ -3553,12 +3634,13 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     height: 30px;
     line-height: 30px;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid $gray-dark;
     padding: 4px 6px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     margin-bottom: 10px;
+    background: $gray-lighter;
   }
 }
 
