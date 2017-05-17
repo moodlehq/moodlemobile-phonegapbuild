@@ -309,6 +309,7 @@
     "mm.core.download": "Download",
     "mm.core.downloading": "Downloading",
     "mm.core.edit": "Edit",
+    "mm.core.emptysplit": "This page will appear blank if the left panel is empty or is loading.",
     "mm.core.error": "Error",
     "mm.core.errorchangecompletion": "An error occurred while changing the completion status. Please try again.",
     "mm.core.errordeletefile": "Error deleting the file. Please try again.",

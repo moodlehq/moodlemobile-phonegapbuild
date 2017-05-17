@@ -2356,11 +2356,17 @@ angular.module('mm.core')
         filename = $mmFS.removeExtension(filename);
         return $mmText.removeSpecialCharactersForFiles(filename);
     };
-    self.invalidateAllFiles = function(siteId) {
+    self.invalidateAllFiles = function(siteId, onlyUnknown) {
+        if (typeof onlyUnknown == 'undefined') {
+            onlyUnknown = true;
+        }
         return getSiteDb(siteId).then(function(db) {
             return db.getAll(mmFilepoolStore).then(function(items) {
                 var promises = [];
                 angular.forEach(items, function(item) {
+                    if (onlyUnknown && !isFileUpdateUnknown(item)) {
+                        return;
+                    }
                     item.stale = true;
                     promises.push(db.insert(mmFilepoolStore, item));
                 });
@@ -2382,7 +2388,10 @@ angular.module('mm.core')
             });
         });
     };
-    self.invalidateFilesByComponent = function(siteId, component, componentId) {
+    self.invalidateFilesByComponent = function(siteId, component, componentId, onlyUnknown) {
+        if (typeof onlyUnknown == 'undefined') {
+            onlyUnknown = true;
+        }
         return getSiteDb(siteId).then(function(db) {
             return getComponentFiles(db, component, componentId).then(function(items) {
                 var promise,
@@ -2390,6 +2399,9 @@ angular.module('mm.core')
                 angular.forEach(items, function(item) {
                     promise = db.get(mmFilepoolStore, item.fileId).then(function(fileEntry) {
                         if (!fileEntry) {
+                            return;
+                        }
+                        if (onlyUnknown && !isFileUpdateUnknown(fileEntry)) {
                             return;
                         }
                         fileEntry.stale = true;
@@ -2410,6 +2422,9 @@ angular.module('mm.core')
     self._isFileOutdated = function(fileObject, revision, timemodified) {
         return fileObject.stale || revision > fileObject.revision || timemodified > fileObject.timemodified;
     };
+    function isFileUpdateUnknown(entry) {
+        return entry.isexternalfile || (!entry.revision && !entry.timemodified);
+    }
     self._notifyFileDeleted = function(siteId, fileId) {
         $mmEvents.trigger(self._getFileEventName(siteId, fileId), {action: 'deleted'});
     };
@@ -23777,6 +23792,7 @@ angular.module('mm.addons.calendar')
             id: -1,
             fullname: $translate.instant('mm.core.fulllistofcourses')
         };
+    $scope.events = [];
     if ($stateParams.eventid) {
         $ionicHistory.clearHistory();
         $state.go('site.calendar-event', {id: $stateParams.eventid});
@@ -23784,7 +23800,6 @@ angular.module('mm.addons.calendar')
     function initVars() {
         daysLoaded = 0;
         emptyEventsTimes = 0;
-        $scope.events = [];
     }
     function fetchData(refresh) {
         initVars();
@@ -23800,10 +23815,16 @@ angular.module('mm.addons.calendar')
                 if (emptyEventsTimes > 5) { 
                     $scope.canLoadMore = false;
                     $scope.eventsLoaded = true;
+                    if (refresh) {
+                        $scope.events = [];
+                    }
                 } else {
-                    return fetchEvents();
+                    return fetchEvents(refresh);
                 }
             } else {
+                events.sort(function(a, b) {
+                    return a.timestart - b.timestart;
+                });
                 angular.forEach(events, $mmaCalendar.formatEventData);
                 if (refresh) {
                     $scope.events = events;
@@ -23816,11 +23837,7 @@ angular.module('mm.addons.calendar')
             }
             scrollView.resize();
         }, function(error) {
-            if (error) {
-                $mmUtil.showErrorModal(error);
-            } else {
-                $mmUtil.showErrorModal('mma.calendar.errorloadevents', true);
-            }
+            $mmUtil.showErrorModalDefault(error, 'mma.calendar.errorloadevents', true);
             $scope.eventsLoaded = true;
             $scope.canLoadMore = false; 
         });
@@ -23858,9 +23875,7 @@ angular.module('mm.addons.calendar')
         promises.push($mmCourses.invalidateUserCourses());
         promises.push($mmaCalendar.invalidateEventsList());
         return $q.all(promises).finally(function() {
-            fetchData(true).finally(function() {
-                $scope.$broadcast('scroll.refreshComplete');
-            });
+            return fetchData(true);
         });
     };
     $scope.openSettings = function() {
@@ -28048,7 +28063,7 @@ angular.module('mm.addons.messages')
 
 angular.module('mm.addons.myoverview')
 .controller('mmaMyOverviewCtrl', ["$scope", "$mmaMyOverview", "$mmUtil", "$q", "$mmCourses", "$mmCoursesDelegate", function($scope, $mmaMyOverview, $mmUtil, $q, $mmCourses, $mmCoursesDelegate) {
-    $scope.tabShown = 'timeline';
+    $scope.tabShown = 'courses';
     $scope.timeline = {
         sort: 'sortbydates',
         events: [],
@@ -28168,7 +28183,7 @@ angular.module('mm.addons.myoverview')
                     switch ($scope.timeline.sort) {
                         case 'sortbydates':
                             $scope.timeline.events = [];
-                            promise = fetchMyOverviewTimesort();
+                            promise = fetchMyOverviewTimeline();
                             break;
                         case 'sortbycourses':
                             $scope.timeline.courses = [];
@@ -28222,11 +28237,7 @@ angular.module('mm.addons.myoverview')
                 break;
         }
     };
-    $scope.switchTab('timeline').finally(function() {
-        if ($scope.timeline.events.length == 0) {
-            $scope.switchTab('courses');
-        }
-    });
+    $scope.switchTab($scope.tabShown);
     $scope.loadMoreTimeline = function() {
         return fetchMyOverviewTimeline($scope.timeline.canLoadMore);
     };
@@ -28239,7 +28250,7 @@ angular.module('mm.addons.myoverview')
 }]);
 
 angular.module('mm.addons.myoverview')
-.directive('mmaMyOverviewEventList', ["$mmCourse", "$mmUtil", function($mmCourse, $mmUtil) {
+.directive('mmaMyOverviewEventList', ["$mmCourse", "$mmUtil", "$mmText", "$mmContentLinksHelper", "$mmSite", function($mmCourse, $mmUtil, $mmText, $mmContentLinksHelper, $mmSite) {
     function filterEventsByTime(events, start, end) {
         start = moment().add(start, 'days').unix();
         end = typeof end == "undefined" ? false : moment().add(end, 'days').unix();
@@ -28283,6 +28294,20 @@ angular.module('mm.addons.myoverview')
                     scope.loadingMore = false;
                 });
             };
+            scope.action = function(e, url) {
+                e.preventDefault();
+                e.stopPropagation();
+                url = $mmText.decodeHTMLEntities(url);
+                var modal = $mmUtil.showModalLoading();
+                $mmContentLinksHelper.handleLink(url).then(function(treated) {
+                    if (!treated) {
+                        return $mmSite.openInBrowserWithAutoLoginIfSameSite(url);
+                    }
+                }).finally(function() {
+                    modal.dismiss();
+                });
+                return false;
+            }
         }
     };
 }]);
