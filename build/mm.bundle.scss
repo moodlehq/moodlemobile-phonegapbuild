@@ -320,6 +320,20 @@ p.item-text-wrap {
   }
 }
 
+.mm-menu-selected:not(.button) {
+  background-color: $gray-lighter;
+  border-left: 5px solid $mm-color-light;
+  padding-left: $item-padding - 4;
+
+  &.item-avatar,
+  &.item-avatar-left {
+    padding-left: $item-avatar-width + ($item-padding * 2) - 4;
+    > img:first-child {
+      left: $item-padding - 4;
+    }
+  }
+}
+
 .user-with-avatar {
   position: relative;
   z-index: 2;
@@ -443,7 +457,7 @@ button.item.item-button-right {
 .mm-loading-container {
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  padding-top: 10px;
   clear: both;
 }
 
@@ -458,6 +472,7 @@ button.item.item-button-right {
   height: 100%;
   display: table;
   z-index: -1;
+  padding-top: 0px;
 
   .mm-loading-spinner {
     display: table-cell;
@@ -481,19 +496,9 @@ mm-loading.mm-loading-noheight .mm-loading-content {
   right: 16px;
 }
 
-.mm-split-item-selected:not(.button),
-.mm-split-item-selected.item:not(.button) {
-  background-color: $gray-lighter;
-  border-left: 5px solid $mm-color-light;
-  padding-left: $item-padding - 4;
-
-  &.item-avatar,
-  &.item-avatar-left {
-    padding-left: $item-avatar-width + ($item-padding * 2) - 4;
-    > img:first-child {
-      left: $item-padding - 4;
-    }
-  }
+.mm-split-item-selected,
+.mm-split-item-selected.item {
+  @extend .mm-menu-selected;
 }
 
 .mm-module-buttons {
@@ -584,6 +589,7 @@ mm-navigation-bar {
 // When using .item and .row in the same element, .row's padding prevails. Use this class to keep .item's padding.
 .item.row.mm-item-padding {
   padding: $item-padding / 2;
+  width: initial;
 }
 
 .row-buttons {
@@ -810,17 +816,26 @@ mm-timer {
 }
 
 // Style timer in items.
-.item mm-timer.mm-timer, mm-timer.mm-timer.item {
-  p, span, label {
+mm-timer.mm-timer .item {
+  span, label {
     color: $item-default-text;
     font-size: $item-font-size;
+  }
+  span {
+    font-weight: bold;
   }
 }
 
 // Create the timer warning colors. Go from $mm-timer-color to $mm-timer-warn-color.
 @for $i from 0 through $mm-timer-iterations {
-  mm-timer.mm-timer.mm-timer-timeleft-#{$i} {
+  mm-timer.mm-timer.mm-timer-timeleft-#{$i} .item {
     background-color: mix($mm-timer-color, $mm-timer-warn-color, ($i / $mm-timer-iterations) * 100);
+    @if $i <= $mm-timer-iterations / 2 {
+      label, span, i {
+        color: $white;
+      }
+    }
+
   }
 }
 
@@ -3019,9 +3034,8 @@ $mma-chat-notice-badge: "stable" !default;
     }
 }
 
-
 .item.mma-mod-lesson-selected {
-  font-weight: bold;
+  @extend .mm-menu-selected;
 }
 
 .mma-mod-lesson-slideshow {
@@ -3034,29 +3048,33 @@ $mma-chat-notice-badge: "stable" !default;
 .mma-mod-lesson-ongoingscore span,
 .item.mma-mod-lesson-ongoingscore span {
   // Same styles as .item p.
-  color: #666;
+  color: $gray-darker;
   font-size: 14px;
 }
 
 .mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
-  .item.row {
-    padding: 0;
-
-    .col-33, .col-50 {
-      border-color: $item-default-border;
-      border-style: solid;
-      &:not(:first-child) {
-        border-left-width: $item-border-width;
-      }
+  .item.row .col-33,
+  .item.row .col-50 {
+    border-color: $item-default-border;
+    border-style: solid;
+    &:not(:first-child) {
+      border-left-width: $item-border-width;
     }
   }
 }
 
-.mm-site_mod_lesson-userattempt {
-  .mma-mod_lesson-contentpage {
-    padding: 0;
-    .row {
-      padding: 0;
+.mm-site_mod_lesson-userretake {
+  .mma-mod_lesson-answer {
+    .item {
+      border-top: 1px solid $item-default-border;
+      border-radius: 0;
+    }
+  }
+
+  .highlight {
+    background-color: $blue-light;
+    p {
+      color: $blue-dark;
     }
   }
 }

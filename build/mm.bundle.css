@@ -10391,6 +10391,13 @@ a.button {
       background-color: #0064d2;
       box-shadow: none;
       color: #fff; }
+  .button.button-light.active, .button.button-light.activated, .button.button-stable.active, .button.button-stable.activated, .button.button-calm.active, .button.button-calm.activated, .button.button-assertive.active, .button.button-assertive.activated, .button.button-balanced.active, .button.button-balanced.activated, .button.button-energized.active, .button.button-energized.activated, .button.button-royal.active, .button.button-royal.activated {
+    box-shadow: none;
+    color: #ffffff; }
+
+.button.active, .button.activated {
+  box-shadow: none;
+  color: #ffffff; }
 
 .button.button-dark {
   border-color: #0064d2;
@@ -10728,6 +10735,15 @@ p.item-text-wrap {
       border-top-width: 0;
       border-bottom-width: 3px; }
 
+.mm-menu-selected:not(.button), .mm-split-item-selected:not(.button), .item.mma-mod-lesson-selected:not(.button), .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button) {
+  background-color: #f5f5f5;
+  border-left: 5px solid #fa9b44;
+  padding-left: 12px; }
+  .mm-menu-selected:not(.button).item-avatar, .mm-menu-selected.item-media:not(.button), .item-media.mm-split-item-selected:not(.button), .item-media.item.mma-mod-lesson-selected:not(.button), .mm-grades-table .item-media.mma-mod-lesson-selected.itemcenter:not(.button), .mm-menu-selected.item-avatar-center:not(.button), .item-avatar-center.mm-split-item-selected:not(.button), .item-avatar-center.item.mma-mod-lesson-selected:not(.button), .mm-grades-table .item-avatar-center.mma-mod-lesson-selected.itemcenter:not(.button), .mm-split-item-selected:not(.button).item-avatar, .mm-split-item-selected.item-progress:not(.button), .mm-menu-selected.item-progress:not(.button), .item-progress.item.mma-mod-lesson-selected:not(.button), .mm-grades-table .item-progress.mma-mod-lesson-selected.itemcenter:not(.button), .item.mma-mod-lesson-selected:not(.button).item-avatar, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar, .mm-menu-selected:not(.button).item-avatar-left, .mm-split-item-selected:not(.button).item-avatar-left, .item.mma-mod-lesson-selected:not(.button).item-avatar-left, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar-left {
+    padding-left: 68px; }
+    .mm-menu-selected:not(.button).item-avatar > img:first-child, .mm-menu-selected.item-media:not(.button) > img:first-child, .item-media.mm-split-item-selected:not(.button) > img:first-child, .item-media.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-media.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .mm-menu-selected.item-avatar-center:not(.button) > img:first-child, .item-avatar-center.mm-split-item-selected:not(.button) > img:first-child, .item-avatar-center.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-avatar-center.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .mm-split-item-selected:not(.button).item-avatar > img:first-child, .mm-split-item-selected.item-progress:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-media.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-avatar-center.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-progress.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar > img:first-child, .mm-menu-selected.item-progress:not(.button) > img:first-child, .item-progress.item.mma-mod-lesson-selected:not(.button) > img:first-child, .mm-grades-table .item-progress.mma-mod-lesson-selected.itemcenter:not(.button) > img:first-child, .item.mma-mod-lesson-selected:not(.button).item-avatar > img:first-child, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar > img:first-child, .mm-menu-selected:not(.button).item-avatar-left > img:first-child, .mm-split-item-selected:not(.button).item-avatar-left > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar-left > img:first-child, .item.mma-mod-lesson-selected:not(.button).item-avatar-left > img:first-child, .mm-grades-table .mma-mod-lesson-selected.itemcenter:not(.button).item-avatar-left > img:first-child {
+      left: 12px; }
+
 .user-with-avatar {
   position: relative;
   z-index: 2;
@@ -10858,7 +10874,7 @@ button.item.item-button-right.item-3-button-right,
 .mm-loading-container {
   width: 100%;
   text-align: center;
-  margin-top: 10px;
+  padding-top: 10px;
   clear: both; }
 
 .scroll > .padding > mm-loading > .mm-loading-container, .item .scroll > .item-heading.padding > mm-loading > .mm-loading-container, .mm-grades-table .itemcenter .scroll > .item-heading.padding > mm-loading > .mm-loading-container,
@@ -10871,7 +10887,8 @@ button.item.item-button-right.item-3-button-right,
   right: 0;
   height: 100%;
   display: table;
-  z-index: -1; }
+  z-index: -1;
+  padding-top: 0px; }
   .scroll > .padding > mm-loading > .mm-loading-container .mm-loading-spinner, .item .scroll > .item-heading.padding > mm-loading > .mm-loading-container .mm-loading-spinner, .mm-grades-table .itemcenter .scroll > .item-heading.padding > mm-loading > .mm-loading-container .mm-loading-spinner,
   .scroll > mm-loading > .mm-loading-container .mm-loading-spinner,
   .mm-loading-center .mm-loading-container .mm-loading-spinner {
@@ -10890,29 +10907,6 @@ mm-loading.mm-loading-noheight .mm-loading-content {
   position: absolute;
   top: 8px;
   right: 16px; }
-
-.mm-split-item-selected:not(.button),
-.mm-split-item-selected.item:not(.button),
-.mm-grades-table .mm-split-item-selected.itemcenter:not(.button) {
-  background-color: #f5f5f5;
-  border-left: 5px solid #fa9b44;
-  padding-left: 12px; }
-  .mm-split-item-selected:not(.button).item-avatar, .mm-split-item-selected.item-media:not(.button), .mm-split-item-selected.item-avatar-center:not(.button), .mm-split-item-selected.item-progress:not(.button), .mm-split-item-selected:not(.button).item-avatar-left,
-  .mm-split-item-selected.item:not(.button).item-avatar,
-  .mm-split-item-selected.item.item-media:not(.button),
-  .mm-grades-table .mm-split-item-selected.item-media.itemcenter:not(.button),
-  .mm-split-item-selected.item.item-avatar-center:not(.button),
-  .mm-grades-table .mm-split-item-selected.item-avatar-center.itemcenter:not(.button),
-  .mm-split-item-selected.item.item-progress:not(.button),
-  .mm-grades-table .mm-split-item-selected.item-progress.itemcenter:not(.button),
-  .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar,
-  .mm-split-item-selected.item:not(.button).item-avatar-left,
-  .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar-left {
-    padding-left: 68px; }
-    .mm-split-item-selected:not(.button).item-avatar > img:first-child, .mm-split-item-selected.item-media:not(.button) > img:first-child, .mm-split-item-selected.item-avatar-center:not(.button) > img:first-child, .mm-split-item-selected.item-progress:not(.button) > img:first-child, .mm-split-item-selected:not(.button).item-avatar-left > img:first-child,
-    .mm-split-item-selected.item:not(.button).item-avatar > img:first-child, .mm-split-item-selected.item.item-media:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-media.itemcenter:not(.button) > img:first-child, .mm-split-item-selected.item.item-avatar-center:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-avatar-center.itemcenter:not(.button) > img:first-child, .mm-split-item-selected.item.item-progress:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.item-progress.itemcenter:not(.button) > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar > img:first-child,
-    .mm-split-item-selected.item:not(.button).item-avatar-left > img:first-child, .mm-grades-table .mm-split-item-selected.itemcenter:not(.button).item-avatar-left > img:first-child {
-      left: 12px; }
 
 .mm-module-buttons {
   float: right;
@@ -10979,7 +10973,8 @@ mm-navigation-bar .col {
   font-size: 1em; }
 
 .item.row.mm-item-padding, .mm-grades-table .row.mm-item-padding.itemcenter {
-  padding: 8px; }
+  padding: 8px;
+  width: initial; }
 
 .row-buttons {
   display: -webkit-box;
@@ -11306,56 +11301,75 @@ p.mm-error {
 mm-timer {
   display: block; }
 
-.item mm-timer.mm-timer p, .mm-grades-table .itemcenter mm-timer.mm-timer p, .item mm-timer.mm-timer span, .mm-grades-table .itemcenter mm-timer.mm-timer span, .item mm-timer.mm-timer label, .mm-grades-table .itemcenter mm-timer.mm-timer label, mm-timer.mm-timer.item p, .mm-grades-table mm-timer.mm-timer.itemcenter p, mm-timer.mm-timer.item span, .mm-grades-table mm-timer.mm-timer.itemcenter span, mm-timer.mm-timer.item label, .mm-grades-table mm-timer.mm-timer.itemcenter label {
+mm-timer.mm-timer .item span, mm-timer.mm-timer .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer .itemcenter span, mm-timer.mm-timer .item label, mm-timer.mm-timer .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer .itemcenter label {
   color: #444;
   font-size: 16px; }
 
-mm-timer.mm-timer.mm-timer-timeleft-0 {
+mm-timer.mm-timer .item span, mm-timer.mm-timer .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer .itemcenter span {
+  font-weight: bold; }
+
+mm-timer.mm-timer.mm-timer-timeleft-0 .item, mm-timer.mm-timer.mm-timer-timeleft-0 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-0 .itemcenter {
   background-color: #cb3d4d; }
+  mm-timer.mm-timer.mm-timer-timeleft-0 .item label, mm-timer.mm-timer.mm-timer-timeleft-0 .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-0 .itemcenter label, mm-timer.mm-timer.mm-timer-timeleft-0 .item span, mm-timer.mm-timer.mm-timer-timeleft-0 .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-0 .itemcenter span, mm-timer.mm-timer.mm-timer-timeleft-0 .item i, mm-timer.mm-timer.mm-timer-timeleft-0 .mm-grades-table .itemcenter i, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-0 .itemcenter i {
+    color: #ffffff; }
 
-mm-timer.mm-timer.mm-timer-timeleft-1 {
+mm-timer.mm-timer.mm-timer-timeleft-1 .item, mm-timer.mm-timer.mm-timer-timeleft-1 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-1 .itemcenter {
   background-color: #ce4a59; }
+  mm-timer.mm-timer.mm-timer-timeleft-1 .item label, mm-timer.mm-timer.mm-timer-timeleft-1 .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-1 .itemcenter label, mm-timer.mm-timer.mm-timer-timeleft-1 .item span, mm-timer.mm-timer.mm-timer-timeleft-1 .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-1 .itemcenter span, mm-timer.mm-timer.mm-timer-timeleft-1 .item i, mm-timer.mm-timer.mm-timer-timeleft-1 .mm-grades-table .itemcenter i, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-1 .itemcenter i {
+    color: #ffffff; }
 
-mm-timer.mm-timer.mm-timer-timeleft-2 {
+mm-timer.mm-timer.mm-timer-timeleft-2 .item, mm-timer.mm-timer.mm-timer-timeleft-2 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-2 .itemcenter {
   background-color: #d25765; }
+  mm-timer.mm-timer.mm-timer-timeleft-2 .item label, mm-timer.mm-timer.mm-timer-timeleft-2 .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-2 .itemcenter label, mm-timer.mm-timer.mm-timer-timeleft-2 .item span, mm-timer.mm-timer.mm-timer-timeleft-2 .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-2 .itemcenter span, mm-timer.mm-timer.mm-timer-timeleft-2 .item i, mm-timer.mm-timer.mm-timer-timeleft-2 .mm-grades-table .itemcenter i, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-2 .itemcenter i {
+    color: #ffffff; }
 
-mm-timer.mm-timer.mm-timer-timeleft-3 {
+mm-timer.mm-timer.mm-timer-timeleft-3 .item, mm-timer.mm-timer.mm-timer-timeleft-3 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-3 .itemcenter {
   background-color: #d56471; }
+  mm-timer.mm-timer.mm-timer-timeleft-3 .item label, mm-timer.mm-timer.mm-timer-timeleft-3 .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-3 .itemcenter label, mm-timer.mm-timer.mm-timer-timeleft-3 .item span, mm-timer.mm-timer.mm-timer-timeleft-3 .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-3 .itemcenter span, mm-timer.mm-timer.mm-timer-timeleft-3 .item i, mm-timer.mm-timer.mm-timer-timeleft-3 .mm-grades-table .itemcenter i, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-3 .itemcenter i {
+    color: #ffffff; }
 
-mm-timer.mm-timer.mm-timer-timeleft-4 {
+mm-timer.mm-timer.mm-timer-timeleft-4 .item, mm-timer.mm-timer.mm-timer-timeleft-4 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-4 .itemcenter {
   background-color: #d9717c; }
+  mm-timer.mm-timer.mm-timer-timeleft-4 .item label, mm-timer.mm-timer.mm-timer-timeleft-4 .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-4 .itemcenter label, mm-timer.mm-timer.mm-timer-timeleft-4 .item span, mm-timer.mm-timer.mm-timer-timeleft-4 .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-4 .itemcenter span, mm-timer.mm-timer.mm-timer-timeleft-4 .item i, mm-timer.mm-timer.mm-timer-timeleft-4 .mm-grades-table .itemcenter i, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-4 .itemcenter i {
+    color: #ffffff; }
 
-mm-timer.mm-timer.mm-timer-timeleft-5 {
+mm-timer.mm-timer.mm-timer-timeleft-5 .item, mm-timer.mm-timer.mm-timer-timeleft-5 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-5 .itemcenter {
   background-color: #dc7e88; }
+  mm-timer.mm-timer.mm-timer-timeleft-5 .item label, mm-timer.mm-timer.mm-timer-timeleft-5 .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-5 .itemcenter label, mm-timer.mm-timer.mm-timer-timeleft-5 .item span, mm-timer.mm-timer.mm-timer-timeleft-5 .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-5 .itemcenter span, mm-timer.mm-timer.mm-timer-timeleft-5 .item i, mm-timer.mm-timer.mm-timer-timeleft-5 .mm-grades-table .itemcenter i, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-5 .itemcenter i {
+    color: #ffffff; }
 
-mm-timer.mm-timer.mm-timer-timeleft-6 {
+mm-timer.mm-timer.mm-timer-timeleft-6 .item, mm-timer.mm-timer.mm-timer-timeleft-6 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-6 .itemcenter {
   background-color: #e08b94; }
+  mm-timer.mm-timer.mm-timer-timeleft-6 .item label, mm-timer.mm-timer.mm-timer-timeleft-6 .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-6 .itemcenter label, mm-timer.mm-timer.mm-timer-timeleft-6 .item span, mm-timer.mm-timer.mm-timer-timeleft-6 .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-6 .itemcenter span, mm-timer.mm-timer.mm-timer-timeleft-6 .item i, mm-timer.mm-timer.mm-timer-timeleft-6 .mm-grades-table .itemcenter i, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-6 .itemcenter i {
+    color: #ffffff; }
 
-mm-timer.mm-timer.mm-timer-timeleft-7 {
+mm-timer.mm-timer.mm-timer-timeleft-7 .item, mm-timer.mm-timer.mm-timer-timeleft-7 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-7 .itemcenter {
   background-color: #e398a0; }
+  mm-timer.mm-timer.mm-timer-timeleft-7 .item label, mm-timer.mm-timer.mm-timer-timeleft-7 .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-7 .itemcenter label, mm-timer.mm-timer.mm-timer-timeleft-7 .item span, mm-timer.mm-timer.mm-timer-timeleft-7 .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-7 .itemcenter span, mm-timer.mm-timer.mm-timer-timeleft-7 .item i, mm-timer.mm-timer.mm-timer-timeleft-7 .mm-grades-table .itemcenter i, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-7 .itemcenter i {
+    color: #ffffff; }
 
-mm-timer.mm-timer.mm-timer-timeleft-8 {
+mm-timer.mm-timer.mm-timer-timeleft-8 .item, mm-timer.mm-timer.mm-timer-timeleft-8 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-8 .itemcenter {
   background-color: #e7a4ac; }
 
-mm-timer.mm-timer.mm-timer-timeleft-9 {
+mm-timer.mm-timer.mm-timer-timeleft-9 .item, mm-timer.mm-timer.mm-timer-timeleft-9 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-9 .itemcenter {
   background-color: #eab1b8; }
 
-mm-timer.mm-timer.mm-timer-timeleft-10 {
+mm-timer.mm-timer.mm-timer-timeleft-10 .item, mm-timer.mm-timer.mm-timer-timeleft-10 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-10 .itemcenter {
   background-color: #eebec4; }
 
-mm-timer.mm-timer.mm-timer-timeleft-11 {
+mm-timer.mm-timer.mm-timer-timeleft-11 .item, mm-timer.mm-timer.mm-timer-timeleft-11 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-11 .itemcenter {
   background-color: #f1cbd0; }
 
-mm-timer.mm-timer.mm-timer-timeleft-12 {
+mm-timer.mm-timer.mm-timer-timeleft-12 .item, mm-timer.mm-timer.mm-timer-timeleft-12 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-12 .itemcenter {
   background-color: #f5d8db; }
 
-mm-timer.mm-timer.mm-timer-timeleft-13 {
+mm-timer.mm-timer.mm-timer-timeleft-13 .item, mm-timer.mm-timer.mm-timer-timeleft-13 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-13 .itemcenter {
   background-color: #f8e5e7; }
 
-mm-timer.mm-timer.mm-timer-timeleft-14 {
+mm-timer.mm-timer.mm-timer-timeleft-14 .item, mm-timer.mm-timer.mm-timer-timeleft-14 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-14 .itemcenter {
   background-color: #fcf2f3; }
 
-mm-timer.mm-timer.mm-timer-timeleft-15 {
+mm-timer.mm-timer.mm-timer-timeleft-15 .item, mm-timer.mm-timer.mm-timer-timeleft-15 .mm-grades-table .itemcenter, .mm-grades-table mm-timer.mm-timer.mm-timer-timeleft-15 .itemcenter {
   background-color: white; }
 
 .mm-monospaced {
@@ -13313,9 +13327,6 @@ p.mma-mod-assign-warning {
   padding: 0;
   border: 0; }
 
-.item.mma-mod-lesson-selected, .mm-grades-table .mma-mod-lesson-selected.itemcenter {
-  font-weight: bold; }
-
 .mma-mod-lesson-slideshow {
   max-width: 100%;
   max-height: 100%; }
@@ -13325,21 +13336,35 @@ p.mma-mod-assign-warning {
 .mm-grades-table .mma-mod-lesson-ongoingscore.itemcenter,
 .mma-mod-lesson-ongoingscore span,
 .item.mma-mod-lesson-ongoingscore span, .mm-grades-table .mma-mod-lesson-ongoingscore.itemcenter span {
-  color: #666;
+  color: #626262;
   font-size: 14px; }
 
-.mma-mod_lesson-lessonstats .item.row, .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter, .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter, .mma-mod_lesson-userstats .item.row, .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter, .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter {
-  padding: 0; }
-  .mma-mod_lesson-lessonstats .item.row .col-33, .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33, .mma-mod_lesson-lessonstats .item.row .col-50, .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-50, .mma-mod_lesson-userstats .item.row .col-33, .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33, .mma-mod_lesson-userstats .item.row .col-50, .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-50 {
-    border-color: #dddddd;
-    border-style: solid; }
-    .mma-mod_lesson-lessonstats .item.row .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33:not(:first-child), .mma-mod_lesson-lessonstats .item.row .col-50:not(:first-child), .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-50:not(:first-child), .mma-mod_lesson-userstats .item.row .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33:not(:first-child), .mma-mod_lesson-userstats .item.row .col-50:not(:first-child), .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-50:not(:first-child) {
-      border-left-width: 1px; }
+.mma-mod_lesson-lessonstats .item.row .col-33, .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33,
+.mma-mod_lesson-lessonstats .item.row .col-50,
+.mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table
+.mma-mod_lesson-lessonstats .row.itemcenter .col-50, .mma-mod_lesson-userstats .item.row .col-33, .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33,
+.mma-mod_lesson-userstats .item.row .col-50,
+.mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table
+.mma-mod_lesson-userstats .row.itemcenter .col-50 {
+  border-color: #dddddd;
+  border-style: solid; }
+  .mma-mod_lesson-lessonstats .item.row .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33:not(:first-child),
+  .mma-mod_lesson-lessonstats .item.row .col-50:not(:first-child),
+  .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table
+  .mma-mod_lesson-lessonstats .row.itemcenter .col-50:not(:first-child), .mma-mod_lesson-userstats .item.row .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33:not(:first-child),
+  .mma-mod_lesson-userstats .item.row .col-50:not(:first-child),
+  .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table
+  .mma-mod_lesson-userstats .row.itemcenter .col-50:not(:first-child) {
+    border-left-width: 1px; }
 
-.mm-site_mod_lesson-userattempt .mma-mod_lesson-contentpage {
-  padding: 0; }
-  .mm-site_mod_lesson-userattempt .mma-mod_lesson-contentpage .row {
-    padding: 0; }
+.mm-site_mod_lesson-userretake .mma-mod_lesson-answer .item, .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .mm-grades-table .itemcenter, .mm-grades-table .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .itemcenter {
+  border-top: 1px solid #dddddd;
+  border-radius: 0; }
+
+.mm-site_mod_lesson-userretake .highlight {
+  background-color: #cce0f6; }
+  .mm-site_mod_lesson-userretake .highlight p {
+    color: #004c9f; }
 
 p.mma-mod-quiz-warning {
   color: #cb3d4d; }

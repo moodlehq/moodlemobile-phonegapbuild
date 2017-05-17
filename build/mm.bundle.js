@@ -22004,7 +22004,9 @@ angular.module('mm.addons.mod_lesson', ['mm.core'])
       url: '/mod_lesson',
       params: {
         module: null,
-        courseid: null
+        courseid: null,
+        action: null,
+        group: null 
       },
       views: {
         'site': {
@@ -22021,7 +22023,7 @@ angular.module('mm.addons.mod_lesson', ['mm.core'])
         pageid: null,
         password: null,
         review: false,
-        attempt: null 
+        retake: null 
       },
       views: {
         'site': {
@@ -22030,25 +22032,27 @@ angular.module('mm.addons.mod_lesson', ['mm.core'])
         }
       }
     })
-    .state('site.mod_lesson-userattempt', {
-      url: '/mod_lesson-userattempt',
+    .state('site.mod_lesson-userretake', {
+      url: '/mod_lesson-userretake',
       params: {
         courseid: null,
         lessonid: null,
         userid: null,
-        attempt: null
+        retake: null
       },
       views: {
         'site': {
-          controller: 'mmaModLessonUserAttemptCtrl',
-          templateUrl: 'addons/mod/lesson/templates/userattempt.html'
+          controller: 'mmaModLessonUserRetakeCtrl',
+          templateUrl: 'addons/mod/lesson/templates/userretake.html'
         }
       }
     });
 }])
-.config(["$mmCourseDelegateProvider", "$mmCoursePrefetchDelegateProvider", function($mmCourseDelegateProvider, $mmCoursePrefetchDelegateProvider) {
+.config(["$mmCourseDelegateProvider", "$mmCoursePrefetchDelegateProvider", "$mmContentLinksDelegateProvider", function($mmCourseDelegateProvider, $mmCoursePrefetchDelegateProvider, $mmContentLinksDelegateProvider) {
     $mmCourseDelegateProvider.registerContentHandler('mmaModLesson', 'lesson', '$mmaModLessonHandlers.courseContentHandler');
     $mmCoursePrefetchDelegateProvider.registerPrefetchHandler('mmaModLesson', 'lesson', '$mmaModLessonPrefetchHandler');
+    $mmContentLinksDelegateProvider.registerLinkHandler('mmaModLesson:view', '$mmaModLessonHandlers.viewLinksHandler');
+    $mmContentLinksDelegateProvider.registerLinkHandler('mmaModLesson:overview', '$mmaModLessonHandlers.overviewLinksHandler');
 }])
 .run(["$mmCronDelegate", function($mmCronDelegate) {
     $mmCronDelegate.register('mmaModLesson', '$mmaModLessonHandlers.syncHandler');
@@ -45150,8 +45154,8 @@ angular.module('mm.addons.mod_lesson')
     $scope.data = {
         password: ''
     };
-    $scope.display = $scope.DISPLAY_VIEW;
-    $scope.selectedGroup = 0;
+    $scope.display = $stateParams.action == 'report' ? $scope.DISPLAY_REPORTS : $scope.DISPLAY_VIEW;
+    $scope.selectedGroup = $stateParams.group || 0;
     function fetchLessonData(refresh, sync, showErrors) {
         $scope.isOnline = $mmApp.isOnline();
         $scope.askPassword = false;
@@ -45178,13 +45182,13 @@ angular.module('mm.addons.mod_lesson')
                 promises.push($mmaModLessonSync.hasDataToSync(lesson.id, info.attemptscount).then(function(hasOffline) {
                     $scope.hasOffline = hasOffline;
                 }));
-                promises.push($mmaModLessonSync.getAttemptFinishedInSync(lesson.id).then(function(attempt) {
-                    if (attempt && attempt.attempt == accessInfo.attemptscount - 1) {
-                        $scope.attemptToReview = attempt;
+                promises.push($mmaModLessonSync.getRetakeFinishedInSync(lesson.id).then(function(retake) {
+                    if (retake && retake.retake == accessInfo.attemptscount - 1) {
+                        $scope.retakeToReview = retake;
                     } else {
-                        $scope.attemptToReview = undefined;
-                        if (attempt) {
-                            $mmaModLessonSync.deleteAttemptFinishedInSync(lesson.id);
+                        $scope.retakeToReview = undefined;
+                        if (retake) {
+                            $mmaModLessonSync.deleteRetakeFinishedInSync(lesson.id);
                         }
                     }
                 }));
@@ -45264,7 +45268,7 @@ angular.module('mm.addons.mod_lesson')
                 }
             }
         }
-        return $mmaModLesson.getAttemptsOverview(lesson.id, groupId).then(function(data) {
+        return $mmaModLesson.getRetakesOverview(lesson.id, groupId).then(function(data) {
             var promises = [];
             if (data && data.avetime != null && data.numofattempts) {
                 data.avetime = parseInt(data.avetime / data.numofattempts, 10);
@@ -45320,7 +45324,7 @@ angular.module('mm.addons.mod_lesson')
             promises.push($mmaModLesson.invalidateTimers(lesson.id));
             promises.push($mmaModLesson.invalidateContentPagesViewed(lesson.id));
             promises.push($mmaModLesson.invalidateQuestionsAttempts(lesson.id));
-            promises.push($mmaModLesson.invalidateAttemptsOverview(lesson.id));
+            promises.push($mmaModLesson.invalidateRetakesOverview(lesson.id));
             promises.push($mmGroups.invalidateActivityGroupInfo(module.id));
         }
         return $q.all(promises).finally(function() {
@@ -45423,16 +45427,16 @@ angular.module('mm.addons.mod_lesson')
         }
     };
     $scope.review = function() {
-        if (!$scope.attemptToReview) {
+        if (!$scope.retakeToReview) {
             return;
         }
         $state.go('site.mod_lesson-player', {
             courseid: courseId,
             lessonid: lesson.id,
-            pageid: $scope.attemptToReview.pageid,
+            pageid: $scope.retakeToReview.pageid,
             password: password,
             review: true,
-            attempt: $scope.attemptToReview.attempt
+            retake: $scope.retakeToReview.retake
         });
     };
     $scope.submitPassword = function(pwd) {
@@ -45563,8 +45567,8 @@ angular.module('mm.addons.mod_lesson')
                     return $q.reject(info.preventaccessreasons[0].message);
                 }
             }
-            if ($scope.review && $stateParams.attempt != accessInfo.attemptscount - 1) {
-                return $mmLang.translateAndReject('mma.mod_lesson.errorreviewattemptnotlast');
+            if ($scope.review && $stateParams.retake != accessInfo.attemptscount - 1) {
+                return $mmLang.translateAndReject('mma.mod_lesson.errorreviewretakenotlast');
             }
             if (password) {
                 var args = [lesson.id, password, true, offline, true];
@@ -45583,11 +45587,11 @@ angular.module('mm.addons.mod_lesson')
             $scope.mediaFile = lesson.mediafiles && lesson.mediafiles[0];
             $scope.lessonWidth = lesson.slideshow ?  $mmUtil.formatPixelsSize(lesson.mediawidth) : '';
             $scope.lessonHeight = lesson.slideshow ?  $mmUtil.formatPixelsSize(lesson.mediaheight) : '';
-            return launchAttempt($scope.currentPage);
+            return launchRetake($scope.currentPage);
         }).catch(function(message) {
             var promise;
-            if ($scope.review && $stateParams.attempt && $mmUtil.isWebServiceError(message)) {
-                promise = $mmaModLessonSync.deleteAttemptFinishedInSync(lessonId);
+            if ($scope.review && $stateParams.retake && $mmUtil.isWebServiceError(message)) {
+                promise = $mmaModLessonSync.deleteRetakeFinishedInSync(lessonId);
             } else {
                 promise = $q.when();
             }
@@ -45598,14 +45602,14 @@ angular.module('mm.addons.mod_lesson')
             });
         });
     }
-    function launchAttempt(pageId) {
+    function launchRetake(pageId) {
         var promise;
         if ($scope.review) {
             promise = $q.when({});
         } else if (!offline) {
-            promise = $mmaModLesson.launchAttempt(lesson.id, password, pageId);
+            promise = $mmaModLesson.launchRetake(lesson.id, password, pageId);
         } else {
-            promise = $mmaModLessonOffline.hasFinishedAttempt(lesson.id).then(function(finished) {
+            promise = $mmaModLessonOffline.hasFinishedRetake(lesson.id).then(function(finished) {
                 if (finished) {
                     pageId = $mmaModLesson.LESSON_EOL;
                 }
@@ -45623,19 +45627,19 @@ angular.module('mm.addons.mod_lesson')
             }
         }).then(function() {
             if ($scope.currentPage == $mmaModLesson.LESSON_EOL) {
-                return finishAttempt();
+                return finishRetake();
             }
             return loadPage($scope.currentPage);
         });
     }
     function loadPage(pageId) {
         if (pageId == $mmaModLesson.LESSON_EOL) {
-            return finishAttempt();
+            return finishRetake();
         }
         var args = [lesson, pageId, password, $scope.review, true, offline, true, accessInfo, jumps];
         return callFunction($mmaModLesson.getPageData, args, 5, 8).then(function(data) {
             if (data.newpageid == $mmaModLesson.LESSON_EOL) {
-                return finishAttempt();
+                return finishRetake();
             }
             $scope.pageData = data;
             $scope.title = data.page.title;
@@ -45659,7 +45663,7 @@ angular.module('mm.addons.mod_lesson')
             $scope.displayMenu = !!data.displaymenu;
         });
     }
-    function finishAttempt(outOfTime) {
+    function finishRetake(outOfTime) {
         var promise;
         $scope.messages = [];
         if (offline && $mmApp.isOnline()) {
@@ -45683,7 +45687,7 @@ angular.module('mm.addons.mod_lesson')
         }
         return promise.then(function() {
             var args = [lesson, courseId, password, outOfTime, $scope.review, offline, accessInfo];
-            return callFunction($mmaModLesson.finishAttempt, args, 5);
+            return callFunction($mmaModLesson.finishRetake, args, 5);
         }).then(function(data) {
             $scope.title = lesson.name;
             $scope.eolData = data.data;
@@ -45784,7 +45788,7 @@ angular.module('mm.addons.mod_lesson')
             blockData && blockData.back();
             return;
         } else if (pageId == $mmaModLesson.LESSON_EOL) {
-            return finishAttempt();
+            return finishRetake();
         }
         $scope.messages = [];
         return loadPage(pageId);
@@ -45806,7 +45810,7 @@ angular.module('mm.addons.mod_lesson')
         });
     }
     fetchLessonData().then(function() {
-        $mmaModLessonSync.deleteAttemptFinishedInSync(lessonId);
+        $mmaModLessonSync.deleteRetakeFinishedInSync(lessonId);
     }).finally(function() {
         $scope.pageLoaded = true;
     });
@@ -45837,7 +45841,7 @@ angular.module('mm.addons.mod_lesson')
     $scope.timeUp = function() {
         $scope.endTime = false;
         showLoading();
-        return finishAttempt(true).catch(function(error) {
+        return finishRetake(true).catch(function(error) {
             $mmUtil.showErrorModalDefault(error, 'Error finishing attempt');
             return $q.reject();
         }).finally(function() {
@@ -45863,12 +45867,12 @@ angular.module('mm.addons.mod_lesson')
 }]);
 
 angular.module('mm.addons.mod_lesson')
-.controller('mmaModLessonUserAttemptCtrl', ["$scope", "$stateParams", "$mmaModLesson", "$q", "$mmLang", "$mmUtil", "$mmSite", "$mmUser", "$mmaModLessonHelper", "mmaModLessonComponent", function($scope, $stateParams, $mmaModLesson, $q, $mmLang, $mmUtil, $mmSite, $mmUser,
+.controller('mmaModLessonUserRetakeCtrl', ["$scope", "$stateParams", "$mmaModLesson", "$q", "$mmLang", "$mmUtil", "$mmSite", "$mmUser", "$mmaModLessonHelper", "mmaModLessonComponent", function($scope, $stateParams, $mmaModLesson, $q, $mmLang, $mmUtil, $mmSite, $mmUser,
     $mmaModLessonHelper, mmaModLessonComponent) {
     var lessonId = $stateParams.lessonid,
         courseId = $stateParams.courseid,
         userId = $stateParams.userid || $mmSite.getUserId(),
-        attemptNumber = $stateParams.attempt,
+        retakeNumber = $stateParams.retake,
         lesson;
     $scope.courseId = courseId;
     $scope.component = mmaModLessonComponent;
@@ -45876,7 +45880,7 @@ angular.module('mm.addons.mod_lesson')
         return $mmaModLesson.getLessonById(courseId, lessonId).then(function(lessonData) {
             lesson = lessonData;
             $scope.lesson = lesson;
-            return $mmaModLesson.getAttemptsOverview(lesson.id);
+            return $mmaModLesson.getRetakesOverview(lesson.id);
         }).then(function(data) {
             var student;
             if (!data || !data.students.length) {
@@ -45895,14 +45899,14 @@ angular.module('mm.addons.mod_lesson')
                 return $mmLang.translateAndReject('mma.mod_lesson.cannotfindattempt');
             }
             student.bestgrade = $mmUtil.roundToDecimals(student.bestgrade, 2);
-            angular.forEach(student.attempts, function(attempt) {
-                if (attemptNumber == attempt.try) {
-                    $scope.selectedAttempt = attemptNumber;
+            angular.forEach(student.attempts, function(retake) {
+                if (retakeNumber == retake.try) {
+                    $scope.selectedRetake = retakeNumber;
                 }
-                attempt.label = $mmaModLessonHelper.getAttemptLabel(attempt);
+                retake.label = $mmaModLessonHelper.getRetakeLabel(retake);
             });
-            if (!$scope.selectedAttempt) {
-                $scope.selectedAttempt = student.attempts[student.attempts.length - 1].try;
+            if (!$scope.selectedRetake) {
+                $scope.selectedRetake = student.attempts[student.attempts.length - 1].try;
             }
            return $mmUser.getProfile(student.id, courseId, true).then(function(user) {
                 student.profileimageurl = user.profileimageurl;
@@ -45912,15 +45916,15 @@ angular.module('mm.addons.mod_lesson')
             });
         }).then(function(student) {
             $scope.student = student;
-            return setAttempt($scope.selectedAttempt);
+            return setRetake($scope.selectedRetake);
         }).catch(function(message) {
             $mmUtil.showErrorModalDefault(message, 'Error getting data.', true);
             return $q.reject();
         });
     }
-    function setAttempt(attemptNumber) {
-        $scope.selectedAttempt = attemptNumber;
-        return $mmaModLesson.getUserAttempt(lesson.id, attemptNumber, userId).then(function(data) {
+    function setRetake(retakeNumber) {
+        $scope.selectedRetake = retakeNumber;
+        return $mmaModLesson.getUserRetake(lesson.id, retakeNumber, userId).then(function(data) {
             if (data && data.completed != -1) {
                 data.userstats.grade = $mmUtil.roundToDecimals(data.userstats.grade, 2);
                 data.userstats.timetakenReadable = $mmUtil.formatTimeInstant(data.userstats.timetotake);
@@ -45938,43 +45942,44 @@ angular.module('mm.addons.mod_lesson')
                     });
                 }
             });
-            $scope.attempt = data;
+            $scope.retake = data;
         });
     }
     function refreshData() {
         var promises = [];
         promises.push($mmaModLesson.invalidateLessonData(courseId));
         if (lesson) {
-            promises.push($mmaModLesson.invalidateAttemptsOverview(lesson.id));
-            promises.push($mmaModLesson.invalidateUserAttemptsForUser(lesson.id, userId));
+            promises.push($mmaModLesson.invalidateRetakesOverview(lesson.id));
+            promises.push($mmaModLesson.invalidateUserRetakesForUser(lesson.id, userId));
         }
         return $q.all(promises).finally(function() {
             return fetchData();
         });
     }
     fetchData().finally(function() {
-        $scope.attemptLoaded = true;
+        $scope.retakeLoaded = true;
     });
     $scope.refreshData = function() {
         return refreshData().finally(function() {
             $scope.$broadcast('scroll.refreshComplete');
         });
     };
-    $scope.setAttempt = function(attemptNumber) {
-        $scope.attemptLoaded = false;
-        return setAttempt(attemptNumber).catch(function(message) {
+    $scope.setRetake = function(retakeNumber) {
+        $scope.retakeLoaded = false;
+        return setRetake(retakeNumber).catch(function(message) {
             $mmUtil.showErrorModalDefault(message, 'Error getting attempt.');
             return $q.reject();
         }).finally(function() {
-            $scope.attemptLoaded = true;
+            $scope.retakeLoaded = true;
         });
     };
 }]);
 
 angular.module('mm.addons.mod_lesson')
-.factory('$mmaModLessonHandlers', ["$mmCourse", "$mmaModLesson", "$state", "$mmaModLessonPrefetchHandler", "$mmUtil", "$mmEvents", "$mmSite", "$mmCoursePrefetchDelegate", "mmCoreEventPackageStatusChanged", "mmaModLessonComponent", "mmCoreDownloading", "mmCoreNotDownloaded", "mmCoreOutdated", "$mmaModLessonSync", function($mmCourse, $mmaModLesson, $state, $mmaModLessonPrefetchHandler, $mmUtil, $mmEvents,
+.factory('$mmaModLessonHandlers', ["$mmCourse", "$mmaModLesson", "$state", "$mmaModLessonPrefetchHandler", "$mmUtil", "$mmEvents", "$mmSite", "$mmCoursePrefetchDelegate", "mmCoreEventPackageStatusChanged", "mmaModLessonComponent", "mmCoreDownloading", "mmCoreNotDownloaded", "mmCoreOutdated", "$mmaModLessonSync", "$mmCourseHelper", "$mmContentLinksHelper", "$q", "$mmContentLinkHandlerFactory", function($mmCourse, $mmaModLesson, $state, $mmaModLessonPrefetchHandler, $mmUtil, $mmEvents,
             $mmSite, $mmCoursePrefetchDelegate, mmCoreEventPackageStatusChanged, mmaModLessonComponent, mmCoreDownloading,
-            mmCoreNotDownloaded, mmCoreOutdated, $mmaModLessonSync) {
+            mmCoreNotDownloaded, mmCoreOutdated, $mmaModLessonSync, $mmCourseHelper, $mmContentLinksHelper, $q,
+            $mmContentLinkHandlerFactory) {
     var self = {};
     self.courseContentHandler = function() {
         var self = {};
@@ -46072,6 +46077,96 @@ angular.module('mm.addons.mod_lesson')
         };
         return self;
     };
+    self.viewLinksHandler = $mmContentLinkHandlerFactory.createChild(
+                /\/mod\/lesson\/view\.php.*([\&\?]id=\d+)/, '$mmCourseDelegate_mmaModLesson');
+    self.viewLinksHandler.isEnabled = function(siteId, url, params, courseId) {
+        courseId = courseId || params.courseid || params.cid;
+        return $mmContentLinksHelper.isModuleIndexEnabled($mmaModLesson, siteId, courseId);
+    };
+    self.viewLinksHandler.getActions = function(siteIds, url, params, courseId) {
+        courseId = courseId || params.courseid || params.cid;
+        return [{
+            action: function(siteId) {
+                if (params.userpassword) {
+                    navigateToModuleWithPassword(parseInt(params.id, 10), courseId, params.userpassword, siteId);
+                } else {
+                    $mmCourseHelper.navigateToModule(parseInt(params.id, 10), siteId, courseId);
+                }
+            }
+        }];
+    };
+    function navigateToModuleWithPassword(moduleId, courseId, password, siteId) {
+        var modal = $mmUtil.showModalLoading();
+        return $mmCourse.getModuleBasicInfo(moduleId, siteId).then(function(module) {
+            courseId = courseId || module.course;
+            return $mmaModLesson.storePassword(parseInt(module.instance, 10), password).catch(function() {
+            }).then(function() {
+                return $mmCourseHelper.navigateToModule(moduleId, siteId, courseId, module.section);
+            });
+        }).catch(function() {
+            return $mmCourseHelper.navigateToModule(moduleId, siteId, courseId);
+        }).finally(function() {
+            modal.dismiss();
+        });
+    }
+    self.overviewLinksHandler = $mmContentLinkHandlerFactory.createChild(
+                /\/mod\/lesson\/report\.php.*([\&\?]id=\d+)/, '$mmCourseDelegate_mmaModLesson');
+    self.overviewLinksHandler.isEnabled = function(siteId, url, params, courseId) {
+        courseId = courseId || params.courseid || params.cid;
+        if (params.action == 'reportdetail' && !params.userid) {
+            return false;
+        }
+        return $mmContentLinksHelper.isModuleIndexEnabled($mmaModLesson, siteId, courseId);
+    };
+    self.overviewLinksHandler.getActions = function(siteIds, url, params, courseId) {
+        courseId = courseId || params.courseid || params.cid;
+        return [{
+            action: function(siteId) {
+                if (!params.action || params.action == 'reportoverview') {
+                    openReportOverview(parseInt(params.id, 10), courseId, parseInt(params.group, 10), siteId);
+                } else if (params.action == 'reportdetail') {
+                    openUserRetake(parseInt(params.id, 10), parseInt(params.userid, 10), courseId,
+                            parseInt(params.try, 10), siteId);
+                }
+            }
+        }];
+    };
+    function openReportOverview(moduleId, courseId, groupId, siteId) {
+        var modal = $mmUtil.showModalLoading();
+        return $mmCourse.getModuleBasicInfo(moduleId, siteId).then(function(module) {
+            courseId = courseId || module.course;
+            var stateParams = {
+                module: module,
+                courseid: courseId ? parseInt(courseId, 10) : courseId,
+                action: 'report',
+                group: groupId
+            };
+            $mmContentLinksHelper.goInSite('site.mod_lesson', stateParams, siteId);
+        }).catch(function(message) {
+            $mmUtil.showErrorModalDefault(message, 'Error processing link.');
+            return $q.reject();
+        }).finally(function() {
+            modal.dismiss();
+        });
+    }
+    function openUserRetake(moduleId, userId, courseId, retake, siteId) {
+        var modal = $mmUtil.showModalLoading();
+        return $mmCourse.getModuleBasicInfo(moduleId, siteId).then(function(module) {
+            courseId = courseId || module.course;
+            var stateParams = {
+                lessonid: module.instance,
+                courseid: courseId ? parseInt(courseId, 10) : courseId,
+                userid: userId,
+                retake: retake || 0
+            };
+            $mmContentLinksHelper.goInSite('site.mod_lesson-userretake', stateParams, siteId);
+        }).catch(function(message) {
+            $mmUtil.showErrorModalDefault(message, 'Error processing link.');
+            return $q.reject();
+        }).finally(function() {
+            modal.dismiss();
+        });
+    }
     return self;
 }]);
 
@@ -46088,30 +46183,6 @@ angular.module('mm.addons.mod_lesson')
         }
         angular.element(anchor).addClass('button button-block');
         return rootElement.innerHTML;
-    };
-    self.getAttemptLabel = function(attempt, includeDuration) {
-        var data = {
-                attempt: attempt.try + 1,
-                grade: '',
-                timestart: '',
-                duration: ''
-            },
-            hasGrade = attempt.grade != null;
-        if (hasGrade || attempt.end) {
-            if (hasGrade) {
-                data.grade = $translate.instant('mm.core.percentagenumber', {$a: attempt.grade});
-            }
-            data.timestart = moment(attempt.timestart * 1000).format('LLL');
-            if (includeDuration) {
-                data.duration = $mmUtil.formatTimeInstant(attempt.timeend - attempt.timestart);
-            }
-        } else {
-            data.grade = $translate.instant('mma.mod_lesson.notcompleted');
-            if (attempt.timestart) {
-                data.timestart = moment(attempt.timestart * 1000).format('LLL');
-            }
-        }
-        return $translate.instant('mma.mod_lesson.attemptlabel' + (includeDuration ? 'full' : 'short'), data);
     };
     self.getContentPageAnswerDataFromHtml = function(html) {
         var data = {},
@@ -46324,6 +46395,30 @@ angular.module('mm.addons.mod_lesson')
         }
         return question;
     };
+    self.getRetakeLabel = function(retake, includeDuration) {
+        var data = {
+                retake: retake.try + 1,
+                grade: '',
+                timestart: '',
+                duration: ''
+            },
+            hasGrade = retake.grade != null;
+        if (hasGrade || retake.end) {
+            if (hasGrade) {
+                data.grade = $translate.instant('mm.core.percentagenumber', {$a: retake.grade});
+            }
+            data.timestart = moment(retake.timestart * 1000).format('LLL');
+            if (includeDuration) {
+                data.duration = $mmUtil.formatTimeInstant(retake.timeend - retake.timestart);
+            }
+        } else {
+            data.grade = $translate.instant('mma.mod_lesson.notcompleted');
+            if (retake.timestart) {
+                data.timestart = moment(retake.timestart * 1000).format('LLL');
+            }
+        }
+        return $translate.instant('mma.mod_lesson.retakelabel' + (includeDuration ? 'full' : 'short'), data);
+    };
     self.prepareQuestionModel = function(question) {
         var model = angular.copy(question.model);
         if (question.template == 'essay' && question.textarea) {
@@ -46386,7 +46481,7 @@ angular.module('mm.addons.mod_lesson')
     self.LESSON_PAGE_MATCHING =     5;
     self.LESSON_PAGE_NUMERICAL =    8;
     self.LESSON_PAGE_ESSAY =        10;
-    self.LESSON_PAGE_BRANCHTABLE =  20;
+    self.LESSON_PAGE_BRANCHTABLE =  20; 
     self.LESSON_PAGE_ENDOFBRANCH =  21;
     self.LESSON_PAGE_CLUSTER =      30;
     self.LESSON_PAGE_ENDOFCLUSTER = 31;
@@ -46427,7 +46522,7 @@ angular.module('mm.addons.mod_lesson')
     };
     function calculateOfflineData(lesson, accessInfo, password, review, pageIndex, siteId) {
         accessInfo = accessInfo || {};
-        var reviewMode = review || accessInfo.reviewmode,
+        var reviewMode = review || accessInfo.reviewmode,
             ongoingMessage = '',
             progress,
             promises = [];
@@ -46458,7 +46553,7 @@ angular.module('mm.addons.mod_lesson')
             return 100;
         }
         var promise,
-            ntries = accessInfo.attemptscount,
+            retake = accessInfo.attemptscount,
             viewedPagesIds = [];
         if (pageIndex) {
             promise = $q.when();
@@ -46468,10 +46563,10 @@ angular.module('mm.addons.mod_lesson')
             });
         }
         return promise.then(function() {
-            return self.getPagesIdsWithQuestionAttempts(lessonId, ntries, false, siteId);
+            return self.getPagesIdsWithQuestionAttempts(lessonId, retake, false, siteId);
         }).then(function(ids) {
             viewedPagesIds = ids;
-            return self.getContentPagesViewedIds(lessonId, ntries, siteId);
+            return self.getContentPagesViewedIds(lessonId, retake, siteId);
         }).then(function(viewedContentPagesIds) {
             var pageId = accessInfo.firstpageid,
                 validPages = {};
@@ -46632,8 +46727,8 @@ angular.module('mm.addons.mod_lesson')
                 return;
             }
             result.userresponse = studentAnswers.join(',');
-            var ncorrect = 0,
-                nhits = 0,
+            var nCorrect = 0,
+                nHits = 0,
                 responses = [],
                 correctAnswerId = 0,
                 wrongAnswerId = 0,
@@ -46658,7 +46753,7 @@ angular.module('mm.addons.mod_lesson')
                 angular.forEach(studentAnswers, function(answerId) {
                     if (answerId == answer.id) {
                         if (correctAnswer) {
-                            nhits++;
+                            nHits++;
                         } else {
                             if (typeof wrongPageId == 'undefined') {
                                 wrongPageId = answer.jumpto;
@@ -46670,7 +46765,7 @@ angular.module('mm.addons.mod_lesson')
                     }
                 });
                 if (correctAnswer) {
-                    ncorrect++;
+                    nCorrect++;
                     if (typeof correctPageId == 'undefined') {
                         correctPageId = answer.jumpto;
                     }
@@ -46679,7 +46774,7 @@ angular.module('mm.addons.mod_lesson')
                     }
                 }
             });
-            if (studentAnswers.length == ncorrect && nhits == ncorrect) {
+            if (studentAnswers.length == nCorrect && nHits == nCorrect) {
                 result.correctanswer = true;
                 result.response = responses.join('<br />');
                 result.newpageid = correctPageId;
@@ -46771,7 +46866,7 @@ angular.module('mm.addons.mod_lesson')
         }
         for (var i in pageData.answers) {
             var answer = pageData.answers[i],
-                expectedAnswer = answer.answer, 
+                expectedAnswer = answer.answer,
                 isMatch = false,
                 markIt = false,
                 useRegExp = pageData.page.qoption,
@@ -46873,11 +46968,11 @@ angular.module('mm.addons.mod_lesson')
         });
         return pages;
     }
-    self.finishAttempt = function(lesson, courseId, password, outOfTime, review, offline, accessInfo, siteId) {
+    self.finishRetake = function(lesson, courseId, password, outOfTime, review, offline, accessInfo, siteId) {
         if (offline) {
-            var attempt = accessInfo.attemptscount;
-            return $mmaModLessonOffline.finishAttempt(lesson.id, courseId, attempt, true, outOfTime, siteId).then(function() {
-                return self.lessonGrade(lesson, accessInfo.attemptscount, password, review, undefined, siteId).catch(function() {
+            var retake = accessInfo.attemptscount;
+            return $mmaModLessonOffline.finishRetake(lesson.id, courseId, retake, true, outOfTime, siteId).then(function() {
+                return self.lessonGrade(lesson, retake, password, review, undefined, siteId).catch(function() {
                     return {};
                 });
             }).then(function(gradeInfo) {
@@ -46960,7 +47055,7 @@ angular.module('mm.addons.mod_lesson')
                 return result;
             });
         }
-        return self.finishAttemptOnline(lesson.id, password, outOfTime, review, siteId);
+        return self.finishRetakeOnline(lesson.id, password, outOfTime, review, siteId);
         function addResultValue(result, name, value, addMessage) {
             var message = '';
             if (addMessage) {
@@ -46974,7 +47069,7 @@ angular.module('mm.addons.mod_lesson')
             };
         }
     };
-    self.finishAttemptOnline = function(lessonId, password, outOfTime, review, siteId) {
+    self.finishRetakeOnline = function(lessonId, password, outOfTime, review, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             var params = {
                 lessonid: lessonId,
@@ -47028,44 +47123,17 @@ angular.module('mm.addons.mod_lesson')
             return site.read('mod_lesson_get_lesson_access_information', params, preSets);
         });
     };
-    function getAttemptsOverviewCacheKey(lessonId, groupId) {
-        return getAttemptsOverviewCommonCacheKey(lessonId) + ':' + groupId;
-    }
-    function getAttemptsOverviewCommonCacheKey(lessonId) {
-        return 'mmaModLesson:attemptsOverview:' + lessonId;
-    }
-    self.getAttemptsOverview = function(lessonId, groupId, forceCache, ignoreCache, siteId) {
-        groupId = groupId || 0;
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            var params = {
-                    lessonid: lessonId,
-                    groupid: groupId
-                },
-                preSets = {
-                    cacheKey: getAttemptsOverviewCacheKey(lessonId, groupId)
-                };
-            if (forceCache) {
-                preSets.omitExpires = true;
-            } else if (ignoreCache) {
-                preSets.getFromCache = 0;
-                preSets.emergencyCache = 0;
-            }
-            return site.read('mod_lesson_get_attempts_overview', params, preSets).then(function(response) {
-                return response.data;
-            });
-        });
-    };
-    self.getContentPagesViewed = function(lessonId, attempt, siteId) {
+    self.getContentPagesViewed = function(lessonId, retake, siteId) {
         var promises = [],
             type = mmaModLessonTypeStructure,
             result = {
                 online: [],
                 offline: []
             };
-        promises.push(self.getContentPagesViewedOnline(lessonId, attempt, false, false, siteId).then(function(pages) {
+        promises.push(self.getContentPagesViewedOnline(lessonId, retake, false, false, siteId).then(function(pages) {
             result.online = pages;
         }));
-        promises.push($mmaModLessonOffline.getAttemptAnswersForType(lessonId, attempt, type, siteId).catch(function() {
+        promises.push($mmaModLessonOffline.getRetakeAttemptsForType(lessonId, retake, type, siteId).catch(function() {
             return [];
         }).then(function(pages) {
             result.offline = pages;
@@ -47074,8 +47142,8 @@ angular.module('mm.addons.mod_lesson')
             return result;
         });
     };
-    self.getContentPagesViewedIds = function(lessonId, attempt, siteId) {
-        return self.getContentPagesViewed(lessonId, attempt, siteId).then(function(result) {
+    self.getContentPagesViewedIds = function(lessonId, retake, siteId) {
+        return self.getContentPagesViewed(lessonId, retake, siteId).then(function(result) {
             var ids = {},
                 pages = result.online.concat(result.offline);
             angular.forEach(pages, function(page) {
@@ -47086,20 +47154,20 @@ angular.module('mm.addons.mod_lesson')
             return Object.keys(ids);
         });
     };
-    function getContentPagesViewedCacheKey(lessonId, attempt) {
-        return getContentPagesViewedCommonCacheKey(lessonId) + ':' + attempt;
+    function getContentPagesViewedCacheKey(lessonId, retake) {
+        return getContentPagesViewedCommonCacheKey(lessonId) + ':' + retake;
     }
     function getContentPagesViewedCommonCacheKey(lessonId) {
         return 'mmaModLesson:contentPagesViewed:' + lessonId;
     }
-    self.getContentPagesViewedOnline = function(lessonId, attempt, forceCache, ignoreCache, siteId) {
+    self.getContentPagesViewedOnline = function(lessonId, retake, forceCache, ignoreCache, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             var params = {
                     lessonid: lessonId,
-                    lessonattempt: attempt
+                    lessonattempt: retake
                 },
                 preSets = {
-                    cacheKey: getContentPagesViewedCacheKey(lessonId, attempt)
+                    cacheKey: getContentPagesViewedCacheKey(lessonId, retake)
                 };
             if (forceCache) {
                 preSets.omitExpires = true;
@@ -47112,8 +47180,8 @@ angular.module('mm.addons.mod_lesson')
             });
         });
     };
-    self.getLastContentPageViewed = function(lessonId, attempt, siteId) {
-        return self.getContentPagesViewed(lessonId, attempt, siteId).then(function(data) {
+    self.getLastContentPageViewed = function(lessonId, retake, siteId) {
+        return self.getContentPagesViewed(lessonId, retake, siteId).then(function(data) {
             var lastPage,
                 maxTime = 0;
             angular.forEach(data.online, function(page) {
@@ -47132,14 +47200,14 @@ angular.module('mm.addons.mod_lesson')
         }).catch(function() {
         });
     };
-    self.getLastPageSeen = function(lessonId, attempt, siteId) {
+    self.getLastPageSeen = function(lessonId, retake, siteId) {
         siteId = siteId || $mmSite.getId();
         var lastPageSeen = false;
-        return $mmaModLessonOffline.getLastQuestionPageAnswer(lessonId, attempt, siteId).then(function(answer) {
+        return $mmaModLessonOffline.getLastQuestionPageAttempt(lessonId, retake, siteId).then(function(answer) {
             if (answer) {
                 lastPageSeen = answer.newpageid;
             }
-            return self.getLastContentPageViewed(lessonId, attempt, siteId).then(function(page) {
+            return self.getLastContentPageViewed(lessonId, retake, siteId).then(function(page) {
                 if (page) {
                     if (answer) {
                         if (page.timemodified > answer.timemodified) {
@@ -47227,11 +47295,11 @@ angular.module('mm.addons.mod_lesson')
         if (accessInfo.canmanage) {
             return $q.when($translate.instant('mma.mod_lesson.teacherongoingwarning'));
         } else {
-            var ntries = accessInfo.attemptscount;
+            var retake = accessInfo.attemptscount;
             if (review) {
-                ntries--;
+                retake--;
             }
-            return self.lessonGrade(lesson, ntries, password, review, pageIndex, siteId).then(function(gradeInfo) {
+            return self.lessonGrade(lesson, retake, password, review, pageIndex, siteId).then(function(gradeInfo) {
                 var data = {};
                 if (lesson.custom) {
                     data.score = gradeInfo.earned;
@@ -47389,13 +47457,13 @@ angular.module('mm.addons.mod_lesson')
         }
         return messages;
     };
-    self.getPagesIdsWithQuestionAttempts = function(lessonId, attempt, correct, siteId, userId) {
-        return self.getQuestionsAttempts(lessonId, attempt, correct, undefined, siteId, userId).then(function(result) {
+    self.getPagesIdsWithQuestionAttempts = function(lessonId, retake, correct, siteId, userId) {
+        return self.getQuestionsAttempts(lessonId, retake, correct, undefined, siteId, userId).then(function(result) {
             var ids = {},
-                answers = result.online.concat(result.offline);
-            angular.forEach(answers, function(answer) {
-                if (!ids[answer.pageid]) {
-                    ids[answer.pageid] = true;
+                attempts = result.online.concat(result.offline);
+            angular.forEach(attempts, function(attempt) {
+                if (!ids[attempt.pageid]) {
+                    ids[attempt.pageid] = true;
                 }
             });
             return Object.keys(ids);
@@ -47407,8 +47475,8 @@ angular.module('mm.addons.mod_lesson')
             promise = $q.when();
         if (!accessInfo.canmanage) {
             if (page.qtype == self.LESSON_PAGE_BRANCHTABLE && lesson.minquestions) {
-                var ntries = accessInfo.attemptscount;
-                promise = self.lessonGrade(lesson, ntries, password, review, undefined, siteId).then(function(gradeInfo) {
+                var retake = accessInfo.attemptscount;
+                promise = self.lessonGrade(lesson, retake, password, review, undefined, siteId).then(function(gradeInfo) {
                     if (gradeInfo.attempts) {
                         if (gradeInfo.nquestions < lesson.minquestions) {
                             data = {
@@ -47447,17 +47515,17 @@ angular.module('mm.addons.mod_lesson')
             return messages;
         });
     };
-    self.getQuestionsAttempts = function(lessonId, attempt, correct, pageId, siteId, userId) {
+    self.getQuestionsAttempts = function(lessonId, retake, correct, pageId, siteId, userId) {
         var promises = [],
             result = {
                 online: [],
                 offline: []
             };
-        promises.push(self.getQuestionsAttemptsOnline(lessonId, attempt, correct, pageId, false, false, siteId, userId)
+        promises.push(self.getQuestionsAttemptsOnline(lessonId, retake, correct, pageId, false, false, siteId, userId)
                 .then(function(attempts) {
             result.online = attempts;
         }));
-        promises.push($mmaModLessonOffline.getQuestionsAttempts(lessonId, attempt, correct, pageId, siteId).catch(function() {
+        promises.push($mmaModLessonOffline.getQuestionsAttempts(lessonId, retake, correct, pageId, siteId).catch(function() {
             return [];
         }).then(function(attempts) {
             result.offline = attempts;
@@ -47466,22 +47534,22 @@ angular.module('mm.addons.mod_lesson')
             return result;
         });
     };
-    function getQuestionsAttemptsCacheKey(lessonId, attempt, userId) {
-        return getQuestionsAttemptsCommonCacheKey(lessonId) + ':' + userId + ':' + attempt;
+    function getQuestionsAttemptsCacheKey(lessonId, retake, userId) {
+        return getQuestionsAttemptsCommonCacheKey(lessonId) + ':' + userId + ':' + retake;
     }
     function getQuestionsAttemptsCommonCacheKey(lessonId) {
         return 'mmaModLesson:questionsAttempts:' + lessonId;
     }
-    self.getQuestionsAttemptsOnline = function(lessonId, attempt, correct, pageId, forceCache, ignoreCache, siteId, userId) {
+    self.getQuestionsAttemptsOnline = function(lessonId, retake, correct, pageId, forceCache, ignoreCache, siteId, userId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             userId = userId || site.getUserId();
             var params = {
                     lessonid: lessonId,
-                    attempt: attempt,
+                    attempt: retake,
                     userid: userId
                 },
                 preSets = {
-                    cacheKey: getQuestionsAttemptsCacheKey(lessonId, attempt, userId)
+                    cacheKey: getQuestionsAttemptsCacheKey(lessonId, retake, userId)
                 };
             if (forceCache) {
                 preSets.omitExpires = true;
@@ -47503,6 +47571,33 @@ angular.module('mm.addons.mod_lesson')
                     });
                 }
                 return response.attempts;
+            });
+        });
+    };
+    function getRetakesOverviewCacheKey(lessonId, groupId) {
+        return getRetakesOverviewCommonCacheKey(lessonId) + ':' + groupId;
+    }
+    function getRetakesOverviewCommonCacheKey(lessonId) {
+        return 'mmaModLesson:retakesOverview:' + lessonId;
+    }
+    self.getRetakesOverview = function(lessonId, groupId, forceCache, ignoreCache, siteId) {
+        groupId = groupId || 0;
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            var params = {
+                    lessonid: lessonId,
+                    groupid: groupId
+                },
+                preSets = {
+                    cacheKey: getRetakesOverviewCacheKey(lessonId, groupId)
+                };
+            if (forceCache) {
+                preSets.omitExpires = true;
+            } else if (ignoreCache) {
+                preSets.getFromCache = 0;
+                preSets.emergencyCache = 0;
+            }
+            return site.read('mod_lesson_get_attempts_overview', params, preSets).then(function(response) {
+                return response.data;
             });
         });
     };
@@ -47553,25 +47648,25 @@ angular.module('mm.addons.mod_lesson')
             });
         });
     };
-    function getUserAttemptCacheKey(lessonId, userId, attempt) {
-        return getUserAttemptUserCacheKey(lessonId, userId) + ':' + attempt;
+    function getUserRetakeCacheKey(lessonId, userId, retake) {
+        return getUserRetakeUserCacheKey(lessonId, userId) + ':' + retake;
     }
-    function getUserAttemptUserCacheKey(lessonId, userId) {
-        return getUserAttemptLessonCacheKey(lessonId) + ':' + userId;
+    function getUserRetakeUserCacheKey(lessonId, userId) {
+        return getUserRetakeLessonCacheKey(lessonId) + ':' + userId;
     }
-    function getUserAttemptLessonCacheKey(lessonId) {
-        return 'mmaModLesson:userAttempt:' + lessonId;
+    function getUserRetakeLessonCacheKey(lessonId) {
+        return 'mmaModLesson:userRetake:' + lessonId;
     }
-    self.getUserAttempt = function(lessonId, attempt, userId, forceCache, ignoreCache, siteId) {
+    self.getUserRetake = function(lessonId, retake, userId, forceCache, ignoreCache, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             userId = userId || site.getUserId();
             var params = {
                     lessonid: lessonId,
                     userid: userId,
-                    lessonattempt: attempt
+                    lessonattempt: retake
                 },
                 preSets = {
-                    cacheKey: getUserAttemptCacheKey(lessonId, userId, attempt)
+                    cacheKey: getUserRetakeCacheKey(lessonId, userId, retake)
                 };
             if (forceCache) {
                 preSets.omitExpires = true;
@@ -47610,24 +47705,14 @@ angular.module('mm.addons.mod_lesson')
             return site.invalidateWsCacheForKey(getAccessInformationCacheKey(lessonId));
         });
     };
-    self.invalidateAttemptsOverview = function(lessonId, siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.invalidateWsCacheForKeyStartingWith(getAttemptsOverviewCommonCacheKey(lessonId));
-        });
-    };
-    self.invalidateAttemptsOverviewForGroup = function(lessonId, groupId, siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.invalidateWsCacheForKey(getPageDataCacheKey(lessonId, groupId));
-        });
-    };
     self.invalidateContentPagesViewed = function(lessonId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             return site.invalidateWsCacheForKeyStartingWith(getContentPagesViewedCommonCacheKey(lessonId));
         });
     };
-    self.invalidateContentPagesViewedForAttempt = function(lessonId, attempt, siteId) {
+    self.invalidateContentPagesViewedForRetake = function(lessonId, retake, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.invalidateWsCacheForKey(getContentPagesViewedCacheKey(lessonId, attempt));
+            return site.invalidateWsCacheForKey(getContentPagesViewedCacheKey(lessonId, retake));
         });
     };
     self.invalidateLessonData = function(courseId, siteId) {
@@ -47665,10 +47750,20 @@ angular.module('mm.addons.mod_lesson')
             return site.invalidateWsCacheForKeyStartingWith(getQuestionsAttemptsCommonCacheKey(lessonId));
         });
     };
-    self.invalidateQuestionsAttemptsForAttempt = function(lessonId, attempt, siteId, userId) {
+    self.invalidateQuestionsAttemptsForRetake = function(lessonId, retake, siteId, userId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             userId = userId || site.getUserId();
-            return site.invalidateWsCacheForKey(getQuestionsAttemptsCacheKey(lessonId, attempt, userId));
+            return site.invalidateWsCacheForKey(getQuestionsAttemptsCacheKey(lessonId, retake, userId));
+        });
+    };
+    self.invalidateRetakesOverview = function(lessonId, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.invalidateWsCacheForKeyStartingWith(getRetakesOverviewCommonCacheKey(lessonId));
+        });
+    };
+    self.invalidateRetakesOverviewForGroup = function(lessonId, groupId, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.invalidateWsCacheForKey(getRetakesOverviewCacheKey(lessonId, groupId));
         });
     };
     self.invalidateTimers = function(lessonId, siteId) {
@@ -47682,21 +47777,21 @@ angular.module('mm.addons.mod_lesson')
             return site.invalidateWsCacheForKey(getTimersCacheKey(lessonId, userId));
         });
     };
-    self.invalidateUserAttemptsForLesson = function(lessonId, siteId) {
+    self.invalidateUserRetakesForLesson = function(lessonId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.invalidateWsCacheForKeyStartingWith(getUserAttemptLessonCacheKey(lessonId));
+            return site.invalidateWsCacheForKeyStartingWith(getUserRetakeLessonCacheKey(lessonId));
         });
     };
-    self.invalidateUserAttemptsForUser = function(lessonId, userId, siteId) {
+    self.invalidateUserRetakesForUser = function(lessonId, userId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             userId = userId || site.getUserId();
-            return site.invalidateWsCacheForKeyStartingWith(getUserAttemptUserCacheKey(lessonId, userId));
+            return site.invalidateWsCacheForKeyStartingWith(getUserRetakeUserCacheKey(lessonId, userId));
         });
     };
-    self.invalidateUserAttempt = function(lessonId, attempt, userId, siteId) {
+    self.invalidateUserRetake = function(lessonId, retake, userId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             userId = userId || site.getUserId();
-            return site.invalidateWsCacheForKey(getUserAttemptCacheKey(lessonId, userId, attempt));
+            return site.invalidateWsCacheForKey(getUserRetakeCacheKey(lessonId, userId, retake));
         });
     };
     function isAnswerCorrect(lesson, pageId, answer, pageIndex) {
@@ -47728,7 +47823,7 @@ angular.module('mm.addons.mod_lesson')
     self.isQuestionPage = function(type) {
         return type == mmaModLessonTypeQuestion;
     };
-    self.launchAttempt = function(id, password, pageId, review, siteId) {
+    self.launchRetake = function(id, password, pageId, review, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
             var params = {
                 lessonid: id,
@@ -47759,7 +47854,7 @@ angular.module('mm.addons.mod_lesson')
         }
         return false;
     };
-    self.lessonGrade = function(lesson, retry, password, review, pageIndex, siteId, userId) {
+    self.lessonGrade = function(lesson, retake, password, review, pageIndex, siteId, userId) {
         var nViewed      = 0,
             nManual      = 0,
             manualPoints = 0,
@@ -47767,7 +47862,7 @@ angular.module('mm.addons.mod_lesson')
             nQuestions   = 0,
             total        = 0,
             earned       = 0;
-        return self.getQuestionsAttempts(lesson.id, retry, false, undefined, siteId, userId).then(function(attempts) {
+        return self.getQuestionsAttempts(lesson.id, retake, false, undefined, siteId, userId).then(function(attempts) {
             attempts = attempts.online.concat(attempts.offline);
             if (!attempts.length) {
                 return;
@@ -47918,10 +48013,10 @@ angular.module('mm.addons.mod_lesson')
     };
     function recordAttempt(lesson, courseId, pageData, data, review, accessInfo, jumps, pageIndex, siteId) {
         var result = checkAnswer(lesson, pageData, data, jumps, pageIndex),
-            nretakes = accessInfo.attemptscount;
+            retake = accessInfo.attemptscount;
         if (result.inmediatejump) {
             if (pageData.page.qtype == self.LESSON_PAGE_BRANCHTABLE) {
-                return $mmaModLessonOffline.processPage(lesson.id, courseId, nretakes, pageData.page, data,
+                return $mmaModLessonOffline.processPage(lesson.id, courseId, retake, pageData.page, data,
                             result.newpageid, result.answerid, false, result.userresponse, siteId).then(function() {
                     return result;
                 });
@@ -47930,7 +48025,7 @@ angular.module('mm.addons.mod_lesson')
         }
         var promise = $q.when(),
             stop = false,
-            nattempts;
+            nAttempts;
         result.attemptsremaining  = 0;
         result.maxattemptsreached = false;
         if (result.noanswer) {
@@ -47938,10 +48033,10 @@ angular.module('mm.addons.mod_lesson')
             result.feedback = $translate.instant('mma.mod_lesson.noanswer');
         } else {
             if (!accessInfo.canmanage) {
-                promise = self.getQuestionsAttempts(lesson.id, nretakes, false, pageData.page.id, siteId).then(function(attempts) {
+                promise = self.getQuestionsAttempts(lesson.id, retake, false, pageData.page.id, siteId).then(function(attempts) {
                     var subPromise;
-                    nattempts = attempts.online.length + attempts.offline.length;
-                    if (nattempts >= lesson.maxattempts) {
+                    nAttempts = attempts.online.length + attempts.offline.length;
+                    if (nAttempts >= lesson.maxattempts) {
                         result.maxattemptsreached = true;
                         result.feedback = $translate.instant('mma.mod_lesson.maximumnumberofattemptsreached');
                         result.newpageid = self.LESSON_NEXTPAGE;
@@ -47949,21 +48044,21 @@ angular.module('mm.addons.mod_lesson')
                         return;
                     }
                     if (!review) {
-                        if (lesson.retake || (!lesson.retake && !nretakes)) {
+                        if (lesson.retake || (!lesson.retake && !retake)) {
                             var newPageId = getNewPageId(pageData.page.id, result.newpageid, jumps);
-                            subPromise = $mmaModLessonOffline.processPage(lesson.id, courseId, nretakes, pageData.page, data,
+                            subPromise = $mmaModLessonOffline.processPage(lesson.id, courseId, retake, pageData.page, data,
                                         newPageId, result.answerid, result.correctanswer, result.userresponse, siteId);
-                            nattempts++;
+                            nAttempts++;
                         }
                     }
                     if (!result.correctanswer && !result.newpageid) {
-                        if (nattempts >= lesson.maxattempts) {
+                        if (nAttempts >= lesson.maxattempts) {
                             if (lesson.maxattempts > 1) { 
                                 result.maxattemptsreached = true;
                             }
                             result.newpageid =  self.LESSON_NEXTPAGE;
                         } else if (lesson.maxattempts > 1) { 
-                            result.attemptsremaining = lesson.maxattempts - nattempts;
+                            result.attemptsremaining = lesson.maxattempts - nAttempts;
                         }
                     }
                     return subPromise;
@@ -47988,16 +48083,16 @@ angular.module('mm.addons.mod_lesson')
                 }
                 if (result.response) {
                     if (lesson.review && !result.correctanswer && !result.isessayquestion) {
-                        if (typeof nattempts == 'undefined') {
-                            subPromise = self.getQuestionsAttempts(lesson.id, nretakes, false, pageData.page.id, siteId)
+                        if (typeof nAttempts == 'undefined') {
+                            subPromise = self.getQuestionsAttempts(lesson.id, retake, false, pageData.page.id, siteId)
                                     .then(function(result) {
-                                nattempts = result.online.length + result.offline.length;
+                                nAttempts = result.online.length + result.offline.length;
                             });
                         } else {
                             subPromise = $q.when();
                         }
                         subPromise.then(function() {
-                            var messageId = nattempts == 1 ? 'firstwrong' : 'secondpluswrong';
+                            var messageId = nAttempts == 1 ? 'firstwrong' : 'secondpluswrong';
                             result.feedback = '<div class="box feedback">' +
                                     $translate.instant('mma.mod_lesson.' + messageId) + '</div>';
                         });
@@ -48062,16 +48157,16 @@ angular.module('mm.addons.mod_lesson')
 }]);
 
 angular.module('mm.addons.mod_lesson')
-.constant('mmaModLessonAttemptsStore', 'mma_mod_lesson_attempts')
-.constant('mmaModLessonAnswersStore', 'mma_mod_lesson_answers')
-.config(["$mmSitesFactoryProvider", "mmaModLessonAttemptsStore", "mmaModLessonAnswersStore", function($mmSitesFactoryProvider, mmaModLessonAttemptsStore, mmaModLessonAnswersStore) {
+.constant('mmaModLessonRetakesStore', 'mma_mod_lesson_retakes')
+.constant('mmaModLessonPageAttemptsStore', 'mma_mod_lesson_page_attempts')
+.config(["$mmSitesFactoryProvider", "mmaModLessonRetakesStore", "mmaModLessonPageAttemptsStore", function($mmSitesFactoryProvider, mmaModLessonRetakesStore, mmaModLessonPageAttemptsStore) {
     var stores = [
         {
-            name: mmaModLessonAttemptsStore,
+            name: mmaModLessonRetakesStore,
             keyPath: 'lessonid', 
             indexes: [
                 {
-                    name: 'attempt'
+                    name: 'retake'
                 },
                 {
                     name: 'lessonid'
@@ -48088,8 +48183,8 @@ angular.module('mm.addons.mod_lesson')
             ]
         },
         {
-            name: mmaModLessonAnswersStore,
-            keyPath: ['lessonid', 'attempt', 'pageid', 'timemodified'], 
+            name: mmaModLessonPageAttemptsStore,
+            keyPath: ['lessonid', 'retake', 'pageid', 'timemodified'], 
             indexes: [
                 {
                     name: 'lessonid'
@@ -48098,7 +48193,7 @@ angular.module('mm.addons.mod_lesson')
                     name: 'courseid'
                 },
                 {
-                    name: 'attempt'
+                    name: 'retake'
                 },
                 {
                     name: 'pageid'
@@ -48114,64 +48209,57 @@ angular.module('mm.addons.mod_lesson')
                     keyPath: ['lessonid', 'pageid']
                 },
                 {
-                    name: 'lessonAndAttempt',
-                    keyPath: ['lessonid', 'attempt']
+                    name: 'lessonAndRetake',
+                    keyPath: ['lessonid', 'retake']
                 },
                 {
-                    name: 'lessonAndAttemptAndType',
-                    keyPath: ['lessonid', 'attempt', 'type']
+                    name: 'lessonAndRetakeAndType',
+                    keyPath: ['lessonid', 'retake', 'type']
                 },
                 {
-                    name: 'lessonAndAttemptAndPage',
-                    keyPath: ['lessonid', 'attempt', 'pageid']
+                    name: 'lessonAndRetakeAndPage',
+                    keyPath: ['lessonid', 'retake', 'pageid']
                 }
             ]
         }
     ];
     $mmSitesFactoryProvider.registerStores(stores);
 }])
-.factory('$mmaModLessonOffline', ["$log", "$mmSitesManager", "$mmUtil", "$q", "mmaModLessonAttemptsStore", "mmaModLessonAnswersStore", "$mmSite", "mmaModLessonTypeQuestion", function($log, $mmSitesManager, $mmUtil, $q, mmaModLessonAttemptsStore, mmaModLessonAnswersStore,
-            $mmSite, mmaModLessonTypeQuestion) {
+.factory('$mmaModLessonOffline', ["$log", "$mmSitesManager", "$mmUtil", "$q", "$mmSite", "mmaModLessonRetakesStore", "mmaModLessonPageAttemptsStore", "mmaModLessonTypeQuestion", function($log, $mmSitesManager, $mmUtil, $q, $mmSite, mmaModLessonRetakesStore,
+             mmaModLessonPageAttemptsStore, mmaModLessonTypeQuestion) {
     $log = $log.getInstance('$mmaModLessonOffline');
     var self = {};
-    self.deleteAnswer = function(lessonId, attempt, pageId, timemodified, siteId) {
+    self.deleteAttempt = function(lessonId, retake, pageId, timemodified, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().remove(mmaModLessonAnswersStore, [lessonId, attempt, pageId, timemodified]);
+            return site.getDb().remove(mmaModLessonPageAttemptsStore, [lessonId, retake, pageId, timemodified]);
         });
     };
-    self.deleteAttempt = function(lessonId, siteId) {
+    self.deleteRetake = function(lessonId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().remove(mmaModLessonAttemptsStore, lessonId);
+            return site.getDb().remove(mmaModLessonRetakesStore, lessonId);
         });
     };
-    self.deleteAttemptAnswersForPage = function(lessonId, attempt, pageId, siteId) {
+    self.deleteRetakeAttemptsForPage = function(lessonId, retake, pageId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return self.getAttemptAnswersForPage(lessonId, attempt, pageId, siteId).then(function(answers) {
+            return self.getRetakeAttemptsForPage(lessonId, retake, pageId, siteId).then(function(attempts) {
                 var promises = [];
-                angular.forEach(answers, function(answer) {
-                    promises.push(site.getDb().remove(mmaModLessonAnswersStore, [lessonId, attempt, pageId, answer.timemodified]));
+                angular.forEach(attempts, function(attempt) {
+                    var timeMod = attempt.timemodified;
+                    promises.push(site.getDb().remove(mmaModLessonPageAttemptsStore, [lessonId, retake, pageId, timeMod]));
                 });
                 return $q.all(promises);
             });
         });
     };
-    self.finishAttempt = function(lessonId, courseId, attempt, finished, outOfTime, siteId) {
+    self.finishRetake = function(lessonId, courseId, retake, finished, outOfTime, siteId) {
         siteId = siteId || $mmSite.getId();
-        return getAttemptWithFallback(lessonId, courseId, attempt, siteId).then(function(entry) {
+        return getRetakeWithFallback(lessonId, courseId, retake, siteId).then(function(entry) {
             return $mmSitesManager.getSite(siteId).then(function(site) {
                 entry.finished = !!finished;
                 entry.outoftime = !!outOfTime;
                 entry.timemodified = $mmUtil.timestamp();
-                return site.getDb().insert(mmaModLessonAttemptsStore, entry);
+                return site.getDb().insert(mmaModLessonRetakesStore, entry);
             });
-        });
-    };
-    self.getAllAnswers = function(siteId) {
-        return $mmSitesManager.getSiteDb(siteId).then(function(db) {
-            if (!db) {
-                return $q.reject();
-            }
-            return db.getAll(mmaModLessonAnswersStore);
         });
     };
     self.getAllAttempts = function(siteId) {
@@ -48179,14 +48267,14 @@ angular.module('mm.addons.mod_lesson')
             if (!db) {
                 return $q.reject();
             }
-            return db.getAll(mmaModLessonAttemptsStore);
+            return db.getAll(mmaModLessonPageAttemptsStore);
         });
     };
     self.getAllLessonsWithData = function(siteId) {
         var promises = [],
             lessons = {};
         promises.push(getLessons(self.getAllAttempts(siteId)));
-        promises.push(getLessons(self.getAllAnswers(siteId)));
+        promises.push(getLessons(self.getAllRetakes(siteId)));
         return $q.all(promises).then(function() {
             return lessons;
         });
@@ -48204,88 +48292,87 @@ angular.module('mm.addons.mod_lesson')
             });
         }
     };
-    self.getAttempt = function(lessonId, siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().get(mmaModLessonAttemptsStore, lessonId);
-        });
-    };
-    self.getAttemptAnswers = function(lessonId, attempt, siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().whereEqual(mmaModLessonAnswersStore, 'lessonAndAttempt', [lessonId, attempt]);
-        });
-    };
-    self.getAttemptAnswersForPage = function(lessonId, attempt, pageId, siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().whereEqual(mmaModLessonAnswersStore, 'lessonAndAttemptAndPage', [lessonId, attempt, pageId]);
-        });
-    };
-    self.getAttemptAnswersForType = function(lessonId, attempt, type, siteId) {
-        return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().whereEqual(mmaModLessonAnswersStore, 'lessonAndAttemptAndType', [lessonId, attempt, type]);
-        });
-    };
-    function getAttemptWithFallback(lessonId, courseId, attempt, siteId) {
-        return self.getAttempt(lessonId, siteId).then(function(attemptData) {
-            if (attemptData.attempt != attempt) {
+    self.getAllRetakes = function(siteId) {
+        return $mmSitesManager.getSiteDb(siteId).then(function(db) {
+            if (!db) {
                 return $q.reject();
             }
-            return attemptData;
-        }).catch(function() {
-            return {
-                lessonid: lessonId,
-                attempt: attempt,
-                courseid: courseId,
-                finished: false
-            };
+            return db.getAll(mmaModLessonRetakesStore);
         });
-    }
-    self.getLastQuestionPageAnswer = function(lessonId, attempt, siteId) {
+    };
+    self.getLastQuestionPageAttempt = function(lessonId, retake, siteId) {
         siteId = siteId || $mmSite.getId();
-        return getAttemptWithFallback(lessonId, 0, attempt, siteId).then(function(attemptData) {
-            if (!attemptData.lastquestionpage) {
+        return getRetakeWithFallback(lessonId, 0, retake, siteId).then(function(retakeData) {
+            if (!retakeData.lastquestionpage) {
                 return;
             }
-            return self.getAttemptAnswersForPage(lessonId, attempt, attemptData.lastquestionpage, siteId).then(function(answers) {
-                return answers.reduce(function(a, b) {
+            return self.getRetakeAttemptsForPage(lessonId, retake, retakeData.lastquestionpage, siteId).then(function(attempts) {
+                return attempts.reduce(function(a, b) {
                     return a.timemodified > b.timemodified ? a : b;
                 });
             });
         }).catch(function() {
         });
     };
-    self.getLessonAnswers = function(lessonId, siteId) {
+    self.getLessonAttempts = function(lessonId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().whereEqual(mmaModLessonAnswersStore, 'lessonid', lessonId);
+            return site.getDb().whereEqual(mmaModLessonPageAttemptsStore, 'lessonid', lessonId);
         });
     };
-    self.getQuestionsAttempts = function(lessonId, attempt, correct, pageId, siteId) {
+    self.getQuestionsAttempts = function(lessonId, retake, correct, pageId, siteId) {
         var promise;
         if (pageId) {
-            promise = self.getAttemptAnswersForPage(lessonId, attempt, pageId, siteId);
+            promise = self.getRetakeAttemptsForPage(lessonId, retake, pageId, siteId);
         } else {
-            promise = self.getAttemptAnswersForType(lessonId, attempt, mmaModLessonTypeQuestion, siteId);
+            promise = self.getRetakeAttemptsForType(lessonId, retake, mmaModLessonTypeQuestion, siteId);
         }
-        return promise.then(function(answers) {
+        return promise.then(function(attempts) {
             if (correct) {
-                return answers.filter(function(answer) {
-                    return !!answer.correct;
+                return attempts.filter(function(attempt) {
+                    return !!attempt.correct;
                 });
             }
-            return answers;
+            return attempts;
         });
     };
-    self.hasAttemptAnswers = function(lessonId, attempt, siteId) {
+    self.getRetake = function(lessonId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().whereEqual(mmaModLessonAnswersStore, 'lessonAndAttempt', [lessonId, attempt]).then(function(list) {
-                return !!list.length;
-            });
-        }).catch(function() {
-            return false;
+            return site.getDb().get(mmaModLessonRetakesStore, lessonId);
         });
     };
-    self.hasFinishedAttempt = function(lessonId, siteId) {
-        return self.getAttempt(lessonId, siteId).then(function(attempt) {
-            return !!attempt.finished;
+    self.getRetakeAttempts = function(lessonId, retake, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.getDb().whereEqual(mmaModLessonPageAttemptsStore, 'lessonAndRetake', [lessonId, retake]);
+        });
+    };
+    self.getRetakeAttemptsForPage = function(lessonId, retake, pageId, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.getDb().whereEqual(mmaModLessonPageAttemptsStore, 'lessonAndRetakeAndPage', [lessonId, retake, pageId]);
+        });
+    };
+    self.getRetakeAttemptsForType = function(lessonId, retake, type, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.getDb().whereEqual(mmaModLessonPageAttemptsStore, 'lessonAndRetakeAndType', [lessonId, retake, type]);
+        });
+    };
+    function getRetakeWithFallback(lessonId, courseId, retake, siteId) {
+        return self.getRetake(lessonId, siteId).then(function(retakeData) {
+            if (retakeData.retake != retake) {
+                return $q.reject();
+            }
+            return retakeData;
+        }).catch(function() {
+            return {
+                lessonid: lessonId,
+                retake: retake,
+                courseid: courseId,
+                finished: false
+            };
+        });
+    }
+    self.hasFinishedRetake = function(lessonId, siteId) {
+        return self.getRetake(lessonId, siteId).then(function(retake) {
+            return !!retake.finished;
         }).catch(function() {
             return false;
         });
@@ -48293,24 +48380,33 @@ angular.module('mm.addons.mod_lesson')
     self.hasOfflineData = function(lessonId, siteId) {
         var promises = [],
             hasData = false;
-        promises.push(self.getAttempt(lessonId, siteId).then(function() {
+        promises.push(self.getRetake(lessonId, siteId).then(function() {
             hasData = true;
         }).catch(function() {
         }));
-        promises.push(self.getLessonAnswers(lessonId, siteId).then(function(answers) {
-            hasData = hasData || !!answers.length;
+        promises.push(self.getLessonAttempts(lessonId, siteId).then(function(attempts) {
+            hasData = hasData || !!attempts.length;
         }).catch(function() {
         }));
         return $q.all(promises).then(function() {
             return hasData;
         });
     };
-    self.processPage = function(lessonId, courseId, attempt, page, data, newPageId, answerId, correct, userAnswer, siteId) {
+    self.hasRetakeAttempts = function(lessonId, retake, siteId) {
+        return $mmSitesManager.getSite(siteId).then(function(site) {
+            return site.getDb().whereEqual(mmaModLessonPageAttemptsStore, 'lessonAndRetake', [lessonId, retake]);
+        }).then(function(list) {
+            return !!list.length;
+        }).catch(function() {
+            return false;
+        });
+    };
+    self.processPage = function(lessonId, courseId, retake, page, data, newPageId, answerId, correct, userAnswer, siteId) {
         siteId = siteId || $mmSite.getId();
         return $mmSitesManager.getSite(siteId).then(function(site) {
             var entry = {
                 lessonid: lessonId,
-                attempt: attempt,
+                retake: retake,
                 pageid: page.id,
                 courseid: courseId,
                 data: data,
@@ -48321,20 +48417,20 @@ angular.module('mm.addons.mod_lesson')
                 userAnswer: userAnswer,
                 timemodified: $mmUtil.timestamp()
             };
-            return site.getDb().insert(mmaModLessonAnswersStore, entry);
+            return site.getDb().insert(mmaModLessonPageAttemptsStore, entry);
         }).then(function() {
             if (page.type == mmaModLessonTypeQuestion) {
-                return self.setLastQuestionPageAnswered(lessonId, courseId, attempt, page.id, siteId);
+                return self.setLastQuestionPageAttempted(lessonId, courseId, retake, page.id, siteId);
             }
         });
     };
-    self.setLastQuestionPageAnswered = function(lessonId, courseId, attempt, lastPage, siteId) {
+    self.setLastQuestionPageAttempted = function(lessonId, courseId, retake, lastPage, siteId) {
         siteId = siteId || $mmSite.getId();
-        return getAttemptWithFallback(lessonId, courseId, attempt, siteId).then(function(entry) {
+        return getRetakeWithFallback(lessonId, courseId, retake, siteId).then(function(entry) {
             return $mmSitesManager.getSite(siteId).then(function(site) {
                 entry.lastquestionpage = lastPage;
                 entry.timemodified = $mmUtil.timestamp();
-                return site.getDb().insert(mmaModLessonAttemptsStore, entry);
+                return site.getDb().insert(mmaModLessonRetakesStore, entry);
             });
         });
     };
@@ -48342,15 +48438,15 @@ angular.module('mm.addons.mod_lesson')
 }]);
 
 angular.module('mm.addons.mod_lesson')
-.constant('mmaModLessonAttemptsFinishedSyncStore', 'mma_mod_lesson_attempts_finished_sync')
-.config(["$mmSitesFactoryProvider", "mmaModLessonAttemptsFinishedSyncStore", function($mmSitesFactoryProvider, mmaModLessonAttemptsFinishedSyncStore) {
+.constant('mmaModLessonRetakesFinishedSyncStore', 'mma_mod_lesson_retakes_finished_sync')
+.config(["$mmSitesFactoryProvider", "mmaModLessonRetakesFinishedSyncStore", function($mmSitesFactoryProvider, mmaModLessonRetakesFinishedSyncStore) {
     var stores = [
         {
-            name: mmaModLessonAttemptsFinishedSyncStore,
+            name: mmaModLessonRetakesFinishedSyncStore,
             keyPath: 'lessonid', 
             indexes: [
                 {
-                    name: 'attempt'
+                    name: 'retake'
                 },
                 {
                     name: 'timefinished'
@@ -48360,42 +48456,42 @@ angular.module('mm.addons.mod_lesson')
     ];
     $mmSitesFactoryProvider.registerStores(stores);
 }])
-.factory('$mmaModLessonSync', ["$log", "$mmaModLesson", "$mmSite", "$mmSitesManager", "$q", "$mmaModLessonOffline", "$mmUtil", "$mmLang", "$mmApp", "$mmEvents", "$translate", "mmaModLessonSyncTime", "$mmSync", "mmaModLessonAutomSyncedEvent", "mmaModLessonComponent", "$mmaModLessonPrefetchHandler", "$mmCourse", "$mmSyncBlock", "mmaModLessonAttemptsFinishedSyncStore", function($log, $mmaModLesson, $mmSite, $mmSitesManager, $q, $mmaModLessonOffline, $mmUtil,
+.factory('$mmaModLessonSync', ["$log", "$mmaModLesson", "$mmSite", "$mmSitesManager", "$q", "$mmaModLessonOffline", "$mmUtil", "$mmLang", "$mmApp", "$mmEvents", "$translate", "mmaModLessonSyncTime", "$mmSync", "mmaModLessonAutomSyncedEvent", "mmaModLessonComponent", "$mmaModLessonPrefetchHandler", "$mmCourse", "$mmSyncBlock", "mmaModLessonRetakesFinishedSyncStore", function($log, $mmaModLesson, $mmSite, $mmSitesManager, $q, $mmaModLessonOffline, $mmUtil,
             $mmLang, $mmApp, $mmEvents, $translate, mmaModLessonSyncTime, $mmSync, mmaModLessonAutomSyncedEvent,
-            mmaModLessonComponent, $mmaModLessonPrefetchHandler, $mmCourse, $mmSyncBlock, mmaModLessonAttemptsFinishedSyncStore) {
+            mmaModLessonComponent, $mmaModLessonPrefetchHandler, $mmCourse, $mmSyncBlock, mmaModLessonRetakesFinishedSyncStore) {
     $log = $log.getInstance('$mmaModLessonSync');
     var self = $mmSync.createChild(mmaModLessonComponent, mmaModLessonSyncTime);
-    self.deleteAttemptFinishedInSync = function(lessonId, siteId) {
+    self.deleteRetakeFinishedInSync = function(lessonId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().remove(mmaModLessonAttemptsFinishedSyncStore, lessonId);
+            return site.getDb().remove(mmaModLessonRetakesFinishedSyncStore, lessonId);
         }).catch(function() {
         });
     };
-    self.getAttemptFinishedInSync = function(lessonId, siteId) {
+    self.getRetakeFinishedInSync = function(lessonId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().get(mmaModLessonAttemptsFinishedSyncStore, lessonId);
+            return site.getDb().get(mmaModLessonRetakesFinishedSyncStore, lessonId);
         }).catch(function() {
         });
     };
-    self.hasDataToSync = function(lessonId, attempt, siteId) {
+    self.hasDataToSync = function(lessonId, retake, siteId) {
         var promises = [],
             hasDataToSync = false;
-        promises.push($mmaModLessonOffline.hasAttemptAnswers(lessonId, attempt, siteId).then(function(hasAnswers) {
-            hasDataToSync = hasDataToSync || hasAnswers;
+        promises.push($mmaModLessonOffline.hasRetakeAttempts(lessonId, retake, siteId).then(function(hasAttempts) {
+            hasDataToSync = hasDataToSync || hasAttempts;
         }).catch(function() {
         }));
-        promises.push($mmaModLessonOffline.hasFinishedAttempt(lessonId, siteId).then(function(hasFinished) {
+        promises.push($mmaModLessonOffline.hasFinishedRetake(lessonId, siteId).then(function(hasFinished) {
             hasDataToSync = hasDataToSync || hasFinished;
         }));
         return $q.all(promises).then(function() {
             return hasDataToSync;
         });
     };
-    self.setAttemptFinishedInSync = function(lessonId, attempt, pageId, siteId) {
+    self.setRetakeFinishedInSync = function(lessonId, retake, pageId, siteId) {
         return $mmSitesManager.getSite(siteId).then(function(site) {
-            return site.getDb().insert(mmaModLessonAttemptsFinishedSyncStore, {
+            return site.getDb().insert(mmaModLessonRetakesFinishedSyncStore, {
                 lessonid: lessonId,
-                attempt: parseInt(attempt, 10),
+                retake: parseInt(retake, 10),
                 pageid: parseInt(pageId, 10),
                 timefinished: $mmUtil.timestamp()
             });
@@ -48463,64 +48559,64 @@ angular.module('mm.addons.mod_lesson')
             return $mmLang.translateAndReject('mm.core.errorsyncblocked', {$a: moduleName});
         }
         $log.debug('Try to sync lesson ' + lessonId + ' in site ' + siteId);
-        syncPromise = $mmaModLessonOffline.getLessonAnswers(lessonId, siteId).then(function(answers) {
-            if (!answers.length) {
+        syncPromise = $mmaModLessonOffline.getLessonAttempts(lessonId, siteId).then(function(attempts) {
+            if (!attempts.length) {
                 return;
             } else if (!$mmApp.isOnline()) {
                 return $q.reject();
             }
-            courseId = answers[0].courseid;
+            courseId = attempts[0].courseid;
             return $mmaModLesson.getLessonById(courseId, lessonId).then(function(lessonData) {
                 lesson = lessonData;
                 return $mmaModLessonPrefetchHandler.gatherLessonPassword(lessonId, false, true, askPassword, siteId);
             }).then(function(data) {
-                var answersLength = answers.length;
+                var attemptsLength = attempts.length;
                 accessInfo = data.accessinfo;
                 password = data.password;
                 lesson = data.lesson || lesson;
                 var promises = [];
-                answers = answers.filter(function(answer) {
-                    if (answer.attempt != accessInfo.attemptscount) {
-                        promises.push($mmaModLessonOffline.deleteAnswer(lesson.id, answer.attempt, answer.pageid,
-                                answer.timemodified, siteId).catch(function() {
+                attempts = attempts.filter(function(attempt) {
+                    if (attempt.retake != accessInfo.attemptscount) {
+                        promises.push($mmaModLessonOffline.deleteAttempt(lesson.id, attempt.retake, attempt.pageid,
+                                attempt.timemodified, siteId).catch(function() {
                         }));
                         return false;
                     }
                     return true;
                 });
-                if (answers.length != answersLength) {
+                if (attempts.length != attemptsLength) {
                     result.warnings.push($translate.instant('mm.core.warningofflinedatadeleted', {
                         component: $mmCourse.translateModuleName('lesson'),
                         name: lesson.name,
-                        error: $translate.instant('mma.mod_lesson.warningattemptfinished')
+                        error: $translate.instant('mma.mod_lesson.warningretakefinished')
                     }));
                 }
                 return $q.all(promises);
             }).then(function() {
-                if (!answers.length) {
+                if (!attempts.length) {
                     return;
                 }
-                answers.sort(function(a, b) {
+                attempts.sort(function(a, b) {
                     return a.timemodified - b.timemodified;
                 });
-                answers = answers.map(function(answer) {
+                attempts = attempts.map(function(attempt) {
                     return {
-                        func: sendAnswer,
-                        params: [lesson, password, answer, result, siteId],
+                        func: sendAttempt,
+                        params: [lesson, password, attempt, result, siteId],
                         blocking: true
                     };
                 });
-                return $mmUtil.executeOrderedPromises(answers);
+                return $mmUtil.executeOrderedPromises(attempts);
             });
         }).then(function() {
-            return $mmaModLessonOffline.getAttempt(lessonId, siteId).then(function(attempt) {
-                if (!attempt.finished) {
-                    return $mmaModLessonOffline.deleteAttempt(lessonId, siteId);
+            return $mmaModLessonOffline.getRetake(lessonId, siteId).then(function(retake) {
+                if (!retake.finished) {
+                    return $mmaModLessonOffline.deleteRetake(lessonId, siteId);
                 } else if (!$mmApp.isOnline()) {
                     return $q.reject();
                 }
                 var promise;
-                courseId = attempt.courseid;
+                courseId = retake.courseid;
                 if (lesson) {
                     promise = $q.when();
                 } else {
@@ -48534,31 +48630,31 @@ angular.module('mm.addons.mod_lesson')
                     });
                 }
                 return promise.then(function() {
-                    if (attempt.attempt != accessInfo.attemptscount) {
+                    if (retake.retake != accessInfo.attemptscount) {
                         if (!result.warnings.length) {
                             result.warnings.push($translate.instant('mm.core.warningofflinedatadeleted', {
                                 component: $mmCourse.translateModuleName('lesson'),
                                 name: lesson.name,
-                                error: $translate.instant('mma.mod_lesson.warningattemptfinished')
+                                error: $translate.instant('mma.mod_lesson.warningretakefinished')
                             }));
                         }
-                        return $mmaModLessonOffline.deleteAttempt(lessonId, siteId);
+                        return $mmaModLessonOffline.deleteRetake(lessonId, siteId);
                     }
-                    return $mmaModLesson.finishAttemptOnline(lessonId, password, false, false, siteId).then(function(response) {
+                    return $mmaModLesson.finishRetakeOnline(lessonId, password, false, false, siteId).then(function(response) {
                         result.updated = true;
                         if (!ignoreBlock) {
                             if (response.data && response.data.reviewlesson) {
                                 var params = $mmUtil.extractUrlParams(response.data.reviewlesson.value);
                                 if (params && params.pageid) {
-                                    self.setAttemptFinishedInSync(lessonId, attempt.attempt, params.pageid, siteId);
+                                    self.setRetakeFinishedInSync(lessonId, retake.retake, params.pageid, siteId);
                                 }
                             }
                         }
-                        return $mmaModLessonOffline.deleteAttempt(lessonId, siteId);
+                        return $mmaModLessonOffline.deleteRetake(lessonId, siteId);
                     }).catch(function(error) {
                         if (error && $mmUtil.isWebServiceError(error)) {
                             result.updated = true;
-                            return $mmaModLessonOffline.deleteAttempt(lessonId, siteId).then(function() {
+                            return $mmaModLessonOffline.deleteRetake(lessonId, siteId).then(function() {
                                 result.warnings.push($translate.instant('mm.core.warningofflinedatadeleted', {
                                     component: $mmCourse.translateModuleName('lesson'),
                                     name: lesson.name,
@@ -48584,10 +48680,10 @@ angular.module('mm.addons.mod_lesson')
                 }).then(function() {
                     return $mmaModLesson.getAccessInformation(lessonId, false, false, siteId).then(function(info) {
                         var promises = [],
-                            attempt = info.attemptscount;
-                        promises.push($mmaModLesson.getContentPagesViewedOnline(lessonId, attempt, false, false, siteId));
+                            retake = info.attemptscount;
+                        promises.push($mmaModLesson.getContentPagesViewedOnline(lessonId, retake, false, false, siteId));
                         promises.push($mmaModLesson.getQuestionsAttemptsOnline(
-                                    lessonId, attempt, false, undefined, false, false, siteId));
+                                    lessonId, retake, false, undefined, false, false, siteId));
                         return $q.all(promises);
                     }).catch(function() {
                     });
@@ -48601,14 +48697,14 @@ angular.module('mm.addons.mod_lesson')
         });
         return self.addOngoingSync(lessonId, syncPromise, siteId);
     };
-    function sendAnswer(lesson, password, answer, result, siteId) {
-        return $mmaModLesson.processPageOnline(lesson.id, answer.pageid, answer.data, password, false, siteId).then(function() {
+    function sendAttempt(lesson, password, attempt, result, siteId) {
+        return $mmaModLesson.processPageOnline(lesson.id, attempt.pageid, attempt.data, password, false, siteId).then(function() {
             result.updated = true;
-            return $mmaModLessonOffline.deleteAnswer(lesson.id, answer.attempt, answer.pageid, answer.timemodified, siteId);
+            return $mmaModLessonOffline.deleteAttempt(lesson.id, attempt.retake, attempt.pageid, attempt.timemodified, siteId);
         }).catch(function(error) {
             if (error && $mmUtil.isWebServiceError(error)) {
                 result.updated = true;
-                return $mmaModLessonOffline.deleteAnswer(lesson.id, answer.attempt, answer.pageid, answer.timemodified, siteId)
+                return $mmaModLessonOffline.deleteAttempt(lesson.id, attempt.retake, attempt.pageid, attempt.timemodified, siteId)
                         .then(function() {
                     result.warnings.push($translate.instant('mm.core.warningofflinedatadeleted', {
                         component: $mmCourse.translateModuleName('lesson'),
@@ -48625,8 +48721,8 @@ angular.module('mm.addons.mod_lesson')
 }]);
 
 angular.module('mm.addons.mod_lesson')
-.factory('$mmaModLessonPrefetchHandler', ["$mmaModLesson", "$q", "$mmPrefetchFactory", "mmaModLessonComponent", "$mmUtil", "$mmGroups", "$mmSite", "$mmFilepool", "$rootScope", "$timeout", "$ionicModal", "mmCoreDontShowError", function($mmaModLesson, $q, $mmPrefetchFactory, mmaModLessonComponent, $mmUtil, $mmGroups,
-    $mmSite, $mmFilepool, $rootScope, $timeout, $ionicModal, mmCoreDontShowError) {
+.factory('$mmaModLessonPrefetchHandler', ["$mmaModLesson", "$q", "$mmPrefetchFactory", "mmaModLessonComponent", "$mmUtil", "$mmGroups", "$mmSite", "$mmFilepool", "$rootScope", "$timeout", "$ionicModal", "mmCoreDontShowError", "$mmCourse", function($mmaModLesson, $q, $mmPrefetchFactory, mmaModLessonComponent, $mmUtil, $mmGroups,
+    $mmSite, $mmFilepool, $rootScope, $timeout, $ionicModal, mmCoreDontShowError, $mmCourse) {
     var self = $mmPrefetchFactory.createPrefetchHandler(mmaModLessonComponent, false);
     self.updatesNames = /^configuration$|^.*files$|^grades$|^gradeitems$|^pages$|^answers$|^questionattempts$|^pagesviewed$/;
     self.download = function(module, courseId) {
@@ -48805,7 +48901,7 @@ angular.module('mm.addons.mod_lesson')
             lesson = data.lesson || lesson;
             accessInfo = data.accessinfo;
             if (!$mmaModLesson.leftDuringTimed(accessInfo)) {
-                return $mmaModLesson.launchAttempt(lesson.id, password, false, false, siteId).then(function() {
+                return $mmaModLesson.launchRetake(lesson.id, password, false, false, siteId).then(function() {
                     var promises = [];
                     promises.push($mmFilepool.updatePackageDownloadTime(siteId, self.component, module.id).catch(function() {
                     }));
@@ -48818,7 +48914,7 @@ angular.module('mm.addons.mod_lesson')
         }).then(function() {
             var promises = [],
                 files,
-                attempt = accessInfo.attemptscount;
+                retake = accessInfo.attemptscount;
             files = lesson.mediafiles || [];
             files = files.concat(self.getIntroFilesFromInstance(module, lesson));
             promises.push($mmFilepool.addFilesToQueueByUrl(siteId, files, self.component, module.id));
@@ -48844,28 +48940,29 @@ angular.module('mm.addons.mod_lesson')
             promises.push($mmaModLesson.getTimers(lesson.id, false, true, siteId).catch(function() {
             }));
             promises.push($mmaModLesson.getPagesPossibleJumps(lesson.id, false, true, siteId));
-            promises.push($mmaModLesson.getContentPagesViewedOnline(lesson.id, attempt, false, true, siteId));
-            promises.push($mmaModLesson.getQuestionsAttemptsOnline(lesson.id, attempt, false, undefined, false, true, siteId));
+            promises.push($mmaModLesson.getContentPagesViewedOnline(lesson.id, retake, false, true, siteId));
+            promises.push($mmaModLesson.getQuestionsAttemptsOnline(lesson.id, retake, false, undefined, false, true, siteId));
+            promises.push($mmCourse.getModuleBasicInfo(module.id, siteId));
             if (accessInfo.canviewreports) {
                 promises.push($mmGroups.getActivityAllowedGroupsIfEnabled(module.id, undefined, siteId).then(function(groups) {
                     var subPromises = [];
                     angular.forEach(groups, function(group) {
-                        subPromises.push($mmaModLesson.getAttemptsOverview(lesson.id, group.id, false, true, siteId));
+                        subPromises.push($mmaModLesson.getRetakesOverview(lesson.id, group.id, false, true, siteId));
                     });
-                    subPromises.push($mmaModLesson.getAttemptsOverview(lesson.id, 0, false, true, siteId).then(function(data) {
-                        var attemptPromises = [];
+                    subPromises.push($mmaModLesson.getRetakesOverview(lesson.id, 0, false, true, siteId).then(function(data) {
+                        var retakePromises = [];
                         angular.forEach(data && data.students, function(student) {
                             if (!student.attempts || !student.attempts.length) {
                                 return;
                             }
-                            var lastAttempt = student.attempts[student.attempts.length - 1];
-                            if (!lastAttempt) {
+                            var lastRetake = student.attempts[student.attempts.length - 1];
+                            if (!lastRetake) {
                                 return;
                             }
-                            attemptPromises.push($mmaModLesson.getUserAttempt(
-                                    lesson.id, lastAttempt.try, student.id, false, true, siteId));
+                            retakePromises.push($mmaModLesson.getUserRetake(
+                                    lesson.id, lastRetake.try, student.id, false, true, siteId));
                         });
-                        return $q.all(attemptPromises);
+                        return $q.all(retakePromises);
                     }));
                     return $q.all(subPromises);
                 }));
