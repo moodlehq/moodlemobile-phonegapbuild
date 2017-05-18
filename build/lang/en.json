@@ -440,6 +440,7 @@
     "mm.core.thereisdatatosync": "There are offline {{$a}} to be synchronized.",
     "mm.core.time": "Time",
     "mm.core.timesup": "Time is up!",
+    "mm.core.today": "Today",
     "mm.core.tryagain": "Try again",
     "mm.core.twoparagraphs": "{{p1}}<br><br>{{p2}}",
     "mm.core.uhoh": "Uh oh!",

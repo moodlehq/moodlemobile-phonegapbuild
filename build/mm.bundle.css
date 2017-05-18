@@ -3770,10 +3770,10 @@ a.subdued {
     border-radius: 0;
     border-color: #d1d3d6;
     background-color: transparent;
-    color: #007aff;
+    color: #0064d2;
     font-size: 21px; }
     .action-sheet .button:hover {
-      color: #007aff; }
+      color: #0064d2; }
     .action-sheet .button.destructive {
       color: #ff3b30; }
       .action-sheet .button.destructive:hover {
@@ -3781,7 +3781,7 @@ a.subdued {
   .action-sheet .button.active, .action-sheet .button.activated {
     box-shadow: none;
     border-color: #d1d3d6;
-    color: #007aff;
+    color: #0064d2;
     background: #e4e5e7; }
 
 .action-sheet-has-icons .icon {
@@ -6058,7 +6058,7 @@ ion-tabs.tabs-striped.tabs-color-active-dark .tab-item.tab-item-active, ion-tabs
 .item, .mm-grades-table .itemcenter {
   border-color: #dddddd;
   background-color: #ffffff;
-  color: #444;
+  color: #3a3a3a;
   position: relative;
   z-index: 2;
   display: block;
@@ -9982,13 +9982,13 @@ a.button {
 .full-image {
   width: 100%; }
 
-.clearfix {
+.clearfix, mm-progress-bar {
   *zoom: 1; }
-  .clearfix:before, .clearfix:after {
+  .clearfix:before, mm-progress-bar:before, .clearfix:after, mm-progress-bar:after {
     display: table;
     content: "";
     line-height: 0; }
-  .clearfix:after {
+  .clearfix:after, mm-progress-bar:after {
     clear: both; }
 
 /**
@@ -10365,6 +10365,24 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
+.icon {
+  color: #626262; }
+  .icon.positive {
+    color: #0064d2; }
+  .icon.assertive {
+    color: #cb3d4d; }
+  .icon.dark {
+    color: #3a3a3a; }
+
+.action-sheet .button .icon {
+  color: #0064d2; }
+
+.platform-android .action-sheet .button .icon {
+  color: inherit; }
+
+.bar-content .icon, .bar-side-menu .icon {
+  color: #ffffff; }
+
 .button.button-light, .button.button-stable, .button.button-calm, .button.button-assertive, .button.button-balanced, .button.button-energized, .button.button-royal {
   border-color: #0064d2;
   background-color: #ffffff;
@@ -10426,7 +10444,7 @@ a.button {
       box-shadow: none;
       color: #fff; }
   .button.button-dark.button-icon {
-    color: #3a3a3a; }
+    color: #626262; }
 
 /**
  * Core styles for the app.
@@ -10935,6 +10953,9 @@ mm-loading.mm-loading-noheight .mm-loading-content {
 .mm-media-adapt-width {
   max-width: 100%; }
 
+audio.mm-media-adapt-width {
+  width: 100%; }
+
 .mm-enabled-media-adapt img.mm-media-adapt-width,
 img.mm-media-adapt-width-enabled {
   height: auto; }
@@ -11302,7 +11323,7 @@ mm-timer {
   display: block; }
 
 mm-timer.mm-timer .item span, mm-timer.mm-timer .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer .itemcenter span, mm-timer.mm-timer .item label, mm-timer.mm-timer .mm-grades-table .itemcenter label, .mm-grades-table mm-timer.mm-timer .itemcenter label {
-  color: #444;
+  color: #3a3a3a;
   font-size: 16px; }
 
 mm-timer.mm-timer .item span, mm-timer.mm-timer .mm-grades-table .itemcenter span, .mm-grades-table mm-timer.mm-timer .itemcenter span {
@@ -11439,11 +11460,10 @@ mm-timer.mm-timer.mm-timer-timeleft-15 .item, mm-timer.mm-timer.mm-timer-timelef
   .item-select.mm-full-width-centered select {
     max-width: 100%;
     background: transparent;
-    direction: ltr;
     text-indent: 0;
     margin: 0 auto;
-    padding: 16px 48px 16px 16px;
-    line-height: 14px;
+    padding: 15px 40px 15px 16px;
+    line-height: 16px;
     border: 0;
     position: relative; }
 
@@ -11557,6 +11577,14 @@ input[type="radio"].mm-radio {
   border: 0;
   padding: 0; }
 
+.item-transparent, .mm-filter-box {
+  border: 0;
+  padding: 0;
+  background-color: transparent; }
+  .item-transparent.item-input-inset .item-input-wrapper, .item-input-inset.mm-filter-box .item-input-wrapper {
+    background: white;
+    height: 36px; }
+
 .padding mm-searchbox .item-input-inset, .item .item-heading.padding mm-searchbox .item-input-inset, .mm-grades-table .itemcenter .item-heading.padding mm-searchbox .item-input-inset {
   padding-top: 0;
   padding-left: 0;
@@ -11564,6 +11592,15 @@ input[type="radio"].mm-radio {
 
 mm-searchbox .item-input-inset .item-input-wrapper {
   background: white; }
+
+.mm-filter-box {
+  padding-bottom: 12px; }
+  .mm-filter-box.item-input-inset .item-input-wrapper {
+    height: 36px; }
+
+@media only screen and (min-width: 769px) {
+  .mm-filter-box {
+    padding-right: 8px; } }
 
 .item.mm-not-clickable, .mm-grades-table .mm-not-clickable.itemcenter {
   cursor: default; }
@@ -11623,7 +11660,9 @@ mm-searchbox .item-input-inset .item-input-wrapper {
 
 @media only screen and (max-width: 768px) {
   .hidden-phone {
-    display: none !important; } }
+    display: none !important; }
+  .item-badge-right-phone {
+    padding-right: 72px; } }
 
 @media only screen and (min-width: 769px) {
   .hidden-tablet {
@@ -11842,6 +11881,9 @@ i, cite, em, var, address, dfn {
     .item-button-right > .buttons.buttons-small > .button.button-icon .icon.icon-accessory:before {
       font-size: 16px; }
 
+.button.button-icon.icon.ion-funnel:before {
+  font-size: 26px; }
+
 .action-sheet-open .modal-backdrop.active {
   z-index: 20; }
   .action-sheet-open .modal-backdrop.active .modal {
@@ -11906,8 +11948,18 @@ progress {
     background-color: #fa9b44;
     border-radius: 2px; }
 
-.mm-progress-text {
-  margin-left: 10px; }
+mm-progress-bar {
+  padding-right: 55px;
+  position: relative;
+  display: block; }
+  mm-progress-bar .mm-progress-text {
+    margin-left: 10px;
+    line-height: 35px;
+    color: #626262;
+    right: 0;
+    top: 0;
+    color: #626262;
+    position: absolute; }
 
 .padding > .button.button-block:only-child, .item .item-heading.padding > .button.button-block:only-child, .mm-grades-table .itemcenter .item-heading.padding > .button.button-block:only-child {
   margin-bottom: 0; }
@@ -12270,7 +12322,7 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
     top: 16px;
     left: 16px; }
   .item-progress h2, .item-progress .item .item-heading, .item .item-progress .item-heading, .item-progress .mm-grades-table .itemcenter .item-heading, .mm-grades-table .itemcenter .item-progress .item-heading {
-    font-size: 24px; }
+    font-size: 21px; }
 
 .progress-chart-container {
   height: 70px;
@@ -12288,7 +12340,8 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
       display: table-cell;
       text-align: center;
       vertical-align: middle;
-      color: #626262; }
+      color: #626262;
+      font-size: 95%; }
     .progress-chart-container .progress-doughnut .progress-indicator {
       position: absolute;
       top: -15px;
@@ -12694,6 +12747,9 @@ mm-course-list-item div.item-icon-left.earlysubmission {
     padding-bottom: 0; }
   .mm-mm_login_credentials img, .mm-mm_login_reconnect img, .mm-mm_login_site img {
     max-width: 100%; }
+  .mm-mm_login_credentials img.moodle-logo, .mm-mm_login_reconnect img.moodle-logo, .mm-mm_login_site img.moodle-logo {
+    width: 90%;
+    max-width: 300px; }
   .mm-mm_login_credentials .box, .mm-mm_login_reconnect .box, .mm-mm_login_site .box {
     padding: 16px;
     background: #ffffff;
@@ -12967,6 +13023,9 @@ li.mm-question-answer-incorrect,
     right: 0;
     left: initial; }
 
+.tab-content .mm-site_messages-discussion {
+  background: #eeeeee; }
+
 .mma-messages-showprevious-spinner-container {
   width: 100%;
   text-align: center; }
@@ -12995,7 +13054,8 @@ li.mm-question-answer-incorrect,
   float: right; }
 
 .mm-timelinetitle {
-  float: left; }
+  float: left;
+  padding: 5px; }
 
 .mm-site_myoverview mm-course-list-progress .card {
   margin-top: 0; }

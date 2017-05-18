@@ -6,7 +6,7 @@
     <ion-content mm-state-class delegate-handle="mmaModLessonPlayerScroll">
         <mm-loading hide-until="pageLoaded">
             <!-- Info messages. Only show the first one. -->
-            <div class="mm-info-card" ng-if="lesson && messages && messages.length">
+            <div class="mm-info-card-icon" ng-if="lesson && messages && messages.length">
                 <i class="icon ion-information-circled padding"></i> {{ messages[0].message }}
             </div>
 
@@ -31,16 +31,16 @@
                     </div>
                     <div ng-if="lesson.progressbar && !canManage" class="item">
                         <p>{{ 'mma.mod_lesson.progresscompleted' | translate:{$a: pageData.progress} }}</p>
-                        <progress max="100" value="{{pageData.progress}}"></progress>
+                        <mm-progress-bar progress="pageData.progress"></mm-progress-bar>
                     </div>
-                    <div ng-if="lesson.progressbar && canManage" class="mm-info-card">
+                    <div ng-if="lesson.progressbar && canManage" class="mm-info-card-icon">
                         <i class="icon ion-information-circled padding"></i>{{ 'mma.mod_lesson.progressbarteacherwarning2' | translate }}
                     </div>
                 </div>
 
                 <!-- End of lesson reached. -->
                 <div ng-if="eolData && !processData" class="card">
-                    <div class="mm-warning" ng-if="eolData.offline && eolData.offline.value">
+                    <div class="mm-warning-card-icon" ng-if="eolData.offline && eolData.offline.value">
                         <i class="icon ion-alert-circled padding"></i> {{ 'mma.mod_lesson.finishretakeoffline' | translate }}
                     </div>
                     <h3 class="padding" ng-if="eolData.gradelesson">{{ 'mma.mod_lesson.congratulations' | translate }}</h3>
@@ -55,7 +55,7 @@
                     <p class="item item-text-wrap" ng-if="eolData.welldone"><mm-format-text>{{ eolData.welldone.message }}</mm-format-text></p>
                     <div class="item item-text-wrap" ng-if="lesson.progressbar && eolData.progresscompleted">
                         <p>{{ 'mma.mod_lesson.progresscompleted' | translate:{$a: eolData.progresscompleted.value} }}</p>
-                        <progress max="100" value="{{eolData.progresscompleted.value}}"></progress>
+                        <mm-progress-bar progress="eolData.progresscompleted.value"></mm-progress-bar>
                     </div>
                     <p class="item item-text-wrap" ng-if="eolData.displayofgrade"><mm-format-text>{{ eolData.displayofgrade.message }}</mm-format-text></p>
                     <div class="item item-text-wrap" ng-if="eolData.reviewlesson"><button class="button button-block" ng-click="reviewLesson(eolData.reviewlesson.pageid)"><mm-format-text>{{ 'mma.mod_lesson.reviewlesson' | translate }}</mm-format-text></button></div>

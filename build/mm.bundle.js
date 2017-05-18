@@ -10085,6 +10085,26 @@ angular.module('mm.core')
 });
 
 angular.module('mm.core')
+.directive('mmProgressBar', function() {
+    return {
+        restrict: 'E',
+        scope: {
+            progress: '=',
+            text: '=?'
+        },
+        templateUrl: 'core/templates/progressbar.html',
+        link: function(scope) {
+            scope.progress = parseInt(scope.progress, 10);
+            if (scope.progress < 0 || isNaN(scope.progress)) {
+                scope.progress = false;
+            } else if (!scope.text) {
+                scope.text = scope.progress;
+            }
+        }
+    };
+});
+
+angular.module('mm.core')
 .directive('mmRichTextEditor', ["$ionicPlatform", "$mmLang", "$timeout", "$q", "$window", "$ionicScrollDelegate", "$mmUtil", "$mmSite", "$mmFilepool", function($ionicPlatform, $mmLang, $timeout, $q, $window, $ionicScrollDelegate, $mmUtil,
             $mmSite, $mmFilepool) {
     var editorInitialHeightDefault = 300,
@@ -17184,7 +17204,7 @@ angular.module('mm.core.login')
     }
     function treatSiteConfig(siteConfig) {
         if (siteConfig && siteConfig.registerauth == 'email' && !$mmLoginHelper.isEmailSignupDisabled(siteConfig)) {
-            $scope.logourl = siteConfig.logourl || siteConfig.compactlogourl;
+            $scope.sitename = siteConfig.sitename;
             $scope.authInstructions = siteConfig.authinstructions;
             initAuthInstructionsModal();
             return true;
@@ -20211,7 +20231,7 @@ angular.module('mm.core.user')
             $scope.title = user.fullname;
             $scope.hasContact = user.email || user.phone1 || user.phone2 || user.city || user.country || user.address;
             $scope.hasDetails = user.url || user.interests || (user.customfields && user.customfields.length > 0);
-        }, function(message) {
+        }).catch(function(message) {
             if (message) {
                 $mmUtil.showErrorModal(message);
             }
@@ -24741,14 +24761,17 @@ angular.module('mm.addons.competency')
             return $mmSitesManager.getSite(siteId).then(function(site) {
                 userId = userId || site.getUserId();
                 var params = {
-                    planid: planId,
-                    competencyid: competencyId,
-                    userid: userId
-                };
+                        planid: planId,
+                        competencyid: competencyId,
+                        userid: userId
+                    },
+                    preSets = {
+                      typeExpected: 'boolean'
+                    };
                 if (planStatus == mmaCompetencyStatusComplete) {
-                    return site.write('core_competency_user_competency_plan_viewed', params);
+                    return site.write('core_competency_user_competency_plan_viewed', params, preSets);
                 } else {
-                    return site.write('core_competency_user_competency_viewed_in_plan', params);
+                    return site.write('core_competency_user_competency_viewed_in_plan', params, preSets);
                 }
             });
         }
@@ -28072,12 +28095,12 @@ angular.module('mm.addons.myoverview')
         sort: 'sortbydates',
         events: [],
         loaded: false,
-        canLoadMore: false,
+        canLoadMore: false
     };
     $scope.timelineCourses = {
         courses: [],
         loaded: false,
-        canLoadMore: false,
+        canLoadMore: false
     };
     $scope.courses = {
         selected: 'inprogress',
@@ -28087,8 +28110,9 @@ angular.module('mm.addons.myoverview')
     $scope.showGrid = true;
     $scope.showFilter = false;
     $scope.searchEnabled = $mmCourses.isSearchCoursesAvailable() && !$mmCourses.isSearchCoursesDisabledInSite();
-    function fetchMyOverviewTimeline(afterEventId) {
+    function fetchMyOverviewTimeline(afterEventId, refresh) {
         return $mmaMyOverview.getActionEventsByTimesort(afterEventId).then(function(events) {
+            $scope.timeline.events = [];
             $scope.timeline.events = $scope.timeline.events.concat(events.events);
             $scope.timeline.canLoadMore = events.canLoadMore;
         }).catch(function(message) {
@@ -28180,17 +28204,15 @@ angular.module('mm.addons.myoverview')
         }
         promises.push($mmCourses.invalidateUserCourses());
         promises.push($mmCoursesDelegate.clearAndInvalidateCoursesOptions());
-        $q.all(promises).finally(function() {
+        return $q.all(promises).finally(function() {
             var promise;
             switch ($scope.tabShown) {
                 case 'timeline':
                     switch ($scope.timeline.sort) {
                         case 'sortbydates':
-                            $scope.timeline.events = [];
-                            promise = fetchMyOverviewTimeline();
+                            promise = fetchMyOverviewTimeline(undefined, true);
                             break;
                         case 'sortbycourses':
-                            $scope.timeline.courses = [];
                             promise = fetchMyOverviewTimelineByCourses();
                             break;
                     }
@@ -28199,9 +28221,7 @@ angular.module('mm.addons.myoverview')
                     promise = fetchMyOverviewCourses();
                     break;
             }
-            promise.finally(function() {
-                $scope.$broadcast('scroll.refreshComplete');
-            });
+            return promise;
         });
     };
     $scope.switchSort = function() {
