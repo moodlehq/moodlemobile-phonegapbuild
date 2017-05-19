@@ -10373,6 +10373,13 @@ a.button {
     color: #cb3d4d; }
   .icon.dark {
     color: #3a3a3a; }
+  .icon.icon-accessory {
+    color: #ccc; }
+
+.button .icon {
+  color: #0064d2; }
+  .button .icon.icon-accessory {
+    color: #ccc; }
 
 .action-sheet .button .icon {
   color: #0064d2; }

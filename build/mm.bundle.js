@@ -207,7 +207,7 @@ angular.module('mm.core', ['pascalprecht.translate'])
                         delegateHandle = delegateHandle && delegateHandle.getAttribute('delegate-handle');
                         scrollView = typeof delegateHandle == 'string' ?
                                 $ionicScrollDelegate.$getByHandle(delegateHandle) : $ionicScrollDelegate;
-                        $ionicScrollDelegate.scrollTo(position[0], position[1]);
+                        scrollView.scrollTo(position[0], position[1]);
                     }
                 }
             }
@@ -8452,7 +8452,7 @@ angular.module('mm.core')
 }]);
 
 angular.module('mm.core')
-.directive('mmAutoFocus', ["$mmUtil", function($mmUtil) {
+.directive('mmAutoFocus', ["$mmUtil", "$timeout", function($mmUtil, $timeout) {
     return {
         restrict: 'A',
         link: function(scope, el, attrs) {
@@ -8462,8 +8462,11 @@ angular.module('mm.core')
                 var showKeyboard = typeof attrs.mmAutoFocus == 'undefined' ||
                     (attrs.mmAutoFocus !== false && attrs.mmAutoFocus !== 'false' && attrs.mmAutoFocus !== '0');
                 if (!isActive && showKeyboard) {
-                    $mmUtil.focusElement(el[0]);
+                    ionic.keyboard.enable();
                     unregister(); 
+                    $timeout(function() {
+                        $mmUtil.focusElement(el[0]);
+                    }, 400);
                 }
             });
         }
@@ -8567,7 +8570,9 @@ angular.module('mm.core')
         link: function(scope, element, attrs) {
             if (scope.completion) {
                 showStatus(scope);
-                element.on('click', function(e) {
+            }
+            scope.completionClicked = function (e) {
+                if (scope.completion) {
                     if (typeof scope.completion.cmid == 'undefined' || scope.completion.tracking !== 1) {
                         return;
                     }
@@ -8590,7 +8595,8 @@ angular.module('mm.core')
                     }).finally(function() {
                         modal.dismiss();
                     });
-                });
+                    return false;
+                }
             }
         }
     };
@@ -11935,44 +11941,6 @@ angular.module('mm.core.comments')
 }]);
 
 angular.module('mm.core.contentlinks')
-.controller('mmContentLinksChooseSiteCtrl', ["$scope", "$stateParams", "$mmSitesManager", "$mmUtil", "$ionicHistory", "$state", "$q", "$mmContentLinksDelegate", "$mmContentLinksHelper", function($scope, $stateParams, $mmSitesManager, $mmUtil, $ionicHistory, $state, $q,
-            $mmContentLinksDelegate, $mmContentLinksHelper) {
-    $scope.url = $stateParams.url || '';
-    var action;
-    function leaveView() {
-        $mmSitesManager.logout().finally(function() {
-            $ionicHistory.nextViewOptions({
-                disableAnimate: true,
-                disableBack: true
-            });
-            $state.go('mm_login.sites');
-        });
-    }
-    if (!$scope.url) {
-        leaveView();
-        return;
-    }
-    $mmContentLinksDelegate.getActionsFor($scope.url).then(function(actions) {
-        action = $mmContentLinksHelper.getFirstValidAction(actions);
-        if (!action) {
-            return $q.reject();
-        }
-        $mmSitesManager.getSites(action.sites).then(function(sites) {
-            $scope.sites = sites;
-        });
-    }).catch(function() {
-        $mmUtil.showErrorModal('mm.contentlinks.errornosites', true);
-        leaveView();
-    });
-    $scope.siteClicked = function(siteId) {
-        action.action(siteId);
-    };
-    $scope.cancel = function() {
-        leaveView();
-    };
-}]);
-
-angular.module('mm.core.contentlinks')
 .provider('$mmContentLinksDelegate', function() {
     var linkHandlers = {},
         self = {};
@@ -12307,6 +12275,44 @@ angular.module('mm.core.contentlinks')
         }];
     };
     return self;
+}]);
+
+angular.module('mm.core.contentlinks')
+.controller('mmContentLinksChooseSiteCtrl', ["$scope", "$stateParams", "$mmSitesManager", "$mmUtil", "$ionicHistory", "$state", "$q", "$mmContentLinksDelegate", "$mmContentLinksHelper", function($scope, $stateParams, $mmSitesManager, $mmUtil, $ionicHistory, $state, $q,
+            $mmContentLinksDelegate, $mmContentLinksHelper) {
+    $scope.url = $stateParams.url || '';
+    var action;
+    function leaveView() {
+        $mmSitesManager.logout().finally(function() {
+            $ionicHistory.nextViewOptions({
+                disableAnimate: true,
+                disableBack: true
+            });
+            $state.go('mm_login.sites');
+        });
+    }
+    if (!$scope.url) {
+        leaveView();
+        return;
+    }
+    $mmContentLinksDelegate.getActionsFor($scope.url).then(function(actions) {
+        action = $mmContentLinksHelper.getFirstValidAction(actions);
+        if (!action) {
+            return $q.reject();
+        }
+        $mmSitesManager.getSites(action.sites).then(function(sites) {
+            $scope.sites = sites;
+        });
+    }).catch(function() {
+        $mmUtil.showErrorModal('mm.contentlinks.errornosites', true);
+        leaveView();
+    });
+    $scope.siteClicked = function(siteId) {
+        action.action(siteId);
+    };
+    $scope.cancel = function() {
+        leaveView();
+    };
 }]);
 
 angular.module('mm.core.course')
