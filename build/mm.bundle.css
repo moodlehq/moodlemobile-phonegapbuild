@@ -12348,7 +12348,8 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
       text-align: center;
       vertical-align: middle;
       color: #626262;
-      font-size: 95%; }
+      font-size: 95%;
+      letter-spacing: -1px; }
     .progress-chart-container .progress-doughnut .progress-indicator {
       position: absolute;
       top: -15px;
