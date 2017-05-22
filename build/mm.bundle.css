@@ -12685,7 +12685,7 @@ mm-course-list-item div.item-icon-left.earlysubmission {
     font-weight: bold; }
   .mm-grades-table .itemcenter {
     padding: 10px;
-    white-space: nowrap; }
+    white-space: normal; }
   .mm-grades-table .feedbacktext {
     padding-left: 10px; }
     .mm-grades-table .feedbacktext .no-overflow {
