@@ -1075,8 +1075,6 @@
     "mma.mod_forum.refreshdiscussions": "Rafraîchir les discussions",
     "mma.mod_forum.refreshposts": "Rafraîchir les messages des discussions",
     "mma.mod_forum.reply": "Répondre",
-    "mma.mod_forum.sortnewestfirst": "Afficher la plus récente en premier",
-    "mma.mod_forum.sortoldestfirst": "Afficher la plus ancienne en premier",
     "mma.mod_forum.subject": "Sujet",
     "mma.mod_forum.unread": "Non lu",
     "mma.mod_forum.unreadpostsnumber": "{{$a}} messages non lus",

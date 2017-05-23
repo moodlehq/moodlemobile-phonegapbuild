@@ -1075,8 +1075,6 @@
     "mma.mod_forum.refreshdiscussions": "Obnovit diskuse",
     "mma.mod_forum.refreshposts": "Obnovit diskusní příspěvky",
     "mma.mod_forum.reply": "Odpovědět",
-    "mma.mod_forum.sortnewestfirst": "Zobrazit nejnovější",
-    "mma.mod_forum.sortoldestfirst": "Zobrazit nejstarší",
     "mma.mod_forum.subject": "Předmět",
     "mma.mod_forum.unread": "Nepřečteno",
     "mma.mod_forum.unreadpostsnumber": "Nepřečtené příspěvky: {{$a}}",

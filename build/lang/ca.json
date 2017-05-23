@@ -1068,8 +1068,6 @@
     "mma.mod_forum.refreshdiscussions": "Actualitza els debats",
     "mma.mod_forum.refreshposts": "Actualitza els missatges",
     "mma.mod_forum.reply": "Respon",
-    "mma.mod_forum.sortnewestfirst": "Mostra els més recents primer",
-    "mma.mod_forum.sortoldestfirst": "Mostra els més antics primer",
     "mma.mod_forum.subject": "Assumpte",
     "mma.mod_forum.unread": "No llegit",
     "mma.mod_forum.unreadpostsnumber": "{{$a}} missatges no llegits",

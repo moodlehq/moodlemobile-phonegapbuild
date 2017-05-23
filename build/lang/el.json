@@ -630,8 +630,6 @@
     "mma.mod_forum.refreshdiscussions": "Ανανεώστε τις συζητήσεις",
     "mma.mod_forum.refreshposts": "Ανανεώστε τα μηνύματα της συζήτησης",
     "mma.mod_forum.reply": "Απάντηση",
-    "mma.mod_forum.sortnewestfirst": "Εμφανίστε πρώτα τα νεότερα",
-    "mma.mod_forum.sortoldestfirst": "Εμφανίστε πρώτα τα παλαιότερα",
     "mma.mod_forum.subject": "Θέμα",
     "mma.mod_forum.unread": "Μη αναγνωσμένο",
     "mma.mod_forum.unreadpostsnumber": "{{$a}} μη αναγνωσμένες δημοσιεύσεις",

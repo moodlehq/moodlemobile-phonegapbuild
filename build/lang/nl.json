@@ -1075,8 +1075,6 @@
     "mma.mod_forum.refreshdiscussions": "Discussie verversen",
     "mma.mod_forum.refreshposts": "Discussieberichten verversen",
     "mma.mod_forum.reply": "Antwoord",
-    "mma.mod_forum.sortnewestfirst": "Toon nieuwste eerst",
-    "mma.mod_forum.sortoldestfirst": "Toon oudste eerst",
     "mma.mod_forum.subject": "Onderwerp",
     "mma.mod_forum.unread": "Niet gelezen",
     "mma.mod_forum.unreadpostsnumber": "{{$a}} ongelezen berichten",

@@ -893,8 +893,6 @@
     "mma.mod_forum.posttoforum": "Отправить в форум",
     "mma.mod_forum.re": "Re:",
     "mma.mod_forum.reply": "Ответить",
-    "mma.mod_forum.sortnewestfirst": "Отобразить сначала новые",
-    "mma.mod_forum.sortoldestfirst": "Отобразить сначала старые",
     "mma.mod_forum.subject": "Тема",
     "mma.mod_forum.unread": "Непрочтенные",
     "mma.mod_forum.unreadpostsnumber": "Непрочитанных сообщений - {{$a}}",

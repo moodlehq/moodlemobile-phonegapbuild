@@ -1055,8 +1055,6 @@
     "mma.mod_forum.refreshdiscussions": "更新討論區",
     "mma.mod_forum.refreshposts": "更新討論區貼文",
     "mma.mod_forum.reply": "回應",
-    "mma.mod_forum.sortnewestfirst": "優先顯示最新的項目",
-    "mma.mod_forum.sortoldestfirst": "優先顯示最早的項目",
     "mma.mod_forum.subject": "主旨",
     "mma.mod_forum.unread": "未閱讀",
     "mma.mod_forum.unreadpostsnumber": "{{$a}}篇未閱讀的貼文",

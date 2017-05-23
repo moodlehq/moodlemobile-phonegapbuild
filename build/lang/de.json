@@ -1076,8 +1076,6 @@
     "mma.mod_forum.refreshdiscussions": "Themen aktualisieren",
     "mma.mod_forum.refreshposts": "Forenbeiträge aktualisieren",
     "mma.mod_forum.reply": "Antworten",
-    "mma.mod_forum.sortnewestfirst": "Neu zuerst",
-    "mma.mod_forum.sortoldestfirst": "Alt zuerst",
     "mma.mod_forum.subject": "Betreff",
     "mma.mod_forum.unread": "Ungelesen",
     "mma.mod_forum.unreadpostsnumber": "{{$a}} ungelesene Beiträge",

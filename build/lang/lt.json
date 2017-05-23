@@ -792,8 +792,6 @@
     "mma.mod_forum.refreshdiscussions": "Atnaujinti pokalbius",
     "mma.mod_forum.refreshposts": "Atnaujinti pokalbių įrašus",
     "mma.mod_forum.reply": "Atsakyti",
-    "mma.mod_forum.sortnewestfirst": "Rodyti naujesnius",
-    "mma.mod_forum.sortoldestfirst": "Rodyti senesnius",
     "mma.mod_forum.subject": "Temos pavadinimas",
     "mma.mod_forum.unread": "Neperskaityta",
     "mma.mod_forum.unreadpostsnumber": "Neperskaitytų skelbimų: {{$a}}",

@@ -700,8 +700,6 @@
     "mma.mod_forum.refreshdiscussions": "Genindlæs diskussioner",
     "mma.mod_forum.refreshposts": "Genindlæs indlæg",
     "mma.mod_forum.reply": "Svar",
-    "mma.mod_forum.sortnewestfirst": "Vis nyeste først",
-    "mma.mod_forum.sortoldestfirst": "Vis ældste først",
     "mma.mod_forum.subject": "Emne",
     "mma.mod_forum.unread": "Ikke læst",
     "mma.mod_forum.unreadpostsnumber": "{{$a}} nye indlæg",

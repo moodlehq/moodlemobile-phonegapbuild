@@ -826,8 +826,6 @@
     "mma.mod_forum.refreshdiscussions": "Atualizar tópicos de discussão",
     "mma.mod_forum.refreshposts": "Atualizar repostas dos tópicos de discussão",
     "mma.mod_forum.reply": "Responder",
-    "mma.mod_forum.sortnewestfirst": "Mostrar mais recentes primeiro",
-    "mma.mod_forum.sortoldestfirst": "Mostrar mais antigos primeiro",
     "mma.mod_forum.subject": "Assunto",
     "mma.mod_forum.unread": "Não lidas",
     "mma.mod_forum.unreadpostsnumber": "{{$a}} mensagens não lidas",

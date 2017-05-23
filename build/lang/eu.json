@@ -1034,8 +1034,6 @@
     "mma.mod_forum.refreshdiscussions": "Freskatu eztabaidak",
     "mma.mod_forum.refreshposts": "Freskatu eztabaidetako mezuak",
     "mma.mod_forum.reply": "Erantzun",
-    "mma.mod_forum.sortnewestfirst": "Erakutsi berrienak lehenago",
-    "mma.mod_forum.sortoldestfirst": "Erakutsi zaharrenak lehenago",
     "mma.mod_forum.subject": "Gaia",
     "mma.mod_forum.unread": "Irakurri gabe",
     "mma.mod_forum.unreadpostsnumber": "Irakurri gabeko {{$a}} mezu",
