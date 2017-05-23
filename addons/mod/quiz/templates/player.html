@@ -7,23 +7,38 @@
     </ion-nav-buttons>
     <!-- Navigation arrows -->
     <ion-header-bar class="bar-subheader mma-mod-quiz-subheader" ng-if="dataLoaded && questions.length && !quizAborted && !showSummary">
-        <div class="row">
-            <div class="col col-20">
-                <a class="button button-icon icon ion-arrow-left-b" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)" title="{{ 'mm.core.previous' | translate }}"></a>
-            </div>
-            <div class="col col-60 text-center">
+        <!-- <div class="row"> -->
+            <!-- <div class="col col-20"> -->
+                <!-- <a class="button button-icon icon ion-arrow-left-b" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)" title="{{ 'mm.core.previous' | translate }}"></a> -->
+            <!-- </div> -->
+            <!-- <div class="col col-60 text-center"> -->
+                <!-- <mm-timer ng-if="endTime" end-time="endTime" finished="timeUp()" timer-text="{{ 'mma.mod_quiz.timeleft' | translate }}"></mm-timer> -->
+            <!-- </div> -->
+            <!-- <div class="col col-20 text-right"> -->
+                <!-- <a class="button button-icon icon ion-arrow-right-b" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" title="{{ 'mm.core.next' | translate }}"></a> -->
+            <!-- </div> -->
+        <!-- </div> -->
+		<div class="row">
+				    <div class="item item-input padding" >
+					<button class="button button-block" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)">{{ 'mma.mod_quiz.previous' | translate }}
+					</button>
+					</div>
+					<div class="col col-50 text-center">
                 <mm-timer ng-if="endTime" end-time="endTime" finished="timeUp()" timer-text="{{ 'mma.mod_quiz.timeleft' | translate }}"></mm-timer>
             </div>
-            <div class="col col-20 text-right">
-                <a class="button button-icon icon ion-arrow-right-b" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" title="{{ 'mm.core.next' | translate }}"></a>
-            </div>
-        </div>
+					<div class="item item-input padding">
+                <button class="button button-block text-right" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" >{{ 'mma.mod_quiz.next' | translate }}
+				</button>
+				</div>
+				</div>
     </ion-header-bar>
     <ion-content padding="true" mm-state-class delegate-handle="mmaModQuizPlayerScroll" ng-class="{'has-subheader': dataLoaded && questions.length && !quizAborted && !showSummary}">
         <mm-loading hide-until="dataLoaded">
             <div class="list padding" ng-if="!attempt">
                 <button class="button button-block" ng-click="start()">{{ 'mma.mod_quiz.startattempt' | translate }}</button>
             </div>
+			
+			
             <!-- Questions -->
             <form name="mma-mod_quiz-player-form" ng-if="questions.length && !quizAborted && !showSummary">
                 <div ng-repeat="question in questions">
@@ -39,6 +54,17 @@
                         <mm-question class="item item-complex item-text-wrap" question="question" abort="abortQuiz()" button-clicked="behaviourButtonClicked(name, value)" component="component" component-id="quiz.coursemodule" attempt-id="attempt.id" offline-enabled="{{offline}}" scroll-handle="mmaModQuizPlayerScroll"></mm-question>
                     </section>
                 </div>
+				<!-- <div class="row"> -->
+				    <!-- <div class="item item-input padding" > -->
+					<!-- <button class="button button-block" ng-if="previousPage >= 0" ng-click="loadPage(previousPage)">{{ 'mma.mod_quiz.previous' | translate }} -->
+					<!-- </button> -->
+					<!-- </div> -->
+					<!-- <div class="item item-input padding"> -->
+                <!-- <button class="button button-block text-right" ng-if="nextPage >= -1" ng-click="loadPage(nextPage)" >{{ 'mma.mod_quiz.next' | translate }} -->
+				<!-- </button> -->
+				<!-- </div> -->
+				<!-- </div> -->
+				
             </form>
             <!-- Summary -->
             <div ng-if="!quizAborted && showSummary && summaryQuestions && summaryQuestions.length" class="card mma-mod-quiz-table">

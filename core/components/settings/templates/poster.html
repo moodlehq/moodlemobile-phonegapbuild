@@ -1,16 +1,31 @@
-<ion-view view-title="{{ 'mm.settings.about' | translate }}" >
+<ion-view view-title="{{ 'mm.sidemenu.poster' | translate }}" >
     <ion-content mm-state-class>
         <ul class="list">
             <!-- <li class="item"> -->
                 <!-- <h2>{{appname}} {{versionname}}</h2> -->
             <!-- </li> -->
-            <!-- <li class="item item-divider"> -->
-                <!-- <p>{{ 'mm.settings.license' | translate }}</p> -->
-            <!-- </li> -->
-            <!-- <li class="item item-text-wrap"> -->
-                <!-- <h2>Apache 2.0</h2> -->
-                <!-- <p><a href="http://www.apache.org/licenses/LICENSE-2.0" mm-link auto-login="no">http://www.apache.org/licenses/LICENSE-2.0</a></p> -->
-            <!-- </li> -->
+            <li class="item item-divider">
+                <p>{{ 'mm.sidemenu.poster' | translate }}</p>
+            </li>
+            <li class="item item-text-wrap">
+				<h2>For New Version !</h2>
+                <p><a href="https://build.phonegap.com/apps/2507608/download/android/?qr_key=m6xbx7DJEUXh4HCHPXY-" mm-link auto-login="no">Update here</a></p>
+
+            </li>
+					<li class="item item-divider">
+                <p>{{ 'mm.settings.share' | translate }}</p>
+            </li>
+            <li class="item item-text-wrap">
+				<h2>Share is Care !</h2>
+                <p><button onclick="window.plugins.socialsharing.share('I am using MyPrivateGuru app for study. its very awesome app. see how it works...', null, null, 'https://goo.gl/jxGQVk')">Invite</button></p>
+
+            </li>
+			
+			
+			
+			
+<!-- <button onclick="window.plugins.socialsharing.share('I am using MyPrivateGuru app for study. its very awesome app. see how it works...', null, null, 'https://goo.gl/jxGQVk')">Invite</button> -->
+
             <!-- <li class="item item-divider" ng-if="privacyPolicy"> -->
                 <!-- <p>{{ 'mm.settings.privacypolicy' | translate }}</p> -->
             <!-- </li> -->
@@ -61,14 +76,14 @@
                 <!-- <p class="item-heading">{{ 'mm.settings.currentlanguage' | translate}}</p> -->
                 <!-- <p>{{ currentlanguage }}</p> -->
             <!-- </li> -->
-            <li class="item item-text-wrap" ng-if="networkstatus">
-                <p class="item-heading">{{ 'mm.settings.networkstatus' | translate}}</p>
-                <p>{{ networkstatus | translate }}</p>
-            </li>
-            <li class="item item-text-wrap" ng-if="wificonnection">
-                <p class="item-heading">{{ 'mm.settings.wificonnection' | translate}}</p>
-                <p>{{ wificonnection | translate }}</p>
-            </li>
+            <!-- <li class="item item-text-wrap" ng-if="networkstatus"> -->
+                <!-- <p class="item-heading">{{ 'mm.settings.networkstatus' | translate}}</p> -->
+                <!-- <p>{{ networkstatus | translate }}</p> -->
+            <!-- </li> -->
+            <!-- <li class="item item-text-wrap" ng-if="wificonnection"> -->
+                <!-- <p class="item-heading">{{ 'mm.settings.wificonnection' | translate}}</p> -->
+                <!-- <p>{{ wificonnection | translate }}</p> -->
+            <!-- </li> -->
             <!-- <li class="item item-text-wrap" ng-if="devicewebworkers"> -->
                 <!-- <p class="item-heading">{{ 'mm.settings.devicewebworkers' | translate}}</p> -->
                 <!-- <p>{{ devicewebworkers | translate }}</p> -->

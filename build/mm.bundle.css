@@ -8426,21 +8426,22 @@ em {
 
 .bar-content {
   border-color: transparent;
-  background-color: #f70;
+  background-color: #f2113e;
   background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
   color: #fff; }
   .bar-content .title {
     color: #fff; }
   .bar-content .button {
     border-color: transparent;
-    background-color: #f70;
+/* this is now moodle mobile app color    */
+   background-color: #f2113e;        
     color: #fff; }
     .bar-content .button:hover {
       color: #fff;
       text-decoration: none; }
     .bar-content .button.active, .bar-content .button.activated {
       border-color: transparent;
-      background-color: #f70; }
+      background-color: #f2113e; }
     .bar-content .button.button-clear {
       border-color: transparent;
       background: none;
@@ -9641,7 +9642,7 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
 
 .bar-side-menu {
   border-color: transparent;
-  background-color: #f70;
+  background-color: #f2113e;
   background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
   color: #fff;
   height: 80px !important; }
