@@ -12600,16 +12600,20 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
     border: 0.5px solid #9e9e9e; }
     .progress-chart-container .no-progress .icon {
       position: absolute;
-      top: 50%;
       text-align: center;
       /*rtl:ignore*/
-      left: 50%;
+      left: -1px;
+      top: -1px;
+      right: 0;
+      bottom: 0;
       margin: 0;
-      transform: translate(-42%, -50%);
       color: #ffffff;
-      height: 45px;
-      width: 45px;
+      height: 70px;
+      width: 70px;
+      line-height: 70px;
       font-size: 45px; }
+      .progress-chart-container .no-progress .icon:before {
+        width: 70px; }
 
 .mm-site_mm_coursescategories .item-icon-left, .mm-site_mm_coursescategories .mm-site_mod_assign div.item-icon-left.latesubmission, .mm-site_mod_assign .mm-site_mm_coursescategories div.item-icon-left.latesubmission, .mm-site_mm_coursescategories
 .mm-site_mod_assign div.item-icon-left.overdue,
@@ -13499,7 +13503,7 @@ p.mma-mod-quiz-warning {
   .mma-mod-quiz-subheader .mm-timer {
     min-height: 41px;
     border: 0;
-    padding: 2px 0 1px 25px; }
+    padding: 1px 0 1px 25px; }
     .mma-mod-quiz-subheader .mm-timer .icon {
       left: 0;
       font-size: 24px; }
