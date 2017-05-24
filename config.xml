@@ -4,14 +4,14 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.amideastonline.mobile"
         versionCode = "2016"
-        version   = "1.0">
+        version   = "1.1">
     <name>AMIDEAST Online Mobile</name>
 
     <description>
         AMIDEAST Online official app
     </description>
 
-    <author href="http://amideastonline.org" email="admin@amideastonline.org">
+    <author href="https://amideastonline.org" email="admin@amideastonline.org">
         AMIDEAST, Ins
     </author>
 
