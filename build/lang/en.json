@@ -1124,6 +1124,7 @@
     "mma.mod_lesson.emptypassword": "Password cannot be empty",
     "mma.mod_lesson.enterpassword": "Please enter the password:",
     "mma.mod_lesson.eolstudentoutoftimenoanswers": "You did not answer any questions.  You have received a 0 for this lesson.",
+    "mma.mod_lesson.errorprefetchrandombranch": "This lesson contains a jump to a random content page, it cannot be attempted in the app until it has been started in web.",
     "mma.mod_lesson.errorreviewretakenotlast": "This attempt can no longer be reviewed because another attempt has been finished.",
     "mma.mod_lesson.finish": "Finish",
     "mma.mod_lesson.finishretakeoffline": "This attempt was finished offline.",
