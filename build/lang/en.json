@@ -1103,6 +1103,7 @@
     "mma.mod_imscp.showmoduledescription": "Show description",
     "mma.mod_label.label": "Label",
     "mma.mod_lesson.answer": "Answer",
+    "mma.mod_lesson.attempt": "Attempt: {{$a}}",
     "mma.mod_lesson.attemptheader": "Attempt",
     "mma.mod_lesson.attemptsremaining": "You have {{$a}} attempt(s) remaining",
     "mma.mod_lesson.averagescore": "Average score",
