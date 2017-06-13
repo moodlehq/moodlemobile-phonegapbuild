@@ -755,7 +755,7 @@
 .ion-wineglass:before,
 .ion-woman:before,
 .ion-wrench:before,
-.ion-xbox:before, mm-format-text[max-height].mm-text-formatted.mm-shortened .mm-show-more:after, *[mm-format-text][max-height].mm-text-formatted.mm-shortened .mm-show-more:after {
+.ion-xbox:before, .fa.icon, mm-format-text[max-height].mm-text-formatted.mm-shortened .mm-show-more:after, *[mm-format-text][max-height].mm-text-formatted.mm-shortened .mm-show-more:after {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -12098,6 +12098,41 @@ h2.invert, .item .invert.item-heading, .mm-grades-table .itemcenter .invert.item
   max-width: calc(100% - 1em); }
 
 /*rtl:end:ignore*/
+/** This file is intended to translate fontawesome to ionicons while the font is not supported */
+.fa {
+  font-size: 24px;
+  width: 24px;
+  height: 24px; }
+
+/** Fixed width */
+.fa-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+/** Uncomment for dev purposes, it will show an asterisk in red where a missing icon is */
+/*.fa:before {
+    color: red !important;
+    content: $ionicon-var-asterisk;
+}*/
+/** Icons translation */
+.fa-search-plus:before {
+  content: ""; }
+
+.fa-cog:before {
+  content: ""; }
+
+.fa-trash:before {
+  content: ""; }
+
+.fa-thumbs-up:before {
+  content: ""; }
+
+.fa-thumbs-down:before {
+  content: ""; }
+
+.fa-ban:before {
+  content: ""; }
+
 /**
  * In this file we will reset ionic styles that can bother online html.
  */
@@ -13378,6 +13413,20 @@ p.mma-mod-assign-warning {
       border-top: 0; }
     .mm-site_mod_choice .col:first-child {
       border-left: 0; } }
+
+.mm-site_mod_data .recordcheckbox {
+  display: none; }
+
+.mm-data-contents {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-all;
+  padding: 16px;
+  background-color: white;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #dddddd; }
 
 .mm-site_mod_feedback .mm-analysis ul {
   font-size: 14px; }
