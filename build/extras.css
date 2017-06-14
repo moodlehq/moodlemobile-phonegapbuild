@@ -1,0 +1,429 @@
+body,html{
+    height: 100%;
+     margin:0;
+}
+
+
+.item.item-text-wrap {
+    background: none;
+}
+.scroll-content {
+    padding: 0px;
+}
+.item {
+    border: none;
+    background: none;
+}
+
+/* Top Bar colour used across app */
+.bar-content {
+    background-color: #e719a4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* The icons used on my courses - participants etc */
+a.tab-item.active {
+    color: #30c3ee;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+/* New login logo custom hack */
+.loginlogo {
+    background: url("../img/extras/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100px;
+    background-position: center;
+    margin-bottom:10px;
+}
+
+
+.loginbg {
+ height: 100%;
+  background-image: url("../img/extras/bglogin.jpg");
+    background-color:#ff7f41; 
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* Menu logo custom hack */
+.menulogo {
+    background: url("../img/extras/mycourses.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100px;
+    background-position: center;
+    margin-bottom:10px;
+}
+
+
+
+/* Course holders */
+.card {
+    border-radius: 0px;
+    box-shadow: none;
+     
+   
+}
+
+
+.list.card {
+     border-top: 4px solid #28d9fb;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin:10px;
+}
+
+.eventlink {
+     border-top: 4px solid #28d9fb;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin:10px;
+    background:#fff;
+}
+
+
+a.item.item-media.item-text-wrap {
+border-top: 4px solid #28d9fb;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin:10px;
+    background:#fff;
+}
+
+
+/* Buttons */
+a.button.button-block {
+    background: #e719a4;
+    border: none;
+    color: #fff;
+}
+a.button.button-block:hover {
+    background: #e719a4;
+    border: none;
+    color: #fff;
+}
+
+/* Turns off bg colour of menu */
+.bar-side-menu {
+    background-color: transparent;
+}
+/* Hides divider in menu */
+.list.dark .item.item-divider {
+    display: none;
+}
+/* Sets badge count to red */
+.badge.badge-positive {
+    background-color: #e719a4;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 150px;
+}
+
+/* makes menu blur background */
+.menu {
+    background: #ff7f41 url("../img/extras/blur.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* makes side menu items white */
+a.item.item-icon-left {
+    color: #fff;
+}
+
+/* App footer */
+
+.bar-footer {
+    background: #fff;
+    border-top: 2px solid #28d9fb;
+    min-height:50px;
+}
+.button.disabled,
+.button[disabled] {
+    color: #fff;
+}
+
+.button-clear.button-clear {
+    color: #fff;
+}
+button.button.button-block {
+    background: #e719a4;
+    border: none;
+    color: #fff;
+}
+
+/* custom hack */
+.courseheader {
+    background: #ff7f41 url("../img/extras/mycourses.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 140px;
+    background-position: center;
+}
+
+/* custom hack */
+.courselistbg {
+    background: #ff7f41 url("../img/extras/courselist.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 140px;
+    background-position: center;
+    margin-bottom:-20px;
+}
+
+/* custom hack */
+.coursesectionsbg {
+    background: #ff7f41 url("../img/extras/coursesectionsbg.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 140px;
+    background-position: center;
+}
+
+/* custom hack */
+.coursesection {
+    background: #ff7f41 url("../img/extras/coursesection.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 140px;
+    background-position: center;
+}
+
+.planssheader {
+    background: url("../img/extras/coursesection.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 140px;
+    background-position: center;
+}
+
+.myplans li {
+  border-top: 4px solid #28d9fb;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    margin:10px;
+}
+
+
+
+/* loginheader */
+.loginheader {
+    background: #ff7f41 url("../img/extras/coursesection.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 140px;
+    background-position: center;
+}
+
+
+/* setup login text */
+.setup {
+    padding: 20px;
+    text-align: center;
+    color:#fff;
+    background: rgba(61, 61, 57, 0.5);
+}
+
+
+/* setup login text */
+.credentialsbg {
+    padding: 25px 5px 25px 5px;
+    text-align: center;
+     background: rgba(61, 61, 57, 0.5);
+    margin-top:0px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.firsttime {
+color:#fff;
+text-align: center;
+}
+
+.profilebg {
+    padding: 25px 5px 25px 5px;
+    text-align: center;
+     background: rgba(255,255,255,0.95);
+    
+}
+
+
+.profileblock2 {
+ padding: 25px 5px 25px 5px;
+    text-align: center;
+    color:#fff;
+    background: rgba(61, 61, 57, 0.5);
+    margin-top:25px
+    margin-bottom:25px;
+    
+}
+
+.profileblock2 .item-heading {
+color:#fff
+}
+
+.profileblock2 .item {
+color:#fff
+}
+
+
+.profileblock2 p{
+    
+    color:#fff;
+   
+}
+
+
+/* course titles on mycourses page */
+a.item.courselist {
+ background: #ff7f41;
+    color:#fff;
+    margin-bottom: 15px;
+}
+
+
+a.item.courselist h2{
+
+    color:#fff;
+   
+}
+a.item.courselist {
+border-left: 45px solid #ff7f41;
+}
+
+/* some random padding that we remove */
+.padding {
+    padding: 0px;
+}
+
+/* The icons used on my courses */
+/* icons only in tabs, not ext */
+.tabs-icon-left.tabs .tab-item .icon {
+    display:block;
+}
+
+.item.tabs.tabs-icon-left {
+    padding-top: 10px;
+    padding-bottom:10px;
+    min-height: 80px;
+    margin-top:10px;
+}
+
+
+
+
+.item.item-text-wrap.item-button-right {
+ border-bottom:1px solid #ff7f41;
+  padding-top:15px;
+    padding-bottom: 15px;
+  
+}
+
+.item.item-divider h2 {
+    background: #fff;
+    color:#000;
+    padding:0px;
+    font-weight:bold;
+   
+    font-size:140%;
+}
+
+
+
+
+
+
+
+
+
+
+span.item-note.ng-binding {
+    background: #ff7f41;
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+
+.profilebg {
+ background: #ff7f41 url("../img/extras/blur.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+    color:#fff;
+    text-align:center;
+}
+
+
+
+
+/* loginheader */
+.eventsheader {
+background:  url("../img/extras/events.png");
+   background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100px;
+    background-position: center;
+    
+}
+
+.eventsheader .item {
+background: grey;
+}
+
+input[type=url] {
+   padding:10px;
+}
+
+
+    
+  
+    
+    .greypage {
+    background: #f8f8f8;
+    }
+
+
+.item {
+border-color: #c46ed1;
+}
+
+.item-stacked-label .input-label {
+    color: #fff;
+}
