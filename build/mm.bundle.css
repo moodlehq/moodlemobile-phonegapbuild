@@ -13428,6 +13428,42 @@ p.mma-mod-assign-warning {
   border-style: solid;
   border-color: #dddddd; }
 
+#mma-mod_data-advanced-search-form table {
+  width: 100%; }
+
+#mma-mod_data-advanced-search-form textarea,
+#mma-mod_data-advanced-search-form input[type="text"],
+#mma-mod_data-advanced-search-form input[type="password"],
+#mma-mod_data-advanced-search-form input[type="datetime"],
+#mma-mod_data-advanced-search-form input[type="datetime-local"],
+#mma-mod_data-advanced-search-form input[type="date"],
+#mma-mod_data-advanced-search-form input[type="month"],
+#mma-mod_data-advanced-search-form input[type="time"],
+#mma-mod_data-advanced-search-form input[type="week"],
+#mma-mod_data-advanced-search-form input[type="number"],
+#mma-mod_data-advanced-search-form input[type="email"],
+#mma-mod_data-advanced-search-form input[type="url"],
+#mma-mod_data-advanced-search-form input[type="search"],
+#mma-mod_data-advanced-search-form input[type="tel"],
+#mma-mod_data-advanced-search-form input[type="color"],
+#mma-mod_data-advanced-search-form .item-select,
+#mma-mod_data-advanced-search-form mm-multiple-select .item,
+#mma-mod_data-advanced-search-form mm-multiple-select .mm-grades-table .itemcenter, .mm-grades-table
+#mma-mod_data-advanced-search-form mm-multiple-select .itemcenter {
+  width: 100%;
+  margin: -1px;
+  border: 1px solid #dddddd;
+  padding: 16px 0 16px 16px;
+  height: 56px; }
+
+#mma-mod_data-advanced-search-form .item-checkbox {
+  margin-right: 1px; }
+
+#mma-mod_data-advanced-search-form .item-select select {
+  width: 100%;
+  left: 0;
+  max-width: none; }
+
 .mm-site_mod_feedback .mm-analysis ul {
   font-size: 14px; }
 
