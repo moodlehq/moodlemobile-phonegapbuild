@@ -2,17 +2,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
+        id        = "my.mu.excel"
         versionCode = "20180"
         version   = "3.3.0">
-    <name>Moodle Mobile</name>
+    <name>Excel.my</name>
 
     <description>
-        Moodle Mobile official app
+        Excel.my official app
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Pty Ltd
+    <author href="https://excel.my" email="support@excel.my">
+        Excel.my
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
