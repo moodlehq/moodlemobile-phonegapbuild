@@ -10538,9 +10538,9 @@ a.button {
     margin: 0 auto;
     margin-bottom: 30px; }
   .mm-bglogo .spinner {
-    color: white;
-    stroke: white;
-    fill: white; }
+    color: #ffffff;
+    stroke: #ffffff;
+    fill: #ffffff; }
 
 /**
  * Styles revert.
@@ -12385,21 +12385,15 @@ mm-format-text .badge, mm-format-text .mma-messages-date span, .mma-messages-dat
 .cke_inner.cke_maximized .cke_toolbox_main {
   margin: 0; }
 
-.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right
-.mma-messages-unreadfrom span.mm-course-download,
-.mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter
-.mma-messages-unreadfrom span.mm-course-download,
-.mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
-  right: 44px; }
-
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px; }
-
-mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
-  padding: 8px; }
-
-.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
-  margin-top: 0; }
+.mm-fileuploader-file-handler input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none;
+  z-index: 100; }
 
 .item-course > .icon, .item-course > ion-spinner {
   height: 40px;
@@ -12722,15 +12716,21 @@ mm-course-list-item
 mm-course-list-item div.item-icon-left.earlysubmission {
   color: #3a3a3a; }
 
-.mm-fileuploader-file-handler input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none;
-  z-index: 100; }
+.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right
+.mma-messages-unreadfrom span.mm-course-download,
+.mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter
+.mma-messages-unreadfrom span.mm-course-download,
+.mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
+  right: 44px; }
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px; }
+
+mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
+  padding: 8px; }
+
+.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
+  margin-top: 0; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
@@ -13007,7 +13007,11 @@ li.mm-question-answer-incorrect,
     .bar-side-menu .item-avatar p,
     .bar-side-menu .item-media p,
     .bar-side-menu .item-avatar-center p,
-    .bar-side-menu .item-progress p {
+    .bar-side-menu .item-progress p,
+    .bar-side-menu .item-avatar .icon,
+    .bar-side-menu .item-media .icon,
+    .bar-side-menu .item-avatar-center .icon,
+    .bar-side-menu .item-progress .icon {
       color: #ffffff; }
 
 .has-side-menu-header {
@@ -13021,6 +13025,22 @@ li.mm-question-answer-incorrect,
 .mma-messages-unreadfrom span,
 .mma-messages-unreadfrom .mm-grades-table .mm-sidemenu-menu .itemcenter span, .mm-sidemenu-menu .item .mma-chat-notice span, .mma-chat-notice .mm-sidemenu-menu .item span, .mm-sidemenu-menu .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-sidemenu-menu .mm-grades-table .itemcenter span, .mm-grades-table .mm-sidemenu-menu .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-sidemenu-menu .itemcenter span {
   right: 16px; }
+
+ion-side-menu li .item, ion-side-menu li .mm-grades-table .itemcenter, .mm-grades-table ion-side-menu li .itemcenter,
+ion-side-menu li.item,
+ion-side-menu .mm-grades-table li.itemcenter, .mm-grades-table
+ion-side-menu li.itemcenter {
+  border-color: #dddddd;
+  background-color: #ffffff;
+  color: #3a3a3a; }
+  ion-side-menu li .item .icon, ion-side-menu li .mm-grades-table .itemcenter .icon, .mm-grades-table ion-side-menu li .itemcenter .icon,
+  ion-side-menu li.item .icon,
+  ion-side-menu .mm-grades-table li.itemcenter .icon, .mm-grades-table
+  ion-side-menu li.itemcenter .icon {
+    color: #626262; }
+
+ion-side-menu li.item.item-divider, ion-side-menu .mm-grades-table li.item-divider.itemcenter, .mm-grades-table ion-side-menu li.item-divider.itemcenter {
+  background-color: #f5f5f5; }
 
 .foreground-ion-edit.ion-edit:before {
   position: relative;
@@ -13048,15 +13068,6 @@ li.mm-question-answer-incorrect,
 .mm-site_frontpage .mm-frontpageitemnews .mm-module-buttons {
   width: 30px;
   height: 22px; }
-
-.mm-site_coursesgrades .item .badge, .mm-site_coursesgrades .mm-grades-table .itemcenter .badge, .mm-grades-table .mm-site_coursesgrades .itemcenter .badge, .mm-site_coursesgrades .item .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item
-.mma-messages-unreadfrom span,
-.mma-messages-unreadfrom .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter
-.mma-messages-unreadfrom span,
-.mma-messages-unreadfrom .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter
-.mma-messages-unreadfrom span,
-.mma-messages-unreadfrom .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
-  right: 16px; }
 
 .mma-messages-date,
 .mma-messages-unreadfrom {
@@ -13131,6 +13142,15 @@ li.mm-question-answer-incorrect,
 .mma-messages-showprevious-spinner-container {
   width: 100%;
   text-align: center; }
+
+.mm-site_coursesgrades .item .badge, .mm-site_coursesgrades .mm-grades-table .itemcenter .badge, .mm-grades-table .mm-site_coursesgrades .itemcenter .badge, .mm-site_coursesgrades .item .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item
+.mma-messages-unreadfrom span,
+.mma-messages-unreadfrom .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter
+.mma-messages-unreadfrom span,
+.mma-messages-unreadfrom .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter
+.mma-messages-unreadfrom span,
+.mma-messages-unreadfrom .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
+  right: 16px; }
 
 @media only screen and (min-width: 567px) {
   .mm-course-grid {
@@ -13428,7 +13448,8 @@ p.mma-mod-assign-warning {
   border-style: solid;
   border-color: #dddddd; }
 
-#mma-mod_data-advanced-search-form table {
+#mma-mod_data-advanced-search-form table,
+#mma-mod_data-edit-form table {
   width: 100%; }
 
 #mma-mod_data-advanced-search-form textarea,
@@ -13447,22 +13468,74 @@ p.mma-mod-assign-warning {
 #mma-mod_data-advanced-search-form input[type="tel"],
 #mma-mod_data-advanced-search-form input[type="color"],
 #mma-mod_data-advanced-search-form .item-select,
-#mma-mod_data-advanced-search-form mm-multiple-select .item,
-#mma-mod_data-advanced-search-form mm-multiple-select .mm-grades-table .itemcenter, .mm-grades-table
-#mma-mod_data-advanced-search-form mm-multiple-select .itemcenter {
+#mma-mod_data-advanced-search-form mm-attachments > .item-border,
+#mma-mod_data-edit-form textarea,
+#mma-mod_data-edit-form input[type="text"],
+#mma-mod_data-edit-form input[type="password"],
+#mma-mod_data-edit-form input[type="datetime"],
+#mma-mod_data-edit-form input[type="datetime-local"],
+#mma-mod_data-edit-form input[type="date"],
+#mma-mod_data-edit-form input[type="month"],
+#mma-mod_data-edit-form input[type="time"],
+#mma-mod_data-edit-form input[type="week"],
+#mma-mod_data-edit-form input[type="number"],
+#mma-mod_data-edit-form input[type="email"],
+#mma-mod_data-edit-form input[type="url"],
+#mma-mod_data-edit-form input[type="search"],
+#mma-mod_data-edit-form input[type="tel"],
+#mma-mod_data-edit-form input[type="color"],
+#mma-mod_data-edit-form .item-select,
+#mma-mod_data-edit-form mm-attachments > .item-border {
   width: 100%;
   margin: -1px;
   border: 1px solid #dddddd;
   padding: 16px 0 16px 16px;
   height: 56px; }
 
-#mma-mod_data-advanced-search-form .item-checkbox {
+#mma-mod_data-advanced-search-form mm-attachments .item-media,
+#mma-mod_data-edit-form mm-attachments .item-media {
+  width: 100%;
+  margin: -1px;
+  border: 1px solid #dddddd;
+  height: 56px; }
+
+#mma-mod_data-advanced-search-form mm-multiple-select .item, #mma-mod_data-advanced-search-form mm-multiple-select .mm-grades-table .itemcenter, .mm-grades-table #mma-mod_data-advanced-search-form mm-multiple-select .itemcenter,
+#mma-mod_data-edit-form mm-multiple-select .item,
+#mma-mod_data-edit-form mm-multiple-select .mm-grades-table .itemcenter, .mm-grades-table
+#mma-mod_data-edit-form mm-multiple-select .itemcenter {
+  width: 100%;
+  margin: -1px;
+  border: 1px solid #dddddd;
+  padding: 16px 0 16px 16px; }
+
+#mma-mod_data-advanced-search-form mm-attachments .item, #mma-mod_data-advanced-search-form mm-attachments .mm-grades-table .itemcenter, .mm-grades-table #mma-mod_data-advanced-search-form mm-attachments .itemcenter,
+#mma-mod_data-edit-form mm-attachments .item,
+#mma-mod_data-edit-form mm-attachments .mm-grades-table .itemcenter, .mm-grades-table
+#mma-mod_data-edit-form mm-attachments .itemcenter {
+  width: 100%;
+  margin: -1px;
+  border: 1px solid #dddddd; }
+
+#mma-mod_data-advanced-search-form .item-checkbox,
+#mma-mod_data-edit-form .item-checkbox {
   margin-right: 1px; }
 
-#mma-mod_data-advanced-search-form .item-select select {
+#mma-mod_data-advanced-search-form .item-select select,
+#mma-mod_data-edit-form .item-select select {
   width: 100%;
   left: 0;
   max-width: none; }
+
+#mma-mod_data-advanced-search-form .item-input.mm-latlong,
+#mma-mod_data-edit-form .item-input.mm-latlong {
+  width: 100%;
+  margin: -1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0; }
+  #mma-mod_data-advanced-search-form .item-input.mm-latlong input,
+  #mma-mod_data-edit-form .item-input.mm-latlong input {
+    border: 0; }
 
 .mm-site_mod_feedback .mm-analysis ul {
   font-size: 14px; }

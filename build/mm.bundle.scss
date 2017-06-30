@@ -52,9 +52,9 @@ $item-input-padding: 16px !default;
  * App Branding
  */
 .mm-bglogo {
-  background-color: #ff5c00; /* Change this to add a bg image or change color */
-  background: -webkit-radial-gradient(#ff7600, #ff5c00);
-  background: radial-gradient(#ff7600, #ff5c00);
+  background-color: $mm-color-init-screen; /* Change this to add a bg image or change color */
+  background: -webkit-radial-gradient($mm-color-init-screen-alt, $mm-color-init-screen);
+  background: radial-gradient($mm-color-init-screen-alt, $mm-color-init-screen);
   background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
@@ -73,17 +73,17 @@ $item-input-padding: 16px !default;
   }
 
   img {
-    width: 60%;
-    max-width: 300px;
+    width: $mm-init-screen-logo-width;
+    max-width: $mm-init-screen-logo-max-width;
     display: block;
     margin: 0 auto;
     margin-bottom: 30px;
   }
 
   .spinner {
-    color: white;
-    stroke: white;
-    fill: white;
+    color: $mm-init-screen-spinner-color;
+    stroke: $mm-init-screen-spinner-color;
+    fill: $mm-init-screen-spinner-color;
   }
 }
 
@@ -2047,28 +2047,24 @@ $mm-rte-min-height: 80px !default;
     margin: 0;
   }
 }
-
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
-}
-
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px;
-}
-
-mm-course-mod-description .card .item {
-  padding: $item-padding / 2;
-}
-
-.padding mm-course-mod-description .card {
-  margin-top: 0;
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+    }
 }
 
 $chart-size: 70px;
 $doughnut-border-size: 15px;
 $doughnut-dasharray: 173;
 $doughnut-empty-colour: $gray-light;
-$doughnut-fill-colour: $orange-light;
+$doughnut-fill-colour: $mm-color-light;
 $doughnut-border-colour:  $gray-dark;
 $doughnut-text-colour: $gray-darker;
 
@@ -2186,17 +2182,21 @@ $doughnut-text-colour: $gray-darker;
 mm-course-list-item .item-icon-left {
   color: $black;
 }
-.mm-fileuploader-file-handler {
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        outline: none;
-        z-index: 100;
-    }
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px;
+}
+
+mm-course-mod-description .card .item {
+  padding: $item-padding / 2;
+}
+
+.padding mm-course-mod-description .card {
+  margin-top: 0;
 }
 
 /* - User grades table (most of it extracted from MM1)
@@ -2367,7 +2367,12 @@ mm-course-list-item .item-icon-left {
     background: $white;
     border: 1px solid $item-default-border;
   }
+
+  .mm-sitename, .mm-siteurl {
+    @if $mm-fixed-url { display: none; }
+  }
 }
+
 
 
 $mm-question-correct-color:         $green-dark !default;
@@ -2506,12 +2511,6 @@ li.mm-question-answer-incorrect,
   color: $base-color;
 }
 
-// Variables.
-$bar-side-menu-height: 80px !default;
-$bar-side-menu-color: $bar-content-bg !default;
-$bar-side-menu-border-color: $bar-content-border !default;
-$bar-side-menu-text-color: $bar-content-text !default;
-
 // Bar styles
 .bar-side-menu {
   @include bar-style($bar-side-menu-color, $bar-side-menu-border-color, $bar-side-menu-text-color);
@@ -2523,7 +2522,8 @@ $bar-side-menu-text-color: $bar-content-text !default;
   .item-avatar {
     margin-top: 0px !important; // MOBILE-959: Added to fix side menu header in iOS.
     h2,
-    p {
+    p,
+    .icon {
       color: $bar-side-menu-text-color;
     }
   }
@@ -2539,6 +2539,20 @@ $bar-side-menu-text-color: $bar-content-text !default;
   }
 }
 
+ion-side-menu li .item,
+ion-side-menu li.item {
+  border-color: $bar-side-menu-item-border-color;
+  background-color: $bar-side-menu-item-background-color;
+  color: $bar-side-menu-item-text-color;
+
+  .icon {
+    color: $bar-side-menu-item-icon-color;
+  }
+}
+
+ion-side-menu li.item.item-divider {
+  background-color: $bar-side-menu-item-divider-color;
+}
 
 .foreground-ion-edit.ion-edit:before {
     position: relative;
@@ -2577,9 +2591,6 @@ $bar-side-menu-text-color: $bar-content-text !default;
             height: 22px;
         }
     }
-}
-.mm-site_coursesgrades .item .badge {
-  right: 16px;
 }
 $mma-messages-date-badge: "stable" !default;
 
@@ -2683,6 +2694,9 @@ $mma-messages-date-badge: "stable" !default;
   text-align: center;
 }
 
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
+}
 @media only screen and (min-width: $grid-responsive-sm-break) {
   .mm-course-grid {
     padding: 0;
@@ -3102,7 +3116,8 @@ $mma-chat-notice-badge: "stable" !default;
   border-color: $item-default-border;
 }
 
-#mma-mod_data-advanced-search-form {
+#mma-mod_data-advanced-search-form,
+#mma-mod_data-edit-form  {
   table {
     width: 100%;
   }
@@ -3123,12 +3138,32 @@ $mma-chat-notice-badge: "stable" !default;
   input[type="tel"],
   input[type="color"],
   .item-select,
-  mm-multiple-select .item {
+  mm-attachments>.item-border {
     width: 100%;
     margin: -1px;
     border: 1px solid $gray;
     padding: 16px 0 16px 16px;
     height: 56px;
+  }
+
+  mm-attachments .item-media {
+    width: 100%;
+    margin: -1px;
+    border: 1px solid $gray;
+    height: 56px;
+  }
+
+  mm-multiple-select .item {
+    width: 100%;
+    margin: -1px;
+    border: 1px solid $gray;
+    padding: 16px 0 16px 16px;
+  }
+
+  mm-attachments .item {
+    width: 100%;
+    margin: -1px;
+    border: 1px solid $gray;
   }
 
   .item-checkbox {
@@ -3139,6 +3174,18 @@ $mma-chat-notice-badge: "stable" !default;
       width: 100%;
       left: 0;
       max-width: none;
+  }
+
+  .item-input.mm-latlong {
+    width: 100%;
+    margin: -1px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+
+    input {
+      border: 0;
+    }
   }
 }
 .mm-site_mod_feedback {
