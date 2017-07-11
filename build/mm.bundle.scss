@@ -1633,6 +1633,33 @@ h2.invert {
     opacity: 0;
   }
 }
+
+// Textarea to copy text in browser or desktop. Don't use display none because otherwise it can't be selected.
+.mm-browser-copy-area {
+  position: absolute;
+  left: -10000px;
+}
+
+// Full screen modal.
+.modal-wrapper .modal.mm-fullscreen-modal {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0
+}
+
+// Buttons in header in modals.
+.modal .bar-header .button {
+  border-color: transparent;
+  background: none;
+}
+
+::-webkit-calendar-picker-indicator, ::-webkit-inner-spin-button, ::-webkit-clear-button {
+  display: none;
+}
+
 .atto_image_preview {
     width: 100%;
     height: 100%;
@@ -2047,17 +2074,21 @@ $mm-rte-min-height: 80px !default;
     margin: 0;
   }
 }
-.mm-fileuploader-file-handler {
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        outline: none;
-        z-index: 100;
-    }
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px;
+}
+
+mm-course-mod-description .card .item {
+  padding: $item-padding / 2;
+}
+
+.padding mm-course-mod-description .card {
+  margin-top: 0;
 }
 
 $chart-size: 70px;
@@ -2182,21 +2213,100 @@ $doughnut-text-colour: $gray-darker;
 mm-course-list-item .item-icon-left {
   color: $black;
 }
+.mm-capture-media-modal {
+    background-color: $gray-light;
 
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
+    .bar-header {
+        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
+
+        .button {
+            color: $bar-content-text;
+            font-weight: normal;
+        }
+    }
+
+    .mm-capture-media-modal-content {
+        text-align: center;
+
+        .mm-av-wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: table;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            clear: both;
+        }
+
+        audio, video, img {
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            object-fit: contain;
+
+            &.mm-webcam-stream {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+
+        .mm-webcam-image-canvas {
+            display: none;
+        }
+
+        .mm-audio-record-container {
+            width: 100%;
+            height: 100%;
+
+            .mm-audio-canvas {
+                width: 100%;
+                height: 100%;
+            }
+
+            .mm-audio-captured {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .bar-footer {
+        background-color: $gray;
+        border-top-color: $gray-dark;
+
+        .col {
+            padding: 0;
+            line-height: $bar-height - $bar-padding-portrait * 2;
+
+            .button-icon {
+                color: $black;
+            }
+
+            .ion-record, .ion-trash-a {
+                color: $red;
+            }
+        }
+    }
 }
 
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px;
-}
-
-mm-course-mod-description .card .item {
-  padding: $item-padding / 2;
-}
-
-.padding mm-course-mod-description .card {
-  margin-top: 0;
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+        cursor: pointer;
+    }
 }
 
 /* - User grades table (most of it extracted from MM1)
@@ -2592,6 +2702,9 @@ ion-side-menu li.item.item-divider {
         }
     }
 }
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
+}
 $mma-messages-date-badge: "stable" !default;
 
 // The date displayed in the list.
@@ -2694,9 +2807,6 @@ $mma-messages-date-badge: "stable" !default;
   text-align: center;
 }
 
-.mm-site_coursesgrades .item .badge {
-  right: 16px;
-}
 @media only screen and (min-width: $grid-responsive-sm-break) {
   .mm-course-grid {
     padding: 0;
@@ -3214,141 +3324,6 @@ $mma-chat-notice-badge: "stable" !default;
 }
 
 
-.mma-forum-discussion-link {
-    text-decoration: none;
-    &.mm-split-item-selected,
-    &.mm-split-item-selected>.item {
-        border-left: 0;
-        padding-left: 0;
-        article .item-heading {
-            border-top: 5px solid $mm-color;
-            margin-top: -1px;
-        }
-    }
-}
-
-.mma-forum-align-right {
-    justify-content: flex-end;
-}
-
-.mma-forum-border {
-    border-color: $item-default-border;
-    border-width: $item-border-width;
-    border-style: solid;
-}
-
-.mma-forum-reply-edit {
-    padding: $item-padding/2;
-}
-
-.mm-site_mod_forum, .mm-site_mod_forum-discussion {
-    .item.item-heading {
-        padding-bottom: 2px;
-
-        .mm-subject {
-            font-size: 90%;
-        }
-
-        .item-note {
-            font-size: 80%;
-            margin-left: 5px;
-        }
-    }
-
-    .card.highlight .item.item-heading {
-        background-color: $stable;
-
-        h2 {
-            font-weight: bold;
-        }
-    }
-}
-
-.mm-nest-cards {
-    .mm-nested-card {
-        padding: 0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        margin: 1px 10px 10px;
-        border-radius: 0;
-        background-color: $white;
-
-        .item {
-            border-left: 0;
-            border-right: 0;
-        }
-        .item-media:first-child {
-            border-top: 0;
-        }
-        .item-media:last-child {
-            border-bottom: 0;
-        }
-    }
-
-    .item-divider {
-        display: none;
-    }
-
-    .mm-nested {
-        margin-left: 10px;
-
-        &>article:nth-child(even)>.mm-nested-card>mma-mod-forum-discussion-post>.item-heading {
-            background: $gray-light;
-        }
-    }
-
-    .mma-forum-reply-edit {
-        padding: 0;
-        border: 0
-    }
-}
-
-.item.mma-mod-lesson-selected {
-  @extend .mm-menu-selected;
-}
-
-.mma-mod-lesson-slideshow {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.mma-mod-lesson-ongoingscore,
-.item.mma-mod-lesson-ongoingscore,
-.mma-mod-lesson-ongoingscore span,
-.item.mma-mod-lesson-ongoingscore span {
-  // Same styles as .item p.
-  color: $gray-darker;
-  font-size: 14px;
-}
-
-.mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
-  .item.row .col-33,
-  .item.row .col-50 {
-    border-color: $item-default-border;
-    border-style: solid;
-    &:not(:first-child) {
-      border-left-width: $item-border-width;
-    }
-  }
-}
-
-.mm-site_mod_lesson-userretake {
-  .mma-mod_lesson-answer {
-    .item {
-      border-top: 1px solid $item-default-border;
-      border-radius: 0;
-    }
-  }
-
-  .highlight {
-    background-color: $blue-light;
-    p {
-      color: $blue-dark;
-    }
-  }
-}
-
-
 $mma-mod-quiz-warning-color:      $red !default;
 $mma-mod-quiz-highlight-bgcolor:  $blue-light !default;
 $mma-mod-quiz-highlight-color:    $blue-dark !default;
@@ -3444,6 +3419,141 @@ p.mma-mod-quiz-warning {
 #mma-mod-quiz-toc .item {
   border-color: $gray-dark;
 }
+.item.mma-mod-lesson-selected {
+  @extend .mm-menu-selected;
+}
+
+.mma-mod-lesson-slideshow {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mma-mod-lesson-ongoingscore,
+.item.mma-mod-lesson-ongoingscore,
+.mma-mod-lesson-ongoingscore span,
+.item.mma-mod-lesson-ongoingscore span {
+  // Same styles as .item p.
+  color: $gray-darker;
+  font-size: 14px;
+}
+
+.mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
+  .item.row .col-33,
+  .item.row .col-50 {
+    border-color: $item-default-border;
+    border-style: solid;
+    &:not(:first-child) {
+      border-left-width: $item-border-width;
+    }
+  }
+}
+
+.mm-site_mod_lesson-userretake {
+  .mma-mod_lesson-answer {
+    .item {
+      border-top: 1px solid $item-default-border;
+      border-radius: 0;
+    }
+  }
+
+  .highlight {
+    background-color: $blue-light;
+    p {
+      color: $blue-dark;
+    }
+  }
+}
+
+
+.mma-forum-discussion-link {
+    text-decoration: none;
+    &.mm-split-item-selected,
+    &.mm-split-item-selected>.item {
+        border-left: 0;
+        padding-left: 0;
+        article .item-heading {
+            border-top: 5px solid $mm-color;
+            margin-top: -1px;
+        }
+    }
+}
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
+
+.mma-forum-reply-edit {
+    padding: $item-padding/2;
+}
+
+.mm-site_mod_forum, .mm-site_mod_forum-discussion {
+    .item.item-heading {
+        padding-bottom: 2px;
+
+        .mm-subject {
+            font-size: 90%;
+        }
+
+        .item-note {
+            font-size: 80%;
+            margin-left: 5px;
+        }
+    }
+
+    .card.highlight .item.item-heading {
+        background-color: $stable;
+
+        h2 {
+            font-weight: bold;
+        }
+    }
+}
+
+.mm-nest-cards {
+    .mm-nested-card {
+        padding: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        margin: 1px 10px 10px;
+        border-radius: 0;
+        background-color: $white;
+
+        .item {
+            border-left: 0;
+            border-right: 0;
+        }
+        .item-media:first-child {
+            border-top: 0;
+        }
+        .item-media:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .item-divider {
+        display: none;
+    }
+
+    .mm-nested {
+        margin-left: 10px;
+
+        &>article:nth-child(even)>.mm-nested-card>mma-mod-forum-discussion-post>.item-heading {
+            background: $gray-light;
+        }
+    }
+
+    .mma-forum-reply-edit {
+        padding: 0;
+        border: 0
+    }
+}
+
 
 $mma-mod-scorm-level-margin:		25px !default;
 $mma-mod-scorm-warning-color:		$red !default;
