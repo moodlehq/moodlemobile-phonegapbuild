@@ -2621,6 +2621,17 @@ li.mm-question-answer-incorrect,
   color: $base-color;
 }
 
+
+.foreground-ion-edit.ion-edit:before {
+    position: relative;
+    left: 120px;
+    bottom: 15px;
+    font-size: 24px;
+}
+
+.mm-site_mm_user-profile .mm-tab-handlers {
+    padding-bottom: 16px;
+}
 // Bar styles
 .bar-side-menu {
   @include bar-style($bar-side-menu-color, $bar-side-menu-border-color, $bar-side-menu-text-color);
@@ -2664,17 +2675,6 @@ ion-side-menu li.item.item-divider {
   background-color: $bar-side-menu-item-divider-color;
 }
 
-.foreground-ion-edit.ion-edit:before {
-    position: relative;
-    left: 120px;
-    bottom: 15px;
-    font-size: 24px;
-}
-
-.mm-site_mm_user-profile .mm-tab-handlers {
-    padding-bottom: 16px;
-}
-
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
         min-height: 55px;
@@ -2701,9 +2701,6 @@ ion-side-menu li.item.item-divider {
             height: 22px;
         }
     }
-}
-.mm-site_coursesgrades .item .badge {
-  right: 16px;
 }
 $mma-messages-date-badge: "stable" !default;
 
@@ -2807,6 +2804,9 @@ $mma-messages-date-badge: "stable" !default;
   text-align: center;
 }
 
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
+}
 @media only screen and (min-width: $grid-responsive-sm-break) {
   .mm-course-grid {
     padding: 0;
@@ -3324,6 +3324,141 @@ $mma-chat-notice-badge: "stable" !default;
 }
 
 
+.mma-forum-discussion-link {
+    text-decoration: none;
+    &.mm-split-item-selected,
+    &.mm-split-item-selected>.item {
+        border-left: 0;
+        padding-left: 0;
+        article .item-heading {
+            border-top: 5px solid $mm-color;
+            margin-top: -1px;
+        }
+    }
+}
+
+.mma-forum-align-right {
+    justify-content: flex-end;
+}
+
+.mma-forum-border {
+    border-color: $item-default-border;
+    border-width: $item-border-width;
+    border-style: solid;
+}
+
+.mma-forum-reply-edit {
+    padding: $item-padding/2;
+}
+
+.mm-site_mod_forum, .mm-site_mod_forum-discussion {
+    .item.item-heading {
+        padding-bottom: 2px;
+
+        .mm-subject {
+            font-size: 90%;
+        }
+
+        .item-note {
+            font-size: 80%;
+            margin-left: 5px;
+        }
+    }
+
+    .card.highlight .item.item-heading {
+        background-color: $stable;
+
+        h2 {
+            font-weight: bold;
+        }
+    }
+}
+
+.mm-nest-cards {
+    .mm-nested-card {
+        padding: 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        margin: 1px 10px 10px;
+        border-radius: 0;
+        background-color: $white;
+
+        .item {
+            border-left: 0;
+            border-right: 0;
+        }
+        .item-media:first-child {
+            border-top: 0;
+        }
+        .item-media:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    .item-divider {
+        display: none;
+    }
+
+    .mm-nested {
+        margin-left: 10px;
+
+        &>article:nth-child(even)>.mm-nested-card>mma-mod-forum-discussion-post>.item-heading {
+            background: $gray-light;
+        }
+    }
+
+    .mma-forum-reply-edit {
+        padding: 0;
+        border: 0
+    }
+}
+
+.item.mma-mod-lesson-selected {
+  @extend .mm-menu-selected;
+}
+
+.mma-mod-lesson-slideshow {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mma-mod-lesson-ongoingscore,
+.item.mma-mod-lesson-ongoingscore,
+.mma-mod-lesson-ongoingscore span,
+.item.mma-mod-lesson-ongoingscore span {
+  // Same styles as .item p.
+  color: $gray-darker;
+  font-size: 14px;
+}
+
+.mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
+  .item.row .col-33,
+  .item.row .col-50 {
+    border-color: $item-default-border;
+    border-style: solid;
+    &:not(:first-child) {
+      border-left-width: $item-border-width;
+    }
+  }
+}
+
+.mm-site_mod_lesson-userretake {
+  .mma-mod_lesson-answer {
+    .item {
+      border-top: 1px solid $item-default-border;
+      border-radius: 0;
+    }
+  }
+
+  .highlight {
+    background-color: $blue-light;
+    p {
+      color: $blue-dark;
+    }
+  }
+}
+
+
 $mma-mod-quiz-warning-color:      $red !default;
 $mma-mod-quiz-highlight-bgcolor:  $blue-light !default;
 $mma-mod-quiz-highlight-color:    $blue-dark !default;
@@ -3419,141 +3554,6 @@ p.mma-mod-quiz-warning {
 #mma-mod-quiz-toc .item {
   border-color: $gray-dark;
 }
-.item.mma-mod-lesson-selected {
-  @extend .mm-menu-selected;
-}
-
-.mma-mod-lesson-slideshow {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.mma-mod-lesson-ongoingscore,
-.item.mma-mod-lesson-ongoingscore,
-.mma-mod-lesson-ongoingscore span,
-.item.mma-mod-lesson-ongoingscore span {
-  // Same styles as .item p.
-  color: $gray-darker;
-  font-size: 14px;
-}
-
-.mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
-  .item.row .col-33,
-  .item.row .col-50 {
-    border-color: $item-default-border;
-    border-style: solid;
-    &:not(:first-child) {
-      border-left-width: $item-border-width;
-    }
-  }
-}
-
-.mm-site_mod_lesson-userretake {
-  .mma-mod_lesson-answer {
-    .item {
-      border-top: 1px solid $item-default-border;
-      border-radius: 0;
-    }
-  }
-
-  .highlight {
-    background-color: $blue-light;
-    p {
-      color: $blue-dark;
-    }
-  }
-}
-
-
-.mma-forum-discussion-link {
-    text-decoration: none;
-    &.mm-split-item-selected,
-    &.mm-split-item-selected>.item {
-        border-left: 0;
-        padding-left: 0;
-        article .item-heading {
-            border-top: 5px solid $mm-color;
-            margin-top: -1px;
-        }
-    }
-}
-
-.mma-forum-align-right {
-    justify-content: flex-end;
-}
-
-.mma-forum-border {
-    border-color: $item-default-border;
-    border-width: $item-border-width;
-    border-style: solid;
-}
-
-.mma-forum-reply-edit {
-    padding: $item-padding/2;
-}
-
-.mm-site_mod_forum, .mm-site_mod_forum-discussion {
-    .item.item-heading {
-        padding-bottom: 2px;
-
-        .mm-subject {
-            font-size: 90%;
-        }
-
-        .item-note {
-            font-size: 80%;
-            margin-left: 5px;
-        }
-    }
-
-    .card.highlight .item.item-heading {
-        background-color: $stable;
-
-        h2 {
-            font-weight: bold;
-        }
-    }
-}
-
-.mm-nest-cards {
-    .mm-nested-card {
-        padding: 0;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        margin: 1px 10px 10px;
-        border-radius: 0;
-        background-color: $white;
-
-        .item {
-            border-left: 0;
-            border-right: 0;
-        }
-        .item-media:first-child {
-            border-top: 0;
-        }
-        .item-media:last-child {
-            border-bottom: 0;
-        }
-    }
-
-    .item-divider {
-        display: none;
-    }
-
-    .mm-nested {
-        margin-left: 10px;
-
-        &>article:nth-child(even)>.mm-nested-card>mma-mod-forum-discussion-post>.item-heading {
-            background: $gray-light;
-        }
-    }
-
-    .mma-forum-reply-edit {
-        padding: 0;
-        border: 0
-    }
-}
-
 
 $mma-mod-scorm-level-margin:		25px !default;
 $mma-mod-scorm-warning-color:		$red !default;
@@ -3693,32 +3693,108 @@ $mma-mod-wiki-subwiki-selected-background-color:   $gray-light !default;
   }
 }
 
+// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddmarker-container {
+  mm-loading {
+    position: absolute;
+    left: 50%;
+  }
 
-$mma-qbehaviour-deferredcbm-judgementok-color:  $green-dark !default;
-$mma-qbehaviour-deferredcbm-slightly-color:     $red-dark !default;
-$mma-qbehaviour-deferredcbm-confident-color:    $red !default;
+  .qtext {
+    margin-bottom: 0.5em;
+    display: block;
+  }
 
-.qbehaviour_deferredcbm_actual_percentage {
-  font-weight: bold;
-}
-.qbehaviour_deferredcbm_judgementok {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-judgementok-color;
-}
-.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-slightly-color;
-}
-.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
-  font-weight: bold;
-  color: $mma-qbehaviour-deferredcbm-confident-color;
-}
+  div.droparea img  {
+    border: 1px solid $gray-darker;
+    max-width: 100%;
+  }
 
-.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
-	font-weight: bold;
-	font-size: 16px;
-}
+  .draghome img, .draghome span {
+    visibility: hidden;
+  }
 
+  .dragitems .dragitem {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .dropzones {
+    position: absolute;
+  }
+  .dropzones svg {
+    z-index: 3;
+  }
+
+  .dragitem.beingdragged .markertext {
+    z-index: 5;
+    box-shadow: 3px 3px 4px $gray-darker;
+  }
+  .dragitems .draghome {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .dragitems.readonly .dragitem {
+    cursor: auto;
+  }
+  div.ddarea {
+    text-align: center;
+  }
+  div.ddarea .markertexts {
+    min-height: 80px;
+    position: absolute;
+    text-align: left;
+  }
+  .dropbackground {
+    margin: 0 auto;
+  }
+
+  div.dragitems div.draghome, div.dragitems div.dragitem,
+  div.draghome, div.drag {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  }
+  div.dragitems span.markertext,
+  div.markertexts span.markertext{
+    margin: 0 5px;
+    z-index: 2;
+    background-color: $white;
+    border: 2px solid $gray-darker;
+    padding: 5px;
+    display: inline-block;
+    zoom: 1;
+    border-radius: 10px;
+  }
+  div.markertexts span.markertext {
+    z-index: 3;
+    background-color: $yellow-light;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $yellow;
+    position: absolute;
+  }
+  span.wrongpart {
+    background-color: $yellow-light;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $yellow;
+    padding: 5px;
+    border-radius: 10px;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    margin: 5px;
+    display: inline-block;
+  }
+  div.dragitems img.target {
+    position: absolute;
+    left: -7px; /* This must be half the size of the target image, minus 0.5. */
+    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
+  }
+  div.dragitems div.draghome img.target {
+    display: none;
+  }
+}
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
 .mma-qtype-ddimageortext-container {
   mm-loading {
@@ -3823,108 +3899,6 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
   .drag.beingdragged {
     z-index: 3;
     box-shadow: 3px 3px 4px $gray-darker;
-  }
-}
-// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
-.mma-qtype-ddmarker-container {
-  mm-loading {
-    position: absolute;
-    left: 50%;
-  }
-
-  .qtext {
-    margin-bottom: 0.5em;
-    display: block;
-  }
-
-  div.droparea img  {
-    border: 1px solid $gray-darker;
-    max-width: 100%;
-  }
-
-  .draghome img, .draghome span {
-    visibility: hidden;
-  }
-
-  .dragitems .dragitem {
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
-  }
-
-  .dropzones {
-    position: absolute;
-  }
-  .dropzones svg {
-    z-index: 3;
-  }
-
-  .dragitem.beingdragged .markertext {
-    z-index: 5;
-    box-shadow: 3px 3px 4px $gray-darker;
-  }
-  .dragitems .draghome {
-    margin: 10px;
-    display: inline-block;
-  }
-
-  .dragitems.readonly .dragitem {
-    cursor: auto;
-  }
-  div.ddarea {
-    text-align: center;
-  }
-  div.ddarea .markertexts {
-    min-height: 80px;
-    position: absolute;
-    text-align: left;
-  }
-  .dropbackground {
-    margin: 0 auto;
-  }
-
-  div.dragitems div.draghome, div.dragitems div.dragitem,
-  div.draghome, div.drag {
-    font: 13px/1.231 arial,helvetica,clean,sans-serif;
-  }
-  div.dragitems span.markertext,
-  div.markertexts span.markertext{
-    margin: 0 5px;
-    z-index: 2;
-    background-color: $white;
-    border: 2px solid $gray-darker;
-    padding: 5px;
-    display: inline-block;
-    zoom: 1;
-    border-radius: 10px;
-  }
-  div.markertexts span.markertext {
-    z-index: 3;
-    background-color: $yellow-light;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $yellow;
-    position: absolute;
-  }
-  span.wrongpart {
-    background-color: $yellow-light;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $yellow;
-    padding: 5px;
-    border-radius: 10px;
-    filter: alpha(opacity=60);
-    opacity: 0.6;
-    margin: 5px;
-    display: inline-block;
-  }
-  div.dragitems img.target {
-    position: absolute;
-    left: -7px; /* This must be half the size of the target image, minus 0.5. */
-    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
-  }
-  div.dragitems div.draghome img.target {
-    display: none;
   }
 }
 // Style ddwtos content a bit. Almost all these styles are copied from Moodle.
@@ -4117,3 +4091,29 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
   }
 }
 
+
+
+$mma-qbehaviour-deferredcbm-judgementok-color:  $green-dark !default;
+$mma-qbehaviour-deferredcbm-slightly-color:     $red-dark !default;
+$mma-qbehaviour-deferredcbm-confident-color:    $red !default;
+
+.qbehaviour_deferredcbm_actual_percentage {
+  font-weight: bold;
+}
+.qbehaviour_deferredcbm_judgementok {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-judgementok-color;
+}
+.qbehaviour_deferredcbm_slightlyunderconfident, .qbehaviour_deferredcbm_slightlyoverconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-slightly-color;
+}
+.qbehaviour_deferredcbm_underconfident, .qbehaviour_deferredcbm_overconfident {
+  font-weight: bold;
+  color: $mma-qbehaviour-deferredcbm-confident-color;
+}
+
+.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
+	font-weight: bold;
+	font-size: 16px;
+}
