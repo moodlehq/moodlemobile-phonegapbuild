@@ -2319,76 +2319,6 @@ mm-course-list-item .item-icon-left {
     }
 }
 
-
-.mm-mm_login_sites {
-  .item-thumbnail-left .item-content {
-    padding-top: $item-padding;
-    padding-right: $item-padding;
-  }
-
-  .list-left-editing .item-thumbnail-left .item-content {
-    padding-right: (ceil( ($item-padding * 3) + ($item-padding / 3) ) - 5);
-  }
-
-  .avatar {
-    margin: 0;
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    border-radius : 50%;
-    padding: 4px;
-    border: 1px solid #ddd;
-  }
-}
-
-.mm-login-sitepolicy-iframe {
-  height: 300px;
-}
-
-.mm-oauth-icon, .item.mm-oauth-icon {
-  padding: ($item-padding / 2);
-
-  > img, > span {
-    max-height: $item-icon-font-size;
-    max-width: $item-icon-font-size;
-    vertical-align: middle;
-  }
-  > span {
-    margin-left: 5px;
-    color: $gray-darker;
-  }
-}
-
-.mm-mm_login_credentials, .mm-mm_login_reconnect, .mm-mm_login_site {
-  .mm-ioninput-password {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  background: -webkit-radial-gradient(white, $gray-light);
-  background: radial-gradient(white, $gray-light);
-
-  img {
-    max-width: 100%;
-  }
-
-  img.moodle-logo {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .box {
-    padding: 16px;
-    background: $white;
-    border: 1px solid $item-default-border;
-  }
-
-  .mm-sitename, .mm-siteurl {
-    @if $mm-fixed-url { display: none; }
-  }
-}
-
-
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
 .mm-grades-container {
@@ -2493,6 +2423,76 @@ mm-course-list-item .item-icon-left {
     border-bottom: 1px solid $item-light-border;
   }
 }
+
+
+.mm-mm_login_sites {
+  .item-thumbnail-left .item-content {
+    padding-top: $item-padding;
+    padding-right: $item-padding;
+  }
+
+  .list-left-editing .item-thumbnail-left .item-content {
+    padding-right: (ceil( ($item-padding * 3) + ($item-padding / 3) ) - 5);
+  }
+
+  .avatar {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius : 50%;
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+}
+
+.mm-login-sitepolicy-iframe {
+  height: 300px;
+}
+
+.mm-oauth-icon, .item.mm-oauth-icon {
+  padding: ($item-padding / 2);
+
+  > img, > span {
+    max-height: $item-icon-font-size;
+    max-width: $item-icon-font-size;
+    vertical-align: middle;
+  }
+  > span {
+    margin-left: 5px;
+    color: $gray-darker;
+  }
+}
+
+.mm-mm_login_credentials, .mm-mm_login_reconnect, .mm-mm_login_site {
+  .mm-ioninput-password {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  background: -webkit-radial-gradient(white, $gray-light);
+  background: radial-gradient(white, $gray-light);
+
+  img {
+    max-width: 100%;
+  }
+
+  img.moodle-logo {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .box {
+    padding: 16px;
+    background: $white;
+    border: 1px solid $item-default-border;
+  }
+
+  .mm-sitename, .mm-siteurl {
+    @if $mm-fixed-url { display: none; }
+  }
+}
+
 
 
 $mm-question-correct-color:         $green-dark !default;
@@ -2627,18 +2627,8 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
-.mm-fileuploader-file-handler {
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        outline: none;
-        z-index: 100;
-        cursor: pointer;
-    }
+#mm-settings-languagelabel {
+  color: $base-color;
 }
 
 // Bar styles
@@ -2683,10 +2673,6 @@ ion-side-menu li.item {
 ion-side-menu li.item.item-divider {
   background-color: $bar-side-menu-item-divider-color;
 }
-#mm-settings-languagelabel {
-  color: $base-color;
-}
-
 
 .foreground-ion-edit.ion-edit:before {
     position: relative;
@@ -2698,9 +2684,21 @@ ion-side-menu li.item.item-divider {
 .mm-site_mm_user-profile .mm-tab-handlers {
     padding-bottom: 16px;
 }
-.mm-site_coursesgrades .item .badge {
-  right: 16px;
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+        cursor: pointer;
+    }
 }
+
+
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
         min-height: 55px;
@@ -2728,7 +2726,9 @@ ion-side-menu li.item.item-divider {
         }
     }
 }
-
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
+}
 $mma-messages-date-badge: "stable" !default;
 
 // The date displayed in the list.
@@ -2882,108 +2882,6 @@ $mma-messages-date-badge: "stable" !default;
     .list.block:last-child .item {
       border-bottom: 0;
     }
-  }
-}
-// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
-.mma-qtype-ddmarker-container {
-  mm-loading {
-    position: absolute;
-    left: 50%;
-  }
-
-  .qtext {
-    margin-bottom: 0.5em;
-    display: block;
-  }
-
-  div.droparea img  {
-    border: 1px solid $gray-darker;
-    max-width: 100%;
-  }
-
-  .draghome img, .draghome span {
-    visibility: hidden;
-  }
-
-  .dragitems .dragitem {
-    cursor: pointer;
-    position: absolute;
-    z-index: 2;
-  }
-
-  .dropzones {
-    position: absolute;
-  }
-  .dropzones svg {
-    z-index: 3;
-  }
-
-  .dragitem.beingdragged .markertext {
-    z-index: 5;
-    box-shadow: 3px 3px 4px $gray-darker;
-  }
-  .dragitems .draghome {
-    margin: 10px;
-    display: inline-block;
-  }
-
-  .dragitems.readonly .dragitem {
-    cursor: auto;
-  }
-  div.ddarea {
-    text-align: center;
-  }
-  div.ddarea .markertexts {
-    min-height: 80px;
-    position: absolute;
-    text-align: left;
-  }
-  .dropbackground {
-    margin: 0 auto;
-  }
-
-  div.dragitems div.draghome, div.dragitems div.dragitem,
-  div.draghome, div.drag {
-    font: 13px/1.231 arial,helvetica,clean,sans-serif;
-  }
-  div.dragitems span.markertext,
-  div.markertexts span.markertext{
-    margin: 0 5px;
-    z-index: 2;
-    background-color: $white;
-    border: 2px solid $gray-darker;
-    padding: 5px;
-    display: inline-block;
-    zoom: 1;
-    border-radius: 10px;
-  }
-  div.markertexts span.markertext {
-    z-index: 3;
-    background-color: $yellow-light;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $yellow;
-    position: absolute;
-  }
-  span.wrongpart {
-    background-color: $yellow-light;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $yellow;
-    padding: 5px;
-    border-radius: 10px;
-    filter: alpha(opacity=60);
-    opacity: 0.6;
-    margin: 5px;
-    display: inline-block;
-  }
-  div.dragitems img.target {
-    position: absolute;
-    left: -7px; /* This must be half the size of the target image, minus 0.5. */
-    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
-  }
-  div.dragitems div.draghome img.target {
-    display: none;
   }
 }
 
@@ -3982,6 +3880,108 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
   .drag.beingdragged {
     z-index: 3;
     box-shadow: 3px 3px 4px $gray-darker;
+  }
+}
+// Style ddmarker content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddmarker-container {
+  mm-loading {
+    position: absolute;
+    left: 50%;
+  }
+
+  .qtext {
+    margin-bottom: 0.5em;
+    display: block;
+  }
+
+  div.droparea img  {
+    border: 1px solid $gray-darker;
+    max-width: 100%;
+  }
+
+  .draghome img, .draghome span {
+    visibility: hidden;
+  }
+
+  .dragitems .dragitem {
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .dropzones {
+    position: absolute;
+  }
+  .dropzones svg {
+    z-index: 3;
+  }
+
+  .dragitem.beingdragged .markertext {
+    z-index: 5;
+    box-shadow: 3px 3px 4px $gray-darker;
+  }
+  .dragitems .draghome {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .dragitems.readonly .dragitem {
+    cursor: auto;
+  }
+  div.ddarea {
+    text-align: center;
+  }
+  div.ddarea .markertexts {
+    min-height: 80px;
+    position: absolute;
+    text-align: left;
+  }
+  .dropbackground {
+    margin: 0 auto;
+  }
+
+  div.dragitems div.draghome, div.dragitems div.dragitem,
+  div.draghome, div.drag {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+  }
+  div.dragitems span.markertext,
+  div.markertexts span.markertext{
+    margin: 0 5px;
+    z-index: 2;
+    background-color: $white;
+    border: 2px solid $gray-darker;
+    padding: 5px;
+    display: inline-block;
+    zoom: 1;
+    border-radius: 10px;
+  }
+  div.markertexts span.markertext {
+    z-index: 3;
+    background-color: $yellow-light;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $yellow;
+    position: absolute;
+  }
+  span.wrongpart {
+    background-color: $yellow-light;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $yellow;
+    padding: 5px;
+    border-radius: 10px;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    margin: 5px;
+    display: inline-block;
+  }
+  div.dragitems img.target {
+    position: absolute;
+    left: -7px; /* This must be half the size of the target image, minus 0.5. */
+    top: -7px;  /* In other words, this works for a 15x15 cross-hair. */
+  }
+  div.dragitems div.draghome img.target {
+    display: none;
   }
 }
 // Style ddwtos content a bit. Almost all these styles are copied from Moodle.

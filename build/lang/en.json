@@ -386,7 +386,7 @@
     "mm.core.moduleintro": "Description",
     "mm.core.mygroups": "My groups",
     "mm.core.name": "Name",
-    "mm.core.networkerrormsg": "Network not enabled or not working.",
+    "mm.core.networkerrormsg": "There was a problem connecting to the site. Please check your connection and try again.",
     "mm.core.never": "Never",
     "mm.core.next": "Next",
     "mm.core.no": "No",
