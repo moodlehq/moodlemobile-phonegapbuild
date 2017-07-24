@@ -2237,191 +2237,18 @@ $doughnut-text-colour: $gray-darker;
 mm-course-list-item .item-icon-left {
   color: $black;
 }
-.mm-capture-media-modal {
-    background-color: $gray-light;
-
-    .bar-header {
-        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
-
-        .button {
-            color: $bar-content-text;
-            font-weight: normal;
-        }
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+        cursor: pointer;
     }
-
-    .mm-capture-media-modal-content {
-        text-align: center;
-
-        .mm-av-wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: table;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            clear: both;
-        }
-
-        audio, video, img {
-            width: 100%;
-            height: 100%;
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-            object-fit: contain;
-
-            &.mm-webcam-stream {
-                -webkit-transform: scaleX(-1);
-                transform: scaleX(-1);
-            }
-        }
-
-        .mm-webcam-image-canvas {
-            display: none;
-        }
-
-        .mm-audio-record-container {
-            width: 100%;
-            height: 100%;
-
-            .mm-audio-canvas {
-                width: 100%;
-                height: 100%;
-            }
-
-            .mm-audio-captured {
-                width: 100%;
-            }
-        }
-    }
-
-
-    .bar-footer {
-        background-color: $gray;
-        border-top-color: $gray-dark;
-
-        .col {
-            padding: 0;
-            line-height: $bar-height - $bar-padding-portrait * 2;
-
-            .button-icon {
-                color: $black;
-            }
-
-            .ion-record, .ion-trash-a {
-                color: $red;
-            }
-        }
-    }
-}
-
-/* - User grades table (most of it extracted from MM1)
--------------------------------------------------------------------------- */
-.mm-grades-container {
-  padding-right: 2px;
-  background: white;
-}
-
-.mm-grades-table {
-  border-collapse: collapse;
-  line-height: 20px;
-  width: 100%;
-  font-size: 16px;
-  color: $item-stable-text;
-  tr {
-    border-bottom: 1px solid $item-light-border;
-  }
-  th,
-  td {
-    text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    vertical-align: top;
-    white-space: normal;
-  }
-  thead th {
-    padding-left: 10px;
-    vertical-align: bottom;
-    font-weight: bold;
-  }
-  tbody th {
-    font-weight: normal;
-  }
-  .item {
-    display: table-cell;
-  }
-  th {
-    &.b1b {
-      padding-left: 20px;
-    }
-    &.item {
-      padding-left: 30px;
-    }
-    &.baggt {
-      padding-left: 30px;
-    }
-    img {
-      margin-left: -20px;
-      float: left;
-    }
-  }
-  .b1l {
-    width: 10px;
-    min-width: 10px;
-  }
-  .b1t,
-  .baggt {
-    font-weight: bold;
-  }
-  .itemcenter {
-    @extend .item;
-    padding: 10px;
-    white-space: normal;
-  }
-  .feedbacktext {
-    padding-left: 10px;
-    .no-overflow {
-      overflow: auto;
-    }
-  }
-  .dimmed_text,
-  .hidden,
-  .hidden a {
-    color: #aaa;
-  }
-  .oddd1,
-  .oddd3,
-  .evend3,
-  .levelodd {
-    background-color: $item-divider-bg;
-  }
-  .oddd2,
-  .evend2,
-  .oddd4,
-  .evend4 {
-    background-color: $item-stable-bg;
-  }
-  .leveleven {
-    background-color: $item-light-bg;
-  }
-  .column-leader {
-    border-left: 1px solid $item-light-border;
-    border-top: 1px solid $item-light-border;
-    border-bottom: 1px solid $item-light-border;
-    &.level1 {
-      border-left: 0;
-    }
-  }
-  .column-itemname {
-    border-right: 1px solid $item-light-border;
-    border-top: 1px solid $item-light-border;
-    border-bottom: 1px solid $item-light-border;
-  }
 }
 
 
@@ -2627,8 +2454,86 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
-#mm-settings-languagelabel {
-  color: $base-color;
+.mm-capture-media-modal {
+    background-color: $gray-light;
+
+    .bar-header {
+        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
+
+        .button {
+            color: $bar-content-text;
+            font-weight: normal;
+        }
+    }
+
+    .mm-capture-media-modal-content {
+        text-align: center;
+
+        .mm-av-wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: table;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            clear: both;
+        }
+
+        audio, video, img {
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            object-fit: contain;
+
+            &.mm-webcam-stream {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+
+        .mm-webcam-image-canvas {
+            display: none;
+        }
+
+        .mm-audio-record-container {
+            width: 100%;
+            height: 100%;
+
+            .mm-audio-canvas {
+                width: 100%;
+                height: 100%;
+            }
+
+            .mm-audio-captured {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .bar-footer {
+        background-color: $gray;
+        border-top-color: $gray-dark;
+
+        .col {
+            padding: 0;
+            line-height: $bar-height - $bar-padding-portrait * 2;
+
+            .button-icon {
+                color: $black;
+            }
+
+            .ion-record, .ion-trash-a {
+                color: $red;
+            }
+        }
+    }
 }
 
 // Bar styles
@@ -2684,18 +2589,113 @@ ion-side-menu li.item.item-divider {
 .mm-site_mm_user-profile .mm-tab-handlers {
     padding-bottom: 16px;
 }
-.mm-fileuploader-file-handler {
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        outline: none;
-        z-index: 100;
-        cursor: pointer;
+#mm-settings-languagelabel {
+  color: $base-color;
+}
+
+/* - User grades table (most of it extracted from MM1)
+-------------------------------------------------------------------------- */
+.mm-grades-container {
+  padding-right: 2px;
+  background: white;
+}
+
+.mm-grades-table {
+  border-collapse: collapse;
+  line-height: 20px;
+  width: 100%;
+  font-size: 16px;
+  color: $item-stable-text;
+  tr {
+    border-bottom: 1px solid $item-light-border;
+  }
+  th,
+  td {
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    vertical-align: top;
+    white-space: normal;
+  }
+  thead th {
+    padding-left: 10px;
+    vertical-align: bottom;
+    font-weight: bold;
+  }
+  tbody th {
+    font-weight: normal;
+  }
+  .item {
+    display: table-cell;
+  }
+  th {
+    &.b1b {
+      padding-left: 20px;
     }
+    &.item {
+      padding-left: 30px;
+    }
+    &.baggt {
+      padding-left: 30px;
+    }
+    img {
+      margin-left: -20px;
+      float: left;
+    }
+  }
+  .b1l {
+    width: 10px;
+    min-width: 10px;
+  }
+  .b1t,
+  .baggt {
+    font-weight: bold;
+  }
+  .itemcenter {
+    @extend .item;
+    padding: 10px;
+    white-space: normal;
+  }
+  .feedbacktext {
+    padding-left: 10px;
+    .no-overflow {
+      overflow: auto;
+    }
+  }
+  .dimmed_text,
+  .hidden,
+  .hidden a {
+    color: #aaa;
+  }
+  .oddd1,
+  .oddd3,
+  .evend3,
+  .levelodd {
+    background-color: $item-divider-bg;
+  }
+  .oddd2,
+  .evend2,
+  .oddd4,
+  .evend4 {
+    background-color: $item-stable-bg;
+  }
+  .leveleven {
+    background-color: $item-light-bg;
+  }
+  .column-leader {
+    border-left: 1px solid $item-light-border;
+    border-top: 1px solid $item-light-border;
+    border-bottom: 1px solid $item-light-border;
+    &.level1 {
+      border-left: 0;
+    }
+  }
+  .column-itemname {
+    border-right: 1px solid $item-light-border;
+    border-top: 1px solid $item-light-border;
+    border-bottom: 1px solid $item-light-border;
+  }
 }
 
 
