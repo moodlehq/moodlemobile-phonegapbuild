@@ -11,7 +11,7 @@
     "gcmpn": "seprepara-moodle-1200",
     "customurlscheme": "moodlemobile",
     "demo_sites": {},
-    "url": "http://seprepara.com",
+    "siteurl": "http://seprepara.com",
     "skipssoconfirmation": "false",
     "forcedefaultlanguage": "true",
     "privacypolicy": "https://moodle.org/mod/page/view.php?id=8148"
