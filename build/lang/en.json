@@ -348,6 +348,7 @@
     "mm.core.info": "Info",
     "mm.core.ios": "iOS",
     "mm.core.labelsep": ": ",
+    "mm.core.lastdownloaded": "Last downloaded",
     "mm.core.lastmodified": "Last modified",
     "mm.core.lastsync": "Last synchronization",
     "mm.core.listsep": ",",
