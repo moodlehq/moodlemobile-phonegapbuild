@@ -2241,20 +2241,6 @@ $doughnut-text-colour: $gray-darker;
 mm-course-list-item .item-icon-left {
   color: $black;
 }
-.mm-fileuploader-file-handler {
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        outline: none;
-        z-index: 100;
-        cursor: pointer;
-    }
-}
-
 .mm-capture-media-modal {
     background-color: $gray-light;
 
@@ -2334,6 +2320,20 @@ mm-course-list-item .item-icon-left {
                 color: $red;
             }
         }
+    }
+}
+
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+        cursor: pointer;
     }
 }
 
@@ -2441,6 +2441,76 @@ mm-course-list-item .item-icon-left {
     border-bottom: 1px solid $item-light-border;
   }
 }
+
+
+.mm-mm_login_sites {
+  .item-thumbnail-left .item-content {
+    padding-top: $item-padding;
+    padding-right: $item-padding;
+  }
+
+  .list-left-editing .item-thumbnail-left .item-content {
+    padding-right: (ceil( ($item-padding * 3) + ($item-padding / 3) ) - 5);
+  }
+
+  .avatar {
+    margin: 0;
+    width: 80px;
+    height: 80px;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius : 50%;
+    padding: 4px;
+    border: 1px solid #ddd;
+  }
+}
+
+.mm-login-sitepolicy-iframe {
+  height: 300px;
+}
+
+.mm-oauth-icon, .item.mm-oauth-icon {
+  padding: ($item-padding / 2);
+
+  > img, > span {
+    max-height: $item-icon-font-size;
+    max-width: $item-icon-font-size;
+    vertical-align: middle;
+  }
+  > span {
+    margin-left: 5px;
+    color: $gray-darker;
+  }
+}
+
+.mm-mm_login_credentials, .mm-mm_login_reconnect, .mm-mm_login_site {
+  .mm-ioninput-password {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  background: -webkit-radial-gradient(white, $gray-light);
+  background: radial-gradient(white, $gray-light);
+
+  img {
+    max-width: 100%;
+  }
+
+  img.moodle-logo {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .box {
+    padding: 16px;
+    background: $white;
+    border: 1px solid $item-default-border;
+  }
+
+  .mm-sitename, .mm-siteurl {
+    @if $mm-fixed-url { display: none; }
+  }
+}
+
 
 
 $mm-question-correct-color:         $green-dark !default;
@@ -2575,76 +2645,6 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
-
-.mm-mm_login_sites {
-  .item-thumbnail-left .item-content {
-    padding-top: $item-padding;
-    padding-right: $item-padding;
-  }
-
-  .list-left-editing .item-thumbnail-left .item-content {
-    padding-right: (ceil( ($item-padding * 3) + ($item-padding / 3) ) - 5);
-  }
-
-  .avatar {
-    margin: 0;
-    width: 80px;
-    height: 80px;
-    max-width: 80px;
-    max-height: 80px;
-    border-radius : 50%;
-    padding: 4px;
-    border: 1px solid #ddd;
-  }
-}
-
-.mm-login-sitepolicy-iframe {
-  height: 300px;
-}
-
-.mm-oauth-icon, .item.mm-oauth-icon {
-  padding: ($item-padding / 2);
-
-  > img, > span {
-    max-height: $item-icon-font-size;
-    max-width: $item-icon-font-size;
-    vertical-align: middle;
-  }
-  > span {
-    margin-left: 5px;
-    color: $gray-darker;
-  }
-}
-
-.mm-mm_login_credentials, .mm-mm_login_reconnect, .mm-mm_login_site {
-  .mm-ioninput-password {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  background: -webkit-radial-gradient(white, $gray-light);
-  background: radial-gradient(white, $gray-light);
-
-  img {
-    max-width: 100%;
-  }
-
-  img.moodle-logo {
-    width: 90%;
-    max-width: 300px;
-  }
-
-  .box {
-    padding: 16px;
-    background: $white;
-    border: 1px solid $item-default-border;
-  }
-
-  .mm-sitename, .mm-siteurl {
-    @if $mm-fixed-url { display: none; }
-  }
-}
-
-
 #mm-settings-languagelabel {
   color: $base-color;
 }
@@ -2702,6 +2702,7 @@ ion-side-menu li.item.item-divider {
 .mm-site_mm_user-profile .mm-tab-handlers {
     padding-bottom: 16px;
 }
+
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
         min-height: 55px;
@@ -2729,7 +2730,62 @@ ion-side-menu li.item.item-divider {
         }
     }
 }
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
+}
+@media only screen and (min-width: $grid-responsive-sm-break) {
+  .mm-course-grid {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
+    mm-course-list-progress {
+      padding: 0 ($padding-base-horizontal / 2);
+      margin: 0;
+      max-width: 50%;
+      width: 50%;
+      display: flex;
+
+      .card {
+        width: 100%;
+        align-items: stretch;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+    }
+  }
+}
+
+.mm-timelinesort {
+  float: right;
+}
+
+.mm-timelinetitle {
+  float: left;
+  padding: 5px;
+}
+
+.mm-site_myoverview {
+  mm-course-list-progress .card {
+    margin-top: 0;
+
+    h5 {
+      margin-left: 10px;
+    }
+    .list.block .item {
+      border-top: $item-border-width solid $item-light-border;
+      border-bottom: $item-border-width solid $item-light-border;
+    }
+    .list.block:last-child .item {
+      border-bottom: 0;
+    }
+  }
+}
 $mma-messages-date-badge: "stable" !default;
 
 // The date displayed in the list.
@@ -2830,187 +2886,6 @@ $mma-messages-date-badge: "stable" !default;
 .mma-messages-showprevious-spinner-container {
   width: 100%;
   text-align: center;
-}
-
-.mm-site_coursesgrades .item .badge {
-  right: 16px;
-}
-@media only screen and (min-width: $grid-responsive-sm-break) {
-  .mm-course-grid {
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    mm-course-list-progress {
-      padding: 0 ($padding-base-horizontal / 2);
-      margin: 0;
-      max-width: 50%;
-      width: 50%;
-      display: flex;
-
-      .card {
-        width: 100%;
-        align-items: stretch;
-      }
-    }
-
-    &:after {
-      content: '';
-      width: 100%;
-    }
-  }
-}
-
-.mm-timelinesort {
-  float: right;
-}
-
-.mm-timelinetitle {
-  float: left;
-  padding: 5px;
-}
-
-.mm-site_myoverview {
-  mm-course-list-progress .card {
-    margin-top: 0;
-
-    h5 {
-      margin-left: 10px;
-    }
-    .list.block .item {
-      border-top: $item-border-width solid $item-light-border;
-      border-bottom: $item-border-width solid $item-light-border;
-    }
-    .list.block:last-child .item {
-      border-bottom: 0;
-    }
-  }
-}
-// Style ddwtos content a bit. Almost all these styles are copied from Moodle.
-.mma-qtype-ddwtos-container {
-  .qtext {
-      margin-bottom: 0.5em;
-      display: block;
-  }
-
-  .draghome {
-      margin-bottom: 1em;
-  }
-
-  .answertext {
-      margin-bottom: 0.5em;
-  }
-
-  .drop {
-      display: inline-block;
-      text-align: center;
-      border: 1px solid $gray-darker;
-      margin-bottom: 2px;
-      border-radius: 5px;
-  }
-  .draghome, .drag {
-      display: inline-block;
-      text-align: center;
-      background: transparent;
-      border: 0;
-  }
-  .draghome, .drag.unplaced{
-      border: 1px solid $gray-darker;
-      border-radius: 5px;
-  }
-  .draghome {
-      visibility: hidden;
-  }
-  .drag {
-      z-index: 2;
-      border-radius: 5px;
-  }
-  .drag.selected {
-      z-index: 3;
-      box-shadow: 3px 3px 4px $gray-darker;
-  }
-
-  .drop.selected {
-      border-color: $yellow-light;
-      box-shadow: 0 0 5px 5px $yellow-light;
-  }
-
-  &.notreadonly .drag,
-  &.notreadonly .draghome,
-  &.notreadonly .drop,
-  &.notreadonly .answercontainer {
-      cursor: pointer;
-      border-radius: 5px;
-  }
-
-  &.readonly .drag,
-  &.readonly .draghome,
-  &.readonly .drop,
-  &.readonly .answercontainer {
-      cursor: default;
-  }
-
-  span.incorrect {
-      background-color: $red-light;
-  }
-  span.correct {
-      background-color: $green-light;
-  }
-
-  .group1 {
-      background-color: $white;
-  }
-  .group2 {
-      background-color: #DCDCDC;
-  }
-  .group3 {
-      background-color: $blue-light;
-  }
-  .group4 {
-      background-color: #D8BFD8;
-  }
-  .group5 {
-      background-color: #87CEFA;
-  }
-  .group6 {
-      background-color: #DAA520;
-  }
-  .group7 {
-      background-color: #FFD700;
-  }
-  .group8 {
-      background-color: #F0E68C;
-  }
-
-  sub, sup {
-      font-size: 80%;
-      position: relative;
-      vertical-align: baseline;
-  }
-  sup {
-      top: -0.4em;
-  }
-  sub {
-      bottom: -0.2em;
-  }
-}
-
-
-
-
-// Style match content a bit.
-.mma-qtype-match-container .item-select {
-  select,
-  .mm-select-fix {
-    padding: 0 36px 0 0;
-    max-width: 100%;
-    display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-  }
 }
 
 
@@ -4126,6 +4001,118 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
     display: none;
   }
 }
+// Style ddwtos content a bit. Almost all these styles are copied from Moodle.
+.mma-qtype-ddwtos-container {
+  .qtext {
+      margin-bottom: 0.5em;
+      display: block;
+  }
+
+  .draghome {
+      margin-bottom: 1em;
+  }
+
+  .answertext {
+      margin-bottom: 0.5em;
+  }
+
+  .drop {
+      display: inline-block;
+      text-align: center;
+      border: 1px solid $gray-darker;
+      margin-bottom: 2px;
+      border-radius: 5px;
+  }
+  .draghome, .drag {
+      display: inline-block;
+      text-align: center;
+      background: transparent;
+      border: 0;
+  }
+  .draghome, .drag.unplaced{
+      border: 1px solid $gray-darker;
+      border-radius: 5px;
+  }
+  .draghome {
+      visibility: hidden;
+  }
+  .drag {
+      z-index: 2;
+      border-radius: 5px;
+  }
+  .drag.selected {
+      z-index: 3;
+      box-shadow: 3px 3px 4px $gray-darker;
+  }
+
+  .drop.selected {
+      border-color: $yellow-light;
+      box-shadow: 0 0 5px 5px $yellow-light;
+  }
+
+  &.notreadonly .drag,
+  &.notreadonly .draghome,
+  &.notreadonly .drop,
+  &.notreadonly .answercontainer {
+      cursor: pointer;
+      border-radius: 5px;
+  }
+
+  &.readonly .drag,
+  &.readonly .draghome,
+  &.readonly .drop,
+  &.readonly .answercontainer {
+      cursor: default;
+  }
+
+  span.incorrect {
+      background-color: $red-light;
+  }
+  span.correct {
+      background-color: $green-light;
+  }
+
+  .group1 {
+      background-color: $white;
+  }
+  .group2 {
+      background-color: #DCDCDC;
+  }
+  .group3 {
+      background-color: $blue-light;
+  }
+  .group4 {
+      background-color: #D8BFD8;
+  }
+  .group5 {
+      background-color: #87CEFA;
+  }
+  .group6 {
+      background-color: #DAA520;
+  }
+  .group7 {
+      background-color: #FFD700;
+  }
+  .group8 {
+      background-color: #F0E68C;
+  }
+
+  sub, sup {
+      font-size: 80%;
+      position: relative;
+      vertical-align: baseline;
+  }
+  sup {
+      top: -0.4em;
+  }
+  sub {
+      bottom: -0.2em;
+  }
+}
+
+
+
+
 // Style gapselect content a bit. All these styles are copied from Moodle.
 .mma-qtype-gapselect-container {
   p {
@@ -4146,6 +4133,19 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
   }
 }
 
+
+// Style match content a bit.
+.mma-qtype-match-container .item-select {
+  select,
+  .mm-select-fix {
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+  }
+}
 
 // Style multianswer content a bit. All these styles are copied from Moodle.
 .mma-qtype-multianswer-container {
