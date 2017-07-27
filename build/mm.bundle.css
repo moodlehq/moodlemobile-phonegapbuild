@@ -13175,43 +13175,6 @@ ion-side-menu li.item.item-divider, ion-side-menu .mm-grades-table li.item-divid
 .mma-messages-unreadfrom .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
   right: 16px; }
 
-@media only screen and (min-width: 567px) {
-  .mm-course-grid {
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    flex-wrap: wrap; }
-    .mm-course-grid mm-course-list-progress {
-      padding: 0 6px;
-      margin: 0;
-      max-width: 50%;
-      width: 50%;
-      display: flex; }
-      .mm-course-grid mm-course-list-progress .card {
-        width: 100%;
-        align-items: stretch; }
-    .mm-course-grid:after {
-      content: '';
-      width: 100%; } }
-
-.mm-timelinesort {
-  float: right; }
-
-.mm-timelinetitle {
-  float: left;
-  padding: 5px; }
-
-.mm-site_myoverview mm-course-list-progress .card {
-  margin-top: 0; }
-  .mm-site_myoverview mm-course-list-progress .card h5 {
-    margin-left: 10px; }
-  .mm-site_myoverview mm-course-list-progress .card .list.block .item, .mm-site_myoverview mm-course-list-progress .card .list.block .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block .itemcenter {
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd; }
-  .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .item, .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .itemcenter {
-    border-bottom: 0; }
-
 .mma-messages-date,
 .mma-messages-unreadfrom {
   text-align: center;
@@ -13285,6 +13248,43 @@ ion-side-menu li.item.item-divider, ion-side-menu .mm-grades-table li.item-divid
 .mma-messages-showprevious-spinner-container {
   width: 100%;
   text-align: center; }
+
+@media only screen and (min-width: 567px) {
+  .mm-course-grid {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .mm-course-grid mm-course-list-progress {
+      padding: 0 6px;
+      margin: 0;
+      max-width: 50%;
+      width: 50%;
+      display: flex; }
+      .mm-course-grid mm-course-list-progress .card {
+        width: 100%;
+        align-items: stretch; }
+    .mm-course-grid:after {
+      content: '';
+      width: 100%; } }
+
+.mm-timelinesort {
+  float: right; }
+
+.mm-timelinetitle {
+  float: left;
+  padding: 5px; }
+
+.mm-site_myoverview mm-course-list-progress .card {
+  margin-top: 0; }
+  .mm-site_myoverview mm-course-list-progress .card h5 {
+    margin-left: 10px; }
+  .mm-site_myoverview mm-course-list-progress .card .list.block .item, .mm-site_myoverview mm-course-list-progress .card .list.block .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block .itemcenter {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd; }
+  .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .item, .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .itemcenter {
+    border-bottom: 0; }
 
 .mm-site_mod_assign div.submissioneditable p,
 .mm-site_mod_assign-submission div.submissioneditable p {
@@ -13641,7 +13641,8 @@ p.mma-mod-assign-warning {
 #mma-mod_data-edit-form mm-attachments .itemcenter {
   width: 100%;
   margin: -1px;
-  border: 1px solid #dddddd; }
+  border: 1px solid #dddddd;
+  overflow: hidden; }
 
 #mma-mod_data-advanced-search-form .item-checkbox,
 #mma-mod_data-edit-form .item-checkbox {

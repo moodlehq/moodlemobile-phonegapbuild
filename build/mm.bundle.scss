@@ -2733,59 +2733,6 @@ ion-side-menu li.item.item-divider {
 .mm-site_coursesgrades .item .badge {
   right: 16px;
 }
-@media only screen and (min-width: $grid-responsive-sm-break) {
-  .mm-course-grid {
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    mm-course-list-progress {
-      padding: 0 ($padding-base-horizontal / 2);
-      margin: 0;
-      max-width: 50%;
-      width: 50%;
-      display: flex;
-
-      .card {
-        width: 100%;
-        align-items: stretch;
-      }
-    }
-
-    &:after {
-      content: '';
-      width: 100%;
-    }
-  }
-}
-
-.mm-timelinesort {
-  float: right;
-}
-
-.mm-timelinetitle {
-  float: left;
-  padding: 5px;
-}
-
-.mm-site_myoverview {
-  mm-course-list-progress .card {
-    margin-top: 0;
-
-    h5 {
-      margin-left: 10px;
-    }
-    .list.block .item {
-      border-top: $item-border-width solid $item-light-border;
-      border-bottom: $item-border-width solid $item-light-border;
-    }
-    .list.block:last-child .item {
-      border-bottom: 0;
-    }
-  }
-}
 $mma-messages-date-badge: "stable" !default;
 
 // The date displayed in the list.
@@ -2888,6 +2835,59 @@ $mma-messages-date-badge: "stable" !default;
   text-align: center;
 }
 
+@media only screen and (min-width: $grid-responsive-sm-break) {
+  .mm-course-grid {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    mm-course-list-progress {
+      padding: 0 ($padding-base-horizontal / 2);
+      margin: 0;
+      max-width: 50%;
+      width: 50%;
+      display: flex;
+
+      .card {
+        width: 100%;
+        align-items: stretch;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+    }
+  }
+}
+
+.mm-timelinesort {
+  float: right;
+}
+
+.mm-timelinetitle {
+  float: left;
+  padding: 5px;
+}
+
+.mm-site_myoverview {
+  mm-course-list-progress .card {
+    margin-top: 0;
+
+    h5 {
+      margin-left: 10px;
+    }
+    .list.block .item {
+      border-top: $item-border-width solid $item-light-border;
+      border-bottom: $item-border-width solid $item-light-border;
+    }
+    .list.block:last-child .item {
+      border-bottom: 0;
+    }
+  }
+}
 
 $mma-mod-assign-warning-color: $red !default;
 
@@ -3340,6 +3340,7 @@ $mma-chat-notice-badge: "stable" !default;
     width: 100%;
     margin: -1px;
     border: 1px solid $gray;
+    overflow: hidden;
   }
 
   .item-checkbox {
