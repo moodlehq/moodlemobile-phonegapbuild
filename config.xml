@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "cl.patache.apklms.1"
+        id        = "cl.patache.apklms"
         versionCode = "20180"
         version   = "3.3.0">
     <name>Patache LMS</name>
