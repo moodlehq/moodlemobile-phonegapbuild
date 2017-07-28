@@ -3262,7 +3262,7 @@ $mma-chat-notice-badge: "stable" !default;
     padding: 0;
   }
 
-  td {
+  td, th {
     @extend .col;
   }
 }
