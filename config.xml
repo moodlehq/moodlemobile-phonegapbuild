@@ -2,17 +2,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "cl.patache.apklms"
+        id        = "cl.patache.apklms2"
         versionCode = "20180"
         version   = "3.3.0">
-    <name>Patache LMS</name>
+    <name>Patache LMS 2</name>
 
     <description>
         Lms para Android
     </description>
 
     <author href="http://www.patache.cl" email="fcontrerasz@gmail.com">
-       Francisco Contreras
+       Francisco Contreras 2
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
@@ -35,9 +35,9 @@
     <allow-intent href="*" />
 
     <preference name="phonegap-version" value="cli-6.5.0" />
-    <preference name="orientation"      value="default" />
+    <preference name="orientation"      value="landscape" />
     <preference name="target-device"    value="universal" />
-    <preference name="fullscreen"       value="false" />
+    <preference name="fullscreen"       value="true" />
     <preference name="stay-in-webview"  value="false" />
     <preference name="webviewbounce"    value="false" />
     <preference name="prerendered-icon" value="true" />
