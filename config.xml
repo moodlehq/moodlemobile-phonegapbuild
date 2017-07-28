@@ -5,14 +5,14 @@
         id        = "cl.patache.apklms2"
         versionCode = "20180"
         version   = "3.3.0">
-    <name>Patache LMS</name>
+    <name>Patache LMS 2</name>
 
     <description>
         Lms para Android
     </description>
 
     <author href="http://www.patache.cl" email="fcontrerasz@gmail.com">
-       Francisco Contreras
+       Francisco Contreras 2
     </author>
 
     <gap:platform name="android" />
