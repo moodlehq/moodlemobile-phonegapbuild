@@ -755,7 +755,7 @@
 .ion-wineglass:before,
 .ion-woman:before,
 .ion-wrench:before,
-.ion-xbox:before, mm-format-text[max-height].mm-text-formatted.mm-shortened .mm-show-more:after, *[mm-format-text][max-height].mm-text-formatted.mm-shortened .mm-show-more:after {
+.ion-xbox:before, .fa.icon, mm-format-text[max-height].mm-text-formatted.mm-shortened .mm-show-more:after, *[mm-format-text][max-height].mm-text-formatted.mm-shortened .mm-show-more:after {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -9607,7 +9607,7 @@ a.button {
  * available width, and the height of each .col with take
  * up the height of the tallest .col in the same .row.
  */
-.row {
+.row, .mm-data-contents tr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -9625,14 +9625,14 @@ a.button {
 
 .row-no-padding {
   padding: 0; }
-  .row-no-padding > .col {
+  .row-no-padding > .col, .mm-data-contents .row-no-padding > td, .mm-data-contents .row-no-padding > th {
     padding: 0; }
 
-.row + .row {
+.row + .row, .mm-data-contents tr + .row, .mm-data-contents .row + tr, .mm-data-contents tr + tr {
   margin-top: -5px;
   padding-top: 0; }
 
-.col {
+.col, .mm-data-contents td, .mm-data-contents th {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -moz-box-flex: 1;
@@ -9844,7 +9844,7 @@ a.button {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .responsive-sm .col, .responsive-sm .col-10, .responsive-sm .col-20, .responsive-sm .col-25, .responsive-sm .col-33, .responsive-sm .col-34, .responsive-sm .col-50, .responsive-sm .col-66, .responsive-sm .col-67, .responsive-sm .col-75, .responsive-sm .col-80, .responsive-sm .col-90 {
+    .responsive-sm .col, .responsive-sm .mm-data-contents td, .mm-data-contents .responsive-sm td, .responsive-sm .mm-data-contents th, .mm-data-contents .responsive-sm th, .responsive-sm .col-10, .responsive-sm .col-20, .responsive-sm .col-25, .responsive-sm .col-33, .responsive-sm .col-34, .responsive-sm .col-50, .responsive-sm .col-66, .responsive-sm .col-67, .responsive-sm .col-75, .responsive-sm .col-80, .responsive-sm .col-90 {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       -moz-box-flex: 1;
@@ -9865,7 +9865,7 @@ a.button {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .responsive-md .col, .responsive-md .col-10, .responsive-md .col-20, .responsive-md .col-25, .responsive-md .col-33, .responsive-md .col-34, .responsive-md .col-50, .responsive-md .col-66, .responsive-md .col-67, .responsive-md .col-75, .responsive-md .col-80, .responsive-md .col-90 {
+    .responsive-md .col, .responsive-md .mm-data-contents td, .mm-data-contents .responsive-md td, .responsive-md .mm-data-contents th, .mm-data-contents .responsive-md th, .responsive-md .col-10, .responsive-md .col-20, .responsive-md .col-25, .responsive-md .col-33, .responsive-md .col-34, .responsive-md .col-50, .responsive-md .col-66, .responsive-md .col-67, .responsive-md .col-75, .responsive-md .col-80, .responsive-md .col-90 {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       -moz-box-flex: 1;
@@ -9886,7 +9886,7 @@ a.button {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .responsive-lg .col, .responsive-lg .col-10, .responsive-lg .col-20, .responsive-lg .col-25, .responsive-lg .col-33, .responsive-lg .col-34, .responsive-lg .col-50, .responsive-lg .col-66, .responsive-lg .col-67, .responsive-lg .col-75, .responsive-lg .col-80, .responsive-lg .col-90 {
+    .responsive-lg .col, .responsive-lg .mm-data-contents td, .mm-data-contents .responsive-lg td, .responsive-lg .mm-data-contents th, .mm-data-contents .responsive-lg th, .responsive-lg .col-10, .responsive-lg .col-20, .responsive-lg .col-25, .responsive-lg .col-33, .responsive-lg .col-34, .responsive-lg .col-50, .responsive-lg .col-66, .responsive-lg .col-67, .responsive-lg .col-75, .responsive-lg .col-80, .responsive-lg .col-90 {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       -moz-box-flex: 1;
@@ -10538,9 +10538,9 @@ a.button {
     margin: 0 auto;
     margin-bottom: 30px; }
   .mm-bglogo .spinner {
-    color: white;
-    stroke: white;
-    fill: white; }
+    color: #ffffff;
+    stroke: #ffffff;
+    fill: #ffffff; }
 
 /**
  * Styles revert.
@@ -10829,6 +10829,13 @@ p.item-text-wrap {
   height: 100%;
   border-radius: 50%; }
 
+.avatar-round {
+  max-width: 40px;
+  max-height: 40px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; }
+
 .mm-split-pane {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11027,11 +11034,11 @@ img.mm-media-adapt-width-enabled {
   .mm-image-viewer-icon i.icon:before {
     color: #3a3a3a !important; }
 
-mm-navigation-bar .row {
+mm-navigation-bar .row, mm-navigation-bar .mm-data-contents tr, .mm-data-contents mm-navigation-bar tr {
   padding-top: 0px;
   padding-bottom: 0px; }
 
-mm-navigation-bar .col {
+mm-navigation-bar .col, mm-navigation-bar .mm-data-contents td, .mm-data-contents mm-navigation-bar td, mm-navigation-bar .mm-data-contents th, .mm-data-contents mm-navigation-bar th {
   padding-top: 0px;
   padding-bottom: 0px; }
 
@@ -11041,7 +11048,7 @@ mm-navigation-bar .col {
   font-weight: normal;
   font-size: 1em; }
 
-.item.row.mm-item-padding, .mm-grades-table .row.mm-item-padding.itemcenter {
+.item.row.mm-item-padding, .mm-grades-table .row.mm-item-padding.itemcenter, .mm-grades-table .mm-data-contents tr.mm-item-padding.itemcenter, .mm-data-contents .mm-grades-table tr.mm-item-padding.itemcenter, .mm-data-contents tr.item.mm-item-padding {
   padding: 8px;
   width: initial; }
 
@@ -11519,6 +11526,16 @@ mm-timer {
 .item-input .item-input-wrapper input {
   width: 100%;
   background: transparent; }
+
+mm-multiple-select {
+  cursor: pointer; }
+  mm-multiple-select .item-stacked-label ion-label.input-label, mm-multiple-select .item-stacked-label p {
+    padding-right: 30px;
+    white-space: normal; }
+  mm-multiple-select .icon.ion-android-arrow-dropdown {
+    font-size: 21px;
+    color: #999999;
+    right: 5px; }
 
 .button.mm-button-icon-small {
   padding: 0 3px;
@@ -12040,6 +12057,28 @@ h2.invert, .item .invert.item-heading, .mm-grades-table .itemcenter .invert.item
 .mm-animate-show-hide.ng-leave.ng-leave-active {
   opacity: 0; }
 
+.mm-browser-copy-area {
+  position: absolute;
+  left: -10000px; }
+
+.modal-wrapper .modal.mm-fullscreen-modal {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0; }
+
+.modal .bar-header .button {
+  border-color: transparent;
+  background: none; }
+
+::-webkit-calendar-picker-indicator, ::-webkit-inner-spin-button, ::-webkit-clear-button {
+  display: none; }
+
+*[ng-click] {
+  cursor: pointer; }
+
 .atto_image_preview {
   width: 100%;
   height: 100%;
@@ -12098,6 +12137,41 @@ h2.invert, .item .invert.item-heading, .mm-grades-table .itemcenter .invert.item
   max-width: calc(100% - 1em); }
 
 /*rtl:end:ignore*/
+/** This file is intended to translate fontawesome to ionicons while the font is not supported */
+.fa {
+  font-size: 24px;
+  width: 24px;
+  height: 24px; }
+
+/** Fixed width */
+.fa-fw {
+  width: 1.28571em;
+  text-align: center; }
+
+/** Uncomment for dev purposes, it will show an asterisk in red where a missing icon is */
+/*.fa:before {
+    color: red !important;
+    content: $ionicon-var-asterisk;
+}*/
+/** Icons translation */
+.fa-search-plus:before {
+  content: ""; }
+
+.fa-cog:before {
+  content: ""; }
+
+.fa-trash:before {
+  content: ""; }
+
+.fa-thumbs-up:before {
+  content: ""; }
+
+.fa-thumbs-down:before {
+  content: ""; }
+
+.fa-ban:before {
+  content: ""; }
+
 /**
  * In this file we will reset ionic styles that can bother online html.
  */
@@ -12687,6 +12761,63 @@ mm-course-list-item
 mm-course-list-item div.item-icon-left.earlysubmission {
   color: #3a3a3a; }
 
+.mm-capture-media-modal {
+  background-color: #eeeeee; }
+  .mm-capture-media-modal .bar-header {
+    border-color: transparent;
+    background-color: #f98012;
+    background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
+    color: #ffffff; }
+    .mm-capture-media-modal .bar-header .title {
+      color: #ffffff; }
+    .mm-capture-media-modal .bar-header .button {
+      color: #ffffff;
+      font-weight: normal; }
+  .mm-capture-media-modal .mm-capture-media-modal-content {
+    text-align: center; }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-av-wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: table;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      clear: both; }
+    .mm-capture-media-modal .mm-capture-media-modal-content audio, .mm-capture-media-modal .mm-capture-media-modal-content video, .mm-capture-media-modal .mm-capture-media-modal-content img {
+      width: 100%;
+      height: 100%;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      object-fit: contain; }
+      .mm-capture-media-modal .mm-capture-media-modal-content audio.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content video.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content img.mm-webcam-stream {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1); }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-webcam-image-canvas {
+      display: none; }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container {
+      width: 100%;
+      height: 100%; }
+      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-canvas {
+        width: 100%;
+        height: 100%; }
+      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-captured {
+        width: 100%; }
+  .mm-capture-media-modal .bar-footer {
+    background-color: #dddddd;
+    border-top-color: #9e9e9e; }
+    .mm-capture-media-modal .bar-footer .col, .mm-capture-media-modal .bar-footer .mm-data-contents td, .mm-data-contents .mm-capture-media-modal .bar-footer td, .mm-capture-media-modal .bar-footer .mm-data-contents th, .mm-data-contents .mm-capture-media-modal .bar-footer th {
+      padding: 0;
+      line-height: 34px; }
+      .mm-capture-media-modal .bar-footer .col .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents td .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer td .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents th .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer th .button-icon {
+        color: #3a3a3a; }
+      .mm-capture-media-modal .bar-footer .col .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-record, .mm-capture-media-modal .bar-footer .col .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-trash-a {
+        color: #cb3d4d; }
+
 .mm-fileuploader-file-handler input {
   position: absolute;
   top: 0;
@@ -12695,7 +12826,8 @@ mm-course-list-item div.item-icon-left.earlysubmission {
   min-height: 100%;
   opacity: 0;
   outline: none;
-  z-index: 100; }
+  z-index: 100;
+  cursor: pointer; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
@@ -12972,7 +13104,11 @@ li.mm-question-answer-incorrect,
     .bar-side-menu .item-avatar p,
     .bar-side-menu .item-media p,
     .bar-side-menu .item-avatar-center p,
-    .bar-side-menu .item-progress p {
+    .bar-side-menu .item-progress p,
+    .bar-side-menu .item-avatar .icon,
+    .bar-side-menu .item-media .icon,
+    .bar-side-menu .item-avatar-center .icon,
+    .bar-side-menu .item-progress .icon {
       color: #ffffff; }
 
 .has-side-menu-header {
@@ -12986,6 +13122,22 @@ li.mm-question-answer-incorrect,
 .mma-messages-unreadfrom span,
 .mma-messages-unreadfrom .mm-grades-table .mm-sidemenu-menu .itemcenter span, .mm-sidemenu-menu .item .mma-chat-notice span, .mma-chat-notice .mm-sidemenu-menu .item span, .mm-sidemenu-menu .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-sidemenu-menu .mm-grades-table .itemcenter span, .mm-grades-table .mm-sidemenu-menu .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-sidemenu-menu .itemcenter span {
   right: 16px; }
+
+ion-side-menu li .item, ion-side-menu li .mm-grades-table .itemcenter, .mm-grades-table ion-side-menu li .itemcenter,
+ion-side-menu li.item,
+ion-side-menu .mm-grades-table li.itemcenter, .mm-grades-table
+ion-side-menu li.itemcenter {
+  border-color: #dddddd;
+  background-color: #ffffff;
+  color: #3a3a3a; }
+  ion-side-menu li .item .icon, ion-side-menu li .mm-grades-table .itemcenter .icon, .mm-grades-table ion-side-menu li .itemcenter .icon,
+  ion-side-menu li.item .icon,
+  ion-side-menu .mm-grades-table li.itemcenter .icon, .mm-grades-table
+  ion-side-menu li.itemcenter .icon {
+    color: #626262; }
+
+ion-side-menu li.item.item-divider, ion-side-menu .mm-grades-table li.item-divider.itemcenter, .mm-grades-table ion-side-menu li.item-divider.itemcenter {
+  background-color: #f5f5f5; }
 
 .foreground-ion-edit.ion-edit:before {
   position: relative;
@@ -13022,43 +13174,6 @@ li.mm-question-answer-incorrect,
 .mma-messages-unreadfrom span,
 .mma-messages-unreadfrom .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
   right: 16px; }
-
-@media only screen and (min-width: 567px) {
-  .mm-course-grid {
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    flex-wrap: wrap; }
-    .mm-course-grid mm-course-list-progress {
-      padding: 0 6px;
-      margin: 0;
-      max-width: 50%;
-      width: 50%;
-      display: flex; }
-      .mm-course-grid mm-course-list-progress .card {
-        width: 100%;
-        align-items: stretch; }
-    .mm-course-grid:after {
-      content: '';
-      width: 100%; } }
-
-.mm-timelinesort {
-  float: right; }
-
-.mm-timelinetitle {
-  float: left;
-  padding: 5px; }
-
-.mm-site_myoverview mm-course-list-progress .card {
-  margin-top: 0; }
-  .mm-site_myoverview mm-course-list-progress .card h5 {
-    margin-left: 10px; }
-  .mm-site_myoverview mm-course-list-progress .card .list.block .item, .mm-site_myoverview mm-course-list-progress .card .list.block .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block .itemcenter {
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd; }
-  .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .item, .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .itemcenter {
-    border-bottom: 0; }
 
 .mma-messages-date,
 .mma-messages-unreadfrom {
@@ -13133,6 +13248,43 @@ li.mm-question-answer-incorrect,
 .mma-messages-showprevious-spinner-container {
   width: 100%;
   text-align: center; }
+
+@media only screen and (min-width: 567px) {
+  .mm-course-grid {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .mm-course-grid mm-course-list-progress {
+      padding: 0 6px;
+      margin: 0;
+      max-width: 50%;
+      width: 50%;
+      display: flex; }
+      .mm-course-grid mm-course-list-progress .card {
+        width: 100%;
+        align-items: stretch; }
+    .mm-course-grid:after {
+      content: '';
+      width: 100%; } }
+
+.mm-timelinesort {
+  float: right; }
+
+.mm-timelinetitle {
+  float: left;
+  padding: 5px; }
+
+.mm-site_myoverview mm-course-list-progress .card {
+  margin-top: 0; }
+  .mm-site_myoverview mm-course-list-progress .card h5 {
+    margin-left: 10px; }
+  .mm-site_myoverview mm-course-list-progress .card .list.block .item, .mm-site_myoverview mm-course-list-progress .card .list.block .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block .itemcenter {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd; }
+  .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .item, .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .mm-grades-table .itemcenter, .mm-grades-table .mm-site_myoverview mm-course-list-progress .card .list.block:last-child .itemcenter {
+    border-bottom: 0; }
 
 .mm-site_mod_assign div.submissioneditable p,
 .mm-site_mod_assign-submission div.submissioneditable p {
@@ -13371,13 +13523,154 @@ p.mma-mod-assign-warning {
   margin: 0 auto; }
 
 @media (min-width: 767px) {
-  .mm-site_mod_choice .col {
+  .mm-site_mod_choice .col, .mm-site_mod_choice .mm-data-contents td, .mm-data-contents .mm-site_mod_choice td, .mm-site_mod_choice .mm-data-contents th, .mm-data-contents .mm-site_mod_choice th {
     border-left: 1px solid #dddddd; }
-    .mm-site_mod_choice .col.item, .mm-site_mod_choice .mm-grades-table .col.itemcenter, .mm-grades-table .mm-site_mod_choice .col.itemcenter, .mm-site_mod_choice .col .chart-item {
+    .mm-site_mod_choice .col.item, .mm-site_mod_choice .mm-grades-table .col.itemcenter, .mm-grades-table .mm-site_mod_choice .col.itemcenter, .mm-site_mod_choice .mm-grades-table .mm-data-contents td.itemcenter, .mm-grades-table .mm-data-contents .mm-site_mod_choice td.itemcenter, .mm-site_mod_choice .mm-data-contents .mm-grades-table td.itemcenter, .mm-data-contents .mm-grades-table .mm-site_mod_choice td.itemcenter, .mm-site_mod_choice .mm-grades-table .mm-data-contents th.itemcenter, .mm-grades-table .mm-data-contents .mm-site_mod_choice th.itemcenter, .mm-site_mod_choice .mm-data-contents .mm-grades-table th.itemcenter, .mm-data-contents .mm-grades-table .mm-site_mod_choice th.itemcenter, .mm-site_mod_choice .mm-data-contents td.item, .mm-data-contents .mm-site_mod_choice td.item, .mm-site_mod_choice .mm-data-contents th.item, .mm-data-contents .mm-site_mod_choice th.item, .mm-site_mod_choice .col .chart-item, .mm-site_mod_choice .mm-data-contents td .chart-item, .mm-data-contents .mm-site_mod_choice td .chart-item, .mm-site_mod_choice .mm-data-contents th .chart-item, .mm-data-contents .mm-site_mod_choice th .chart-item {
       margin-top: 0;
       border-top: 0; }
-    .mm-site_mod_choice .col:first-child {
+    .mm-site_mod_choice .col:first-child, .mm-site_mod_choice .mm-data-contents td:first-child, .mm-data-contents .mm-site_mod_choice td:first-child, .mm-site_mod_choice .mm-data-contents th:first-child, .mm-data-contents .mm-site_mod_choice th:first-child {
       border-left: 0; } }
+
+.mm-site_mod_data .recordcheckbox {
+  display: none; }
+
+.mm-data-contents {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-word;
+  padding: 16px;
+  background-color: white;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-style: solid;
+  border-color: #dddddd; }
+  .mm-data-contents table, .mm-data-contents tbody {
+    display: block; }
+  .mm-data-contents tr {
+    padding: 0; }
+
+#mma-mod_data-advanced-search-form table,
+#mma-mod_data-edit-form table {
+  width: 100%; }
+
+#mma-mod_data-advanced-search-form td,
+#mma-mod_data-edit-form td {
+  vertical-align: top; }
+
+#mma-mod_data-advanced-search-form textarea,
+#mma-mod_data-advanced-search-form input[type="text"],
+#mma-mod_data-advanced-search-form input[type="password"],
+#mma-mod_data-advanced-search-form input[type="datetime"],
+#mma-mod_data-advanced-search-form input[type="datetime-local"],
+#mma-mod_data-advanced-search-form input[type="date"],
+#mma-mod_data-advanced-search-form input[type="month"],
+#mma-mod_data-advanced-search-form input[type="time"],
+#mma-mod_data-advanced-search-form input[type="week"],
+#mma-mod_data-advanced-search-form input[type="number"],
+#mma-mod_data-advanced-search-form input[type="email"],
+#mma-mod_data-advanced-search-form input[type="url"],
+#mma-mod_data-advanced-search-form input[type="search"],
+#mma-mod_data-advanced-search-form input[type="tel"],
+#mma-mod_data-advanced-search-form input[type="color"],
+#mma-mod_data-advanced-search-form .item-select,
+#mma-mod_data-advanced-search-form mm-attachments > .item-border,
+#mma-mod_data-edit-form textarea,
+#mma-mod_data-edit-form input[type="text"],
+#mma-mod_data-edit-form input[type="password"],
+#mma-mod_data-edit-form input[type="datetime"],
+#mma-mod_data-edit-form input[type="datetime-local"],
+#mma-mod_data-edit-form input[type="date"],
+#mma-mod_data-edit-form input[type="month"],
+#mma-mod_data-edit-form input[type="time"],
+#mma-mod_data-edit-form input[type="week"],
+#mma-mod_data-edit-form input[type="number"],
+#mma-mod_data-edit-form input[type="email"],
+#mma-mod_data-edit-form input[type="url"],
+#mma-mod_data-edit-form input[type="search"],
+#mma-mod_data-edit-form input[type="tel"],
+#mma-mod_data-edit-form input[type="color"],
+#mma-mod_data-edit-form .item-select,
+#mma-mod_data-edit-form mm-attachments > .item-border {
+  width: 100%;
+  margin: -1px;
+  border: 1px solid #dddddd;
+  padding: 16px 0 16px 16px;
+  height: 56px; }
+
+#mma-mod_data-advanced-search-form input[type="datetime"],
+#mma-mod_data-advanced-search-form input[type="datetime-local"],
+#mma-mod_data-advanced-search-form input[type="date"],
+#mma-mod_data-edit-form input[type="datetime"],
+#mma-mod_data-edit-form input[type="datetime-local"],
+#mma-mod_data-edit-form input[type="date"] {
+  -webkit-appearance: none; }
+
+#mma-mod_data-advanced-search-form mm-attachments .item-media,
+#mma-mod_data-edit-form mm-attachments .item-media {
+  width: 100%;
+  margin: -1px;
+  border: 1px solid #dddddd;
+  height: 56px; }
+
+#mma-mod_data-advanced-search-form mm-multiple-select .item, #mma-mod_data-advanced-search-form mm-multiple-select .mm-grades-table .itemcenter, .mm-grades-table #mma-mod_data-advanced-search-form mm-multiple-select .itemcenter,
+#mma-mod_data-edit-form mm-multiple-select .item,
+#mma-mod_data-edit-form mm-multiple-select .mm-grades-table .itemcenter, .mm-grades-table
+#mma-mod_data-edit-form mm-multiple-select .itemcenter {
+  width: 100%;
+  margin: -1px;
+  border: 1px solid #dddddd;
+  padding: 16px 0 16px 16px; }
+
+#mma-mod_data-advanced-search-form mm-attachments + .item-stacked-label,
+#mma-mod_data-edit-form mm-attachments + .item-stacked-label {
+  border-top: 0px;
+  padding: 0;
+  margin-right: 1px; }
+  #mma-mod_data-advanced-search-form mm-attachments + .item-stacked-label ion-label,
+  #mma-mod_data-edit-form mm-attachments + .item-stacked-label ion-label {
+    margin: 0;
+    padding-left: 16px; }
+  #mma-mod_data-advanced-search-form mm-attachments + .item-stacked-label input,
+  #mma-mod_data-edit-form mm-attachments + .item-stacked-label input {
+    border: 0;
+    margin: 0; }
+
+#mma-mod_data-advanced-search-form mm-attachments .item, #mma-mod_data-advanced-search-form mm-attachments .mm-grades-table .itemcenter, .mm-grades-table #mma-mod_data-advanced-search-form mm-attachments .itemcenter,
+#mma-mod_data-edit-form mm-attachments .item,
+#mma-mod_data-edit-form mm-attachments .mm-grades-table .itemcenter, .mm-grades-table
+#mma-mod_data-edit-form mm-attachments .itemcenter {
+  width: 100%;
+  margin: -1px;
+  border: 1px solid #dddddd;
+  overflow: hidden; }
+
+#mma-mod_data-advanced-search-form .item-checkbox,
+#mma-mod_data-edit-form .item-checkbox {
+  margin-right: 1px; }
+
+#mma-mod_data-advanced-search-form .item-input.item-select,
+#mma-mod_data-edit-form .item-input.item-select {
+  margin-bottom: -6px; }
+  #mma-mod_data-advanced-search-form .item-input.item-select select,
+  #mma-mod_data-edit-form .item-input.item-select select {
+    width: 100%;
+    left: 0;
+    max-width: none; }
+
+#mma-mod_data-advanced-search-form .item-input.mm-latlong,
+#mma-mod_data-edit-form .item-input.mm-latlong {
+  width: 100%;
+  margin: -1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0; }
+  #mma-mod_data-advanced-search-form .item-input.mm-latlong input,
+  #mma-mod_data-edit-form .item-input.mm-latlong input {
+    border: 0; }
+
+#mma-mod_data-advanced-search-form .mm-item-has-rich-text-editor,
+#mma-mod_data-edit-form .mm-item-has-rich-text-editor {
+  margin-right: 1px; }
 
 .mm-site_mod_feedback .mm-analysis ul {
   font-size: 14px; }
@@ -13472,22 +13765,46 @@ p.mma-mod-assign-warning {
   color: #626262;
   font-size: 14px; }
 
-.mma-mod_lesson-lessonstats .item.row .col-33, .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33,
+.mma-mod_lesson-lessonstats .item.row .col-33, .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33, .mma-mod_lesson-lessonstats .mm-grades-table .mm-data-contents tr.itemcenter .col-33, .mm-grades-table .mm-data-contents .mma-mod_lesson-lessonstats tr.itemcenter .col-33, .mma-mod_lesson-lessonstats .mm-data-contents .mm-grades-table tr.itemcenter .col-33, .mm-data-contents .mm-grades-table .mma-mod_lesson-lessonstats tr.itemcenter .col-33, .mma-mod_lesson-lessonstats .mm-data-contents tr.item .col-33, .mm-data-contents .mma-mod_lesson-lessonstats tr.item .col-33,
 .mma-mod_lesson-lessonstats .item.row .col-50,
 .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table
-.mma-mod_lesson-lessonstats .row.itemcenter .col-50, .mma-mod_lesson-userstats .item.row .col-33, .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33,
+.mma-mod_lesson-lessonstats .row.itemcenter .col-50,
+.mma-mod_lesson-lessonstats .mm-grades-table .mm-data-contents tr.itemcenter .col-50, .mm-grades-table .mm-data-contents
+.mma-mod_lesson-lessonstats tr.itemcenter .col-50,
+.mma-mod_lesson-lessonstats .mm-data-contents .mm-grades-table tr.itemcenter .col-50, .mm-data-contents .mm-grades-table
+.mma-mod_lesson-lessonstats tr.itemcenter .col-50,
+.mma-mod_lesson-lessonstats .mm-data-contents tr.item .col-50, .mm-data-contents
+.mma-mod_lesson-lessonstats tr.item .col-50, .mma-mod_lesson-userstats .item.row .col-33, .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33, .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33, .mma-mod_lesson-userstats .mm-grades-table .mm-data-contents tr.itemcenter .col-33, .mm-grades-table .mm-data-contents .mma-mod_lesson-userstats tr.itemcenter .col-33, .mma-mod_lesson-userstats .mm-data-contents .mm-grades-table tr.itemcenter .col-33, .mm-data-contents .mm-grades-table .mma-mod_lesson-userstats tr.itemcenter .col-33, .mma-mod_lesson-userstats .mm-data-contents tr.item .col-33, .mm-data-contents .mma-mod_lesson-userstats tr.item .col-33,
 .mma-mod_lesson-userstats .item.row .col-50,
 .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50, .mm-grades-table
-.mma-mod_lesson-userstats .row.itemcenter .col-50 {
+.mma-mod_lesson-userstats .row.itemcenter .col-50,
+.mma-mod_lesson-userstats .mm-grades-table .mm-data-contents tr.itemcenter .col-50, .mm-grades-table .mm-data-contents
+.mma-mod_lesson-userstats tr.itemcenter .col-50,
+.mma-mod_lesson-userstats .mm-data-contents .mm-grades-table tr.itemcenter .col-50, .mm-data-contents .mm-grades-table
+.mma-mod_lesson-userstats tr.itemcenter .col-50,
+.mma-mod_lesson-userstats .mm-data-contents tr.item .col-50, .mm-data-contents
+.mma-mod_lesson-userstats tr.item .col-50 {
   border-color: #dddddd;
   border-style: solid; }
-  .mma-mod_lesson-lessonstats .item.row .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33:not(:first-child),
+  .mma-mod_lesson-lessonstats .item.row .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-lessonstats .row.itemcenter .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-grades-table .mm-data-contents tr.itemcenter .col-33:not(:first-child), .mm-grades-table .mm-data-contents .mma-mod_lesson-lessonstats tr.itemcenter .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-data-contents .mm-grades-table tr.itemcenter .col-33:not(:first-child), .mm-data-contents .mm-grades-table .mma-mod_lesson-lessonstats tr.itemcenter .col-33:not(:first-child), .mma-mod_lesson-lessonstats .mm-data-contents tr.item .col-33:not(:first-child), .mm-data-contents .mma-mod_lesson-lessonstats tr.item .col-33:not(:first-child),
   .mma-mod_lesson-lessonstats .item.row .col-50:not(:first-child),
   .mma-mod_lesson-lessonstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table
-  .mma-mod_lesson-lessonstats .row.itemcenter .col-50:not(:first-child), .mma-mod_lesson-userstats .item.row .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33:not(:first-child),
+  .mma-mod_lesson-lessonstats .row.itemcenter .col-50:not(:first-child),
+  .mma-mod_lesson-lessonstats .mm-grades-table .mm-data-contents tr.itemcenter .col-50:not(:first-child), .mm-grades-table .mm-data-contents
+  .mma-mod_lesson-lessonstats tr.itemcenter .col-50:not(:first-child),
+  .mma-mod_lesson-lessonstats .mm-data-contents .mm-grades-table tr.itemcenter .col-50:not(:first-child), .mm-data-contents .mm-grades-table
+  .mma-mod_lesson-lessonstats tr.itemcenter .col-50:not(:first-child),
+  .mma-mod_lesson-lessonstats .mm-data-contents tr.item .col-50:not(:first-child), .mm-data-contents
+  .mma-mod_lesson-lessonstats tr.item .col-50:not(:first-child), .mma-mod_lesson-userstats .item.row .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-33:not(:first-child), .mm-grades-table .mma-mod_lesson-userstats .row.itemcenter .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-grades-table .mm-data-contents tr.itemcenter .col-33:not(:first-child), .mm-grades-table .mm-data-contents .mma-mod_lesson-userstats tr.itemcenter .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-data-contents .mm-grades-table tr.itemcenter .col-33:not(:first-child), .mm-data-contents .mm-grades-table .mma-mod_lesson-userstats tr.itemcenter .col-33:not(:first-child), .mma-mod_lesson-userstats .mm-data-contents tr.item .col-33:not(:first-child), .mm-data-contents .mma-mod_lesson-userstats tr.item .col-33:not(:first-child),
   .mma-mod_lesson-userstats .item.row .col-50:not(:first-child),
   .mma-mod_lesson-userstats .mm-grades-table .row.itemcenter .col-50:not(:first-child), .mm-grades-table
-  .mma-mod_lesson-userstats .row.itemcenter .col-50:not(:first-child) {
+  .mma-mod_lesson-userstats .row.itemcenter .col-50:not(:first-child),
+  .mma-mod_lesson-userstats .mm-grades-table .mm-data-contents tr.itemcenter .col-50:not(:first-child), .mm-grades-table .mm-data-contents
+  .mma-mod_lesson-userstats tr.itemcenter .col-50:not(:first-child),
+  .mma-mod_lesson-userstats .mm-data-contents .mm-grades-table tr.itemcenter .col-50:not(:first-child), .mm-data-contents .mm-grades-table
+  .mma-mod_lesson-userstats tr.itemcenter .col-50:not(:first-child),
+  .mma-mod_lesson-userstats .mm-data-contents tr.item .col-50:not(:first-child), .mm-data-contents
+  .mma-mod_lesson-userstats tr.item .col-50:not(:first-child) {
     border-left-width: 1px; }
 
 .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .item, .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .mm-grades-table .itemcenter, .mm-grades-table .mm-site_mod_lesson-userretake .mma-mod_lesson-answer .itemcenter {
@@ -13502,9 +13819,9 @@ p.mma-mod-assign-warning {
 p.mma-mod-quiz-warning {
   color: #cb3d4d; }
 
-.mm-site_mod_quiz .row, .mm-site_mod_quiz-player .row {
+.mm-site_mod_quiz .row, .mm-site_mod_quiz .mm-data-contents tr, .mm-data-contents .mm-site_mod_quiz tr, .mm-site_mod_quiz-player .row, .mm-site_mod_quiz-player .mm-data-contents tr, .mm-data-contents .mm-site_mod_quiz-player tr {
   min-height: 57px; }
-  .mm-site_mod_quiz .row .button.button-block, .mm-site_mod_quiz-player .row .button.button-block {
+  .mm-site_mod_quiz .row .button.button-block, .mm-site_mod_quiz .mm-data-contents tr .button.button-block, .mm-data-contents .mm-site_mod_quiz tr .button.button-block, .mm-site_mod_quiz-player .row .button.button-block, .mm-site_mod_quiz-player .mm-data-contents tr .button.button-block, .mm-data-contents .mm-site_mod_quiz-player tr .button.button-block {
     margin: 0; }
 
 .item.mma-mod-quiz-highlighted, .mm-grades-table .mma-mod-quiz-highlighted.itemcenter,
@@ -13517,6 +13834,12 @@ p.mma-mod-quiz-warning {
 .mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted,
 .mma-mod-quiz-table .mm-grades-table .row.mma-mod-quiz-highlighted.itemcenter, .mm-grades-table
 .mma-mod-quiz-table .row.mma-mod-quiz-highlighted.itemcenter,
+.mma-mod-quiz-table .mm-grades-table .mm-data-contents tr.mma-mod-quiz-highlighted.itemcenter, .mm-grades-table .mm-data-contents
+.mma-mod-quiz-table tr.mma-mod-quiz-highlighted.itemcenter,
+.mma-mod-quiz-table .mm-data-contents .mm-grades-table tr.mma-mod-quiz-highlighted.itemcenter, .mm-data-contents .mm-grades-table
+.mma-mod-quiz-table tr.mma-mod-quiz-highlighted.itemcenter,
+.mma-mod-quiz-table .mm-data-contents tr.item.mma-mod-quiz-highlighted, .mm-data-contents
+.mma-mod-quiz-table tr.item.mma-mod-quiz-highlighted,
 .item.mma-mod-quiz-highlighted p, .mm-grades-table .mma-mod-quiz-highlighted.itemcenter p {
   background-color: #cce0f6;
   color: #004c9f; }
@@ -13529,7 +13852,7 @@ p.mma-mod-quiz-warning {
 .mma-mod-quiz-subheader {
   padding-top: 0px;
   padding-bottom: 0px; }
-  .mma-mod-quiz-subheader .row, .mma-mod-quiz-subheader .col {
+  .mma-mod-quiz-subheader .row, .mma-mod-quiz-subheader .mm-data-contents tr, .mm-data-contents .mma-mod-quiz-subheader tr, .mma-mod-quiz-subheader .col, .mma-mod-quiz-subheader .mm-data-contents td, .mm-data-contents .mma-mod-quiz-subheader td, .mma-mod-quiz-subheader .mm-data-contents th, .mm-data-contents .mma-mod-quiz-subheader th {
     padding-top: 0px;
     padding-bottom: 0px; }
   .mma-mod-quiz-subheader .mm-timer {
@@ -13546,7 +13869,7 @@ p.mma-mod-quiz-warning {
     .mma-mod-quiz-subheader .mm-timer span.mm-timesup {
       line-height: 40px; }
 
-.mma-mod-quiz-table .row:nth-child(odd) {
+.mma-mod-quiz-table .row:nth-child(odd), .mma-mod-quiz-table .mm-data-contents tr:nth-child(odd), .mm-data-contents .mma-mod-quiz-table tr:nth-child(odd) {
   background-color: #f5f5f5; }
 
 .mma-mod_quiz-connection-error, ion-popover-view.popover.mma-mod_quiz-connection-error {
@@ -13564,7 +13887,13 @@ p.mma-mod-quiz-warning {
 .platform-ios .mma-mod-quiz-selected.itemcenter,
 .mma-mod-quiz-table .item.row.mma-mod-quiz-selected,
 .mma-mod-quiz-table .mm-grades-table .row.mma-mod-quiz-selected.itemcenter, .mm-grades-table
-.mma-mod-quiz-table .row.mma-mod-quiz-selected.itemcenter {
+.mma-mod-quiz-table .row.mma-mod-quiz-selected.itemcenter,
+.mma-mod-quiz-table .mm-grades-table .mm-data-contents tr.mma-mod-quiz-selected.itemcenter, .mm-grades-table .mm-data-contents
+.mma-mod-quiz-table tr.mma-mod-quiz-selected.itemcenter,
+.mma-mod-quiz-table .mm-data-contents .mm-grades-table tr.mma-mod-quiz-selected.itemcenter, .mm-data-contents .mm-grades-table
+.mma-mod-quiz-table tr.mma-mod-quiz-selected.itemcenter,
+.mma-mod-quiz-table .mm-data-contents tr.item.mma-mod-quiz-selected, .mm-data-contents
+.mma-mod-quiz-table tr.item.mma-mod-quiz-selected {
   background: #cce0f6; }
 
 #mma-mod-quiz-toc .item, #mma-mod-quiz-toc .mm-grades-table .itemcenter, .mm-grades-table #mma-mod-quiz-toc .itemcenter {
@@ -13647,7 +13976,7 @@ ion-popover-view {
   padding-top: 10px;
   padding-bottom: 10px; }
 
-.mm-site_mod_survey .row, .mm-site_mod_survey .input-label {
+.mm-site_mod_survey .row, .mm-site_mod_survey .mm-data-contents tr, .mm-data-contents .mm-site_mod_survey tr, .mm-site_mod_survey .input-label {
   font-size: 14px; }
 
 .mm-site_mod_survey .mma-mod_survey-darkbg {
