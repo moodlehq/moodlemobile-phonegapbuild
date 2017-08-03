@@ -1,6 +1,6 @@
 {
     "app_id" : "com.dexlearn",
-    "versioncode" : "1",
+    "versioncode" : "1.2",
     "versionname" : "1.2",
     "cache_expiration_time" : 300000,
     "default_lang" : "en",
