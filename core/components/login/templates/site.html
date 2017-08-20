@@ -8,9 +8,9 @@
         <div class="text-center padding">
           <img ng-src="img/logo.png" class="avatar-full  moodle-logo" role="presentation">
         </div>
-        <p class="padding">{{ 'mm.login.newsitedescription' | translate }}</p>
+        <p class="padding">{{ 'mm.login.newsitedescription' | translate }} Nuevo descripcion del Sitio</p>
         <div class="list item item-input">
-          <input type="url" placeholder="{{ 'mm.login.siteaddress' | translate }}" ng-model="siteurl" mm-no-input-validation mm-auto-focus value="colegio.centropromos.cl"> >
+          <input type="url" placeholder="{{ 'mm.login.siteaddress' | translate }}" ng-model="siteurl" mm-no-input-validation mm-auto-focus value="colegio.centropromos.cl">
         </div>
         <button class="button button-block button-positive" ng-click="connect(siteurl)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
       </div>
