@@ -10,9 +10,9 @@
         </div>
         <p class="padding">{{ 'mm.login.newsitedescription' | translate }} Nuevo descripcion del Sitio</p>
         <div class="list item item-input">
-          <input type="url"  ng-model="colegio.centropromos.cl" mm-no-input-validation mm-auto-focus  value="colegio.centropromos.cl">
+            <input type="url" placeholder="{{ 'mm.login.siteaddress' | translate }}" ng-model="siteurl" mm-no-input-validation mm-auto-focus value="colegio.centropromos.cl">
         </div>
-        <button class="button button-block button-positive" ng-click="connect(siteurl)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
+        <button class="button button-block button-positive" ng-click="connect(colegio.centropromos.cl)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
       </div>
     </form>
   </ion-content>
