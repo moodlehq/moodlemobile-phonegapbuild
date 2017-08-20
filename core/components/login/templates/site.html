@@ -8,11 +8,12 @@
         <div class="text-center padding">
           <img ng-src="img/logo.png" class="avatar-full  moodle-logo" role="presentation">
         </div>
-        <p class="padding">{{ 'mm.login.newsitedescription' | translate }} Nuevo descripcion del Sitio</p>
+        <p class="padding">Por su Seguridad debe ingresar la dirección del servidor:</p>
+        <p class="padding"><strong>colegio.centropromos.cl</strong></p>
         <div class="list item item-input">
             <input type="url" placeholder="{{ 'mm.login.siteaddress' | translate }}" ng-model="siteurl" mm-no-input-validation mm-auto-focus value="colegio.centropromos.cl">
         </div>
-        <button class="button button-block button-positive" ng-click="connect(colegio.centropromos.cl)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
+        <button class="button button-block button-positive" ng-click="connect(siteurl)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
       </div>
     </form>
   </ion-content>
