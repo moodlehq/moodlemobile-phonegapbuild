@@ -607,7 +607,7 @@
     "mm.login.security_question": "Pregunta de seguridad",
     "mm.login.selectacountry": "Seleccione su país",
     "mm.login.signupplugindisabled": "{{$a}} no está habilitado",
-    "mm.login.siteaddress": "Dirección del sitio",
+    "mm.login.siteaddress": "Ingrese: colegio.centropromos.cl",
     "mm.login.siteinmaintenance": "Su sitio está en modo mantenimiento",
     "mm.login.sitepolicynotagreederror": "No se aceptó la política del sitio.",
     "mm.login.siteurl": "URL del sitio",
