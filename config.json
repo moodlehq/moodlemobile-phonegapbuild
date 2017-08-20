@@ -10,7 +10,7 @@
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "gcmpn": "6947675965690",
-    "customurlscheme": "colegioitaliano",
+    "customurlscheme": "colegio",
     "siteurl": "https://colegio.centropromos.cl",
     "skipssoconfirmation": "false",
     "forcedefaultlanguage": "true",
