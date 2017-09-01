@@ -1,5 +1,5 @@
 {
-    "app_id" : "com.moodle.moodlemobile",
+    "app_id" : "com.lms.reza101",
     "appname": "Edthailand  Mobile App",
     "desktopappname": "LMS Desktop",
     "versioncode" : "2019",
@@ -10,7 +10,7 @@
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "gcmpn": "694767596569",
-    "customurlscheme": "moodlemobile",
+    "customurlscheme": "reza101",
     "siteurl": "http://lms.edthailand.com/",
     "skipssoconfirmation": "false",
     "forcedefaultlanguage": "false",
