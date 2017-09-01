@@ -1,7 +1,7 @@
 {
-    "app_id" : "com.lms.reza101",
-    "appname": "Edthailand  Mobile App",
-    "desktopappname": "LMS Desktop",
+    "app_id" : "com.moodle.moodlemobile",
+    "appname": "Edthailand Mobile App",
+    "desktopappname": "Edthailand Desktop",
     "versioncode" : "2019",
     "versionname" : "3.3.1",
     "cache_expiration_time" : 300000,
@@ -10,9 +10,9 @@
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
     "gcmpn": "694767596569",
-    "customurlscheme": "reza101",
-    "siteurl": "http://lms.edthailand.com",
-    "skipssoconfirmation": "true",
+    "customurlscheme": "moodlemobile",
+    "siteurl": "http://lms.edthailand.com/",
+    "skipssoconfirmation": "false",
     "forcedefaultlanguage": "false",
     "privacypolicy": "https://moodle.org/mod/page/view.php?id=8148"
 }
