@@ -5,10 +5,10 @@
         id        = "com.moodle.moodlemobile"
         versionCode = "20190"
         version   = "3.3.1">
-    <name>LMS  Mobile App</name>
+    <name>Edthailand  Mobile App</name>
 
     <description>
-        LMS Mobile official app
+        Edthailand Mobile official app
     </description>
 
     <author href="edthailand.com" email="rgumoa@gmail.com">
