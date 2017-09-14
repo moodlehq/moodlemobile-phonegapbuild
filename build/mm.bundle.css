@@ -12079,6 +12079,13 @@ h2.invert, .item .invert.item-heading, .mm-grades-table .itemcenter .invert.item
 *[ng-click] {
   cursor: pointer; }
 
+::-webkit-media-controls {
+  max-width: 100%; }
+
+ol.list-with-style, ul.list-with-style {
+  list-style: initial;
+  padding-left: 40px; }
+
 .atto_image_preview {
   width: 100%;
   height: 100%;
