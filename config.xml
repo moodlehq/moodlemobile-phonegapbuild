@@ -2,21 +2,21 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
+        id        = "bo.edu.uagrm.uagrmvirtual"
         versionCode = "20200"
-        version   = "3.3.2">
-    <name>Moodle Mobile</name>
+        version   = "1.3.1">
+    <name>UAGRM Virtual</name>
 
     <description>
-        Moodle Mobile official app
+        Aplicación móvil para el uso de la plataforma educativa virtual de la UAGRM.
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team
+    <author href="http://www.uagrm.edu.bo" email="dedte@uagrm.edu.bo">
+        DEDTE UAGRM
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>3.3.2</string>
+        <string>1.3.1</string>
     </gap:config-file>
 
     <gap:platform name="ios" />
