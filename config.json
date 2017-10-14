@@ -11,7 +11,7 @@
     "wsextservice" : "local_mobile",
     "gcmpn": "8688665495691942",
     "customurlscheme": "moodlemobile",
-    "siteurl": "https://virtual.uagrm.edu.bo/pregrado",
+    "siteurl": "virtual.uagrm.edu.bo/pregrado",
     "skipssoconfirmation": "false",
     "forcedefaultlanguage": "false",
     "privacypolicy": "https://moodle.org/mod/page/view.php?id=8148"
