@@ -4,11 +4,11 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.codeworksukltd.iQube"
         versionCode = "20200"
-        version   = "3.3.2">
-    <name>Moodle Mobile</name>
+        version   = "1.0.0">
+    <name>CW Moodle Mobile</name>
 
     <description>
-        Moodle Mobile official app
+        Codeworks Moodle Mobile official app
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
@@ -16,7 +16,7 @@
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>3.3.2</string>
+        <string>1.0.0</string>
     </gap:config-file>
 
     <gap:platform name="ios" />
