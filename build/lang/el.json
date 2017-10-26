@@ -215,7 +215,6 @@
     "mm.core.years": "χρονιές",
     "mm.core.yes": "Ναι",
     "mm.course.activitydisabled": "Ο οργανισμός σας απενεργοποίησε αυτήν την δραστηριότητα στην εφαρμογή για κινητά.",
-    "mm.course.activitynotyetviewableinapp": "Εργαζόμαστε για την υποστήριξη της δραστηριότητας {{$a}} .",
     "mm.course.activitynotyetviewableremoteaddon": "Ο οργανισμός σας εγκατέστησε ένα plugin που δεν υποστηρίζεται ακόμη.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "Η πλατφόρμα Moodle του οργανισμού σας πρέπει να αναβαθμιστεί.",
     "mm.course.allsections": "Όλα τα τμήματα",

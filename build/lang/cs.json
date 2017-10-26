@@ -472,7 +472,6 @@
     "mm.core.years": "roky",
     "mm.core.yes": "Ano",
     "mm.course.activitydisabled": "Vaše organizace zakázal tuto činnost v mobilní aplikaci.",
-    "mm.course.activitynotyetviewableinapp": "Pracujeme na úpravě aktivity {{$a}}.",
     "mm.course.activitynotyetviewableremoteaddon": "Tato aktivita je doplněk třetí strany, který ještě není aplikací podporován.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "Instalace Moodle vaší organizace je třeba aktualizovat.",
     "mm.course.allsections": "Všechny sekce",

@@ -472,7 +472,6 @@
     "mm.core.years": "Jaren",
     "mm.core.yes": "Ja",
     "mm.course.activitydisabled": "Jouw organisatie heeft deze activiteit uitgeschakeld in de mobiele app.",
-    "mm.course.activitynotyetviewableinapp": "We werken aan de ondersteuning van de activiteit {{$a}}.",
     "mm.course.activitynotyetviewableremoteaddon": "Jouw organisatie heeft een plugin geïnstalleerd die nog niet ondersteund wordt.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "De site gebruikt de niet laatste Moodle-versie en moet worden geüpdatet. Neem contact op met de site-beheerder.",
     "mm.course.allsections": "Alle secties",

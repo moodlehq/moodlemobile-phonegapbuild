@@ -432,7 +432,6 @@
     "mm.core.years": "urte",
     "mm.core.yes": "Bai",
     "mm.course.activitydisabled": "Zure erakundeak jarduera hau mobile app-an desgaitu du.",
-    "mm.course.activitynotyetviewableinapp": "{{$a}} jarduera onartzeko lanean ari gara.",
     "mm.course.activitynotyetviewableremoteaddon": "Zure erakundeak oraindik app-ean onartzen ez den gehigarri bat instalatuta dauka..",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "Zure erakundeko Moodle instalazioak eguneraketa bat behar du.",
     "mm.course.allsections": "Atal guztiak",

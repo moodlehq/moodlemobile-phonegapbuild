@@ -381,7 +381,6 @@
     "mm.core.year": "سال",
     "mm.core.years": "سال",
     "mm.core.yes": "بله",
-    "mm.course.activitynotyetviewableinapp": "ما در حال کار بر روی پشتیبانی از فعالیت {{$a}} هستیم.",
     "mm.course.allsections": "تمام قسمت‌ها",
     "mm.course.confirmdeletemodulefiles": "آیا مطمئنید که می‌خواهید فایل‌های این ماژول را پاک کنید؟",
     "mm.course.confirmdownload": "شما در آستانهٔ دریافت {{size}} هستید. آیا مطمئنید که می‌خواهید ادامه دهید؟",

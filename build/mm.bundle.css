@@ -10371,6 +10371,8 @@ a.button {
     color: #0064d2; }
   .icon.assertive {
     color: #cb3d4d; }
+  .icon.balanced {
+    color: #5e8100; }
   .icon.dark {
     color: #3a3a3a; }
   .icon.icon-accessory {
@@ -10427,37 +10429,64 @@ a.button {
 .item-delete .button.icon.actived {
   color: #cb3d4d; }
 
-.button.button-light, .button.button-stable, .button.button-calm, .button.button-assertive, .button.button-balanced, .button.button-energized, .button.button-royal {
+.button.button-light, .button.button-stable, .button.button-calm, .button.button-balanced, .button.button-energized, .button.button-royal {
   border-color: #0064d2;
   background-color: #ffffff;
   color: #0064d2; }
-  .button.button-light:hover, .button.button-stable:hover, .button.button-calm:hover, .button.button-assertive:hover, .button.button-balanced:hover, .button.button-energized:hover, .button.button-royal:hover {
+  .button.button-light:hover, .button.button-stable:hover, .button.button-calm:hover, .button.button-balanced:hover, .button.button-energized:hover, .button.button-royal:hover {
     color: #0064d2;
     text-decoration: none; }
-  .button.button-light.active, .button.button-light.activated, .button.button-stable.active, .button.button-stable.activated, .button.button-calm.active, .button.button-calm.activated, .button.button-assertive.active, .button.button-assertive.activated, .button.button-balanced.active, .button.button-balanced.activated, .button.button-energized.active, .button.button-energized.activated, .button.button-royal.active, .button.button-royal.activated {
+  .button.button-light.active, .button.button-light.activated, .button.button-stable.active, .button.button-stable.activated, .button.button-calm.active, .button.button-calm.activated, .button.button-balanced.active, .button.button-balanced.activated, .button.button-energized.active, .button.button-energized.activated, .button.button-royal.active, .button.button-royal.activated {
     border-color: #0064d2;
     background-color: #0064d2; }
-  .button.button-light.button-clear, .button.button-stable.button-clear, .button.button-calm.button-clear, .button.button-assertive.button-clear, .button.button-balanced.button-clear, .button.button-energized.button-clear, .button.button-royal.button-clear {
+  .button.button-light.button-clear, .button.button-stable.button-clear, .button.button-calm.button-clear, .button.button-balanced.button-clear, .button.button-energized.button-clear, .button.button-royal.button-clear {
     border-color: transparent;
     background: none;
     box-shadow: none;
     color: #0064d2; }
-  .button.button-light.button-icon, .button.button-stable.button-icon, .button.button-calm.button-icon, .button.button-assertive.button-icon, .button.button-balanced.button-icon, .button.button-energized.button-icon, .button.button-royal.button-icon {
+  .button.button-light.button-icon, .button.button-stable.button-icon, .button.button-calm.button-icon, .button.button-balanced.button-icon, .button.button-energized.button-icon, .button.button-royal.button-icon {
     border-color: transparent;
     background: none; }
-  .button.button-light.button-outline, .button.button-stable.button-outline, .button.button-calm.button-outline, .button.button-assertive.button-outline, .button.button-balanced.button-outline, .button.button-energized.button-outline, .button.button-royal.button-outline {
+  .button.button-light.button-outline, .button.button-stable.button-outline, .button.button-calm.button-outline, .button.button-balanced.button-outline, .button.button-energized.button-outline, .button.button-royal.button-outline {
     border-color: #0064d2;
     background: transparent;
     color: #0064d2; }
-    .button.button-light.button-outline.active, .button.button-light.button-outline.activated, .button.button-stable.button-outline.active, .button.button-stable.button-outline.activated, .button.button-calm.button-outline.active, .button.button-calm.button-outline.activated, .button.button-assertive.button-outline.active, .button.button-assertive.button-outline.activated, .button.button-balanced.button-outline.active, .button.button-balanced.button-outline.activated, .button.button-energized.button-outline.active, .button.button-energized.button-outline.activated, .button.button-royal.button-outline.active, .button.button-royal.button-outline.activated {
+    .button.button-light.button-outline.active, .button.button-light.button-outline.activated, .button.button-stable.button-outline.active, .button.button-stable.button-outline.activated, .button.button-calm.button-outline.active, .button.button-calm.button-outline.activated, .button.button-balanced.button-outline.active, .button.button-balanced.button-outline.activated, .button.button-energized.button-outline.active, .button.button-energized.button-outline.activated, .button.button-royal.button-outline.active, .button.button-royal.button-outline.activated {
       background-color: #0064d2;
       box-shadow: none;
       color: #fff; }
-  .button.button-light.active, .button.button-light.activated, .button.button-stable.active, .button.button-stable.activated, .button.button-calm.active, .button.button-calm.activated, .button.button-assertive.active, .button.button-assertive.activated, .button.button-balanced.active, .button.button-balanced.activated, .button.button-energized.active, .button.button-energized.activated, .button.button-royal.active, .button.button-royal.activated {
+  .button.button-light.active, .button.button-light.activated, .button.button-stable.active, .button.button-stable.activated, .button.button-calm.active, .button.button-calm.activated, .button.button-balanced.active, .button.button-balanced.activated, .button.button-energized.active, .button.button-energized.activated, .button.button-royal.active, .button.button-royal.activated {
     box-shadow: none;
     color: #ffffff; }
-    .button.button-light.active .icon, .button.button-light.activated .icon, .button.button-stable.active .icon, .button.button-stable.activated .icon, .button.button-calm.active .icon, .button.button-calm.activated .icon, .button.button-assertive.active .icon, .button.button-assertive.activated .icon, .button.button-balanced.active .icon, .button.button-balanced.activated .icon, .button.button-energized.active .icon, .button.button-energized.activated .icon, .button.button-royal.active .icon, .button.button-royal.activated .icon {
+    .button.button-light.active .icon, .button.button-light.activated .icon, .button.button-stable.active .icon, .button.button-stable.activated .icon, .button.button-calm.active .icon, .button.button-calm.activated .icon, .button.button-balanced.active .icon, .button.button-balanced.activated .icon, .button.button-energized.active .icon, .button.button-energized.activated .icon, .button.button-royal.active .icon, .button.button-royal.activated .icon {
       color: #ffffff; }
+
+.button.button-assertive {
+  border-color: #a82d3b;
+  background-color: #cb3d4d;
+  color: #fff; }
+  .button.button-assertive:hover {
+    color: #fff;
+    text-decoration: none; }
+  .button.button-assertive.active, .button.button-assertive.activated {
+    border-color: #a82d3b;
+    background-color: #a82d3b; }
+  .button.button-assertive.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #cb3d4d; }
+  .button.button-assertive.button-icon {
+    border-color: transparent;
+    background: none; }
+  .button.button-assertive.button-outline {
+    border-color: #cb3d4d;
+    background: transparent;
+    color: #cb3d4d; }
+    .button.button-assertive.button-outline.active, .button.button-assertive.button-outline.activated {
+      background-color: #cb3d4d;
+      box-shadow: none;
+      color: #fff; }
 
 .button.active, .button.activated {
   box-shadow: none;
@@ -10932,6 +10961,18 @@ button.item.item-button-right.item-3-button-right,
   .button.button-block .icon:before, .button.button-block.icon:before, .button.button-block.icon-left:before, .button.button-block.icon-right:before {
     line-height: 28px; }
 
+.item-icon-right .item-note .icon {
+  display: inline;
+  align-items: normal;
+  position: relative;
+  top: auto;
+  right: auto;
+  height: auto;
+  font-size: 14px; }
+  .item-icon-right .item-note .icon:before {
+    display: inline;
+    width: auto; }
+
 /**
  * Core directives.
  */
@@ -11277,6 +11318,10 @@ mm-navigation-bar .col, mm-navigation-bar .mm-data-contents td, .mm-data-content
   margin-left: 0;
   margin-right: 0; }
 
+.item-icon-left.item-icon-top .icon, .item-icon-right.item-icon-top .icon {
+  align-items: flex-start;
+  top: 11px; }
+
 .mm-error-item, .mm-site_mod_assign div.latesubmission,
 .mm-site_mod_assign div.overdue,
 .mm-site_mod_assign-submission div.latesubmission,
@@ -11503,6 +11548,15 @@ mm-timer {
     line-height: 16px;
     border: 0;
     position: relative; }
+
+.item-select.mm-full-width select {
+  max-width: 100%;
+  background: transparent;
+  text-indent: 0;
+  padding: 15px 40px 15px 16px;
+  line-height: 16px;
+  border: 0;
+  position: relative; }
 
 .item-select .mm-select-fix {
   position: absolute;
@@ -12137,6 +12191,9 @@ ol.list-with-style, ul.list-with-style {
   list-style: initial;
   padding-left: 40px; }
 
+.no-padding-bottom, .padding.no-padding-bottom, .item .no-padding-bottom.item-heading.padding, .mm-grades-table .itemcenter .no-padding-bottom.item-heading.padding {
+  padding-bottom: 0; }
+
 .atto_image_preview {
   width: 100%;
   height: 100%;
@@ -12482,6 +12539,22 @@ mm-format-text .badge, mm-format-text .mma-messages-date span, .mma-messages-dat
 .cke_inner.cke_maximized .cke_toolbox_main {
   margin: 0; }
 
+.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right
+.mma-messages-unreadfrom span.mm-course-download,
+.mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter
+.mma-messages-unreadfrom span.mm-course-download,
+.mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
+  right: 44px; }
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px; }
+
+mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
+  padding: 8px; }
+
+.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
+  margin-top: 0; }
+
 .item-course > .icon, .item-course > ion-spinner {
   height: 40px;
   width: 40px;
@@ -12803,21 +12876,77 @@ mm-course-list-item
 mm-course-list-item div.item-icon-left.earlysubmission {
   color: #3a3a3a; }
 
-.item.item-button-right .badge.mm-course-download, .mm-grades-table .item-button-right.itemcenter .badge.mm-course-download, .item.item-button-right .mma-messages-date span.mm-course-download, .mma-messages-date .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-messages-date span.mm-course-download, .mma-messages-date .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right
-.mma-messages-unreadfrom span.mm-course-download,
-.mma-messages-unreadfrom .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter
-.mma-messages-unreadfrom span.mm-course-download,
-.mma-messages-unreadfrom .mm-grades-table .item-button-right.itemcenter span.mm-course-download, .item.item-button-right .mma-chat-notice span.mm-course-download, .mma-chat-notice .item.item-button-right span.mm-course-download, .mm-grades-table .item-button-right.itemcenter .mma-chat-notice span.mm-course-download, .mma-chat-notice .mm-grades-table .item-button-right.itemcenter span.mm-course-download {
-  right: 44px; }
+.mm-course-enrollment-img {
+  max-width: 20px;
+  max-height: 34px; }
 
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px; }
+.mm-capture-media-modal {
+  background-color: #eeeeee; }
+  .mm-capture-media-modal .bar-header {
+    border-color: transparent;
+    background-color: #f98012;
+    background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
+    color: #ffffff; }
+    .mm-capture-media-modal .bar-header .title {
+      color: #ffffff; }
+    .mm-capture-media-modal .bar-header .button {
+      color: #ffffff;
+      font-weight: normal; }
+  .mm-capture-media-modal .mm-capture-media-modal-content {
+    text-align: center; }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-av-wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: table;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      clear: both; }
+    .mm-capture-media-modal .mm-capture-media-modal-content audio, .mm-capture-media-modal .mm-capture-media-modal-content video, .mm-capture-media-modal .mm-capture-media-modal-content img {
+      width: 100%;
+      height: 100%;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      object-fit: contain; }
+      .mm-capture-media-modal .mm-capture-media-modal-content audio.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content video.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content img.mm-webcam-stream {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1); }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-webcam-image-canvas {
+      display: none; }
+    .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container {
+      width: 100%;
+      height: 100%; }
+      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-canvas {
+        width: 100%;
+        height: 100%; }
+      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-captured {
+        width: 100%; }
+  .mm-capture-media-modal .bar-footer {
+    background-color: #dddddd;
+    border-top-color: #9e9e9e; }
+    .mm-capture-media-modal .bar-footer .col, .mm-capture-media-modal .bar-footer .mm-data-contents td, .mm-data-contents .mm-capture-media-modal .bar-footer td, .mm-capture-media-modal .bar-footer .mm-data-contents th, .mm-data-contents .mm-capture-media-modal .bar-footer th {
+      padding: 0;
+      line-height: 34px; }
+      .mm-capture-media-modal .bar-footer .col .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents td .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer td .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents th .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer th .button-icon {
+        color: #3a3a3a; }
+      .mm-capture-media-modal .bar-footer .col .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-record, .mm-capture-media-modal .bar-footer .col .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-trash-a {
+        color: #cb3d4d; }
 
-mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grades-table .itemcenter, .mm-grades-table mm-course-mod-description .card .itemcenter {
-  padding: 8px; }
-
-.padding mm-course-mod-description .card, .item .item-heading.padding mm-course-mod-description .card, .mm-grades-table .itemcenter .item-heading.padding mm-course-mod-description .card {
-  margin-top: 0; }
+.mm-fileuploader-file-handler input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  outline: none;
+  z-index: 100;
+  cursor: pointer; }
 
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
@@ -12898,62 +13027,51 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
     border-top: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd; }
 
-.mm-capture-media-modal {
-  background-color: #eeeeee; }
-  .mm-capture-media-modal .bar-header {
-    border-color: transparent;
-    background-color: #f98012;
-    background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
-    color: #ffffff; }
-    .mm-capture-media-modal .bar-header .title {
-      color: #ffffff; }
-    .mm-capture-media-modal .bar-header .button {
-      color: #ffffff;
-      font-weight: normal; }
-  .mm-capture-media-modal .mm-capture-media-modal-content {
-    text-align: center; }
-    .mm-capture-media-modal .mm-capture-media-modal-content .mm-av-wrapper {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      display: table;
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      clear: both; }
-    .mm-capture-media-modal .mm-capture-media-modal-content audio, .mm-capture-media-modal .mm-capture-media-modal-content video, .mm-capture-media-modal .mm-capture-media-modal-content img {
-      width: 100%;
-      height: 100%;
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      object-fit: contain; }
-      .mm-capture-media-modal .mm-capture-media-modal-content audio.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content video.mm-webcam-stream, .mm-capture-media-modal .mm-capture-media-modal-content img.mm-webcam-stream {
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1); }
-    .mm-capture-media-modal .mm-capture-media-modal-content .mm-webcam-image-canvas {
-      display: none; }
-    .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container {
-      width: 100%;
-      height: 100%; }
-      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-canvas {
-        width: 100%;
-        height: 100%; }
-      .mm-capture-media-modal .mm-capture-media-modal-content .mm-audio-record-container .mm-audio-captured {
-        width: 100%; }
-  .mm-capture-media-modal .bar-footer {
-    background-color: #dddddd;
-    border-top-color: #9e9e9e; }
-    .mm-capture-media-modal .bar-footer .col, .mm-capture-media-modal .bar-footer .mm-data-contents td, .mm-data-contents .mm-capture-media-modal .bar-footer td, .mm-capture-media-modal .bar-footer .mm-data-contents th, .mm-data-contents .mm-capture-media-modal .bar-footer th {
-      padding: 0;
-      line-height: 34px; }
-      .mm-capture-media-modal .bar-footer .col .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents td .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer td .button-icon, .mm-capture-media-modal .bar-footer .mm-data-contents th .button-icon, .mm-data-contents .mm-capture-media-modal .bar-footer th .button-icon {
-        color: #3a3a3a; }
-      .mm-capture-media-modal .bar-footer .col .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-record, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-record, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-record, .mm-capture-media-modal .bar-footer .col .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents td .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer td .ion-trash-a, .mm-capture-media-modal .bar-footer .mm-data-contents th .ion-trash-a, .mm-data-contents .mm-capture-media-modal .bar-footer th .ion-trash-a {
-        color: #cb3d4d; }
+.mm-mm_login_sites .item-thumbnail-left .item-content {
+  padding-top: 16px;
+  padding-right: 16px; }
+
+.mm-mm_login_sites .list-left-editing .item-thumbnail-left .item-content {
+  padding-right: 49px; }
+
+.mm-mm_login_sites .avatar {
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  padding: 4px;
+  border: 1px solid #ddd; }
+
+.mm-login-sitepolicy-iframe {
+  height: 300px; }
+
+.mm-oauth-icon, .item.mm-oauth-icon, .mm-grades-table .mm-oauth-icon.itemcenter {
+  padding: 8px; }
+  .mm-oauth-icon > img, .mm-oauth-icon > span, .item.mm-oauth-icon > img, .mm-grades-table .mm-oauth-icon.itemcenter > img, .item.mm-oauth-icon > span, .mm-grades-table .mm-oauth-icon.itemcenter > span {
+    max-height: 32px;
+    max-width: 32px;
+    vertical-align: middle; }
+  .mm-oauth-icon > span, .item.mm-oauth-icon > span, .mm-grades-table .mm-oauth-icon.itemcenter > span {
+    margin-left: 5px;
+    color: #626262; }
+
+.mm-mm_login_credentials, .mm-mm_login_reconnect, .mm-mm_login_site {
+  background: -webkit-radial-gradient(white, #eeeeee);
+  background: radial-gradient(white, #eeeeee); }
+  .mm-mm_login_credentials .mm-ioninput-password, .mm-mm_login_reconnect .mm-ioninput-password, .mm-mm_login_site .mm-ioninput-password {
+    padding-top: 0;
+    padding-bottom: 0; }
+  .mm-mm_login_credentials img, .mm-mm_login_reconnect img, .mm-mm_login_site img {
+    max-width: 100%; }
+  .mm-mm_login_credentials img.moodle-logo, .mm-mm_login_reconnect img.moodle-logo, .mm-mm_login_site img.moodle-logo {
+    width: 90%;
+    max-width: 300px; }
+  .mm-mm_login_credentials .box, .mm-mm_login_reconnect .box, .mm-mm_login_site .box {
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #dddddd; }
 
 .mm-question-textarea {
   width: 100%;
@@ -13089,63 +13207,6 @@ li.mm-question-answer-incorrect,
 
 #mm-settings-languagelabel {
   color: #3a3a3a; }
-
-.mm-mm_login_sites .item-thumbnail-left .item-content {
-  padding-top: 16px;
-  padding-right: 16px; }
-
-.mm-mm_login_sites .list-left-editing .item-thumbnail-left .item-content {
-  padding-right: 49px; }
-
-.mm-mm_login_sites .avatar {
-  margin: 0;
-  width: 80px;
-  height: 80px;
-  max-width: 80px;
-  max-height: 80px;
-  border-radius: 50%;
-  padding: 4px;
-  border: 1px solid #ddd; }
-
-.mm-login-sitepolicy-iframe {
-  height: 300px; }
-
-.mm-oauth-icon, .item.mm-oauth-icon, .mm-grades-table .mm-oauth-icon.itemcenter {
-  padding: 8px; }
-  .mm-oauth-icon > img, .mm-oauth-icon > span, .item.mm-oauth-icon > img, .mm-grades-table .mm-oauth-icon.itemcenter > img, .item.mm-oauth-icon > span, .mm-grades-table .mm-oauth-icon.itemcenter > span {
-    max-height: 32px;
-    max-width: 32px;
-    vertical-align: middle; }
-  .mm-oauth-icon > span, .item.mm-oauth-icon > span, .mm-grades-table .mm-oauth-icon.itemcenter > span {
-    margin-left: 5px;
-    color: #626262; }
-
-.mm-mm_login_credentials, .mm-mm_login_reconnect, .mm-mm_login_site {
-  background: -webkit-radial-gradient(white, #eeeeee);
-  background: radial-gradient(white, #eeeeee); }
-  .mm-mm_login_credentials .mm-ioninput-password, .mm-mm_login_reconnect .mm-ioninput-password, .mm-mm_login_site .mm-ioninput-password {
-    padding-top: 0;
-    padding-bottom: 0; }
-  .mm-mm_login_credentials img, .mm-mm_login_reconnect img, .mm-mm_login_site img {
-    max-width: 100%; }
-  .mm-mm_login_credentials img.moodle-logo, .mm-mm_login_reconnect img.moodle-logo, .mm-mm_login_site img.moodle-logo {
-    width: 90%;
-    max-width: 300px; }
-  .mm-mm_login_credentials .box, .mm-mm_login_reconnect .box, .mm-mm_login_site .box {
-    padding: 16px;
-    background: #ffffff;
-    border: 1px solid #dddddd; }
-
-.mm-fileuploader-file-handler input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 100%;
-  min-height: 100%;
-  opacity: 0;
-  outline: none;
-  z-index: 100;
-  cursor: pointer; }
 
 .bar-side-menu {
   border-color: transparent;

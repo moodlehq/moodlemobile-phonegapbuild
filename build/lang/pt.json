@@ -223,7 +223,6 @@
     "mm.core.years": "anos",
     "mm.core.yes": "Sim",
     "mm.course.activitydisabled": "A sua organização desativou esta atividade na aplicação para dispositivos móveis.",
-    "mm.course.activitynotyetviewableinapp": "Estamos trabalhar no suporte para a atividade {{$a}}.",
     "mm.course.activitynotyetviewableremoteaddon": "A sua organização instalou um módulo que ainda não é suportado.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "A instalação do Moodle da sua organização precisa ser atualizada.",
     "mm.course.allsections": "Todas as secções",

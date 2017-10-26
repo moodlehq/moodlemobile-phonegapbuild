@@ -209,7 +209,6 @@
     "mm.core.years": "godina",
     "mm.core.yes": "Da",
     "mm.course.activitydisabled": "Vaša institucija je onemogućila ovu aktivnost u mobilnoj aplikaciji.",
-    "mm.course.activitynotyetviewableinapp": "Radimo na podršci za aktivnost {{$a}}.",
     "mm.course.activitynotyetviewableremoteaddon": "Vaša institucija je instalirala dodatak koji još uvek nije podržan.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "Potrebno je da se ažurira Moodle instalacija vaše institucije.",
     "mm.course.allsections": "Sve sekcije",

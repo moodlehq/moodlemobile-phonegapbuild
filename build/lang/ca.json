@@ -465,7 +465,6 @@
     "mm.core.years": "anys",
     "mm.core.yes": "Sí",
     "mm.course.activitydisabled": "La vostra organització ha desactivat aquesta activitat a l'app mòbil.",
-    "mm.course.activitynotyetviewableinapp": "Estem treballant per donar suport a l'activitat {{$a}}.",
     "mm.course.activitynotyetviewableremoteaddon": "La vostra organització ha instal·lat un complement que encara no és compatible amb l'aplicació.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "El Moodle de la vostra organització necessita una actualització.",
     "mm.course.allsections": "Totes les seccions",

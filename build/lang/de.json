@@ -472,7 +472,6 @@
     "mm.core.years": "Jahre",
     "mm.core.yes": "Ja",
     "mm.course.activitydisabled": "Für diese Website ist die Aktivität in der App deaktiviert.",
-    "mm.course.activitynotyetviewableinapp": "Wir arbeiten daran, die Aktivität {{$a}} zu unterstützen.",
     "mm.course.activitynotyetviewableremoteaddon": "Für die Website ist ein Plugin installiert, das bisher nicht unterstützt wird.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "Diese Website muss aktualisiert werden.",
     "mm.course.allsections": "Alle Abschnitte",

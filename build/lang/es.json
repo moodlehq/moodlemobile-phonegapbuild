@@ -465,7 +465,6 @@
     "mm.core.years": "años",
     "mm.core.yes": "Sí",
     "mm.course.activitydisabled": "Su  organización ha deshabilitado esta actividad en la aplicación móvil.",
-    "mm.course.activitynotyetviewableinapp": "Estamos trabajando para soportar la actividad de {{$a}}.",
     "mm.course.activitynotyetviewableremoteaddon": "Esta actividad es un complemento de terceros que todavía no está soportada por la aplicación.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "El sitio no está usando la versión más reciente de Moodle. Por favor, contacte al administrador del sitio.",
     "mm.course.allsections": "Todas las secciones",

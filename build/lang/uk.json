@@ -203,7 +203,6 @@
     "mm.core.years": "роки",
     "mm.core.yes": "Так",
     "mm.course.activitydisabled": "Ваша організація відключила цю активність в мобільному додатку.",
-    "mm.course.activitynotyetviewableinapp": "Ми працюємо на підтримку діяльності {{$a}}.",
     "mm.course.activitynotyetviewableremoteaddon": "Ваша організація встановила плагін, який ще не підтримується.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "Установка версія Moodle вашої організації повинна бути оновлена.",
     "mm.course.allsections": "Всі секції",

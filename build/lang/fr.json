@@ -472,7 +472,6 @@
     "mm.core.years": "années",
     "mm.core.yes": "Oui",
     "mm.course.activitydisabled": "Votre institution a désactivé cette activité dans l'App mobile.",
-    "mm.course.activitynotyetviewableinapp": "L'activité {{$a}} sera bientôt supportée.",
     "mm.course.activitynotyetviewableremoteaddon": "Votre institution a installé un plugin qui n'est pas encore supporté.",
     "mm.course.activitynotyetviewablesiteupgradeneeded": "L'installation Moodle de votre institution doit être mise à jour.",
     "mm.course.allsections": "Toutes les sections",
