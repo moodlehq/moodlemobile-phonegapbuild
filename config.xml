@@ -50,6 +50,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
