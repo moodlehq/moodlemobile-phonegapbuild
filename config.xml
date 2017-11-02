@@ -3,8 +3,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.isea-got.in"
-        versionCode = "20200"
-        version   = "3.3.2">
+        versionCode = "2017"
+        version   = "3.3.3">
     <name>ISEA Project</name>
 
     <description>
