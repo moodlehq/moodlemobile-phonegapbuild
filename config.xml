@@ -5,10 +5,10 @@
         id        = "com.isea-got.in"
         versionCode = "20200"
         version   = "3.3.2">
-    <name>Moodle Mobile</name>
+    <name>ISEA Project</name>
 
     <description>
-        Moodle Mobile official app
+        ISEA Project Phase2 official app
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
