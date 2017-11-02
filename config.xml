@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
+        id        = "com.isea-got.in"
         versionCode = "20200"
         version   = "3.3.2">
     <name>Moodle Mobile</name>
@@ -146,7 +146,7 @@
     <gap:plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
 
     <gap:config-file platform="android" parent="/manifest">
-         <application android:debuggable="true" />
+         <application android:debuggable="false" />
     </gap:config-file>
 
     <!-- See MOBILE-892 -->
