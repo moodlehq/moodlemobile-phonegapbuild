@@ -546,4 +546,8 @@
         </dict>
     </gap:config-file>
 
+    <gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription">
+        <string>We'd like to access your photo library to let you upload a photo or image to the site.</string>
+    </gap:config-file>
+
 </widget>
