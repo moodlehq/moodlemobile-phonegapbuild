@@ -4,7 +4,7 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "org.edulabs.hirtenberger"
         versionCode = "20200"
-        version   = "1.0.0">
+        version   = "1.0.1">
     <name>Hirtenberger Mobile Learning</name>
 
     <description>
