@@ -116,32 +116,32 @@
         <splash src="resources/ios/splash/Default-Portrait@~ipadpro.png" width="2048" height="2732"/>
     </platform>
 
-    <gap:plugin name="cordova-plugin-camera" source="npm" />
-    <gap:plugin name="cordova-plugin-media-capture" source="npm">
+    <gap:plugin name="cordova-plugin-camera" source="npm" version="2.4.1" />
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" version="1.4.3">
         <param name="CAMERA_USAGE_DESCRIPTION" value="We'd like to access your camera to let you take a photo"/>
         <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We'd like to access your photo library to let you pick a photo"/>
         <param name="MICROPHONE_USAGE_DESCRIPTION" value="We'd like to access your microphone to let you record an audio"/>
     </gap:plugin>
-    <gap:plugin name="cordova-plugin-device" source="npm" />
-    <gap:plugin name="cordova-plugin-file" source="npm" />
-    <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
-    <gap:plugin name="cordova-plugin-globalization" source="npm" />
-    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
-    <gap:plugin name="cordova-plugin-network-information" source="npm" />
-    <gap:plugin name="cordova-plugin-statusbar" source="npm" />
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
-    <gap:plugin name="cordova-universal-clipboard" source="npm" />
-    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
+    <gap:plugin name="cordova-plugin-device" source="npm" version="1.1.6" />
+    <gap:plugin name="cordova-plugin-file" source="npm" version="4.3.3" />
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.3" />
+    <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.7" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.7.1" />
+    <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.3.3" />
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" version="2.2.3" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" version="1.3.2" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.3" />
+    <gap:plugin name="cordova-universal-clipboard" source="npm" version="0.1.0" />
+    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" version="1.0.1" />
 
     <gap:plugin name="phonegap-plugin-push" source="npm" version="1.9.2">
         <param name="SENDER_ID" value="694767596569" />
     </gap:plugin>
-    <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+    <gap:plugin name="cordova-plugin-customurlscheme" source="npm" version="4.3.0">
         <param name="URL_SCHEME" value="moodlemobile" />
     </gap:plugin>
-    <gap:plugin name="ionic-plugin-keyboard" source="npm" />
-    <gap:plugin name="cordova-plugin-zip" source="npm" />
+    <gap:plugin name="ionic-plugin-keyboard" source="npm" version="2.2.1" />
+    <gap:plugin name="cordova-plugin-zip" source="npm" version="3.1.0" />
     <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
     <gap:plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git" source="git" />
     <gap:plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
