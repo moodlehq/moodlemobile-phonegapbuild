@@ -10665,13 +10665,18 @@ p.item-text-wrap {
   max-width: 40%;
   width: 40%; }
 
+.item-avatar > img:first-child, .item-media > img:first-child, .item-avatar-center > img:first-child, .item-progress > img:first-child {
+  text-indent: -99999px;
+  background-color: #eeeeee; }
+
 .item-media {
   padding-left: 64px;
   min-height: 64px; }
   .item-media > img:first-child {
     max-width: 32px;
     max-height: 32px;
-    border-radius: 0; }
+    border-radius: 0;
+    background-color: transparent; }
   .item-media p {
     margin: 0px; }
   .item-media.item-button-right > .button,
@@ -11549,14 +11554,20 @@ mm-timer {
     border: 0;
     position: relative; }
 
-.item-select.mm-full-width select {
-  max-width: 100%;
-  background: transparent;
-  text-indent: 0;
-  padding: 15px 40px 15px 16px;
-  line-height: 16px;
-  border: 0;
-  position: relative; }
+.item-select.mm-full-width {
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 0; }
+  .item-select.mm-full-width select {
+    max-width: 100%;
+    width: 100%;
+    background: transparent;
+    text-indent: 0;
+    line-height: 16px;
+    border: 0;
+    position: relative; }
+  .item-select.mm-full-width.select-align-left select {
+    direction: ltr; }
 
 .item-select .mm-select-fix {
   position: absolute;
@@ -12194,6 +12205,12 @@ ol.list-with-style, ul.list-with-style {
 .no-padding-bottom, .padding.no-padding-bottom, .item .no-padding-bottom.item-heading.padding, .mm-grades-table .itemcenter .no-padding-bottom.item-heading.padding {
   padding-bottom: 0; }
 
+.text-success {
+  color: #5e8100; }
+
+.text-danger {
+  color: #cb3d4d; }
+
 .atto_image_preview {
   width: 100%;
   height: 100%;
@@ -12286,6 +12303,12 @@ ol.list-with-style, ul.list-with-style {
 
 .fa-ban:before {
   content: ""; }
+
+.fa-remove:before {
+  content: ""; }
+
+.fa-check:before {
+  content: ""; }
 
 /**
  * In this file we will reset ionic styles that can bother online html.
@@ -13204,6 +13227,9 @@ li.mm-question-answer-incorrect,
 
 .mm-question-warning, p.mm-question-warning, .item .mm-question-warning, .mm-grades-table .itemcenter .mm-question-warning {
   color: #cb3d4d; }
+
+.questioncorrectnessicon {
+  font-size: 20px; }
 
 #mm-settings-languagelabel {
   color: #3a3a3a; }
@@ -14149,6 +14175,11 @@ ion-popover-view {
     background-color: #eeeeee; }
   .mm-site_mod_wiki .mma-mod_wiki-subwiki-picker .item.item-selected .icon, .mm-site_mod_wiki .mma-mod_wiki-subwiki-picker .mm-grades-table .item-selected.itemcenter .icon, .mm-grades-table .mm-site_mod_wiki .mma-mod_wiki-subwiki-picker .item-selected.itemcenter .icon {
     font-size: 24px; }
+
+.mm-site_mod_workshop p.mm-overriden-grade,
+.mm-site_mod_workshop-submission p.mm-overriden-grade,
+.mm-site_mod_workshop-assessment p.mm-overriden-grade {
+  color: #5e8100; }
 
 .qbehaviour_deferredcbm_actual_percentage {
   font-weight: bold; }
