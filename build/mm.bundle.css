@@ -13065,7 +13065,8 @@ mm-course-list-item div.item-icon-left.earlysubmission {
   max-height: 80px;
   border-radius: 50%;
   padding: 4px;
-  border: 1px solid #ddd; }
+  border: 1px solid #ddd;
+  text-indent: -99999px; }
 
 .mm-login-sitepolicy-iframe {
   height: 300px; }
