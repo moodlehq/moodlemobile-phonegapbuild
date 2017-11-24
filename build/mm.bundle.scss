@@ -2243,6 +2243,23 @@ $mm-rte-min-height: 80px !default;
     margin: 0;
   }
 }
+
+.item.item-button-right .badge.mm-course-download{
+  right: $spinner-width + $item-padding;
+}
+
+.mm-course-module-handler mm-format-text + mm-format-text {
+  margin-top: 16px;
+}
+
+mm-course-mod-description .card .item {
+  padding: $item-padding / 2;
+}
+
+.padding mm-course-mod-description .card {
+  margin-top: 0;
+}
+
 $chart-size: 70px;
 $doughnut-border-size: 15px;
 $doughnut-dasharray: 173;
@@ -2369,23 +2386,6 @@ mm-course-list-item .item-icon-left {
 .mm-course-enrollment-img {
   max-width: 20px;
   max-height: 34px;
-}
-
-
-.item.item-button-right .badge.mm-course-download{
-  right: $spinner-width + $item-padding;
-}
-
-.mm-course-module-handler mm-format-text + mm-format-text {
-  margin-top: 16px;
-}
-
-mm-course-mod-description .card .item {
-  padding: $item-padding / 2;
-}
-
-.padding mm-course-mod-description .card {
-  margin-top: 0;
 }
 
 .mm-capture-media-modal {
@@ -2660,10 +2660,6 @@ mm-course-mod-description .card .item {
 }
 
 
-#mm-settings-languagelabel {
-  color: $base-color;
-}
-
 
 $mm-question-correct-color:         $green-dark !default;
 $mm-question-correct-color-bg:      $green-light !default;
@@ -2802,6 +2798,10 @@ li.mm-question-answer-incorrect,
 .questioncorrectnessicon {
   font-size: 20px;
 }
+#mm-settings-languagelabel {
+  color: $base-color;
+}
+
 // Bar styles
 .bar-side-menu {
   @include bar-style($bar-side-menu-color, $bar-side-menu-border-color, $bar-side-menu-text-color);
@@ -2882,6 +2882,9 @@ ion-side-menu li.item.item-divider {
             height: 22px;
         }
     }
+}
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
 }
 $mma-messages-date-badge: "stable" !default;
 
@@ -2985,9 +2988,6 @@ $mma-messages-date-badge: "stable" !default;
   text-align: center;
 }
 
-.mm-site_coursesgrades .item .badge {
-  right: 16px;
-}
 @media only screen and (min-width: $grid-responsive-sm-break) {
   .mm-course-grid {
     padding: 0;
