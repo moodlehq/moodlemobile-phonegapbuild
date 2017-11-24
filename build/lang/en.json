@@ -1119,6 +1119,7 @@
     "mma.mod_data.resetsettings": "Reset filters",
     "mma.mod_data.search": "Search",
     "mma.mod_data.selectedrequired": "All selected required",
+    "mma.mod_data.single": "View single",
     "mma.mod_data.timeadded": "Time added",
     "mma.mod_data.timemodified": "Time modified",
     "mma.mod_data.usedate": "Include in search.",
