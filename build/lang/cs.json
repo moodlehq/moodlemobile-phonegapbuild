@@ -986,8 +986,6 @@
     "mma.mod_assign_feedback_editpdf.pluginname": "PDF poznámky",
     "mma.mod_assign_feedback_file.pluginname": "Soubor se zpětnou vazbou",
     "mma.mod_assign_submission_comments.pluginname": "Komentář studenta",
-    "mma.mod_assign_submission_file.filesofthesetypes": "K řešení úkolu mohou být přidány soubory těchto typů:",
-    "mma.mod_assign_submission_file.filetypewithexts": "{{$a.name}} &mdash; {{$a.extlist}}",
     "mma.mod_assign_submission_file.pluginname": "Odevzdat soubor(y)",
     "mma.mod_assign_submission_onlinetext.pluginname": "Název repozitáře",
     "mma.mod_book.errorchapter": "Chyba při čtení kapitoly knihy.",

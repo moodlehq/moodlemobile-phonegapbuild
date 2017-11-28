@@ -945,8 +945,6 @@
     "mma.mod_assign_feedback_editpdf.pluginname": "PDF oharra",
     "mma.mod_assign_feedback_file.pluginname": "Feedback-fitxategia",
     "mma.mod_assign_submission_comments.pluginname": "Bidalketaren iruzkinak",
-    "mma.mod_assign_submission_file.filesofthesetypes": "Mota hauetako fitxategiak gehitu daitezke bidalketa honetara:",
-    "mma.mod_assign_submission_file.filetypewithexts": "{{$a.name}} &mdash; {{$a.extlist}}",
     "mma.mod_assign_submission_file.pluginname": "Fitxategi-bidalketak",
     "mma.mod_assign_submission_onlinetext.pluginname": "Biltegi-pluginaren izena",
     "mma.mod_book.errorchapter": "Errorea liburuaren atala irakurtzean.",

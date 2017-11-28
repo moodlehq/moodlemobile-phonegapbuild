@@ -698,8 +698,6 @@
     "mma.mod_assign_feedback_editpdf.pluginname": "PDF komentarai",
     "mma.mod_assign_feedback_file.pluginname": "Failo atsiliepimas",
     "mma.mod_assign_submission_comments.pluginname": "Pateikimo komentarai",
-    "mma.mod_assign_submission_file.filesofthesetypes": "Pateikimui gali būti įtraukti šių failų tipai:",
-    "mma.mod_assign_submission_file.filetypewithexts": "{{$a.name}} &mdash; {{$a.extlist}}",
     "mma.mod_assign_submission_file.pluginname": "Failų pateikimai",
     "mma.mod_assign_submission_onlinetext.pluginname": "Saugyklos priedo pavadinimas",
     "mma.mod_chat.beep": "Pyp",

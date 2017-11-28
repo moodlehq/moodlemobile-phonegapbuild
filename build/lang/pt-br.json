@@ -972,8 +972,6 @@
     "mma.mod_assign_feedback_editpdf.pluginname": "Anotar PDF",
     "mma.mod_assign_feedback_file.pluginname": "Arquivo de feedback",
     "mma.mod_assign_submission_comments.pluginname": "Comentários ao envio",
-    "mma.mod_assign_submission_file.filesofthesetypes": "Arquivos destes tipos podem ser adicionados ao envio:",
-    "mma.mod_assign_submission_file.filetypewithexts": "{{$a.name}} &mdash; {{$a.extlist}}",
     "mma.mod_assign_submission_file.pluginname": "Envio de arquivos",
     "mma.mod_assign_submission_onlinetext.pluginname": "Nome do plugin de repositório",
     "mma.mod_book.errorchapter": "Erro ao ler capítulo de livro",

@@ -484,8 +484,6 @@
     "mma.mod_assign_feedback_editpdf.pluginname": "Kommenter i PDF-filen.",
     "mma.mod_assign_feedback_file.pluginname": "Tilbakemeldinger i fil",
     "mma.mod_assign_submission_comments.pluginname": "Kommentarer til innleveringen",
-    "mma.mod_assign_submission_file.filesofthesetypes": "Disse filtypene kan brukes i denne innleveringen.",
-    "mma.mod_assign_submission_file.filetypewithexts": "{{$a.name}} &mdash; {{$a.extlist}}",
     "mma.mod_assign_submission_file.pluginname": "Filinnleveringer",
     "mma.mod_assign_submission_onlinetext.pluginname": "Filområdets modulnavn",
     "mma.mod_chat.beep": "tut",

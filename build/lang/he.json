@@ -809,7 +809,6 @@
     "mma.mod_assign_feedback_editpdf.pluginname": "מתן הערות מקוונות למסמך PDF",
     "mma.mod_assign_feedback_file.pluginname": "משוב כקובץ",
     "mma.mod_assign_submission_comments.pluginname": "הערות להגשה",
-    "mma.mod_assign_submission_file.filesofthesetypes": "קבצים מסוג זה ניתנים להעלאה בהגשה זו:",
     "mma.mod_assign_submission_file.pluginname": "הגשות קובץ",
     "mma.mod_assign_submission_onlinetext.pluginname": "שם תוסף המאגר",
     "mma.mod_book.errorchapter": "שגיאה בקריאת פרק בספר.",

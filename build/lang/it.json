@@ -881,8 +881,6 @@
     "mma.mod_assign_feedback_editpdf.pluginname": "Annotazione PDF",
     "mma.mod_assign_feedback_file.pluginname": "File di commento",
     "mma.mod_assign_submission_comments.pluginname": "Commenti alle consegne",
-    "mma.mod_assign_submission_file.filesofthesetypes": "Tipi di file accettati per la consegna:",
-    "mma.mod_assign_submission_file.filetypewithexts": "{{$a.name}} &mdash; {{$a.extlist}}",
     "mma.mod_assign_submission_file.pluginname": "Consegna file",
     "mma.mod_assign_submission_onlinetext.pluginname": "Nome plugin repository",
     "mma.mod_book.errorchapter": "Si è verificato un errore durante la lettura del capitolo del libro.",
