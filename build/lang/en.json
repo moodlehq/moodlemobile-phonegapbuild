@@ -693,7 +693,7 @@
     "mm.login.startsignup": "Create new account",
     "mm.login.stillcantconnect": "Still can't connect?",
     "mm.login.supplyinfo": "More details",
-    "mm.login.username": "Username",
+    "mm.login.username": "Username(Enter Mobile Number)",
     "mm.login.usernameoremail": "Enter either username or email address",
     "mm.login.usernamerequired": "Username required",
     "mm.login.usernotaddederror": "User not added - error",
