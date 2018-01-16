@@ -10,7 +10,15 @@
         </div>
         <p class="padding">{{ 'mm.login.newsitedescription' | translate }}</p>
         <div class="list item item-input">
-          <input type="url" placeholder="{{ 'mm.login.siteaddress' | translate }}" ng-model="siteurl" mm-no-input-validation mm-auto-focus >
+			<p class="padding">{{ 'mm.login.sitelist' | translate }}<br>
+          <select type="url" placeholder="{{ 'mm.login.siteaddress' | translate }}" ng-model="siteurl" mm-no-input-validation mm-auto-focus>
+			<option value="lms.zorbas.com.cy">Bakers Academy</option>
+			<option value="lms.humanasset.com">Human Asset LMS</option>
+			<option value="totara.humanasset.com">Human Asset Totara</option>
+			</select><br><br>
+			{{ 'mm.login.sitetype' | translate }}<br>
+			<input type="url" placeholder="{{ 'mm.login.siteaddress' | translate }}" ng-model="siteurl" mm-no-input-validation mm-auto-focus >
+			</p>
         </div>
         <button class="button button-block button-positive" ng-click="connect(siteurl)" ng-disabled="!siteurl">{{ 'mm.login.connect' | translate }}</button>
       </div>

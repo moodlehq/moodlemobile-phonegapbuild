@@ -65711,7 +65711,7 @@ angular.module('mm.core')
     "versioncode" : "2018",
     "versionname" : "1.0.0",
     "cache_expiration_time" : 300000,
-    "default_lang" : "en",
+    "default_lang" : "el",
     "languages": {"el": "Ελληνικά", "en": "English"},
     "wsservice" : "moodle_mobile_app",
     "wsextservice" : "local_mobile",
