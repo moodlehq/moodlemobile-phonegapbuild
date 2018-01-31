@@ -65709,7 +65709,7 @@ angular.module('mm.core')
     "appname": "HA elearning",
     "desktopappname": "HA elearning Desktop",
     "versioncode" : "2018",
-    "versionname" : "1.0.0",
+    "versionname" : "1.1.0",
     "cache_expiration_time" : 300000,
     "default_lang" : "el",
     "languages": {"el": "Ελληνικά", "en": "English"},
