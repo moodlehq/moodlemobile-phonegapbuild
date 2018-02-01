@@ -4,7 +4,7 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.humanasset.lmsall"
         versionCode = "2018"
-        version   = "1.2.0">
+        version   = "1.3.0">
     <name>HA elearning</name>
 
     <description>
@@ -115,7 +115,7 @@
         <splash src="resources/ios/splash/Default-Portrait@~ipadpro.png" width="2048" height="2732"/>
     </platform>
 
-    <gap:plugin name="cordova-plugin-camera" source="npm" />
+    <!--<gap:plugin name="cordova-plugin-camera" source="npm" />-->
     <gap:plugin name="cordova-plugin-media-capture" source="npm">
         <param name="CAMERA_USAGE_DESCRIPTION" value="We'd like to access your camera to let you take a photo"/>
         <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We'd like to access your photo library to let you pick a photo"/>
@@ -160,9 +160,9 @@
     </gap:config-file>
         
     
-<gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription">
-<string>We'd like to access your photo library to let you upload a photo or image to the site.</string>
-</gap:config-file>
+	<gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription">
+	<string>We'd like to access your photo library to let you upload a photo or image to the site.</string>
+	</gap:config-file>
     <gap:config-file platform="ios" parent="CFBundleDocumentTypes" mode="add">
         <array>
             <dict>
