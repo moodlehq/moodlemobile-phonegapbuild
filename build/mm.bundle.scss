@@ -2277,6 +2277,18 @@ $doughnut-text-colour: $gray-darker;
     color: $doughnut-text-colour;
     position: absolute;
   }
+
+  &.item-progress .mm-course-download-spinner {
+    top: 46px;
+  }
+
+  &:not(.item-progress) {
+    padding-right: 80px;
+
+    .mm-course-download-spinner {
+      right: 40px;
+    }
+  }
 }
 
 .item-progress {
@@ -2386,6 +2398,88 @@ mm-course-list-item .item-icon-left {
 .mm-course-enrollment-img {
   max-width: 20px;
   max-height: 34px;
+}
+
+.mm-capture-media-modal {
+    background-color: $gray-light;
+
+    .bar-header {
+        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
+
+        .button {
+            color: $bar-content-text;
+            font-weight: normal;
+        }
+    }
+
+    .mm-capture-media-modal-content {
+        text-align: center;
+
+        .mm-av-wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: table;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            clear: both;
+        }
+
+        audio, video, img {
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            object-fit: contain;
+
+            &.mm-webcam-stream {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+
+        .mm-webcam-image-canvas {
+            display: none;
+        }
+
+        .mm-audio-record-container {
+            width: 100%;
+            height: 100%;
+
+            .mm-audio-canvas {
+                width: 100%;
+                height: 100%;
+            }
+
+            .mm-audio-captured {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .bar-footer {
+        background-color: $gray;
+        border-top-color: $gray-dark;
+
+        .col {
+            padding: 0;
+            line-height: $bar-height - $bar-padding-portrait * 2;
+
+            .button-icon {
+                color: $black;
+            }
+
+            .ion-record, .ion-trash-a {
+                color: $red;
+            }
+        }
+    }
 }
 
 .mm-fileuploader-file-handler {
@@ -2507,10 +2601,6 @@ mm-course-list-item .item-icon-left {
   }
 }
 
-#mm-settings-languagelabel {
-  color: $base-color;
-}
-
 
 .mm-mm_login_sites {
   .item-thumbnail-left .item-content {
@@ -2582,59 +2672,6 @@ mm-course-list-item .item-icon-left {
 }
 
 
-// Bar styles
-.bar-side-menu {
-  @include bar-style($bar-side-menu-color, $bar-side-menu-border-color, $bar-side-menu-text-color);
-  height: $bar-side-menu-height !important; // MOBILE-959: Added !important to fix side menu header in iOS.
-  .item {
-    background: transparent;
-    border: none;
-  }
-  .item-avatar {
-    margin-top: 0px !important; // MOBILE-959: Added to fix side menu header in iOS.
-    h2,
-    p,
-    .icon {
-      color: $bar-side-menu-text-color;
-    }
-  }
-}
-
-.has-side-menu-header {
-  top: $bar-side-menu-height;
-}
-
-.mm-sidemenu-menu {
-  .item .badge {
-    right: 16px;
-  }
-}
-
-ion-side-menu li .item,
-ion-side-menu li.item {
-  border-color: $bar-side-menu-item-border-color;
-  background-color: $bar-side-menu-item-background-color;
-  color: $bar-side-menu-item-text-color;
-
-  .icon {
-    color: $bar-side-menu-item-icon-color;
-  }
-}
-
-ion-side-menu li.item.item-divider {
-  background-color: $bar-side-menu-item-divider-color;
-}
-
-.foreground-ion-edit.ion-edit:before {
-    position: relative;
-    left: 120px;
-    bottom: 15px;
-    font-size: 24px;
-}
-
-.mm-site_mm_user-profile .mm-tab-handlers {
-    padding-bottom: 16px;
-}
 
 $mm-question-correct-color:         $green-dark !default;
 $mm-question-correct-color-bg:      $green-light !default;
@@ -2773,91 +2810,62 @@ li.mm-question-answer-incorrect,
 .questioncorrectnessicon {
   font-size: 20px;
 }
-.mm-capture-media-modal {
-    background-color: $gray-light;
-
-    .bar-header {
-        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
-
-        .button {
-            color: $bar-content-text;
-            font-weight: normal;
-        }
-    }
-
-    .mm-capture-media-modal-content {
-        text-align: center;
-
-        .mm-av-wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: table;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            clear: both;
-        }
-
-        audio, video, img {
-            width: 100%;
-            height: 100%;
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-            object-fit: contain;
-
-            &.mm-webcam-stream {
-                -webkit-transform: scaleX(-1);
-                transform: scaleX(-1);
-            }
-        }
-
-        .mm-webcam-image-canvas {
-            display: none;
-        }
-
-        .mm-audio-record-container {
-            width: 100%;
-            height: 100%;
-
-            .mm-audio-canvas {
-                width: 100%;
-                height: 100%;
-            }
-
-            .mm-audio-captured {
-                width: 100%;
-            }
-        }
-    }
-
-
-    .bar-footer {
-        background-color: $gray;
-        border-top-color: $gray-dark;
-
-        .col {
-            padding: 0;
-            line-height: $bar-height - $bar-padding-portrait * 2;
-
-            .button-icon {
-                color: $black;
-            }
-
-            .ion-record, .ion-trash-a {
-                color: $red;
-            }
-        }
-    }
+#mm-settings-languagelabel {
+  color: $base-color;
 }
 
+// Bar styles
+.bar-side-menu {
+  @include bar-style($bar-side-menu-color, $bar-side-menu-border-color, $bar-side-menu-text-color);
+  height: $bar-side-menu-height !important; // MOBILE-959: Added !important to fix side menu header in iOS.
+  .item {
+    background: transparent;
+    border: none;
+  }
+  .item-avatar {
+    margin-top: 0px !important; // MOBILE-959: Added to fix side menu header in iOS.
+    h2,
+    p,
+    .icon {
+      color: $bar-side-menu-text-color;
+    }
+  }
+}
 
-.mm-site_coursesgrades .item .badge {
-  right: 16px;
+.has-side-menu-header {
+  top: $bar-side-menu-height;
+}
+
+.mm-sidemenu-menu {
+  .item .badge {
+    right: 16px;
+  }
+}
+
+ion-side-menu li .item,
+ion-side-menu li.item {
+  border-color: $bar-side-menu-item-border-color;
+  background-color: $bar-side-menu-item-background-color;
+  color: $bar-side-menu-item-text-color;
+
+  .icon {
+    color: $bar-side-menu-item-icon-color;
+  }
+}
+
+ion-side-menu li.item.item-divider {
+  background-color: $bar-side-menu-item-divider-color;
+}
+
+.foreground-ion-edit.ion-edit:before {
+    position: relative;
+    left: 120px;
+    bottom: 15px;
+    font-size: 24px;
+}
+
+.mm-site_mm_user-profile .mm-tab-handlers {
+    padding-bottom: 16px;
 }
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
@@ -2886,59 +2894,10 @@ li.mm-question-answer-incorrect,
         }
     }
 }
-@media only screen and (min-width: $grid-responsive-sm-break) {
-  .mm-course-grid {
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    mm-course-list-progress {
-      padding: 0 ($padding-base-horizontal / 2);
-      margin: 0;
-      max-width: 50%;
-      width: 50%;
-      display: flex;
-
-      .card {
-        width: 100%;
-        align-items: stretch;
-      }
-    }
-
-    &:after {
-      content: '';
-      width: 100%;
-    }
-  }
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
 }
 
-.mm-timelinesort {
-  float: right;
-}
-
-.mm-timelinetitle {
-  float: left;
-  padding: 5px;
-}
-
-.mm-site_myoverview {
-  mm-course-list-progress .card {
-    margin-top: 0;
-
-    h5 {
-      margin-left: 10px;
-    }
-    .list.block .item {
-      border-top: $item-border-width solid $item-light-border;
-      border-bottom: $item-border-width solid $item-light-border;
-    }
-    .list.block:last-child .item {
-      border-bottom: 0;
-    }
-  }
-}
 $mma-messages-date-badge: "stable" !default;
 
 // The date displayed in the list.
@@ -3041,6 +3000,59 @@ $mma-messages-date-badge: "stable" !default;
   text-align: center;
 }
 
+@media only screen and (min-width: $grid-responsive-sm-break) {
+  .mm-course-grid {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    mm-course-list-progress {
+      padding: 0 ($padding-base-horizontal / 2);
+      margin: 0;
+      max-width: 50%;
+      width: 50%;
+      display: flex;
+
+      .card {
+        width: 100%;
+        align-items: stretch;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+    }
+  }
+}
+
+.mm-timelinesort {
+  float: right;
+}
+
+.mm-timelinetitle {
+  float: left;
+  padding: 5px;
+}
+
+.mm-site_myoverview {
+  mm-course-list-progress .card {
+    margin-top: 0;
+
+    h5 {
+      margin-left: 10px;
+    }
+    .list.block .item {
+      border-top: $item-border-width solid $item-light-border;
+      border-bottom: $item-border-width solid $item-light-border;
+    }
+    .list.block:last-child .item {
+      border-bottom: 0;
+    }
+  }
+}
 
 $mma-mod-assign-warning-color: $red !default;
 
