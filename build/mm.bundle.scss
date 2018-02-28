@@ -2277,6 +2277,18 @@ $doughnut-text-colour: $gray-darker;
     color: $doughnut-text-colour;
     position: absolute;
   }
+
+  &.item-progress .mm-course-download-spinner {
+    top: 46px;
+  }
+
+  &:not(.item-progress) {
+    padding-right: 80px;
+
+    .mm-course-download-spinner {
+      right: 40px;
+    }
+  }
 }
 
 .item-progress {
@@ -3959,6 +3971,19 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 .mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title p {
 	font-weight: bold;
 	font-size: 16px;
+}
+
+// Style match content a bit.
+.mma-qtype-calculated-container .item-select {
+  select,
+  .mm-select-fix {
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+  }
 }
 
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.

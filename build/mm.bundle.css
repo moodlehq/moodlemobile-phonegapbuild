@@ -12586,6 +12586,14 @@ mm-course-mod-description .card .item, mm-course-mod-description .card .mm-grade
   color: #626262;
   position: absolute; }
 
+.item-course.item-progress .mm-course-download-spinner {
+  top: 46px; }
+
+.item-course:not(.item-progress) {
+  padding-right: 80px; }
+  .item-course:not(.item-progress) .mm-course-download-spinner {
+    right: 40px; }
+
 .item-progress {
   padding-left: 102px;
   min-height: 102px; }
@@ -14206,6 +14214,15 @@ ion-popover-view {
 .mma-qbehaviour-deferredcbm-certainty-title, .item.mma-qbehaviour-deferredcbm-certainty-title, .mm-grades-table .mma-qbehaviour-deferredcbm-certainty-title.itemcenter, .item.mma-qbehaviour-deferredcbm-certainty-title p, .mm-grades-table .mma-qbehaviour-deferredcbm-certainty-title.itemcenter p {
   font-weight: bold;
   font-size: 16px; }
+
+.mma-qtype-calculated-container .item-select select,
+.mma-qtype-calculated-container .item-select .mm-select-fix {
+  padding: 0 36px 0 0;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; }
 
 .mma-qtype-ddimageortext-container mm-loading {
   position: absolute;
