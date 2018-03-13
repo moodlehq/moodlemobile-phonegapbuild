@@ -1,17 +1,17 @@
 webpackJsonp([31],{
 
-/***/ 1159:
+/***/ 1269:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreContentLinksChooseSitePageModule", function() { return CoreContentLinksChooseSitePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesSelfEnrolPasswordPageModule", function() { return CoreCoursesSelfEnrolPasswordPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__choose_site__ = __webpack_require__(1214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__self_enrol_password__ = __webpack_require__(1320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(50);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,40 +37,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreContentLinksChooseSitePageModule = /** @class */ (function () {
-    function CoreContentLinksChooseSitePageModule() {
+var CoreCoursesSelfEnrolPasswordPageModule = /** @class */ (function () {
+    function CoreCoursesSelfEnrolPasswordPageModule() {
     }
-    CoreContentLinksChooseSitePageModule = __decorate([
+    CoreCoursesSelfEnrolPasswordPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__choose_site__["a" /* CoreContentLinksChooseSitePage */]
+                __WEBPACK_IMPORTED_MODULE_2__self_enrol_password__["a" /* CoreCoursesSelfEnrolPasswordPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__choose_site__["a" /* CoreContentLinksChooseSitePage */]),
-                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__self_enrol_password__["a" /* CoreCoursesSelfEnrolPasswordPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild(),
             ]
         })
-    ], CoreContentLinksChooseSitePageModule);
-    return CoreContentLinksChooseSitePageModule;
+    ], CoreCoursesSelfEnrolPasswordPageModule);
+    return CoreCoursesSelfEnrolPasswordPageModule;
 }());
 
-//# sourceMappingURL=choose-site.module.js.map
+//# sourceMappingURL=self-enrol-password.module.js.map
 
 /***/ }),
 
-/***/ 1214:
+/***/ 1320:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreContentLinksChooseSitePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesSelfEnrolPasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_helper__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -95,82 +91,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
 /**
- * Page to display the list of sites to choose one to perform a content link action.
+ * Page that displays a form to enter a password to self enrol in a course.
  */
-var CoreContentLinksChooseSitePage = /** @class */ (function () {
-    function CoreContentLinksChooseSitePage(navCtrl, navParams, contentLinksDelegate, sitesProvider, domUtils, contentLinksHelper) {
-        this.navCtrl = navCtrl;
-        this.contentLinksDelegate = contentLinksDelegate;
-        this.sitesProvider = sitesProvider;
-        this.domUtils = domUtils;
-        this.contentLinksHelper = contentLinksHelper;
-        this.url = navParams.get('url');
+var CoreCoursesSelfEnrolPasswordPage = /** @class */ (function () {
+    function CoreCoursesSelfEnrolPasswordPage(viewCtrl) {
+        this.viewCtrl = viewCtrl;
     }
     /**
-     * Component being initialized.
+     * Close help modal.
      */
-    CoreContentLinksChooseSitePage.prototype.ngOnInit = function () {
-        var _this = this;
-        if (!this.url) {
-            return this.leaveView();
-        }
-        // Get the action to perform.
-        this.contentLinksDelegate.getActionsFor(this.url).then(function (actions) {
-            _this.action = _this.contentLinksHelper.getFirstValidAction(actions);
-            if (!_this.action) {
-                return Promise.reject(null);
-            }
-            // Get the sites that can perform the action.
-            return _this.sitesProvider.getSites(_this.action.sites).then(function (sites) {
-                _this.sites = sites;
-            });
-        }).catch(function () {
-            _this.domUtils.showErrorModal('core.contentlinks.errornosites', true);
-            _this.leaveView();
-        }).finally(function () {
-            _this.loaded = true;
-        });
+    CoreCoursesSelfEnrolPasswordPage.prototype.close = function () {
+        this.viewCtrl.dismiss();
     };
     /**
-     * Cancel.
-     */
-    CoreContentLinksChooseSitePage.prototype.cancel = function () {
-        this.leaveView();
-    };
-    /**
-     * Perform the action on a certain site.
+     * Submit password.
      *
-     * @param {string} siteId Site ID.
+     * @param {string} password Password to submit.
      */
-    CoreContentLinksChooseSitePage.prototype.siteClicked = function (siteId) {
-        this.action.action(siteId, this.navCtrl);
+    CoreCoursesSelfEnrolPasswordPage.prototype.submitPassword = function (password) {
+        this.viewCtrl.dismiss(password);
     };
-    /**
-     * Cancel and leave the view.
-     */
-    CoreContentLinksChooseSitePage.prototype.leaveView = function () {
-        var _this = this;
-        this.sitesProvider.logout().finally(function () {
-            _this.navCtrl.setRoot('CoreLoginSitesPage');
-        });
-    };
-    CoreContentLinksChooseSitePage = __decorate([
+    CoreCoursesSelfEnrolPasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-content-links-choose-site',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/contentlinks/pages/choose-site/choose-site.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.contentlinks.chooseaccount\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <ion-list>\n            <ion-item text-wrap>\n                <p class="item-heading">{{ \'core.contentlinks.chooseaccounttoopenlink\' | translate }}</p>\n                <p>{{ url }}</p>\n            </ion-item>\n            <a ion-item *ngFor="let site of sites" (click)="siteClicked(site.id)">\n                <img [src]="site.avatar" item-start>\n                <h2>{{site.fullName}}</h2>\n                <p><core-format-text clean="true" [text]="site.siteName"></core-format-text></p>\n                <p>{{site.siteUrl}}</p>\n            </a>\n            <ion-item>\n                <button ion-button block (click)="cancel()">{{ \'core.login.cancel\' | translate }}</button>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/contentlinks/pages/choose-site/choose-site.html"*/,
+            selector: 'page-core-courses-self-enrol-password',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/courses/pages/self-enrol-password/self-enrol-password.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.courses.selfenrolment\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="close()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <form ion-list #f="ngForm" (ngSubmit)="submitPassword(f.value.password)">\n        <ion-item>\n            <core-show-password item-content [name]="\'password\'">\n                <ion-input text-wrap class="core-ioninput-password" name="password" type="password" placeholder="{{ \'core.courses.password\' | translate }}" ngModel [core-auto-focus]></ion-input>\n            </core-show-password>\n        </ion-item>\n        <ion-item>\n            <button ion-button block [disabled]="!f.value.password">{{ \'core.courses.enrolme\' | translate }}</button>\n        </ion-item>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/courses/pages/self-enrol-password/self-enrol-password.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreContentLinksDelegate */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_helper__["a" /* CoreContentLinksHelperProvider */]])
-    ], CoreContentLinksChooseSitePage);
-    return CoreContentLinksChooseSitePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */]])
+    ], CoreCoursesSelfEnrolPasswordPage);
+    return CoreCoursesSelfEnrolPasswordPage;
 }());
 
-//# sourceMappingURL=choose-site.js.map
+//# sourceMappingURL=self-enrol-password.js.map
 
 /***/ })
 

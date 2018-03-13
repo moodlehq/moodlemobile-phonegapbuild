@@ -1,17 +1,18 @@
 webpackJsonp([33],{
 
-/***/ 1157:
+/***/ 1268:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonFilesListPageModule", function() { return AddonFilesListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesMyOverviewPageModule", function() { return CoreCoursesMyOverviewPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__list__ = __webpack_require__(1212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__my_overview__ = __webpack_require__(1319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(694);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_sitehome_components_components_module__ = __webpack_require__(696);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,44 +38,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonFilesListPageModule = /** @class */ (function () {
-    function AddonFilesListPageModule() {
+
+var CoreCoursesMyOverviewPageModule = /** @class */ (function () {
+    function CoreCoursesMyOverviewPageModule() {
     }
-    AddonFilesListPageModule = __decorate([
+    CoreCoursesMyOverviewPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__list__["a" /* AddonFilesListPage */],
+                __WEBPACK_IMPORTED_MODULE_3__my_overview__["a" /* CoreCoursesMyOverviewPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__list__["a" /* AddonFilesListPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* CoreCoursesComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_6__core_sitehome_components_components_module__["a" /* CoreSiteHomeComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__my_overview__["a" /* CoreCoursesMyOverviewPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonFilesListPageModule);
-    return AddonFilesListPageModule;
+    ], CoreCoursesMyOverviewPageModule);
+    return CoreCoursesMyOverviewPageModule;
 }());
 
-//# sourceMappingURL=list.module.js.map
+//# sourceMappingURL=my-overview.module.js.map
 
 /***/ }),
 
-/***/ 1212:
+/***/ 1319:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonFilesListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesMyOverviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_files__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(646);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_courses__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_my_overview__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_course_providers_helper__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_course_providers_options_delegate__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_sitehome_providers_sitehome__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_moment__);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -108,183 +112,370 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page that displays the list of files.
+ * Page that displays My Overview.
  */
-var AddonFilesListPage = /** @class */ (function () {
-    function AddonFilesListPage(navParams, eventsProvider, sitesProvider, domUtils, translate, appProvider, filesProvider, filesHelper, textUtils) {
-        var _this = this;
-        this.sitesProvider = sitesProvider;
+var CoreCoursesMyOverviewPage = /** @class */ (function () {
+    function CoreCoursesMyOverviewPage(navCtrl, coursesProvider, domUtils, myOverviewProvider, courseHelper, sitesProvider, siteHomeProvider, courseOptionsDelegate) {
+        this.navCtrl = navCtrl;
+        this.coursesProvider = coursesProvider;
         this.domUtils = domUtils;
-        this.translate = translate;
-        this.appProvider = appProvider;
-        this.filesProvider = filesProvider;
-        this.filesHelper = filesHelper;
-        this.textUtils = textUtils;
-        this.title = navParams.get('title') || this.translate.instant('addon.files.files');
-        this.root = navParams.get('root');
-        this.path = navParams.get('path');
-        // Update visibility if current site info is updated.
-        this.updateSiteObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, function () {
-            _this.setVisibility();
-        }, sitesProvider.getCurrentSiteId());
+        this.myOverviewProvider = myOverviewProvider;
+        this.courseHelper = courseHelper;
+        this.sitesProvider = sitesProvider;
+        this.siteHomeProvider = siteHomeProvider;
+        this.courseOptionsDelegate = courseOptionsDelegate;
+        this.tabsReady = false;
+        this.tabShown = 'courses';
+        this.timeline = {
+            sort: 'sortbydates',
+            events: [],
+            loaded: false,
+            canLoadMore: undefined
+        };
+        this.timelineCourses = {
+            courses: [],
+            loaded: false,
+            canLoadMore: false
+        };
+        this.courses = {
+            selected: 'inprogress',
+            loaded: false,
+            filter: '',
+            past: [],
+            inprogress: [],
+            future: []
+        };
+        this.showFilter = false;
+        this.tabs = [];
+        this.prefetchCoursesData = {
+            inprogress: {},
+            past: {},
+            future: {}
+        };
+        this.prefetchIconsInitialized = false;
     }
     /**
      * View loaded.
      */
-    AddonFilesListPage.prototype.ionViewDidLoad = function () {
-        this.setVisibility();
-        this.userQuota = this.sitesProvider.getCurrentSite().getInfo().userquota;
-        if (!this.root) {
-            // Load private files by default.
-            if (this.showPrivateFiles) {
-                this.root = 'my';
+    CoreCoursesMyOverviewPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.searchEnabled = !this.coursesProvider.isSearchCoursesDisabledInSite();
+        // Decide which tab to load first.
+        this.siteHomeProvider.isAvailable().then(function (enabled) {
+            var site = _this.sitesProvider.getCurrentSite(), displaySiteHome = site.getInfo() && site.getInfo().userhomepage === 0;
+            _this.siteHomeEnabled = enabled;
+            _this.firstSelectedTab = displaySiteHome ? 0 : 2;
+            _this.tabsReady = true;
+        });
+    };
+    /**
+     * Fetch the timeline.
+     *
+     * @param {number} [afterEventId] The last event id.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreCoursesMyOverviewPage.prototype.fetchMyOverviewTimeline = function (afterEventId) {
+        var _this = this;
+        return this.myOverviewProvider.getActionEventsByTimesort(afterEventId).then(function (events) {
+            _this.timeline.events = events.events;
+            _this.timeline.canLoadMore = events.canLoadMore;
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error getting my overview data.');
+        });
+    };
+    /**
+     * Fetch the timeline by courses.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreCoursesMyOverviewPage.prototype.fetchMyOverviewTimelineByCourses = function () {
+        var _this = this;
+        return this.fetchUserCourses().then(function (courses) {
+            var today = __WEBPACK_IMPORTED_MODULE_9_moment__().unix();
+            var courseIds;
+            courses = courses.filter(function (course) {
+                return course.startdate <= today && (!course.enddate || course.enddate >= today);
+            });
+            _this.timelineCourses.courses = courses;
+            if (courses.length > 0) {
+                courseIds = courses.map(function (course) {
+                    return course.id;
+                });
+                return _this.myOverviewProvider.getActionEventsByCourses(courseIds).then(function (courseEvents) {
+                    _this.timelineCourses.courses.forEach(function (course) {
+                        course.events = courseEvents[course.id].events;
+                        course.canLoadMore = courseEvents[course.id].canLoadMore;
+                    });
+                });
             }
-            else if (this.showSiteFiles) {
-                this.root = 'site';
-            }
-        }
-        if (this.root) {
-            this.rootChanged();
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error getting my overview data.');
+        });
+    };
+    /**
+     * Fetch the courses for my overview.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreCoursesMyOverviewPage.prototype.fetchMyOverviewCourses = function () {
+        var _this = this;
+        return this.fetchUserCourses().then(function (courses) {
+            var today = __WEBPACK_IMPORTED_MODULE_9_moment__().unix();
+            _this.courses.past = [];
+            _this.courses.inprogress = [];
+            _this.courses.future = [];
+            courses.forEach(function (course) {
+                if (course.startdate > today) {
+                    // Courses that have not started yet.
+                    _this.courses.future.push(course);
+                }
+                else if (course.enddate && course.enddate < today) {
+                    // Courses that have already ended.
+                    _this.courses.past.push(course);
+                }
+                else {
+                    // Courses still in progress.
+                    _this.courses.inprogress.push(course);
+                }
+            });
+            _this.courses.filter = '';
+            _this.showFilter = false;
+            _this.filteredCourses = _this.courses[_this.courses.selected];
+            _this.initPrefetchCoursesIcons();
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error getting my overview data.');
+        });
+    };
+    /**
+     * Fetch user courses.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreCoursesMyOverviewPage.prototype.fetchUserCourses = function () {
+        var _this = this;
+        return this.coursesProvider.getUserCourses().then(function (courses) {
+            var courseIds = courses.map(function (course) {
+                return course.id;
+            });
+            // Load course options of the course.
+            return _this.coursesProvider.getCoursesAdminAndNavOptions(courseIds).then(function (options) {
+                courses.forEach(function (course) {
+                    course.navOptions = options.navOptions[course.id];
+                    course.admOptions = options.admOptions[course.id];
+                });
+                return courses.sort(function (a, b) {
+                    var compareA = a.fullname.toLowerCase(), compareB = b.fullname.toLowerCase();
+                    return compareA.localeCompare(compareB);
+                });
+            });
+        });
+    };
+    /**
+     * Show or hide the filter.
+     */
+    CoreCoursesMyOverviewPage.prototype.switchFilter = function () {
+        this.showFilter = !this.showFilter;
+        this.courses.filter = '';
+        this.filteredCourses = this.courses[this.courses.selected];
+    };
+    /**
+     * The filter has changed.
+     *
+     * @param {any} Received Event.
+     */
+    CoreCoursesMyOverviewPage.prototype.filterChanged = function (event) {
+        var newValue = event.target.value && event.target.value.trim().toLowerCase();
+        if (!newValue || !this.courses[this.courses.selected]) {
+            this.filteredCourses = this.courses[this.courses.selected];
         }
         else {
-            this.filesLoaded = true;
+            this.filteredCourses = this.courses[this.courses.selected].filter(function (course) {
+                return course.fullname.toLowerCase().indexOf(newValue) > -1;
+            });
         }
     };
     /**
      * Refresh the data.
      *
      * @param {any} refresher Refresher.
+     * @return {Promise<any>} Promise resolved when done.
      */
-    AddonFilesListPage.prototype.refreshData = function (refresher) {
-        this.refreshFiles().finally(function () {
+    CoreCoursesMyOverviewPage.prototype.refreshMyOverview = function (refresher) {
+        var _this = this;
+        var promises = [];
+        if (this.tabShown == 'timeline') {
+            promises.push(this.myOverviewProvider.invalidateActionEventsByTimesort());
+            promises.push(this.myOverviewProvider.invalidateActionEventsByCourses());
+        }
+        promises.push(this.coursesProvider.invalidateUserCourses());
+        promises.push(this.courseOptionsDelegate.clearAndInvalidateCoursesOptions());
+        return Promise.all(promises).finally(function () {
+            switch (_this.tabShown) {
+                case 'timeline':
+                    switch (_this.timeline.sort) {
+                        case 'sortbydates':
+                            return _this.fetchMyOverviewTimeline();
+                        case 'sortbycourses':
+                            return _this.fetchMyOverviewTimelineByCourses();
+                        default:
+                    }
+                    break;
+                case 'courses':
+                    _this.prefetchIconsInitialized = false;
+                    return _this.fetchMyOverviewCourses();
+                default:
+            }
+        }).finally(function () {
             refresher.complete();
         });
     };
     /**
-     * Function called when the root has changed.
+     * Change timeline sort being viewed.
      */
-    AddonFilesListPage.prototype.rootChanged = function () {
+    CoreCoursesMyOverviewPage.prototype.switchSort = function () {
         var _this = this;
-        this.filesLoaded = false;
-        this.component = this.root == 'my' ? __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */].PRIVATE_FILES_COMPONENT : __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */].SITE_FILES_COMPONENT;
-        this.fetchFiles().finally(function () {
-            _this.filesLoaded = true;
-        });
-    };
-    /**
-     * Upload a new file.
-     */
-    AddonFilesListPage.prototype.uploadFile = function () {
-        var _this = this;
-        this.filesProvider.versionCanUploadFiles().then(function (canUpload) {
-            if (!canUpload) {
-                _this.domUtils.showAlertTranslated('core.notice', 'addon.files.erroruploadnotworking');
-            }
-            else if (!_this.appProvider.isOnline()) {
-                _this.domUtils.showErrorModal('core.fileuploader.errormustbeonlinetoupload', true);
-            }
-            else {
-                _this.filesHelper.uploadPrivateFile(_this.filesInfo).then(function () {
-                    // File uploaded, refresh the list.
-                    _this.filesLoaded = false;
-                    _this.refreshFiles().finally(function () {
-                        _this.filesLoaded = true;
+        switch (this.timeline.sort) {
+            case 'sortbydates':
+                if (!this.timeline.loaded) {
+                    this.fetchMyOverviewTimeline().finally(function () {
+                        _this.timeline.loaded = true;
                     });
-                }).catch(function () {
-                    // Ignore errors, they're handled inside the function.
-                });
-            }
+                }
+                break;
+            case 'sortbycourses':
+                if (!this.timelineCourses.loaded) {
+                    this.fetchMyOverviewTimelineByCourses().finally(function () {
+                        _this.timelineCourses.loaded = true;
+                    });
+                }
+                break;
+            default:
+        }
+    };
+    /**
+     * The tab has changed.
+     *
+     * @param {string} tab Name of the new tab.
+     */
+    CoreCoursesMyOverviewPage.prototype.tabChanged = function (tab) {
+        var _this = this;
+        this.tabShown = tab;
+        switch (this.tabShown) {
+            case 'timeline':
+                if (!this.timeline.loaded) {
+                    this.fetchMyOverviewTimeline().finally(function () {
+                        _this.timeline.loaded = true;
+                    });
+                }
+                break;
+            case 'courses':
+                if (!this.courses.loaded) {
+                    this.fetchMyOverviewCourses().finally(function () {
+                        _this.courses.loaded = true;
+                    });
+                }
+                break;
+            default:
+        }
+    };
+    /**
+     * Load more events.
+     */
+    CoreCoursesMyOverviewPage.prototype.loadMoreTimeline = function () {
+        return this.fetchMyOverviewTimeline(this.timeline.canLoadMore);
+    };
+    /**
+     * Load more events.
+     *
+     * @param {any} course Course.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreCoursesMyOverviewPage.prototype.loadMoreCourse = function (course) {
+        return this.myOverviewProvider.getActionEventsByCourse(course.id, course.canLoadMore).then(function (courseEvents) {
+            course.events = course.events.concat(courseEvents.events);
+            course.canLoadMore = courseEvents.canLoadMore;
         });
     };
     /**
-     * Set visibility of some items based on site data.
+     * Go to search courses.
      */
-    AddonFilesListPage.prototype.setVisibility = function () {
-        this.showPrivateFiles = this.filesProvider.canViewPrivateFiles();
-        this.showSiteFiles = this.filesProvider.canViewSiteFiles();
-        this.showUpload = this.filesProvider.canUploadFiles();
+    CoreCoursesMyOverviewPage.prototype.openSearch = function () {
+        this.navCtrl.push('CoreCoursesSearchPage');
     };
     /**
-     * Fetch the files.
+     * The selected courses have changed.
+     */
+    CoreCoursesMyOverviewPage.prototype.selectedChanged = function () {
+        this.filteredCourses = this.courses[this.courses.selected];
+    };
+    /**
+     * Prefetch all the shown courses.
      *
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonFilesListPage.prototype.fetchFiles = function () {
+    CoreCoursesMyOverviewPage.prototype.prefetchCourses = function () {
         var _this = this;
-        var promise;
-        if (!this.path) {
-            // The path is unknown, the user must be requesting a root.
-            if (this.root == 'site') {
-                this.title = this.translate.instant('addon.files.sitefiles');
-                promise = this.filesProvider.getSiteFiles();
+        var selected = this.courses.selected, selectedData = this.prefetchCoursesData[selected], initialIcon = selectedData.icon;
+        selectedData.icon = 'spinner';
+        selectedData.badge = '';
+        return this.courseHelper.confirmAndPrefetchCourses(this.courses[selected], function (progress) {
+            selectedData.badge = progress.count + ' / ' + progress.total;
+        }).then(function (downloaded) {
+            selectedData.icon = downloaded ? 'refresh' : initialIcon;
+        }, function (error) {
+            if (!_this.isDestroyed) {
+                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
+                selectedData.icon = initialIcon;
             }
-            else if (this.root == 'my') {
-                this.title = this.translate.instant('addon.files.files');
-                promise = this.filesProvider.getPrivateFiles().then(function (files) {
-                    if (_this.showUpload && _this.filesProvider.canGetPrivateFilesInfo() && _this.userQuota > 0) {
-                        // Get the info to calculate the available size.
-                        return _this.filesProvider.getPrivateFilesInfo().then(function (info) {
-                            _this.filesInfo = info;
-                            _this.spaceUsed = _this.textUtils.bytesToSize(info.filesizewithoutreferences, 1);
-                            _this.userQuotaReadable = _this.textUtils.bytesToSize(_this.userQuota, 1);
-                            return files;
-                        });
-                    }
-                    else {
-                        // User quota isn't useful, delete it.
-                        delete _this.userQuota;
-                    }
-                    return files;
-                });
-            }
-            else {
-                // Unknown root.
-                promise = Promise.reject(null);
-            }
-        }
-        else {
-            // Path is set, serve the files the user requested.
-            promise = this.filesProvider.getFiles(this.path);
-        }
-        return promise.then(function (files) {
-            _this.files = files;
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.files.couldnotloadfiles', true);
+        }).finally(function () {
+            selectedData.badge = '';
         });
     };
     /**
-     * Refresh the displayed files.
-     *
-     * @return {Promise<any>} Promise resolved when done.
+     * Initialize the prefetch icon for selected courses.
      */
-    AddonFilesListPage.prototype.refreshFiles = function () {
+    CoreCoursesMyOverviewPage.prototype.initPrefetchCoursesIcons = function () {
         var _this = this;
-        var promises = [];
-        promises.push(this.filesProvider.invalidateDirectory(this.root, this.path));
-        promises.push(this.filesProvider.invalidatePrivateFilesInfoForUser());
-        return Promise.all(promises).finally(function () {
-            return _this.fetchFiles();
+        if (this.prefetchIconsInitialized) {
+            // Already initialized.
+            return;
+        }
+        this.prefetchIconsInitialized = true;
+        Object.keys(this.prefetchCoursesData).forEach(function (filter) {
+            if (!_this.courses[filter] || _this.courses[filter].length < 2) {
+                // Not enough courses.
+                _this.prefetchCoursesData[filter].icon = '';
+                return;
+            }
+            _this.courseHelper.determineCoursesStatus(_this.courses[filter]).then(function (status) {
+                var icon = _this.courseHelper.getCourseStatusIconFromStatus(status);
+                if (icon == 'spinner') {
+                    // It seems all courses are being downloaded, show a download button instead.
+                    icon = 'cloud-download';
+                }
+                _this.prefetchCoursesData[filter].icon = icon;
+            });
         });
     };
     /**
-     * Page destroyed.
+     * Component being destroyed.
      */
-    AddonFilesListPage.prototype.ngOnDestroy = function () {
-        this.updateSiteObserver && this.updateSiteObserver.off();
+    CoreCoursesMyOverviewPage.prototype.ngOnDestroy = function () {
+        this.isDestroyed = true;
     };
-    AddonFilesListPage = __decorate([
+    CoreCoursesMyOverviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-files-list',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/files/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="filesLoaded && (showPrivateFiles || showSiteFiles)" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="filesLoaded" *ngIf="showPrivateFiles || showSiteFiles">\n        <!-- Allow selecting the files to see: private or site. -->\n        <div no-padding *ngIf="showPrivateFiles && showSiteFiles && !path">\n            <ion-select [(ngModel)]="root" (ngModelChange)="rootChanged()" interface="popover">\n                <ion-option value="my">{{ \'addon.files.privatefiles\' | translate }}</ion-option>\n                <ion-option value="site">{{ \'addon.files.sitefiles\' | translate }}</ion-option>\n            </ion-select>\n        </div>\n\n        <!-- Display info about space used and space left. -->\n        <p class="core-info-card" *ngIf="userQuota && filesInfo && filesInfo.filecount > 0">{{ \'core.quotausage\' | translate:{$a: {used: spaceUsed, total: userQuotaReadable} } }}</p>\n\n        <!-- List of files. -->\n        <ion-list *ngIf="files && files.length > 0">\n            <div *ngFor="let file of files">\n                <a *ngIf="file.isdir" ion-item class="item-media" [navPush]="\'AddonFilesListPage\'" [navParams]="{path: file.link, title: file.filename}">\n                    <img [src]="file.imgPath" alt="" role="presentation" item-start>\n                    <p>{{file.filename}}</p>\n                </a>\n                <core-file *ngIf="!file.isdir" [file]="file" [component]="component" [componentId]="file.contextid"></core-file>\n            </div>\n        </ion-list>\n\n        <!-- Message telling there are no files. -->\n        <core-empty-box *ngIf="!files || !files.length" icon="folder" [message]="\'addon.files.emptyfilelist\' | translate"></core-empty-box>\n    </core-loading>\n\n    <!-- Upload a private file. -->\n    <ion-fab bottom right *ngIf="showUpload && root != \'site\' && !path">\n        <button ion-fab (click)="uploadFile()" [attr.aria-label]="\'core.fileuploader.uploadafile\' | translate">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>\n</ion-content>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/files/pages/list/list.html"*/,
+            selector: 'page-core-courses-my-overview',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/courses/pages/my-overview/my-overview.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.courses.courseoverview\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="tabShown == \'courses\' && courses[courses.selected] && courses[courses.selected].length > 5" ion-button icon-only [attr.aria-label]="\'core.courses.filtermycourses\' | translate" (click)="switchFilter()">\n                <ion-icon name="funnel"></ion-icon>\n            </button>\n            <button *ngIf="searchEnabled" ion-button icon-only (click)="openSearch()" [attr.aria-label]="\'core.courses.searchcourses\' | translate">\n                <ion-icon name="search"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-tabs [selectedIndex]="firstSelectedTab" [hideUntil]="tabsReady">\n        <!-- Site home tab. -->\n        <core-tab [show]="siteHomeEnabled" [title]="\'core.sitehome.sitehome\' | translate" (ionSelect)="tabChanged(\'sitehome\')">\n            <ng-template>\n                <core-sitehome-index></core-sitehome-index>\n            </ng-template>\n        </core-tab>\n\n        <!-- Timeline tab. -->\n        <core-tab [title]="\'core.courses.timeline\' | translate" (ionSelect)="tabChanged(\'timeline\')">\n            <ng-template>\n                <ion-content>\n                    <ion-refresher [enabled]="timeline.loaded || timelineCourses.loaded || courses.loaded" (ionRefresh)="refreshMyOverview($event)">\n                        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n                    </ion-refresher>\n\n                    <div no-padding [hidden]="!(timeline.loaded || timelineCourses.loaded)">\n                        <ion-select [(ngModel)]="timeline.sort" (ngModelChange)="switchSort()" interface="popover">\n                            <ion-option value="sortbydates">{{ \'core.courses.sortbydates\' | translate }}</ion-option>\n                            <ion-option value="sortbycourses">{{ \'core.courses.sortbycourses\' | translate }}</ion-option>\n                        </ion-select>\n                    </div>\n                    <core-loading [hideUntil]="timeline.loaded" [hidden]="timeline.sort != \'sortbydates\'" class="core-loading-center">\n                        <core-courses-overview-events [events]="timeline.events" showCourse="true" [canLoadMore]="timeline.canLoadMore" (loadMore)="loadMoreTimeline()"></core-courses-overview-events>\n                    </core-loading>\n                    <core-loading [hideUntil]="timelineCourses.loaded" [hidden]="timeline.sort != \'sortbycourses\'" class="core-loading-center">\n                        <ion-grid no-padding>\n                            <ion-row no-padding>\n                                <ion-col *ngFor="let course of timelineCourses.courses" no-padding col-12 col-md-6>\n                                    <core-courses-course-progress [course]="course">\n                                        <core-courses-overview-events [events]="course.events" [canLoadMore]="course.canLoadMore" (loadMore)="loadMoreCourse(course)"></core-courses-overview-events>\n                                    </core-courses-course-progress>\n                                </ion-col>\n                            </ion-row>\n                        </ion-grid>\n                        <core-empty-box *ngIf="timelineCourses.courses.length == 0" image="assets/img/icons/courses.svg" [message]="\'core.courses.nocoursesoverview\' | translate"></core-empty-box>\n                    </core-loading>\n                </ion-content>\n            </ng-template>\n        </core-tab>\n\n        <!-- Courses tab. -->\n        <core-tab [title]="\'core.courses.courses\' | translate" (ionSelect)="tabChanged(\'courses\')">\n            <ng-template>\n                <ion-content>\n                    <ion-refresher [enabled]="timeline.loaded || timelineCourses.loaded || courses.loaded" (ionRefresh)="refreshMyOverview($event)">\n                        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n                    </ion-refresher>\n\n                    <core-loading [hideUntil]="courses.loaded" class="core-loading-center">\n                        <!-- "Time" selector. -->\n                        <div no-padding class="clearfix" [hidden]="showFilter">\n                            <ion-select [title]="\'core.show\' | translate" [(ngModel)]="courses.selected" float-start (ngModelChange)="selectedChanged()" interface="popover">\n                                <ion-option value="inprogress">{{ \'core.courses.inprogress\' | translate }}</ion-option>\n                                <ion-option value="future">{{ \'core.courses.future\' | translate }}</ion-option>\n                                <ion-option value="past">{{ \'core.courses.past\' | translate }}</ion-option>\n                            </ion-select>\n                            <!-- Download all courses. -->\n                            <div *ngIf="courses[courses.selected] && courses[courses.selected].length > 1" class="core-button-spinner" float-end>\n                                <button *ngIf="prefetchCoursesData[courses.selected].icon && prefetchCoursesData[courses.selected].icon != \'spinner\'" ion-button icon-only clear color="dark" (click)="prefetchCourses()">\n                                    <ion-icon [name]="prefetchCoursesData[courses.selected].icon"></ion-icon>\n                                </button>\n                                <ion-spinner *ngIf="!prefetchCoursesData[courses.selected].icon || prefetchCoursesData[courses.selected].icon == \'spinner\'"></ion-spinner>\n                                <span float-end *ngIf="prefetchCoursesData[courses.selected].badge">{{prefetchCoursesData[courses.selected].badge}}</span>\n                            </div>\n                        </div>\n                        <!-- Filter courses. -->\n                        <ion-searchbar *ngIf="showFilter" [(ngModel)]="courses.filter" (ionInput)="filterChanged($event)" (ionCancel)="filterChanged()" [placeholder]="\'core.courses.filtermycourses\' | translate">\n                        </ion-searchbar>\n                        <!-- List of courses. -->\n                        <div>\n                            <ion-grid no-padding>\n                                <ion-row no-padding>\n                                    <ion-col *ngFor="let course of filteredCourses" no-padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 align-self-stretch>\n                                        <core-courses-course-progress [course]="course" class="core-courseoverview"></core-courses-course-progress>\n                                    </ion-col>\n                                </ion-row>\n                            </ion-grid>\n\n                            <core-empty-box *ngIf="courses[courses.selected].length == 0 && courses.selected == \'inprogress\'" image="assets/img/icons/courses.svg" [message]="\'core.courses.nocoursesinprogress\' | translate"></core-empty-box>\n                            <core-empty-box *ngIf="courses[courses.selected].length == 0 && courses.selected == \'future\'" image="assets/img/icons/courses.svg" [message]="\'core.courses.nocoursesfuture\' | translate"></core-empty-box>\n                            <core-empty-box *ngIf="courses[courses.selected].length == 0 && courses.selected == \'past\'" image="assets/img/icons/courses.svg" [message]="\'core.courses.nocoursespast\' | translate"></core-empty-box>\n                        </div>\n                    </core-loading>\n                </ion-content>\n            </ng-template>\n        </core-tab>\n    </core-tabs>\n</ion-content>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/courses/pages/my-overview/my-overview.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */], __WEBPACK_IMPORTED_MODULE_9__providers_helper__["a" /* AddonFilesHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
-    ], AddonFilesListPage);
-    return AddonFilesListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_courses__["a" /* CoreCoursesProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_my_overview__["a" /* CoreCoursesMyOverviewProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__core_course_providers_helper__["a" /* CoreCourseHelperProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__core_sitehome_providers_sitehome__["a" /* CoreSiteHomeProvider */], __WEBPACK_IMPORTED_MODULE_7__core_course_providers_options_delegate__["a" /* CoreCourseOptionsDelegate */]])
+    ], CoreCoursesMyOverviewPage);
+    return CoreCoursesMyOverviewPage;
 }());
 
-//# sourceMappingURL=list.js.map
+//# sourceMappingURL=my-overview.js.map
 
 /***/ })
 

@@ -1,18 +1,16 @@
 webpackJsonp([30],{
 
-/***/ 1165:
+/***/ 1270:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesCoursePreviewPageModule", function() { return CoreCoursesCoursePreviewPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreEmulatorCaptureMediaPageModule", function() { return CoreEmulatorCaptureMediaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__course_preview__ = __webpack_require__(1220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__capture_media__ = __webpack_require__(1321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,49 +35,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-var CoreCoursesCoursePreviewPageModule = /** @class */ (function () {
-    function CoreCoursesCoursePreviewPageModule() {
+var CoreEmulatorCaptureMediaPageModule = /** @class */ (function () {
+    function CoreEmulatorCaptureMediaPageModule() {
     }
-    CoreCoursesCoursePreviewPageModule = __decorate([
+    CoreEmulatorCaptureMediaPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__course_preview__["a" /* CoreCoursesCoursePreviewPage */],
+                __WEBPACK_IMPORTED_MODULE_2__capture_media__["a" /* CoreEmulatorCaptureMediaPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__course_preview__["a" /* CoreCoursesCoursePreviewPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__capture_media__["a" /* CoreEmulatorCaptureMediaPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ]
         })
-    ], CoreCoursesCoursePreviewPageModule);
-    return CoreCoursesCoursePreviewPageModule;
+    ], CoreEmulatorCaptureMediaPageModule);
+    return CoreEmulatorCaptureMediaPageModule;
 }());
 
-//# sourceMappingURL=course-preview.module.js.map
+//# sourceMappingURL=capture-media.module.js.map
 
 /***/ }),
 
-/***/ 1220:
+/***/ 1321:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesCoursePreviewPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreEmulatorCaptureMediaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_courses__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__course_providers_options_delegate__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__course_providers_course__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__course_providers_helper__ = __webpack_require__(639);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_file__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_text__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_time__ = __webpack_require__(46);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -108,376 +96,340 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-
-
 /**
- * Page that allows "previewing" a course and enrolling in it if enabled and not enrolled.
+ * Page to capture media in browser or desktop.
  */
-var CoreCoursesCoursePreviewPage = /** @class */ (function () {
-    function CoreCoursesCoursePreviewPage(navCtrl, navParams, sitesProvider, domUtils, textUtils, appProvider, coursesProvider, platform, modalCtrl, translate, eventsProvider, courseOptionsDelegate, courseHelper, courseProvider) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.sitesProvider = sitesProvider;
+var CoreEmulatorCaptureMediaPage = /** @class */ (function () {
+    function CoreEmulatorCaptureMediaPage(viewCtrl, params, domUtils, timeUtils, fileProvider, textUtils, cdr) {
+        this.viewCtrl = viewCtrl;
         this.domUtils = domUtils;
+        this.timeUtils = timeUtils;
+        this.fileProvider = fileProvider;
         this.textUtils = textUtils;
-        this.coursesProvider = coursesProvider;
-        this.platform = platform;
-        this.modalCtrl = modalCtrl;
-        this.translate = translate;
-        this.eventsProvider = eventsProvider;
-        this.courseOptionsDelegate = courseOptionsDelegate;
-        this.courseHelper = courseHelper;
-        this.courseProvider = courseProvider;
-        this.canAccessCourse = true;
-        this.component = 'CoreCoursesCoursePreview';
-        this.selfEnrolInstances = [];
-        this.prefetchCourseData = {
-            prefetchCourseIcon: 'spinner'
-        };
-        this.isGuestEnabled = false;
-        this.waitStart = 0;
-        this.pageDestroyed = false;
-        this.course = navParams.get('course');
-        this.isMobile = appProvider.isMobile();
-        this.isDesktop = appProvider.isDesktop();
-        // Listen for status change in course.
-        this.courseStatusObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */].COURSE_STATUS_CHANGED, function (data) {
-            if (data.courseId == _this.course.id) {
-                _this.prefetchCourseData.prefetchCourseIcon = _this.courseHelper.getCourseStatusIconFromStatus(data.status);
-            }
-        }, sitesProvider.getCurrentSiteId());
+        this.cdr = cdr;
+        this.window = window;
+        this.type = params.get('type');
+        this.maxTime = params.get('maxTime');
+        this.facingMode = params.get('facingMode') || 'environment';
+        this.mimetype = params.get('mimetype');
+        this.extension = params.get('extension');
+        this.quality = params.get('quality') || 0.92;
+        this.returnDataUrl = !!params.get('returnDataUrl');
     }
     /**
-     * View loaded.
+     * Component being initialized.
      */
-    CoreCoursesCoursePreviewPage.prototype.ionViewDidLoad = function () {
+    CoreEmulatorCaptureMediaPage.prototype.ngOnInit = function () {
         var _this = this;
-        var currentSite = this.sitesProvider.getCurrentSite(), currentSiteUrl = currentSite && currentSite.getURL();
-        this.paypalEnabled = this.course.enrollmentmethods && this.course.enrollmentmethods.indexOf('paypal') > -1;
-        this.guestWSAvailable = this.coursesProvider.isGuestWSAvailable();
-        this.enrolUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'enrol/index.php?id=' + this.course.id);
-        this.courseUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'course/view.php?id=' + this.course.id);
-        this.paypalReturnUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'enrol/paypal/return.php');
-        // Initialize the self enrol modal.
-        this.selfEnrolModal = this.modalCtrl.create('CoreCoursesSelfEnrolPasswordPage');
-        this.selfEnrolModal.onDidDismiss(function (password) {
-            if (typeof password != 'undefined') {
-                _this.selfEnrolInCourse(password, _this.currentInstanceId);
-            }
-        });
-        this.getCourse().finally(function () {
-            // Determine course prefetch icon.
-            _this.courseHelper.getCourseStatusIcon(_this.course.id).then(function (icon) {
-                _this.prefetchCourseData.prefetchCourseIcon = icon;
-                if (icon == 'spinner') {
-                    // Course is being downloaded. Get the download promise.
-                    var promise = _this.courseHelper.getCourseDownloadPromise(_this.course.id);
-                    if (promise) {
-                        // There is a download promise. If it fails, show an error.
-                        promise.catch(function (error) {
-                            if (!_this.pageDestroyed) {
-                                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
-                            }
-                        });
-                    }
-                    else {
-                        // No download, this probably means that the app was closed while downloading. Set previous status.
-                        _this.courseProvider.setCoursePreviousStatus(_this.course.id);
-                    }
+        this.initVariables();
+        var constraints = {
+            video: this.isAudio ? false : { facingMode: this.facingMode },
+            audio: !this.isImage
+        };
+        navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
+            var chunks = [];
+            _this.localMediaStream = stream;
+            if (!_this.isImage) {
+                if (_this.isVideo) {
+                    _this.previewMedia = _this.previewVideo.nativeElement;
                 }
-            });
+                else {
+                    _this.previewMedia = _this.previewAudio.nativeElement;
+                    _this.initAudioDrawer(_this.localMediaStream);
+                    _this.audioDrawer.start();
+                }
+                _this.mediaRecorder = new _this.window.MediaRecorder(_this.localMediaStream, { mimeType: _this.mimetype });
+                // When video or audio is recorded, add it to the list of chunks.
+                _this.mediaRecorder.ondataavailable = function (e) {
+                    if (e.data.size > 0) {
+                        chunks.push(e.data);
+                    }
+                };
+                // When recording stops, create a Blob element with the recording and set it to the video or audio.
+                _this.mediaRecorder.onstop = function () {
+                    _this.mediaBlob = new Blob(chunks);
+                    chunks = [];
+                    _this.previewMedia.src = window.URL.createObjectURL(_this.mediaBlob);
+                };
+            }
+            if (_this.isImage || _this.isVideo) {
+                var hasLoaded_1 = false, waitTimeout_1;
+                // Listen for stream ready to display the stream.
+                _this.streamVideo.nativeElement.onloadedmetadata = function () {
+                    if (hasLoaded_1) {
+                        // Already loaded or timeout triggered, stop.
+                        return;
+                    }
+                    hasLoaded_1 = true;
+                    clearTimeout(waitTimeout_1);
+                    _this.readyToCapture = true;
+                    _this.streamVideo.nativeElement.onloadedmetadata = null;
+                    // Force change detection. Angular doesn't detect these async operations.
+                    _this.cdr.detectChanges();
+                };
+                // Set the stream as the source of the video.
+                _this.streamVideo.nativeElement.src = window.URL.createObjectURL(_this.localMediaStream);
+                // If stream isn't ready in a while, show error.
+                waitTimeout_1 = setTimeout(function () {
+                    if (!hasLoaded_1) {
+                        // Show error.
+                        hasLoaded_1 = true;
+                        _this.dismissWithError(-1, 'Cannot connect to webcam.');
+                    }
+                }, 10000);
+            }
+            else {
+                // It's ready to capture.
+                _this.readyToCapture = true;
+            }
+        }).catch(function (error) {
+            _this.dismissWithError(-1, error.message || error);
         });
+    };
+    /**
+     * Initialize the audio drawer. This code has been extracted from MDN's example on MediaStream Recording:
+     * https://github.com/mdn/web-dictaphone
+     *
+     * @param {MediaStream} stream Stream returned by getUserMedia.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.initAudioDrawer = function (stream) {
+        var skip = true, running = false;
+        var audioCtx = new (this.window.AudioContext || this.window.webkitAudioContext)(), canvasCtx = this.streamAudio.nativeElement.getContext('2d'), source = audioCtx.createMediaStreamSource(stream), analyser = audioCtx.createAnalyser(), bufferLength = analyser.frequencyBinCount, dataArray = new Uint8Array(bufferLength), width = this.streamAudio.nativeElement.width, height = this.streamAudio.nativeElement.height, drawAudio = function () {
+            if (!running) {
+                return;
+            }
+            // Update the draw every animation frame.
+            requestAnimationFrame(drawAudio);
+            // Skip half of the frames to improve performance, shouldn't affect the smoothness.
+            skip = !skip;
+            if (skip) {
+                return;
+            }
+            var sliceWidth = width / bufferLength;
+            var x = 0;
+            analyser.getByteTimeDomainData(dataArray);
+            canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+            canvasCtx.fillRect(0, 0, width, height);
+            canvasCtx.lineWidth = 1;
+            canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+            canvasCtx.beginPath();
+            for (var i = 0; i < bufferLength; i++) {
+                var v = dataArray[i] / 128.0, y = v * height / 2;
+                if (i === 0) {
+                    canvasCtx.moveTo(x, y);
+                }
+                else {
+                    canvasCtx.lineTo(x, y);
+                }
+                x += sliceWidth;
+            }
+            canvasCtx.lineTo(width, height / 2);
+            canvasCtx.stroke();
+        };
+        analyser.fftSize = 2048;
+        source.connect(analyser);
+        this.audioDrawer = {
+            start: function () {
+                if (running) {
+                    return;
+                }
+                running = true;
+                drawAudio();
+            },
+            stop: function () {
+                running = false;
+            }
+        };
+    };
+    /**
+     * Initialize some variables based on the params.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.initVariables = function () {
+        if (this.type == 'captureimage') {
+            this.isCaptureImage = true;
+            this.type = 'image';
+        }
+        // Initialize some data based on the type of media to capture.
+        if (this.type == 'video') {
+            this.isVideo = true;
+            this.title = 'core.capturevideo';
+        }
+        else if (this.type == 'audio') {
+            this.isAudio = true;
+            this.title = 'core.captureaudio';
+        }
+        else if (this.type == 'image') {
+            this.isImage = true;
+            this.title = 'core.captureimage';
+        }
+    };
+    /**
+     * Main action clicked: record or stop recording.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.actionClicked = function () {
+        var _this = this;
+        if (this.isCapturing) {
+            // It's capturing, stop.
+            this.stopCapturing();
+            this.cdr.detectChanges();
+        }
+        else {
+            if (!this.isImage) {
+                // Start the capture.
+                this.isCapturing = true;
+                this.resetChrono = false;
+                this.mediaRecorder.start();
+                this.cdr.detectChanges();
+            }
+            else {
+                // Get the image from the video and set it to the canvas, using video width/height.
+                var width = this.streamVideo.nativeElement.videoWidth, height = this.streamVideo.nativeElement.videoHeight, loadingModal_1 = this.domUtils.showModalLoading();
+                this.imgCanvas.nativeElement.width = width;
+                this.imgCanvas.nativeElement.height = height;
+                this.imgCanvas.nativeElement.getContext('2d').drawImage(this.streamVideo.nativeElement, 0, 0, width, height);
+                // Convert the image to blob and show it in an image element.
+                this.imgCanvas.nativeElement.toBlob(function (blob) {
+                    loadingModal_1.dismiss();
+                    _this.mediaBlob = blob;
+                    _this.previewImage.nativeElement.setAttribute('src', window.URL.createObjectURL(_this.mediaBlob));
+                    _this.hasCaptured = true;
+                }, this.mimetype, this.quality);
+            }
+        }
+    };
+    /**
+     * User cancelled.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.cancel = function () {
+        // Send a "cancelled" error like the Cordova plugin does.
+        this.dismissWithError(3, 'Canceled.', 'Camera cancelled');
+    };
+    /**
+     * Discard the captured media.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.discard = function () {
+        this.previewMedia && this.previewMedia.pause();
+        this.streamVideo && this.streamVideo.nativeElement.play();
+        this.audioDrawer && this.audioDrawer.start();
+        this.hasCaptured = false;
+        this.isCapturing = false;
+        this.resetChrono = true;
+        delete this.mediaBlob;
+        this.cdr.detectChanges();
+    };
+    /**
+     * Close the modal, returning some data (success).
+     *
+     * @param {any} data Data to return.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.dismissWithData = function (data) {
+        this.viewCtrl.dismiss(data, 'success');
+    };
+    /**
+     * Close the modal, returning an error.
+     *
+     * @param {number} code Error code. Will not be used if it's a Camera capture.
+     * @param {string} message Error message.
+     * @param {string} [cameraMessage] A specific message to use if it's a Camera capture. If not set, message will be used.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.dismissWithError = function (code, message, cameraMessage) {
+        var isCamera = this.isImage && !this.isCaptureImage, error = isCamera ? (cameraMessage || message) : { code: code, message: message };
+        this.viewCtrl.dismiss(error, 'error');
+    };
+    /**
+     * Done capturing, write the file.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.done = function () {
+        var _this = this;
+        if (this.returnDataUrl) {
+            // Return the image as a base64 string.
+            this.dismissWithData(this.imgCanvas.nativeElement.toDataURL(this.mimetype, this.quality));
+            return;
+        }
+        if (!this.mediaBlob) {
+            // Shouldn't happen.
+            this.domUtils.showErrorModal('Please capture the media first.');
+            return;
+        }
+        // Create the file and return it.
+        var fileName = this.type + '_' + this.timeUtils.readableTimestamp() + '.' + this.extension, path = this.textUtils.concatenatePaths(__WEBPACK_IMPORTED_MODULE_2__providers_file__["a" /* CoreFileProvider */].TMPFOLDER, 'media/' + fileName), loadingModal = this.domUtils.showModalLoading();
+        this.fileProvider.writeFile(path, this.mediaBlob).then(function (fileEntry) {
+            if (_this.isImage && !_this.isCaptureImage) {
+                _this.dismissWithData(fileEntry.toURL());
+            }
+            else {
+                // The capture plugin returns a MediaFile, not a FileEntry.
+                // The only difference is that it supports a new function that won't be supported in desktop.
+                fileEntry.getFormatData = function (successFn, errorFn) {
+                    // Nothing to do.
+                };
+                _this.dismissWithData([fileEntry]);
+            }
+        }).catch(function (err) {
+            _this.domUtils.showErrorModal(err);
+        }).finally(function () {
+            loadingModal.dismiss();
+        });
+    };
+    /**
+     * Stop capturing. Only for video and audio.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.stopCapturing = function () {
+        this.streamVideo && this.streamVideo.nativeElement.pause();
+        this.audioDrawer && this.audioDrawer.stop();
+        this.mediaRecorder && this.mediaRecorder.stop();
+        this.isCapturing = false;
+        this.hasCaptured = true;
     };
     /**
      * Page destroyed.
      */
-    CoreCoursesCoursePreviewPage.prototype.ngOnDestroy = function () {
-        this.pageDestroyed = true;
-        if (this.courseStatusObserver) {
-            this.courseStatusObserver.off();
-        }
-    };
-    /**
-     * Check if the user can access as guest.
-     *
-     * @return {Promise<boolean>} Promise resolved if can access as guest, rejected otherwise. Resolve param indicates if
-     *                            password is required for guest access.
-     */
-    CoreCoursesCoursePreviewPage.prototype.canAccessAsGuest = function () {
-        if (!this.isGuestEnabled) {
-            return Promise.reject(null);
-        }
-        // Search instance ID of guest enrolment method.
-        this.guestInstanceId = undefined;
-        for (var i = 0; i < this.enrollmentMethods.length; i++) {
-            var method = this.enrollmentMethods[i];
-            if (method.type == 'guest') {
-                this.guestInstanceId = method.id;
-                break;
-            }
-        }
-        if (this.guestInstanceId) {
-            return this.coursesProvider.getCourseGuestEnrolmentInfo(this.guestInstanceId).then(function (info) {
-                if (!info.status) {
-                    // Not active, reject.
-                    return Promise.reject(null);
-                }
-                return info.passwordrequired;
-            });
-        }
-        return Promise.reject(null);
-    };
-    /**
-     * Convenience function to get course. We use this to determine if a user can see the course or not.
-     *
-     * @param {boolean} refresh Whether the user is refreshing the data.
-     */
-    CoreCoursesCoursePreviewPage.prototype.getCourse = function (refresh) {
-        var _this = this;
-        // Get course enrolment methods.
-        this.selfEnrolInstances = [];
-        return this.coursesProvider.getCourseEnrolmentMethods(this.course.id).then(function (methods) {
-            _this.enrollmentMethods = methods;
-            _this.enrollmentMethods.forEach(function (method) {
-                if (method.type === 'self') {
-                    _this.selfEnrolInstances.push(method);
-                }
-                else if (_this.guestWSAvailable && method.type === 'guest') {
-                    _this.isGuestEnabled = true;
-                }
-            });
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error getting enrolment data');
-        }).then(function () {
-            // Check if user is enrolled in the course.
-            return _this.coursesProvider.getUserCourse(_this.course.id).then(function (course) {
-                _this.isEnrolled = true;
-                return course;
-            }).catch(function () {
-                // The user is not enrolled in the course. Use getCourses to see if it's an admin/manager and can see the course.
-                _this.isEnrolled = false;
-                return _this.coursesProvider.getCourse(_this.course.id);
-            }).then(function (course) {
-                // Success retrieving the course, we can assume the user has permissions to view it.
-                _this.course.fullname = course.fullname || _this.course.fullname;
-                _this.course.summary = course.summary || _this.course.summary;
-                _this.canAccessCourse = true;
-            }).catch(function () {
-                // The user is not an admin/manager. Check if we can provide guest access to the course.
-                return _this.canAccessAsGuest().then(function (passwordRequired) {
-                    if (!passwordRequired) {
-                        _this.canAccessCourse = true;
-                    }
-                    else {
-                        _this.canAccessCourse = false;
-                    }
-                }).catch(function () {
-                    _this.canAccessCourse = false;
-                });
-            });
-        }).finally(function () {
-            _this.dataLoaded = true;
+    CoreEmulatorCaptureMediaPage.prototype.ngOnDestroy = function () {
+        var tracks = this.localMediaStream.getTracks();
+        tracks.forEach(function (track) {
+            track.stop();
         });
+        this.streamVideo && this.streamVideo.nativeElement.pause();
+        this.previewMedia && this.previewMedia.pause();
+        this.audioDrawer && this.audioDrawer.stop();
+        delete this.mediaBlob;
     };
-    /**
-     * Open the course.
-     */
-    CoreCoursesCoursePreviewPage.prototype.openCourse = function () {
-        if (!this.canAccessCourse) {
-            // Course cannot be opened.
-            return;
-        }
-        this.navCtrl.push('CoreCourseSectionPage', { course: this.course });
-    };
-    /**
-     * Enrol using PayPal.
-     */
-    CoreCoursesCoursePreviewPage.prototype.paypalEnrol = function () {
-        var _this = this;
-        var window, hasReturnedFromPaypal = false, inAppLoadSubscription, inAppFinishSubscription, inAppExitSubscription, appResumeSubscription;
-        var urlLoaded = function (event) {
-            if (event.url.indexOf(_this.paypalReturnUrl) != -1) {
-                hasReturnedFromPaypal = true;
-            }
-            else if (event.url.indexOf(_this.courseUrl) != -1 && hasReturnedFromPaypal) {
-                // User reached the course index page after returning from PayPal, close the InAppBrowser.
-                inAppClosed();
-                window.close();
-            }
-        }, inAppClosed = function () {
-            // InAppBrowser closed, refresh data.
-            unsubscribeAll();
-            if (!_this.dataLoaded) {
-                return;
-            }
-            _this.dataLoaded = false;
-            _this.refreshData();
-        }, unsubscribeAll = function () {
-            inAppLoadSubscription && inAppLoadSubscription.unsubscribe();
-            inAppFinishSubscription && inAppFinishSubscription.unsubscribe();
-            inAppExitSubscription && inAppExitSubscription.unsubscribe();
-            appResumeSubscription && appResumeSubscription.unsubscribe();
-        };
-        // Open the enrolment page in InAppBrowser.
-        this.sitesProvider.getCurrentSite().openInAppWithAutoLogin(this.enrolUrl).then(function (w) {
-            window = w;
-            if (_this.isDesktop || _this.isMobile) {
-                // Observe loaded pages in the InAppBrowser to check if the enrol process has ended.
-                inAppLoadSubscription = window.on('loadstart').subscribe(urlLoaded);
-                // Observe window closed.
-                inAppExitSubscription = window.on('exit').subscribe(inAppClosed);
-            }
-            if (_this.isDesktop) {
-                // In desktop, also observe stop loading since some pages don't throw the loadstart event.
-                inAppFinishSubscription = window.on('loadstop').subscribe(urlLoaded);
-                // Since the user can switch windows, reload the data if he comes back to the app.
-                appResumeSubscription = _this.platform.resume.subscribe(function () {
-                    if (!_this.dataLoaded) {
-                        return;
-                    }
-                    _this.dataLoaded = false;
-                    _this.refreshData();
-                });
-            }
-        });
-    };
-    /**
-     * User clicked in a self enrol button.
-     *
-     * @param {number} instanceId The instance ID of the enrolment method.
-     */
-    CoreCoursesCoursePreviewPage.prototype.selfEnrolClicked = function (instanceId) {
-        var _this = this;
-        this.domUtils.showConfirm(this.translate.instant('core.courses.confirmselfenrol')).then(function () {
-            _this.selfEnrolInCourse('', instanceId);
-        }).catch(function () {
-            // User cancelled.
-        });
-    };
-    /**
-     * Self enrol in a course.
-     *
-     * @param {string} password Password to use.
-     * @param {number} instanceId The instance ID.
-     * @return {Promise<any>} Promise resolved when self enrolled.
-     */
-    CoreCoursesCoursePreviewPage.prototype.selfEnrolInCourse = function (password, instanceId) {
-        var _this = this;
-        var modal = this.domUtils.showModalLoading('core.loading', true);
-        return this.coursesProvider.selfEnrol(this.course.id, password, instanceId).then(function () {
-            // Close modal and refresh data.
-            _this.isEnrolled = true;
-            _this.dataLoaded = false;
-            // Sometimes the list of enrolled courses takes a while to be updated. Wait for it.
-            _this.waitForEnrolled(true).then(function () {
-                _this.refreshData().finally(function () {
-                    // My courses have been updated, trigger event.
-                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */].EVENT_MY_COURSES_UPDATED, {}, _this.sitesProvider.getCurrentSiteId());
-                });
-            });
-        }).catch(function (error) {
-            if (error && error.code === __WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */].ENROL_INVALID_KEY) {
-                // Invalid password, show the modal to enter the password.
-                _this.selfEnrolModal.present();
-                _this.currentInstanceId = instanceId;
-                if (!password) {
-                    // No password entered, don't show error.
-                    return;
-                }
-            }
-            _this.domUtils.showErrorModalDefault(error, 'core.courses.errorselfenrol', true);
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    /**
-     * Refresh the data.
-     *
-     * @param {any} [refresher] The refresher if this was triggered by a Pull To Refresh.
-     */
-    CoreCoursesCoursePreviewPage.prototype.refreshData = function (refresher) {
-        var _this = this;
-        var promises = [];
-        promises.push(this.coursesProvider.invalidateUserCourses());
-        promises.push(this.coursesProvider.invalidateCourse(this.course.id));
-        promises.push(this.coursesProvider.invalidateCourseEnrolmentMethods(this.course.id));
-        promises.push(this.courseOptionsDelegate.clearAndInvalidateCoursesOptions(this.course.id));
-        if (this.guestInstanceId) {
-            promises.push(this.coursesProvider.invalidateCourseGuestEnrolmentInfo(this.guestInstanceId));
-        }
-        return Promise.all(promises).finally(function () {
-            return _this.getCourse(true);
-        }).finally(function () {
-            if (refresher) {
-                refresher.complete();
-            }
-        });
-    };
-    /**
-     * Wait for the user to be enrolled in the course.
-     *
-     * @param {boolean} first If it's the first call (true) or it's a recursive call (false).
-     * @return {Promise<any>} Promise resolved when enrolled or timeout.
-     */
-    CoreCoursesCoursePreviewPage.prototype.waitForEnrolled = function (first) {
-        var _this = this;
-        if (first) {
-            this.waitStart = Date.now();
-        }
-        // Check if user is enrolled in the course.
-        return this.coursesProvider.invalidateUserCourses().catch(function () {
-            // Ignore errors.
-        }).then(function () {
-            return _this.coursesProvider.getUserCourse(_this.course.id);
-        }).catch(function () {
-            // Not enrolled, wait a bit and try again.
-            if (_this.pageDestroyed || (Date.now() - _this.waitStart > 60000)) {
-                // Max time reached or the user left the view, stop.
-                return;
-            }
-            return new Promise(function (resolve, reject) {
-                setTimeout(function () {
-                    if (!_this.pageDestroyed) {
-                        // Wait again.
-                        _this.waitForEnrolled().then(resolve);
-                    }
-                    else {
-                        resolve();
-                    }
-                }, 5000);
-            });
-        });
-    };
-    /**
-     * Prefetch the course.
-     */
-    CoreCoursesCoursePreviewPage.prototype.prefetchCourse = function () {
-        var _this = this;
-        this.courseHelper.confirmAndPrefetchCourse(this.prefetchCourseData, this.course).catch(function (error) {
-            if (!_this.pageDestroyed) {
-                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
-            }
-        });
-    };
-    CoreCoursesCoursePreviewPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('streamVideo'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "streamVideo", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('previewVideo'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "previewVideo", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('imgCanvas'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "imgCanvas", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('previewImage'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "previewImage", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('streamAudio'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "streamAudio", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('previewAudio'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "previewAudio", void 0);
+    CoreEmulatorCaptureMediaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-courses-course-preview',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/courses/pages/course-preview/course-preview.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="course.fullname"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="dataLoaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="dataLoaded">\n\n        <ion-list *ngIf="course">\n            <a ion-item text-wrap (click)="openCourse()" [title]="course.fullname" [attr.detail-none]="!canAccessCourse">\n                <ion-icon name="ionic" item-start></ion-icon>\n                <h2><core-format-text [text]="course.fullname"></core-format-text></h2>\n                <p *ngIf="course.categoryname">{{course.categoryname}}</p>\n                <p *ngIf="course.startdate">{{course.startdate * 1000 | coreFormatDate:"dfdaymonthyear"}} <span *ngIf="course.enddate"> - {{course.enddate * 1000 | coreFormatDate:"dfdaymonthyear"}}</span></p>\n            </a>\n\n            <ion-item text-wrap *ngIf="course.summary" detail-none>\n                <core-format-text [text]="course.summary" maxHeight="120"></core-format-text>\n            </ion-item>\n\n            <ng-container text-wrap *ngIf="course.contacts && course.contacts.length">\n                <ion-item-divider color="light">{{ \'core.teachers\' | translate }}</ion-item-divider>\n                <a ion-item text-wrap *ngFor="let contact of course.contacts" core-user-link userId="{{contact.id}}" courseId="{{isEnrolled ? course.id : null}}" [attr.aria-label]="\'core.viewprofile\' | translate">{{contact.fullname}}</a>\n                <ion-item-divider color="light"></ion-item-divider>\n            </ng-container>\n            <core-file *ngFor="let file of course.overviewfiles" [file]="file" [component]="component" [componentId]="course.id"></core-file>\n            <div *ngIf="!isEnrolled" detail-none>\n                <ion-item text-wrap *ngFor="let instance of selfEnrolInstances">\n                    <h2>{{ instance.name }}</h2>\n                    <button ion-button block margin-top (click)="selfEnrolClicked(instance.id)">{{ \'core.courses.enrolme\' | translate }}</button>\n                </ion-item>\n            </div>\n            <ion-item text-wrap *ngIf="!isEnrolled && paypalEnabled" detail-none>\n                <h2>{{ \'core.courses.paypalaccepted\' | translate }}</h2>\n                <p>{{ \'core.paymentinstant\' | translate }}</p>\n                <button ion-button block margin-top (click)="paypalEnrol()">{{ \'core.courses.sendpaymentbutton\' | translate }}</button>\n            </ion-item>\n            <ion-item *ngIf="!isEnrolled && !selfEnrolInstances.length && !paypalEnabled">\n                <p>{{ \'core.courses.notenrollable\' | translate }}</p>\n            </ion-item>\n            <a ion-item *ngIf="canAccessCourse" (click)="prefetchCourse()" detail-none>\n                <ion-icon *ngIf="prefetchCourseData.prefetchCourseIcon != \'spinner\'" [name]="prefetchCourseData.prefetchCourseIcon" item-start></ion-icon>\n                <ion-spinner *ngIf="prefetchCourseData.prefetchCourseIcon == \'spinner\'" item-start></ion-spinner>\n                <h2>{{ \'core.course.downloadcourse\' | translate }}</h2>\n            </a>\n            <a ion-item (click)="openCourse()" [title]="course.fullname" *ngIf="canAccessCourse">\n                <ion-icon name="briefcase" item-start></ion-icon>\n                <h2>{{ \'core.course.contents\' | translate }}</h2>\n            </a>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/courses/pages/course-preview/course-preview.html"*/,
+            selector: 'page-core-emulator-capture-media',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/emulator/pages/capture-media/capture-media.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-buttons start>\n            <button ion-button (click)="cancel()">{{ \'core.cancel\' | translate }}</button>\n        </ion-buttons>\n\n        <ion-title>{{ title | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button *ngIf="hasCaptured" (click)="done()">{{ \'core.done\' | translate }}</button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="readyToCapture">\n        <div class="core-av-wrapper">\n            <!-- Video stream for image and video. -->\n            <video *ngIf="!isAudio" [hidden]="hasCaptured" class="core-webcam-stream" autoplay #streamVideo></video>\n\n            <!-- For video recording, use 2 videos and show/hide them because a CSS rule caused problems with the controls. -->\n            <video *ngIf="isVideo" [hidden]="!hasCaptured" class="core-webcam-video-captured" controls #previewVideo></video>\n\n            <!-- Canvas to treat the image and an img to show the result. -->\n            <canvas *ngIf="isImage" class="core-webcam-image-canvas" #imgCanvas></canvas>\n            <img *ngIf="isImage" [hidden]="!hasCaptured" class="core-webcam-image" alt="{{ \'core.capturedimage\' | translate }}" #previewImage>\n\n            <!-- Canvas to show audio waves when recording audio and audio player to listen to the result. -->\n            <div *ngIf="isAudio" class="core-audio-record-container">\n                <canvas [hidden]="hasCaptured" class="core-audio-canvas" #streamAudio></canvas>\n                <audio [hidden]="!hasCaptured" class="core-audio-captured" controls #previewAudio></audio>\n            </div>\n        </div>\n    </core-loading>\n</ion-content>\n\n<ion-footer>\n    <ion-row *ngIf="readyToCapture">\n        <ion-col></ion-col>\n        <ion-col text-center>\n            <button ion-button icon-only clear *ngIf="!hasCaptured" (click)="actionClicked()" [attr.aria-label]="title">\n                <ion-icon *ngIf="!isCapturing && isAudio" name="microphone"></ion-icon>\n                <ion-icon *ngIf="!isCapturing && isVideo" name="videocam"></ion-icon>\n                <ion-icon *ngIf="isImage" name="camera"></ion-icon>\n                <ion-icon *ngIf="isCapturing" name="square"></ion-icon>\n            </button>\n            <button ion-button icon-only clear *ngIf="hasCaptured" (click)="discard()" [attr.aria-label]="\'core.discard\' | translate">\n                <ion-icon name="trash"></ion-icon>\n            </button>\n        </ion-col>\n        <ion-col padding text-right class="chrono-container">\n            <core-chrono *ngIf="!isImage" [hidden]="hasCaptured" [running]="isCapturing" [reset]="resetChrono" [endTime]="maxTime" (onEnd)="stopCapturing()"></core-chrono>\n        </ion-col>\n    </ion-row>\n</ion-footer>\n\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/emulator/pages/capture-media/capture-media.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__course_providers_options_delegate__["a" /* CoreCourseOptionsDelegate */], __WEBPACK_IMPORTED_MODULE_11__course_providers_helper__["a" /* CoreCourseHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_10__course_providers_course__["a" /* CoreCourseProvider */]])
-    ], CoreCoursesCoursePreviewPage);
-    return CoreCoursesCoursePreviewPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_utils_time__["a" /* CoreTimeUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_file__["a" /* CoreFileProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]])
+    ], CoreEmulatorCaptureMediaPage);
+    return CoreEmulatorCaptureMediaPage;
 }());
 
-//# sourceMappingURL=course-preview.js.map
+//# sourceMappingURL=capture-media.js.map
 
 /***/ })
 

@@ -1,16 +1,16 @@
 webpackJsonp([9],{
 
-/***/ 1189:
+/***/ 1291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreViewerImagePageModule", function() { return CoreViewerImagePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSitePluginsModuleIndexPageModule", function() { return CoreSitePluginsModuleIndexPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__image__ = __webpack_require__(1244);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__module_index__ = __webpack_require__(1342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(699);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,36 +35,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreViewerImagePageModule = /** @class */ (function () {
-    function CoreViewerImagePageModule() {
+/**
+ * Module to lazy load the page.
+ */
+var CoreSitePluginsModuleIndexPageModule = /** @class */ (function () {
+    function CoreSitePluginsModuleIndexPageModule() {
     }
-    CoreViewerImagePageModule = __decorate([
+    CoreSitePluginsModuleIndexPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__image__["a" /* CoreViewerImagePage */]
+                __WEBPACK_IMPORTED_MODULE_3__module_index__["a" /* CoreSitePluginsModuleIndexPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__image__["a" /* CoreViewerImagePage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreSitePluginsComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__module_index__["a" /* CoreSitePluginsModuleIndexPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ]
         })
-    ], CoreViewerImagePageModule);
-    return CoreViewerImagePageModule;
+    ], CoreSitePluginsModuleIndexPageModule);
+    return CoreSitePluginsModuleIndexPageModule;
 }());
 
-//# sourceMappingURL=image.module.js.map
+//# sourceMappingURL=module-index.module.js.map
 
 /***/ }),
 
-/***/ 1244:
+/***/ 1342:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreViewerImagePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSitePluginsModuleIndexPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_module_index_module_index__ = __webpack_require__(170);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -91,32 +94,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page to view an image. If opened as a modal, it will have a button to close the modal.
+ * Page to render the index page of a module site plugin.
  */
-var CoreViewerImagePage = /** @class */ (function () {
-    function CoreViewerImagePage(viewCtrl, params, translate) {
-        this.viewCtrl = viewCtrl;
-        this.title = params.get('title') || translate.instant('core.imageviewer');
-        this.image = params.get('image');
-        this.component = params.get('component');
-        this.componentId = params.get('componentId');
+var CoreSitePluginsModuleIndexPage = /** @class */ (function () {
+    function CoreSitePluginsModuleIndexPage(params) {
+        this.title = params.get('title');
+        this.module = params.get('module');
+        this.courseId = params.get('courseId');
     }
     /**
-     * Close modal.
+     * Refresh the data.
+     *
+     * @param {any} refresher Refresher.
      */
-    CoreViewerImagePage.prototype.closeModal = function () {
-        this.viewCtrl.dismiss();
+    CoreSitePluginsModuleIndexPage.prototype.refreshData = function (refresher) {
+        this.content.doRefresh().finally(function () {
+            refresher.complete();
+        });
     };
-    CoreViewerImagePage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_module_index_module_index__["a" /* CoreSitePluginsModuleIndexComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_module_index_module_index__["a" /* CoreSitePluginsModuleIndexComponent */])
+    ], CoreSitePluginsModuleIndexPage.prototype, "content", void 0);
+    CoreSitePluginsModuleIndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-viewer-image',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/viewer/pages/image/image.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ title }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <img [src]="image" alt="{{ title }}" core-external-content [component]="component" [componentId]="componentId">\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/viewer/pages/image/image.html"*/,
+            selector: 'page-core-site-plugins-module-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/siteplugins/pages/module-index/module-index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ title }}</ion-title>\n\n        <ion-buttons end>\n            <!-- If the site plugin defines some buttons using core-nav-buttons, they will be added here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="content && content.content && content.content.dataLoaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-site-plugins-module-index [module]="module" [courseId]="courseId"></core-site-plugins-module-index>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/siteplugins/pages/module-index/module-index.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]])
-    ], CoreViewerImagePage);
-    return CoreViewerImagePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+    ], CoreSitePluginsModuleIndexPage);
+    return CoreSitePluginsModuleIndexPage;
 }());
 
-//# sourceMappingURL=image.js.map
+//# sourceMappingURL=module-index.js.map
 
 /***/ })
 

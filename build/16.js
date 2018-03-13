@@ -1,17 +1,16 @@
 webpackJsonp([16],{
 
-/***/ 1181:
+/***/ 1284:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreMainMenuPageModule", function() { return CoreMainMenuPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitesPageModule", function() { return CoreLoginSitesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__more__ = __webpack_require__(1236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sites__ = __webpack_require__(1335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(50);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,41 +35,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var CoreMainMenuPageModule = /** @class */ (function () {
-    function CoreMainMenuPageModule() {
+var CoreLoginSitesPageModule = /** @class */ (function () {
+    function CoreLoginSitesPageModule() {
     }
-    CoreMainMenuPageModule = __decorate([
+    CoreLoginSitesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__more__["a" /* CoreMainMenuMorePage */],
+                __WEBPACK_IMPORTED_MODULE_3__sites__["a" /* CoreLoginSitesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__more__["a" /* CoreMainMenuMorePage */]),
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__sites__["a" /* CoreLoginSitesPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], CoreMainMenuPageModule);
-    return CoreMainMenuPageModule;
+    ], CoreLoginSitesPageModule);
+    return CoreLoginSitesPageModule;
 }());
 
-//# sourceMappingURL=more.module.js.map
+//# sourceMappingURL=sites.module.js.map
 
 /***/ }),
 
-/***/ 1236:
+/***/ 1335:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreMainMenuMorePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginSitesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__ = __webpack_require__(643);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_logger__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__addon_pushnotifications_providers_pushnotifications__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_helper__ = __webpack_require__(56);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -99,94 +98,128 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Page that displays the list of main menu options that aren't in the tabs.
+ * Page that displays the list of stored sites.
  */
-var CoreMainMenuMorePage = /** @class */ (function () {
-    function CoreMainMenuMorePage(menuDelegate, sitesProvider, navCtrl, mainMenuProvider, eventsProvider) {
-        this.menuDelegate = menuDelegate;
+var CoreLoginSitesPage = /** @class */ (function () {
+    function CoreLoginSitesPage(domUtils, textUtils, sitesProvider, loginHelper, logger, translate, pushNotificationsProvider) {
+        this.domUtils = domUtils;
+        this.textUtils = textUtils;
         this.sitesProvider = sitesProvider;
-        this.navCtrl = navCtrl;
-        this.mainMenuProvider = mainMenuProvider;
-        this.langObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */].LANGUAGE_CHANGED, this.loadSiteInfo.bind(this));
-        this.updateSiteObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, this.loadSiteInfo.bind(this), sitesProvider.getCurrentSiteId());
-        this.loadSiteInfo();
+        this.loginHelper = loginHelper;
+        this.translate = translate;
+        this.pushNotificationsProvider = pushNotificationsProvider;
+        this.logger = logger.getInstance('CoreLoginSitesPage');
     }
     /**
      * View loaded.
      */
-    CoreMainMenuMorePage.prototype.ionViewDidLoad = function () {
+    CoreLoginSitesPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        // Load the handlers.
-        this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
-            _this.handlers = handlers.slice(__WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Remove the main handlers.
-            _this.handlersLoaded = _this.menuDelegate.areHandlersLoaded();
+        this.sitesProvider.getSites().then(function (sites) {
+            // Remove protocol from the url to show more url text.
+            sites = sites.map(function (site) {
+                site.siteUrl = site.siteUrl.replace(/^https?:\/\//, '');
+                site.badge = 0;
+                _this.pushNotificationsProvider.getSiteCounter(site.id).then(function (counter) {
+                    site.badge = counter;
+                });
+                return site;
+            });
+            // Sort sites by url and fullname.
+            _this.sites = sites.sort(function (a, b) {
+                // First compare by site url without the protocol.
+                var compareA = a.siteUrl.toLowerCase(), compareB = b.siteUrl.toLowerCase();
+                var compare = compareA.localeCompare(compareB);
+                if (compare !== 0) {
+                    return compare;
+                }
+                // If site url is the same, use fullname instead.
+                compareA = a.fullName.toLowerCase().trim();
+                compareB = b.fullName.toLowerCase().trim();
+                return compareA.localeCompare(compareB);
+            });
+            _this.showDelete = false;
+        }).catch(function () {
+            // Shouldn't happen.
         });
     };
     /**
-     * Page destroyed.
+     * Go to the page to add a site.
      */
-    CoreMainMenuMorePage.prototype.ngOnDestroy = function () {
-        if (this.subscription) {
-            this.subscription.unsubscribe();
-        }
+    CoreLoginSitesPage.prototype.add = function () {
+        this.loginHelper.goToAddSite(false);
     };
     /**
-     * Load the site info required by the view.
+     * Delete a site.
+     *
+     * @param {Event} e Click event.
+     * @param {number} index Position of the site.
      */
-    CoreMainMenuMorePage.prototype.loadSiteInfo = function () {
+    CoreLoginSitesPage.prototype.deleteSite = function (e, index) {
         var _this = this;
-        var currentSite = this.sitesProvider.getCurrentSite(), config = currentSite.getStoredConfig();
-        this.siteInfo = currentSite.getInfo();
-        this.logoutLabel = 'core.mainmenu.' + (config && config.tool_mobile_forcelogout == '1' ? 'logout' : 'changesite');
-        this.showWeb = !currentSite.isFeatureDisabled('$mmSideMenuDelegate_website');
-        this.showHelp = !currentSite.isFeatureDisabled('$mmSideMenuDelegate_help');
-        currentSite.getDocsUrl().then(function (docsUrl) {
-            _this.docsUrl = docsUrl;
+        e.stopPropagation();
+        var site = this.sites[index], siteName = site.siteName;
+        this.textUtils.formatText(siteName).then(function (siteName) {
+            _this.domUtils.showConfirm(_this.translate.instant('core.login.confirmdeletesite', { sitename: siteName })).then(function () {
+                _this.sitesProvider.deleteSite(site.id).then(function () {
+                    _this.sites.splice(index, 1);
+                    _this.showDelete = false;
+                    // If there are no sites left, go to add site.
+                    _this.sitesProvider.hasSites().then(function (hasSites) {
+                        if (!hasSites) {
+                            _this.loginHelper.goToAddSite(true);
+                        }
+                    });
+                }).catch(function (error) {
+                    _this.logger.error('Error deleting site ' + site.id, error);
+                    _this.domUtils.showErrorModalDefault(error, 'Delete site failed.');
+                    _this.domUtils.showErrorModal('core.login.errordeletesite', true);
+                });
+            }).catch(function () {
+                // User cancelled, nothing to do.
+            });
         });
-        this.mainMenuProvider.getCustomMenuItems().then(function (items) {
-            _this.customItems = items;
+    };
+    /**
+     * Login in a site.
+     *
+     * @param {string} siteId The site ID.
+     */
+    CoreLoginSitesPage.prototype.login = function (siteId) {
+        var _this = this;
+        var modal = this.domUtils.showModalLoading();
+        this.sitesProvider.loadSite(siteId).then(function () {
+            if (!_this.loginHelper.isSiteLoggedOut()) {
+                return _this.loginHelper.goToSiteInitialPage();
+            }
+        }).catch(function (error) {
+            _this.logger.error('Error loading site ' + siteId, error);
+            _this.domUtils.showErrorModalDefault(error, 'Error loading site.');
+        }).finally(function () {
+            modal.dismiss();
         });
     };
     /**
-     * Open a handler.
-     *
-     * @param {CoreMainMenuHandlerData} handler Handler to open.
+     * Toggle delete.
      */
-    CoreMainMenuMorePage.prototype.openHandler = function (handler) {
-        // @todo.
+    CoreLoginSitesPage.prototype.toggleDelete = function () {
+        this.showDelete = !this.showDelete;
     };
-    /**
-     * Open an embedded custom item.
-     *
-     * @param {CoreMainMenuCustomItem} item Item to open.
-     */
-    CoreMainMenuMorePage.prototype.openItem = function (item) {
-        this.navCtrl.push('CoreViewerIframePage', { title: item.label, url: item.url });
-    };
-    /**
-     * Open settings page.
-     */
-    CoreMainMenuMorePage.prototype.openSettings = function () {
-        this.navCtrl.push('CoreSettingsListPage');
-    };
-    /**
-     * Logout the user.
-     */
-    CoreMainMenuMorePage.prototype.logout = function () {
-        this.sitesProvider.logout();
-    };
-    CoreMainMenuMorePage = __decorate([
+    CoreLoginSitesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-mainmenu-more',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/more/more.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="siteInfo.sitename"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <a ion-item core-user-link userId="{{siteInfo.userid}}">\n            <ion-avatar item-start>\n                <img [src]="siteInfo.userpictureurl" core-external-content alt="{{ \'core.pictureof\' | translate:{$a: siteInfo.fullname} }}" role="presentation">\n            </ion-avatar>\n            <p>{{siteInfo.fullname}}</p>\n        </a>\n        <ion-item-divider color="light"></ion-item-divider>\n        <ion-item text-center *ngIf="(!handlers || !handlers.length) && !handlersLoaded">\n            <ion-spinner></ion-spinner>\n        </ion-item>\n        <ion-item *ngFor="let handler of handlers" class="core-moremenu-handler {{handler.class}}" (click)="openHandler(handler)" title="{{ handler.title | translate }}">\n            <ion-icon [name]="handler.icon" item-start></ion-icon>\n            <p>{{ handler.title | translate}}</p>\n            <!-- @todo: Badge. -->\n            <!-- <span ng-show="!loading && badge" class="badge badge-positive">{{badge}}</span>\n            <ion-spinner ng-if="loading" class="icon"></ion-spinner> -->\n        </ion-item>\n        <div *ngFor="let item of customItems" class="core-moremenu-customitem">\n            <a ion-item *ngIf="item.type != \'embedded\'" [href]="item.url" core-link [capture]="item.type == \'app\'" [inApp]="item.type == \'inappbrowser\'" title="{{item.label}}">\n                <ion-icon [name]="item.icon" item-start></ion-icon>\n                <p>{{item.label}}</p>\n            </a>\n            <a ion-item *ngIf="item.type == \'embedded\'" (click)="openItem(item)" title="{{item.label}}">\n                <ion-icon [name]="item.icon" item-start></ion-icon>\n                <p>{{item.label}}</p>\n            </a>\n        </div>\n        <a *ngIf="showWeb" ion-item [href]="siteInfo.siteurl" core-link autoLogin="yes" title="{{ \'core.mainmenu.website\' | translate }}">\n            <ion-icon name="globe" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.website\' | translate }}</p>\n        </a>\n        <a *ngIf="showHelp" ion-item [href]="docsUrl" core-link autoLogin="no" title="{{ \'core.mainmenu.help\' | translate }}">\n            <ion-icon name="help-buoy" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.help\' | translate }}</p>\n        </a>\n        <a ion-item (click)="openSettings()" title="{{ \'core.mainmenu.appsettings\' | translate }}">\n            <ion-icon name="cog" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.appsettings\' | translate }}</p>\n        </a>\n        <a ion-item (click)="logout()" title="{{ logoutLabel | translate }}">\n            <ion-icon name="log-out" item-start></ion-icon>\n            <p>{{ logoutLabel | translate }}</p>\n        </a>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/more/more.html"*/,
+            selector: 'page-core-login-sites',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/sites/sites.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.sites\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="sites && sites.length > 0" ion-button icon-only (click)="toggleDelete()" [attr.aria-label]="\'core.delete\' | translate">\n                <ion-icon name="create" ios="md-create"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item (click)="login(site.id)" *ngFor="let site of sites; let idx = index">\n            <ion-avatar item-start>\n                <img [src]="site.avatar" core-external-content [siteId]="site.id" alt="{{ \'core.pictureof\' | translate:{$a: site.fullname} }}" role="presentation" onError="this.src=\'assets/img/user-avatar.png\'">\n            </ion-avatar>\n            <h2>{{site.fullName}}</h2>\n            <p><core-format-text [text]="site.siteName" clean="true" watch="true" [siteId]="site.id"></core-format-text></p>\n            <p>{{site.siteUrl}}</p>\n            <ion-badge item-end *ngIf="!showDelete && site.badge">{{site.badge}}</ion-badge>\n            <button *ngIf="showDelete" item-end ion-button icon-only clear color="danger" (click)="deleteSite($event, idx)" [attr.aria-label]="\'core.delete\' | translate">\n                <ion-icon name="trash"></ion-icon>\n            </button>\n        </ion-item>\n    </ion-list>\n    <ion-fab bottom right>\n        <button ion-fab (click)="add()" [attr.aria-label]="\'core.add\' | translate">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/sites/sites.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__["a" /* CoreMainMenuProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */]])
-    ], CoreMainMenuMorePage);
-    return CoreMainMenuMorePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__["a" /* CoreTextUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_helper__["a" /* CoreLoginHelperProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_logger__["a" /* CoreLoggerProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_6__addon_pushnotifications_providers_pushnotifications__["a" /* AddonPushNotificationsProvider */]])
+    ], CoreLoginSitesPage);
+    return CoreLoginSitesPage;
 }());
 
-//# sourceMappingURL=more.js.map
+//# sourceMappingURL=sites.js.map
 
 /***/ })
 

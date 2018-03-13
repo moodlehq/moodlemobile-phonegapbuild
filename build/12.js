@@ -1,16 +1,17 @@
 webpackJsonp([12],{
 
-/***/ 1187:
+/***/ 1287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreUserParticipantsPageModule", function() { return CoreUserParticipantsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSharedFilesChooseSitePageModule", function() { return CoreSharedFilesChooseSitePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(641);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__participants__ = __webpack_require__(1242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__choose_site__ = __webpack_require__(1338);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(50);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,35 +36,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreUserParticipantsPageModule = /** @class */ (function () {
-    function CoreUserParticipantsPageModule() {
+
+var CoreSharedFilesChooseSitePageModule = /** @class */ (function () {
+    function CoreSharedFilesChooseSitePageModule() {
     }
-    CoreUserParticipantsPageModule = __decorate([
+    CoreSharedFilesChooseSitePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__participants__["a" /* CoreUserParticipantsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__choose_site__["a" /* CoreSharedFilesChooseSitePage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreUserComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__participants__["a" /* CoreUserParticipantsPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__choose_site__["a" /* CoreSharedFilesChooseSitePage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ]
         })
-    ], CoreUserParticipantsPageModule);
-    return CoreUserParticipantsPageModule;
+    ], CoreSharedFilesChooseSitePageModule);
+    return CoreSharedFilesChooseSitePageModule;
 }());
 
-//# sourceMappingURL=participants.module.js.map
+//# sourceMappingURL=choose-site.module.js.map
 
 /***/ }),
 
-/***/ 1242:
+/***/ 1338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreUserParticipantsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSharedFilesChooseSitePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_file__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_helper__ = __webpack_require__(280);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -88,23 +95,75 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
+
 /**
- * Page that displays the list of course participants.
+ * Modal to display the list of sites to choose one to store a shared file.
  */
-var CoreUserParticipantsPage = /** @class */ (function () {
-    function CoreUserParticipantsPage(navParams) {
-        this.courseId = navParams.get('courseId');
+var CoreSharedFilesChooseSitePage = /** @class */ (function () {
+    function CoreSharedFilesChooseSitePage(navCtrl, navParams, sharedFilesHelper, sitesProvider, domUtils, fileProvider) {
+        this.navCtrl = navCtrl;
+        this.sharedFilesHelper = sharedFilesHelper;
+        this.sitesProvider = sitesProvider;
+        this.domUtils = domUtils;
+        this.fileProvider = fileProvider;
+        this.filePath = navParams.get('filePath');
     }
-    CoreUserParticipantsPage = __decorate([
+    /**
+     * Component being initialized.
+     */
+    CoreSharedFilesChooseSitePage.prototype.ngOnInit = function () {
+        var _this = this;
+        if (!this.filePath) {
+            this.domUtils.showErrorModal('Error reading file.');
+            this.navCtrl.pop();
+            return;
+        }
+        var fileAndDir = this.fileProvider.getFileAndDirectoryFromPath(this.filePath);
+        this.fileName = fileAndDir.name;
+        // Get the file.
+        this.fileProvider.getFile(this.filePath).then(function (fe) {
+            _this.fileEntry = fe;
+            _this.fileName = _this.fileEntry.name;
+        }).catch(function () {
+            _this.domUtils.showErrorModal('Error reading file.');
+            _this.navCtrl.pop();
+        });
+        // Get the sites.
+        this.sitesProvider.getSites().then(function (sites) {
+            _this.sites = sites;
+        }).finally(function () {
+            _this.loaded = true;
+        });
+    };
+    /**
+     * Store the file in a certain site.
+     *
+     * @param {string} siteId Site ID.
+     */
+    CoreSharedFilesChooseSitePage.prototype.storeInSite = function (siteId) {
+        var _this = this;
+        this.loaded = false;
+        this.sharedFilesHelper.storeSharedFileInSite(this.fileEntry, siteId).then(function () {
+            _this.navCtrl.pop();
+        }).finally(function () {
+            _this.loaded = true;
+        });
+    };
+    CoreSharedFilesChooseSitePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-user-participants',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/user/pages/participants/participants.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.user.participants\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-user-participants [courseId]="courseId"></core-user-participants>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/user/pages/participants/participants.html"*/,
+            selector: 'page-core-shared-files-choose-site',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/sharedfiles/pages/choose-site/choose-site.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.sharedfiles.sharedfiles\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <ion-list>\n            <ion-item text-wrap>\n                <p class="item-heading">{{ \'core.sharedfiles.chooseaccountstorefile\' | translate }}</p>\n                <p>{{fileName}}</p>\n            </ion-item>\n            <a ion-item *ngFor="let site of sites" (click)="storeInSite(site.id)">\n                <img [src]="site.avatar" item-start>\n                <h2>{{site.fullName}}</h2>\n                <p><core-format-text clean="true" [text]="site.siteName"></core-format-text></p>\n                <p>{{site.siteUrl}}</p>\n            </a>\n        </ion-list>\n    </core-loading>\n</ion-content>\n\n\n\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/sharedfiles/pages/choose-site/choose-site.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], CoreUserParticipantsPage);
-    return CoreUserParticipantsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_helper__["a" /* CoreSharedFilesHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_file__["a" /* CoreFileProvider */]])
+    ], CoreSharedFilesChooseSitePage);
+    return CoreSharedFilesChooseSitePage;
 }());
 
-//# sourceMappingURL=participants.js.map
+//# sourceMappingURL=choose-site.js.map
 
 /***/ })
 

@@ -1,16 +1,17 @@
 webpackJsonp([34],{
 
-/***/ 1156:
+/***/ 1264:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCalendarSettingsPageModule", function() { return AddonCalendarSettingsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesMyCoursesPageModule", function() { return CoreCoursesMyCoursesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings__ = __webpack_require__(1211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__my_courses__ = __webpack_require__(1315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(694);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,37 +36,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonCalendarSettingsPageModule = /** @class */ (function () {
-    function AddonCalendarSettingsPageModule() {
+
+var CoreCoursesMyCoursesPageModule = /** @class */ (function () {
+    function CoreCoursesMyCoursesPageModule() {
     }
-    AddonCalendarSettingsPageModule = __decorate([
+    CoreCoursesMyCoursesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonCalendarSettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_3__my_courses__["a" /* CoreCoursesMyCoursesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonCalendarSettingsPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* CoreCoursesComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__my_courses__["a" /* CoreCoursesMyCoursesPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCalendarSettingsPageModule);
-    return AddonCalendarSettingsPageModule;
+    ], CoreCoursesMyCoursesPageModule);
+    return CoreCoursesMyCoursesPageModule;
 }());
 
-//# sourceMappingURL=settings.module.js.map
+//# sourceMappingURL=my-courses.module.js.map
 
 /***/ }),
 
-/***/ 1211:
+/***/ 1315:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCalendarSettingsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesMyCoursesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_calendar__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_courses__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_course_providers_helper__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_course_providers_options_delegate__ = __webpack_require__(105);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -92,45 +99,185 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
 /**
- * Page that displays the calendar settings.
+ * Page that displays the list of courses the user is enrolled in.
  */
-var AddonCalendarSettingsPage = /** @class */ (function () {
-    function AddonCalendarSettingsPage(calendarProvider, eventsProvider, sitesProvider) {
-        this.calendarProvider = calendarProvider;
+var CoreCoursesMyCoursesPage = /** @class */ (function () {
+    function CoreCoursesMyCoursesPage(navCtrl, coursesProvider, domUtils, eventsProvider, sitesProvider, courseHelper, courseOptionsDelegate) {
+        this.navCtrl = navCtrl;
+        this.coursesProvider = coursesProvider;
+        this.domUtils = domUtils;
         this.eventsProvider = eventsProvider;
         this.sitesProvider = sitesProvider;
-        this.defaultTime = 0;
+        this.courseHelper = courseHelper;
+        this.courseOptionsDelegate = courseOptionsDelegate;
+        this.filter = '';
+        this.showFilter = false;
+        this.coursesLoaded = false;
+        this.prefetchCoursesData = {};
+        this.prefetchIconInitialized = false;
+        this.isDestroyed = false;
     }
     /**
      * View loaded.
      */
-    AddonCalendarSettingsPage.prototype.ionViewDidLoad = function () {
+    CoreCoursesMyCoursesPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.calendarProvider.getDefaultNotificationTime().then(function (time) {
-            _this.defaultTime = time;
+        this.searchEnabled = !this.coursesProvider.isSearchCoursesDisabledInSite();
+        this.fetchCourses().finally(function () {
+            _this.coursesLoaded = true;
+        });
+        this.myCoursesObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_5__providers_courses__["a" /* CoreCoursesProvider */].EVENT_MY_COURSES_UPDATED, function () {
+            _this.fetchCourses();
+        }, this.sitesProvider.getCurrentSiteId());
+        this.siteUpdatedObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, function () {
+            _this.searchEnabled = !_this.coursesProvider.isSearchCoursesDisabledInSite();
+        }, this.sitesProvider.getCurrentSiteId());
+    };
+    /**
+     * Fetch the user courses.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreCoursesMyCoursesPage.prototype.fetchCourses = function () {
+        var _this = this;
+        return this.coursesProvider.getUserCourses().then(function (courses) {
+            var courseIds = courses.map(function (course) {
+                return course.id;
+            });
+            return _this.coursesProvider.getCoursesAdminAndNavOptions(courseIds).then(function (options) {
+                courses.forEach(function (course) {
+                    course.navOptions = options.navOptions[course.id];
+                    course.admOptions = options.admOptions[course.id];
+                });
+                _this.courses = courses;
+                _this.filteredCourses = _this.courses;
+                _this.filter = '';
+                _this.initPrefetchCoursesIcon();
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'core.courses.errorloadcourses', true);
         });
     };
     /**
-     * Update default time.
+     * Refresh the courses.
      *
-     * @param {number} newTime New time.
+     * @param {any} refresher Refresher.
      */
-    AddonCalendarSettingsPage.prototype.updateDefaultTime = function (newTime) {
-        this.calendarProvider.setDefaultNotificationTime(newTime);
-        this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_1__providers_calendar__["a" /* AddonCalendarProvider */].DEFAULT_NOTIFICATION_TIME_CHANGED, { time: newTime }, this.sitesProvider.getCurrentSiteId());
+    CoreCoursesMyCoursesPage.prototype.refreshCourses = function (refresher) {
+        var _this = this;
+        var promises = [];
+        promises.push(this.coursesProvider.invalidateUserCourses());
+        promises.push(this.courseOptionsDelegate.clearAndInvalidateCoursesOptions());
+        Promise.all(promises).finally(function () {
+            _this.prefetchIconInitialized = false;
+            _this.fetchCourses().finally(function () {
+                refresher.complete();
+            });
+        });
     };
-    AddonCalendarSettingsPage = __decorate([
+    /**
+     * Show or hide the filter.
+     */
+    CoreCoursesMyCoursesPage.prototype.switchFilter = function () {
+        this.filter = '';
+        this.showFilter = !this.showFilter;
+        this.filteredCourses = this.courses;
+    };
+    /**
+     * Go to search courses.
+     */
+    CoreCoursesMyCoursesPage.prototype.openSearch = function () {
+        this.navCtrl.push('CoreCoursesSearchPage');
+    };
+    /**
+     * The filter has changed.
+     *
+     * @param {any} Received Event.
+     */
+    CoreCoursesMyCoursesPage.prototype.filterChanged = function (event) {
+        var newValue = event.target.value && event.target.value.trim().toLowerCase();
+        if (!newValue || !this.courses) {
+            this.filteredCourses = this.courses;
+        }
+        else {
+            this.filteredCourses = this.courses.filter(function (course) {
+                return course.fullname.toLowerCase().indexOf(newValue) > -1;
+            });
+        }
+    };
+    /**
+     * Prefetch all the courses.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreCoursesMyCoursesPage.prototype.prefetchCourses = function () {
+        var _this = this;
+        var initialIcon = this.prefetchCoursesData.icon;
+        this.prefetchCoursesData.icon = 'spinner';
+        this.prefetchCoursesData.badge = '';
+        return this.courseHelper.confirmAndPrefetchCourses(this.courses, function (progress) {
+            _this.prefetchCoursesData.badge = progress.count + ' / ' + progress.total;
+        }).then(function (downloaded) {
+            _this.prefetchCoursesData.icon = downloaded ? 'ion-android-refresh' : initialIcon;
+        }, function (error) {
+            if (!_this.isDestroyed) {
+                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
+                _this.prefetchCoursesData.icon = initialIcon;
+            }
+        }).finally(function () {
+            _this.prefetchCoursesData.badge = '';
+        });
+    };
+    /**
+     * Initialize the prefetch icon for the list of courses.
+     */
+    CoreCoursesMyCoursesPage.prototype.initPrefetchCoursesIcon = function () {
+        var _this = this;
+        if (this.prefetchIconInitialized) {
+            // Already initialized.
+            return;
+        }
+        this.prefetchIconInitialized = true;
+        if (!this.courses || this.courses.length < 2) {
+            // Not enough courses.
+            this.prefetchCoursesData.icon = '';
+            return;
+        }
+        this.courseHelper.determineCoursesStatus(this.courses).then(function (status) {
+            var icon = _this.courseHelper.getCourseStatusIconFromStatus(status);
+            if (icon == 'spinner') {
+                // It seems all courses are being downloaded, show a download button instead.
+                icon = 'cloud-download';
+            }
+            _this.prefetchCoursesData.icon = icon;
+        });
+    };
+    /**
+     * Page destroyed.
+     */
+    CoreCoursesMyCoursesPage.prototype.ngOnDestroy = function () {
+        this.isDestroyed = true;
+        this.myCoursesObserver && this.myCoursesObserver.off();
+        this.siteUpdatedObserver && this.siteUpdatedObserver.off();
+    };
+    CoreCoursesMyCoursesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-calendar-settings',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/settings/settings.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.settings\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item>\n            <ion-label>{{ \'addon.calendar.defaultnotificationtime\' | translate }}</ion-label>\n            <ion-select [(ngModel)]="defaultTime" (ionChange)="updateDefaultTime($event)" interface="popover">\n                <ion-option value="0">{{ \'core.settings.disabled\' | translate }}</ion-option>\n                <ion-option value="10">{{ 600 | coreDuration }}</ion-option>\n                <ion-option value="30">{{ 1800 | coreDuration }}</ion-option>\n                <ion-option value="60">{{ 3600 | coreDuration }}</ion-option>\n                <ion-option value="120">{{ 7200 | coreDuration }}</ion-option>\n                <ion-option value="360">{{ 21600 | coreDuration }}</ion-option>\n                <ion-option value="720">{{ 43200 | coreDuration }}</ion-option>\n                <ion-option value="1440">{{ 86400 | coreDuration }}</ion-option>\n            </ion-select>\n        </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/settings/settings.html"*/,
+            selector: 'page-core-courses-my-courses',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/courses/pages/my-courses/my-courses.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.courses.mycourses\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="searchEnabled" ion-button icon-only (click)="openSearch()" [attr.aria-label]="\'core.courses.searchcourses\' | translate">\n                <ion-icon name="search"></ion-icon>\n            </button>\n            <core-context-menu>\n                <core-context-menu-item [hidden]="!courses || courses.length < 2" [priority]="800" [content]="\'core.courses.downloadcourses\' | translate" (action)="prefetchCourses()" [iconAction]="prefetchCoursesData.icon" [closeOnClick]="false" [badge]="prefetchCoursesData.badge"></core-context-menu-item>\n                <core-context-menu-item [hidden]="!courses || courses.length <= 5" [priority]="700" [content]="\'core.courses.filtermycourses\' | translate" (action)="switchFilter()" [iconAction]="\'funnel\'"></core-context-menu-item>\n            </core-context-menu>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="coursesLoaded" (ionRefresh)="refreshCourses($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="coursesLoaded">\n        <ion-searchbar *ngIf="showFilter" [(ngModel)]="filter" (ionInput)="filterChanged($event)" (ionCancel)="filterChanged()" [placeholder]="\'core.courses.filtermycourses\' | translate">\n        </ion-searchbar>\n        <ion-grid no-padding>\n            <ion-row no-padding>\n                <ion-col *ngFor="let course of filteredCourses" no-padding col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 align-self-stretch>\n                    <core-courses-course-progress [course]="course" class="core-courseoverview"></core-courses-course-progress>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n        <core-empty-box *ngIf="!courses || !courses.length" icon="ionic" [message]="\'core.courses.nocourses\' | translate">\n            <p *ngIf="searchEnabled">{{ \'core.courses.searchcoursesadvice\' | translate }}</p>\n        </core-empty-box>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/courses/pages/my-courses/my-courses.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_calendar__["a" /* AddonCalendarProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */]])
-    ], AddonCalendarSettingsPage);
-    return AddonCalendarSettingsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__providers_courses__["a" /* CoreCoursesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_6__core_course_providers_helper__["a" /* CoreCourseHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__core_course_providers_options_delegate__["a" /* CoreCourseOptionsDelegate */]])
+    ], CoreCoursesMyCoursesPage);
+    return CoreCoursesMyCoursesPage;
 }());
 
-//# sourceMappingURL=settings.js.map
+//# sourceMappingURL=my-courses.js.map
 
 /***/ })
 

@@ -1,17 +1,17 @@
 webpackJsonp([14],{
 
-/***/ 1183:
+/***/ 1286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSharedFilesListPageModule", function() { return CoreSharedFilesListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreMainMenuPageModule", function() { return CoreMainMenuPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list__ = __webpack_require__(1238);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__more__ = __webpack_require__(1337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(50);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,42 +37,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreSharedFilesListPageModule = /** @class */ (function () {
-    function CoreSharedFilesListPageModule() {
+var CoreMainMenuPageModule = /** @class */ (function () {
+    function CoreMainMenuPageModule() {
     }
-    CoreSharedFilesListPageModule = __decorate([
+    CoreMainMenuPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__list__["a" /* CoreSharedFilesListPage */]
+                __WEBPACK_IMPORTED_MODULE_3__more__["a" /* CoreMainMenuMorePage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__list__["a" /* CoreSharedFilesListPage */]),
-                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__more__["a" /* CoreMainMenuMorePage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ],
         })
-    ], CoreSharedFilesListPageModule);
-    return CoreSharedFilesListPageModule;
+    ], CoreMainMenuPageModule);
+    return CoreMainMenuPageModule;
 }());
 
-//# sourceMappingURL=list.module.js.map
+//# sourceMappingURL=more.module.js.map
 
 /***/ }),
 
-/***/ 1238:
+/***/ 1337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSharedFilesListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreMainMenuMorePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_file__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_sharedfiles__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__ = __webpack_require__(698);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -101,160 +99,105 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 /**
- * Modal to display the list of shared files.
+ * Page that displays the list of main menu options that aren't in the tabs.
  */
-var CoreSharedFilesListPage = /** @class */ (function () {
-    function CoreSharedFilesListPage(viewCtrl, navParams, sharedFilesProvider, sitesProvider, textUtils, translate, fileProvider, eventsProvider, navCtrl) {
-        this.viewCtrl = viewCtrl;
-        this.sharedFilesProvider = sharedFilesProvider;
+var CoreMainMenuMorePage = /** @class */ (function () {
+    function CoreMainMenuMorePage(menuDelegate, sitesProvider, navCtrl, mainMenuProvider, eventsProvider) {
+        this.menuDelegate = menuDelegate;
         this.sitesProvider = sitesProvider;
-        this.textUtils = textUtils;
-        this.translate = translate;
-        this.fileProvider = fileProvider;
-        this.eventsProvider = eventsProvider;
         this.navCtrl = navCtrl;
-        this.path = '';
-        this.siteId = navParams.get('siteId') || this.sitesProvider.getCurrentSiteId();
-        this.mimetypes = navParams.get('mimetypes');
-        this.isModal = !!navParams.get('isModal');
-        this.manage = !!navParams.get('manage');
-        this.pick = !!navParams.get('pick');
-        this.path = navParams.get('path') || '';
+        this.mainMenuProvider = mainMenuProvider;
+        this.eventsProvider = eventsProvider;
+        this.langObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */].LANGUAGE_CHANGED, this.loadSiteInfo.bind(this));
+        this.updateSiteObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, this.loadSiteInfo.bind(this), sitesProvider.getCurrentSiteId());
+        this.loadSiteInfo();
     }
     /**
-     * Component being initialized.
+     * View loaded.
      */
-    CoreSharedFilesListPage.prototype.ngOnInit = function () {
+    CoreMainMenuMorePage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.loadFiles();
-        // Listen for new files shared with the app.
-        this.shareObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */].FILE_SHARED, function (data) {
-            if (data.siteId == _this.siteId) {
-                // File was stored in current site, refresh the list.
-                _this.filesLoaded = false;
-                _this.loadFiles().finally(function () {
-                    _this.filesLoaded = true;
-                });
-            }
+        // Load the handlers.
+        this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
+            _this.handlers = handlers.slice(__WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Remove the main handlers.
+            _this.handlersLoaded = _this.menuDelegate.areHandlersLoaded();
         });
-    };
-    /**
-     * Load the files.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    CoreSharedFilesListPage.prototype.loadFiles = function () {
-        var _this = this;
-        if (this.path) {
-            this.title = this.fileProvider.getFileAndDirectoryFromPath(this.path).name;
-        }
-        else {
-            this.title = this.translate.instant('core.sharedfiles.sharedfiles');
-        }
-        return this.sharedFilesProvider.getSiteSharedFiles(this.siteId, this.path, this.mimetypes).then(function (files) {
-            _this.files = files;
-            _this.filesLoaded = true;
-        });
-    };
-    /**
-     * Close modal.
-     */
-    CoreSharedFilesListPage.prototype.closeModal = function () {
-        this.viewCtrl.dismiss();
-    };
-    /**
-     * Refresh the list of files.
-     *
-     * @param {any} refresher Refresher.
-     */
-    CoreSharedFilesListPage.prototype.refreshFiles = function (refresher) {
-        this.loadFiles().finally(function () {
-            refresher.complete();
-        });
-    };
-    /**
-     * Called when a file is deleted. Remove the file from the list.
-     *
-     * @param {number} index Position of the file.
-     */
-    CoreSharedFilesListPage.prototype.fileDeleted = function (index) {
-        this.files.splice(index, 1);
-    };
-    /**
-     * Called when a file is renamed. Update the list.
-     *
-     * @param {number} index Position of the file.
-     * @param {any} file New FileEntry.
-     */
-    CoreSharedFilesListPage.prototype.fileRenamed = function (index, file) {
-        this.files[index] = file;
-    };
-    /**
-     * Open a subfolder.
-     *
-     * @param {any} folder The folder to open.
-     */
-    CoreSharedFilesListPage.prototype.openFolder = function (folder) {
-        var path = this.textUtils.concatenatePaths(this.path, folder.name);
-        if (this.isModal) {
-            // In Modal we don't want to open a new page because we cannot dismiss the modal from the new page.
-            this.path = path;
-            this.filesLoaded = false;
-            this.loadFiles();
-        }
-        else {
-            this.navCtrl.push('CoreSharedFilesListPage', {
-                path: path,
-                manage: this.manage,
-                pick: this.pick,
-                siteId: this.siteId,
-                mimetypes: this.mimetypes,
-                isModal: this.isModal
+        this.updateBadgeObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */].UPDATE_BADGE_EVENT, function (data) {
+            var handler = _this.handlers.find(function (handler) {
+                return handler.showBadge && handler['name'] == data.name;
             });
+            if (handler) {
+                handler.badge = data.badge;
+            }
+        }, this.sitesProvider.getCurrentSiteId());
+    };
+    /**
+     * Page destroyed.
+     */
+    CoreMainMenuMorePage.prototype.ngOnDestroy = function () {
+        if (this.subscription) {
+            this.subscription.unsubscribe();
         }
+        this.updateBadgeObserver && this.updateBadgeObserver.off();
     };
     /**
-     * Change site loaded.
+     * Load the site info required by the view.
+     */
+    CoreMainMenuMorePage.prototype.loadSiteInfo = function () {
+        var _this = this;
+        var currentSite = this.sitesProvider.getCurrentSite(), config = currentSite.getStoredConfig();
+        this.siteInfo = currentSite.getInfo();
+        this.logoutLabel = 'core.mainmenu.' + (config && config.tool_mobile_forcelogout == '1' ? 'logout' : 'changesite');
+        this.showWeb = !currentSite.isFeatureDisabled('$mmSideMenuDelegate_website');
+        this.showHelp = !currentSite.isFeatureDisabled('$mmSideMenuDelegate_help');
+        currentSite.getDocsUrl().then(function (docsUrl) {
+            _this.docsUrl = docsUrl;
+        });
+        this.mainMenuProvider.getCustomMenuItems().then(function (items) {
+            _this.customItems = items;
+        });
+    };
+    /**
+     * Open a handler.
      *
-     * @param {string} id Site to load.
+     * @param {CoreMainMenuHandlerData} handler Handler to open.
      */
-    CoreSharedFilesListPage.prototype.changeSite = function (id) {
-        this.siteId = id;
-        this.path = '';
-        this.filesLoaded = false;
-        this.loadFiles();
+    CoreMainMenuMorePage.prototype.openHandler = function (handler) {
+        this.navCtrl.push(handler.page);
     };
     /**
-     * A file was picked.
+     * Open an embedded custom item.
      *
-     * @param {any} file Picked file.
+     * @param {CoreMainMenuCustomItem} item Item to open.
      */
-    CoreSharedFilesListPage.prototype.filePicked = function (file) {
-        this.viewCtrl.dismiss(file);
+    CoreMainMenuMorePage.prototype.openItem = function (item) {
+        this.navCtrl.push('CoreViewerIframePage', { title: item.label, url: item.url });
     };
     /**
-     * Component destroyed.
+     * Open settings page.
      */
-    CoreSharedFilesListPage.prototype.ngOnDestroy = function () {
-        if (this.shareObserver) {
-            this.shareObserver.off();
-        }
+    CoreMainMenuMorePage.prototype.openSettings = function () {
+        this.navCtrl.push('CoreSettingsListPage');
     };
-    CoreSharedFilesListPage = __decorate([
+    /**
+     * Logout the user.
+     */
+    CoreMainMenuMorePage.prototype.logout = function () {
+        this.sitesProvider.logout();
+    };
+    CoreMainMenuMorePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-shared-files-list',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/sharedfiles/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end *ngIf="isModal">\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="filesLoaded" (ionRefresh)="refreshFiles($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <!-- Allow selecting the site to view. -->\n    <core-site-picker [hidden]="!filesLoaded" [initialSite]="siteId" (siteSelected)="changeSite($event)"></core-site-picker>\n    <ion-item-divider color="light"></ion-item-divider>\n    <core-loading [hideUntil]="filesLoaded">\n        <ion-list *ngIf="files && files.length > 0">\n            <div *ngFor="let file of files; let idx = index">\n                <core-local-file *ngIf="file.isFile" [file]="file" [manage]="manage" [overrideClick]="pick" (onClick)="filePicked(file)" (onDelete)="fileDeleted(idx)" (onRename)="fileRenamed(idx, $event)"></core-local-file>\n                <a ion-item text-wrap class="item-media" *ngIf="!file.isFile" (click)="openFolder(file)">\n                    <img src="assets/img/files/folder-64.png" alt="{{ \'core.folder\' | translate }}" role="presentation" item-start>\n                    <p>{{ file.name }}</p>\n                </a>\n            </div>\n        </ion-list>\n        <core-empty-box *ngIf="files && !files.length && manage" icon="folder" [message]="\'core.sharedfiles.nosharedfiles\' | translate"></core-empty-box>\n        <core-empty-box *ngIf="files && !files.length && !manage" icon="folder" [message]="\'core.sharedfiles.nosharedfilestoupload\' | translate"></core-empty-box>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/sharedfiles/pages/list/list.html"*/,
+            selector: 'page-core-mainmenu-more',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/more/more.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="siteInfo.sitename"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <a ion-item core-user-link userId="{{siteInfo.userid}}">\n            <ion-avatar item-start>\n                <img [src]="siteInfo.userpictureurl" core-external-content alt="{{ \'core.pictureof\' | translate:{$a: siteInfo.fullname} }}" role="presentation">\n            </ion-avatar>\n            <p>{{siteInfo.fullname}}</p>\n        </a>\n        <ion-item-divider color="light"></ion-item-divider>\n        <ion-item text-center *ngIf="(!handlers || !handlers.length) && !handlersLoaded">\n            <ion-spinner></ion-spinner>\n        </ion-item>\n        <ion-item *ngFor="let handler of handlers" [ngClass]="[\'core-moremenu-handler\', handler.class]" (click)="openHandler(handler)" title="{{ handler.title | translate }}" detail-push>\n            <ion-icon [name]="handler.icon" item-start></ion-icon>\n            <p>{{ handler.title | translate}}</p>\n            <ion-badge item-end *ngIf="handler.showBadge" [hidden]="handler.loading || !handler.badge">{{badge}}</ion-badge>\n            <ion-spinner item-end *ngIf="handler.showBadge && handler.loading"></ion-spinner>\n        </ion-item>\n        <div *ngFor="let item of customItems" class="core-moremenu-customitem">\n            <a ion-item *ngIf="item.type != \'embedded\'" [href]="item.url" core-link [capture]="item.type == \'app\'" [inApp]="item.type == \'inappbrowser\'" title="{{item.label}}">\n                <ion-icon [name]="item.icon" item-start></ion-icon>\n                <p>{{item.label}}</p>\n            </a>\n            <a ion-item *ngIf="item.type == \'embedded\'" (click)="openItem(item)" title="{{item.label}}">\n                <ion-icon [name]="item.icon" item-start></ion-icon>\n                <p>{{item.label}}</p>\n            </a>\n        </div>\n        <a *ngIf="showWeb" ion-item [href]="siteInfo.siteurl" core-link autoLogin="yes" title="{{ \'core.mainmenu.website\' | translate }}">\n            <ion-icon name="globe" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.website\' | translate }}</p>\n        </a>\n        <a *ngIf="showHelp" ion-item [href]="docsUrl" core-link autoLogin="no" title="{{ \'core.mainmenu.help\' | translate }}">\n            <ion-icon name="help-buoy" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.help\' | translate }}</p>\n        </a>\n        <a ion-item (click)="openSettings()" title="{{ \'core.mainmenu.appsettings\' | translate }}">\n            <ion-icon name="cog" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.appsettings\' | translate }}</p>\n        </a>\n        <a ion-item (click)="logout()" title="{{ logoutLabel | translate }}">\n            <ion-icon name="log-out" item-start></ion-icon>\n            <p>{{ logoutLabel | translate }}</p>\n        </a>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/more/more.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_7__providers_sharedfiles__["a" /* CoreSharedFilesProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_file__["a" /* CoreFileProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]])
-    ], CoreSharedFilesListPage);
-    return CoreSharedFilesListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__["a" /* CoreMainMenuProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */]])
+    ], CoreMainMenuMorePage);
+    return CoreMainMenuMorePage;
 }());
 
-//# sourceMappingURL=list.js.map
+//# sourceMappingURL=more.js.map
 
 /***/ })
 

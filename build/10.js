@@ -1,15 +1,16 @@
 webpackJsonp([10],{
 
-/***/ 1188:
+/***/ 1290:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreViewerIframePageModule", function() { return CoreViewerIframePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSiteHomeIndexPageModule", function() { return CoreSiteHomeIndexPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__iframe__ = __webpack_require__(1243);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index__ = __webpack_require__(1341);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(696);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,34 +34,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreViewerIframePageModule = /** @class */ (function () {
-    function CoreViewerIframePageModule() {
+
+var CoreSiteHomeIndexPageModule = /** @class */ (function () {
+    function CoreSiteHomeIndexPageModule() {
     }
-    CoreViewerIframePageModule = __decorate([
+    CoreSiteHomeIndexPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__iframe__["a" /* CoreViewerIframePage */]
+                __WEBPACK_IMPORTED_MODULE_3__index__["a" /* CoreSiteHomeIndexPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__iframe__["a" /* CoreViewerIframePage */])
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreSiteHomeComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__index__["a" /* CoreSiteHomeIndexPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ]
         })
-    ], CoreViewerIframePageModule);
-    return CoreViewerIframePageModule;
+    ], CoreSiteHomeIndexPageModule);
+    return CoreSiteHomeIndexPageModule;
 }());
 
-//# sourceMappingURL=iframe.module.js.map
+//# sourceMappingURL=index.module.js.map
 
 /***/ }),
 
-/***/ 1243:
+/***/ 1341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreViewerIframePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSiteHomeIndexPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_course_providers_helper__ = __webpack_require__(57);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -85,24 +90,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 /**
- * Page to display a URL in an iframe.
+ * Page that displays site home index.
  */
-var CoreViewerIframePage = /** @class */ (function () {
-    function CoreViewerIframePage(params) {
-        this.title = params.get('title');
-        this.url = params.get('url');
+var CoreSiteHomeIndexPage = /** @class */ (function () {
+    function CoreSiteHomeIndexPage(navParams, navCtrl, courseHelper, sitesProvider) {
+        var module = navParams.get('module');
+        if (module) {
+            courseHelper.openModule(navCtrl, module, sitesProvider.getCurrentSite().getSiteHomeId());
+        }
     }
-    CoreViewerIframePage = __decorate([
+    CoreSiteHomeIndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-viewer-iframe',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/viewer/pages/iframe/iframe.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ title }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-iframe [src]="url"></core-iframe>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/viewer/pages/iframe/iframe.html"*/,
+            selector: 'page-core-sitehome-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/sitehome/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.sitehome.sitehome\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-sitehome-index></core-sitehome-index>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/sitehome/pages/index/index.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], CoreViewerIframePage);
-    return CoreViewerIframePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__core_course_providers_helper__["a" /* CoreCourseHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */]])
+    ], CoreSiteHomeIndexPage);
+    return CoreSiteHomeIndexPage;
 }());
 
-//# sourceMappingURL=iframe.js.map
+//# sourceMappingURL=index.js.map
 
 /***/ })
 

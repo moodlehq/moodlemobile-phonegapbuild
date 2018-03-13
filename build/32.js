@@ -1,16 +1,17 @@
 webpackJsonp([32],{
 
-/***/ 1158:
+/***/ 1266:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CorePlaceholderPageModule", function() { return CorePlaceholderPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesSearchPageModule", function() { return CoreCoursesSearchPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placeholder__ = __webpack_require__(1213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_module__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__search__ = __webpack_require__(1317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(694);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,43 +31,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-// Code based on https://github.com/martinpritchardelevate/ionic-split-pane-demo
 
 
 
 
 
-var CorePlaceholderPageModule = /** @class */ (function () {
-    function CorePlaceholderPageModule() {
+
+var CoreCoursesSearchPageModule = /** @class */ (function () {
+    function CoreCoursesSearchPageModule() {
     }
-    CorePlaceholderPageModule = __decorate([
+    CoreCoursesSearchPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__placeholder__["a" /* CoreSplitViewPlaceholderPage */],
+                __WEBPACK_IMPORTED_MODULE_3__search__["a" /* CoreCoursesSearchPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__placeholder__["a" /* CoreSplitViewPlaceholderPage */]),
-                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* CoreCoursesComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__search__["a" /* CoreCoursesSearchPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_2__placeholder__["a" /* CoreSplitViewPlaceholderPage */]
-            ]
         })
-    ], CorePlaceholderPageModule);
-    return CorePlaceholderPageModule;
+    ], CoreCoursesSearchPageModule);
+    return CoreCoursesSearchPageModule;
 }());
 
-//# sourceMappingURL=placeholder.module.js.map
+//# sourceMappingURL=search.module.js.map
 
 /***/ }),
 
-/***/ 1213:
+/***/ 1317:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSplitViewPlaceholderPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesSearchPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_courses__ = __webpack_require__(31);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -89,22 +90,76 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-// Code based on https://github.com/martinpritchardelevate/ionic-split-pane-demo
 
-var CoreSplitViewPlaceholderPage = /** @class */ (function () {
-    function CoreSplitViewPlaceholderPage() {
-        // Nothing to do.
+
+
+/**
+ * Page that allows searching for courses.
+ */
+var CoreCoursesSearchPage = /** @class */ (function () {
+    function CoreCoursesSearchPage(domUtils, coursesProvider) {
+        this.domUtils = domUtils;
+        this.coursesProvider = coursesProvider;
+        this.total = 0;
+        this.page = 0;
+        this.currentSearch = '';
     }
-    CoreSplitViewPlaceholderPage = __decorate([
+    /**
+     * Search a new text.
+     *
+     * @param {string} text The text to search.
+     */
+    CoreCoursesSearchPage.prototype.search = function (text) {
+        this.currentSearch = text;
+        this.courses = undefined;
+        this.page = 0;
+        var modal = this.domUtils.showModalLoading('core.searching', true);
+        this.searchCourses().finally(function () {
+            modal.dismiss();
+        });
+    };
+    /**
+     * Load more results.
+     *
+     * @param {any} infiniteScroll The infinit scroll instance.
+     */
+    CoreCoursesSearchPage.prototype.loadMoreResults = function (infiniteScroll) {
+        this.searchCourses().finally(function () {
+            infiniteScroll.complete();
+        });
+    };
+    /**
+     * Search courses or load the next page of current search.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreCoursesSearchPage.prototype.searchCourses = function () {
+        var _this = this;
+        return this.coursesProvider.search(this.currentSearch, this.page).then(function (response) {
+            if (_this.page === 0) {
+                _this.courses = response.courses;
+            }
+            else {
+                _this.courses = _this.courses.concat(response.courses);
+            }
+            _this.total = response.total;
+            _this.page++;
+            _this.canLoadMore = _this.courses.length < _this.total;
+        }).catch(function (error) {
+            _this.canLoadMore = false;
+            _this.domUtils.showErrorModalDefault(error, 'core.courses.errorsearching', true);
+        });
+    };
+    CoreCoursesSearchPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'core-placeholder',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/components/split-view/placeholder/placeholder.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>&nbsp;</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <core-empty-box icon="arrow-dropleft" [message]="\'core.emptysplit\' | translate"></core-empty-box>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/components/split-view/placeholder/placeholder.html"*/,
+            selector: 'page-core-courses-search',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/courses/pages/search/search.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.courses.searchcourses\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-search-box (onSubmit)="search($event)" [placeholder]="\'core.courses.search\' | translate" [searchLabel]="\'core.courses.search\' | translate" autoFocus="true" showClear="false"></core-search-box>\n\n    <div *ngIf="courses">\n        <ion-item-divider color="light">{{ \'core.courses.totalcoursesearchresults\' | translate:{$a: total} }}</ion-item-divider>\n        <core-empty-box *ngIf="total == 0" icon="search" [message]="\'core.courses.nosearchresults\' | translate"></core-empty-box>\n        <core-courses-course-list-item *ngFor="let course of courses" [course]="course"></core-courses-course-list-item>\n        <ion-infinite-scroll [enabled]="canLoadMore" (ionInfinite)="loadMoreResults($event)">\n            <ion-infinite-scroll-content></ion-infinite-scroll-content>\n        </ion-infinite-scroll>\n    </div>\n</ion-content>\n\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/courses/pages/search/search.html"*/,
         }),
-        __metadata("design:paramtypes", [])
-    ], CoreSplitViewPlaceholderPage);
-    return CoreSplitViewPlaceholderPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_courses__["a" /* CoreCoursesProvider */]])
+    ], CoreCoursesSearchPage);
+    return CoreCoursesSearchPage;
 }());
 
-//# sourceMappingURL=placeholder.js.map
+//# sourceMappingURL=search.js.map
 
 /***/ })
 

@@ -1,18 +1,18 @@
 webpackJsonp([35],{
 
-/***/ 1155:
+/***/ 1267:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCalendarListPageModule", function() { return AddonCalendarListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesCoursePreviewPageModule", function() { return CoreCoursesCoursePreviewPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list__ = __webpack_require__(1210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__course_preview__ = __webpack_require__(1318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(97);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,49 +39,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonCalendarListPageModule = /** @class */ (function () {
-    function AddonCalendarListPageModule() {
+var CoreCoursesCoursePreviewPageModule = /** @class */ (function () {
+    function CoreCoursesCoursePreviewPageModule() {
     }
-    AddonCalendarListPageModule = __decorate([
+    CoreCoursesCoursePreviewPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__list__["a" /* AddonCalendarListPage */],
+                __WEBPACK_IMPORTED_MODULE_3__course_preview__["a" /* CoreCoursesCoursePreviewPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__list__["a" /* AddonCalendarListPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__course_preview__["a" /* CoreCoursesCoursePreviewPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCalendarListPageModule);
-    return AddonCalendarListPageModule;
+    ], CoreCoursesCoursePreviewPageModule);
+    return CoreCoursesCoursePreviewPageModule;
 }());
 
-//# sourceMappingURL=list.module.js.map
+//# sourceMappingURL=course-preview.module.js.map
 
 /***/ }),
 
-/***/ 1210:
+/***/ 1318:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCalendarListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesCoursePreviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_calendar__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(642);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_courses_providers_courses__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_utils__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_local_notifications__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_course_picker_menu_course_picker_menu_popover__ = __webpack_require__(645);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_app__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__ = __webpack_require__(251);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_courses__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_course_providers_options_delegate__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_course_providers_helper__ = __webpack_require__(57);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -116,310 +114,370 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 /**
- * Page that displays the list of calendar events.
+ * Page that allows "previewing" a course and enrolling in it if enabled and not enrolled.
  */
-var AddonCalendarListPage = /** @class */ (function () {
-    function AddonCalendarListPage(translate, calendarProvider, navParams, domUtils, coursesProvider, utils, calendarHelper, sitesProvider, localNotificationsProvider, popoverCtrl, eventsProvider, navCtrl, appProvider) {
+var CoreCoursesCoursePreviewPage = /** @class */ (function () {
+    function CoreCoursesCoursePreviewPage(navCtrl, navParams, sitesProvider, domUtils, textUtils, appProvider, coursesProvider, platform, modalCtrl, translate, eventsProvider, courseOptionsDelegate, courseHelper, courseProvider) {
         var _this = this;
-        this.translate = translate;
-        this.calendarProvider = calendarProvider;
-        this.domUtils = domUtils;
-        this.coursesProvider = coursesProvider;
-        this.utils = utils;
-        this.calendarHelper = calendarHelper;
-        this.popoverCtrl = popoverCtrl;
         this.navCtrl = navCtrl;
-        this.daysLoaded = 0;
-        this.emptyEventsTimes = 0; // Variable to identify consecutive calls returning 0 events.
-        this.categoriesRetrieved = false;
-        this.getCategories = false;
-        this.allCourses = {
-            id: -1,
-            fullname: this.translate.instant('core.fulllistofcourses'),
-            category: -1
+        this.sitesProvider = sitesProvider;
+        this.domUtils = domUtils;
+        this.textUtils = textUtils;
+        this.coursesProvider = coursesProvider;
+        this.platform = platform;
+        this.modalCtrl = modalCtrl;
+        this.translate = translate;
+        this.eventsProvider = eventsProvider;
+        this.courseOptionsDelegate = courseOptionsDelegate;
+        this.courseHelper = courseHelper;
+        this.courseProvider = courseProvider;
+        this.canAccessCourse = true;
+        this.component = 'CoreCoursesCoursePreview';
+        this.selfEnrolInstances = [];
+        this.prefetchCourseData = {
+            prefetchCourseIcon: 'spinner'
         };
-        this.categories = {};
-        this.eventsLoaded = false;
-        this.events = [];
-        this.notificationsEnabled = false;
-        this.filteredEvents = [];
-        this.canLoadMore = false;
-        this.filter = {
-            course: this.allCourses
-        };
-        this.siteHomeId = sitesProvider.getCurrentSite().getSiteHomeId();
-        this.notificationsEnabled = localNotificationsProvider.isAvailable();
-        if (this.notificationsEnabled) {
-            // Re-schedule events if default time changes.
-            this.obsDefaultTimeChange = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */].DEFAULT_NOTIFICATION_TIME_CHANGED, function () {
-                calendarProvider.scheduleEventsNotifications(_this.events);
-            }, sitesProvider.getCurrentSiteId());
-        }
-        this.eventId = navParams.get('eventid') || false;
+        this.isGuestEnabled = false;
+        this.waitStart = 0;
+        this.pageDestroyed = false;
+        this.course = navParams.get('course');
+        this.isMobile = appProvider.isMobile();
+        this.isDesktop = appProvider.isDesktop();
+        // Listen for status change in course.
+        this.courseStatusObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */].COURSE_STATUS_CHANGED, function (data) {
+            if (data.courseId == _this.course.id) {
+                _this.prefetchCourseData.prefetchCourseIcon = _this.courseHelper.getCourseStatusIconFromStatus(data.status);
+            }
+        }, sitesProvider.getCurrentSiteId());
     }
     /**
      * View loaded.
      */
-    AddonCalendarListPage.prototype.ionViewDidLoad = function () {
+    CoreCoursesCoursePreviewPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        if (this.eventId) {
-            // There is an event to load, open the event in a new state.
-            this.gotoEvent(this.eventId);
-        }
-        this.fetchData().then(function () {
-            if (!_this.eventId && _this.splitviewCtrl.isOn() && _this.events.length > 0) {
-                // Take first and load it.
-                _this.gotoEvent(_this.events[0].id);
+        var currentSite = this.sitesProvider.getCurrentSite(), currentSiteUrl = currentSite && currentSite.getURL();
+        this.paypalEnabled = this.course.enrollmentmethods && this.course.enrollmentmethods.indexOf('paypal') > -1;
+        this.guestWSAvailable = this.coursesProvider.isGuestWSAvailable();
+        this.enrolUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'enrol/index.php?id=' + this.course.id);
+        this.courseUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'course/view.php?id=' + this.course.id);
+        this.paypalReturnUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'enrol/paypal/return.php');
+        // Initialize the self enrol modal.
+        this.selfEnrolModal = this.modalCtrl.create('CoreCoursesSelfEnrolPasswordPage');
+        this.selfEnrolModal.onDidDismiss(function (password) {
+            if (typeof password != 'undefined') {
+                _this.selfEnrolInCourse(password, _this.currentInstanceId);
             }
-        }).finally(function () {
-            _this.eventsLoaded = true;
         });
-    };
-    /**
-     * Fetch all the data required for the view.
-     *
-     * @param {boolean} [refresh] Empty events array first.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonCalendarListPage.prototype.fetchData = function (refresh) {
-        var _this = this;
-        if (refresh === void 0) { refresh = false; }
-        this.daysLoaded = 0;
-        this.emptyEventsTimes = 0;
-        // Load courses for the popover.
-        return this.coursesProvider.getUserCourses(false).then(function (courses) {
-            // Add "All courses".
-            courses.unshift(_this.allCourses);
-            _this.courses = courses;
-            return _this.fetchEvents(refresh);
-        });
-    };
-    /**
-     * Fetches the events and updates the view.
-     *
-     * @param {boolean} [refresh] Empty events array first.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonCalendarListPage.prototype.fetchEvents = function (refresh) {
-        var _this = this;
-        if (refresh === void 0) { refresh = false; }
-        return this.calendarProvider.getEventsList(this.daysLoaded, __WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */].DAYS_INTERVAL).then(function (events) {
-            _this.daysLoaded += __WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */].DAYS_INTERVAL;
-            if (events.length === 0) {
-                _this.emptyEventsTimes++;
-                if (_this.emptyEventsTimes > 5) {
-                    _this.canLoadMore = false;
-                    if (refresh) {
-                        _this.events = [];
-                        _this.filteredEvents = [];
+        this.getCourse().finally(function () {
+            // Determine course prefetch icon.
+            _this.courseHelper.getCourseStatusIcon(_this.course.id).then(function (icon) {
+                _this.prefetchCourseData.prefetchCourseIcon = icon;
+                if (icon == 'spinner') {
+                    // Course is being downloaded. Get the download promise.
+                    var promise = _this.courseHelper.getCourseDownloadPromise(_this.course.id);
+                    if (promise) {
+                        // There is a download promise. If it fails, show an error.
+                        promise.catch(function (error) {
+                            if (!_this.pageDestroyed) {
+                                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
+                            }
+                        });
+                    }
+                    else {
+                        // No download, this probably means that the app was closed while downloading. Set previous status.
+                        _this.courseProvider.setCoursePreviousStatus(_this.course.id);
                     }
                 }
-                else {
-                    // No events returned, load next events.
-                    return _this.fetchEvents();
-                }
-            }
-            else {
-                // Sort the events by timestart, they're ordered by id.
-                events.sort(function (a, b) {
-                    return a.timestart - b.timestart;
-                });
-                events.forEach(_this.calendarHelper.formatEventData.bind(_this.calendarHelper));
-                _this.getCategories = _this.shouldLoadCategories(events);
-                if (refresh) {
-                    _this.events = events;
-                }
-                else {
-                    // Filter events with same ID. Repeated events are returned once per WS call, show them only once.
-                    _this.events = _this.utils.mergeArraysWithoutDuplicates(_this.events, events, 'id');
-                }
-                _this.filteredEvents = _this.getFilteredEvents();
-                _this.canLoadMore = true;
-                // Schedule notifications for the events retrieved (might have new events).
-                _this.calendarProvider.scheduleEventsNotifications(_this.events);
-            }
-            // Resize the content so infinite loading is able to calculate if it should load more items or not.
-            // @todo: Infinite loading is not working if content is not high enough.
-            _this.content.resize();
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.calendar.errorloadevents', true);
-            _this.canLoadMore = false; // Set to false to prevent infinite calls with infinite-loading.
-        }).then(function () {
-            // Success retrieving events. Get categories if needed.
-            if (_this.getCategories) {
-                _this.getCategories = false;
-                return _this.loadCategories();
-            }
-        });
-    };
-    /**
-     * Get filtered events.
-     *
-     * @return {any[]} Filtered events.
-     */
-    AddonCalendarListPage.prototype.getFilteredEvents = function () {
-        if (this.filter.course.id == -1) {
-            // No filter, display everything.
-            return this.events;
-        }
-        return this.events.filter(this.shouldDisplayEvent.bind(this));
-    };
-    /**
-     * Check if an event should be displayed based on the filter.
-     *
-     * @param {any} event Event object.
-     * @return {boolean} Whether it should be displayed.
-     */
-    AddonCalendarListPage.prototype.shouldDisplayEvent = function (event) {
-        if (event.eventtype == 'user' || event.eventtype == 'site') {
-            // User or site event, display it.
-            return true;
-        }
-        if (event.eventtype == 'category') {
-            if (!event.categoryid || !Object.keys(this.categories).length) {
-                // We can't tell if the course belongs to the category, display them all.
-                return true;
-            }
-            if (event.categoryid == this.filter.course.category) {
-                // The event is in the same category as the course, display it.
-                return true;
-            }
-            // Check parent categories.
-            var category = this.categories[this.filter.course.category];
-            while (category) {
-                if (!category.parent) {
-                    // Category doesn't have parent, stop.
-                    break;
-                }
-                if (event.categoryid == category.parent) {
-                    return true;
-                }
-                category = this.categories[category.parent];
-            }
-            return false;
-        }
-        // Show the event if it is from site home or if it matches the selected course.
-        return event.courseid === this.siteHomeId || event.courseid == this.filter.course.id;
-    };
-    /**
-     * Returns if the current state should load categories or not.
-     * @param {any[]} events Events to parse.
-     * @return {boolean}  True if categories should be loaded.
-     */
-    AddonCalendarListPage.prototype.shouldLoadCategories = function (events) {
-        if (this.categoriesRetrieved || this.getCategories) {
-            // Use previous value
-            return this.getCategories;
-        }
-        // Categories not loaded yet. We should get them if there's any category event.
-        var found = events.some(function (event) { return event.categoryid != 'undefined' && event.categoryid > 0; });
-        return found || this.getCategories;
-    };
-    /**
-     * Load categories to be able to filter events.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonCalendarListPage.prototype.loadCategories = function () {
-        var _this = this;
-        return this.coursesProvider.getCategories(0, true).then(function (cats) {
-            _this.categoriesRetrieved = true;
-            _this.categories = {};
-            // Index categories by ID.
-            cats.forEach(function (category) {
-                _this.categories[category.id] = category;
-            });
-        }).catch(function () {
-            // Ignore errors.
-        });
-    };
-    /**
-     * Refresh the events.
-     *
-     * @param {any} refresher Refresher.
-     */
-    AddonCalendarListPage.prototype.refreshEvents = function (refresher) {
-        var _this = this;
-        var promises = [];
-        promises.push(this.calendarProvider.invalidateEventsList(this.courses));
-        if (this.categoriesRetrieved) {
-            promises.push(this.coursesProvider.invalidateCategories(0, true));
-            this.categoriesRetrieved = false;
-        }
-        Promise.all(promises).finally(function () {
-            _this.fetchData(true).finally(function () {
-                refresher.complete();
             });
         });
-    };
-    /**
-     * Show the context menu.
-     *
-     * @param {MouseEvent} event Event.
-     */
-    AddonCalendarListPage.prototype.openCourseFilter = function (event) {
-        var _this = this;
-        var popover = this.popoverCtrl.create(__WEBPACK_IMPORTED_MODULE_10__components_course_picker_menu_course_picker_menu_popover__["a" /* CoreCoursePickerMenuPopoverComponent */], {
-            courses: this.courses,
-            courseId: this.filter.course.id
-        });
-        popover.onDidDismiss(function (course) {
-            if (course) {
-                _this.filter.course = course;
-                _this.content.scrollToTop();
-                _this.filteredEvents = _this.getFilteredEvents();
-            }
-        });
-        popover.present({
-            ev: event
-        });
-    };
-    /**
-     * Open calendar events settings.
-     */
-    AddonCalendarListPage.prototype.openSettings = function () {
-        this.navCtrl.push('AddonCalendarSettingsPage');
-    };
-    /**
-     * Navigate to a particular event.
-     *
-     * @param {number} eventId Event to load.
-     */
-    AddonCalendarListPage.prototype.gotoEvent = function (eventId) {
-        this.eventId = eventId;
-        this.splitviewCtrl.push('AddonCalendarEventPage', { id: eventId });
     };
     /**
      * Page destroyed.
      */
-    AddonCalendarListPage.prototype.ngOnDestroy = function () {
-        this.obsDefaultTimeChange && this.obsDefaultTimeChange.off();
+    CoreCoursesCoursePreviewPage.prototype.ngOnDestroy = function () {
+        this.pageDestroyed = true;
+        if (this.courseStatusObserver) {
+            this.courseStatusObserver.off();
+        }
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonCalendarListPage.prototype, "content", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
-    ], AddonCalendarListPage.prototype, "splitviewCtrl", void 0);
-    AddonCalendarListPage = __decorate([
+    /**
+     * Check if the user can access as guest.
+     *
+     * @return {Promise<boolean>} Promise resolved if can access as guest, rejected otherwise. Resolve param indicates if
+     *                            password is required for guest access.
+     */
+    CoreCoursesCoursePreviewPage.prototype.canAccessAsGuest = function () {
+        if (!this.isGuestEnabled) {
+            return Promise.reject(null);
+        }
+        // Search instance ID of guest enrolment method.
+        this.guestInstanceId = undefined;
+        for (var i = 0; i < this.enrollmentMethods.length; i++) {
+            var method = this.enrollmentMethods[i];
+            if (method.type == 'guest') {
+                this.guestInstanceId = method.id;
+                break;
+            }
+        }
+        if (this.guestInstanceId) {
+            return this.coursesProvider.getCourseGuestEnrolmentInfo(this.guestInstanceId).then(function (info) {
+                if (!info.status) {
+                    // Not active, reject.
+                    return Promise.reject(null);
+                }
+                return info.passwordrequired;
+            });
+        }
+        return Promise.reject(null);
+    };
+    /**
+     * Convenience function to get course. We use this to determine if a user can see the course or not.
+     *
+     * @param {boolean} refresh Whether the user is refreshing the data.
+     */
+    CoreCoursesCoursePreviewPage.prototype.getCourse = function (refresh) {
+        var _this = this;
+        // Get course enrolment methods.
+        this.selfEnrolInstances = [];
+        return this.coursesProvider.getCourseEnrolmentMethods(this.course.id).then(function (methods) {
+            _this.enrollmentMethods = methods;
+            _this.enrollmentMethods.forEach(function (method) {
+                if (method.type === 'self') {
+                    _this.selfEnrolInstances.push(method);
+                }
+                else if (_this.guestWSAvailable && method.type === 'guest') {
+                    _this.isGuestEnabled = true;
+                }
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error getting enrolment data');
+        }).then(function () {
+            // Check if user is enrolled in the course.
+            return _this.coursesProvider.getUserCourse(_this.course.id).then(function (course) {
+                _this.isEnrolled = true;
+                return course;
+            }).catch(function () {
+                // The user is not enrolled in the course. Use getCourses to see if it's an admin/manager and can see the course.
+                _this.isEnrolled = false;
+                return _this.coursesProvider.getCourse(_this.course.id);
+            }).then(function (course) {
+                // Success retrieving the course, we can assume the user has permissions to view it.
+                _this.course.fullname = course.fullname || _this.course.fullname;
+                _this.course.summary = course.summary || _this.course.summary;
+                _this.canAccessCourse = true;
+            }).catch(function () {
+                // The user is not an admin/manager. Check if we can provide guest access to the course.
+                return _this.canAccessAsGuest().then(function (passwordRequired) {
+                    if (!passwordRequired) {
+                        _this.canAccessCourse = true;
+                    }
+                    else {
+                        _this.canAccessCourse = false;
+                    }
+                }).catch(function () {
+                    _this.canAccessCourse = false;
+                });
+            });
+        }).finally(function () {
+            _this.dataLoaded = true;
+        });
+    };
+    /**
+     * Open the course.
+     */
+    CoreCoursesCoursePreviewPage.prototype.openCourse = function () {
+        if (!this.canAccessCourse) {
+            // Course cannot be opened.
+            return;
+        }
+        this.navCtrl.push('CoreCourseSectionPage', { course: this.course });
+    };
+    /**
+     * Enrol using PayPal.
+     */
+    CoreCoursesCoursePreviewPage.prototype.paypalEnrol = function () {
+        var _this = this;
+        var window, hasReturnedFromPaypal = false, inAppLoadSubscription, inAppFinishSubscription, inAppExitSubscription, appResumeSubscription;
+        var urlLoaded = function (event) {
+            if (event.url.indexOf(_this.paypalReturnUrl) != -1) {
+                hasReturnedFromPaypal = true;
+            }
+            else if (event.url.indexOf(_this.courseUrl) != -1 && hasReturnedFromPaypal) {
+                // User reached the course index page after returning from PayPal, close the InAppBrowser.
+                inAppClosed();
+                window.close();
+            }
+        }, inAppClosed = function () {
+            // InAppBrowser closed, refresh data.
+            unsubscribeAll();
+            if (!_this.dataLoaded) {
+                return;
+            }
+            _this.dataLoaded = false;
+            _this.refreshData();
+        }, unsubscribeAll = function () {
+            inAppLoadSubscription && inAppLoadSubscription.unsubscribe();
+            inAppFinishSubscription && inAppFinishSubscription.unsubscribe();
+            inAppExitSubscription && inAppExitSubscription.unsubscribe();
+            appResumeSubscription && appResumeSubscription.unsubscribe();
+        };
+        // Open the enrolment page in InAppBrowser.
+        this.sitesProvider.getCurrentSite().openInAppWithAutoLogin(this.enrolUrl).then(function (w) {
+            window = w;
+            if (_this.isDesktop || _this.isMobile) {
+                // Observe loaded pages in the InAppBrowser to check if the enrol process has ended.
+                inAppLoadSubscription = window.on('loadstart').subscribe(urlLoaded);
+                // Observe window closed.
+                inAppExitSubscription = window.on('exit').subscribe(inAppClosed);
+            }
+            if (_this.isDesktop) {
+                // In desktop, also observe stop loading since some pages don't throw the loadstart event.
+                inAppFinishSubscription = window.on('loadstop').subscribe(urlLoaded);
+                // Since the user can switch windows, reload the data if he comes back to the app.
+                appResumeSubscription = _this.platform.resume.subscribe(function () {
+                    if (!_this.dataLoaded) {
+                        return;
+                    }
+                    _this.dataLoaded = false;
+                    _this.refreshData();
+                });
+            }
+        });
+    };
+    /**
+     * User clicked in a self enrol button.
+     *
+     * @param {number} instanceId The instance ID of the enrolment method.
+     */
+    CoreCoursesCoursePreviewPage.prototype.selfEnrolClicked = function (instanceId) {
+        var _this = this;
+        this.domUtils.showConfirm(this.translate.instant('core.courses.confirmselfenrol')).then(function () {
+            _this.selfEnrolInCourse('', instanceId);
+        }).catch(function () {
+            // User cancelled.
+        });
+    };
+    /**
+     * Self enrol in a course.
+     *
+     * @param {string} password Password to use.
+     * @param {number} instanceId The instance ID.
+     * @return {Promise<any>} Promise resolved when self enrolled.
+     */
+    CoreCoursesCoursePreviewPage.prototype.selfEnrolInCourse = function (password, instanceId) {
+        var _this = this;
+        var modal = this.domUtils.showModalLoading('core.loading', true);
+        return this.coursesProvider.selfEnrol(this.course.id, password, instanceId).then(function () {
+            // Close modal and refresh data.
+            _this.isEnrolled = true;
+            _this.dataLoaded = false;
+            // Sometimes the list of enrolled courses takes a while to be updated. Wait for it.
+            _this.waitForEnrolled(true).then(function () {
+                _this.refreshData().finally(function () {
+                    // My courses have been updated, trigger event.
+                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */].EVENT_MY_COURSES_UPDATED, {}, _this.sitesProvider.getCurrentSiteId());
+                });
+            });
+        }).catch(function (error) {
+            if (error && error.code === __WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */].ENROL_INVALID_KEY) {
+                // Invalid password, show the modal to enter the password.
+                _this.selfEnrolModal.present();
+                _this.currentInstanceId = instanceId;
+                if (!password) {
+                    // No password entered, don't show error.
+                    return;
+                }
+            }
+            _this.domUtils.showErrorModalDefault(error, 'core.courses.errorselfenrol', true);
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
+    /**
+     * Refresh the data.
+     *
+     * @param {any} [refresher] The refresher if this was triggered by a Pull To Refresh.
+     */
+    CoreCoursesCoursePreviewPage.prototype.refreshData = function (refresher) {
+        var _this = this;
+        var promises = [];
+        promises.push(this.coursesProvider.invalidateUserCourses());
+        promises.push(this.coursesProvider.invalidateCourse(this.course.id));
+        promises.push(this.coursesProvider.invalidateCourseEnrolmentMethods(this.course.id));
+        promises.push(this.courseOptionsDelegate.clearAndInvalidateCoursesOptions(this.course.id));
+        if (this.guestInstanceId) {
+            promises.push(this.coursesProvider.invalidateCourseGuestEnrolmentInfo(this.guestInstanceId));
+        }
+        return Promise.all(promises).finally(function () {
+            return _this.getCourse(true);
+        }).finally(function () {
+            if (refresher) {
+                refresher.complete();
+            }
+        });
+    };
+    /**
+     * Wait for the user to be enrolled in the course.
+     *
+     * @param {boolean} first If it's the first call (true) or it's a recursive call (false).
+     * @return {Promise<any>} Promise resolved when enrolled or timeout.
+     */
+    CoreCoursesCoursePreviewPage.prototype.waitForEnrolled = function (first) {
+        var _this = this;
+        if (first) {
+            this.waitStart = Date.now();
+        }
+        // Check if user is enrolled in the course.
+        return this.coursesProvider.invalidateUserCourses().catch(function () {
+            // Ignore errors.
+        }).then(function () {
+            return _this.coursesProvider.getUserCourse(_this.course.id);
+        }).catch(function () {
+            // Not enrolled, wait a bit and try again.
+            if (_this.pageDestroyed || (Date.now() - _this.waitStart > 60000)) {
+                // Max time reached or the user left the view, stop.
+                return;
+            }
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    if (!_this.pageDestroyed) {
+                        // Wait again.
+                        _this.waitForEnrolled().then(resolve);
+                    }
+                    else {
+                        resolve();
+                    }
+                }, 5000);
+            });
+        });
+    };
+    /**
+     * Prefetch the course.
+     */
+    CoreCoursesCoursePreviewPage.prototype.prefetchCourse = function () {
+        var _this = this;
+        this.courseHelper.confirmAndPrefetchCourse(this.prefetchCourseData, this.course).catch(function (error) {
+            if (!_this.pageDestroyed) {
+                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
+            }
+        });
+    };
+    CoreCoursesCoursePreviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-calendar-list',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.calendar.calendarevents\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button *ngIf="courses && courses.length" ion-button icon-only (click)="openCourseFilter($event)" [attr.aria-label]="\'core.courses.filter\' | translate">\n                <ion-icon name="funnel"></ion-icon>\n            </button>\n            <core-context-menu>\n                <core-context-menu-item [hidden]="!notificationsEnabled" [priority]="600" [content]="\'core.settings.settings\' | translate" (action)="openSettings()" [iconAction]="\'cog\'"></core-context-menu-item>\n            </core-context-menu>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="eventsLoaded" (ionRefresh)="refreshEvents($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="eventsLoaded">\n            <core-empty-box *ngIf="!filteredEvents || !filteredEvents.length" icon="calendar" [message]="\'addon.calendar.noevents\' | translate">\n            </core-empty-box>\n\n            <ion-list *ngIf="filteredEvents && filteredEvents.length" no-margin>\n                <a ion-item text-wrap *ngFor="let event of filteredEvents" [title]="event.name" (click)="gotoEvent(event.id)" [class.core-split-item-selected]="event.id == eventId">\n                    <img *ngIf="event.moduleIcon" src="{{event.moduleIcon}}" item-start class="core-module-icon">\n                    <ion-icon *ngIf="!event.moduleIcon" name="{{event.icon}}" item-start></ion-icon>\n                    <h2><core-format-text [text]="event.name"></core-format-text></h2>\n                    <p>{{ event.timestart | coreToLocaleString }}</p>\n                </a>\n            </ion-list>\n\n            <ion-infinite-scroll [enabled]="canLoadMore" (ionInfinite)="$event.waitFor(fetchEvents())">\n               <ion-infinite-scroll-content></ion-infinite-scroll-content>\n            </ion-infinite-scroll>\n        </core-loading>\n    </ion-content>\n</core-split-view>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/list/list.html"*/,
+            selector: 'page-core-courses-course-preview',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/courses/pages/course-preview/course-preview.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="course.fullname"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="dataLoaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="dataLoaded">\n\n        <ion-list *ngIf="course">\n            <a ion-item text-wrap (click)="openCourse()" [title]="course.fullname" [attr.detail-none]="!canAccessCourse">\n                <ion-icon name="ionic" item-start></ion-icon>\n                <h2><core-format-text [text]="course.fullname"></core-format-text></h2>\n                <p *ngIf="course.categoryname">{{course.categoryname}}</p>\n                <p *ngIf="course.startdate">{{course.startdate * 1000 | coreFormatDate:"dfdaymonthyear"}} <span *ngIf="course.enddate"> - {{course.enddate * 1000 | coreFormatDate:"dfdaymonthyear"}}</span></p>\n            </a>\n\n            <ion-item text-wrap *ngIf="course.summary" detail-none>\n                <core-format-text [text]="course.summary" maxHeight="120"></core-format-text>\n            </ion-item>\n\n            <ng-container text-wrap *ngIf="course.contacts && course.contacts.length">\n                <ion-item-divider color="light">{{ \'core.teachers\' | translate }}</ion-item-divider>\n                <a ion-item text-wrap *ngFor="let contact of course.contacts" core-user-link userId="{{contact.id}}" courseId="{{isEnrolled ? course.id : null}}" [attr.aria-label]="\'core.viewprofile\' | translate">{{contact.fullname}}</a>\n                <ion-item-divider color="light"></ion-item-divider>\n            </ng-container>\n            <core-file *ngFor="let file of course.overviewfiles" [file]="file" [component]="component" [componentId]="course.id"></core-file>\n            <div *ngIf="!isEnrolled" detail-none>\n                <ion-item text-wrap *ngFor="let instance of selfEnrolInstances">\n                    <h2>{{ instance.name }}</h2>\n                    <button ion-button block margin-top (click)="selfEnrolClicked(instance.id)">{{ \'core.courses.enrolme\' | translate }}</button>\n                </ion-item>\n            </div>\n            <ion-item text-wrap *ngIf="!isEnrolled && paypalEnabled" detail-none>\n                <h2>{{ \'core.courses.paypalaccepted\' | translate }}</h2>\n                <p>{{ \'core.paymentinstant\' | translate }}</p>\n                <button ion-button block margin-top (click)="paypalEnrol()">{{ \'core.courses.sendpaymentbutton\' | translate }}</button>\n            </ion-item>\n            <ion-item *ngIf="!isEnrolled && !selfEnrolInstances.length && !paypalEnabled">\n                <p>{{ \'core.courses.notenrollable\' | translate }}</p>\n            </ion-item>\n            <a ion-item *ngIf="canAccessCourse" (click)="prefetchCourse()" detail-none>\n                <ion-icon *ngIf="prefetchCourseData.prefetchCourseIcon != \'spinner\'" [name]="prefetchCourseData.prefetchCourseIcon" item-start></ion-icon>\n                <ion-spinner *ngIf="prefetchCourseData.prefetchCourseIcon == \'spinner\'" item-start></ion-spinner>\n                <h2>{{ \'core.course.downloadcourse\' | translate }}</h2>\n            </a>\n            <a ion-item (click)="openCourse()" [title]="course.fullname" *ngIf="canAccessCourse">\n                <ion-icon name="briefcase" item-start></ion-icon>\n                <h2>{{ \'core.course.contents\' | translate }}</h2>\n            </a>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/courses/pages/course-preview/course-preview.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__core_courses_providers_courses__["a" /* CoreCoursesProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_utils_utils__["a" /* CoreUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* AddonCalendarHelperProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* PopoverController */],
-            __WEBPACK_IMPORTED_MODULE_11__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_12__providers_app__["a" /* CoreAppProvider */]])
-    ], AddonCalendarListPage);
-    return AddonCalendarListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_9__core_course_providers_options_delegate__["a" /* CoreCourseOptionsDelegate */], __WEBPACK_IMPORTED_MODULE_11__core_course_providers_helper__["a" /* CoreCourseHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__["a" /* CoreCourseProvider */]])
+    ], CoreCoursesCoursePreviewPage);
+    return CoreCoursesCoursePreviewPage;
 }());
 
-//# sourceMappingURL=list.js.map
+//# sourceMappingURL=course-preview.js.map
 
 /***/ })
 

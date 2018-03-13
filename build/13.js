@@ -1,18 +1,17 @@
 webpackJsonp([13],{
 
-/***/ 1185:
+/***/ 1289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreUserAboutPageModule", function() { return CoreUserAboutPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSettingsListPageModule", function() { return CoreSettingsListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about__ = __webpack_require__(1240);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(641);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list__ = __webpack_require__(1340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(50);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,43 +37,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var CoreUserAboutPageModule = /** @class */ (function () {
-    function CoreUserAboutPageModule() {
+var CoreSettingsListPageModule = /** @class */ (function () {
+    function CoreSettingsListPageModule() {
     }
-    CoreUserAboutPageModule = __decorate([
+    CoreSettingsListPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__about__["a" /* CoreUserAboutPage */],
+                __WEBPACK_IMPORTED_MODULE_3__list__["a" /* CoreSettingsListPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* CoreUserComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__about__["a" /* CoreUserAboutPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__list__["a" /* CoreSettingsListPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], CoreUserAboutPageModule);
-    return CoreUserAboutPageModule;
+    ], CoreSettingsListPageModule);
+    return CoreSettingsListPageModule;
 }());
 
-//# sourceMappingURL=about.module.js.map
+//# sourceMappingURL=list.module.js.map
 
 /***/ }),
 
-/***/ 1240:
+/***/ 1340:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreUserAboutPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_user__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_helper__ = __webpack_require__(644);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_events__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sites__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_delegate__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__ = __webpack_require__(166);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -101,86 +95,53 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
 /**
- * Page that displays an user about page.
+ * Page that displays the list of settings pages.
  */
-var CoreUserAboutPage = /** @class */ (function () {
-    function CoreUserAboutPage(navParams, userProvider, userHelper, domUtils, eventsProvider, sitesProvider, platform) {
-        this.userProvider = userProvider;
-        this.userHelper = userHelper;
-        this.domUtils = domUtils;
-        this.eventsProvider = eventsProvider;
-        this.sitesProvider = sitesProvider;
-        this.platform = platform;
-        this.userLoaded = false;
-        this.hasContact = false;
-        this.hasDetails = false;
-        this.isAndroid = false;
-        this.user = {};
-        this.userId = navParams.get('userId');
-        this.courseId = navParams.get('courseId');
-        this.isAndroid = this.platform.is('android');
-        this.siteId = this.sitesProvider.getCurrentSite().getId();
+var CoreSettingsListPage = /** @class */ (function () {
+    function CoreSettingsListPage(settingsDelegate, navCtrl, platorm, navParams) {
+        this.settingsDelegate = settingsDelegate;
+        this.navCtrl = navCtrl;
+        this.isIOS = platorm.is('ios');
+        this.selectedPage = navParams.get('page') || false;
     }
     /**
      * View loaded.
      */
-    CoreUserAboutPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.fetchUser().finally(function () {
-            _this.userLoaded = true;
-        });
+    CoreSettingsListPage.prototype.ionViewDidLoad = function () {
+        this.handlers = this.settingsDelegate.getHandlers();
+        if (this.selectedPage) {
+            this.openHandler(this.selectedPage);
+        }
+        else if (this.splitviewCtrl.isOn()) {
+            this.openHandler('CoreSettingsGeneralPage');
+        }
     };
     /**
-     * Fetches the user and updates the view.
-     */
-    CoreUserAboutPage.prototype.fetchUser = function () {
-        var _this = this;
-        return this.userProvider.getProfile(this.userId, this.courseId).then(function (user) {
-            if (user.address) {
-                user.address = _this.userHelper.formatAddress(user.address, user.city, user.country);
-                user.encodedAddress = encodeURIComponent(user.address);
-            }
-            _this.hasContact = user.email || user.phone1 || user.phone2 || user.city || user.country || user.address;
-            _this.hasDetails = user.url || user.interests || (user.customfields && user.customfields.length > 0);
-            _this.user = user;
-            _this.title = user.fullname;
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'core.user.errorloaduser', true);
-        });
-    };
-    /**
-     * Refresh the user.
+     * Open a handler.
      *
-     * @param {any} refresher Refresher.
+     * @param {string} page Page to open.
+     * @param {any} params Params of the page to open.
      */
-    CoreUserAboutPage.prototype.refreshUser = function (refresher) {
-        var _this = this;
-        this.userProvider.invalidateUserCache(this.userId).finally(function () {
-            _this.fetchUser().finally(function () {
-                _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_2__providers_user__["a" /* CoreUserProvider */].PROFILE_REFRESHED, {
-                    courseId: _this.courseId, userId: _this.userId,
-                    user: _this.user
-                }, _this.siteId);
-                refresher && refresher.complete();
-            });
-        });
+    CoreSettingsListPage.prototype.openHandler = function (page, params) {
+        this.selectedPage = page;
+        this.splitviewCtrl.push(page, params);
     };
-    CoreUserAboutPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
+    ], CoreSettingsListPage.prototype, "splitviewCtrl", void 0);
+    CoreSettingsListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-user-about',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/user/pages/about/about.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="userLoaded" (ionRefresh)="refreshUser($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="userLoaded">\n        <div *ngIf="user">\n            <ion-item-group *ngIf="hasContact">\n                <ion-item-divider color="light">{{ \'core.user.contact\' | translate}}</ion-item-divider>\n                <ion-item text-wrap *ngIf="user.email">\n                    <h2>{{ \'core.user.email\' | translate }}</h2>\n                    <p><a href="mailto:{{user.email}}" core-link auto-login="no">\n                        <core-format-text [text]="user.email"></core-format-text>\n                    </a></p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="user.phone1">\n                    <h2>{{ \'core.user.phone1\' | translate}}</h2>\n                    <p><a href="tel:{{user.phone1}}" core-link auto-login="no">\n                        <core-format-text [text]="user.phone1"></core-format-text>\n                    </a></p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="user.phone2">\n                    <h2>{{ \'core.user.phone2\' | translate}}</h2>\n                    <p><a href="tel:{{user.phone2}}" core-link auto-login="no">\n                        <core-format-text [text]="user.phone2"></core-format-text>\n                    </a></p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="user.address">\n                    <h2>{{ \'core.user.address\' | translate}}</h2>\n                    <p><a *ngIf="isAndroid" href="geo:0,0?q={{user.encodedAddress}}" core-link auto-login="no">\n                            <core-format-text [text]="user.address"></core-format-text>\n                        </a>\n                        <a *ngIf="!isAndroid" href="http://maps.google.com?q={{user.encodedAddress}}" core-link auto-login="no">\n                            <core-format-text [text]="user.address"></core-format-text>\n                        </a>\n                    </p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="user.city && !user.address">\n                    <h2>{{ \'core.user.city\' | translate}}</h2>\n                    <p><core-format-text [text]="user.city"></core-format-text></p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="user.country && !user.address">\n                    <h2>{{ \'core.user.country\' | translate}}</h2>\n                    <p><core-format-text [text]="user.country"></core-format-text></p>\n                </ion-item>\n            </ion-item-group>\n            <ion-item-group *ngIf="hasDetails">\n                <ion-item-divider color="light">{{ \'core.userdetails\' | translate}}</ion-item-divider>\n                <ion-item text-wrap *ngIf="user.url">\n                    <h2>{{ \'core.user.webpage\' | translate}}</h2>\n                    <p><a href="{{user.url}}" core-link>\n                        <core-format-text [text]="user.url"></core-format-text>\n                    </a></p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="user.interests">\n                    <h2>{{ \'core.user.interests\' | translate}}</h2>\n                    <p><core-format-text [text]="user.interests"></core-format-text></p>\n                </ion-item>\n                <core-user-profile-field *ngFor="let field of user.customfields" [field]="field"></core-user-profile-field>\n            </ion-item-group>\n            <ion-item-group *ngIf="user.description">\n                <ion-item-divider color="light">{{ \'core.user.description\' | translate}}</ion-item-divider>\n                <ion-item text-wrap>\n                    <p><core-format-text [text]="user.description"></core-format-text></p>\n                </ion-item>\n            </ion-item-group>\n        </div>\n        <core-empty-box *ngIf="!user || (!hasContact && !hasDetails && !user.description)" icon="person" [message]=" \'core.user.detailsnotavailable\' | translate"></core-empty-box>\n    </core-loading>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/user/pages/about/about.html"*/,
+            selector: 'page-core-settings-list',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/settings/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.settings\' | translate}}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-list>\n            <ion-item (click)="openHandler(\'CoreSettingsGeneralPage\')" [title]="\'core.settings.general\' | translate"  [class.core-split-item-selected]="\'CoreSettingsGeneralPage\' == selectedPage" detail-push>\n                <ion-icon name="construct" item-start></ion-icon>\n                <p>{{ \'core.settings.general\' | translate }}</p>\n            </ion-item>\n            <ion-item (click)="openHandler(\'CoreSettingsSpaceUsagePage\')" [title]="\'core.settings.spaceusage\' | translate" [class.core-split-item-selected]="\'CoreSettingsSpaceUsagePage\' == selectedPage" detail-push>\n                <ion-icon name="stats" item-start></ion-icon>\n                <p>{{ \'core.settings.spaceusage\' | translate }}</p>\n            </ion-item>\n            <ion-item (click)="openHandler(\'CoreSettingSynchronizationPage\')" [title]="\'core.settings.synchronization\' | translate" [class.core-split-item-selected]="\'CoreSettingSynchronizationPage\' == selectedPage" detail-push>\n                <ion-icon name="sync" item-start></ion-icon>\n                <p>{{ \'core.settings.synchronization\' | translate }}</p>\n            </ion-item>\n            <ion-item *ngIf="isIOS" (click)="openHandler(\'CoreSharedFilesListPage\', {manage: true})" [title]="\'core.sharedfiles.sharedfiles\' | translate" [class.core-split-item-selected]="\'CoreSharedFilesListPage\' == selectedPage" detail-push>\n                <ion-icon name="folder" item-start></ion-icon>\n                <p>{{ \'core.sharedfiles.sharedfiles\' | translate }}</p>\n            </ion-item>\n\n            <ion-item *ngFor="let handler of handlers" [ngClass]="[\'core-settings-handler\', handler.class]" (click)="openHandler(handler.page, handler.params)" [title]="handler.title | translate" detail-push [class.core-split-item-selected]="handler.page == selectedPage">\n                <ion-icon [name]="handler.icon" item-start *ngIf="handler.icon"></ion-icon>\n                <p>{{ handler.title | translate}}</p>\n            </ion-item>\n\n            <ion-item (click)="openHandler(\'CoreSettingsAboutPage\')" [title]="\'core.settings.about\' | translate" [class.core-split-item-selected]="\'CoreSettingsAboutPage\' == selectedPage" detail-push>\n                <ion-icon name="contacts" item-start></ion-icon>\n                <p>{{ \'core.settings.about\' | translate }}</p>\n            </ion-item>\n        </ion-list>\n    </ion-content>\n</core-split-view>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/settings/pages/list/list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_user__["a" /* CoreUserProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_helper__["a" /* CoreUserHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */]])
-    ], CoreUserAboutPage);
-    return CoreUserAboutPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_delegate__["a" /* CoreSettingsDelegate */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+    ], CoreSettingsListPage);
+    return CoreSettingsListPage;
 }());
 
-//# sourceMappingURL=about.js.map
+//# sourceMappingURL=list.js.map
 
 /***/ })
 

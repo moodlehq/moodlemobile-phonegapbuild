@@ -23814,7 +23814,7 @@ ion-spinner.spinner-paused svg {
   bottom: auto;
 }
 
-.tab-button, core-tabs .core-tabs-bar > a, page-core-course-section .core-tabs-bar > a {
+.tab-button, core-tabs .core-tabs-bar > a {
   margin: 0;
   text-align: center;
   border-radius: 0;
@@ -23892,28 +23892,22 @@ ion-spinner.spinner-paused svg {
   white-space: normal;
 }
 
-[tabsLayout=icon-bottom] .tab-button .tab-button-icon, [tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-icon, [tabsLayout=icon-bottom] page-core-course-section .core-tabs-bar > a .tab-button-icon, page-core-course-section [tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-icon {
+[tabsLayout=icon-bottom] .tab-button .tab-button-icon, [tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-icon {
   -webkit-box-ordinal-group: 11;
   -webkit-order: 10;
   -ms-flex-order: 10;
   order: 10;
 }
 
-[tabsLayout=icon-left] .tab-button, [tabsLayout=icon-left] core-tabs .core-tabs-bar > a, core-tabs [tabsLayout=icon-left] .core-tabs-bar > a, [tabsLayout=icon-left] page-core-course-section .core-tabs-bar > a, page-core-course-section [tabsLayout=icon-left] .core-tabs-bar > a,
+[tabsLayout=icon-left] .tab-button, [tabsLayout=icon-left] core-tabs .core-tabs-bar > a, core-tabs [tabsLayout=icon-left] .core-tabs-bar > a,
 [tabsLayout=icon-right] .tab-button,
 [tabsLayout=icon-right] core-tabs .core-tabs-bar > a, core-tabs
-[tabsLayout=icon-right] .core-tabs-bar > a,
-[tabsLayout=icon-right] page-core-course-section .core-tabs-bar > a, page-core-course-section
 [tabsLayout=icon-right] .core-tabs-bar > a,
 [tabsLayout=icon-start] .tab-button,
 [tabsLayout=icon-start] core-tabs .core-tabs-bar > a, core-tabs
 [tabsLayout=icon-start] .core-tabs-bar > a,
-[tabsLayout=icon-start] page-core-course-section .core-tabs-bar > a, page-core-course-section
-[tabsLayout=icon-start] .core-tabs-bar > a,
 [tabsLayout=icon-end] .tab-button,
 [tabsLayout=icon-end] core-tabs .core-tabs-bar > a, core-tabs
-[tabsLayout=icon-end] .core-tabs-bar > a,
-[tabsLayout=icon-end] page-core-course-section .core-tabs-bar > a, page-core-course-section
 [tabsLayout=icon-end] .core-tabs-bar > a {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -23922,22 +23916,18 @@ ion-spinner.spinner-paused svg {
   flex-direction: row;
 }
 
-[tabsLayout=icon-left] .tab-button .tab-button-icon, [tabsLayout=icon-left] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-left] .core-tabs-bar > a .tab-button-icon, [tabsLayout=icon-left] page-core-course-section .core-tabs-bar > a .tab-button-icon, page-core-course-section [tabsLayout=icon-left] .core-tabs-bar > a .tab-button-icon,
+[tabsLayout=icon-left] .tab-button .tab-button-icon, [tabsLayout=icon-left] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-left] .core-tabs-bar > a .tab-button-icon,
 [tabsLayout=icon-start] .tab-button .tab-button-icon,
 [tabsLayout=icon-start] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs
-[tabsLayout=icon-start] .core-tabs-bar > a .tab-button-icon,
-[tabsLayout=icon-start] page-core-course-section .core-tabs-bar > a .tab-button-icon, page-core-course-section
 [tabsLayout=icon-start] .core-tabs-bar > a .tab-button-icon {
   padding-right: 8px;
   text-align: right;
   text-align: end;
 }
 
-[tabsLayout=icon-right] .tab-button .tab-button-icon, [tabsLayout=icon-right] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-right] .core-tabs-bar > a .tab-button-icon, [tabsLayout=icon-right] page-core-course-section .core-tabs-bar > a .tab-button-icon, page-core-course-section [tabsLayout=icon-right] .core-tabs-bar > a .tab-button-icon,
+[tabsLayout=icon-right] .tab-button .tab-button-icon, [tabsLayout=icon-right] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-right] .core-tabs-bar > a .tab-button-icon,
 [tabsLayout=icon-end] .tab-button .tab-button-icon,
 [tabsLayout=icon-end] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs
-[tabsLayout=icon-end] .core-tabs-bar > a .tab-button-icon,
-[tabsLayout=icon-end] page-core-course-section .core-tabs-bar > a .tab-button-icon, page-core-course-section
 [tabsLayout=icon-end] .core-tabs-bar > a .tab-button-icon {
   padding-left: 8px;
   text-align: left;
@@ -23992,7 +23982,7 @@ ion-spinner.spinner-paused svg {
   border-bottom: 0.55px solid rgba(0, 0, 0, 0.3);
 }
 
-.tabs-ios .tab-button, .tabs-ios core-tabs .core-tabs-bar > a, core-tabs .tabs-ios .core-tabs-bar > a, .tabs-ios page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios .core-tabs-bar > a {
+.tabs-ios .tab-button, .tabs-ios core-tabs .core-tabs-bar > a, core-tabs .tabs-ios .core-tabs-bar > a {
   max-width: 240px;
   min-height: 49px;
   font-size: 10px;
@@ -24001,16 +23991,14 @@ ion-spinner.spinner-paused svg {
   padding: 0 2px;
 }
 
-.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-ios .core-tabs-bar > a:hover:not(.disable-hover), .tabs-ios page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-ios .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-ios .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios .tab-button[aria-selected=true],
 .tabs-ios core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
-.tabs-ios .core-tabs-bar > a[aria-selected=true],
-.tabs-ios page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
 .tabs-ios .core-tabs-bar > a[aria-selected=true] {
   color: #f98012;
 }
 
-.tabs-ios .tab-button[aria-selected=true] .tab-button-icon, .tabs-ios core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-ios .core-tabs-bar > a[aria-selected=true] .tab-button-icon, .tabs-ios page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section .tabs-ios .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon, .tabs-ios core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-ios .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #f98012;
 }
 
@@ -24037,72 +24025,54 @@ ion-spinner.spinner-paused svg {
   vertical-align: top;
 }
 
-.tabs-ios[tabsLayout=icon-right] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-right] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .tab-button-text, .tabs-ios[tabsLayout=icon-right] page-core-course-section .core-tabs-bar > a .tab-button-text, page-core-course-section .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .tab-button-text,
+.tabs-ios[tabsLayout=icon-right] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-right] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .tab-button-text,
 .tabs-ios[tabsLayout=icon-left] .tab-button .tab-button-text,
 .tabs-ios[tabsLayout=icon-left] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs
-.tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a .tab-button-text,
-.tabs-ios[tabsLayout=icon-left] page-core-course-section .core-tabs-bar > a .tab-button-text, page-core-course-section
 .tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a .tab-button-text,
 .tabs-ios[tabsLayout=icon-end] .tab-button .tab-button-text,
 .tabs-ios[tabsLayout=icon-end] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs
 .tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a .tab-button-text,
-.tabs-ios[tabsLayout=icon-end] page-core-course-section .core-tabs-bar > a .tab-button-text, page-core-course-section
-.tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a .tab-button-text,
 .tabs-ios[tabsLayout=icon-start] .tab-button .tab-button-text,
 .tabs-ios[tabsLayout=icon-start] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs
-.tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a .tab-button-text,
-.tabs-ios[tabsLayout=icon-start] page-core-course-section .core-tabs-bar > a .tab-button-text, page-core-course-section
 .tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a .tab-button-text {
   font-size: 1.4rem;
   line-height: 1.1;
 }
 
-.tabs-ios[tabsLayout=icon-right] .tab-button ion-icon, .tabs-ios[tabsLayout=icon-right] core-tabs .core-tabs-bar > a ion-icon, core-tabs .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a ion-icon, .tabs-ios[tabsLayout=icon-right] page-core-course-section .core-tabs-bar > a ion-icon, page-core-course-section .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a ion-icon,
+.tabs-ios[tabsLayout=icon-right] .tab-button ion-icon, .tabs-ios[tabsLayout=icon-right] core-tabs .core-tabs-bar > a ion-icon, core-tabs .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a ion-icon,
 .tabs-ios[tabsLayout=icon-left] .tab-button ion-icon,
 .tabs-ios[tabsLayout=icon-left] core-tabs .core-tabs-bar > a ion-icon, core-tabs
-.tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a ion-icon,
-.tabs-ios[tabsLayout=icon-left] page-core-course-section .core-tabs-bar > a ion-icon, page-core-course-section
 .tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a ion-icon,
 .tabs-ios[tabsLayout=icon-end] .tab-button ion-icon,
 .tabs-ios[tabsLayout=icon-end] core-tabs .core-tabs-bar > a ion-icon, core-tabs
 .tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a ion-icon,
-.tabs-ios[tabsLayout=icon-end] page-core-course-section .core-tabs-bar > a ion-icon, page-core-course-section
-.tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a ion-icon,
 .tabs-ios[tabsLayout=icon-start] .tab-button ion-icon,
 .tabs-ios[tabsLayout=icon-start] core-tabs .core-tabs-bar > a ion-icon, core-tabs
-.tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a ion-icon,
-.tabs-ios[tabsLayout=icon-start] page-core-course-section .core-tabs-bar > a ion-icon, page-core-course-section
 .tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a ion-icon {
   min-width: 24px;
   height: 26px;
   font-size: 24px;
 }
 
-.tabs-ios[tabsLayout=icon-hide] .tab-button, .tabs-ios[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a, .tabs-ios[tabsLayout=icon-hide] page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-ios[tabsLayout=icon-hide] .tab-button, .tabs-ios[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a,
 .tabs-ios .tab-button.has-title-only,
 .tabs-ios core-tabs .core-tabs-bar > a.has-title-only, core-tabs
-.tabs-ios .core-tabs-bar > a.has-title-only,
-.tabs-ios page-core-course-section .core-tabs-bar > a.has-title-only, page-core-course-section
 .tabs-ios .core-tabs-bar > a.has-title-only {
   min-height: 41px;
 }
 
-.tabs-ios[tabsLayout=icon-hide] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a .tab-button-text, .tabs-ios[tabsLayout=icon-hide] page-core-course-section .core-tabs-bar > a .tab-button-text, page-core-course-section .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a .tab-button-text,
+.tabs-ios[tabsLayout=icon-hide] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a .tab-button-text,
 .tabs-ios .tab-button.has-title-only .tab-button-text,
 .tabs-ios core-tabs .core-tabs-bar > a.has-title-only .tab-button-text, core-tabs
-.tabs-ios .core-tabs-bar > a.has-title-only .tab-button-text,
-.tabs-ios page-core-course-section .core-tabs-bar > a.has-title-only .tab-button-text, page-core-course-section
 .tabs-ios .core-tabs-bar > a.has-title-only .tab-button-text {
   margin: 2px 0;
   font-size: 1.4rem;
   line-height: 1.1;
 }
 
-.tabs-ios[tabsLayout=title-hide] .tab-button, .tabs-ios[tabsLayout=title-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-ios[tabsLayout=title-hide] .core-tabs-bar > a, .tabs-ios[tabsLayout=title-hide] page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios[tabsLayout=title-hide] .core-tabs-bar > a,
+.tabs-ios[tabsLayout=title-hide] .tab-button, .tabs-ios[tabsLayout=title-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-ios[tabsLayout=title-hide] .core-tabs-bar > a,
 .tabs-ios .tab-button.icon-only,
 .tabs-ios core-tabs .core-tabs-bar > a.icon-only, core-tabs
-.tabs-ios .core-tabs-bar > a.icon-only,
-.tabs-ios page-core-course-section .core-tabs-bar > a.icon-only, page-core-course-section
 .tabs-ios .core-tabs-bar > a.icon-only {
   min-height: 41px;
 }
@@ -24112,26 +24082,20 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-ios-primary .tab-button, .tabs-ios-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-primary .core-tabs-bar > a, .tabs-ios-primary page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-primary .core-tabs-bar > a,
+.tabs-ios-primary .tab-button, .tabs-ios-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-primary .core-tabs-bar > a,
 .tabs-ios-primary .tab-button-icon,
 .tabs-ios-primary .tab-button:hover:not(.disable-hover),
 .tabs-ios-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-primary .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-primary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-primary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-primary .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-primary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-primary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-primary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-primary .tab-button[aria-selected=true], .tabs-ios-primary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-primary .core-tabs-bar > a[aria-selected=true], .tabs-ios-primary page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-primary .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-primary .tab-button[aria-selected=true], .tabs-ios-primary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-primary .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-primary .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-primary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-primary page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24141,26 +24105,20 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-ios-secondary .tab-button, .tabs-ios-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-secondary .core-tabs-bar > a, .tabs-ios-secondary page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-secondary .core-tabs-bar > a,
+.tabs-ios-secondary .tab-button, .tabs-ios-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-secondary .core-tabs-bar > a,
 .tabs-ios-secondary .tab-button-icon,
 .tabs-ios-secondary .tab-button:hover:not(.disable-hover),
 .tabs-ios-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-secondary .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-secondary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-secondary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-secondary .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-secondary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-secondary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-secondary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-secondary .tab-button[aria-selected=true], .tabs-ios-secondary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-secondary .core-tabs-bar > a[aria-selected=true], .tabs-ios-secondary page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-secondary .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-secondary .tab-button[aria-selected=true], .tabs-ios-secondary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-secondary .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-secondary .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-secondary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-secondary page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24170,26 +24128,20 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-ios-danger .tab-button, .tabs-ios-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-danger .core-tabs-bar > a, .tabs-ios-danger page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-danger .core-tabs-bar > a,
+.tabs-ios-danger .tab-button, .tabs-ios-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-danger .core-tabs-bar > a,
 .tabs-ios-danger .tab-button-icon,
 .tabs-ios-danger .tab-button:hover:not(.disable-hover),
 .tabs-ios-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-danger .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-danger page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-danger .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-danger .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-danger .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-danger page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-danger .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-danger .tab-button[aria-selected=true], .tabs-ios-danger core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-danger .core-tabs-bar > a[aria-selected=true], .tabs-ios-danger page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-danger .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-danger .tab-button[aria-selected=true], .tabs-ios-danger core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-danger .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-danger .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-danger core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-danger page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24199,26 +24151,20 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-ios-light .tab-button, .tabs-ios-light core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-light .core-tabs-bar > a, .tabs-ios-light page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-light .core-tabs-bar > a,
+.tabs-ios-light .tab-button, .tabs-ios-light core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-light .core-tabs-bar > a,
 .tabs-ios-light .tab-button-icon,
 .tabs-ios-light .tab-button:hover:not(.disable-hover),
 .tabs-ios-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-light .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-light page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-light .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-light .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-light .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-light page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-light .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-ios-light .tab-button[aria-selected=true], .tabs-ios-light core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-light .core-tabs-bar > a[aria-selected=true], .tabs-ios-light page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-light .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-light .tab-button[aria-selected=true], .tabs-ios-light core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-light .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-light .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-light core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-light page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #000;
 }
@@ -24228,26 +24174,20 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-ios-gray .tab-button, .tabs-ios-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-gray .core-tabs-bar > a, .tabs-ios-gray page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-gray .core-tabs-bar > a,
+.tabs-ios-gray .tab-button, .tabs-ios-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-gray .core-tabs-bar > a,
 .tabs-ios-gray .tab-button-icon,
 .tabs-ios-gray .tab-button:hover:not(.disable-hover),
 .tabs-ios-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-gray .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-gray page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-gray .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-gray .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-gray .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-gray page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-gray .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-gray .tab-button[aria-selected=true], .tabs-ios-gray core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-gray .core-tabs-bar > a[aria-selected=true], .tabs-ios-gray page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-gray .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-gray .tab-button[aria-selected=true], .tabs-ios-gray core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-gray .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-gray .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-gray core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-gray page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24257,26 +24197,20 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-ios-dark .tab-button, .tabs-ios-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-dark .core-tabs-bar > a, .tabs-ios-dark page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-dark .core-tabs-bar > a,
+.tabs-ios-dark .tab-button, .tabs-ios-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-dark .core-tabs-bar > a,
 .tabs-ios-dark .tab-button-icon,
 .tabs-ios-dark .tab-button:hover:not(.disable-hover),
 .tabs-ios-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-dark .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-dark page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-dark .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-dark .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-dark .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-dark page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-dark .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-dark .tab-button[aria-selected=true], .tabs-ios-dark core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-dark .core-tabs-bar > a[aria-selected=true], .tabs-ios-dark page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-dark .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-dark .tab-button[aria-selected=true], .tabs-ios-dark core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-dark .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-dark .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-dark core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-dark page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24286,26 +24220,20 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-ios-warning .tab-button, .tabs-ios-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-warning .core-tabs-bar > a, .tabs-ios-warning page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-warning .core-tabs-bar > a,
+.tabs-ios-warning .tab-button, .tabs-ios-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-warning .core-tabs-bar > a,
 .tabs-ios-warning .tab-button-icon,
 .tabs-ios-warning .tab-button:hover:not(.disable-hover),
 .tabs-ios-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-warning .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-warning page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-warning .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-warning .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-warning .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-warning page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-warning .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-warning .tab-button[aria-selected=true], .tabs-ios-warning core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-warning .core-tabs-bar > a[aria-selected=true], .tabs-ios-warning page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-warning .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-warning .tab-button[aria-selected=true], .tabs-ios-warning core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-warning .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-warning .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-warning core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-warning page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24315,26 +24243,20 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-ios-success .tab-button, .tabs-ios-success core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-success .core-tabs-bar > a, .tabs-ios-success page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-success .core-tabs-bar > a,
+.tabs-ios-success .tab-button, .tabs-ios-success core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-success .core-tabs-bar > a,
 .tabs-ios-success .tab-button-icon,
 .tabs-ios-success .tab-button:hover:not(.disable-hover),
 .tabs-ios-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-success .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-success page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-success .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-success .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-success .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-success page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-success .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-success .tab-button[aria-selected=true], .tabs-ios-success core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-success .core-tabs-bar > a[aria-selected=true], .tabs-ios-success page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-success .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-success .tab-button[aria-selected=true], .tabs-ios-success core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-success .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-success .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-success core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-success page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24344,26 +24266,20 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-ios-info .tab-button, .tabs-ios-info core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-info .core-tabs-bar > a, .tabs-ios-info page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-ios-info .core-tabs-bar > a,
+.tabs-ios-info .tab-button, .tabs-ios-info core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-info .core-tabs-bar > a,
 .tabs-ios-info .tab-button-icon,
 .tabs-ios-info .tab-button:hover:not(.disable-hover),
 .tabs-ios-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-info .core-tabs-bar > a:hover:not(.disable-hover),
-.tabs-ios-info page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section
-.tabs-ios-info .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-info .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-ios-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-ios-info .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-info page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-ios-info .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-info .tab-button[aria-selected=true], .tabs-ios-info core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-info .core-tabs-bar > a[aria-selected=true], .tabs-ios-info page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-ios-info .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-info .tab-button[aria-selected=true], .tabs-ios-info core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-info .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-info .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-ios-info core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-ios-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-ios-info page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-ios-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24372,14 +24288,14 @@ ion-spinner.spinner-paused svg {
   background: #626262;
 }
 
-.tabs-md .tab-button, .tabs-md core-tabs .core-tabs-bar > a, core-tabs .tabs-md .core-tabs-bar > a, .tabs-md page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md .core-tabs-bar > a {
+.tabs-md .tab-button, .tabs-md core-tabs .core-tabs-bar > a, core-tabs .tabs-md .core-tabs-bar > a {
   min-height: 5.6rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.7);
   padding: 0;
 }
 
-.tabs-md .tab-button[aria-selected=true], .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true], .tabs-md page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-md .core-tabs-bar > a[aria-selected=true] {
+.tabs-md .tab-button[aria-selected=true], .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true] {
   color: #f98012;
   padding: 0;
 }
@@ -24396,7 +24312,7 @@ ion-spinner.spinner-paused svg {
   transform-origin: 50% 80%;
 }
 
-.tabs-md .tab-button[aria-selected=true] .tab-button-text, .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-text, core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-text, .tabs-md page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-text, page-core-course-section .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-text {
+.tabs-md .tab-button[aria-selected=true] .tab-button-text, .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-text, core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-text {
   -webkit-transform: scale3d(1.16667, 1.16667, 1);
   transform: scale3d(1.16667, 1.16667, 1);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -24410,7 +24326,7 @@ ion-spinner.spinner-paused svg {
   margin-bottom: 0;
 }
 
-.tabs-md[tabsLayout=icon-bottom] .tab-button .tab-button-text, .tabs-md[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-text, .tabs-md[tabsLayout=icon-bottom] page-core-course-section .core-tabs-bar > a .tab-button-text, page-core-course-section .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-text {
+.tabs-md[tabsLayout=icon-bottom] .tab-button .tab-button-text, .tabs-md[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-text {
   margin-top: 0;
 }
 
@@ -24427,52 +24343,42 @@ ion-spinner.spinner-paused svg {
   transform-origin: 50% 150%;
 }
 
-.tabs-md .tab-button[aria-selected=true] .tab-button-icon, .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-icon, .tabs-md page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon, .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #f98012;
   -webkit-transform: translate3d(0,  -2px,  0);
   transform: translate3d(0,  -2px,  0);
 }
 
-.tabs-md[tabsLayout=icon-right] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-right] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-right] .core-tabs-bar > a[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-right] page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section .tabs-md[tabsLayout=icon-right] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
+.tabs-md[tabsLayout=icon-right] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-right] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-right] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
 .tabs-md[tabsLayout=icon-end] .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md[tabsLayout=icon-end] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md[tabsLayout=icon-end] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md[tabsLayout=icon-end] page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md[tabsLayout=icon-end] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   -webkit-transform: translate3d(2px,  0,  0);
   transform: translate3d(2px,  0,  0);
 }
 
-.tabs-md[tabsLayout=icon-bottom] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-bottom] page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md[tabsLayout=icon-bottom] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   -webkit-transform: translate3d(0,  2px,  0);
   transform: translate3d(0,  2px,  0);
 }
 
-.tabs-md[tabsLayout=icon-left] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-left] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-left] .core-tabs-bar > a[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-left] page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section .tabs-md[tabsLayout=icon-left] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
+.tabs-md[tabsLayout=icon-left] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-left] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-left] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
 .tabs-md[tabsLayout=icon-start] .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md[tabsLayout=icon-start] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md[tabsLayout=icon-start] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md[tabsLayout=icon-start] page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md[tabsLayout=icon-start] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   -webkit-transform: translate3d(-2px,  0,  0);
   transform: translate3d(-2px,  0,  0);
 }
 
-.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-md[tabsLayout=icon-hide] .core-tabs-bar > a, .tabs-md[tabsLayout=icon-hide] page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-md[tabsLayout=icon-hide] .core-tabs-bar > a,
 .tabs-md[tabsLayout=title-hide] .tab-button,
 .tabs-md[tabsLayout=title-hide] core-tabs .core-tabs-bar > a, core-tabs
-.tabs-md[tabsLayout=title-hide] .core-tabs-bar > a,
-.tabs-md[tabsLayout=title-hide] page-core-course-section .core-tabs-bar > a, page-core-course-section
 .tabs-md[tabsLayout=title-hide] .core-tabs-bar > a,
 .tabs-md .tab-button.icon-only,
 .tabs-md core-tabs .core-tabs-bar > a.icon-only, core-tabs
 .tabs-md .core-tabs-bar > a.icon-only,
-.tabs-md page-core-course-section .core-tabs-bar > a.icon-only, page-core-course-section
-.tabs-md .core-tabs-bar > a.icon-only,
 .tabs-md .tab-button.has-title-only,
 .tabs-md core-tabs .core-tabs-bar > a.has-title-only, core-tabs
-.tabs-md .core-tabs-bar > a.has-title-only,
-.tabs-md page-core-course-section .core-tabs-bar > a.has-title-only, page-core-course-section
 .tabs-md .core-tabs-bar > a.has-title-only {
   padding: 0 10px;
 }
@@ -24504,21 +24410,17 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-md-primary .tab-button, .tabs-md-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-md-primary .core-tabs-bar > a, .tabs-md-primary page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-primary .core-tabs-bar > a,
+.tabs-md-primary .tab-button, .tabs-md-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-md-primary .core-tabs-bar > a,
 .tabs-md-primary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-primary .tab-button:hover:not(.disable-hover), .tabs-md-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-primary .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-primary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-primary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-primary .tab-button:hover:not(.disable-hover), .tabs-md-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-primary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-primary .tab-button[aria-selected=true],
 .tabs-md-primary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-primary .core-tabs-bar > a[aria-selected=true],
-.tabs-md-primary page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-primary .core-tabs-bar > a[aria-selected=true],
 .tabs-md-primary .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-primary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-primary page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24531,21 +24433,17 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-md-secondary .tab-button, .tabs-md-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-md-secondary .core-tabs-bar > a, .tabs-md-secondary page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-secondary .core-tabs-bar > a,
+.tabs-md-secondary .tab-button, .tabs-md-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-md-secondary .core-tabs-bar > a,
 .tabs-md-secondary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-secondary .tab-button:hover:not(.disable-hover), .tabs-md-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-secondary .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-secondary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-secondary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-secondary .tab-button:hover:not(.disable-hover), .tabs-md-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-secondary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-secondary .tab-button[aria-selected=true],
 .tabs-md-secondary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-secondary .core-tabs-bar > a[aria-selected=true],
-.tabs-md-secondary page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-secondary .core-tabs-bar > a[aria-selected=true],
 .tabs-md-secondary .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-secondary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-secondary page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24558,21 +24456,17 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-md-danger .tab-button, .tabs-md-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-md-danger .core-tabs-bar > a, .tabs-md-danger page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-danger .core-tabs-bar > a,
+.tabs-md-danger .tab-button, .tabs-md-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-md-danger .core-tabs-bar > a,
 .tabs-md-danger .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-danger .tab-button:hover:not(.disable-hover), .tabs-md-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-danger .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-danger page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-danger .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-danger .tab-button:hover:not(.disable-hover), .tabs-md-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-danger .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-danger .tab-button[aria-selected=true],
 .tabs-md-danger core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-danger .core-tabs-bar > a[aria-selected=true],
-.tabs-md-danger page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-danger .core-tabs-bar > a[aria-selected=true],
 .tabs-md-danger .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-danger core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-danger page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24585,21 +24479,17 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-md-light .tab-button, .tabs-md-light core-tabs .core-tabs-bar > a, core-tabs .tabs-md-light .core-tabs-bar > a, .tabs-md-light page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-light .core-tabs-bar > a,
+.tabs-md-light .tab-button, .tabs-md-light core-tabs .core-tabs-bar > a, core-tabs .tabs-md-light .core-tabs-bar > a,
 .tabs-md-light .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-md-light .tab-button:hover:not(.disable-hover), .tabs-md-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-light .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-light page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-light .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-light .tab-button:hover:not(.disable-hover), .tabs-md-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-light .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-light .tab-button[aria-selected=true],
 .tabs-md-light core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-light .core-tabs-bar > a[aria-selected=true],
-.tabs-md-light page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-light .core-tabs-bar > a[aria-selected=true],
 .tabs-md-light .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-light core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-light page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #000;
 }
@@ -24612,21 +24502,17 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-md-gray .tab-button, .tabs-md-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-md-gray .core-tabs-bar > a, .tabs-md-gray page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-gray .core-tabs-bar > a,
+.tabs-md-gray .tab-button, .tabs-md-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-md-gray .core-tabs-bar > a,
 .tabs-md-gray .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-gray .tab-button:hover:not(.disable-hover), .tabs-md-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-gray .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-gray page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-gray .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-gray .tab-button:hover:not(.disable-hover), .tabs-md-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-gray .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-gray .tab-button[aria-selected=true],
 .tabs-md-gray core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-gray .core-tabs-bar > a[aria-selected=true],
-.tabs-md-gray page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-gray .core-tabs-bar > a[aria-selected=true],
 .tabs-md-gray .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-gray core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-gray page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24639,21 +24525,17 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-md-dark .tab-button, .tabs-md-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-md-dark .core-tabs-bar > a, .tabs-md-dark page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-dark .core-tabs-bar > a,
+.tabs-md-dark .tab-button, .tabs-md-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-md-dark .core-tabs-bar > a,
 .tabs-md-dark .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-dark .tab-button:hover:not(.disable-hover), .tabs-md-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-dark .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-dark page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-dark .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-dark .tab-button:hover:not(.disable-hover), .tabs-md-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-dark .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-dark .tab-button[aria-selected=true],
 .tabs-md-dark core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-dark .core-tabs-bar > a[aria-selected=true],
-.tabs-md-dark page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-dark .core-tabs-bar > a[aria-selected=true],
 .tabs-md-dark .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-dark core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-dark page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24666,21 +24548,17 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-md-warning .tab-button, .tabs-md-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-md-warning .core-tabs-bar > a, .tabs-md-warning page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-warning .core-tabs-bar > a,
+.tabs-md-warning .tab-button, .tabs-md-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-md-warning .core-tabs-bar > a,
 .tabs-md-warning .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-warning .tab-button:hover:not(.disable-hover), .tabs-md-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-warning .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-warning page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-warning .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-warning .tab-button:hover:not(.disable-hover), .tabs-md-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-warning .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-warning .tab-button[aria-selected=true],
 .tabs-md-warning core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-warning .core-tabs-bar > a[aria-selected=true],
-.tabs-md-warning page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-warning .core-tabs-bar > a[aria-selected=true],
 .tabs-md-warning .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-warning core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-warning page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24693,21 +24571,17 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-md-success .tab-button, .tabs-md-success core-tabs .core-tabs-bar > a, core-tabs .tabs-md-success .core-tabs-bar > a, .tabs-md-success page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-success .core-tabs-bar > a,
+.tabs-md-success .tab-button, .tabs-md-success core-tabs .core-tabs-bar > a, core-tabs .tabs-md-success .core-tabs-bar > a,
 .tabs-md-success .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-success .tab-button:hover:not(.disable-hover), .tabs-md-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-success .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-success page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-success .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-success .tab-button:hover:not(.disable-hover), .tabs-md-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-success .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-success .tab-button[aria-selected=true],
 .tabs-md-success core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-success .core-tabs-bar > a[aria-selected=true],
-.tabs-md-success page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-success .core-tabs-bar > a[aria-selected=true],
 .tabs-md-success .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-success core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-success page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24720,21 +24594,17 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-md-info .tab-button, .tabs-md-info core-tabs .core-tabs-bar > a, core-tabs .tabs-md-info .core-tabs-bar > a, .tabs-md-info page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-md-info .core-tabs-bar > a,
+.tabs-md-info .tab-button, .tabs-md-info core-tabs .core-tabs-bar > a, core-tabs .tabs-md-info .core-tabs-bar > a,
 .tabs-md-info .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-info .tab-button:hover:not(.disable-hover), .tabs-md-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-info .core-tabs-bar > a:hover:not(.disable-hover), .tabs-md-info page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-md-info .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-info .tab-button:hover:not(.disable-hover), .tabs-md-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-info .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-info .tab-button[aria-selected=true],
 .tabs-md-info core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-info .core-tabs-bar > a[aria-selected=true],
-.tabs-md-info page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-md-info .core-tabs-bar > a[aria-selected=true],
 .tabs-md-info .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-md-info core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-md-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-md-info page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-md-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24747,7 +24617,7 @@ ion-spinner.spinner-paused svg {
   background: #626262;
 }
 
-.tabs-wp .tab-button, .tabs-wp core-tabs .core-tabs-bar > a, core-tabs .tabs-wp .core-tabs-bar > a, .tabs-wp page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp .core-tabs-bar > a {
+.tabs-wp .tab-button, .tabs-wp core-tabs .core-tabs-bar > a, core-tabs .tabs-wp .core-tabs-bar > a {
   border-radius: 0;
   min-height: 4.8rem;
   border-bottom: 2px solid transparent;
@@ -24759,21 +24629,21 @@ ion-spinner.spinner-paused svg {
   padding: 12px 10px 5px;
 }
 
-.tabs-wp .tab-button[aria-selected=true], .tabs-wp core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-wp .core-tabs-bar > a[aria-selected=true], .tabs-wp page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-wp .core-tabs-bar > a[aria-selected=true] {
+.tabs-wp .tab-button[aria-selected=true], .tabs-wp core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-wp .core-tabs-bar > a[aria-selected=true] {
   border-bottom-color: #f98012;
   color: #f98012;
 }
 
-.tabs-wp .tab-button.activated, .tabs-wp core-tabs .core-tabs-bar > a.activated, core-tabs .tabs-wp .core-tabs-bar > a.activated, .tabs-wp page-core-course-section .core-tabs-bar > a.activated, page-core-course-section .tabs-wp .core-tabs-bar > a.activated {
+.tabs-wp .tab-button.activated, .tabs-wp core-tabs .core-tabs-bar > a.activated, core-tabs .tabs-wp .core-tabs-bar > a.activated {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.tabs-wp[tabsPlacement=bottom] .tab-button, .tabs-wp[tabsPlacement=bottom] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a, .tabs-wp[tabsPlacement=bottom] page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a {
+.tabs-wp[tabsPlacement=bottom] .tab-button, .tabs-wp[tabsPlacement=bottom] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a {
   border-top: 2px solid transparent;
   border-bottom-width: 0;
 }
 
-.tabs-wp[tabsPlacement=bottom] .tab-button[aria-selected=true], .tabs-wp[tabsPlacement=bottom] core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a[aria-selected=true], .tabs-wp[tabsPlacement=bottom] page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a[aria-selected=true] {
+.tabs-wp[tabsPlacement=bottom] .tab-button[aria-selected=true], .tabs-wp[tabsPlacement=bottom] core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a[aria-selected=true] {
   border-top-color: #f98012;
 }
 
@@ -24788,68 +24658,50 @@ ion-spinner.spinner-paused svg {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp .tab-button[aria-selected=true] .tab-button-icon, .tabs-wp core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-wp .core-tabs-bar > a[aria-selected=true] .tab-button-icon, .tabs-wp page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section .tabs-wp .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp .tab-button[aria-selected=true] .tab-button-icon, .tabs-wp core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-wp .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #f98012;
 }
 
-.tabs-wp[tabsLayout=icon-bottom] .tab-button, .tabs-wp[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-bottom] .core-tabs-bar > a, .tabs-wp[tabsLayout=icon-bottom] page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp[tabsLayout=icon-bottom] .core-tabs-bar > a {
+.tabs-wp[tabsLayout=icon-bottom] .tab-button, .tabs-wp[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-bottom] .core-tabs-bar > a {
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.tabs-wp[tabsLayout=icon-right] .tab-button, .tabs-wp[tabsLayout=icon-right] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a, .tabs-wp[tabsLayout=icon-right] page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=icon-right] .tab-button, .tabs-wp[tabsLayout=icon-right] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a,
 .tabs-wp[tabsLayout=icon-left] .tab-button,
 .tabs-wp[tabsLayout=icon-left] core-tabs .core-tabs-bar > a, core-tabs
-.tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a,
-.tabs-wp[tabsLayout=icon-left] page-core-course-section .core-tabs-bar > a, page-core-course-section
 .tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a,
 .tabs-wp[tabsLayout=icon-end] .tab-button,
 .tabs-wp[tabsLayout=icon-end] core-tabs .core-tabs-bar > a, core-tabs
 .tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a,
-.tabs-wp[tabsLayout=icon-end] page-core-course-section .core-tabs-bar > a, page-core-course-section
-.tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a,
 .tabs-wp[tabsLayout=icon-start] .tab-button,
 .tabs-wp[tabsLayout=icon-start] core-tabs .core-tabs-bar > a, core-tabs
-.tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a,
-.tabs-wp[tabsLayout=icon-start] page-core-course-section .core-tabs-bar > a, page-core-course-section
 .tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a {
   padding-bottom: 10px;
 }
 
-.tabs-wp[tabsLayout=icon-right] .tab-button ion-icon, .tabs-wp[tabsLayout=icon-right] core-tabs .core-tabs-bar > a ion-icon, core-tabs .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a ion-icon, .tabs-wp[tabsLayout=icon-right] page-core-course-section .core-tabs-bar > a ion-icon, page-core-course-section .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a ion-icon,
+.tabs-wp[tabsLayout=icon-right] .tab-button ion-icon, .tabs-wp[tabsLayout=icon-right] core-tabs .core-tabs-bar > a ion-icon, core-tabs .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a ion-icon,
 .tabs-wp[tabsLayout=icon-left] .tab-button ion-icon,
 .tabs-wp[tabsLayout=icon-left] core-tabs .core-tabs-bar > a ion-icon, core-tabs
-.tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a ion-icon,
-.tabs-wp[tabsLayout=icon-left] page-core-course-section .core-tabs-bar > a ion-icon, page-core-course-section
 .tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a ion-icon,
 .tabs-wp[tabsLayout=icon-end] .tab-button ion-icon,
 .tabs-wp[tabsLayout=icon-end] core-tabs .core-tabs-bar > a ion-icon, core-tabs
 .tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a ion-icon,
-.tabs-wp[tabsLayout=icon-end] page-core-course-section .core-tabs-bar > a ion-icon, page-core-course-section
-.tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a ion-icon,
 .tabs-wp[tabsLayout=icon-start] .tab-button ion-icon,
 .tabs-wp[tabsLayout=icon-start] core-tabs .core-tabs-bar > a ion-icon, core-tabs
-.tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a ion-icon,
-.tabs-wp[tabsLayout=icon-start] page-core-course-section .core-tabs-bar > a ion-icon, page-core-course-section
 .tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a ion-icon {
   min-width: 24px;
 }
 
-.tabs-wp[tabsLayout=icon-hide] .tab-button, .tabs-wp[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-hide] .core-tabs-bar > a, .tabs-wp[tabsLayout=icon-hide] page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=icon-hide] .tab-button, .tabs-wp[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-hide] .core-tabs-bar > a,
 .tabs-wp[tabsLayout=title-hide] .tab-button,
 .tabs-wp[tabsLayout=title-hide] core-tabs .core-tabs-bar > a, core-tabs
-.tabs-wp[tabsLayout=title-hide] .core-tabs-bar > a,
-.tabs-wp[tabsLayout=title-hide] page-core-course-section .core-tabs-bar > a, page-core-course-section
 .tabs-wp[tabsLayout=title-hide] .core-tabs-bar > a,
 .tabs-wp .tab-button.icon-only,
 .tabs-wp core-tabs .core-tabs-bar > a.icon-only, core-tabs
 .tabs-wp .core-tabs-bar > a.icon-only,
-.tabs-wp page-core-course-section .core-tabs-bar > a.icon-only, page-core-course-section
-.tabs-wp .core-tabs-bar > a.icon-only,
 .tabs-wp .tab-button.has-title-only,
 .tabs-wp core-tabs .core-tabs-bar > a.has-title-only, core-tabs
-.tabs-wp .core-tabs-bar > a.has-title-only,
-.tabs-wp page-core-course-section .core-tabs-bar > a.has-title-only, page-core-course-section
 .tabs-wp .core-tabs-bar > a.has-title-only {
   padding: 6px 10px;
 }
@@ -24858,26 +24710,20 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-wp-primary .tab-button, .tabs-wp-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-primary .core-tabs-bar > a, .tabs-wp-primary page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-primary .core-tabs-bar > a,
+.tabs-wp-primary .tab-button, .tabs-wp-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-primary .core-tabs-bar > a,
 .tabs-wp-primary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-primary .tab-button:hover:not(.disable-hover), .tabs-wp-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-primary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-primary .tab-button:hover:not(.disable-hover), .tabs-wp-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-primary .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-primary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-primary .tab-button[aria-selected=true],
 .tabs-wp-primary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-primary .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-primary page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-primary .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-primary .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-primary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-primary page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24887,26 +24733,20 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-wp-secondary .tab-button, .tabs-wp-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-secondary .core-tabs-bar > a, .tabs-wp-secondary page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-secondary .core-tabs-bar > a,
+.tabs-wp-secondary .tab-button, .tabs-wp-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-secondary .core-tabs-bar > a,
 .tabs-wp-secondary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-secondary .tab-button:hover:not(.disable-hover), .tabs-wp-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-secondary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-secondary .tab-button:hover:not(.disable-hover), .tabs-wp-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-secondary .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-secondary page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-secondary .tab-button[aria-selected=true],
 .tabs-wp-secondary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-secondary .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-secondary page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-secondary .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-secondary .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-secondary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-secondary page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24916,26 +24756,20 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-wp-danger .tab-button, .tabs-wp-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-danger .core-tabs-bar > a, .tabs-wp-danger page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-danger .core-tabs-bar > a,
+.tabs-wp-danger .tab-button, .tabs-wp-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-danger .core-tabs-bar > a,
 .tabs-wp-danger .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-danger .tab-button:hover:not(.disable-hover), .tabs-wp-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-danger page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-danger .tab-button:hover:not(.disable-hover), .tabs-wp-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-danger .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-danger page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-danger .tab-button[aria-selected=true],
 .tabs-wp-danger core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-danger .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-danger page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-danger .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-danger .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-danger core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-danger page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24945,26 +24779,20 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-wp-light .tab-button, .tabs-wp-light core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-light .core-tabs-bar > a, .tabs-wp-light page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-light .core-tabs-bar > a,
+.tabs-wp-light .tab-button, .tabs-wp-light core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-light .core-tabs-bar > a,
 .tabs-wp-light .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-wp-light .tab-button:hover:not(.disable-hover), .tabs-wp-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-light page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-light .tab-button:hover:not(.disable-hover), .tabs-wp-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-light .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-light page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-light .tab-button[aria-selected=true],
 .tabs-wp-light core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-light .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-light page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-light .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-light .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-light core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-light page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #000;
   color: #000;
@@ -24974,26 +24802,20 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-wp-gray .tab-button, .tabs-wp-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-gray .core-tabs-bar > a, .tabs-wp-gray page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-gray .core-tabs-bar > a,
+.tabs-wp-gray .tab-button, .tabs-wp-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-gray .core-tabs-bar > a,
 .tabs-wp-gray .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-gray .tab-button:hover:not(.disable-hover), .tabs-wp-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-gray page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-gray .tab-button:hover:not(.disable-hover), .tabs-wp-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-gray .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-gray page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-gray .tab-button[aria-selected=true],
 .tabs-wp-gray core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-gray .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-gray page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-gray .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-gray .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-gray core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-gray page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -25003,26 +24825,20 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-wp-dark .tab-button, .tabs-wp-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-dark .core-tabs-bar > a, .tabs-wp-dark page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-dark .core-tabs-bar > a,
+.tabs-wp-dark .tab-button, .tabs-wp-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-dark .core-tabs-bar > a,
 .tabs-wp-dark .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-dark .tab-button:hover:not(.disable-hover), .tabs-wp-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-dark page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-dark .tab-button:hover:not(.disable-hover), .tabs-wp-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-dark .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-dark page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-dark .tab-button[aria-selected=true],
 .tabs-wp-dark core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-dark .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-dark page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-dark .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-dark .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-dark core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-dark page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -25032,26 +24848,20 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-wp-warning .tab-button, .tabs-wp-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-warning .core-tabs-bar > a, .tabs-wp-warning page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-warning .core-tabs-bar > a,
+.tabs-wp-warning .tab-button, .tabs-wp-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-warning .core-tabs-bar > a,
 .tabs-wp-warning .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-warning .tab-button:hover:not(.disable-hover), .tabs-wp-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-warning page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-warning .tab-button:hover:not(.disable-hover), .tabs-wp-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-warning .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-warning page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-warning .tab-button[aria-selected=true],
 .tabs-wp-warning core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-warning .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-warning page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-warning .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-warning .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-warning core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-warning page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -25061,26 +24871,20 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-wp-success .tab-button, .tabs-wp-success core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-success .core-tabs-bar > a, .tabs-wp-success page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-success .core-tabs-bar > a,
+.tabs-wp-success .tab-button, .tabs-wp-success core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-success .core-tabs-bar > a,
 .tabs-wp-success .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-success .tab-button:hover:not(.disable-hover), .tabs-wp-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-success page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-success .tab-button:hover:not(.disable-hover), .tabs-wp-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-success .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-success page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-success .tab-button[aria-selected=true],
 .tabs-wp-success core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-success .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-success page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-success .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-success .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-success core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-success page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -25090,26 +24894,20 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-wp-info .tab-button, .tabs-wp-info core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-info .core-tabs-bar > a, .tabs-wp-info page-core-course-section .core-tabs-bar > a, page-core-course-section .tabs-wp-info .core-tabs-bar > a,
+.tabs-wp-info .tab-button, .tabs-wp-info core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-info .core-tabs-bar > a,
 .tabs-wp-info .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-info .tab-button:hover:not(.disable-hover), .tabs-wp-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover), .tabs-wp-info page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover), page-core-course-section .tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-info .tab-button:hover:not(.disable-hover), .tabs-wp-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-info .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
-.tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-info page-core-course-section .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, page-core-course-section
 .tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-info .tab-button[aria-selected=true],
 .tabs-wp-info core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-info .core-tabs-bar > a[aria-selected=true],
-.tabs-wp-info page-core-course-section .core-tabs-bar > a[aria-selected=true], page-core-course-section
-.tabs-wp-info .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-info .tab-button[aria-selected=true] .tab-button-icon,
 .tabs-wp-info core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
-.tabs-wp-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
-.tabs-wp-info page-core-course-section .core-tabs-bar > a[aria-selected=true] .tab-button-icon, page-core-course-section
 .tabs-wp-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -29830,7 +29628,7 @@ ion-navbar.toolbar {
   background: #f98012;
 }
 
-.header-md::after,
+.header-md::after, .md core-tabs .core-tabs-bar::after,
 .tabs-md[tabsPlacement="top"] > .tabbar::after,
 .footer-md::before,
 .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
@@ -29853,7 +29651,7 @@ ion-navbar.toolbar {
   height: 2px;
 }
 
-.header-md[no-border]::after,
+.header-md[no-border]::after, .md core-tabs [no-border].core-tabs-bar::after,
 .footer-md[no-border]::before,
 .tabs-md[tabsPlacement="top"][no-border] > .tabbar::after,
 .tabs-md[tabsPlacement="bottom"][no-border] > .tabbar::before {
@@ -37398,6 +37196,183 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+addon-messages-discussions h2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+addon-messages-discussions h2 .note {
+  margin: 0;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+addon-messages-discussions h2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+addon-messages-discussions h2 .note {
+  margin: 0;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+page-addon-messages-discussion .addon-messages-discussion-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+page-addon-messages-discussion .addon-messages-date,
+page-addon-messages-discussion .addon-messages-unreadfrom {
+  margin-top: 10px;
+}
+
+page-addon-messages-discussion .addon-messages-unreadfrom {
+  color: #0064d2;
+}
+
+page-addon-messages-discussion .addon-message {
+  max-width: 80%;
+  border: 0;
+  border-radius: 16px;
+  padding: 10px;
+  margin: 4px;
+  background-color: #f5f5f5;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  width: auto;
+  min-height: 0;
+  position: relative;
+  -webkit-transition: width 500ms ease-in-out;
+  transition: width 500ms ease-in-out;
+}
+
+page-addon-messages-discussion .addon-message.activated {
+  background-color: gainsboro;
+}
+
+page-addon-messages-discussion .addon-message.item-block .item-inner {
+  border-bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+
+page-addon-messages-discussion .addon-message .label {
+  margin: 0;
+  padding: 0;
+}
+
+page-addon-messages-discussion .addon-message .addon-message-text {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+page-addon-messages-discussion .addon-message .note {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  color: #9e9e9e;
+  font-size: 75%;
+  margin-left: 10px;
+}
+
+page-addon-messages-discussion .addon-message .addon-messages-delete-button {
+  min-height: initial;
+  line-height: initial;
+  margin: 0 0 0 10px;
+  height: auto;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  vertical-align: middle;
+}
+
+page-addon-messages-discussion .addon-message .addon-messages-delete-button .icon {
+  font-size: 1.4em;
+  line-height: initial;
+}
+
+page-addon-messages-discussion .addon-message-mine {
+  background-color: #cce0f6;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  max-width: 80%;
+}
+
+page-addon-messages-discussion .addon-message-mine.activated {
+  background-color: #a1c6ee;
+}
+
+page-addon-messages-discussion .addon-message-mine .spinner {
+  float: right;
+  margin-left: 5px;
+  margin-right: -3px;
+  margin-top: 2px;
+  margin-bottom: -2px;
+}
+
+page-addon-messages-discussion .addon-message-mine .spinner svg {
+  width: 16px;
+  height: 16px;
+}
+
+page-addon-messages-discussion .addon-message .item-content,
+page-addon-messages-discussion .addon-message-mine .item-content {
+  background-color: transparent;
+  padding: 0;
+}
+
+page-addon-messages-settings .list-header {
+  margin-bottom: 0;
+  border-top: 0;
+}
+
+page-addon-messages-settings .toggle {
+  display: inline-block;
+}
+
+a.core-course-module-handler.addon-mod-label-handler {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .text-left {
   text-align: left;
 }
@@ -37420,6 +37395,12 @@ ion-navbar.toolbar {
   clear: both;
 }
 
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .opacity-hide {
   opacity: 0;
 }
@@ -37428,7 +37409,7 @@ ion-navbar.toolbar {
   font-size: 115%;
 }
 
-@media only screen and (min-width: 430px) {
+@media (min-width: 576px) {
   .core-center-view .scroll-content {
     display: -webkit-box !important;
     display: -webkit-flex !important;
@@ -37448,15 +37429,17 @@ ion-navbar.toolbar {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 767px) {
   .hidden-phone {
     display: none !important;
+    opacity: 0 !important;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media (min-width: 768px) {
   .hidden-tablet {
     display: none !important;
+    opacity: 0 !important;
   }
 }
 
@@ -37624,6 +37607,18 @@ core-format-text[ng-reflect-max-height].core-expand-in-fullview .core-show-more,
   background-position: right 0 center;
   background-repeat: no-repeat;
   background-size: 14px 14px;
+}
+
+core-format-text[singleLine="true"], *[core-format-text][singleLine="true"],
+core-format-text[ng-reflect-single-line="true"], *[core-format-text][ng-reflect-single-line="true"] {
+  cursor: pointer;
+  pointer-events: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  position: relative;
+  width: 100%;
 }
 
 .core-media-adapt-width {
@@ -37813,6 +37808,35 @@ ion-toast.core-toast-alert .toast-wrapper {
   background: #a82d3b;
 }
 
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+textarea[core-auto-rows] {
+  height: auto;
+  line-height: 18px;
+  padding: 5px;
+}
+
+textarea:not([core-auto-rows]) {
+  height: 200px;
+  min-height: 80px;
+}
+
+.toolbar .core-bar-button-image {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 31px;
+  max-height: 31px;
+  border-radius: 50%;
+}
+
+.footer.footer-adjustable {
+  height: auto;
+}
+
 .core-primary-card {
   border-bottom: 3px solid #f98012;
 }
@@ -37849,6 +37873,47 @@ ion-toast.core-toast-alert .toast-wrapper {
   border-bottom: 3px solid #0064d2;
 }
 
+.core-circle:before, .core-primary-circle:before, .core-secondary-circle:before, .core-danger-circle:before, .core-light-circle:before, .core-gray-circle:before, .core-dark-circle:before, .core-warning-circle:before, .core-success-circle:before, .core-info-circle:before {
+  content: ' \25CF';
+  font-size: 20px;
+}
+
+.core-primary-circle:before {
+  color: #f98012;
+}
+
+.core-secondary-circle:before {
+  color: #007982;
+}
+
+.core-danger-circle:before {
+  color: #cb3d4d;
+}
+
+.core-light-circle:before {
+  color: #f5f5f5;
+}
+
+.core-gray-circle:before {
+  color: #9e9e9e;
+}
+
+.core-dark-circle:before {
+  color: #3a3a3a;
+}
+
+.core-warning-circle:before {
+  color: #fbad1a;
+}
+
+.core-success-circle:before {
+  color: #5e8100;
+}
+
+.core-info-circle:before {
+  color: #0064d2;
+}
+
 .button-ios {
   min-height: 2.8em;
 }
@@ -37872,6 +37937,11 @@ ion-toast.core-toast-alert .toast-wrapper {
   margin-bottom: 8px;
 }
 
+.ios .core-avoid-header ion-content {
+  top: 44px;
+  height: calc(100% - 44px);
+}
+
 .button-md {
   min-height: 3.6rem;
 }
@@ -37891,6 +37961,11 @@ ion-toast.core-toast-alert .toast-wrapper {
 .item-md ion-spinner[item-start] + .item-inner,
 .item-md ion-spinner[item-start] + .item-input {
   margin-left: 23px;
+}
+
+.md .core-avoid-header ion-content {
+  top: 56px;
+  height: calc(100% - 56px);
 }
 
 .card-md .item-input.item-input-has-focus:last-child, .md .core-primary-card .item-input.item-input-has-focus:last-child, .md .core-secondary-card .item-input.item-input-has-focus:last-child, .md .core-danger-card .item-input.item-input-has-focus:last-child, .md .core-light-card .item-input.item-input-has-focus:last-child, .md .core-gray-card .item-input.item-input-has-focus:last-child, .md .core-dark-card .item-input.item-input-has-focus:last-child, .md .core-warning-card .item-input.item-input-has-focus:last-child, .md .core-success-card .item-input.item-input-has-focus:last-child, .md .core-info-card .item-input.item-input-has-focus:last-child,
@@ -37983,6 +38058,16 @@ ion-toast.core-toast-alert .toast-wrapper {
   margin-left: 8px;
 }
 
+.wp .core-avoid-header ion-content {
+  top: 46px;
+  height: calc(100% - 46px);
+}
+
+core-context-menu-popover .item-md ion-icon[item-start] + .item-inner,
+core-context-menu-popover .item-md ion-icon[item-start] + .item-input {
+  margin-left: 5px;
+}
+
 core-empty-box .core-empty-box {
   position: absolute;
   top: 0;
@@ -38028,7 +38113,7 @@ core-empty-box .core-empty-box p {
   font-size: 120%;
 }
 
-@media only screen and (max-height: 420px) {
+@media (max-width: 767px) {
   core-empty-box .core-empty-box {
     position: relative;
   }
@@ -38058,6 +38143,11 @@ core-input-errors .core-input-error-container .core-input-error {
 
 core-input-errors .core-input-error-container .core-input-error:first-child {
   display: block;
+}
+
+core-loading {
+  -webkit-transition: core-show-animation 500ms ease-in-out;
+  transition: core-show-animation 500ms ease-in-out;
 }
 
 core-loading .core-loading-container {
@@ -38261,6 +38351,55 @@ core-search-box .item.item-input.item-block .item-inner ion-input {
   border-bottom: 0;
 }
 
+core-send-message-form {
+  background: #ffffff;
+}
+
+core-send-message-form form {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+core-send-message-form .core-send-message-input {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  -webkit-align-self: self-start;
+  -ms-flex-item-align: self-start;
+  align-self: self-start;
+  background: #dddddd;
+  color: #3a3a3a;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+core-send-message-form .core-send-message-button {
+  margin: 0;
+  padding: 0;
+  display: none;
+  min-height: 0;
+  -webkit-align-self: self-end;
+  -ms-flex-item-align: self-end;
+  align-self: self-end;
+}
+
 core-show-password {
   padding: 0px;
   width: 100%;
@@ -38346,21 +38485,13 @@ core-split-view .split-pane-visible .split-pane-side .core-split-item-selected.i
   padding-left: 11px;
 }
 
-.ios ion-header + core-split-view ion-menu.split-pane-side ion-content {
-  top: 44px;
-}
-
-.md ion-header + core-split-view ion-menu.split-pane-side ion-content {
-  top: 56px;
-}
-
-.wp ion-header + core-split-view ion-menu.split-pane-side ion-content {
-  top: 46px;
+core-split-view ion-header {
+  display: none;
 }
 
 core-tabs .core-tabs-bar {
   left: 0;
-  bottom: 0;
+  position: relative;
   z-index: 10;
   display: -webkit-box;
   display: -webkit-flex;
@@ -38373,13 +38504,14 @@ core-tabs .core-tabs-bar {
 core-tabs .core-tabs-bar > a {
   background: #ffffff;
   color: #9e9e9e !important;
-  border-bottom: 1px solid #dddddd;
   font-size: 1.6rem;
+  border: 0;
 }
 
 core-tabs .core-tabs-bar > a[aria-selected=true] {
   color: #f98012 !important;
-  border-bottom: 2px solid #f98012;
+  border: 0 !important;
+  border-bottom: 2px solid #f98012 !important;
 }
 
 core-tabs .core-tabs-content-container {
@@ -38417,15 +38549,32 @@ core-tabs core-tab .fixed-content, core-tabs core-tab .scroll-content {
   overflow: hidden !important;
 }
 
-core-tabs .core-tabs-bar {
+.ios core-tabs .core-tabs-bar {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-core-tabs .core-tabs-bar > a {
+.ios core-tabs .core-tabs-bar > a {
   font-size: 1.6rem;
+}
+
+.ios .core-avoid-header ion-content core-tabs core-tab ion-content, .md .core-avoid-header ion-content core-tabs core-tab ion-content, .wp .core-avoid-header ion-content core-tabs core-tab ion-content {
+  top: 0;
+  height: 100%;
+}
+
+.ios ion-content core-tabs core-tab .core-avoid-header ion-content, .md ion-content core-tabs core-tab .core-avoid-header ion-content, .wp ion-content core-tabs core-tab .core-avoid-header ion-content {
+  top: 0;
+  height: 100%;
+}
+
+ion-badge.core-course-download-section-progress {
+  display: block;
+  float: left;
+  margin-top: 12px;
+  margin-right: 12px;
 }
 
 core-course-module a.core-course-module-handler {
@@ -38433,20 +38582,55 @@ core-course-module a.core-course-module-handler {
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  min-height: 52px;
 }
 
-core-course-module a.core-course-module-handler item-inner {
+core-course-module a.core-course-module-handler.item .item-inner {
   padding-right: 0;
 }
 
-core-course-module .core-module-icon {
+core-course-module a.core-course-module-handler .label {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+core-course-module a.core-course-module-handler .core-module-icon {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
 }
 
-core-course-module .core-module-buttons {
+core-course-module .core-module-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+core-course-module .core-module-title core-format-text {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+}
+
+core-course-module .core-module-title .core-module-buttons {
+  margin: 0;
+}
+
+core-course-module .core-module-title .core-module-buttons,
+core-course-module .core-module-title .core-module-buttons-more {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38461,16 +38645,79 @@ core-course-module .core-module-buttons {
   -ms-flex-align: center;
   align-items: center;
   z-index: 1;
-  cursor: pointer;
-  pointer-events: auto;
-  position: absolute;
-  right: 0;
-  top: 4px;
 }
 
-core-course-module .core-module-buttons .spinner {
-  right: 7px;
+core-course-module .core-module-title .core-module-buttons core-course-module-completion,
+core-course-module .core-module-title .core-module-buttons-more button {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+core-course-module .core-module-title .core-module-buttons-more .spinner {
+  right: 13px;
   position: absolute;
+}
+
+.md core-course-module .core-module-description,
+.md core-course-module .core-module-description .core-show-more {
+  padding-right: 8px;
+}
+
+.md core-course-module a.core-course-module-handler .core-module-icon {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.md core-course-module .core-module-title core-format-text {
+  padding-top: 16px;
+}
+
+.md core-course-module .button-md {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.md core-course-module .core-module-buttons-more {
+  min-height: 52px;
+  min-width: 53px;
+}
+
+.ios core-course-module .core-module-description,
+.ios core-course-module .core-module-description .core-show-more {
+  padding-right: 8px;
+}
+
+.ios core-course-module a.core-course-module-handler .core-module-icon {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.ios core-course-module .core-module-title core-format-text {
+  padding-top: 14px;
+}
+
+.ios core-course-module .core-module-buttons-more {
+  min-height: 53px;
+  min-width: 58px;
+}
+
+.wp core-course-module .core-module-description,
+.wp core-course-module .core-module-description .core-show-more {
+  padding-right: 8px;
+}
+
+.wp core-course-module a.core-course-module-handler .core-module-icon {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.wp core-course-module .core-module-title core-format-text {
+  padding-top: 16px;
+}
+
+.wp core-course-module .button-wp {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 core-course-module-completion a img {
@@ -38479,48 +38726,12 @@ core-course-module-completion a img {
   vertical-align: middle;
 }
 
-page-core-course-section .core-tabs-bar {
-  left: 0;
-  bottom: 0;
-  z-index: 10;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  background: #ffffff;
-}
-
-page-core-course-section .core-tabs-bar > a {
-  background: #ffffff;
-  color: #9e9e9e !important;
-  border-bottom: 1px solid #dddddd;
-  font-size: 1.6rem;
-}
-
-page-core-course-section .core-tabs-bar > a[aria-selected=true] {
-  color: #f98012 !important;
-  border-bottom: 2px solid #f98012;
-}
-
 core-courses-course-list-item .core-course-enrollment-img {
   max-width: 16px;
   max-height: 16px;
 }
 
-@media (max-width: 576px) {
-  core-courses-course-progress.core-courseoverview ion-card.card, core-courses-course-progress.core-courseoverview .card.core-primary-card, core-courses-course-progress.core-courseoverview .card.core-secondary-card, core-courses-course-progress.core-courseoverview .card.core-danger-card, core-courses-course-progress.core-courseoverview .card.core-light-card, core-courses-course-progress.core-courseoverview .card.core-gray-card, core-courses-course-progress.core-courseoverview .card.core-dark-card, core-courses-course-progress.core-courseoverview .card.core-warning-card, core-courses-course-progress.core-courseoverview .card.core-success-card, core-courses-course-progress.core-courseoverview .card.core-info-card {
-    margin: 0;
-    border-radius: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-bottom: 1px solid #c8c7cc;
-    width: 100%;
-    height: 100% !important;
-  }
-}
-
-core-courses-course-progress.core-courseoverview ion-card.card, core-courses-course-progress.core-courseoverview .card.core-primary-card, core-courses-course-progress.core-courseoverview .card.core-secondary-card, core-courses-course-progress.core-courseoverview .card.core-danger-card, core-courses-course-progress.core-courseoverview .card.core-light-card, core-courses-course-progress.core-courseoverview .card.core-gray-card, core-courses-course-progress.core-courseoverview .card.core-dark-card, core-courses-course-progress.core-courseoverview .card.core-warning-card, core-courses-course-progress.core-courseoverview .card.core-success-card, core-courses-course-progress.core-courseoverview .card.core-info-card {
+core-courses-course-progress ion-card.card, core-courses-course-progress .card.core-primary-card, core-courses-course-progress .card.core-secondary-card, core-courses-course-progress .card.core-danger-card, core-courses-course-progress .card.core-light-card, core-courses-course-progress .card.core-gray-card, core-courses-course-progress .card.core-dark-card, core-courses-course-progress .card.core-warning-card, core-courses-course-progress .card.core-success-card, core-courses-course-progress .card.core-info-card {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38536,11 +38747,11 @@ core-courses-course-progress.core-courseoverview ion-card.card, core-courses-cou
   justify-content: space-between;
 }
 
-core-courses-course-progress button {
-  z-index: 1;
+core-courses-course-progress ion-card.card .core-course-link .item-inner, core-courses-course-progress .card.core-primary-card .core-course-link .item-inner, core-courses-course-progress .card.core-secondary-card .core-course-link .item-inner, core-courses-course-progress .card.core-danger-card .core-course-link .item-inner, core-courses-course-progress .card.core-light-card .core-course-link .item-inner, core-courses-course-progress .card.core-gray-card .core-course-link .item-inner, core-courses-course-progress .card.core-dark-card .core-course-link .item-inner, core-courses-course-progress .card.core-warning-card .core-course-link .item-inner, core-courses-course-progress .card.core-success-card .core-course-link .item-inner, core-courses-course-progress .card.core-info-card .core-course-link .item-inner {
+  padding-right: 0;
 }
 
-core-courses-course-progress .core-course-link {
+core-courses-course-progress ion-card.card .core-course-link .label, core-courses-course-progress .card.core-primary-card .core-course-link .label, core-courses-course-progress .card.core-secondary-card .core-course-link .label, core-courses-course-progress .card.core-danger-card .core-course-link .label, core-courses-course-progress .card.core-light-card .core-course-link .label, core-courses-course-progress .card.core-gray-card .core-course-link .label, core-courses-course-progress .card.core-dark-card .core-course-link .label, core-courses-course-progress .card.core-warning-card .core-course-link .label, core-courses-course-progress .card.core-success-card .core-course-link .label, core-courses-course-progress .card.core-info-card .core-course-link .label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38555,11 +38766,22 @@ core-courses-course-progress .core-course-link {
   justify-content: space-between;
 }
 
-core-courses-course-progress .core-course-link h2 {
+core-courses-course-progress ion-card.card .core-course-link h2, core-courses-course-progress .card.core-primary-card .core-course-link h2, core-courses-course-progress .card.core-secondary-card .core-course-link h2, core-courses-course-progress .card.core-danger-card .core-course-link h2, core-courses-course-progress .card.core-light-card .core-course-link h2, core-courses-course-progress .card.core-gray-card .core-course-link h2, core-courses-course-progress .card.core-dark-card .core-course-link h2, core-courses-course-progress .card.core-warning-card .core-course-link h2, core-courses-course-progress .card.core-success-card .core-course-link h2, core-courses-course-progress .card.core-info-card .core-course-link h2 {
+  margins: 6px 0;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+}
+
+core-courses-course-progress ion-card.card .label, core-courses-course-progress .card.core-primary-card .label, core-courses-course-progress .card.core-secondary-card .label, core-courses-course-progress .card.core-danger-card .label, core-courses-course-progress .card.core-light-card .label, core-courses-course-progress .card.core-gray-card .label, core-courses-course-progress .card.core-dark-card .label, core-courses-course-progress .card.core-warning-card .label, core-courses-course-progress .card.core-success-card .label, core-courses-course-progress .card.core-info-card .label {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+core-courses-course-progress button {
+  z-index: 1;
 }
 
 core-courses-course-progress .core-course-module-handler.item-md.item-block .item-inner {
@@ -38645,6 +38867,87 @@ page-core-emulator-capture-media ion-footer .col .icon.ion-md-trash, page-core-e
 
 page-core-emulator-capture-media ion-footer .chrono-container {
   line-height: 24px;
+}
+
+core-grades-course .core-grades-table {
+  border-collapse: collapse;
+  line-height: 20px;
+  width: 100%;
+  font-size: 16px;
+  color: #3a3a3a;
+}
+
+core-grades-course .core-grades-table tr {
+  border-bottom: 1px solid #c8c7cc;
+}
+
+core-grades-course .core-grades-table th, core-grades-course .core-grades-table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  vertical-align: top;
+  white-space: normal;
+  text-align: left;
+}
+
+core-grades-course .core-grades-table thead th {
+  vertical-align: bottom;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+
+core-grades-course .core-grades-table tbody th {
+  font-weight: normal;
+}
+
+core-grades-course .core-grades-table #gradeitem {
+  padding-left: 5px;
+}
+
+core-grades-course .core-grades-table .core-grades-table-gradeitem {
+  padding-left: 5px;
+  font-weight: bold;
+}
+
+core-grades-course .core-grades-table .core-grades-table-gradeitem img {
+  width: 16px;
+  height: 16px;
+}
+
+core-grades-course .core-grades-table .core-grades-table-gradeitem ion-icon {
+  color: #999999;
+}
+
+core-grades-course .core-grades-table .core-grades-table-feedback {
+  padding-left: 5px;
+}
+
+core-grades-course .core-grades-table .core-grades-table-feedback .no-overflow {
+  overflow: auto;
+}
+
+core-grades-course .core-grades-table .dimmed_text,
+core-grades-course .core-grades-table .hidden {
+  opacity: .7;
+}
+
+core-grades-course .core-grades-table .odd td, core-grades-course .core-grades-table .odd th, core-grades-course .core-grades-table .odd th.core-split-item-selected {
+  background-color: #f5f5f5;
+}
+
+core-grades-course .core-grades-table .even td, core-grades-course .core-grades-table .even th, core-grades-course .core-grades-table .even th.core-split-item-selected {
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  core-grades-course .core-grades-table td {
+    font-size: 0.85em;
+  }
+}
+
+.split-pane-side core-grades-course .core-grades-table .hidden-phone, .split-pane-main core-grades-course .core-grades-table .hidden-phone {
+  display: none;
+  opacity: 0;
 }
 
 page-core-login-credentials .content {
@@ -38788,14 +39091,18 @@ page-core-user-profile .core-icon-foreground {
 }
 
 page-core-user-profile .core-user-communication-handlers {
-  padding: 6px 2px;
   background: #ffffff;
+  border-bottom: 1px solid #c8c7cc;
 }
 
 page-core-user-profile .core-user-communication-handlers .core-user-profile-handler {
   background: #ffffff;
   border: 0;
   color: #f98012;
+}
+
+page-core-user-profile .core-user-communication-handlers .core-user-profile-handler p {
+  margin: 0;
 }
 
 page-core-user-profile .core-user-communication-handlers .core-user-profile-handler .icon {
@@ -38808,4 +39115,8 @@ page-core-user-profile .core-user-communication-handlers .core-user-profile-hand
   color: white;
   background-color: #f98012;
   margin-bottom: 5px;
+}
+
+page-core-user-profile .core-user-profile-handler ion-spinner {
+  margin-left: 0.3em;
 }

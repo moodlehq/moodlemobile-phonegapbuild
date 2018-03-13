@@ -1,18 +1,18 @@
 webpackJsonp([36],{
 
-/***/ 1154:
+/***/ 1263:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCalendarEventPageModule", function() { return AddonCalendarEventPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesCategoriesPageModule", function() { return CoreCoursesCategoriesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__event__ = __webpack_require__(1209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__categories__ = __webpack_require__(1314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(694);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,47 +39,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonCalendarEventPageModule = /** @class */ (function () {
-    function AddonCalendarEventPageModule() {
+var CoreCoursesCategoriesPageModule = /** @class */ (function () {
+    function CoreCoursesCategoriesPageModule() {
     }
-    AddonCalendarEventPageModule = __decorate([
+    CoreCoursesCategoriesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__event__["a" /* AddonCalendarEventPage */],
+                __WEBPACK_IMPORTED_MODULE_3__categories__["a" /* CoreCoursesCategoriesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__event__["a" /* AddonCalendarEventPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* CoreCoursesComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__categories__["a" /* CoreCoursesCategoriesPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCalendarEventPageModule);
-    return AddonCalendarEventPageModule;
+    ], CoreCoursesCategoriesPageModule);
+    return CoreCoursesCategoriesPageModule;
 }());
 
-//# sourceMappingURL=event.module.js.map
+//# sourceMappingURL=categories.module.js.map
 
 /***/ }),
 
-/***/ 1209:
+/***/ 1314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCalendarEventPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesCategoriesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_calendar__ = __webpack_require__(252);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(642);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_courses_providers_courses__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_local_notifications__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_course_providers_course__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_moment__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_utils__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_courses__ = __webpack_require__(31);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -109,127 +104,104 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
 /**
- * Page that displays a single calendar event.
+ * Page that displays a list of categories and the courses in the current category if any.
  */
-var AddonCalendarEventPage = /** @class */ (function () {
-    function AddonCalendarEventPage(translate, calendarProvider, navParams, domUtils, coursesProvider, calendarHelper, sitesProvider, localNotificationsProvider, courseProvider) {
-        var _this = this;
-        this.translate = translate;
-        this.calendarProvider = calendarProvider;
-        this.domUtils = domUtils;
+var CoreCoursesCategoriesPage = /** @class */ (function () {
+    function CoreCoursesCategoriesPage(navCtrl, navParams, coursesProvider, domUtils, utils, translate, sitesProvider) {
+        this.navCtrl = navCtrl;
         this.coursesProvider = coursesProvider;
-        this.calendarHelper = calendarHelper;
-        this.courseProvider = courseProvider;
-        this.event = {};
-        this.notificationsEnabled = false;
-        this.eventId = navParams.get('id');
-        this.notificationsEnabled = localNotificationsProvider.isAvailable();
-        this.siteHomeId = sitesProvider.getCurrentSite().getSiteHomeId();
-        if (this.notificationsEnabled) {
-            this.calendarProvider.getEventNotificationTimeOption(this.eventId).then(function (notificationTime) {
-                _this.notificationTime = notificationTime;
-            });
-            this.calendarProvider.getDefaultNotificationTime().then(function (defaultTime) {
-                if (defaultTime === 0) {
-                    // Disabled by default.
-                    _this.defaultTimeReadable = _this.translate.instant('core.settings.disabled');
-                }
-                else {
-                    _this.defaultTimeReadable = __WEBPACK_IMPORTED_MODULE_10_moment__["duration"](defaultTime * 60 * 1000).humanize();
-                }
-            });
-        }
+        this.domUtils = domUtils;
+        this.utils = utils;
+        this.sitesProvider = sitesProvider;
+        this.categories = [];
+        this.courses = [];
+        this.categoryId = navParams.get('categoryId') || 0;
+        this.title = translate.instant('core.courses.categories');
     }
     /**
      * View loaded.
      */
-    AddonCalendarEventPage.prototype.ionViewDidLoad = function () {
+    CoreCoursesCategoriesPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchEvent().finally(function () {
-            _this.eventLoaded = true;
+        this.fetchCategories().finally(function () {
+            _this.categoriesLoaded = true;
         });
     };
-    AddonCalendarEventPage.prototype.updateNotificationTime = function () {
-        if (!isNaN(this.notificationTime) && this.event && this.event.id) {
-            this.calendarProvider.updateNotificationTime(this.event, this.notificationTime);
-        }
-    };
     /**
-     * Fetches the event and updates the view.
+     * Fetch the categories.
      *
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonCalendarEventPage.prototype.fetchEvent = function () {
+    CoreCoursesCategoriesPage.prototype.fetchCategories = function () {
         var _this = this;
-        return this.calendarProvider.getEvent(this.eventId).then(function (event) {
-            _this.calendarHelper.formatEventData(event);
-            _this.event = event;
-            // Guess event title.
-            var title = _this.translate.instant('addon.calendar.type' + event.eventtype);
-            if (event.moduleIcon) {
-                // It's a module event, translate the module name to the current language.
-                var name_1 = _this.courseProvider.translateModuleName(event.modulename);
-                if (name_1.indexOf('core.mod_') === -1) {
-                    event.moduleName = name_1;
+        return this.coursesProvider.getCategories(this.categoryId, true).then(function (cats) {
+            _this.currentCategory = undefined;
+            cats.forEach(function (cat, index) {
+                if (cat.id == _this.categoryId) {
+                    _this.currentCategory = cat;
+                    // Delete current Category to avoid problems with the formatTree.
+                    delete cats[index];
                 }
-                if (title == 'addon.calendar.type' + event.eventtype) {
-                    title = _this.translate.instant('core.mod_' + event.modulename + '.' + event.eventtype);
-                    if (title == 'core.mod_' + event.modulename + '.' + event.eventtype) {
-                        title = name_1;
-                    }
+            });
+            // Sort by depth and sortorder to avoid problems formatting Tree.
+            cats.sort(function (a, b) {
+                if (a.depth == b.depth) {
+                    return (a.sortorder > b.sortorder) ? 1 : ((b.sortorder > a.sortorder) ? -1 : 0);
                 }
-            }
-            else {
-                if (title == 'addon.calendar.type' + event.eventtype) {
-                    title = event.name;
-                }
-            }
-            _this.title = title;
-            if (event.courseid != _this.siteHomeId) {
-                // It's a course event, retrieve the course name.
-                return _this.coursesProvider.getUserCourse(event.courseid, true).then(function (course) {
-                    _this.courseName = course.fullname;
+                return a.depth > b.depth ? 1 : -1;
+            });
+            _this.categories = _this.utils.formatTree(cats, 'parent', 'id', _this.categoryId);
+            if (_this.currentCategory) {
+                _this.title = _this.currentCategory.name;
+                return _this.coursesProvider.getCoursesByField('category', _this.categoryId).then(function (courses) {
+                    _this.courses = courses;
+                }).catch(function (error) {
+                    _this.domUtils.showErrorModalDefault(error, 'core.courses.errorloadcourses', true);
                 });
             }
         }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.calendar.errorloadevent', true);
+            _this.domUtils.showErrorModalDefault(error, 'core.courses.errorloadcategories', true);
         });
     };
     /**
-     * Refresh the event.
+     * Refresh the categories.
      *
      * @param {any} refresher Refresher.
      */
-    AddonCalendarEventPage.prototype.refreshEvent = function (refresher) {
+    CoreCoursesCategoriesPage.prototype.refreshCategories = function (refresher) {
         var _this = this;
-        this.calendarProvider.invalidateEvent(this.eventId).finally(function () {
-            _this.fetchEvent().finally(function () {
+        var promises = [];
+        promises.push(this.coursesProvider.invalidateUserCourses());
+        promises.push(this.coursesProvider.invalidateCategories(this.categoryId, true));
+        promises.push(this.coursesProvider.invalidateCoursesByField('category', this.categoryId));
+        promises.push(this.sitesProvider.getCurrentSite().invalidateConfig());
+        Promise.all(promises).finally(function () {
+            _this.fetchCategories().finally(function () {
                 refresher.complete();
             });
         });
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonCalendarEventPage.prototype, "content", void 0);
-    AddonCalendarEventPage = __decorate([
+    /**
+     * Open a category.
+     *
+     * @param {number} categoryId The category ID.
+     */
+    CoreCoursesCategoriesPage.prototype.openCategory = function (categoryId) {
+        this.navCtrl.push('CoreCoursesCategoriesPage', { categoryId: categoryId });
+    };
+    CoreCoursesCategoriesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-calendar-event',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/event/event.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="eventLoaded" (ionRefresh)="refreshEvent($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="eventLoaded">\n        <ion-card>\n            <ion-card-content>\n                <ion-card-title text-wrap>\n                    <ion-icon *ngIf="!event.moduleIcon" name="{{event.icon}}" item-start></ion-icon>\n                    <core-format-text [text]="event.name"></core-format-text>\n                </ion-card-title>\n                <ion-item text-wrap>\n                    <h2>{{ \'addon.calendar.eventstarttime\' | translate}}</h2>\n                    <p>{{ event.timestart | coreToLocaleString }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="event.timeduration > 0">\n                    <h2>{{ \'addon.calendar.eventendtime\' | translate}}</h2>\n                    <p>{{ (event.timestart + event.timeduration) |  coreToLocaleString }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="courseName">\n                    <h2>{{ \'core.course\' | translate}}</h2>\n                    <p><core-format-text [text]="courseName"></core-format-text></p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="event.moduleIcon">\n                    <img *ngIf="event.moduleIcon" src="{{event.moduleIcon}}" item-start alt="" role="presentation" class="core-module-icon"> {{event.moduleName}}\n                </ion-item>\n                <ion-item>\n                    <p text-wrap *ngIf="event.description">\n                        <core-format-text [text]="event.description"></core-format-text>\n                    </p>\n                </ion-item>\n            </ion-card-content>\n        </ion-card>\n\n        <ion-card list *ngIf="notificationsEnabled">\n            <ion-item>\n                <ion-label>{{ \'addon.calendar.notifications\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="notificationTime" (ionChange)="updateNotificationTime($event)" interface="popover">\n                    <ion-option value="-1">{{ \'core.defaultvalue\' | translate :{$a: defaultTimeReadable} }}</ion-option>\n                    <ion-option value="0">{{ \'core.settings.disabled\' | translate }}</ion-option>\n                    <ion-option value="10">{{ 600 | coreDuration }}</ion-option>\n                    <ion-option value="30">{{ 1800 | coreDuration }}</ion-option>\n                    <ion-option value="60">{{ 3600 | coreDuration }}</ion-option>\n                    <ion-option value="120">{{ 7200 | coreDuration }}</ion-option>\n                    <ion-option value="360">{{ 21600 | coreDuration }}</ion-option>\n                    <ion-option value="720">{{ 43200 | coreDuration }}</ion-option>\n                    <ion-option value="1440">{{ 86400 | coreDuration }}</ion-option>\n                </ion-select>\n            </ion-item>\n        </ion-card>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/event/event.html"*/,
+            selector: 'page-core-courses-categories',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/courses/pages/categories/categories.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="categoriesLoaded" (ionRefresh)="refreshCategories($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="categoriesLoaded">\n        <ion-item *ngIf="currentCategory" text-wrap>\n            <ion-icon name="folder" item-start></ion-icon>\n            <h2><core-format-text [text]="currentCategory.name"></core-format-text></h2>\n        </ion-item>\n        <ion-item text-wrap *ngIf="currentCategory && currentCategory.description">\n            <core-format-text [text]="currentCategory.description" maxHeight="60"></core-format-text>\n        </ion-item>\n\n        <div *ngIf="categories.length > 0">\n            <ion-item-divider color="light">{{ \'core.courses.categories\' | translate }}</ion-item-divider>\n            <section *ngFor="let category of categories">\n                <a ion-item text-wrap (click)="openCategory(category.id)" [title]="category.name">\n                    <ion-icon name="folder" item-start></ion-icon>\n                    <h2><core-format-text [text]="category.name"></core-format-text></h2>\n                    <ion-badge item-end *ngIf="category.coursecount > 0" color="light">{{category.coursecount}}</ion-badge>\n                </a>\n            </section>\n        </div>\n\n        <div *ngIf="courses.length > 0">\n            <ion-item-divider color="light">{{ \'core.courses.courses\' | translate }}</ion-item-divider>\n            <core-courses-course-list-item *ngFor="let course of courses" [course]="course"></core-courses-course-list-item>\n        </div>\n        <core-empty-box *ngIf="!categories.length && !courses.length" icon="ionic" [message]="\'core.courses.nocoursesyet\' | translate">\n            <p *ngIf="searchEnabled">{{ \'core.courses.searchcoursesadvice\' | translate }}</p>\n        </core-empty-box>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/courses/pages/categories/categories.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__core_courses_providers_courses__["a" /* CoreCoursesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* AddonCalendarHelperProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_9__core_course_providers_course__["a" /* CoreCourseProvider */]])
-    ], AddonCalendarEventPage);
-    return AddonCalendarEventPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__providers_courses__["a" /* CoreCoursesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */]])
+    ], CoreCoursesCategoriesPage);
+    return CoreCoursesCategoriesPage;
 }());
 
-//# sourceMappingURL=event.js.map
+//# sourceMappingURL=categories.js.map
 
 /***/ })
 

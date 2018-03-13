@@ -1,17 +1,16 @@
 webpackJsonp([20],{
 
-/***/ 1176:
+/***/ 1281:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitePolicyPageModule", function() { return CoreLoginSitePolicyPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSiteErrorPageModule", function() { return CoreLoginSiteErrorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_policy__ = __webpack_require__(1231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_error__ = __webpack_require__(1332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(50);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,41 +35,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var CoreLoginSitePolicyPageModule = /** @class */ (function () {
-    function CoreLoginSitePolicyPageModule() {
+var CoreLoginSiteErrorPageModule = /** @class */ (function () {
+    function CoreLoginSiteErrorPageModule() {
     }
-    CoreLoginSitePolicyPageModule = __decorate([
+    CoreLoginSiteErrorPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__site_policy__["a" /* CoreLoginSitePolicyPage */]
+                __WEBPACK_IMPORTED_MODULE_2__site_error__["a" /* CoreLoginSiteErrorPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__site_policy__["a" /* CoreLoginSitePolicyPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__site_error__["a" /* CoreLoginSiteErrorPage */]),
                 __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ]
         })
-    ], CoreLoginSitePolicyPageModule);
-    return CoreLoginSitePolicyPageModule;
+    ], CoreLoginSiteErrorPageModule);
+    return CoreLoginSiteErrorPageModule;
 }());
 
-//# sourceMappingURL=site-policy.module.js.map
+//# sourceMappingURL=site-error.module.js.map
 
 /***/ }),
 
-/***/ 1231:
+/***/ 1332:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginSitePolicyPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginSiteErrorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_mimetype__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_helper__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -95,108 +88,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
 /**
- * Page to accept a site policy.
+ * Component that displays an error when trying to connect to a site.
  */
-var CoreLoginSitePolicyPage = /** @class */ (function () {
-    function CoreLoginSitePolicyPage(navCtrl, navParams, loginHelper, domUtils, sitesProvider, mimeUtils) {
-        this.navCtrl = navCtrl;
-        this.loginHelper = loginHelper;
-        this.domUtils = domUtils;
-        this.sitesProvider = sitesProvider;
-        this.mimeUtils = mimeUtils;
-        this.siteId = navParams.get('siteId');
+var CoreLoginSiteErrorPage = /** @class */ (function () {
+    function CoreLoginSiteErrorPage(viewCtrl, params) {
+        this.viewCtrl = viewCtrl;
+        this.siteUrl = params.get('siteUrl');
+        this.issue = params.get('issue');
     }
     /**
-     * View laoded.
+     * Close modal.
      */
-    CoreLoginSitePolicyPage.prototype.ionViewDidLoad = function () {
-        this.currentSite = this.sitesProvider.getCurrentSite();
-        if (!this.currentSite) {
-            // Not logged in, stop.
-            this.cancel();
-            return;
-        }
-        var currentSiteId = this.currentSite.id;
-        this.siteId = this.siteId || currentSiteId;
-        if (this.siteId != currentSiteId || !this.currentSite.wsAvailable('core_user_agree_site_policy')) {
-            // Not current site or WS not available, stop.
-            this.cancel();
-            return;
-        }
-        this.fetchSitePolicy();
+    CoreLoginSiteErrorPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
     };
-    /**
-     * Fetch the site policy URL.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    CoreLoginSitePolicyPage.prototype.fetchSitePolicy = function () {
-        var _this = this;
-        return this.loginHelper.getSitePolicy(this.siteId).then(function (sitePolicy) {
-            _this.sitePolicy = sitePolicy;
-            // Try to get the mime type.
-            return _this.mimeUtils.getMimeTypeFromUrl(sitePolicy).then(function (mimeType) {
-                var extension = _this.mimeUtils.getExtension(mimeType, sitePolicy);
-                _this.showInline = extension == 'html' || extension == 'htm';
-            }).catch(function () {
-                // Unable to get mime type, assume it's not supported.
-                _this.showInline = false;
-            }).finally(function () {
-                _this.policyLoaded = true;
-            });
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error && error.error, 'Error getting site policy.');
-            _this.cancel();
-        });
-    };
-    /**
-     * Cancel.
-     */
-    CoreLoginSitePolicyPage.prototype.cancel = function () {
-        var _this = this;
-        this.sitesProvider.logout().catch(function () {
-            // Ignore errors, shouldn't happen.
-        }).then(function () {
-            _this.navCtrl.setRoot('CoreLoginSitesPage');
-        });
-    };
-    /**
-     * Accept the site policy.
-     */
-    CoreLoginSitePolicyPage.prototype.accept = function () {
-        var _this = this;
-        var modal = this.domUtils.showModalLoading('core.sending', true);
-        this.loginHelper.acceptSitePolicy(this.siteId).then(function () {
-            // Success accepting, go to site initial page.
-            // Invalidate cache since some WS don't return error if site policy is not accepted.
-            return _this.currentSite.invalidateWsCache().catch(function () {
-                // Ignore errors.
-            }).then(function () {
-                return _this.loginHelper.goToSiteInitialPage();
-            });
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error.message, 'Error accepting site policy.');
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    CoreLoginSitePolicyPage = __decorate([
+    CoreLoginSiteErrorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-site-policy',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/site-policy/site-policy.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.policyagreement\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="policyLoaded">\n        <ion-list>\n            <ion-item text-wrap>\n                {{ \'core.login.policyagree\' | translate }}\n            </ion-item>\n            <ion-item text-wrap>\n                <p><a [href]="sitePolicy" core-link [capture]="false">{{ \'core.login.policyagreementclick\' | translate }}</a></p>\n            </ion-item>\n            <ion-card *ngIf="showInline">\n                <core-iframe [src]="sitePolicy"></core-iframe>\n            </ion-card>\n            <ion-item text-wrap padding>\n                <button ion-button block color="primary" (click)="accept()">{{ \'core.login.policyaccept\' | translate }}</button>\n                <button ion-button block (click)="cancel()">{{ \'core.login.cancel\' | translate }}</button>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/site-policy/site-policy.html"*/,
+            selector: 'page-core-login-site-error',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/site-error/site-error.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.error\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <h3>{{ \'core.whoops\' | translate }}</h3>\n    <p>{{ \'core.login.problemconnectingerror\' | translate }}</p>\n    <p padding>{{siteUrl}}</p>\n    <p>{{ \'core.login.problemconnectingerrorcontinue\' | translate }}</p>\n    <button ion-button block (click)="closeModal()">{{ \'core.tryagain\' | translate }}</button>\n    <h3>{{ \'core.login.stillcantconnect\' | translate }}</h3>\n    <p>{{ \'core.login.contactyouradministrator\' | translate }}</p>\n    <p *ngIf="issue">\n        {{ \'core.login.contactyouradministratorissue\' | translate:{$a: \'\'} }}\n    </p>\n    <p *ngIf="issue">\n        <core-format-text [text]="issue"></core-format-text>\n    </p>\n</ion-content>\n\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/site-error/site-error.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_helper__["a" /* CoreLoginHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_mimetype__["a" /* CoreMimetypeUtilsProvider */]])
-    ], CoreLoginSitePolicyPage);
-    return CoreLoginSitePolicyPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+    ], CoreLoginSiteErrorPage);
+    return CoreLoginSiteErrorPage;
 }());
 
-//# sourceMappingURL=site-policy.js.map
+//# sourceMappingURL=site-error.js.map
 
 /***/ })
 

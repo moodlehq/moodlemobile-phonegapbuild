@@ -1,17 +1,15 @@
 webpackJsonp([23],{
 
-/***/ 1172:
+/***/ 1275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginReconnectPageModule", function() { return CoreLoginReconnectPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginForgottenPasswordPageModule", function() { return CoreLoginForgottenPasswordPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reconnect__ = __webpack_require__(1227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forgotten_password__ = __webpack_require__(1326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(8);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,43 +33,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-var CoreLoginReconnectPageModule = /** @class */ (function () {
-    function CoreLoginReconnectPageModule() {
+var CoreLoginForgottenPasswordPageModule = /** @class */ (function () {
+    function CoreLoginForgottenPasswordPageModule() {
     }
-    CoreLoginReconnectPageModule = __decorate([
+    CoreLoginForgottenPasswordPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__reconnect__["a" /* CoreLoginReconnectPage */]
+                __WEBPACK_IMPORTED_MODULE_2__forgotten_password__["a" /* CoreLoginForgottenPasswordPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__reconnect__["a" /* CoreLoginReconnectPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__forgotten_password__["a" /* CoreLoginForgottenPasswordPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ]
         })
-    ], CoreLoginReconnectPageModule);
-    return CoreLoginReconnectPageModule;
+    ], CoreLoginForgottenPasswordPageModule);
+    return CoreLoginForgottenPasswordPageModule;
 }());
 
-//# sourceMappingURL=reconnect.module.js.map
+//# sourceMappingURL=forgotten-password.module.js.map
 
 /***/ }),
 
-/***/ 1227:
+/***/ 1326:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginReconnectPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginForgottenPasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_helper__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(28);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -100,132 +93,73 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 /**
- * Page to enter the user password to reconnect to a site.
+ * Page to recover a forgotten password.
  */
-var CoreLoginReconnectPage = /** @class */ (function () {
-    function CoreLoginReconnectPage(navCtrl, navParams, fb, appProvider, sitesProvider, loginHelper, domUtils) {
+var CoreLoginForgottenPasswordPage = /** @class */ (function () {
+    function CoreLoginForgottenPasswordPage(navCtrl, navParams, fb, translate, loginHelper, domUtils) {
         this.navCtrl = navCtrl;
-        this.appProvider = appProvider;
-        this.sitesProvider = sitesProvider;
+        this.translate = translate;
         this.loginHelper = loginHelper;
         this.domUtils = domUtils;
-        var currentSite = this.sitesProvider.getCurrentSite();
-        this.infoSiteUrl = navParams.get('infoSiteUrl');
-        this.pageName = navParams.get('pageName');
-        this.pageParams = navParams.get('pageParams');
-        this.siteConfig = navParams.get('siteConfig');
         this.siteUrl = navParams.get('siteUrl');
-        this.siteId = navParams.get('siteId');
-        this.isLoggedOut = currentSite && currentSite.isLoggedOut();
-        this.credForm = fb.group({
-            password: ['', __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* Validators */].required]
+        this.myForm = fb.group({
+            field: ['username', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["h" /* Validators */].required],
+            value: [navParams.get('username') || '', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["h" /* Validators */].required]
         });
     }
     /**
-     * View loaded.
+     * Request to reset the password.
      */
-    CoreLoginReconnectPage.prototype.ionViewDidLoad = function () {
+    CoreLoginForgottenPasswordPage.prototype.resetPassword = function () {
         var _this = this;
-        if (this.siteConfig) {
-            this.identityProviders = this.loginHelper.getValidIdentityProviders(this.siteConfig);
+        var field = this.myForm.value.field, value = this.myForm.value.value;
+        if (!value) {
+            this.domUtils.showErrorModal('core.login.usernameoremail', true);
+            return;
         }
-        this.sitesProvider.getSite(this.siteId).then(function (site) {
-            _this.site = {
-                id: site.id,
-                fullname: site.infos.fullname,
-                avatar: site.infos.userpictureurl
-            };
-            _this.username = site.infos.username;
-            _this.siteUrl = site.infos.siteurl;
-            _this.siteName = site.infos.sitename;
-            // Check logoURL if user avatar is not set.
-            if (_this.site.avatar.startsWith(site.infos.siteurl + '/theme/image.php')) {
-                _this.site.avatar = false;
-                return site.getPublicConfig().then(function (config) {
-                    _this.logoUrl = config.logourl || config.compactlogourl;
-                });
+        var modal = this.domUtils.showModalLoading('core.sending', true), isMail = field == 'email';
+        this.loginHelper.requestPasswordReset(this.siteUrl, isMail ? '' : value, isMail ? value : '').then(function (response) {
+            if (response.status == 'dataerror') {
+                // Error in the data sent.
+                _this.showError(isMail, response.warnings);
             }
-        }).catch(function () {
-            // Shouldn't happen. Just leave the view.
-            _this.cancel();
-        });
-    };
-    /**
-     * Cancel reconnect.
-     */
-    CoreLoginReconnectPage.prototype.cancel = function () {
-        var _this = this;
-        this.sitesProvider.logout().finally(function () {
-            _this.navCtrl.setRoot('CoreLoginSitesPage');
-        });
-    };
-    /**
-     * Tries to authenticate the user.
-     */
-    CoreLoginReconnectPage.prototype.login = function () {
-        var _this = this;
-        this.appProvider.closeKeyboard();
-        // Get input data.
-        var siteUrl = this.siteUrl, username = this.username, password = this.credForm.value.password;
-        if (!password) {
-            this.domUtils.showErrorModal('core.login.passwordrequired', true);
-            return;
-        }
-        if (!this.appProvider.isOnline()) {
-            this.domUtils.showErrorModal('core.networkerrormsg', true);
-            return;
-        }
-        var modal = this.domUtils.showModalLoading();
-        // Start the authentication process.
-        this.sitesProvider.getUserToken(siteUrl, username, password).then(function (data) {
-            return _this.sitesProvider.updateSiteToken(_this.infoSiteUrl, username, data.token, data.privateToken).then(function () {
-                // Update site info too because functions might have changed (e.g. unisntall local_mobile).
-                return _this.sitesProvider.updateSiteInfoByUrl(_this.infoSiteUrl, username).finally(function () {
-                    // Reset fields so the data is not in the view anymore.
-                    _this.credForm.controls['password'].reset();
-                    if (_this.pageName) {
-                        // Page defined, go to that page instead of site initial page.
-                        return _this.navCtrl.setRoot(_this.pageName, _this.pageParams);
-                    }
-                    else {
-                        return _this.loginHelper.goToSiteInitialPage();
-                    }
-                }).catch(function (error) {
-                    // Site deleted? Go back to login page.
-                    _this.domUtils.showErrorModal('core.login.errorupdatesite', true);
-                    _this.cancel();
-                });
-            });
+            else if (response.status == 'emailpasswordconfirmnotsent' || response.status == 'emailpasswordconfirmnoemail') {
+                // Error, not found.
+                _this.domUtils.showErrorModal(response.notice);
+            }
+            else {
+                // Success.
+                _this.domUtils.showAlert(_this.translate.instant('core.success'), response.notice);
+                _this.navCtrl.pop();
+            }
         }).catch(function (error) {
-            _this.loginHelper.treatUserTokenError(siteUrl, error);
+            _this.domUtils.showErrorModal(error.error);
         }).finally(function () {
             modal.dismiss();
         });
     };
-    /**
-     * An OAuth button was clicked.
-     *
-     * @param {any} provider The provider that was clicked.
-     */
-    CoreLoginReconnectPage.prototype.oauthClicked = function (provider) {
-        if (!this.loginHelper.openBrowserForOAuthLogin(this.siteUrl, provider, this.siteConfig.launchurl)) {
-            this.domUtils.showErrorModal('Invalid data.');
+    // Show an error from the warnings.
+    CoreLoginForgottenPasswordPage.prototype.showError = function (isMail, warnings) {
+        for (var i = 0; i < warnings.length; i++) {
+            var warning = warnings[i];
+            if ((warning.item == 'email' && isMail) || (warning.item == 'username' && !isMail)) {
+                this.domUtils.showErrorModal(warning.message);
+                break;
+            }
         }
     };
-    CoreLoginReconnectPage = __decorate([
+    CoreLoginForgottenPasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-reconnect',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/reconnect/reconnect.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.reconnect\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content padding class="core-center-view">\n    <div class="box">\n        <div *ngIf="site" text-wrap text-center [ngClass]="{\'item-avatar-center\': site.avatar}">\n            <ion-avatar *ngIf="site.avatar">\n                <!-- Show user avatar. -->\n                <img [src]="site.avatar" class="avatar" core-external-content [siteId]="site.id" alt="{{ \'core.pictureof\' | translate:{$a: site.fullname} }}" role="presentation">\n            </ion-avatar>\n\n            <!-- Show site logo or a default image. -->\n            <img *ngIf="!site.avatar && logoUrl" [src]="logoUrl" core-external-content [siteId]="site.id" role="presentation">\n            <img *ngIf="!site.avatar && !logoUrl" src="assets/img/login_logo.png" class="login-logo" role="presentation">\n\n            <!-- If no sitename show big siteurl. -->\n            <p *ngIf="!siteName" class="item-heading core-siteurl">{{siteUrl}}</p>\n            <!-- If sitename, show big sitename and small siteurl. -->\n            <p *ngIf="siteName" class="item-heading core-sitename">{{siteName}}</p>\n            <p *ngIf="siteName" class="core-siteurl">{{siteUrl}}</p>\n\n            <p *ngIf="!isLoggedOut">\n                <ion-icon padding name="alert"></ion-icon> {{ \'core.login.reconnectdescription\' | translate }}\n            </p>\n        </div>\n        <ion-list>\n            <ion-item padding text-wrap class="core-username">\n                <p class="item-heading">{{ \'core.login.username\' | translate }}</p>\n                <p>{{username}}</p>\n            </ion-item>\n            <form [formGroup]="credForm" (ngSubmit)="login()">\n                <ion-item>\n                    <core-show-password item-content [name]="\'password\'">\n                        <ion-input class="core-ioninput-password" name="password" type="password" placeholder="{{ \'core.login.password\' | translate }}" formControlName="password" core-show-password core-auto-focus></ion-input>\n                    </core-show-password>\n                </ion-item>\n                <ion-grid>\n                    <ion-row>\n                        <ion-col>\n                            <a ion-button block color="light" (click)="cancel()">{{ \'core.login.cancel\' | translate }}</a>\n                        </ion-col>\n                        <ion-col>\n                            <button ion-button block [disabled]="!credForm.valid">{{ \'core.login.loginbutton\' | translate }}</button>\n                        </ion-col>\n                    </ion-row>\n                </ion-grid>\n            </form>\n        </ion-list>\n\n        <!-- Identity providers. -->\n        <ion-list *ngIf="identityProviders && identityProviders.length" padding-top>\n            <ion-list-header text-wrap>{{ \'core.login.potentialidps\' | translate }}</ion-list-header>\n            <button ion-item *ngFor="let provider of identityProviders" text-wrap class="core-oauth-icon" (click)="oauthClicked(provider)" title="{{provider.name}}">\n                <img [src]="provider.iconurl" alt="{{provider.name}}" item-start>\n                {{provider.name}}\n            </button>\n        </ion-list>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/reconnect/reconnect.html"*/,
+            selector: 'page-core-login-forgotten-password',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/forgotten-password/forgotten-password.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.passwordforgotten\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item text-wrap>\n            {{ \'core.login.passwordforgotteninstructions2\' | translate }}\n        </ion-item>\n    </ion-list>\n    <ion-card>\n        <form ion-list [formGroup]="myForm" (ngSubmit)="resetPassword()">\n            <ion-item-divider text-wrap color="light">\n                {{ \'core.login.searchby\' | translate }}\n            </ion-item-divider>\n            <div radio-group formControlName="field">\n                <ion-item>\n                    <ion-label>{{ \'core.login.username\' | translate }}</ion-label>\n                    <ion-radio value="username"></ion-radio>\n                </ion-item>\n                <ion-item>\n                    <ion-label>{{ \'core.user.email\' | translate }}</ion-label>\n                    <ion-radio value="email"></ion-radio>\n                </ion-item>\n            </div>\n            <ion-item>\n                <ion-input type="text" name="value" placeholder="{{ \'core.login.usernameoremail\' | translate }}" formControlName="value" autocapitalize="none" autocorrect="off" core-auto-focus></ion-input>\n            </ion-item>\n            <ion-item>\n                <button text-wrap ion-button block [disabled]="!myForm.valid">{{ \'core.courses.search\' | translate }}</button>\n            </ion-item>\n        </form>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/forgotten-password/forgotten-password.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_helper__["a" /* CoreLoginHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])
-    ], CoreLoginReconnectPage);
-    return CoreLoginReconnectPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* CoreLoginHelperProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])
+    ], CoreLoginForgottenPasswordPage);
+    return CoreLoginForgottenPasswordPage;
 }());
 
-//# sourceMappingURL=reconnect.js.map
+//# sourceMappingURL=forgotten-password.js.map
 
 /***/ })
 
