@@ -13317,15 +13317,6 @@ ion-side-menu li.item.item-divider, ion-side-menu .mm-grades-table li.item-divid
 .mm-site_mm_user-profile .mm-tab-handlers {
   padding-bottom: 16px; }
 
-.mm-site_coursesgrades .item .badge, .mm-site_coursesgrades .mm-grades-table .itemcenter .badge, .mm-grades-table .mm-site_coursesgrades .itemcenter .badge, .mm-site_coursesgrades .item .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item
-.mma-messages-unreadfrom span,
-.mma-messages-unreadfrom .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter
-.mma-messages-unreadfrom span,
-.mma-messages-unreadfrom .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter
-.mma-messages-unreadfrom span,
-.mma-messages-unreadfrom .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
-  right: 16px; }
-
 .mm-site_frontpage .mma-frontpage-item-container .item-media {
   min-height: 55px;
   padding-left: 54px; }
@@ -13343,6 +13334,15 @@ ion-side-menu li.item.item-divider, ion-side-menu .mm-grades-table li.item-divid
 .mm-site_frontpage .mm-frontpageitemnews .mm-module-buttons {
   width: 30px;
   height: 22px; }
+
+.mm-site_coursesgrades .item .badge, .mm-site_coursesgrades .mm-grades-table .itemcenter .badge, .mm-grades-table .mm-site_coursesgrades .itemcenter .badge, .mm-site_coursesgrades .item .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-messages-date span, .mma-messages-date .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-messages-date span, .mma-messages-date .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item
+.mma-messages-unreadfrom span,
+.mma-messages-unreadfrom .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter
+.mma-messages-unreadfrom span,
+.mma-messages-unreadfrom .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter
+.mma-messages-unreadfrom span,
+.mma-messages-unreadfrom .mm-grades-table .mm-site_coursesgrades .itemcenter span, .mm-site_coursesgrades .item .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .item span, .mm-site_coursesgrades .mm-grades-table .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-site_coursesgrades .mm-grades-table .itemcenter span, .mm-grades-table .mm-site_coursesgrades .itemcenter .mma-chat-notice span, .mma-chat-notice .mm-grades-table .mm-site_coursesgrades .itemcenter span {
+  right: 16px; }
 
 .mma-messages-date,
 .mma-messages-unreadfrom {
