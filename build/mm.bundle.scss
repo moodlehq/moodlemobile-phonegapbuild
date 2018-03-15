@@ -1813,12 +1813,26 @@ ol.list-with-style, ul.list-with-style {
   padding-bottom: 0;
 }
 
-.text-success {
+.text-success, p.text-success, .item p.text-success {
   color: $mm-success-color;
 }
 
-.text-danger {
+.text-danger, p.text-danger, .item p.text-danger {
   color: $mm-error-color;
+}
+
+// ReCaptcha modal.
+.mm-recaptcha-modal {
+    background-color: $gray-light;
+
+    .bar-header {
+        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
+
+        .button {
+            color: $bar-content-text;
+            font-weight: normal;
+        }
+    }
 }
 
 .atto_image_preview {
@@ -2868,6 +2882,9 @@ ion-side-menu li.item.item-divider {
     padding-bottom: 16px;
 }
 
+.mm-site_coursesgrades .item .badge {
+  right: 16px;
+}
 .mm-site_frontpage {
     .mma-frontpage-item-container .item-media {
         min-height: 55px;
@@ -2894,9 +2911,6 @@ ion-side-menu li.item.item-divider {
             height: 22px;
         }
     }
-}
-.mm-site_coursesgrades .item .badge {
-  right: 16px;
 }
 $mma-messages-date-badge: "stable" !default;
 
@@ -4327,6 +4341,19 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 }
 
 
+// Style match content a bit.
+.mma-qtype-match-container .item-select {
+  select,
+  .mm-select-fix {
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+  }
+}
+
 // Style multianswer content a bit. All these styles are copied from Moodle.
 .mma-qtype-multianswer-container {
   p {
@@ -4371,16 +4398,3 @@ $mma-qbehaviour-deferredcbm-confident-color:    $red !default;
   }
 }
 
-
-// Style match content a bit.
-.mma-qtype-match-container .item-select {
-  select,
-  .mm-select-fix {
-    padding: 0 36px 0 0;
-    max-width: 100%;
-    display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
-  }
-}
