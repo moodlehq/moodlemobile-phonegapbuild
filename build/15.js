@@ -1,6 +1,6 @@
 webpackJsonp([15],{
 
-/***/ 1285:
+/***/ 1320:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(1336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(1379);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -54,17 +54,16 @@ var CoreMainMenuPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 1336:
+/***/ 1379:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreMainMenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_mainmenu__ = __webpack_require__(698);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_delegate__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__ = __webpack_require__(708);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(70);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -92,16 +91,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 /**
  * Page that displays the main menu of the app.
  */
 var CoreMainMenuPage = /** @class */ (function () {
-    function CoreMainMenuPage(menuDelegate, sitesProvider, navParams, navCtrl, eventsProvider) {
+    function CoreMainMenuPage(menuDelegate, sitesProvider, navParams, navCtrl) {
         this.menuDelegate = menuDelegate;
         this.sitesProvider = sitesProvider;
         this.navCtrl = navCtrl;
-        this.eventsProvider = eventsProvider;
         this.tabs = [];
         this.moreTabData = {
             page: 'CoreMainMenuMorePage',
@@ -146,16 +143,8 @@ var CoreMainMenuPage = /** @class */ (function () {
             return;
         }
         var site = this.sitesProvider.getCurrentSite(), displaySiteHome = site.getInfo() && site.getInfo().userhomepage === 0;
-        this.updateBadgeObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_5__providers_delegate__["a" /* CoreMainMenuDelegate */].UPDATE_BADGE_EVENT, function (data) {
-            var tab = _this.tabs.find(function (tab) {
-                return tab.showBadge && tab['name'] == data.name;
-            });
-            if (tab) {
-                tab.badge = data.badge;
-            }
-        }, site.getId());
         this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
-            handlers = handlers.slice(0, __WEBPACK_IMPORTED_MODULE_4__providers_mainmenu__["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Get main handlers.
+            handlers = handlers.slice(0, __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Get main handlers.
             // Check if handlers are already in tabs. Add the ones that aren't.
             // @todo: https://github.com/ionic-team/ionic/issues/13633
             for (var i = 0; i < handlers.length; i++) {
@@ -191,7 +180,6 @@ var CoreMainMenuPage = /** @class */ (function () {
      */
     CoreMainMenuPage.prototype.ngOnDestroy = function () {
         this.subscription && this.subscription.unsubscribe();
-        this.updateBadgeObserver && this.updateBadgeObserver.off();
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('mainTabs'),
@@ -202,8 +190,8 @@ var CoreMainMenuPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-core-mainmenu',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/'<ion-tabs *ngIf="loaded" #mainTabs [selectedIndex]="initialTab" tabsPlacement="bottom" tabsLayout="title-hide">\n    <ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></ion-tab>\n    <ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]])
     ], CoreMainMenuPage);
     return CoreMainMenuPage;
 }());
