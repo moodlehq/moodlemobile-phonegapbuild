@@ -12205,11 +12205,24 @@ ol.list-with-style, ul.list-with-style {
 .no-padding-bottom, .padding.no-padding-bottom, .item .no-padding-bottom.item-heading.padding, .mm-grades-table .itemcenter .no-padding-bottom.item-heading.padding {
   padding-bottom: 0; }
 
-.text-success {
+.text-success, p.text-success, .item p.text-success, .mm-grades-table .itemcenter p.text-success {
   color: #5e8100; }
 
-.text-danger {
+.text-danger, p.text-danger, .item p.text-danger, .mm-grades-table .itemcenter p.text-danger {
   color: #cb3d4d; }
+
+.mm-recaptcha-modal {
+  background-color: #eeeeee; }
+  .mm-recaptcha-modal .bar-header {
+    border-color: transparent;
+    background-color: #f98012;
+    background-image: linear-gradient(0deg, transparent, transparent 50%, transparent 50%);
+    color: #ffffff; }
+    .mm-recaptcha-modal .bar-header .title {
+      color: #ffffff; }
+    .mm-recaptcha-modal .bar-header .button {
+      color: #ffffff;
+      font-weight: normal; }
 
 .atto_image_preview {
   width: 100%;
