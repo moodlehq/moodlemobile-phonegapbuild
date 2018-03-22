@@ -1,17 +1,17 @@
 webpackJsonp([46],{
 
-/***/ 1287:
+/***/ 1316:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonFilesListPageModule", function() { return AddonFilesListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModBookIndexPageModule", function() { return AddonModBookIndexPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__list__ = __webpack_require__(1346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(724);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1379);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,44 +37,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonFilesListPageModule = /** @class */ (function () {
-    function AddonFilesListPageModule() {
+var AddonModBookIndexPageModule = /** @class */ (function () {
+    function AddonModBookIndexPageModule() {
     }
-    AddonFilesListPageModule = __decorate([
+    AddonModBookIndexPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__list__["a" /* AddonFilesListPage */],
+                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModBookIndexPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__list__["a" /* AddonFilesListPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModBookComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModBookIndexPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonFilesListPageModule);
-    return AddonFilesListPageModule;
+    ], AddonModBookIndexPageModule);
+    return AddonModBookIndexPageModule;
 }());
 
-//# sourceMappingURL=list.module.js.map
+//# sourceMappingURL=index.module.js.map
 
 /***/ }),
 
-/***/ 1346:
+/***/ 1379:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonFilesListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModBookIndexPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_files__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(714);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(290);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -100,191 +93,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-
-
-
 /**
- * Page that displays the list of files.
+ * Page that displays a book.
  */
-var AddonFilesListPage = /** @class */ (function () {
-    function AddonFilesListPage(navParams, eventsProvider, sitesProvider, domUtils, translate, appProvider, filesProvider, filesHelper, textUtils) {
-        var _this = this;
-        this.sitesProvider = sitesProvider;
-        this.domUtils = domUtils;
-        this.translate = translate;
-        this.appProvider = appProvider;
-        this.filesProvider = filesProvider;
-        this.filesHelper = filesHelper;
-        this.textUtils = textUtils;
-        this.title = navParams.get('title') || this.translate.instant('addon.files.files');
-        this.root = navParams.get('root');
-        this.path = navParams.get('path');
-        // Update visibility if current site info is updated.
-        this.updateSiteObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, function () {
-            _this.setVisibility();
-        }, sitesProvider.getCurrentSiteId());
+var AddonModBookIndexPage = /** @class */ (function () {
+    function AddonModBookIndexPage(navParams) {
+        this.module = navParams.get('module') || {};
+        this.courseId = navParams.get('courseId');
+        this.title = this.module.name;
     }
     /**
-     * View loaded.
-     */
-    AddonFilesListPage.prototype.ionViewDidLoad = function () {
-        this.setVisibility();
-        this.userQuota = this.sitesProvider.getCurrentSite().getInfo().userquota;
-        if (!this.root) {
-            // Load private files by default.
-            if (this.showPrivateFiles) {
-                this.root = 'my';
-            }
-            else if (this.showSiteFiles) {
-                this.root = 'site';
-            }
-        }
-        if (this.root) {
-            this.rootChanged();
-        }
-        else {
-            this.filesLoaded = true;
-        }
-    };
-    /**
-     * Refresh the data.
+     * Update some data based on the book instance.
      *
-     * @param {any} refresher Refresher.
+     * @param {any} book Book instance.
      */
-    AddonFilesListPage.prototype.refreshData = function (refresher) {
-        this.refreshFiles().finally(function () {
-            refresher.complete();
-        });
+    AddonModBookIndexPage.prototype.updateData = function (book) {
+        this.title = book.name || this.title;
     };
-    /**
-     * Function called when the root has changed.
-     */
-    AddonFilesListPage.prototype.rootChanged = function () {
-        var _this = this;
-        this.filesLoaded = false;
-        this.component = this.root == 'my' ? __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */].PRIVATE_FILES_COMPONENT : __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */].SITE_FILES_COMPONENT;
-        this.fetchFiles().finally(function () {
-            _this.filesLoaded = true;
-        });
-    };
-    /**
-     * Upload a new file.
-     */
-    AddonFilesListPage.prototype.uploadFile = function () {
-        var _this = this;
-        this.filesProvider.versionCanUploadFiles().then(function (canUpload) {
-            if (!canUpload) {
-                _this.domUtils.showAlertTranslated('core.notice', 'addon.files.erroruploadnotworking');
-            }
-            else if (!_this.appProvider.isOnline()) {
-                _this.domUtils.showErrorModal('core.fileuploader.errormustbeonlinetoupload', true);
-            }
-            else {
-                _this.filesHelper.uploadPrivateFile(_this.filesInfo).then(function () {
-                    // File uploaded, refresh the list.
-                    _this.filesLoaded = false;
-                    _this.refreshFiles().finally(function () {
-                        _this.filesLoaded = true;
-                    });
-                }).catch(function () {
-                    // Ignore errors, they're handled inside the function.
-                });
-            }
-        });
-    };
-    /**
-     * Set visibility of some items based on site data.
-     */
-    AddonFilesListPage.prototype.setVisibility = function () {
-        this.showPrivateFiles = this.filesProvider.canViewPrivateFiles();
-        this.showSiteFiles = this.filesProvider.canViewSiteFiles();
-        this.showUpload = this.filesProvider.canUploadFiles();
-    };
-    /**
-     * Fetch the files.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonFilesListPage.prototype.fetchFiles = function () {
-        var _this = this;
-        var promise;
-        if (!this.path) {
-            // The path is unknown, the user must be requesting a root.
-            if (this.root == 'site') {
-                this.title = this.translate.instant('addon.files.sitefiles');
-                promise = this.filesProvider.getSiteFiles();
-            }
-            else if (this.root == 'my') {
-                this.title = this.translate.instant('addon.files.files');
-                promise = this.filesProvider.getPrivateFiles().then(function (files) {
-                    if (_this.showUpload && _this.filesProvider.canGetPrivateFilesInfo() && _this.userQuota > 0) {
-                        // Get the info to calculate the available size.
-                        return _this.filesProvider.getPrivateFilesInfo().then(function (info) {
-                            _this.filesInfo = info;
-                            _this.spaceUsed = _this.textUtils.bytesToSize(info.filesizewithoutreferences, 1);
-                            _this.userQuotaReadable = _this.textUtils.bytesToSize(_this.userQuota, 1);
-                            return files;
-                        });
-                    }
-                    else {
-                        // User quota isn't useful, delete it.
-                        delete _this.userQuota;
-                    }
-                    return files;
-                });
-            }
-            else {
-                // Unknown root.
-                promise = Promise.reject(null);
-            }
-        }
-        else {
-            // Path is set, serve the files the user requested.
-            promise = this.filesProvider.getFiles(this.path);
-        }
-        return promise.then(function (files) {
-            _this.files = files;
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.files.couldnotloadfiles', true);
-        });
-    };
-    /**
-     * Refresh the displayed files.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonFilesListPage.prototype.refreshFiles = function () {
-        var _this = this;
-        var promises = [];
-        promises.push(this.filesProvider.invalidateDirectory(this.root, this.path));
-        promises.push(this.filesProvider.invalidatePrivateFilesInfoForUser());
-        return Promise.all(promises).finally(function () {
-            return _this.fetchFiles();
-        });
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonFilesListPage.prototype.ngOnDestroy = function () {
-        this.updateSiteObserver && this.updateSiteObserver.off();
-    };
-    AddonFilesListPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModBookIndexComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModBookIndexComponent */])
+    ], AddonModBookIndexPage.prototype, "bookComponent", void 0);
+    AddonModBookIndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-files-list',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/files/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="filesLoaded && (showPrivateFiles || showSiteFiles)" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="filesLoaded" *ngIf="showPrivateFiles || showSiteFiles">\n        <!-- Allow selecting the files to see: private or site. -->\n        <div no-padding *ngIf="showPrivateFiles && showSiteFiles && !path">\n            <ion-select [(ngModel)]="root" (ngModelChange)="rootChanged()" interface="popover">\n                <ion-option value="my">{{ \'addon.files.privatefiles\' | translate }}</ion-option>\n                <ion-option value="site">{{ \'addon.files.sitefiles\' | translate }}</ion-option>\n            </ion-select>\n        </div>\n\n        <!-- Display info about space used and space left. -->\n        <p class="core-info-card" *ngIf="userQuota && filesInfo && filesInfo.filecount > 0">{{ \'core.quotausage\' | translate:{$a: {used: spaceUsed, total: userQuotaReadable} } }}</p>\n\n        <!-- List of files. -->\n        <ion-list *ngIf="files && files.length > 0">\n            <div *ngFor="let file of files">\n                <a *ngIf="file.isdir" ion-item class="item-media" [navPush]="\'AddonFilesListPage\'" [navParams]="{path: file.link, title: file.filename}">\n                    <img [src]="file.imgPath" alt="" role="presentation" item-start>\n                    <p>{{file.filename}}</p>\n                </a>\n                <core-file *ngIf="!file.isdir" [file]="file" [component]="component" [componentId]="file.contextid"></core-file>\n            </div>\n        </ion-list>\n\n        <!-- Message telling there are no files. -->\n        <core-empty-box *ngIf="!files || !files.length" icon="folder" [message]="\'addon.files.emptyfilelist\' | translate"></core-empty-box>\n    </core-loading>\n\n    <!-- Upload a private file. -->\n    <ion-fab bottom right *ngIf="showUpload && root != \'site\' && !path">\n        <button ion-fab (click)="uploadFile()" [attr.aria-label]="\'core.fileuploader.uploadafile\' | translate">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>\n</ion-content>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/files/pages/list/list.html"*/,
+            selector: 'page-addon-mod-book-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/book/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="bookComponent.loaded" (ionRefresh)="bookComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-book-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-book-index>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/book/pages/index/index.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */], __WEBPACK_IMPORTED_MODULE_9__providers_helper__["a" /* AddonFilesHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
-    ], AddonFilesListPage);
-    return AddonFilesListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+    ], AddonModBookIndexPage);
+    return AddonModBookIndexPage;
 }());
 
-//# sourceMappingURL=list.js.map
+//# sourceMappingURL=index.js.map
 
 /***/ })
 
