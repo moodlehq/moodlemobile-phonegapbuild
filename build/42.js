@@ -1,17 +1,16 @@
 webpackJsonp([42],{
 
-/***/ 1320:
+/***/ 1342:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModUrlIndexPageModule", function() { return AddonModUrlIndexPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotesAddPageModule", function() { return AddonNotesAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(729);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1383);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add__ = __webpack_require__(1407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(35);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,38 +35,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var AddonModUrlIndexPageModule = /** @class */ (function () {
-    function AddonModUrlIndexPageModule() {
+var AddonNotesAddPageModule = /** @class */ (function () {
+    function AddonNotesAddPageModule() {
     }
-    AddonModUrlIndexPageModule = __decorate([
+    AddonNotesAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModUrlIndexPage */],
+                __WEBPACK_IMPORTED_MODULE_2__add__["a" /* AddonNotesAddPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModUrlComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModUrlIndexPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__add__["a" /* AddonNotesAddPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ]
         })
-    ], AddonModUrlIndexPageModule);
-    return AddonModUrlIndexPageModule;
+    ], AddonNotesAddPageModule);
+    return AddonNotesAddPageModule;
 }());
 
-//# sourceMappingURL=index.module.js.map
+//# sourceMappingURL=add.module.js.map
 
 /***/ }),
 
-/***/ 1383:
+/***/ 1407:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModUrlIndexPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonNotesAddPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_notes__ = __webpack_require__(114);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,37 +92,61 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Page that displays a url.
+ * Component that displays a text area for composing a note.
  */
-var AddonModUrlIndexPage = /** @class */ (function () {
-    function AddonModUrlIndexPage(navParams) {
-        this.module = navParams.get('module') || {};
-        this.courseId = navParams.get('courseId');
-        this.title = this.module.name;
+var AddonNotesAddPage = /** @class */ (function () {
+    function AddonNotesAddPage(params, viewCtrl, appProvider, domUtils, notesProvider) {
+        this.viewCtrl = viewCtrl;
+        this.appProvider = appProvider;
+        this.domUtils = domUtils;
+        this.notesProvider = notesProvider;
+        this.publishState = 'personal';
+        this.text = '';
+        this.processing = false;
+        this.userId = params.get('userId');
+        this.courseId = params.get('courseId');
     }
     /**
-     * Update some data based on the url instance.
-     *
-     * @param {any} url Url instance.
+     * Send the note or store it offline.
      */
-    AddonModUrlIndexPage.prototype.updateData = function (url) {
-        this.title = url.name || this.title;
+    AddonNotesAddPage.prototype.addNote = function () {
+        var _this = this;
+        this.appProvider.closeKeyboard();
+        var loadingModal = this.domUtils.showModalLoading('core.sending', true);
+        // Freeze the add note button.
+        this.processing = true;
+        this.notesProvider.addNote(this.userId, this.courseId, this.publishState, this.text).then(function (sent) {
+            _this.viewCtrl.dismiss().finally(function () {
+                var message = sent ? 'addon.notes.eventnotecreated' : 'core.datastoredoffline';
+                _this.domUtils.showAlertTranslated('core.success', message);
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModal(error);
+            _this.processing = false;
+        }).finally(function () {
+            loadingModal.dismiss();
+        });
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModUrlIndexComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModUrlIndexComponent */])
-    ], AddonModUrlIndexPage.prototype, "urlComponent", void 0);
-    AddonModUrlIndexPage = __decorate([
+    /**
+     * Close modal.
+     */
+    AddonNotesAddPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    AddonNotesAddPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-url-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/url/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="urlComponent.loaded" (ionRefresh)="urlComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-url-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-url-index>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/url/pages/index/index.html"*/,
+            selector: 'page-addon-notes-add',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/notes/pages/add/add.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.notes.addnewnote\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <form name="itemEdit" (ngSubmit)="addNote()">\n        <ion-item>\n            <ion-label>{{ \'addon.notes.publishstate\' | translate }}</ion-label>\n            <ion-select [(ngModel)]="publishState" name="publishState">\n                <ion-option value="personal">{{ \'addon.notes.personalnotes\' | translate }}</ion-option>\n                <ion-option value="course">{{ \'addon.notes.coursenotes\' | translate }}</ion-option>\n                <ion-option value="site">{{ \'addon.notes.sitenotes\' | translate }}</ion-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-textarea placeholder="{{ \'addon.notes.note\' | translate }}" rows="5" [(ngModel)]="text" name="text" required="required"></ion-textarea>\n        </ion-item>\n        <button ion-button block margin-vertical type="submit" [disabled]="processing || text.length < 2">\n            {{ \'addon.notes.addnewnote\' | translate }}\n        </button>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/notes/pages/add/add.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], AddonModUrlIndexPage);
-    return AddonModUrlIndexPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_notes__["a" /* AddonNotesProvider */]])
+    ], AddonNotesAddPage);
+    return AddonNotesAddPage;
 }());
 
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=add.js.map
 
 /***/ })
 
