@@ -3,8 +3,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.skillsBreeder"
-        versionCode = "20170"
-        version   = "3.2.1">
+        versionCode = "2100000000"
+        version   = "3.2.2">
     <name>skillsBreeder</name>
 
     <description>
