@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "yash.nsec.v2"
+        id        = "yash.NIOS.v2"
         versionCode = "20230"
         version   = "3.4.2">
     <name>Yash NIOS Secondary</name>
