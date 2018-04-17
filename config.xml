@@ -2,10 +2,10 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "yash.nios.moodlemobile"
+        id        = "Yash.NSec.1"
         versionCode = "20230"
         version   = "3.4.2">
-    <name>Yash NIOS 17 Apr</name>
+    <name>Yash NSec V1</name>
 
     <description>
         Yash NIOS : TheOpenSchool
