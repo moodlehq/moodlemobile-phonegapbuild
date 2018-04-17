@@ -1,6 +1,6 @@
 {
     "app_id" : "yash.nios.moodlemobile",
-    "appname": "Yash NIOS Secondary",
+    "appname": "Yash NIOS 17 Apr",
     "desktopappname": "Moodle Desktop",
     "versioncode" : "2023",
     "versionname" : "3.4.2",
@@ -12,7 +12,7 @@
     "demo_sites": "",
     "gcmpn": "694767596569",
     "customurlscheme": "moodlemobile",
-    "siteurl": "",
+    "siteurl": "https://thinktulip.com/mdl_test",
     "multisitesdisplay": "select",
     "skipssoconfirmation": "false",
     "forcedefaultlanguage": "false",
