@@ -15,36 +15,25 @@
  * Variables
  */
 
-// Bar content.
-$bar-content-bg: #f70 !default;
-$bar-content-border: transparent !default;
-$bar-content-text: #fff !default;
-
 // Small avatar ideal for icons.
 $item-media-width: 32px !default;
 $item-media-height: 32px !default;
 
-// Howto tips.
-$item-howto-color: #d9edf7 !default;
-
 // Messages.
-$item-message-bg: $stable !default;
-$item-message-note-text: #999 !default;
+$item-message-bg: $gray-lighter !default;
+$item-message-note-text: $gray-darker !default;
 $item-message-note-font-size: $font-size-small !default;
-$item-message-mine-bg: rgba(17, 193, 243, .1) !default;
+$item-message-mine-bg: $blue-light !default;
 
-// Disabled items.
-$item-disabled-color: #999 !default;
-
-// Warnings (energized).
-$mm-warning-color: $energized !default;
-
-// Errors (red).
-$mm-error-color: #c00 !default;
+// Messages boxes.
+$mm-warning-color: $energized !default; // Energized / yellow.
+$mm-success-color: $balanced !default; // Balanced / green.
+$mm-info-color: $positive !default; // Positive / blue.
+$mm-error-color: $assertive !default; // Red.
 
 // Timer variables.
-$mm-timer-warn-color:     #f00 !default;
-$mm-timer-color:          #fff !default;
+$mm-timer-warn-color:     $assertive !default;
+$mm-timer-color:          $white !default;
 $mm-timer-iterations:     15 !default;
 
 // Text with icon.
@@ -54,44 +43,50 @@ $mm-text-with-icon-height: 22px !default;
 $mm-button-icon-small-height: 22px !default;
 
 // Required inputs asterisk color.
-$mm-input-required-asterisk-color: #ff4136 !default;
+$mm-input-required-asterisk-color: $red !default;
 
 // Item padding.
 $item-input-padding: 16px !default;
 
-// Rich text editor.
-$mm-rte-min-height: 80px !default;
+$mm-progress-bar-height: 5px !default;
 
 /**
  * App Branding
  */
 .mm-bglogo {
-  background-color: white; /* Change this to add a bg image or change color */
+  background-color: $mm-color-init-screen; /* Change this to add a bg image or change color */
+  background: -webkit-radial-gradient($mm-color-init-screen-alt, $mm-color-init-screen);
+  background: radial-gradient($mm-color-init-screen-alt, $mm-color-init-screen);
   background-repeat: no-repeat;
   background-position: center center;
-  width: 100%;
   position: absolute;
   top: 0;
   bottom: 0;
-}
-
-.mm-logo {
-  background-image: url('../img/moodle.png'); /* Change logo here */
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-}
-
-.mm-logo:before {
-  content: '';
-  display: inline-block;
+  left: 0;
+  right: 0;
   height: 100%;
-  vertical-align: middle;
-  margin-top: 120px; /* Change this to place spinner under the logo (usually double of the logo size) */
+  width: 100%;
+  display: table;
+
+  .mm-logo {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  img {
+    width: $mm-init-screen-logo-width;
+    max-width: $mm-init-screen-logo-max-width;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .spinner {
+    color: $mm-init-screen-spinner-color;
+    stroke: $mm-init-screen-spinner-color;
+    fill: $mm-init-screen-spinner-color;
+  }
 }
 
 /**
@@ -105,6 +100,10 @@ em {
 /**
  * Styles.
  */
+
+a.button {
+  line-height: $button-height + 5px - ($button-border-width * 2);
+}
 
 .mm-big   { font-size: 115%; }
 
@@ -124,7 +123,7 @@ em {
   @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
   .button {
     @include button-style($bar-content-bg, $bar-content-border, $bar-content-bg, $bar-content-border, $bar-content-text);
-    @include button-clear(#fff, $bar-title-font-size);
+    @include button-clear($bar-content-text, $bar-title-font-size);
   }
 }
 
@@ -171,6 +170,11 @@ p.item-text-wrap {
   width: 40%;
 }
 
+.item-avatar > img:first-child {
+  text-indent: -99999px;
+  background-color: $gray-light;
+}
+
 // Media item, ideal for icons.
 .item-media {
   @extend .item-avatar;
@@ -180,6 +184,7 @@ p.item-text-wrap {
     max-width: $item-media-width;
     max-height: $item-media-height;
     border-radius: 0;
+    background-color: transparent;
   }
   p {
     margin: 0px;
@@ -190,28 +195,6 @@ p.item-text-wrap {
     > .spinner {
       top: $item-padding;
     }
-  }
-}
-
-// Howto tips.
-.item.item-howto {
-  padding-bottom: 12px;
-  padding: 9px;
-  margin-bottom: 12px;
-  background-color: $item-howto-color;
-  border-color: $item-howto-color;
-  color: #666;
-
-  &.item-icon-left {
-    padding-left: 35px;
-
-    .icon:first-child {
-      left: 4px;
-    }
-  }
-
-  &.item-icon-right {
-    @extend .item-icon-right;
   }
 }
 
@@ -231,15 +214,6 @@ p.item-text-wrap {
     font-size: $item-message-note-font-size;
     margin-left: 20px;
   }
-
-  mm-format-text > p:only-child {
-    display: inline;
-  }
-}
-
-.item-message .item-content {
-  background-color: $item-message-bg;
-  padding: 0;
 }
 
 // Defines when an item-message is the user's.
@@ -262,7 +236,8 @@ p.item-text-wrap {
   }
 }
 
-.item-message-mine .item-content {
+.item-message .item-content,
+.item-message-mine .item-content{
   background-color: transparent;
   padding: 0;
 }
@@ -310,7 +285,7 @@ p.item-text-wrap {
           border-radius: 2%;
           border: 0;
           max-width: 100%;
-          max-height: 200px;
+          max-height: 160px;
           width: auto;
           height: auto;
         }
@@ -322,23 +297,47 @@ p.item-text-wrap {
   border-top: 0;
 }
 
+.item-dimmed {
+  opacity: 0.6;
+}
+
 /* Show buttons as tabs */
+@include tabs-striped-color('mm-tabs-color', $mm-color);
+@include tabs-color('mm-tabs-color', $mm-color);
+
 .tabs.tabs-free {
   position: initial;
-  background: transparent;
+  background: white;
   border: 0;
-  margin-bottom: 0;
-  margin-top: 10px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2);
 
   .tab-item {
-    margin-top: -1px;
+    color: $gray-darker;
+    margin-top: 0;
     max-width: initial;
     font-size: 120%;
 
     &.active, &.activated {
-      margin-top: -1px;
+      color: $black;
+      margin-top: 0;
       border-top-width: 0;
       border-bottom-width: 3px;
+    }
+  }
+}
+
+.mm-menu-selected:not(.button) {
+  background-color: $gray-lighter;
+  border-left: 5px solid $mm-color-light;
+  padding-left: $item-padding - 4;
+
+  &.item-avatar,
+  &.item-avatar-left {
+    padding-left: $item-avatar-width + ($item-padding * 2) - 4;
+    > img:first-child {
+      left: $item-padding - 4;
     }
   }
 }
@@ -361,6 +360,13 @@ p.item-text-wrap {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+.avatar-round {
+  max-width: 40px;
+  max-height: 40px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 // Split pane.
@@ -388,10 +394,11 @@ p.item-text-wrap {
   .mm-split-pane-menu {
     @include flex(0, 0, $menu-width);
     width: $menu-width;
-    border-right: 1px solid #ddd;
+    margin-right: 2px;
   }
   .mm-split-pane-content {
     display: block;
+    box-shadow: $menu-side-shadow;
   }
 }
 
@@ -449,6 +456,20 @@ button.item.item-button-right {
   }
 }
 
+.item-icon-right .item-note .icon {
+  display: inline;
+  align-items: normal;
+  position: relative;
+  top: auto;
+  right: auto;
+  height: auto;
+  font-size: 14px;
+  &:before {
+    display: inline;
+    width: auto;
+  }
+}
+
 /**
  * Core directives.
  */
@@ -463,9 +484,30 @@ button.item.item-button-right {
 }
 
 .mm-loading-container {
-    width: 100%;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  clear: both;
+}
+
+.scroll > .padding > mm-loading > .mm-loading-container,
+.scroll > mm-loading > .mm-loading-container,
+.mm-loading-center .mm-loading-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  display: table;
+  z-index: -1;
+  padding-top: 0px;
+
+  .mm-loading-spinner {
+    display: table-cell;
     text-align: center;
-    margin-top: 10px;
+    vertical-align: middle;
+  }
 }
 
 .mm-loading-content {
@@ -476,19 +518,6 @@ mm-loading.mm-loading-noheight .mm-loading-content {
   height: auto;
 }
 
-mm-loading.mm-loading-center {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-
-  .mm-loading-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
 // Align ion-spinner right
 .spinner-right {
   position: absolute;
@@ -496,9 +525,9 @@ mm-loading.mm-loading-center {
   right: 16px;
 }
 
-.mm-split-item-selected, .mm-split-item-selected .item {
-  border-color: #ccc;
-  background-color: #D9D9D9;
+.mm-split-item-selected,
+.mm-split-item-selected.item {
+  @extend .mm-menu-selected;
 }
 
 .mm-module-buttons {
@@ -538,6 +567,10 @@ mm-loading.mm-loading-center {
   max-width: 100%;
 }
 
+audio.mm-media-adapt-width {
+  width: 100%;
+}
+
 .mm-enabled-media-adapt img.mm-media-adapt-width,
 img.mm-media-adapt-width-enabled {
   height: auto;
@@ -552,7 +585,7 @@ img.mm-media-adapt-width-enabled {
   position: absolute;
   right: 10px;
   bottom: 10px;
-  color: black;
+  color: $black;
   font-size: 20px;
   border-radius: 5px;
   background: rgba(255, 255, 255, .5);
@@ -560,6 +593,10 @@ img.mm-media-adapt-width-enabled {
   height: 30px;
   text-align: center;
   line-height: 30px;
+
+  i.icon:before {
+    color: $black !important;
+  }
 }
 
 // Remove padding-top and bottom from navigation bar to minimize height used.
@@ -585,18 +622,72 @@ mm-navigation-bar {
 // When using .item and .row in the same element, .row's padding prevails. Use this class to keep .item's padding.
 .item.row.mm-item-padding {
   padding: $item-padding / 2;
+  width: initial;
 }
 
-p.mm-error {
-  color: $mm-error-color;
+.row-buttons {
+  @include display-flex();
+  padding: 0;
+
+  &.item {
+    padding: $item-padding - ($button-block-margin / 2);
+  }
+  &.padding-top {
+    padding-top: $content-padding;
+  }
+
+  .button.button-block {
+    @include flex(1);
+    margin: ($button-block-margin/2) $button-block-margin ($button-block-margin/2) 0;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
-.mm-warning {
-  border-bottom: 3px solid $mm-warning-color;
+/* Message cards */
+// Mixin to create message "cards" with a colored border-bottom and, optionally, an icon. For examples, for mm-warning.
+@mixin mm-message-card($color) {
+  border-bottom: 3px solid $color;
   padding: $card-padding;
   box-shadow: $card-box-shadow;
   margin: 20px 10px;
-  background-color: #fff;
+  background-color: $white;
+  position: relative;
+  text-align: left;
+
+  i.icon:before {
+    color: $color;
+    font-size: 125%;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.mm-error-card {
+  @include mm-message-card($mm-error-color);
+}
+
+.mm-warning-card {
+  @include mm-message-card($mm-warning-color);
+}
+
+.mm-info-card {
+  @include mm-message-card($mm-info-color);
+}
+
+.mm-success-card {
+  @include mm-message-card($mm-success-color);
+}
+
+@mixin mm-message-card-icon($color) {
+  border-bottom: 3px solid $color;
+  padding: $card-padding;
+  box-shadow: $card-box-shadow;
+  margin: 20px 10px;
+  background-color: $white;
   position: relative;
   padding-left: $item-padding * 3;
   text-align: left;
@@ -609,14 +700,88 @@ p.mm-error {
     height: 100%;
     font-size: ceil(($item-icon-font-size / 4) * 3);
     left: ceil($item-padding / 4);
-    color: $mm-warning-color;
 
     &:before {
+      color: $color;
       display: block;
       width: ceil(($item-icon-font-size / 4) * 3);
       text-align: center;
     }
   }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.mm-error-card-icon {
+  @include mm-message-card-icon($mm-error-color);
+}
+
+.mm-warning, // mm-warning is deprecated, use mm-warning-card-icon instead.
+.mm-warning-card-icon {
+  @include mm-message-card-icon($mm-warning-color);
+}
+
+.mm-info-card-icon {
+  @include mm-message-card-icon($mm-info-color);
+}
+
+.mm-success-card-icon {
+  @include mm-message-card-icon($mm-success-color);
+}
+
+.padding {
+  .mm-error-card, .mm-warning-card, .mm-info-card, .mm-success-card,
+  .mm-error-card-icon, .mm-warning-card-icon, .mm-info-card-icon, .mm-success-card-icon {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.item-icon-left, .item-icon-right {
+  &.item-icon-top .icon {
+    align-items: flex-start;
+    top: 11px;
+  }
+}
+
+// These will need item-icon-left as well.
+@mixin mm-message-item($color) {
+  border-bottom: 3px solid $color !important;
+  padding-top: 12px;
+  padding-bottom: 9px;
+  i.icon:before:not(.radio-icon) {
+    color: $color;
+  }
+  &.item-icon-left {
+    @extend .item-icon-left;
+  }
+
+  &.item-icon-right {
+    @extend .item-icon-right;
+  }
+}
+
+.mm-error-item {
+  @include mm-message-item($mm-error-color);
+}
+
+.mm-warning-item {
+  @include mm-message-item($mm-warning-color);
+}
+
+.item.item-howto, // item-howto is deprecated, use mm-info-item instead.
+.mm-info-item {
+  @include mm-message-item($mm-info-color);
+}
+
+.mm-success-item {
+  @include mm-message-item($mm-success-color);
+}
+
+p.mm-error { // Deprecated, use one of the above mm-error classes.
+  color: $mm-error-color;
 }
 
 // Extra attributes to ionic classes to force frames via directive 100% height.
@@ -669,33 +834,47 @@ p.mm-error {
   border-radius: 50%;
 }
 
+.item.item-button-right .badge.badge-inline,
 .badge.badge-inline {
   display: inline-block;
   position: relative;
   top: initial;
   right: initial;
   white-space: normal;
+  text-align: left;
+}
+
+.badge-positive, .badge-calm, .badge-balanced, .badge-energize, .badge-assertive, .badge-royal, badge-dark {
+  a {
+    color: white;
+  }
 }
 
 // Timer.
 mm-timer {
   display: block;
-}
 
-// Style timer in items.
-.item mm-timer.mm-timer, mm-timer.mm-timer.item {
-  p, span, label {
-    color: $item-default-text;
+  span, label {
     font-size: $item-font-size;
+    color: $item-default-text;
+  }
+  span {
+    font-weight: bold;
+  }
+
+  // Create the timer warning colors. Go from $mm-timer-color to $mm-timer-warn-color.
+  @for $i from 0 through $mm-timer-iterations {
+    &.mm-timer-timeleft-#{$i} {
+      background-color: mix($mm-timer-color, $mm-timer-warn-color, ($i / $mm-timer-iterations) * 100);
+      @if $i <= $mm-timer-iterations / 2 {
+        label, span, i {
+          color: $white;
+        }
+      }
+    }
   }
 }
 
-// Create the timer warning colors. Go from $mm-timer-color to $mm-timer-warn-color.
-@for $i from 0 through $mm-timer-iterations {
-  mm-timer.mm-timer.mm-timer-timeleft-#{$i} {
-    background-color: mix($mm-timer-color, $mm-timer-warn-color, ($i / $mm-timer-iterations) * 100);
-  }
-}
 
 .mm-monospaced {
   font-family: Andale Mono,Monaco,Courier New,DejaVu Sans Mono,monospace;
@@ -751,7 +930,7 @@ mm-timer {
   .icon {
     font-size: $mm-text-with-icon-height;
     padding: 0 5px;
-    color: $positive;
+    color: $mm-buttons-color;
   }
 }
 
@@ -786,6 +965,43 @@ mm-timer {
   }
 }
 
+.item-select.mm-full-width-centered {
+  display: inline;
+
+  select {
+    max-width: 100%;
+    background: transparent;
+    text-indent: 0;
+    margin: 0 auto;
+    padding: ($item-input-padding - 1) ($item-input-padding/2*5) ($item-input-padding - 1) $item-input-padding;
+    line-height: $font-size-base + 2;
+    border: 0;
+    position: relative;
+  }
+}
+
+.item-select.mm-full-width {
+  margin-top: ($item-input-padding / 2);
+  margin-bottom: $item-input-padding - 1;
+  border: 0;
+
+  select {
+    max-width: 100%;
+    width: 100%;
+    background: transparent;
+    text-indent: 0;
+    line-height: $font-size-base + 2;
+    border: 0;
+    position: relative;
+  }
+
+  &.select-align-left {
+    select {
+      direction: ltr;
+    }
+  }
+}
+
 .item-select .mm-select-fix {
   // Taken from .item-select select.
   position: absolute;
@@ -812,6 +1028,23 @@ mm-timer {
 .item-input .item-input-wrapper input {
   width: 100%;
   background: transparent;
+}
+
+mm-multiple-select {
+  cursor: pointer;
+
+  .item-stacked-label {
+    ion-label.input-label, p {
+      padding-right: 30px;
+      white-space: normal;
+    }
+  }
+  .icon.ion-android-arrow-dropdown {
+    font-size: 21px;
+    color: #999999;
+    right: 5px;
+  }
+
 }
 
 .button.mm-button-icon-small {
@@ -854,6 +1087,106 @@ mm-timer {
   border-radius: 0;
 }
 
+.item-radio .radio-icon {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: block;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  top: 14px;
+  right: 14px;
+  visibility: visible;
+
+  &:before {
+    border: 1px solid #ddd;
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    background: white;
+    -webkit-transition: background-color 20ms ease-in-out;
+    transition: background-color 20ms ease-in-out;
+    content: ' ';
+  }
+
+  &:after {
+    @include transition(opacity .05s ease-in-out);
+    @include rotate(-45deg);
+    position: absolute;
+    top: 33%;
+    left: 25%;
+    display: table;
+    width: ($checkbox-width / 2);
+    height: ($checkbox-width / 4) - 1;
+    border: $checkbox-check-width solid $checkbox-check-color;
+    border-top: 0;
+    border-right: 0;
+    content: ' ';
+  }
+}
+
+.item-radio input:checked + .radio-content .radio-icon:before {
+    background: $checkbox-on-bg-positive;
+    border-color: $checkbox-off-border-positive;
+}
+
+
+input[type="radio"].mm-radio {
+  position: relative;
+  width: $checkbox-width;
+  height: $checkbox-height;
+  display: block;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  margin: 0 auto;
+  -webkit-appearance: none;
+
+  &:before {
+    // what the checkbox looks like when its not checked
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-width: $checkbox-border-width;
+    border-style: solid;
+    border-radius: $checkbox-border-radius;
+    border-color: $checkbox-off-border-light;
+    background: $checkbox-off-bg-color;
+    content: ' ';
+    @include transition(background-color 20ms ease-in-out);
+  }
+  &:checked:before {
+    background: $checkbox-on-bg-positive;
+    border-color: $checkbox-off-border-positive;
+  }
+  &:disabled:before {
+    border-color: $checkbox-off-border-light;
+    background: $checkbox-on-bg-light;
+  }
+
+  &:after {
+    @include transition(opacity .05s ease-in-out);
+    @include rotate(-45deg);
+    position: absolute;
+    top: 33%;
+    left: 25%;
+    display: table;
+    width: ($checkbox-width / 2);
+    height: ($checkbox-width / 4) - 1;
+    border: $checkbox-check-width solid $checkbox-check-color;
+    border-top: 0;
+    border-right: 0;
+    content: ' ';
+    opacity: 0;
+  }
+  &:checked:after {
+    opacity: 1;
+  }
+}
+
 .item-title {
   border: 0;
   border-bottom: 1px solid #ddd;
@@ -873,10 +1206,40 @@ mm-timer {
   padding: 0;
 }
 
-.padding .mm-searchbox .item-input-inset {
+.item-transparent {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+
+  &.item-input-inset .item-input-wrapper {
+    background: white;
+    height: 36px;
+  }
+}
+
+.padding mm-searchbox .item-input-inset {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
+}
+
+mm-searchbox .item-input-inset .item-input-wrapper {
+  background: white;
+}
+
+.mm-filter-box {
+  @extend .item-transparent;
+
+  padding-bottom: $item-padding - 4;
+  &.item-input-inset .item-input-wrapper {
+    height: 36px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .mm-filter-box {
+    padding-right: ($item-padding / 2);
+  }
 }
 
 .item.mm-not-clickable {
@@ -901,7 +1264,7 @@ mm-timer {
     border: 0;
   }
   .tabs-icon-round {
-    color: $positive;
+    color: $mm-buttons-color;
 
     .tab-item.activated {
       opacity: 0.7;
@@ -913,7 +1276,7 @@ mm-timer {
       font-size: 22px;
       line-height: 32px;
       color: white;
-      background-color: $positive;
+      background-color: $mm-buttons-color;
       margin-bottom: 5px;
 
       &:before {
@@ -953,167 +1316,14 @@ mm-timer {
   .hidden-phone {
     display: none !important;
   }
-}
-/**
- * RichTextEditor.
- */
-
-.mm-textarea {
-  width: 100%;
-  resize: none;
-
-  &[mm-auto-rows] {
-    height: auto;
-    line-height: 18px;
-    padding: 5px;
-  }
-  &:not([mm-auto-rows]) {
-    height: 200px;
-    min-height: $mm-rte-min-height;
+  .item-badge-right-phone {
+    padding-right: $item-avatar-width + ($item-padding * 2);
   }
 }
 
-.item-input-wrapper .mm-textarea {
-  background: transparent;
-}
-
-.item.mm-item-has-rich-text-editor {
-  &.item-input {
-    padding: 0;
-  }
-  padding: 0;
-  display: block;
-
-  .input-label, .mm-textarea {
-    padding-left: $item-padding;
-    padding-top: $item-padding/2;
-  }
-}
-
-.mm-rich-text-editor-container {
-
-  .cke.cke_chrome {
-    border: 0;
-    box-shadow: none;
-  }
-
-  .cke_bottom.cke_expanded {
-    height: auto;
-  }
-
-  .cke_bottom .cke_path {
-    display: none;
-    float: none;
-    margin: 0;
-  }
-
-  .cke_bottom.cke_expanded .cke_path {
-    display: block;
-  }
-
-  textarea.cke_source {
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .cke_contents {
-    min-height: $mm-rte-min-height;
-  }
-}
-
-.mm-rich-text-editor-container,
-.cke_inner.cke_maximized {
-
-  .cke_bottom {
-    padding: 0;
-    border-color: #ddd;
-    box-shadow: none;
-    background: #F2F2F2;
-    height: 30px;
-  }
-
-  .cke_button:first-child, .cke_button:last-child {
-    border-radius: 0;
-  }
-
-  .cke_button,
-  a.cke_combo_button,
-  .cke_toolbox_collapser {
-    background: white;
-    background-image: none;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-    padding: 5px 8px;
-    border-radius: 0;
-    border: 0;
-    margin: 1px;
-  }
-
-  a.cke_combo_button {
-    min-height: 26px;
-    padding: 1px;
-  }
-
-  .cke_button:hover,
-  a.cke_combo_button:hover,
-  .cke_combo_off a.cke_combo_button:hover,
-  .cke_toolbox_collapser:hover {
-    background-image: radial-gradient(ellipse at center, #ffffff 60%,#dfdfdf 100%);
-    background-color: #ebebeb;
-  }
-
-  .cke_button:active,
-  a.cke_combo_button:active,
-  .cke_toolbox_collapser:active {
-    background-image: radial-gradient(ellipse at center, #ffffff 50%, #dfdfdf 100%);
-    background-color: #ebebeb;
-    border: 0;
-  }
-
-  .cke_toolgroup {
-    margin: 0;
-    border: 0;
-    background: none;
-    background-image: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .cke_toolbar_separator,
-  .cke_toolbar_break {
-    clear: none;
-    display: none;
-  }
-
-  .cke_toolbox_collapser {
-    padding-top: 9px;
-    padding-bottom: 8px;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  .cke_toolbox_main {
-    margin-right: 30px;
-    float: left;
-    display: block !important;
-  }
-
-  .cke_button__source_label {
-    display: none;
-  }
-}
-
-.cke_inner.cke_maximized {
-  .cke_bottom {
-    height: auto;
-  }
-
-  .cke_toolbox_collapser {
-    display: none;
-  }
-
-  .cke_toolbox_main {
-    margin: 0;
+@media only screen and (min-width: 769px) {
+  .hidden-tablet {
+    display: none !important;
   }
 }
 
@@ -1371,24 +1581,391 @@ i, cite, em, var, address, dfn {
   }
 }
 
-/** Format Text */
-mm-format-text, *[mm-format-text] {
-  audio, video, a, iframe {
-    pointer-events: auto;
-  }
+.button.button-icon.icon.ion-funnel:before {
+  font-size: 26px;
+}
 
-  // Fix lists styles in mm-format-text.
-  ul, ol {
-    -webkit-padding-start: 40px;
-  }
-  ul {
-    list-style: disc;
-  }
-  ol {
-    list-style: decimal;
+// Position modals over action sheet. This means that modals will ALWAYS be over action sheet (in Ionic it's the opposite).
+.action-sheet-open .modal-backdrop.active {
+  z-index: 20;
+  .modal {
+    pointer-events: auto;
   }
 }
 
+// Disable action sheet if loading is active.
+.action-sheet-open .backdrop-loading.active {
+  z-index: 21;
+}
+.action-sheet-open.loading-active .action-sheet-backdrop {
+  pointer-events: none;
+}
+
+.item-divider .item-note {
+  color: $gray-darker;
+}
+
+
+.mm-empty-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  clear: both;
+
+  .mm-empty-box-content {
+    color: $dark;
+    margin: 0;
+    padding: $item-padding;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  &.mm-empty-box-inline {
+    position: relative;
+    top: initial;
+    left: initial;
+    right: initial;
+    z-index: initial;
+  }
+
+  .icon {
+    font-size: 120px;
+  }
+  img {
+    height: 125px;
+    width: 145px;
+  }
+  p {
+    font-size: 120%;
+  }
+  .icon + p, img + p {
+    padding-top: $item-padding;
+  }
+}
+
+@media only screen and (max-height: 420px) {
+  .mm-empty-box {
+    position: relative;
+
+    .mm-empty-box-content {
+      padding: $item-padding / 2;
+    }
+    .icon {
+      font-size: 100px;
+    }
+    img {
+      height: 104px;
+      width: 121px;
+    }
+    .icon + p, img + p {
+      padding-top: $item-padding / 2;
+    }
+  }
+}
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  height: $mm-progress-bar-height;
+  margin: 15px 0;
+  padding: 0;
+  display: block;
+
+  .progress-bar-fallback,
+  &[value]::-webkit-progress-bar {
+    background-color: $gray-light;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+  }
+
+  .progress-bar-fallback span,
+  &[value]::-webkit-progress-value {
+    background-color: $mm-color-light;
+    border-radius: 2px;
+  }
+
+  .progress-bar-fallback {
+      width: 100%;
+      height: $mm-progress-bar-height;
+      display: block;
+      position: relative;
+
+      span {
+          height: $mm-progress-bar-height;
+          display: block;
+      }
+  }
+}
+
+mm-progress-bar {
+  padding-right: 55px;
+  position: relative;
+  display: block;
+  @extend .clearfix;
+
+  .mm-progress-text {
+    margin-left: 10px;
+    line-height: 35px;
+    color: $gray-darker;
+    right: 0;
+    top: 0;
+    color: #626262;
+    position: absolute;
+  }
+}
+
+.padding > .button.button-block:only-child {
+  margin-bottom: 0;
+}
+
+h2.invert {
+  color: $white;
+}
+
+
+@media only screen and (min-width: 430px) {
+  .mm-center-view .scroll {
+    margin: 0 auto;
+    max-width: 600px;
+    display: table !important;
+    width: 100% !important;
+    height: 100% !important;
+    .mm-view-content {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+/* Animations */
+.mm-animate-show,
+.mm-animate-show-hide {
+  &.ng-enter {
+    transition: 0.5s ease all;
+    opacity: 0;
+  }
+
+  &.ng-enter.ng-enter-active {
+    opacity: 1;
+  }
+}
+
+.mm-animate-hide,
+.mm-animate-show-hide {
+  &.ng-leave {
+    transition: 0.5s ease all;
+    opacity: 1;
+  }
+  &.ng-leave.ng-leave-active {
+    opacity: 0;
+  }
+}
+
+// Textarea to copy text in browser or desktop. Don't use display none because otherwise it can't be selected.
+.mm-browser-copy-area {
+  position: absolute;
+  left: -10000px;
+}
+
+// Full screen modal.
+.modal-wrapper .modal.mm-fullscreen-modal {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0
+}
+
+// Buttons in header in modals.
+.modal .bar-header .button {
+  border-color: transparent;
+  background: none;
+}
+
+::-webkit-calendar-picker-indicator, ::-webkit-inner-spin-button, ::-webkit-clear-button {
+  display: none;
+}
+
+*[ng-click] {
+  cursor: pointer;
+}
+
+::-webkit-media-controls {
+  max-width: 100%;
+}
+
+ol.list-with-style, ul.list-with-style {
+  list-style: initial;
+  padding-left: 40px;
+}
+
+.no-padding-bottom, .padding.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.text-success, p.text-success, .item p.text-success {
+  color: $mm-success-color;
+}
+
+.text-danger, p.text-danger, .item p.text-danger {
+  color: $mm-error-color;
+}
+
+// ReCaptcha modal.
+.mm-recaptcha-modal {
+    background-color: $gray-light;
+
+    .bar-header {
+        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
+
+        .button {
+            color: $bar-content-text;
+            font-weight: normal;
+        }
+    }
+}
+
+.atto_image_preview {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.atto_image_preview_box {
+    max-height: 200px;
+    margin-bottom: 1em;
+    overflow: auto;
+}
+
+.editor_atto_content img {
+    cursor: pointer;
+}
+
+.atto_image_size {
+    display: inline-block;
+}
+
+.atto_image_size input[type=checkbox] {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.atto_image_size input[type=text] {
+    width: 3em;
+}
+
+.atto_image_size label {
+    display: inline-block;
+}
+
+.atto_image_button_text-top {
+    vertical-align: text-top;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_middle {
+    vertical-align: middle;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_text-bottom {
+    vertical-align: text-bottom;
+    margin: 0 0.5em;
+}
+
+.atto_image_button_text-top.img-responsive,
+.atto_image_button_middle.img-responsive,
+.atto_image_button_text-bottom.img-responsive {
+    /* If the image is display: block then linking the image to URLs won't work. */
+    display: inline-block;
+    max-width: calc(100% - 1em);
+}
+
+/*rtl:begin:ignore*/
+.atto_image_button_left {
+    float: left;
+    margin: 0 0.5em 0 0;
+    max-width: calc(100% - 1em);
+}
+
+.atto_image_button_right {
+    float: right;
+    margin: 0 0 0 0.5em;
+    max-width: calc(100% - 1em);
+}
+/*rtl:end:ignore*/
+/** This file is intended to translate fontawesome to ionicons while the font is not supported */
+
+.fa.icon {
+    @extend .ion;
+}
+
+.fa {
+    font-size: $button-icon-size;
+    width: $button-icon-size;
+    height: $button-icon-size;
+}
+
+/** Fixed width */
+.fa-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
+/** Uncomment for dev purposes, it will show an asterisk in red where a missing icon is */
+/*.fa:before {
+    color: red !important;
+    content: $ionicon-var-asterisk;
+}*/
+
+/** Icons translation */
+.fa-search-plus:before {
+    content: $ionicon-var-ios-search-strong;
+}
+
+.fa-cog:before {
+    content: $ionicon-var-gear-b;
+}
+
+.fa-trash:before {
+    content: $ionicon-var-trash-a;
+}
+
+.fa-thumbs-up:before {
+    content: $ionicon-var-thumbsup;
+}
+
+.fa-thumbs-down:before {
+    content: $ionicon-var-thumbsdown;
+}
+
+.fa-ban:before {
+    content: $ionicon-var-minus-circled;
+}
+
+.fa-remove:before {
+    content: $ionicon-var-close-round;
+}
+
+.fa-check:before {
+    content: $ionicon-var-checkmark-round;
+}
+/**
+ * In this file we will reset ionic styles that can bother online html.
+ */
+
+/** Format Text */
 mm-format-text[max-height], *[mm-format-text][max-height] {
   display: block;
   position: relative;
@@ -1414,7 +1991,7 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
     }
 
     &.mm-shortened {
-      color: #777;
+      color: $gray-darker;
       overflow: hidden;
       min-height: 50px;
 
@@ -1427,7 +2004,7 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
         bottom: 0;
         right: 0;
         z-index: 1001;
-        background-color: white;
+        background-color: $white;
         padding-left: 10px;
 
         &:after {
@@ -1487,22 +2064,199 @@ mm-format-text[max-height], *[mm-format-text][max-height] {
   }
 }
 
-// Position modals over action sheet. This means that modals will ALWAYS be over action sheet (in Ionic it's the opposite).
-.action-sheet-open .modal-backdrop.active {
-  z-index: 20;
-  .modal {
+mm-format-text, *[mm-format-text] {
+  audio, video, a, iframe {
     pointer-events: auto;
+  }
+
+  // Fix lists styles in mm-format-text.
+  ul, ol {
+    -webkit-padding-start: 40px;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+
+  .badge {
+    position: initial !important;
   }
 }
 
-// Disable action sheet if loading is active.
-.action-sheet-open .backdrop-loading.active {
-  z-index: 21;
-}
-.action-sheet-open.loading-active .action-sheet-backdrop {
-  pointer-events: none;
+// Message item.
+.item-message {
+  mm-format-text > p:only-child {
+    display: inline;
+  }
 }
 
+/**
+ * Textarea related css.
+ */
+
+// Rich text editor.
+$mm-rte-min-height: 80px !default;
+
+.mm-textarea {
+  width: 100%;
+  resize: none;
+
+  &[mm-auto-rows] {
+    height: auto;
+    line-height: 18px;
+    padding: 5px;
+  }
+  &:not([mm-auto-rows]) {
+    height: 200px;
+    min-height: $mm-rte-min-height;
+  }
+}
+
+.item-input-wrapper .mm-textarea {
+  background: transparent;
+}
+
+.item.mm-item-has-rich-text-editor {
+  &.item-input {
+    padding: 0;
+  }
+  padding: 0;
+  display: block;
+
+  .input-label, .mm-textarea {
+    padding-left: $item-padding;
+    padding-top: $item-padding/2;
+  }
+}
+
+.mm-rich-text-editor-container {
+
+  .cke.cke_chrome {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .cke_bottom.cke_expanded {
+    height: auto;
+  }
+
+  .cke_bottom .cke_path {
+    display: none;
+    float: none;
+    margin: 0;
+  }
+
+  .cke_bottom.cke_expanded .cke_path {
+    display: block;
+  }
+
+  textarea.cke_source {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .cke_contents {
+    min-height: $mm-rte-min-height;
+  }
+}
+
+.mm-rich-text-editor-container,
+.cke_inner.cke_maximized {
+
+  .cke_bottom {
+    padding: 0;
+    border-color: #ddd;
+    box-shadow: none;
+    background: #F2F2F2;
+    height: 30px;
+  }
+
+  .cke_button:first-child, .cke_button:last-child {
+    border-radius: 0;
+  }
+
+  .cke_button,
+  a.cke_combo_button,
+  .cke_toolbox_collapser {
+    background: white;
+    background-image: none;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    padding: 5px 8px;
+    border-radius: 0;
+    border: 0;
+    margin: 1px;
+  }
+
+  a.cke_combo_button {
+    min-height: 26px;
+    padding: 1px;
+  }
+
+  .cke_button:hover,
+  a.cke_combo_button:hover,
+  .cke_combo_off a.cke_combo_button:hover,
+  .cke_toolbox_collapser:hover {
+    background-image: radial-gradient(ellipse at center, #ffffff 60%,#dfdfdf 100%);
+    background-color: #ebebeb;
+  }
+
+  .cke_button:active,
+  a.cke_combo_button:active,
+  .cke_toolbox_collapser:active {
+    background-image: radial-gradient(ellipse at center, #ffffff 50%, #dfdfdf 100%);
+    background-color: #ebebeb;
+    border: 0;
+  }
+
+  .cke_toolgroup {
+    margin: 0;
+    border: 0;
+    background: none;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .cke_toolbar_separator,
+  .cke_toolbar_break {
+    clear: none;
+    display: none;
+  }
+
+  .cke_toolbox_collapser {
+    padding-top: 9px;
+    padding-bottom: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .cke_toolbox_main {
+    margin-right: 30px;
+    float: left;
+    display: block !important;
+  }
+
+  .cke_button__source_label {
+    display: none;
+  }
+}
+
+.cke_inner.cke_maximized {
+  .cke_bottom {
+    height: auto;
+  }
+
+  .cke_toolbox_collapser {
+    display: none;
+  }
+
+  .cke_toolbox_main {
+    margin: 0;
+  }
+}
 
 .item.item-button-right .badge.mm-course-download{
   right: $spinner-width + $item-padding;
@@ -1520,10 +2274,247 @@ mm-course-mod-description .card .item {
   margin-top: 0;
 }
 
+$chart-size: 70px;
+$doughnut-border-size: 15px;
+$doughnut-dasharray: 173;
+$doughnut-empty-colour: $gray-light;
+$doughnut-fill-colour: $mm-color-light;
+$doughnut-border-colour:  $gray-dark;
+$doughnut-text-colour: $gray-darker;
+
+.item-course {
+  >.icon, >ion-spinner {
+    height: 32px + ($item-padding /2);
+    width: 32px + ($item-padding /2);
+    right: 0;
+    top: 6px;
+    color: $doughnut-text-colour;
+    position: absolute;
+  }
+
+  &.item-progress .mm-course-download-spinner {
+    top: 46px;
+  }
+
+  &:not(.item-progress) {
+    padding-right: 80px;
+
+    .mm-course-download-spinner {
+      right: 40px;
+    }
+  }
+}
+
+.item-progress {
+  @extend .item-avatar;
+  padding-left: $chart-size + ($item-padding * 2);
+  min-height: $chart-size + ($item-padding * 2);
+  >.progress-chart-container {
+    max-width: $chart-size;
+    max-height: $chart-size;
+    position: absolute;
+    top: $item-padding;
+    left: $item-padding;
+  }
+  h2 {
+    font-size: 21px;
+  }
+}
+
+.progress-chart-container {
+  height: $chart-size;
+  width: $chart-size;
+
+  .progress-doughnut {
+    position: relative;
+    height: $chart-size;
+    width: $chart-size;
+    background-clip: padding-box;
+    border: $doughnut-border-size solid $doughnut-empty-colour;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: table;
+
+    .progress-text {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      color: $doughnut-text-colour;
+      font-size: 95%;
+      letter-spacing: -1px;
+    }
+
+    .progress-indicator {
+      position: absolute;
+      top: ($doughnut-border-size * -1);
+      left: ($doughnut-border-size * -1);
+      height: $chart-size;
+      width: $chart-size;
+
+      svg {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .circle {
+          stroke-width: $doughnut-border-size;
+          stroke: $doughnut-fill-colour;
+          fill: none;
+          stroke-dasharray: $doughnut-dasharray;
+          stroke-dashoffset: $doughnut-dasharray;
+          transform: rotate(-90deg);
+          transform-origin: center center;
+
+          @for $i from 1 through 100 {
+              &.percent-#{$i} {
+                  stroke-dashoffset: $doughnut-dasharray - ($i / 100 * $doughnut-dasharray);
+              }
+          }
+        }
+      }
+    }
+  }
+
+  .no-progress {
+    height: $chart-size;
+    width: $chart-size;
+    background-color: $doughnut-empty-colour;
+    border-radius: 50%;
+    position: relative;
+    border: 0.5px solid $doughnut-border-colour;
+
+    .icon {
+      position: absolute;
+      text-align: center;
+      /*rtl:ignore*/
+      left: -1px;
+      top: -1px;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      color: $white;
+      height: $chart-size;
+      width: $chart-size;
+      line-height: $chart-size;
+      font-size: ($chart-size / 2) + 10px;
+      &:before {
+        width: $chart-size;
+      }
+    }
+  }
+}
+
+.mm-site_mm_coursescategories .item-icon-left,
+mm-course-list-item .item-icon-left {
+  color: $black;
+}
+
+.mm-course-enrollment-img {
+  max-width: 20px;
+  max-height: 34px;
+}
+
+.mm-capture-media-modal {
+    background-color: $gray-light;
+
+    .bar-header {
+        @include bar-style($bar-content-bg, $bar-content-border, $bar-content-text);
+
+        .button {
+            color: $bar-content-text;
+            font-weight: normal;
+        }
+    }
+
+    .mm-capture-media-modal-content {
+        text-align: center;
+
+        .mm-av-wrapper {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: table;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            clear: both;
+        }
+
+        audio, video, img {
+            width: 100%;
+            height: 100%;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            object-fit: contain;
+
+            &.mm-webcam-stream {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
+
+        .mm-webcam-image-canvas {
+            display: none;
+        }
+
+        .mm-audio-record-container {
+            width: 100%;
+            height: 100%;
+
+            .mm-audio-canvas {
+                width: 100%;
+                height: 100%;
+            }
+
+            .mm-audio-captured {
+                width: 100%;
+            }
+        }
+    }
+
+
+    .bar-footer {
+        background-color: $gray;
+        border-top-color: $gray-dark;
+
+        .col {
+            padding: 0;
+            line-height: $bar-height - $bar-padding-portrait * 2;
+
+            .button-icon {
+                color: $black;
+            }
+
+            .ion-record, .ion-trash-a {
+                color: $red;
+            }
+        }
+    }
+}
+
+.mm-fileuploader-file-handler {
+    input {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 0;
+        outline: none;
+        z-index: 100;
+        cursor: pointer;
+    }
+}
+
 /* - User grades table (most of it extracted from MM1)
 -------------------------------------------------------------------------- */
 .mm-grades-container {
   padding-right: 2px;
+  background: white;
 }
 
 .mm-grades-table {
@@ -1581,7 +2572,7 @@ mm-course-mod-description .card .item {
   .itemcenter {
     @extend .item;
     padding: 10px;
-    white-space: nowrap;
+    white-space: normal;
   }
   .feedbacktext {
     padding-left: 10px;
@@ -1624,19 +2615,6 @@ mm-course-mod-description .card .item {
   }
 }
 
-.mm-fileuploader-file-handler {
-    input {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        opacity: 0;
-        outline: none;
-        z-index: 100;
-    }
-}
-
 
 .mm-mm_login_sites {
   .item-thumbnail-left .item-content {
@@ -1657,6 +2635,7 @@ mm-course-mod-description .card .item {
     border-radius : 50%;
     padding: 4px;
     border: 1px solid #ddd;
+    text-indent: -99999px;
   }
 }
 
@@ -1664,13 +2643,62 @@ mm-course-mod-description .card .item {
   height: 300px;
 }
 
+.mm-oauth-icon, .item.mm-oauth-icon {
+  padding: ($item-padding / 2);
 
-$mm-question-correct-color:         #468847 !default;
-$mm-question-incorrect-color:       #b94a48 !default;
-$mm-question-state-correct-color:   #cfc !default;
-$mm-question-state-partial-color:   #ffa !default;
-$mm-question-state-incorrect-color: #fcc !default;
-$mm-question-warning-color:         #c00 !default;
+  > img, > span {
+    max-height: $item-icon-font-size;
+    max-width: $item-icon-font-size;
+    vertical-align: middle;
+  }
+  > span {
+    margin-left: 5px;
+    color: $gray-darker;
+  }
+}
+
+.mm-mm_login_credentials, .mm-mm_login_reconnect, .mm-mm_login_site {
+  .mm-ioninput-password {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  background: -webkit-radial-gradient(white, $gray-light);
+  background: radial-gradient(white, $gray-light);
+
+  img {
+    max-width: 100%;
+  }
+
+  img.moodle-logo {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .box {
+    padding: 16px;
+    background: $white;
+    border: 1px solid $item-default-border;
+  }
+
+  .mm-sitename, .mm-siteurl {
+    @if $mm-fixed-url { display: none; }
+  }
+}
+
+
+
+$mm-question-correct-color:         $green-dark !default;
+$mm-question-correct-color-bg:      $green-light !default;
+$mm-question-incorrect-color:       $red !default;
+$mm-question-incorrect-color-bg:    $red-light !default;
+$mm-question-feedback-color:        $yellow-dark !default;
+$mm-question-feedback-color-bg:     $yellow-light !default;
+
+$mm-question-state-correct-color:   $green-light !default;
+$mm-question-state-partial-color:   $yellow-light !default;
+$mm-question-state-incorrect-color: $red-light !default;
+
+$mm-question-warning-color:         $red !default;
 
 .mm-question-textarea {
   width: 100%;
@@ -1695,11 +2723,12 @@ li.mm-question-answer-correct,
 .mm-question-comment p {
   color: $mm-question-correct-color;
   -webkit-text-fill-color: $mm-question-correct-color; /* Override iOS / Android font color change */
-  background-color: #dff0d8;
+  background-color: $mm-question-correct-color-bg;
 }
 
 .mm-question-answer-correct .checkbox input:disabled:checked:before,
-.mm-question-answer-correct .checkbox input:disabled:checked + .checkbox-icon:before {
+.mm-question-answer-correct .checkbox input:disabled:checked + .checkbox-icon:before,
+.mm-question-answer-correct.item-radio input:checked + .radio-content .radio-icon:before {
   background-color: $mm-question-correct-color;
   border-color: $mm-question-correct-color;
 }
@@ -1721,11 +2750,12 @@ li.mm-question-answer-incorrect,
 .mm-question-incorrect p {
   color: $mm-question-incorrect-color;
   -webkit-text-fill-color: $mm-question-incorrect-color; /* Override iOS / Android font color change */
-  background-color: #f2dede;
+  background-color: $mm-question-incorrect-color-bg;
 }
 
 .mm-question-answer-incorrect .checkbox input:disabled:checked:before,
-.mm-question-answer-incorrect .checkbox input:disabled:checked + .checkbox-icon:before {
+.mm-question-answer-incorrect .checkbox input:disabled:checked + .checkbox-icon:before,
+.mm-question-answer-incorrect.item-radio input:checked + .radio-content .radio-icon:before {
   background-color: $mm-question-incorrect-color;
   border-color: $mm-question-incorrect-color;
 }
@@ -1735,9 +2765,10 @@ li.mm-question-answer-incorrect,
   opacity: 1;
 }
 
-.mm-question-feedback-container {
-  background-color: #fcf8e3;
-  color: #8a6d3b;
+.mm-question-feedback-container,
+.mm-question-feedback-container p {
+  background-color: $mm-question-feedback-color-bg;
+  color: $mm-question-feedback-color;
 
   .specificfeedback, .rightanswer, .im-feedback, .feedback, .generalfeedback {
     margin: 0 0 .5em;
@@ -1748,17 +2779,17 @@ li.mm-question-answer-incorrect,
     padding: 2px 4px;
     font-weight: bold;
     line-height: 14px;
-    color: #fff;
+    color: $white;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-    background-color: #999;
+    background-color: $gray-dark;
     -webkit-border-radius: 3px;
     border-radius: 3px;
 
     &.incorrect {
-      background-color: $mm-question-incorrect-color;
+      background-color: $red;
     }
     &.correct {
-      background-color: $mm-question-correct-color;
+      background-color: $green;
     }
   }
 }
@@ -1790,15 +2821,12 @@ li.mm-question-answer-incorrect,
   color: $mm-question-warning-color;
 }
 
+.questioncorrectnessicon {
+  font-size: 20px;
+}
 #mm-settings-languagelabel {
   color: $base-color;
 }
-
-// Variables.
-$bar-side-menu-height: 80px !default;
-$bar-side-menu-color: $bar-content-bg !default;
-$bar-side-menu-border-color: $bar-content-border !default;
-$bar-side-menu-text-color: $bar-content-text !default;
 
 // Bar styles
 .bar-side-menu {
@@ -1811,7 +2839,8 @@ $bar-side-menu-text-color: $bar-content-text !default;
   .item-avatar {
     margin-top: 0px !important; // MOBILE-959: Added to fix side menu header in iOS.
     h2,
-    p {
+    p,
+    .icon {
       color: $bar-side-menu-text-color;
     }
   }
@@ -1827,6 +2856,20 @@ $bar-side-menu-text-color: $bar-content-text !default;
   }
 }
 
+ion-side-menu li .item,
+ion-side-menu li.item {
+  border-color: $bar-side-menu-item-border-color;
+  background-color: $bar-side-menu-item-background-color;
+  color: $bar-side-menu-item-text-color;
+
+  .icon {
+    color: $bar-side-menu-item-icon-color;
+  }
+}
+
+ion-side-menu li.item.item-divider {
+  background-color: $bar-side-menu-item-divider-color;
+}
 
 .foreground-ion-edit.ion-edit:before {
     position: relative;
@@ -1848,6 +2891,10 @@ $bar-side-menu-text-color: $bar-content-text !default;
             top: 11px;
             left: 11px;
         }
+    }
+
+    .mma-frontpage-item-container {
+        color: $black;
     }
 
     .mm-frontpageitemnews {
@@ -1919,6 +2966,8 @@ $mma-messages-date-badge: "stable" !default;
   width: 100%;
 }
 .mm-site_messages-discussion {
+  background: $white;
+
   .list-left-editing .item-message.item-left-editable,
   .item-left-editing.item-message.item-left-editable {
     max-width: calc(80% + 35px);
@@ -1956,27 +3005,85 @@ $mma-messages-date-badge: "stable" !default;
   }
 }
 
+.tab-content .mm-site_messages-discussion {
+  background: $base-background-color;
+}
+
 .mma-messages-showprevious-spinner-container {
   width: 100%;
   text-align: center;
 }
 
+@media only screen and (min-width: $grid-responsive-sm-break) {
+  .mm-course-grid {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-$mma-mod-assign-warning-color:      #c00 !default;
+    mm-course-list-progress {
+      padding: 0 ($padding-base-horizontal / 2);
+      margin: 0;
+      max-width: 50%;
+      width: 50%;
+      display: flex;
+
+      .card {
+        width: 100%;
+        align-items: stretch;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+    }
+  }
+}
+
+.mm-timelinesort {
+  float: right;
+}
+
+.mm-timelinetitle {
+  float: left;
+  padding: 5px;
+}
+
+.mm-site_myoverview {
+  mm-course-list-progress .card {
+    margin-top: 0;
+
+    h5 {
+      margin-left: 10px;
+    }
+    .list.block .item {
+      border-top: $item-border-width solid $item-light-border;
+      border-bottom: $item-border-width solid $item-light-border;
+    }
+    .list.block:last-child .item {
+      border-bottom: 0;
+    }
+  }
+}
+
+$mma-mod-assign-warning-color: $red !default;
 
 .mm-site_mod_assign,
 .mm-site_mod_assign-submission {
 
-  div.latesubmission {
-    background-color: #efcfcf;
+  div.latesubmission,
+  div.overdue {
+    @extend .mm-error-item;
   }
 
   div.earlysubmission {
-    background-color: #cfefcf;
+    @extend .mm-success-item;
   }
 
-  div.submissioneditable {
-    color: red;
+  div.submissioneditable p {
+    color: $red;
   }
 }
 
@@ -1994,11 +3101,11 @@ p.mma-mod-assign-warning {
   padding-bottom: 1.5em;
 
   .criterion {
-    border: 1px solid #DDD;
+    border: 1px solid $item-default-border;
     overflow: hidden;
 
     &.even {
-      background: #F0F0F0;
+      background: $gray-lighter;
     }
 
     .description,
@@ -2032,7 +3139,7 @@ p.mma-mod-assign-warning {
     }
 
     .levels .level {
-      border-left: 1px solid #DDD;
+      border-left: 1px solid $item-default-border;
       max-width: 150px;
     }
 
@@ -2041,12 +3148,12 @@ p.mma-mod-assign-warning {
     }
 
     .levels .level.last {
-      border-right: 1px solid #DDD;
+      border-right: 1px solid $item-default-border;
     }
 
     .levels .level .score {
       font-style: italic;
-      color: #575;
+      color: $green-dark;
       font-weight: bold;
       margin-top: 5px;
       white-space: nowrap;
@@ -2061,7 +3168,7 @@ p.mma-mod-assign-warning {
     }
 
     .levels .level.checked {
-      background: #d0ffd0;
+      background: $green-light;
     }
 
     .description.error,
@@ -2071,7 +3178,7 @@ p.mma-mod-assign-warning {
     }
 
     .levels.error {
-      border: 1px solid red;
+      border: 1px solid $red;
     }
   }
 
@@ -2098,13 +3205,14 @@ p.mma-mod-assign-warning {
 
   .criteria {
     height:100%;
+    background: $white;
   }
 }
 
 .gradingform_rubric-regrade {
   padding: 10px;
   background: #FFDDDD;
-  border: 1px solid #F00;
+  border: 1px solid $red;
   margin-bottom: 10px;
 }
 .gradingform_rubric-restored {
@@ -2114,7 +3222,7 @@ p.mma-mod-assign-warning {
   margin-bottom: 10px;
 }
 .gradingform_rubric-error {
-  color: red;
+  color: $red;
   font-weight: bold;
 }
 
@@ -2133,7 +3241,7 @@ p.mma-mod-assign-warning {
   }
 
   .criterion {
-    border: 1px solid #DDD;
+    border: 1px solid $item-default-border;
     overflow: hidden;
 
     .description,
@@ -2142,7 +3250,7 @@ p.mma-mod-assign-warning {
     }
 
     &.even {
-      background: #F0F0F0;
+      background: $gray-lighter;
     }
 
     .description {
@@ -2275,6 +3383,15 @@ $mma-chat-notice-badge: "stable" !default;
       border: 0;
     }
   }
+
+  .button-bar {
+    padding: 0;
+    border: 0;
+
+    .button {
+      border: 0;
+    }
+  }
 }
 .mm-site_mod_choice {
   .chart {
@@ -2298,8 +3415,180 @@ $mma-chat-notice-badge: "stable" !default;
   }
 }
 
+.mm-site_mod_data {
+  .recordcheckbox {
+    display: none;
+  }
+}
+
+.mm-data-contents {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-word;
+  padding: $item-padding;
+  background-color: white;
+  border-top-width: $item-border-width;
+  border-bottom-width: $item-border-width;
+  border-style: solid;
+  border-color: $item-default-border;
+
+  table, tbody {
+    display: block;
+  }
+
+  tr {
+    @extend .row;
+    padding: 0;
+  }
+
+  td, th {
+    @extend .col;
+  }
+}
+
+#mma-mod_data-advanced-search-form,
+#mma-mod_data-edit-form  {
+  table {
+    width: 100%;
+  }
+  td {
+    vertical-align: top;
+  }
+
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  .item-select,
+  mm-attachments>.item-border {
+    width: 100%;
+    margin: -1px;
+    border: 1px solid $gray;
+    padding: 16px 0 16px 16px;
+    height: 56px;
+  }
+
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"] {
+    -webkit-appearance: none;
+  }
+
+  mm-attachments .item-media {
+    width: 100%;
+    margin: -1px;
+    border: 1px solid $gray;
+    height: 56px;
+  }
+
+  mm-multiple-select .item {
+    width: 100%;
+    margin: -1px;
+    border: 1px solid $gray;
+    padding: 16px 0 16px 16px;
+  }
+
+  mm-attachments + .item-stacked-label {
+    border-top: 0px;
+    padding: 0;
+    margin-right: 1px;
+
+    ion-label {
+      margin: 0;
+      padding-left: 16px;
+    }
+
+    input {
+      border: 0;
+      margin: 0;
+    }
+  }
+
+  mm-attachments .item {
+    width: 100%;
+    margin: -1px;
+    border: 1px solid $gray;
+    overflow: hidden;
+  }
+
+  .item-checkbox {
+    margin-right: 1px;
+  }
+
+  .item-input.item-select {
+    margin-bottom: -6px;
+
+    select {
+      width: 100%;
+      left: 0;
+      max-width: none;
+    }
+  }
+
+  .item-input.mm-latlong {
+    width: 100%;
+    margin: -1px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+
+    input {
+      border: 0;
+    }
+  }
+
+  .mm-item-has-rich-text-editor {
+    margin-right: 1px;
+  }
+}
+.mm-site_mod_feedback {
+  .mm-analysis {
+    ul {
+      font-size: $font-size-base;
+    }
+    .item .chart {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.mm-site_mod_feedback-form {
+  .item-select select {
+      position: relative;
+      padding: $item-padding / 2;
+      max-width: 100%;
+      width: 100%;
+      direction: ltr;
+  }
+  input, textarea {
+    background: transparent;
+  }
+}
+
+
 .mma-forum-discussion-link {
     text-decoration: none;
+    &.mm-split-item-selected,
+    &.mm-split-item-selected>.item {
+        border-left: 0;
+        padding-left: 0;
+        article .item-heading {
+            border-top: 5px solid $mm-color;
+            margin-top: -1px;
+        }
+    }
 }
 
 .mma-forum-align-right {
@@ -2346,7 +3635,7 @@ $mma-chat-notice-badge: "stable" !default;
         overflow: hidden;
         margin: 1px 10px 10px;
         border-radius: 0;
-        background-color: #fff;
+        background-color: $white;
 
         .item {
             border-left: 0;
@@ -2368,7 +3657,7 @@ $mma-chat-notice-badge: "stable" !default;
         margin-left: 10px;
 
         &>article:nth-child(even)>.mm-nested-card>mma-mod-forum-discussion-post>.item-heading {
-            background: #eee;
+            background: $gray-light;
         }
     }
 
@@ -2378,13 +3667,60 @@ $mma-chat-notice-badge: "stable" !default;
     }
 }
 
+.item.mma-mod-lesson-selected {
+  @extend .mm-menu-selected;
+}
 
-$mma-mod-quiz-warning-color:      #c00 !default;
-$mma-mod-quiz-highlight-color:    #d9edf7 !default;
-$mma-mod-quiz-alternate-color:    #fbfbfb !default;
-$mma-mod-quiz-conecterr-color:    #fcc !default;
-$mma-mod-quiz-selected-color:     #666 !default;
+.mma-mod-lesson-slideshow {
+  max-width: 100%;
+  max-height: 100%;
+}
 
+.mma-mod-lesson-ongoingscore,
+.item.mma-mod-lesson-ongoingscore,
+.mma-mod-lesson-ongoingscore span,
+.item.mma-mod-lesson-ongoingscore span {
+  // Same styles as .item p.
+  color: $gray-darker;
+  font-size: 14px;
+}
+
+.mma-mod_lesson-lessonstats, .mma-mod_lesson-userstats {
+  .item.row .col-33,
+  .item.row .col-50 {
+    border-color: $item-default-border;
+    border-style: solid;
+    &:not(:first-child) {
+      border-left-width: $item-border-width;
+    }
+  }
+}
+
+.mm-site_mod_lesson-userretake {
+  .mma-mod_lesson-answer {
+    .item {
+      border-top: 1px solid $item-default-border;
+      border-radius: 0;
+    }
+  }
+
+  .highlight {
+    background-color: $blue-light;
+    p {
+      color: $blue-dark;
+    }
+  }
+}
+
+
+$mma-mod-quiz-warning-color:      $red !default;
+$mma-mod-quiz-highlight-bgcolor:  $blue-light !default;
+$mma-mod-quiz-highlight-color:    $blue-dark !default;
+$mma-mod-quiz-alternate-color:    $gray-lighter !default;
+$mma-mod-quiz-conecterr-color:    $red-light !default;
+$mma-mod-quiz-selected-color:     $blue-light !default;
+
+// Deprecated use mm-error-item instead.
 p.mma-mod-quiz-warning {
   color: $mma-mod-quiz-warning-color;
 }
@@ -2402,8 +3738,10 @@ p.mma-mod-quiz-warning {
 .item.mma-mod-quiz-highlighted,
 .platform-android .item.mma-mod-quiz-highlighted,
 .platform-ios .item.mma-mod-quiz-highlighted,
-.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted {
-  background-color: $mma-mod-quiz-highlight-color;
+.mma-mod-quiz-table .item.row.mma-mod-quiz-highlighted,
+.item.mma-mod-quiz-highlighted p {
+  background-color: $mma-mod-quiz-highlight-bgcolor;
+  color: $mma-mod-quiz-highlight-color;
 }
 
 .mma-quiz-textarea {
@@ -2414,16 +3752,34 @@ p.mma-mod-quiz-warning {
 
 // Remove padding-top and bottom from navigation bar to minimize height used.
 .mma-mod-quiz-subheader {
-  .row {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-  .col {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  .row, .col {
     padding-top: 0px;
     padding-bottom: 0px;
   }
   .mm-timer {
-    line-height: $button-bar-button-height
+    min-height: 41px;
+    border: 0;
+    padding: 1px 0 1px 25px;
+
+    .icon {
+      left: 0;
+      font-size: $item-font-size * 3 /2;
+    }
+
+    label {
+      font-size: $item-font-size - 2;
+    }
+
+    span {
+      display: block;
+    }
+
+    span.mm-timesup {
+      line-height: 40px;
+    }
   }
 }
 
@@ -2446,15 +3802,15 @@ p.mma-mod-quiz-warning {
 .platform-android .item.mma-mod-quiz-selected,
 .platform-ios .item.mma-mod-quiz-selected,
 .mma-mod-quiz-table .item.row.mma-mod-quiz-selected {
-  border: 3px solid $mma-mod-quiz-selected-color;
-  &:not(.mma-mod-quiz-last-of-page) {
-    border-bottom: 0;
-  }
+  background: $mma-mod-quiz-selected-color;
 }
 
+#mma-mod-quiz-toc .item {
+  border-color: $gray-dark;
+}
 
 $mma-mod-scorm-level-margin:		25px !default;
-$mma-mod-scorm-warning-color:		#c00 !default;
+$mma-mod-scorm-warning-color:		$red !default;
 
 @for $i from 0 through 15 {
   .mma-scorm-level-#{$i} {
@@ -2501,90 +3857,114 @@ ion-popover-view {
   padding-bottom: 10px;
 }
 
-.mma-mod_survey-darkbg {
-  background-color: $item-divider-bg;
-}
+.mm-site_mod_survey {
+  .row, .input-label {
+    font-size: $font-size-base;
+  }
 
-.mma-mod_survey-padding-top {
-  padding-top: 20px;
-}
+  .mma-mod_survey-darkbg {
+    background-color: $item-divider-bg;
+  }
 
-textarea.mma-mod_survey-textarea {
-  height: 100px;
-  border:1px solid $item-default-border;
-}
+  .mma-mod_survey-padding-top {
+    padding-top: 20px;
+  }
 
-select.mma-mod_survey-select {
-  background-color: transparent;
-  padding-left: 0px;
-  padding-right: $item-padding * 2;
-  max-width: 100%;
+  textarea.mma-mod_survey-textarea {
+    height: 100px;
+    border: 1px solid $item-default-border;
+  }
 
-  .mma-mod_survey-defaultoption {
-    display: none;
+  select.mma-mod_survey-select {
+    background-color: transparent;
+    padding-left: 0px;
+    padding-right: $item-padding * 2;
+    max-width: 100%;
+
+    .mma-mod_survey-defaultoption {
+      display: none;
+    }
   }
 }
 
 $mma-mod-wiki-toc-level-padding:    12px !default;
-$mma-mod-wiki-newentry-link-color:   red !default;
-$mma-mod-wiki-toc-title-color:   #666 !default;
-$mma-mod-wiki-toc-border-color:   #bbb !default;
-$mma-mod-wiki-toc-background-color:   #eee !default;
-$mma-mod-wiki-subwiki-selected-background-color:   #eee !default;
+$mma-mod-wiki-newentry-link-color:  $red !default;
+$mma-mod-wiki-toc-title-color:      $gray-darker !default;
+$mma-mod-wiki-toc-border-color:     $gray-dark !default;
+$mma-mod-wiki-toc-background-color: $gray-light !default;
+$mma-mod-wiki-subwiki-selected-background-color:   $gray-light !default;
 
-.wiki-toc {
-  border: 1px solid $mma-mod-wiki-toc-border-color;
-  background: $mma-mod-wiki-toc-background-color;
-  margin: 16px;
-  padding: 8px;
+.mm-site_mod_wiki {
+  background-color: white;
+
+  .wiki-toc {
+    border: 1px solid $mma-mod-wiki-toc-border-color;
+    background: $mma-mod-wiki-toc-background-color;
+    margin: 16px;
+    padding: 8px;
+  }
+
+  .wiki-toc-title {
+    color: $mma-mod-wiki-toc-title-color;
+    font-size: 1.1em;
+    font-variant: small-caps;
+    text-align: center;
+  }
+
+  .wiki-toc-section {
+    padding: 0;
+    margin: 2px 8px;
+  }
+
+  .wiki-toc-section-2 {
+    padding-left: $mma-mod-wiki-toc-level-padding;
+  }
+
+  .wiki-toc-section-3 {
+    padding-left: $mma-mod-wiki-toc-level-padding * 2;
+  }
+
+  .wiki_newentry {
+    color: $mma-mod-wiki-newentry-link-color;
+    font-style: italic;
+  }
+
+  /* Hide edit section links */
+  .mma-mod_wiki-noedit a.wiki_edit_section {
+    display: none;
+  }
+
+  .mma-mod_wiki-subwiki-picker .item-divider {
+    font-weight: bold;
+  }
+
+  .mma-mod_wiki-subwiki-picker .item.item-selected {
+    background-color: $mma-mod-wiki-subwiki-selected-background-color;
+  }
+
+  .mma-mod_wiki-subwiki-picker .item.item-selected .icon {
+    font-size: 24px;
+  }
 }
 
-.wiki-toc-title {
-  color: $mma-mod-wiki-toc-title-color;
-  font-size: 1.1em;
-  font-variant: small-caps;
-  text-align: center;
-}
+.mm-site_mod_workshop,
+.mm-site_mod_workshop-submission,
+.mm-site_mod_workshop-assessment {
 
-.wiki-toc-section {
-  padding: 0;
-  margin: 2px 8px;
-}
+  p.mm-overriden-grade {
+    color: $mm-success-color;
+  }
 
-.wiki-toc-section-2 {
-  padding-left: $mma-mod-wiki-toc-level-padding;
-}
-
-.wiki-toc-section-3 {
-  padding-left: $mma-mod-wiki-toc-level-padding * 2;
-}
-
-.mm-site_mod_wiki .wiki_newentry {
-  color: $mma-mod-wiki-newentry-link-color;
-  font-style: italic;
-}
-
-/* Hide edit section links */
-.mma-mod_wiki-noedit a.wiki_edit_section {
-  display: none;
-}
-
-.mma-mod_wiki-subwiki-picker .item-divider {
-  font-weight: bold;
-}
-
-.mma-mod_wiki-subwiki-picker .item.item-selected {
-  background-color: $mma-mod-wiki-subwiki-selected-background-color;
-}
-
-.mma-mod_wiki-subwiki-picker .item.item-selected .icon {
-  font-size: 24px;
+  p.mm-has-overriden-grade {
+    color: $mm-error-color;
+    text-decoration: line-through;
+  }
 }
 
 
-$mma-qbehaviour-deferredcbm-judgementok-color:  #080 !default;
-$mma-qbehaviour-deferredcbm-slightly-color:     #600 !default;
-$mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
+$mma-qbehaviour-deferredcbm-judgementok-color:  $green-dark !default;
+$mma-qbehaviour-deferredcbm-slightly-color:     $red-dark !default;
+$mma-qbehaviour-deferredcbm-confident-color:    $red !default;
 
 .qbehaviour_deferredcbm_actual_percentage {
   font-weight: bold;
@@ -2607,6 +3987,19 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
 	font-size: 16px;
 }
 
+// Style match content a bit.
+.mma-qtype-calculated-container .item-select {
+  select,
+  .mm-select-fix {
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
+  }
+}
+
 // Style ddimageortext content a bit. Almost all these styles are copied from Moodle.
 .mma-qtype-ddimageortext-container {
   mm-loading {
@@ -2620,7 +4013,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.droparea img {
-    border: 1px solid #000000;
+    border: 1px solid $gray-darker;
     max-width: 100%;
   }
 
@@ -2634,7 +4027,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.draghome {
-    border: 1px solid black;
+    border: 1px solid $gray-darker;
     cursor: pointer;
     background-color: #B0C4DE;
     display:inline-block;
@@ -2644,10 +4037,10 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   .group1 {
-    background-color: #FFFFFF;
+    background-color: $white;
   }
   .group2 {
-    background-color: #B0C4DE;
+    background-color: $blue-light;
   }
   .group3 {
     background-color: #DCDCDC;
@@ -2668,7 +4061,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     background-color: #F0E68C;
   }
   .drag {
-    border: 1px solid black;
+    border: 1px solid $gray-darker;
     cursor: pointer;
     z-index: 2;
   }
@@ -2696,7 +4089,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     margin:0 auto;
   }
   .dropzone {
-    border: 1px solid black;
+    border: 1px solid $gray-darker;
     position: absolute;
     z-index: 1;
     cursor: pointer;
@@ -2710,7 +4103,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
   .drag.beingdragged {
     z-index: 3;
-    box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px $gray-darker;
   }
 }
 // Style ddmarker content a bit. Almost all these styles are copied from Moodle.
@@ -2726,7 +4119,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   div.droparea img  {
-    border: 1px solid #000;
+    border: 1px solid $gray-darker;
     max-width: 100%;
   }
 
@@ -2749,7 +4142,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
 
   .dragitem.beingdragged .markertext {
     z-index: 5;
-    box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px $gray-darker;
   }
   .dragitems .draghome {
     margin: 10px;
@@ -2779,8 +4172,8 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   div.markertexts span.markertext{
     margin: 0 5px;
     z-index: 2;
-    background-color: white;
-    border: 2px solid black;
+    background-color: $white;
+    border: 2px solid $gray-darker;
     padding: 5px;
     display: inline-block;
     zoom: 1;
@@ -2788,17 +4181,17 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
   div.markertexts span.markertext {
     z-index: 3;
-    background-color: yellow;
+    background-color: $yellow-light;
     border-style: solid;
     border-width: 2px;
-    border-color: khaki;
+    border-color: $yellow;
     position: absolute;
   }
   span.wrongpart {
-    background-color: yellow;
+    background-color: $yellow-light;
     border-style: solid;
     border-width: 2px;
-    border-color: khaki;
+    border-color: $yellow;
     padding: 5px;
     border-radius: 10px;
     filter: alpha(opacity=60);
@@ -2833,8 +4226,9 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   .drop {
       display: inline-block;
       text-align: center;
-      border: 1px solid #000000;
+      border: 1px solid $gray-darker;
       margin-bottom: 2px;
+      border-radius: 5px;
   }
   .draghome, .drag {
       display: inline-block;
@@ -2843,22 +4237,24 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
       border: 0;
   }
   .draghome, .drag.unplaced{
-      border: 1px solid #000000;
+      border: 1px solid $gray-darker;
+      border-radius: 5px;
   }
   .draghome {
       visibility: hidden;
   }
   .drag {
       z-index: 2;
+      border-radius: 5px;
   }
   .drag.selected {
       z-index: 3;
-      box-shadow: 3px 3px 4px #000;
+      box-shadow: 3px 3px 4px $gray-darker;
   }
 
   .drop.selected {
-      border-color: #0a0;
-      box-shadow: 0 0 5px 5px rgba(255, 255, 150, 1);
+      border-color: $yellow-light;
+      box-shadow: 0 0 5px 5px $yellow-light;
   }
 
   &.notreadonly .drag,
@@ -2866,6 +4262,7 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   &.notreadonly .drop,
   &.notreadonly .answercontainer {
       cursor: pointer;
+      border-radius: 5px;
   }
 
   &.readonly .drag,
@@ -2876,20 +4273,20 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
   }
 
   span.incorrect {
-      background-color: #faa;
+      background-color: $red-light;
   }
   span.correct {
-      background-color: #afa;
+      background-color: $green-light;
   }
 
   .group1 {
-      background-color: #FFFFFF;
+      background-color: $white;
   }
   .group2 {
       background-color: #DCDCDC;
   }
   .group3 {
-      background-color: #B0C4DE;
+      background-color: $blue-light;
   }
   .group4 {
       background-color: #D8BFD8;
@@ -2933,12 +4330,13 @@ $mma-qbehaviour-deferredcbm-confident-color:    #c00 !default;
     height: 30px;
     line-height: 30px;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid $gray-dark;
     padding: 4px 6px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
     margin-bottom: 10px;
+    background: $gray-lighter;
   }
 }
 
