@@ -1,16 +1,17 @@
 webpackJsonp([9],{
 
-/***/ 1617:
+/***/ 1704:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreUserParticipantsPageModule", function() { return CoreUserParticipantsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreViewerTextPageModule", function() { return CoreViewerTextPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(331);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__participants__ = __webpack_require__(1709);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__text__ = __webpack_require__(1806);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,35 +36,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreUserParticipantsPageModule = (function () {
-    function CoreUserParticipantsPageModule() {
+
+/**
+ * Module to lazy load the page.
+ */
+var CoreViewerTextPageModule = (function () {
+    function CoreViewerTextPageModule() {
     }
-    CoreUserParticipantsPageModule = __decorate([
+    CoreViewerTextPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__participants__["a" /* CoreUserParticipantsPage */],
+                __WEBPACK_IMPORTED_MODULE_3__text__["a" /* CoreViewerTextPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreUserComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__participants__["a" /* CoreUserParticipantsPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__text__["a" /* CoreViewerTextPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+            ]
         })
-    ], CoreUserParticipantsPageModule);
-    return CoreUserParticipantsPageModule;
+    ], CoreViewerTextPageModule);
+    return CoreViewerTextPageModule;
 }());
 
-//# sourceMappingURL=participants.module.js.map
+//# sourceMappingURL=text.module.js.map
 
 /***/ }),
 
-/***/ 1709:
+/***/ 1806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreUserParticipantsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreViewerTextPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_text__ = __webpack_require__(9);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -88,23 +95,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
- * Page that displays the list of course participants.
+ * Page to render a certain text. If opened as a modal, it will have a button to close the modal.
  */
-var CoreUserParticipantsPage = (function () {
-    function CoreUserParticipantsPage(navParams) {
-        this.courseId = navParams.get('courseId');
+var CoreViewerTextPage = (function () {
+    function CoreViewerTextPage(viewCtrl, params, textUtils) {
+        this.viewCtrl = viewCtrl;
+        this.title = params.get('title');
+        this.content = params.get('content');
+        this.component = params.get('component');
+        this.componentId = params.get('componentId');
+        this.files = params.get('files');
     }
-    CoreUserParticipantsPage = __decorate([
+    /**
+     * Close modal.
+     */
+    CoreViewerTextPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    CoreViewerTextPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-user-participants',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/user/pages/participants/participants.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.user.participants\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-user-participants [courseId]="courseId"></core-user-participants>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/user/pages/participants/participants.html"*/,
+            selector: 'page-core-viewer-text',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/viewer/pages/text/text.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ title }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <core-format-text [text]="content" [component]="component" [componentId]="componentId"></core-format-text>\n\n    <ion-card *ngIf="files && files.length">\n        <core-file *ngFor="let file of files" [file]="file" [component]="component" [componentId]="componentId"></core-file>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/viewer/pages/text/text.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], CoreUserParticipantsPage);
-    return CoreUserParticipantsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
+    ], CoreViewerTextPage);
+    return CoreViewerTextPage;
 }());
 
-//# sourceMappingURL=participants.js.map
+//# sourceMappingURL=text.js.map
 
 /***/ })
 

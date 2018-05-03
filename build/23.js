@@ -1,16 +1,17 @@
 webpackJsonp([23],{
 
-/***/ 1603:
+/***/ 1690:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitesPageModule", function() { return CoreLoginSitesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSettingsGeneralPageModule", function() { return CoreSettingsGeneralPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sites__ = __webpack_require__(1695);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__general__ = __webpack_require__(1792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,41 +36,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreLoginSitesPageModule = (function () {
-    function CoreLoginSitesPageModule() {
+
+var CoreSettingsGeneralPageModule = (function () {
+    function CoreSettingsGeneralPageModule() {
     }
-    CoreLoginSitesPageModule = __decorate([
+    CoreSettingsGeneralPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__sites__["a" /* CoreLoginSitesPage */],
+                __WEBPACK_IMPORTED_MODULE_3__general__["a" /* CoreSettingsGeneralPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__sites__["a" /* CoreLoginSitesPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__general__["a" /* CoreSettingsGeneralPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], CoreLoginSitesPageModule);
-    return CoreLoginSitesPageModule;
+    ], CoreSettingsGeneralPageModule);
+    return CoreSettingsGeneralPageModule;
 }());
 
-//# sourceMappingURL=sites.module.js.map
+//# sourceMappingURL=general.module.js.map
 
 /***/ }),
 
-/***/ 1695:
+/***/ 1792:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginSitesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsGeneralPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_logger__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__addon_pushnotifications_providers_pushnotifications__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_helper__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_constants__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_config__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_file__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_events__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_lang__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_local_notifications__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__configconstants__ = __webpack_require__(58);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -100,113 +105,73 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Page that displays the list of stored sites.
+ * Page that displays the general settings.
  */
-var CoreLoginSitesPage = (function () {
-    function CoreLoginSitesPage(domUtils, textUtils, sitesProvider, loginHelper, logger, translate, pushNotificationsProvider) {
+var CoreSettingsGeneralPage = (function () {
+    function CoreSettingsGeneralPage(appProvider, configProvider, fileProvider, eventsProvider, langProvider, domUtils, localNotificationsProvider) {
+        var _this = this;
+        this.configProvider = configProvider;
+        this.eventsProvider = eventsProvider;
+        this.langProvider = langProvider;
         this.domUtils = domUtils;
-        this.textUtils = textUtils;
-        this.sitesProvider = sitesProvider;
-        this.loginHelper = loginHelper;
-        this.translate = translate;
-        this.pushNotificationsProvider = pushNotificationsProvider;
-        this.logger = logger.getInstance('CoreLoginSitesPage');
+        this.languages = {};
+        this.languageCodes = [];
+        this.languages = __WEBPACK_IMPORTED_MODULE_9__configconstants__["a" /* CoreConfigConstants */].languages;
+        this.languageCodes = Object.keys(this.languages);
+        langProvider.getCurrentLanguage().then(function (currentLanguage) {
+            _this.selectedLanguage = currentLanguage;
+        });
+        this.rteSupported = this.domUtils.isRichTextEditorSupported();
+        if (this.rteSupported) {
+            this.configProvider.get(__WEBPACK_IMPORTED_MODULE_2__core_constants__["a" /* CoreConstants */].SETTINGS_RICH_TEXT_EDITOR, true).then(function (richTextEditorEnabled) {
+                _this.richTextEditor = richTextEditorEnabled;
+            });
+        }
+        if (localStorage && localStorage.getItem && localStorage.setItem) {
+            this.showReport = true;
+            this.reportInBackground = parseInt(localStorage.getItem(__WEBPACK_IMPORTED_MODULE_2__core_constants__["a" /* CoreConstants */].SETTINGS_REPORT_IN_BACKGROUND), 10) === 1;
+        }
+        else {
+            this.showReport = false;
+        }
     }
     /**
-     * View loaded.
+     * Called when a new language is selected.
      */
-    CoreLoginSitesPage.prototype.ionViewDidLoad = function () {
+    CoreSettingsGeneralPage.prototype.languageChanged = function () {
         var _this = this;
-        this.sitesProvider.getSortedSites().then(function (sites) {
-            // Remove protocol from the url to show more url text.
-            _this.sites = sites.map(function (site) {
-                site.siteUrl = site.siteUrl.replace(/^https?:\/\//, '');
-                site.badge = 0;
-                _this.pushNotificationsProvider.getSiteCounter(site.id).then(function (counter) {
-                    site.badge = counter;
-                });
-                return site;
-            });
-            _this.showDelete = false;
-        }).catch(function () {
-            // Shouldn't happen.
+        this.langProvider.changeCurrentLanguage(this.selectedLanguage).finally(function () {
+            _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */].LANGUAGE_CHANGED);
         });
     };
     /**
-     * Go to the page to add a site.
+     * Called when the rich text editor is enabled or disabled.
      */
-    CoreLoginSitesPage.prototype.add = function () {
-        this.loginHelper.goToAddSite(false);
+    CoreSettingsGeneralPage.prototype.richTextEditorChanged = function () {
+        this.configProvider.set(__WEBPACK_IMPORTED_MODULE_2__core_constants__["a" /* CoreConstants */].SETTINGS_RICH_TEXT_EDITOR, this.richTextEditor);
     };
     /**
-     * Delete a site.
-     *
-     * @param {Event} e Click event.
-     * @param {number} index Position of the site.
+     * Called when the report in background setting is enabled or disabled.
      */
-    CoreLoginSitesPage.prototype.deleteSite = function (e, index) {
-        var _this = this;
-        e.stopPropagation();
-        var site = this.sites[index], siteName = site.siteName;
-        this.textUtils.formatText(siteName).then(function (siteName) {
-            _this.domUtils.showConfirm(_this.translate.instant('core.login.confirmdeletesite', { sitename: siteName })).then(function () {
-                _this.sitesProvider.deleteSite(site.id).then(function () {
-                    _this.sites.splice(index, 1);
-                    _this.showDelete = false;
-                    // If there are no sites left, go to add site.
-                    _this.sitesProvider.hasSites().then(function (hasSites) {
-                        if (!hasSites) {
-                            _this.loginHelper.goToAddSite(true);
-                        }
-                    });
-                }).catch(function (error) {
-                    _this.logger.error('Error deleting site ' + site.id, error);
-                    _this.domUtils.showErrorModalDefault(error, 'Delete site failed.');
-                    _this.domUtils.showErrorModal('core.login.errordeletesite', true);
-                });
-            }).catch(function () {
-                // User cancelled, nothing to do.
-            });
-        });
+    CoreSettingsGeneralPage.prototype.reportInBackgroundChanged = function () {
+        localStorage.setItem(__WEBPACK_IMPORTED_MODULE_2__core_constants__["a" /* CoreConstants */].SETTINGS_REPORT_IN_BACKGROUND, this.reportInBackground ? '1' : '0');
     };
-    /**
-     * Login in a site.
-     *
-     * @param {string} siteId The site ID.
-     */
-    CoreLoginSitesPage.prototype.login = function (siteId) {
-        var _this = this;
-        var modal = this.domUtils.showModalLoading();
-        this.sitesProvider.loadSite(siteId).then(function () {
-            if (!_this.loginHelper.isSiteLoggedOut()) {
-                return _this.loginHelper.goToSiteInitialPage();
-            }
-        }).catch(function (error) {
-            _this.logger.error('Error loading site ' + siteId, error);
-            _this.domUtils.showErrorModalDefault(error, 'Error loading site.');
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    /**
-     * Toggle delete.
-     */
-    CoreLoginSitesPage.prototype.toggleDelete = function () {
-        this.showDelete = !this.showDelete;
-    };
-    CoreLoginSitesPage = __decorate([
+    CoreSettingsGeneralPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-sites',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/sites/sites.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.sites\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="sites && sites.length > 0" ion-button icon-only (click)="toggleDelete()" [attr.aria-label]="\'core.delete\' | translate">\n                <ion-icon name="create" ios="md-create"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item (click)="login(site.id)" *ngFor="let site of sites; let idx = index">\n            <ion-avatar item-start>\n                <img [src]="site.avatar" core-external-content [siteId]="site.id" alt="{{ \'core.pictureof\' | translate:{$a: site.fullname} }}" role="presentation" onError="this.src=\'assets/img/user-avatar.png\'">\n            </ion-avatar>\n            <h2>{{site.fullName}}</h2>\n            <p><core-format-text [text]="site.siteName" clean="true" watch="true" [siteId]="site.id"></core-format-text></p>\n            <p>{{site.siteUrl}}</p>\n            <ion-badge item-end *ngIf="!showDelete && site.badge">{{site.badge}}</ion-badge>\n            <button *ngIf="showDelete" item-end ion-button icon-only clear color="danger" (click)="deleteSite($event, idx)" [attr.aria-label]="\'core.delete\' | translate">\n                <ion-icon name="trash"></ion-icon>\n            </button>\n        </ion-item>\n    </ion-list>\n    <ion-fab bottom right>\n        <button ion-fab (click)="add()" [attr.aria-label]="\'core.add\' | translate">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/sites/sites.html"*/,
+            selector: 'page-core-settings-general',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/settings/pages/general/general.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.general\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-item text-wrap>\n        <ion-label><h2>{{ \'core.settings.language\' | translate }}</h2></ion-label>\n        <ion-select [(ngModel)]="selectedLanguage" (ngModelChange)="languageChanged()">\n            <ion-option *ngFor="let code of languageCodes" [value]="code">{{ languages[code] }}</ion-option>\n        </ion-select>\n    </ion-item>\n    <ion-item text-wrap *ngIf="rteSupported">\n        <ion-label>\n            <h2>{{ \'core.settings.enablerichtexteditor\' | translate }}</h2>\n            <p>{{ \'core.settings.enablerichtexteditordescription\' | translate }}</p>\n        </ion-label>\n        <ion-toggle [(ngModel)]="richTextEditor" (ngModelChange)="richTextEditorChanged()"></ion-toggle>\n    </ion-item>\n    <ion-item text-wrap *ngIf="showReport">\n        <ion-label><h2>{{ \'core.settings.reportinbackground\' | translate }}</h2></ion-label>\n        <ion-toggle [(ngModel)]="reportInBackground" (ngModelChange)="reportInBackgroundChanged()"></ion-toggle>\n    </ion-item>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/settings/pages/general/general.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__["a" /* CoreTextUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_helper__["a" /* CoreLoginHelperProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_logger__["a" /* CoreLoggerProvider */],
-            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_6__addon_pushnotifications_providers_pushnotifications__["a" /* AddonPushNotificationsProvider */]])
-    ], CoreLoginSitesPage);
-    return CoreLoginSitesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_config__["a" /* CoreConfigProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_file__["a" /* CoreFileProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_6__providers_lang__["a" /* CoreLangProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */]])
+    ], CoreSettingsGeneralPage);
+    return CoreSettingsGeneralPage;
 }());
 
-//# sourceMappingURL=sites.js.map
+//# sourceMappingURL=general.js.map
 
 /***/ })
 

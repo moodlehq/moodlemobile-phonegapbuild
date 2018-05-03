@@ -1,17 +1,18 @@
 webpackJsonp([49],{
 
-/***/ 1576:
+/***/ 1663:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotificationsSettingsPageModule", function() { return AddonNotificationsSettingsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCourseUnsupportedModulePageModule", function() { return CoreCourseUnsupportedModulePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings__ = __webpack_require__(1666);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__unsupported_module__ = __webpack_require__(1765);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(57);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,48 +38,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonNotificationsSettingsPageModule = (function () {
-    function AddonNotificationsSettingsPageModule() {
+
+var CoreCourseUnsupportedModulePageModule = (function () {
+    function CoreCourseUnsupportedModulePageModule() {
     }
-    AddonNotificationsSettingsPageModule = __decorate([
+    CoreCourseUnsupportedModulePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonNotificationsSettingsPage */],
+                __WEBPACK_IMPORTED_MODULE_3__unsupported_module__["a" /* CoreCourseUnsupportedModulePage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonNotificationsSettingsPage */]),
+                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* CoreCourseComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__unsupported_module__["a" /* CoreCourseUnsupportedModulePage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonNotificationsSettingsPageModule);
-    return AddonNotificationsSettingsPageModule;
+    ], CoreCourseUnsupportedModulePageModule);
+    return CoreCourseUnsupportedModulePageModule;
 }());
 
-//# sourceMappingURL=settings.module.js.map
+//# sourceMappingURL=unsupported-module.module.js.map
 
 /***/ }),
 
-/***/ 1666:
+/***/ 1765:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonNotificationsSettingsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCourseUnsupportedModulePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_notifications__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_user_providers_user__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_settings_providers_helper__ = __webpack_require__(790);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__addon_messageoutput_providers_delegate__ = __webpack_require__(346);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_config__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_app__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_constants__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_text__ = __webpack_require__(9);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -101,256 +94,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 /**
- * Page that displays notifications settings.
+ * Page that displays info about an unsupported module.
  */
-var AddonNotificationsSettingsPage = (function () {
-    function AddonNotificationsSettingsPage(notificationsProvider, domUtils, settingsHelper, userProvider, navCtrl, messageOutputDelegate, appProvider, configProvider, eventsProvider, localNotificationsProvider, sitesProvider, svComponent) {
-        var _this = this;
-        this.notificationsProvider = notificationsProvider;
-        this.domUtils = domUtils;
-        this.settingsHelper = settingsHelper;
-        this.userProvider = userProvider;
-        this.navCtrl = navCtrl;
-        this.messageOutputDelegate = messageOutputDelegate;
-        this.configProvider = configProvider;
-        this.eventsProvider = eventsProvider;
-        this.localNotificationsProvider = localNotificationsProvider;
-        this.sitesProvider = sitesProvider;
-        this.svComponent = svComponent;
-        this.processorHandlers = [];
-        this.notifPrefsEnabled = notificationsProvider.isNotificationPreferencesEnabled();
-        this.canChangeSound = localNotificationsProvider.isAvailable() && !appProvider.isDesktop();
-        if (this.canChangeSound) {
-            configProvider.get(__WEBPACK_IMPORTED_MODULE_10__core_constants__["a" /* CoreConstants */].SETTINGS_NOTIFICATION_SOUND, true).then(function (enabled) {
-                _this.notificationSound = enabled;
-            });
-        }
+var CoreCourseUnsupportedModulePage = (function () {
+    function CoreCourseUnsupportedModulePage(navParams, translate, textUtils) {
+        this.translate = translate;
+        this.textUtils = textUtils;
+        this.module = navParams.get('module') || {};
     }
     /**
-     * View loaded.
+     * Expand the description.
      */
-    AddonNotificationsSettingsPage.prototype.ionViewDidLoad = function () {
-        if (this.notifPrefsEnabled) {
-            this.fetchPreferences();
-        }
-        else {
-            this.preferencesLoaded = true;
-        }
+    CoreCourseUnsupportedModulePage.prototype.expandDescription = function () {
+        this.textUtils.expandText(this.translate.instant('core.description'), this.module.description);
     };
-    /**
-     * Fetches preference data.
-     *
-     * @return {Promise<any>} Resolved when done.
-     */
-    AddonNotificationsSettingsPage.prototype.fetchPreferences = function () {
-        var _this = this;
-        return this.notificationsProvider.getNotificationPreferences().then(function (preferences) {
-            if (!_this.currentProcessor) {
-                // Initialize current processor. Load "Mobile" (airnotifier) if available.
-                _this.currentProcessor = _this.settingsHelper.getProcessor(preferences.processors, 'airnotifier');
-            }
-            if (!_this.currentProcessor) {
-                // Shouldn't happen.
-                return Promise.reject('No processor found');
-            }
-            preferences.disableall = !!preferences.disableall; // Convert to boolean.
-            _this.preferences = preferences;
-            _this.loadProcessor(_this.currentProcessor);
-            // Get display data of message output handlers (thery are displayed in the context menu),
-            _this.processorHandlers = [];
-            if (preferences.processors) {
-                preferences.processors.forEach(function (processor) {
-                    processor.supported = _this.messageOutputDelegate.hasHandler(processor.name, true);
-                    if (processor.hassettings && processor.supported) {
-                        _this.processorHandlers.push(_this.messageOutputDelegate.getDisplayData(processor));
-                    }
-                });
-            }
-        }).catch(function (message) {
-            _this.domUtils.showErrorModal(message);
-        }).finally(function () {
-            _this.preferencesLoaded = true;
-        });
-    };
-    /**
-     * Load a processor.
-     *
-     * @param {any} processor Processor object.
-     */
-    AddonNotificationsSettingsPage.prototype.loadProcessor = function (processor) {
-        if (!processor) {
-            return;
-        }
-        this.currentProcessor = processor;
-        this.components = this.settingsHelper.getProcessorComponents(processor.name, this.preferences.components);
-    };
-    /**
-     * Update preferences after a certain time. The purpose is to store the updated data, it won't be reflected in the view.
-     */
-    AddonNotificationsSettingsPage.prototype.updatePreferencesAfterDelay = function () {
-        var _this = this;
-        // Cancel pending updates.
-        clearTimeout(this.updateTimeout);
-        this.updateTimeout = setTimeout(function () {
-            _this.updateTimeout = null;
-            _this.updatePreferences();
-        }, 5000);
-    };
-    /**
-     * Update preferences. The purpose is to store the updated data, it won't be reflected in the view.
-     */
-    AddonNotificationsSettingsPage.prototype.updatePreferences = function () {
-        var _this = this;
-        this.notificationsProvider.invalidateNotificationPreferences().finally(function () {
-            _this.notificationsProvider.getNotificationPreferences();
-        });
-    };
-    /**
-     * The selected processor was changed.
-     *
-     * @param {string} name Name of the selected processor.
-     */
-    AddonNotificationsSettingsPage.prototype.changeProcessor = function (name) {
-        var _this = this;
-        this.preferences.processors.forEach(function (processor) {
-            if (processor.name == name) {
-                _this.loadProcessor(processor);
-            }
-        });
-    };
-    /**
-     * Refresh the list of preferences.
-     *
-     * @param {any} [refresher] Refresher.
-     */
-    AddonNotificationsSettingsPage.prototype.refreshPreferences = function (refresher) {
-        var _this = this;
-        this.notificationsProvider.invalidateNotificationPreferences().finally(function () {
-            _this.fetchPreferences().finally(function () {
-                refresher && refresher.complete();
-            });
-        });
-    };
-    /**
-     * Open extra preferences.
-     *
-     * @param {AddonMessageOutputHandlerData} handlerData
-     */
-    AddonNotificationsSettingsPage.prototype.openExtraPreferences = function (handlerData) {
-        // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.
-        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
-        navCtrl.push(handlerData.page, handlerData.pageParams);
-    };
-    /**
-     * Change the value of a certain preference.
-     *
-     * @param {any} notification Notification object.
-     * @param {string} state State name, ['loggedin', 'loggedoff'].
-     */
-    AddonNotificationsSettingsPage.prototype.changePreference = function (notification, state) {
-        var _this = this;
-        var processorState = notification.currentProcessor[state];
-        var preferenceName = notification.preferencekey + '_' + processorState.name;
-        var value;
-        notification.processors.forEach(function (processor) {
-            if (processor[state].checked) {
-                if (!value) {
-                    value = processor.name;
-                }
-                else {
-                    value += ',' + processor.name;
-                }
-            }
-        });
-        if (!value) {
-            value = 'none';
-        }
-        processorState.updating = true;
-        this.userProvider.updateUserPreference(preferenceName, value).then(function () {
-            // Update the preferences since they were modified.
-            _this.updatePreferencesAfterDelay();
-        }).catch(function (message) {
-            // Show error and revert change.
-            _this.domUtils.showErrorModal(message);
-            notification.currentProcessor[state].checked = !notification.currentProcessor[state].checked;
-        }).finally(function () {
-            processorState.updating = false;
-        });
-    };
-    /**
-     * Disable all notifications changed.
-     */
-    AddonNotificationsSettingsPage.prototype.disableAll = function (disable) {
-        var _this = this;
-        var modal = this.domUtils.showModalLoading('core.sending', true);
-        this.userProvider.updateUserPreferences([], disable).then(function () {
-            // Update the preferences since they were modified.
-            _this.updatePreferencesAfterDelay();
-        }).catch(function (message) {
-            // Show error and revert change.
-            _this.domUtils.showErrorModal(message);
-            _this.preferences.disableall = !_this.preferences.disableall;
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    /**
-     * Change the notification sound setting.
-     *
-     * @param {enabled} enabled True to enable the notification sound, false to disable it.
-     */
-    AddonNotificationsSettingsPage.prototype.changeNotificationSound = function (enabled) {
-        var _this = this;
-        this.configProvider.set(__WEBPACK_IMPORTED_MODULE_10__core_constants__["a" /* CoreConstants */].SETTINGS_NOTIFICATION_SOUND, enabled).finally(function () {
-            var siteId = _this.sitesProvider.getCurrentSiteId();
-            _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_events__["a" /* CoreEventsProvider */].NOTIFICATION_SOUND_CHANGED, { enabled: enabled }, siteId);
-            _this.localNotificationsProvider.rescheduleAll();
-        });
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonNotificationsSettingsPage.prototype.ngOnDestroy = function () {
-        // If there is a pending action to update preferences, execute it right now.
-        if (this.updateTimeout) {
-            clearTimeout(this.updateTimeout);
-            this.updatePreferences();
-        }
-    };
-    AddonNotificationsSettingsPage = __decorate([
+    CoreCourseUnsupportedModulePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-notifications-settings',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/notifications/pages/settings/settings.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.notifications.notificationpreferences\' | translate }}</ion-title>\n        <ion-buttons end>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-navbar-buttons>\n    <core-context-menu *ngIf="processorHandlers.length > 0">\n        <core-context-menu-item *ngFor="let handler of processorHandlers" [priority]="handler.priority" [content]="handler.label | translate" (action)="openExtraPreferences(handler)" [iconAction]="handler.icon"></core-context-menu-item>\n    </core-context-menu>\n</core-navbar-buttons>\n<ion-content>\n    <ion-refresher [enabled]="preferencesLoaded && notifPrefsEnabled" (ionRefresh)="refreshPreferences($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="preferencesLoaded">\n        <!-- If notification preferences aren\'t enabled, show only the notification sound setting. -->\n        <ion-item *ngIf="canChangeSound && !notifPrefsEnabled">\n            <ion-label>{{ \'addon.notifications.playsound\' | translate }}</ion-label>\n            <ion-toggle [(ngModel)]="notificationSound" (ionChange)="changeNotificationSound(notificationSound)"></ion-toggle>\n        </ion-item>\n\n        <ng-container *ngIf="notifPrefsEnabled">\n            <ion-card>\n                <ion-item text-wrap *ngIf="preferences">\n                    <ion-label>{{ \'core.settings.disableall\' | translate }}</ion-label>\n                    <ion-toggle [(ngModel)]="preferences.disableall" (ionChange)="disableAll(preferences.disableall)"></ion-toggle>\n                </ion-item>\n                <ion-item text-wrap *ngIf="canChangeSound">\n                    <ion-label>{{ \'addon.notifications.playsound\' | translate }}</ion-label>\n                    <ion-toggle [(ngModel)]="notificationSound" (ionChange)="changeNotificationSound(notificationSound)"></ion-toggle>\n                </ion-item>\n            </ion-card>\n\n            <!-- Show processor selector. -->\n            <ion-select *ngIf="preferences && preferences.processors && preferences.processors.length > 0" [ngModel]="currentProcessor.name" (ngModelChange)="changeProcessor($event)" interface="popover">\n                <ion-option *ngFor="let processor of preferences.processors" [value]="processor.name">{{ processor.displayname }}</ion-option>\n            </ion-select>\n\n            <ion-card list *ngFor="let component of components">\n                <ion-item-divider color="light" text-wrap>\n                    <ion-row no-padding>\n                        <ion-col no-padding>{{ component.displayname }}</ion-col>\n                        <ion-col col-2 text-center no-padding class="hidden-phone">{{ \'core.settings.loggedin\' | translate }}</ion-col>\n                        <ion-col col-2 text-center no-padding class="hidden-phone">{{ \'core.settings.loggedoff\' | translate }}</ion-col>\n                    </ion-row>\n                </ion-item-divider>\n                <ng-container *ngFor="let notification of component.notifications">\n                    <!-- Tablet view -->\n                    <ion-row text-wrap class="hidden-phone" align-items-center>\n                        <ion-col margin-horizontal>{{ notification.displayname }}</ion-col>\n                        <ion-col col-2 text-center *ngFor="let state of [\'loggedin\', \'loggedoff\']">\n                            <!-- If notifications not disabled, show toggle. -->\n                            <ion-spinner [hidden]="preferences.disableall || !(notification.currentProcessor[state] && notification.currentProcessor[state].updating)"></ion-spinner>\n                            <ion-toggle *ngIf="!preferences.disableall" [(ngModel)]="notification.currentProcessor[state].checked" (ionChange)="changePreference(notification, state)" [disabled]="notification.currentProcessor.locked || notification.currentProcessor[state].updating">\n                            </ion-toggle>\n                            <!-- If notifications are disabled, show "Disabled" instead of toggle. -->\n                            <span *ngIf="preferences.disableall">{{ \'core.settings.disabled\' | translate }}</span>\n                        </ion-col>\n                    </ion-row>\n                    <!-- Phone view -->\n                    <ion-list-header text-wrap no-margin class="hidden-tablet">{{ notification.displayname }}</ion-list-header>\n                    <!-- If notifications not disabled, show toggles. If notifications are disabled, show "Disabled" instead of toggle. -->\n                    <ion-item *ngFor="let state of [\'loggedin\', \'loggedoff\']" text-wrap class="hidden-tablet">\n                        <ion-label>{{ \'core.settings.\' + state | translate }}</ion-label>\n                        <ion-spinner item-end *ngIf="!preferences.disableall && (notification.currentProcessor[state] && notification.currentProcessor[state].updating)"></ion-spinner>\n                        <ion-toggle item-end *ngIf="!preferences.disableall" [(ngModel)]="notification.currentProcessor[state].checked" (ionChange)="changePreference(notification, state)" [disabled]="notification.currentProcessor.locked || notification.currentProcessor[state].updating">\n                        </ion-toggle>\n                        <ion-note item-end *ngIf="preferences.disableall">{{ \'core.settings.disabled\' | translate }}</ion-note>\n                    </ion-item>\n                </ng-container>\n            </ion-card>\n        </ng-container>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/notifications/pages/settings/settings.html"*/,
+            selector: 'page-core-course-unsupported-module',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/course/pages/unsupported-module/unsupported-module.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="module.name"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <core-context-menu>\n                <core-context-menu-item [priority]="900" *ngIf="module.url" [href]="module.url" [content]="\'core.openinbrowser\' | translate" [iconAction]="\'open\'"></core-context-menu-item>\n                <core-context-menu-item [priority]="800" *ngIf="module.description" [content]="\'core.moduleintro\' | translate" (action)="expandDescription()" [iconAction]="\'arrow-forward\'"></core-context-menu-item>\n            </core-context-menu>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-course-unsupported-module [module]="module"></core-course-unsupported-module>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/course/pages/unsupported-module/unsupported-module.html"*/,
         }),
-        __param(11, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_notifications__["a" /* AddonNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__core_settings_providers_helper__["a" /* CoreSettingsHelper */], __WEBPACK_IMPORTED_MODULE_3__core_user_providers_user__["a" /* CoreUserProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__addon_messageoutput_providers_delegate__["a" /* AddonMessageOutputDelegate */],
-            __WEBPACK_IMPORTED_MODULE_9__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_config__["a" /* CoreConfigProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_12__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__["a" /* CoreSplitViewComponent */]])
-    ], AddonNotificationsSettingsPage);
-    return AddonNotificationsSettingsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
+    ], CoreCourseUnsupportedModulePage);
+    return CoreCourseUnsupportedModulePage;
 }());
 
-//# sourceMappingURL=settings.js.map
+//# sourceMappingURL=unsupported-module.js.map
 
 /***/ })
 

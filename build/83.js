@@ -1,18 +1,18 @@
 webpackJsonp([83],{
 
-/***/ 1540:
+/***/ 1621:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonBadgesIssuedBadgePageModule", function() { return AddonBadgesIssuedBadgePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyPlanPageModule", function() { return AddonCompetencyPlanPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__issued_badge__ = __webpack_require__(1627);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__plan__ = __webpack_require__(1719);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,43 +39,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonBadgesIssuedBadgePageModule = (function () {
-    function AddonBadgesIssuedBadgePageModule() {
+var AddonCompetencyPlanPageModule = (function () {
+    function AddonCompetencyPlanPageModule() {
     }
-    AddonBadgesIssuedBadgePageModule = __decorate([
+    AddonCompetencyPlanPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__issued_badge__["a" /* AddonBadgesIssuedBadgePage */],
+                __WEBPACK_IMPORTED_MODULE_6__plan__["a" /* AddonCompetencyPlanPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
                 __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__issued_badge__["a" /* AddonBadgesIssuedBadgePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__plan__["a" /* AddonCompetencyPlanPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonBadgesIssuedBadgePageModule);
-    return AddonBadgesIssuedBadgePageModule;
+    ], AddonCompetencyPlanPageModule);
+    return AddonCompetencyPlanPageModule;
 }());
 
-//# sourceMappingURL=issued-badge.module.js.map
+//# sourceMappingURL=plan.module.js.map
 
 /***/ }),
 
-/***/ 1627:
+/***/ 1719:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonBadgesIssuedBadgePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCompetencyPlanPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_badges__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_user_providers_user__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_courses_providers_courses__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_split_view_split_view__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_competency__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_helper__ = __webpack_require__(354);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -98,6 +98,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 
 
 
@@ -107,95 +110,118 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page that displays the list of calendar events.
+ * Page that displays a learning plan.
  */
-var AddonBadgesIssuedBadgePage = (function () {
-    function AddonBadgesIssuedBadgePage(badgesProvider, navParams, sitesProvider, domUtils, timeUtils, userProvider, coursesProvider) {
-        this.badgesProvider = badgesProvider;
+var AddonCompetencyPlanPage = (function () {
+    function AddonCompetencyPlanPage(navCtrl, navParams, translate, appProvider, domUtils, svComponent, competencyProvider, competencyHelperProvider) {
+        this.navCtrl = navCtrl;
+        this.translate = translate;
+        this.appProvider = appProvider;
         this.domUtils = domUtils;
-        this.timeUtils = timeUtils;
-        this.userProvider = userProvider;
-        this.coursesProvider = coursesProvider;
-        this.user = {};
-        this.course = {};
-        this.badge = {};
-        this.badgeLoaded = false;
-        this.currentTime = 0;
-        this.courseId = navParams.get('courseId') || 0; // Use 0 for site badges.
-        this.userId = navParams.get('userId') || sitesProvider.getCurrentSite().getUserId();
-        this.badgeHash = navParams.get('badgeHash');
+        this.svComponent = svComponent;
+        this.competencyProvider = competencyProvider;
+        this.competencyHelperProvider = competencyHelperProvider;
+        this.planLoaded = false;
+        this.planId = navParams.get('planId');
     }
     /**
      * View loaded.
      */
-    AddonBadgesIssuedBadgePage.prototype.ionViewDidLoad = function () {
+    AddonCompetencyPlanPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchIssuedBadge().finally(function () {
-            _this.badgeLoaded = true;
+        this.fetchLearningPlan().finally(function () {
+            _this.planLoaded = true;
         });
     };
     /**
-     * Fetch the issued badge required for the view.
+     * Fetches the learning plan and updates the view.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return {Promise<void>} Promise resolved when done.
      */
-    AddonBadgesIssuedBadgePage.prototype.fetchIssuedBadge = function () {
+    AddonCompetencyPlanPage.prototype.fetchLearningPlan = function () {
         var _this = this;
-        var promises = [];
-        this.currentTime = this.timeUtils.timestamp();
-        var promise = this.userProvider.getProfile(this.userId, this.courseId, true).then(function (user) {
-            _this.user = user;
-        });
-        promises.push(promise);
-        promise = this.badgesProvider.getUserBadges(this.courseId, this.userId).then(function (badges) {
-            badges.forEach(function (badge) {
-                if (_this.badgeHash == badge.uniquehash) {
-                    _this.badge = badge;
-                    if (badge.courseid) {
-                        return _this.coursesProvider.getUserCourse(badge.courseid, true).then(function (course) {
-                            _this.course = course;
-                        }).catch(function () {
-                            // Maybe an old deleted course.
-                            _this.course = null;
-                        });
-                    }
-                }
+        return this.competencyProvider.getLearningPlan(this.planId).then(function (plan) {
+            plan.plan.statusname = _this.getStatusName(plan.plan.status);
+            // Get the user profile image.
+            _this.competencyHelperProvider.getProfile(plan.plan.userid).then(function (user) {
+                _this.user = user;
             });
+            _this.plan = plan;
         }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'Error getting badge data.');
+            _this.domUtils.showErrorModalDefault(message, 'Error getting learning plan data.');
         });
-        promises.push(promise);
-        return Promise.all(promises);
     };
     /**
-     * Refresh the badges.
+     * Navigates to a particular competency.
+     *
+     * @param {number} competencyId
+     */
+    AddonCompetencyPlanPage.prototype.openCompetency = function (competencyId) {
+        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
+        if (this.appProvider.isWide()) {
+            navCtrl.push('AddonCompetencyCompetenciesPage', { competencyId: competencyId, planId: this.planId });
+        }
+        else {
+            navCtrl.push('AddonCompetencyCompetencyPage', { competencyId: competencyId, planId: this.planId });
+        }
+    };
+    /**
+     * Convenience function to get the status name translated.
+     *
+     * @param {number} status
+     * @return {string}
+     */
+    AddonCompetencyPlanPage.prototype.getStatusName = function (status) {
+        var statusTranslateName;
+        switch (status) {
+            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].STATUS_DRAFT:
+                statusTranslateName = 'draft';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].REVIEW_STATUS_IN_REVIEW:
+                statusTranslateName = 'inreview';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].REVIEW_STATUS_WAITING_FOR_REVIEW:
+                statusTranslateName = 'waitingforreview';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].STATUS_ACTIVE:
+                statusTranslateName = 'active';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].STATUS_COMPLETE:
+                statusTranslateName = 'complete';
+                break;
+            default:
+                // We can use the current status name.
+                return String(status);
+        }
+        return this.translate.instant('addon.competency.planstatus' + statusTranslateName);
+    };
+    /**
+     * Refreshes the learning plan.
      *
      * @param {any} refresher Refresher.
      */
-    AddonBadgesIssuedBadgePage.prototype.refreshBadges = function (refresher) {
+    AddonCompetencyPlanPage.prototype.refreshLearningPlan = function (refresher) {
         var _this = this;
-        this.badgesProvider.invalidateUserBadges(this.courseId, this.userId).finally(function () {
-            _this.fetchIssuedBadge().finally(function () {
+        this.competencyProvider.invalidateLearningPlan(this.planId).finally(function () {
+            _this.fetchLearningPlan().finally(function () {
                 refresher.complete();
             });
         });
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonBadgesIssuedBadgePage.prototype, "content", void 0);
-    AddonBadgesIssuedBadgePage = __decorate([
+    AddonCompetencyPlanPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-badges-issued-badge',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/badges/pages/issued-badge/issued-badge.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{badge.name}}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="badgeLoaded" (ionRefresh)="refreshEvent($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="badgeLoaded">\n\n        <ion-item-group>\n            <ion-item text-wrap class="item-avatar-center">\n                <img *ngIf="badge.badgeurl" class="avatar" [src]="badge.badgeurl" core-external-content [alt]="badge.name">\n                <ion-badge color="danger" *ngIf="badge.dateexpire && currentTime >= badge.dateexpire">\n                    {{ \'addon.badges.expired\' | translate }}\n                </ion-badge>\n            </ion-item>\n        </ion-item-group>\n\n        <ion-item-group *ngIf="user.fullname">\n            <ion-item-divider color="light">\n                <h2>{{ \'addon.badges.recipientdetails\' | translate}}</h2>\n            </ion-item-divider>\n            <ion-item text-wrap>\n                <h2>{{ \'core.name\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="user.fullname"></core-format-text>\n                </p>\n            </ion-item>\n        </ion-item-group>\n\n        <ion-item-group>\n            <ion-item-divider color="light">\n                <h2>{{ \'addon.badges.issuerdetails\' | translate}}</h2>\n            </ion-item-divider>\n            <ion-item text-wrap *ngIf="badge.issuername">\n                <h2>{{ \'addon.badges.issuername\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="badge.issuername"></core-format-text>\n                </p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="badge.issuercontact">\n                <h2>{{ \'addon.badges.contact\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="badge.issuercontact"></core-format-text>\n                </p>\n            </ion-item>\n        </ion-item-group>\n\n        <ion-item-group>\n            <ion-item-divider color="light">\n                <h2>{{ \'addon.badges.badgedetails\' | translate}}</h2>\n            </ion-item-divider>\n            <ion-item text-wrap *ngIf="badge.name">\n                <h2>{{ \'core.name\' | translate}}</h2>\n                <p>{{badge.name}}</p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="badge.description">\n                <h2>{{ \'core.description\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="badge.description"></core-format-text>\n                </p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="course.fullname">\n                <h2>{{ \'core.course\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="course.fullname"></core-format-text>\n                </p>\n            </ion-item>\n        </ion-item-group>\n\n        <ion-item-group>\n            <ion-item-divider color="light">\n                <h2>{{ \'addon.badges.issuancedetails\' | translate}}</h2>\n            </ion-item-divider>\n            <ion-item text-wrap *ngIf="badge.dateissued">\n                <h2>{{ \'addon.badges.dateawarded\' | translate}}</h2>\n                <p>{{badge.dateissued | coreToLocaleString }}</p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="badge.dateexpire">\n                <h2>{{ \'addon.badges.expirydate\' | translate}}</h2>\n                <p>{{badge.dateexpire | coreToLocaleString }}</p>\n            </ion-item>\n        </ion-item-group>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/badges/pages/issued-badge/issued-badge.html"*/,
+            selector: 'page-addon-competency-plan',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/competency/pages/plan/plan.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title *ngIf="plan">{{plan.plan.name}}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="planLoaded" (ionRefresh)="refreshLearningPlan($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="planLoaded">\n        <ion-card *ngIf="user">\n            <ion-item text-wrap>\n                <ion-avatar *ngIf="user.profileimageurl && user.profileimageurl !== true" item-start>\n                    <img  [src]="user.profileimageurl" [alt]="\'core.pictureof\' | translate:{$a: user.fullname}" core-external-content>\n                </ion-avatar>\n                <span *ngIf="user.profileimageurl === true" item-start>\n                    <ion-icon name="person"></ion-icon>\n                </span>\n                <h2><core-format-text [text]="user.fullname"></core-format-text></h2>\n            </ion-item>\n       </ion-card>\n        <ion-card *ngIf="plan">\n            <ion-list>\n                <ion-item text-wrap>\n                    <strong>{{ \'addon.competency.status\' | translate }}</strong>:\n                    {{ plan.plan.statusname }}\n                </ion-item>\n                <ion-item text-wrap *ngIf="plan.plan.duedate > 0">\n                    <strong>{{ \'addon.competency.duedate\' | translate }}</strong>:\n                    {{ plan.plan.duedate | coreToLocaleString }}\n                </ion-item>\n                <ion-item text-wrap *ngIf="plan.plan.template">\n                    <strong>{{ \'addon.competency.template\' | translate }}</strong>:\n                    {{ plan.plan.template.shortname }}\n                </ion-item>\n                <ion-item text-wrap>\n                    <strong>{{ \'addon.competency.progress\' | translate }}</strong>:\n                    {{ \'addon.competency.xcompetenciesproficientoutofy\' | translate: {$a: {x: plan.proficientcompetencycount, y: plan.competencycount} } }}\n                    <core-progress-bar [progress]="plan.proficientcompetencypercentage" [text]="plan.proficientcompetencypercentageformatted"></core-progress-bar>\n                </ion-item>\n            </ion-list>\n        </ion-card>\n        <ion-card *ngIf="plan">\n            <ion-card-header text-wrap>{{ \'addon.competency.learningplancompetencies\' | translate }}</ion-card-header>\n            <ion-list>\n                <ion-item text-wrap *ngIf="plan.competencycount == 0">\n                    {{ \'addon.competency.nocompetencies\' | translate }}\n                </ion-item>\n                <a ion-item text-wrap *ngFor="let competency of plan.competencies" (click)="openCompetency(competency.competency.id)" [title]="competency.competency.shortname">\n                    {{competency.competency.shortname}} <small>{{competency.competency.idnumber}}</small>\n                    <ion-badge item-end [color]="competency.usercompetency.proficiency ? \'success\' : \'danger\'">{{ competency.usercompetency.gradename }}</ion-badge>\n                </a>\n            </ion-list>\n        </ion-card>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/competency/pages/plan/plan.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_badges__["a" /* AddonBadgesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__["a" /* CoreTimeUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__core_user_providers_user__["a" /* CoreUserProvider */], __WEBPACK_IMPORTED_MODULE_7__core_courses_providers_courses__["a" /* CoreCoursesProvider */]])
-    ], AddonBadgesIssuedBadgePage);
-    return AddonBadgesIssuedBadgePage;
+        __param(5, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__components_split_view_split_view__["a" /* CoreSplitViewComponent */], __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_helper__["a" /* AddonCompetencyHelperProvider */]])
+    ], AddonCompetencyPlanPage);
+    return AddonCompetencyPlanPage;
 }());
 
-//# sourceMappingURL=issued-badge.js.map
+//# sourceMappingURL=plan.js.map
 
 /***/ })
 

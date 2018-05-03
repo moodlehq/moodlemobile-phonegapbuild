@@ -1,16 +1,15 @@
 webpackJsonp([26],{
 
-/***/ 1600:
+/***/ 1685:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSiteHelpPageModule", function() { return CoreLoginSiteHelpPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreMainMenuPageModule", function() { return CoreMainMenuPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_help__ = __webpack_require__(1692);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(1787);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,36 +33,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var CoreLoginSiteHelpPageModule = (function () {
-    function CoreLoginSiteHelpPageModule() {
+var CoreMainMenuPageModule = (function () {
+    function CoreMainMenuPageModule() {
     }
-    CoreLoginSiteHelpPageModule = __decorate([
+    CoreMainMenuPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__site_help__["a" /* CoreLoginSiteHelpPage */]
+                __WEBPACK_IMPORTED_MODULE_3__menu__["a" /* CoreMainMenuPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__site_help__["a" /* CoreLoginSiteHelpPage */]),
-                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild(),
-            ]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__menu__["a" /* CoreMainMenuPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ],
         })
-    ], CoreLoginSiteHelpPageModule);
-    return CoreLoginSiteHelpPageModule;
+    ], CoreMainMenuPageModule);
+    return CoreMainMenuPageModule;
 }());
 
-//# sourceMappingURL=site-help.module.js.map
+//# sourceMappingURL=menu.module.js.map
 
 /***/ }),
 
-/***/ 1692:
+/***/ 1787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginSiteHelpPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreMainMenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__ = __webpack_require__(831);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(83);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -88,29 +88,115 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 /**
- * Component that displays some help regarding the CoreLoginSitePage.
+ * Page that displays the main menu of the app.
  */
-var CoreLoginSiteHelpPage = (function () {
-    function CoreLoginSiteHelpPage(viewCtrl) {
-        this.viewCtrl = viewCtrl;
+var CoreMainMenuPage = (function () {
+    function CoreMainMenuPage(menuDelegate, sitesProvider, navParams, navCtrl) {
+        this.menuDelegate = menuDelegate;
+        this.sitesProvider = sitesProvider;
+        this.navCtrl = navCtrl;
+        this.tabs = [];
+        this.moreTabData = {
+            page: 'CoreMainMenuMorePage',
+            title: 'core.more',
+            icon: 'more'
+        };
+        this.moreTabAdded = false;
+        this.redirectPageLoaded = false;
+        this.redirectPage = navParams.get('redirectPage');
+        this.redirectParams = navParams.get('redirectParams');
     }
+    Object.defineProperty(CoreMainMenuPage.prototype, "mainTabs", {
+        // Use a setter to wait for ion-tabs to be loaded because it's inside a ngIf.
+        set: function (ionTabs) {
+            if (ionTabs && this.redirectPage && !this.redirectPageLoaded) {
+                // Tabs ready and there is a redirect page set. Load it.
+                this.redirectPageLoaded = true;
+                // Check if the page is the root page of any of the tabs.
+                var indexToSelect_1 = 0;
+                for (var i = 0; i < this.tabs.length; i++) {
+                    if (this.tabs[i].page == this.redirectPage) {
+                        indexToSelect_1 = i + 1;
+                        break;
+                    }
+                }
+                // Use a setTimeout, otherwise loading the first tab opens a new state for some reason.
+                setTimeout(function () {
+                    ionTabs.select(indexToSelect_1);
+                });
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
     /**
-     * Close help modal.
+     * View loaded.
      */
-    CoreLoginSiteHelpPage.prototype.closeHelp = function () {
-        this.viewCtrl.dismiss();
+    CoreMainMenuPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        if (!this.sitesProvider.isLoggedIn()) {
+            this.navCtrl.setRoot('CoreLoginInitPage');
+            return;
+        }
+        var site = this.sitesProvider.getCurrentSite(), displaySiteHome = site.getInfo() && site.getInfo().userhomepage === 0;
+        this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
+            handlers = handlers.slice(0, __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Get main handlers.
+            // Check if handlers are already in tabs. Add the ones that aren't.
+            // @todo: https://github.com/ionic-team/ionic/issues/13633
+            for (var i = 0; i < handlers.length; i++) {
+                var handler = handlers[i], shouldSelect = (displaySiteHome && handler.name == 'CoreSiteHome') ||
+                    (!displaySiteHome && handler.name == 'CoreCourses');
+                var found = false;
+                for (var j = 0; j < _this.tabs.length; j++) {
+                    var tab = _this.tabs[j];
+                    if (tab.title == handler.title && tab.icon == handler.icon) {
+                        found = true;
+                        if (shouldSelect) {
+                            _this.initialTab = j;
+                        }
+                        break;
+                    }
+                }
+                if (!found) {
+                    _this.tabs.push(handler);
+                    if (shouldSelect) {
+                        _this.initialTab = _this.tabs.length;
+                    }
+                }
+            }
+            if (!_this.moreTabAdded) {
+                _this.moreTabAdded = true;
+                _this.tabs.push(_this.moreTabData); // Add "More" tab.
+            }
+            _this.loaded = _this.menuDelegate.areHandlersLoaded();
+        });
     };
-    CoreLoginSiteHelpPage = __decorate([
+    /**
+     * Page destroyed.
+     */
+    CoreMainMenuPage.prototype.ngOnDestroy = function () {
+        this.subscription && this.subscription.unsubscribe();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('mainTabs'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Tabs */]),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Tabs */]])
+    ], CoreMainMenuPage.prototype, "mainTabs", null);
+    CoreMainMenuPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-site-help',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/site-help/site-help.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.help\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeHelp()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <core-format-text [text]="\'core.login.helpmelogin\' | translate"></core-format-text>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/site-help/site-help.html"*/,
+            selector: 'page-core-mainmenu',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/'<ion-tabs *ngIf="loaded" #mainTabs [selectedIndex]="initialTab" tabsPlacement="bottom" tabsLayout="title-hide">\n    <ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></ion-tab>\n    <ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */]])
-    ], CoreLoginSiteHelpPage);
-    return CoreLoginSiteHelpPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]])
+    ], CoreMainMenuPage);
+    return CoreMainMenuPage;
 }());
 
-//# sourceMappingURL=site-help.js.map
+//# sourceMappingURL=menu.js.map
 
 /***/ })
 

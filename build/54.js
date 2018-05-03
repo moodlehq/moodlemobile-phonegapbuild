@@ -1,19 +1,17 @@
 webpackJsonp([54],{
 
-/***/ 1569:
+/***/ 1659:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModQuizReviewPageModule", function() { return AddonModQuizReviewPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotificationsSettingsPageModule", function() { return AddonNotificationsSettingsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_question_components_components_module__ = __webpack_require__(789);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__review__ = __webpack_require__(1656);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings__ = __webpack_require__(1761);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,47 +37,48 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-var AddonModQuizReviewPageModule = (function () {
-    function AddonModQuizReviewPageModule() {
+var AddonNotificationsSettingsPageModule = (function () {
+    function AddonNotificationsSettingsPageModule() {
     }
-    AddonModQuizReviewPageModule = __decorate([
+    AddonNotificationsSettingsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_7__review__["a" /* AddonModQuizReviewPage */],
+                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonNotificationsSettingsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_6__core_question_components_components_module__["a" /* CoreQuestionComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_7__review__["a" /* AddonModQuizReviewPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonNotificationsSettingsPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModQuizReviewPageModule);
-    return AddonModQuizReviewPageModule;
+    ], AddonNotificationsSettingsPageModule);
+    return AddonNotificationsSettingsPageModule;
 }());
 
-//# sourceMappingURL=review.module.js.map
+//# sourceMappingURL=settings.module.js.map
 
 /***/ }),
 
-/***/ 1656:
+/***/ 1761:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModQuizReviewPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonNotificationsSettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_text__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_time__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_question_providers_helper__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_quiz__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_helper__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_notifications__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_user_providers_user__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_settings_providers_helper__ = __webpack_require__(828);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__addon_messageoutput_providers_delegate__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_config__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_constants__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__ = __webpack_require__(170);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -102,6 +101,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
 
 
 
@@ -112,245 +119,238 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page that allows reviewing a quiz attempt.
+ * Page that displays notifications settings.
  */
-var AddonModQuizReviewPage = (function () {
-    function AddonModQuizReviewPage(navParams, modalCtrl, translate, domUtils, timeUtils, quizProvider, quizHelper, questionHelper, textUtils) {
-        this.translate = translate;
+var AddonNotificationsSettingsPage = (function () {
+    function AddonNotificationsSettingsPage(notificationsProvider, domUtils, settingsHelper, userProvider, navCtrl, messageOutputDelegate, appProvider, configProvider, eventsProvider, localNotificationsProvider, sitesProvider, svComponent) {
+        var _this = this;
+        this.notificationsProvider = notificationsProvider;
         this.domUtils = domUtils;
-        this.timeUtils = timeUtils;
-        this.quizProvider = quizProvider;
-        this.quizHelper = quizHelper;
-        this.questionHelper = questionHelper;
-        this.textUtils = textUtils;
-        this.component = __WEBPACK_IMPORTED_MODULE_7__providers_quiz__["a" /* AddonModQuizProvider */].COMPONENT; // Component to link the files to.
-        this.quizId = navParams.get('quizId');
-        this.courseId = navParams.get('courseId');
-        this.attemptId = navParams.get('attemptId');
-        this.currentPage = navParams.get('page') || -1;
-        this.showAll = this.currentPage == -1;
-        // Create the navigation modal.
-        this.navigationModal = modalCtrl.create('AddonModQuizNavigationModalPage', {
-            isReview: true,
-            page: this
-        });
+        this.settingsHelper = settingsHelper;
+        this.userProvider = userProvider;
+        this.navCtrl = navCtrl;
+        this.messageOutputDelegate = messageOutputDelegate;
+        this.configProvider = configProvider;
+        this.eventsProvider = eventsProvider;
+        this.localNotificationsProvider = localNotificationsProvider;
+        this.sitesProvider = sitesProvider;
+        this.svComponent = svComponent;
+        this.processorHandlers = [];
+        this.notifPrefsEnabled = notificationsProvider.isNotificationPreferencesEnabled();
+        this.canChangeSound = localNotificationsProvider.isAvailable() && !appProvider.isDesktop();
+        if (this.canChangeSound) {
+            configProvider.get(__WEBPACK_IMPORTED_MODULE_10__core_constants__["a" /* CoreConstants */].SETTINGS_NOTIFICATION_SOUND, true).then(function (enabled) {
+                _this.notificationSound = enabled;
+            });
+        }
     }
     /**
-     * Component being initialized.
+     * View loaded.
      */
-    AddonModQuizReviewPage.prototype.ngOnInit = function () {
-        var _this = this;
-        this.fetchData().then(function () {
-            _this.quizProvider.logViewAttemptReview(_this.attemptId).catch(function (error) {
-                // Ignore errors.
-            });
-        }).finally(function () {
-            _this.loaded = true;
-        });
+    AddonNotificationsSettingsPage.prototype.ionViewDidLoad = function () {
+        if (this.notifPrefsEnabled) {
+            this.fetchPreferences();
+        }
+        else {
+            this.preferencesLoaded = true;
+        }
     };
     /**
-     * Change the current page. If slot is supplied, try to scroll to that question.
+     * Fetches preference data.
      *
-     * @param {number} page Page to load. -1 means all questions in same page.
-     * @param {boolean} [fromModal] Whether the page was selected using the navigation modal.
-     * @param {number} [slot] Slot of the question to scroll to.
+     * @return {Promise<any>} Resolved when done.
      */
-    AddonModQuizReviewPage.prototype.changePage = function (page, fromModal, slot) {
+    AddonNotificationsSettingsPage.prototype.fetchPreferences = function () {
         var _this = this;
-        if (typeof slot != 'undefined' && (this.attempt.currentpage == -1 || page == this.currentPage)) {
-            // Scrol to a certain question in the current page.
-            this.scrollToQuestion(slot);
-            return;
-        }
-        else if (page == this.currentPage) {
-            // If the user is navigating to the current page and no question specified, we do nothing.
-            return;
-        }
-        this.loaded = false;
-        this.content.scrollToTop();
-        this.loadPage(page).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.mod_quiz.errorgetquestions', true);
-        }).finally(function () {
-            _this.loaded = true;
-            if (typeof slot != 'undefined') {
-                // Scroll to the question. Give some time to the questions to render.
-                setTimeout(function () {
-                    _this.scrollToQuestion(slot);
-                }, 2000);
+        return this.notificationsProvider.getNotificationPreferences().then(function (preferences) {
+            if (!_this.currentProcessor) {
+                // Initialize current processor. Load "Mobile" (airnotifier) if available.
+                _this.currentProcessor = _this.settingsHelper.getProcessor(preferences.processors, 'airnotifier');
             }
-        });
-    };
-    /**
-     * Convenience function to get the quiz data.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModQuizReviewPage.prototype.fetchData = function () {
-        var _this = this;
-        return this.quizProvider.getQuizById(this.courseId, this.quizId).then(function (quizData) {
-            _this.quiz = quizData;
-            _this.componentId = _this.quiz.coursemodule;
-            return _this.quizProvider.getCombinedReviewOptions(_this.quizId).then(function (result) {
-                _this.options = result;
-                // Load the navigation data.
-                return _this.loadNavigation().then(function () {
-                    // Load questions.
-                    return _this.loadPage(_this.currentPage);
+            if (!_this.currentProcessor) {
+                // Shouldn't happen.
+                return Promise.reject('No processor found');
+            }
+            preferences.disableall = !!preferences.disableall; // Convert to boolean.
+            _this.preferences = preferences;
+            _this.loadProcessor(_this.currentProcessor);
+            // Get display data of message output handlers (thery are displayed in the context menu),
+            _this.processorHandlers = [];
+            if (preferences.processors) {
+                preferences.processors.forEach(function (processor) {
+                    processor.supported = _this.messageOutputDelegate.hasHandler(processor.name, true);
+                    if (processor.hassettings && processor.supported) {
+                        _this.processorHandlers.push(_this.messageOutputDelegate.getDisplayData(processor));
+                    }
                 });
-            });
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.mod_quiz.errorgetquiz', true);
-        });
-    };
-    /**
-     * Load a page questions.
-     *
-     * @param {number} page The page to load.
-     * @return {Promise<void>} Promise resolved when done.
-     */
-    AddonModQuizReviewPage.prototype.loadPage = function (page) {
-        var _this = this;
-        return this.quizProvider.getAttemptReview(this.attemptId, page).then(function (data) {
-            _this.attempt = data.attempt;
-            _this.attempt.currentpage = page;
-            _this.currentPage = page;
-            // Set the summary data.
-            _this.setSummaryCalculatedData(data);
-            _this.questions = data.questions;
-            _this.nextPage = page == -1 ? undefined : page + 1;
-            _this.previousPage = page - 1;
-            _this.questions.forEach(function (question) {
-                // Get the readable mark for each question.
-                question.readableMark = _this.quizHelper.getQuestionMarkFromHtml(question.html);
-                // Extract the question info box.
-                _this.questionHelper.extractQuestionInfoBox(question, '.info');
-                // Set the preferred behaviour.
-                question.preferredBehaviour = _this.quiz.preferredbehaviour;
-            });
-        });
-    };
-    /**
-     * Load data to navigate the questions using the navigation modal.
-     *
-     * @return {Promise<void>} Promise resolved when done.
-     */
-    AddonModQuizReviewPage.prototype.loadNavigation = function () {
-        var _this = this;
-        // Get all questions in single page to retrieve all the questions.
-        return this.quizProvider.getAttemptReview(this.attemptId, -1).then(function (data) {
-            var lastQuestion = data.questions[data.questions.length - 1];
-            data.questions.forEach(function (question) {
-                question.stateClass = _this.questionHelper.getQuestionStateClass(question.state);
-            });
-            _this.navigation = data.questions;
-            _this.numPages = lastQuestion ? lastQuestion.page + 1 : 0;
-        });
-    };
-    /**
-     * Refreshes data.
-     *
-     * @param {any} refresher Refresher
-     */
-    AddonModQuizReviewPage.prototype.refreshData = function (refresher) {
-        var _this = this;
-        var promises = [];
-        promises.push(this.quizProvider.invalidateQuizData(this.courseId));
-        promises.push(this.quizProvider.invalidateCombinedReviewOptionsForUser(this.quizId));
-        promises.push(this.quizProvider.invalidateAttemptReview(this.attemptId));
-        Promise.all(promises).finally(function () {
-            return _this.fetchData();
-        }).finally(function () {
-            refresher.complete();
-        });
-    };
-    /**
-     * Scroll to a certain question.
-     *
-     * @param {number} slot Slot of the question to scroll to.
-     */
-    AddonModQuizReviewPage.prototype.scrollToQuestion = function (slot) {
-        this.domUtils.scrollToElementBySelector(this.content, '#addon-mod_quiz-question-' + slot);
-    };
-    /**
-     * Calculate review summary data.
-     *
-     * @param {any} data Result of getAttemptReview.
-     */
-    AddonModQuizReviewPage.prototype.setSummaryCalculatedData = function (data) {
-        var _this = this;
-        this.attempt.readableState = this.quizProvider.getAttemptReadableStateName(this.attempt.state);
-        if (this.attempt.state == __WEBPACK_IMPORTED_MODULE_7__providers_quiz__["a" /* AddonModQuizProvider */].ATTEMPT_FINISHED) {
-            this.showCompleted = true;
-            this.additionalData = data.additionaldata;
-            var timeTaken = this.attempt.timefinish - this.attempt.timestart;
-            if (timeTaken) {
-                // Format time taken.
-                this.attempt.timeTaken = this.timeUtils.formatTime(timeTaken);
-                // Calculate overdue time.
-                if (this.quiz.timelimit && timeTaken > this.quiz.timelimit + 60) {
-                    this.attempt.overTime = this.timeUtils.formatTime(timeTaken - this.quiz.timelimit);
-                }
             }
-            // Treat grade.
-            if (this.options.someoptions.marks >= __WEBPACK_IMPORTED_MODULE_7__providers_quiz__["a" /* AddonModQuizProvider */].QUESTION_OPTIONS_MARK_AND_MAX &&
-                this.quizProvider.quizHasGrades(this.quiz)) {
-                if (data.grade === null || typeof data.grade == 'undefined') {
-                    this.attempt.readableGrade = this.quizProvider.formatGrade(data.grade, this.quiz.decimalpoints);
+        }).catch(function (message) {
+            _this.domUtils.showErrorModal(message);
+        }).finally(function () {
+            _this.preferencesLoaded = true;
+        });
+    };
+    /**
+     * Load a processor.
+     *
+     * @param {any} processor Processor object.
+     */
+    AddonNotificationsSettingsPage.prototype.loadProcessor = function (processor) {
+        if (!processor) {
+            return;
+        }
+        this.currentProcessor = processor;
+        this.components = this.settingsHelper.getProcessorComponents(processor.name, this.preferences.components);
+    };
+    /**
+     * Update preferences after a certain time. The purpose is to store the updated data, it won't be reflected in the view.
+     */
+    AddonNotificationsSettingsPage.prototype.updatePreferencesAfterDelay = function () {
+        var _this = this;
+        // Cancel pending updates.
+        clearTimeout(this.updateTimeout);
+        this.updateTimeout = setTimeout(function () {
+            _this.updateTimeout = null;
+            _this.updatePreferences();
+        }, 5000);
+    };
+    /**
+     * Update preferences. The purpose is to store the updated data, it won't be reflected in the view.
+     */
+    AddonNotificationsSettingsPage.prototype.updatePreferences = function () {
+        var _this = this;
+        this.notificationsProvider.invalidateNotificationPreferences().finally(function () {
+            _this.notificationsProvider.getNotificationPreferences();
+        });
+    };
+    /**
+     * The selected processor was changed.
+     *
+     * @param {string} name Name of the selected processor.
+     */
+    AddonNotificationsSettingsPage.prototype.changeProcessor = function (name) {
+        var _this = this;
+        this.preferences.processors.forEach(function (processor) {
+            if (processor.name == name) {
+                _this.loadProcessor(processor);
+            }
+        });
+    };
+    /**
+     * Refresh the list of preferences.
+     *
+     * @param {any} [refresher] Refresher.
+     */
+    AddonNotificationsSettingsPage.prototype.refreshPreferences = function (refresher) {
+        var _this = this;
+        this.notificationsProvider.invalidateNotificationPreferences().finally(function () {
+            _this.fetchPreferences().finally(function () {
+                refresher && refresher.complete();
+            });
+        });
+    };
+    /**
+     * Open extra preferences.
+     *
+     * @param {AddonMessageOutputHandlerData} handlerData
+     */
+    AddonNotificationsSettingsPage.prototype.openExtraPreferences = function (handlerData) {
+        // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.
+        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
+        navCtrl.push(handlerData.page, handlerData.pageParams);
+    };
+    /**
+     * Change the value of a certain preference.
+     *
+     * @param {any} notification Notification object.
+     * @param {string} state State name, ['loggedin', 'loggedoff'].
+     */
+    AddonNotificationsSettingsPage.prototype.changePreference = function (notification, state) {
+        var _this = this;
+        var processorState = notification.currentProcessor[state];
+        var preferenceName = notification.preferencekey + '_' + processorState.name;
+        var value;
+        notification.processors.forEach(function (processor) {
+            if (processor[state].checked) {
+                if (!value) {
+                    value = processor.name;
                 }
                 else {
-                    // Show raw marks only if they are different from the grade (like on the entry page).
-                    if (this.quiz.grade != this.quiz.sumgrades) {
-                        this.attempt.readableMark = this.translate.instant('addon.mod_quiz.outofshort', { $a: {
-                                grade: this.quizProvider.formatGrade(this.attempt.sumgrades, this.quiz.decimalpoints),
-                                maxgrade: this.quizProvider.formatGrade(this.quiz.sumgrades, this.quiz.decimalpoints)
-                            } });
-                    }
-                    // Now the scaled grade.
-                    var gradeObject = {
-                        grade: this.quizProvider.formatGrade(data.grade, this.quiz.decimalpoints),
-                        maxgrade: this.quizProvider.formatGrade(this.quiz.grade, this.quiz.decimalpoints)
-                    };
-                    if (this.quiz.grade != 100) {
-                        gradeObject.percent = this.textUtils.roundToDecimals(this.attempt.sumgrades * 100 / this.quiz.sumgrades, 0);
-                        this.attempt.readableGrade = this.translate.instant('addon.mod_quiz.outofpercent', { $a: gradeObject });
-                    }
-                    else {
-                        this.attempt.readableGrade = this.translate.instant('addon.mod_quiz.outof', { $a: gradeObject });
-                    }
+                    value += ',' + processor.name;
                 }
             }
-            // Treat additional data.
-            this.additionalData.forEach(function (data) {
-                // Remove help links from additional data.
-                data.content = _this.domUtils.removeElementFromHtml(data.content, '.helptooltip');
-            });
+        });
+        if (!value) {
+            value = 'none';
         }
+        processorState.updating = true;
+        this.userProvider.updateUserPreference(preferenceName, value).then(function () {
+            // Update the preferences since they were modified.
+            _this.updatePreferencesAfterDelay();
+        }).catch(function (message) {
+            // Show error and revert change.
+            _this.domUtils.showErrorModal(message);
+            notification.currentProcessor[state].checked = !notification.currentProcessor[state].checked;
+        }).finally(function () {
+            processorState.updating = false;
+        });
     };
     /**
-     * Switch mode: all questions in same page OR one page at a time.
+     * Disable all notifications changed.
      */
-    AddonModQuizReviewPage.prototype.switchMode = function () {
-        this.showAll = !this.showAll;
-        // Load all questions or first page, depending on the mode.
-        this.loadPage(this.showAll ? -1 : 0);
+    AddonNotificationsSettingsPage.prototype.disableAll = function (disable) {
+        var _this = this;
+        var modal = this.domUtils.showModalLoading('core.sending', true);
+        this.userProvider.updateUserPreferences([], disable).then(function () {
+            // Update the preferences since they were modified.
+            _this.updatePreferencesAfterDelay();
+        }).catch(function (message) {
+            // Show error and revert change.
+            _this.domUtils.showErrorModal(message);
+            _this.preferences.disableall = !_this.preferences.disableall;
+        }).finally(function () {
+            modal.dismiss();
+        });
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonModQuizReviewPage.prototype, "content", void 0);
-    AddonModQuizReviewPage = __decorate([
+    /**
+     * Change the notification sound setting.
+     *
+     * @param {enabled} enabled True to enable the notification sound, false to disable it.
+     */
+    AddonNotificationsSettingsPage.prototype.changeNotificationSound = function (enabled) {
+        var _this = this;
+        this.configProvider.set(__WEBPACK_IMPORTED_MODULE_10__core_constants__["a" /* CoreConstants */].SETTINGS_NOTIFICATION_SOUND, enabled).finally(function () {
+            var siteId = _this.sitesProvider.getCurrentSiteId();
+            _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_events__["a" /* CoreEventsProvider */].NOTIFICATION_SOUND_CHANGED, { enabled: enabled }, siteId);
+            _this.localNotificationsProvider.rescheduleAll();
+        });
+    };
+    /**
+     * Page destroyed.
+     */
+    AddonNotificationsSettingsPage.prototype.ngOnDestroy = function () {
+        // If there is a pending action to update preferences, execute it right now.
+        if (this.updateTimeout) {
+            clearTimeout(this.updateTimeout);
+            this.updatePreferences();
+        }
+    };
+    AddonNotificationsSettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-quiz-review',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/quiz/pages/review/review.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_quiz.review\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="navigation && navigation.length" ion-button icon-only [attr.aria-label]="\'addon.mod_quiz.opentoc\' | translate" (click)="navigationModal.present()">\n                <ion-icon name="bookmark"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n\n        <!-- Review summary -->\n        <ion-card *ngIf="attempt">\n            <ion-card-header text-wrap>\n                <h2 *ngIf="attempt.preview">{{ \'addon.mod_quiz.reviewofpreview\' | translate }}</h2>\n                <h2 *ngIf="!attempt.preview">{{ \'addon.mod_quiz.reviewofattempt\' | translate:{$a: attempt.attempt} }}</h2>\n            </ion-card-header>\n            <ion-list>\n                <ion-item text-wrap>\n                    <p class="item-heading">{{ \'addon.mod_quiz.startedon\' | translate }}</p>\n                    <p>{{ attempt.timestart * 1000 | coreFormatDate:"dfmediumdate" }}</p>\n                </ion-item>\n                <ion-item text-wrap>\n                    <p class="item-heading">{{ \'addon.mod_quiz.attemptstate\' | translate }}</p>\n                    <p>{{ attempt.readableState }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="showCompleted">\n                    <p class="item-heading">{{ \'addon.mod_quiz.completedon\' | translate }}</p>\n                    <p>{{ attempt.timefinish * 1000 | coreFormatDate:"dfmediumdate" }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="attempt.timeTaken">\n                    <p class="item-heading">{{ \'addon.mod_quiz.timetaken\' | translate }}</p>\n                    <p>{{ attempt.timeTaken }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="attempt.overTime">\n                    <p class="item-heading">{{ \'addon.mod_quiz.overdue\' | translate }}</p>\n                    <p>{{ attempt.overTime }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="attempt.readableMark">\n                    <p class="item-heading">{{ \'addon.mod_quiz.marks\' | translate }}</p>\n                    <p><core-format-text [text]="attempt.readableMark"></core-format-text></p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="attempt.readableGrade">\n                    <p class="item-heading">{{ \'addon.mod_quiz.grade\' | translate }}</p>\n                    <p>{{ attempt.readableGrade }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngFor="let data of additionalData">\n                    <p class="item-heading">{{ data.title }}</p>\n                    <core-format-text [component]="component" [componentId]="componentId" [text]="data.content"></core-format-text>\n                </ion-item>\n            </ion-list>\n        </ion-card>\n\n        <!-- Questions -->\n        <div *ngIf="attempt && questions.length">\n            <!-- Arrows to go to next/previous. -->\n            <ng-container *ngTemplateOutlet="navArrows"></ng-container>\n\n            <!-- Questions. -->\n            <div *ngFor="let question of questions">\n                <ion-card id="addon-mod_quiz-question-{{question.slot}}">\n                    <!-- "Header" of the question. -->\n                    <ion-item-divider color="light">\n                        <h2 *ngIf="question.number" class="inline">{{ \'core.question.questionno\' | translate:{$a: question.number} }}</h2>\n                        <h2 *ngIf="!question.number" class="inline">{{ \'core.question.information\' | translate }}</h2>\n                        <ion-note text-wrap item-end *ngIf="question.status || question.readableMark">\n                            <p *ngIf="question.status" class="block">{{question.status}}</p>\n                            <p *ngIf="question.readableMark"><core-format-text [text]="question.readableMark"></core-format-text></p>\n                        </ion-note>\n                    </ion-item-divider>\n                    <!-- Body of the question. -->\n                    <core-question text-wrap [question]="question" [component]="component" [componentId]="componentId" [attemptId]="attempt.id" [offlineEnabled]="false"></core-question>\n                </ion-card>\n            </div>\n\n            <!-- Arrows to go to next/previous. -->\n            <ng-container *ngTemplateOutlet="navArrows"></ng-container>\n        </div>\n    </core-loading>\n</ion-content>\n\n<!-- Arrows to go to next/previous. -->\n<ng-template #navArrows>\n    <ion-row align-items-center>\n        <ion-col>\n            <a ion-button icon-only color="light" *ngIf="previousPage >= 0" (click)="changePage(previousPage)" [title]="\'core.previous\' | translate">\n                <ion-icon name="arrow-back" md="ios-arrow-back"></ion-icon>\n            </a>\n        </ion-col>\n        <ion-col text-right>\n            <a ion-button icon-only color="light" *ngIf="nextPage >= -1" (click)="changePage(nextPage)" [title]="\'core.next\' | translate">\n                <ion-icon name="arrow-forward" md="ios-arrow-forward"></ion-icon>\n            </a>\n        </ion-col>\n    </ion-row>\n</ng-template>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/quiz/pages/review/review.html"*/,
+            selector: 'page-addon-notifications-settings',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/notifications/pages/settings/settings.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.notifications.notificationpreferences\' | translate }}</ion-title>\n        <ion-buttons end>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-navbar-buttons>\n    <core-context-menu *ngIf="processorHandlers.length > 0">\n        <core-context-menu-item *ngFor="let handler of processorHandlers" [priority]="handler.priority" [content]="handler.label | translate" (action)="openExtraPreferences(handler)" [iconAction]="handler.icon"></core-context-menu-item>\n    </core-context-menu>\n</core-navbar-buttons>\n<ion-content>\n    <ion-refresher [enabled]="preferencesLoaded && notifPrefsEnabled" (ionRefresh)="refreshPreferences($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="preferencesLoaded">\n        <!-- If notification preferences aren\'t enabled, show only the notification sound setting. -->\n        <ion-item *ngIf="canChangeSound && !notifPrefsEnabled">\n            <ion-label>{{ \'addon.notifications.playsound\' | translate }}</ion-label>\n            <ion-toggle [(ngModel)]="notificationSound" (ionChange)="changeNotificationSound(notificationSound)"></ion-toggle>\n        </ion-item>\n\n        <ng-container *ngIf="notifPrefsEnabled">\n            <ion-card>\n                <ion-item text-wrap *ngIf="preferences">\n                    <ion-label>{{ \'core.settings.disableall\' | translate }}</ion-label>\n                    <ion-toggle [(ngModel)]="preferences.disableall" (ionChange)="disableAll(preferences.disableall)"></ion-toggle>\n                </ion-item>\n                <ion-item text-wrap *ngIf="canChangeSound">\n                    <ion-label>{{ \'addon.notifications.playsound\' | translate }}</ion-label>\n                    <ion-toggle [(ngModel)]="notificationSound" (ionChange)="changeNotificationSound(notificationSound)"></ion-toggle>\n                </ion-item>\n            </ion-card>\n\n            <!-- Show processor selector. -->\n            <ion-select *ngIf="preferences && preferences.processors && preferences.processors.length > 0" [ngModel]="currentProcessor.name" (ngModelChange)="changeProcessor($event)" interface="popover">\n                <ion-option *ngFor="let processor of preferences.processors" [value]="processor.name">{{ processor.displayname }}</ion-option>\n            </ion-select>\n\n            <ion-card list *ngFor="let component of components">\n                <ion-item-divider color="light" text-wrap>\n                    <ion-row no-padding>\n                        <ion-col no-padding>{{ component.displayname }}</ion-col>\n                        <ion-col col-2 text-center no-padding class="hidden-phone">{{ \'core.settings.loggedin\' | translate }}</ion-col>\n                        <ion-col col-2 text-center no-padding class="hidden-phone">{{ \'core.settings.loggedoff\' | translate }}</ion-col>\n                    </ion-row>\n                </ion-item-divider>\n                <ng-container *ngFor="let notification of component.notifications">\n                    <!-- Tablet view -->\n                    <ion-row text-wrap class="hidden-phone" align-items-center>\n                        <ion-col margin-horizontal>{{ notification.displayname }}</ion-col>\n                        <ion-col col-2 text-center *ngFor="let state of [\'loggedin\', \'loggedoff\']">\n                            <!-- If notifications not disabled, show toggle. -->\n                            <ion-spinner [hidden]="preferences.disableall || !(notification.currentProcessor[state] && notification.currentProcessor[state].updating)"></ion-spinner>\n                            <ion-toggle *ngIf="!preferences.disableall" [(ngModel)]="notification.currentProcessor[state].checked" (ionChange)="changePreference(notification, state)" [disabled]="notification.currentProcessor.locked || notification.currentProcessor[state].updating">\n                            </ion-toggle>\n                            <!-- If notifications are disabled, show "Disabled" instead of toggle. -->\n                            <span *ngIf="preferences.disableall">{{ \'core.settings.disabled\' | translate }}</span>\n                        </ion-col>\n                    </ion-row>\n                    <!-- Phone view -->\n                    <ion-list-header text-wrap no-margin class="hidden-tablet">{{ notification.displayname }}</ion-list-header>\n                    <!-- If notifications not disabled, show toggles. If notifications are disabled, show "Disabled" instead of toggle. -->\n                    <ion-item *ngFor="let state of [\'loggedin\', \'loggedoff\']" text-wrap class="hidden-tablet">\n                        <ion-label>{{ \'core.settings.\' + state | translate }}</ion-label>\n                        <ion-spinner item-end *ngIf="!preferences.disableall && (notification.currentProcessor[state] && notification.currentProcessor[state].updating)"></ion-spinner>\n                        <ion-toggle item-end *ngIf="!preferences.disableall" [(ngModel)]="notification.currentProcessor[state].checked" (ionChange)="changePreference(notification, state)" [disabled]="notification.currentProcessor.locked || notification.currentProcessor[state].updating">\n                        </ion-toggle>\n                        <ion-note item-end *ngIf="preferences.disableall">{{ \'core.settings.disabled\' | translate }}</ion-note>\n                    </ion-item>\n                </ng-container>\n            </ion-card>\n        </ng-container>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/notifications/pages/settings/settings.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_time__["a" /* CoreTimeUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_quiz__["a" /* AddonModQuizProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_helper__["a" /* AddonModQuizHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__core_question_providers_helper__["a" /* CoreQuestionHelperProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
-    ], AddonModQuizReviewPage);
-    return AddonModQuizReviewPage;
+        __param(11, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_notifications__["a" /* AddonNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__core_settings_providers_helper__["a" /* CoreSettingsHelper */], __WEBPACK_IMPORTED_MODULE_3__core_user_providers_user__["a" /* CoreUserProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__addon_messageoutput_providers_delegate__["a" /* AddonMessageOutputDelegate */],
+            __WEBPACK_IMPORTED_MODULE_9__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_config__["a" /* CoreConfigProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_12__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__["a" /* CoreSplitViewComponent */]])
+    ], AddonNotificationsSettingsPage);
+    return AddonNotificationsSettingsPage;
 }());
 
-//# sourceMappingURL=review.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ })
 

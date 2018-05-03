@@ -37411,6 +37411,14 @@ page-addon-messages-settings .toggle {
   display: inline-block;
 }
 
+addon-mod-assign-submission div.submissioneditable p {
+  color: #cb3d4d;
+}
+
+addon-mod-assign-submission .core-grading-summary .advancedgrade {
+  display: none;
+}
+
 page-addon-mod-chat-chat .addon-mod-chat-notice {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -37449,6 +37457,27 @@ page-addon-mod-feedback-form .item-wp .addon-mod_feedback-form-content {
 addon-mod-folder-index .item-media > img:first-child {
   width: 24px;
   height: 24px;
+}
+
+addon-mod-imscp-index .addon-mod-imscp-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+addon-mod-imscp-index core-iframe {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
 }
 
 a.core-course-module-handler.addon-mod-label-handler {
@@ -37523,6 +37552,11 @@ page-addon-mod-quiz-review .text-input[disabled] .label,
 page-addon-mod-quiz-review .text-input[disabled] .radio,
 page-addon-mod-quiz-review .text-input[disabled] .checkbox {
   opacity: 1;
+}
+
+addon-mod-scorm-index .addon-mod_scorm-toc img {
+  width: auto;
+  display: inline;
 }
 
 addon-mod-survey-index .label, addon-mod-survey-index .label[stacked] {
@@ -38043,6 +38077,11 @@ addon-qtype-multianswer input[type="radio"], addon-qtype-multianswer input[type=
 
 .item-radio-checked {
   background-color: #f5f5f5;
+}
+
+.item *[no-lines] .item-inner,
+*[no-lines] .item .item-inner {
+  border: 0;
 }
 
 .core-oauth-icon, .item.core-oauth-icon, .list .item.core-oauth-icon {
@@ -38575,7 +38614,7 @@ canvas[core-chart] {
   color: #f98012;
 }
 
-.text-primary, p.primary, .item p.text-primary {
+.text-primary, p.text-primary, .item p.text-primary, .card p.text-primary {
   color: #f98012;
 }
 
@@ -38621,7 +38660,7 @@ canvas[core-chart] {
   color: #007982;
 }
 
-.text-secondary, p.secondary, .item p.text-secondary {
+.text-secondary, p.text-secondary, .item p.text-secondary, .card p.text-secondary {
   color: #007982;
 }
 
@@ -38667,7 +38706,7 @@ canvas[core-chart] {
   color: #cb3d4d;
 }
 
-.text-danger, p.danger, .item p.text-danger {
+.text-danger, p.text-danger, .item p.text-danger, .card p.text-danger {
   color: #cb3d4d;
 }
 
@@ -38713,7 +38752,7 @@ canvas[core-chart] {
   color: #f5f5f5;
 }
 
-.text-light, p.light, .item p.text-light {
+.text-light, p.text-light, .item p.text-light, .card p.text-light {
   color: #f5f5f5;
 }
 
@@ -38759,7 +38798,7 @@ canvas[core-chart] {
   color: #9e9e9e;
 }
 
-.text-gray, p.gray, .item p.text-gray {
+.text-gray, p.text-gray, .item p.text-gray, .card p.text-gray {
   color: #9e9e9e;
 }
 
@@ -38805,7 +38844,7 @@ canvas[core-chart] {
   color: #3a3a3a;
 }
 
-.text-dark, p.dark, .item p.text-dark {
+.text-dark, p.text-dark, .item p.text-dark, .card p.text-dark {
   color: #3a3a3a;
 }
 
@@ -38851,7 +38890,7 @@ canvas[core-chart] {
   color: #fbad1a;
 }
 
-.text-warning, p.warning, .item p.text-warning {
+.text-warning, p.text-warning, .item p.text-warning, .card p.text-warning {
   color: #fbad1a;
 }
 
@@ -38897,7 +38936,7 @@ canvas[core-chart] {
   color: #5e8100;
 }
 
-.text-success, p.success, .item p.text-success {
+.text-success, p.text-success, .item p.text-success, .card p.text-success {
   color: #5e8100;
 }
 
@@ -38943,7 +38982,7 @@ canvas[core-chart] {
   color: #0064d2;
 }
 
-.text-info, p.info, .item p.text-info {
+.text-info, p.text-info, .item p.text-info, .card p.text-info {
   color: #0064d2;
 }
 
@@ -38960,6 +38999,10 @@ canvas[core-chart] {
 
 .core-white-push-arrow .item-inner {
   background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2020'><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23FFFFFF'/></svg>") !important;
+}
+
+.core-list-align-detail-right .item .item-inner {
+  padding-right: 32px;
 }
 
 [ion-fixed] {
@@ -39157,6 +39200,70 @@ canvas[core-chart] {
   height: calc(100% - 44px);
 }
 
+.ios .core-padding-0 {
+  padding-left: 16px;
+}
+
+.ios .core-padding-1 {
+  padding-left: 31px;
+}
+
+.ios .core-padding-2 {
+  padding-left: 46px;
+}
+
+.ios .core-padding-3 {
+  padding-left: 61px;
+}
+
+.ios .core-padding-4 {
+  padding-left: 76px;
+}
+
+.ios .core-padding-5 {
+  padding-left: 91px;
+}
+
+.ios .core-padding-6 {
+  padding-left: 106px;
+}
+
+.ios .core-padding-7 {
+  padding-left: 121px;
+}
+
+.ios .core-padding-8 {
+  padding-left: 136px;
+}
+
+.ios .core-padding-9 {
+  padding-left: 151px;
+}
+
+.ios .core-padding-10 {
+  padding-left: 166px;
+}
+
+.ios .core-padding-11 {
+  padding-left: 181px;
+}
+
+.ios .core-padding-12 {
+  padding-left: 196px;
+}
+
+.ios .core-padding-13 {
+  padding-left: 211px;
+}
+
+.ios .core-padding-14 {
+  padding-left: 226px;
+}
+
+.ios .core-padding-15 {
+  padding-left: 241px;
+}
+
 .button-md {
   min-height: 3.6rem;
 }
@@ -39324,6 +39431,70 @@ canvas[core-chart] {
   box-shadow: inset 0 -1px 0 0 #cb3d4d;
 }
 
+.md .core-padding-0 {
+  padding-left: 16px;
+}
+
+.md .core-padding-1 {
+  padding-left: 31px;
+}
+
+.md .core-padding-2 {
+  padding-left: 46px;
+}
+
+.md .core-padding-3 {
+  padding-left: 61px;
+}
+
+.md .core-padding-4 {
+  padding-left: 76px;
+}
+
+.md .core-padding-5 {
+  padding-left: 91px;
+}
+
+.md .core-padding-6 {
+  padding-left: 106px;
+}
+
+.md .core-padding-7 {
+  padding-left: 121px;
+}
+
+.md .core-padding-8 {
+  padding-left: 136px;
+}
+
+.md .core-padding-9 {
+  padding-left: 151px;
+}
+
+.md .core-padding-10 {
+  padding-left: 166px;
+}
+
+.md .core-padding-11 {
+  padding-left: 181px;
+}
+
+.md .core-padding-12 {
+  padding-left: 196px;
+}
+
+.md .core-padding-13 {
+  padding-left: 211px;
+}
+
+.md .core-padding-14 {
+  padding-left: 226px;
+}
+
+.md .core-padding-15 {
+  padding-left: 241px;
+}
+
 .button-wp {
   min-height: 3.6rem;
 }
@@ -39422,6 +39593,70 @@ canvas[core-chart] {
   height: calc(100% - 46px);
 }
 
+.wp .core-padding-0 {
+  padding-left: 16px;
+}
+
+.wp .core-padding-1 {
+  padding-left: 31px;
+}
+
+.wp .core-padding-2 {
+  padding-left: 46px;
+}
+
+.wp .core-padding-3 {
+  padding-left: 61px;
+}
+
+.wp .core-padding-4 {
+  padding-left: 76px;
+}
+
+.wp .core-padding-5 {
+  padding-left: 91px;
+}
+
+.wp .core-padding-6 {
+  padding-left: 106px;
+}
+
+.wp .core-padding-7 {
+  padding-left: 121px;
+}
+
+.wp .core-padding-8 {
+  padding-left: 136px;
+}
+
+.wp .core-padding-9 {
+  padding-left: 151px;
+}
+
+.wp .core-padding-10 {
+  padding-left: 166px;
+}
+
+.wp .core-padding-11 {
+  padding-left: 181px;
+}
+
+.wp .core-padding-12 {
+  padding-left: 196px;
+}
+
+.wp .core-padding-13 {
+  padding-left: 211px;
+}
+
+.wp .core-padding-14 {
+  padding-left: 226px;
+}
+
+.wp .core-padding-15 {
+  padding-left: 241px;
+}
+
 core-context-menu-popover .item-md ion-icon[item-start] + .item-inner, core-context-menu-popover .item-md [item-start].fa.icon + .item-inner,
 core-context-menu-popover .item-md ion-icon[item-start] + .item-input,
 core-context-menu-popover .item-md [item-start].fa.icon + .item-input {
@@ -39486,12 +39721,25 @@ core-empty-box .core-empty-box p {
   }
 }
 
+.card-md core-file + core-file > .item-md.item-block > .item-inner, .md .core-primary-card core-file + core-file > .item-md.item-block > .item-inner, .md .core-secondary-card core-file + core-file > .item-md.item-block > .item-inner, .md .core-danger-card core-file + core-file > .item-md.item-block > .item-inner, .md .core-light-card core-file + core-file > .item-md.item-block > .item-inner, .md .core-gray-card core-file + core-file > .item-md.item-block > .item-inner, .md .core-dark-card core-file + core-file > .item-md.item-block > .item-inner, .md .core-warning-card core-file + core-file > .item-md.item-block > .item-inner, .md .core-success-card core-file + core-file > .item-md.item-block > .item-inner, .md .core-info-card core-file + core-file > .item-md.item-block > .item-inner {
+  border-top: 1px solid #dedede;
+}
+
+.card-ios core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-primary-card core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-secondary-card core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-danger-card core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-light-card core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-gray-card core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-dark-card core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-warning-card core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-success-card core-file + core-file > .item-ios.item-block > .item-inner, .ios .core-info-card core-file + core-file > .item-ios.item-block > .item-inner {
+  border-top: 0.55px solid #c8c7cc;
+}
+
+.card-wp core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-primary-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-secondary-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-danger-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-light-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-gray-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-dark-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-warning-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-success-card core-file + core-file > .item-wp.item-block > .item-inner, .wp .core-info-card core-file + core-file > .item-wp.item-block > .item-inner {
+  border-top: 1px solid transparent;
+}
+
 core-iframe > div {
   height: 100%;
 }
 
 core-iframe iframe {
   border: 0;
+  display: block;
 }
 
 core-iframe .core-loading-container {
@@ -39531,8 +39779,8 @@ core-input-errors .core-input-error-container .core-input-error:first-child {
 }
 
 core-loading {
-  -webkit-transition: core-show-animation 500ms ease-in-out;
-  transition: core-show-animation 500ms ease-in-out;
+  -webkit-transition: height 200ms ease-in-out;
+  transition: height 200ms ease-in-out;
 }
 
 core-loading .core-loading-container {
@@ -39543,6 +39791,7 @@ core-loading .core-loading-container {
 }
 
 core-loading .core-loading-content {
+  display: unset;
   padding-bottom: 1px;
   /* This makes height be real */
 }
@@ -39551,9 +39800,23 @@ core-loading.core-loading-noheight .core-loading-content {
   height: auto;
 }
 
+.scroll-content > core-loading,
+ion-content > .scroll-content > core-loading,
+.core-loading-center {
+  position: unset !important;
+}
+
+.scroll-content > core-loading,
+ion-content > .scroll-content > core-loading,
+.core-loading-center,
+core-loading.core-loading-loaded {
+  position: relative;
+}
+
 .scroll-content > core-loading > .core-loading-container,
 ion-content > .scroll-content > core-loading > .core-loading-container,
-.core-loading-center .core-loading-container {
+.core-loading-center > .core-loading-container,
+core-loading.core-loading-loaded > .core-loading-container {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -39570,7 +39833,8 @@ ion-content > .scroll-content > core-loading > .core-loading-container,
 
 .scroll-content > core-loading > .core-loading-container .core-loading-spinner,
 ion-content > .scroll-content > core-loading > .core-loading-container .core-loading-spinner,
-.core-loading-center .core-loading-container .core-loading-spinner {
+.core-loading-center > .core-loading-container .core-loading-spinner,
+core-loading.core-loading-loaded > .core-loading-container .core-loading-spinner {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -39902,6 +40166,17 @@ core-tabs .core-tabs-bar > a[aria-selected=true] {
 
 core-tabs .core-tabs-content-container {
   height: 100%;
+}
+
+core-tabs .core-tabs-content-container.no-scroll {
+  height: auto;
+  padding-bottom: 0 !important;
+}
+
+core-tabs .core-tabs-content-container.no-scroll .scroll-content {
+  overflow: hidden !important;
+  contain: initial;
+  position: relative;
 }
 
 core-tabs.tabs-hidden .core-tabs-bar {

@@ -1,19 +1,18 @@
 webpackJsonp([3],{
 
-/***/ 1575:
+/***/ 1632:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotificationsListPageModule", function() { return AddonNotificationsListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModAssignSubmissionReviewPageModule", function() { return AddonModAssignSubmissionReviewPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(1663);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__list__ = __webpack_require__(1665);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(1705);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__submission_review__ = __webpack_require__(1730);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -40,42 +39,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var AddonNotificationsListPageModule = (function () {
-    function AddonNotificationsListPageModule() {
+var AddonModAssignSubmissionReviewPageModule = (function () {
+    function AddonModAssignSubmissionReviewPageModule() {
     }
-    AddonNotificationsListPageModule = __decorate([
+    AddonModAssignSubmissionReviewPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_7__list__["a" /* AddonNotificationsListPage */],
+                __WEBPACK_IMPORTED_MODULE_6__submission_review__["a" /* AddonModAssignSubmissionReviewPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_7__list__["a" /* AddonNotificationsListPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild(),
-                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* AddonNotificationsComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* AddonModAssignComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__submission_review__["a" /* AddonModAssignSubmissionReviewPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonNotificationsListPageModule);
-    return AddonNotificationsListPageModule;
+    ], AddonModAssignSubmissionReviewPageModule);
+    return AddonModAssignSubmissionReviewPageModule;
 }());
 
-//# sourceMappingURL=list.module.js.map
+//# sourceMappingURL=submission-review.module.js.map
 
 /***/ }),
 
-/***/ 1663:
+/***/ 1705:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonNotificationsComponentsModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModAssignComponentsModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__actions_actions__ = __webpack_require__(1664);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_course_components_components_module__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__index_index__ = __webpack_require__(821);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__submission_submission__ = __webpack_require__(822);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__submission_plugin_submission_plugin__ = __webpack_require__(825);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__feedback_plugin_feedback_plugin__ = __webpack_require__(1706);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -100,39 +104,62 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonNotificationsComponentsModule = (function () {
-    function AddonNotificationsComponentsModule() {
+
+
+
+
+
+
+
+var AddonModAssignComponentsModule = (function () {
+    function AddonModAssignComponentsModule() {
     }
-    AddonNotificationsComponentsModule = __decorate([
+    AddonModAssignComponentsModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__actions_actions__["a" /* AddonNotificationsActionsComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__index_index__["a" /* AddonModAssignIndexComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__submission_submission__["a" /* AddonModAssignSubmissionComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__submission_plugin_submission_plugin__["a" /* AddonModAssignSubmissionPluginComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__feedback_plugin_feedback_plugin__["a" /* AddonModAssignFeedbackPluginComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_common__["b" /* CommonModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicModule */],
                 __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild(),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_7__core_course_components_components_module__["a" /* CoreCourseComponentsModule */]
             ],
             providers: [],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_4__actions_actions__["a" /* AddonNotificationsActionsComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__index_index__["a" /* AddonModAssignIndexComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__submission_submission__["a" /* AddonModAssignSubmissionComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__submission_plugin_submission_plugin__["a" /* AddonModAssignSubmissionPluginComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__feedback_plugin_feedback_plugin__["a" /* AddonModAssignFeedbackPluginComponent */]
             ],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_8__index_index__["a" /* AddonModAssignIndexComponent */]
+            ]
         })
-    ], AddonNotificationsComponentsModule);
-    return AddonNotificationsComponentsModule;
+    ], AddonModAssignComponentsModule);
+    return AddonModAssignComponentsModule;
 }());
 
 //# sourceMappingURL=components.module.js.map
 
 /***/ }),
 
-/***/ 1664:
+/***/ 1706:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonNotificationsActionsComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModAssignFeedbackPluginComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__core_contentlinks_providers_delegate__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_assign__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_helper__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_feedback_delegate__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_dynamic_component_dynamic_component__ = __webpack_require__(171);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -157,58 +184,124 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 /**
- * Component that displays the actions for a notification.
+ * Component that displays an assignment feedback plugin.
  */
-var AddonNotificationsActionsComponent = (function () {
-    function AddonNotificationsActionsComponent(contentLinksDelegate) {
-        this.contentLinksDelegate = contentLinksDelegate;
-        this.actions = [];
+var AddonModAssignFeedbackPluginComponent = (function () {
+    function AddonModAssignFeedbackPluginComponent(injector, feedbackDelegate, assignProvider, assignHelper) {
+        this.injector = injector;
+        this.feedbackDelegate = feedbackDelegate;
+        this.assignProvider = assignProvider;
+        this.assignHelper = assignHelper;
+        // Data to render the plugin if it isn't supported.
+        this.component = __WEBPACK_IMPORTED_MODULE_1__providers_assign__["a" /* AddonModAssignProvider */].COMPONENT;
+        this.text = '';
+        this.files = [];
     }
     /**
      * Component being initialized.
      */
-    AddonNotificationsActionsComponent.prototype.ngOnInit = function () {
+    AddonModAssignFeedbackPluginComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.contentLinksDelegate.getActionsFor(this.contextUrl, this.courseId).then(function (actions) {
-            _this.actions = actions;
+        if (!this.plugin) {
+            this.pluginLoaded = true;
+            return;
+        }
+        this.plugin.name = this.feedbackDelegate.getPluginName(this.plugin);
+        if (!this.plugin.name) {
+            this.pluginLoaded = true;
+            return;
+        }
+        this.edit = this.edit && this.edit !== 'false';
+        this.canEdit = this.canEdit && this.canEdit !== 'false';
+        // Check if the plugin has defined its own component to render itself.
+        this.feedbackDelegate.getComponentForPlugin(this.injector, this.plugin).then(function (component) {
+            _this.pluginComponent = component;
+            if (component) {
+                // Prepare the data to pass to the component.
+                _this.data = {
+                    assign: _this.assign,
+                    submission: _this.submission,
+                    plugin: _this.plugin,
+                    userId: _this.userId,
+                    configs: _this.assignHelper.getPluginConfig(_this.assign, 'assignfeedback', _this.plugin.type),
+                    edit: _this.edit,
+                    canEdit: _this.canEdit
+                };
+            }
+            else {
+                // Data to render the plugin.
+                _this.text = _this.assignProvider.getSubmissionPluginText(_this.plugin);
+                _this.files = _this.assignProvider.getSubmissionPluginAttachments(_this.plugin);
+                _this.notSupported = _this.feedbackDelegate.isPluginSupported(_this.plugin.type);
+                _this.pluginLoaded = true;
+            }
         });
     };
+    /**
+     * Invalidate the plugin data.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModAssignFeedbackPluginComponent.prototype.invalidate = function () {
+        return Promise.resolve(this.dynamicComponent && this.dynamicComponent.callComponentFunction('invalidate', []));
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_4__components_dynamic_component_dynamic_component__["a" /* CoreDynamicComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4__components_dynamic_component_dynamic_component__["a" /* CoreDynamicComponent */])
+    ], AddonModAssignFeedbackPluginComponent.prototype, "dynamicComponent", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], AddonNotificationsActionsComponent.prototype, "contextUrl", void 0);
+        __metadata("design:type", Object)
+    ], AddonModAssignFeedbackPluginComponent.prototype, "assign", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], AddonModAssignFeedbackPluginComponent.prototype, "submission", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], AddonModAssignFeedbackPluginComponent.prototype, "plugin", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
         __metadata("design:type", Number)
-    ], AddonNotificationsActionsComponent.prototype, "courseId", void 0);
-    AddonNotificationsActionsComponent = __decorate([
+    ], AddonModAssignFeedbackPluginComponent.prototype, "userId", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], AddonModAssignFeedbackPluginComponent.prototype, "canEdit", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], AddonModAssignFeedbackPluginComponent.prototype, "edit", void 0);
+    AddonModAssignFeedbackPluginComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'addon-notifications-actions',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/notifications/components/actions/actions.html"*/'<ion-row *ngIf="actions && actions.length > 0">\n    <ion-col *ngFor="let action of actions">\n        <button ion-button icon-left clear small (click)="action.action()">\n            <ion-icon name="{{action.icon}}"></ion-icon>\n            {{ action.message | translate }}\n        </button>\n    </ion-col>\n</ion-row>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/notifications/components/actions/actions.html"*/,
+            selector: 'addon-mod-assign-feedback-plugin',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/assign/components/feedback-plugin/feedback-plugin.html"*/'\n<core-dynamic-component [component]="pluginComponent" [data]="data">\n    <!-- This content will be replaced by the component if found. -->\n    <core-loading [hideUntil]="pluginLoaded">\n        <ion-item text-wrap *ngIf="text.length > 0 || files.length > 0">\n            <h2>{{ plugin.name }}</h2>\n            <ion-badge *ngIf="notSupported" color="primary">\n                {{ \'addon.mod_assign.feedbacknotsupported\' | translate }}\n            </ion-badge>\n            <p *ngIf="text">\n                <core-format-text [component]="component" [componentId]="assign.cmid" [maxHeight]="80" [fullOnClick]="true" [fullTitle]="plugin.name" [text]="text"></core-format-text>\n            </p>\n            <core-file *ngFor="let file of files" [file]="file" [component]="component" [componentId]="assign.cmid" [alwaysDownload]="true"></core-file>\n        </ion-item>\n    </core-loading>\n</core-dynamic-component>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/assign/components/feedback-plugin/feedback-plugin.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__core_contentlinks_providers_delegate__["a" /* CoreContentLinksDelegate */]])
-    ], AddonNotificationsActionsComponent);
-    return AddonNotificationsActionsComponent;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injector */], __WEBPACK_IMPORTED_MODULE_3__providers_feedback_delegate__["a" /* AddonModAssignFeedbackDelegate */],
+            __WEBPACK_IMPORTED_MODULE_1__providers_assign__["a" /* AddonModAssignProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_helper__["a" /* AddonModAssignHelperProvider */]])
+    ], AddonModAssignFeedbackPluginComponent);
+    return AddonModAssignFeedbackPluginComponent;
 }());
 
-//# sourceMappingURL=actions.js.map
+//# sourceMappingURL=feedback-plugin.js.map
 
 /***/ }),
 
-/***/ 1665:
+/***/ 1730:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonNotificationsListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModAssignSubmissionReviewPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_text__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_utils__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_notifications__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__addon_pushnotifications_providers_delegate__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_course_providers_course__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_assign__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_submission_submission__ = __webpack_require__(822);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -237,174 +330,128 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
 /**
- * Page that displays the list of notifications.
+ * Page that displays a submission.
  */
-var AddonNotificationsListPage = (function () {
-    function AddonNotificationsListPage(navParams, domUtils, eventsProvider, sitesProvider, textUtils, utils, notificationsProvider, pushNotificationsDelegate) {
-        this.domUtils = domUtils;
-        this.eventsProvider = eventsProvider;
-        this.sitesProvider = sitesProvider;
-        this.textUtils = textUtils;
-        this.utils = utils;
-        this.notificationsProvider = notificationsProvider;
-        this.pushNotificationsDelegate = pushNotificationsDelegate;
-        this.notifications = [];
-        this.notificationsLoaded = false;
-        this.canLoadMore = false;
-        this.readCount = 0;
-        this.unreadCount = 0;
+var AddonModAssignSubmissionReviewPage = (function () {
+    function AddonModAssignSubmissionReviewPage(navParams, navCtrl, courseProvider, appProvider, assignProvider) {
+        this.navCtrl = navCtrl;
+        this.courseProvider = courseProvider;
+        this.appProvider = appProvider;
+        this.assignProvider = assignProvider;
+        this.forceLeave = false; // To allow leaving the page without checking for changes.
+        this.moduleId = navParams.get('moduleId');
+        this.courseId = navParams.get('courseId');
+        this.submitId = navParams.get('submitId');
+        this.blindId = navParams.get('blindId');
+        this.showGrade = !!navParams.get('showGrade');
     }
     /**
-     * View loaded.
+     * Component being initialized.
      */
-    AddonNotificationsListPage.prototype.ionViewDidLoad = function () {
+    AddonModAssignSubmissionReviewPage.prototype.ngOnInit = function () {
         var _this = this;
-        this.fetchNotifications().finally(function () {
-            _this.notificationsLoaded = true;
-        });
-        this.cronObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_7__providers_notifications__["a" /* AddonNotificationsProvider */].READ_CRON_EVENT, function () { return _this.refreshNotifications(); }, this.sitesProvider.getCurrentSiteId());
-        this.pushObserver = this.pushNotificationsDelegate.on('receive').subscribe(function (notification) {
-            // New notification received. If it's from current site, refresh the data.
-            if (_this.utils.isTrueOrOne(notification.notif) && _this.sitesProvider.isCurrentSite(notification.site)) {
-                _this.refreshNotifications();
-            }
+        this.fetchSubmission().finally(function () {
+            _this.loaded = true;
         });
     };
     /**
-     * Convenience function to get notifications. Gets unread notifications first.
+     * Check if we can leave the page or not.
      *
-     * @param {boolean} refreh Whether we're refreshing data.
-     * @return {Promise<any>} Resolved when done.
+     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
      */
-    AddonNotificationsListPage.prototype.fetchNotifications = function (refresh) {
-        var _this = this;
-        if (refresh) {
-            this.readCount = 0;
-            this.unreadCount = 0;
+    AddonModAssignSubmissionReviewPage.prototype.ionViewCanLeave = function () {
+        if (!this.submissionComponent || this.forceLeave) {
+            return true;
         }
-        var limit = __WEBPACK_IMPORTED_MODULE_7__providers_notifications__["a" /* AddonNotificationsProvider */].LIST_LIMIT;
-        return this.notificationsProvider.getUnreadNotifications(this.unreadCount, limit).then(function (unread) {
-            var promise;
-            unread.forEach(_this.formatText.bind(_this));
-            /* Don't add the unread notifications to this.notifications yet. If there are no unread notifications
-               that causes that the "There are no notifications" message is shown in pull to refresh. */
-            _this.unreadCount += unread.length;
-            if (unread.length < limit) {
-                // Limit not reached. Get read notifications until reach the limit.
-                var readLimit_1 = limit - unread.length;
-                promise = _this.notificationsProvider.getReadNotifications(_this.readCount, readLimit_1).then(function (read) {
-                    read.forEach(_this.formatText.bind(_this));
-                    _this.readCount += read.length;
-                    if (refresh) {
-                        _this.notifications = unread.concat(read);
+        // Check if data has changed.
+        return this.submissionComponent.canLeave();
+    };
+    /**
+     * Get the submission.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModAssignSubmissionReviewPage.prototype.fetchSubmission = function () {
+        var _this = this;
+        return this.assignProvider.getAssignment(this.courseId, this.moduleId).then(function (assignment) {
+            _this.assign = assignment;
+            _this.title = _this.assign.name;
+            _this.blindMarking = _this.assign.blindmarking && !_this.assign.revealidentities;
+            return _this.courseProvider.getModuleBasicGradeInfo(_this.moduleId).then(function (gradeInfo) {
+                if (gradeInfo) {
+                    // Grades can be saved if simple grading.
+                    if (gradeInfo.advancedgrading && gradeInfo.advancedgrading[0] &&
+                        typeof gradeInfo.advancedgrading[0].method != 'undefined') {
+                        var method = gradeInfo.advancedgrading[0].method || 'simple';
+                        _this.canSaveGrades = method == 'simple';
                     }
                     else {
-                        _this.notifications = _this.notifications.concat(unread, read);
+                        _this.canSaveGrades = true;
                     }
-                    _this.canLoadMore = read.length >= readLimit_1;
-                }).catch(function (error) {
-                    if (unread.length == 0) {
-                        _this.domUtils.showErrorModalDefault(error, 'addon.notifications.errorgetnotifications', true);
-                        _this.canLoadMore = false; // Set to false to prevent infinite calls with infinite-loading.
-                    }
-                });
-            }
-            else {
-                promise = Promise.resolve();
-                if (refresh) {
-                    _this.notifications = unread;
                 }
-                else {
-                    _this.notifications = _this.notifications.concat(unread);
-                }
-                _this.canLoadMore = true;
-            }
-            return promise.then(function () {
-                // Mark retrieved notifications as read if they are not.
-                _this.markNotificationsAsRead(unread);
             });
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.notifications.errorgetnotifications', true);
-            _this.canLoadMore = false; // Set to false to prevent infinite calls with infinite-loading.
         });
     };
     /**
-     * Mark notifications as read.
+     * Refresh all the data.
      *
-     * @param {any[]} notifications Array of notification objects.
+     * @return {Promise<any>} Promise resolved when done.
      */
-    AddonNotificationsListPage.prototype.markNotificationsAsRead = function (notifications) {
+    AddonModAssignSubmissionReviewPage.prototype.refreshAllData = function () {
         var _this = this;
-        if (notifications.length > 0) {
-            var promises = notifications.map(function (notification) {
-                return _this.notificationsProvider.markNotificationRead(notification.id);
-            });
-            Promise.all(promises).finally(function () {
-                _this.notificationsProvider.invalidateNotificationsList().finally(function () {
-                    var siteId = _this.sitesProvider.getCurrentSiteId();
-                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_7__providers_notifications__["a" /* AddonNotificationsProvider */].READ_CHANGED_EVENT, null, siteId);
-                });
+        var promises = [];
+        promises.push(this.assignProvider.invalidateAssignmentData(this.courseId));
+        if (this.assign) {
+            promises.push(this.assignProvider.invalidateSubmissionData(this.assign.id));
+            promises.push(this.assignProvider.invalidateAssignmentUserMappingsData(this.assign.id));
+            promises.push(this.assignProvider.invalidateSubmissionStatusData(this.assign.id, this.submitId, this.blindMarking));
+        }
+        return Promise.all(promises).finally(function () {
+            _this.submissionComponent && _this.submissionComponent.invalidateAndRefresh();
+            return _this.fetchSubmission();
+        });
+    };
+    /**
+     * Refresh the data.
+     *
+     * @param {any} refresher Refresher.
+     */
+    AddonModAssignSubmissionReviewPage.prototype.refreshSubmission = function (refresher) {
+        this.refreshAllData().finally(function () {
+            refresher.complete();
+        });
+    };
+    /**
+     * Submit a grade and feedback.
+     */
+    AddonModAssignSubmissionReviewPage.prototype.submitGrade = function () {
+        var _this = this;
+        if (this.submissionComponent) {
+            this.submissionComponent.submitGrade().then(function () {
+                // Grade submitted, leave the view if not in tablet.
+                if (!_this.appProvider.isWide()) {
+                    _this.forceLeave = true;
+                    _this.navCtrl.pop();
+                }
             });
         }
     };
-    /**
-     * Refresh notifications.
-     *
-     * @param {any} [refresher] Refresher.
-     */
-    AddonNotificationsListPage.prototype.refreshNotifications = function (refresher) {
-        var _this = this;
-        this.notificationsProvider.invalidateNotificationsList().finally(function () {
-            return _this.fetchNotifications(true).finally(function () {
-                if (refresher) {
-                    refresher.complete();
-                }
-            });
-        });
-    };
-    /**
-     * Load more results.
-     *
-     * @param {any} infiniteScroll The infinit scroll instance.
-     */
-    AddonNotificationsListPage.prototype.loadMoreNotifications = function (infiniteScroll) {
-        this.fetchNotifications().finally(function () {
-            infiniteScroll.complete();
-        });
-    };
-    /**
-     * Formats the text of a notification.
-     *
-     * @param {any} notification The notification object.
-     */
-    AddonNotificationsListPage.prototype.formatText = function (notification) {
-        var text = notification.mobiletext.replace(/-{4,}/ig, '');
-        notification.mobiletext = this.textUtils.replaceNewLines(text, '<br>');
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonNotificationsListPage.prototype.ngOnDestroy = function () {
-        this.cronObserver && this.cronObserver.off();
-        this.pushObserver && this.pushObserver.unsubscribe();
-    };
-    AddonNotificationsListPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_5__components_submission_submission__["a" /* AddonModAssignSubmissionComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_5__components_submission_submission__["a" /* AddonModAssignSubmissionComponent */])
+    ], AddonModAssignSubmissionReviewPage.prototype, "submissionComponent", void 0);
+    AddonModAssignSubmissionReviewPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-notifications-list',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/notifications/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.notifications.notifications\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="notificationsLoaded" (ionRefresh)="refreshNotifications($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="notificationsLoaded">\n        <ion-card *ngFor="let notification of notifications">\n            <ion-item>\n                <ion-avatar item-start core-user-link [userId]="notification.useridfrom" [courseId]="notification.courseid">\n                    <img [src]="notification.profileimageurlfrom || \'assets/img/user-avatar.png\'" core-external-content [alt]="\'core.pictureof\' | translate:{$a: notification.userfromfullname}" role="presentation">\n                </ion-avatar>\n                <h2>{{notification.userfromfullname}}</h2>\n                <div item-end *ngIf="!notification.timeread"><ion-icon name="record" color="primary"></ion-icon></div>\n                <p>{{notification.timecreated | coreDateDayOrTime}}</p>\n            </ion-item>\n            <ion-item text-wrap>\n                <p><core-format-text [text]="notification.mobiletext | coreCreateLinks"></core-format-text></p>\n            </ion-item>\n            <addon-notifications-actions [contextUrl]="notification.contexturl" [courseId]="notification.courseid"></addon-notifications-actions>\n        </ion-card>\n        <core-empty-box *ngIf="!notifications || notifications.length <= 0" icon="notifications" [message]="\'addon.notifications.therearentnotificationsyet\' | translate"></core-empty-box>\n        <ion-infinite-scroll [enabled]="canLoadMore" (ionInfinite)="loadMoreNotifications($event)">\n            <ion-infinite-scroll-content></ion-infinite-scroll-content>\n        </ion-infinite-scroll>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/notifications/pages/list/list.html"*/,
+            selector: 'page-addon-mod-assign-submission-review',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/assign/pages/submission-review/submission-review.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end></ion-buttons>\n    </ion-navbar>\n\n    <core-navbar-buttons end>\n        <button [hidden]="!canSaveGrades" ion-button button-clear (click)="submitGrade()" [attr.aria-label]="\'core.done\' | translate">\n            {{ \'core.done\' | translate }}\n        </button>\n    </core-navbar-buttons>\n</ion-header>\n<ion-content>\n\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshSubmission($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n        <addon-mod-assign-submission [courseId]="courseId" [moduleId]="moduleId" [submitId]="submitId" [blindId]="blindId" [showGrade]="showGrade"></addon-mod-assign-submission>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/assign/pages/submission-review/submission-review.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_text__["a" /* CoreTextUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_notifications__["a" /* AddonNotificationsProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__addon_pushnotifications_providers_delegate__["a" /* AddonPushNotificationsDelegate */]])
-    ], AddonNotificationsListPage);
-    return AddonNotificationsListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__core_course_providers_course__["a" /* CoreCourseProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_assign__["a" /* AddonModAssignProvider */]])
+    ], AddonModAssignSubmissionReviewPage);
+    return AddonModAssignSubmissionReviewPage;
 }());
 
-//# sourceMappingURL=list.js.map
+//# sourceMappingURL=submission-review.js.map
 
 /***/ })
 

@@ -1,17 +1,18 @@
 webpackJsonp([52],{
 
-/***/ 1572:
+/***/ 1661:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModSurveyIndexPageModule", function() { return AddonModSurveyIndexPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCommentsViewerPageModule", function() { return CoreCommentsViewerPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(809);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1660);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__viewer__ = __webpack_require__(1763);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(852);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,37 +38,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModSurveyIndexPageModule = (function () {
-    function AddonModSurveyIndexPageModule() {
+
+var CoreCommentsViewerPageModule = (function () {
+    function CoreCommentsViewerPageModule() {
     }
-    AddonModSurveyIndexPageModule = __decorate([
+    CoreCommentsViewerPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModSurveyIndexPage */],
+                __WEBPACK_IMPORTED_MODULE_3__viewer__["a" /* CoreCommentsViewerPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModSurveyComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModSurveyIndexPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* CoreCommentsComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__viewer__["a" /* CoreCommentsViewerPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModSurveyIndexPageModule);
-    return AddonModSurveyIndexPageModule;
+    ], CoreCommentsViewerPageModule);
+    return CoreCommentsViewerPageModule;
 }());
 
-//# sourceMappingURL=index.module.js.map
+//# sourceMappingURL=viewer.module.js.map
 
 /***/ }),
 
-/***/ 1660:
+/***/ 1763:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModSurveyIndexPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCommentsViewerPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_user_providers_user__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_comments__ = __webpack_require__(141);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,37 +100,99 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
 /**
- * Page that displays a survey.
+ * Page that displays comments.
  */
-var AddonModSurveyIndexPage = (function () {
-    function AddonModSurveyIndexPage(navParams) {
-        this.module = navParams.get('module') || {};
-        this.courseId = navParams.get('courseId');
-        this.title = this.module.name;
+var CoreCommentsViewerPage = (function () {
+    function CoreCommentsViewerPage(navParams, sitesProvider, userProvider, domUtils, translate, commentsProvider) {
+        this.userProvider = userProvider;
+        this.domUtils = domUtils;
+        this.translate = translate;
+        this.commentsProvider = commentsProvider;
+        this.comments = [];
+        this.commentsLoaded = false;
+        this.contextLevel = navParams.get('contextLevel');
+        this.instanceId = navParams.get('instanceId');
+        this.component = navParams.get('component');
+        this.itemId = navParams.get('itemId');
+        this.area = navParams.get('area') || '';
+        this.page = navParams.get('page') || 0;
+        this.title = navParams.get('title') || this.translate.instant('core.comments');
     }
     /**
-     * Update some data based on the survey instance.
-     *
-     * @param {any} survey Survey instance.
+     * View loaded.
      */
-    AddonModSurveyIndexPage.prototype.updateData = function (survey) {
-        this.title = survey.name || this.title;
+    CoreCommentsViewerPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.fetchComments().finally(function () {
+            _this.commentsLoaded = true;
+        });
+    };
+    /**
+     * Fetches the comments.
+     *
+     * @return {Promise<any>} Resolved when done.
+     */
+    CoreCommentsViewerPage.prototype.fetchComments = function () {
+        var _this = this;
+        // Get comments data.
+        return this.commentsProvider.getComments(this.contextLevel, this.instanceId, this.component, this.itemId, this.area, this.page).then(function (comments) {
+            _this.comments = comments;
+            _this.comments.sort(function (a, b) { return b.timecreated - a.timecreated; });
+            _this.comments.forEach(function (comment) {
+                // Get the user profile image.
+                _this.userProvider.getProfile(comment.userid, undefined, true).then(function (user) {
+                    comment.profileimageurl = user.profileimageurl;
+                });
+            });
+        }).catch(function (error) {
+            if (error) {
+                if (_this.component == 'assignsubmission_comments') {
+                    _this.domUtils.showAlertTranslated('core.notice', 'core.commentsnotworking');
+                }
+                else {
+                    _this.domUtils.showErrorModal(error);
+                }
+            }
+            else {
+                _this.domUtils.showErrorModal(_this.translate.instant('core.error') + ': get_comments');
+            }
+            return Promise.reject(null);
+        });
+    };
+    /**
+     * Refresh the comments.
+     *
+     * @param {any} refresher Refresher.
+     */
+    CoreCommentsViewerPage.prototype.refreshComments = function (refresher) {
+        var _this = this;
+        this.commentsProvider.invalidateCommentsData(this.contextLevel, this.instanceId, this.component, this.itemId, this.area, this.page).finally(function () {
+            return _this.fetchComments().finally(function () {
+                refresher.complete();
+            });
+        });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModSurveyIndexComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModSurveyIndexComponent */])
-    ], AddonModSurveyIndexPage.prototype, "surveyComponent", void 0);
-    AddonModSurveyIndexPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
+    ], CoreCommentsViewerPage.prototype, "content", void 0);
+    CoreCommentsViewerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-survey-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/survey/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="surveyComponent.loaded" (ionRefresh)="surveyComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-survey-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-survey-index>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/survey/pages/index/index.html"*/,
+            selector: 'page-core-comments-viewer',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/comments/pages/viewer/viewer.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="commentsLoaded" (ionRefresh)="refreshComments($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="commentsLoaded">\n        <core-empty-box *ngIf="!comments || !comments.length" icon="chatbubbles" [message]="\'core.nocomments\' | translate"></core-empty-box>\n\n        <ion-card *ngFor="let comment of comments">\n            <ion-item text-wrap>\n                <ion-avatar item-start>\n                    <img [src]="comment.profileimageurl" onError="this.src=\'assets/img/user-avatar.png\'" core-external-content core-user-link [userId]="comment.userid" [alt]="\'core.pictureof\' | translate:{$a: comment.fullname}" role="presentation">\n                </ion-avatar>\n                <h2>{{ comment.fullname }}</h2>\n                <p>{{ comment.time }}</p>\n            </ion-item>\n            <ion-item text-wrap>\n                <core-format-text clean="true" [text]="comment.content"></core-format-text>\n            </ion-item>\n        </ion-card>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/comments/pages/viewer/viewer.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], AddonModSurveyIndexPage);
-    return AddonModSurveyIndexPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_5__core_user_providers_user__["a" /* CoreUserProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_comments__["a" /* CoreCommentsProvider */]])
+    ], CoreCommentsViewerPage);
+    return CoreCommentsViewerPage;
 }());
 
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=viewer.js.map
 
 /***/ })
 

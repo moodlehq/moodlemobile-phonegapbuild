@@ -1,17 +1,17 @@
 webpackJsonp([57],{
 
-/***/ 1566:
+/***/ 1655:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModQuizIndexPageModule", function() { return AddonModQuizIndexPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModSurveyIndexPageModule", function() { return AddonModSurveyIndexPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(806);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1653);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(850);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1755);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,37 +37,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModQuizIndexPageModule = (function () {
-    function AddonModQuizIndexPageModule() {
+var AddonModSurveyIndexPageModule = (function () {
+    function AddonModSurveyIndexPageModule() {
     }
-    AddonModQuizIndexPageModule = __decorate([
+    AddonModSurveyIndexPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModQuizIndexPage */],
+                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModSurveyIndexPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModQuizComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModQuizIndexPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModSurveyComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModSurveyIndexPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModQuizIndexPageModule);
-    return AddonModQuizIndexPageModule;
+    ], AddonModSurveyIndexPageModule);
+    return AddonModSurveyIndexPageModule;
 }());
 
 //# sourceMappingURL=index.module.js.map
 
 /***/ }),
 
-/***/ 1653:
+/***/ 1755:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModQuizIndexPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModSurveyIndexPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(369);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -94,45 +94,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page that displays the quiz entry page.
+ * Page that displays a survey.
  */
-var AddonModQuizIndexPage = (function () {
-    function AddonModQuizIndexPage(navParams) {
+var AddonModSurveyIndexPage = (function () {
+    function AddonModSurveyIndexPage(navParams) {
         this.module = navParams.get('module') || {};
         this.courseId = navParams.get('courseId');
         this.title = this.module.name;
     }
     /**
-     * Update some data based on the quiz instance.
+     * Update some data based on the survey instance.
      *
-     * @param {any} quiz Quiz instance.
+     * @param {any} survey Survey instance.
      */
-    AddonModQuizIndexPage.prototype.updateData = function (quiz) {
-        this.title = quiz.name || this.title;
-    };
-    /**
-     * User entered the page.
-     */
-    AddonModQuizIndexPage.prototype.ionViewDidEnter = function () {
-        this.quizComponent.ionViewDidEnter();
-    };
-    /**
-     * User left the page.
-     */
-    AddonModQuizIndexPage.prototype.ionViewDidLeave = function () {
-        this.quizComponent.ionViewDidLeave();
+    AddonModSurveyIndexPage.prototype.updateData = function (survey) {
+        this.title = survey.name || this.title;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModQuizIndexComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModQuizIndexComponent */])
-    ], AddonModQuizIndexPage.prototype, "quizComponent", void 0);
-    AddonModQuizIndexPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModSurveyIndexComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModSurveyIndexComponent */])
+    ], AddonModSurveyIndexPage.prototype, "surveyComponent", void 0);
+    AddonModSurveyIndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-quiz-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/quiz/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="quizComponent.loaded" (ionRefresh)="quizComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-quiz-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-quiz-index>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/quiz/pages/index/index.html"*/,
+            selector: 'page-addon-mod-survey-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/survey/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="surveyComponent.loaded" (ionRefresh)="surveyComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-survey-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-survey-index>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/survey/pages/index/index.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], AddonModQuizIndexPage);
-    return AddonModQuizIndexPage;
+    ], AddonModSurveyIndexPage);
+    return AddonModSurveyIndexPage;
 }());
 
 //# sourceMappingURL=index.js.map

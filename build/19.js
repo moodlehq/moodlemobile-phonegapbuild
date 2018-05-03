@@ -1,17 +1,17 @@
 webpackJsonp([19],{
 
-/***/ 1606:
+/***/ 1696:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSettingsGeneralPageModule", function() { return CoreSettingsGeneralPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSharedFilesChooseSitePageModule", function() { return CoreSharedFilesChooseSitePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__general__ = __webpack_require__(1698);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__choose_site__ = __webpack_require__(1798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,44 +37,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreSettingsGeneralPageModule = (function () {
-    function CoreSettingsGeneralPageModule() {
+var CoreSharedFilesChooseSitePageModule = (function () {
+    function CoreSharedFilesChooseSitePageModule() {
     }
-    CoreSettingsGeneralPageModule = __decorate([
+    CoreSharedFilesChooseSitePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__general__["a" /* CoreSettingsGeneralPage */]
+                __WEBPACK_IMPORTED_MODULE_2__choose_site__["a" /* CoreSharedFilesChooseSitePage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__general__["a" /* CoreSettingsGeneralPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__choose_site__["a" /* CoreSharedFilesChooseSitePage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ]
         })
-    ], CoreSettingsGeneralPageModule);
-    return CoreSettingsGeneralPageModule;
+    ], CoreSharedFilesChooseSitePageModule);
+    return CoreSharedFilesChooseSitePageModule;
 }());
 
-//# sourceMappingURL=general.module.js.map
+//# sourceMappingURL=choose-site.module.js.map
 
 /***/ }),
 
-/***/ 1698:
+/***/ 1798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsGeneralPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSharedFilesChooseSitePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_app__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_constants__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_config__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_file__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_events__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_lang__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_local_notifications__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__configconstants__ = __webpack_require__(55);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_file__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_helper__ = __webpack_require__(373);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -103,75 +99,71 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
 /**
- * Page that displays the general settings.
+ * Modal to display the list of sites to choose one to store a shared file.
  */
-var CoreSettingsGeneralPage = (function () {
-    function CoreSettingsGeneralPage(appProvider, configProvider, fileProvider, eventsProvider, langProvider, domUtils, localNotificationsProvider) {
-        var _this = this;
-        this.configProvider = configProvider;
-        this.eventsProvider = eventsProvider;
-        this.langProvider = langProvider;
+var CoreSharedFilesChooseSitePage = (function () {
+    function CoreSharedFilesChooseSitePage(navCtrl, navParams, sharedFilesHelper, sitesProvider, domUtils, fileProvider) {
+        this.navCtrl = navCtrl;
+        this.sharedFilesHelper = sharedFilesHelper;
+        this.sitesProvider = sitesProvider;
         this.domUtils = domUtils;
-        this.languages = {};
-        this.languageCodes = [];
-        this.languages = __WEBPACK_IMPORTED_MODULE_9__configconstants__["a" /* CoreConfigConstants */].languages;
-        this.languageCodes = Object.keys(this.languages);
-        langProvider.getCurrentLanguage().then(function (currentLanguage) {
-            _this.selectedLanguage = currentLanguage;
-        });
-        this.rteSupported = this.domUtils.isRichTextEditorSupported();
-        if (this.rteSupported) {
-            this.configProvider.get(__WEBPACK_IMPORTED_MODULE_2__core_constants__["a" /* CoreConstants */].SETTINGS_RICH_TEXT_EDITOR, true).then(function (richTextEditorEnabled) {
-                _this.richTextEditor = richTextEditorEnabled;
-            });
-        }
-        if (localStorage && localStorage.getItem && localStorage.setItem) {
-            this.showReport = true;
-            this.reportInBackground = parseInt(localStorage.getItem(__WEBPACK_IMPORTED_MODULE_2__core_constants__["a" /* CoreConstants */].SETTINGS_REPORT_IN_BACKGROUND), 10) === 1;
-        }
-        else {
-            this.showReport = false;
-        }
+        this.fileProvider = fileProvider;
+        this.filePath = navParams.get('filePath');
     }
     /**
-     * Called when a new language is selected.
+     * Component being initialized.
      */
-    CoreSettingsGeneralPage.prototype.languageChanged = function () {
+    CoreSharedFilesChooseSitePage.prototype.ngOnInit = function () {
         var _this = this;
-        this.langProvider.changeCurrentLanguage(this.selectedLanguage).finally(function () {
-            _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */].LANGUAGE_CHANGED);
+        if (!this.filePath) {
+            this.domUtils.showErrorModal('Error reading file.');
+            this.navCtrl.pop();
+            return;
+        }
+        var fileAndDir = this.fileProvider.getFileAndDirectoryFromPath(this.filePath);
+        this.fileName = fileAndDir.name;
+        // Get the file.
+        this.fileProvider.getFile(this.filePath).then(function (fe) {
+            _this.fileEntry = fe;
+            _this.fileName = _this.fileEntry.name;
+        }).catch(function () {
+            _this.domUtils.showErrorModal('Error reading file.');
+            _this.navCtrl.pop();
+        });
+        // Get the sites.
+        this.sitesProvider.getSites().then(function (sites) {
+            _this.sites = sites;
+        }).finally(function () {
+            _this.loaded = true;
         });
     };
     /**
-     * Called when the rich text editor is enabled or disabled.
+     * Store the file in a certain site.
+     *
+     * @param {string} siteId Site ID.
      */
-    CoreSettingsGeneralPage.prototype.richTextEditorChanged = function () {
-        this.configProvider.set(__WEBPACK_IMPORTED_MODULE_2__core_constants__["a" /* CoreConstants */].SETTINGS_RICH_TEXT_EDITOR, this.richTextEditor);
+    CoreSharedFilesChooseSitePage.prototype.storeInSite = function (siteId) {
+        var _this = this;
+        this.loaded = false;
+        this.sharedFilesHelper.storeSharedFileInSite(this.fileEntry, siteId).then(function () {
+            _this.navCtrl.pop();
+        }).finally(function () {
+            _this.loaded = true;
+        });
     };
-    /**
-     * Called when the report in background setting is enabled or disabled.
-     */
-    CoreSettingsGeneralPage.prototype.reportInBackgroundChanged = function () {
-        localStorage.setItem(__WEBPACK_IMPORTED_MODULE_2__core_constants__["a" /* CoreConstants */].SETTINGS_REPORT_IN_BACKGROUND, this.reportInBackground ? '1' : '0');
-    };
-    CoreSettingsGeneralPage = __decorate([
+    CoreSharedFilesChooseSitePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-settings-general',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/settings/pages/general/general.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.general\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-item text-wrap>\n        <ion-label><h2>{{ \'core.settings.language\' | translate }}</h2></ion-label>\n        <ion-select [(ngModel)]="selectedLanguage" (ngModelChange)="languageChanged()">\n            <ion-option *ngFor="let code of languageCodes" [value]="code">{{ languages[code] }}</ion-option>\n        </ion-select>\n    </ion-item>\n    <ion-item text-wrap *ngIf="rteSupported">\n        <ion-label>\n            <h2>{{ \'core.settings.enablerichtexteditor\' | translate }}</h2>\n            <p>{{ \'core.settings.enablerichtexteditordescription\' | translate }}</p>\n        </ion-label>\n        <ion-toggle [(ngModel)]="richTextEditor" (ngModelChange)="richTextEditorChanged()"></ion-toggle>\n    </ion-item>\n    <ion-item text-wrap *ngIf="showReport">\n        <ion-label><h2>{{ \'core.settings.reportinbackground\' | translate }}</h2></ion-label>\n        <ion-toggle [(ngModel)]="reportInBackground" (ngModelChange)="reportInBackgroundChanged()"></ion-toggle>\n    </ion-item>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/settings/pages/general/general.html"*/,
+            selector: 'page-core-shared-files-choose-site',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/sharedfiles/pages/choose-site/choose-site.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.sharedfiles.sharedfiles\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <ion-list>\n            <ion-item text-wrap>\n                <p class="item-heading">{{ \'core.sharedfiles.chooseaccountstorefile\' | translate }}</p>\n                <p>{{fileName}}</p>\n            </ion-item>\n            <a ion-item *ngFor="let site of sites" (click)="storeInSite(site.id)">\n                <img [src]="site.avatar" item-start>\n                <h2>{{site.fullName}}</h2>\n                <p><core-format-text clean="true" [text]="site.siteName"></core-format-text></p>\n                <p>{{site.siteUrl}}</p>\n            </a>\n        </ion-list>\n    </core-loading>\n</ion-content>\n\n\n\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/sharedfiles/pages/choose-site/choose-site.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_config__["a" /* CoreConfigProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_file__["a" /* CoreFileProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_6__providers_lang__["a" /* CoreLangProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */]])
-    ], CoreSettingsGeneralPage);
-    return CoreSettingsGeneralPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_helper__["a" /* CoreSharedFilesHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__providers_file__["a" /* CoreFileProvider */]])
+    ], CoreSharedFilesChooseSitePage);
+    return CoreSharedFilesChooseSitePage;
 }());
 
-//# sourceMappingURL=general.js.map
+//# sourceMappingURL=choose-site.js.map
 
 /***/ })
 

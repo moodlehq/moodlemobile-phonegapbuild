@@ -1,17 +1,16 @@
 webpackJsonp([53],{
 
-/***/ 1571:
+/***/ 1660:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModResourceIndexPageModule", function() { return AddonModResourceIndexPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CorePlaceholderPageModule", function() { return CorePlaceholderPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(808);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1659);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placeholder__ = __webpack_require__(1762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_module__ = __webpack_require__(17);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,43 +30,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+// Code based on https://github.com/martinpritchardelevate/ionic-split-pane-demo
 
 
 
 
 
-
-var AddonModResourceIndexPageModule = (function () {
-    function AddonModResourceIndexPageModule() {
+var CorePlaceholderPageModule = (function () {
+    function CorePlaceholderPageModule() {
     }
-    AddonModResourceIndexPageModule = __decorate([
+    CorePlaceholderPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModResourceIndexPage */],
+                __WEBPACK_IMPORTED_MODULE_2__placeholder__["a" /* CoreSplitViewPlaceholderPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModResourceComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModResourceIndexPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_4__components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__placeholder__["a" /* CoreSplitViewPlaceholderPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__placeholder__["a" /* CoreSplitViewPlaceholderPage */]
+            ]
         })
-    ], AddonModResourceIndexPageModule);
-    return AddonModResourceIndexPageModule;
+    ], CorePlaceholderPageModule);
+    return CorePlaceholderPageModule;
 }());
 
-//# sourceMappingURL=index.module.js.map
+//# sourceMappingURL=placeholder.module.js.map
 
 /***/ }),
 
-/***/ 1659:
+/***/ 1762:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModResourceIndexPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSplitViewPlaceholderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(343);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -90,40 +89,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// Code based on https://github.com/martinpritchardelevate/ionic-split-pane-demo
 
-
-
-/**
- * Page that displays a resource.
- */
-var AddonModResourceIndexPage = (function () {
-    function AddonModResourceIndexPage(navParams) {
-        this.module = navParams.get('module') || {};
-        this.courseId = navParams.get('courseId');
-        this.title = this.module.name;
+var CoreSplitViewPlaceholderPage = (function () {
+    function CoreSplitViewPlaceholderPage() {
+        // Nothing to do.
     }
-    /**
-     * Update some data based on the resource instance.
-     *
-     * @param {any} resource Resource instance.
-     */
-    AddonModResourceIndexPage.prototype.updateData = function (resource) {
-        this.title = resource.name || this.title;
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModResourceIndexComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModResourceIndexComponent */])
-    ], AddonModResourceIndexPage.prototype, "resourceComponent", void 0);
-    AddonModResourceIndexPage = __decorate([
+    CoreSplitViewPlaceholderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-resource-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/resource/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="resourceComponent.loaded && resourceComponent.mode == \'external\'" (ionRefresh)="resourceComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-resource-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-resource-index>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/resource/pages/index/index.html"*/,
+            selector: 'core-placeholder',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/components/split-view/placeholder/placeholder.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>&nbsp;</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <core-empty-box icon="arrow-dropleft" [message]="\'core.emptysplit\' | translate"></core-empty-box>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/components/split-view/placeholder/placeholder.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], AddonModResourceIndexPage);
-    return AddonModResourceIndexPage;
+        __metadata("design:paramtypes", [])
+    ], CoreSplitViewPlaceholderPage);
+    return CoreSplitViewPlaceholderPage;
 }());
 
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=placeholder.js.map
 
 /***/ })
 

@@ -1,18 +1,17 @@
 webpackJsonp([81],{
 
-/***/ 1539:
+/***/ 1623:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCalendarEventPageModule", function() { return AddonCalendarEventPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonFilesListPageModule", function() { return AddonFilesListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__event__ = __webpack_require__(1626);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__list__ = __webpack_require__(1721);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,48 +37,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var AddonCalendarEventPageModule = (function () {
-    function AddonCalendarEventPageModule() {
+var AddonFilesListPageModule = (function () {
+    function AddonFilesListPageModule() {
     }
-    AddonCalendarEventPageModule = __decorate([
+    AddonFilesListPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__event__["a" /* AddonCalendarEventPage */],
+                __WEBPACK_IMPORTED_MODULE_5__list__["a" /* AddonFilesListPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__event__["a" /* AddonCalendarEventPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__list__["a" /* AddonFilesListPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCalendarEventPageModule);
-    return AddonCalendarEventPageModule;
+    ], AddonFilesListPageModule);
+    return AddonFilesListPageModule;
 }());
 
-//# sourceMappingURL=event.module.js.map
+//# sourceMappingURL=list.module.js.map
 
 /***/ }),
 
-/***/ 1626:
+/***/ 1721:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCalendarEventPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonFilesListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_calendar__ = __webpack_require__(330);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(788);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_courses_providers_courses__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_local_notifications__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_course_providers_course__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_moment__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_files__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(837);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -112,124 +107,184 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 /**
- * Page that displays a single calendar event.
+ * Page that displays the list of files.
  */
-var AddonCalendarEventPage = (function () {
-    function AddonCalendarEventPage(translate, calendarProvider, navParams, domUtils, coursesProvider, calendarHelper, sitesProvider, localNotificationsProvider, courseProvider) {
+var AddonFilesListPage = (function () {
+    function AddonFilesListPage(navParams, eventsProvider, sitesProvider, domUtils, translate, appProvider, filesProvider, filesHelper, textUtils) {
         var _this = this;
-        this.translate = translate;
-        this.calendarProvider = calendarProvider;
+        this.sitesProvider = sitesProvider;
         this.domUtils = domUtils;
-        this.coursesProvider = coursesProvider;
-        this.calendarHelper = calendarHelper;
-        this.courseProvider = courseProvider;
-        this.event = {};
-        this.notificationsEnabled = false;
-        this.eventId = navParams.get('id');
-        this.notificationsEnabled = localNotificationsProvider.isAvailable();
-        this.siteHomeId = sitesProvider.getCurrentSite().getSiteHomeId();
-        if (this.notificationsEnabled) {
-            this.calendarProvider.getEventNotificationTimeOption(this.eventId).then(function (notificationTime) {
-                _this.notificationTime = notificationTime;
-            });
-            this.calendarProvider.getDefaultNotificationTime().then(function (defaultTime) {
-                if (defaultTime === 0) {
-                    // Disabled by default.
-                    _this.defaultTimeReadable = _this.translate.instant('core.settings.disabled');
-                }
-                else {
-                    _this.defaultTimeReadable = __WEBPACK_IMPORTED_MODULE_10_moment__["duration"](defaultTime * 60 * 1000).humanize();
-                }
-            });
-        }
+        this.translate = translate;
+        this.appProvider = appProvider;
+        this.filesProvider = filesProvider;
+        this.filesHelper = filesHelper;
+        this.textUtils = textUtils;
+        this.title = navParams.get('title') || this.translate.instant('addon.files.files');
+        this.root = navParams.get('root');
+        this.path = navParams.get('path');
+        // Update visibility if current site info is updated.
+        this.updateSiteObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, function () {
+            _this.setVisibility();
+        }, sitesProvider.getCurrentSiteId());
     }
     /**
      * View loaded.
      */
-    AddonCalendarEventPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.fetchEvent().finally(function () {
-            _this.eventLoaded = true;
-        });
-    };
-    AddonCalendarEventPage.prototype.updateNotificationTime = function () {
-        if (!isNaN(this.notificationTime) && this.event && this.event.id) {
-            this.calendarProvider.updateNotificationTime(this.event, this.notificationTime);
+    AddonFilesListPage.prototype.ionViewDidLoad = function () {
+        this.setVisibility();
+        this.userQuota = this.sitesProvider.getCurrentSite().getInfo().userquota;
+        if (!this.root) {
+            // Load private files by default.
+            if (this.showPrivateFiles) {
+                this.root = 'my';
+            }
+            else if (this.showSiteFiles) {
+                this.root = 'site';
+            }
+        }
+        if (this.root) {
+            this.rootChanged();
+        }
+        else {
+            this.filesLoaded = true;
         }
     };
     /**
-     * Fetches the event and updates the view.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonCalendarEventPage.prototype.fetchEvent = function () {
-        var _this = this;
-        return this.calendarProvider.getEvent(this.eventId).then(function (event) {
-            _this.calendarHelper.formatEventData(event);
-            _this.event = event;
-            // Guess event title.
-            var title = _this.translate.instant('addon.calendar.type' + event.eventtype);
-            if (event.moduleIcon) {
-                // It's a module event, translate the module name to the current language.
-                var name_1 = _this.courseProvider.translateModuleName(event.modulename);
-                if (name_1.indexOf('core.mod_') === -1) {
-                    event.moduleName = name_1;
-                }
-                if (title == 'addon.calendar.type' + event.eventtype) {
-                    title = _this.translate.instant('core.mod_' + event.modulename + '.' + event.eventtype);
-                    if (title == 'core.mod_' + event.modulename + '.' + event.eventtype) {
-                        title = name_1;
-                    }
-                }
-            }
-            else {
-                if (title == 'addon.calendar.type' + event.eventtype) {
-                    title = event.name;
-                }
-            }
-            _this.title = title;
-            if (event.courseid != _this.siteHomeId) {
-                // It's a course event, retrieve the course name.
-                return _this.coursesProvider.getUserCourse(event.courseid, true).then(function (course) {
-                    _this.courseName = course.fullname;
-                });
-            }
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.calendar.errorloadevent', true);
-        });
-    };
-    /**
-     * Refresh the event.
+     * Refresh the data.
      *
      * @param {any} refresher Refresher.
      */
-    AddonCalendarEventPage.prototype.refreshEvent = function (refresher) {
-        var _this = this;
-        this.calendarProvider.invalidateEvent(this.eventId).finally(function () {
-            _this.fetchEvent().finally(function () {
-                refresher.complete();
-            });
+    AddonFilesListPage.prototype.refreshData = function (refresher) {
+        this.refreshFiles().finally(function () {
+            refresher.complete();
         });
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonCalendarEventPage.prototype, "content", void 0);
-    AddonCalendarEventPage = __decorate([
+    /**
+     * Function called when the root has changed.
+     */
+    AddonFilesListPage.prototype.rootChanged = function () {
+        var _this = this;
+        this.filesLoaded = false;
+        this.component = this.root == 'my' ? __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */].PRIVATE_FILES_COMPONENT : __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */].SITE_FILES_COMPONENT;
+        this.fetchFiles().finally(function () {
+            _this.filesLoaded = true;
+        });
+    };
+    /**
+     * Upload a new file.
+     */
+    AddonFilesListPage.prototype.uploadFile = function () {
+        var _this = this;
+        this.filesProvider.versionCanUploadFiles().then(function (canUpload) {
+            if (!canUpload) {
+                _this.domUtils.showAlertTranslated('core.notice', 'addon.files.erroruploadnotworking');
+            }
+            else if (!_this.appProvider.isOnline()) {
+                _this.domUtils.showErrorModal('core.fileuploader.errormustbeonlinetoupload', true);
+            }
+            else {
+                _this.filesHelper.uploadPrivateFile(_this.filesInfo).then(function () {
+                    // File uploaded, refresh the list.
+                    _this.filesLoaded = false;
+                    _this.refreshFiles().finally(function () {
+                        _this.filesLoaded = true;
+                    });
+                }).catch(function () {
+                    // Ignore errors, they're handled inside the function.
+                });
+            }
+        });
+    };
+    /**
+     * Set visibility of some items based on site data.
+     */
+    AddonFilesListPage.prototype.setVisibility = function () {
+        this.showPrivateFiles = this.filesProvider.canViewPrivateFiles();
+        this.showSiteFiles = this.filesProvider.canViewSiteFiles();
+        this.showUpload = this.filesProvider.canUploadFiles();
+    };
+    /**
+     * Fetch the files.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonFilesListPage.prototype.fetchFiles = function () {
+        var _this = this;
+        var promise;
+        if (!this.path) {
+            // The path is unknown, the user must be requesting a root.
+            if (this.root == 'site') {
+                this.title = this.translate.instant('addon.files.sitefiles');
+                promise = this.filesProvider.getSiteFiles();
+            }
+            else if (this.root == 'my') {
+                this.title = this.translate.instant('addon.files.files');
+                promise = this.filesProvider.getPrivateFiles().then(function (files) {
+                    if (_this.showUpload && _this.filesProvider.canGetPrivateFilesInfo() && _this.userQuota > 0) {
+                        // Get the info to calculate the available size.
+                        return _this.filesProvider.getPrivateFilesInfo().then(function (info) {
+                            _this.filesInfo = info;
+                            _this.spaceUsed = _this.textUtils.bytesToSize(info.filesizewithoutreferences, 1);
+                            _this.userQuotaReadable = _this.textUtils.bytesToSize(_this.userQuota, 1);
+                            return files;
+                        });
+                    }
+                    else {
+                        // User quota isn't useful, delete it.
+                        delete _this.userQuota;
+                    }
+                    return files;
+                });
+            }
+            else {
+                // Unknown root.
+                promise = Promise.reject(null);
+            }
+        }
+        else {
+            // Path is set, serve the files the user requested.
+            promise = this.filesProvider.getFiles(this.path);
+        }
+        return promise.then(function (files) {
+            _this.files = files;
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'addon.files.couldnotloadfiles', true);
+        });
+    };
+    /**
+     * Refresh the displayed files.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonFilesListPage.prototype.refreshFiles = function () {
+        var _this = this;
+        var promises = [];
+        promises.push(this.filesProvider.invalidateDirectory(this.root, this.path));
+        promises.push(this.filesProvider.invalidatePrivateFilesInfoForUser());
+        return Promise.all(promises).finally(function () {
+            return _this.fetchFiles();
+        });
+    };
+    /**
+     * Page destroyed.
+     */
+    AddonFilesListPage.prototype.ngOnDestroy = function () {
+        this.updateSiteObserver && this.updateSiteObserver.off();
+    };
+    AddonFilesListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-calendar-event',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/event/event.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="eventLoaded" (ionRefresh)="refreshEvent($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="eventLoaded">\n        <ion-card>\n            <ion-card-content>\n                <ion-card-title text-wrap>\n                    <ion-icon *ngIf="!event.moduleIcon" name="{{event.icon}}" item-start></ion-icon>\n                    <core-format-text [text]="event.name"></core-format-text>\n                </ion-card-title>\n                <ion-item text-wrap>\n                    <h2>{{ \'addon.calendar.eventstarttime\' | translate}}</h2>\n                    <p>{{ event.timestart | coreToLocaleString }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="event.timeduration > 0">\n                    <h2>{{ \'addon.calendar.eventendtime\' | translate}}</h2>\n                    <p>{{ (event.timestart + event.timeduration) |  coreToLocaleString }}</p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="courseName">\n                    <h2>{{ \'core.course\' | translate}}</h2>\n                    <p><core-format-text [text]="courseName"></core-format-text></p>\n                </ion-item>\n                <ion-item text-wrap *ngIf="event.moduleIcon">\n                    <img *ngIf="event.moduleIcon" src="{{event.moduleIcon}}" item-start alt="" role="presentation" class="core-module-icon"> {{event.moduleName}}\n                </ion-item>\n                <ion-item>\n                    <p text-wrap *ngIf="event.description">\n                        <core-format-text [text]="event.description"></core-format-text>\n                    </p>\n                </ion-item>\n            </ion-card-content>\n        </ion-card>\n\n        <ion-card list *ngIf="notificationsEnabled">\n            <ion-item>\n                <ion-label>{{ \'addon.calendar.notifications\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="notificationTime" (ionChange)="updateNotificationTime($event)" interface="popover">\n                    <ion-option value="-1">{{ \'core.defaultvalue\' | translate :{$a: defaultTimeReadable} }}</ion-option>\n                    <ion-option value="0">{{ \'core.settings.disabled\' | translate }}</ion-option>\n                    <ion-option value="10">{{ 600 | coreDuration }}</ion-option>\n                    <ion-option value="30">{{ 1800 | coreDuration }}</ion-option>\n                    <ion-option value="60">{{ 3600 | coreDuration }}</ion-option>\n                    <ion-option value="120">{{ 7200 | coreDuration }}</ion-option>\n                    <ion-option value="360">{{ 21600 | coreDuration }}</ion-option>\n                    <ion-option value="720">{{ 43200 | coreDuration }}</ion-option>\n                    <ion-option value="1440">{{ 86400 | coreDuration }}</ion-option>\n                </ion-select>\n            </ion-item>\n        </ion-card>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/event/event.html"*/,
+            selector: 'page-addon-files-list',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/files/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="filesLoaded && (showPrivateFiles || showSiteFiles)" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="filesLoaded" *ngIf="showPrivateFiles || showSiteFiles">\n        <!-- Allow selecting the files to see: private or site. -->\n        <div no-padding *ngIf="showPrivateFiles && showSiteFiles && !path">\n            <ion-select [(ngModel)]="root" (ngModelChange)="rootChanged()" interface="popover">\n                <ion-option value="my">{{ \'addon.files.privatefiles\' | translate }}</ion-option>\n                <ion-option value="site">{{ \'addon.files.sitefiles\' | translate }}</ion-option>\n            </ion-select>\n        </div>\n\n        <!-- Display info about space used and space left. -->\n        <p class="core-info-card" *ngIf="userQuota && filesInfo && filesInfo.filecount > 0">{{ \'core.quotausage\' | translate:{$a: {used: spaceUsed, total: userQuotaReadable} } }}</p>\n\n        <!-- List of files. -->\n        <ion-list *ngIf="files && files.length > 0">\n            <div *ngFor="let file of files">\n                <a *ngIf="file.isdir" ion-item class="item-media" [navPush]="\'AddonFilesListPage\'" [navParams]="{path: file.link, title: file.filename}">\n                    <img [src]="file.imgPath" alt="" role="presentation" item-start>\n                    <p>{{file.filename}}</p>\n                </a>\n                <core-file *ngIf="!file.isdir" [file]="file" [component]="component" [componentId]="file.contextid"></core-file>\n            </div>\n        </ion-list>\n\n        <!-- Message telling there are no files. -->\n        <core-empty-box *ngIf="!files || !files.length" icon="folder" [message]="\'addon.files.emptyfilelist\' | translate"></core-empty-box>\n    </core-loading>\n\n    <!-- Upload a private file. -->\n    <ion-fab bottom right *ngIf="showUpload && root != \'site\' && !path">\n        <button ion-fab (click)="uploadFile()" [attr.aria-label]="\'core.fileuploader.uploadafile\' | translate">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>\n</ion-content>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/files/pages/list/list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__core_courses_providers_courses__["a" /* CoreCoursesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* AddonCalendarHelperProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_9__core_course_providers_course__["a" /* CoreCourseProvider */]])
-    ], AddonCalendarEventPage);
-    return AddonCalendarEventPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */], __WEBPACK_IMPORTED_MODULE_9__providers_helper__["a" /* AddonFilesHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
+    ], AddonFilesListPage);
+    return AddonFilesListPage;
 }());
 
-//# sourceMappingURL=event.js.map
+//# sourceMappingURL=list.js.map
 
 /***/ })
 

@@ -1,18 +1,16 @@
 webpackJsonp([80],{
 
-/***/ 1541:
+/***/ 1624:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCalendarListPageModule", function() { return AddonCalendarListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonMessageOutputAirnotifierDevicesPageModule", function() { return AddonMessageOutputAirnotifierDevicesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__list__ = __webpack_require__(1628);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__devices__ = __webpack_require__(1722);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,51 +35,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-var AddonCalendarListPageModule = (function () {
-    function AddonCalendarListPageModule() {
+var AddonMessageOutputAirnotifierDevicesPageModule = (function () {
+    function AddonMessageOutputAirnotifierDevicesPageModule() {
     }
-    AddonCalendarListPageModule = __decorate([
+    AddonMessageOutputAirnotifierDevicesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__list__["a" /* AddonCalendarListPage */],
+                __WEBPACK_IMPORTED_MODULE_4__devices__["a" /* AddonMessageOutputAirnotifierDevicesPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__list__["a" /* AddonCalendarListPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__devices__["a" /* AddonMessageOutputAirnotifierDevicesPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCalendarListPageModule);
-    return AddonCalendarListPageModule;
+    ], AddonMessageOutputAirnotifierDevicesPageModule);
+    return AddonMessageOutputAirnotifierDevicesPageModule;
 }());
 
-//# sourceMappingURL=list.module.js.map
+//# sourceMappingURL=devices.module.js.map
 
 /***/ }),
 
-/***/ 1628:
+/***/ 1722:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCalendarListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonMessageOutputAirnotifierDevicesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_calendar__ = __webpack_require__(330);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(788);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_courses_providers_courses__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_utils__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_local_notifications__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_course_picker_menu_course_picker_menu_popover__ = __webpack_require__(798);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_app__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addon_pushnotifications_providers_pushnotifications__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__ = __webpack_require__(356);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -108,318 +92,121 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /**
- * Page that displays the list of calendar events.
+ * Page that displays the list of devices.
  */
-var AddonCalendarListPage = (function () {
-    function AddonCalendarListPage(translate, calendarProvider, navParams, domUtils, coursesProvider, utils, calendarHelper, sitesProvider, localNotificationsProvider, popoverCtrl, eventsProvider, navCtrl, appProvider) {
-        var _this = this;
-        this.translate = translate;
-        this.calendarProvider = calendarProvider;
+var AddonMessageOutputAirnotifierDevicesPage = (function () {
+    function AddonMessageOutputAirnotifierDevicesPage(domUtils, airnotifierProivder, pushNotificationsProvider) {
         this.domUtils = domUtils;
-        this.coursesProvider = coursesProvider;
-        this.utils = utils;
-        this.calendarHelper = calendarHelper;
-        this.popoverCtrl = popoverCtrl;
-        this.navCtrl = navCtrl;
-        this.daysLoaded = 0;
-        this.emptyEventsTimes = 0; // Variable to identify consecutive calls returning 0 events.
-        this.categoriesRetrieved = false;
-        this.getCategories = false;
-        this.allCourses = {
-            id: -1,
-            fullname: this.translate.instant('core.fulllistofcourses'),
-            category: -1
-        };
-        this.categories = {};
-        this.eventsLoaded = false;
-        this.events = [];
-        this.notificationsEnabled = false;
-        this.filteredEvents = [];
-        this.canLoadMore = false;
-        this.filter = {
-            course: this.allCourses
-        };
-        this.siteHomeId = sitesProvider.getCurrentSite().getSiteHomeId();
-        this.notificationsEnabled = localNotificationsProvider.isAvailable();
-        if (this.notificationsEnabled) {
-            // Re-schedule events if default time changes.
-            this.obsDefaultTimeChange = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */].DEFAULT_NOTIFICATION_TIME_CHANGED, function () {
-                calendarProvider.scheduleEventsNotifications(_this.events);
-            }, sitesProvider.getCurrentSiteId());
-        }
-        this.eventId = navParams.get('eventid') || false;
+        this.airnotifierProivder = airnotifierProivder;
+        this.pushNotificationsProvider = pushNotificationsProvider;
+        this.devices = [];
+        this.devicesLoaded = false;
     }
     /**
      * View loaded.
      */
-    AddonCalendarListPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        if (this.eventId) {
-            // There is an event to load, open the event in a new state.
-            this.gotoEvent(this.eventId);
-        }
-        this.fetchData().then(function () {
-            if (!_this.eventId && _this.splitviewCtrl.isOn() && _this.events.length > 0) {
-                // Take first and load it.
-                _this.gotoEvent(_this.events[0].id);
-            }
-        }).finally(function () {
-            _this.eventsLoaded = true;
-        });
+    AddonMessageOutputAirnotifierDevicesPage.prototype.ionViewDidLoad = function () {
+        this.fetchDevices();
     };
     /**
-     * Fetch all the data required for the view.
-     *
-     * @param {boolean} [refresh] Empty events array first.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonCalendarListPage.prototype.fetchData = function (refresh) {
-        var _this = this;
-        if (refresh === void 0) { refresh = false; }
-        this.daysLoaded = 0;
-        this.emptyEventsTimes = 0;
-        // Load courses for the popover.
-        return this.coursesProvider.getUserCourses(false).then(function (courses) {
-            // Add "All courses".
-            courses.unshift(_this.allCourses);
-            _this.courses = courses;
-            return _this.fetchEvents(refresh);
-        });
-    };
-    /**
-     * Fetches the events and updates the view.
-     *
-     * @param {boolean} [refresh] Empty events array first.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonCalendarListPage.prototype.fetchEvents = function (refresh) {
-        var _this = this;
-        if (refresh === void 0) { refresh = false; }
-        return this.calendarProvider.getEventsList(this.daysLoaded, __WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */].DAYS_INTERVAL).then(function (events) {
-            _this.daysLoaded += __WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */].DAYS_INTERVAL;
-            if (events.length === 0) {
-                _this.emptyEventsTimes++;
-                if (_this.emptyEventsTimes > 5) {
-                    _this.canLoadMore = false;
-                    if (refresh) {
-                        _this.events = [];
-                        _this.filteredEvents = [];
-                    }
-                }
-                else {
-                    // No events returned, load next events.
-                    return _this.fetchEvents();
-                }
-            }
-            else {
-                // Sort the events by timestart, they're ordered by id.
-                events.sort(function (a, b) {
-                    return a.timestart - b.timestart;
-                });
-                events.forEach(_this.calendarHelper.formatEventData.bind(_this.calendarHelper));
-                _this.getCategories = _this.shouldLoadCategories(events);
-                if (refresh) {
-                    _this.events = events;
-                }
-                else {
-                    // Filter events with same ID. Repeated events are returned once per WS call, show them only once.
-                    _this.events = _this.utils.mergeArraysWithoutDuplicates(_this.events, events, 'id');
-                }
-                _this.filteredEvents = _this.getFilteredEvents();
-                _this.canLoadMore = true;
-                // Schedule notifications for the events retrieved (might have new events).
-                _this.calendarProvider.scheduleEventsNotifications(_this.events);
-            }
-            // Resize the content so infinite loading is able to calculate if it should load more items or not.
-            // @todo: Infinite loading is not working if content is not high enough.
-            _this.content.resize();
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.calendar.errorloadevents', true);
-            _this.canLoadMore = false; // Set to false to prevent infinite calls with infinite-loading.
-        }).then(function () {
-            // Success retrieving events. Get categories if needed.
-            if (_this.getCategories) {
-                _this.getCategories = false;
-                return _this.loadCategories();
-            }
-        });
-    };
-    /**
-     * Get filtered events.
-     *
-     * @return {any[]} Filtered events.
-     */
-    AddonCalendarListPage.prototype.getFilteredEvents = function () {
-        if (this.filter.course.id == -1) {
-            // No filter, display everything.
-            return this.events;
-        }
-        return this.events.filter(this.shouldDisplayEvent.bind(this));
-    };
-    /**
-     * Check if an event should be displayed based on the filter.
-     *
-     * @param {any} event Event object.
-     * @return {boolean} Whether it should be displayed.
-     */
-    AddonCalendarListPage.prototype.shouldDisplayEvent = function (event) {
-        if (event.eventtype == 'user' || event.eventtype == 'site') {
-            // User or site event, display it.
-            return true;
-        }
-        if (event.eventtype == 'category') {
-            if (!event.categoryid || !Object.keys(this.categories).length) {
-                // We can't tell if the course belongs to the category, display them all.
-                return true;
-            }
-            if (event.categoryid == this.filter.course.category) {
-                // The event is in the same category as the course, display it.
-                return true;
-            }
-            // Check parent categories.
-            var category = this.categories[this.filter.course.category];
-            while (category) {
-                if (!category.parent) {
-                    // Category doesn't have parent, stop.
-                    break;
-                }
-                if (event.categoryid == category.parent) {
-                    return true;
-                }
-                category = this.categories[category.parent];
-            }
-            return false;
-        }
-        // Show the event if it is from site home or if it matches the selected course.
-        return event.courseid === this.siteHomeId || event.courseid == this.filter.course.id;
-    };
-    /**
-     * Returns if the current state should load categories or not.
-     * @param {any[]} events Events to parse.
-     * @return {boolean}  True if categories should be loaded.
-     */
-    AddonCalendarListPage.prototype.shouldLoadCategories = function (events) {
-        if (this.categoriesRetrieved || this.getCategories) {
-            // Use previous value
-            return this.getCategories;
-        }
-        // Categories not loaded yet. We should get them if there's any category event.
-        var found = events.some(function (event) { return event.categoryid != 'undefined' && event.categoryid > 0; });
-        return found || this.getCategories;
-    };
-    /**
-     * Load categories to be able to filter events.
+     * Fetches the list of devices.
      *
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonCalendarListPage.prototype.loadCategories = function () {
+    AddonMessageOutputAirnotifierDevicesPage.prototype.fetchDevices = function () {
         var _this = this;
-        return this.coursesProvider.getCategories(0, true).then(function (cats) {
-            _this.categoriesRetrieved = true;
-            _this.categories = {};
-            // Index categories by ID.
-            cats.forEach(function (category) {
-                _this.categories[category.id] = category;
+        return this.airnotifierProivder.getUserDevices().then(function (devices) {
+            var pushId = _this.pushNotificationsProvider.getPushId();
+            // Convert enabled to boolean and search current device.
+            devices.forEach(function (device) {
+                device.enable = !!device.enable;
+                device.current = pushId && pushId == device.pushid;
             });
-        }).catch(function () {
-            // Ignore errors.
+            _this.devices = devices;
+        }).catch(function (message) {
+            _this.domUtils.showErrorModal(message);
+        }).finally(function () {
+            _this.devicesLoaded = true;
         });
     };
     /**
-     * Refresh the events.
+     * Update list of devices after a certain time. The purpose is to store the updated data, it won't be reflected in the view.
+     */
+    AddonMessageOutputAirnotifierDevicesPage.prototype.updateDevicesAfterDelay = function () {
+        var _this = this;
+        // Cancel pending updates.
+        if (this.updateTimeout) {
+            clearTimeout(this.updateTimeout);
+        }
+        this.updateTimeout = setTimeout(function () {
+            _this.updateTimeout = null;
+            _this.updateDevices();
+        }, 5000);
+    };
+    /**
+     * Fetch devices. The purpose is to store the updated data, it won't be reflected in the view.
+     */
+    AddonMessageOutputAirnotifierDevicesPage.prototype.updateDevices = function () {
+        var _this = this;
+        this.airnotifierProivder.invalidateUserDevices().finally(function () {
+            _this.airnotifierProivder.getUserDevices();
+        });
+    };
+    /**
+     * Refresh the list of devices.
      *
      * @param {any} refresher Refresher.
      */
-    AddonCalendarListPage.prototype.refreshEvents = function (refresher) {
+    AddonMessageOutputAirnotifierDevicesPage.prototype.refreshDevices = function (refresher) {
         var _this = this;
-        var promises = [];
-        promises.push(this.calendarProvider.invalidateEventsList(this.courses));
-        if (this.categoriesRetrieved) {
-            promises.push(this.coursesProvider.invalidateCategories(0, true));
-            this.categoriesRetrieved = false;
-        }
-        Promise.all(promises).finally(function () {
-            _this.fetchData(true).finally(function () {
+        this.airnotifierProivder.invalidateUserDevices().finally(function () {
+            _this.fetchDevices().finally(function () {
                 refresher.complete();
             });
         });
     };
     /**
-     * Show the context menu.
+     * Enable or disable a certain device.
      *
-     * @param {MouseEvent} event Event.
+     * @param {any} device The device object.
+     * @param {boolean} enable True to enable the device, false to disable it.
      */
-    AddonCalendarListPage.prototype.openCourseFilter = function (event) {
+    AddonMessageOutputAirnotifierDevicesPage.prototype.enableDevice = function (device, enable) {
         var _this = this;
-        var popover = this.popoverCtrl.create(__WEBPACK_IMPORTED_MODULE_10__components_course_picker_menu_course_picker_menu_popover__["a" /* CoreCoursePickerMenuPopoverComponent */], {
-            courses: this.courses,
-            courseId: this.filter.course.id
+        device.updating = true;
+        this.airnotifierProivder.enableDevice(device.id, enable).then(function () {
+            // Update the list of devices since it was modified.
+            _this.updateDevicesAfterDelay();
+        }).catch(function (message) {
+            // Show error and revert change.
+            _this.domUtils.showErrorModal(message);
+            device.enable = !device.enable;
+        }).finally(function () {
+            device.updating = false;
         });
-        popover.onDidDismiss(function (course) {
-            if (course) {
-                _this.filter.course = course;
-                _this.content.scrollToTop();
-                _this.filteredEvents = _this.getFilteredEvents();
-            }
-        });
-        popover.present({
-            ev: event
-        });
-    };
-    /**
-     * Open calendar events settings.
-     */
-    AddonCalendarListPage.prototype.openSettings = function () {
-        this.navCtrl.push('AddonCalendarSettingsPage');
-    };
-    /**
-     * Navigate to a particular event.
-     *
-     * @param {number} eventId Event to load.
-     */
-    AddonCalendarListPage.prototype.gotoEvent = function (eventId) {
-        this.eventId = eventId;
-        this.splitviewCtrl.push('AddonCalendarEventPage', { id: eventId });
     };
     /**
      * Page destroyed.
      */
-    AddonCalendarListPage.prototype.ngOnDestroy = function () {
-        this.obsDefaultTimeChange && this.obsDefaultTimeChange.off();
+    AddonMessageOutputAirnotifierDevicesPage.prototype.ngOnDestroy = function () {
+        // If there is a pending action to update devices, execute it right now.
+        if (this.updateTimeout) {
+            clearTimeout(this.updateTimeout);
+            this.updateDevices();
+        }
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonCalendarListPage.prototype, "content", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
-    ], AddonCalendarListPage.prototype, "splitviewCtrl", void 0);
-    AddonCalendarListPage = __decorate([
+    AddonMessageOutputAirnotifierDevicesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-calendar-list',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.calendar.calendarevents\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button *ngIf="courses && courses.length" ion-button icon-only (click)="openCourseFilter($event)" [attr.aria-label]="\'core.courses.filter\' | translate">\n                <ion-icon name="funnel"></ion-icon>\n            </button>\n            <core-context-menu>\n                <core-context-menu-item [hidden]="!notificationsEnabled" [priority]="600" [content]="\'core.settings.settings\' | translate" (action)="openSettings()" [iconAction]="\'cog\'"></core-context-menu-item>\n            </core-context-menu>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="eventsLoaded" (ionRefresh)="refreshEvents($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="eventsLoaded">\n            <core-empty-box *ngIf="!filteredEvents || !filteredEvents.length" icon="calendar" [message]="\'addon.calendar.noevents\' | translate">\n            </core-empty-box>\n\n            <ion-list *ngIf="filteredEvents && filteredEvents.length" no-margin>\n                <a ion-item text-wrap *ngFor="let event of filteredEvents" [title]="event.name" (click)="gotoEvent(event.id)" [class.core-split-item-selected]="event.id == eventId">\n                    <img *ngIf="event.moduleIcon" src="{{event.moduleIcon}}" item-start class="core-module-icon">\n                    <ion-icon *ngIf="!event.moduleIcon" name="{{event.icon}}" item-start></ion-icon>\n                    <h2><core-format-text [text]="event.name"></core-format-text></h2>\n                    <p>{{ event.timestart | coreToLocaleString }}</p>\n                </a>\n            </ion-list>\n\n            <ion-infinite-scroll [enabled]="canLoadMore" (ionInfinite)="$event.waitFor(fetchEvents())">\n               <ion-infinite-scroll-content></ion-infinite-scroll-content>\n            </ion-infinite-scroll>\n        </core-loading>\n    </ion-content>\n</core-split-view>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/calendar/pages/list/list.html"*/,
+            selector: 'page-addon-message-output-airnotifier-devices',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.messageoutput_airnotifier.processorsettingsdesc\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="devicesLoaded" (ionRefresh)="refreshDevices($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="devicesLoaded">\n        <ion-list>\n            <ion-item text-wrap *ngFor="let device of devices">\n                <ion-label [class.core-bold]="device.current">\n                    {{ device.model }}\n                    <span *ngIf="device.current">({{ \'core.currentdevice\' | translate }})</span>\n                </ion-label>\n                <ion-spinner *ngIf="device.updating" item-end></ion-spinner>\n                <ion-toggle [disabled]="device.updating" [(ngModel)]="device.enable" (ngModelChange)="enableDevice(device, device.enable)"></ion-toggle>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_calendar__["a" /* AddonCalendarProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__core_courses_providers_courses__["a" /* CoreCoursesProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_utils_utils__["a" /* CoreUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* AddonCalendarHelperProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* PopoverController */],
-            __WEBPACK_IMPORTED_MODULE_11__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_12__providers_app__["a" /* CoreAppProvider */]])
-    ], AddonCalendarListPage);
-    return AddonCalendarListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__["a" /* AddonMessageOutputAirnotifierProvider */],
+            __WEBPACK_IMPORTED_MODULE_2__addon_pushnotifications_providers_pushnotifications__["a" /* AddonPushNotificationsProvider */]])
+    ], AddonMessageOutputAirnotifierDevicesPage);
+    return AddonMessageOutputAirnotifierDevicesPage;
 }());
 
-//# sourceMappingURL=list.js.map
+//# sourceMappingURL=devices.js.map
 
 /***/ })
 

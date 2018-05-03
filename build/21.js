@@ -1,17 +1,18 @@
 webpackJsonp([21],{
 
-/***/ 1605:
+/***/ 1694:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreMainMenuPageModule", function() { return CoreMainMenuPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreSettingsSpaceUsagePageModule", function() { return CoreSettingsSpaceUsagePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__more__ = __webpack_require__(1697);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__space_usage__ = __webpack_require__(1796);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(101);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,40 +38,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreMainMenuPageModule = (function () {
-    function CoreMainMenuPageModule() {
+
+var CoreSettingsSpaceUsagePageModule = (function () {
+    function CoreSettingsSpaceUsagePageModule() {
     }
-    CoreMainMenuPageModule = __decorate([
+    CoreSettingsSpaceUsagePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__more__["a" /* CoreMainMenuMorePage */],
+                __WEBPACK_IMPORTED_MODULE_3__space_usage__["a" /* CoreSettingsSpaceUsagePage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__more__["a" /* CoreMainMenuMorePage */]),
+                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__space_usage__["a" /* CoreSettingsSpaceUsagePage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], CoreMainMenuPageModule);
-    return CoreMainMenuPageModule;
+    ], CoreSettingsSpaceUsagePageModule);
+    return CoreSettingsSpaceUsagePageModule;
 }());
 
-//# sourceMappingURL=more.module.js.map
+//# sourceMappingURL=space-usage.module.js.map
 
 /***/ }),
 
-/***/ 1697:
+/***/ 1796:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreMainMenuMorePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsSpaceUsagePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_file__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_filepool__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(10);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -99,95 +103,167 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
- * Page that displays the list of main menu options that aren't in the tabs.
+ * Page that displays the space usage settings.
  */
-var CoreMainMenuMorePage = (function () {
-    function CoreMainMenuMorePage(menuDelegate, sitesProvider, navCtrl, mainMenuProvider, eventsProvider) {
-        this.menuDelegate = menuDelegate;
+var CoreSettingsSpaceUsagePage = (function () {
+    function CoreSettingsSpaceUsagePage(fileProvider, filePoolProvider, sitesProvider, textUtils, translate, domUtils) {
+        this.fileProvider = fileProvider;
+        this.filePoolProvider = filePoolProvider;
         this.sitesProvider = sitesProvider;
-        this.navCtrl = navCtrl;
-        this.mainMenuProvider = mainMenuProvider;
-        this.langObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */].LANGUAGE_CHANGED, this.loadSiteInfo.bind(this));
-        this.updateSiteObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, this.loadSiteInfo.bind(this), sitesProvider.getCurrentSiteId());
-        this.loadSiteInfo();
+        this.textUtils = textUtils;
+        this.translate = translate;
+        this.domUtils = domUtils;
+        this.usageLoaded = false;
+        this.sites = [];
+        this.currentSiteId = '';
+        this.totalUsage = 0;
+        this.freeSpace = 0;
+        this.currentSiteId = this.sitesProvider.getCurrentSiteId();
     }
     /**
      * View loaded.
      */
-    CoreMainMenuMorePage.prototype.ionViewDidLoad = function () {
+    CoreSettingsSpaceUsagePage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        // Load the handlers.
-        this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
-            _this.handlers = handlers.slice(__WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Remove the main handlers.
-            _this.handlersLoaded = _this.menuDelegate.areHandlersLoaded();
+        this.fetchData().finally(function () {
+            _this.usageLoaded = true;
         });
     };
     /**
-     * Page destroyed.
+     * Convenience function to calculate each site's usage, and the total usage.
+     *
+     * @return {Promise<any>} Resolved when done.
      */
-    CoreMainMenuMorePage.prototype.ngOnDestroy = function () {
-        if (this.subscription) {
-            this.subscription.unsubscribe();
+    CoreSettingsSpaceUsagePage.prototype.calculateSizeUsage = function () {
+        var _this = this;
+        return this.sitesProvider.getSortedSites().then(function (sites) {
+            _this.sites = sites;
+            // Get space usage.
+            var promises = _this.sites.map(function (siteEntry) {
+                return _this.sitesProvider.getSite(siteEntry.id).then(function (site) {
+                    return site.getSpaceUsage().then(function (size) {
+                        siteEntry.spaceUsage = size;
+                    });
+                });
+            });
+            return Promise.all(promises);
+        });
+    };
+    /**
+     * Convenience function to calculate total usage.
+     */
+    CoreSettingsSpaceUsagePage.prototype.calculateTotalUsage = function () {
+        var total = 0;
+        this.sites.forEach(function (site) {
+            if (site.spaceUsage) {
+                total += parseInt(site.spaceUsage, 10);
+            }
+        });
+        this.totalUsage = total;
+    };
+    /**
+     * Convenience function to calculate free space in the device.
+     *
+     * @return {Promise<any>} Resolved when done.
+     */
+    CoreSettingsSpaceUsagePage.prototype.calculateFreeSpace = function () {
+        var _this = this;
+        if (this.fileProvider.isAvailable()) {
+            return this.fileProvider.calculateFreeSpace().then(function (freeSpace) {
+                _this.freeSpace = freeSpace;
+            }).catch(function () {
+                _this.freeSpace = 0;
+            });
+        }
+        else {
+            this.freeSpace = 0;
+            return Promise.resolve(null);
         }
     };
     /**
-     * Load the site info required by the view.
+     * Convenience function to calculate space usage and free space in the device.
+     *
+     * @return {Promise<any>} Resolved when done.
      */
-    CoreMainMenuMorePage.prototype.loadSiteInfo = function () {
+    CoreSettingsSpaceUsagePage.prototype.fetchData = function () {
         var _this = this;
-        var currentSite = this.sitesProvider.getCurrentSite(), config = currentSite.getStoredConfig();
-        this.siteInfo = currentSite.getInfo();
-        this.logoutLabel = 'core.mainmenu.' + (config && config.tool_mobile_forcelogout == '1' ? 'logout' : 'changesite');
-        this.showWeb = !currentSite.isFeatureDisabled('CoreMainMenuDelegate_website');
-        this.showHelp = !currentSite.isFeatureDisabled('CoreMainMenuDelegate_help');
-        currentSite.getDocsUrl().then(function (docsUrl) {
-            _this.docsUrl = docsUrl;
-        });
-        this.mainMenuProvider.getCustomMenuItems().then(function (items) {
-            _this.customItems = items;
-        });
+        return Promise.all([
+            this.calculateSizeUsage().then(function () { return _this.calculateTotalUsage(); }),
+            this.calculateFreeSpace(),
+        ]);
     };
     /**
-     * Open a handler.
+     * Refresh the data.
      *
-     * @param {CoreMainMenuHandlerData} handler Handler to open.
+     * @param {any} refresher Refresher.
      */
-    CoreMainMenuMorePage.prototype.openHandler = function (handler) {
-        this.navCtrl.push(handler.page, handler.pageParams);
+    CoreSettingsSpaceUsagePage.prototype.refreshData = function (refresher) {
+        this.fetchData().finally(function () {
+            refresher.complete();
+        });
     };
     /**
-     * Open an embedded custom item.
+     * Convenience function to update site size, along with total usage and free space.
      *
-     * @param {CoreMainMenuCustomItem} item Item to open.
+     * @param {any} site Site object with space usage.
+     * @param {number} newUsage New space usage of the site in bytes.
      */
-    CoreMainMenuMorePage.prototype.openItem = function (item) {
-        this.navCtrl.push('CoreViewerIframePage', { title: item.label, url: item.url });
+    CoreSettingsSpaceUsagePage.prototype.updateSiteUsage = function (site, newUsage) {
+        var oldUsage = site.spaceUsage;
+        site.spaceUsage = newUsage;
+        this.totalUsage -= oldUsage - newUsage;
+        this.freeSpace += oldUsage - newUsage;
     };
     /**
-     * Open settings page.
+     * Deletes files of a site.
+     *
+     * @param {any} siteData Site object with space usage.
      */
-    CoreMainMenuMorePage.prototype.openSettings = function () {
-        this.navCtrl.push('CoreSettingsListPage');
+    CoreSettingsSpaceUsagePage.prototype.deleteSiteFiles = function (siteData) {
+        var _this = this;
+        this.textUtils.formatText(siteData.siteName).then(function (siteName) {
+            var title = _this.translate.instant('core.settings.deletesitefilestitle');
+            var message = _this.translate.instant('core.settings.deletesitefiles', { sitename: siteName });
+            _this.domUtils.showConfirm(message, title).then(function () {
+                return _this.sitesProvider.getSite(siteData.id);
+            }).then(function (site) {
+                site.deleteFolder().then(function () {
+                    _this.filePoolProvider.clearAllPackagesStatus(site.id);
+                    _this.filePoolProvider.clearFilepool(site.id);
+                    _this.updateSiteUsage(siteData, 0);
+                }).catch(function (error) {
+                    if (error && error.code === FileError.NOT_FOUND_ERR) {
+                        // Not found, set size 0.
+                        _this.filePoolProvider.clearAllPackagesStatus(site.id);
+                        _this.updateSiteUsage(siteData, 0);
+                    }
+                    else {
+                        // Error, recalculate the site usage.
+                        _this.domUtils.showErrorModal('core.settings.errordeletesitefiles', true);
+                        site.getSpaceUsage().then(function (size) {
+                            _this.updateSiteUsage(siteData, size);
+                        });
+                    }
+                });
+            }).catch(function () {
+                // Ignore cancelled confirmation modal.
+            });
+        });
     };
-    /**
-     * Logout the user.
-     */
-    CoreMainMenuMorePage.prototype.logout = function () {
-        this.sitesProvider.logout();
-    };
-    CoreMainMenuMorePage = __decorate([
+    CoreSettingsSpaceUsagePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-mainmenu-more',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/more/more.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="siteInfo.sitename"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <a ion-item core-user-link userId="{{siteInfo.userid}}">\n            <ion-avatar item-start>\n                <img [src]="siteInfo.userpictureurl" core-external-content alt="{{ \'core.pictureof\' | translate:{$a: siteInfo.fullname} }}" role="presentation">\n            </ion-avatar>\n            <p>{{siteInfo.fullname}}</p>\n        </a>\n        <ion-item-divider color="light"></ion-item-divider>\n        <ion-item text-center *ngIf="(!handlers || !handlers.length) && !handlersLoaded">\n            <ion-spinner></ion-spinner>\n        </ion-item>\n        <ion-item *ngFor="let handler of handlers" [ngClass]="[\'core-moremenu-handler\', handler.class]" (click)="openHandler(handler)" title="{{ handler.title | translate }}" detail-push>\n            <ion-icon [name]="handler.icon" item-start></ion-icon>\n            <p>{{ handler.title | translate}}</p>\n            <ion-badge item-end *ngIf="handler.showBadge" [hidden]="handler.loading || !handler.badge">{{badge}}</ion-badge>\n            <ion-spinner item-end *ngIf="handler.showBadge && handler.loading"></ion-spinner>\n        </ion-item>\n        <div *ngFor="let item of customItems" class="core-moremenu-customitem">\n            <a ion-item *ngIf="item.type != \'embedded\'" [href]="item.url" core-link [capture]="item.type == \'app\'" [inApp]="item.type == \'inappbrowser\'" title="{{item.label}}">\n                <ion-icon [name]="item.icon" item-start></ion-icon>\n                <p>{{item.label}}</p>\n            </a>\n            <a ion-item *ngIf="item.type == \'embedded\'" (click)="openItem(item)" title="{{item.label}}">\n                <ion-icon [name]="item.icon" item-start></ion-icon>\n                <p>{{item.label}}</p>\n            </a>\n        </div>\n        <a *ngIf="showWeb" ion-item [href]="siteInfo.siteurl" core-link autoLogin="yes" title="{{ \'core.mainmenu.website\' | translate }}">\n            <ion-icon name="globe" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.website\' | translate }}</p>\n        </a>\n        <a *ngIf="showHelp" ion-item [href]="docsUrl" core-link autoLogin="no" title="{{ \'core.mainmenu.help\' | translate }}">\n            <ion-icon name="help-buoy" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.help\' | translate }}</p>\n        </a>\n        <a ion-item (click)="openSettings()" title="{{ \'core.mainmenu.appsettings\' | translate }}">\n            <ion-icon name="cog" item-start></ion-icon>\n            <p>{{ \'core.mainmenu.appsettings\' | translate }}</p>\n        </a>\n        <a ion-item (click)="logout()" title="{{ logoutLabel | translate }}">\n            <ion-icon name="log-out" item-start></ion-icon>\n            <p>{{ logoutLabel | translate }}</p>\n        </a>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/more/more.html"*/,
+            selector: 'page-core-settings-space-usage',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/settings/pages/space-usage/space-usage.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.spaceusage\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="usageLoaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="usageLoaded">\n        <ion-item *ngFor="let site of sites" [class.core-primary-item]="site.id == currentSiteId">\n            <h2><core-format-text [text]="site.siteName"></core-format-text></h2>\n            <p>{{ site.fullName }}</p>\n            <p item-end>{{ site.spaceUsage | coreBytesToSize }}</p>\n            <button ion-button icon-only clear color="danger" item-end (click)="deleteSiteFiles(site)" [hidden]="!site.spaceUsage > \'0\'" [attr.aria-label]="\'core.settings.deletesitefilestitle\' | translate">\n                <ion-icon name="trash"></ion-icon>\n            </button>\n        </ion-item>\n        <ion-item-divider color="light">\n            <p>{{ \'core.settings.total\' | translate }}</p>\n            <p item-end>{{ totalUsage | coreBytesToSize }}</p>\n        </ion-item-divider>\n        <ion-item-divider color="light">\n            <p>{{ \'core.settings.estimatedfreespace\' | translate }}</p>\n            <p item-end>{{ freeSpace | coreBytesToSize }}</p>\n        </ion-item-divider>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/settings/pages/space-usage/space-usage.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_5__providers_mainmenu__["a" /* CoreMainMenuProvider */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */]])
-    ], CoreMainMenuMorePage);
-    return CoreMainMenuMorePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_file__["a" /* CoreFileProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_filepool__["a" /* CoreFilepoolProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__["a" /* CoreTextUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])
+    ], CoreSettingsSpaceUsagePage);
+    return CoreSettingsSpaceUsagePage;
 }());
 
-//# sourceMappingURL=more.js.map
+//# sourceMappingURL=space-usage.js.map
 
 /***/ })
 

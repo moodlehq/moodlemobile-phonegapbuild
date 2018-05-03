@@ -1,17 +1,18 @@
 webpackJsonp([76],{
 
-/***/ 1543:
+/***/ 1636:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyCompetencySummaryPageModule", function() { return AddonCompetencyCompetencySummaryPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatChatPageModule", function() { return AddonModChatChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__competencysummary__ = __webpack_require__(1630);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__chat__ = __webpack_require__(1734);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,39 +38,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonCompetencyCompetencySummaryPageModule = (function () {
-    function AddonCompetencyCompetencySummaryPageModule() {
+
+var AddonModChatChatPageModule = (function () {
+    function AddonModChatChatPageModule() {
     }
-    AddonCompetencyCompetencySummaryPageModule = __decorate([
+    AddonModChatChatPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__competencysummary__["a" /* AddonCompetencyCompetencySummaryPage */],
+                __WEBPACK_IMPORTED_MODULE_6__chat__["a" /* AddonModChatChatPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__competencysummary__["a" /* AddonCompetencyCompetencySummaryPage */]),
+                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__chat__["a" /* AddonModChatChatPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCompetencyCompetencySummaryPageModule);
-    return AddonCompetencyCompetencySummaryPageModule;
+    ], AddonModChatChatPageModule);
+    return AddonModChatChatPageModule;
 }());
 
-//# sourceMappingURL=competencysummary.module.js.map
+//# sourceMappingURL=chat.module.js.map
 
 /***/ }),
 
-/***/ 1630:
+/***/ 1734:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCompetencyCompetencySummaryPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModChatChatPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_competency__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_chat__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_network__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_moment__);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -92,85 +101,288 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
+
+
+
+
+
 
 
 
 
 
 /**
- * Page that displays a learning plan.
+ * Page that displays a chat session.
  */
-var AddonCompetencyCompetencySummaryPage = (function () {
-    function AddonCompetencyCompetencySummaryPage(navCtrl, navParams, domUtils, svComponent, competencyProvider) {
+var AddonModChatChatPage = (function () {
+    function AddonModChatChatPage(navParams, logger, network, navCtrl, chatProvider, appProvider, sitesProvider, modalCtrl, domUtils, textUtils) {
+        var _this = this;
         this.navCtrl = navCtrl;
+        this.chatProvider = chatProvider;
+        this.appProvider = appProvider;
+        this.modalCtrl = modalCtrl;
         this.domUtils = domUtils;
-        this.svComponent = svComponent;
-        this.competencyProvider = competencyProvider;
-        this.competencyLoaded = false;
-        this.competencyId = navParams.get('competencyId');
+        this.textUtils = textUtils;
+        this.loaded = false;
+        this.messages = [];
+        this.lastTime = 0;
+        this.oldContentHeight = 0;
+        this.viewDestroyed = false;
+        this.pollingRunning = false;
+        this.chatId = navParams.get('chatId');
+        this.courseId = navParams.get('courseId');
+        this.title = navParams.get('title');
+        this.logger = logger.getInstance('AddonModChoiceChoicePage');
+        this.currentUserBeep = 'beep ' + sitesProvider.getCurrentSiteUserId();
+        this.isOnline = this.appProvider.isOnline();
+        this.onlineObserver = network.onchange().subscribe(function (online) {
+            _this.isOnline = _this.appProvider.isOnline();
+        });
     }
     /**
      * View loaded.
      */
-    AddonCompetencyCompetencySummaryPage.prototype.ionViewDidLoad = function () {
+    AddonModChatChatPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchCompetency().then(function () {
-            _this.competencyProvider.logCompetencyView(_this.competencyId);
+        this.loginUser().then(function () {
+            return _this.fetchMessages().then(function () {
+                _this.startPolling();
+            }).catch(function (error) {
+                _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhileretrievingmessages', true);
+                _this.navCtrl.pop();
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhileconnecting', true);
+            _this.navCtrl.pop();
         }).finally(function () {
-            _this.competencyLoaded = true;
+            _this.loaded = true;
         });
     };
     /**
-     * Fetches the competency summary and updates the view.
-     *
-     * @return {Promise<void>} Promise resolved when done.
+     * Runs when the page has fully entered and is now the active page.
+     * This event will fire, whether it was the first load or a cached page.
      */
-    AddonCompetencyCompetencySummaryPage.prototype.fetchCompetency = function () {
+    AddonModChatChatPage.prototype.ionViewDidEnter = function () {
+        this.startPolling();
+    };
+    /**
+     * Runs when the page is about to leave and no longer be the active page.
+     */
+    AddonModChatChatPage.prototype.ionViewWillLeave = function () {
+        this.stopPolling();
+    };
+    /**
+     * Display the chat users modal.
+     */
+    AddonModChatChatPage.prototype.showChatUsers = function () {
         var _this = this;
-        return this.competencyProvider.getCompetencySummary(this.competencyId).then(function (competency) {
-            _this.competency = competency;
-        }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'Error getting competency summary data.');
+        var modal = this.modalCtrl.create('AddonModChatUsersPage', { sessionId: this.sessionId });
+        modal.onDidDismiss(function (data) {
+            if (data && data.talkTo) {
+                _this.newMessage = "To " + data.talkTo + ": ";
+            }
+            if (data && data.beepTo) {
+                _this.sendMessage('', data.beepTo);
+            }
+        });
+        modal.present();
+    };
+    /**
+     * Convenience function to login the user.
+     *
+     * @return {Promise<any>} Resolved when done.
+     */
+    AddonModChatChatPage.prototype.loginUser = function () {
+        var _this = this;
+        return this.chatProvider.loginUser(this.chatId).then(function (sessionId) {
+            _this.sessionId = sessionId;
         });
     };
     /**
-     * Refreshes the competency summary.
+     * Convenience function to fetch chat messages.
      *
-     * @param {any} refresher Refresher.
+     * @return {Promise<any>} Promise resolved when done.
      */
-    AddonCompetencyCompetencySummaryPage.prototype.refreshCompetency = function (refresher) {
+    AddonModChatChatPage.prototype.fetchMessages = function () {
         var _this = this;
-        this.competencyProvider.invalidateCompetencySummary(this.competencyId).finally(function () {
-            _this.fetchCompetency().finally(function () {
-                refresher.complete();
+        return this.chatProvider.getLatestMessages(this.sessionId, this.lastTime).then(function (messagesInfo) {
+            _this.lastTime = messagesInfo.chatnewlasttime || 0;
+            return _this.chatProvider.getMessagesUserData(messagesInfo.messages, _this.courseId).then(function (messages) {
+                _this.messages = _this.messages.concat(messages);
             });
         });
     };
     /**
-     * Opens the summary of a competency.
-     *
-     * @param {number} competencyId
+     * Start the polling to get chat messages periodically.
      */
-    AddonCompetencyCompetencySummaryPage.prototype.openCompetencySummary = function (competencyId) {
-        // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.
-        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
-        navCtrl.push('AddonCompetencyCompetencySummaryPage', { competencyId: competencyId });
+    AddonModChatChatPage.prototype.startPolling = function () {
+        var _this = this;
+        // We already have the polling in place.
+        if (this.polling) {
+            return;
+        }
+        // Start polling.
+        this.polling = setInterval(function () {
+            _this.fetchMessagesInterval().catch(function () {
+                // Ignore errors.
+            });
+        }, __WEBPACK_IMPORTED_MODULE_7__providers_chat__["a" /* AddonModChatProvider */].POLL_INTERVAL);
     };
-    AddonCompetencyCompetencySummaryPage = __decorate([
+    /**
+     * Stop polling for messages.
+     */
+    AddonModChatChatPage.prototype.stopPolling = function () {
+        if (this.polling) {
+            this.logger.debug('Cancelling polling for messages');
+            clearInterval(this.polling);
+        }
+    };
+    /**
+     * Convenience function to be called every certain time to fetch chat messages.
+     *
+     * @return {Promise<any>} Promised resolved when done.
+     */
+    AddonModChatChatPage.prototype.fetchMessagesInterval = function () {
+        var _this = this;
+        this.logger.debug('Polling for messages');
+        if (!this.isOnline || this.pollingRunning) {
+            // Obviously we cannot check for new messages when the app is offline.
+            return Promise.reject(null);
+        }
+        this.pollingRunning = true;
+        return this.fetchMessages().catch(function () {
+            // Try to login, it might have failed because the session expired.
+            return _this.loginUser().then(function () {
+                return _this.fetchMessages();
+            }).catch(function (error) {
+                // Fail again. Stop polling if needed.
+                if (_this.polling) {
+                    clearInterval(_this.polling);
+                    _this.polling = undefined;
+                }
+                _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhileretrievingmessages', true);
+                return Promise.reject(null);
+            });
+        }).finally(function () {
+            _this.pollingRunning = false;
+        });
+    };
+    /**
+     * Check if the date should be displayed between messages (when the day changes at midnight for example).
+     *
+     * @param  {any} message     New message object.
+     * @param  {any} prevMessage Previous message object.
+     * @return {boolean} True if messages are from diferent days, false othetwise.
+     */
+    AddonModChatChatPage.prototype.showDate = function (message, prevMessage) {
+        if (!prevMessage) {
+            return true;
+        }
+        // Check if day has changed.
+        return !__WEBPACK_IMPORTED_MODULE_9_moment__(message.timestamp * 1000).isSame(prevMessage.timestamp * 1000, 'day');
+    };
+    /**
+     * Send a message to the chat.
+     *
+     * @param {string} text     Text of the nessage.
+     * @param {number} [beep=0] ID of the user to beep.
+     */
+    AddonModChatChatPage.prototype.sendMessage = function (text, beep) {
+        var _this = this;
+        if (beep === void 0) { beep = 0; }
+        if (!this.isOnline) {
+            // Silent error, the view should prevent this.
+            return;
+        }
+        else if (beep === 0 && !text.trim()) {
+            // Silent error.
+            return;
+        }
+        text = this.textUtils.replaceNewLines(text, '<br>');
+        var modal = this.domUtils.showModalLoading('core.sending', true);
+        this.chatProvider.sendMessage(this.sessionId, text, beep).then(function () {
+            // Update messages to show the sent message.
+            _this.fetchMessagesInterval().catch(function () {
+                // Ignore errors.
+            });
+        }).catch(function (error) {
+            /* Only close the keyboard if an error happens, we want the user to be able to send multiple
+              messages without the keyboard being closed. */
+            _this.appProvider.closeKeyboard();
+            _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhilesendingmessage', true);
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
+    AddonModChatChatPage.prototype.reconnect = function () {
+        var _this = this;
+        var modal = this.domUtils.showModalLoading();
+        // Call startPolling would take a while for the first execution, so we'll execute it manually to check if it works now.
+        return this.fetchMessagesInterval().then(function () {
+            // It works, start the polling again.
+            _this.startPolling();
+        }).catch(function () {
+            // Ignore errors.
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
+    /**
+     * Scroll bottom when render has finished.
+     */
+    AddonModChatChatPage.prototype.scrollToBottom = function () {
+        var _this = this;
+        // Need a timeout to leave time to the view to be rendered.
+        setTimeout(function () {
+            if (!_this.viewDestroyed) {
+                _this.content.scrollToBottom(0);
+            }
+        });
+    };
+    /**
+     * Content or scroll has been resized. For content, only call it if it's been added on top.
+     */
+    AddonModChatChatPage.prototype.resizeContent = function () {
+        var _this = this;
+        var top = this.content.getContentDimensions().scrollTop;
+        this.content.resize();
+        // Wait for new content height to be calculated.
+        setTimeout(function () {
+            // Visible content size changed, maintain the bottom position.
+            if (!_this.viewDestroyed && _this.content && _this.content.contentHeight != _this.oldContentHeight) {
+                if (!top) {
+                    top = _this.content.getContentDimensions().scrollTop;
+                }
+                top += _this.oldContentHeight - _this.content.contentHeight;
+                _this.oldContentHeight = _this.content.contentHeight;
+                _this.content.scrollTo(0, top, 0);
+            }
+        });
+    };
+    /**
+     * Page destroyed.
+     */
+    AddonModChatChatPage.prototype.ngOnDestroy = function () {
+        this.onlineObserver && this.onlineObserver.unsubscribe();
+        this.stopPolling();
+        this.viewDestroyed = true;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
+    ], AddonModChatChatPage.prototype, "content", void 0);
+    AddonModChatChatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-competency-competency-summary',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/competency/pages/competencysummary/competencysummary.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title *ngIf="competency">{{ competency.competency.shortname }} <small>{{ competency.competency.idnumber }}</small></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="competencyLoaded" (ionRefresh)="refreshCompetency($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="competencyLoaded">\n        <ion-card *ngIf="competency">\n            <ion-item text-wrap *ngIf="competency.competency.description">\n                <core-format-text [text]="competency.competency.description"></core-format-text>\n            </ion-item>\n            <ion-item text-wrap>\n                <strong>{{ \'addon.competency.path\' | translate }}</strong>:\n                {{ competency.comppath.framework.name }}\n                <span *ngFor="let ancestor of competency.comppath.ancestors">\n                    &nbsp;/&nbsp;<a (click)="openCompetencySummary(ancestor.id)">{{ ancestor.name }}</a>\n                </span>\n            </ion-item>\n        </ion-card>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/competency/pages/competencysummary/competencysummary.html"*/,
+            selector: 'page-addon-mod-chat-chat',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/chat/pages/chat/chat.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n        <ion-buttons end>\n            <button *ngIf="loaded" ion-button icon-only (click)="showChatUsers()">\n                <ion-icon name="people"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <div aria-live="polite">\n            <div *ngFor="let message of messages; index as index; last as last">\n\n                <div text-center *ngIf="showDate(messages[index], messages[index - 1])" class="addon-mod-chat-notice">\n                    <ion-badge text-wrap color="light">\n                        <span>{{ message.timestamp * 1000 | coreFormatDate:"dfdayweekmonth" }}</span>\n                    </ion-badge>\n                </div>\n\n                <div text-center *ngIf="message.system && message.message == \'enter\'" class="addon-mod-chat-notice">\n                    <ion-badge text-wrap color="light">\n                        <span>{{ message.timestamp * 1000 | coreFormatDate:"dftimedate" }} {{ \'addon.mod_chat.messageenter\' | translate:{$a: message.userfullname} }}</span>\n                    </ion-badge>\n                </div>\n\n                <div text-center *ngIf="message.system && message.message == \'exit\'" class="addon-mod-chat-notice">\n                    <ion-badge text-wrap color="light">\n                        <span>{{ message.timestamp * 1000 | coreFormatDate:"dftimedate" }} {{ \'addon.mod_chat.messageexit\' | translate:{$a: message.userfullname} }}</span>\n                    </ion-badge>\n                </div>\n\n                <div text-center *ngIf="message.message == currentUserBeep" class="addon-mod-chat-notice">\n                    <ion-badge text-wrap color="light">\n                        <span>{{ \'addon.mod_chat.messagebeepsyou\' | translate:{$a: message.userfullname} }}</span>\n                    </ion-badge>\n                </div>\n\n                <ion-item text-wrap *ngIf="!message.system && message.message.substr(0, 4) != \'beep\'" class="addon-mod-chat-message">\n                    <ion-avatar item-start>\n                        <img [src]="message.userprofileimageurl" onError="this.src=\'assets/img/user-avatar.png\'" core-external-content [alt]="\'core.pictureof\' | translate:{$a: message.userfullname}" role="presentation">\n                    </ion-avatar>\n                    <h2>\n                        <p float-right>{{ message.timestamp * 1000 | coreFormatDate:"dftimedate" }}</p>\n                        <core-format-text [text]="message.userfullname"></core-format-text>\n                    </h2>\n                    <core-format-text [text]="message.message" (afterRender)="last && scrollToBottom()"></core-format-text>\n                </ion-item>\n            </div>\n\n            <div text-center margin *ngIf="!messages || messages.length <= 0">\n                <p>{{ \'addon.mod_chat.nomessages\' | translate}}</p>\n            </div>\n        </div>\n    </core-loading>\n</ion-content>\n<ion-footer color="light" class="footer-adjustable">\n    <ion-toolbar color="light" position="bottom">\n        <p text-center *ngIf="!isOnline">{{ \'addon.mod_chat.mustbeonlinetosendmessages\' | translate }}</p>\n        <core-send-message-form *ngIf="isOnline && polling && loaded" [message]="newMessage" (onSubmit)="sendMessage($event)" [showKeyboard]="showKeyboard" [placeholder]="\'addon.messages.newmessage\' | translate" (onResize)="resizeContent()"></core-send-message-form>\n        <button *ngIf="isOnline && !polling && loaded" (click)="reconnect()" ion-button block color="light">{{ \'core.login.reconnect\' | translate }}</button>\n    </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/chat/pages/chat/chat.html"*/,
         }),
-        __param(3, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__["a" /* CoreSplitViewComponent */], __WEBPACK_IMPORTED_MODULE_4__providers_competency__["a" /* AddonCompetencyProvider */]])
-    ], AddonCompetencyCompetencySummaryPage);
-    return AddonCompetencyCompetencySummaryPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_logger__["a" /* CoreLoggerProvider */], __WEBPACK_IMPORTED_MODULE_8__ionic_native_network__["a" /* Network */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_chat__["a" /* AddonModChatProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
+    ], AddonModChatChatPage);
+    return AddonModChatChatPage;
 }());
 
-//# sourceMappingURL=competencysummary.js.map
+//# sourceMappingURL=chat.js.map
 
 /***/ })
 

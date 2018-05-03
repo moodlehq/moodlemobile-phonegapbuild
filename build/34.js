@@ -1,17 +1,15 @@
 webpackJsonp([34],{
 
-/***/ 1593:
+/***/ 1681:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreGradesCourseSplitPageModule", function() { return CoreGradesCourseSplitPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginForgottenPasswordPageModule", function() { return CoreLoginForgottenPasswordPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__coursesplit__ = __webpack_require__(1685);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(793);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forgotten_password__ = __webpack_require__(1783);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,39 +33,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-var CoreGradesCourseSplitPageModule = (function () {
-    function CoreGradesCourseSplitPageModule() {
+var CoreLoginForgottenPasswordPageModule = (function () {
+    function CoreLoginForgottenPasswordPageModule() {
     }
-    CoreGradesCourseSplitPageModule = __decorate([
+    CoreLoginForgottenPasswordPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__coursesplit__["a" /* CoreGradesCourseSplitPage */]
+                __WEBPACK_IMPORTED_MODULE_2__forgotten_password__["a" /* CoreLoginForgottenPasswordPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* CoreGradesComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__coursesplit__["a" /* CoreGradesCourseSplitPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__forgotten_password__["a" /* CoreLoginForgottenPasswordPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ]
         })
-    ], CoreGradesCourseSplitPageModule);
-    return CoreGradesCourseSplitPageModule;
+    ], CoreLoginForgottenPasswordPageModule);
+    return CoreLoginForgottenPasswordPageModule;
 }());
 
-//# sourceMappingURL=coursesplit.module.js.map
+//# sourceMappingURL=forgotten-password.module.js.map
 
 /***/ }),
 
-/***/ 1685:
+/***/ 1783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreGradesCourseSplitPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginForgottenPasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(33);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,25 +90,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 /**
- * Page that displays a course grades.
+ * Page to recover a forgotten password.
  */
-var CoreGradesCourseSplitPage = (function () {
-    function CoreGradesCourseSplitPage(navParams, sitesProvider) {
-        this.courseId = navParams.get('courseId');
-        this.userId = navParams.get('userId') || sitesProvider.getCurrentSiteUserId();
-        this.gradeId = navParams.get('gradeId');
+var CoreLoginForgottenPasswordPage = (function () {
+    function CoreLoginForgottenPasswordPage(navCtrl, navParams, fb, translate, loginHelper, domUtils) {
+        this.navCtrl = navCtrl;
+        this.translate = translate;
+        this.loginHelper = loginHelper;
+        this.domUtils = domUtils;
+        this.siteUrl = navParams.get('siteUrl');
+        this.myForm = fb.group({
+            field: ['username', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["h" /* Validators */].required],
+            value: [navParams.get('username') || '', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["h" /* Validators */].required]
+        });
     }
-    CoreGradesCourseSplitPage = __decorate([
+    /**
+     * Request to reset the password.
+     */
+    CoreLoginForgottenPasswordPage.prototype.resetPassword = function () {
+        var _this = this;
+        var field = this.myForm.value.field, value = this.myForm.value.value;
+        if (!value) {
+            this.domUtils.showErrorModal('core.login.usernameoremail', true);
+            return;
+        }
+        var modal = this.domUtils.showModalLoading('core.sending', true), isMail = field == 'email';
+        this.loginHelper.requestPasswordReset(this.siteUrl, isMail ? '' : value, isMail ? value : '').then(function (response) {
+            if (response.status == 'dataerror') {
+                // Error in the data sent.
+                _this.showError(isMail, response.warnings);
+            }
+            else if (response.status == 'emailpasswordconfirmnotsent' || response.status == 'emailpasswordconfirmnoemail') {
+                // Error, not found.
+                _this.domUtils.showErrorModal(response.notice);
+            }
+            else {
+                // Success.
+                _this.domUtils.showAlert(_this.translate.instant('core.success'), response.notice);
+                _this.navCtrl.pop();
+            }
+        }).catch(function (error) {
+            _this.domUtils.showErrorModal(error.error);
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
+    // Show an error from the warnings.
+    CoreLoginForgottenPasswordPage.prototype.showError = function (isMail, warnings) {
+        for (var i = 0; i < warnings.length; i++) {
+            var warning = warnings[i];
+            if ((warning.item == 'email' && isMail) || (warning.item == 'username' && !isMail)) {
+                this.domUtils.showErrorModal(warning.message);
+                break;
+            }
+        }
+    };
+    CoreLoginForgottenPasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-grades-course-split',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/grades/pages/coursesplit/coursesplit.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.grades.grades\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <core-grades-course class="core-avoid-header" [courseId]="courseId" [userId]="userId" [gradeId]="gradeId"></core-grades-course>\n</core-split-view>\n\n\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/grades/pages/coursesplit/coursesplit.html"*/,
+            selector: 'page-core-login-forgotten-password',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/forgotten-password/forgotten-password.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.passwordforgotten\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item text-wrap>\n            {{ \'core.login.passwordforgotteninstructions2\' | translate }}\n        </ion-item>\n    </ion-list>\n    <ion-card>\n        <form ion-list [formGroup]="myForm" (ngSubmit)="resetPassword()">\n            <ion-item-divider text-wrap color="light">\n                {{ \'core.login.searchby\' | translate }}\n            </ion-item-divider>\n            <div radio-group formControlName="field">\n                <ion-item>\n                    <ion-label>{{ \'core.login.username\' | translate }}</ion-label>\n                    <ion-radio value="username"></ion-radio>\n                </ion-item>\n                <ion-item>\n                    <ion-label>{{ \'core.user.email\' | translate }}</ion-label>\n                    <ion-radio value="email"></ion-radio>\n                </ion-item>\n            </div>\n            <ion-item>\n                <ion-input type="text" name="value" placeholder="{{ \'core.login.usernameoremail\' | translate }}" formControlName="value" autocapitalize="none" autocorrect="off" core-auto-focus></ion-input>\n            </ion-item>\n            <ion-item>\n                <button text-wrap ion-button block [disabled]="!myForm.valid">{{ \'core.courses.search\' | translate }}</button>\n            </ion-item>\n        </form>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/forgotten-password/forgotten-password.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */]])
-    ], CoreGradesCourseSplitPage);
-    return CoreGradesCourseSplitPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* CoreLoginHelperProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])
+    ], CoreLoginForgottenPasswordPage);
+    return CoreLoginForgottenPasswordPage;
 }());
 
-//# sourceMappingURL=coursesplit.js.map
+//# sourceMappingURL=forgotten-password.js.map
 
 /***/ })
 

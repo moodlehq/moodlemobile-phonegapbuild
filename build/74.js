@@ -1,18 +1,18 @@
 webpackJsonp([74],{
 
-/***/ 1547:
+/***/ 1635:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyPlanPageModule", function() { return AddonCompetencyPlanPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatUsersPageModule", function() { return AddonModChatUsersPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__plan__ = __webpack_require__(1634);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__users__ = __webpack_require__(1733);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,43 +39,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonCompetencyPlanPageModule = (function () {
-    function AddonCompetencyPlanPageModule() {
+var AddonModChatUsersPageModule = (function () {
+    function AddonModChatUsersPageModule() {
     }
-    AddonCompetencyPlanPageModule = __decorate([
+    AddonModChatUsersPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__plan__["a" /* AddonCompetencyPlanPage */],
+                __WEBPACK_IMPORTED_MODULE_6__users__["a" /* AddonModChatUsersPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
                 __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__plan__["a" /* AddonCompetencyPlanPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__users__["a" /* AddonModChatUsersPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCompetencyPlanPageModule);
-    return AddonCompetencyPlanPageModule;
+    ], AddonModChatUsersPageModule);
+    return AddonModChatUsersPageModule;
 }());
 
-//# sourceMappingURL=plan.module.js.map
+//# sourceMappingURL=users.module.js.map
 
 /***/ }),
 
-/***/ 1634:
+/***/ 1733:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCompetencyPlanPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModChatUsersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_split_view_split_view__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_competency__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_helper__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_chat__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__ = __webpack_require__(120);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -98,10 +97,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
 
 
 
@@ -110,118 +105,78 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 /**
- * Page that displays a learning plan.
+ * Page that displays the chat session users.
  */
-var AddonCompetencyPlanPage = (function () {
-    function AddonCompetencyPlanPage(navCtrl, navParams, translate, appProvider, domUtils, svComponent, competencyProvider, competencyHelperProvider) {
-        this.navCtrl = navCtrl;
-        this.translate = translate;
+var AddonModChatUsersPage = (function () {
+    function AddonModChatUsersPage(navParams, network, appProvider, sitesProvider, viewCtrl, domUtils, chatProvider) {
+        var _this = this;
         this.appProvider = appProvider;
+        this.sitesProvider = sitesProvider;
+        this.viewCtrl = viewCtrl;
         this.domUtils = domUtils;
-        this.svComponent = svComponent;
-        this.competencyProvider = competencyProvider;
-        this.competencyHelperProvider = competencyHelperProvider;
-        this.planLoaded = false;
-        this.planId = navParams.get('planId');
+        this.chatProvider = chatProvider;
+        this.users = [];
+        this.usersLoaded = false;
+        this.sessionId = navParams.get('sessionId');
+        this.isOnline = this.appProvider.isOnline();
+        this.currentUserId = this.sitesProvider.getCurrentSiteUserId();
+        this.onlineObserver = network.onchange().subscribe(function (online) {
+            _this.isOnline = _this.appProvider.isOnline();
+        });
     }
     /**
      * View loaded.
      */
-    AddonCompetencyPlanPage.prototype.ionViewDidLoad = function () {
+    AddonModChatUsersPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchLearningPlan().finally(function () {
-            _this.planLoaded = true;
+        this.chatProvider.getChatUsers(this.sessionId).then(function (data) {
+            _this.users = data.users;
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhilegettingchatusers', true);
+        }).finally(function () {
+            _this.usersLoaded = true;
         });
     };
     /**
-     * Fetches the learning plan and updates the view.
-     *
-     * @return {Promise<void>} Promise resolved when done.
+     * Close the chat users modal.
      */
-    AddonCompetencyPlanPage.prototype.fetchLearningPlan = function () {
-        var _this = this;
-        return this.competencyProvider.getLearningPlan(this.planId).then(function (plan) {
-            plan.plan.statusname = _this.getStatusName(plan.plan.status);
-            // Get the user profile image.
-            _this.competencyHelperProvider.getProfile(plan.plan.userid).then(function (user) {
-                _this.user = user;
-            });
-            _this.plan = plan;
-        }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'Error getting learning plan data.');
-        });
+    AddonModChatUsersPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
     };
     /**
-     * Navigates to a particular competency.
+     * Add "To user:".
      *
-     * @param {number} competencyId
+     * @param {any} user User object.
      */
-    AddonCompetencyPlanPage.prototype.openCompetency = function (competencyId) {
-        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
-        if (this.appProvider.isWide()) {
-            navCtrl.push('AddonCompetencyCompetenciesPage', { competencyId: competencyId, planId: this.planId });
-        }
-        else {
-            navCtrl.push('AddonCompetencyCompetencyPage', { competencyId: competencyId, planId: this.planId });
-        }
+    AddonModChatUsersPage.prototype.talkTo = function (user) {
+        this.viewCtrl.dismiss({ talkTo: user.fullname });
     };
     /**
-     * Convenience function to get the status name translated.
+     * Beep a user.
      *
-     * @param {number} status
-     * @return {string}
+     * @param {any} user User object.
      */
-    AddonCompetencyPlanPage.prototype.getStatusName = function (status) {
-        var statusTranslateName;
-        switch (status) {
-            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].STATUS_DRAFT:
-                statusTranslateName = 'draft';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].REVIEW_STATUS_IN_REVIEW:
-                statusTranslateName = 'inreview';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].REVIEW_STATUS_WAITING_FOR_REVIEW:
-                statusTranslateName = 'waitingforreview';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].STATUS_ACTIVE:
-                statusTranslateName = 'active';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].STATUS_COMPLETE:
-                statusTranslateName = 'complete';
-                break;
-            default:
-                // We can use the current status name.
-                return String(status);
-        }
-        return this.translate.instant('addon.competency.planstatus' + statusTranslateName);
+    AddonModChatUsersPage.prototype.beepTo = function (user) {
+        this.viewCtrl.dismiss({ beepTo: user.id });
     };
     /**
-     * Refreshes the learning plan.
-     *
-     * @param {any} refresher Refresher.
+     * Page destroyed.
      */
-    AddonCompetencyPlanPage.prototype.refreshLearningPlan = function (refresher) {
-        var _this = this;
-        this.competencyProvider.invalidateLearningPlan(this.planId).finally(function () {
-            _this.fetchLearningPlan().finally(function () {
-                refresher.complete();
-            });
-        });
+    AddonModChatUsersPage.prototype.ngOnDestroy = function () {
+        this.onlineObserver && this.onlineObserver.unsubscribe();
     };
-    AddonCompetencyPlanPage = __decorate([
+    AddonModChatUsersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-competency-plan',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/competency/pages/plan/plan.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title *ngIf="plan">{{plan.plan.name}}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="planLoaded" (ionRefresh)="refreshLearningPlan($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="planLoaded">\n        <ion-card *ngIf="user">\n            <ion-item text-wrap>\n                <ion-avatar *ngIf="user.profileimageurl && user.profileimageurl !== true" item-start>\n                    <img  [src]="user.profileimageurl" [alt]="\'core.pictureof\' | translate:{$a: user.fullname}" core-external-content>\n                </ion-avatar>\n                <span *ngIf="user.profileimageurl === true" item-start>\n                    <ion-icon name="person"></ion-icon>\n                </span>\n                <h2><core-format-text [text]="user.fullname"></core-format-text></h2>\n            </ion-item>\n       </ion-card>\n        <ion-card *ngIf="plan">\n            <ion-list>\n                <ion-item text-wrap>\n                    <strong>{{ \'addon.competency.status\' | translate }}</strong>:\n                    {{ plan.plan.statusname }}\n                </ion-item>\n                <ion-item text-wrap *ngIf="plan.plan.duedate > 0">\n                    <strong>{{ \'addon.competency.duedate\' | translate }}</strong>:\n                    {{ plan.plan.duedate | coreToLocaleString }}\n                </ion-item>\n                <ion-item text-wrap *ngIf="plan.plan.template">\n                    <strong>{{ \'addon.competency.template\' | translate }}</strong>:\n                    {{ plan.plan.template.shortname }}\n                </ion-item>\n                <ion-item text-wrap>\n                    <strong>{{ \'addon.competency.progress\' | translate }}</strong>:\n                    {{ \'addon.competency.xcompetenciesproficientoutofy\' | translate: {$a: {x: plan.proficientcompetencycount, y: plan.competencycount} } }}\n                    <core-progress-bar [progress]="plan.proficientcompetencypercentage" [text]="plan.proficientcompetencypercentageformatted"></core-progress-bar>\n                </ion-item>\n            </ion-list>\n        </ion-card>\n        <ion-card *ngIf="plan">\n            <ion-card-header text-wrap>{{ \'addon.competency.learningplancompetencies\' | translate }}</ion-card-header>\n            <ion-list>\n                <ion-item text-wrap *ngIf="plan.competencycount == 0">\n                    {{ \'addon.competency.nocompetencies\' | translate }}\n                </ion-item>\n                <a ion-item text-wrap *ngFor="let competency of plan.competencies" (click)="openCompetency(competency.competency.id)" [title]="competency.competency.shortname">\n                    {{competency.competency.shortname}} <small>{{competency.competency.idnumber}}</small>\n                    <ion-badge item-end [color]="competency.usercompetency.proficiency ? \'success\' : \'danger\'">{{ competency.usercompetency.gradename }}</ion-badge>\n                </a>\n            </ion-list>\n        </ion-card>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/competency/pages/plan/plan.html"*/,
+            selector: 'page-addon-mod-chat-users',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/chat/pages/users/users.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_chat.currentusers\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="usersLoaded">\n        <ion-item text-wrap *ngFor="let user of users" [class.addon-mod-chat-user]="currentUserId != user.id && isOnline">\n            <ion-avatar item-start>\n                <img [src]="user.profileimageurl" onError="this.src=\'assets/img/user-avatar.png\'" core-external-content [alt]="\'core.pictureof\' | translate:{$a: user.fullname}" role="presentation">\n            </ion-avatar>\n            <h2><core-format-text [text]="user.fullname"></core-format-text></h2>\n            <ng-container *ngIf="currentUserId != user.id && isOnline">\n                <button ion-button clear icon-left (click)="talkTo(user)">\n                    <ion-icon name="chatboxes"></ion-icon>\n                    {{ \'addon.mod_chat.talk\' | translate }}\n                </button>\n                <button ion-button clear icon-left (click)="beepTo(user)">\n                    <ion-icon name="notifications"></ion-icon>\n                    {{ \'addon.mod_chat.beep\' | translate }}\n                </button>\n            </ng-container>\n        </ion-item>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/chat/pages/users/users.html"*/,
         }),
-        __param(5, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__components_split_view_split_view__["a" /* CoreSplitViewComponent */], __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_helper__["a" /* AddonCompetencyHelperProvider */]])
-    ], AddonCompetencyPlanPage);
-    return AddonCompetencyPlanPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__["a" /* Network */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_chat__["a" /* AddonModChatProvider */]])
+    ], AddonModChatUsersPage);
+    return AddonModChatUsersPage;
 }());
 
-//# sourceMappingURL=plan.js.map
+//# sourceMappingURL=users.js.map
 
 /***/ })
 

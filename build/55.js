@@ -1,16 +1,16 @@
 webpackJsonp([55],{
 
-/***/ 1567:
+/***/ 1656:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModQuizPreflightModalModule", function() { return AddonModQuizPreflightModalModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotesAddPageModule", function() { return AddonNotesAddPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__preflight_modal__ = __webpack_require__(1654);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add__ = __webpack_require__(1756);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,40 +35,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModQuizPreflightModalModule = (function () {
-    function AddonModQuizPreflightModalModule() {
+var AddonNotesAddPageModule = (function () {
+    function AddonNotesAddPageModule() {
     }
-    AddonModQuizPreflightModalModule = __decorate([
+    AddonNotesAddPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__preflight_modal__["a" /* AddonModQuizPreflightModalPage */]
+                __WEBPACK_IMPORTED_MODULE_2__add__["a" /* AddonNotesAddPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__preflight_modal__["a" /* AddonModQuizPreflightModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__add__["a" /* AddonNotesAddPage */]),
                 __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ]
         })
-    ], AddonModQuizPreflightModalModule);
-    return AddonModQuizPreflightModalModule;
+    ], AddonNotesAddPageModule);
+    return AddonNotesAddPageModule;
 }());
 
-//# sourceMappingURL=preflight-modal.module.js.map
+//# sourceMappingURL=add.module.js.map
 
 /***/ }),
 
-/***/ 1654:
+/***/ 1756:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModQuizPreflightModalPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonNotesAddPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_access_rules_delegate__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_notes__ = __webpack_require__(143);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -96,98 +94,59 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 /**
- * Modal that renders the access rules for a quiz.
+ * Component that displays a text area for composing a note.
  */
-var AddonModQuizPreflightModalPage = (function () {
-    function AddonModQuizPreflightModalPage(params, fb, translate, sitesProvider, viewCtrl, accessRuleDelegate, injector, domUtils) {
+var AddonNotesAddPage = (function () {
+    function AddonNotesAddPage(params, viewCtrl, appProvider, domUtils, notesProvider) {
         this.viewCtrl = viewCtrl;
-        this.accessRuleDelegate = accessRuleDelegate;
-        this.injector = injector;
+        this.appProvider = appProvider;
         this.domUtils = domUtils;
-        this.accessRulesComponent = [];
-        this.renderedRules = [];
-        this.title = params.get('title') || translate.instant('addon.mod_quiz.startattempt');
-        this.quiz = params.get('quiz');
-        this.attempt = params.get('attempt');
-        this.prefetch = params.get('prefetch');
-        this.siteId = params.get('siteId') || sitesProvider.getCurrentSiteId();
-        this.rules = params.get('rules') || [];
-        // Create an empty form group. The controls will be added by the access rules components.
-        this.preflightForm = fb.group({});
-        // Create the data to pass to the access rules components.
-        this.data = {
-            quiz: this.quiz,
-            attempt: this.attempt,
-            prefetch: this.prefetch,
-            form: this.preflightForm,
-            siteId: this.siteId
-        };
+        this.notesProvider = notesProvider;
+        this.publishState = 'personal';
+        this.text = '';
+        this.processing = false;
+        this.userId = params.get('userId');
+        this.courseId = params.get('courseId');
     }
     /**
-     * Component being initialized.
+     * Send the note or store it offline.
      */
-    AddonModQuizPreflightModalPage.prototype.ngOnInit = function () {
+    AddonNotesAddPage.prototype.addNote = function () {
         var _this = this;
-        var promises = [];
-        this.rules.forEach(function (rule) {
-            // Check if preflight is required for rule and, if so, get the component to render it.
-            promises.push(_this.accessRuleDelegate.isPreflightCheckRequiredForRule(rule, _this.quiz, _this.attempt, _this.prefetch, _this.siteId).then(function (required) {
-                if (required) {
-                    return _this.accessRuleDelegate.getPreflightComponent(rule, _this.injector).then(function (component) {
-                        if (component) {
-                            _this.renderedRules.push(rule);
-                            _this.accessRulesComponent.push(component);
-                        }
-                    });
-                }
-            }));
-        });
-        Promise.all(promises).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error loading rules');
+        this.appProvider.closeKeyboard();
+        var loadingModal = this.domUtils.showModalLoading('core.sending', true);
+        // Freeze the add note button.
+        this.processing = true;
+        this.notesProvider.addNote(this.userId, this.courseId, this.publishState, this.text).then(function (sent) {
+            _this.viewCtrl.dismiss().finally(function () {
+                var message = sent ? 'addon.notes.eventnotecreated' : 'core.datastoredoffline';
+                _this.domUtils.showAlertTranslated('core.success', message);
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModal(error);
+            _this.processing = false;
         }).finally(function () {
-            _this.loaded = true;
+            loadingModal.dismiss();
         });
-    };
-    /**
-     * Check that the data is valid and send it back.
-     */
-    AddonModQuizPreflightModalPage.prototype.sendData = function () {
-        if (!this.preflightForm.valid) {
-            // Form not valid. Scroll to the first element with errors.
-            if (!this.domUtils.scrollToInputError(this.content)) {
-                // Input not found, show an error modal.
-                this.domUtils.showErrorModal('core.errorinvalidform', true);
-            }
-        }
-        else {
-            this.viewCtrl.dismiss(this.preflightForm.value);
-        }
     };
     /**
      * Close modal.
      */
-    AddonModQuizPreflightModalPage.prototype.closeModal = function () {
+    AddonNotesAddPage.prototype.closeModal = function () {
         this.viewCtrl.dismiss();
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonModQuizPreflightModalPage.prototype, "content", void 0);
-    AddonModQuizPreflightModalPage = __decorate([
+    AddonNotesAddPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-quiz-preflight-modal',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/quiz/pages/preflight-modal/preflight-modal.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ title | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding class="addon-mod_quiz-preflight-modal">\n    <core-loading [hideUntil]="loaded">\n        <form ion-list [formGroup]="preflightForm" (ngSubmit)="sendData()">\n            <!-- Access rules. -->\n            <ng-container *ngFor="let componentClass of accessRulesComponent; let last = last">\n                <core-dynamic-component [component]="componentClass" [data]="data">\n                    <p padding>Couldn\'t find the directive to render this access rule.</p>\n                </core-dynamic-component>\n                <ion-item-divider color="light" *ngIf="!last"></ion-item-divider>\n            </ng-container>\n\n            <button ion-button block type="submit">\n                {{ title | translate }}\n            </button>\n        </form>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/quiz/pages/preflight-modal/preflight-modal.html"*/,
+            selector: 'page-addon-notes-add',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/notes/pages/add/add.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.notes.addnewnote\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <form name="itemEdit" (ngSubmit)="addNote()">\n        <ion-item>\n            <ion-label>{{ \'addon.notes.publishstate\' | translate }}</ion-label>\n            <ion-select [(ngModel)]="publishState" name="publishState" interface="popover">\n                <ion-option value="personal">{{ \'addon.notes.personalnotes\' | translate }}</ion-option>\n                <ion-option value="course">{{ \'addon.notes.coursenotes\' | translate }}</ion-option>\n                <ion-option value="site">{{ \'addon.notes.sitenotes\' | translate }}</ion-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-textarea placeholder="{{ \'addon.notes.note\' | translate }}" rows="5" [(ngModel)]="text" name="text" required="required"></ion-textarea>\n        </ion-item>\n        <button ion-button block margin-vertical type="submit" [disabled]="processing || text.length < 2">\n            {{ \'addon.notes.addnewnote\' | translate }}\n        </button>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/notes/pages/add/add.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_6__providers_access_rules_delegate__["a" /* AddonModQuizAccessRuleDelegate */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injector */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])
-    ], AddonModQuizPreflightModalPage);
-    return AddonModQuizPreflightModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_notes__["a" /* AddonNotesProvider */]])
+    ], AddonNotesAddPage);
+    return AddonNotesAddPage;
 }());
 
-//# sourceMappingURL=preflight-modal.js.map
+//# sourceMappingURL=add.js.map
 
 /***/ })
 

@@ -1,17 +1,16 @@
 webpackJsonp([28],{
 
-/***/ 1598:
+/***/ 1684:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginReconnectPageModule", function() { return CoreLoginReconnectPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitePageModule", function() { return CoreLoginSitePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reconnect__ = __webpack_require__(1690);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site__ = __webpack_require__(1786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,42 +35,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var CoreLoginReconnectPageModule = (function () {
-    function CoreLoginReconnectPageModule() {
+var CoreLoginSitePageModule = (function () {
+    function CoreLoginSitePageModule() {
     }
-    CoreLoginReconnectPageModule = __decorate([
+    CoreLoginSitePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__reconnect__["a" /* CoreLoginReconnectPage */]
+                __WEBPACK_IMPORTED_MODULE_2__site__["a" /* CoreLoginSitePage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__reconnect__["a" /* CoreLoginReconnectPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__site__["a" /* CoreLoginSitePage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ]
         })
-    ], CoreLoginReconnectPageModule);
-    return CoreLoginReconnectPageModule;
+    ], CoreLoginSitePageModule);
+    return CoreLoginSitePageModule;
 }());
 
-//# sourceMappingURL=reconnect.module.js.map
+//# sourceMappingURL=site.module.js.map
 
 /***/ }),
 
-/***/ 1690:
+/***/ 1786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginReconnectPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginSitePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_helper__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_forms__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__configconstants__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_helper__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_forms__ = __webpack_require__(33);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -101,133 +99,108 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
- * Page to enter the user password to reconnect to a site.
+ * Page to enter or select the site URL to connect to.
  */
-var CoreLoginReconnectPage = (function () {
-    function CoreLoginReconnectPage(navCtrl, navParams, fb, appProvider, sitesProvider, loginHelper, domUtils) {
+var CoreLoginSitePage = (function () {
+    function CoreLoginSitePage(navCtrl, fb, appProvider, sitesProvider, loginHelper, modalCtrl, domUtils) {
         this.navCtrl = navCtrl;
         this.appProvider = appProvider;
         this.sitesProvider = sitesProvider;
         this.loginHelper = loginHelper;
+        this.modalCtrl = modalCtrl;
         this.domUtils = domUtils;
-        var currentSite = this.sitesProvider.getCurrentSite();
-        this.infoSiteUrl = navParams.get('infoSiteUrl');
-        this.pageName = navParams.get('pageName');
-        this.pageParams = navParams.get('pageParams');
-        this.siteConfig = navParams.get('siteConfig');
-        this.siteUrl = navParams.get('siteUrl');
-        this.siteId = navParams.get('siteId');
-        this.isLoggedOut = currentSite && currentSite.isLoggedOut();
-        this.credForm = fb.group({
-            password: ['', __WEBPACK_IMPORTED_MODULE_6__angular_forms__["h" /* Validators */].required]
+        this.displayAsButtons = false;
+        var url = '';
+        // Load fixed sites if they're set.
+        if (this.loginHelper.hasSeveralFixedSites()) {
+            this.fixedSites = this.loginHelper.getFixedSites();
+            this.displayAsButtons = __WEBPACK_IMPORTED_MODULE_5__configconstants__["a" /* CoreConfigConstants */].multisitesdisplay == 'buttons';
+            url = this.fixedSites[0].url;
+        }
+        this.siteForm = fb.group({
+            siteUrl: [url, __WEBPACK_IMPORTED_MODULE_7__angular_forms__["h" /* Validators */].required]
         });
     }
     /**
-     * View loaded.
+     * Try to connect to a site.
      */
-    CoreLoginReconnectPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        if (this.siteConfig) {
-            this.identityProviders = this.loginHelper.getValidIdentityProviders(this.siteConfig);
-        }
-        this.sitesProvider.getSite(this.siteId).then(function (site) {
-            _this.site = {
-                id: site.id,
-                fullname: site.infos.fullname,
-                avatar: site.infos.userpictureurl
-            };
-            _this.username = site.infos.username;
-            _this.siteUrl = site.infos.siteurl;
-            _this.siteName = site.infos.sitename;
-            // Check logoURL if user avatar is not set.
-            if (_this.site.avatar.startsWith(site.infos.siteurl + '/theme/image.php')) {
-                _this.site.avatar = false;
-                return site.getPublicConfig().then(function (config) {
-                    _this.logoUrl = config.logourl || config.compactlogourl;
-                }).catch(function () {
-                    // Ignore errors.
-                });
-            }
-        }).catch(function () {
-            // Shouldn't happen. Just leave the view.
-            _this.cancel();
-        });
-    };
-    /**
-     * Cancel reconnect.
-     */
-    CoreLoginReconnectPage.prototype.cancel = function () {
-        var _this = this;
-        this.sitesProvider.logout().finally(function () {
-            _this.navCtrl.setRoot('CoreLoginSitesPage');
-        });
-    };
-    /**
-     * Tries to authenticate the user.
-     */
-    CoreLoginReconnectPage.prototype.login = function () {
+    CoreLoginSitePage.prototype.connect = function (url) {
         var _this = this;
         this.appProvider.closeKeyboard();
-        // Get input data.
-        var siteUrl = this.siteUrl, username = this.username, password = this.credForm.value.password;
-        if (!password) {
-            this.domUtils.showErrorModal('core.login.passwordrequired', true);
+        if (!url) {
+            this.domUtils.showErrorModal('core.login.siteurlrequired', true);
             return;
         }
         if (!this.appProvider.isOnline()) {
             this.domUtils.showErrorModal('core.networkerrormsg', true);
             return;
         }
-        var modal = this.domUtils.showModalLoading();
-        // Start the authentication process.
-        this.sitesProvider.getUserToken(siteUrl, username, password).then(function (data) {
-            return _this.sitesProvider.updateSiteToken(_this.infoSiteUrl, username, data.token, data.privateToken).then(function () {
-                // Update site info too because functions might have changed (e.g. unisntall local_mobile).
-                return _this.sitesProvider.updateSiteInfoByUrl(_this.infoSiteUrl, username).finally(function () {
-                    // Reset fields so the data is not in the view anymore.
-                    _this.credForm.controls['password'].reset();
-                    if (_this.pageName) {
-                        // Page defined, go to that page instead of site initial page.
-                        return _this.navCtrl.setRoot(_this.pageName, _this.pageParams);
-                    }
-                    else {
-                        return _this.loginHelper.goToSiteInitialPage();
-                    }
-                }).catch(function (error) {
-                    // Site deleted? Go back to login page.
-                    _this.domUtils.showErrorModal('core.login.errorupdatesite', true);
-                    _this.cancel();
+        var modal = this.domUtils.showModalLoading(), siteData = this.sitesProvider.getDemoSiteData(url);
+        if (siteData) {
+            // It's a demo site.
+            this.sitesProvider.getUserToken(siteData.url, siteData.username, siteData.password).then(function (data) {
+                return _this.sitesProvider.newSite(data.siteUrl, data.token, data.privateToken).then(function () {
+                    return _this.loginHelper.goToSiteInitialPage();
+                }, function (error) {
+                    _this.domUtils.showErrorModal(error);
                 });
+            }, function (error) {
+                _this.loginHelper.treatUserTokenError(siteData.url, error);
+            }).finally(function () {
+                modal.dismiss();
             });
-        }).catch(function (error) {
-            _this.loginHelper.treatUserTokenError(siteUrl, error);
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    /**
-     * An OAuth button was clicked.
-     *
-     * @param {any} provider The provider that was clicked.
-     */
-    CoreLoginReconnectPage.prototype.oauthClicked = function (provider) {
-        if (!this.loginHelper.openBrowserForOAuthLogin(this.siteUrl, provider, this.siteConfig.launchurl)) {
-            this.domUtils.showErrorModal('Invalid data.');
+        }
+        else {
+            // Not a demo site.
+            this.sitesProvider.checkSite(url).then(function (result) {
+                if (result.warning) {
+                    _this.domUtils.showErrorModal(result.warning, true, 4000);
+                }
+                if (_this.loginHelper.isSSOLoginNeeded(result.code)) {
+                    // SSO. User needs to authenticate in a browser.
+                    _this.loginHelper.confirmAndOpenBrowserForSSOLogin(result.siteUrl, result.code, result.service, result.config && result.config.launchurl);
+                }
+                else {
+                    _this.navCtrl.push('CoreLoginCredentialsPage', { siteUrl: result.siteUrl, siteConfig: result.config });
+                }
+            }, function (error) {
+                _this.showLoginIssue(url, error);
+            }).finally(function () {
+                modal.dismiss();
+            });
         }
     };
-    CoreLoginReconnectPage = __decorate([
+    /**
+     * Show a help modal.
+     */
+    CoreLoginSitePage.prototype.showHelp = function () {
+        var modal = this.modalCtrl.create('CoreLoginSiteHelpPage');
+        modal.present();
+    };
+    /**
+     * Show an error that aims people to solve the issue.
+     *
+     * @param {string} url The URL the user was trying to connect to.
+     * @param {string} error Error to display.
+     */
+    CoreLoginSitePage.prototype.showLoginIssue = function (url, error) {
+        var modal = this.modalCtrl.create('CoreLoginSiteErrorPage', { siteUrl: url, issue: error });
+        modal.present();
+    };
+    CoreLoginSitePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-reconnect',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/reconnect/reconnect.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.reconnect\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content padding class="core-center-view">\n    <div class="box">\n        <div *ngIf="site" text-wrap text-center [ngClass]="{\'item-avatar-center\': site.avatar}">\n            <ion-avatar *ngIf="site.avatar">\n                <!-- Show user avatar. -->\n                <img [src]="site.avatar" class="avatar" core-external-content [siteId]="site.id" alt="{{ \'core.pictureof\' | translate:{$a: site.fullname} }}" role="presentation" onError="this.src=\'assets/img/user-avatar.png\'">\n            </ion-avatar>\n\n            <!-- Show site logo or a default image. -->\n            <img *ngIf="!site.avatar && logoUrl" [src]="logoUrl" core-external-content [siteId]="site.id" role="presentation">\n            <img *ngIf="!site.avatar && !logoUrl" src="assets/img/login_logo.png" class="login-logo" role="presentation">\n\n            <!-- If no sitename show big siteurl. -->\n            <p *ngIf="!siteName" class="item-heading core-siteurl">{{siteUrl}}</p>\n            <!-- If sitename, show big sitename and small siteurl. -->\n            <p *ngIf="siteName" class="item-heading core-sitename">{{siteName}}</p>\n            <p *ngIf="siteName" class="core-siteurl">{{siteUrl}}</p>\n\n            <p *ngIf="!isLoggedOut">\n                <ion-icon padding name="alert"></ion-icon> {{ \'core.login.reconnectdescription\' | translate }}\n            </p>\n        </div>\n        <ion-list>\n            <ion-item padding text-wrap class="core-username">\n                <p class="item-heading">{{ \'core.login.username\' | translate }}</p>\n                <p>{{username}}</p>\n            </ion-item>\n            <form [formGroup]="credForm" (ngSubmit)="login()">\n                <ion-item>\n                    <core-show-password item-content [name]="\'password\'">\n                        <ion-input class="core-ioninput-password" name="password" type="password" placeholder="{{ \'core.login.password\' | translate }}" formControlName="password" core-show-password core-auto-focus></ion-input>\n                    </core-show-password>\n                </ion-item>\n                <ion-grid>\n                    <ion-row>\n                        <ion-col>\n                            <a ion-button block color="light" (click)="cancel()">{{ \'core.login.cancel\' | translate }}</a>\n                        </ion-col>\n                        <ion-col>\n                            <button ion-button block [disabled]="!credForm.valid">{{ \'core.login.loginbutton\' | translate }}</button>\n                        </ion-col>\n                    </ion-row>\n                </ion-grid>\n            </form>\n        </ion-list>\n\n        <!-- Identity providers. -->\n        <ion-list *ngIf="identityProviders && identityProviders.length" padding-top>\n            <ion-list-header text-wrap>{{ \'core.login.potentialidps\' | translate }}</ion-list-header>\n            <button ion-item *ngFor="let provider of identityProviders" text-wrap class="core-oauth-icon" (click)="oauthClicked(provider)" title="{{provider.name}}">\n                <img [src]="provider.iconurl" alt="{{provider.name}}" item-start>\n                {{provider.name}}\n            </button>\n        </ion-list>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/reconnect/reconnect.html"*/,
+            selector: 'page-core-login-site',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/site/site.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.connecttomoodle\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="showHelp()" [attr.aria-label]="\'core.help\' | translate">\n                <ion-icon name="help-circle"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content class="core-center-view">\n    <div class="box">\n        <div text-center padding>\n            <img src="assets/img/login_logo.png" class="avatar-full login-logo" role="presentation">\n        </div>\n        <form ion-list no-lines [formGroup]="siteForm" (ngSubmit)="connect(siteForm.value.siteUrl)">\n            <!-- Form to input the site URL if there are no fixed sites. -->\n            <div *ngIf="!fixedSites">\n                <p padding>{{ \'core.login.newsitedescription\' | translate }}</p>\n                <ion-item>\n                    <ion-input type="url" name="url" placeholder="{{ \'core.login.siteaddress\' | translate }}" formControlName="siteUrl" [core-auto-focus]></ion-input>\n                </ion-item>\n            </div>\n\n            <!-- Pick the site from a list of fixed sites. -->\n            <div *ngIf="fixedSites" text-wrap>\n                <!-- Display them using a select. -->\n                <ion-item *ngIf="!displayAsButtons">\n                    <!-- @todo: Display label and select in different lines. -->\n                    <ion-label for="siteSelect">{{ \'core.login.selectsite\' | translate }}</ion-label>\n                    <ion-select formControlName="siteUrl" name="url" placeholder="{{ \'core.login.siteaddress\' | translate }}" interface="popover">\n                        <ion-option *ngFor="let site of fixedSites" [value]="site.url">{{site.name}}</ion-option>\n                    </ion-select>\n                </ion-item>\n\n                <!-- Display them using buttons. -->\n                <div *ngIf="displayAsButtons">\n                    <p class="padding no-padding-bottom">{{ \'core.login.selectsite\' | translate }}</p>\n                    <a *ngFor="let site of fixedSites" ion-button block (click)="connect(site.url)" title="{{site.name}}">{{site.name}}</a>\n                </div>\n            </div>\n\n            <button *ngIf="!fixedSites || !displayAsButtons" ion-button block [disabled]="!siteForm.valid">{{ \'core.login.connect\' | translate }}</button>\n        </form>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/site/site.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_helper__["a" /* CoreLoginHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])
-    ], CoreLoginReconnectPage);
-    return CoreLoginReconnectPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_7__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_6__providers_helper__["a" /* CoreLoginHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])
+    ], CoreLoginSitePage);
+    return CoreLoginSitePage;
 }());
 
-//# sourceMappingURL=reconnect.js.map
+//# sourceMappingURL=site.js.map
 
 /***/ })
 

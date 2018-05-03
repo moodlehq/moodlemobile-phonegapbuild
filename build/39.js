@@ -1,17 +1,17 @@
 webpackJsonp([39],{
 
-/***/ 1585:
+/***/ 1674:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesSearchPageModule", function() { return CoreCoursesSearchPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreGradesCoursesPageModule", function() { return CoreGradesCoursesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__search__ = __webpack_require__(1677);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__courses__ = __webpack_require__(1776);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,37 +37,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreCoursesSearchPageModule = (function () {
-    function CoreCoursesSearchPageModule() {
+var CoreGradesCoursesPageModule = (function () {
+    function CoreGradesCoursesPageModule() {
     }
-    CoreCoursesSearchPageModule = __decorate([
+    CoreGradesCoursesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__search__["a" /* CoreCoursesSearchPage */],
+                __WEBPACK_IMPORTED_MODULE_3__courses__["a" /* CoreGradesCoursesPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* CoreCoursesComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__search__["a" /* CoreCoursesSearchPage */]),
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__courses__["a" /* CoreGradesCoursesPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], CoreCoursesSearchPageModule);
-    return CoreCoursesSearchPageModule;
+    ], CoreGradesCoursesPageModule);
+    return CoreGradesCoursesPageModule;
 }());
 
-//# sourceMappingURL=search.module.js.map
+//# sourceMappingURL=courses.module.js.map
 
 /***/ }),
 
-/***/ 1677:
+/***/ 1776:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesSearchPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreGradesCoursesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_courses__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_grades__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_split_view_split_view__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_helper__ = __webpack_require__(132);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,73 +96,94 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 /**
- * Page that allows searching for courses.
+ * Page that displays courses grades (main menu option).
  */
-var CoreCoursesSearchPage = (function () {
-    function CoreCoursesSearchPage(domUtils, coursesProvider) {
+var CoreGradesCoursesPage = (function () {
+    function CoreGradesCoursesPage(gradesProvider, domUtils, gradesHelper) {
+        this.gradesProvider = gradesProvider;
         this.domUtils = domUtils;
-        this.coursesProvider = coursesProvider;
-        this.total = 0;
-        this.page = 0;
-        this.currentSearch = '';
+        this.gradesHelper = gradesHelper;
+        this.grades = [];
+        this.gradesLoaded = false;
     }
     /**
-     * Search a new text.
-     *
-     * @param {string} text The text to search.
+     * View loaded.
      */
-    CoreCoursesSearchPage.prototype.search = function (text) {
-        this.currentSearch = text;
-        this.courses = undefined;
-        this.page = 0;
-        var modal = this.domUtils.showModalLoading('core.searching', true);
-        this.searchCourses().finally(function () {
-            modal.dismiss();
-        });
-    };
-    /**
-     * Load more results.
-     *
-     * @param {any} infiniteScroll The infinit scroll instance.
-     */
-    CoreCoursesSearchPage.prototype.loadMoreResults = function (infiniteScroll) {
-        this.searchCourses().finally(function () {
-            infiniteScroll.complete();
-        });
-    };
-    /**
-     * Search courses or load the next page of current search.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    CoreCoursesSearchPage.prototype.searchCourses = function () {
+    CoreGradesCoursesPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        return this.coursesProvider.search(this.currentSearch, this.page).then(function (response) {
-            if (_this.page === 0) {
-                _this.courses = response.courses;
+        if (this.courseId) {
+            // There is the course to load, open the course in a new state.
+            this.gotoCourseGrades(this.courseId);
+        }
+        this.fetchData().then(function () {
+            if (!_this.courseId && _this.splitviewCtrl.isOn() && _this.grades.length > 0) {
+                _this.gotoCourseGrades(_this.grades[0].courseid);
             }
-            else {
-                _this.courses = _this.courses.concat(response.courses);
-            }
-            _this.total = response.total;
-            _this.page++;
-            _this.canLoadMore = _this.courses.length < _this.total;
-        }).catch(function (error) {
-            _this.canLoadMore = false;
-            _this.domUtils.showErrorModalDefault(error, 'core.courses.errorsearching', true);
+            // Add log in Moodle.
+            return _this.gradesProvider.logCoursesGradesView();
+        }).finally(function () {
+            _this.gradesLoaded = true;
         });
     };
-    CoreCoursesSearchPage = __decorate([
+    /**
+     * Fetch all the data required for the view.
+     *
+     * @return {Promise<any>}     Resolved when done.
+     */
+    CoreGradesCoursesPage.prototype.fetchData = function () {
+        var _this = this;
+        return this.gradesProvider.getCoursesGrades().then(function (grades) {
+            return _this.gradesHelper.getGradesCourseData(grades).then(function (grades) {
+                _this.grades = grades;
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error loading grades');
+        });
+    };
+    /**
+     * Refresh data.
+     *
+     * @param {any} refresher Refresher.
+     */
+    CoreGradesCoursesPage.prototype.refreshGrades = function (refresher) {
+        var _this = this;
+        this.gradesProvider.invalidateCoursesGradesData().finally(function () {
+            _this.fetchData().finally(function () {
+                refresher.complete();
+            });
+        });
+    };
+    /**
+     * Navigate to the grades of the selected course.
+     * @param {number} courseId  Course Id where to navigate.
+     */
+    CoreGradesCoursesPage.prototype.gotoCourseGrades = function (courseId) {
+        this.courseId = courseId;
+        this.splitviewCtrl.push('CoreGradesCoursePage', { courseId: courseId, userId: this.userId });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
+    ], CoreGradesCoursesPage.prototype, "content", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_4__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
+    ], CoreGradesCoursesPage.prototype, "splitviewCtrl", void 0);
+    CoreGradesCoursesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-courses-search',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/courses/pages/search/search.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.courses.searchcourses\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-search-box (onSubmit)="search($event)" [placeholder]="\'core.courses.search\' | translate" [searchLabel]="\'core.courses.search\' | translate" autoFocus="true" showClear="false"></core-search-box>\n\n    <div *ngIf="courses">\n        <ion-item-divider color="light">{{ \'core.courses.totalcoursesearchresults\' | translate:{$a: total} }}</ion-item-divider>\n        <core-empty-box *ngIf="total == 0" icon="search" [message]="\'core.courses.nosearchresults\' | translate"></core-empty-box>\n        <core-courses-course-list-item *ngFor="let course of courses" [course]="course"></core-courses-course-list-item>\n        <ion-infinite-scroll [enabled]="canLoadMore" (ionInfinite)="loadMoreResults($event)">\n            <ion-infinite-scroll-content></ion-infinite-scroll-content>\n        </ion-infinite-scroll>\n    </div>\n</ion-content>\n\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/courses/pages/search/search.html"*/,
+            selector: 'page-core-grades-courses',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/grades/pages/courses/courses.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.grades.grades\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="gradesLoaded" (ionRefresh)="refreshGrades($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="gradesLoaded">\n            <core-empty-box *ngIf="grades && grades.length == 0" icon="stats" [message]="\'core.grades.nogradesreturned\' | translate">\n            </core-empty-box>\n\n            <ion-list *ngIf="grades && grades.length > 0">\n                <a ion-item text-wrap *ngFor="let grade of grades" [title]="grade.courseFullName" (click)="gotoCourseGrades(grade.courseid)" [class.core-split-item-selected]="grade.courseid == courseId">\n                    <h2><core-format-text [text]="grade.courseFullName"></core-format-text></h2>\n                    <ion-badge item-end color="light">{{grade.grade}}</ion-badge>\n                </a>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/grades/pages/courses/courses.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_courses__["a" /* CoreCoursesProvider */]])
-    ], CoreCoursesSearchPage);
-    return CoreCoursesSearchPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_grades__["a" /* CoreGradesProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_helper__["a" /* CoreGradesHelperProvider */]])
+    ], CoreGradesCoursesPage);
+    return CoreGradesCoursesPage;
 }());
 
-//# sourceMappingURL=search.js.map
+//# sourceMappingURL=courses.js.map
 
 /***/ })
 

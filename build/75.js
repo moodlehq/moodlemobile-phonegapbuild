@@ -1,16 +1,17 @@
 webpackJsonp([75],{
 
-/***/ 1544:
+/***/ 1634:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyCourseCompetenciesPageModule", function() { return AddonCompetencyCourseCompetenciesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatIndexPageModule", function() { return AddonModChatIndexPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(799);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__coursecompetencies__ = __webpack_require__(1631);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(840);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1732);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,35 +36,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonCompetencyCourseCompetenciesPageModule = (function () {
-    function AddonCompetencyCourseCompetenciesPageModule() {
+
+var AddonModChatIndexPageModule = (function () {
+    function AddonModChatIndexPageModule() {
     }
-    AddonCompetencyCourseCompetenciesPageModule = __decorate([
+    AddonModChatIndexPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__coursecompetencies__["a" /* AddonCompetencyCourseCompetenciesPage */],
+                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModChatIndexPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__coursecompetencies__["a" /* AddonCompetencyCourseCompetenciesPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild(),
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* AddonCompetencyComponentsModule */]
+                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModChatComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModChatIndexPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCompetencyCourseCompetenciesPageModule);
-    return AddonCompetencyCourseCompetenciesPageModule;
+    ], AddonModChatIndexPageModule);
+    return AddonModChatIndexPageModule;
 }());
 
-//# sourceMappingURL=coursecompetencies.module.js.map
+//# sourceMappingURL=index.module.js.map
 
 /***/ }),
 
-/***/ 1631:
+/***/ 1732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCompetencyCourseCompetenciesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModChatIndexPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(359);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -88,24 +92,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
- * Page that displays the list of competencies of a course.
+ * Page that displays a chat.
  */
-var AddonCompetencyCourseCompetenciesPage = (function () {
-    function AddonCompetencyCourseCompetenciesPage(navParams) {
+var AddonModChatIndexPage = (function () {
+    function AddonModChatIndexPage(navParams) {
+        this.module = navParams.get('module') || {};
         this.courseId = navParams.get('courseId');
-        this.userId = navParams.get('userId');
+        this.title = this.module.name;
     }
-    AddonCompetencyCourseCompetenciesPage = __decorate([
+    /**
+     * Update some data based on the chat instance.
+     *
+     * @param {any} chat Chat instance.
+     */
+    AddonModChatIndexPage.prototype.updateData = function (chat) {
+        this.title = chat.name || this.title;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModChatIndexComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModChatIndexComponent */])
+    ], AddonModChatIndexPage.prototype, "chatComponent", void 0);
+    AddonModChatIndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-competency-coursecompetencies',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/competency/pages/coursecompetencies/coursecompetencies.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.competency.coursecompetencies\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<addon-competency-course class="core-avoid-header" [courseId]="courseId" [userId]="userId"></addon-competency-course>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/competency/pages/coursecompetencies/coursecompetencies.html"*/,
+            selector: 'page-addon-mod-chat-index',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/chat/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="chatComponent.loaded" (ionRefresh)="chatComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-chat-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-chat-index>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/chat/pages/index/index.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], AddonCompetencyCourseCompetenciesPage);
-    return AddonCompetencyCourseCompetenciesPage;
+    ], AddonModChatIndexPage);
+    return AddonModChatIndexPage;
 }());
 
-//# sourceMappingURL=coursecompetencies.js.map
+//# sourceMappingURL=index.js.map
 
 /***/ })
 

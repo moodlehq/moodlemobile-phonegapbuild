@@ -1,18 +1,15 @@
 webpackJsonp([62],{
 
-/***/ 1560:
+/***/ 1647:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModFeedbackNonRespondentsPageModule", function() { return AddonModFeedbackNonRespondentsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModQuizNavigationModalPageModule", function() { return AddonModQuizNavigationModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nonrespondents__ = __webpack_require__(1647);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navigation_modal__ = __webpack_require__(1745);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,44 +33,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-
-var AddonModFeedbackNonRespondentsPageModule = (function () {
-    function AddonModFeedbackNonRespondentsPageModule() {
+var AddonModQuizNavigationModalPageModule = (function () {
+    function AddonModQuizNavigationModalPageModule() {
     }
-    AddonModFeedbackNonRespondentsPageModule = __decorate([
+    AddonModQuizNavigationModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__nonrespondents__["a" /* AddonModFeedbackNonRespondentsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__navigation_modal__["a" /* AddonModQuizNavigationModalPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* AddonModFeedbackComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__nonrespondents__["a" /* AddonModFeedbackNonRespondentsPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__navigation_modal__["a" /* AddonModQuizNavigationModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ]
         })
-    ], AddonModFeedbackNonRespondentsPageModule);
-    return AddonModFeedbackNonRespondentsPageModule;
+    ], AddonModQuizNavigationModalPageModule);
+    return AddonModQuizNavigationModalPageModule;
 }());
 
-//# sourceMappingURL=nonrespondents.module.js.map
+//# sourceMappingURL=navigation-modal.module.js.map
 
 /***/ }),
 
-/***/ 1647:
+/***/ 1745:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModFeedbackNonRespondentsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModQuizNavigationModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_feedback__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_helper__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_groups__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -98,139 +85,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
 /**
- * Page that displays feedback non respondents.
+ * Modal that renders the quiz navigation.
  */
-var AddonModFeedbackNonRespondentsPage = (function () {
-    function AddonModFeedbackNonRespondentsPage(navParams, feedbackProvider, groupsProvider, domUtils, feedbackHelper, navCtrl) {
-        this.feedbackProvider = feedbackProvider;
-        this.groupsProvider = groupsProvider;
-        this.domUtils = domUtils;
-        this.feedbackHelper = feedbackHelper;
-        this.navCtrl = navCtrl;
-        this.page = 0;
-        this.groupInfo = {
-            groups: [],
-            separateGroups: false,
-            visibleGroups: false
-        };
-        this.users = [];
-        this.total = 0;
-        this.canLoadMore = false;
-        this.feedbackLoaded = false;
-        this.loadingMore = false;
-        var module = navParams.get('module');
-        this.moduleId = module.id;
-        this.feedbackId = module.instance;
-        this.courseId = navParams.get('courseId');
-        this.selectedGroup = navParams.get('group') || 0;
+var AddonModQuizNavigationModalPage = (function () {
+    function AddonModQuizNavigationModalPage(params, viewCtrl) {
+        this.viewCtrl = viewCtrl;
+        this.isReview = !!params.get('isReview');
+        this.pageInstance = params.get('page');
     }
     /**
-     * View loaded.
+     * Close modal.
      */
-    AddonModFeedbackNonRespondentsPage.prototype.ionViewDidLoad = function () {
-        this.fetchData();
+    AddonModQuizNavigationModalPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
     };
     /**
-     * Fetch all the data required for the view.
+     * Load a certain page.
      *
-     * @param {boolean} [refresh] Empty events array first.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param {number} page The page to load.
+     * @param {number} [slot] Slot of the question to scroll to.
      */
-    AddonModFeedbackNonRespondentsPage.prototype.fetchData = function (refresh) {
-        var _this = this;
-        if (refresh === void 0) { refresh = false; }
-        this.page = 0;
-        this.total = 0;
-        this.users = [];
-        return this.groupsProvider.getActivityGroupInfo(this.moduleId).then(function (groupInfo) {
-            _this.groupInfo = groupInfo;
-            return _this.loadGroupUsers(_this.selectedGroup);
-        }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
-            if (!refresh) {
-                // Some call failed on first fetch, go back.
-                _this.navCtrl.pop();
-            }
-            return Promise.reject(null);
-        });
+    AddonModQuizNavigationModalPage.prototype.loadPage = function (page, slot) {
+        this.pageInstance.changePage && this.pageInstance.changePage(page, true, slot);
+        this.closeModal();
     };
     /**
-     * Load Group responses.
-     *
-     * @param  {number} [groupId]   If defined it will change group if not, it will load more users for the same group.
-     * @return {Promise<any>}       Resolved with the attempts loaded.
+     * Switch mode in review.
      */
-    AddonModFeedbackNonRespondentsPage.prototype.loadGroupUsers = function (groupId) {
-        var _this = this;
-        if (typeof groupId == 'undefined') {
-            this.page++;
-            this.loadingMore = true;
-        }
-        else {
-            this.selectedGroup = groupId;
-            this.page = 0;
-            this.total = 0;
-            this.users = [];
-            this.feedbackLoaded = false;
-        }
-        return this.feedbackHelper.getNonRespondents(this.feedbackId, this.selectedGroup, this.page).then(function (response) {
-            _this.total = response.total;
-            if (_this.users.length < response.total) {
-                _this.users = _this.users.concat(response.users);
-            }
-            _this.canLoadMore = _this.users.length < response.total;
-            return response;
-        }).finally(function () {
-            _this.loadingMore = false;
-            _this.feedbackLoaded = true;
-        });
+    AddonModQuizNavigationModalPage.prototype.switchMode = function () {
+        this.pageInstance.switchMode && this.pageInstance.switchMode();
+        this.closeModal();
     };
-    /**
-     * Change selected group or load more users.
-     *
-     * @param {number} [groupId] Group ID selected. If not defined, it will load more users.
-     */
-    AddonModFeedbackNonRespondentsPage.prototype.loadAttempts = function (groupId) {
-        var _this = this;
-        this.loadGroupUsers(groupId).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
-        });
-    };
-    /**
-     * Refresh the attempts.
-     *
-     * @param {any} refresher Refresher.
-     */
-    AddonModFeedbackNonRespondentsPage.prototype.refreshFeedback = function (refresher) {
-        var _this = this;
-        if (this.feedbackLoaded) {
-            var promises = [];
-            promises.push(this.feedbackProvider.invalidateNonRespondentsData(this.feedbackId));
-            promises.push(this.groupsProvider.invalidateActivityGroupInfo(this.moduleId));
-            Promise.all(promises).finally(function () {
-                return _this.fetchData(true);
-            }).finally(function () {
-                refresher.complete();
-            });
-        }
-    };
-    AddonModFeedbackNonRespondentsPage = __decorate([
+    AddonModQuizNavigationModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-feedback-nonrespondents',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/feedback/pages/nonrespondents/nonrespondents.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_feedback.responses\' |translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="feedbackLoaded" (ionRefresh)="refreshFeedback($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="feedbackLoaded">\n        <ion-list no-margin>\n            <ion-item text-wrap *ngIf="groupInfo.separateGroups || groupInfo.visibleGroups">\n                <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n                <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="selectedGroup" (ionChange)="loadAttempts(selectedGroup)" aria-labelledby="addon-feedback-groupslabel">\n                    <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n                </ion-select>\n            </ion-item>\n            <ion-item-divider color="light">\n                {{ \'addon.mod_feedback.non_respondents_students\' | translate : {$a: total } }}\n            </ion-item-divider>\n            <ng-container *ngIf="total > 0">\n                <ion-item *ngFor="let user of users" text-wrap>\n                    <ion-avatar item-start>\n                        <img [src]="user.profileimageurl" [alt]="\'core.pictureof\' | translate:{$a: user.fullname}" core-external-content onError="this.src=\'assets/img/user-avatar.png\'">\n                    </ion-avatar>\n                    <h2><core-format-text [text]="user.fullname"></core-format-text></h2>\n                    <p>\n                        <ion-badge color="success" *ngIf="user.started">\n                            {{ \'addon.mod_feedback.started\' | translate}}\n                        </ion-badge>\n                        <ion-badge color="danger" *ngIf="!user.started">\n                            {{ \'addon.mod_feedback.not_started\' | translate}}\n                        </ion-badge>\n                    </p>\n                </ion-item>\n            </ng-container>\n            <ion-item padding text-center *ngIf="canLoadMore">\n                <!-- Button and spinner to show more attempts. -->\n                <button ion-button block *ngIf="!loadingMore" (click)="loadAttempts()">{{ \'core.loadmore\' | translate }}</button>\n                <ion-spinner *ngIf="loadingMore"></ion-spinner>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/feedback/pages/nonrespondents/nonrespondents.html"*/,
+            selector: 'page-addon-mod-quiz-navigation-modal',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/mod/quiz/pages/navigation-modal/navigation-modal.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_quiz.quiznavigation\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content class="addon-mod_quiz-navigation-modal">\n    <nav>\n        <ion-list>\n            <!-- In player, show button to finish attempt. -->\n            <a ion-item text-wrap *ngIf="!isReview" (click)="loadPage(-1)">\n                {{ \'addon.mod_quiz.finishattemptdots\' | translate }}\n            </a>\n\n            <!-- In review we can toggle between all questions in same page or one page at a time. -->\n            <a ion-item text-wrap *ngIf="isReview && pageInstance.numPages > 1" (click)="switchMode()">\n                <span *ngIf="!pageInstance.showAll">{{ \'addon.mod_quiz.showall\' | translate }}</span>\n                <span *ngIf="pageInstance.showAll">{{ \'addon.mod_quiz.showeachpage\' | translate }}</span>\n            </a>\n            <a ion-item text-wrap *ngFor="let question of pageInstance.navigation" class="{{question.stateClass}}" [ngClass]=\'{"addon-mod_quiz-selected": !pageInstance.showSummary && pageInstance.attempt.currentpage == question.page}\' (click)="loadPage(question.page, question.slot)">\n                <span *ngIf="question.number">{{ \'core.question.questionno\' | translate:{$a: question.number} }}</span>\n                <span *ngIf="!question.number">{{ \'core.question.information\' | translate }}</span>\n            </a>\n\n            <!-- In player, show button to finish attempt. -->\n            <a ion-item text-wrap *ngIf="!isReview" (click)="loadPage(-1)">\n                {{ \'addon.mod_quiz.finishattemptdots\' | translate }}\n            </a>\n\n            <!-- In review we can toggle between all questions in same page or one page at a time. -->\n            <a ion-item text-wrap *ngIf="isReview && pageInstance.numPages > 1" (click)="switchMode()">\n                <span *ngIf="!pageInstance.showAll">{{ \'addon.mod_quiz.showall\' | translate }}</span>\n                <span *ngIf="pageInstance.showAll">{{ \'addon.mod_quiz.showeachpage\' | translate }}</span>\n            </a>\n        </ion-list>\n    </nav>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/mod/quiz/pages/navigation-modal/navigation-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_feedback__["a" /* AddonModFeedbackProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_groups__["a" /* CoreGroupsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_helper__["a" /* AddonModFeedbackHelperProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]])
-    ], AddonModFeedbackNonRespondentsPage);
-    return AddonModFeedbackNonRespondentsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */]])
+    ], AddonModQuizNavigationModalPage);
+    return AddonModQuizNavigationModalPage;
 }());
 
-//# sourceMappingURL=nonrespondents.js.map
+//# sourceMappingURL=navigation-modal.js.map
 
 /***/ })
 

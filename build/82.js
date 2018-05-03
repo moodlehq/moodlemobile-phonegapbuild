@@ -1,18 +1,17 @@
 webpackJsonp([82],{
 
-/***/ 1538:
+/***/ 1619:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonBadgesUserBadgesPageModule", function() { return AddonBadgesUserBadgesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyPlanListPageModule", function() { return AddonCompetencyPlanListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_badges__ = __webpack_require__(1625);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__planlist__ = __webpack_require__(1717);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,43 +37,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var AddonBadgesUserBadgesPageModule = (function () {
-    function AddonBadgesUserBadgesPageModule() {
+var AddonCompetencyPlanListPageModule = (function () {
+    function AddonCompetencyPlanListPageModule() {
     }
-    AddonBadgesUserBadgesPageModule = __decorate([
+    AddonCompetencyPlanListPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__user_badges__["a" /* AddonBadgesUserBadgesPage */],
+                __WEBPACK_IMPORTED_MODULE_5__planlist__["a" /* AddonCompetencyPlanListPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__user_badges__["a" /* AddonBadgesUserBadgesPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__planlist__["a" /* AddonCompetencyPlanListPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonBadgesUserBadgesPageModule);
-    return AddonBadgesUserBadgesPageModule;
+    ], AddonCompetencyPlanListPageModule);
+    return AddonCompetencyPlanListPageModule;
 }());
 
-//# sourceMappingURL=user-badges.module.js.map
+//# sourceMappingURL=planlist.module.js.map
 
 /***/ }),
 
-/***/ 1625:
+/***/ 1717:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonBadgesUserBadgesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCompetencyPlanListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_badges__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_competency__ = __webpack_require__(140);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -102,91 +97,84 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 /**
- * Page that displays the list of calendar events.
+ * Page that displays the list of learning plans.
  */
-var AddonBadgesUserBadgesPage = (function () {
-    function AddonBadgesUserBadgesPage(navParams, sitesProvider, badgesProvider, domUtils, timeUtils) {
-        this.badgesProvider = badgesProvider;
+var AddonCompetencyPlanListPage = (function () {
+    function AddonCompetencyPlanListPage(navParams, domUtils, competencyProvider) {
         this.domUtils = domUtils;
-        this.timeUtils = timeUtils;
-        this.badgesLoaded = false;
-        this.badges = [];
-        this.currentTime = 0;
-        this.courseId = navParams.get('courseId') || 0; // Use 0 for site badges.
-        this.userId = navParams.get('userId') || sitesProvider.getCurrentSite().getUserId();
+        this.competencyProvider = competencyProvider;
+        this.plansLoaded = false;
+        this.plans = [];
+        this.userId = navParams.get('userId');
     }
     /**
      * View loaded.
      */
-    AddonBadgesUserBadgesPage.prototype.ionViewDidLoad = function () {
+    AddonCompetencyPlanListPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchBadges().finally(function () {
-            if (!_this.badgeHash && _this.splitviewCtrl.isOn() && _this.badges.length > 0) {
+        if (this.planId) {
+            // There is a learning plan to load.
+            this.openPlan(this.planId);
+        }
+        this.fetchLearningPlans().then(function () {
+            if (!_this.planId && _this.splitviewCtrl.isOn() && _this.plans.length > 0) {
                 // Take first and load it.
-                _this.loadIssuedBadge(_this.badges[0].uniquehash);
+                _this.openPlan(_this.plans[0].id);
             }
-            _this.badgesLoaded = true;
+        }).finally(function () {
+            _this.plansLoaded = true;
         });
     };
     /**
-     * Fetch all the badges required for the view.
+     * Fetches the learning plans and updates the view.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return {Promise<void>} Promise resolved when done.
      */
-    AddonBadgesUserBadgesPage.prototype.fetchBadges = function () {
+    AddonCompetencyPlanListPage.prototype.fetchLearningPlans = function () {
         var _this = this;
-        this.currentTime = this.timeUtils.timestamp();
-        return this.badgesProvider.getUserBadges(this.courseId, this.userId).then(function (badges) {
-            _this.badges = badges;
+        return this.competencyProvider.getLearningPlans(this.userId).then(function (plans) {
+            _this.plans = plans;
         }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'Error getting badges data.');
+            _this.domUtils.showErrorModalDefault(message, 'Error getting learning plans data.');
         });
     };
     /**
-     * Refresh the badges.
+     * Refreshes the learning plans.
      *
      * @param {any} refresher Refresher.
      */
-    AddonBadgesUserBadgesPage.prototype.refreshBadges = function (refresher) {
+    AddonCompetencyPlanListPage.prototype.refreshLearningPlans = function (refresher) {
         var _this = this;
-        this.badgesProvider.invalidateUserBadges(this.courseId, this.userId).finally(function () {
-            _this.fetchBadges().finally(function () {
+        this.competencyProvider.invalidateLearningPlans(this.userId).finally(function () {
+            _this.fetchLearningPlans().finally(function () {
                 refresher.complete();
             });
         });
     };
     /**
-     * Navigate to a particular badge.
+     * Opens a learning plan.
      *
-     * @param {string} badgeHash Badge to load.
+     * @param {number} planId Learning plan to load.
      */
-    AddonBadgesUserBadgesPage.prototype.loadIssuedBadge = function (badgeHash) {
-        this.badgeHash = badgeHash;
-        var params = { courseId: this.courseId, userId: this.userId, badgeHash: badgeHash };
-        this.splitviewCtrl.push('AddonBadgesIssuedBadgePage', params);
+    AddonCompetencyPlanListPage.prototype.openPlan = function (planId) {
+        this.planId = planId;
+        this.splitviewCtrl.push('AddonCompetencyPlanPage', { planId: planId });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonBadgesUserBadgesPage.prototype, "content", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
-    ], AddonBadgesUserBadgesPage.prototype, "splitviewCtrl", void 0);
-    AddonBadgesUserBadgesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
+    ], AddonCompetencyPlanListPage.prototype, "splitviewCtrl", void 0);
+    AddonCompetencyPlanListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-badges-user-badges',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/badges/pages/user-badges/user-badges.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.badges.badges\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="badgesLoaded" (ionRefresh)="refreshBadges($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="badgesLoaded">\n            <core-empty-box *ngIf="!badges || badges.length == 0" icon="trophy" [message]="\'addon.badges.nobadges\' | translate">\n            </core-empty-box>\n\n            <ion-list *ngIf="badges && badges.length" no-margin>\n                <a ion-item text-wrap *ngFor="let badge of badges" [title]="badge.name" (click)="loadIssuedBadge(badge.uniquehash)" [class.core-split-item-selected]="badge.uniquehash == badgeHash">\n                    <ion-avatar item-start>\n                        <img [src]="badge.badgeurl" [alt]="badge.name" item-start core-external-content>\n                    </ion-avatar>\n                    <h2><core-format-text [text]="badge.name"></core-format-text></h2>\n                    <p>{{ badge.dateissued | coreToLocaleString }}</p>\n                    <ion-badge item-end color="danger" *ngIf="badge.dateexpire && currentTime >= badge.dateexpire">\n                        {{ \'addon.badges.expired\' | translate }}\n                    </ion-badge>\n                </a>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/badges/pages/user-badges/user-badges.html"*/,
+            selector: 'page-addon-competency-planlist',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/addon/competency/pages/planlist/planlist.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.competency.userplans\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="plansLoaded" (ionRefresh)="refreshLearningPlans($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="plansLoaded">\n            <core-empty-box *ngIf="plans.length == 0" icon="map" [message]="\'addon.competency.noplanswerecreated\' | translate">\n            </core-empty-box>\n            <ion-list *ngIf="plans.length > 0" no-margin>\n                <a ion-item text-wrap *ngFor="let plan of plans" [title]="plan.name" (click)="openPlan(plan.id)" [class.core-split-item-selected]="plan.id == planId">\n                    <h2>{{ plan.name }}</h2>\n                    <p *ngIf="plan.duedate > 0">{{ \'addon.competency.duedate\' | translate }}: {{ plan.duedate | coreToLocaleString }}</p>\n                </a>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/addon/competency/pages/planlist/planlist.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_badges__["a" /* AddonBadgesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__["a" /* CoreTimeUtilsProvider */]])
-    ], AddonBadgesUserBadgesPage);
-    return AddonBadgesUserBadgesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_competency__["a" /* AddonCompetencyProvider */]])
+    ], AddonCompetencyPlanListPage);
+    return AddonCompetencyPlanListPage;
 }());
 
-//# sourceMappingURL=user-badges.js.map
+//# sourceMappingURL=planlist.js.map
 
 /***/ })
 

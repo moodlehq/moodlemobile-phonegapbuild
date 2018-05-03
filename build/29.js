@@ -1,14 +1,17 @@
 webpackJsonp([29],{
 
-/***/ 1597:
+/***/ 1687:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginInitPageModule", function() { return CoreLoginInitPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitePolicyPageModule", function() { return CoreLoginSitePolicyPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__init__ = __webpack_require__(1689);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_policy__ = __webpack_require__(1789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,38 +34,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CoreLoginInitPageModule = (function () {
-    function CoreLoginInitPageModule() {
+
+
+
+var CoreLoginSitePolicyPageModule = (function () {
+    function CoreLoginSitePolicyPageModule() {
     }
-    CoreLoginInitPageModule = __decorate([
+    CoreLoginSitePolicyPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__init__["a" /* CoreLoginInitPage */],
+                __WEBPACK_IMPORTED_MODULE_2__site_policy__["a" /* CoreLoginSitePolicyPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__init__["a" /* CoreLoginInitPage */]),
-            ],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__site_policy__["a" /* CoreLoginSitePolicyPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ]
         })
-    ], CoreLoginInitPageModule);
-    return CoreLoginInitPageModule;
+    ], CoreLoginSitePolicyPageModule);
+    return CoreLoginSitePolicyPageModule;
 }());
 
-//# sourceMappingURL=init.module.js.map
+//# sourceMappingURL=site-policy.module.js.map
 
 /***/ }),
 
-/***/ 1689:
+/***/ 1789:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginInitPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginSitePolicyPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_init__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constants__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_helper__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_mimetype__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_helper__ = __webpack_require__(66);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -91,84 +99,104 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 /**
- * Page that displays a "splash screen" while the app is being initialized.
+ * Page to accept a site policy.
  */
-var CoreLoginInitPage = (function () {
-    function CoreLoginInitPage(navCtrl, appProvider, initDelegate, sitesProvider, loginHelper) {
+var CoreLoginSitePolicyPage = (function () {
+    function CoreLoginSitePolicyPage(navCtrl, navParams, loginHelper, domUtils, sitesProvider, mimeUtils) {
         this.navCtrl = navCtrl;
-        this.appProvider = appProvider;
-        this.initDelegate = initDelegate;
-        this.sitesProvider = sitesProvider;
         this.loginHelper = loginHelper;
+        this.domUtils = domUtils;
+        this.sitesProvider = sitesProvider;
+        this.mimeUtils = mimeUtils;
+        this.siteId = navParams.get('siteId');
     }
     /**
-     * View loaded.
+     * View laoded.
      */
-    CoreLoginInitPage.prototype.ionViewDidLoad = function () {
+    CoreLoginSitePolicyPage.prototype.ionViewDidLoad = function () {
+        this.currentSite = this.sitesProvider.getCurrentSite();
+        if (!this.currentSite) {
+            // Not logged in, stop.
+            this.cancel();
+            return;
+        }
+        var currentSiteId = this.currentSite.id;
+        this.siteId = this.siteId || currentSiteId;
+        if (this.siteId != currentSiteId || !this.currentSite.wsAvailable('core_user_agree_site_policy')) {
+            // Not current site or WS not available, stop.
+            this.cancel();
+            return;
+        }
+        this.fetchSitePolicy();
+    };
+    /**
+     * Fetch the site policy URL.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreLoginSitePolicyPage.prototype.fetchSitePolicy = function () {
         var _this = this;
-        // Wait for the app to be ready.
-        this.initDelegate.ready().then(function () {
-            // Check if there was a pending redirect.
-            var redirectData = _this.appProvider.getRedirect();
-            if (redirectData.siteId && redirectData.page) {
-                // Unset redirect data.
-                _this.appProvider.storeRedirect('', '', '');
-                // Only accept the redirect if it was stored less than 20 seconds ago.
-                if (Date.now() - redirectData.timemodified < 20000) {
-                    if (redirectData.siteId != __WEBPACK_IMPORTED_MODULE_5__constants__["a" /* CoreConstants */].NO_SITE_ID) {
-                        // The redirect is pointing to a site, load it.
-                        return _this.sitesProvider.loadSite(redirectData.siteId).then(function () {
-                            if (!_this.loginHelper.isSiteLoggedOut(redirectData.page, redirectData.params)) {
-                                _this.navCtrl.setRoot(redirectData.page, redirectData.params, { animate: false });
-                            }
-                        }).catch(function () {
-                            // Site doesn't exist.
-                            _this.loadPage();
-                        });
-                    }
-                    else {
-                        // No site to load, just open the state.
-                        return _this.navCtrl.setRoot(redirectData.page, redirectData.params, { animate: false });
-                    }
-                }
-            }
-            _this.loadPage();
+        return this.loginHelper.getSitePolicy(this.siteId).then(function (sitePolicy) {
+            _this.sitePolicy = sitePolicy;
+            // Try to get the mime type.
+            return _this.mimeUtils.getMimeTypeFromUrl(sitePolicy).then(function (mimeType) {
+                var extension = _this.mimeUtils.getExtension(mimeType, sitePolicy);
+                _this.showInline = extension == 'html' || extension == 'htm';
+            }).catch(function () {
+                // Unable to get mime type, assume it's not supported.
+                _this.showInline = false;
+            }).finally(function () {
+                _this.policyLoaded = true;
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error && error.error, 'Error getting site policy.');
+            _this.cancel();
         });
     };
     /**
-     * Load the right page.
+     * Cancel.
      */
-    CoreLoginInitPage.prototype.loadPage = function () {
+    CoreLoginSitePolicyPage.prototype.cancel = function () {
         var _this = this;
-        if (this.sitesProvider.isLoggedIn()) {
-            if (!this.loginHelper.isSiteLoggedOut()) {
-                this.loginHelper.goToSiteInitialPage();
-            }
-        }
-        else {
-            this.sitesProvider.hasSites().then(function (hasSites) {
-                if (hasSites) {
-                    _this.navCtrl.setRoot('CoreLoginSitesPage');
-                }
-                else {
-                    _this.loginHelper.goToAddSite(true);
-                }
-            });
-        }
+        this.sitesProvider.logout().catch(function () {
+            // Ignore errors, shouldn't happen.
+        }).then(function () {
+            _this.navCtrl.setRoot('CoreLoginSitesPage');
+        });
     };
-    CoreLoginInitPage = __decorate([
+    /**
+     * Accept the site policy.
+     */
+    CoreLoginSitePolicyPage.prototype.accept = function () {
+        var _this = this;
+        var modal = this.domUtils.showModalLoading('core.sending', true);
+        this.loginHelper.acceptSitePolicy(this.siteId).then(function () {
+            // Success accepting, go to site initial page.
+            // Invalidate cache since some WS don't return error if site policy is not accepted.
+            return _this.currentSite.invalidateWsCache().catch(function () {
+                // Ignore errors.
+            }).then(function () {
+                return _this.loginHelper.goToSiteInitialPage();
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error.message, 'Error accepting site policy.');
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
+    CoreLoginSitePolicyPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-init',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/init/init.html"*/'<ion-content>\n    <div class="core-bglogo">\n        <div class="core-logo">\n            <img src="assets/img/splash_logo.png"/>\n            <ion-spinner></ion-spinner>\n        </div>\n    </div>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/init/init.html"*/,
+            selector: 'page-core-login-site-policy',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/site-policy/site-policy.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.policyagreement\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="policyLoaded">\n        <ion-list>\n            <ion-item text-wrap>\n                {{ \'core.login.policyagree\' | translate }}\n            </ion-item>\n            <ion-item text-wrap>\n                <p><a [href]="sitePolicy" core-link [capture]="false">{{ \'core.login.policyagreementclick\' | translate }}</a></p>\n            </ion-item>\n            <ion-card *ngIf="showInline">\n                <core-iframe [src]="sitePolicy"></core-iframe>\n            </ion-card>\n            <ion-item text-wrap padding>\n                <button ion-button block color="primary" (click)="accept()">{{ \'core.login.policyaccept\' | translate }}</button>\n                <button ion-button block (click)="cancel()">{{ \'core.login.cancel\' | translate }}</button>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/site-policy/site-policy.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_init__["a" /* CoreInitDelegate */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_6__providers_helper__["a" /* CoreLoginHelperProvider */]])
-    ], CoreLoginInitPage);
-    return CoreLoginInitPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_helper__["a" /* CoreLoginHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_mimetype__["a" /* CoreMimetypeUtilsProvider */]])
+    ], CoreLoginSitePolicyPage);
+    return CoreLoginSitePolicyPage;
 }());
 
-//# sourceMappingURL=init.js.map
+//# sourceMappingURL=site-policy.js.map
 
 /***/ })
 
