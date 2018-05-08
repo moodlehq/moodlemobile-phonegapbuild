@@ -3,11 +3,11 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.isea-got.in"
-        versionCode = "20180"
-        version   = "3.3.4">
-    <name>ISEA-GOT App</name>
+        versionCode = "20160"
+        version   = "3.2.0">
+    <name>Moodle Mobile</name>
 
-        ISEA-GOT Mobile official app
+        Moodle Mobile official app
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
