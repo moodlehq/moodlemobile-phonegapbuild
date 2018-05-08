@@ -3,9 +3,9 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.isea-got.in"
-        versionCode = "2018"
+        versionCode = "20180"
         version   = "3.3.4">
-    <name>Moodle Mobile</name>
+    <name>ISEA-GOT App</name>
 
         ISEA-GOT Mobile official app
     </description>
