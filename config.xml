@@ -3,14 +3,14 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.isea-got.in"
-        versionCode = "20160"
-        version   = "3.2.0">
+        versionCode = "2018"
+        version   = "3.3.4">
     <name>Moodle Mobile</name>
 
-        Moodle Mobile official app
+        ISEA-GOT Mobile official app
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
+    <author href="http://isea-got.in" email="sandeeppatitripathi.com">
         Moodle Pty Ltd
     </author>
 
