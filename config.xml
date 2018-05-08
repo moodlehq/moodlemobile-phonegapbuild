@@ -10,9 +10,9 @@
         ISEA-GOT Mobile official app
     </description>
 
-    <author href="http://isea-got.in" email="sandeeppatitripathi@gmail.com">
-     NIELIT Gorakhpur   
-</author>
+    <author href="http://moodle.com" email="mobile@moodle.com">
+        Moodle Pty Ltd
+    </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
         <string>3.2.0</string>
