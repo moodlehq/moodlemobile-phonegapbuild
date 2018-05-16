@@ -1,6 +1,6 @@
 webpackJsonp([50],{
 
-/***/ 1664:
+/***/ 1657:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,11 +8,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCourseSectionPageModule", function() { return CoreCourseSectionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__section__ = __webpack_require__(1766);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__section__ = __webpack_require__(1759);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(59);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,25 +63,25 @@ var CoreCourseSectionPageModule = (function () {
 
 /***/ }),
 
-/***/ 1766:
+/***/ 1759:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCourseSectionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_course__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_helper__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_format_delegate__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_format_delegate__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_module_prefetch_delegate__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_options_delegate__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_format_format__ = __webpack_require__(838);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__core_courses_providers_courses__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_format_format__ = __webpack_require__(840);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__core_courses_providers_courses__ = __webpack_require__(47);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -137,7 +137,8 @@ var CoreCourseSectionPage = (function () {
         this.prefetchDelegate = prefetchDelegate;
         this.downloadEnabledIcon = 'square-outline'; // Disabled by default.
         this.prefetchCourseData = {
-            prefetchCourseIcon: 'spinner'
+            prefetchCourseIcon: 'spinner',
+            title: 'core.course.downloadcourse'
         };
         this.isDestroyed = false;
         this.course = navParams.get('course');
@@ -155,7 +156,7 @@ var CoreCourseSectionPage = (function () {
         // Listen for changes in course status.
         this.courseStatusObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */].COURSE_STATUS_CHANGED, function (data) {
             if (data.courseId == _this.course.id) {
-                _this.prefetchCourseData.prefetchCourseIcon = _this.courseHelper.getCourseStatusIconFromStatus(data.status);
+                _this.updateCourseStatus(data.status);
             }
         }, sitesProvider.getCurrentSiteId());
     }
@@ -186,7 +187,7 @@ var CoreCourseSectionPage = (function () {
                     else {
                         // No download, this probably means that the app was closed while downloading. Set previous status.
                         _this.courseProvider.setCoursePreviousStatus(_this.course.id).then(function (status) {
-                            _this.prefetchCourseData.prefetchCourseIcon = _this.courseHelper.getCourseStatusIconFromStatus(status);
+                            _this.updateCourseStatus(status);
                         });
                     }
                 }
@@ -325,8 +326,9 @@ var CoreCourseSectionPage = (function () {
      */
     CoreCourseSectionPage.prototype.determineCoursePrefetchIcon = function () {
         var _this = this;
-        return this.courseHelper.getCourseStatusIcon(this.course.id).then(function (icon) {
-            _this.prefetchCourseData.prefetchCourseIcon = icon;
+        return this.courseHelper.getCourseStatusIconAndTitle(this.course.id).then(function (data) {
+            _this.prefetchCourseData.prefetchCourseIcon = data.icon;
+            _this.prefetchCourseData.title = data.title;
         });
     };
     /**
@@ -354,6 +356,16 @@ var CoreCourseSectionPage = (function () {
     CoreCourseSectionPage.prototype.toggleDownload = function () {
         this.downloadEnabled = !this.downloadEnabled;
         this.downloadEnabledIcon = this.downloadEnabled ? 'checkbox-outline' : 'square-outline';
+    };
+    /**
+     * Update the course status icon and title.
+     *
+     * @param {string} status Status to show.
+     */
+    CoreCourseSectionPage.prototype.updateCourseStatus = function (status) {
+        var statusData = this.courseHelper.getCourseStatusIconAndTitleFromStatus(status);
+        this.prefetchCourseData.prefetchCourseIcon = statusData.icon;
+        this.prefetchCourseData.title = statusData.title;
     };
     /**
      * Page destroyed.
@@ -386,7 +398,7 @@ var CoreCourseSectionPage = (function () {
     ], CoreCourseSectionPage.prototype, "formatComponent", void 0);
     CoreCourseSectionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-course-section',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/course/pages/section/section.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end></ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-tabs>\n        <!-- Course contents tab. -->\n        <core-tab [title]="\'core.course.contents\' | translate">\n            <ng-template>\n                <core-navbar-buttons>\n                    <core-context-menu>\n                        <core-context-menu-item *ngIf="displayEnableDownload" [priority]="2000" [content]="\'core.settings.enabledownloadsection\' | translate" (action)="toggleDownload()" [iconAction]="downloadEnabledIcon"></core-context-menu-item>\n                        <core-context-menu-item [priority]="1900" [content]="\'core.course.downloadcourse\' | translate" (action)="prefetchCourse()" [iconAction]="prefetchCourseData.prefetchCourseIcon" [closeOnClick]="false"></core-context-menu-item>\n                    </core-context-menu>\n                </core-navbar-buttons>\n                <ion-content>\n                    <ion-refresher [enabled]="dataLoaded" (ionRefresh)="doRefresh($event)">\n                        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n                    </ion-refresher>\n\n                    <core-loading [hideUntil]="dataLoaded">\n                        <core-course-format [course]="course" [sections]="sections" [initialSectionId]="sectionId" [initialSectionNumber]="sectionNumber" [downloadEnabled]="downloadEnabled" [moduleId]="moduleId" (completionChanged)="onCompletionChange()"></core-course-format>\n                    </core-loading>\n                </ion-content>\n            </ng-template>\n        </core-tab>\n        <!-- One tab per handler. -->\n        <core-tab *ngFor="let handler of courseHandlers" [title]="handler.data.title | translate" class="{{handler.data.class}}">\n            <ng-template>\n                <core-dynamic-component [component]="handler.data.component" [data]="handler.data.componentData"></core-dynamic-component>\n            </ng-template>\n        </core-tab>\n    </core-tabs>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/course/pages/section/section.html"*/,
+            selector: 'page-core-course-section',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/course/pages/section/section.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end></ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-tabs>\n        <!-- Course contents tab. -->\n        <core-tab [title]="\'core.course.contents\' | translate">\n            <ng-template>\n                <core-navbar-buttons>\n                    <core-context-menu>\n                        <core-context-menu-item *ngIf="displayEnableDownload" [priority]="2000" [content]="\'core.settings.enabledownloadsection\' | translate" (action)="toggleDownload()" [iconAction]="downloadEnabledIcon"></core-context-menu-item>\n                        <core-context-menu-item [priority]="1900" [content]="prefetchCourseData.title | translate" (action)="prefetchCourse()" [iconAction]="prefetchCourseData.prefetchCourseIcon" [closeOnClick]="false"></core-context-menu-item>\n                    </core-context-menu>\n                </core-navbar-buttons>\n                <ion-content>\n                    <ion-refresher [enabled]="dataLoaded" (ionRefresh)="doRefresh($event)">\n                        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n                    </ion-refresher>\n\n                    <core-loading [hideUntil]="dataLoaded">\n                        <core-course-format [course]="course" [sections]="sections" [initialSectionId]="sectionId" [initialSectionNumber]="sectionNumber" [downloadEnabled]="downloadEnabled" [moduleId]="moduleId" (completionChanged)="onCompletionChange()"></core-course-format>\n                    </core-loading>\n                </ion-content>\n            </ng-template>\n        </core-tab>\n        <!-- One tab per handler. -->\n        <core-tab *ngFor="let handler of courseHandlers" [title]="handler.data.title | translate" class="{{handler.data.class}}">\n            <ng-template>\n                <core-dynamic-component [component]="handler.data.component" [data]="handler.data.componentData"></core-dynamic-component>\n            </ng-template>\n        </core-tab>\n    </core-tabs>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/course/pages/section/section.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_7__providers_course__["a" /* CoreCourseProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
             __WEBPACK_IMPORTED_MODULE_9__providers_format_delegate__["a" /* CoreCourseFormatDelegate */], __WEBPACK_IMPORTED_MODULE_11__providers_options_delegate__["a" /* CoreCourseOptionsDelegate */],

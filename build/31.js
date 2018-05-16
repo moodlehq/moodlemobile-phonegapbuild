@@ -1,6 +1,6 @@
 webpackJsonp([31],{
 
-/***/ 1682:
+/***/ 1676:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSiteErrorPageModule", function() { return CoreLoginSiteErrorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_error__ = __webpack_require__(1784);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__site_error__ = __webpack_require__(1778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
 //
@@ -57,7 +57,7 @@ var CoreLoginSiteErrorPageModule = (function () {
 
 /***/ }),
 
-/***/ 1784:
+/***/ 1778:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -105,7 +105,7 @@ var CoreLoginSiteErrorPage = (function () {
     };
     CoreLoginSiteErrorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-site-error',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/site-error/site-error.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.error\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <h3>{{ \'core.whoops\' | translate }}</h3>\n    <p>{{ \'core.login.problemconnectingerror\' | translate }}</p>\n    <p padding>{{siteUrl}}</p>\n    <p>{{ \'core.login.problemconnectingerrorcontinue\' | translate }}</p>\n    <button ion-button block (click)="closeModal()">{{ \'core.tryagain\' | translate }}</button>\n    <h3>{{ \'core.login.stillcantconnect\' | translate }}</h3>\n    <p>{{ \'core.login.contactyouradministrator\' | translate }}</p>\n    <p *ngIf="issue">\n        {{ \'core.login.contactyouradministratorissue\' | translate:{$a: \'\'} }}\n    </p>\n    <p *ngIf="issue">\n        <core-format-text [text]="issue"></core-format-text>\n    </p>\n</ion-content>\n\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/site-error/site-error.html"*/,
+            selector: 'page-core-login-site-error',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/site-error/site-error.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.error\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <h3>{{ \'core.whoops\' | translate }}</h3>\n    <p>{{ \'core.login.problemconnectingerror\' | translate }}</p>\n    <p padding>{{siteUrl}}</p>\n    <p>{{ \'core.login.problemconnectingerrorcontinue\' | translate }}</p>\n    <button ion-button block (click)="closeModal()">{{ \'core.tryagain\' | translate }}</button>\n    <h3>{{ \'core.login.stillcantconnect\' | translate }}</h3>\n    <p>{{ \'core.login.contactyouradministrator\' | translate }}</p>\n    <p *ngIf="issue">\n        {{ \'core.login.contactyouradministratorissue\' | translate:{$a: \'\'} }}\n    </p>\n    <p *ngIf="issue">\n        <core-format-text [text]="issue"></core-format-text>\n    </p>\n</ion-content>\n\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/site-error/site-error.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
     ], CoreLoginSiteErrorPage);

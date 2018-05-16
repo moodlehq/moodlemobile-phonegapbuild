@@ -1,6 +1,6 @@
 webpackJsonp([34],{
 
-/***/ 1681:
+/***/ 1673:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginForgottenPasswordPageModule", function() { return CoreLoginForgottenPasswordPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forgotten_password__ = __webpack_require__(1783);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__forgotten_password__ = __webpack_require__(1775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(5);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -54,17 +54,17 @@ var CoreLoginForgottenPasswordPageModule = (function () {
 
 /***/ }),
 
-/***/ 1783:
+/***/ 1775:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreLoginForgottenPasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_helper__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(31);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -151,7 +151,7 @@ var CoreLoginForgottenPasswordPage = (function () {
     };
     CoreLoginForgottenPasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-forgotten-password',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/login/pages/forgotten-password/forgotten-password.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.passwordforgotten\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item text-wrap>\n            {{ \'core.login.passwordforgotteninstructions2\' | translate }}\n        </ion-item>\n    </ion-list>\n    <ion-card>\n        <form ion-list [formGroup]="myForm" (ngSubmit)="resetPassword()">\n            <ion-item-divider text-wrap color="light">\n                {{ \'core.login.searchby\' | translate }}\n            </ion-item-divider>\n            <div radio-group formControlName="field">\n                <ion-item>\n                    <ion-label>{{ \'core.login.username\' | translate }}</ion-label>\n                    <ion-radio value="username"></ion-radio>\n                </ion-item>\n                <ion-item>\n                    <ion-label>{{ \'core.user.email\' | translate }}</ion-label>\n                    <ion-radio value="email"></ion-radio>\n                </ion-item>\n            </div>\n            <ion-item>\n                <ion-input type="text" name="value" placeholder="{{ \'core.login.usernameoremail\' | translate }}" formControlName="value" autocapitalize="none" autocorrect="off" core-auto-focus></ion-input>\n            </ion-item>\n            <ion-item>\n                <button text-wrap ion-button block [disabled]="!myForm.valid">{{ \'core.courses.search\' | translate }}</button>\n            </ion-item>\n        </form>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/login/pages/forgotten-password/forgotten-password.html"*/,
+            selector: 'page-core-login-forgotten-password',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/forgotten-password/forgotten-password.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.passwordforgotten\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item text-wrap>\n            {{ \'core.login.passwordforgotteninstructions2\' | translate }}\n        </ion-item>\n    </ion-list>\n    <ion-card>\n        <form ion-list [formGroup]="myForm" (ngSubmit)="resetPassword()">\n            <ion-item-divider text-wrap color="light">\n                {{ \'core.login.searchby\' | translate }}\n            </ion-item-divider>\n            <div radio-group formControlName="field">\n                <ion-item>\n                    <ion-label>{{ \'core.login.username\' | translate }}</ion-label>\n                    <ion-radio value="username"></ion-radio>\n                </ion-item>\n                <ion-item>\n                    <ion-label>{{ \'core.user.email\' | translate }}</ion-label>\n                    <ion-radio value="email"></ion-radio>\n                </ion-item>\n            </div>\n            <ion-item>\n                <ion-input type="text" name="value" placeholder="{{ \'core.login.usernameoremail\' | translate }}" formControlName="value" autocapitalize="none" autocorrect="off" core-auto-focus></ion-input>\n            </ion-item>\n            <ion-item>\n                <button text-wrap ion-button block [disabled]="!myForm.valid">{{ \'core.courses.search\' | translate }}</button>\n            </ion-item>\n        </form>\n    </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/forgotten-password/forgotten-password.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_4__providers_helper__["a" /* CoreLoginHelperProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])

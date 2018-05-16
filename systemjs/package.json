@@ -1,0 +1,80 @@
+{
+  "_from": "systemjs",
+  "_id": "systemjs@0.21.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Ly/H3MUDaxl5OzMJ/loGFLWPao0h6WHcN6LHlI2HdsTJfZY9sYyn5B2SDnifuBlOUFlTr65rLAP+vSAXDsxOtg==",
+  "_location": "/systemjs",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "systemjs",
+    "name": "systemjs",
+    "escapedName": "systemjs",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/systemjs/-/systemjs-0.21.0.tgz",
+  "_shasum": "e3e61dd7beacaae421a52703c9679fb2543862f2",
+  "_spec": "systemjs",
+  "_where": "/Users/dpalou/Development/moodlemobile2",
+  "author": {
+    "name": "Guy Bedford"
+  },
+  "bugs": {
+    "url": "https://github.com/systemjs/systemjs/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Dynamic ES module loader",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.19.0",
+    "bluebird": "^3.4.6",
+    "es-module-loader": "^2.2.8",
+    "mocha": "^3.1.2",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.1",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "systemjs-plugin-babel": "0.0.17",
+    "systemjs-plugin-traceur": "0.0.3",
+    "traceur": "0.0.111",
+    "uglify-js": "^3.0.11"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/systemjs/systemjs#readme",
+  "license": "MIT",
+  "main": "dist/system.src.js",
+  "name": "systemjs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/systemjs/systemjs.git"
+  },
+  "scripts": {
+    "build": "npm run build:dev && npm run build:production",
+    "build:dev": "rollup -c",
+    "build:production": "rollup -c --environment production",
+    "footprint": "npm run footprint:dev && npm run footprint:production",
+    "footprint:dev": "uglifyjs dist/system.src.js -cm | gzip -9f | wc -c",
+    "footprint:production": "uglifyjs dist/system-production.src.js -cm | gzip -9f | wc -c",
+    "irhydra": "node --trace-hydrogen --trace-phase=Z --trace-deopt --code-comments --hydrogen-track-positions --redirect-code-traces --redirect-code-traces-to=code.asm --print-opt-code --trace_hydrogen_file=hydrogen.cfg irhydra/load.js",
+    "min": "npm run min:dev && npm run min:production",
+    "min:dev": "cd dist && uglifyjs system.src.js -cm --source-map content=system.src.js.map --comments \"/SystemJS v/\" -o system.js",
+    "min:production": "cd dist && uglifyjs system-production.src.js -cm --source-map content=system-production.src.js.map --comments \"/SystemJS v/\" -o system-production.js",
+    "prepublish": "rimraf dist && npm run build && npm run min",
+    "test": "npm run test:production && npm run test:babel && npm run test:traceur",
+    "test:babel": "mocha test/test-babel.js -u tdd --reporter dot",
+    "test:production": "mocha test/test-production.js -u tdd --reporter dot",
+    "test:traceur": "mocha test/test-traceur.js -u tdd --reporter dot"
+  },
+  "version": "0.21.0"
+}

@@ -803,6 +803,7 @@
     "core.course.hiddenfromstudents": "Hidden from students",
     "core.course.nocontentavailable": "No content available at the moment.",
     "core.course.overriddennotice": "Your final grade from this activity was manually adjusted.",
+    "core.course.refreshcourse": "Refresh course",
     "core.course.sections": "Sections",
     "core.course.useactivityonbrowser": "You can still use it using your device's web browser.",
     "core.coursedetails": "Course details",

@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 1660:
+/***/ 1654:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CorePlaceholderPageModule", function() { return CorePlaceholderPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placeholder__ = __webpack_require__(1762);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placeholder__ = __webpack_require__(1756);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_module__ = __webpack_require__(17);
 // (C) Copyright 2015 Martin Dougiamas
 //
@@ -61,7 +61,7 @@ var CorePlaceholderPageModule = (function () {
 
 /***/ }),
 
-/***/ 1762:
+/***/ 1756:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -97,7 +97,7 @@ var CoreSplitViewPlaceholderPage = (function () {
     }
     CoreSplitViewPlaceholderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'core-placeholder',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/components/split-view/placeholder/placeholder.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>&nbsp;</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <core-empty-box icon="arrow-dropleft" [message]="\'core.emptysplit\' | translate"></core-empty-box>\n</ion-content>\n'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/components/split-view/placeholder/placeholder.html"*/,
+            selector: 'core-placeholder',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/components/split-view/placeholder/placeholder.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>&nbsp;</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <core-empty-box icon="arrow-dropleft" [message]="\'core.emptysplit\' | translate"></core-empty-box>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/components/split-view/placeholder/placeholder.html"*/,
         }),
         __metadata("design:paramtypes", [])
     ], CoreSplitViewPlaceholderPage);

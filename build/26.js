@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 1685:
+/***/ 1681:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreMainMenuPageModule", function() { return CoreMainMenuPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(1787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(1783);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -54,7 +54,7 @@ var CoreMainMenuPageModule = (function () {
 
 /***/ }),
 
-/***/ 1787:
+/***/ 1783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,8 +62,8 @@ var CoreMainMenuPageModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__ = __webpack_require__(831);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__ = __webpack_require__(833);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(82);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -188,7 +188,7 @@ var CoreMainMenuPage = (function () {
     ], CoreMainMenuPage.prototype, "mainTabs", null);
     CoreMainMenuPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-mainmenu',template:/*ion-inline-start:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/'<ion-tabs *ngIf="loaded" #mainTabs [selectedIndex]="initialTab" tabsPlacement="bottom" tabsLayout="title-hide">\n    <ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></ion-tab>\n    <ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/ionic-projects/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/,
+            selector: 'page-core-mainmenu',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/'<ion-tabs *ngIf="loaded" #mainTabs [selectedIndex]="initialTab" tabsPlacement="bottom" tabsLayout="title-hide">\n    <ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></ion-tab>\n    <ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]])
