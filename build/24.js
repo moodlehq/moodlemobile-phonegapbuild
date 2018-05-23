@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 1683:
+/***/ 1709:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about__ = __webpack_require__(1785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__about__ = __webpack_require__(1814);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
@@ -48,7 +48,7 @@ var CoreSettingsAboutPageModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__about__["a" /* CoreSettingsAboutPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__about__["a" /* CoreSettingsAboutPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
@@ -60,20 +60,21 @@ var CoreSettingsAboutPageModule = (function () {
 
 /***/ }),
 
-/***/ 1785:
+/***/ 1814:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsAboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__ = __webpack_require__(365);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__ = __webpack_require__(370);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_file__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_init__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_lang__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__configconstants__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_file__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_init__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_lang__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_sites__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__configconstants__ = __webpack_require__(62);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -105,16 +106,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Page that displays the about settings.
  */
 var CoreSettingsAboutPage = (function () {
-    function CoreSettingsAboutPage(platform, device, appProvider, fileProvider, initDelegate, langProvider, localNotificationsProvider) {
+    function CoreSettingsAboutPage(platform, device, appProvider, fileProvider, initDelegate, langProvider, sitesProvider, localNotificationsProvider) {
         var _this = this;
-        this.appName = appProvider.isDesktop() ? __WEBPACK_IMPORTED_MODULE_8__configconstants__["a" /* CoreConfigConstants */].desktopappname : __WEBPACK_IMPORTED_MODULE_8__configconstants__["a" /* CoreConfigConstants */].appname;
-        this.versionName = __WEBPACK_IMPORTED_MODULE_8__configconstants__["a" /* CoreConfigConstants */].versionname;
-        this.versionCode = __WEBPACK_IMPORTED_MODULE_8__configconstants__["a" /* CoreConfigConstants */].versioncode;
-        this.privacyPolicy = __WEBPACK_IMPORTED_MODULE_8__configconstants__["a" /* CoreConfigConstants */].privacypolicy;
+        var currentSite = sitesProvider.getCurrentSite();
+        this.appName = appProvider.isDesktop() ? __WEBPACK_IMPORTED_MODULE_9__configconstants__["a" /* CoreConfigConstants */].desktopappname : __WEBPACK_IMPORTED_MODULE_9__configconstants__["a" /* CoreConfigConstants */].appname;
+        this.versionName = __WEBPACK_IMPORTED_MODULE_9__configconstants__["a" /* CoreConfigConstants */].versionname;
+        this.versionCode = __WEBPACK_IMPORTED_MODULE_9__configconstants__["a" /* CoreConfigConstants */].versioncode;
+        // Calculate the privacy policy to use.
+        this.privacyPolicy = currentSite.getStoredConfig('tool_mobile_apppolicy') || currentSite.getStoredConfig('sitepolicy') ||
+            __WEBPACK_IMPORTED_MODULE_9__configconstants__["a" /* CoreConfigConstants */].privacypolicy;
         this.navigator = window.navigator;
         if (window.location && window.location.href) {
             var url = window.location.href;
@@ -159,8 +164,8 @@ var CoreSettingsAboutPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-core-settings-about',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/settings/pages/about/about.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.about\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-item text-wrap>\n        <h2>{{ appName }} {{ versionName }}</h2>\n    </ion-item>\n    <ion-item-group>\n        <ion-item-divider text-wrap color="light">\n            {{ \'core.settings.license\' | translate }}\n        </ion-item-divider>\n        <ion-item text-wrap>\n            <h2>Apache 2.0</h2>\n            <p><a href="http://www.apache.org/licenses/LICENSE-2.0" core-link auto-login="no">http://www.apache.org/licenses/LICENSE-2.0</a></p>\n        </ion-item>\n    </ion-item-group>\n    <ion-item-group *ngIf="privacyPolicy">\n        <ion-item-divider text-wrap color="light">\n            {{ \'core.settings.privacypolicy\' | translate }}\n        </ion-item-divider>\n        <ion-item text-wrap>\n            <p><a [href]="privacyPolicy" core-link auto-login="no">{{ privacyPolicy }}</a></p>\n        </ion-item>\n    </ion-item-group>\n    <ion-item-group>\n        <ion-item-divider text-wrap color="light">\n            {{ \'core.settings.deviceinfo\' | translate }}\n        </ion-item-divider>\n        <ion-item text-wrap *ngIf="versionName">\n            <h2>{{ \'core.settings.versionname\' | translate}}</h2>\n            <p>{{ versionName }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="versionCode">\n            <h2>{{ \'core.settings.versioncode\' | translate}}</h2>\n            <p>{{ versionCode }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="fileSystemRoot">\n            <h2>{{ \'core.settings.filesystemroot\' | translate}}</h2>\n            <p><a *ngIf="fsClickable" [href]="fileSystemRoot" core-link auto-login="no">{{ fileSystemRoot }}</a></p>\n            <p *ngIf="!fsClickable">{{ fileSystemRoot }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="navigator && navigator.userAgent">\n            <h2>{{ \'core.settings.navigatoruseragent\' | translate}}</h2>\n            <p>{{ navigator.userAgent }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="navigator && navigator.language">\n            <h2>{{ \'core.settings.navigatorlanguage\' | translate}}</h2>\n            <p>{{ navigator.language }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="locationHref">\n            <h2>{{ \'core.settings.locationhref\' | translate}}</h2>\n            <p>{{ locationHref }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="appReady">\n            <h2>{{ \'core.settings.appready\' | translate}}</h2>\n            <p>{{ appReady | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="deviceType">\n            <h2>{{ \'core.settings.displayformat\' | translate}}</h2>\n            <p>{{ deviceType | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="deviceOs">\n            <h2>{{ \'core.settings.deviceos\' | translate}}</h2>\n            <p>{{ deviceOs | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="currentLanguage">\n            <h2>{{ \'core.settings.currentlanguage\' | translate}}</h2>\n            <p>{{ currentLanguage }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="networkStatus">\n            <h2>{{ \'core.settings.networkstatus\' | translate}}</h2>\n            <p>{{ networkStatus | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="wifiConnection">\n            <h2>{{ \'core.settings.wificonnection\' | translate}}</h2>\n            <p>{{ wifiConnection | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="deviceWebWorkers">\n            <h2>{{ \'core.settings.devicewebworkers\' | translate}}</h2>\n            <p>{{ deviceWebWorkers | translate }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="device && device.cordova">\n            <h2>{{ \'core.settings.cordovaversion\' | translate}}</h2>\n            <p>{{ device.cordova }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="device && device.platform">\n            <h2>{{ \'core.settings.cordovadeviceplatform\' | translate}}</h2>\n            <p>{{ device.platform }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="device && device.version">\n            <h2>{{ \'core.settings.cordovadeviceosversion\' | translate}}</h2>\n            <p>{{ device.version }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="device && device.model">\n            <h2>{{ \'core.settings.cordovadevicemodel\' | translate}}</h2>\n            <p>{{ device.model }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="device && device.uuid">\n            <h2>{{ \'core.settings.cordovadeviceuuid\' | translate}}</h2>\n            <p>{{ device.uuid }}</p>\n        </ion-item>\n        <ion-item text-wrap *ngIf="localNotifAvailable">\n            <h2>{{ \'core.settings.localnotifavailable\' | translate}}</h2>\n            <p>{{ localNotifAvailable | translate }}</p>\n        </ion-item>\n    </ion-item-group>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/settings/pages/about/about.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_file__["a" /* CoreFileProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_init__["a" /* CoreInitDelegate */], __WEBPACK_IMPORTED_MODULE_6__providers_lang__["a" /* CoreLangProvider */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_file__["a" /* CoreFileProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_init__["a" /* CoreInitDelegate */], __WEBPACK_IMPORTED_MODULE_6__providers_lang__["a" /* CoreLangProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_sites__["a" /* CoreSitesProvider */],
             __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */]])
     ], CoreSettingsAboutPage);
     return CoreSettingsAboutPage;

@@ -1,17 +1,18 @@
 webpackJsonp([77],{
 
-/***/ 1627:
+/***/ 1652:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModBookIndexPageModule", function() { return AddonModBookIndexPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatUsersPageModule", function() { return AddonModChatUsersPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(841);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1725);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__users__ = __webpack_require__(1754);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,37 +38,43 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModBookIndexPageModule = (function () {
-    function AddonModBookIndexPageModule() {
+
+var AddonModChatUsersPageModule = (function () {
+    function AddonModChatUsersPageModule() {
     }
-    AddonModBookIndexPageModule = __decorate([
+    AddonModChatUsersPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModBookIndexPage */],
+                __WEBPACK_IMPORTED_MODULE_6__users__["a" /* AddonModChatUsersPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModBookComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModBookIndexPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__users__["a" /* AddonModChatUsersPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModBookIndexPageModule);
-    return AddonModBookIndexPageModule;
+    ], AddonModChatUsersPageModule);
+    return AddonModChatUsersPageModule;
 }());
 
-//# sourceMappingURL=index.module.js.map
+//# sourceMappingURL=users.module.js.map
 
 /***/ }),
 
-/***/ 1725:
+/***/ 1754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModBookIndexPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModChatUsersPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_chat__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__ = __webpack_require__(123);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,37 +100,83 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
 /**
- * Page that displays a book.
+ * Page that displays the chat session users.
  */
-var AddonModBookIndexPage = (function () {
-    function AddonModBookIndexPage(navParams) {
-        this.module = navParams.get('module') || {};
-        this.courseId = navParams.get('courseId');
-        this.title = this.module.name;
+var AddonModChatUsersPage = (function () {
+    function AddonModChatUsersPage(navParams, network, appProvider, sitesProvider, viewCtrl, domUtils, chatProvider) {
+        var _this = this;
+        this.appProvider = appProvider;
+        this.sitesProvider = sitesProvider;
+        this.viewCtrl = viewCtrl;
+        this.domUtils = domUtils;
+        this.chatProvider = chatProvider;
+        this.users = [];
+        this.usersLoaded = false;
+        this.sessionId = navParams.get('sessionId');
+        this.isOnline = this.appProvider.isOnline();
+        this.currentUserId = this.sitesProvider.getCurrentSiteUserId();
+        this.onlineObserver = network.onchange().subscribe(function (online) {
+            _this.isOnline = _this.appProvider.isOnline();
+        });
     }
     /**
-     * Update some data based on the book instance.
-     *
-     * @param {any} book Book instance.
+     * View loaded.
      */
-    AddonModBookIndexPage.prototype.updateData = function (book) {
-        this.title = book.name || this.title;
+    AddonModChatUsersPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.chatProvider.getChatUsers(this.sessionId).then(function (data) {
+            _this.users = data.users;
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhilegettingchatusers', true);
+        }).finally(function () {
+            _this.usersLoaded = true;
+        });
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModBookIndexComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModBookIndexComponent */])
-    ], AddonModBookIndexPage.prototype, "bookComponent", void 0);
-    AddonModBookIndexPage = __decorate([
+    /**
+     * Close the chat users modal.
+     */
+    AddonModChatUsersPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    /**
+     * Add "To user:".
+     *
+     * @param {any} user User object.
+     */
+    AddonModChatUsersPage.prototype.talkTo = function (user) {
+        this.viewCtrl.dismiss({ talkTo: user.fullname });
+    };
+    /**
+     * Beep a user.
+     *
+     * @param {any} user User object.
+     */
+    AddonModChatUsersPage.prototype.beepTo = function (user) {
+        this.viewCtrl.dismiss({ beepTo: user.id });
+    };
+    /**
+     * Page destroyed.
+     */
+    AddonModChatUsersPage.prototype.ngOnDestroy = function () {
+        this.onlineObserver && this.onlineObserver.unsubscribe();
+    };
+    AddonModChatUsersPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-book-index',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/book/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="bookComponent.loaded" (ionRefresh)="bookComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-book-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-book-index>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/book/pages/index/index.html"*/,
+            selector: 'page-addon-mod-chat-users',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/chat/pages/users/users.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_chat.currentusers\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="usersLoaded">\n        <ion-item text-wrap *ngFor="let user of users" [class.addon-mod-chat-user]="currentUserId != user.id && isOnline">\n            <ion-avatar item-start>\n                <img [src]="user.profileimageurl" onError="this.src=\'assets/img/user-avatar.png\'" core-external-content [alt]="\'core.pictureof\' | translate:{$a: user.fullname}" role="presentation">\n            </ion-avatar>\n            <h2><core-format-text [text]="user.fullname"></core-format-text></h2>\n            <ng-container *ngIf="currentUserId != user.id && isOnline">\n                <button ion-button clear icon-left (click)="talkTo(user)">\n                    <ion-icon name="chatboxes"></ion-icon>\n                    {{ \'addon.mod_chat.talk\' | translate }}\n                </button>\n                <button ion-button clear icon-left (click)="beepTo(user)">\n                    <ion-icon name="notifications"></ion-icon>\n                    {{ \'addon.mod_chat.beep\' | translate }}\n                </button>\n            </ng-container>\n        </ion-item>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/chat/pages/users/users.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], AddonModBookIndexPage);
-    return AddonModBookIndexPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__["a" /* Network */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_chat__["a" /* AddonModChatProvider */]])
+    ], AddonModChatUsersPage);
+    return AddonModChatUsersPage;
 }());
 
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=users.js.map
 
 /***/ })
 

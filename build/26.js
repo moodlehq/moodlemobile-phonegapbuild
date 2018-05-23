@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 1681:
+/***/ 1707:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__menu__ = __webpack_require__(1783);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__menu__ = __webpack_require__(1812);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -33,16 +34,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var CoreMainMenuPageModule = (function () {
     function CoreMainMenuPageModule() {
     }
     CoreMainMenuPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__menu__["a" /* CoreMainMenuPage */],
+                __WEBPACK_IMPORTED_MODULE_4__menu__["a" /* CoreMainMenuPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__menu__["a" /* CoreMainMenuPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__menu__["a" /* CoreMainMenuPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
@@ -54,16 +57,16 @@ var CoreMainMenuPageModule = (function () {
 
 /***/ }),
 
-/***/ 1783:
+/***/ 1812:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreMainMenuPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__ = __webpack_require__(833);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_sites__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__ = __webpack_require__(844);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_delegate__ = __webpack_require__(85);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -100,39 +103,12 @@ var CoreMainMenuPage = (function () {
         this.sitesProvider = sitesProvider;
         this.navCtrl = navCtrl;
         this.tabs = [];
-        this.moreTabData = {
-            page: 'CoreMainMenuMorePage',
-            title: 'core.more',
-            icon: 'more'
-        };
-        this.moreTabAdded = false;
+        this.loaded = false;
+        this.showTabs = false;
         this.redirectPageLoaded = false;
         this.redirectPage = navParams.get('redirectPage');
         this.redirectParams = navParams.get('redirectParams');
     }
-    Object.defineProperty(CoreMainMenuPage.prototype, "mainTabs", {
-        // Use a setter to wait for ion-tabs to be loaded because it's inside a ngIf.
-        set: function (ionTabs) {
-            if (ionTabs && this.redirectPage && !this.redirectPageLoaded) {
-                // Tabs ready and there is a redirect page set. Load it.
-                this.redirectPageLoaded = true;
-                // Check if the page is the root page of any of the tabs.
-                var indexToSelect_1 = 0;
-                for (var i = 0; i < this.tabs.length; i++) {
-                    if (this.tabs[i].page == this.redirectPage) {
-                        indexToSelect_1 = i + 1;
-                        break;
-                    }
-                }
-                // Use a setTimeout, otherwise loading the first tab opens a new state for some reason.
-                setTimeout(function () {
-                    ionTabs.select(indexToSelect_1);
-                });
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
     /**
      * View loaded.
      */
@@ -142,35 +118,51 @@ var CoreMainMenuPage = (function () {
             this.navCtrl.setRoot('CoreLoginInitPage');
             return;
         }
+        this.showTabs = true;
         var site = this.sitesProvider.getCurrentSite(), displaySiteHome = site.getInfo() && site.getInfo().userhomepage === 0;
         this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
             handlers = handlers.slice(0, __WEBPACK_IMPORTED_MODULE_3__providers_mainmenu__["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Get main handlers.
-            // Check if handlers are already in tabs. Add the ones that aren't.
-            // @todo: https://github.com/ionic-team/ionic/issues/13633
+            // Re-build the list of tabs. If a handler is already in the list, use existing object to prevent re-creating the tab.
+            var newTabs = [];
+            var _loop_1 = function (i) {
+                var handler = handlers[i];
+                // Check if the handler is already in the tabs list. If so, use it.
+                var tab = _this.tabs.find(function (tab) {
+                    return tab.title == handler.title && tab.icon == handler.icon;
+                });
+                newTabs.push(tab || handler);
+            };
             for (var i = 0; i < handlers.length; i++) {
-                var handler = handlers[i], shouldSelect = (displaySiteHome && handler.name == 'CoreSiteHome') ||
-                    (!displaySiteHome && handler.name == 'CoreCourses');
-                var found = false;
-                for (var j = 0; j < _this.tabs.length; j++) {
-                    var tab = _this.tabs[j];
-                    if (tab.title == handler.title && tab.icon == handler.icon) {
-                        found = true;
-                        if (shouldSelect) {
-                            _this.initialTab = j;
-                        }
-                        break;
-                    }
-                }
-                if (!found) {
-                    _this.tabs.push(handler);
-                    if (shouldSelect) {
-                        _this.initialTab = _this.tabs.length;
-                    }
-                }
+                _loop_1(i);
             }
-            if (!_this.moreTabAdded) {
-                _this.moreTabAdded = true;
-                _this.tabs.push(_this.moreTabData); // Add "More" tab.
+            _this.tabs = newTabs;
+            // Sort them by priority so new handlers are in the right position.
+            _this.tabs.sort(function (a, b) {
+                return b.priority - a.priority;
+            });
+            if (typeof _this.initialTab == 'undefined' && !_this.loaded) {
+                // Calculate the tab to load.
+                if (_this.redirectPage) {
+                    // Check if the redirect page is the root page of any of the tabs.
+                    _this.initialTab = 0;
+                    for (var i = 0; i < _this.tabs.length; i++) {
+                        if (_this.tabs[i].page == _this.redirectPage) {
+                            _this.initialTab = i + 1;
+                            break;
+                        }
+                    }
+                }
+                else {
+                    // By default, course overview will be loaded (3.3+). Check if we need to select Site Home or My Courses.
+                    for (var i = 0; i < _this.tabs.length; i++) {
+                        var handler = handlers[i];
+                        if ((displaySiteHome && handler.name == 'CoreSiteHome') ||
+                            (!displaySiteHome && handler.name == 'CoreCourses')) {
+                            _this.initialTab = i;
+                            break;
+                        }
+                    }
+                }
             }
             _this.loaded = _this.menuDelegate.areHandlersLoaded();
         });
@@ -181,17 +173,12 @@ var CoreMainMenuPage = (function () {
     CoreMainMenuPage.prototype.ngOnDestroy = function () {
         this.subscription && this.subscription.unsubscribe();
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('mainTabs'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Tabs */]),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Tabs */]])
-    ], CoreMainMenuPage.prototype, "mainTabs", null);
     CoreMainMenuPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-mainmenu',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/'<ion-tabs *ngIf="loaded" #mainTabs [selectedIndex]="initialTab" tabsPlacement="bottom" tabsLayout="title-hide">\n    <ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></ion-tab>\n    <ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}"></ion-tab>\n</ion-tabs>'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/,
+            selector: 'page-core-mainmenu',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/'<core-ion-tabs #mainTabs [hidden]="!showTabs" [loaded]="loaded" [selectedIndex]="initialTab" [selectedDisabled]="!!redirectPage" tabsPlacement="bottom" tabsLayout="title-hide">\n    <core-ion-tab [enabled]="false" [show]="false" [root]="redirectPage" [rootParams]="redirectParams"></core-ion-tab>\n    <core-ion-tab *ngFor="let tab of tabs" [root]="tab.page" [rootParams]="tab.pageParams" [tabTitle]="tab.title | translate" [tabIcon]="tab.icon" [tabBadge]="tab.badge" class="{{tab.class}}"></core-ion-tab>\n    <core-ion-tab root="CoreMainMenuMorePage" [tabTitle]="\'core.more\' | translate" tabIcon="more"></core-ion-tab>\n</core-ion-tabs>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/mainmenu/pages/menu/menu.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__providers_delegate__["a" /* CoreMainMenuDelegate */], __WEBPACK_IMPORTED_MODULE_2__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */]])
     ], CoreMainMenuPage);
     return CoreMainMenuPage;
 }());

@@ -1,19 +1,18 @@
 webpackJsonp([72],{
 
-/***/ 1632:
+/***/ 1657:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModFeedbackAttemptPageModule", function() { return AddonModFeedbackAttemptPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModFeedbackNonRespondentsPageModule", function() { return AddonModFeedbackNonRespondentsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(825);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__attempt__ = __webpack_require__(1730);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(835);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__nonrespondents__ = __webpack_require__(1759);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -40,43 +39,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var AddonModFeedbackAttemptPageModule = (function () {
-    function AddonModFeedbackAttemptPageModule() {
+var AddonModFeedbackNonRespondentsPageModule = (function () {
+    function AddonModFeedbackNonRespondentsPageModule() {
     }
-    AddonModFeedbackAttemptPageModule = __decorate([
+    AddonModFeedbackNonRespondentsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_7__attempt__["a" /* AddonModFeedbackAttemptPage */],
+                __WEBPACK_IMPORTED_MODULE_6__nonrespondents__["a" /* AddonModFeedbackNonRespondentsPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* AddonModFeedbackComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_7__attempt__["a" /* AddonModFeedbackAttemptPage */]),
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* AddonModFeedbackComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__nonrespondents__["a" /* AddonModFeedbackNonRespondentsPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModFeedbackAttemptPageModule);
-    return AddonModFeedbackAttemptPageModule;
+    ], AddonModFeedbackNonRespondentsPageModule);
+    return AddonModFeedbackNonRespondentsPageModule;
 }());
 
-//# sourceMappingURL=attempt.module.js.map
+//# sourceMappingURL=nonrespondents.module.js.map
 
 /***/ }),
 
-/***/ 1730:
+/***/ 1759:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModFeedbackAttemptPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModFeedbackNonRespondentsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_feedback__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_helper__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_feedback__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_helper__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_groups__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(10);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -106,72 +103,134 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page that displays a feedback attempt review.
+ * Page that displays feedback non respondents.
  */
-var AddonModFeedbackAttemptPage = (function () {
-    function AddonModFeedbackAttemptPage(navParams, feedbackProvider, navCtrl, domUtils, feedbackHelper, textUtils) {
+var AddonModFeedbackNonRespondentsPage = (function () {
+    function AddonModFeedbackNonRespondentsPage(navParams, feedbackProvider, groupsProvider, domUtils, feedbackHelper, navCtrl) {
         this.feedbackProvider = feedbackProvider;
-        this.navCtrl = navCtrl;
+        this.groupsProvider = groupsProvider;
         this.domUtils = domUtils;
         this.feedbackHelper = feedbackHelper;
-        this.textUtils = textUtils;
-        this.component = __WEBPACK_IMPORTED_MODULE_2__providers_feedback__["a" /* AddonModFeedbackProvider */].COMPONENT;
+        this.navCtrl = navCtrl;
+        this.page = 0;
+        this.groupInfo = {
+            groups: [],
+            separateGroups: false,
+            visibleGroups: false
+        };
+        this.users = [];
+        this.total = 0;
+        this.canLoadMore = false;
         this.feedbackLoaded = false;
-        this.feedbackId = navParams.get('feedbackId') || 0;
-        this.attempt = navParams.get('attempt') || false;
-        this.componentId = navParams.get('moduleId');
+        this.loadingMore = false;
+        var module = navParams.get('module');
+        this.moduleId = module.id;
+        this.feedbackId = module.instance;
+        this.courseId = navParams.get('courseId');
+        this.selectedGroup = navParams.get('group') || 0;
     }
     /**
      * View loaded.
      */
-    AddonModFeedbackAttemptPage.prototype.ionViewDidLoad = function () {
+    AddonModFeedbackNonRespondentsPage.prototype.ionViewDidLoad = function () {
         this.fetchData();
     };
     /**
      * Fetch all the data required for the view.
      *
+     * @param {boolean} [refresh] Empty events array first.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonModFeedbackAttemptPage.prototype.fetchData = function () {
+    AddonModFeedbackNonRespondentsPage.prototype.fetchData = function (refresh) {
         var _this = this;
-        return this.feedbackProvider.getItems(this.feedbackId).then(function (items) {
-            // Add responses and format items.
-            _this.items = items.items.map(function (item) {
-                if (item.typ == 'label') {
-                    item.submittedValue = _this.textUtils.replacePluginfileUrls(item.presentation, item.itemfiles);
-                }
-                else {
-                    for (var x in _this.attempt.responses) {
-                        if (_this.attempt.responses[x].id == item.id) {
-                            item.submittedValue = _this.attempt.responses[x].printval;
-                            delete _this.attempt.responses[x];
-                            break;
-                        }
-                    }
-                }
-                return _this.feedbackHelper.getItemForm(item, true);
-            });
+        if (refresh === void 0) { refresh = false; }
+        this.page = 0;
+        this.total = 0;
+        this.users = [];
+        return this.groupsProvider.getActivityGroupInfo(this.moduleId).then(function (groupInfo) {
+            _this.groupInfo = groupInfo;
+            return _this.loadGroupUsers(_this.selectedGroup);
         }).catch(function (message) {
             _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
-            // Some call failed on first fetch, go back.
-            _this.navCtrl.pop();
+            if (!refresh) {
+                // Some call failed on first fetch, go back.
+                _this.navCtrl.pop();
+            }
             return Promise.reject(null);
+        });
+    };
+    /**
+     * Load Group responses.
+     *
+     * @param  {number} [groupId]   If defined it will change group if not, it will load more users for the same group.
+     * @return {Promise<any>}       Resolved with the attempts loaded.
+     */
+    AddonModFeedbackNonRespondentsPage.prototype.loadGroupUsers = function (groupId) {
+        var _this = this;
+        if (typeof groupId == 'undefined') {
+            this.page++;
+            this.loadingMore = true;
+        }
+        else {
+            this.selectedGroup = groupId;
+            this.page = 0;
+            this.total = 0;
+            this.users = [];
+            this.feedbackLoaded = false;
+        }
+        return this.feedbackHelper.getNonRespondents(this.feedbackId, this.selectedGroup, this.page).then(function (response) {
+            _this.total = response.total;
+            if (_this.users.length < response.total) {
+                _this.users = _this.users.concat(response.users);
+            }
+            _this.canLoadMore = _this.users.length < response.total;
+            return response;
         }).finally(function () {
+            _this.loadingMore = false;
             _this.feedbackLoaded = true;
         });
     };
-    AddonModFeedbackAttemptPage = __decorate([
+    /**
+     * Change selected group or load more users.
+     *
+     * @param {number} [groupId] Group ID selected. If not defined, it will load more users.
+     */
+    AddonModFeedbackNonRespondentsPage.prototype.loadAttempts = function (groupId) {
+        var _this = this;
+        this.loadGroupUsers(groupId).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+        });
+    };
+    /**
+     * Refresh the attempts.
+     *
+     * @param {any} refresher Refresher.
+     */
+    AddonModFeedbackNonRespondentsPage.prototype.refreshFeedback = function (refresher) {
+        var _this = this;
+        if (this.feedbackLoaded) {
+            var promises = [];
+            promises.push(this.feedbackProvider.invalidateNonRespondentsData(this.feedbackId));
+            promises.push(this.groupsProvider.invalidateActivityGroupInfo(this.moduleId));
+            Promise.all(promises).finally(function () {
+                return _this.fetchData(true);
+            }).finally(function () {
+                refresher.complete();
+            });
+        }
+    };
+    AddonModFeedbackNonRespondentsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-feedback-attempt',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/attempt/attempt.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text  [text]=" attempt.fullname "></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="feedbackLoaded">\n        <ion-list no-margin>\n            <a *ngIf="attempt.fullname" ion-item text-wrap core-user-link [userId]="attempt.userid" [attr.aria-label]=" \'core.user.viewprofile\' | translate" core-user-link [courseId]="attempt.courseid" [title]="attempt.fullname">\n                <ion-avatar item-start>\n                    <img [src]="attempt.profileimageurl" [alt]="\'core.pictureof\' | translate:{$a: attempt.fullname}" core-external-content onError="this.src=\'assets/img/user-avatar.png\'">\n                </ion-avatar>\n                <h2>{{attempt.fullname}}</h2>\n                <p *ngIf="attempt.timemodified">{{attempt.timemodified * 1000 | coreFormatDate:"LLL"}}</p>\n            </a>\n\n            <ion-item text-wrap *ngIf="!attempt.fullname">\n                <h2>{{ \'addon.mod_feedback.response_nr\' |translate }}: {{attempt.number}} ({{ \'addon.mod_feedback.anonymous\' |translate }})</h2>\n                <p *ngIf="attempt.timemodified">{{attempt.timemodified * 1000 | coreFormatDate:"LLL"}}</p>\n            </ion-item >\n            <ng-container *ngIf="items && items.length">\n                <ng-container *ngFor="let item of items">\n                    <ion-item-divider *ngIf="item.typ == \'pagebreak\'" color="light"></ion-item-divider>\n                    <ion-item text-wrap *ngIf="item.typ != \'pagebreak\'" [color]="item.dependitem > 0 ? \'light\' : \'\'">\n                        <h2 *ngIf="item.name" [core-mark-required]="item.required">\n                            <span *ngIf="item.itemnumber">{{item.itemnumber}}. </span><core-format-text  [component]="component" [componentId]="componentId" [text]="item.name"></core-format-text>\n                        </h2>\n                        <p *ngIf="item.submittedValue"><core-format-text  [component]="component" [componentId]="componentId" [text]=" item.submittedValue"></core-format-text></p>\n                    </ion-item>\n                </ng-container>\n            </ng-container>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/attempt/attempt.html"*/,
+            selector: 'page-addon-mod-feedback-nonrespondents',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/nonrespondents/nonrespondents.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_feedback.responses\' |translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="feedbackLoaded" (ionRefresh)="refreshFeedback($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="feedbackLoaded">\n        <ion-list no-margin>\n            <ion-item text-wrap *ngIf="groupInfo.separateGroups || groupInfo.visibleGroups">\n                <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n                <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="selectedGroup" (ionChange)="loadAttempts(selectedGroup)" aria-labelledby="addon-feedback-groupslabel" interface="popover">\n                    <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n                </ion-select>\n            </ion-item>\n            <ion-item-divider color="light">\n                {{ \'addon.mod_feedback.non_respondents_students\' | translate : {$a: total } }}\n            </ion-item-divider>\n            <ng-container *ngIf="total > 0">\n                <ion-item *ngFor="let user of users" text-wrap>\n                    <ion-avatar item-start>\n                        <img [src]="user.profileimageurl" [alt]="\'core.pictureof\' | translate:{$a: user.fullname}" core-external-content onError="this.src=\'assets/img/user-avatar.png\'">\n                    </ion-avatar>\n                    <h2><core-format-text [text]="user.fullname"></core-format-text></h2>\n                    <p>\n                        <ion-badge color="success" *ngIf="user.started">\n                            {{ \'addon.mod_feedback.started\' | translate}}\n                        </ion-badge>\n                        <ion-badge color="danger" *ngIf="!user.started">\n                            {{ \'addon.mod_feedback.not_started\' | translate}}\n                        </ion-badge>\n                    </p>\n                </ion-item>\n            </ng-container>\n            <ion-item padding text-center *ngIf="canLoadMore">\n                <!-- Button and spinner to show more attempts. -->\n                <button ion-button block *ngIf="!loadingMore" (click)="loadAttempts()">{{ \'core.loadmore\' | translate }}</button>\n                <ion-spinner *ngIf="loadingMore"></ion-spinner>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/nonrespondents/nonrespondents.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_feedback__["a" /* AddonModFeedbackProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_helper__["a" /* AddonModFeedbackHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
-    ], AddonModFeedbackAttemptPage);
-    return AddonModFeedbackAttemptPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_feedback__["a" /* AddonModFeedbackProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_groups__["a" /* CoreGroupsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_helper__["a" /* AddonModFeedbackHelperProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */]])
+    ], AddonModFeedbackNonRespondentsPage);
+    return AddonModFeedbackNonRespondentsPage;
 }());
 
-//# sourceMappingURL=attempt.js.map
+//# sourceMappingURL=nonrespondents.js.map
 
 /***/ })
 

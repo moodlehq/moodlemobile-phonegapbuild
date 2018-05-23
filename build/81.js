@@ -1,17 +1,17 @@
 webpackJsonp([81],{
 
-/***/ 1617:
+/***/ 1647:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonFilesListPageModule", function() { return AddonFilesListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModAssignSubmissionListPageModule", function() { return AddonModAssignSubmissionListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__list__ = __webpack_require__(1715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__submission_list__ = __webpack_require__(1749);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,44 +37,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonFilesListPageModule = (function () {
-    function AddonFilesListPageModule() {
+var AddonModAssignSubmissionListPageModule = (function () {
+    function AddonModAssignSubmissionListPageModule() {
     }
-    AddonFilesListPageModule = __decorate([
+    AddonModAssignSubmissionListPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__list__["a" /* AddonFilesListPage */],
+                __WEBPACK_IMPORTED_MODULE_5__submission_list__["a" /* AddonModAssignSubmissionListPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__list__["a" /* AddonFilesListPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__submission_list__["a" /* AddonModAssignSubmissionListPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonFilesListPageModule);
-    return AddonFilesListPageModule;
+    ], AddonModAssignSubmissionListPageModule);
+    return AddonModAssignSubmissionListPageModule;
 }());
 
-//# sourceMappingURL=list.module.js.map
+//# sourceMappingURL=submission-list.module.js.map
 
 /***/ }),
 
-/***/ 1715:
+/***/ 1749:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonFilesListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModAssignSubmissionListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_files__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_helper__ = __webpack_require__(839);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_assign__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_assign_offline__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_helper__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__ = __webpack_require__(131);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -108,183 +108,226 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page that displays the list of files.
+ * Page that displays a list of submissions of an assignment.
  */
-var AddonFilesListPage = (function () {
-    function AddonFilesListPage(navParams, eventsProvider, sitesProvider, domUtils, translate, appProvider, filesProvider, filesHelper, textUtils) {
+var AddonModAssignSubmissionListPage = (function () {
+    function AddonModAssignSubmissionListPage(navParams, sitesProvider, eventsProvider, domUtils, translate, assignProvider, assignOfflineProvider, assignHelper) {
         var _this = this;
-        this.sitesProvider = sitesProvider;
         this.domUtils = domUtils;
         this.translate = translate;
-        this.appProvider = appProvider;
-        this.filesProvider = filesProvider;
-        this.filesHelper = filesHelper;
-        this.textUtils = textUtils;
-        this.title = navParams.get('title') || this.translate.instant('addon.files.files');
-        this.root = navParams.get('root');
-        this.path = navParams.get('path');
-        // Update visibility if current site info is updated.
-        this.updateSiteObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */].SITE_UPDATED, function () {
-            _this.setVisibility();
+        this.assignProvider = assignProvider;
+        this.assignOfflineProvider = assignOfflineProvider;
+        this.assignHelper = assignHelper;
+        this.moduleId = navParams.get('moduleId');
+        this.courseId = navParams.get('courseId');
+        this.selectedStatus = navParams.get('status');
+        if (this.selectedStatus) {
+            if (this.selectedStatus == __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].NEED_GRADING) {
+                this.title = this.translate.instant('addon.mod_assign.numberofsubmissionsneedgrading');
+            }
+            else {
+                this.title = this.translate.instant('addon.mod_assign.submissionstatus_' + this.selectedStatus);
+            }
+        }
+        else {
+            this.title = this.translate.instant('addon.mod_assign.numberofparticipants');
+        }
+        // Update data if some grade changes.
+        this.gradedObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].GRADED_EVENT, function (data) {
+            if (_this.assign && data.assignmentId == _this.assign.id && data.userId == sitesProvider.getCurrentSiteUserId()) {
+                // Grade changed, refresh the data.
+                _this.loaded = false;
+                _this.refreshAllData().finally(function () {
+                    _this.loaded = true;
+                });
+            }
         }, sitesProvider.getCurrentSiteId());
     }
     /**
-     * View loaded.
+     * Component being initialized.
      */
-    AddonFilesListPage.prototype.ionViewDidLoad = function () {
-        this.setVisibility();
-        this.userQuota = this.sitesProvider.getCurrentSite().getInfo().userquota;
-        if (!this.root) {
-            // Load private files by default.
-            if (this.showPrivateFiles) {
-                this.root = 'my';
+    AddonModAssignSubmissionListPage.prototype.ngOnInit = function () {
+        var _this = this;
+        this.fetchAssignment().finally(function () {
+            if (!_this.selectedSubmissionId && _this.splitviewCtrl.isOn() && _this.submissions.length > 0) {
+                // Take first and load it.
+                _this.loadSubmission(_this.submissions[0]);
             }
-            else if (this.showSiteFiles) {
-                this.root = 'site';
-            }
-        }
-        if (this.root) {
-            this.rootChanged();
-        }
-        else {
-            this.filesLoaded = true;
-        }
+            _this.loaded = true;
+        });
     };
     /**
-     * Refresh the data.
+     * Check if we can leave the page or not.
+     *
+     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    AddonModAssignSubmissionListPage.prototype.ionViewCanLeave = function () {
+        // If split view is enabled, check if we can leave the details page.
+        if (this.splitviewCtrl.isOn()) {
+            var detailsPage = this.splitviewCtrl.getDetailsNav().getActive().instance;
+            if (detailsPage && detailsPage.ionViewCanLeave) {
+                return detailsPage.ionViewCanLeave();
+            }
+        }
+        return true;
+    };
+    /**
+     * Fetch assignment data.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModAssignSubmissionListPage.prototype.fetchAssignment = function () {
+        var _this = this;
+        var participants, submissionsData;
+        // Get assignment data.
+        return this.assignProvider.getAssignment(this.courseId, this.moduleId).then(function (assign) {
+            _this.title = assign.name || _this.title;
+            _this.assign = assign;
+            _this.haveAllParticipants = true;
+            // Get assignment submissions.
+            return _this.assignProvider.getSubmissions(assign.id);
+        }).then(function (data) {
+            if (!data.canviewsubmissions) {
+                // User shouldn't be able to reach here.
+                return Promise.reject(null);
+            }
+            submissionsData = data;
+            // Get the participants.
+            return _this.assignHelper.getParticipants(_this.assign).then(function (parts) {
+                _this.haveAllParticipants = true;
+                participants = parts;
+            }).catch(function () {
+                _this.haveAllParticipants = false;
+            });
+        }).then(function () {
+            // We want to show the user data on each submission.
+            return _this.assignProvider.getSubmissionsUserData(submissionsData.submissions, _this.courseId, _this.assign.id, _this.assign.blindmarking && !_this.assign.revealidentities, participants);
+        }).then(function (submissions) {
+            // Filter the submissions to get only the ones with the right status and add some extra data.
+            var getNeedGrading = _this.selectedStatus == __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].NEED_GRADING, searchStatus = getNeedGrading ? __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].SUBMISSION_STATUS_SUBMITTED : _this.selectedStatus, promises = [];
+            _this.submissions = [];
+            submissions.forEach(function (submission) {
+                if (!searchStatus || searchStatus == submission.status) {
+                    promises.push(_this.assignOfflineProvider.getSubmissionGrade(_this.assign.id, submission.userid).catch(function () {
+                        // Ignore errors.
+                    }).then(function (data) {
+                        var promise, notSynced = false;
+                        // Load offline grades.
+                        if (data && submission.timemodified < data.timemodified) {
+                            notSynced = true;
+                        }
+                        if (getNeedGrading) {
+                            // Only show the submissions that need to be graded.
+                            promise = _this.assignProvider.needsSubmissionToBeGraded(submission, _this.assign.id);
+                        }
+                        else {
+                            promise = Promise.resolve(true);
+                        }
+                        return promise.then(function (add) {
+                            if (!add) {
+                                return;
+                            }
+                            submission.statusColor = _this.assignProvider.getSubmissionStatusColor(submission.status);
+                            submission.gradingColor = _this.assignProvider.getSubmissionGradingStatusColor(submission.gradingstatus);
+                            // Show submission status if not submitted for grading.
+                            if (submission.statusColor != 'success' || !submission.gradingstatus) {
+                                submission.statusTranslated = _this.translate.instant('addon.mod_assign.submissionstatus_' +
+                                    submission.status);
+                            }
+                            else {
+                                submission.statusTranslated = false;
+                            }
+                            if (notSynced) {
+                                submission.gradingStatusTranslationId = 'addon.mod_assign.gradenotsynced';
+                                submission.gradingColor = '';
+                            }
+                            else if (submission.statusColor != 'danger' || submission.gradingColor != 'danger') {
+                                // Show grading status if one of the statuses is not done.
+                                submission.gradingStatusTranslationId =
+                                    _this.assignProvider.getSubmissionGradingStatusTranslationId(submission.gradingstatus);
+                            }
+                            else {
+                                submission.gradingStatusTranslationId = false;
+                            }
+                            _this.submissions.push(submission);
+                        });
+                    }));
+                }
+            });
+            return Promise.all(promises);
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error getting assigment data.');
+        });
+    };
+    /**
+     * Load a certain submission.
+     *
+     * @param {any} submission The submission to load.
+     */
+    AddonModAssignSubmissionListPage.prototype.loadSubmission = function (submission) {
+        if (this.selectedSubmissionId === submission.id && this.splitviewCtrl.isOn()) {
+            // Already selected.
+            return;
+        }
+        this.selectedSubmissionId = submission.id;
+        this.splitviewCtrl.push('AddonModAssignSubmissionReviewPage', {
+            courseId: this.courseId,
+            moduleId: this.moduleId,
+            submitId: submission.submitid,
+            blindId: submission.blindid
+        });
+    };
+    /**
+     * Refresh all the data.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModAssignSubmissionListPage.prototype.refreshAllData = function () {
+        var _this = this;
+        var promises = [];
+        promises.push(this.assignProvider.invalidateAssignmentData(this.courseId));
+        if (this.assign) {
+            promises.push(this.assignProvider.invalidateAllSubmissionData(this.assign.id));
+            promises.push(this.assignProvider.invalidateAssignmentUserMappingsData(this.assign.id));
+            promises.push(this.assignProvider.invalidateListParticipantsData(this.assign.id));
+        }
+        return Promise.all(promises).finally(function () {
+            return _this.fetchAssignment();
+        });
+    };
+    /**
+     * Refresh the list.
      *
      * @param {any} refresher Refresher.
      */
-    AddonFilesListPage.prototype.refreshData = function (refresher) {
-        this.refreshFiles().finally(function () {
+    AddonModAssignSubmissionListPage.prototype.refreshList = function (refresher) {
+        this.refreshAllData().finally(function () {
             refresher.complete();
         });
     };
     /**
-     * Function called when the root has changed.
+     * Component being destroyed.
      */
-    AddonFilesListPage.prototype.rootChanged = function () {
-        var _this = this;
-        this.filesLoaded = false;
-        this.component = this.root == 'my' ? __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */].PRIVATE_FILES_COMPONENT : __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */].SITE_FILES_COMPONENT;
-        this.fetchFiles().finally(function () {
-            _this.filesLoaded = true;
-        });
+    AddonModAssignSubmissionListPage.prototype.ngOnDestroy = function () {
+        this.gradedObserver && this.gradedObserver.off();
     };
-    /**
-     * Upload a new file.
-     */
-    AddonFilesListPage.prototype.uploadFile = function () {
-        var _this = this;
-        this.filesProvider.versionCanUploadFiles().then(function (canUpload) {
-            if (!canUpload) {
-                _this.domUtils.showAlertTranslated('core.notice', 'addon.files.erroruploadnotworking');
-            }
-            else if (!_this.appProvider.isOnline()) {
-                _this.domUtils.showErrorModal('core.fileuploader.errormustbeonlinetoupload', true);
-            }
-            else {
-                _this.filesHelper.uploadPrivateFile(_this.filesInfo).then(function () {
-                    // File uploaded, refresh the list.
-                    _this.filesLoaded = false;
-                    _this.refreshFiles().finally(function () {
-                        _this.filesLoaded = true;
-                    });
-                }).catch(function () {
-                    // Ignore errors, they're handled inside the function.
-                });
-            }
-        });
-    };
-    /**
-     * Set visibility of some items based on site data.
-     */
-    AddonFilesListPage.prototype.setVisibility = function () {
-        this.showPrivateFiles = this.filesProvider.canViewPrivateFiles();
-        this.showSiteFiles = this.filesProvider.canViewSiteFiles();
-        this.showUpload = this.filesProvider.canUploadFiles();
-    };
-    /**
-     * Fetch the files.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonFilesListPage.prototype.fetchFiles = function () {
-        var _this = this;
-        var promise;
-        if (!this.path) {
-            // The path is unknown, the user must be requesting a root.
-            if (this.root == 'site') {
-                this.title = this.translate.instant('addon.files.sitefiles');
-                promise = this.filesProvider.getSiteFiles();
-            }
-            else if (this.root == 'my') {
-                this.title = this.translate.instant('addon.files.files');
-                promise = this.filesProvider.getPrivateFiles().then(function (files) {
-                    if (_this.showUpload && _this.filesProvider.canGetPrivateFilesInfo() && _this.userQuota > 0) {
-                        // Get the info to calculate the available size.
-                        return _this.filesProvider.getPrivateFilesInfo().then(function (info) {
-                            _this.filesInfo = info;
-                            _this.spaceUsed = _this.textUtils.bytesToSize(info.filesizewithoutreferences, 1);
-                            _this.userQuotaReadable = _this.textUtils.bytesToSize(_this.userQuota, 1);
-                            return files;
-                        });
-                    }
-                    else {
-                        // User quota isn't useful, delete it.
-                        delete _this.userQuota;
-                    }
-                    return files;
-                });
-            }
-            else {
-                // Unknown root.
-                promise = Promise.reject(null);
-            }
-        }
-        else {
-            // Path is set, serve the files the user requested.
-            promise = this.filesProvider.getFiles(this.path);
-        }
-        return promise.then(function (files) {
-            _this.files = files;
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.files.couldnotloadfiles', true);
-        });
-    };
-    /**
-     * Refresh the displayed files.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonFilesListPage.prototype.refreshFiles = function () {
-        var _this = this;
-        var promises = [];
-        promises.push(this.filesProvider.invalidateDirectory(this.root, this.path));
-        promises.push(this.filesProvider.invalidatePrivateFilesInfoForUser());
-        return Promise.all(promises).finally(function () {
-            return _this.fetchFiles();
-        });
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonFilesListPage.prototype.ngOnDestroy = function () {
-        this.updateSiteObserver && this.updateSiteObserver.off();
-    };
-    AddonFilesListPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
+    ], AddonModAssignSubmissionListPage.prototype, "splitviewCtrl", void 0);
+    AddonModAssignSubmissionListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-files-list',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/files/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="filesLoaded && (showPrivateFiles || showSiteFiles)" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="filesLoaded" *ngIf="showPrivateFiles || showSiteFiles">\n        <!-- Allow selecting the files to see: private or site. -->\n        <div no-padding *ngIf="showPrivateFiles && showSiteFiles && !path">\n            <ion-select [(ngModel)]="root" (ngModelChange)="rootChanged()" interface="popover">\n                <ion-option value="my">{{ \'addon.files.privatefiles\' | translate }}</ion-option>\n                <ion-option value="site">{{ \'addon.files.sitefiles\' | translate }}</ion-option>\n            </ion-select>\n        </div>\n\n        <!-- Display info about space used and space left. -->\n        <p class="core-info-card" *ngIf="userQuota && filesInfo && filesInfo.filecount > 0">{{ \'core.quotausage\' | translate:{$a: {used: spaceUsed, total: userQuotaReadable} } }}</p>\n\n        <!-- List of files. -->\n        <ion-list *ngIf="files && files.length > 0">\n            <div *ngFor="let file of files">\n                <a *ngIf="file.isdir" ion-item class="item-media" [navPush]="\'AddonFilesListPage\'" [navParams]="{path: file.link, title: file.filename}">\n                    <img [src]="file.imgPath" alt="" role="presentation" item-start>\n                    <p>{{file.filename}}</p>\n                </a>\n                <core-file *ngIf="!file.isdir" [file]="file" [component]="component" [componentId]="file.contextid"></core-file>\n            </div>\n        </ion-list>\n\n        <!-- Message telling there are no files. -->\n        <core-empty-box *ngIf="!files || !files.length" icon="folder" [message]="\'addon.files.emptyfilelist\' | translate"></core-empty-box>\n    </core-loading>\n\n    <!-- Upload a private file. -->\n    <ion-fab bottom right *ngIf="showUpload && root != \'site\' && !path">\n        <button ion-fab (click)="uploadFile()" [attr.aria-label]="\'core.fileuploader.uploadafile\' | translate">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>\n</ion-content>'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/files/pages/list/list.html"*/,
+            selector: 'page-addon-mod-assign-submission-list',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/assign/pages/submission-list/submission-list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end></ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="loaded" (ionRefresh)="refreshList($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="loaded">\n            <core-empty-box *ngIf="!submissions || submissions.length == 0" icon="paper" [message]="\'addon.mod_assign.submissionstatus_\' | translate">\n            </core-empty-box>\n\n            <ion-list>\n                <!-- List of submissions. -->\n                <ng-container *ngFor="let submission of submissions">\n                    <a ion-item text-wrap (click)="loadSubmission(submission)" [class.core-split-item-selected]="submission.id == selectedSubmissionId">\n                        <ion-avatar item-start *ngIf="submission.userprofileimageurl">\n                            <img [src]="submission.userprofileimageurl" [alt]="\'core.pictureof\' | translate:{$a: submission.userfullname}" core-external-content role="presentation" onError="this.src=\'assets/img/user-avatar.png\'">\n                        </ion-avatar>\n                        <h2 *ngIf="submission.userfullname">{{submission.userfullname}}</h2>\n                        <h2 *ngIf="!submission.userfullname">{{ \'addon.mod_assign.hiddenuser\' | translate }}{{submission.blindid}}</h2>\n                        <p *ngIf="assign.teamsubmission">\n                            <span *ngIf="submission.groupname">{{submission.groupname}}</span>\n                            <span *ngIf="assign.preventsubmissionnotingroup && !submission.groupname && !submission.manyGroups && !submission.blindid">{{ \'addon.mod_assign.noteam\' | translate }}</span>\n                            <span *ngIf="assign.preventsubmissionnotingroup && !submission.groupname && submission.manyGroups && !submission.blindid">{{ \'addon.mod_assign.multipleteams\' | translate }}</span>\n                            <span *ngIf="!assign.preventsubmissionnotingroup && !submission.groupname">{{ \'addon.mod_assign.defaultteam\' | translate }}</span>\n                        </p>\n                        <ion-badge text-center [color]="submission.statusColor" *ngIf="submission.statusTranslated">\n                            {{ submission.statusTranslated }}\n                        </ion-badge>\n                        <ion-badge text-center [color]="submission.gradingColor" *ngIf="submission.gradingStatusTranslationId">\n                            {{ submission.gradingStatusTranslationId | translate }}\n                        </ion-badge>\n                    </a>\n                </ng-container>\n\n                <ion-item text-wrap class="core-warning-card" *ngIf="!haveAllParticipants" icon-start>\n                    <ion-icon name="warning"></ion-icon>\n                    {{ \'addon.mod_assign.notallparticipantsareshown\' | translate }}\n                </ion-item>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/assign/pages/submission-list/submission-list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_files__["a" /* AddonFilesProvider */], __WEBPACK_IMPORTED_MODULE_9__providers_helper__["a" /* AddonFilesHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
-    ], AddonFilesListPage);
-    return AddonFilesListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_assign_offline__["a" /* AddonModAssignOfflineProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_helper__["a" /* AddonModAssignHelperProvider */]])
+    ], AddonModAssignSubmissionListPage);
+    return AddonModAssignSubmissionListPage;
 }());
 
-//# sourceMappingURL=list.js.map
+//# sourceMappingURL=submission-list.js.map
 
 /***/ })
 

@@ -1,6 +1,6 @@
 webpackJsonp([35],{
 
-/***/ 1672:
+/***/ 1698:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,11 +8,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginCredentialsPageModule", function() { return CoreLoginCredentialsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__email_signup__ = __webpack_require__(1774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__email_signup__ = __webpack_require__(1803);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_user_components_components_module__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_user_components_components_module__ = __webpack_require__(367);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -51,7 +51,7 @@ var CoreLoginCredentialsPageModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
                 __WEBPACK_IMPORTED_MODULE_6__core_user_components_components_module__["a" /* CoreUserComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__email_signup__["a" /* CoreLoginEmailSignupPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__email_signup__["a" /* CoreLoginEmailSignupPage */]),
                 __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ]
         })
@@ -63,7 +63,7 @@ var CoreLoginCredentialsPageModule = (function () {
 
 /***/ }),
 
-/***/ 1774:
+/***/ 1803:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71,14 +71,14 @@ var CoreLoginCredentialsPageModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_utils__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_ws__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_helper__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_forms__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_user_providers_user_profile_field_delegate__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_ws__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_helper__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_forms__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_user_providers_user_profile_field_delegate__ = __webpack_require__(111);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -131,7 +131,14 @@ var CoreLoginEmailSignupPage = (function () {
         this.captcha = {
             recaptcharesponse: ''
         };
+        this.isMinor = false; // Whether the user is minor age.
         this.siteUrl = navParams.get('siteUrl');
+        // Create the ageVerificationForm.
+        this.ageVerificationForm = this.fb.group({
+            age: ['', __WEBPACK_IMPORTED_MODULE_9__angular_forms__["h" /* Validators */].required]
+        });
+        this.countryControl = this.fb.control('', __WEBPACK_IMPORTED_MODULE_9__angular_forms__["h" /* Validators */].required);
+        this.ageVerificationForm.addControl('country', this.countryControl);
         // Create the signupForm with the basic controls. More controls will be added later.
         this.signupForm = this.fb.group({
             username: ['', __WEBPACK_IMPORTED_MODULE_9__angular_forms__["h" /* Validators */].required],
@@ -179,7 +186,19 @@ var CoreLoginEmailSignupPage = (function () {
         return this.sitesProvider.getSitePublicConfig(this.siteUrl).then(function (config) {
             _this.siteConfig = config;
             if (_this.treatSiteConfig(config)) {
-                return _this.getSignupSettings();
+                // Check content verification.
+                if (typeof _this.ageDigitalConsentVerification == 'undefined') {
+                    return _this.wsProvider.callAjax('core_auth_is_age_digital_consent_verification_enabled', {}, { siteUrl: _this.siteUrl }).then(function (result) {
+                        _this.ageDigitalConsentVerification = result.status;
+                    }).catch(function (e) {
+                        // Capture exceptions, fail silently.
+                    }).then(function () {
+                        return _this.getSignupSettings();
+                    });
+                }
+                else {
+                    return _this.getSignupSettings();
+                }
             }
         }).then(function () {
             _this.completeFormGroup();
@@ -197,6 +216,9 @@ var CoreLoginEmailSignupPage = (function () {
             _this.categories = _this.loginHelper.formatProfileFieldsForSignup(settings.profilefields);
             if (_this.settings.recaptchapublickey) {
                 _this.captcha.recaptcharesponse = ''; // Reset captcha.
+            }
+            if (!_this.countryControl.value) {
+                _this.countryControl.setValue(settings.country || '');
             }
             _this.namefieldsErrors = {};
             if (settings.namefields) {
@@ -220,6 +242,10 @@ var CoreLoginEmailSignupPage = (function () {
         if (siteConfig && siteConfig.registerauth == 'email' && !this.loginHelper.isEmailSignupDisabled(siteConfig)) {
             this.siteName = siteConfig.sitename;
             this.authInstructions = siteConfig.authinstructions;
+            this.ageDigitalConsentVerification = siteConfig.agedigitalconsentverification;
+            this.supportName = siteConfig.supportname;
+            this.supportEmail = siteConfig.supportemail;
+            this.countryControl.setValue(siteConfig.country || '');
             return true;
         }
         else {
@@ -282,7 +308,7 @@ var CoreLoginEmailSignupPage = (function () {
                         if (result.warnings && result.warnings.length) {
                             var error = result.warnings[0].message;
                             if (error == 'incorrect-captcha-sol') {
-                                error = _this.translate.instant('mm.login.recaptchaincorrect');
+                                error = _this.translate.instant('core.login.recaptchaincorrect');
                             }
                             _this.domUtils.showErrorModal(error);
                         }
@@ -304,15 +330,48 @@ var CoreLoginEmailSignupPage = (function () {
     CoreLoginEmailSignupPage.prototype.showAuthInstructions = function () {
         this.textUtils.expandText(this.translate.instant('core.login.instructions'), this.authInstructions);
     };
+    /**
+     * Show contact information on site (we have to display again the age verification form).
+     */
+    CoreLoginEmailSignupPage.prototype.showContactOnSite = function () {
+        this.utils.openInBrowser(this.siteUrl + '/login/verify_age_location.php');
+    };
+    /**
+     * Verify Age.
+     */
+    CoreLoginEmailSignupPage.prototype.verifyAge = function () {
+        var _this = this;
+        if (!this.ageVerificationForm.valid) {
+            this.domUtils.showErrorModal('core.errorinvalidform', true);
+            return;
+        }
+        var modal = this.domUtils.showModalLoading('core.sending', true), params = this.ageVerificationForm.value;
+        params.age = parseInt(params.age, 10); // Use just the integer part.
+        this.wsProvider.callAjax('core_auth_is_minor', params, { siteUrl: this.siteUrl }).then(function (result) {
+            if (!result.status) {
+                // Not a minor, go ahead!
+                _this.ageDigitalConsentVerification = false;
+            }
+            else {
+                // Is a minor!!
+                _this.isMinor = true;
+            }
+        }).catch(function () {
+            // Something wrong, redirect to the site.
+            _this.domUtils.showErrorModal('There was an error verifying your age, please try again using the browser.');
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
     ], CoreLoginEmailSignupPage.prototype, "content", void 0);
     CoreLoginEmailSignupPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-login-email-signup',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/email-signup/email-signup.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.newaccount\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only *ngIf="authInstructions" (click)="showAuthInstructions()" [attr.aria-label]="\'core.login.instructions\' | translate">\n                <ion-icon name="help-circle"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="settingsLoaded" (ionRefresh)="refreshSettings($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="settingsLoaded">\n        <form ion-list *ngIf="settingsLoaded && settings" [formGroup]="signupForm" (ngSubmit)="create()" class="list list-inset">\n            <ion-item text-wrap text-center>\n                <!-- If no sitename show big siteurl. -->\n                <p *ngIf="!siteName" padding class="item-heading">{{siteUrl}}</p>\n                <!-- If sitename, show big sitename and small siteurl. -->\n                <p *ngIf="siteName" padding class="item-heading">{{siteName}}</p>\n                <p *ngIf="siteName">{{siteUrl}}</p>\n            </ion-item>\n\n            <!-- Username and password. -->\n            <ion-item-divider text-wrap color="light">\n                {{ \'core.login.createuserandpass\' | translate }}\n            </ion-item-divider>\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.login.username\' | translate }}</ion-label>\n                <ion-input type="text" name="username" placeholder="{{ \'core.login.username\' | translate }}" formControlName="username" autocapitalize="none" autocorrect="off"></ion-input>\n                <core-input-errors item-content [control]="signupForm.controls.username" [errorMessages]="usernameErrors"></core-input-errors>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.login.password\' | translate }}</ion-label>\n                <core-show-password item-content [name]="\'password\'">\n                    <ion-input type="password" name="password" placeholder="{{ \'core.login.password\' | translate }}" formControlName="password"></ion-input>\n                </core-show-password>\n                <p *ngIf="settings.passwordpolicy" item-content class="core-input-footnote">\n                    {{settings.passwordpolicy}}\n                </p>\n                <core-input-errors item-content [control]="signupForm.controls.password" [errorMessages]="passwordErrors"></core-input-errors>\n            </ion-item>\n\n            <!-- More details. -->\n            <ion-item-divider text-wrap color="light">\n                {{ \'core.login.supplyinfo\' | translate }}\n            </ion-item-divider>\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.user.email\' | translate }}</ion-label>\n                <ion-input type="email" name="email" placeholder="{{ \'core.user.email\' | translate }}" formControlName="email" autocapitalize="none" autocorrect="off"></ion-input>\n                <core-input-errors item-content [control]="signupForm.controls.email" [errorMessages]="emailErrors"></core-input-errors>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.user.emailagain\' | translate }}</ion-label>\n                <ion-input type="email" name="email2" placeholder="{{ \'core.user.emailagain\' | translate }}" formControlName="email2" autocapitalize="none" autocorrect="off" pattern="{{signupForm.controls.email.value}}"></ion-input>\n                <core-input-errors item-content [control]="signupForm.controls.email2" [errorMessages]="email2Errors"></core-input-errors>\n            </ion-item>\n            <ion-item *ngFor="let nameField of settings.namefields" text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.user.\' + nameField | translate }}</ion-label>\n                <ion-input type="text" name="nameField" placeholder="{{ \'core.user.\' + nameField | translate }}" formControlName="{{nameField}}" autocorrect="off"></ion-input>\n                <core-input-errors item-content [control]="signupForm.controls[nameField]" [errorMessages]="namefieldsErrors[nameField]"></core-input-errors>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked>{{ \'core.user.city\' | translate }}</ion-label>\n                <ion-input type="text" name="city" placeholder="{{ \'core.user.city\' | translate }}" formControlName="city" autocorrect="off"></ion-input>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked id="core-login-signup-country">{{ \'core.user.country\' | translate }}</ion-label>\n                <ion-select name="country" formControlName="country" aria-labelledby="core-login-signup-country" interface="popover">\n                    <ion-option value="">{{ \'core.login.selectacountry\' | translate }}</ion-option>\n                    <ion-option *ngFor="let key of countriesKeys" [value]="key">{{countries[key]}}</ion-option>\n                </ion-select>\n            </ion-item>\n\n            <!-- Other categories. -->\n            <ng-container *ngFor="let category of categories">\n                <ion-item-divider text-wrap color="light">{{ category.name }}</ion-item-divider>\n                <core-user-profile-field *ngFor="let field of category.fields" [field]="field" edit="true" signup="true" registerAuth="email" [form]="signupForm"></core-user-profile-field>\n            </ng-container>\n\n            <!-- ReCAPTCHA -->\n            <ng-container *ngIf="settings.recaptchapublickey">\n                <ion-item-divider text-wrap color="light">{{ \'core.login.security_question\' | translate }}</ion-item-divider>\n                <ion-item text-wrap>\n                    <core-recaptcha [publicKey]="settings.recaptchapublickey" [model]="captcha" [siteUrl]="siteUrl"></core-recaptcha>\n                </ion-item>\n            </ng-container>\n\n            <!-- Site policy (if any). -->\n            <ng-container *ngIf="settings.sitepolicy">\n                <ion-item-divider text-wrap color="light">{{ \'core.login.policyagreement\' | translate }}</ion-item-divider>\n                <ion-item text-wrap>\n                    <p><a [href]="settings.sitepolicy" core-link capture="false">{{ \'core.login.policyagreementclick\' | translate }}</a></p>\n                </ion-item>\n                <ion-item text-wrap>\n                    <ion-label core-mark-required="true">{{ \'core.login.policyaccept\' | translate }}</ion-label>\n                    <ion-checkbox item-end name="policyagreed" formControlName="policyagreed"></ion-checkbox>\n                    <core-input-errors [control]="signupForm.controls.policyagreed" [errorMessages]="policyErrors"></core-input-errors>\n                </ion-item>\n            </ng-container>\n\n            <!-- Submit button. -->\n            <ion-item padding>\n                <button ion-button block color="primary" type="submit">{{ \'core.login.createaccount\' | translate }}</button>\n            </ion-item>\n        </form>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/email-signup/email-signup.html"*/,
+            selector: 'page-core-login-email-signup',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/email-signup/email-signup.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.login.newaccount\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button ion-button icon-only *ngIf="authInstructions" (click)="showAuthInstructions()" [attr.aria-label]="\'core.login.instructions\' | translate">\n                <ion-icon name="help-circle"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="settingsLoaded && !isMinor" (ionRefresh)="refreshSettings($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="settingsLoaded" *ngIf="!isMinor">\n\n        <!-- Age verification. -->\n        <form ion-list *ngIf="settingsLoaded && settings && ageDigitalConsentVerification" [formGroup]="ageVerificationForm" (ngSubmit)="verifyAge()">\n            <ion-item-divider color="light" text-wrap>\n                <p class="item-heading">{{ \'core.agelocationverification\' | translate }}</p>\n            </ion-item-divider>\n\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.whatisyourage\' | translate }}</ion-label>\n                <ion-input type="number" name="age" placeholder="0" formControlName="age" autocapitalize="none" autocorrect="off"></ion-input>\n            </ion-item>\n\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.wheredoyoulive\' | translate }}</ion-label>\n                <ion-select name="country" formControlName="country" interface="popover">\n                    <ion-option value="">{{ \'core.login.selectacountry\' | translate }}</ion-option>\n                    <ion-option *ngFor="let key of countriesKeys" [value]="key">{{countries[key]}}</ion-option>\n                </ion-select>\n            </ion-item>\n\n            <!-- Submit button. -->\n            <ion-item padding>\n                <button ion-button block type="submit" [disabled]="!ageVerificationForm.valid">{{ \'core.proceed\' | translate }}</button>\n            </ion-item>\n\n            <ion-item text-wrap>\n                <p class="item-heading">{{ \'core.whyisthisrequired\' | translate }}</p>\n                <p>{{ \'core.explanationdigitalminor\' | translate }}</p>\n            </ion-item>\n        </form>\n\n        <!-- Signup form. -->\n        <form ion-list *ngIf="settingsLoaded && settings && !ageDigitalConsentVerification" [formGroup]="signupForm" (ngSubmit)="create()">\n            <ion-item text-wrap text-center>\n                <!-- If no sitename show big siteurl. -->\n                <p *ngIf="!siteName" padding class="item-heading">{{siteUrl}}</p>\n                <!-- If sitename, show big sitename and small siteurl. -->\n                <p *ngIf="siteName" padding class="item-heading"><core-format-text [text]="siteName"></core-format-text></p>\n                <p *ngIf="siteName">{{siteUrl}}</p>\n            </ion-item>\n\n            <!-- Username and password. -->\n            <ion-item-divider text-wrap color="light">\n                {{ \'core.login.createuserandpass\' | translate }}\n            </ion-item-divider>\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.login.username\' | translate }}</ion-label>\n                <ion-input type="text" name="username" placeholder="{{ \'core.login.username\' | translate }}" formControlName="username" autocapitalize="none" autocorrect="off"></ion-input>\n                <core-input-errors item-content [control]="signupForm.controls.username" [errorMessages]="usernameErrors"></core-input-errors>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.login.password\' | translate }}</ion-label>\n                <core-show-password item-content [name]="\'password\'">\n                    <ion-input type="password" name="password" placeholder="{{ \'core.login.password\' | translate }}" formControlName="password"></ion-input>\n                </core-show-password>\n                <p *ngIf="settings.passwordpolicy" item-content class="core-input-footnote">\n                    {{settings.passwordpolicy}}\n                </p>\n                <core-input-errors item-content [control]="signupForm.controls.password" [errorMessages]="passwordErrors"></core-input-errors>\n            </ion-item>\n\n            <!-- More details. -->\n            <ion-item-divider text-wrap color="light">\n                {{ \'core.login.supplyinfo\' | translate }}\n            </ion-item-divider>\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.user.email\' | translate }}</ion-label>\n                <ion-input type="email" name="email" placeholder="{{ \'core.user.email\' | translate }}" formControlName="email" autocapitalize="none" autocorrect="off"></ion-input>\n                <core-input-errors item-content [control]="signupForm.controls.email" [errorMessages]="emailErrors"></core-input-errors>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.user.emailagain\' | translate }}</ion-label>\n                <ion-input type="email" name="email2" placeholder="{{ \'core.user.emailagain\' | translate }}" formControlName="email2" autocapitalize="none" autocorrect="off" pattern="{{signupForm.controls.email.value}}"></ion-input>\n                <core-input-errors item-content [control]="signupForm.controls.email2" [errorMessages]="email2Errors"></core-input-errors>\n            </ion-item>\n            <ion-item *ngFor="let nameField of settings.namefields" text-wrap>\n                <ion-label stacked core-mark-required="true">{{ \'core.user.\' + nameField | translate }}</ion-label>\n                <ion-input type="text" name="nameField" placeholder="{{ \'core.user.\' + nameField | translate }}" formControlName="{{nameField}}" autocorrect="off"></ion-input>\n                <core-input-errors item-content [control]="signupForm.controls[nameField]" [errorMessages]="namefieldsErrors[nameField]"></core-input-errors>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked>{{ \'core.user.city\' | translate }}</ion-label>\n                <ion-input type="text" name="city" placeholder="{{ \'core.user.city\' | translate }}" formControlName="city" autocorrect="off"></ion-input>\n            </ion-item>\n            <ion-item text-wrap>\n                <ion-label stacked id="core-login-signup-country">{{ \'core.user.country\' | translate }}</ion-label>\n                <ion-select name="country" formControlName="country" aria-labelledby="core-login-signup-country" interface="popover">\n                    <ion-option value="">{{ \'core.login.selectacountry\' | translate }}</ion-option>\n                    <ion-option *ngFor="let key of countriesKeys" [value]="key">{{countries[key]}}</ion-option>\n                </ion-select>\n            </ion-item>\n\n            <!-- Other categories. -->\n            <ng-container *ngFor="let category of categories">\n                <ion-item-divider text-wrap color="light">{{ category.name }}</ion-item-divider>\n                <core-user-profile-field *ngFor="let field of category.fields" [field]="field" edit="true" signup="true" registerAuth="email" [form]="signupForm"></core-user-profile-field>\n            </ng-container>\n\n            <!-- ReCAPTCHA -->\n            <ng-container *ngIf="settings.recaptchapublickey">\n                <ion-item-divider text-wrap color="light">{{ \'core.login.security_question\' | translate }}</ion-item-divider>\n                <ion-item text-wrap>\n                    <core-recaptcha [publicKey]="settings.recaptchapublickey" [model]="captcha" [siteUrl]="siteUrl"></core-recaptcha>\n                </ion-item>\n            </ng-container>\n\n            <!-- Site policy (if any). -->\n            <ng-container *ngIf="settings.sitepolicy">\n                <ion-item-divider text-wrap color="light">{{ \'core.login.policyagreement\' | translate }}</ion-item-divider>\n                <ion-item text-wrap>\n                    <p><a [href]="settings.sitepolicy" core-link capture="false">{{ \'core.login.policyagreementclick\' | translate }}</a></p>\n                </ion-item>\n                <ion-item text-wrap>\n                    <ion-label core-mark-required="true">{{ \'core.login.policyaccept\' | translate }}</ion-label>\n                    <ion-checkbox item-end name="policyagreed" formControlName="policyagreed"></ion-checkbox>\n                    <core-input-errors [control]="signupForm.controls.policyagreed" [errorMessages]="policyErrors"></core-input-errors>\n                </ion-item>\n            </ng-container>\n\n            <!-- Submit button. -->\n            <ion-item padding>\n                <button ion-button block color="primary" type="submit">{{ \'core.login.createaccount\' | translate }}</button>\n            </ion-item>\n        </form>\n    </core-loading>\n\n    <ion-list *ngIf="isMinor">\n        <ion-item-divider color="light" text-wrap>\n            <p *ngIf="siteName" class="item-heading padding"><core-format-text [text]="siteName"></core-format-text></p>\n        </ion-item-divider>\n        <ion-item text-wrap>\n            <p class="item-heading">{{ \'core.considereddigitalminor\' | translate }}</p>\n            <p>{{ \'core.digitalminor_desc\' | translate }}</p>\n            <p *ngIf="supportName">{{ supportName }}</p>\n            <p *ngIf="supportEmail">{{ supportEmail }}</p>\n            <div padding *ngIf="!supportName && !supportEmail">\n                <button ion-button block (click)="showContactOnSite()">\n                    {{ \'core.openinbrowser\' | translate }}\n                </button>\n            </div>\n        </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/login/pages/email-signup/email-signup.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_9__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_7__providers_ws__["a" /* CoreWSProvider */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_9__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_7__providers_ws__["a" /* CoreWSProvider */],
             __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_helper__["a" /* CoreLoginHelperProvider */],
             __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_6__providers_utils_utils__["a" /* CoreUtilsProvider */],
             __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_10__core_user_providers_user_profile_field_delegate__["a" /* CoreUserProfileFieldDelegate */]])

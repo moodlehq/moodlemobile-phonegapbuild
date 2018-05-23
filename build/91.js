@@ -1,18 +1,16 @@
 webpackJsonp([91],{
 
-/***/ 1607:
+/***/ 1632:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonBadgesUserBadgesPageModule", function() { return AddonBadgesUserBadgesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCalendarSettingsPageModule", function() { return AddonCalendarSettingsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_badges__ = __webpack_require__(1705);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings__ = __webpack_require__(1734);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(94);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,44 +35,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-
-var AddonBadgesUserBadgesPageModule = (function () {
-    function AddonBadgesUserBadgesPageModule() {
+var AddonCalendarSettingsPageModule = (function () {
+    function AddonCalendarSettingsPageModule() {
     }
-    AddonBadgesUserBadgesPageModule = __decorate([
+    AddonCalendarSettingsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__user_badges__["a" /* AddonBadgesUserBadgesPage */],
+                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonCalendarSettingsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__user_badges__["a" /* AddonBadgesUserBadgesPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonCalendarSettingsPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonBadgesUserBadgesPageModule);
-    return AddonBadgesUserBadgesPageModule;
+    ], AddonCalendarSettingsPageModule);
+    return AddonCalendarSettingsPageModule;
 }());
 
-//# sourceMappingURL=user-badges.module.js.map
+//# sourceMappingURL=settings.module.js.map
 
 /***/ }),
 
-/***/ 1705:
+/***/ 1734:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonBadgesUserBadgesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCalendarSettingsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_badges__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_calendar__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(2);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -101,92 +92,45 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
 /**
- * Page that displays the list of calendar events.
+ * Page that displays the calendar settings.
  */
-var AddonBadgesUserBadgesPage = (function () {
-    function AddonBadgesUserBadgesPage(navParams, sitesProvider, badgesProvider, domUtils, timeUtils) {
-        this.badgesProvider = badgesProvider;
-        this.domUtils = domUtils;
-        this.timeUtils = timeUtils;
-        this.badgesLoaded = false;
-        this.badges = [];
-        this.currentTime = 0;
-        this.courseId = navParams.get('courseId') || 0; // Use 0 for site badges.
-        this.userId = navParams.get('userId') || sitesProvider.getCurrentSite().getUserId();
+var AddonCalendarSettingsPage = (function () {
+    function AddonCalendarSettingsPage(calendarProvider, eventsProvider, sitesProvider) {
+        this.calendarProvider = calendarProvider;
+        this.eventsProvider = eventsProvider;
+        this.sitesProvider = sitesProvider;
+        this.defaultTime = 0;
     }
     /**
      * View loaded.
      */
-    AddonBadgesUserBadgesPage.prototype.ionViewDidLoad = function () {
+    AddonCalendarSettingsPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchBadges().finally(function () {
-            if (!_this.badgeHash && _this.splitviewCtrl.isOn() && _this.badges.length > 0) {
-                // Take first and load it.
-                _this.loadIssuedBadge(_this.badges[0].uniquehash);
-            }
-            _this.badgesLoaded = true;
+        this.calendarProvider.getDefaultNotificationTime().then(function (time) {
+            _this.defaultTime = time;
         });
     };
     /**
-     * Fetch all the badges required for the view.
+     * Update default time.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @param {number} newTime New time.
      */
-    AddonBadgesUserBadgesPage.prototype.fetchBadges = function () {
-        var _this = this;
-        this.currentTime = this.timeUtils.timestamp();
-        return this.badgesProvider.getUserBadges(this.courseId, this.userId).then(function (badges) {
-            _this.badges = badges;
-        }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'Error getting badges data.');
-        });
+    AddonCalendarSettingsPage.prototype.updateDefaultTime = function (newTime) {
+        this.calendarProvider.setDefaultNotificationTime(newTime);
+        this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_1__providers_calendar__["a" /* AddonCalendarProvider */].DEFAULT_NOTIFICATION_TIME_CHANGED, { time: newTime }, this.sitesProvider.getCurrentSiteId());
     };
-    /**
-     * Refresh the badges.
-     *
-     * @param {any} refresher Refresher.
-     */
-    AddonBadgesUserBadgesPage.prototype.refreshBadges = function (refresher) {
-        var _this = this;
-        this.badgesProvider.invalidateUserBadges(this.courseId, this.userId).finally(function () {
-            _this.fetchBadges().finally(function () {
-                refresher.complete();
-            });
-        });
-    };
-    /**
-     * Navigate to a particular badge.
-     *
-     * @param {string} badgeHash Badge to load.
-     */
-    AddonBadgesUserBadgesPage.prototype.loadIssuedBadge = function (badgeHash) {
-        this.badgeHash = badgeHash;
-        var params = { courseId: this.courseId, userId: this.userId, badgeHash: badgeHash };
-        this.splitviewCtrl.push('AddonBadgesIssuedBadgePage', params);
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonBadgesUserBadgesPage.prototype, "content", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
-    ], AddonBadgesUserBadgesPage.prototype, "splitviewCtrl", void 0);
-    AddonBadgesUserBadgesPage = __decorate([
+    AddonCalendarSettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-badges-user-badges',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/badges/pages/user-badges/user-badges.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.badges.badges\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="badgesLoaded" (ionRefresh)="refreshBadges($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="badgesLoaded">\n            <core-empty-box *ngIf="!badges || badges.length == 0" icon="trophy" [message]="\'addon.badges.nobadges\' | translate">\n            </core-empty-box>\n\n            <ion-list *ngIf="badges && badges.length" no-margin>\n                <a ion-item text-wrap *ngFor="let badge of badges" [title]="badge.name" (click)="loadIssuedBadge(badge.uniquehash)" [class.core-split-item-selected]="badge.uniquehash == badgeHash">\n                    <ion-avatar item-start>\n                        <img [src]="badge.badgeurl" [alt]="badge.name" item-start core-external-content>\n                    </ion-avatar>\n                    <h2><core-format-text [text]="badge.name"></core-format-text></h2>\n                    <p>{{ badge.dateissued | coreToLocaleString }}</p>\n                    <ion-badge item-end color="danger" *ngIf="badge.dateexpire && currentTime >= badge.dateexpire">\n                        {{ \'addon.badges.expired\' | translate }}\n                    </ion-badge>\n                </a>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/badges/pages/user-badges/user-badges.html"*/,
+            selector: 'page-addon-calendar-settings',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/calendar/pages/settings/settings.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.settings\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-list>\n        <ion-item>\n            <ion-label>{{ \'addon.calendar.defaultnotificationtime\' | translate }}</ion-label>\n            <ion-select [(ngModel)]="defaultTime" (ionChange)="updateDefaultTime($event)" interface="popover">\n                <ion-option value="0">{{ \'core.settings.disabled\' | translate }}</ion-option>\n                <ion-option value="10">{{ 600 | coreDuration }}</ion-option>\n                <ion-option value="30">{{ 1800 | coreDuration }}</ion-option>\n                <ion-option value="60">{{ 3600 | coreDuration }}</ion-option>\n                <ion-option value="120">{{ 7200 | coreDuration }}</ion-option>\n                <ion-option value="360">{{ 21600 | coreDuration }}</ion-option>\n                <ion-option value="720">{{ 43200 | coreDuration }}</ion-option>\n                <ion-option value="1440">{{ 86400 | coreDuration }}</ion-option>\n            </ion-select>\n        </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/calendar/pages/settings/settings.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_badges__["a" /* AddonBadgesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__["a" /* CoreTimeUtilsProvider */]])
-    ], AddonBadgesUserBadgesPage);
-    return AddonBadgesUserBadgesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_calendar__["a" /* AddonCalendarProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */]])
+    ], AddonCalendarSettingsPage);
+    return AddonCalendarSettingsPage;
 }());
 
-//# sourceMappingURL=user-badges.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ })
 

@@ -1,6 +1,6 @@
 webpackJsonp([22],{
 
-/***/ 1685:
+/***/ 1711:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list__ = __webpack_require__(1787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list__ = __webpack_require__(1816);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(16);
 // (C) Copyright 2015 Martin Dougiamas
@@ -48,7 +48,7 @@ var CoreSettingsListPageModule = (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__list__["a" /* CoreSettingsListPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__list__["a" /* CoreSettingsListPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
@@ -60,15 +60,15 @@ var CoreSettingsListPageModule = (function () {
 
 /***/ }),
 
-/***/ 1787:
+/***/ 1816:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreSettingsListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_delegate__ = __webpack_require__(174);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_delegate__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__ = __webpack_require__(131);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -134,7 +134,7 @@ var CoreSettingsListPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-core-settings-list',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/core/settings/pages/list/list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'core.settings.settings\' | translate}}</ion-title>\n        <ion-buttons end>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-list>\n            <ion-item (click)="openHandler(\'CoreSettingsGeneralPage\')" [title]="\'core.settings.general\' | translate"  [class.core-split-item-selected]="\'CoreSettingsGeneralPage\' == selectedPage" detail-push>\n                <ion-icon name="construct" item-start></ion-icon>\n                <p>{{ \'core.settings.general\' | translate }}</p>\n            </ion-item>\n            <ion-item (click)="openHandler(\'CoreSettingsSpaceUsagePage\')" [title]="\'core.settings.spaceusage\' | translate" [class.core-split-item-selected]="\'CoreSettingsSpaceUsagePage\' == selectedPage" detail-push>\n                <ion-icon name="stats" item-start></ion-icon>\n                <p>{{ \'core.settings.spaceusage\' | translate }}</p>\n            </ion-item>\n            <ion-item (click)="openHandler(\'CoreSettingsSynchronizationPage\')" [title]="\'core.settings.synchronization\' | translate" [class.core-split-item-selected]="\'CoreSettingsSynchronizationPage\' == selectedPage" detail-push>\n                <ion-icon name="sync" item-start></ion-icon>\n                <p>{{ \'core.settings.synchronization\' | translate }}</p>\n            </ion-item>\n            <ion-item *ngIf="isIOS" (click)="openHandler(\'CoreSharedFilesListPage\', {manage: true})" [title]="\'core.sharedfiles.sharedfiles\' | translate" [class.core-split-item-selected]="\'CoreSharedFilesListPage\' == selectedPage" detail-push>\n                <ion-icon name="folder" item-start></ion-icon>\n                <p>{{ \'core.sharedfiles.sharedfiles\' | translate }}</p>\n            </ion-item>\n\n            <ion-item *ngFor="let handler of handlers" [ngClass]="[\'core-settings-handler\', handler.class]" (click)="openHandler(handler.page, handler.params)" [title]="handler.title | translate" detail-push [class.core-split-item-selected]="handler.page == selectedPage">\n                <ion-icon [name]="handler.icon" item-start *ngIf="handler.icon"></ion-icon>\n                <p>{{ handler.title | translate}}</p>\n            </ion-item>\n\n            <ion-item (click)="openHandler(\'CoreSettingsAboutPage\')" [title]="\'core.settings.about\' | translate" [class.core-split-item-selected]="\'CoreSettingsAboutPage\' == selectedPage" detail-push>\n                <ion-icon name="contacts" item-start></ion-icon>\n                <p>{{ \'core.settings.about\' | translate }}</p>\n            </ion-item>\n        </ion-list>\n    </ion-content>\n</core-split-view>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/core/settings/pages/list/list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_delegate__["a" /* CoreSettingsDelegate */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_delegate__["a" /* CoreSettingsDelegate */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */]])
     ], CoreSettingsListPage);
     return CoreSettingsListPage;
 }());

@@ -1,17 +1,19 @@
 webpackJsonp([75],{
 
-/***/ 1629:
+/***/ 1654:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatIndexPageModule", function() { return AddonModChatIndexPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModFeedbackAttemptPageModule", function() { return AddonModFeedbackAttemptPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(842);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1727);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(835);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__attempt__ = __webpack_require__(1756);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,37 +39,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModChatIndexPageModule = (function () {
-    function AddonModChatIndexPageModule() {
+
+
+var AddonModFeedbackAttemptPageModule = (function () {
+    function AddonModFeedbackAttemptPageModule() {
     }
-    AddonModChatIndexPageModule = __decorate([
+    AddonModFeedbackAttemptPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModChatIndexPage */],
+                __WEBPACK_IMPORTED_MODULE_7__attempt__["a" /* AddonModFeedbackAttemptPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModChatComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModChatIndexPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* AddonModFeedbackComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_7__attempt__["a" /* AddonModFeedbackAttemptPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModChatIndexPageModule);
-    return AddonModChatIndexPageModule;
+    ], AddonModFeedbackAttemptPageModule);
+    return AddonModFeedbackAttemptPageModule;
 }());
 
-//# sourceMappingURL=index.module.js.map
+//# sourceMappingURL=attempt.module.js.map
 
 /***/ }),
 
-/***/ 1727:
+/***/ 1756:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModChatIndexPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModFeedbackAttemptPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(369);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_feedback__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_helper__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(9);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,37 +102,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 /**
- * Page that displays a chat.
+ * Page that displays a feedback attempt review.
  */
-var AddonModChatIndexPage = (function () {
-    function AddonModChatIndexPage(navParams) {
-        this.module = navParams.get('module') || {};
-        this.courseId = navParams.get('courseId');
-        this.title = this.module.name;
+var AddonModFeedbackAttemptPage = (function () {
+    function AddonModFeedbackAttemptPage(navParams, feedbackProvider, navCtrl, domUtils, feedbackHelper, textUtils) {
+        this.feedbackProvider = feedbackProvider;
+        this.navCtrl = navCtrl;
+        this.domUtils = domUtils;
+        this.feedbackHelper = feedbackHelper;
+        this.textUtils = textUtils;
+        this.component = __WEBPACK_IMPORTED_MODULE_2__providers_feedback__["a" /* AddonModFeedbackProvider */].COMPONENT;
+        this.feedbackLoaded = false;
+        this.feedbackId = navParams.get('feedbackId') || 0;
+        this.attempt = navParams.get('attempt') || false;
+        this.componentId = navParams.get('moduleId');
     }
     /**
-     * Update some data based on the chat instance.
-     *
-     * @param {any} chat Chat instance.
+     * View loaded.
      */
-    AddonModChatIndexPage.prototype.updateData = function (chat) {
-        this.title = chat.name || this.title;
+    AddonModFeedbackAttemptPage.prototype.ionViewDidLoad = function () {
+        this.fetchData();
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModChatIndexComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModChatIndexComponent */])
-    ], AddonModChatIndexPage.prototype, "chatComponent", void 0);
-    AddonModChatIndexPage = __decorate([
+    /**
+     * Fetch all the data required for the view.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModFeedbackAttemptPage.prototype.fetchData = function () {
+        var _this = this;
+        return this.feedbackProvider.getItems(this.feedbackId).then(function (items) {
+            // Add responses and format items.
+            _this.items = items.items.map(function (item) {
+                if (item.typ == 'label') {
+                    item.submittedValue = _this.textUtils.replacePluginfileUrls(item.presentation, item.itemfiles);
+                }
+                else {
+                    for (var x in _this.attempt.responses) {
+                        if (_this.attempt.responses[x].id == item.id) {
+                            item.submittedValue = _this.attempt.responses[x].printval;
+                            delete _this.attempt.responses[x];
+                            break;
+                        }
+                    }
+                }
+                return _this.feedbackHelper.getItemForm(item, true);
+            });
+        }).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+            // Some call failed on first fetch, go back.
+            _this.navCtrl.pop();
+            return Promise.reject(null);
+        }).finally(function () {
+            _this.feedbackLoaded = true;
+        });
+    };
+    AddonModFeedbackAttemptPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-chat-index',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/chat/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="chatComponent.loaded" (ionRefresh)="chatComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-chat-index [module]="module" [courseId]="courseId" (dataRetrieved)="updateData($event)"></addon-mod-chat-index>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/chat/pages/index/index.html"*/,
+            selector: 'page-addon-mod-feedback-attempt',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/attempt/attempt.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text  [text]=" attempt.fullname "></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="feedbackLoaded">\n        <ion-list no-margin>\n            <a *ngIf="attempt.fullname" ion-item text-wrap core-user-link [userId]="attempt.userid" [attr.aria-label]=" \'core.user.viewprofile\' | translate" core-user-link [courseId]="attempt.courseid" [title]="attempt.fullname">\n                <ion-avatar item-start>\n                    <img [src]="attempt.profileimageurl" [alt]="\'core.pictureof\' | translate:{$a: attempt.fullname}" core-external-content onError="this.src=\'assets/img/user-avatar.png\'">\n                </ion-avatar>\n                <h2>{{attempt.fullname}}</h2>\n                <p *ngIf="attempt.timemodified">{{attempt.timemodified * 1000 | coreFormatDate:"LLL"}}</p>\n            </a>\n\n            <ion-item text-wrap *ngIf="!attempt.fullname">\n                <h2>{{ \'addon.mod_feedback.response_nr\' |translate }}: {{attempt.number}} ({{ \'addon.mod_feedback.anonymous\' |translate }})</h2>\n                <p *ngIf="attempt.timemodified">{{attempt.timemodified * 1000 | coreFormatDate:"LLL"}}</p>\n            </ion-item >\n            <ng-container *ngIf="items && items.length">\n                <ng-container *ngFor="let item of items">\n                    <ion-item-divider *ngIf="item.typ == \'pagebreak\'" color="light"></ion-item-divider>\n                    <ion-item text-wrap *ngIf="item.typ != \'pagebreak\'" [color]="item.dependitem > 0 ? \'light\' : \'\'">\n                        <h2 *ngIf="item.name" [core-mark-required]="item.required">\n                            <span *ngIf="item.itemnumber">{{item.itemnumber}}. </span><core-format-text  [component]="component" [componentId]="componentId" [text]="item.name"></core-format-text>\n                        </h2>\n                        <p *ngIf="item.submittedValue"><core-format-text  [component]="component" [componentId]="componentId" [text]=" item.submittedValue"></core-format-text></p>\n                    </ion-item>\n                </ng-container>\n            </ng-container>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/attempt/attempt.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], AddonModChatIndexPage);
-    return AddonModChatIndexPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_feedback__["a" /* AddonModFeedbackProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_helper__["a" /* AddonModFeedbackHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
+    ], AddonModFeedbackAttemptPage);
+    return AddonModFeedbackAttemptPage;
 }());
 
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=attempt.js.map
 
 /***/ })
 

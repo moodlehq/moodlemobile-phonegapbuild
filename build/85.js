@@ -1,17 +1,17 @@
 webpackJsonp([85],{
 
-/***/ 1613:
+/***/ 1638:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyCompetencySummaryPageModule", function() { return AddonCompetencyCompetencySummaryPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyPlanListPageModule", function() { return AddonCompetencyPlanListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__competencysummary__ = __webpack_require__(1711);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__planlist__ = __webpack_require__(1740);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,39 +37,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonCompetencyCompetencySummaryPageModule = (function () {
-    function AddonCompetencyCompetencySummaryPageModule() {
+var AddonCompetencyPlanListPageModule = (function () {
+    function AddonCompetencyPlanListPageModule() {
     }
-    AddonCompetencyCompetencySummaryPageModule = __decorate([
+    AddonCompetencyPlanListPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__competencysummary__["a" /* AddonCompetencyCompetencySummaryPage */],
+                __WEBPACK_IMPORTED_MODULE_5__planlist__["a" /* AddonCompetencyPlanListPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__competencysummary__["a" /* AddonCompetencyCompetencySummaryPage */]),
+                __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__planlist__["a" /* AddonCompetencyPlanListPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCompetencyCompetencySummaryPageModule);
-    return AddonCompetencyCompetencySummaryPageModule;
+    ], AddonCompetencyPlanListPageModule);
+    return AddonCompetencyPlanListPageModule;
 }());
 
-//# sourceMappingURL=competencysummary.module.js.map
+//# sourceMappingURL=planlist.module.js.map
 
 /***/ }),
 
-/***/ 1711:
+/***/ 1740:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCompetencyCompetencySummaryPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCompetencyPlanListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_competency__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_competency__ = __webpack_require__(144);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -92,85 +92,89 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
 
 
 
 
 
 /**
- * Page that displays a learning plan.
+ * Page that displays the list of learning plans.
  */
-var AddonCompetencyCompetencySummaryPage = (function () {
-    function AddonCompetencyCompetencySummaryPage(navCtrl, navParams, domUtils, svComponent, competencyProvider) {
-        this.navCtrl = navCtrl;
+var AddonCompetencyPlanListPage = (function () {
+    function AddonCompetencyPlanListPage(navParams, domUtils, competencyProvider) {
         this.domUtils = domUtils;
-        this.svComponent = svComponent;
         this.competencyProvider = competencyProvider;
-        this.competencyLoaded = false;
-        this.competencyId = navParams.get('competencyId');
+        this.plansLoaded = false;
+        this.plans = [];
+        this.userId = navParams.get('userId');
     }
     /**
      * View loaded.
      */
-    AddonCompetencyCompetencySummaryPage.prototype.ionViewDidLoad = function () {
+    AddonCompetencyPlanListPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchCompetency().then(function () {
-            _this.competencyProvider.logCompetencyView(_this.competencyId);
+        if (this.planId) {
+            // There is a learning plan to load.
+            this.openPlan(this.planId);
+        }
+        this.fetchLearningPlans().then(function () {
+            if (!_this.planId && _this.splitviewCtrl.isOn() && _this.plans.length > 0) {
+                // Take first and load it.
+                _this.openPlan(_this.plans[0].id);
+            }
         }).finally(function () {
-            _this.competencyLoaded = true;
+            _this.plansLoaded = true;
         });
     };
     /**
-     * Fetches the competency summary and updates the view.
+     * Fetches the learning plans and updates the view.
      *
      * @return {Promise<void>} Promise resolved when done.
      */
-    AddonCompetencyCompetencySummaryPage.prototype.fetchCompetency = function () {
+    AddonCompetencyPlanListPage.prototype.fetchLearningPlans = function () {
         var _this = this;
-        return this.competencyProvider.getCompetencySummary(this.competencyId).then(function (competency) {
-            _this.competency = competency;
+        return this.competencyProvider.getLearningPlans(this.userId).then(function (plans) {
+            _this.plans = plans;
         }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'Error getting competency summary data.');
+            _this.domUtils.showErrorModalDefault(message, 'Error getting learning plans data.');
         });
     };
     /**
-     * Refreshes the competency summary.
+     * Refreshes the learning plans.
      *
      * @param {any} refresher Refresher.
      */
-    AddonCompetencyCompetencySummaryPage.prototype.refreshCompetency = function (refresher) {
+    AddonCompetencyPlanListPage.prototype.refreshLearningPlans = function (refresher) {
         var _this = this;
-        this.competencyProvider.invalidateCompetencySummary(this.competencyId).finally(function () {
-            _this.fetchCompetency().finally(function () {
+        this.competencyProvider.invalidateLearningPlans(this.userId).finally(function () {
+            _this.fetchLearningPlans().finally(function () {
                 refresher.complete();
             });
         });
     };
     /**
-     * Opens the summary of a competency.
+     * Opens a learning plan.
      *
-     * @param {number} competencyId
+     * @param {number} planId Learning plan to load.
      */
-    AddonCompetencyCompetencySummaryPage.prototype.openCompetencySummary = function (competencyId) {
-        // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.
-        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
-        navCtrl.push('AddonCompetencyCompetencySummaryPage', { competencyId: competencyId });
+    AddonCompetencyPlanListPage.prototype.openPlan = function (planId) {
+        this.planId = planId;
+        this.splitviewCtrl.push('AddonCompetencyPlanPage', { planId: planId });
     };
-    AddonCompetencyCompetencySummaryPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
+    ], AddonCompetencyPlanListPage.prototype, "splitviewCtrl", void 0);
+    AddonCompetencyPlanListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-competency-competency-summary',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/competency/pages/competencysummary/competencysummary.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title *ngIf="competency">{{ competency.competency.shortname }} <small>{{ competency.competency.idnumber }}</small></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="competencyLoaded" (ionRefresh)="refreshCompetency($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="competencyLoaded">\n        <ion-card *ngIf="competency">\n            <ion-item text-wrap *ngIf="competency.competency.description">\n                <core-format-text [text]="competency.competency.description"></core-format-text>\n            </ion-item>\n            <ion-item text-wrap>\n                <strong>{{ \'addon.competency.path\' | translate }}</strong>:\n                {{ competency.comppath.framework.name }}\n                <span *ngFor="let ancestor of competency.comppath.ancestors">\n                    &nbsp;/&nbsp;<a (click)="openCompetencySummary(ancestor.id)">{{ ancestor.name }}</a>\n                </span>\n            </ion-item>\n        </ion-card>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/competency/pages/competencysummary/competencysummary.html"*/,
+            selector: 'page-addon-competency-planlist',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/competency/pages/planlist/planlist.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.competency.userplans\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="plansLoaded" (ionRefresh)="refreshLearningPlans($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="plansLoaded">\n            <core-empty-box *ngIf="plans.length == 0" icon="map" [message]="\'addon.competency.noplanswerecreated\' | translate">\n            </core-empty-box>\n            <ion-list *ngIf="plans.length > 0" no-margin>\n                <a ion-item text-wrap *ngFor="let plan of plans" [title]="plan.name" (click)="openPlan(plan.id)" [class.core-split-item-selected]="plan.id == planId">\n                    <h2>{{ plan.name }}</h2>\n                    <p *ngIf="plan.duedate > 0">{{ \'addon.competency.duedate\' | translate }}: {{ plan.duedate | coreToLocaleString }}</p>\n                </a>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/competency/pages/planlist/planlist.html"*/,
         }),
-        __param(3, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__components_split_view_split_view__["a" /* CoreSplitViewComponent */], __WEBPACK_IMPORTED_MODULE_4__providers_competency__["a" /* AddonCompetencyProvider */]])
-    ], AddonCompetencyCompetencySummaryPage);
-    return AddonCompetencyCompetencySummaryPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_competency__["a" /* AddonCompetencyProvider */]])
+    ], AddonCompetencyPlanListPage);
+    return AddonCompetencyPlanListPage;
 }());
 
-//# sourceMappingURL=competencysummary.js.map
+//# sourceMappingURL=planlist.js.map
 
 /***/ })
 

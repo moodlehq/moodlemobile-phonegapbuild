@@ -1,16 +1,15 @@
 webpackJsonp([61],{
 
-/***/ 1644:
+/***/ 1668:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModQuizPreflightModalModule", function() { return AddonModQuizPreflightModalModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModQuizNavigationModalPageModule", function() { return AddonModQuizNavigationModalPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__preflight_modal__ = __webpack_require__(1743);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__navigation_modal__ = __webpack_require__(1770);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(17);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -34,41 +33,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var AddonModQuizPreflightModalModule = (function () {
-    function AddonModQuizPreflightModalModule() {
+var AddonModQuizNavigationModalPageModule = (function () {
+    function AddonModQuizNavigationModalPageModule() {
     }
-    AddonModQuizPreflightModalModule = __decorate([
+    AddonModQuizNavigationModalPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__preflight_modal__["a" /* AddonModQuizPreflightModalPage */]
+                __WEBPACK_IMPORTED_MODULE_2__navigation_modal__["a" /* AddonModQuizNavigationModalPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__preflight_modal__["a" /* AddonModQuizPreflightModalPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__navigation_modal__["a" /* AddonModQuizNavigationModalPage */]),
                 __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ]
         })
-    ], AddonModQuizPreflightModalModule);
-    return AddonModQuizPreflightModalModule;
+    ], AddonModQuizNavigationModalPageModule);
+    return AddonModQuizNavigationModalPageModule;
 }());
 
-//# sourceMappingURL=preflight-modal.module.js.map
+//# sourceMappingURL=navigation-modal.module.js.map
 
 /***/ }),
 
-/***/ 1743:
+/***/ 1770:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModQuizPreflightModalPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModQuizNavigationModalPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_access_rules_delegate__ = __webpack_require__(62);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -93,101 +85,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-
-
-
-
 /**
- * Modal that renders the access rules for a quiz.
+ * Modal that renders the quiz navigation.
  */
-var AddonModQuizPreflightModalPage = (function () {
-    function AddonModQuizPreflightModalPage(params, fb, translate, sitesProvider, viewCtrl, accessRuleDelegate, injector, domUtils) {
+var AddonModQuizNavigationModalPage = (function () {
+    function AddonModQuizNavigationModalPage(params, viewCtrl) {
         this.viewCtrl = viewCtrl;
-        this.accessRuleDelegate = accessRuleDelegate;
-        this.injector = injector;
-        this.domUtils = domUtils;
-        this.accessRulesData = []; // Components and data for each access rule.
-        this.title = params.get('title') || translate.instant('addon.mod_quiz.startattempt');
-        this.quiz = params.get('quiz');
-        this.attempt = params.get('attempt');
-        this.prefetch = params.get('prefetch');
-        this.siteId = params.get('siteId') || sitesProvider.getCurrentSiteId();
-        this.rules = params.get('rules') || [];
-        // Create an empty form group. The controls will be added by the access rules components.
-        this.preflightForm = fb.group({});
+        this.isReview = !!params.get('isReview');
+        this.pageInstance = params.get('page');
     }
-    /**
-     * Component being initialized.
-     */
-    AddonModQuizPreflightModalPage.prototype.ngOnInit = function () {
-        var _this = this;
-        var promises = [];
-        this.rules.forEach(function (rule) {
-            // Check if preflight is required for rule and, if so, get the component to render it.
-            promises.push(_this.accessRuleDelegate.isPreflightCheckRequiredForRule(rule, _this.quiz, _this.attempt, _this.prefetch, _this.siteId).then(function (required) {
-                if (required) {
-                    return _this.accessRuleDelegate.getPreflightComponent(rule, _this.injector).then(function (component) {
-                        if (component) {
-                            _this.accessRulesData.push({
-                                component: component,
-                                data: {
-                                    rule: rule,
-                                    quiz: _this.quiz,
-                                    attempt: _this.attempt,
-                                    prefetch: _this.prefetch,
-                                    form: _this.preflightForm,
-                                    siteId: _this.siteId
-                                }
-                            });
-                        }
-                    });
-                }
-            }));
-        });
-        Promise.all(promises).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error loading rules');
-        }).finally(function () {
-            _this.loaded = true;
-        });
-    };
-    /**
-     * Check that the data is valid and send it back.
-     */
-    AddonModQuizPreflightModalPage.prototype.sendData = function () {
-        if (!this.preflightForm.valid) {
-            // Form not valid. Scroll to the first element with errors.
-            if (!this.domUtils.scrollToInputError(this.content)) {
-                // Input not found, show an error modal.
-                this.domUtils.showErrorModal('core.errorinvalidform', true);
-            }
-        }
-        else {
-            this.viewCtrl.dismiss(this.preflightForm.value);
-        }
-    };
     /**
      * Close modal.
      */
-    AddonModQuizPreflightModalPage.prototype.closeModal = function () {
+    AddonModQuizNavigationModalPage.prototype.closeModal = function () {
         this.viewCtrl.dismiss();
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Content */])
-    ], AddonModQuizPreflightModalPage.prototype, "content", void 0);
-    AddonModQuizPreflightModalPage = __decorate([
+    /**
+     * Load a certain page.
+     *
+     * @param {number} page The page to load.
+     * @param {number} [slot] Slot of the question to scroll to.
+     */
+    AddonModQuizNavigationModalPage.prototype.loadPage = function (page, slot) {
+        this.pageInstance.changePage && this.pageInstance.changePage(page, true, slot);
+        this.closeModal();
+    };
+    /**
+     * Switch mode in review.
+     */
+    AddonModQuizNavigationModalPage.prototype.switchMode = function () {
+        this.pageInstance.switchMode && this.pageInstance.switchMode();
+        this.closeModal();
+    };
+    AddonModQuizNavigationModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-quiz-preflight-modal',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/quiz/pages/preflight-modal/preflight-modal.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ title | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding class="addon-mod_quiz-preflight-modal">\n    <core-loading [hideUntil]="loaded">\n        <form ion-list [formGroup]="preflightForm" (ngSubmit)="sendData()">\n            <!-- Access rules. -->\n            <ng-container *ngFor="let data of accessRulesData; let last = last">\n                <core-dynamic-component [component]="data.component" [data]="data.data">\n                    <p padding>Couldn\'t find the directive to render this access rule.</p>\n                </core-dynamic-component>\n                <ion-item-divider color="light" *ngIf="!last"></ion-item-divider>\n            </ng-container>\n\n            <button ion-button block type="submit">\n                {{ title | translate }}\n            </button>\n        </form>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/quiz/pages/preflight-modal/preflight-modal.html"*/,
+            selector: 'page-addon-mod-quiz-navigation-modal',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/quiz/pages/navigation-modal/navigation-modal.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_quiz.quiznavigation\' | translate }}</ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="closeModal()" [attr.aria-label]="\'core.close\' | translate">\n                <ion-icon name="close"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content class="addon-mod_quiz-navigation-modal">\n    <nav>\n        <ion-list>\n            <!-- In player, show button to finish attempt. -->\n            <a ion-item text-wrap *ngIf="!isReview" (click)="loadPage(-1)">\n                {{ \'addon.mod_quiz.finishattemptdots\' | translate }}\n            </a>\n\n            <!-- In review we can toggle between all questions in same page or one page at a time. -->\n            <a ion-item text-wrap *ngIf="isReview && pageInstance.numPages > 1" (click)="switchMode()">\n                <span *ngIf="!pageInstance.showAll">{{ \'addon.mod_quiz.showall\' | translate }}</span>\n                <span *ngIf="pageInstance.showAll">{{ \'addon.mod_quiz.showeachpage\' | translate }}</span>\n            </a>\n            <a ion-item text-wrap *ngFor="let question of pageInstance.navigation" class="{{question.stateClass}}" [ngClass]=\'{"addon-mod_quiz-selected": !pageInstance.showSummary && pageInstance.attempt.currentpage == question.page}\' (click)="loadPage(question.page, question.slot)">\n                <span *ngIf="question.number">{{ \'core.question.questionno\' | translate:{$a: question.number} }}</span>\n                <span *ngIf="!question.number">{{ \'core.question.information\' | translate }}</span>\n            </a>\n\n            <!-- In player, show button to finish attempt. -->\n            <a ion-item text-wrap *ngIf="!isReview" (click)="loadPage(-1)">\n                {{ \'addon.mod_quiz.finishattemptdots\' | translate }}\n            </a>\n\n            <!-- In review we can toggle between all questions in same page or one page at a time. -->\n            <a ion-item text-wrap *ngIf="isReview && pageInstance.numPages > 1" (click)="switchMode()">\n                <span *ngIf="!pageInstance.showAll">{{ \'addon.mod_quiz.showall\' | translate }}</span>\n                <span *ngIf="pageInstance.showAll">{{ \'addon.mod_quiz.showeachpage\' | translate }}</span>\n            </a>\n        </ion-list>\n    </nav>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/quiz/pages/navigation-modal/navigation-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ViewController */], __WEBPACK_IMPORTED_MODULE_6__providers_access_rules_delegate__["a" /* AddonModQuizAccessRuleDelegate */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injector */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */]])
-    ], AddonModQuizPreflightModalPage);
-    return AddonModQuizPreflightModalPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ViewController */]])
+    ], AddonModQuizNavigationModalPage);
+    return AddonModQuizNavigationModalPage;
 }());
 
-//# sourceMappingURL=preflight-modal.js.map
+//# sourceMappingURL=navigation-modal.js.map
 
 /***/ })
 
