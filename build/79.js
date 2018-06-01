@@ -1,18 +1,18 @@
 webpackJsonp([79],{
 
-/***/ 1650:
+/***/ 1760:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatChatPageModule", function() { return AddonModChatChatPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModForumDiscussionPageModule", function() { return AddonModForumDiscussionPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__chat__ = __webpack_require__(1752);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(884);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__discussion__ = __webpack_require__(1876);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,46 +39,50 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModChatChatPageModule = (function () {
-    function AddonModChatChatPageModule() {
+var AddonModForumDiscussionPageModule = (function () {
+    function AddonModForumDiscussionPageModule() {
     }
-    AddonModChatChatPageModule = __decorate([
+    AddonModForumDiscussionPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__chat__["a" /* AddonModChatChatPage */],
+                __WEBPACK_IMPORTED_MODULE_6__discussion__["a" /* AddonModForumDiscussionPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__chat__["a" /* AddonModChatChatPage */]),
+                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* AddonModForumComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__discussion__["a" /* AddonModForumDiscussionPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModChatChatPageModule);
-    return AddonModChatChatPageModule;
+    ], AddonModForumDiscussionPageModule);
+    return AddonModForumDiscussionPageModule;
 }());
 
-//# sourceMappingURL=chat.module.js.map
+//# sourceMappingURL=discussion.module.js.map
 
 /***/ }),
 
-/***/ 1752:
+/***/ 1876:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModChatChatPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModForumDiscussionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_app__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_chat__ = __webpack_require__(368);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_network__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_network__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_app__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sites__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_utils__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_fileuploader_providers_fileuploader__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_split_view_split_view__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_forum__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_offline__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_helper__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_sync__ = __webpack_require__(187);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -101,6 +105,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
 
 
 
@@ -112,277 +124,362 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Page that displays a chat session.
+ * Page that displays a forum discussion.
  */
-var AddonModChatChatPage = (function () {
-    function AddonModChatChatPage(navParams, logger, network, navCtrl, chatProvider, appProvider, sitesProvider, modalCtrl, domUtils, textUtils) {
+var AddonModForumDiscussionPage = (function () {
+    function AddonModForumDiscussionPage(navParams, network, appProvider, eventsProvider, sitesProvider, domUtils, utils, translate, uploaderProvider, forumProvider, forumOffline, forumHelper, forumSync, svComponent) {
         var _this = this;
-        this.navCtrl = navCtrl;
-        this.chatProvider = chatProvider;
         this.appProvider = appProvider;
-        this.modalCtrl = modalCtrl;
+        this.eventsProvider = eventsProvider;
+        this.sitesProvider = sitesProvider;
         this.domUtils = domUtils;
-        this.textUtils = textUtils;
-        this.loaded = false;
-        this.messages = [];
-        this.lastTime = 0;
-        this.oldContentHeight = 0;
-        this.viewDestroyed = false;
-        this.pollingRunning = false;
-        this.chatId = navParams.get('chatId');
+        this.utils = utils;
+        this.translate = translate;
+        this.uploaderProvider = uploaderProvider;
+        this.forumProvider = forumProvider;
+        this.forumOffline = forumOffline;
+        this.forumHelper = forumHelper;
+        this.forumSync = forumSync;
+        this.svComponent = svComponent;
+        this.discussionLoaded = false;
+        this.sort = 'flat-oldest';
+        this.replyData = {
+            replyingTo: 0,
+            isEditing: false,
+            subject: '',
+            message: null,
+            files: [],
+        };
+        this.originalData = {
+            subject: null,
+            message: null,
+            files: [],
+        };
+        this.refreshIcon = 'spinner';
+        this.syncIcon = 'spinner';
         this.courseId = navParams.get('courseId');
-        this.title = navParams.get('title');
-        this.logger = logger.getInstance('AddonModChoiceChoicePage');
-        this.currentUserBeep = 'beep ' + sitesProvider.getCurrentSiteUserId();
+        this.cmId = navParams.get('cmId');
+        this.forumId = navParams.get('forumId');
+        this.discussionId = navParams.get('discussionId');
+        this.trackPosts = navParams.get('trackPosts');
+        this.locked = navParams.get('locked');
         this.isOnline = this.appProvider.isOnline();
         this.onlineObserver = network.onchange().subscribe(function (online) {
             _this.isOnline = _this.appProvider.isOnline();
         });
+        this.isSplitViewOn = this.svComponent && this.svComponent.isOn();
     }
     /**
      * View loaded.
      */
-    AddonModChatChatPage.prototype.ionViewDidLoad = function () {
+    AddonModForumDiscussionPage.prototype.ionViewDidLoad = function () {
+        this.fetchPosts(true, false, true);
+    };
+    /**
+     * User entered the page that contains the component.
+     */
+    AddonModForumDiscussionPage.prototype.ionViewDidEnter = function () {
         var _this = this;
-        this.loginUser().then(function () {
-            return _this.fetchMessages().then(function () {
-                _this.startPolling();
-            }).catch(function (error) {
-                _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhileretrievingmessages', true);
-                _this.navCtrl.pop();
-            });
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhileconnecting', true);
-            _this.navCtrl.pop();
-        }).finally(function () {
-            _this.loaded = true;
+        // Refresh data if this discussion is synchronized automatically.
+        this.syncObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_14__providers_sync__["a" /* AddonModForumSyncProvider */].AUTO_SYNCED, function (data) {
+            if (data.forumId == _this.forumId && _this.discussionId == data.discussionId
+                && data.userId == _this.sitesProvider.getCurrentSiteUserId()) {
+                // Refresh the data.
+                _this.discussionLoaded = false;
+                _this.refreshPosts();
+            }
+        }, this.sitesProvider.getCurrentSiteId());
+        // Refresh data if this forum discussion is synchronized from discussions list.
+        this.syncManualObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_14__providers_sync__["a" /* AddonModForumSyncProvider */].MANUAL_SYNCED, function (data) {
+            if (data.source != 'discussion' && data.forumId == _this.forumId &&
+                data.userId == _this.sitesProvider.getCurrentSiteUserId()) {
+                // Refresh the data.
+                _this.discussionLoaded = false;
+                _this.refreshPosts();
+            }
+        }, this.sitesProvider.getCurrentSiteId());
+        // Trigger view event, to highlight the current opened discussion in the split view.
+        this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_forum__["a" /* AddonModForumProvider */].VIEW_DISCUSSION_EVENT, {
+            forumId: this.forumId,
+            discussion: this.discussionId,
+        }, this.sitesProvider.getCurrentSiteId());
+    };
+    /**
+     * Check if we can leave the page or not.
+     *
+     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    AddonModForumDiscussionPage.prototype.ionViewCanLeave = function () {
+        var _this = this;
+        var promise;
+        if (this.forumHelper.hasPostDataChanged(this.replyData, this.originalData)) {
+            // Show confirmation if some data has been modified.
+            promise = this.domUtils.showConfirm(this.translate.instant('core.confirmcanceledit'));
+        }
+        else {
+            promise = Promise.resolve();
+        }
+        return promise.then(function () {
+            // Delete the local files from the tmp folder.
+            _this.uploaderProvider.clearTmpFiles(_this.replyData.files);
         });
     };
     /**
-     * Runs when the page has fully entered and is now the active page.
-     * This event will fire, whether it was the first load or a cached page.
+     * Convenience function to get the forum.
+     *
+     * @return {Promise<any>} Promise resolved with the forum.
      */
-    AddonModChatChatPage.prototype.ionViewDidEnter = function () {
-        this.startPolling();
+    AddonModForumDiscussionPage.prototype.fetchForum = function () {
+        if (this.courseId && this.cmId) {
+            return this.forumProvider.getForum(this.courseId, this.cmId);
+        }
+        else if (this.courseId && this.forumId) {
+            return this.forumProvider.getForumById(this.courseId, this.forumId);
+        }
+        else {
+            // Cannot get the forum.
+            return Promise.reject(null);
+        }
+    };
+    /**
+     * Convenience function to get forum discussions.
+     *
+     * @param  {boolean} [sync]            Whether to try to synchronize the discussion.
+     * @param  {boolean} [showErrors]      Whether to show errors in a modal.
+     * @param  {boolean} [forceMarkAsRead] Whether to mark all posts as read.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.fetchPosts = function (sync, showErrors, forceMarkAsRead) {
+        var _this = this;
+        var syncPromise;
+        if (sync) {
+            // Try to synchronize the forum.
+            syncPromise = this.syncDiscussion(showErrors).catch(function () {
+                // Ignore errors.
+            });
+        }
+        else {
+            syncPromise = Promise.resolve();
+        }
+        var onlinePosts = [];
+        var offlineReplies = [];
+        var hasUnreadPosts = false;
+        return syncPromise.then(function () {
+            return _this.forumProvider.getDiscussionPosts(_this.discussionId).then(function (posts) {
+                onlinePosts = posts;
+            }).then(function () {
+                // Check if there are responses stored in offline.
+                return _this.forumOffline.getDiscussionReplies(_this.discussionId).then(function (replies) {
+                    _this.postHasOffline = !!replies.length;
+                    var convertPromises = [];
+                    // Index posts to allow quick access. Also check unread field.
+                    var posts = {};
+                    onlinePosts.forEach(function (post) {
+                        posts[post.id] = post;
+                        hasUnreadPosts = hasUnreadPosts || !post.postread;
+                    });
+                    replies.forEach(function (offlineReply) {
+                        // If we don't have forumId and courseId, get it from the post.
+                        if (!_this.forumId) {
+                            _this.forumId = offlineReply.forumid;
+                        }
+                        if (!_this.courseId) {
+                            _this.courseId = offlineReply.courseid;
+                        }
+                        convertPromises.push(_this.forumHelper.convertOfflineReplyToOnline(offlineReply).then(function (reply) {
+                            offlineReplies.push(reply);
+                            // Disable reply of the parent. Reply in offline to the same post is not allowed, edit instead.
+                            posts[reply.parent].canreply = false;
+                        }));
+                    });
+                    return Promise.all(convertPromises).then(function () {
+                        // Convert back to array.
+                        onlinePosts = _this.utils.objectToArray(posts);
+                    });
+                });
+            });
+        }).then(function () {
+            var posts = offlineReplies.concat(onlinePosts);
+            _this.discussion = _this.forumProvider.extractStartingPost(posts);
+            // If sort type is nested, normal sorting is disabled and nested posts will be displayed.
+            if (_this.sort == 'nested') {
+                // Sort first by creation date to make format tree work.
+                _this.forumProvider.sortDiscussionPosts(posts, 'ASC');
+                _this.posts = _this.utils.formatTree(posts, 'parent', 'id', _this.discussion.id);
+            }
+            else {
+                // Set default reply subject.
+                var direction = _this.sort == 'flat-newest' ? 'DESC' : 'ASC';
+                _this.forumProvider.sortDiscussionPosts(posts, direction);
+                _this.posts = posts;
+            }
+            _this.defaultSubject = _this.translate.instant('addon.mod_forum.re') + ' ' + _this.discussion.subject;
+            _this.replyData.subject = _this.defaultSubject;
+            // Now try to get the forum.
+            return _this.fetchForum().then(function (forum) {
+                if (_this.discussion.userfullname && _this.discussion.parent == 0 && forum.type == 'single') {
+                    // Hide author for first post and type single.
+                    _this.discussion.userfullname = null;
+                }
+                // "forum.istracked" is more reliable than "trackPosts".
+                if (typeof forum.istracked != 'undefined') {
+                    _this.trackPosts = forum.istracked;
+                }
+                _this.forumId = forum.id;
+                _this.cmId = forum.cmid;
+                _this.forum = forum;
+            }).catch(function () {
+                // Ignore errors.
+                _this.forum = {};
+            });
+        }).catch(function (message) {
+            _this.domUtils.showErrorModal(message);
+        }).finally(function () {
+            _this.discussionLoaded = true;
+            _this.refreshIcon = 'refresh';
+            _this.syncIcon = 'sync';
+            if (forceMarkAsRead || (hasUnreadPosts && _this.trackPosts)) {
+                // // Add log in Moodle and mark unread posts as readed.
+                _this.forumProvider.logDiscussionView(_this.discussionId).catch(function () {
+                    // Ignore errors.
+                });
+            }
+        });
+    };
+    /**
+     * Tries to synchronize the posts discussion.
+     *
+     * @param  {boolean} showErrors Whether to show errors in a modal.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.syncDiscussion = function (showErrors) {
+        var _this = this;
+        return this.forumSync.syncDiscussionReplies(this.discussionId).then(function (result) {
+            if (result.warnings && result.warnings.length) {
+                _this.domUtils.showErrorModal(result.warnings[0]);
+            }
+            if (result && result.updated) {
+                // Sync successful, send event.
+                _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_14__providers_sync__["a" /* AddonModForumSyncProvider */].MANUAL_SYNCED, {
+                    forumId: _this.forumId,
+                    userId: _this.sitesProvider.getCurrentSiteUserId(),
+                    source: 'discussion'
+                }, _this.sitesProvider.getCurrentSiteId());
+            }
+            return result.updated;
+        }).catch(function (error) {
+            if (showErrors) {
+                _this.domUtils.showErrorModalDefault(error, 'core.errorsync', true);
+            }
+            return Promise.reject(null);
+        });
+    };
+    /**
+     * Refresh the data.
+     *
+     * @param {any}       [refresher] Refresher.
+     * @param {Function}  [done] Function to call when done.
+     * @param {boolean}   [showErrors=false] If show errors to the user of hide them.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.doRefresh = function (refresher, done, showErrors) {
+        if (showErrors === void 0) { showErrors = false; }
+        if (this.discussionLoaded) {
+            return this.refreshPosts(true, showErrors).finally(function () {
+                refresher && refresher.complete();
+                done && done();
+            });
+        }
+        return Promise.resolve();
+    };
+    /**
+     * Refresh posts.
+     *
+     * @param  {boolean} [sync]       Whether to try to synchronize the discussion.
+     * @param  {boolean} [showErrors] Whether to show errors in a modal.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.refreshPosts = function (sync, showErrors) {
+        var _this = this;
+        this.content && this.content.scrollToTop();
+        this.refreshIcon = 'spinner';
+        this.syncIcon = 'spinner';
+        return this.forumProvider.invalidateDiscussionPosts(this.discussionId).catch(function () {
+            // Ignore errors.
+        }).then(function () {
+            return _this.fetchPosts(sync, showErrors);
+        });
+    };
+    /**
+     * Function to change posts sorting
+     *
+     * @param  {SortType} type Sort type.
+     * @return {Promise<any>} Promised resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.changeSort = function (type) {
+        this.discussionLoaded = false;
+        this.sort = type;
+        this.content && this.content.scrollToTop();
+        return this.fetchPosts();
+    };
+    /**
+     * New post added.
+     */
+    AddonModForumDiscussionPage.prototype.postListChanged = function () {
+        var _this = this;
+        // Trigger an event to notify a new reply.
+        var data = {
+            forumId: this.forumId,
+            discussionId: this.discussionId,
+            cmId: this.cmId
+        };
+        this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_forum__["a" /* AddonModForumProvider */].REPLY_DISCUSSION_EVENT, data, this.sitesProvider.getCurrentSiteId());
+        this.discussionLoaded = false;
+        this.refreshPosts().finally(function () {
+            _this.discussionLoaded = true;
+        });
     };
     /**
      * Runs when the page is about to leave and no longer be the active page.
      */
-    AddonModChatChatPage.prototype.ionViewWillLeave = function () {
-        this.stopPolling();
-    };
-    /**
-     * Display the chat users modal.
-     */
-    AddonModChatChatPage.prototype.showChatUsers = function () {
-        var _this = this;
-        var modal = this.modalCtrl.create('AddonModChatUsersPage', { sessionId: this.sessionId });
-        modal.onDidDismiss(function (data) {
-            if (data && data.talkTo) {
-                _this.newMessage = "To " + data.talkTo + ": ";
-            }
-            if (data && data.beepTo) {
-                _this.sendMessage('', data.beepTo);
-            }
-        });
-        modal.present();
-    };
-    /**
-     * Convenience function to login the user.
-     *
-     * @return {Promise<any>} Resolved when done.
-     */
-    AddonModChatChatPage.prototype.loginUser = function () {
-        var _this = this;
-        return this.chatProvider.loginUser(this.chatId).then(function (sessionId) {
-            _this.sessionId = sessionId;
-        });
-    };
-    /**
-     * Convenience function to fetch chat messages.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModChatChatPage.prototype.fetchMessages = function () {
-        var _this = this;
-        return this.chatProvider.getLatestMessages(this.sessionId, this.lastTime).then(function (messagesInfo) {
-            _this.lastTime = messagesInfo.chatnewlasttime || 0;
-            return _this.chatProvider.getMessagesUserData(messagesInfo.messages, _this.courseId).then(function (messages) {
-                _this.messages = _this.messages.concat(messages);
-            });
-        });
-    };
-    /**
-     * Start the polling to get chat messages periodically.
-     */
-    AddonModChatChatPage.prototype.startPolling = function () {
-        var _this = this;
-        // We already have the polling in place.
-        if (this.polling) {
-            return;
-        }
-        // Start polling.
-        this.polling = setInterval(function () {
-            _this.fetchMessagesInterval().catch(function () {
-                // Ignore errors.
-            });
-        }, __WEBPACK_IMPORTED_MODULE_7__providers_chat__["a" /* AddonModChatProvider */].POLL_INTERVAL);
-    };
-    /**
-     * Stop polling for messages.
-     */
-    AddonModChatChatPage.prototype.stopPolling = function () {
-        if (this.polling) {
-            this.logger.debug('Cancelling polling for messages');
-            clearInterval(this.polling);
-        }
-    };
-    /**
-     * Convenience function to be called every certain time to fetch chat messages.
-     *
-     * @return {Promise<any>} Promised resolved when done.
-     */
-    AddonModChatChatPage.prototype.fetchMessagesInterval = function () {
-        var _this = this;
-        this.logger.debug('Polling for messages');
-        if (!this.isOnline || this.pollingRunning) {
-            // Obviously we cannot check for new messages when the app is offline.
-            return Promise.reject(null);
-        }
-        this.pollingRunning = true;
-        return this.fetchMessages().catch(function () {
-            // Try to login, it might have failed because the session expired.
-            return _this.loginUser().then(function () {
-                return _this.fetchMessages();
-            }).catch(function (error) {
-                // Fail again. Stop polling if needed.
-                if (_this.polling) {
-                    clearInterval(_this.polling);
-                    _this.polling = undefined;
-                }
-                _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhileretrievingmessages', true);
-                return Promise.reject(null);
-            });
-        }).finally(function () {
-            _this.pollingRunning = false;
-        });
-    };
-    /**
-     * Check if the date should be displayed between messages (when the day changes at midnight for example).
-     *
-     * @param  {any} message     New message object.
-     * @param  {any} prevMessage Previous message object.
-     * @return {boolean} True if messages are from diferent days, false othetwise.
-     */
-    AddonModChatChatPage.prototype.showDate = function (message, prevMessage) {
-        if (!prevMessage) {
-            return true;
-        }
-        // Check if day has changed.
-        return !__WEBPACK_IMPORTED_MODULE_9_moment__(message.timestamp * 1000).isSame(prevMessage.timestamp * 1000, 'day');
-    };
-    /**
-     * Send a message to the chat.
-     *
-     * @param {string} text     Text of the nessage.
-     * @param {number} [beep=0] ID of the user to beep.
-     */
-    AddonModChatChatPage.prototype.sendMessage = function (text, beep) {
-        var _this = this;
-        if (beep === void 0) { beep = 0; }
-        if (!this.isOnline) {
-            // Silent error, the view should prevent this.
-            return;
-        }
-        else if (beep === 0 && !text.trim()) {
-            // Silent error.
-            return;
-        }
-        text = this.textUtils.replaceNewLines(text, '<br>');
-        var modal = this.domUtils.showModalLoading('core.sending', true);
-        this.chatProvider.sendMessage(this.sessionId, text, beep).then(function () {
-            // Update messages to show the sent message.
-            _this.fetchMessagesInterval().catch(function () {
-                // Ignore errors.
-            });
-        }).catch(function (error) {
-            /* Only close the keyboard if an error happens, we want the user to be able to send multiple
-              messages without the keyboard being closed. */
-            _this.appProvider.closeKeyboard();
-            _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhilesendingmessage', true);
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    AddonModChatChatPage.prototype.reconnect = function () {
-        var _this = this;
-        var modal = this.domUtils.showModalLoading();
-        // Call startPolling would take a while for the first execution, so we'll execute it manually to check if it works now.
-        return this.fetchMessagesInterval().then(function () {
-            // It works, start the polling again.
-            _this.startPolling();
-        }).catch(function () {
-            // Ignore errors.
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    /**
-     * Scroll bottom when render has finished.
-     */
-    AddonModChatChatPage.prototype.scrollToBottom = function () {
-        var _this = this;
-        // Need a timeout to leave time to the view to be rendered.
-        setTimeout(function () {
-            if (!_this.viewDestroyed) {
-                _this.content.scrollToBottom(0);
-            }
-        });
-    };
-    /**
-     * Content or scroll has been resized. For content, only call it if it's been added on top.
-     */
-    AddonModChatChatPage.prototype.resizeContent = function () {
-        var _this = this;
-        var top = this.content.getContentDimensions().scrollTop;
-        this.content.resize();
-        // Wait for new content height to be calculated.
-        setTimeout(function () {
-            // Visible content size changed, maintain the bottom position.
-            if (!_this.viewDestroyed && _this.content && _this.content.contentHeight != _this.oldContentHeight) {
-                if (!top) {
-                    top = _this.content.getContentDimensions().scrollTop;
-                }
-                top += _this.oldContentHeight - _this.content.contentHeight;
-                _this.oldContentHeight = _this.content.contentHeight;
-                _this.content.scrollTo(0, top, 0);
-            }
-        });
+    AddonModForumDiscussionPage.prototype.ionViewWillLeave = function () {
+        this.syncObserver && this.syncObserver.off();
+        this.syncManualObserver && this.syncManualObserver.off();
     };
     /**
      * Page destroyed.
      */
-    AddonModChatChatPage.prototype.ngOnDestroy = function () {
+    AddonModForumDiscussionPage.prototype.ngOnDestroy = function () {
         this.onlineObserver && this.onlineObserver.unsubscribe();
-        this.stopPolling();
-        this.viewDestroyed = true;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
-    ], AddonModChatChatPage.prototype, "content", void 0);
-    AddonModChatChatPage = __decorate([
+    ], AddonModForumDiscussionPage.prototype, "content", void 0);
+    AddonModForumDiscussionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-chat-chat',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/chat/pages/chat/chat.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n        <ion-buttons end>\n            <button *ngIf="loaded" ion-button icon-only (click)="showChatUsers()">\n                <ion-icon name="people"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <div aria-live="polite">\n            <div *ngFor="let message of messages; index as index; last as last">\n\n                <div text-center *ngIf="showDate(messages[index], messages[index - 1])" class="addon-mod-chat-notice">\n                    <ion-badge text-wrap color="light">\n                        <span>{{ message.timestamp * 1000 | coreFormatDate:"dfdayweekmonth" }}</span>\n                    </ion-badge>\n                </div>\n\n                <div text-center *ngIf="message.system && message.message == \'enter\'" class="addon-mod-chat-notice">\n                    <ion-badge text-wrap color="light">\n                        <span>{{ message.timestamp * 1000 | coreFormatDate:"dftimedate" }} {{ \'addon.mod_chat.messageenter\' | translate:{$a: message.userfullname} }}</span>\n                    </ion-badge>\n                </div>\n\n                <div text-center *ngIf="message.system && message.message == \'exit\'" class="addon-mod-chat-notice">\n                    <ion-badge text-wrap color="light">\n                        <span>{{ message.timestamp * 1000 | coreFormatDate:"dftimedate" }} {{ \'addon.mod_chat.messageexit\' | translate:{$a: message.userfullname} }}</span>\n                    </ion-badge>\n                </div>\n\n                <div text-center *ngIf="message.message == currentUserBeep" class="addon-mod-chat-notice">\n                    <ion-badge text-wrap color="light">\n                        <span>{{ \'addon.mod_chat.messagebeepsyou\' | translate:{$a: message.userfullname} }}</span>\n                    </ion-badge>\n                </div>\n\n                <ion-item text-wrap *ngIf="!message.system && message.message.substr(0, 4) != \'beep\'" class="addon-mod-chat-message">\n                    <ion-avatar item-start>\n                        <img [src]="message.userprofileimageurl" onError="this.src=\'assets/img/user-avatar.png\'" core-external-content [alt]="\'core.pictureof\' | translate:{$a: message.userfullname}" role="presentation">\n                    </ion-avatar>\n                    <h2>\n                        <p float-right>{{ message.timestamp * 1000 | coreFormatDate:"dftimedate" }}</p>\n                        <core-format-text [text]="message.userfullname"></core-format-text>\n                    </h2>\n                    <core-format-text [text]="message.message" (afterRender)="last && scrollToBottom()"></core-format-text>\n                </ion-item>\n            </div>\n\n            <div text-center margin *ngIf="!messages || messages.length <= 0">\n                <p>{{ \'addon.mod_chat.nomessages\' | translate}}</p>\n            </div>\n        </div>\n    </core-loading>\n</ion-content>\n<ion-footer color="light" class="footer-adjustable">\n    <ion-toolbar color="light" position="bottom">\n        <p text-center *ngIf="!isOnline">{{ \'addon.mod_chat.mustbeonlinetosendmessages\' | translate }}</p>\n        <core-send-message-form *ngIf="isOnline && polling && loaded" [message]="newMessage" (onSubmit)="sendMessage($event)" [showKeyboard]="showKeyboard" [placeholder]="\'addon.messages.newmessage\' | translate" (onResize)="resizeContent()"></core-send-message-form>\n        <button *ngIf="isOnline && !polling && loaded" (click)="reconnect()" ion-button block color="light">{{ \'core.login.reconnect\' | translate }}</button>\n    </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/chat/pages/chat/chat.html"*/,
+            selector: 'page-addon-mod-forum-discussion',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/forum/pages/discussion/discussion.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title *ngIf="discussion"><core-format-text [text]="discussion.subject"></core-format-text></ion-title>\n        <ion-buttons end>\n            <!-- The context menu will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-navbar-buttons end>\n    <core-context-menu>\n        <core-context-menu-item [priority]="650" *ngIf="discussionLoaded && !postHasOffline && isOnline" [content]="\'addon.mod_forum.refreshposts\' | translate" (action)="doRefresh(null, $event)" [iconAction]="refreshIcon" [closeOnClick]="false"></core-context-menu-item>\n        <core-context-menu-item [priority]="550" *ngIf="discussionLoaded && !isSplitViewOn && postHasOffline && isOnline" [content]="\'core.settings.synchronizenow\' | translate" (action)="doRefresh(null, $event, true)" [iconAction]="syncIcon" [closeOnClick]="false"></core-context-menu-item>\n        <core-context-menu-item [hidden]="sort == \'flat-oldest\'" [priority]="500" [content]="\'addon.mod_forum.modeflatoldestfirst\' | translate" (action)="changeSort(\'flat-oldest\')" iconAction="arrow-round-down"></core-context-menu-item>\n        <core-context-menu-item [hidden]="sort == \'flat-newest\'" [priority]="450" [content]="\'addon.mod_forum.modeflatnewestfirst\' | translate" (action)="changeSort(\'flat-newest\')" iconAction="arrow-round-up"></core-context-menu-item>\n        <core-context-menu-item [hidden]="sort == \'nested\'" [priority]="400" [content]="\'addon.mod_forum.modenested\' | translate" (action)="changeSort(\'nested\')" iconAction="swap"></core-context-menu-item>\n    </core-context-menu>\n</core-navbar-buttons>\n<ion-content>\n    <ion-refresher [enabled]="discussionLoaded" (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="discussionLoaded">\n        <!-- Discussion replies found to be synchronized -->\n        <ion-card class="core-warning-card" *ngIf="postHasOffline">\n            <ion-icon name="warning"></ion-icon> {{ \'core.hasdatatosync\' | translate:{$a: discussionStr} }}\n        </ion-card>\n\n        <ion-card class="core-warning-card" *ngIf="locked">\n            <ion-icon name="warning"></ion-icon> {{ \'addon.mod_forum.discussionlocked\' | translate }}\n        </ion-card>\n\n        <ion-card *ngIf="discussion" margin-bottom>\n            <addon-mod-forum-post [post]="discussion" [courseId]="courseId" [discussionId]="discussionId" [component]="component" [componentId]="componentId" [replyData]="replyData" [originalData]="originalData" [defaultSubject]="defaultSubject" [forum]="forum" [trackPosts]="trackPosts" (onPostChange)="postListChanged()"></addon-mod-forum-post>\n        </ion-card>\n\n        <ion-card *ngIf="sort != \'nested\'">\n            <ng-container *ngFor="let post of posts; first as first">\n                <ion-item-divider color="light" *ngIf="!first"></ion-item-divider>\n                <addon-mod-forum-post [post]="post" [courseId]="courseId" [discussionId]="discussionId" [component]="component" [componentId]="componentId" [replyData]="replyData" [originalData]="originalData" [defaultSubject]="defaultSubject" [forum]="forum" [trackPosts]="trackPosts" (onPostChange)="postListChanged()"></addon-mod-forum-post>\n            </ng-container>\n        </ion-card>\n\n        <ng-container *ngIf="sort == \'nested\'">\n            <ng-container *ngFor="let post of posts">\n                <ng-container *ngTemplateOutlet="nestedPosts; context: {post: post}"></ng-container>\n            </ng-container>\n        </ng-container>\n\n        <ng-template #nestedPosts let-post="post">\n            <ion-card>\n                <addon-mod-forum-post [post]="post" [courseId]="courseId" [discussionId]="discussionId" [component]="component" [componentId]="componentId" [replyData]="replyData" [originalData]="originalData" [defaultSubject]="defaultSubject" [forum]="forum" [trackPosts]="trackPosts" (onPostChange)="postListChanged()"></addon-mod-forum-post>\n            </ion-card>\n            <div padding-left *ngIf="post.children.length && post.children[0].subject">\n                <ng-container *ngFor="let child of post.children">\n                    <ng-container *ngTemplateOutlet="nestedPosts; context: {post: child}"></ng-container>\n                </ng-container>\n            </div>\n        </ng-template>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/forum/pages/discussion/discussion.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_logger__["a" /* CoreLoggerProvider */], __WEBPACK_IMPORTED_MODULE_8__ionic_native_network__["a" /* Network */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_chat__["a" /* AddonModChatProvider */], __WEBPACK_IMPORTED_MODULE_2__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ModalController */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
-    ], AddonModChatChatPage);
-    return AddonModChatChatPage;
+        __param(13, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_network__["a" /* Network */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_utils_utils__["a" /* CoreUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_9__core_fileuploader_providers_fileuploader__["a" /* CoreFileUploaderProvider */],
+            __WEBPACK_IMPORTED_MODULE_11__providers_forum__["a" /* AddonModForumProvider */],
+            __WEBPACK_IMPORTED_MODULE_12__providers_offline__["a" /* AddonModForumOfflineProvider */],
+            __WEBPACK_IMPORTED_MODULE_13__providers_helper__["a" /* AddonModForumHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_14__providers_sync__["a" /* AddonModForumSyncProvider */],
+            __WEBPACK_IMPORTED_MODULE_10__components_split_view_split_view__["a" /* CoreSplitViewComponent */]])
+    ], AddonModForumDiscussionPage);
+    return AddonModForumDiscussionPage;
 }());
 
-//# sourceMappingURL=chat.js.map
+//# sourceMappingURL=discussion.js.map
 
 /***/ })
 

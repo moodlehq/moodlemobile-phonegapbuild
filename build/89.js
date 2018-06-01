@@ -1,18 +1,20 @@
 webpackJsonp([89],{
 
-/***/ 1634:
+/***/ 1750:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyCompetencyPageModule", function() { return AddonCompetencyCompetencyPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModDataEditPageModule", function() { return AddonModDataEditPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__competency__ = __webpack_require__(1736);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_comments_components_components_module__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_compile_components_compile_html_compile_html_module__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_components_module__ = __webpack_require__(383);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__edit__ = __webpack_require__(1866);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,42 +41,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonCompetencyCompetencyPageModule = (function () {
-    function AddonCompetencyCompetencyPageModule() {
+
+
+var AddonModDataEditPageModule = (function () {
+    function AddonModDataEditPageModule() {
     }
-    AddonCompetencyCompetencyPageModule = __decorate([
+    AddonModDataEditPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__competency__["a" /* AddonCompetencyCompetencyPage */],
+                __WEBPACK_IMPORTED_MODULE_8__edit__["a" /* AddonModDataEditPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__competency__["a" /* AddonCompetencyCompetencyPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_7__components_components_module__["a" /* AddonModDataComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_6__core_compile_components_compile_html_compile_html_module__["a" /* CoreCompileHtmlComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_5__core_comments_components_components_module__["a" /* CoreCommentsComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_8__edit__["a" /* AddonModDataEditPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonCompetencyCompetencyPageModule);
-    return AddonCompetencyCompetencyPageModule;
+    ], AddonModDataEditPageModule);
+    return AddonModDataEditPageModule;
 }());
 
-//# sourceMappingURL=competency.module.js.map
+//# sourceMappingURL=edit.module.js.map
 
 /***/ }),
 
-/***/ 1736:
+/***/ 1866:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonCompetencyCompetencyPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModDataEditPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_split_view_split_view__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_competency__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_utils__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sites__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_groups__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_fileuploader_providers_fileuploader__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_data__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_helper__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_offline__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_fields_delegate__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_components_module__ = __webpack_require__(383);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -97,9 +112,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
+
+
+
+
+
+
+
+
+
 
 
 
@@ -108,158 +129,290 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 /**
- * Page that displays a learning plan.
+ * Page that displays the view edit page.
  */
-var AddonCompetencyCompetencyPage = (function () {
-    function AddonCompetencyCompetencyPage(navCtrl, navParams, translate, sitesProvider, domUtils, svComponent, competencyProvider) {
+var AddonModDataEditPage = (function () {
+    function AddonModDataEditPage(params, utils, groupsProvider, domUtils, fieldsDelegate, courseProvider, dataProvider, dataOffline, dataHelper, sitesProvider, navCtrl, translate, eventsProvider, fileUploaderProvider) {
+        this.utils = utils;
+        this.groupsProvider = groupsProvider;
+        this.domUtils = domUtils;
+        this.fieldsDelegate = fieldsDelegate;
+        this.courseProvider = courseProvider;
+        this.dataProvider = dataProvider;
+        this.dataOffline = dataOffline;
+        this.dataHelper = dataHelper;
         this.navCtrl = navCtrl;
         this.translate = translate;
-        this.sitesProvider = sitesProvider;
-        this.domUtils = domUtils;
-        this.svComponent = svComponent;
-        this.competencyProvider = competencyProvider;
-        this.competencyLoaded = false;
-        this.competencyId = navParams.get('competencyId');
-        this.planId = navParams.get('planId');
-        this.courseId = navParams.get('courseId');
-        this.userId = navParams.get('userId');
+        this.eventsProvider = eventsProvider;
+        this.fileUploaderProvider = fileUploaderProvider;
+        this.offlineActions = [];
+        this.fields = {};
+        this.fieldsArray = [];
+        this.forceLeave = false; // To allow leaving the page without checking for changes.
+        this.title = '';
+        this.component = __WEBPACK_IMPORTED_MODULE_11__providers_data__["a" /* AddonModDataProvider */].COMPONENT;
+        this.loaded = false;
+        this.selectedGroup = 0;
+        this.cssClass = '';
+        this.cssTemplate = '';
+        this.editFormRender = '';
+        this.extraImports = [__WEBPACK_IMPORTED_MODULE_15__components_components_module__["a" /* AddonModDataComponentsModule */]];
+        this.errors = {};
+        this.module = params.get('module') || {};
+        this.entryId = params.get('entryId') || null;
+        this.courseId = params.get('courseId');
+        this.selectedGroup = params.get('group') || 0;
+        this.siteId = sitesProvider.getCurrentSiteId();
+        this.title = this.module.name;
+        this.editForm = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["c" /* FormGroup */]({});
     }
     /**
      * View loaded.
      */
-    AddonCompetencyCompetencyPage.prototype.ionViewDidLoad = function () {
+    AddonModDataEditPage.prototype.ionViewDidLoad = function () {
+        this.fetchEntryData();
+    };
+    /**
+     * Check if we can leave the page or not and ask to confirm the lost of data.
+     *
+     * @return {boolean | Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    AddonModDataEditPage.prototype.ionViewCanLeave = function () {
         var _this = this;
-        this.fetchCompetency().then(function () {
-            if (_this.planId) {
-                _this.competencyProvider.logCompetencyInPlanView(_this.planId, _this.competencyId, _this.planStatus, _this.userId);
+        if (this.forceLeave) {
+            return true;
+        }
+        var inputData = this.editForm.value;
+        return this.dataHelper.hasEditDataChanged(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (changed) {
+            if (!changed) {
+                return Promise.resolve();
             }
-            else {
-                _this.competencyProvider.logCompetencyInCourseView(_this.courseId, _this.competencyId, _this.userId);
-            }
-        }).finally(function () {
-            _this.competencyLoaded = true;
+            // Show confirmation if some data has been modified.
+            return _this.domUtils.showConfirm(_this.translate.instant('core.confirmcanceledit'));
+        }).then(function () {
+            // Delete the local files from the tmp folder.
+            return _this.dataHelper.getEditTmpFiles(inputData, _this.fieldsArray, _this.data.id, _this.entry.contents).then(function (files) {
+                _this.fileUploaderProvider.clearTmpFiles(files);
+            });
         });
     };
     /**
-     * Fetches the competency and updates the view.
+     * Fetch the entry data.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return {Promise<any>}         Resolved when done.
      */
-    AddonCompetencyCompetencyPage.prototype.fetchCompetency = function () {
+    AddonModDataEditPage.prototype.fetchEntryData = function () {
         var _this = this;
-        var promise;
-        if (this.planId) {
-            this.planStatus = null;
-            promise = this.competencyProvider.getCompetencyInPlan(this.planId, this.competencyId);
-        }
-        else if (this.courseId) {
-            promise = this.competencyProvider.getCompetencyInCourse(this.courseId, this.competencyId, this.userId);
-        }
-        else {
-            promise = Promise.reject(null);
-        }
-        return promise.then(function (competency) {
-            _this.competency = competency.usercompetencysummary;
-            if (_this.planId) {
-                _this.planStatus = competency.plan.status;
-                _this.competency.usercompetency.statusname = _this.getStatusName(_this.competency.usercompetency.status);
+        return this.dataProvider.getDatabase(this.courseId, this.module.id).then(function (data) {
+            _this.title = data.name || _this.title;
+            _this.data = data;
+            _this.cssClass = 'addon-data-entries-' + data.id;
+            return _this.dataProvider.getDatabaseAccessInformation(data.id);
+        }).then(function (accessData) {
+            _this.cssTemplate = _this.dataHelper.prefixCSS(_this.data.csstemplate, '.' + _this.cssClass);
+            if (_this.entryId) {
+                return _this.groupsProvider.getActivityGroupInfo(_this.data.coursemodule, accessData.canmanageentries)
+                    .then(function (groupInfo) {
+                    _this.groupInfo = groupInfo;
+                    // Check selected group is accessible.
+                    if (groupInfo && groupInfo.groups && groupInfo.groups.length > 0) {
+                        if (!groupInfo.groups.some(function (group) { return _this.selectedGroup == group.id; })) {
+                            _this.selectedGroup = groupInfo.groups[0].id;
+                        }
+                    }
+                });
+            }
+        }).then(function () {
+            return _this.dataOffline.getEntryActions(_this.data.id, _this.entryId);
+        }).then(function (actions) {
+            _this.offlineActions = actions;
+            return _this.dataProvider.getFields(_this.data.id);
+        }).then(function (fieldsData) {
+            _this.fieldsArray = fieldsData;
+            _this.fields = _this.utils.arrayToObject(fieldsData, 'id');
+            return _this.dataHelper.getEntry(_this.data, _this.entryId, _this.offlineActions);
+        }).then(function (entry) {
+            if (entry) {
+                entry = entry.entry;
+                // Index contents by fieldid.
+                entry.contents = _this.utils.arrayToObject(entry.contents, 'fieldid');
             }
             else {
-                _this.competency.usercompetency = _this.competency.usercompetencycourse;
-                _this.coursemodules = competency.coursemodules;
+                entry = {
+                    contents: {}
+                };
             }
-            if (_this.competency.user.id != _this.sitesProvider.getCurrentSiteUserId()) {
-                _this.competency.user.profileimageurl = _this.competency.user.profileimageurl || true;
-                // Get the user profile image from the returned object.
-                _this.user = _this.competency.user;
-            }
-            _this.competency.evidence.forEach(function (evidence) {
-                if (evidence.descidentifier) {
-                    var key = 'addon.competency.' + evidence.descidentifier;
-                    evidence.description = _this.translate.instant(key, { $a: evidence.desca });
-                }
-            });
+            return _this.dataHelper.applyOfflineActions(entry, _this.offlineActions, _this.fieldsArray);
+        }).then(function (entryData) {
+            _this.entry = entryData;
+            _this.editFormRender = _this.displayEditFields();
         }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'Error getting competency data.');
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+        }).finally(function () {
+            _this.loaded = true;
         });
     };
     /**
-     * Convenience function to get the review status name translated.
+     * Saves data.
      *
-     * @param {number} status
-     * @return {string}
+     * @return {Promise<any>} Resolved when done.
      */
-    AddonCompetencyCompetencyPage.prototype.getStatusName = function (status) {
-        var statusTranslateName;
-        switch (status) {
-            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].REVIEW_STATUS_IDLE:
-                statusTranslateName = 'idle';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].REVIEW_STATUS_IN_REVIEW:
-                statusTranslateName = 'inreview';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */].REVIEW_STATUS_WAITING_FOR_REVIEW:
-                statusTranslateName = 'waitingforreview';
-                break;
-            default:
-                // We can use the current status name.
-                return String(status);
-        }
-        return this.translate.instant('addon.competency.usercompetencystatus_' + statusTranslateName);
-    };
-    /**
-     * Refreshes the competency.
-     *
-     * @param {any} refresher Refresher.
-     */
-    AddonCompetencyCompetencyPage.prototype.refreshCompetency = function (refresher) {
+    AddonModDataEditPage.prototype.save = function () {
         var _this = this;
-        var promise;
-        if (this.planId) {
-            promise = this.competencyProvider.invalidateCompetencyInPlan(this.planId, this.competencyId);
-        }
-        else {
-            promise = this.competencyProvider.invalidateCompetencyInCourse(this.courseId, this.competencyId);
-        }
-        return promise.finally(function () {
-            _this.fetchCompetency().finally(function () {
-                refresher.complete();
+        var inputData = this.editForm.value;
+        return this.dataHelper.hasEditDataChanged(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (changed) {
+            if (!changed) {
+                if (_this.entryId) {
+                    return _this.returnToEntryList();
+                }
+                // New entry, no changes means no field filled, warn the user.
+                return Promise.reject('addon.mod_data.emptyaddform');
+            }
+            var modal = _this.domUtils.showModalLoading('core.sending', true);
+            // Create an ID to assign files.
+            var entryTemp = _this.entryId ? _this.entryId : -(new Date().getTime());
+            return _this.dataHelper.getEditDataFromForm(inputData, _this.fieldsArray, _this.data.id, entryTemp, _this.entry.contents, _this.offline).catch(function (e) {
+                if (!_this.offline) {
+                    // Cannot submit in online, prepare for offline usage.
+                    _this.offline = true;
+                    return _this.dataHelper.getEditDataFromForm(inputData, _this.fieldsArray, _this.data.id, entryTemp, _this.entry.contents, _this.offline);
+                }
+                return Promise.reject(e);
+            }).then(function (editData) {
+                if (editData.length > 0) {
+                    if (_this.entryId) {
+                        return _this.dataProvider.editEntry(_this.data.id, _this.entryId, _this.courseId, editData, _this.fields, undefined, _this.offline);
+                    }
+                    return _this.dataProvider.addEntry(_this.data.id, entryTemp, _this.courseId, editData, _this.selectedGroup, _this.fields, undefined, _this.offline);
+                }
+                return false;
+            }).then(function (result) {
+                if (!result) {
+                    // No field filled, warn the user.
+                    return Promise.reject('addon.mod_data.emptyaddform');
+                }
+                // This is done if entry is updated when editing or creating if not.
+                if ((_this.entryId && result.updated) || (!_this.entryId && result.newentryid)) {
+                    var promises = [];
+                    _this.entryId = _this.entryId || result.newentryid;
+                    promises.push(_this.dataProvider.invalidateEntryData(_this.data.id, _this.entryId, _this.siteId));
+                    promises.push(_this.dataProvider.invalidateEntriesData(_this.data.id, _this.siteId));
+                    return Promise.all(promises).then(function () {
+                        _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_data__["a" /* AddonModDataProvider */].ENTRY_CHANGED, { dataId: _this.data.id, entryId: _this.entryId }, _this.siteId);
+                    }).finally(function () {
+                        return _this.returnToEntryList();
+                    });
+                }
+                else {
+                    _this.errors = {};
+                    result.fieldnotifications.forEach(function (fieldNotif) {
+                        var field = _this.fieldsArray.find(function (field) { return field.name == fieldNotif.fieldname; });
+                        if (field) {
+                            _this.errors[field.id] = fieldNotif.notification;
+                        }
+                    });
+                    _this.jsData['errors'] = _this.errors;
+                    setTimeout(function () {
+                        _this.scrollToFirstError();
+                    });
+                }
+            }).finally(function () {
+                modal.dismiss();
             });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Cannot edit entry', true);
+            return Promise.reject(null);
         });
     };
     /**
-     * Opens the summary of a competency.
+     * Set group to see the database.
      *
-     * @param {number} competencyId
+     * @param  {number}       groupId Group identifier to set.
+     * @return {Promise<any>}         Resolved when done.
      */
-    AddonCompetencyCompetencyPage.prototype.openCompetencySummary = function (competencyId) {
-        // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.
-        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
-        navCtrl.push('AddonCompetencyCompetencySummaryPage', { competencyId: competencyId });
+    AddonModDataEditPage.prototype.setGroup = function (groupId) {
+        this.selectedGroup = groupId;
+        this.loaded = false;
+        return this.fetchEntryData();
     };
     /**
-     * Opens the profile of a user.
+     * Displays Edit Search Fields.
      *
-     * @param {number} userId
+     * @return {string}  Generated HTML.
      */
-    AddonCompetencyCompetencyPage.prototype.openUserProfile = function (userId) {
-        // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.
-        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
-        navCtrl.push('CoreUserProfilePage', { userId: userId, courseId: this.courseId });
+    AddonModDataEditPage.prototype.displayEditFields = function () {
+        if (!this.data.addtemplate) {
+            return '';
+        }
+        this.jsData = {
+            fields: this.fields,
+            contents: this.entry.contents,
+            form: this.editForm,
+            data: this.data,
+            errors: this.errors
+        };
+        var replace, render, template = this.data.addtemplate;
+        // Replace the fields found on template.
+        this.fieldsArray.forEach(function (field) {
+            replace = '[[' + field.name + ']]';
+            replace = replace.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+            replace = new RegExp(replace, 'gi');
+            // Replace field by a generic directive.
+            render = '<addon-mod-data-field-plugin mode="edit" [field]="fields[' + field.id + ']"\
+                [value]="contents[' + field.id + ']" [form]="form" [database]="data" [error]="errors[' + field.id + ']">\
+                </addon-mod-data-field-plugin>';
+            template = template.replace(replace, render);
+            // Replace the field id tag.
+            replace = '[[' + field.name + '#id]]';
+            replace = replace.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+            replace = new RegExp(replace, 'gi');
+            template = template.replace(replace, 'field_' + field.id);
+        });
+        return template;
     };
-    AddonCompetencyCompetencyPage = __decorate([
+    /**
+     * Return to the entry list (previous page) discarding temp data.
+     *
+     * @return {Promise<any>}  Resolved when done.
+     */
+    AddonModDataEditPage.prototype.returnToEntryList = function () {
+        var _this = this;
+        var inputData = this.editForm.value;
+        return this.dataHelper.getEditTmpFiles(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (files) {
+            _this.fileUploaderProvider.clearTmpFiles(files);
+        }).finally(function () {
+            // Go back to entry list.
+            _this.forceLeave = true;
+            _this.navCtrl.pop();
+        });
+    };
+    /**
+     * Scroll to first error or to the top if not found.
+     */
+    AddonModDataEditPage.prototype.scrollToFirstError = function () {
+        if (!this.domUtils.scrollToElementBySelector(this.content, '.addon-data-error')) {
+            this.content.scrollToTop();
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
+    ], AddonModDataEditPage.prototype, "content", void 0);
+    AddonModDataEditPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-competency-competency',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/competency/pages/competency/competency.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title *ngIf="competency">{{ competency.competency.competency.shortname }} <small>{{ competency.competency.competency.idnumber }}</small></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="competencyLoaded" (ionRefresh)="refreshCompetency($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="competencyLoaded">\n        <ion-card *ngIf="user">\n            <ion-item text-wrap>\n                <ion-avatar *ngIf="user.profileimageurl && user.profileimageurl !== true" item-start>\n                    <img  [src]="user.profileimageurl" [alt]="\'core.pictureof\' | translate:{$a: user.fullname}" core-external-content>\n                </ion-avatar>\n                <span *ngIf="user.profileimageurl === true" item-start>\n                    <ion-icon name="person"></ion-icon>\n                </span>\n                <h2><core-format-text [text]="user.fullname"></core-format-text></h2>\n            </ion-item>\n        </ion-card>\n\n        <ion-card *ngIf="competency">\n            <ion-item text-wrap *ngIf="competency.competency.competency.description">\n                <core-format-text [text]="competency.competency.competency.description"></core-format-text>\n            </ion-item>\n            <ion-item text-wrap>\n                <strong>{{ \'addon.competency.path\' | translate }}</strong>:\n                {{ competency.competency.comppath.framework.name }}\n                <span *ngFor="let ancestor of competency.competency.comppath.ancestors">\n                    &nbsp;/&nbsp;<a (click)="openCompetencySummary(ancestor.id)">{{ ancestor.name }}</a>\n                </span>\n            </ion-item>\n            <ion-item text-wrap>\n                <strong>{{ \'addon.competency.crossreferencedcompetencies\' | translate }}</strong>:\n                <div *ngIf="!competency.competency.hasrelatedcompetencies">{{ \'addon.competency.nocrossreferencedcompetencies\' | translate }}</div>\n                <div *ngIf="competency.competency.hasrelatedcompetencies">\n                    <p *ngFor="let relatedcomp of competency.competency.relatedcompetencies">\n                        <a (click)="openCompetencySummary(relatedcomp.id)">\n                            {{ relatedcomp.shortname }} - {{ relatedcomp.idnumber }}\n                        </a>\n                    </p>\n                </div>\n            </ion-item>\n            <ion-item text-wrap *ngIf="coursemodules">\n                <strong>{{ \'addon.competency.activities\' | translate }}</strong>:\n                <span *ngIf="coursemodules.length == 0">\n                    {{ \'addon.competency.noactivities\' | translate }}\n                </span>\n                <a ion-item text-wrap *ngFor="let activity of coursemodules" [href]="activity.url" [title]="activity.name">\n                    <img item-start core-external-content [src]="activity.iconurl" alt="" role="presentation" *ngIf="activity.iconurl" class="core-module-icon">\n                    <core-format-text [text]="activity.name"></core-format-text>\n                </a>\n            </ion-item>\n            <ion-item text-wrap *ngIf="competency.usercompetency.status">\n                <strong>{{ \'addon.competency.reviewstatus\' | translate }}</strong>:\n                {{ competency.usercompetency.statusname }}\n            </ion-item>\n            <ion-item text-wrap>\n                <strong>{{ \'addon.competency.proficient\' | translate }}</strong>:\n                <ion-badge color="success" *ngIf="competency.usercompetency.proficiency">\n                    {{ \'core.yes\' | translate }}\n                </ion-badge>\n                <ion-badge color="danger" *ngIf="!competency.usercompetency.proficiency">\n                    {{ \'core.no\' | translate }}\n                </ion-badge>\n            </ion-item>\n            <ion-item text-wrap>\n                <strong>{{ \'addon.competency.rating\' | translate }}</strong>:\n                <ion-badge color="dark">{{ competency.usercompetency.gradename }}</ion-badge>\n            </ion-item>\n        </ion-card>\n\n        <div *ngIf="competency">\n            <h3 margin-horizontal>{{ \'addon.competency.evidence\' | translate }}</h3>\n            <p margin-horizontal *ngIf="competency.evidence.length == 0">\n                {{ \'addon.competency.noevidence\' | translate }}\n            </p>\n            <ion-card *ngFor="let evidence of competency.evidence">\n                <a ion-item text-wrap *ngIf="evidence.actionuser" (click)="openUserProfile(evidence.actionuser.id)">\n                    <ion-avatar item-start>\n                        <img core-external-content [src]="evidence.actionuser.profileimageurlsmall" [alt]="\'core.pictureof\' | translate:{$a: evidence.actionuser.fullname}" role="presentation">\n                    </ion-avatar>\n                    <h2>{{ evidence.actionuser.fullname }}</h2>\n                    <p>{{ evidence.timemodified | coreToLocaleString }}</p>\n                </a>\n                <ion-item text-wrap>\n                    <p><ion-badge color="dark">{{ evidence.gradename }}</ion-badge></p>\n                    <p margin-top *ngIf="evidence.description">{{ evidence.description }}</p>\n                    <blockquote *ngIf="evidence.note"><core-format-text [text]="evidence.note"></core-format-text></blockquote>\n                </ion-item>\n            </ion-card>\n        </div>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/competency/pages/competency/competency.html"*/,
+            selector: 'page-addon-mod-data-edit',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/data/pages/edit/edit.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n        <ion-buttons end>\n            <button ion-button icon-only (click)="save()" [attr.aria-label]="\'core.save\' | translate">\n                <ion-icon name="send"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <ion-item text-wrap *ngIf="groupInfo && (groupInfo.separateGroups || groupInfo.visibleGroups)">\n            <ion-label id="addon-data-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n            <ion-label id="addon-data-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n            <ion-select [(ngModel)]="selectedGroup" (ionChange)="setGroup(selectedGroup)" aria-labelledby="addon-data-groupslabel">\n                <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n            </ion-select>\n        </ion-item>\n\n        <div class="addon-data-contents {{cssClass}}">\n            <style *ngIf="cssTemplate">\n                {{ cssTemplate }}\n            </style>\n\n            <form (ngSubmit)="save()" [formGroup]="editForm">\n                <core-compile-html [text]="editFormRender" [jsData]="jsData" [extraImports]="extraImports"></core-compile-html>\n            </form>\n        </div>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/data/pages/edit/edit.html"*/,
         }),
-        __param(5, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__components_split_view_split_view__["a" /* CoreSplitViewComponent */], __WEBPACK_IMPORTED_MODULE_6__providers_competency__["a" /* AddonCompetencyProvider */]])
-    ], AddonCompetencyCompetencyPage);
-    return AddonCompetencyCompetencyPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_groups__["a" /* CoreGroupsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_14__providers_fields_delegate__["a" /* AddonModDataFieldsDelegate */],
+            __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__["a" /* CoreCourseProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_data__["a" /* AddonModDataProvider */],
+            __WEBPACK_IMPORTED_MODULE_13__providers_offline__["a" /* AddonModDataOfflineProvider */], __WEBPACK_IMPORTED_MODULE_12__providers_helper__["a" /* AddonModDataHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_9__core_fileuploader_providers_fileuploader__["a" /* CoreFileUploaderProvider */]])
+    ], AddonModDataEditPage);
+    return AddonModDataEditPage;
 }());
 
-//# sourceMappingURL=competency.js.map
+//# sourceMappingURL=edit.js.map
 
 /***/ })
 

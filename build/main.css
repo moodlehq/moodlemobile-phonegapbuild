@@ -12586,7 +12586,7 @@ ion-fab-list[side=right] {
   padding: 0;
 }
 
-.grid[no-padding] > .row > .col {
+.grid[no-padding] > .row > .col, .addon-data-contents .grid[no-padding] > tr > .col, .addon-data-contents .grid[no-padding] > .row > td, .addon-data-contents .grid[no-padding] > tr > td, .addon-data-contents .grid[no-padding] > .row > th, .addon-data-contents .grid[no-padding] > tr > th {
   padding: 0;
 }
 
@@ -12618,7 +12618,7 @@ ion-fab-list[side=right] {
   }
 }
 
-.row {
+.row, .addon-data-contents tr {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -12628,88 +12628,88 @@ ion-fab-list[side=right] {
   flex-wrap: wrap;
 }
 
-.row[nowrap] {
+.row[nowrap], .addon-data-contents tr[nowrap] {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 
-.row[wrap-reverse] {
+.row[wrap-reverse], .addon-data-contents tr[wrap-reverse] {
   -webkit-flex-wrap: wrap-reverse;
   -ms-flex-wrap: wrap-reverse;
   flex-wrap: wrap-reverse;
 }
 
-.row[align-items-start] {
+.row[align-items-start], .addon-data-contents tr[align-items-start] {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
 }
 
-.row[align-items-center] {
+.row[align-items-center], .addon-data-contents tr[align-items-center] {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
-.row[align-items-end] {
+.row[align-items-end], .addon-data-contents tr[align-items-end] {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
 }
 
-.row[align-items-stretch] {
+.row[align-items-stretch], .addon-data-contents tr[align-items-stretch] {
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
 }
 
-.row[align-items-baseline] {
+.row[align-items-baseline], .addon-data-contents tr[align-items-baseline] {
   -webkit-box-align: baseline;
   -webkit-align-items: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
 }
 
-.row[justify-content-start] {
+.row[justify-content-start], .addon-data-contents tr[justify-content-start] {
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
-.row[justify-content-center] {
+.row[justify-content-center], .addon-data-contents tr[justify-content-center] {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.row[justify-content-end] {
+.row[justify-content-end], .addon-data-contents tr[justify-content-end] {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
-.row[justify-content-around] {
+.row[justify-content-around], .addon-data-contents tr[justify-content-around] {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
-.row[justify-content-between] {
+.row[justify-content-between], .addon-data-contents tr[justify-content-between] {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
-.col {
+.col, .addon-data-contents td, .addon-data-contents th {
   padding: 5px;
   position: relative;
   width: 100%;
@@ -12725,31 +12725,31 @@ ion-fab-list[side=right] {
   max-width: 100%;
 }
 
-.col[align-self-start] {
+.col[align-self-start], .addon-data-contents td[align-self-start], .addon-data-contents th[align-self-start] {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
-.col[align-self-end] {
+.col[align-self-end], .addon-data-contents td[align-self-end], .addon-data-contents th[align-self-end] {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
 }
 
-.col[align-self-center] {
+.col[align-self-center], .addon-data-contents td[align-self-center], .addon-data-contents th[align-self-center] {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.col[align-self-stretch] {
+.col[align-self-stretch], .addon-data-contents td[align-self-stretch], .addon-data-contents th[align-self-stretch] {
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
 }
 
-.col[align-self-baseline] {
+.col[align-self-baseline], .addon-data-contents td[align-self-baseline], .addon-data-contents th[align-self-baseline] {
   -webkit-align-self: baseline;
   -ms-flex-item-align: baseline;
   align-self: baseline;
@@ -23840,7 +23840,7 @@ ion-spinner.spinner-paused svg {
   bottom: auto;
 }
 
-.tab-button, core-tabs .core-tabs-bar > a {
+.tab-button, .core-tabs-bar > a {
   margin: 0;
   text-align: center;
   border-radius: 0;
@@ -23919,22 +23919,19 @@ ion-spinner.spinner-paused svg {
   white-space: normal;
 }
 
-[tabsLayout=icon-bottom] .tab-button .tab-button-icon, [tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-icon {
+[tabsLayout=icon-bottom] .tab-button .tab-button-icon, [tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-icon {
   -webkit-box-ordinal-group: 11;
   -webkit-order: 10;
   -ms-flex-order: 10;
   order: 10;
 }
 
-[tabsLayout=icon-left] .tab-button, [tabsLayout=icon-left] core-tabs .core-tabs-bar > a, core-tabs [tabsLayout=icon-left] .core-tabs-bar > a,
+[tabsLayout=icon-left] .tab-button, [tabsLayout=icon-left] .core-tabs-bar > a,
 [tabsLayout=icon-right] .tab-button,
-[tabsLayout=icon-right] core-tabs .core-tabs-bar > a, core-tabs
 [tabsLayout=icon-right] .core-tabs-bar > a,
 [tabsLayout=icon-start] .tab-button,
-[tabsLayout=icon-start] core-tabs .core-tabs-bar > a, core-tabs
 [tabsLayout=icon-start] .core-tabs-bar > a,
 [tabsLayout=icon-end] .tab-button,
-[tabsLayout=icon-end] core-tabs .core-tabs-bar > a, core-tabs
 [tabsLayout=icon-end] .core-tabs-bar > a {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -23943,18 +23940,16 @@ ion-spinner.spinner-paused svg {
   flex-direction: row;
 }
 
-[tabsLayout=icon-left] .tab-button .tab-button-icon, [tabsLayout=icon-left] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-left] .core-tabs-bar > a .tab-button-icon,
+[tabsLayout=icon-left] .tab-button .tab-button-icon, [tabsLayout=icon-left] .core-tabs-bar > a .tab-button-icon,
 [tabsLayout=icon-start] .tab-button .tab-button-icon,
-[tabsLayout=icon-start] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs
 [tabsLayout=icon-start] .core-tabs-bar > a .tab-button-icon {
   padding-right: 8px;
   text-align: right;
   text-align: end;
 }
 
-[tabsLayout=icon-right] .tab-button .tab-button-icon, [tabsLayout=icon-right] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs [tabsLayout=icon-right] .core-tabs-bar > a .tab-button-icon,
+[tabsLayout=icon-right] .tab-button .tab-button-icon, [tabsLayout=icon-right] .core-tabs-bar > a .tab-button-icon,
 [tabsLayout=icon-end] .tab-button .tab-button-icon,
-[tabsLayout=icon-end] core-tabs .core-tabs-bar > a .tab-button-icon, core-tabs
 [tabsLayout=icon-end] .core-tabs-bar > a .tab-button-icon {
   padding-left: 8px;
   text-align: left;
@@ -24009,7 +24004,7 @@ ion-spinner.spinner-paused svg {
   border-bottom: 0.55px solid rgba(0, 0, 0, 0.3);
 }
 
-.tabs-ios .tab-button, .tabs-ios core-tabs .core-tabs-bar > a, core-tabs .tabs-ios .core-tabs-bar > a {
+.tabs-ios .tab-button, .tabs-ios .core-tabs-bar > a {
   max-width: 240px;
   min-height: 49px;
   font-size: 10px;
@@ -24018,14 +24013,13 @@ ion-spinner.spinner-paused svg {
   padding: 0 2px;
 }
 
-.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-ios .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-ios .tab-button:hover:not(.disable-hover), .tabs-ios .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios .tab-button[aria-selected=true],
-.tabs-ios core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-ios .core-tabs-bar > a[aria-selected=true] {
   color: #f98012;
 }
 
-.tabs-ios .tab-button[aria-selected=true] .tab-button-icon, .tabs-ios core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-ios .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon, .tabs-ios .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #f98012;
 }
 
@@ -24052,63 +24046,51 @@ ion-spinner.spinner-paused svg {
   vertical-align: top;
 }
 
-.tabs-ios[tabsLayout=icon-right] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-right] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .tab-button-text,
+.tabs-ios[tabsLayout=icon-right] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .tab-button-text,
 .tabs-ios[tabsLayout=icon-left] .tab-button .tab-button-text,
-.tabs-ios[tabsLayout=icon-left] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs
 .tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a .tab-button-text,
 .tabs-ios[tabsLayout=icon-end] .tab-button .tab-button-text,
-.tabs-ios[tabsLayout=icon-end] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs
 .tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a .tab-button-text,
 .tabs-ios[tabsLayout=icon-start] .tab-button .tab-button-text,
-.tabs-ios[tabsLayout=icon-start] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs
 .tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a .tab-button-text {
   font-size: 1.4rem;
   line-height: 1.1;
 }
 
-.tabs-ios[tabsLayout=icon-right] .tab-button ion-icon, .tabs-ios[tabsLayout=icon-right] core-tabs .core-tabs-bar > a ion-icon, core-tabs .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a ion-icon, .tabs-ios[tabsLayout=icon-right] .tab-button .fa.icon, .tabs-ios[tabsLayout=icon-right] core-tabs .core-tabs-bar > a .fa.icon, core-tabs .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .fa.icon,
+.tabs-ios[tabsLayout=icon-right] .tab-button ion-icon, .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a ion-icon, .tabs-ios[tabsLayout=icon-right] .tab-button .fa.icon, .tabs-ios[tabsLayout=icon-right] .core-tabs-bar > a .fa.icon,
 .tabs-ios[tabsLayout=icon-left] .tab-button ion-icon,
-.tabs-ios[tabsLayout=icon-left] core-tabs .core-tabs-bar > a ion-icon, core-tabs
 .tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a ion-icon,
 .tabs-ios[tabsLayout=icon-left] .tab-button .fa.icon,
-.tabs-ios[tabsLayout=icon-left] core-tabs .core-tabs-bar > a .fa.icon, core-tabs
 .tabs-ios[tabsLayout=icon-left] .core-tabs-bar > a .fa.icon,
 .tabs-ios[tabsLayout=icon-end] .tab-button ion-icon,
-.tabs-ios[tabsLayout=icon-end] core-tabs .core-tabs-bar > a ion-icon, core-tabs
 .tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a ion-icon,
 .tabs-ios[tabsLayout=icon-end] .tab-button .fa.icon,
-.tabs-ios[tabsLayout=icon-end] core-tabs .core-tabs-bar > a .fa.icon, core-tabs
 .tabs-ios[tabsLayout=icon-end] .core-tabs-bar > a .fa.icon,
 .tabs-ios[tabsLayout=icon-start] .tab-button ion-icon,
-.tabs-ios[tabsLayout=icon-start] core-tabs .core-tabs-bar > a ion-icon, core-tabs
 .tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a ion-icon,
 .tabs-ios[tabsLayout=icon-start] .tab-button .fa.icon,
-.tabs-ios[tabsLayout=icon-start] core-tabs .core-tabs-bar > a .fa.icon, core-tabs
 .tabs-ios[tabsLayout=icon-start] .core-tabs-bar > a .fa.icon {
   min-width: 24px;
   height: 26px;
   font-size: 24px;
 }
 
-.tabs-ios[tabsLayout=icon-hide] .tab-button, .tabs-ios[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-ios[tabsLayout=icon-hide] .tab-button, .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a,
 .tabs-ios .tab-button.has-title-only,
-.tabs-ios core-tabs .core-tabs-bar > a.has-title-only, core-tabs
 .tabs-ios .core-tabs-bar > a.has-title-only {
   min-height: 41px;
 }
 
-.tabs-ios[tabsLayout=icon-hide] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a .tab-button-text,
+.tabs-ios[tabsLayout=icon-hide] .tab-button .tab-button-text, .tabs-ios[tabsLayout=icon-hide] .core-tabs-bar > a .tab-button-text,
 .tabs-ios .tab-button.has-title-only .tab-button-text,
-.tabs-ios core-tabs .core-tabs-bar > a.has-title-only .tab-button-text, core-tabs
 .tabs-ios .core-tabs-bar > a.has-title-only .tab-button-text {
   margin: 2px 0;
   font-size: 1.4rem;
   line-height: 1.1;
 }
 
-.tabs-ios[tabsLayout=title-hide] .tab-button, .tabs-ios[tabsLayout=title-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-ios[tabsLayout=title-hide] .core-tabs-bar > a,
+.tabs-ios[tabsLayout=title-hide] .tab-button, .tabs-ios[tabsLayout=title-hide] .core-tabs-bar > a,
 .tabs-ios .tab-button.icon-only,
-.tabs-ios core-tabs .core-tabs-bar > a.icon-only, core-tabs
 .tabs-ios .core-tabs-bar > a.icon-only {
   min-height: 41px;
 }
@@ -24118,20 +24100,17 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-ios-primary .tab-button, .tabs-ios-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-primary .core-tabs-bar > a,
+.tabs-ios-primary .tab-button, .tabs-ios-primary .core-tabs-bar > a,
 .tabs-ios-primary .tab-button-icon,
 .tabs-ios-primary .tab-button:hover:not(.disable-hover),
-.tabs-ios-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-primary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-primary .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-primary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-primary .tab-button[aria-selected=true], .tabs-ios-primary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-primary .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-primary .tab-button[aria-selected=true], .tabs-ios-primary .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-primary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-primary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24141,20 +24120,17 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-ios-secondary .tab-button, .tabs-ios-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-secondary .core-tabs-bar > a,
+.tabs-ios-secondary .tab-button, .tabs-ios-secondary .core-tabs-bar > a,
 .tabs-ios-secondary .tab-button-icon,
 .tabs-ios-secondary .tab-button:hover:not(.disable-hover),
-.tabs-ios-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-secondary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-secondary .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-secondary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-secondary .tab-button[aria-selected=true], .tabs-ios-secondary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-secondary .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-secondary .tab-button[aria-selected=true], .tabs-ios-secondary .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-secondary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-secondary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24164,20 +24140,17 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-ios-danger .tab-button, .tabs-ios-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-danger .core-tabs-bar > a,
+.tabs-ios-danger .tab-button, .tabs-ios-danger .core-tabs-bar > a,
 .tabs-ios-danger .tab-button-icon,
 .tabs-ios-danger .tab-button:hover:not(.disable-hover),
-.tabs-ios-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-danger .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-danger .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-danger .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-danger .tab-button[aria-selected=true], .tabs-ios-danger core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-danger .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-danger .tab-button[aria-selected=true], .tabs-ios-danger .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-danger .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-danger core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24187,20 +24160,17 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-ios-light .tab-button, .tabs-ios-light core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-light .core-tabs-bar > a,
+.tabs-ios-light .tab-button, .tabs-ios-light .core-tabs-bar > a,
 .tabs-ios-light .tab-button-icon,
 .tabs-ios-light .tab-button:hover:not(.disable-hover),
-.tabs-ios-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-light .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-light .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-light .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-ios-light .tab-button[aria-selected=true], .tabs-ios-light core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-light .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-light .tab-button[aria-selected=true], .tabs-ios-light .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-light .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-light core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #000;
 }
@@ -24210,20 +24180,17 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-ios-gray .tab-button, .tabs-ios-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-gray .core-tabs-bar > a,
+.tabs-ios-gray .tab-button, .tabs-ios-gray .core-tabs-bar > a,
 .tabs-ios-gray .tab-button-icon,
 .tabs-ios-gray .tab-button:hover:not(.disable-hover),
-.tabs-ios-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-gray .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-gray .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-gray .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-gray .tab-button[aria-selected=true], .tabs-ios-gray core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-gray .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-gray .tab-button[aria-selected=true], .tabs-ios-gray .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-gray .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-gray core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24233,20 +24200,17 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-ios-dark .tab-button, .tabs-ios-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-dark .core-tabs-bar > a,
+.tabs-ios-dark .tab-button, .tabs-ios-dark .core-tabs-bar > a,
 .tabs-ios-dark .tab-button-icon,
 .tabs-ios-dark .tab-button:hover:not(.disable-hover),
-.tabs-ios-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-dark .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-dark .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-dark .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-dark .tab-button[aria-selected=true], .tabs-ios-dark core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-dark .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-dark .tab-button[aria-selected=true], .tabs-ios-dark .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-dark .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-dark core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24256,20 +24220,17 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-ios-warning .tab-button, .tabs-ios-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-warning .core-tabs-bar > a,
+.tabs-ios-warning .tab-button, .tabs-ios-warning .core-tabs-bar > a,
 .tabs-ios-warning .tab-button-icon,
 .tabs-ios-warning .tab-button:hover:not(.disable-hover),
-.tabs-ios-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-warning .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-warning .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-warning .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-warning .tab-button[aria-selected=true], .tabs-ios-warning core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-warning .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-warning .tab-button[aria-selected=true], .tabs-ios-warning .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-warning .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-warning core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24279,20 +24240,17 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-ios-success .tab-button, .tabs-ios-success core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-success .core-tabs-bar > a,
+.tabs-ios-success .tab-button, .tabs-ios-success .core-tabs-bar > a,
 .tabs-ios-success .tab-button-icon,
 .tabs-ios-success .tab-button:hover:not(.disable-hover),
-.tabs-ios-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-success .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-success .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-success .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-success .tab-button[aria-selected=true], .tabs-ios-success core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-success .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-success .tab-button[aria-selected=true], .tabs-ios-success .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-success .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-success core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24302,20 +24260,17 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-ios-info .tab-button, .tabs-ios-info core-tabs .core-tabs-bar > a, core-tabs .tabs-ios-info .core-tabs-bar > a,
+.tabs-ios-info .tab-button, .tabs-ios-info .core-tabs-bar > a,
 .tabs-ios-info .tab-button-icon,
 .tabs-ios-info .tab-button:hover:not(.disable-hover),
-.tabs-ios-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs
 .tabs-ios-info .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-ios-info .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-ios-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-ios-info .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-ios-info .tab-button[aria-selected=true], .tabs-ios-info core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-ios-info .core-tabs-bar > a[aria-selected=true],
+.tabs-ios-info .tab-button[aria-selected=true], .tabs-ios-info .core-tabs-bar > a[aria-selected=true],
 .tabs-ios-info .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-ios-info core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-ios-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24324,14 +24279,14 @@ ion-spinner.spinner-paused svg {
   background: #626262;
 }
 
-.tabs-md .tab-button, .tabs-md core-tabs .core-tabs-bar > a, core-tabs .tabs-md .core-tabs-bar > a {
+.tabs-md .tab-button, .tabs-md .core-tabs-bar > a {
   min-height: 5.6rem;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.7);
   padding: 0;
 }
 
-.tabs-md .tab-button[aria-selected=true], .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true] {
+.tabs-md .tab-button[aria-selected=true], .tabs-md .core-tabs-bar > a[aria-selected=true] {
   color: #f98012;
   padding: 0;
 }
@@ -24348,7 +24303,7 @@ ion-spinner.spinner-paused svg {
   transform-origin: 50% 80%;
 }
 
-.tabs-md .tab-button[aria-selected=true] .tab-button-text, .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-text, core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-text {
+.tabs-md .tab-button[aria-selected=true] .tab-button-text, .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-text {
   -webkit-transform: scale3d(1.16667, 1.16667, 1);
   transform: scale3d(1.16667, 1.16667, 1);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -24362,7 +24317,7 @@ ion-spinner.spinner-paused svg {
   margin-bottom: 0;
 }
 
-.tabs-md[tabsLayout=icon-bottom] .tab-button .tab-button-text, .tabs-md[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a .tab-button-text, core-tabs .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-text {
+.tabs-md[tabsLayout=icon-bottom] .tab-button .tab-button-text, .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a .tab-button-text {
   margin-top: 0;
 }
 
@@ -24379,42 +24334,37 @@ ion-spinner.spinner-paused svg {
   transform-origin: 50% 150%;
 }
 
-.tabs-md .tab-button[aria-selected=true] .tab-button-icon, .tabs-md core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon, .tabs-md .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #f98012;
   -webkit-transform: translate3d(0,  -2px,  0);
   transform: translate3d(0,  -2px,  0);
 }
 
-.tabs-md[tabsLayout=icon-right] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-right] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-right] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
+.tabs-md[tabsLayout=icon-right] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-right] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
 .tabs-md[tabsLayout=icon-end] .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md[tabsLayout=icon-end] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md[tabsLayout=icon-end] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   -webkit-transform: translate3d(2px,  0,  0);
   transform: translate3d(2px,  0,  0);
 }
 
-.tabs-md[tabsLayout=icon-bottom] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-md[tabsLayout=icon-bottom] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-bottom] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   -webkit-transform: translate3d(0,  2px,  0);
   transform: translate3d(0,  2px,  0);
 }
 
-.tabs-md[tabsLayout=icon-left] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-left] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-md[tabsLayout=icon-left] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
+.tabs-md[tabsLayout=icon-left] .tab-button[aria-selected=true] .tab-button-icon, .tabs-md[tabsLayout=icon-left] .core-tabs-bar > a[aria-selected=true] .tab-button-icon,
 .tabs-md[tabsLayout=icon-start] .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md[tabsLayout=icon-start] core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md[tabsLayout=icon-start] .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   -webkit-transform: translate3d(-2px,  0,  0);
   transform: translate3d(-2px,  0,  0);
 }
 
-.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-md[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=icon-hide] .core-tabs-bar > a,
 .tabs-md[tabsLayout=title-hide] .tab-button,
-.tabs-md[tabsLayout=title-hide] core-tabs .core-tabs-bar > a, core-tabs
 .tabs-md[tabsLayout=title-hide] .core-tabs-bar > a,
 .tabs-md .tab-button.icon-only,
-.tabs-md core-tabs .core-tabs-bar > a.icon-only, core-tabs
 .tabs-md .core-tabs-bar > a.icon-only,
 .tabs-md .tab-button.has-title-only,
-.tabs-md core-tabs .core-tabs-bar > a.has-title-only, core-tabs
 .tabs-md .core-tabs-bar > a.has-title-only {
   padding: 0 10px;
 }
@@ -24446,17 +24396,15 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-md-primary .tab-button, .tabs-md-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-md-primary .core-tabs-bar > a,
+.tabs-md-primary .tab-button, .tabs-md-primary .core-tabs-bar > a,
 .tabs-md-primary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-primary .tab-button:hover:not(.disable-hover), .tabs-md-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-primary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-primary .tab-button:hover:not(.disable-hover), .tabs-md-primary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-primary .tab-button[aria-selected=true],
-.tabs-md-primary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-primary .core-tabs-bar > a[aria-selected=true],
 .tabs-md-primary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-primary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24469,17 +24417,15 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-md-secondary .tab-button, .tabs-md-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-md-secondary .core-tabs-bar > a,
+.tabs-md-secondary .tab-button, .tabs-md-secondary .core-tabs-bar > a,
 .tabs-md-secondary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-secondary .tab-button:hover:not(.disable-hover), .tabs-md-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-secondary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-secondary .tab-button:hover:not(.disable-hover), .tabs-md-secondary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-secondary .tab-button[aria-selected=true],
-.tabs-md-secondary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-secondary .core-tabs-bar > a[aria-selected=true],
 .tabs-md-secondary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-secondary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24492,17 +24438,15 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-md-danger .tab-button, .tabs-md-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-md-danger .core-tabs-bar > a,
+.tabs-md-danger .tab-button, .tabs-md-danger .core-tabs-bar > a,
 .tabs-md-danger .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-danger .tab-button:hover:not(.disable-hover), .tabs-md-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-danger .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-danger .tab-button:hover:not(.disable-hover), .tabs-md-danger .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-danger .tab-button[aria-selected=true],
-.tabs-md-danger core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-danger .core-tabs-bar > a[aria-selected=true],
 .tabs-md-danger .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-danger core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24515,17 +24459,15 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-md-light .tab-button, .tabs-md-light core-tabs .core-tabs-bar > a, core-tabs .tabs-md-light .core-tabs-bar > a,
+.tabs-md-light .tab-button, .tabs-md-light .core-tabs-bar > a,
 .tabs-md-light .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-md-light .tab-button:hover:not(.disable-hover), .tabs-md-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-light .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-light .tab-button:hover:not(.disable-hover), .tabs-md-light .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-light .tab-button[aria-selected=true],
-.tabs-md-light core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-light .core-tabs-bar > a[aria-selected=true],
 .tabs-md-light .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-light core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #000;
 }
@@ -24538,17 +24480,15 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-md-gray .tab-button, .tabs-md-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-md-gray .core-tabs-bar > a,
+.tabs-md-gray .tab-button, .tabs-md-gray .core-tabs-bar > a,
 .tabs-md-gray .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-gray .tab-button:hover:not(.disable-hover), .tabs-md-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-gray .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-gray .tab-button:hover:not(.disable-hover), .tabs-md-gray .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-gray .tab-button[aria-selected=true],
-.tabs-md-gray core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-gray .core-tabs-bar > a[aria-selected=true],
 .tabs-md-gray .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-gray core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24561,17 +24501,15 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-md-dark .tab-button, .tabs-md-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-md-dark .core-tabs-bar > a,
+.tabs-md-dark .tab-button, .tabs-md-dark .core-tabs-bar > a,
 .tabs-md-dark .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-dark .tab-button:hover:not(.disable-hover), .tabs-md-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-dark .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-dark .tab-button:hover:not(.disable-hover), .tabs-md-dark .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-dark .tab-button[aria-selected=true],
-.tabs-md-dark core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-dark .core-tabs-bar > a[aria-selected=true],
 .tabs-md-dark .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-dark core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24584,17 +24522,15 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-md-warning .tab-button, .tabs-md-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-md-warning .core-tabs-bar > a,
+.tabs-md-warning .tab-button, .tabs-md-warning .core-tabs-bar > a,
 .tabs-md-warning .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-warning .tab-button:hover:not(.disable-hover), .tabs-md-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-warning .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-warning .tab-button:hover:not(.disable-hover), .tabs-md-warning .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-warning .tab-button[aria-selected=true],
-.tabs-md-warning core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-warning .core-tabs-bar > a[aria-selected=true],
 .tabs-md-warning .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-warning core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24607,17 +24543,15 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-md-success .tab-button, .tabs-md-success core-tabs .core-tabs-bar > a, core-tabs .tabs-md-success .core-tabs-bar > a,
+.tabs-md-success .tab-button, .tabs-md-success .core-tabs-bar > a,
 .tabs-md-success .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-success .tab-button:hover:not(.disable-hover), .tabs-md-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-success .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-success .tab-button:hover:not(.disable-hover), .tabs-md-success .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-success .tab-button[aria-selected=true],
-.tabs-md-success core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-success .core-tabs-bar > a[aria-selected=true],
 .tabs-md-success .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-success core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24630,17 +24564,15 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-md-info .tab-button, .tabs-md-info core-tabs .core-tabs-bar > a, core-tabs .tabs-md-info .core-tabs-bar > a,
+.tabs-md-info .tab-button, .tabs-md-info .core-tabs-bar > a,
 .tabs-md-info .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-md-info .tab-button:hover:not(.disable-hover), .tabs-md-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-md-info .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-md-info .tab-button:hover:not(.disable-hover), .tabs-md-info .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-md-info .tab-button[aria-selected=true],
-.tabs-md-info core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-md-info .core-tabs-bar > a[aria-selected=true],
 .tabs-md-info .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-md-info core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-md-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #fff;
 }
@@ -24653,7 +24585,7 @@ ion-spinner.spinner-paused svg {
   background: #626262;
 }
 
-.tabs-wp .tab-button, .tabs-wp core-tabs .core-tabs-bar > a, core-tabs .tabs-wp .core-tabs-bar > a {
+.tabs-wp .tab-button, .tabs-wp .core-tabs-bar > a {
   border-radius: 0;
   min-height: 4.8rem;
   border-bottom: 2px solid transparent;
@@ -24665,21 +24597,21 @@ ion-spinner.spinner-paused svg {
   padding: 12px 10px 5px;
 }
 
-.tabs-wp .tab-button[aria-selected=true], .tabs-wp core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-wp .core-tabs-bar > a[aria-selected=true] {
+.tabs-wp .tab-button[aria-selected=true], .tabs-wp .core-tabs-bar > a[aria-selected=true] {
   border-bottom-color: #f98012;
   color: #f98012;
 }
 
-.tabs-wp .tab-button.activated, .tabs-wp core-tabs .core-tabs-bar > a.activated, core-tabs .tabs-wp .core-tabs-bar > a.activated {
+.tabs-wp .tab-button.activated, .tabs-wp .core-tabs-bar > a.activated {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.tabs-wp[tabsPlacement=bottom] .tab-button, .tabs-wp[tabsPlacement=bottom] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a {
+.tabs-wp[tabsPlacement=bottom] .tab-button, .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a {
   border-top: 2px solid transparent;
   border-bottom-width: 0;
 }
 
-.tabs-wp[tabsPlacement=bottom] .tab-button[aria-selected=true], .tabs-wp[tabsPlacement=bottom] core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a[aria-selected=true] {
+.tabs-wp[tabsPlacement=bottom] .tab-button[aria-selected=true], .tabs-wp[tabsPlacement=bottom] .core-tabs-bar > a[aria-selected=true] {
   border-top-color: #f98012;
 }
 
@@ -24694,59 +24626,47 @@ ion-spinner.spinner-paused svg {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp .tab-button[aria-selected=true] .tab-button-icon, .tabs-wp core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs .tabs-wp .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
+.tabs-wp .tab-button[aria-selected=true] .tab-button-icon, .tabs-wp .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   color: #f98012;
 }
 
-.tabs-wp[tabsLayout=icon-bottom] .tab-button, .tabs-wp[tabsLayout=icon-bottom] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-bottom] .core-tabs-bar > a {
+.tabs-wp[tabsLayout=icon-bottom] .tab-button, .tabs-wp[tabsLayout=icon-bottom] .core-tabs-bar > a {
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
-.tabs-wp[tabsLayout=icon-right] .tab-button, .tabs-wp[tabsLayout=icon-right] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=icon-right] .tab-button, .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a,
 .tabs-wp[tabsLayout=icon-left] .tab-button,
-.tabs-wp[tabsLayout=icon-left] core-tabs .core-tabs-bar > a, core-tabs
 .tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a,
 .tabs-wp[tabsLayout=icon-end] .tab-button,
-.tabs-wp[tabsLayout=icon-end] core-tabs .core-tabs-bar > a, core-tabs
 .tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a,
 .tabs-wp[tabsLayout=icon-start] .tab-button,
-.tabs-wp[tabsLayout=icon-start] core-tabs .core-tabs-bar > a, core-tabs
 .tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a {
   padding-bottom: 10px;
 }
 
-.tabs-wp[tabsLayout=icon-right] .tab-button ion-icon, .tabs-wp[tabsLayout=icon-right] core-tabs .core-tabs-bar > a ion-icon, core-tabs .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a ion-icon, .tabs-wp[tabsLayout=icon-right] .tab-button .fa.icon, .tabs-wp[tabsLayout=icon-right] core-tabs .core-tabs-bar > a .fa.icon, core-tabs .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a .fa.icon,
+.tabs-wp[tabsLayout=icon-right] .tab-button ion-icon, .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a ion-icon, .tabs-wp[tabsLayout=icon-right] .tab-button .fa.icon, .tabs-wp[tabsLayout=icon-right] .core-tabs-bar > a .fa.icon,
 .tabs-wp[tabsLayout=icon-left] .tab-button ion-icon,
-.tabs-wp[tabsLayout=icon-left] core-tabs .core-tabs-bar > a ion-icon, core-tabs
 .tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a ion-icon,
 .tabs-wp[tabsLayout=icon-left] .tab-button .fa.icon,
-.tabs-wp[tabsLayout=icon-left] core-tabs .core-tabs-bar > a .fa.icon, core-tabs
 .tabs-wp[tabsLayout=icon-left] .core-tabs-bar > a .fa.icon,
 .tabs-wp[tabsLayout=icon-end] .tab-button ion-icon,
-.tabs-wp[tabsLayout=icon-end] core-tabs .core-tabs-bar > a ion-icon, core-tabs
 .tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a ion-icon,
 .tabs-wp[tabsLayout=icon-end] .tab-button .fa.icon,
-.tabs-wp[tabsLayout=icon-end] core-tabs .core-tabs-bar > a .fa.icon, core-tabs
 .tabs-wp[tabsLayout=icon-end] .core-tabs-bar > a .fa.icon,
 .tabs-wp[tabsLayout=icon-start] .tab-button ion-icon,
-.tabs-wp[tabsLayout=icon-start] core-tabs .core-tabs-bar > a ion-icon, core-tabs
 .tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a ion-icon,
 .tabs-wp[tabsLayout=icon-start] .tab-button .fa.icon,
-.tabs-wp[tabsLayout=icon-start] core-tabs .core-tabs-bar > a .fa.icon, core-tabs
 .tabs-wp[tabsLayout=icon-start] .core-tabs-bar > a .fa.icon {
   min-width: 24px;
 }
 
-.tabs-wp[tabsLayout=icon-hide] .tab-button, .tabs-wp[tabsLayout=icon-hide] core-tabs .core-tabs-bar > a, core-tabs .tabs-wp[tabsLayout=icon-hide] .core-tabs-bar > a,
+.tabs-wp[tabsLayout=icon-hide] .tab-button, .tabs-wp[tabsLayout=icon-hide] .core-tabs-bar > a,
 .tabs-wp[tabsLayout=title-hide] .tab-button,
-.tabs-wp[tabsLayout=title-hide] core-tabs .core-tabs-bar > a, core-tabs
 .tabs-wp[tabsLayout=title-hide] .core-tabs-bar > a,
 .tabs-wp .tab-button.icon-only,
-.tabs-wp core-tabs .core-tabs-bar > a.icon-only, core-tabs
 .tabs-wp .core-tabs-bar > a.icon-only,
 .tabs-wp .tab-button.has-title-only,
-.tabs-wp core-tabs .core-tabs-bar > a.has-title-only, core-tabs
 .tabs-wp .core-tabs-bar > a.has-title-only {
   padding: 6px 10px;
 }
@@ -24755,20 +24675,17 @@ ion-spinner.spinner-paused svg {
   background-color: #f98012;
 }
 
-.tabs-wp-primary .tab-button, .tabs-wp-primary core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-primary .core-tabs-bar > a,
+.tabs-wp-primary .tab-button, .tabs-wp-primary .core-tabs-bar > a,
 .tabs-wp-primary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-primary .tab-button:hover:not(.disable-hover), .tabs-wp-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-primary .tab-button:hover:not(.disable-hover), .tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-primary .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-primary core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-primary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-primary .tab-button[aria-selected=true],
-.tabs-wp-primary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-primary .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-primary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-primary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-primary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24778,20 +24695,17 @@ ion-spinner.spinner-paused svg {
   background-color: #007982;
 }
 
-.tabs-wp-secondary .tab-button, .tabs-wp-secondary core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-secondary .core-tabs-bar > a,
+.tabs-wp-secondary .tab-button, .tabs-wp-secondary .core-tabs-bar > a,
 .tabs-wp-secondary .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-secondary .tab-button:hover:not(.disable-hover), .tabs-wp-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-secondary .tab-button:hover:not(.disable-hover), .tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-secondary .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-secondary core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-secondary .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-secondary .tab-button[aria-selected=true],
-.tabs-wp-secondary core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-secondary .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-secondary .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-secondary core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-secondary .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24801,20 +24715,17 @@ ion-spinner.spinner-paused svg {
   background-color: #cb3d4d;
 }
 
-.tabs-wp-danger .tab-button, .tabs-wp-danger core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-danger .core-tabs-bar > a,
+.tabs-wp-danger .tab-button, .tabs-wp-danger .core-tabs-bar > a,
 .tabs-wp-danger .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-danger .tab-button:hover:not(.disable-hover), .tabs-wp-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-danger .tab-button:hover:not(.disable-hover), .tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-danger .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-danger core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-danger .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-danger .tab-button[aria-selected=true],
-.tabs-wp-danger core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-danger .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-danger .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-danger core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-danger .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24824,20 +24735,17 @@ ion-spinner.spinner-paused svg {
   background-color: #f5f5f5;
 }
 
-.tabs-wp-light .tab-button, .tabs-wp-light core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-light .core-tabs-bar > a,
+.tabs-wp-light .tab-button, .tabs-wp-light .core-tabs-bar > a,
 .tabs-wp-light .tab-button-icon {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.tabs-wp-light .tab-button:hover:not(.disable-hover), .tabs-wp-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-light .tab-button:hover:not(.disable-hover), .tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-light .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-light core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-light .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-light .tab-button[aria-selected=true],
-.tabs-wp-light core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-light .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-light .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-light core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-light .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #000;
   color: #000;
@@ -24847,20 +24755,17 @@ ion-spinner.spinner-paused svg {
   background-color: #9e9e9e;
 }
 
-.tabs-wp-gray .tab-button, .tabs-wp-gray core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-gray .core-tabs-bar > a,
+.tabs-wp-gray .tab-button, .tabs-wp-gray .core-tabs-bar > a,
 .tabs-wp-gray .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-gray .tab-button:hover:not(.disable-hover), .tabs-wp-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-gray .tab-button:hover:not(.disable-hover), .tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-gray .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-gray core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-gray .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-gray .tab-button[aria-selected=true],
-.tabs-wp-gray core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-gray .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-gray .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-gray core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-gray .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24870,20 +24775,17 @@ ion-spinner.spinner-paused svg {
   background-color: #3a3a3a;
 }
 
-.tabs-wp-dark .tab-button, .tabs-wp-dark core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-dark .core-tabs-bar > a,
+.tabs-wp-dark .tab-button, .tabs-wp-dark .core-tabs-bar > a,
 .tabs-wp-dark .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-dark .tab-button:hover:not(.disable-hover), .tabs-wp-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-dark .tab-button:hover:not(.disable-hover), .tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-dark .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-dark core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-dark .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-dark .tab-button[aria-selected=true],
-.tabs-wp-dark core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-dark .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-dark .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-dark core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-dark .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24893,20 +24795,17 @@ ion-spinner.spinner-paused svg {
   background-color: #fbad1a;
 }
 
-.tabs-wp-warning .tab-button, .tabs-wp-warning core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-warning .core-tabs-bar > a,
+.tabs-wp-warning .tab-button, .tabs-wp-warning .core-tabs-bar > a,
 .tabs-wp-warning .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-warning .tab-button:hover:not(.disable-hover), .tabs-wp-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-warning .tab-button:hover:not(.disable-hover), .tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-warning .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-warning core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-warning .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-warning .tab-button[aria-selected=true],
-.tabs-wp-warning core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-warning .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-warning .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-warning core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-warning .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24916,20 +24815,17 @@ ion-spinner.spinner-paused svg {
   background-color: #5e8100;
 }
 
-.tabs-wp-success .tab-button, .tabs-wp-success core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-success .core-tabs-bar > a,
+.tabs-wp-success .tab-button, .tabs-wp-success .core-tabs-bar > a,
 .tabs-wp-success .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-success .tab-button:hover:not(.disable-hover), .tabs-wp-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-success .tab-button:hover:not(.disable-hover), .tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-success .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-success core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-success .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-success .tab-button[aria-selected=true],
-.tabs-wp-success core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-success .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-success .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-success core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-success .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -24939,20 +24835,17 @@ ion-spinner.spinner-paused svg {
   background-color: #0064d2;
 }
 
-.tabs-wp-info .tab-button, .tabs-wp-info core-tabs .core-tabs-bar > a, core-tabs .tabs-wp-info .core-tabs-bar > a,
+.tabs-wp-info .tab-button, .tabs-wp-info .core-tabs-bar > a,
 .tabs-wp-info .tab-button-icon {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.tabs-wp-info .tab-button:hover:not(.disable-hover), .tabs-wp-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover), core-tabs .tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover),
+.tabs-wp-info .tab-button:hover:not(.disable-hover), .tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover),
 .tabs-wp-info .tab-button:hover:not(.disable-hover) .tab-button-icon,
-.tabs-wp-info core-tabs .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon, core-tabs
 .tabs-wp-info .core-tabs-bar > a:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-info .tab-button[aria-selected=true],
-.tabs-wp-info core-tabs .core-tabs-bar > a[aria-selected=true], core-tabs
 .tabs-wp-info .core-tabs-bar > a[aria-selected=true],
 .tabs-wp-info .tab-button[aria-selected=true] .tab-button-icon,
-.tabs-wp-info core-tabs .core-tabs-bar > a[aria-selected=true] .tab-button-icon, core-tabs
 .tabs-wp-info .core-tabs-bar > a[aria-selected=true] .tab-button-icon {
   border-color: #fff;
   color: #fff;
@@ -29673,7 +29566,7 @@ ion-navbar.toolbar {
   background: #f98012;
 }
 
-.header-md::after, .md core-tabs .core-tabs-bar::after,
+.header-md::after, .md .core-tabs-bar::after,
 .tabs-md[tabsPlacement="top"] > .tabbar::after,
 .footer-md::before,
 .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
@@ -29696,7 +29589,7 @@ ion-navbar.toolbar {
   height: 2px;
 }
 
-.header-md[no-border]::after, .md core-tabs [no-border].core-tabs-bar::after,
+.header-md[no-border]::after, .md [no-border].core-tabs-bar::after,
 .footer-md[no-border]::before,
 .tabs-md[tabsPlacement="top"][no-border] > .tabbar::after,
 .tabs-md[tabsPlacement="bottom"][no-border] > .tabbar::before {
@@ -37435,6 +37328,144 @@ page-addon-mod-chat-users .addon-mod-chat-user ion-label {
   margin-bottom: 0;
 }
 
+.addon-data-contents {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-word;
+  padding: 10px;
+  background-color: white;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 0;
+  border-left-width: 0;
+  border-style: solid;
+  border-color: #c8c7cc;
+}
+
+.addon-data-contents table, .addon-data-contents tbody {
+  display: block;
+}
+
+.addon-data-contents tr {
+  padding: 0;
+}
+
+page-addon-mod-data-search table,
+page-addon-mod-data-edit table {
+  width: 100%;
+}
+
+page-addon-mod-data-search td,
+page-addon-mod-data-edit td {
+  vertical-align: top;
+}
+
+page-addon-mod-data-search .item.item-input.item-block .item-inner ion-input,
+page-addon-mod-data-search .item.item-input.item-input-has-focus .item-inner ion-input,
+page-addon-mod-data-search .item.item-input.input-has-focus .item-inner ion-input,
+page-addon-mod-data-edit .item.item-input.item-block .item-inner ion-input,
+page-addon-mod-data-edit .item.item-input.item-input-has-focus .item-inner ion-input,
+page-addon-mod-data-edit .item.item-input.input-has-focus .item-inner ion-input {
+  border: 0 !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+page-addon-mod-data-search .addon-data-lantlong,
+page-addon-mod-data-edit .addon-data-lantlong {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-addon-mod-data-search form, page-addon-mod-data-search .addon-data-advanced-search,
+page-addon-mod-data-edit form,
+page-addon-mod-data-edit .addon-data-advanced-search {
+  background-color: #ffffff;
+}
+
+page-addon-mod-data-search form .core-mark-required, page-addon-mod-data-search .addon-data-advanced-search .core-mark-required,
+page-addon-mod-data-edit form .core-mark-required,
+page-addon-mod-data-edit .addon-data-advanced-search .core-mark-required {
+  float: right;
+}
+
+page-addon-mod-data-search form .core-mark-required + ion-input,
+page-addon-mod-data-search form .core-mark-required + ion-select, page-addon-mod-data-search .addon-data-advanced-search .core-mark-required + ion-input,
+page-addon-mod-data-search .addon-data-advanced-search .core-mark-required + ion-select,
+page-addon-mod-data-edit form .core-mark-required + ion-input,
+page-addon-mod-data-edit form .core-mark-required + ion-select,
+page-addon-mod-data-edit .addon-data-advanced-search .core-mark-required + ion-input,
+page-addon-mod-data-edit .addon-data-advanced-search .core-mark-required + ion-select {
+  padding-right: 20px;
+}
+
+page-addon-mod-data-search form .input-md input, page-addon-mod-data-search .addon-data-advanced-search .input-md input,
+page-addon-mod-data-edit form .input-md input,
+page-addon-mod-data-edit .addon-data-advanced-search .input-md input {
+  padding-right: 8px;
+  border-bottom: 1px solid #dedede;
+}
+
+page-addon-mod-data-search form .input-md input:focus, page-addon-mod-data-search .addon-data-advanced-search .input-md input:focus,
+page-addon-mod-data-edit form .input-md input:focus,
+page-addon-mod-data-edit .addon-data-advanced-search .input-md input:focus {
+  border-bottom-color: #f98012;
+  -webkit-box-shadow: inset 0 -1px 0 0 #f98012;
+  box-shadow: inset 0 -1px 0 0 #f98012;
+}
+
+page-addon-mod-data-search form .input-ios input, page-addon-mod-data-search .addon-data-advanced-search .input-ios input,
+page-addon-mod-data-edit form .input-ios input,
+page-addon-mod-data-edit .addon-data-advanced-search .input-ios input {
+  padding-right: 8px;
+  padding-right: 8px;
+  border-bottom: 0.55px solid #c8c7cc;
+}
+
+@media screen and (orientation: landscape) {
+  page-addon-mod-data-search form .input-ios input, page-addon-mod-data-search .addon-data-advanced-search .input-ios input,
+  page-addon-mod-data-edit form .input-ios input,
+  page-addon-mod-data-edit .addon-data-advanced-search .input-ios input {
+    padding-right: calc(constant(safe-area-inset-right) + 8px);
+    padding-right: calc(env(safe-area-inset-right) + 8px);
+  }
+}
+
+page-addon-mod-data-search form .input-ios input:focus, page-addon-mod-data-search .addon-data-advanced-search .input-ios input:focus,
+page-addon-mod-data-edit form .input-ios input:focus,
+page-addon-mod-data-edit .addon-data-advanced-search .input-ios input:focus {
+  border-bottom-color: #f98012;
+}
+
+page-addon-mod-data-search form .input-wp input, page-addon-mod-data-search .addon-data-advanced-search .input-wp input,
+page-addon-mod-data-edit form .input-wp input,
+page-addon-mod-data-edit .addon-data-advanced-search .input-wp input {
+  padding-right: 8px;
+  border-bottom: 1px solid transparent;
+}
+
+page-addon-mod-data-search form .input-wp input:focus, page-addon-mod-data-search .addon-data-advanced-search .input-wp input:focus,
+page-addon-mod-data-edit form .input-wp input:focus,
+page-addon-mod-data-edit .addon-data-advanced-search .input-wp input:focus {
+  border-color: #f98012;
+}
+
+page-addon-mod-data-search form ion-select, page-addon-mod-data-search .addon-data-advanced-search ion-select,
+page-addon-mod-data-edit form ion-select,
+page-addon-mod-data-edit .addon-data-advanced-search ion-select {
+  width: 100%;
+  left: 0;
+  max-width: none;
+}
+
+page-addon-mod-data-search form .core-item-has-rich-text-editor, page-addon-mod-data-search .addon-data-advanced-search .core-item-has-rich-text-editor,
+page-addon-mod-data-edit form .core-item-has-rich-text-editor,
+page-addon-mod-data-edit .addon-data-advanced-search .core-item-has-rich-text-editor {
+  margin-right: 1px;
+}
+
 page-addon-mod-feedback-form .addon-mod_feedback-form-content {
   -webkit-align-self: self-start;
   -ms-flex-item-align: self-start;
@@ -37489,6 +37520,37 @@ a.core-course-module-handler.addon-mod-label-handler {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+page-addon-mod-lesson-menu-modal .addon-mod_lesson-selected, page-addon-mod-lesson-menu-modal .item.addon-mod_lesson-selected {
+  background: #cce0f6;
+}
+
+page-addon-mod-lesson-player .addon-mod_lesson-slideshow {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+page-addon-mod-lesson-player ion-input[padding-left] input[padding-left] {
+  padding-left: 0;
+}
+
+page-addon-mod-lesson-player .addon-mod_lesson-pagebuttons .button-block {
+  contain: content;
+  height: auto;
+}
+
+page-addon-mod-lesson-player .addon-mod_lesson-pagebuttons .button-block .button-inner {
+  height: auto;
+}
+
+page-addon-mod-lesson-user-retake .addon-mod_lesson-highlight {
+  background: #cce0f6;
+}
+
+page-addon-mod-lesson-user-retake .addon-mod_lesson-highlight .label, page-addon-mod-lesson-user-retake .addon-mod_lesson-highlight .label p {
+  color: #004c9f;
 }
 
 addon-mod-quiz-connection-error {
@@ -37583,6 +37645,66 @@ addon-mod-survey-index .even {
 addon-mod-survey-index .addon-mod_survey-textarea textarea {
   height: 100px;
   border: 1px solid #9e9e9e;
+}
+
+addon-mod-wiki-index {
+  background-color: #ffffff;
+  /* Hide edit section links */
+}
+
+addon-mod-wiki-index .core-tabs-content-container,
+addon-mod-wiki-index .addon-mod_wiki-page-content {
+  background-color: #ffffff;
+}
+
+addon-mod-wiki-index .wiki-toc {
+  border: 1px solid #9e9e9e;
+  background: #eeeeee;
+  margin: 16px;
+  padding: 8px;
+}
+
+addon-mod-wiki-index .wiki-toc-title {
+  color: #626262;
+  font-size: 1.1em;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+addon-mod-wiki-index .wiki-toc-section {
+  padding: 0;
+  margin: 2px 8px;
+}
+
+addon-mod-wiki-index .wiki-toc-section-2 {
+  padding-left: 12px;
+}
+
+addon-mod-wiki-index .wiki-toc-section-3 {
+  padding-left: 24px;
+}
+
+addon-mod-wiki-index .wiki_newentry {
+  color: #cb3d4d;
+  font-style: italic;
+}
+
+addon-mod-wiki-index .addon-mod_wiki-noedit a.wiki_edit_section {
+  display: none;
+}
+
+addon-mod-wiki-subwiki-picker .item-divider, addon-mod-wiki-subwiki-picker .item-divider .label {
+  font-weight: bold;
+}
+
+addon-mod-wiki-subwiki-picker .item.addon-mod_wiki-subwiki-selected {
+  background-color: #eeeeee;
+  color: #f98012;
+}
+
+addon-mod-wiki-subwiki-picker .item.addon-mod_wiki-subwiki-selected .icon {
+  color: #f98012;
+  font-size: 24px;
 }
 
 page-addon-notifications-settings .list-header {
@@ -38022,7 +38144,7 @@ addon-qtype-multianswer input[type="radio"], addon-qtype-multianswer input[type=
 .img-responsive {
   display: block;
   max-width: 100%;
-  /* height: auto; */
+  height: auto;
 }
 
 .opacity-hide {
@@ -38171,6 +38293,10 @@ ion-avatar ion-img, ion-avatar img {
   font-style: italic;
 }
 
+ion-datetime {
+  position: relative;
+}
+
 /** Format Text */
 core-format-text[maxHeight], *[core-format-text][maxHeight],
 core-format-text[ng-reflect-max-height], *[core-format-text][ng-reflect-max-height] {
@@ -38294,16 +38420,30 @@ core-format-text audio, core-format-text video, core-format-text a, core-format-
   pointer-events: auto;
 }
 
-core-format-text ul, core-format-text ol, *[core-format-text] ul, *[core-format-text] ol {
-  -webkit-padding-start: 40px;
-}
-
 core-format-text ul, *[core-format-text] ul {
-  list-style: disc;
+  list-style-type: disc;
 }
 
 core-format-text ol, *[core-format-text] ol {
-  list-style: decimal;
+  list-style-type: decimal;
+}
+
+core-format-text ul, core-format-text ol, *[core-format-text] ul, *[core-format-text] ol {
+  -webkit-padding-start: 15px;
+  list-style-position: inside;
+}
+
+core-format-text ul ul, core-format-text ol ul, *[core-format-text] ul ul, *[core-format-text] ol ul {
+  list-style-type: circle;
+}
+
+core-format-text ul ol, core-format-text ol ol, *[core-format-text] ul ol, *[core-format-text] ol ol {
+  list-style-type: lower-latin;
+}
+
+core-format-text ul ul, core-format-text ul ol, core-format-text ol ul, core-format-text ol ol, *[core-format-text] ul ul, *[core-format-text] ul ol, *[core-format-text] ol ul, *[core-format-text] ol ol {
+  list-style-position: inside;
+  margin-left: 15px;
 }
 
 core-format-text .badge, *[core-format-text] .badge {
@@ -39116,7 +39256,7 @@ canvas[core-chart] {
   color: #f98012;
 }
 
-.col[align-self-stretch] .card-ios, .col[align-self-stretch] .ios .core-primary-card, .ios .col[align-self-stretch] .core-primary-card, .col[align-self-stretch] .ios .core-secondary-card, .ios .col[align-self-stretch] .core-secondary-card, .col[align-self-stretch] .ios .core-danger-card, .ios .col[align-self-stretch] .core-danger-card, .col[align-self-stretch] .ios .core-light-card, .ios .col[align-self-stretch] .core-light-card, .col[align-self-stretch] .ios .core-gray-card, .ios .col[align-self-stretch] .core-gray-card, .col[align-self-stretch] .ios .core-dark-card, .ios .col[align-self-stretch] .core-dark-card, .col[align-self-stretch] .ios .core-warning-card, .ios .col[align-self-stretch] .core-warning-card, .col[align-self-stretch] .ios .core-success-card, .ios .col[align-self-stretch] .core-success-card, .col[align-self-stretch] .ios .core-info-card, .ios .col[align-self-stretch] .core-info-card {
+.col[align-self-stretch] .card-ios, .addon-data-contents td[align-self-stretch] .card-ios, .addon-data-contents th[align-self-stretch] .card-ios, .col[align-self-stretch] .ios .core-primary-card, .ios .col[align-self-stretch] .core-primary-card, .addon-data-contents td[align-self-stretch] .ios .core-primary-card, .ios .addon-data-contents td[align-self-stretch] .core-primary-card, .addon-data-contents th[align-self-stretch] .ios .core-primary-card, .ios .addon-data-contents th[align-self-stretch] .core-primary-card, .col[align-self-stretch] .ios .core-secondary-card, .ios .col[align-self-stretch] .core-secondary-card, .addon-data-contents td[align-self-stretch] .ios .core-secondary-card, .ios .addon-data-contents td[align-self-stretch] .core-secondary-card, .addon-data-contents th[align-self-stretch] .ios .core-secondary-card, .ios .addon-data-contents th[align-self-stretch] .core-secondary-card, .col[align-self-stretch] .ios .core-danger-card, .ios .col[align-self-stretch] .core-danger-card, .addon-data-contents td[align-self-stretch] .ios .core-danger-card, .ios .addon-data-contents td[align-self-stretch] .core-danger-card, .addon-data-contents th[align-self-stretch] .ios .core-danger-card, .ios .addon-data-contents th[align-self-stretch] .core-danger-card, .col[align-self-stretch] .ios .core-light-card, .ios .col[align-self-stretch] .core-light-card, .addon-data-contents td[align-self-stretch] .ios .core-light-card, .ios .addon-data-contents td[align-self-stretch] .core-light-card, .addon-data-contents th[align-self-stretch] .ios .core-light-card, .ios .addon-data-contents th[align-self-stretch] .core-light-card, .col[align-self-stretch] .ios .core-gray-card, .ios .col[align-self-stretch] .core-gray-card, .addon-data-contents td[align-self-stretch] .ios .core-gray-card, .ios .addon-data-contents td[align-self-stretch] .core-gray-card, .addon-data-contents th[align-self-stretch] .ios .core-gray-card, .ios .addon-data-contents th[align-self-stretch] .core-gray-card, .col[align-self-stretch] .ios .core-dark-card, .ios .col[align-self-stretch] .core-dark-card, .addon-data-contents td[align-self-stretch] .ios .core-dark-card, .ios .addon-data-contents td[align-self-stretch] .core-dark-card, .addon-data-contents th[align-self-stretch] .ios .core-dark-card, .ios .addon-data-contents th[align-self-stretch] .core-dark-card, .col[align-self-stretch] .ios .core-warning-card, .ios .col[align-self-stretch] .core-warning-card, .addon-data-contents td[align-self-stretch] .ios .core-warning-card, .ios .addon-data-contents td[align-self-stretch] .core-warning-card, .addon-data-contents th[align-self-stretch] .ios .core-warning-card, .ios .addon-data-contents th[align-self-stretch] .core-warning-card, .col[align-self-stretch] .ios .core-success-card, .ios .col[align-self-stretch] .core-success-card, .addon-data-contents td[align-self-stretch] .ios .core-success-card, .ios .addon-data-contents td[align-self-stretch] .core-success-card, .addon-data-contents th[align-self-stretch] .ios .core-success-card, .ios .addon-data-contents th[align-self-stretch] .core-success-card, .col[align-self-stretch] .ios .core-info-card, .ios .col[align-self-stretch] .core-info-card, .addon-data-contents td[align-self-stretch] .ios .core-info-card, .ios .addon-data-contents td[align-self-stretch] .core-info-card, .addon-data-contents th[align-self-stretch] .ios .core-info-card, .ios .addon-data-contents th[align-self-stretch] .core-info-card {
   height: calc(100% - 24px);
 }
 
@@ -39280,7 +39420,7 @@ canvas[core-chart] {
   color: #f98012;
 }
 
-.col[align-self-stretch] .card-md, .col[align-self-stretch] .md .core-primary-card, .md .col[align-self-stretch] .core-primary-card, .col[align-self-stretch] .md .core-secondary-card, .md .col[align-self-stretch] .core-secondary-card, .col[align-self-stretch] .md .core-danger-card, .md .col[align-self-stretch] .core-danger-card, .col[align-self-stretch] .md .core-light-card, .md .col[align-self-stretch] .core-light-card, .col[align-self-stretch] .md .core-gray-card, .md .col[align-self-stretch] .core-gray-card, .col[align-self-stretch] .md .core-dark-card, .md .col[align-self-stretch] .core-dark-card, .col[align-self-stretch] .md .core-warning-card, .md .col[align-self-stretch] .core-warning-card, .col[align-self-stretch] .md .core-success-card, .md .col[align-self-stretch] .core-success-card, .col[align-self-stretch] .md .core-info-card, .md .col[align-self-stretch] .core-info-card {
+.col[align-self-stretch] .card-md, .addon-data-contents td[align-self-stretch] .card-md, .addon-data-contents th[align-self-stretch] .card-md, .col[align-self-stretch] .md .core-primary-card, .md .col[align-self-stretch] .core-primary-card, .addon-data-contents td[align-self-stretch] .md .core-primary-card, .md .addon-data-contents td[align-self-stretch] .core-primary-card, .addon-data-contents th[align-self-stretch] .md .core-primary-card, .md .addon-data-contents th[align-self-stretch] .core-primary-card, .col[align-self-stretch] .md .core-secondary-card, .md .col[align-self-stretch] .core-secondary-card, .addon-data-contents td[align-self-stretch] .md .core-secondary-card, .md .addon-data-contents td[align-self-stretch] .core-secondary-card, .addon-data-contents th[align-self-stretch] .md .core-secondary-card, .md .addon-data-contents th[align-self-stretch] .core-secondary-card, .col[align-self-stretch] .md .core-danger-card, .md .col[align-self-stretch] .core-danger-card, .addon-data-contents td[align-self-stretch] .md .core-danger-card, .md .addon-data-contents td[align-self-stretch] .core-danger-card, .addon-data-contents th[align-self-stretch] .md .core-danger-card, .md .addon-data-contents th[align-self-stretch] .core-danger-card, .col[align-self-stretch] .md .core-light-card, .md .col[align-self-stretch] .core-light-card, .addon-data-contents td[align-self-stretch] .md .core-light-card, .md .addon-data-contents td[align-self-stretch] .core-light-card, .addon-data-contents th[align-self-stretch] .md .core-light-card, .md .addon-data-contents th[align-self-stretch] .core-light-card, .col[align-self-stretch] .md .core-gray-card, .md .col[align-self-stretch] .core-gray-card, .addon-data-contents td[align-self-stretch] .md .core-gray-card, .md .addon-data-contents td[align-self-stretch] .core-gray-card, .addon-data-contents th[align-self-stretch] .md .core-gray-card, .md .addon-data-contents th[align-self-stretch] .core-gray-card, .col[align-self-stretch] .md .core-dark-card, .md .col[align-self-stretch] .core-dark-card, .addon-data-contents td[align-self-stretch] .md .core-dark-card, .md .addon-data-contents td[align-self-stretch] .core-dark-card, .addon-data-contents th[align-self-stretch] .md .core-dark-card, .md .addon-data-contents th[align-self-stretch] .core-dark-card, .col[align-self-stretch] .md .core-warning-card, .md .col[align-self-stretch] .core-warning-card, .addon-data-contents td[align-self-stretch] .md .core-warning-card, .md .addon-data-contents td[align-self-stretch] .core-warning-card, .addon-data-contents th[align-self-stretch] .md .core-warning-card, .md .addon-data-contents th[align-self-stretch] .core-warning-card, .col[align-self-stretch] .md .core-success-card, .md .col[align-self-stretch] .core-success-card, .addon-data-contents td[align-self-stretch] .md .core-success-card, .md .addon-data-contents td[align-self-stretch] .core-success-card, .addon-data-contents th[align-self-stretch] .md .core-success-card, .md .addon-data-contents th[align-self-stretch] .core-success-card, .col[align-self-stretch] .md .core-info-card, .md .col[align-self-stretch] .core-info-card, .addon-data-contents td[align-self-stretch] .md .core-info-card, .md .addon-data-contents td[align-self-stretch] .core-info-card, .addon-data-contents th[align-self-stretch] .md .core-info-card, .md .addon-data-contents th[align-self-stretch] .core-info-card {
   height: calc(100% - 20px);
 }
 
@@ -39511,7 +39651,7 @@ canvas[core-chart] {
   color: #f98012;
 }
 
-.col[align-self-stretch] .card-wp, .col[align-self-stretch] .wp .core-primary-card, .wp .col[align-self-stretch] .core-primary-card, .col[align-self-stretch] .wp .core-secondary-card, .wp .col[align-self-stretch] .core-secondary-card, .col[align-self-stretch] .wp .core-danger-card, .wp .col[align-self-stretch] .core-danger-card, .col[align-self-stretch] .wp .core-light-card, .wp .col[align-self-stretch] .core-light-card, .col[align-self-stretch] .wp .core-gray-card, .wp .col[align-self-stretch] .core-gray-card, .col[align-self-stretch] .wp .core-dark-card, .wp .col[align-self-stretch] .core-dark-card, .col[align-self-stretch] .wp .core-warning-card, .wp .col[align-self-stretch] .core-warning-card, .col[align-self-stretch] .wp .core-success-card, .wp .col[align-self-stretch] .core-success-card, .col[align-self-stretch] .wp .core-info-card, .wp .col[align-self-stretch] .core-info-card {
+.col[align-self-stretch] .card-wp, .addon-data-contents td[align-self-stretch] .card-wp, .addon-data-contents th[align-self-stretch] .card-wp, .col[align-self-stretch] .wp .core-primary-card, .wp .col[align-self-stretch] .core-primary-card, .addon-data-contents td[align-self-stretch] .wp .core-primary-card, .wp .addon-data-contents td[align-self-stretch] .core-primary-card, .addon-data-contents th[align-self-stretch] .wp .core-primary-card, .wp .addon-data-contents th[align-self-stretch] .core-primary-card, .col[align-self-stretch] .wp .core-secondary-card, .wp .col[align-self-stretch] .core-secondary-card, .addon-data-contents td[align-self-stretch] .wp .core-secondary-card, .wp .addon-data-contents td[align-self-stretch] .core-secondary-card, .addon-data-contents th[align-self-stretch] .wp .core-secondary-card, .wp .addon-data-contents th[align-self-stretch] .core-secondary-card, .col[align-self-stretch] .wp .core-danger-card, .wp .col[align-self-stretch] .core-danger-card, .addon-data-contents td[align-self-stretch] .wp .core-danger-card, .wp .addon-data-contents td[align-self-stretch] .core-danger-card, .addon-data-contents th[align-self-stretch] .wp .core-danger-card, .wp .addon-data-contents th[align-self-stretch] .core-danger-card, .col[align-self-stretch] .wp .core-light-card, .wp .col[align-self-stretch] .core-light-card, .addon-data-contents td[align-self-stretch] .wp .core-light-card, .wp .addon-data-contents td[align-self-stretch] .core-light-card, .addon-data-contents th[align-self-stretch] .wp .core-light-card, .wp .addon-data-contents th[align-self-stretch] .core-light-card, .col[align-self-stretch] .wp .core-gray-card, .wp .col[align-self-stretch] .core-gray-card, .addon-data-contents td[align-self-stretch] .wp .core-gray-card, .wp .addon-data-contents td[align-self-stretch] .core-gray-card, .addon-data-contents th[align-self-stretch] .wp .core-gray-card, .wp .addon-data-contents th[align-self-stretch] .core-gray-card, .col[align-self-stretch] .wp .core-dark-card, .wp .col[align-self-stretch] .core-dark-card, .addon-data-contents td[align-self-stretch] .wp .core-dark-card, .wp .addon-data-contents td[align-self-stretch] .core-dark-card, .addon-data-contents th[align-self-stretch] .wp .core-dark-card, .wp .addon-data-contents th[align-self-stretch] .core-dark-card, .col[align-self-stretch] .wp .core-warning-card, .wp .col[align-self-stretch] .core-warning-card, .addon-data-contents td[align-self-stretch] .wp .core-warning-card, .wp .addon-data-contents td[align-self-stretch] .core-warning-card, .addon-data-contents th[align-self-stretch] .wp .core-warning-card, .wp .addon-data-contents th[align-self-stretch] .core-warning-card, .col[align-self-stretch] .wp .core-success-card, .wp .col[align-self-stretch] .core-success-card, .addon-data-contents td[align-self-stretch] .wp .core-success-card, .wp .addon-data-contents td[align-self-stretch] .core-success-card, .addon-data-contents th[align-self-stretch] .wp .core-success-card, .wp .addon-data-contents th[align-self-stretch] .core-success-card, .col[align-self-stretch] .wp .core-info-card, .wp .col[align-self-stretch] .core-info-card, .addon-data-contents td[align-self-stretch] .wp .core-info-card, .wp .addon-data-contents td[align-self-stretch] .core-info-card, .addon-data-contents th[align-self-stretch] .wp .core-info-card, .wp .addon-data-contents th[align-self-stretch] .core-info-card {
   height: calc(100% - 16px);
 }
 
@@ -39680,7 +39820,6 @@ core-empty-box .core-empty-box {
   display: table;
   height: 100%;
   width: 100%;
-  z-index: -1;
   margin: 0;
   padding: 0;
   clear: both;
@@ -40204,6 +40343,32 @@ core-rich-text-editor .core-rte-editor:empty:before {
   font-weight: bold;
 }
 
+core-rich-text-editor .core-rte-editor ul {
+  list-style-type: disc;
+}
+
+core-rich-text-editor .core-rte-editor ol {
+  list-style-type: decimal;
+}
+
+core-rich-text-editor .core-rte-editor ul, core-rich-text-editor .core-rte-editor ol {
+  -webkit-padding-start: 15px;
+  list-style-position: inside;
+}
+
+core-rich-text-editor .core-rte-editor ul ul, core-rich-text-editor .core-rte-editor ol ul {
+  list-style-type: circle;
+}
+
+core-rich-text-editor .core-rte-editor ul ol, core-rich-text-editor .core-rte-editor ol ol {
+  list-style-type: lower-latin;
+}
+
+core-rich-text-editor .core-rte-editor ul ul, core-rich-text-editor .core-rte-editor ul ol, core-rich-text-editor .core-rte-editor ol ul, core-rich-text-editor .core-rte-editor ol ol {
+  list-style-position: inside;
+  margin-left: 15px;
+}
+
 core-rich-text-editor .core-textarea textarea {
   margin: 0 !important;
   padding: 0;
@@ -40214,9 +40379,9 @@ core-rich-text-editor .core-textarea textarea {
   overflow-y: auto;
 }
 
-core-rich-text-editor div.formatOptions {
-  background: #9e9e9e;
-  margin: 5px 1px 15px 1px;
+core-rich-text-editor div.core-rte-toolbar {
+  background: #626262;
+  margin: 0px 1px 15px 1px;
   text-align: center;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -40226,14 +40391,43 @@ core-rich-text-editor div.formatOptions {
   z-index: 1;
 }
 
-core-rich-text-editor div.formatOptions button {
-  background: #9e9e9e;
+core-rich-text-editor div.core-rte-toolbar .core-rte-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+core-rich-text-editor div.core-rte-toolbar .core-rte-buttons button {
+  background: #626262;
   color: #ffffff;
   font-size: 1.1em;
   height: 35px;
   min-width: 30px;
-  padding-left: 1px;
-  padding-right: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  border-right: 1px solid #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 core-search-box .button.item-button[icon-only] {
@@ -40308,7 +40502,7 @@ core-show-password .button[icon-only] {
   background: transparent;
   padding: 0 5px;
   position: absolute;
-  top: 5px;
+  bottom: 5px;
   right: 0;
   margin-top: 0;
   margin-bottom: 0;
@@ -40320,23 +40514,23 @@ core-show-password .core-ioninput-password {
 }
 
 .md .item-label-stacked core-show-password .button[icon-only] {
-  top: 0;
+  bottom: 0;
 }
 
 .ios .item-label-stacked core-show-password .button[icon-only] {
-  top: -5px;
+  bottom: -5px;
 }
 
 .ios core-show-password .button[icon-only] {
-  top: 0;
+  bottom: 0;
 }
 
 .wp .item-label-stacked core-show-password .button[icon-only] {
-  top: 7px;
+  bottom: 7px;
 }
 
 .wp core-show-password .button[icon-only] {
-  top: 12px;
+  bottom: 12px;
   right: 5px;
 }
 
@@ -40383,7 +40577,7 @@ core-split-view ion-header {
   display: none;
 }
 
-core-tabs .core-tabs-bar {
+.core-tabs-bar {
   left: 0;
   position: relative;
   z-index: 10;
@@ -40395,17 +40589,42 @@ core-tabs .core-tabs-bar {
   background: #ffffff;
 }
 
-core-tabs .core-tabs-bar > a {
+.core-tabs-bar > a {
   background: #ffffff;
   color: #9e9e9e !important;
   font-size: 1.6rem;
   border: 0;
 }
 
-core-tabs .core-tabs-bar > a[aria-selected=true] {
+.core-tabs-bar > a[aria-selected=true] {
   color: #f98012 !important;
   border: 0 !important;
   border-bottom: 2px solid #f98012 !important;
+}
+
+.md .core-tabs-bar > a {
+  min-height: 5.6rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ios .core-tabs-bar > a {
+  max-width: 240px;
+  min-height: 49px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.wp .core-tabs-bar > a {
+  border-radius: 0;
+  min-height: 4.8rem;
+  border-bottom: 2px solid transparent;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 core-tabs .core-tabs-content-container {
@@ -40431,21 +40650,21 @@ core-tabs.tabs-hidden .core-tabs-content-container {
   padding-bottom: 0 !important;
 }
 
-core-tabs core-tab {
+core-tabs core-tab, core-tabs .core-tab {
   display: none;
   height: 100%;
   position: relative;
 }
 
-core-tabs core-tab.selected {
+core-tabs core-tab.selected, core-tabs .core-tab.selected {
   display: block;
 }
 
-core-tabs core-tab ion-header {
+core-tabs core-tab ion-header, core-tabs .core-tab ion-header {
   display: none;
 }
 
-core-tabs core-tab .fixed-content, core-tabs core-tab .scroll-content {
+core-tabs core-tab .fixed-content, core-tabs core-tab .scroll-content, core-tabs .core-tab .fixed-content, core-tabs .core-tab .scroll-content {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
@@ -40454,14 +40673,14 @@ core-tabs core-tab .fixed-content, core-tabs core-tab .scroll-content {
   overflow: hidden !important;
 }
 
-.ios core-tabs .core-tabs-bar {
+.ios .core-tabs-bar {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
 
-.ios core-tabs .core-tabs-bar > a {
+.ios .core-tabs-bar > a {
   font-size: 1.6rem;
 }
 
@@ -40873,11 +41092,11 @@ page-core-emulator-capture-media ion-footer {
   border-top: 1px solid #9e9e9e;
 }
 
-page-core-emulator-capture-media ion-footer .col {
+page-core-emulator-capture-media ion-footer .col, page-core-emulator-capture-media ion-footer .addon-data-contents td, .addon-data-contents page-core-emulator-capture-media ion-footer td, page-core-emulator-capture-media ion-footer .addon-data-contents th, .addon-data-contents page-core-emulator-capture-media ion-footer th {
   padding: 0;
 }
 
-page-core-emulator-capture-media ion-footer .col .icon.ion-md-trash, page-core-emulator-capture-media ion-footer .col .icon.ion-ios-trash {
+page-core-emulator-capture-media ion-footer .col .icon.ion-md-trash, page-core-emulator-capture-media ion-footer .addon-data-contents td .icon.ion-md-trash, .addon-data-contents page-core-emulator-capture-media ion-footer td .icon.ion-md-trash, page-core-emulator-capture-media ion-footer .addon-data-contents th .icon.ion-md-trash, .addon-data-contents page-core-emulator-capture-media ion-footer th .icon.ion-md-trash, page-core-emulator-capture-media ion-footer .col .icon.ion-ios-trash, page-core-emulator-capture-media ion-footer .addon-data-contents td .icon.ion-ios-trash, .addon-data-contents page-core-emulator-capture-media ion-footer td .icon.ion-ios-trash, page-core-emulator-capture-media ion-footer .addon-data-contents th .icon.ion-ios-trash, .addon-data-contents page-core-emulator-capture-media ion-footer th .icon.ion-ios-trash {
   color: #cb3d4d;
 }
 

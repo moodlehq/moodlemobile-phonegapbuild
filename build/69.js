@@ -1,18 +1,17 @@
 webpackJsonp([69],{
 
-/***/ 1660:
+/***/ 1770:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModForumDiscussionPageModule", function() { return AddonModForumDiscussionPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModLessonPlayerPageModule", function() { return AddonModLessonPlayerPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(839);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__discussion__ = __webpack_require__(1762);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__player__ = __webpack_require__(1886);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,51 +37,51 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var AddonModForumDiscussionPageModule = (function () {
-    function AddonModForumDiscussionPageModule() {
+var AddonModLessonPlayerPageModule = (function () {
+    function AddonModLessonPlayerPageModule() {
     }
-    AddonModForumDiscussionPageModule = __decorate([
+    AddonModLessonPlayerPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__discussion__["a" /* AddonModForumDiscussionPage */],
+                __WEBPACK_IMPORTED_MODULE_5__player__["a" /* AddonModLessonPlayerPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__components_components_module__["a" /* AddonModForumComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__discussion__["a" /* AddonModForumDiscussionPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__player__["a" /* AddonModLessonPlayerPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModForumDiscussionPageModule);
-    return AddonModForumDiscussionPageModule;
+    ], AddonModLessonPlayerPageModule);
+    return AddonModLessonPlayerPageModule;
 }());
 
-//# sourceMappingURL=discussion.module.js.map
+//# sourceMappingURL=player.module.js.map
 
 /***/ }),
 
-/***/ 1762:
+/***/ 1886:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModForumDiscussionPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModLessonPlayerPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_network__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_app__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_events__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_utils__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_fileuploader_providers_fileuploader__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_split_view_split_view__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_forum__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_offline__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_helper__ = __webpack_require__(176);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_sync__ = __webpack_require__(177);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_app__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_logger__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_sites__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_sync__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_utils_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_utils_time__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_utils_url__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_utils_utils__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_lesson__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_lesson_offline__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_lesson_sync__ = __webpack_require__(248);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_helper__ = __webpack_require__(885);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -105,9 +104,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
+
+
 
 
 
@@ -124,362 +122,539 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 /**
- * Page that displays a forum discussion.
+ * Page that allows attempting and reviewing a lesson.
  */
-var AddonModForumDiscussionPage = (function () {
-    function AddonModForumDiscussionPage(navParams, network, appProvider, eventsProvider, sitesProvider, domUtils, utils, translate, uploaderProvider, forumProvider, forumOffline, forumHelper, forumSync, svComponent) {
-        var _this = this;
-        this.appProvider = appProvider;
+var AddonModLessonPlayerPage = (function () {
+    function AddonModLessonPlayerPage(navParams, logger, translate, eventsProvider, sitesProvider, syncProvider, domUtils, popoverCtrl, timeUtils, lessonProvider, lessonHelper, lessonSync, lessonOfflineProvider, cdr, modalCtrl, navCtrl, appProvider, utils, urlUtils, fb) {
+        this.navParams = navParams;
+        this.translate = translate;
         this.eventsProvider = eventsProvider;
         this.sitesProvider = sitesProvider;
+        this.syncProvider = syncProvider;
         this.domUtils = domUtils;
+        this.timeUtils = timeUtils;
+        this.lessonProvider = lessonProvider;
+        this.lessonHelper = lessonHelper;
+        this.lessonSync = lessonSync;
+        this.lessonOfflineProvider = lessonOfflineProvider;
+        this.cdr = cdr;
+        this.navCtrl = navCtrl;
+        this.appProvider = appProvider;
         this.utils = utils;
-        this.translate = translate;
-        this.uploaderProvider = uploaderProvider;
-        this.forumProvider = forumProvider;
-        this.forumOffline = forumOffline;
-        this.forumHelper = forumHelper;
-        this.forumSync = forumSync;
-        this.svComponent = svComponent;
-        this.discussionLoaded = false;
-        this.sort = 'flat-oldest';
-        this.replyData = {
-            replyingTo: 0,
-            isEditing: false,
-            subject: '',
-            message: null,
-            files: [],
-        };
-        this.originalData = {
-            subject: null,
-            message: null,
-            files: [],
-        };
-        this.refreshIcon = 'spinner';
-        this.syncIcon = 'spinner';
+        this.urlUtils = urlUtils;
+        this.fb = fb;
+        this.component = __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].COMPONENT;
+        this.LESSON_EOL = __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL;
+        this.forceLeave = false; // If true, don't perform any check when leaving the view.
+        this.lessonId = navParams.get('lessonId');
         this.courseId = navParams.get('courseId');
-        this.cmId = navParams.get('cmId');
-        this.forumId = navParams.get('forumId');
-        this.discussionId = navParams.get('discussionId');
-        this.trackPosts = navParams.get('trackPosts');
-        this.locked = navParams.get('locked');
-        this.isOnline = this.appProvider.isOnline();
-        this.onlineObserver = network.onchange().subscribe(function (online) {
-            _this.isOnline = _this.appProvider.isOnline();
+        this.password = navParams.get('password');
+        this.review = !!navParams.get('review');
+        this.currentPage = navParams.get('pageId');
+        // Block the lesson so it cannot be synced.
+        this.syncProvider.blockOperation(this.component, this.lessonId);
+        // Create the navigation modal.
+        this.menuModal = modalCtrl.create('AddonModLessonMenuModalPage', {
+            page: this
         });
-        this.isSplitViewOn = this.svComponent && this.svComponent.isOn();
     }
     /**
-     * View loaded.
+     * Component being initialized.
      */
-    AddonModForumDiscussionPage.prototype.ionViewDidLoad = function () {
-        this.fetchPosts(true, false, true);
+    AddonModLessonPlayerPage.prototype.ngOnInit = function () {
+        var _this = this;
+        // Fetch the Lesson data.
+        this.fetchLessonData().then(function (success) {
+            if (success) {
+                // Review data loaded or new retake started, remove any retake being finished in sync.
+                _this.lessonSync.deleteRetakeFinishedInSync(_this.lessonId);
+            }
+        }).finally(function () {
+            _this.loaded = true;
+        });
     };
     /**
-     * User entered the page that contains the component.
+     * Component being destroyed.
      */
-    AddonModForumDiscussionPage.prototype.ionViewDidEnter = function () {
-        var _this = this;
-        // Refresh data if this discussion is synchronized automatically.
-        this.syncObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_14__providers_sync__["a" /* AddonModForumSyncProvider */].AUTO_SYNCED, function (data) {
-            if (data.forumId == _this.forumId && _this.discussionId == data.discussionId
-                && data.userId == _this.sitesProvider.getCurrentSiteUserId()) {
-                // Refresh the data.
-                _this.discussionLoaded = false;
-                _this.refreshPosts();
-            }
-        }, this.sitesProvider.getCurrentSiteId());
-        // Refresh data if this forum discussion is synchronized from discussions list.
-        this.syncManualObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_14__providers_sync__["a" /* AddonModForumSyncProvider */].MANUAL_SYNCED, function (data) {
-            if (data.source != 'discussion' && data.forumId == _this.forumId &&
-                data.userId == _this.sitesProvider.getCurrentSiteUserId()) {
-                // Refresh the data.
-                _this.discussionLoaded = false;
-                _this.refreshPosts();
-            }
-        }, this.sitesProvider.getCurrentSiteId());
-        // Trigger view event, to highlight the current opened discussion in the split view.
-        this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_forum__["a" /* AddonModForumProvider */].VIEW_DISCUSSION_EVENT, {
-            forumId: this.forumId,
-            discussion: this.discussionId,
-        }, this.sitesProvider.getCurrentSiteId());
+    AddonModLessonPlayerPage.prototype.ngOnDestroy = function () {
+        // Unblock the lesson so it can be synced.
+        this.syncProvider.unblockOperation(this.component, this.lessonId);
     };
     /**
      * Check if we can leave the page or not.
      *
      * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
      */
-    AddonModForumDiscussionPage.prototype.ionViewCanLeave = function () {
+    AddonModLessonPlayerPage.prototype.ionViewCanLeave = function () {
+        if (this.forceLeave) {
+            return true;
+        }
+        if (this.question && !this.eolData && !this.processData && this.originalData) {
+            // Question shown. Check if there is any change.
+            if (!this.utils.basicLeftCompare(this.questionForm.getRawValue(), this.originalData, 3)) {
+                return this.domUtils.showConfirm(this.translate.instant('core.confirmcanceledit'));
+            }
+        }
+        return Promise.resolve();
+    };
+    /**
+     * A button was clicked.
+     *
+     * @param {any} data Button data.
+     */
+    AddonModLessonPlayerPage.prototype.buttonClicked = function (data) {
+        this.processPage(data);
+    };
+    /**
+     * Call a function and go offline if allowed and the call fails.
+     *
+     * @param {Function} func Function to call.
+     * @param {any[]} args Arguments to pass to the function.
+     * @param {number} offlineParamPos Position of the offline parameter in the args.
+     * @param {number} [jumpsParamPos] Position of the jumps parameter in the args.
+     * @return {Promise<any>} Promise resolved in success, rejected otherwise.
+     */
+    AddonModLessonPlayerPage.prototype.callFunction = function (func, args, offlineParamPos, jumpsParamPos) {
+        var _this = this;
+        return func.apply(func, args).catch(function (error) {
+            if (!_this.offline && !_this.review && _this.lessonProvider.isLessonOffline(_this.lesson) &&
+                !_this.utils.isWebServiceError(error)) {
+                // If it fails, go offline.
+                _this.offline = true;
+                // Get the possible jumps now.
+                return _this.lessonProvider.getPagesPossibleJumps(_this.lesson.id, true).then(function (jumpList) {
+                    _this.jumps = jumpList;
+                    // Call the function again with offline set to true and the new jumps.
+                    args[offlineParamPos] = true;
+                    if (typeof jumpsParamPos != 'undefined') {
+                        args[jumpsParamPos] = _this.jumps;
+                    }
+                    return func.apply(func, args);
+                });
+            }
+            return Promise.reject(error);
+        });
+    };
+    /**
+     * Change the page from menu or when continuing from a feedback page.
+     *
+     * @param {number} pageId Page to load.
+     * @param {boolean} [ignoreCurrent] If true, allow loading current page.
+     */
+    AddonModLessonPlayerPage.prototype.changePage = function (pageId, ignoreCurrent) {
+        var _this = this;
+        if (!ignoreCurrent && !this.eolData && this.currentPage == pageId) {
+            // Page already loaded, stop.
+            return;
+        }
+        this.loaded = true;
+        this.messages = [];
+        this.loadPage(pageId).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error loading page');
+        }).finally(function () {
+            _this.loaded = true;
+        });
+    };
+    /**
+     * Get the lesson data and load the page.
+     *
+     * @return {Promise<boolean>} Promise resolved with true if success, resolved with false otherwise.
+     */
+    AddonModLessonPlayerPage.prototype.fetchLessonData = function () {
+        var _this = this;
+        // Wait for any ongoing sync to finish. We won't sync a lesson while it's being played.
+        return this.lessonSync.waitForSync(this.lessonId).then(function () {
+            return _this.lessonProvider.getLessonById(_this.courseId, _this.lessonId);
+        }).then(function (lessonData) {
+            _this.lesson = lessonData;
+            _this.title = _this.lesson.name; // Temporary title.
+            // If lesson has offline data already, use offline mode.
+            return _this.lessonOfflineProvider.hasOfflineData(_this.lessonId);
+        }).then(function (offlineMode) {
+            _this.offline = offlineMode;
+            if (!offlineMode && !_this.appProvider.isOnline() && _this.lessonProvider.isLessonOffline(_this.lesson) && !_this.review) {
+                // Lesson doesn't have offline data, but it allows offline and the device is offline. Use offline mode.
+                _this.offline = true;
+            }
+            return _this.callFunction(_this.lessonProvider.getAccessInformation.bind(_this.lessonProvider), [_this.lesson.id, _this.offline, true], 1);
+        }).then(function (info) {
+            var promises = [];
+            _this.accessInfo = info;
+            _this.canManage = info.canmanage;
+            _this.retake = info.attemptscount;
+            _this.showRetake = !_this.currentPage && _this.retake > 0; // Only show it in first page if it isn't the first retake.
+            if (info.preventaccessreasons && info.preventaccessreasons.length) {
+                // If it's a password protected lesson and we have the password, allow playing it.
+                if (!_this.password || info.preventaccessreasons.length > 1 || !_this.lessonProvider.isPasswordProtected(info)) {
+                    // Lesson cannot be played, show message and go back.
+                    return Promise.reject(info.preventaccessreasons[0].message);
+                }
+            }
+            if (_this.review && _this.navParams.get('retake') != info.attemptscount - 1) {
+                // Reviewing a retake that isn't the last one. Error.
+                return Promise.reject(_this.translate.instant('addon.mod_lesson.errorreviewretakenotlast'));
+            }
+            if (_this.password) {
+                // Lesson uses password, get the whole lesson object.
+                promises.push(_this.callFunction(_this.lessonProvider.getLessonWithPassword.bind(_this.lessonProvider), [_this.lesson.id, _this.password, true, _this.offline, true], 3).then(function (lesson) {
+                    _this.lesson = lesson;
+                }));
+            }
+            if (_this.offline) {
+                // Offline mode, get the list of possible jumps to allow navigation.
+                promises.push(_this.lessonProvider.getPagesPossibleJumps(_this.lesson.id, true).then(function (jumpList) {
+                    _this.jumps = jumpList;
+                }));
+            }
+            return Promise.all(promises);
+        }).then(function () {
+            _this.mediaFile = _this.lesson.mediafiles && _this.lesson.mediafiles[0];
+            _this.lessonWidth = _this.lesson.slideshow ? _this.domUtils.formatPixelsSize(_this.lesson.mediawidth) : '';
+            _this.lessonHeight = _this.lesson.slideshow ? _this.domUtils.formatPixelsSize(_this.lesson.mediaheight) : '';
+            return _this.launchRetake(_this.currentPage);
+        }).then(function () {
+            return true;
+        }).catch(function (error) {
+            // An error occurred.
+            var promise;
+            if (_this.review && _this.navParams.get('retake') && _this.utils.isWebServiceError(error)) {
+                // The user cannot review the retake. Unmark the retake as being finished in sync.
+                promise = _this.lessonSync.deleteRetakeFinishedInSync(_this.lessonId);
+            }
+            else {
+                promise = Promise.resolve();
+            }
+            return promise.then(function () {
+                _this.domUtils.showErrorModalDefault(error, 'core.course.errorgetmodule', true);
+                _this.forceLeave = true;
+                _this.navCtrl.pop();
+                return false;
+            });
+        });
+    };
+    /**
+     * Finish the retake.
+     *
+     * @param {boolean} [outOfTime] Whether the retake is finished because the user ran out of time.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModLessonPlayerPage.prototype.finishRetake = function (outOfTime) {
         var _this = this;
         var promise;
-        if (this.forumHelper.hasPostDataChanged(this.replyData, this.originalData)) {
-            // Show confirmation if some data has been modified.
-            promise = this.domUtils.showConfirm(this.translate.instant('core.confirmcanceledit'));
+        this.messages = [];
+        if (this.offline && this.appProvider.isOnline()) {
+            // Offline mode but the app is online. Try to sync the data.
+            promise = this.lessonSync.syncLesson(this.lesson.id, true, true).then(function (result) {
+                if (result.warnings && result.warnings.length) {
+                    var error_1 = result.warnings[0];
+                    // Some data was deleted. Check if the retake has changed.
+                    return _this.lessonProvider.getAccessInformation(_this.lesson.id).then(function (info) {
+                        if (info.attemptscount != _this.accessInfo.attemptscount) {
+                            // The retake has changed. Leave the view and show the error.
+                            _this.forceLeave = true;
+                            _this.navCtrl.pop();
+                            return Promise.reject(error_1);
+                        }
+                        // Retake hasn't changed, show the warning and finish the retake in offline.
+                        _this.offline = false;
+                        _this.domUtils.showErrorModal(error_1);
+                    });
+                }
+                _this.offline = false;
+            }, function () {
+                // Ignore errors.
+            });
         }
         else {
             promise = Promise.resolve();
         }
         return promise.then(function () {
-            // Delete the local files from the tmp folder.
-            _this.uploaderProvider.clearTmpFiles(_this.replyData.files);
+            // Now finish the retake.
+            var args = [_this.lesson, _this.courseId, _this.password, outOfTime, _this.review, _this.offline, _this.accessInfo];
+            return _this.callFunction(_this.lessonProvider.finishRetake.bind(_this.lessonProvider), args, 5);
+        }).then(function (data) {
+            _this.title = _this.lesson.name;
+            _this.eolData = data.data;
+            _this.messages = _this.messages.concat(data.messages);
+            _this.processData = undefined;
+            // Format activity link if present.
+            if (_this.eolData && _this.eolData.activitylink) {
+                _this.eolData.activitylink.value = _this.lessonHelper.formatActivityLink(_this.eolData.activitylink.value);
+            }
+            // Format review lesson if present.
+            if (_this.eolData && _this.eolData.reviewlesson) {
+                var params = _this.urlUtils.extractUrlParams(_this.eolData.reviewlesson.value);
+                if (!params || !params.pageid) {
+                    // No pageid in the URL, the user cannot review (probably didn't answer any question).
+                    delete _this.eolData.reviewlesson;
+                }
+                else {
+                    _this.eolData.reviewlesson.pageid = params.pageid;
+                }
+            }
         });
     };
     /**
-     * Convenience function to get the forum.
+     * Jump to a certain page after performing an action.
      *
-     * @return {Promise<any>} Promise resolved with the forum.
-     */
-    AddonModForumDiscussionPage.prototype.fetchForum = function () {
-        if (this.courseId && this.cmId) {
-            return this.forumProvider.getForum(this.courseId, this.cmId);
-        }
-        else if (this.courseId && this.forumId) {
-            return this.forumProvider.getForumById(this.courseId, this.forumId);
-        }
-        else {
-            // Cannot get the forum.
-            return Promise.reject(null);
-        }
-    };
-    /**
-     * Convenience function to get forum discussions.
-     *
-     * @param  {boolean} [sync]            Whether to try to synchronize the discussion.
-     * @param  {boolean} [showErrors]      Whether to show errors in a modal.
-     * @param  {boolean} [forceMarkAsRead] Whether to mark all posts as read.
+     * @param {number} pageId The page to load.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonModForumDiscussionPage.prototype.fetchPosts = function (sync, showErrors, forceMarkAsRead) {
+    AddonModLessonPlayerPage.prototype.jumpToPage = function (pageId) {
+        if (pageId === 0) {
+            // Not a valid page, return to entry view.
+            // This happens, for example, when the user clicks to go to previous page and there is no previous page.
+            this.forceLeave = true;
+            this.navCtrl.pop();
+            return Promise.resolve();
+        }
+        else if (pageId == __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL) {
+            // End of lesson reached.
+            return this.finishRetake();
+        }
+        // Load new page.
+        this.messages = [];
+        return this.loadPage(pageId);
+    };
+    /**
+     * Start or continue a retake.
+     *
+     * @param {number} pageId The page to load.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModLessonPlayerPage.prototype.launchRetake = function (pageId) {
         var _this = this;
-        var syncPromise;
-        if (sync) {
-            // Try to synchronize the forum.
-            syncPromise = this.syncDiscussion(showErrors).catch(function () {
-                // Ignore errors.
-            });
+        var promise;
+        if (this.review) {
+            // Review mode, no need to launch the retake.
+            promise = Promise.resolve({});
+        }
+        else if (!this.offline) {
+            // Not in offline mode, launch the retake.
+            promise = this.lessonProvider.launchRetake(this.lesson.id, this.password, pageId);
         }
         else {
-            syncPromise = Promise.resolve();
-        }
-        var onlinePosts = [];
-        var offlineReplies = [];
-        var hasUnreadPosts = false;
-        return syncPromise.then(function () {
-            return _this.forumProvider.getDiscussionPosts(_this.discussionId).then(function (posts) {
-                onlinePosts = posts;
-            }).then(function () {
-                // Check if there are responses stored in offline.
-                return _this.forumOffline.getDiscussionReplies(_this.discussionId).then(function (replies) {
-                    _this.postHasOffline = !!replies.length;
-                    var convertPromises = [];
-                    // Index posts to allow quick access. Also check unread field.
-                    var posts = {};
-                    onlinePosts.forEach(function (post) {
-                        posts[post.id] = post;
-                        hasUnreadPosts = hasUnreadPosts || !post.postread;
-                    });
-                    replies.forEach(function (offlineReply) {
-                        // If we don't have forumId and courseId, get it from the post.
-                        if (!_this.forumId) {
-                            _this.forumId = offlineReply.forumid;
-                        }
-                        if (!_this.courseId) {
-                            _this.courseId = offlineReply.courseid;
-                        }
-                        convertPromises.push(_this.forumHelper.convertOfflineReplyToOnline(offlineReply).then(function (reply) {
-                            offlineReplies.push(reply);
-                            // Disable reply of the parent. Reply in offline to the same post is not allowed, edit instead.
-                            posts[reply.parent].canreply = false;
-                        }));
-                    });
-                    return Promise.all(convertPromises).then(function () {
-                        // Convert back to array.
-                        onlinePosts = _this.utils.objectToArray(posts);
-                    });
-                });
+            // Check if there is a finished offline retake.
+            promise = this.lessonOfflineProvider.hasFinishedRetake(this.lesson.id).then(function (finished) {
+                if (finished) {
+                    // Always show EOL page.
+                    pageId = __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL;
+                }
+                return {};
             });
+        }
+        return promise.then(function (data) {
+            _this.currentPage = pageId || _this.accessInfo.firstpageid;
+            _this.messages = data.messages || [];
+            if (_this.lesson.timelimit && !_this.accessInfo.canmanage) {
+                // Get the last lesson timer.
+                return _this.lessonProvider.getTimers(_this.lesson.id, false, true).then(function (timers) {
+                    _this.endTime = timers[timers.length - 1].starttime + _this.lesson.timelimit;
+                });
+            }
         }).then(function () {
-            var posts = offlineReplies.concat(onlinePosts);
-            _this.discussion = _this.forumProvider.extractStartingPost(posts);
-            // If sort type is nested, normal sorting is disabled and nested posts will be displayed.
-            if (_this.sort == 'nested') {
-                // Sort first by creation date to make format tree work.
-                _this.forumProvider.sortDiscussionPosts(posts, 'ASC');
-                _this.posts = _this.utils.formatTree(posts, 'parent', 'id', _this.discussion.id);
+            return _this.loadPage(_this.currentPage);
+        });
+    };
+    /**
+     * Load the lesson menu.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModLessonPlayerPage.prototype.loadMenu = function () {
+        var _this = this;
+        if (this.loadingMenu) {
+            // Already loading.
+            return;
+        }
+        this.loadingMenu = true;
+        var args = [this.lessonId, this.password, this.offline, true];
+        return this.callFunction(this.lessonProvider.getPages.bind(this.lessonProvider), args, 2).then(function (pages) {
+            _this.lessonPages = pages.map(function (entry) {
+                return entry.page;
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error loading menu.');
+        }).finally(function () {
+            _this.loadingMenu = false;
+        });
+    };
+    /**
+     * Load a certain page.
+     *
+     * @param {number} pageId The page to load.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModLessonPlayerPage.prototype.loadPage = function (pageId) {
+        var _this = this;
+        if (pageId == __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL) {
+            // End of lesson reached.
+            return this.finishRetake();
+        }
+        var args = [this.lesson, pageId, this.password, this.review, true, this.offline, true, this.accessInfo, this.jumps];
+        return this.callFunction(this.lessonProvider.getPageData.bind(this.lessonProvider), args, 5, 8).then(function (data) {
+            if (data.newpageid == __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL) {
+                // End of lesson reached.
+                return _this.finishRetake();
+            }
+            _this.pageData = data;
+            _this.title = data.page.title;
+            _this.pageContent = _this.lessonHelper.getPageContentsFromPageData(data);
+            _this.loaded = true;
+            _this.currentPage = pageId;
+            _this.messages = _this.messages.concat(data.messages);
+            // Page loaded, hide EOL and feedback data if shown.
+            _this.eolData = _this.processData = undefined;
+            if (_this.lessonProvider.isQuestionPage(data.page.type)) {
+                // Create an empty FormGroup without controls, they will be added in getQuestionFromPageData.
+                _this.questionForm = _this.fb.group({});
+                _this.pageButtons = [];
+                _this.question = _this.lessonHelper.getQuestionFromPageData(_this.questionForm, data);
+                _this.originalData = _this.questionForm.getRawValue(); // Use getRawValue to include disabled values.
             }
             else {
-                // Set default reply subject.
-                var direction = _this.sort == 'flat-newest' ? 'DESC' : 'ASC';
-                _this.forumProvider.sortDiscussionPosts(posts, direction);
-                _this.posts = posts;
+                _this.pageButtons = _this.lessonHelper.getPageButtonsFromHtml(data.pagecontent);
+                _this.question = undefined;
+                _this.originalData = undefined;
             }
-            _this.defaultSubject = _this.translate.instant('addon.mod_forum.re') + ' ' + _this.discussion.subject;
-            _this.replyData.subject = _this.defaultSubject;
-            // Now try to get the forum.
-            return _this.fetchForum().then(function (forum) {
-                if (_this.discussion.userfullname && _this.discussion.parent == 0 && forum.type == 'single') {
-                    // Hide author for first post and type single.
-                    _this.discussion.userfullname = null;
-                }
-                // "forum.istracked" is more reliable than "trackPosts".
-                if (typeof forum.istracked != 'undefined') {
-                    _this.trackPosts = forum.istracked;
-                }
-                _this.forumId = forum.id;
-                _this.cmId = forum.cmid;
-                _this.forum = forum;
-            }).catch(function () {
-                // Ignore errors.
-                _this.forum = {};
-            });
-        }).catch(function (message) {
-            _this.domUtils.showErrorModal(message);
-        }).finally(function () {
-            _this.discussionLoaded = true;
-            _this.refreshIcon = 'refresh';
-            _this.syncIcon = 'sync';
-            if (forceMarkAsRead || (hasUnreadPosts && _this.trackPosts)) {
-                // // Add log in Moodle and mark unread posts as readed.
-                _this.forumProvider.logDiscussionView(_this.discussionId).catch(function () {
-                    // Ignore errors.
-                });
+            if (data.displaymenu && !_this.displayMenu) {
+                // Load the menu.
+                _this.loadMenu();
+            }
+            _this.displayMenu = !!data.displaymenu;
+            if (!_this.firstPageLoaded) {
+                _this.firstPageLoaded = true;
+            }
+            else {
+                _this.showRetake = false;
             }
         });
     };
     /**
-     * Tries to synchronize the posts discussion.
+     * Process a page, sending some data.
      *
-     * @param  {boolean} showErrors Whether to show errors in a modal.
+     * @param {any} data The data to send.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonModForumDiscussionPage.prototype.syncDiscussion = function (showErrors) {
+    AddonModLessonPlayerPage.prototype.processPage = function (data) {
         var _this = this;
-        return this.forumSync.syncDiscussionReplies(this.discussionId).then(function (result) {
-            if (result.warnings && result.warnings.length) {
-                _this.domUtils.showErrorModal(result.warnings[0]);
+        this.loaded = false;
+        var args = [this.lesson, this.courseId, this.pageData, data, this.password, this.review, this.offline, this.accessInfo,
+            this.jumps];
+        return this.callFunction(this.lessonProvider.processPage.bind(this.lessonProvider), args, 6, 8).then(function (result) {
+            if (!_this.offline && !_this.review && _this.lessonProvider.isLessonOffline(_this.lesson)) {
+                // Lesson allows offline and the user changed some data in server. Update cached data.
+                var retake = _this.accessInfo.attemptscount;
+                if (_this.lessonProvider.isQuestionPage(_this.pageData.page.type)) {
+                    _this.lessonProvider.getQuestionsAttemptsOnline(_this.lessonId, retake, false, undefined, false, true);
+                }
+                else {
+                    _this.lessonProvider.getContentPagesViewedOnline(_this.lessonId, retake, false, true);
+                }
             }
-            if (result && result.updated) {
-                // Sync successful, send event.
-                _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_14__providers_sync__["a" /* AddonModForumSyncProvider */].MANUAL_SYNCED, {
-                    forumId: _this.forumId,
-                    userId: _this.sitesProvider.getCurrentSiteUserId(),
-                    source: 'discussion'
-                }, _this.sitesProvider.getCurrentSiteId());
+            if (result.nodefaultresponse || result.inmediatejump) {
+                // Don't display feedback or force a redirect to a new page. Load the new page.
+                return _this.jumpToPage(result.newpageid);
             }
-            return result.updated;
+            else {
+                // Not inmediate jump, show the feedback.
+                result.feedback = _this.lessonHelper.removeQuestionFromFeedback(result.feedback);
+                _this.messages = result.messages;
+                _this.processData = result;
+                _this.processData.buttons = [];
+                if (_this.lesson.review && !result.correctanswer && !result.noanswer && !result.isessayquestion &&
+                    !result.maxattemptsreached && !result.reviewmode) {
+                    // User can try again, show button to do so.
+                    _this.processData.buttons.push({
+                        label: 'addon.mod_lesson.reviewquestionback',
+                        pageId: _this.currentPage
+                    });
+                }
+                // Button to continue.
+                if (_this.lesson.review && !result.correctanswer && !result.noanswer && !result.isessayquestion &&
+                    !result.maxattemptsreached) {
+                    _this.processData.buttons.push({
+                        label: 'addon.mod_lesson.reviewquestioncontinue',
+                        pageId: result.newpageid
+                    });
+                }
+                else {
+                    _this.processData.buttons.push({
+                        label: 'addon.mod_lesson.continue',
+                        pageId: result.newpageid
+                    });
+                }
+            }
         }).catch(function (error) {
-            if (showErrors) {
-                _this.domUtils.showErrorModalDefault(error, 'core.errorsync', true);
-            }
-            return Promise.reject(null);
+            _this.domUtils.showErrorModalDefault(error, 'Error processing page');
+        }).finally(function () {
+            _this.loaded = true;
         });
     };
     /**
-     * Refresh the data.
+     * Review the lesson.
      *
-     * @param {any}       [refresher] Refresher.
-     * @param {Function}  [done] Function to call when done.
-     * @param {boolean}   [showErrors=false] If show errors to the user of hide them.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param {number} pageId Page to load.
      */
-    AddonModForumDiscussionPage.prototype.doRefresh = function (refresher, done, showErrors) {
-        if (showErrors === void 0) { showErrors = false; }
-        if (this.discussionLoaded) {
-            return this.refreshPosts(true, showErrors).finally(function () {
-                refresher && refresher.complete();
-                done && done();
-            });
-        }
-        return Promise.resolve();
-    };
-    /**
-     * Refresh posts.
-     *
-     * @param  {boolean} [sync]       Whether to try to synchronize the discussion.
-     * @param  {boolean} [showErrors] Whether to show errors in a modal.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModForumDiscussionPage.prototype.refreshPosts = function (sync, showErrors) {
+    AddonModLessonPlayerPage.prototype.reviewLesson = function (pageId) {
         var _this = this;
-        this.content && this.content.scrollToTop();
-        this.refreshIcon = 'spinner';
-        this.syncIcon = 'spinner';
-        return this.forumProvider.invalidateDiscussionPosts(this.discussionId).catch(function () {
-            // Ignore errors.
-        }).then(function () {
-            return _this.fetchPosts(sync, showErrors);
+        this.loaded = false;
+        this.review = true;
+        this.offline = false; // Don't allow offline mode in review.
+        this.loadPage(pageId).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error loading page');
+        }).finally(function () {
+            _this.loaded = true;
         });
     };
     /**
-     * Function to change posts sorting
-     *
-     * @param  {SortType} type Sort type.
-     * @return {Promise<any>} Promised resolved when done.
+     * Submit a question.
      */
-    AddonModForumDiscussionPage.prototype.changeSort = function (type) {
-        this.discussionLoaded = false;
-        this.sort = type;
-        this.content && this.content.scrollToTop();
-        return this.fetchPosts();
-    };
-    /**
-     * New post added.
-     */
-    AddonModForumDiscussionPage.prototype.postListChanged = function () {
+    AddonModLessonPlayerPage.prototype.submitQuestion = function () {
         var _this = this;
-        // Trigger an event to notify a new reply.
-        var data = {
-            forumId: this.forumId,
-            discussionId: this.discussionId,
-            cmId: this.cmId
-        };
-        this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_forum__["a" /* AddonModForumProvider */].REPLY_DISCUSSION_EVENT, data, this.sitesProvider.getCurrentSiteId());
-        this.discussionLoaded = false;
-        this.refreshPosts().finally(function () {
-            _this.discussionLoaded = true;
+        this.loaded = false;
+        // Use getRawValue to include disabled values.
+        this.lessonHelper.prepareQuestionData(this.question, this.questionForm.getRawValue()).then(function (data) {
+            return _this.processPage(data);
+        }).finally(function () {
+            _this.loaded = true;
         });
     };
     /**
-     * Runs when the page is about to leave and no longer be the active page.
+     * Time up.
      */
-    AddonModForumDiscussionPage.prototype.ionViewWillLeave = function () {
-        this.syncObserver && this.syncObserver.off();
-        this.syncManualObserver && this.syncManualObserver.off();
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonModForumDiscussionPage.prototype.ngOnDestroy = function () {
-        this.onlineObserver && this.onlineObserver.unsubscribe();
+    AddonModLessonPlayerPage.prototype.timeUp = function () {
+        var _this = this;
+        // Time up called, hide the timer.
+        this.endTime = undefined;
+        this.loaded = false;
+        this.finishRetake(true).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error finishing attempt');
+        }).finally(function () {
+            _this.loaded = true;
+        });
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
-    ], AddonModForumDiscussionPage.prototype, "content", void 0);
-    AddonModForumDiscussionPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* Content */])
+    ], AddonModLessonPlayerPage.prototype, "content", void 0);
+    AddonModLessonPlayerPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-forum-discussion',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/forum/pages/discussion/discussion.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title *ngIf="discussion"><core-format-text [text]="discussion.subject"></core-format-text></ion-title>\n        <ion-buttons end>\n            <!-- The context menu will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-navbar-buttons end>\n    <core-context-menu>\n        <core-context-menu-item [priority]="650" *ngIf="discussionLoaded && !postHasOffline && isOnline" [content]="\'addon.mod_forum.refreshposts\' | translate" (action)="doRefresh(null, $event)" [iconAction]="refreshIcon" [closeOnClick]="false"></core-context-menu-item>\n        <core-context-menu-item [priority]="550" *ngIf="discussionLoaded && !isSplitViewOn && postHasOffline && isOnline" [content]="\'core.settings.synchronizenow\' | translate" (action)="doRefresh(null, $event, true)" [iconAction]="syncIcon" [closeOnClick]="false"></core-context-menu-item>\n        <core-context-menu-item [hidden]="sort == \'flat-oldest\'" [priority]="500" [content]="\'addon.mod_forum.modeflatoldestfirst\' | translate" (action)="changeSort(\'flat-oldest\')" iconAction="arrow-round-down"></core-context-menu-item>\n        <core-context-menu-item [hidden]="sort == \'flat-newest\'" [priority]="450" [content]="\'addon.mod_forum.modeflatnewestfirst\' | translate" (action)="changeSort(\'flat-newest\')" iconAction="arrow-round-up"></core-context-menu-item>\n        <core-context-menu-item [hidden]="sort == \'nested\'" [priority]="400" [content]="\'addon.mod_forum.modenested\' | translate" (action)="changeSort(\'nested\')" iconAction="swap"></core-context-menu-item>\n    </core-context-menu>\n</core-navbar-buttons>\n<ion-content>\n    <ion-refresher [enabled]="discussionLoaded" (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="discussionLoaded">\n        <!-- Discussion replies found to be synchronized -->\n        <ion-card class="core-warning-card" *ngIf="postHasOffline">\n            <ion-icon name="warning"></ion-icon> {{ \'core.hasdatatosync\' | translate:{$a: discussionStr} }}\n        </ion-card>\n\n        <ion-card class="core-warning-card" *ngIf="locked">\n            <ion-icon name="warning"></ion-icon> {{ \'addon.mod_forum.discussionlocked\' | translate }}\n        </ion-card>\n\n        <ion-card *ngIf="discussion" margin-bottom>\n            <addon-mod-forum-post [post]="discussion" [courseId]="courseId" [discussionId]="discussionId" [component]="component" [componentId]="componentId" [replyData]="replyData" [originalData]="originalData" [defaultSubject]="defaultSubject" [forum]="forum" [trackPosts]="trackPosts" (onPostChange)="postListChanged()"></addon-mod-forum-post>\n        </ion-card>\n\n        <ion-card *ngIf="sort != \'nested\'">\n            <ng-container *ngFor="let post of posts; first as first">\n                <ion-item-divider color="light" *ngIf="!first"></ion-item-divider>\n                <addon-mod-forum-post [post]="post" [courseId]="courseId" [discussionId]="discussionId" [component]="component" [componentId]="componentId" [replyData]="replyData" [originalData]="originalData" [defaultSubject]="defaultSubject" [forum]="forum" [trackPosts]="trackPosts" (onPostChange)="postListChanged()"></addon-mod-forum-post>\n            </ng-container>\n        </ion-card>\n\n        <ng-container *ngIf="sort == \'nested\'">\n            <ng-container *ngFor="let post of posts">\n                <ng-container *ngTemplateOutlet="nestedPosts; context: {post: post}"></ng-container>\n            </ng-container>\n        </ng-container>\n\n        <ng-template #nestedPosts let-post="post">\n            <ion-card>\n                <addon-mod-forum-post [post]="post" [courseId]="courseId" [discussionId]="discussionId" [component]="component" [componentId]="componentId" [replyData]="replyData" [originalData]="originalData" [defaultSubject]="defaultSubject" [forum]="forum" [trackPosts]="trackPosts" (onPostChange)="postListChanged()"></addon-mod-forum-post>\n            </ion-card>\n            <div padding-left *ngIf="post.children.length && post.children[0].subject">\n                <ng-container *ngFor="let child of post.children">\n                    <ng-container *ngTemplateOutlet="nestedPosts; context: {post: child}"></ng-container>\n                </ng-container>\n            </div>\n        </ng-template>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/forum/pages/discussion/discussion.html"*/,
+            selector: 'page-addon-mod-lesson-player',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/lesson/pages/player/player.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="displayMenu || mediaFile" ion-button icon-only [attr.aria-label]="\'addon.mod_lesson.lessonmenu\' | translate" (click)="menuModal.present()">\n                <ion-icon name="bookmark"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <!-- Info messages. Only show the first one. -->\n        <div class="core-info-card" icon-start *ngIf="lesson && messages && messages.length">\n            <ion-icon name="information-circle"></ion-icon>\n            <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="messages[0].message"></core-format-text>\n        </div>\n\n        <div *ngIf="lesson" [ngClass]=\'{"addon-mod_lesson-slideshow": lesson.slideshow}\' [ngStyle]="{\'width\': lessonWidth, \'height\': lessonHeight}">\n\n            <core-timer *ngIf="endTime" [endTime]="endTime" (finished)="timeUp()" [timerText]="\'addon.mod_lesson.timeremaining\' | translate"></core-timer>\n\n            <!-- Retake and ongoing score. -->\n            <ion-item text-wrap *ngIf="showRetake && !eolData && !processData">\n                <p>{{ \'addon.mod_lesson.attempt\' | translate:{$a: retake} }}</p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="pageData && pageData.ongoingscore && !eolData && !processData" class="addon-mod_lesson-ongoingscore">\n                <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="pageData.ongoingscore"></core-format-text>\n            </ion-item>\n\n            <!-- Page content. -->\n            <ion-card *ngIf="!eolData && !processData">\n                <!-- Content page. -->\n                <ion-item text-wrap *ngIf="!question">\n                    <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="pageContent"></core-format-text>\n                </ion-item>\n\n                <!-- Question page. -->\n                <form *ngIf="question" ion-list [formGroup]="questionForm">\n                    <ion-item-divider text-wrap color="light">\n                        <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="pageContent"></core-format-text>\n                    </ion-item-divider>\n\n                    <input *ngFor="let input of question.hiddenInputs" type="hidden" [name]="input.name" [value]="input.value" />\n\n                    <!-- Render a different input depending on the type of the question. -->\n                    <ng-container [ngSwitch]="question.template">\n\n                        <!-- Short answer. -->\n                        <ng-container *ngSwitchCase="\'shortanswer\'">\n                            <ion-input padding-left [type]="question.input.type" placeholder="{{ \'addon.mod_lesson.youranswer\' | translate }}" [id]="question.input.id" [formControlName]="question.input.name" autocorrect="off" [maxlength]="question.input.maxlength">\n                            </ion-input>\n                        </ng-container>\n\n                        <!-- Essay. -->\n                        <ng-container *ngSwitchCase="\'essay\'">\n                            <ion-item *ngIf="question.textarea">\n                                <core-rich-text-editor item-content placeholder="{{ \'addon.mod_lesson.youranswer\' | translate }}" [control]="question.control" [component]="component" [componentId]="lesson.coursemodule"></core-rich-text-editor>\n                            </ion-item>\n                            <ion-item text-wrap *ngIf="!question.textarea && question.useranswer">\n                                <p class="item-heading">{{ \'addon.mod_lesson.youranswer\' | translate }}</p>\n                                <p><core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="question.useranswer"></core-format-text></p>\n                            </ion-item>\n                        </ng-container>\n\n                        <!-- Multichoice. -->\n                        <ng-container *ngSwitchCase="\'multichoice\'">\n                            <!-- Single choice. -->\n                            <div *ngIf="!question.multi" radio-group [formControlName]="question.controlName">\n                                <ion-item text-wrap *ngFor="let option of question.options">\n                                    <ion-label>\n                                        <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="option.text"></core-format-text>\n                                    </ion-label>\n                                    <ion-radio [id]="option.id" [value]="option.value" [disabled]="option.disabled"></ion-radio>\n                                </ion-item>\n                            </div>\n\n                            <!-- Multiple choice. -->\n                            <ng-container *ngIf="question.multi">\n                                <ion-item text-wrap *ngFor="let option of question.options">\n                                    <ion-label>\n                                        <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="option.text"></core-format-text>\n                                    </ion-label>\n                                    <ion-checkbox [id]="option.id" [formControlName]="option.name" item-end></ion-checkbox>\n                                </ion-item>\n                            </ng-container>\n                        </ng-container>\n\n                        <!-- Matching. -->\n                        <ng-container *ngSwitchCase="\'matching\'">\n                            <ion-item text-wrap *ngFor="let row of question.rows">\n                                <ion-grid item-content>\n                                    <ion-row>\n                                        <ion-col>\n                                            <p><core-format-text id="addon-mod_lesson-matching-{{row.id}}" [component]="component" [componentId]="lesson.coursemodule" [text]="row.text"></core-format-text></p>\n                                        </ion-col>\n                                        <ion-col>\n                                            <ion-select [id]="row.id" [formControlName]="row.name" [attr.aria-labelledby]="\'addon-mod_lesson-matching-\' + row.id" interface="popover">\n                                                <ion-option *ngFor="let option of row.options" [value]="option.value">{{option.label}}</ion-option>\n                                            </ion-select>\n                                        </ion-col>\n                                    </ion-row>\n                                </ion-grid>\n                            </ion-item>\n                        </ng-container>\n                    </ng-container>\n\n                    <ion-item>\n                        <button ion-button block (click)="submitQuestion()">{{ question.submitLabel }}</button>\n                    </ion-item>\n                </form>\n            </ion-card>\n\n            <!-- Page buttons and progress. -->\n            <ion-list *ngIf="!eolData && !processData">\n                <ion-grid text-wrap *ngIf="pageButtons && pageButtons.length" class="addon-mod_lesson-pagebuttons">\n                    <ion-row align-items-center>\n                        <ion-col *ngFor="let button of pageButtons" col-12 col-md-6 col-lg-3 col-xl>\n                            <a ion-button block outline text-wrap [id]="button.id" (click)="buttonClicked(button.data)">{{ button.content }}</a>\n                        </ion-col>\n                    </ion-row>\n                </ion-grid>\n                <ion-item text-wrap *ngIf="lesson && lesson.progressbar && !canManage && pageData">\n                    <p>{{ \'addon.mod_lesson.progresscompleted\' | translate:{$a: pageData.progress} }}</p>\n                    <core-progress-bar [progress]="pageData.progress"></core-progress-bar>\n                </ion-item>\n                <div class="core-info-card" icon-start *ngIf="lesson && lesson.progressbar && canManage">\n                    <ion-icon name="information-circle"></ion-icon>\n                    {{ \'addon.mod_lesson.progressbarteacherwarning2\' | translate }}\n                </div>\n            </ion-list>\n\n            <!-- End of lesson reached. -->\n            <ion-card *ngIf="eolData && !processData">\n                <div class="core-warning-card" icon-start *ngIf="eolData.offline && eolData.offline.value">\n                    <ion-icon name="warning"></ion-icon>\n                    {{ \'addon.mod_lesson.finishretakeoffline\' | translate }}\n                </div>\n\n                <h3 padding *ngIf="eolData.gradelesson">{{ \'addon.mod_lesson.congratulations\' | translate }}</h3>\n                <ion-item text-wrap *ngIf="eolData.notenoughtimespent">\n                    <core-format-text [text]="eolData.notenoughtimespent.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.numberofpagesviewed">\n                    <core-format-text [text]="eolData.numberofpagesviewed.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.youshouldview">\n                    <core-format-text [text]="eolData.youshouldview.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.numberofcorrectanswers">\n                    <core-format-text [text]="eolData.numberofcorrectanswers.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.displayscorewithessays">\n                    <core-format-text [text]="eolData.displayscorewithessays.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="!eolData.displayscorewithessays && eolData.displayscorewithoutessays">\n                    <core-format-text [text]="eolData.displayscorewithoutessays.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.yourcurrentgradeisoutof">\n                    <core-format-text [text]="eolData.yourcurrentgradeisoutof.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.eolstudentoutoftimenoanswers">\n                    <core-format-text [text]="eolData.eolstudentoutoftimenoanswers.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.welldone">\n                    <core-format-text [text]="eolData.welldone.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="lesson.progressbar && eolData.progresscompleted">\n                    <p>{{ \'addon.mod_lesson.progresscompleted\' | translate:{$a: eolData.progresscompleted.value} }}</p>\n                    <core-progress-bar [progress]="eolData.progresscompleted.value"></core-progress-bar>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.displayofgrade">\n                    <core-format-text [text]="eolData.displayofgrade.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.reviewlesson">\n                    <a ion-button block (click)="reviewLesson(eolData.reviewlesson.pageid)">\n                        <core-format-text [text]="\'addon.mod_lesson.reviewlesson\' | translate"></core-format-text>\n                    </a>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.modattemptsnoteacher">\n                    <core-format-text [text]="eolData.modattemptsnoteacher.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.activitylink && eolData.activitylink.value">\n                    <ng-container *ngIf="eolData.activitylink.value.formatted">\n                        <!-- Activity link was successfully formatted, render the button. -->\n                        <a ion-button block color="light" [href]="eolData.activitylink.value.href" core-link [capture]="true">\n                            <core-format-text [text]="eolData.activitylink.value.label"></core-format-text>\n                        </a>\n                    </ng-container>\n                    <ng-container *ngIf="!eolData.activitylink.value.formatted">\n                        <!-- Activity link wasn\'t formatted, render the original link. -->\n                        <core-format-text [text]="eolData.activitylink.value.label"></core-format-text>\n                    </ng-container>\n                </ion-item>\n            </ion-card>\n\n            <!-- Feedback returned when processing an action. -->\n            <ion-list *ngIf="processData">\n                <ion-item text-wrap *ngIf="processData.ongoingscore && !processData.reviewmode" >\n                    <core-format-text class="addon-mod_lesson-ongoingscore" [text]="processData.ongoingscore"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="!processData.reviewmode || review">\n                    <p *ngIf="!processData.reviewmode">\n                        <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="processData.feedback"></core-format-text>\n                    </p>\n                    <div *ngIf="review">\n                        <p>{{ \'addon.mod_lesson.gotoendoflesson\' | translate }}</p>\n                        <p>{{ \'addon.mod_lesson.or\' | translate }}</p>\n                        <p>{{ \'addon.mod_lesson.continuetonextpage\' | translate }}</p>\n                    </div>\n                </ion-item>\n                <ion-item text-wrap *ngIf="review || (processData.buttons && processData.buttons.length)">\n                    <a ion-button block color="light" *ngIf="review" (click)="changePage(LESSON_EOL)">{{ \'addon.mod_lesson.finish\' | translate }}</a>\n                    <a ion-button block color="light" *ngFor="let button of processData.buttons" (click)="changePage(button.pageId, true)">{{ button.label | translate }}</a>\n                </ion-item>\n            </ion-list>\n        </div>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/lesson/pages/player/player.html"*/,
         }),
-        __param(13, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_network__["a" /* Network */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_utils_utils__["a" /* CoreUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_9__core_fileuploader_providers_fileuploader__["a" /* CoreFileUploaderProvider */],
-            __WEBPACK_IMPORTED_MODULE_11__providers_forum__["a" /* AddonModForumProvider */],
-            __WEBPACK_IMPORTED_MODULE_12__providers_offline__["a" /* AddonModForumOfflineProvider */],
-            __WEBPACK_IMPORTED_MODULE_13__providers_helper__["a" /* AddonModForumHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_14__providers_sync__["a" /* AddonModForumSyncProvider */],
-            __WEBPACK_IMPORTED_MODULE_10__components_split_view_split_view__["a" /* CoreSplitViewComponent */]])
-    ], AddonModForumDiscussionPage);
-    return AddonModForumDiscussionPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__providers_logger__["a" /* CoreLoggerProvider */], __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_sync__["a" /* CoreSyncProvider */], __WEBPACK_IMPORTED_MODULE_9__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["t" /* PopoverController */],
+            __WEBPACK_IMPORTED_MODULE_10__providers_utils_time__["a" /* CoreTimeUtilsProvider */], __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */],
+            __WEBPACK_IMPORTED_MODULE_16__providers_helper__["a" /* AddonModLessonHelperProvider */], __WEBPACK_IMPORTED_MODULE_15__providers_lesson_sync__["a" /* AddonModLessonSyncProvider */],
+            __WEBPACK_IMPORTED_MODULE_14__providers_lesson_offline__["a" /* AddonModLessonOfflineProvider */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["o" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_12__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_utils_url__["a" /* CoreUrlUtilsProvider */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]])
+    ], AddonModLessonPlayerPage);
+    return AddonModLessonPlayerPage;
 }());
 
-//# sourceMappingURL=discussion.js.map
+//# sourceMappingURL=player.js.map
 
 /***/ })
 

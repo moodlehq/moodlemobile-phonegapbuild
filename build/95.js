@@ -1,18 +1,17 @@
 webpackJsonp([95],{
 
-/***/ 1628:
+/***/ 1743:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonBadgesIssuedBadgePageModule", function() { return AddonBadgesIssuedBadgePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModAssignSubmissionListPageModule", function() { return AddonModAssignSubmissionListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__issued_badge__ = __webpack_require__(1730);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__submission_list__ = __webpack_require__(1859);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,44 +37,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
-var AddonBadgesIssuedBadgePageModule = (function () {
-    function AddonBadgesIssuedBadgePageModule() {
+var AddonModAssignSubmissionListPageModule = (function () {
+    function AddonModAssignSubmissionListPageModule() {
     }
-    AddonBadgesIssuedBadgePageModule = __decorate([
+    AddonModAssignSubmissionListPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__issued_badge__["a" /* AddonBadgesIssuedBadgePage */],
+                __WEBPACK_IMPORTED_MODULE_5__submission_list__["a" /* AddonModAssignSubmissionListPage */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
                 __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_6__issued_badge__["a" /* AddonBadgesIssuedBadgePage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__submission_list__["a" /* AddonModAssignSubmissionListPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonBadgesIssuedBadgePageModule);
-    return AddonBadgesIssuedBadgePageModule;
+    ], AddonModAssignSubmissionListPageModule);
+    return AddonModAssignSubmissionListPageModule;
 }());
 
-//# sourceMappingURL=issued-badge.module.js.map
+//# sourceMappingURL=submission-list.module.js.map
 
 /***/ }),
 
-/***/ 1730:
+/***/ 1859:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonBadgesIssuedBadgePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModAssignSubmissionListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_badges__ = __webpack_require__(175);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_user_providers_user__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_courses_providers_courses__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_assign__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_assign_offline__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_helper__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__ = __webpack_require__(127);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -106,96 +105,229 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
- * Page that displays the list of calendar events.
+ * Page that displays a list of submissions of an assignment.
  */
-var AddonBadgesIssuedBadgePage = (function () {
-    function AddonBadgesIssuedBadgePage(badgesProvider, navParams, sitesProvider, domUtils, timeUtils, userProvider, coursesProvider) {
-        this.badgesProvider = badgesProvider;
+var AddonModAssignSubmissionListPage = (function () {
+    function AddonModAssignSubmissionListPage(navParams, sitesProvider, eventsProvider, domUtils, translate, assignProvider, assignOfflineProvider, assignHelper) {
+        var _this = this;
         this.domUtils = domUtils;
-        this.timeUtils = timeUtils;
-        this.userProvider = userProvider;
-        this.coursesProvider = coursesProvider;
-        this.user = {};
-        this.course = {};
-        this.badge = {};
-        this.badgeLoaded = false;
-        this.currentTime = 0;
-        this.courseId = navParams.get('courseId') || 0; // Use 0 for site badges.
-        this.userId = navParams.get('userId') || sitesProvider.getCurrentSite().getUserId();
-        this.badgeHash = navParams.get('badgeHash');
+        this.translate = translate;
+        this.assignProvider = assignProvider;
+        this.assignOfflineProvider = assignOfflineProvider;
+        this.assignHelper = assignHelper;
+        this.moduleId = navParams.get('moduleId');
+        this.courseId = navParams.get('courseId');
+        this.selectedStatus = navParams.get('status');
+        if (this.selectedStatus) {
+            if (this.selectedStatus == __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].NEED_GRADING) {
+                this.title = this.translate.instant('addon.mod_assign.numberofsubmissionsneedgrading');
+            }
+            else {
+                this.title = this.translate.instant('addon.mod_assign.submissionstatus_' + this.selectedStatus);
+            }
+        }
+        else {
+            this.title = this.translate.instant('addon.mod_assign.numberofparticipants');
+        }
+        // Update data if some grade changes.
+        this.gradedObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].GRADED_EVENT, function (data) {
+            if (_this.assign && data.assignmentId == _this.assign.id && data.userId == sitesProvider.getCurrentSiteUserId()) {
+                // Grade changed, refresh the data.
+                _this.loaded = false;
+                _this.refreshAllData().finally(function () {
+                    _this.loaded = true;
+                });
+            }
+        }, sitesProvider.getCurrentSiteId());
     }
     /**
-     * View loaded.
+     * Component being initialized.
      */
-    AddonBadgesIssuedBadgePage.prototype.ionViewDidLoad = function () {
+    AddonModAssignSubmissionListPage.prototype.ngOnInit = function () {
         var _this = this;
-        this.fetchIssuedBadge().finally(function () {
-            _this.badgeLoaded = true;
+        this.fetchAssignment().finally(function () {
+            if (!_this.selectedSubmissionId && _this.splitviewCtrl.isOn() && _this.submissions.length > 0) {
+                // Take first and load it.
+                _this.loadSubmission(_this.submissions[0]);
+            }
+            _this.loaded = true;
         });
     };
     /**
-     * Fetch the issued badge required for the view.
+     * Check if we can leave the page or not.
+     *
+     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    AddonModAssignSubmissionListPage.prototype.ionViewCanLeave = function () {
+        // If split view is enabled, check if we can leave the details page.
+        if (this.splitviewCtrl.isOn()) {
+            var detailsPage = this.splitviewCtrl.getDetailsNav().getActive().instance;
+            if (detailsPage && detailsPage.ionViewCanLeave) {
+                return detailsPage.ionViewCanLeave();
+            }
+        }
+        return true;
+    };
+    /**
+     * Fetch assignment data.
      *
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonBadgesIssuedBadgePage.prototype.fetchIssuedBadge = function () {
+    AddonModAssignSubmissionListPage.prototype.fetchAssignment = function () {
         var _this = this;
-        var promises = [];
-        this.currentTime = this.timeUtils.timestamp();
-        var promise = this.userProvider.getProfile(this.userId, this.courseId, true).then(function (user) {
-            _this.user = user;
-        });
-        promises.push(promise);
-        promise = this.badgesProvider.getUserBadges(this.courseId, this.userId).then(function (badges) {
-            badges.forEach(function (badge) {
-                if (_this.badgeHash == badge.uniquehash) {
-                    _this.badge = badge;
-                    if (badge.courseid) {
-                        return _this.coursesProvider.getUserCourse(badge.courseid, true).then(function (course) {
-                            _this.course = course;
-                        }).catch(function () {
-                            // Maybe an old deleted course.
-                            _this.course = null;
+        var participants, submissionsData;
+        // Get assignment data.
+        return this.assignProvider.getAssignment(this.courseId, this.moduleId).then(function (assign) {
+            _this.title = assign.name || _this.title;
+            _this.assign = assign;
+            _this.haveAllParticipants = true;
+            // Get assignment submissions.
+            return _this.assignProvider.getSubmissions(assign.id);
+        }).then(function (data) {
+            if (!data.canviewsubmissions) {
+                // User shouldn't be able to reach here.
+                return Promise.reject(null);
+            }
+            submissionsData = data;
+            // Get the participants.
+            return _this.assignHelper.getParticipants(_this.assign).then(function (parts) {
+                _this.haveAllParticipants = true;
+                participants = parts;
+            }).catch(function () {
+                _this.haveAllParticipants = false;
+            });
+        }).then(function () {
+            // We want to show the user data on each submission.
+            return _this.assignProvider.getSubmissionsUserData(submissionsData.submissions, _this.courseId, _this.assign.id, _this.assign.blindmarking && !_this.assign.revealidentities, participants);
+        }).then(function (submissions) {
+            // Filter the submissions to get only the ones with the right status and add some extra data.
+            var getNeedGrading = _this.selectedStatus == __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].NEED_GRADING, searchStatus = getNeedGrading ? __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].SUBMISSION_STATUS_SUBMITTED : _this.selectedStatus, promises = [];
+            _this.submissions = [];
+            submissions.forEach(function (submission) {
+                if (!searchStatus || searchStatus == submission.status) {
+                    promises.push(_this.assignOfflineProvider.getSubmissionGrade(_this.assign.id, submission.userid).catch(function () {
+                        // Ignore errors.
+                    }).then(function (data) {
+                        var promise, notSynced = false;
+                        // Load offline grades.
+                        if (data && submission.timemodified < data.timemodified) {
+                            notSynced = true;
+                        }
+                        if (getNeedGrading) {
+                            // Only show the submissions that need to be graded.
+                            promise = _this.assignProvider.needsSubmissionToBeGraded(submission, _this.assign.id);
+                        }
+                        else {
+                            promise = Promise.resolve(true);
+                        }
+                        return promise.then(function (add) {
+                            if (!add) {
+                                return;
+                            }
+                            submission.statusColor = _this.assignProvider.getSubmissionStatusColor(submission.status);
+                            submission.gradingColor = _this.assignProvider.getSubmissionGradingStatusColor(submission.gradingstatus);
+                            // Show submission status if not submitted for grading.
+                            if (submission.statusColor != 'success' || !submission.gradingstatus) {
+                                submission.statusTranslated = _this.translate.instant('addon.mod_assign.submissionstatus_' +
+                                    submission.status);
+                            }
+                            else {
+                                submission.statusTranslated = false;
+                            }
+                            if (notSynced) {
+                                submission.gradingStatusTranslationId = 'addon.mod_assign.gradenotsynced';
+                                submission.gradingColor = '';
+                            }
+                            else if (submission.statusColor != 'danger' || submission.gradingColor != 'danger') {
+                                // Show grading status if one of the statuses is not done.
+                                submission.gradingStatusTranslationId =
+                                    _this.assignProvider.getSubmissionGradingStatusTranslationId(submission.gradingstatus);
+                            }
+                            else {
+                                submission.gradingStatusTranslationId = false;
+                            }
+                            _this.submissions.push(submission);
                         });
-                    }
+                    }));
                 }
             });
-        }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'Error getting badge data.');
+            return Promise.all(promises);
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error getting assigment data.');
         });
-        promises.push(promise);
-        return Promise.all(promises);
     };
     /**
-     * Refresh the badges.
+     * Load a certain submission.
+     *
+     * @param {any} submission The submission to load.
+     */
+    AddonModAssignSubmissionListPage.prototype.loadSubmission = function (submission) {
+        if (this.selectedSubmissionId === submission.id && this.splitviewCtrl.isOn()) {
+            // Already selected.
+            return;
+        }
+        this.selectedSubmissionId = submission.id;
+        this.splitviewCtrl.push('AddonModAssignSubmissionReviewPage', {
+            courseId: this.courseId,
+            moduleId: this.moduleId,
+            submitId: submission.submitid,
+            blindId: submission.blindid
+        });
+    };
+    /**
+     * Refresh all the data.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModAssignSubmissionListPage.prototype.refreshAllData = function () {
+        var _this = this;
+        var promises = [];
+        promises.push(this.assignProvider.invalidateAssignmentData(this.courseId));
+        if (this.assign) {
+            promises.push(this.assignProvider.invalidateAllSubmissionData(this.assign.id));
+            promises.push(this.assignProvider.invalidateAssignmentUserMappingsData(this.assign.id));
+            promises.push(this.assignProvider.invalidateListParticipantsData(this.assign.id));
+        }
+        return Promise.all(promises).finally(function () {
+            return _this.fetchAssignment();
+        });
+    };
+    /**
+     * Refresh the list.
      *
      * @param {any} refresher Refresher.
      */
-    AddonBadgesIssuedBadgePage.prototype.refreshBadges = function (refresher) {
-        var _this = this;
-        this.badgesProvider.invalidateUserBadges(this.courseId, this.userId).finally(function () {
-            _this.fetchIssuedBadge().finally(function () {
-                refresher.complete();
-            });
+    AddonModAssignSubmissionListPage.prototype.refreshList = function (refresher) {
+        this.refreshAllData().finally(function () {
+            refresher.complete();
         });
     };
+    /**
+     * Component being destroyed.
+     */
+    AddonModAssignSubmissionListPage.prototype.ngOnDestroy = function () {
+        this.gradedObserver && this.gradedObserver.off();
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
-    ], AddonBadgesIssuedBadgePage.prototype, "content", void 0);
-    AddonBadgesIssuedBadgePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
+    ], AddonModAssignSubmissionListPage.prototype, "splitviewCtrl", void 0);
+    AddonModAssignSubmissionListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-badges-issued-badge',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/badges/pages/issued-badge/issued-badge.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{badge.name}}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="badgeLoaded" (ionRefresh)="refreshEvent($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="badgeLoaded">\n\n        <ion-item-group>\n            <ion-item text-wrap class="item-avatar-center">\n                <img *ngIf="badge.badgeurl" class="avatar" [src]="badge.badgeurl" core-external-content [alt]="badge.name">\n                <ion-badge color="danger" *ngIf="badge.dateexpire && currentTime >= badge.dateexpire">\n                    {{ \'addon.badges.expired\' | translate }}\n                </ion-badge>\n            </ion-item>\n        </ion-item-group>\n\n        <ion-item-group *ngIf="user.fullname">\n            <ion-item-divider color="light">\n                <h2>{{ \'addon.badges.recipientdetails\' | translate}}</h2>\n            </ion-item-divider>\n            <ion-item text-wrap>\n                <h2>{{ \'core.name\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="user.fullname"></core-format-text>\n                </p>\n            </ion-item>\n        </ion-item-group>\n\n        <ion-item-group>\n            <ion-item-divider color="light">\n                <h2>{{ \'addon.badges.issuerdetails\' | translate}}</h2>\n            </ion-item-divider>\n            <ion-item text-wrap *ngIf="badge.issuername">\n                <h2>{{ \'addon.badges.issuername\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="badge.issuername"></core-format-text>\n                </p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="badge.issuercontact">\n                <h2>{{ \'addon.badges.contact\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="badge.issuercontact"></core-format-text>\n                </p>\n            </ion-item>\n        </ion-item-group>\n\n        <ion-item-group>\n            <ion-item-divider color="light">\n                <h2>{{ \'addon.badges.badgedetails\' | translate}}</h2>\n            </ion-item-divider>\n            <ion-item text-wrap *ngIf="badge.name">\n                <h2>{{ \'core.name\' | translate}}</h2>\n                <p>{{badge.name}}</p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="badge.description">\n                <h2>{{ \'core.description\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="badge.description"></core-format-text>\n                </p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="course.fullname">\n                <h2>{{ \'core.course\' | translate}}</h2>\n                <p>\n                    <core-format-text clean="true" [text]="course.fullname"></core-format-text>\n                </p>\n            </ion-item>\n        </ion-item-group>\n\n        <ion-item-group>\n            <ion-item-divider color="light">\n                <h2>{{ \'addon.badges.issuancedetails\' | translate}}</h2>\n            </ion-item-divider>\n            <ion-item text-wrap *ngIf="badge.dateissued">\n                <h2>{{ \'addon.badges.dateawarded\' | translate}}</h2>\n                <p>{{badge.dateissued | coreToLocaleString }}</p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="badge.dateexpire">\n                <h2>{{ \'addon.badges.expirydate\' | translate}}</h2>\n                <p>{{badge.dateexpire | coreToLocaleString }}</p>\n            </ion-item>\n        </ion-item-group>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/badges/pages/issued-badge/issued-badge.html"*/,
+            selector: 'page-addon-mod-assign-submission-list',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/assign/pages/submission-list/submission-list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end></ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="loaded" (ionRefresh)="refreshList($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="loaded">\n            <core-empty-box *ngIf="!submissions || submissions.length == 0" icon="paper" [message]="\'addon.mod_assign.submissionstatus_\' | translate">\n            </core-empty-box>\n\n            <ion-list>\n                <!-- List of submissions. -->\n                <ng-container *ngFor="let submission of submissions">\n                    <a ion-item text-wrap (click)="loadSubmission(submission)" [class.core-split-item-selected]="submission.id == selectedSubmissionId">\n                        <ion-avatar item-start *ngIf="submission.userprofileimageurl">\n                            <img [src]="submission.userprofileimageurl" [alt]="\'core.pictureof\' | translate:{$a: submission.userfullname}" core-external-content role="presentation" onError="this.src=\'assets/img/user-avatar.png\'">\n                        </ion-avatar>\n                        <h2 *ngIf="submission.userfullname">{{submission.userfullname}}</h2>\n                        <h2 *ngIf="!submission.userfullname">{{ \'addon.mod_assign.hiddenuser\' | translate }}{{submission.blindid}}</h2>\n                        <p *ngIf="assign.teamsubmission">\n                            <span *ngIf="submission.groupname">{{submission.groupname}}</span>\n                            <span *ngIf="assign.preventsubmissionnotingroup && !submission.groupname && !submission.manyGroups && !submission.blindid">{{ \'addon.mod_assign.noteam\' | translate }}</span>\n                            <span *ngIf="assign.preventsubmissionnotingroup && !submission.groupname && submission.manyGroups && !submission.blindid">{{ \'addon.mod_assign.multipleteams\' | translate }}</span>\n                            <span *ngIf="!assign.preventsubmissionnotingroup && !submission.groupname">{{ \'addon.mod_assign.defaultteam\' | translate }}</span>\n                        </p>\n                        <ion-badge text-center [color]="submission.statusColor" *ngIf="submission.statusTranslated">\n                            {{ submission.statusTranslated }}\n                        </ion-badge>\n                        <ion-badge text-center [color]="submission.gradingColor" *ngIf="submission.gradingStatusTranslationId">\n                            {{ submission.gradingStatusTranslationId | translate }}\n                        </ion-badge>\n                    </a>\n                </ng-container>\n\n                <ion-item text-wrap class="core-warning-card" *ngIf="!haveAllParticipants" icon-start>\n                    <ion-icon name="warning"></ion-icon>\n                    {{ \'addon.mod_assign.notallparticipantsareshown\' | translate }}\n                </ion-item>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/assign/pages/submission-list/submission-list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_badges__["a" /* AddonBadgesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_utils_time__["a" /* CoreTimeUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__core_user_providers_user__["a" /* CoreUserProvider */], __WEBPACK_IMPORTED_MODULE_7__core_courses_providers_courses__["a" /* CoreCoursesProvider */]])
-    ], AddonBadgesIssuedBadgePage);
-    return AddonBadgesIssuedBadgePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_assign_offline__["a" /* AddonModAssignOfflineProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_helper__["a" /* AddonModAssignHelperProvider */]])
+    ], AddonModAssignSubmissionListPage);
+    return AddonModAssignSubmissionListPage;
 }());
 
-//# sourceMappingURL=issued-badge.js.map
+//# sourceMappingURL=submission-list.js.map
 
 /***/ })
 

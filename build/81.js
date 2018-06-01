@@ -1,17 +1,19 @@
 webpackJsonp([81],{
 
-/***/ 1647:
+/***/ 1758:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModAssignSubmissionListPageModule", function() { return AddonModAssignSubmissionListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModFeedbackRespondentsPageModule", function() { return AddonModFeedbackRespondentsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__submission_list__ = __webpack_require__(1749);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(876);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__respondents__ = __webpack_require__(1874);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -37,44 +39,45 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonModAssignSubmissionListPageModule = (function () {
-    function AddonModAssignSubmissionListPageModule() {
+
+
+var AddonModFeedbackRespondentsPageModule = (function () {
+    function AddonModFeedbackRespondentsPageModule() {
     }
-    AddonModAssignSubmissionListPageModule = __decorate([
+    AddonModFeedbackRespondentsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__submission_list__["a" /* AddonModAssignSubmissionListPage */],
+                __WEBPACK_IMPORTED_MODULE_7__respondents__["a" /* AddonModFeedbackRespondentsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__submission_list__["a" /* AddonModAssignSubmissionListPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* AddonModFeedbackComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_7__respondents__["a" /* AddonModFeedbackRespondentsPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonModAssignSubmissionListPageModule);
-    return AddonModAssignSubmissionListPageModule;
+    ], AddonModFeedbackRespondentsPageModule);
+    return AddonModFeedbackRespondentsPageModule;
 }());
 
-//# sourceMappingURL=submission-list.module.js.map
+//# sourceMappingURL=respondents.module.js.map
 
 /***/ }),
 
-/***/ 1749:
+/***/ 1874:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModAssignSubmissionListPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModFeedbackRespondentsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_assign__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_assign_offline__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_helper__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_feedback__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_helper__ = __webpack_require__(239);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_groups__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__ = __webpack_require__(127);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -104,230 +107,181 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
 /**
- * Page that displays a list of submissions of an assignment.
+ * Page that displays feedback respondents.
  */
-var AddonModAssignSubmissionListPage = (function () {
-    function AddonModAssignSubmissionListPage(navParams, sitesProvider, eventsProvider, domUtils, translate, assignProvider, assignOfflineProvider, assignHelper) {
-        var _this = this;
+var AddonModFeedbackRespondentsPage = (function () {
+    function AddonModFeedbackRespondentsPage(navParams, feedbackProvider, groupsProvider, domUtils, feedbackHelper, navCtrl) {
+        this.feedbackProvider = feedbackProvider;
+        this.groupsProvider = groupsProvider;
         this.domUtils = domUtils;
-        this.translate = translate;
-        this.assignProvider = assignProvider;
-        this.assignOfflineProvider = assignOfflineProvider;
-        this.assignHelper = assignHelper;
-        this.moduleId = navParams.get('moduleId');
+        this.feedbackHelper = feedbackHelper;
+        this.navCtrl = navCtrl;
+        this.page = 0;
+        this.groupInfo = {
+            groups: [],
+            separateGroups: false,
+            visibleGroups: false
+        };
+        this.responses = {
+            attempts: [],
+            total: 0,
+            canLoadMore: false
+        };
+        this.anonResponses = {
+            attempts: [],
+            total: 0,
+            canLoadMore: false
+        };
+        this.feedbackLoaded = false;
+        this.loadingMore = false;
+        var module = navParams.get('module');
+        this.moduleId = module.id;
+        this.feedbackId = module.instance;
         this.courseId = navParams.get('courseId');
-        this.selectedStatus = navParams.get('status');
-        if (this.selectedStatus) {
-            if (this.selectedStatus == __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].NEED_GRADING) {
-                this.title = this.translate.instant('addon.mod_assign.numberofsubmissionsneedgrading');
-            }
-            else {
-                this.title = this.translate.instant('addon.mod_assign.submissionstatus_' + this.selectedStatus);
-            }
-        }
-        else {
-            this.title = this.translate.instant('addon.mod_assign.numberofparticipants');
-        }
-        // Update data if some grade changes.
-        this.gradedObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].GRADED_EVENT, function (data) {
-            if (_this.assign && data.assignmentId == _this.assign.id && data.userId == sitesProvider.getCurrentSiteUserId()) {
-                // Grade changed, refresh the data.
-                _this.loaded = false;
-                _this.refreshAllData().finally(function () {
-                    _this.loaded = true;
-                });
-            }
-        }, sitesProvider.getCurrentSiteId());
+        this.selectedGroup = navParams.get('group') || 0;
     }
     /**
-     * Component being initialized.
+     * View loaded.
      */
-    AddonModAssignSubmissionListPage.prototype.ngOnInit = function () {
+    AddonModFeedbackRespondentsPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchAssignment().finally(function () {
-            if (!_this.selectedSubmissionId && _this.splitviewCtrl.isOn() && _this.submissions.length > 0) {
-                // Take first and load it.
-                _this.loadSubmission(_this.submissions[0]);
-            }
-            _this.loaded = true;
-        });
-    };
-    /**
-     * Check if we can leave the page or not.
-     *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
-     */
-    AddonModAssignSubmissionListPage.prototype.ionViewCanLeave = function () {
-        // If split view is enabled, check if we can leave the details page.
-        if (this.splitviewCtrl.isOn()) {
-            var detailsPage = this.splitviewCtrl.getDetailsNav().getActive().instance;
-            if (detailsPage && detailsPage.ionViewCanLeave) {
-                return detailsPage.ionViewCanLeave();
-            }
-        }
-        return true;
-    };
-    /**
-     * Fetch assignment data.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModAssignSubmissionListPage.prototype.fetchAssignment = function () {
-        var _this = this;
-        var participants, submissionsData;
-        // Get assignment data.
-        return this.assignProvider.getAssignment(this.courseId, this.moduleId).then(function (assign) {
-            _this.title = assign.name || _this.title;
-            _this.assign = assign;
-            _this.haveAllParticipants = true;
-            // Get assignment submissions.
-            return _this.assignProvider.getSubmissions(assign.id);
-        }).then(function (data) {
-            if (!data.canviewsubmissions) {
-                // User shouldn't be able to reach here.
-                return Promise.reject(null);
-            }
-            submissionsData = data;
-            // Get the participants.
-            return _this.assignHelper.getParticipants(_this.assign).then(function (parts) {
-                _this.haveAllParticipants = true;
-                participants = parts;
-            }).catch(function () {
-                _this.haveAllParticipants = false;
-            });
-        }).then(function () {
-            // We want to show the user data on each submission.
-            return _this.assignProvider.getSubmissionsUserData(submissionsData.submissions, _this.courseId, _this.assign.id, _this.assign.blindmarking && !_this.assign.revealidentities, participants);
-        }).then(function (submissions) {
-            // Filter the submissions to get only the ones with the right status and add some extra data.
-            var getNeedGrading = _this.selectedStatus == __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].NEED_GRADING, searchStatus = getNeedGrading ? __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */].SUBMISSION_STATUS_SUBMITTED : _this.selectedStatus, promises = [];
-            _this.submissions = [];
-            submissions.forEach(function (submission) {
-                if (!searchStatus || searchStatus == submission.status) {
-                    promises.push(_this.assignOfflineProvider.getSubmissionGrade(_this.assign.id, submission.userid).catch(function () {
-                        // Ignore errors.
-                    }).then(function (data) {
-                        var promise, notSynced = false;
-                        // Load offline grades.
-                        if (data && submission.timemodified < data.timemodified) {
-                            notSynced = true;
-                        }
-                        if (getNeedGrading) {
-                            // Only show the submissions that need to be graded.
-                            promise = _this.assignProvider.needsSubmissionToBeGraded(submission, _this.assign.id);
-                        }
-                        else {
-                            promise = Promise.resolve(true);
-                        }
-                        return promise.then(function (add) {
-                            if (!add) {
-                                return;
-                            }
-                            submission.statusColor = _this.assignProvider.getSubmissionStatusColor(submission.status);
-                            submission.gradingColor = _this.assignProvider.getSubmissionGradingStatusColor(submission.gradingstatus);
-                            // Show submission status if not submitted for grading.
-                            if (submission.statusColor != 'success' || !submission.gradingstatus) {
-                                submission.statusTranslated = _this.translate.instant('addon.mod_assign.submissionstatus_' +
-                                    submission.status);
-                            }
-                            else {
-                                submission.statusTranslated = false;
-                            }
-                            if (notSynced) {
-                                submission.gradingStatusTranslationId = 'addon.mod_assign.gradenotsynced';
-                                submission.gradingColor = '';
-                            }
-                            else if (submission.statusColor != 'danger' || submission.gradingColor != 'danger') {
-                                // Show grading status if one of the statuses is not done.
-                                submission.gradingStatusTranslationId =
-                                    _this.assignProvider.getSubmissionGradingStatusTranslationId(submission.gradingstatus);
-                            }
-                            else {
-                                submission.gradingStatusTranslationId = false;
-                            }
-                            _this.submissions.push(submission);
-                        });
-                    }));
+        this.fetchData().then(function () {
+            if (_this.splitviewCtrl.isOn()) {
+                if (_this.responses.attempts.length > 0) {
+                    // Take first and load it.
+                    _this.gotoAttempt(_this.responses.attempts[0]);
                 }
-            });
-            return Promise.all(promises);
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error getting assigment data.');
+                else if (_this.anonResponses.attempts.length > 0) {
+                    // Take first and load it.
+                    _this.gotoAttempt(_this.anonResponses.attempts[0]);
+                }
+            }
         });
     };
     /**
-     * Load a certain submission.
+     * Fetch all the data required for the view.
      *
-     * @param {any} submission The submission to load.
-     */
-    AddonModAssignSubmissionListPage.prototype.loadSubmission = function (submission) {
-        if (this.selectedSubmissionId === submission.id && this.splitviewCtrl.isOn()) {
-            // Already selected.
-            return;
-        }
-        this.selectedSubmissionId = submission.id;
-        this.splitviewCtrl.push('AddonModAssignSubmissionReviewPage', {
-            courseId: this.courseId,
-            moduleId: this.moduleId,
-            submitId: submission.submitid,
-            blindId: submission.blindid
-        });
-    };
-    /**
-     * Refresh all the data.
-     *
+     * @param {boolean} [refresh] Empty events array first.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonModAssignSubmissionListPage.prototype.refreshAllData = function () {
+    AddonModFeedbackRespondentsPage.prototype.fetchData = function (refresh) {
         var _this = this;
-        var promises = [];
-        promises.push(this.assignProvider.invalidateAssignmentData(this.courseId));
-        if (this.assign) {
-            promises.push(this.assignProvider.invalidateAllSubmissionData(this.assign.id));
-            promises.push(this.assignProvider.invalidateAssignmentUserMappingsData(this.assign.id));
-            promises.push(this.assignProvider.invalidateListParticipantsData(this.assign.id));
-        }
-        return Promise.all(promises).finally(function () {
-            return _this.fetchAssignment();
+        if (refresh === void 0) { refresh = false; }
+        this.page = 0;
+        this.responses.total = 0;
+        this.responses.attempts = [];
+        this.anonResponses.total = 0;
+        this.anonResponses.attempts = [];
+        return this.groupsProvider.getActivityGroupInfo(this.moduleId).then(function (groupInfo) {
+            _this.groupInfo = groupInfo;
+            return _this.loadGroupAttempts(_this.selectedGroup);
+        }).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+            if (!refresh) {
+                // Some call failed on first fetch, go back.
+                _this.navCtrl.pop();
+            }
+            return Promise.reject(null);
         });
     };
     /**
-     * Refresh the list.
+     * Load Group attempts.
+     *
+     * @param  {number} [groupId]   If defined it will change group if not, it will load more attempts for the same group.
+     * @return {Promise<any>}       Resolved with the attempts loaded.
+     */
+    AddonModFeedbackRespondentsPage.prototype.loadGroupAttempts = function (groupId) {
+        var _this = this;
+        if (typeof groupId == 'undefined') {
+            this.page++;
+            this.loadingMore = true;
+        }
+        else {
+            this.selectedGroup = groupId;
+            this.page = 0;
+            this.responses.total = 0;
+            this.responses.attempts = [];
+            this.anonResponses.total = 0;
+            this.anonResponses.attempts = [];
+            this.feedbackLoaded = false;
+        }
+        return this.feedbackHelper.getResponsesAnalysis(this.feedbackId, this.selectedGroup, this.page).then(function (responses) {
+            _this.responses.total = responses.totalattempts;
+            _this.anonResponses.total = responses.totalanonattempts;
+            if (_this.anonResponses.attempts.length < responses.totalanonattempts) {
+                _this.anonResponses.attempts = _this.anonResponses.attempts.concat(responses.anonattempts);
+            }
+            if (_this.responses.attempts.length < responses.totalattempts) {
+                _this.responses.attempts = _this.responses.attempts.concat(responses.attempts);
+            }
+            _this.anonResponses.canLoadMore = _this.anonResponses.attempts.length < responses.totalanonattempts;
+            _this.responses.canLoadMore = _this.responses.attempts.length < responses.totalattempts;
+            return responses;
+        }).finally(function () {
+            _this.loadingMore = false;
+            _this.feedbackLoaded = true;
+        });
+    };
+    /**
+     * Navigate to a particular attempt.
+     *
+     * @param {any} attempt Attempt object to load.
+     */
+    AddonModFeedbackRespondentsPage.prototype.gotoAttempt = function (attempt) {
+        this.attemptId = attempt.id;
+        this.splitviewCtrl.push('AddonModFeedbackAttemptPage', {
+            attemptId: attempt.id,
+            attempt: attempt,
+            feedbackId: this.feedbackId,
+            moduleId: this.moduleId
+        });
+    };
+    /**
+     * Change selected group or load more attempts.
+     *
+     * @param {number} [groupId] Group ID selected. If not defined, it will load more attempts.
+     */
+    AddonModFeedbackRespondentsPage.prototype.loadAttempts = function (groupId) {
+        var _this = this;
+        this.loadGroupAttempts(groupId).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+        });
+    };
+    /**
+     * Refresh the attempts.
      *
      * @param {any} refresher Refresher.
      */
-    AddonModAssignSubmissionListPage.prototype.refreshList = function (refresher) {
-        this.refreshAllData().finally(function () {
-            refresher.complete();
-        });
-    };
-    /**
-     * Component being destroyed.
-     */
-    AddonModAssignSubmissionListPage.prototype.ngOnDestroy = function () {
-        this.gradedObserver && this.gradedObserver.off();
+    AddonModFeedbackRespondentsPage.prototype.refreshFeedback = function (refresher) {
+        var _this = this;
+        if (this.feedbackLoaded) {
+            var promises = [];
+            promises.push(this.feedbackProvider.invalidateResponsesAnalysisData(this.feedbackId));
+            promises.push(this.groupsProvider.invalidateActivityGroupInfo(this.moduleId));
+            Promise.all(promises).finally(function () {
+                return _this.fetchData(true);
+            }).finally(function () {
+                refresher.complete();
+            });
+        }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_9__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
-    ], AddonModAssignSubmissionListPage.prototype, "splitviewCtrl", void 0);
-    AddonModAssignSubmissionListPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__["a" /* CoreSplitViewComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6__components_split_view_split_view__["a" /* CoreSplitViewComponent */])
+    ], AddonModFeedbackRespondentsPage.prototype, "splitviewCtrl", void 0);
+    AddonModFeedbackRespondentsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-assign-submission-list',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/assign/pages/submission-list/submission-list.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end></ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="loaded" (ionRefresh)="refreshList($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="loaded">\n            <core-empty-box *ngIf="!submissions || submissions.length == 0" icon="paper" [message]="\'addon.mod_assign.submissionstatus_\' | translate">\n            </core-empty-box>\n\n            <ion-list>\n                <!-- List of submissions. -->\n                <ng-container *ngFor="let submission of submissions">\n                    <a ion-item text-wrap (click)="loadSubmission(submission)" [class.core-split-item-selected]="submission.id == selectedSubmissionId">\n                        <ion-avatar item-start *ngIf="submission.userprofileimageurl">\n                            <img [src]="submission.userprofileimageurl" [alt]="\'core.pictureof\' | translate:{$a: submission.userfullname}" core-external-content role="presentation" onError="this.src=\'assets/img/user-avatar.png\'">\n                        </ion-avatar>\n                        <h2 *ngIf="submission.userfullname">{{submission.userfullname}}</h2>\n                        <h2 *ngIf="!submission.userfullname">{{ \'addon.mod_assign.hiddenuser\' | translate }}{{submission.blindid}}</h2>\n                        <p *ngIf="assign.teamsubmission">\n                            <span *ngIf="submission.groupname">{{submission.groupname}}</span>\n                            <span *ngIf="assign.preventsubmissionnotingroup && !submission.groupname && !submission.manyGroups && !submission.blindid">{{ \'addon.mod_assign.noteam\' | translate }}</span>\n                            <span *ngIf="assign.preventsubmissionnotingroup && !submission.groupname && submission.manyGroups && !submission.blindid">{{ \'addon.mod_assign.multipleteams\' | translate }}</span>\n                            <span *ngIf="!assign.preventsubmissionnotingroup && !submission.groupname">{{ \'addon.mod_assign.defaultteam\' | translate }}</span>\n                        </p>\n                        <ion-badge text-center [color]="submission.statusColor" *ngIf="submission.statusTranslated">\n                            {{ submission.statusTranslated }}\n                        </ion-badge>\n                        <ion-badge text-center [color]="submission.gradingColor" *ngIf="submission.gradingStatusTranslationId">\n                            {{ submission.gradingStatusTranslationId | translate }}\n                        </ion-badge>\n                    </a>\n                </ng-container>\n\n                <ion-item text-wrap class="core-warning-card" *ngIf="!haveAllParticipants" icon-start>\n                    <ion-icon name="warning"></ion-icon>\n                    {{ \'addon.mod_assign.notallparticipantsareshown\' | translate }}\n                </ion-item>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/assign/pages/submission-list/submission-list.html"*/,
+            selector: 'page-addon-mod-feedback-respondents',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/respondents/respondents.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.mod_feedback.responses\' |translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<core-split-view>\n    <ion-content>\n        <ion-refresher [enabled]="feedbackLoaded" (ionRefresh)="refreshFeedback($event)">\n            <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n        </ion-refresher>\n        <core-loading [hideUntil]="feedbackLoaded">\n            <ion-list no-margin>\n                <ion-item text-wrap *ngIf="groupInfo.separateGroups || groupInfo.visibleGroups">\n                    <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.separateGroups">{{ \'core.groupsseparate\' | translate }}</ion-label>\n                    <ion-label id="addon-feedback-groupslabel" *ngIf="groupInfo.visibleGroups">{{ \'core.groupsvisible\' | translate }}</ion-label>\n                    <ion-select [(ngModel)]="selectedGroup" (ionChange)="loadAttempts(selectedGroup)" aria-labelledby="addon-feedback-groupslabel" interface="popover">\n                        <ion-option *ngFor="let groupOpt of groupInfo.groups" [value]="groupOpt.id">{{groupOpt.name}}</ion-option>\n                    </ion-select>\n                </ion-item>\n                <ng-container *ngIf="responses.total > 0">\n                    <ion-item-divider color="light">\n                        {{ \'addon.mod_feedback.non_anonymous_entries\' | translate : {$a: responses.total } }}\n                    </ion-item-divider>\n                    <a *ngFor="let attempt of responses.attempts" ion-item text-wrap (click)="gotoAttempt(attempt)" [class.core-split-item-selected]="attempt.id == attemptId">\n                        <ion-avatar item-start>\n                            <img [src]="attempt.profileimageurl" [alt]="\'core.pictureof\' | translate:{$a: attempt.fullname}" core-external-content onError="this.src=\'assets/img/user-avatar.png\'">\n                        </ion-avatar>\n                        <h2><core-format-text [text]="attempt.fullname"></core-format-text></h2>\n                        <p *ngIf="attempt.timemodified">{{attempt.timemodified * 1000 | coreFormatDate: "LLL"}}</p>\n                    </a>\n                    <ion-item padding text-center *ngIf="responses.canLoadMore">\n                        <!-- Button and spinner to show more attempts. -->\n                        <button ion-button block *ngIf="!loadingMore" (click)="loadAttempts()">{{ \'core.loadmore\' | translate }}</button>\n                        <ion-spinner *ngIf="loadingMore"></ion-spinner>\n                    </ion-item>\n                </ng-container>\n                <ng-container *ngIf="anonResponses.total > 0">\n                    <ion-item-divider color="light">\n                        {{ \'addon.mod_feedback.anonymous_entries\' |translate : {$a: anonResponses.total } }}\n                    </ion-item-divider>\n                    <a *ngFor="let attempt of anonResponses.attempts" ion-item text-wrap (click)="gotoAttempt(attempt)">\n                        <h2>{{ \'addon.mod_feedback.response_nr\' |translate }}: {{attempt.number}}</h2>\n                    </a>\n                    <ion-item padding text-center *ngIf="anonResponses.canLoadMore">\n                        <!-- Button and spinner to show more attempts. -->\n                        <button ion-button block *ngIf="!loadingMore" (click)="loadAttempts()">{{ \'core.loadmore\' | translate }}</button>\n                        <ion-spinner *ngIf="loadingMore"></ion-spinner>\n                    </ion-item>\n                </ng-container>\n            </ion-list>\n        </core-loading>\n    </ion-content>\n</core-split-view>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/respondents/respondents.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_assign__["a" /* AddonModAssignProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_assign_offline__["a" /* AddonModAssignOfflineProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_helper__["a" /* AddonModAssignHelperProvider */]])
-    ], AddonModAssignSubmissionListPage);
-    return AddonModAssignSubmissionListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_feedback__["a" /* AddonModFeedbackProvider */],
+            __WEBPACK_IMPORTED_MODULE_4__providers_groups__["a" /* CoreGroupsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_helper__["a" /* AddonModFeedbackHelperProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* NavController */]])
+    ], AddonModFeedbackRespondentsPage);
+    return AddonModFeedbackRespondentsPage;
 }());
 
-//# sourceMappingURL=submission-list.js.map
+//# sourceMappingURL=respondents.js.map
 
 /***/ })
 

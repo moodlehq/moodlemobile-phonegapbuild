@@ -1,16 +1,17 @@
 webpackJsonp([83],{
 
-/***/ 1640:
+/***/ 1756:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonMessageOutputAirnotifierDevicesPageModule", function() { return AddonMessageOutputAirnotifierDevicesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModFeedbackIndexPageModule", function() { return AddonModFeedbackIndexPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__devices__ = __webpack_require__(1742);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(876);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__index__ = __webpack_require__(1872);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,37 +36,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AddonMessageOutputAirnotifierDevicesPageModule = (function () {
-    function AddonMessageOutputAirnotifierDevicesPageModule() {
+
+var AddonModFeedbackIndexPageModule = (function () {
+    function AddonModFeedbackIndexPageModule() {
     }
-    AddonMessageOutputAirnotifierDevicesPageModule = __decorate([
+    AddonModFeedbackIndexPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_4__devices__["a" /* AddonMessageOutputAirnotifierDevicesPage */],
+                __WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModFeedbackIndexPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__devices__["a" /* AddonMessageOutputAirnotifierDevicesPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* AddonModFeedbackComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__index__["a" /* AddonModFeedbackIndexPage */]),
                 __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
         })
-    ], AddonMessageOutputAirnotifierDevicesPageModule);
-    return AddonMessageOutputAirnotifierDevicesPageModule;
+    ], AddonModFeedbackIndexPageModule);
+    return AddonModFeedbackIndexPageModule;
 }());
 
-//# sourceMappingURL=devices.module.js.map
+//# sourceMappingURL=index.module.js.map
 
 /***/ }),
 
-/***/ 1742:
+/***/ 1872:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonMessageOutputAirnotifierDevicesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModFeedbackIndexPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addon_pushnotifications_providers_pushnotifications__ = __webpack_require__(226);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__ = __webpack_require__(371);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index__ = __webpack_require__(399);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -91,122 +93,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 /**
- * Page that displays the list of devices.
+ * Page that displays a feedback.
  */
-var AddonMessageOutputAirnotifierDevicesPage = (function () {
-    function AddonMessageOutputAirnotifierDevicesPage(domUtils, airnotifierProivder, pushNotificationsProvider) {
-        this.domUtils = domUtils;
-        this.airnotifierProivder = airnotifierProivder;
-        this.pushNotificationsProvider = pushNotificationsProvider;
-        this.devices = [];
-        this.devicesLoaded = false;
+var AddonModFeedbackIndexPage = (function () {
+    function AddonModFeedbackIndexPage(navParams) {
+        this.module = navParams.get('module') || {};
+        this.courseId = navParams.get('courseId');
+        this.selectedGroup = navParams.get('group') || 0;
+        this.selectedTab = navParams.get('tab') || 'overview';
+        this.title = this.module.name;
     }
     /**
-     * View loaded.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.ionViewDidLoad = function () {
-        this.fetchDevices();
-    };
-    /**
-     * Fetches the list of devices.
+     * Update some data based on the feedback instance.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @param {any} feedback Feedback instance.
      */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.fetchDevices = function () {
-        var _this = this;
-        return this.airnotifierProivder.getUserDevices().then(function (devices) {
-            var pushId = _this.pushNotificationsProvider.getPushId();
-            // Convert enabled to boolean and search current device.
-            devices.forEach(function (device) {
-                device.enable = !!device.enable;
-                device.current = pushId && pushId == device.pushid;
-            });
-            _this.devices = devices;
-        }).catch(function (message) {
-            _this.domUtils.showErrorModal(message);
-        }).finally(function () {
-            _this.devicesLoaded = true;
-        });
+    AddonModFeedbackIndexPage.prototype.updateData = function (feedback) {
+        this.title = feedback.name || this.title;
     };
-    /**
-     * Update list of devices after a certain time. The purpose is to store the updated data, it won't be reflected in the view.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.updateDevicesAfterDelay = function () {
-        var _this = this;
-        // Cancel pending updates.
-        if (this.updateTimeout) {
-            clearTimeout(this.updateTimeout);
-        }
-        this.updateTimeout = setTimeout(function () {
-            _this.updateTimeout = null;
-            _this.updateDevices();
-        }, 5000);
-    };
-    /**
-     * Fetch devices. The purpose is to store the updated data, it won't be reflected in the view.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.updateDevices = function () {
-        var _this = this;
-        this.airnotifierProivder.invalidateUserDevices().finally(function () {
-            _this.airnotifierProivder.getUserDevices();
-        });
-    };
-    /**
-     * Refresh the list of devices.
-     *
-     * @param {any} refresher Refresher.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.refreshDevices = function (refresher) {
-        var _this = this;
-        this.airnotifierProivder.invalidateUserDevices().finally(function () {
-            _this.fetchDevices().finally(function () {
-                refresher.complete();
-            });
-        });
-    };
-    /**
-     * Enable or disable a certain device.
-     *
-     * @param {any} device The device object.
-     * @param {boolean} enable True to enable the device, false to disable it.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.enableDevice = function (device, enable) {
-        var _this = this;
-        device.updating = true;
-        this.airnotifierProivder.enableDevice(device.id, enable).then(function () {
-            // Update the list of devices since it was modified.
-            _this.updateDevicesAfterDelay();
-        }).catch(function (message) {
-            // Show error and revert change.
-            _this.domUtils.showErrorModal(message);
-            device.enable = !device.enable;
-        }).finally(function () {
-            device.updating = false;
-        });
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonMessageOutputAirnotifierDevicesPage.prototype.ngOnDestroy = function () {
-        // If there is a pending action to update devices, execute it right now.
-        if (this.updateTimeout) {
-            clearTimeout(this.updateTimeout);
-            this.updateDevices();
-        }
-    };
-    AddonMessageOutputAirnotifierDevicesPage = __decorate([
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModFeedbackIndexComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_index_index__["a" /* AddonModFeedbackIndexComponent */])
+    ], AddonModFeedbackIndexPage.prototype, "feedbackComponent", void 0);
+    AddonModFeedbackIndexPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-message-output-airnotifier-devices',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>{{ \'addon.messageoutput_airnotifier.processorsettingsdesc\' | translate }}</ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="devicesLoaded" (ionRefresh)="refreshDevices($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="devicesLoaded">\n        <ion-list>\n            <ion-item text-wrap *ngFor="let device of devices">\n                <ion-label [class.core-bold]="device.current">\n                    {{ device.model }}\n                    <span *ngIf="device.current">({{ \'core.currentdevice\' | translate }})</span>\n                </ion-label>\n                <ion-spinner *ngIf="device.updating" item-end></ion-spinner>\n                <ion-toggle [disabled]="device.updating" [(ngModel)]="device.enable" (ngModelChange)="enableDevice(device, device.enable)"></ion-toggle>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/messageoutput/airnotifier/pages/devices/devices.html"*/,
+            selector: 'page-addon-mod-feedback-index',template:/*ion-inline-start:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/index/index.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <!-- The buttons defined by the component will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="feedbackComponent.loaded" (ionRefresh)="feedbackComponent.doRefresh($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <addon-mod-feedback-index [module]="module" [courseId]="courseId" [group]="selectedGroup" [tab]="selectedTab" (dataRetrieved)="updateData($event)"></addon-mod-feedback-index>\n</ion-content>\n'/*ion-inline-end:"/Users/dpalou/Development/moodlemobile2/src/addon/mod/feedback/pages/index/index.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_airnotifier__["a" /* AddonMessageOutputAirnotifierProvider */],
-            __WEBPACK_IMPORTED_MODULE_2__addon_pushnotifications_providers_pushnotifications__["a" /* AddonPushNotificationsProvider */]])
-    ], AddonMessageOutputAirnotifierDevicesPage);
-    return AddonMessageOutputAirnotifierDevicesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavParams */]])
+    ], AddonModFeedbackIndexPage);
+    return AddonModFeedbackIndexPage;
 }());
 
-//# sourceMappingURL=devices.js.map
+//# sourceMappingURL=index.js.map
 
 /***/ })
 
