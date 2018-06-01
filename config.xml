@@ -3,8 +3,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.moodle.moodlemobile"
-        versionCode = "20230"
-        version   = "3.4.2">
+        versionCode = "20240"
+        version   = "3.5.0">
     <name>Moodle Mobile</name>
 
     <description>
@@ -33,8 +33,12 @@
     <allow-navigation href="*" />
 
     <allow-intent href="*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
 
-    <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
@@ -43,7 +47,7 @@
     <preference name="prerendered-icon" value="true" />
     <preference name="load-url-timeout" value="60000" />
     <preference name="AppendUserAgent" value="MoodleMobile" />
-    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-minSdkVersion" value="19" />
     <preference name="android-targetSdkVersion" value="19" />
     <preference name="android-installLocation" value="auto" />
     <preference name="UIWebViewBounce" value="false" />
@@ -123,29 +127,30 @@
         <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We'd like to access your photo library to let you pick a photo"/>
         <param name="MICROPHONE_USAGE_DESCRIPTION" value="We'd like to access your microphone to let you record an audio"/>
     </gap:plugin>
-    <gap:plugin name="cordova-plugin-device" source="npm" version="1.1.6" />
-    <gap:plugin name="cordova-plugin-file" source="npm" version="4.3.3" />
-    <gap:plugin name="cordova-plugin-file-transfer" source="npm" version="1.6.3" />
-    <gap:plugin name="cordova-plugin-globalization" source="npm" version="1.0.7" />
-    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" version="1.7.1" />
-    <gap:plugin name="cordova-plugin-network-information" source="npm" version="1.3.3" />
-    <gap:plugin name="cordova-plugin-statusbar" source="npm" version="2.2.3" />
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" version="1.3.2" />
-    <gap:plugin name="cordova-plugin-splashscreen" source="npm" version="4.0.3" />
-    <gap:plugin name="cordova-universal-clipboard" source="npm" version="0.1.0" />
-    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" version="1.0.1" />
+    <gap:plugin name="cordova-plugin-device" source="npm />
+    <gap:plugin name="cordova-plugin-file" source="npm" />
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
+    <gap:plugin name="cordova-plugin-globalization" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="cordova-plugin-network-information" source="npm" />
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <gap:plugin name="cordova-clipboard" source="npm" />
+    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
 
-    <gap:plugin name="phonegap-plugin-push" source="npm" version="1.9.2">
+    <gap:plugin name="phonegap-plugin-push" source="npm" >
         <param name="SENDER_ID" value="694767596569" />
     </gap:plugin>
-    <gap:plugin name="cordova-plugin-customurlscheme" source="npm" version="4.3.0">
+    <gap:plugin name="cordova-plugin-customurlscheme" source="npm" >
         <param name="URL_SCHEME" value="moodlemobile" />
     </gap:plugin>
-    <gap:plugin name="ionic-plugin-keyboard" source="npm" version="2.2.1" />
-    <gap:plugin name="cordova-plugin-zip" source="npm" version="3.1.0" />
+    <gap:plugin name="ionic-plugin-keyboard" source="npm" />
+    <gap:plugin name="cordova-plugin-zip" source="npm" />
     <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
-    <gap:plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git" source="git" />
-    <gap:plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
+    <gap:plugin name="cordova-sqlite-storage" source="npm" />
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm" />
+    <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" />
 
     <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="true" />
