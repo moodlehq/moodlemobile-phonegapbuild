@@ -147,7 +147,6 @@
     </gap:plugin>
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
     <gap:plugin name="cordova-plugin-zip" source="npm" />
-    <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
     <gap:plugin name="cordova-sqlite-evcore-extbuild-free" source="npm" />
     <gap:plugin name="cordova-plugin-file-opener2" source="npm" />
     <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" />
