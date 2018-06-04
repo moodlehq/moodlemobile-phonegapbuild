@@ -147,6 +147,7 @@
     </gap:plugin>
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
     <gap:plugin name="cordova-plugin-zip" source="npm" />
+    <gap:plugin name="cordova-sqlite-evcore-extbuild-free" source="npm" />
 
     <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="true" />
