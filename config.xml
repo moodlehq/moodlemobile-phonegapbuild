@@ -138,6 +138,7 @@
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
     <gap:plugin name="cordova-clipboard" source="npm" />
+    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
 
 
     <gap:config-file platform="android" parent="/manifest">
