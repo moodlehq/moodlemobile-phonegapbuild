@@ -149,8 +149,10 @@
     <gap:plugin name="cordova-plugin-zip" source="npm" />
     <gap:plugin name="cordova-sqlite-evcore-extbuild-free" source="npm" />
     <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" />
+    <gap:plugin name="cordova-plugin-app-event" source="npm" />    
     <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
     <gap:plugin name="cordova-plugin-file-opener2" source="npm" />
+    <gap:plugin name="cordova-plugin-badge" source="npm" />
     <gap:plugin name="cordova-android-support-gradle-release" source="npm" >
         <param name="ANDROID_SUPPORT_VERSION" value="27.1.0" />
     </gap:plugin>
