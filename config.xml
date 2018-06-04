@@ -145,6 +145,7 @@
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm" >
         <param name="URL_SCHEME" value="moodlemobile" />
     </gap:plugin>
+    <gap:plugin name="ionic-plugin-keyboard" source="npm" />
 
     <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="true" />
