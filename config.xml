@@ -39,6 +39,7 @@
     <allow-intent href="geo:*" />
 
     <preference name="phonegap-version" value="cli-7.1.0" />
+    <preference name='pgb-builder-version' value='1' />
     <preference name="orientation"      value="default" />
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
