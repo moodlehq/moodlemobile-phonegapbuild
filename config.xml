@@ -150,6 +150,7 @@
     <gap:plugin name="cordova-sqlite-evcore-extbuild-free" source="npm" />
     <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" />
     <gap:plugin name="cordova-plugin-local-notification" source="npm" />
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm" />
 
     <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="true" />
