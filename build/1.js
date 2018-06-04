@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 1738:
+/***/ 1737:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index__ = __webpack_require__(1854);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__index__ = __webpack_require__(1853);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_components_module__ = __webpack_require__(1837);
 // (C) Copyright 2015 Martin Dougiamas
@@ -619,7 +619,7 @@ var AddonMessagesContactsComponent = (function () {
 
 /***/ }),
 
-/***/ 1854:
+/***/ 1853:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

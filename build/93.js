@@ -1,6 +1,6 @@
 webpackJsonp([93],{
 
-/***/ 1746:
+/***/ 1749:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,7 +12,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__chat__ = __webpack_require__(1862);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__chat__ = __webpack_require__(1865);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,7 +63,7 @@ var AddonModChatChatPageModule = (function () {
 
 /***/ }),
 
-/***/ 1862:
+/***/ 1865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

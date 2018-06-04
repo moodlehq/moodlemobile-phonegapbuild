@@ -1,6 +1,6 @@
 webpackJsonp([99],{
 
-/***/ 1734:
+/***/ 1732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11,7 +11,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipes_pipes_module__ = __webpack_require__(75);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__planlist__ = __webpack_require__(1850);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__planlist__ = __webpack_require__(1848);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -60,7 +60,7 @@ var AddonCompetencyPlanListPageModule = (function () {
 
 /***/ }),
 
-/***/ 1850:
+/***/ 1848:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
