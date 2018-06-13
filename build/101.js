@@ -1,1 +1,577 @@
-webpackJsonp([101],{1738:function(l,n,u){"use strict";function t(l){return m._57(0,[(l()(),m._31(0,0,null,null,2,"ion-title",[],null,null,null,G.b,G.a)),m._30(1,49152,null,0,H.a,[q.a,m.t,m.V,[2,J.a],[2,K.a]],null,null),(l()(),m._55(2,0,["",""]))],null,function(l,n){l(n,2,0,n.component.plan.plan.name)})}function e(l){return m._57(0,[(l()(),m._31(0,0,null,null,7,"ion-avatar",[["item-start",""]],null,null,null,null,null)),m._30(1,16384,null,0,z.a,[],null,null),(l()(),m._55(-1,null,["\n                    "])),(l()(),m._31(3,0,null,null,3,"img",[["core-external-content",""]],[[8,"src",4],[8,"alt",0]],null,null,null,null)),m._30(4,4210688,null,0,B.a,[m.t,Q.a,X.a,Y.a,Z.a,I.a,ll.a,v.a],null,null),m._48(5,{$a:0}),m._47(131072,nl.a,[ul.a,m.j]),(l()(),m._55(-1,null,["\n                "]))],null,function(l,n){var u=n.component;l(n,3,0,u.user.profileimageurl,m._56(n,3,1,m._44(n,6).transform("core.pictureof",l(n,5,0,u.user.fullname))))})}function a(l){return m._57(0,[(l()(),m._31(0,0,null,null,4,"span",[["item-start",""]],null,null,null,null,null)),(l()(),m._55(-1,null,["\n                    "])),(l()(),m._31(2,0,null,null,1,"ion-icon",[["name","person"],["role","img"]],[[2,"hide",null]],null,null,null,null)),m._30(3,147456,[[3,4]],0,tl.a,[q.a,m.t,m.V],{name:[0,"name"]},null),(l()(),m._55(-1,null,["\n                "]))],function(l,n){l(n,3,0,"person")},function(l,n){l(n,2,0,m._44(n,3)._hidden)})}function o(l){return m._57(0,[(l()(),m._31(0,0,null,null,20,"ion-card",[],null,null,null,null,null)),m._30(1,16384,null,0,el.a,[q.a,m.t,m.V],null,null),(l()(),m._55(-1,null,["\n            "])),(l()(),m._31(3,0,null,null,16,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,al.b,al.a)),m._30(4,1097728,null,3,ol.a,[_l.a,q.a,m.t,m.V,[2,rl.a]],null,null),m._52(335544320,1,{contentLabel:0}),m._52(603979776,2,{_buttons:1}),m._52(603979776,3,{_icons:1}),m._30(8,16384,null,0,il.a,[],null,null),(l()(),m._55(-1,2,["\n                "])),(l()(),m._26(16777216,null,0,1,null,e)),m._30(11,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,2,["\n                "])),(l()(),m._26(16777216,null,0,1,null,a)),m._30(14,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,2,["\n                "])),(l()(),m._31(16,0,null,2,2,"h2",[],null,null,null,null,null)),(l()(),m._31(17,0,null,null,1,"core-format-text",[],null,null,null,null,null)),m._30(18,540672,null,0,pl.a,[m.t,Z.a,I.a,sl.a,ul.a,Y.a,fl.a,ll.a,Q.a,X.a,v.a,ml.a,[2,dl.a],[2,gl.a]],{text:[0,"text"]},null),(l()(),m._55(-1,2,["\n            "])),(l()(),m._55(-1,null,["\n       "]))],function(l,n){var u=n.component;l(n,11,0,u.user.profileimageurl&&!0!==u.user.profileimageurl);l(n,14,0,!0===u.user.profileimageurl);l(n,18,0,u.user.fullname)},null)}function _(l){return m._57(0,[(l()(),m._31(0,0,null,null,11,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,al.b,al.a)),m._30(1,1097728,null,3,ol.a,[_l.a,q.a,m.t,m.V,[2,rl.a]],null,null),m._52(335544320,7,{contentLabel:0}),m._52(603979776,8,{_buttons:1}),m._52(603979776,9,{_icons:1}),m._30(5,16384,null,0,il.a,[],null,null),(l()(),m._55(-1,2,["\n                    "])),(l()(),m._31(7,0,null,2,2,"strong",[],null,null,null,null,null)),(l()(),m._55(8,null,["",""])),m._47(131072,nl.a,[ul.a,m.j]),(l()(),m._55(10,2,[":\n                    ","\n                "])),m._49(11,1)],null,function(l,n){var u=n.component;l(n,8,0,m._56(n,8,0,m._44(n,9).transform("addon.competency.duedate")));l(n,10,0,m._56(n,10,0,l(n,11,0,m._44(n.parent.parent,0),u.plan.plan.duedate)))})}function r(l){return m._57(0,[(l()(),m._31(0,0,null,null,10,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,al.b,al.a)),m._30(1,1097728,null,3,ol.a,[_l.a,q.a,m.t,m.V,[2,rl.a]],null,null),m._52(335544320,10,{contentLabel:0}),m._52(603979776,11,{_buttons:1}),m._52(603979776,12,{_icons:1}),m._30(5,16384,null,0,il.a,[],null,null),(l()(),m._55(-1,2,["\n                    "])),(l()(),m._31(7,0,null,2,2,"strong",[],null,null,null,null,null)),(l()(),m._55(8,null,["",""])),m._47(131072,nl.a,[ul.a,m.j]),(l()(),m._55(10,2,[":\n                    ","\n                "]))],null,function(l,n){var u=n.component;l(n,8,0,m._56(n,8,0,m._44(n,9).transform("addon.competency.template")));l(n,10,0,u.plan.plan.template.shortname)})}function i(l){return m._57(0,[(l()(),m._31(0,0,null,null,42,"ion-card",[],null,null,null,null,null)),m._30(1,16384,null,0,el.a,[q.a,m.t,m.V],null,null),(l()(),m._55(-1,null,["\n            "])),(l()(),m._31(3,0,null,null,38,"ion-list",[],null,null,null,null,null)),m._30(4,16384,null,0,bl.a,[q.a,m.t,m.V,Y.a,hl.l,yl.a],null,null),(l()(),m._55(-1,null,["\n                "])),(l()(),m._31(6,0,null,null,10,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,al.b,al.a)),m._30(7,1097728,null,3,ol.a,[_l.a,q.a,m.t,m.V,[2,rl.a]],null,null),m._52(335544320,4,{contentLabel:0}),m._52(603979776,5,{_buttons:1}),m._52(603979776,6,{_icons:1}),m._30(11,16384,null,0,il.a,[],null,null),(l()(),m._55(-1,2,["\n                    "])),(l()(),m._31(13,0,null,2,2,"strong",[],null,null,null,null,null)),(l()(),m._55(14,null,["",""])),m._47(131072,nl.a,[ul.a,m.j]),(l()(),m._55(16,2,[":\n                    ","\n                "])),(l()(),m._55(-1,null,["\n                "])),(l()(),m._26(16777216,null,null,1,null,_)),m._30(19,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,null,["\n                "])),(l()(),m._26(16777216,null,null,1,null,r)),m._30(22,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,null,["\n                "])),(l()(),m._31(24,0,null,null,16,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,al.b,al.a)),m._30(25,1097728,null,3,ol.a,[_l.a,q.a,m.t,m.V,[2,rl.a]],null,null),m._52(335544320,13,{contentLabel:0}),m._52(603979776,14,{_buttons:1}),m._52(603979776,15,{_icons:1}),m._30(29,16384,null,0,il.a,[],null,null),(l()(),m._55(-1,2,["\n                    "])),(l()(),m._31(31,0,null,2,2,"strong",[],null,null,null,null,null)),(l()(),m._55(32,null,["",""])),m._47(131072,nl.a,[ul.a,m.j]),(l()(),m._55(34,2,[":\n                    ","\n                    "])),m._48(35,{x:0,y:1}),m._48(36,{$a:0}),m._47(131072,nl.a,[ul.a,m.j]),(l()(),m._31(38,0,null,2,1,"core-progress-bar",[],null,null,null,vl.b,vl.a)),m._30(39,573440,null,0,Il.a,[Pl.c],{progress:[0,"progress"],text:[1,"text"]},null),(l()(),m._55(-1,2,["\n                "])),(l()(),m._55(-1,null,["\n            "])),(l()(),m._55(-1,null,["\n        "]))],function(l,n){var u=n.component;l(n,19,0,u.plan.plan.duedate>0);l(n,22,0,u.plan.plan.template);l(n,39,0,u.plan.proficientcompetencypercentage,u.plan.proficientcompetencypercentageformatted)},function(l,n){var u=n.component;l(n,14,0,m._56(n,14,0,m._44(n,15).transform("addon.competency.status")));l(n,16,0,u.plan.plan.statusname);l(n,32,0,m._56(n,32,0,m._44(n,33).transform("addon.competency.progress")));l(n,34,0,m._56(n,34,0,m._44(n,37).transform("addon.competency.xcompetenciesproficientoutofy",l(n,36,0,l(n,35,0,u.plan.proficientcompetencycount,u.plan.competencycount)))))})}function c(l){return m._57(0,[(l()(),m._31(0,0,null,null,7,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,al.b,al.a)),m._30(1,1097728,null,3,ol.a,[_l.a,q.a,m.t,m.V,[2,rl.a]],null,null),m._52(335544320,16,{contentLabel:0}),m._52(603979776,17,{_buttons:1}),m._52(603979776,18,{_icons:1}),m._30(5,16384,null,0,il.a,[],null,null),(l()(),m._55(6,2,["\n                    ","\n                "])),m._47(131072,nl.a,[ul.a,m.j])],null,function(l,n){l(n,6,0,m._56(n,6,0,m._44(n,7).transform("addon.competency.nocompetencies")))})}function p(l){return m._57(0,[(l()(),m._31(0,0,null,null,13,"a",[["class","item item-block"],["ion-item",""],["text-wrap",""]],[[8,"title",0]],[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.openCompetency(l.context.$implicit.competency.id)&&t}return t},al.b,al.a)),m._30(1,1097728,null,3,ol.a,[_l.a,q.a,m.t,m.V,[2,rl.a]],null,null),m._52(335544320,19,{contentLabel:0}),m._52(603979776,20,{_buttons:1}),m._52(603979776,21,{_icons:1}),m._30(5,16384,null,0,il.a,[],null,null),(l()(),m._55(6,2,["\n                    "," "])),(l()(),m._31(7,0,null,2,1,"small",[],null,null,null,null,null)),(l()(),m._55(8,null,["",""])),(l()(),m._55(-1,2,["\n                    "])),(l()(),m._31(10,0,null,4,2,"ion-badge",[["item-end",""]],null,null,null,null,null)),m._30(11,16384,null,0,xl.a,[q.a,m.t,m.V],{color:[0,"color"]},null),(l()(),m._55(12,null,["",""])),(l()(),m._55(-1,2,["\n                "]))],function(l,n){l(n,11,0,n.context.$implicit.usercompetency.proficiency?"success":"danger")},function(l,n){l(n,0,0,n.context.$implicit.competency.shortname);l(n,6,0,n.context.$implicit.competency.shortname);l(n,8,0,n.context.$implicit.competency.idnumber);l(n,12,0,n.context.$implicit.usercompetency.gradename)})}function s(l){return m._57(0,[(l()(),m._31(0,0,null,null,17,"ion-card",[],null,null,null,null,null)),m._30(1,16384,null,0,el.a,[q.a,m.t,m.V],null,null),(l()(),m._55(-1,null,["\n            "])),(l()(),m._31(3,0,null,null,3,"ion-card-header",[["text-wrap",""]],null,null,null,null,null)),m._30(4,16384,null,0,Vl.a,[q.a,m.t,m.V],null,null),(l()(),m._55(5,null,["",""])),m._47(131072,nl.a,[ul.a,m.j]),(l()(),m._55(-1,null,["\n            "])),(l()(),m._31(8,0,null,null,8,"ion-list",[],null,null,null,null,null)),m._30(9,16384,null,0,bl.a,[q.a,m.t,m.V,Y.a,hl.l,yl.a],null,null),(l()(),m._55(-1,null,["\n                "])),(l()(),m._26(16777216,null,null,1,null,c)),m._30(12,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,null,["\n                "])),(l()(),m._26(16777216,null,null,1,null,p)),m._30(15,802816,null,0,cl.j,[m._11,m._6,m.E],{ngForOf:[0,"ngForOf"]},null),(l()(),m._55(-1,null,["\n            "])),(l()(),m._55(-1,null,["\n        "]))],function(l,n){var u=n.component;l(n,12,0,0==u.plan.competencycount);l(n,15,0,u.plan.competencies)},function(l,n){l(n,5,0,m._56(n,5,0,m._44(n,6).transform("addon.competency.learningplancompetencies")))})}function f(l){return m._57(0,[m._47(0,kl.a,[Q.a]),(l()(),m._31(1,0,null,null,9,"ion-header",[],null,null,null,null,null)),m._30(2,16384,null,0,jl.a,[q.a,m.t,m.V,[2,Ll.a]],null,null),(l()(),m._55(-1,null,["\n    "])),(l()(),m._31(4,0,null,null,5,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,Rl.b,Rl.a)),m._30(5,49152,null,0,K.a,[wl.a,[2,Ll.a],[2,dl.a],q.a,m.t,m.V],null,null),(l()(),m._55(-1,3,["\n        "])),(l()(),m._26(16777216,null,3,1,null,t)),m._30(8,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,3,["\n    "])),(l()(),m._55(-1,null,["\n"])),(l()(),m._55(-1,null,["\n"])),(l()(),m._31(12,0,null,null,23,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,Cl.b,Cl.a)),m._30(13,4374528,null,0,gl.a,[q.a,Y.a,yl.a,m.t,m.V,wl.a,Tl.a,m.M,[2,Ll.a],[2,dl.a]],null,null),(l()(),m._55(-1,1,["\n    "])),(l()(),m._31(15,0,null,2,6,"ion-refresher",[],[[2,"refresher-active",null],[4,"top",null]],[[null,"ionRefresh"]],function(l,n,u){var t=!0;if("ionRefresh"===n){t=!1!==l.component.refreshLearningPlan(u)&&t}return t},null,null)),m._30(16,212992,null,0,El.a,[Y.a,gl.a,m.M,hl.l],{enabled:[0,"enabled"]},{ionRefresh:"ionRefresh"}),(l()(),m._55(-1,null,["\n        "])),(l()(),m._31(18,0,null,null,2,"ion-refresher-content",[],[[1,"state",0]],null,null,Ol.b,Ol.a)),m._30(19,114688,null,0,Sl.a,[El.a,q.a],{pullingText:[0,"pullingText"]},null),m._47(131072,nl.a,[ul.a,m.j]),(l()(),m._55(-1,null,["\n    "])),(l()(),m._55(-1,1,["\n    "])),(l()(),m._31(23,0,null,1,11,"core-loading",[],null,null,null,Al.b,Al.a)),m._30(24,638976,null,0,Ul.a,[ul.a,m.t],{hideUntil:[0,"hideUntil"]},null),(l()(),m._55(-1,0,["\n        "])),(l()(),m._26(16777216,null,0,1,null,o)),m._30(27,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,0,["\n        "])),(l()(),m._26(16777216,null,0,1,null,i)),m._30(30,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,0,["\n        "])),(l()(),m._26(16777216,null,0,1,null,s)),m._30(33,16384,null,0,cl.k,[m._11,m._6],{ngIf:[0,"ngIf"]},null),(l()(),m._55(-1,0,["\n    "])),(l()(),m._55(-1,1,["\n"])),(l()(),m._55(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,8,0,u.plan);l(n,16,0,u.planLoaded);l(n,19,0,m._34(1,"",m._56(n,19,0,m._44(n,20).transform("core.pulltorefresh")),""));l(n,24,0,u.planLoaded);l(n,27,0,u.user);l(n,30,0,u.plan);l(n,33,0,u.plan)},function(l,n){l(n,4,0,m._44(n,5)._hidden,m._44(n,5)._sbPadding);l(n,12,0,m._44(n,13).statusbarPadding,m._44(n,13)._hasRefresher);l(n,15,0,"inactive"!==m._44(n,16).state,m._44(n,16)._top);l(n,18,0,m._44(n,19).r.state)})}Object.defineProperty(n,"__esModule",{value:!0});var m=u(0),d=u(9),g=u(7),b=u(31),h=u(30),y=u(111),v=u(12),I=u(6),P=u(128),x=u(207),V=u(325),k=this&&this.__decorate||function(l,n,u,t){var e,a=arguments.length,o=a<3?n:null===t?t=Object.getOwnPropertyDescriptor(n,u):t;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(l,n,u,t);else for(var _=l.length-1;_>=0;_--)(e=l[_])&&(o=(a<3?e(o):a>3?e(n,u,o):e(n,u))||o);return a>3&&o&&Object.defineProperty(n,u,o),o},j=this&&this.__metadata||function(l,n){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(l,n)},L=this&&this.__param||function(l,n){return function(u,t){n(u,t,l)}},R=function(){function l(l,n,u,t,e,a,o,_){this.navCtrl=l,this.translate=u,this.appProvider=t,this.domUtils=e,this.svComponent=a,this.competencyProvider=o,this.competencyHelperProvider=_,this.planLoaded=!1,this.planId=n.get("planId")}return l.prototype.ionViewDidLoad=function(){var l=this;this.fetchLearningPlan().finally(function(){l.planLoaded=!0})},l.prototype.fetchLearningPlan=function(){var l=this;return this.competencyProvider.getLearningPlan(this.planId).then(function(n){n.plan.statusname=l.getStatusName(n.plan.status),l.competencyHelperProvider.getProfile(n.plan.userid).then(function(n){l.user=n}),l.plan=n}).catch(function(n){l.domUtils.showErrorModalDefault(n,"Error getting learning plan data.")})},l.prototype.openCompetency=function(l){var n=this.svComponent?this.svComponent.getMasterNav():this.navCtrl;this.appProvider.isWide()?n.push("AddonCompetencyCompetenciesPage",{competencyId:l,planId:this.planId}):n.push("AddonCompetencyCompetencyPage",{competencyId:l,planId:this.planId})},l.prototype.getStatusName=function(l){var n;switch(l){case x.a.STATUS_DRAFT:n="draft";break;case x.a.REVIEW_STATUS_IN_REVIEW:n="inreview";break;case x.a.REVIEW_STATUS_WAITING_FOR_REVIEW:n="waitingforreview";break;case x.a.STATUS_ACTIVE:n="active";break;case x.a.STATUS_COMPLETE:n="complete";break;default:return String(l)}return this.translate.instant("addon.competency.planstatus"+n)},l.prototype.refreshLearningPlan=function(l){var n=this;this.competencyProvider.invalidateLearningPlan(this.planId).finally(function(){n.fetchLearningPlan().finally(function(){l.complete()})})},l=k([Object(m.m)({selector:"page-addon-competency-plan",templateUrl:"plan.html"}),L(5,Object(m.N)()),j("design:paramtypes",[d.q,d.r,g.c,v.a,I.a,P.a,x.a,V.a])],l)}(),w=this&&this.__decorate||function(l,n,u,t){var e,a=arguments.length,o=a<3?n:null===t?t=Object.getOwnPropertyDescriptor(n,u):t;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(l,n,u,t);else for(var _=l.length-1;_>=0;_--)(e=l[_])&&(o=(a<3?e(o):a>3?e(n,u,o):e(n,u))||o);return a>3&&o&&Object.defineProperty(n,u,o),o},C=function(){function l(){}return l=w([Object(m.I)({declarations:[R],imports:[b.a,h.a,y.a,d.l.forChild(R),g.b.forChild()]})],l)}(),T=u(1243),E=u(1244),O=u(1245),S=u(1246),A=u(1247),U=u(1248),$=u(1249),M=u(1250),N=u(1251),W=u(1254),D=u(1255),F=u(1256),G=u(1253),H=u(315),q=u(3),J=u(227),K=u(182),z=u(185),B=u(166),Q=u(2),X=u(16),Y=u(13),Z=u(1),ll=u(23),nl=u(28),ul=u(15),tl=u(38),el=u(112),al=u(33),ol=u(19),_l=u(18),rl=u(29),il=u(32),cl=u(8),pl=u(39),sl=u(10),fl=u(4),ml=u(22),dl=u(20),gl=u(24),bl=u(75),hl=u(35),yl=u(25),vl=u(620),Il=u(318),Pl=u(79),xl=u(229),Vl=u(261),kl=u(1263),jl=u(402),Ll=u(34),Rl=u(1252),wl=u(27),Cl=u(183),Tl=u(93),El=u(139),Ol=u(203),Sl=u(150),Al=u(57),Ul=u(55),$l=u(54),Ml=m._29({encapsulation:2,styles:[],data:{}}),Nl=m._27("page-addon-competency-plan",R,function(l){return m._57(0,[(l()(),m._31(0,0,null,null,1,"page-addon-competency-plan",[],null,null,null,f,Ml)),m._30(1,49152,null,0,R,[dl.a,$l.a,ul.a,v.a,I.a,[2,P.a],x.a,V.a],null,null)],null,null)},{},{},[]),Wl=u(17),Dl=u(311),Fl=u(312),Gl=u(314),Hl=u(313),ql=u(401),Jl=u(615),Kl=u(228);u.d(n,"AddonCompetencyPlanPageModuleNgFactory",function(){return zl});var zl=m._28(C,[],function(l){return m._40([m._41(512,m.o,m._21,[[8,[T.a,E.a,O.a,S.a,A.a,U.a,$.a,M.a,N.a,W.a,D.a,F.a,Nl]],[3,m.o],m.K]),m._41(4608,cl.m,cl.l,[m.G,[2,cl.v]]),m._41(4608,Wl.x,Wl.x,[]),m._41(4608,Wl.d,Wl.d,[]),m._41(4608,Dl.b,Dl.a,[]),m._41(4608,Fl.a,Fl.b,[]),m._41(4608,Gl.b,Gl.a,[]),m._41(4608,Hl.b,Hl.a,[]),m._41(4608,ul.a,ul.a,[ql.a,Dl.b,Fl.a,Gl.b,Hl.b,ul.b,ul.c]),m._41(512,cl.b,cl.b,[]),m._41(512,Wl.v,Wl.v,[]),m._41(512,Wl.i,Wl.i,[]),m._41(512,Wl.s,Wl.s,[]),m._41(512,Jl.a,Jl.a,[]),m._41(512,g.b,g.b,[]),m._41(512,h.a,h.a,[]),m._41(512,y.a,y.a,[]),m._41(512,b.a,b.a,[]),m._41(512,Jl.b,Jl.b,[]),m._41(512,C,C,[]),m._41(256,ul.c,void 0,[]),m._41(256,ul.b,void 0,[]),m._41(256,Kl.a,R,[])])})}});
+webpackJsonp([101],{
+
+/***/ 1738:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 1 modules
+var directives_module = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
+var pipes_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./src/providers/app.ts
+var app = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
+var split_view = __webpack_require__(128);
+
+// EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
+var competency = __webpack_require__(207);
+
+// EXTERNAL MODULE: ./src/addon/competency/providers/helper.ts
+var helper = __webpack_require__(325);
+
+// CONCATENATED MODULE: ./src/addon/competency/pages/plan/plan.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+/**
+ * Page that displays a learning plan.
+ */
+var plan_AddonCompetencyPlanPage = /** @class */ (function () {
+    function AddonCompetencyPlanPage(navCtrl, navParams, translate, appProvider, domUtils, svComponent, competencyProvider, competencyHelperProvider) {
+        this.navCtrl = navCtrl;
+        this.translate = translate;
+        this.appProvider = appProvider;
+        this.domUtils = domUtils;
+        this.svComponent = svComponent;
+        this.competencyProvider = competencyProvider;
+        this.competencyHelperProvider = competencyHelperProvider;
+        this.planLoaded = false;
+        this.planId = navParams.get('planId');
+    }
+    /**
+     * View loaded.
+     */
+    AddonCompetencyPlanPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.fetchLearningPlan().finally(function () {
+            _this.planLoaded = true;
+        });
+    };
+    /**
+     * Fetches the learning plan and updates the view.
+     *
+     * @return {Promise<void>} Promise resolved when done.
+     */
+    AddonCompetencyPlanPage.prototype.fetchLearningPlan = function () {
+        var _this = this;
+        return this.competencyProvider.getLearningPlan(this.planId).then(function (plan) {
+            plan.plan.statusname = _this.getStatusName(plan.plan.status);
+            // Get the user profile image.
+            _this.competencyHelperProvider.getProfile(plan.plan.userid).then(function (user) {
+                _this.user = user;
+            });
+            _this.plan = plan;
+        }).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'Error getting learning plan data.');
+        });
+    };
+    /**
+     * Navigates to a particular competency.
+     *
+     * @param {number} competencyId
+     */
+    AddonCompetencyPlanPage.prototype.openCompetency = function (competencyId) {
+        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
+        if (this.appProvider.isWide()) {
+            navCtrl.push('AddonCompetencyCompetenciesPage', { competencyId: competencyId, planId: this.planId });
+        }
+        else {
+            navCtrl.push('AddonCompetencyCompetencyPage', { competencyId: competencyId, planId: this.planId });
+        }
+    };
+    /**
+     * Convenience function to get the status name translated.
+     *
+     * @param {number} status
+     * @return {string}
+     */
+    AddonCompetencyPlanPage.prototype.getStatusName = function (status) {
+        var statusTranslateName;
+        switch (status) {
+            case competency["a" /* AddonCompetencyProvider */].STATUS_DRAFT:
+                statusTranslateName = 'draft';
+                break;
+            case competency["a" /* AddonCompetencyProvider */].REVIEW_STATUS_IN_REVIEW:
+                statusTranslateName = 'inreview';
+                break;
+            case competency["a" /* AddonCompetencyProvider */].REVIEW_STATUS_WAITING_FOR_REVIEW:
+                statusTranslateName = 'waitingforreview';
+                break;
+            case competency["a" /* AddonCompetencyProvider */].STATUS_ACTIVE:
+                statusTranslateName = 'active';
+                break;
+            case competency["a" /* AddonCompetencyProvider */].STATUS_COMPLETE:
+                statusTranslateName = 'complete';
+                break;
+            default:
+                // We can use the current status name.
+                return String(status);
+        }
+        return this.translate.instant('addon.competency.planstatus' + statusTranslateName);
+    };
+    /**
+     * Refreshes the learning plan.
+     *
+     * @param {any} refresher Refresher.
+     */
+    AddonCompetencyPlanPage.prototype.refreshLearningPlan = function (refresher) {
+        var _this = this;
+        this.competencyProvider.invalidateLearningPlan(this.planId).finally(function () {
+            _this.fetchLearningPlan().finally(function () {
+                refresher.complete();
+            });
+        });
+    };
+    AddonCompetencyPlanPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-addon-competency-plan',
+            templateUrl: 'plan.html',
+        }),
+        __param(5, Object(core["N" /* Optional */])()),
+        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], ionic_angular["r" /* NavParams */], _ngx_translate_core["c" /* TranslateService */],
+            app["a" /* CoreAppProvider */], dom["a" /* CoreDomUtilsProvider */],
+            split_view["a" /* CoreSplitViewComponent */], competency["a" /* AddonCompetencyProvider */],
+            helper["a" /* AddonCompetencyHelperProvider */]])
+    ], AddonCompetencyPlanPage);
+    return AddonCompetencyPlanPage;
+}());
+
+//# sourceMappingURL=plan.js.map
+// CONCATENATED MODULE: ./src/addon/competency/pages/plan/plan.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var plan_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+var plan_module_AddonCompetencyPlanPageModule = /** @class */ (function () {
+    function AddonCompetencyPlanPageModule() {
+    }
+    AddonCompetencyPlanPageModule = plan_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                plan_AddonCompetencyPlanPage,
+            ],
+            imports: [
+                components_module["a" /* CoreComponentsModule */],
+                directives_module["a" /* CoreDirectivesModule */],
+                pipes_module["a" /* CorePipesModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(plan_AddonCompetencyPlanPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], AddonCompetencyPlanPageModule);
+    return AddonCompetencyPlanPageModule;
+}());
+
+//# sourceMappingURL=plan.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1243);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1244);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1245);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1246);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1248);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1249);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1250);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1251);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1254);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1255);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1256);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1253);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(315);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(182);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
+var avatar = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./src/directives/external-content.ts
+var external_content = __webpack_require__(166);
+
+// EXTERNAL MODULE: ./src/providers/logger.ts
+var logger = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./src/providers/filepool.ts
+var filepool = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./src/providers/utils/url.ts
+var url = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
+var card = __webpack_require__(112);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./src/directives/format-text.ts
+var format_text = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
+var providers_helper = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
+var list = __webpack_require__(75);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
+var progress_bar_ngfactory = __webpack_require__(620);
+
+// EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
+var progress_bar = __webpack_require__(318);
+
+// EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
+var platform_browser = __webpack_require__(79);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
+var badge = __webpack_require__(229);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
+var card_header = __webpack_require__(261);
+
+// EXTERNAL MODULE: ./src/pipes/to-locale-string.ts
+var to_locale_string = __webpack_require__(1263);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(402);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1252);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app_app = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
+var refresher = __webpack_require__(139);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
+var refresher_content_ngfactory = __webpack_require__(203);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
+var refresher_content = __webpack_require__(150);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(57);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(55);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(54);
+
+// CONCATENATED MODULE: ./src/addon/competency/pages/plan/plan.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonCompetencyPlanPage = [];
+var RenderType_AddonCompetencyPlanPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonCompetencyPlanPage, data: {} });
+
+function View_AddonCompetencyPlanPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](1, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](2, 0, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.plan.plan.name; _ck(_v, 2, 0, currVal_0); }); }
+function View_AddonCompetencyPlanPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, "ion-avatar", [["item-start", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 3, "img", [["core-external-content", ""]], [[8, "src", 4], [8, "alt", 0]], null, null, null, null)), core["_30" /* ɵdid */](4, 4210688, null, 0, external_content["a" /* CoreExternalContentDirective */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], platform["a" /* Platform */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], app["a" /* CoreAppProvider */]], null, null), core["_48" /* ɵpod */](5, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.user.profileimageurl; var currVal_1 = core["_56" /* ɵunv */](_v, 3, 1, core["_44" /* ɵnov */](_v, 6).transform("core.pictureof", _ck(_v, 5, 0, _co.user.fullname))); _ck(_v, 3, 0, currVal_0, currVal_1); }); }
+function View_AddonCompetencyPlanPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 4, "span", [["item-start", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 1, "ion-icon", [["name", "person"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](3, 147456, [[3, 4]], 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], function (_ck, _v) { var currVal_1 = "person"; _ck(_v, 3, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 3)._hidden; _ck(_v, 2, 0, currVal_0); }); }
+function View_AddonCompetencyPlanPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 20, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 16, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](4, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](8, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonCompetencyPlanPage_3)), core["_30" /* ɵdid */](11, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonCompetencyPlanPage_4)), core["_30" /* ɵdid */](14, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, 2, 2, "h2", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](17, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](18, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n       "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.user.profileimageurl && (_co.user.profileimageurl !== true)); _ck(_v, 11, 0, currVal_0); var currVal_1 = (_co.user.profileimageurl === true); _ck(_v, 14, 0, currVal_1); var currVal_2 = _co.user.fullname; _ck(_v, 18, 0, currVal_2); }, null); }
+function View_AddonCompetencyPlanPage_6(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 11, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 7, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 8, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 9, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 2, 2, "strong", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](8, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](10, 2, [":\n                    ", "\n                "])), core["_49" /* ɵppd */](11, 1)], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("addon.competency.duedate")); _ck(_v, 8, 0, currVal_0); var currVal_1 = core["_56" /* ɵunv */](_v, 10, 0, _ck(_v, 11, 0, core["_44" /* ɵnov */](_v.parent.parent, 0), _co.plan.plan.duedate)); _ck(_v, 10, 0, currVal_1); }); }
+function View_AddonCompetencyPlanPage_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 10, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 10, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 11, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 12, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 2, 2, "strong", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](8, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](10, 2, [":\n                    ", "\n                "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("addon.competency.template")); _ck(_v, 8, 0, currVal_0); var currVal_1 = _co.plan.plan.template.shortname; _ck(_v, 10, 0, currVal_1); }); }
+function View_AddonCompetencyPlanPage_5(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 42, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 38, "ion-list", [], null, null, null, null, null)), core["_30" /* ɵdid */](4, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, null, 10, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](7, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](11, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 2, 2, "strong", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](14, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](16, 2, [":\n                    ", "\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonCompetencyPlanPage_6)), core["_30" /* ɵdid */](19, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonCompetencyPlanPage_7)), core["_30" /* ɵdid */](22, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](24, 0, null, null, 16, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](25, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 13, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 14, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 15, { _icons: 1 }), core["_30" /* ɵdid */](29, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](31, 0, null, 2, 2, "strong", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](32, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](34, 2, [":\n                    ", "\n                    "])), core["_48" /* ɵpod */](35, { x: 0, y: 1 }), core["_48" /* ɵpod */](36, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_31" /* ɵeld */](38, 0, null, 2, 1, "core-progress-bar", [], null, null, null, progress_bar_ngfactory["b" /* View_CoreProgressBarComponent_0 */], progress_bar_ngfactory["a" /* RenderType_CoreProgressBarComponent */])), core["_30" /* ɵdid */](39, 573440, null, 0, progress_bar["a" /* CoreProgressBarComponent */], [platform_browser["c" /* DomSanitizer */]], { progress: [0, "progress"], text: [1, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_2 = (_co.plan.plan.duedate > 0); _ck(_v, 19, 0, currVal_2); var currVal_3 = _co.plan.plan.template; _ck(_v, 22, 0, currVal_3); var currVal_6 = _co.plan.proficientcompetencypercentage; var currVal_7 = _co.plan.proficientcompetencypercentageformatted; _ck(_v, 39, 0, currVal_6, currVal_7); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 14, 0, core["_44" /* ɵnov */](_v, 15).transform("addon.competency.status")); _ck(_v, 14, 0, currVal_0); var currVal_1 = _co.plan.plan.statusname; _ck(_v, 16, 0, currVal_1); var currVal_4 = core["_56" /* ɵunv */](_v, 32, 0, core["_44" /* ɵnov */](_v, 33).transform("addon.competency.progress")); _ck(_v, 32, 0, currVal_4); var currVal_5 = core["_56" /* ɵunv */](_v, 34, 0, core["_44" /* ɵnov */](_v, 37).transform("addon.competency.xcompetenciesproficientoutofy", _ck(_v, 36, 0, _ck(_v, 35, 0, _co.plan.proficientcompetencycount, _co.plan.competencycount)))); _ck(_v, 34, 0, currVal_5); }); }
+function View_AddonCompetencyPlanPage_9(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 16, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 17, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 18, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](6, 2, ["\n                    ", "\n                "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 6, 0, core["_44" /* ɵnov */](_v, 7).transform("addon.competency.nocompetencies")); _ck(_v, 6, 0, currVal_0); }); }
+function View_AddonCompetencyPlanPage_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 13, "a", [["class", "item item-block"], ["ion-item", ""], ["text-wrap", ""]], [[8, "title", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.openCompetency(_v.context.$implicit.competency.id) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 19, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 20, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 21, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](6, 2, ["\n                    ", " "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 2, 1, "small", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](8, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 4, 2, "ion-badge", [["item-end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](11, 16384, null, 0, badge["a" /* Badge */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"] }, null), (_l()(), core["_55" /* ɵted */](12, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "]))], function (_ck, _v) { var currVal_3 = (_v.context.$implicit.usercompetency.proficiency ? "success" : "danger"); _ck(_v, 11, 0, currVal_3); }, function (_ck, _v) { var currVal_0 = _v.context.$implicit.competency.shortname; _ck(_v, 0, 0, currVal_0); var currVal_1 = _v.context.$implicit.competency.shortname; _ck(_v, 6, 0, currVal_1); var currVal_2 = _v.context.$implicit.competency.idnumber; _ck(_v, 8, 0, currVal_2); var currVal_4 = _v.context.$implicit.usercompetency.gradename; _ck(_v, 12, 0, currVal_4); }); }
+function View_AddonCompetencyPlanPage_8(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 17, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 3, "ion-card-header", [["text-wrap", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](4, 16384, null, 0, card_header["a" /* CardHeader */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](5, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](8, 0, null, null, 8, "ion-list", [], null, null, null, null, null)), core["_30" /* ɵdid */](9, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonCompetencyPlanPage_9)), core["_30" /* ɵdid */](12, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonCompetencyPlanPage_10)), core["_30" /* ɵdid */](15, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = (_co.plan.competencycount == 0); _ck(_v, 12, 0, currVal_1); var currVal_2 = _co.plan.competencies; _ck(_v, 15, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 5, 0, core["_44" /* ɵnov */](_v, 6).transform("addon.competency.learningplancompetencies")); _ck(_v, 5, 0, currVal_0); }); }
+function View_AddonCompetencyPlanPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, to_locale_string["a" /* CoreToLocaleStringPipe */], [logger["a" /* CoreLoggerProvider */]]), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 9, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, null, 5, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](5, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 3, 1, null, View_AddonCompetencyPlanPage_1)), core["_30" /* ɵdid */](8, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](12, 0, null, null, 23, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](13, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, 2, 6, "ion-refresher", [], [[2, "refresher-active", null], [4, "top", null]], [[null, "ionRefresh"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("ionRefresh" === en)) {
+        var pd_0 = (_co.refreshLearningPlan($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](16, 212992, null, 0, refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](18, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](19, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](23, 0, null, 1, 11, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](24, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonCompetencyPlanPage_2)), core["_30" /* ɵdid */](27, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonCompetencyPlanPage_5)), core["_30" /* ɵdid */](30, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonCompetencyPlanPage_8)), core["_30" /* ɵdid */](33, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.plan; _ck(_v, 8, 0, currVal_2); var currVal_7 = _co.planLoaded; _ck(_v, 16, 0, currVal_7); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 19, 0, core["_44" /* ɵnov */](_v, 20).transform("core.pulltorefresh")), ""); _ck(_v, 19, 0, currVal_9); var currVal_10 = _co.planLoaded; _ck(_v, 24, 0, currVal_10); var currVal_11 = _co.user; _ck(_v, 27, 0, currVal_11); var currVal_12 = _co.plan; _ck(_v, 30, 0, currVal_12); var currVal_13 = _co.plan; _ck(_v, 33, 0, currVal_13); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = core["_44" /* ɵnov */](_v, 13).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 13)._hasRefresher; _ck(_v, 12, 0, currVal_3, currVal_4); var currVal_5 = (core["_44" /* ɵnov */](_v, 16).state !== "inactive"); var currVal_6 = core["_44" /* ɵnov */](_v, 16)._top; _ck(_v, 15, 0, currVal_5, currVal_6); var currVal_8 = core["_44" /* ɵnov */](_v, 19).r.state; _ck(_v, 18, 0, currVal_8); }); }
+function View_AddonCompetencyPlanPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-competency-plan", [], null, null, null, View_AddonCompetencyPlanPage_0, RenderType_AddonCompetencyPlanPage)), core["_30" /* ɵdid */](1, 49152, null, 0, plan_AddonCompetencyPlanPage, [nav_controller["a" /* NavController */], nav_params["a" /* NavParams */], translate_service["a" /* TranslateService */], app["a" /* CoreAppProvider */], dom["a" /* CoreDomUtilsProvider */], [2, split_view["a" /* CoreSplitViewComponent */]], competency["a" /* AddonCompetencyProvider */], helper["a" /* AddonCompetencyHelperProvider */]], null, null)], null, null); }
+var AddonCompetencyPlanPageNgFactory = core["_27" /* ɵccf */]("page-addon-competency-plan", plan_AddonCompetencyPlanPage, View_AddonCompetencyPlanPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=plan.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(311);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(312);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(314);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(313);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(401);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(615);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(228);
+
+// CONCATENATED MODULE: ./src/addon/competency/pages/plan/plan.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyPlanPageModuleNgFactory", function() { return AddonCompetencyPlanPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AddonCompetencyPlanPageModuleNgFactory = core["_28" /* ɵcmf */](plan_module_AddonCompetencyPlanPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], AddonCompetencyPlanPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, plan_module_AddonCompetencyPlanPageModule, plan_module_AddonCompetencyPlanPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], plan_AddonCompetencyPlanPage, [])]); });
+
+//# sourceMappingURL=plan.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=101.js.map

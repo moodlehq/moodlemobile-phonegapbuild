@@ -1,1 +1,431 @@
-webpackJsonp([49],{1814:function(l,n,u){"use strict";function a(l){return t._57(0,[(l()(),t._31(0,0,null,null,11,"ion-header",[],null,null,null,null,null)),t._30(1,16384,null,0,j.a,[P.a,t.t,t.V,[2,k.a]],null,null),(l()(),t._55(-1,null,["\n    "])),(l()(),t._31(3,0,null,null,7,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,U.b,U.a)),t._30(4,49152,null,0,R.a,[O.a,[2,k.a],[2,L.a],P.a,t.t,t.V],null,null),(l()(),t._55(-1,3,["\n        "])),(l()(),t._31(6,0,null,3,3,"ion-title",[],null,null,null,M.b,M.a)),t._30(7,49152,null,0,x.a,[P.a,t.t,t.V,[2,F.a],[2,R.a]],null,null),(l()(),t._55(8,0,["",""])),t._47(131072,E.a,[D.a,t.j]),(l()(),t._55(-1,3,["\n    "])),(l()(),t._55(-1,null,["\n"])),(l()(),t._55(-1,null,["\n"])),(l()(),t._31(13,0,null,null,104,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,S.b,S.a)),t._30(14,4374528,null,0,q.a,[P.a,I.a,N.a,t.t,t.V,O.a,T.a,t.M,[2,k.a],[2,L.a]],null,null),(l()(),t._55(-1,1,["\n    "])),(l()(),t._31(16,0,null,1,11,"ion-list",[],null,null,null,null,null)),t._30(17,16384,null,0,H.a,[P.a,t.t,t.V,I.a,z.l,N.a],null,null),(l()(),t._55(-1,null,["\n        "])),(l()(),t._31(19,0,null,null,7,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,A.b,A.a)),t._30(20,1097728,null,3,G.a,[J.a,P.a,t.t,t.V,[2,K.a]],null,null),t._52(335544320,1,{contentLabel:0}),t._52(603979776,2,{_buttons:1}),t._52(603979776,3,{_icons:1}),t._30(24,16384,null,0,B.a,[],null,null),(l()(),t._55(25,2,["\n            ","\n        "])),t._47(131072,E.a,[D.a,t.j]),(l()(),t._55(-1,null,["\n    "])),(l()(),t._55(-1,1,["\n    "])),(l()(),t._31(29,0,null,1,87,"ion-card",[],null,null,null,null,null)),t._30(30,16384,null,0,Q.a,[P.a,t.t,t.V],null,null),(l()(),t._55(-1,null,["\n        "])),(l()(),t._31(32,0,null,null,83,"form",[["ion-list",""],["novalidate",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngSubmit"],[null,"submit"],[null,"reset"]],function(l,n,u){var a=!0,e=l.component;if("submit"===n){a=!1!==t._44(l,34).onSubmit(u)&&a}if("reset"===n){a=!1!==t._44(l,34).onReset()&&a}if("ngSubmit"===n){a=!1!==e.resetPassword()&&a}return a},null,null)),t._30(33,16384,null,0,s.w,[],null,null),t._30(34,540672,null,0,s.h,[[8,null],[8,null]],{form:[0,"form"]},{ngSubmit:"ngSubmit"}),t._50(2048,null,s.b,null,[s.h]),t._30(36,16384,null,0,s.o,[s.b],null,null),(l()(),t._55(-1,null,["\n            "])),(l()(),t._31(38,0,null,null,7,"ion-item-divider",[["class","item item-divider"],["color","light"],["text-wrap",""]],null,null,null,A.b,A.a)),t._30(39,1097728,null,3,G.a,[J.a,P.a,t.t,t.V,[2,K.a]],{color:[0,"color"]},null),t._52(335544320,4,{contentLabel:0}),t._52(603979776,5,{_buttons:1}),t._52(603979776,6,{_icons:1}),t._30(43,16384,null,0,W.a,[P.a,t.t,t.V],{color:[0,"color"]},null),(l()(),t._55(44,2,["\n                ","\n            "])),t._47(131072,E.a,[D.a,t.j]),(l()(),t._55(-1,null,["\n            "])),(l()(),t._31(47,0,null,null,39,"div",[["formControlName","field"],["radio-group",""],["role","radiogroup"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],null,null,null,null)),t._30(48,1064960,null,1,X.a,[t.V,t.t,t.j],null,null),t._52(335544320,7,{_header:0}),t._50(1024,null,s.l,function(l){return[l]},[X.a]),t._30(51,671744,null,0,s.f,[[3,s.b],[8,null],[8,null],[2,s.l]],{name:[0,"name"]},null),t._50(2048,null,s.m,null,[s.f]),t._30(53,16384,null,0,s.n,[s.m],null,null),(l()(),t._55(-1,null,["\n                "])),(l()(),t._31(55,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,A.b,A.a)),t._30(56,1097728,null,3,G.a,[J.a,P.a,t.t,t.V,[2,K.a]],null,null),t._52(335544320,8,{contentLabel:0}),t._52(603979776,9,{_buttons:1}),t._52(603979776,10,{_icons:1}),t._30(60,16384,null,0,B.a,[],null,null),(l()(),t._55(-1,2,["\n                    "])),(l()(),t._31(62,0,null,1,3,"ion-label",[],null,null,null,null,null)),t._30(63,16384,[[8,4]],0,Y.a,[P.a,t.t,t.V,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._55(64,null,["",""])),t._47(131072,E.a,[D.a,t.j]),(l()(),t._55(-1,2,["\n                    "])),(l()(),t._31(67,0,null,4,1,"ion-radio",[["value","username"]],[[2,"radio-disabled",null]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==t._44(l,68)._click(u)&&a}return a},Z.b,Z.a)),t._30(68,245760,null,0,$.a,[J.a,P.a,t.t,t.V,[2,G.a],[2,X.a]],{value:[0,"value"]},null),(l()(),t._55(-1,2,["\n                "])),(l()(),t._55(-1,null,["\n                "])),(l()(),t._31(71,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,A.b,A.a)),t._30(72,1097728,null,3,G.a,[J.a,P.a,t.t,t.V,[2,K.a]],null,null),t._52(335544320,11,{contentLabel:0}),t._52(603979776,12,{_buttons:1}),t._52(603979776,13,{_icons:1}),t._30(76,16384,null,0,B.a,[],null,null),(l()(),t._55(-1,2,["\n                    "])),(l()(),t._31(78,0,null,1,3,"ion-label",[],null,null,null,null,null)),t._30(79,16384,[[11,4]],0,Y.a,[P.a,t.t,t.V,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),t._55(80,null,["",""])),t._47(131072,E.a,[D.a,t.j]),(l()(),t._55(-1,2,["\n                    "])),(l()(),t._31(83,0,null,4,1,"ion-radio",[["value","email"]],[[2,"radio-disabled",null]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==t._44(l,84)._click(u)&&a}return a},Z.b,Z.a)),t._30(84,245760,null,0,$.a,[J.a,P.a,t.t,t.V,[2,G.a],[2,X.a]],{value:[0,"value"]},null),(l()(),t._55(-1,2,["\n                "])),(l()(),t._55(-1,null,["\n            "])),(l()(),t._55(-1,null,["\n            "])),(l()(),t._31(88,0,null,null,13,"ion-item",[["class","item item-block"]],null,null,null,A.b,A.a)),t._30(89,1097728,null,3,G.a,[J.a,P.a,t.t,t.V,[2,K.a]],null,null),t._52(335544320,14,{contentLabel:0}),t._52(603979776,15,{_buttons:1}),t._52(603979776,16,{_icons:1}),t._30(93,16384,null,0,B.a,[],null,null),(l()(),t._55(-1,2,["\n                "])),(l()(),t._31(95,0,null,3,5,"ion-input",[["autocapitalize","none"],["autocorrect","off"],["core-auto-focus",""],["formControlName","value"],["name","value"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],null,null,ll.b,ll.a)),t._30(96,671744,null,0,s.f,[[3,s.b],[8,null],[8,null],[8,null]],{name:[0,"name"]},null),t._50(2048,null,s.m,null,[s.f]),t._30(98,16384,null,0,s.n,[s.m],null,null),t._30(99,5423104,null,0,nl.a,[P.a,I.a,J.a,O.a,t.t,t.V,[2,q.a],[2,G.a],[2,s.m],N.a],{type:[0,"type"],autocorrect:[1,"autocorrect"],placeholder:[2,"placeholder"]},null),t._47(131072,E.a,[D.a,t.j]),(l()(),t._55(-1,2,["\n            "])),(l()(),t._55(-1,null,["\n            "])),(l()(),t._31(103,0,null,null,11,"ion-item",[["class","item item-block"]],null,null,null,A.b,A.a)),t._30(104,1097728,null,3,G.a,[J.a,P.a,t.t,t.V,[2,K.a]],null,null),t._52(335544320,17,{contentLabel:0}),t._52(603979776,18,{_buttons:1}),t._52(603979776,19,{_icons:1}),t._30(108,16384,null,0,B.a,[],null,null),(l()(),t._55(-1,2,["\n                "])),(l()(),t._31(110,0,null,2,3,"button",[["block",""],["ion-button",""],["text-wrap",""]],[[8,"disabled",0]],null,null,ul.b,ul.a)),t._30(111,1097728,[[18,4]],0,al.a,[[8,""],P.a,t.t,t.V],{block:[0,"block"]},null),(l()(),t._55(112,0,["",""])),t._47(131072,E.a,[D.a,t.j]),(l()(),t._55(-1,2,["\n            "])),(l()(),t._55(-1,null,["\n        "])),(l()(),t._55(-1,null,["\n    "])),(l()(),t._55(-1,1,["\n"])),(l()(),t._55(-1,null,["\n"]))],function(l,n){l(n,34,0,n.component.myForm);l(n,39,0,"light");l(n,43,0,"light");l(n,51,0,"field");l(n,68,0,"username");l(n,84,0,"email");l(n,96,0,"value");l(n,99,0,"text","off",t._34(1,"",t._56(n,99,2,t._44(n,100).transform("core.login.usernameoremail")),""));l(n,111,0,"")},function(l,n){var u=n.component;l(n,3,0,t._44(n,4)._hidden,t._44(n,4)._sbPadding);l(n,8,0,t._56(n,8,0,t._44(n,9).transform("core.login.passwordforgotten")));l(n,13,0,t._44(n,14).statusbarPadding,t._44(n,14)._hasRefresher);l(n,25,0,t._56(n,25,0,t._44(n,26).transform("core.login.passwordforgotteninstructions2")));l(n,32,0,t._44(n,36).ngClassUntouched,t._44(n,36).ngClassTouched,t._44(n,36).ngClassPristine,t._44(n,36).ngClassDirty,t._44(n,36).ngClassValid,t._44(n,36).ngClassInvalid,t._44(n,36).ngClassPending);l(n,44,0,t._56(n,44,0,t._44(n,45).transform("core.login.searchby")));l(n,47,0,t._44(n,53).ngClassUntouched,t._44(n,53).ngClassTouched,t._44(n,53).ngClassPristine,t._44(n,53).ngClassDirty,t._44(n,53).ngClassValid,t._44(n,53).ngClassInvalid,t._44(n,53).ngClassPending);l(n,64,0,t._56(n,64,0,t._44(n,65).transform("core.login.username")));l(n,67,0,t._44(n,68)._disabled);l(n,80,0,t._56(n,80,0,t._44(n,81).transform("core.user.email")));l(n,83,0,t._44(n,84)._disabled);l(n,95,0,t._44(n,98).ngClassUntouched,t._44(n,98).ngClassTouched,t._44(n,98).ngClassPristine,t._44(n,98).ngClassDirty,t._44(n,98).ngClassValid,t._44(n,98).ngClassInvalid,t._44(n,98).ngClassPending);l(n,110,0,!u.myForm.valid);l(n,112,0,t._56(n,112,0,t._44(n,113).transform("core.courses.search")))})}Object.defineProperty(n,"__esModule",{value:!0});var t=u(0),e=u(9),o=u(7),i=u(6),r=u(113),s=u(17),_=this&&this.__decorate||function(l,n,u,a){var t,e=arguments.length,o=e<3?n:null===a?a=Object.getOwnPropertyDescriptor(n,u):a;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(l,n,u,a);else for(var i=l.length-1;i>=0;i--)(t=l[i])&&(o=(e<3?t(o):e>3?t(n,u,o):t(n,u))||o);return e>3&&o&&Object.defineProperty(n,u,o),o},c=this&&this.__metadata||function(l,n){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(l,n)},d=function(){function l(l,n,u,a,t,e){this.navCtrl=l,this.translate=a,this.loginHelper=t,this.domUtils=e,this.siteUrl=n.get("siteUrl"),this.myForm=u.group({field:["username",s.u.required],value:[n.get("username")||"",s.u.required]})}return l.prototype.resetPassword=function(){var l=this,n=this.myForm.value.field,u=this.myForm.value.value;if(u){var a=this.domUtils.showModalLoading("core.sending",!0),t="email"==n;this.loginHelper.requestPasswordReset(this.siteUrl,t?"":u,t?u:"").then(function(n){"dataerror"==n.status?l.showError(t,n.warnings):"emailpasswordconfirmnotsent"==n.status||"emailpasswordconfirmnoemail"==n.status?l.domUtils.showErrorModal(n.notice):(l.domUtils.showAlert(l.translate.instant("core.success"),n.notice),l.navCtrl.pop())}).catch(function(n){l.domUtils.showErrorModal(n.error)}).finally(function(){a.dismiss()})}else this.domUtils.showErrorModal("core.login.usernameoremail",!0)},l.prototype.showError=function(l,n){for(var u=0;u<n.length;u++){var a=n[u];if("email"==a.item&&l||"username"==a.item&&!l){this.domUtils.showErrorModal(a.message);break}}},l=_([Object(t.m)({selector:"page-core-login-forgotten-password",templateUrl:"forgotten-password.html"}),c("design:paramtypes",[e.q,e.r,s.d,o.c,r.a,i.a])],l)}(),m=this&&this.__decorate||function(l,n,u,a){var t,e=arguments.length,o=e<3?n:null===a?a=Object.getOwnPropertyDescriptor(n,u):a;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(l,n,u,a);else for(var i=l.length-1;i>=0;i--)(t=l[i])&&(o=(e<3?t(o):e>3?t(n,u,o):t(n,u))||o);return e>3&&o&&Object.defineProperty(n,u,o),o},g=function(){function l(){}return l=m([Object(t.I)({declarations:[d],imports:[e.l.forChild(d),o.b.forChild()]})],l)}(),f=u(1243),b=u(1244),h=u(1245),p=u(1246),v=u(1247),y=u(1248),w=u(1249),C=u(1250),V=u(1251),j=u(402),P=u(3),k=u(34),U=u(1252),R=u(182),O=u(27),L=u(20),M=u(1253),x=u(315),F=u(227),E=u(28),D=u(15),S=u(183),q=u(24),I=u(13),N=u(25),T=u(93),H=u(75),z=u(35),A=u(33),G=u(19),J=u(18),K=u(29),B=u(32),Q=u(112),W=u(184),X=u(124),Y=u(61),Z=u(174),$=u(135),ll=u(94),nl=u(76),ul=u(43),al=u(37),tl=u(54),el=t._29({encapsulation:2,styles:[],data:{}}),ol=t._27("page-core-login-forgotten-password",d,function(l){return t._57(0,[(l()(),t._31(0,0,null,null,1,"page-core-login-forgotten-password",[],null,null,null,a,el)),t._30(1,49152,null,0,d,[L.a,tl.a,s.d,D.a,r.a,i.a],null,null)],null,null)},{},{},[]),il=u(8),rl=u(311),sl=u(312),_l=u(314),cl=u(313),dl=u(401),ml=u(615),gl=u(228);u.d(n,"CoreLoginForgottenPasswordPageModuleNgFactory",function(){return fl});var fl=t._28(g,[],function(l){return t._40([t._41(512,t.o,t._21,[[8,[f.a,b.a,h.a,p.a,v.a,y.a,w.a,C.a,V.a,ol]],[3,t.o],t.K]),t._41(4608,il.m,il.l,[t.G,[2,il.v]]),t._41(4608,s.x,s.x,[]),t._41(4608,s.d,s.d,[]),t._41(4608,rl.b,rl.a,[]),t._41(4608,sl.a,sl.b,[]),t._41(4608,_l.b,_l.a,[]),t._41(4608,cl.b,cl.a,[]),t._41(4608,D.a,D.a,[dl.a,rl.b,sl.a,_l.b,cl.b,D.b,D.c]),t._41(512,il.b,il.b,[]),t._41(512,s.v,s.v,[]),t._41(512,s.i,s.i,[]),t._41(512,s.s,s.s,[]),t._41(512,ml.a,ml.a,[]),t._41(512,ml.b,ml.b,[]),t._41(512,o.b,o.b,[]),t._41(512,g,g,[]),t._41(256,gl.a,d,[]),t._41(256,D.c,void 0,[]),t._41(256,D.b,void 0,[])])})}});
+webpackJsonp([49],{
+
+/***/ 1814:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/core/login/providers/helper.ts
+var helper = __webpack_require__(113);
+
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(17);
+
+// CONCATENATED MODULE: ./src/core/login/pages/forgotten-password/forgotten-password.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Page to recover a forgotten password.
+ */
+var forgotten_password_CoreLoginForgottenPasswordPage = /** @class */ (function () {
+    function CoreLoginForgottenPasswordPage(navCtrl, navParams, fb, translate, loginHelper, domUtils) {
+        this.navCtrl = navCtrl;
+        this.translate = translate;
+        this.loginHelper = loginHelper;
+        this.domUtils = domUtils;
+        this.siteUrl = navParams.get('siteUrl');
+        this.myForm = fb.group({
+            field: ['username', esm5_forms["u" /* Validators */].required],
+            value: [navParams.get('username') || '', esm5_forms["u" /* Validators */].required]
+        });
+    }
+    /**
+     * Request to reset the password.
+     */
+    CoreLoginForgottenPasswordPage.prototype.resetPassword = function () {
+        var _this = this;
+        var field = this.myForm.value.field, value = this.myForm.value.value;
+        if (!value) {
+            this.domUtils.showErrorModal('core.login.usernameoremail', true);
+            return;
+        }
+        var modal = this.domUtils.showModalLoading('core.sending', true), isMail = field == 'email';
+        this.loginHelper.requestPasswordReset(this.siteUrl, isMail ? '' : value, isMail ? value : '').then(function (response) {
+            if (response.status == 'dataerror') {
+                // Error in the data sent.
+                _this.showError(isMail, response.warnings);
+            }
+            else if (response.status == 'emailpasswordconfirmnotsent' || response.status == 'emailpasswordconfirmnoemail') {
+                // Error, not found.
+                _this.domUtils.showErrorModal(response.notice);
+            }
+            else {
+                // Success.
+                _this.domUtils.showAlert(_this.translate.instant('core.success'), response.notice);
+                _this.navCtrl.pop();
+            }
+        }).catch(function (error) {
+            _this.domUtils.showErrorModal(error.error);
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
+    // Show an error from the warnings.
+    CoreLoginForgottenPasswordPage.prototype.showError = function (isMail, warnings) {
+        for (var i = 0; i < warnings.length; i++) {
+            var warning = warnings[i];
+            if ((warning.item == 'email' && isMail) || (warning.item == 'username' && !isMail)) {
+                this.domUtils.showErrorModal(warning.message);
+                break;
+            }
+        }
+    };
+    CoreLoginForgottenPasswordPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-core-login-forgotten-password',
+            templateUrl: 'forgotten-password.html',
+        }),
+        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], ionic_angular["r" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */],
+            helper["a" /* CoreLoginHelperProvider */], dom["a" /* CoreDomUtilsProvider */]])
+    ], CoreLoginForgottenPasswordPage);
+    return CoreLoginForgottenPasswordPage;
+}());
+
+//# sourceMappingURL=forgotten-password.js.map
+// CONCATENATED MODULE: ./src/core/login/pages/forgotten-password/forgotten-password.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var forgotten_password_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var forgotten_password_module_CoreLoginForgottenPasswordPageModule = /** @class */ (function () {
+    function CoreLoginForgottenPasswordPageModule() {
+    }
+    CoreLoginForgottenPasswordPageModule = forgotten_password_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                forgotten_password_CoreLoginForgottenPasswordPage
+            ],
+            imports: [
+                ionic_angular["l" /* IonicPageModule */].forChild(forgotten_password_CoreLoginForgottenPasswordPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ]
+        })
+    ], CoreLoginForgottenPasswordPageModule);
+    return CoreLoginForgottenPasswordPageModule;
+}());
+
+//# sourceMappingURL=forgotten-password.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1243);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1244);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1245);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1246);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1248);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1249);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1250);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1251);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(402);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1252);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(182);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1253);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(315);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
+var list = __webpack_require__(75);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
+var card = __webpack_require__(112);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
+var item_divider = __webpack_require__(184);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-group.js
+var radio_group = __webpack_require__(124);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
+var label = __webpack_require__(61);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.ngfactory.js
+var radio_button_ngfactory = __webpack_require__(174);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
+var radio_button = __webpack_require__(135);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.ngfactory.js
+var input_ngfactory = __webpack_require__(94);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
+var input = __webpack_require__(76);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(54);
+
+// CONCATENATED MODULE: ./src/core/login/pages/forgotten-password/forgotten-password.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_CoreLoginForgottenPasswordPage = [];
+var RenderType_CoreLoginForgottenPasswordPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreLoginForgottenPasswordPage, data: {} });
+
+function View_CoreLoginForgottenPasswordPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 11, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 7, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](7, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](8, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](13, 0, null, null, 104, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](14, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, 1, 11, "ion-list", [], null, null, null, null, null)), core["_30" /* ɵdid */](17, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, null, 7, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](20, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](24, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](25, 2, ["\n            ", "\n        "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](29, 0, null, 1, 87, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](30, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](32, 0, null, null, 83, "form", [["ion-list", ""], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngSubmit"], [null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("submit" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 34).onSubmit($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("reset" === en)) {
+        var pd_1 = (core["_44" /* ɵnov */](_v, 34).onReset() !== false);
+        ad = (pd_1 && ad);
+    } if (("ngSubmit" === en)) {
+        var pd_2 = (_co.resetPassword() !== false);
+        ad = (pd_2 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](33, 16384, null, 0, esm5_forms["w" /* ɵbf */], [], null, null), core["_30" /* ɵdid */](34, 540672, null, 0, esm5_forms["h" /* FormGroupDirective */], [[8, null], [8, null]], { form: [0, "form"] }, { ngSubmit: "ngSubmit" }), core["_50" /* ɵprd */](2048, null, esm5_forms["b" /* ControlContainer */], null, [esm5_forms["h" /* FormGroupDirective */]]), core["_30" /* ɵdid */](36, 16384, null, 0, esm5_forms["o" /* NgControlStatusGroup */], [esm5_forms["b" /* ControlContainer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](38, 0, null, null, 7, "ion-item-divider", [["class", "item item-divider"], ["color", "light"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](39, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], { color: [0, "color"] }, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](43, 16384, null, 0, item_divider["a" /* ItemDivider */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"] }, null), (_l()(), core["_55" /* ɵted */](44, 2, ["\n                ", "\n            "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](47, 0, null, null, 39, "div", [["formControlName", "field"], ["radio-group", ""], ["role", "radiogroup"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, null, null)), core["_30" /* ɵdid */](48, 1064960, null, 1, radio_group["a" /* RadioGroup */], [core["V" /* Renderer */], core["t" /* ElementRef */], core["j" /* ChangeDetectorRef */]], null, null), core["_52" /* ɵqud */](335544320, 7, { _header: 0 }), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [radio_group["a" /* RadioGroup */]]), core["_30" /* ɵdid */](51, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](53, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](55, 0, null, null, 14, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](56, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 8, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 9, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 10, { _icons: 1 }), core["_30" /* ɵdid */](60, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](62, 0, null, 1, 3, "ion-label", [], null, null, null, null, null)), core["_30" /* ɵdid */](63, 16384, [[8, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, null], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](64, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](67, 0, null, 4, 1, "ion-radio", [["value", "username"]], [[2, "radio-disabled", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 68)._click($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, radio_button_ngfactory["b" /* View_RadioButton_0 */], radio_button_ngfactory["a" /* RenderType_RadioButton */])), core["_30" /* ɵdid */](68, 245760, null, 0, radio_button["a" /* RadioButton */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], [2, radio_group["a" /* RadioGroup */]]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](71, 0, null, null, 14, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](72, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 11, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 12, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 13, { _icons: 1 }), core["_30" /* ɵdid */](76, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](78, 0, null, 1, 3, "ion-label", [], null, null, null, null, null)), core["_30" /* ɵdid */](79, 16384, [[11, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, null], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](80, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](83, 0, null, 4, 1, "ion-radio", [["value", "email"]], [[2, "radio-disabled", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 84)._click($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, radio_button_ngfactory["b" /* View_RadioButton_0 */], radio_button_ngfactory["a" /* RenderType_RadioButton */])), core["_30" /* ɵdid */](84, 245760, null, 0, radio_button["a" /* RadioButton */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], [2, radio_group["a" /* RadioGroup */]]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](88, 0, null, null, 13, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](89, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 14, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 15, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 16, { _icons: 1 }), core["_30" /* ɵdid */](93, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](95, 0, null, 3, 5, "ion-input", [["autocapitalize", "none"], ["autocorrect", "off"], ["core-auto-focus", ""], ["formControlName", "value"], ["name", "value"], ["type", "text"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, input_ngfactory["b" /* View_TextInput_0 */], input_ngfactory["a" /* RenderType_TextInput */])), core["_30" /* ɵdid */](96, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [8, null]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](98, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](99, 5423104, null, 0, input["a" /* TextInput */], [config["a" /* Config */], platform["a" /* Platform */], util_form["a" /* Form */], app["a" /* App */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, content["a" /* Content */]], [2, item["a" /* Item */]], [2, esm5_forms["m" /* NgControl */]], dom_controller["a" /* DomController */]], { type: [0, "type"], autocorrect: [1, "autocorrect"], placeholder: [2, "placeholder"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](103, 0, null, null, 11, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](104, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 17, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 18, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 19, { _icons: 1 }), core["_30" /* ɵdid */](108, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](110, 0, null, 2, 3, "button", [["block", ""], ["ion-button", ""], ["text-wrap", ""]], [[8, "disabled", 0]], null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](111, 1097728, [[18, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](112, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_13 = _co.myForm; _ck(_v, 34, 0, currVal_13); var currVal_14 = "light"; _ck(_v, 39, 0, currVal_14); var currVal_15 = "light"; _ck(_v, 43, 0, currVal_15); var currVal_24 = "field"; _ck(_v, 51, 0, currVal_24); var currVal_27 = "username"; _ck(_v, 68, 0, currVal_27); var currVal_30 = "email"; _ck(_v, 84, 0, currVal_30); var currVal_38 = "value"; _ck(_v, 96, 0, currVal_38); var currVal_39 = "text"; var currVal_40 = "off"; var currVal_41 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 99, 2, core["_44" /* ɵnov */](_v, 100).transform("core.login.usernameoremail")), ""); _ck(_v, 99, 0, currVal_39, currVal_40, currVal_41); var currVal_43 = ""; _ck(_v, 111, 0, currVal_43); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("core.login.passwordforgotten")); _ck(_v, 8, 0, currVal_2); var currVal_3 = core["_44" /* ɵnov */](_v, 14).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 14)._hasRefresher; _ck(_v, 13, 0, currVal_3, currVal_4); var currVal_5 = core["_56" /* ɵunv */](_v, 25, 0, core["_44" /* ɵnov */](_v, 26).transform("core.login.passwordforgotteninstructions2")); _ck(_v, 25, 0, currVal_5); var currVal_6 = core["_44" /* ɵnov */](_v, 36).ngClassUntouched; var currVal_7 = core["_44" /* ɵnov */](_v, 36).ngClassTouched; var currVal_8 = core["_44" /* ɵnov */](_v, 36).ngClassPristine; var currVal_9 = core["_44" /* ɵnov */](_v, 36).ngClassDirty; var currVal_10 = core["_44" /* ɵnov */](_v, 36).ngClassValid; var currVal_11 = core["_44" /* ɵnov */](_v, 36).ngClassInvalid; var currVal_12 = core["_44" /* ɵnov */](_v, 36).ngClassPending; _ck(_v, 32, 0, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12); var currVal_16 = core["_56" /* ɵunv */](_v, 44, 0, core["_44" /* ɵnov */](_v, 45).transform("core.login.searchby")); _ck(_v, 44, 0, currVal_16); var currVal_17 = core["_44" /* ɵnov */](_v, 53).ngClassUntouched; var currVal_18 = core["_44" /* ɵnov */](_v, 53).ngClassTouched; var currVal_19 = core["_44" /* ɵnov */](_v, 53).ngClassPristine; var currVal_20 = core["_44" /* ɵnov */](_v, 53).ngClassDirty; var currVal_21 = core["_44" /* ɵnov */](_v, 53).ngClassValid; var currVal_22 = core["_44" /* ɵnov */](_v, 53).ngClassInvalid; var currVal_23 = core["_44" /* ɵnov */](_v, 53).ngClassPending; _ck(_v, 47, 0, currVal_17, currVal_18, currVal_19, currVal_20, currVal_21, currVal_22, currVal_23); var currVal_25 = core["_56" /* ɵunv */](_v, 64, 0, core["_44" /* ɵnov */](_v, 65).transform("core.login.username")); _ck(_v, 64, 0, currVal_25); var currVal_26 = core["_44" /* ɵnov */](_v, 68)._disabled; _ck(_v, 67, 0, currVal_26); var currVal_28 = core["_56" /* ɵunv */](_v, 80, 0, core["_44" /* ɵnov */](_v, 81).transform("core.user.email")); _ck(_v, 80, 0, currVal_28); var currVal_29 = core["_44" /* ɵnov */](_v, 84)._disabled; _ck(_v, 83, 0, currVal_29); var currVal_31 = core["_44" /* ɵnov */](_v, 98).ngClassUntouched; var currVal_32 = core["_44" /* ɵnov */](_v, 98).ngClassTouched; var currVal_33 = core["_44" /* ɵnov */](_v, 98).ngClassPristine; var currVal_34 = core["_44" /* ɵnov */](_v, 98).ngClassDirty; var currVal_35 = core["_44" /* ɵnov */](_v, 98).ngClassValid; var currVal_36 = core["_44" /* ɵnov */](_v, 98).ngClassInvalid; var currVal_37 = core["_44" /* ɵnov */](_v, 98).ngClassPending; _ck(_v, 95, 0, currVal_31, currVal_32, currVal_33, currVal_34, currVal_35, currVal_36, currVal_37); var currVal_42 = !_co.myForm.valid; _ck(_v, 110, 0, currVal_42); var currVal_44 = core["_56" /* ɵunv */](_v, 112, 0, core["_44" /* ɵnov */](_v, 113).transform("core.courses.search")); _ck(_v, 112, 0, currVal_44); }); }
+function View_CoreLoginForgottenPasswordPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-login-forgotten-password", [], null, null, null, View_CoreLoginForgottenPasswordPage_0, RenderType_CoreLoginForgottenPasswordPage)), core["_30" /* ɵdid */](1, 49152, null, 0, forgotten_password_CoreLoginForgottenPasswordPage, [nav_controller["a" /* NavController */], nav_params["a" /* NavParams */], esm5_forms["d" /* FormBuilder */], translate_service["a" /* TranslateService */], helper["a" /* CoreLoginHelperProvider */], dom["a" /* CoreDomUtilsProvider */]], null, null)], null, null); }
+var CoreLoginForgottenPasswordPageNgFactory = core["_27" /* ɵccf */]("page-core-login-forgotten-password", forgotten_password_CoreLoginForgottenPasswordPage, View_CoreLoginForgottenPasswordPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=forgotten-password.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(311);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(312);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(314);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(313);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(401);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(615);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(228);
+
+// CONCATENATED MODULE: ./src/core/login/pages/forgotten-password/forgotten-password.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginForgottenPasswordPageModuleNgFactory", function() { return CoreLoginForgottenPasswordPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var CoreLoginForgottenPasswordPageModuleNgFactory = core["_28" /* ɵcmf */](forgotten_password_module_CoreLoginForgottenPasswordPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], CoreLoginForgottenPasswordPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, forgotten_password_module_CoreLoginForgottenPasswordPageModule, forgotten_password_module_CoreLoginForgottenPasswordPageModule, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], forgotten_password_CoreLoginForgottenPasswordPage, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, [])]); });
+
+//# sourceMappingURL=forgotten-password.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=49.js.map

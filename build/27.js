@@ -1,1 +1,958 @@
-webpackJsonp([27],{1760:function(l,n,u){"use strict";function e(l){return N._57(0,[(l()(),N._31(0,0,null,null,2,"p",[],null,null,null,null,null)),(l()(),N._55(1,null,["",""])),N._47(131072,Il.a,[Cl.a,N.j])],null,function(l,n){l(n,1,0,N._56(n,1,0,N._44(n,2).transform("addon.mod_feedback.anonymous")))})}function t(l){return N._57(0,[(l()(),N._31(0,0,null,null,2,"p",[],null,null,null,null,null)),(l()(),N._55(1,null,["",""])),N._47(131072,Il.a,[Cl.a,N.j])],null,function(l,n){l(n,1,0,N._56(n,1,0,N._44(n,2).transform("addon.mod_feedback.non_anonymous")))})}function a(l){return N._57(0,[(l()(),N._31(0,0,null,null,5,"ion-item-divider",[["class","item item-divider"],["color","light"]],null,null,null,Pl.b,Pl.a)),N._30(1,1097728,null,3,yl.a,[wl.a,$l.a,N.t,N.V,[2,Vl.a]],{color:[0,"color"]},null),N._52(335544320,4,{contentLabel:0}),N._52(603979776,5,{_buttons:1}),N._52(603979776,6,{_icons:1}),N._30(5,16384,null,0,ql.a,[$l.a,N.t,N.V],{color:[0,"color"]},null)],function(l,n){l(n,1,0,"light");l(n,5,0,"light")},null)}function i(l){return N._57(0,[(l()(),N._31(0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),N._55(1,null,["",". "]))],null,function(l,n){l(n,1,0,n.parent.parent.parent.context.$implicit.itemnumber)})}function o(l){return N._57(0,[(l()(),N._31(0,0,null,null,9,"ion-label",[["stacked",""]],null,null,null,jl.b,jl.a)),N._30(1,4308992,null,0,Sl.a,[N.t,Cl.a,Ml.a,z.a],{coreMarkRequired:[0,"coreMarkRequired"]},null),N._30(2,16384,[[7,4]],0,Ol.a,[$l.a,N.t,N.V,[8,null],[8,""],[8,null],[8,null]],null,null),(l()(),N._55(-1,0,["\n                            "])),(l()(),N._26(16777216,null,0,1,null,i)),N._30(5,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,0,["\n                            "])),(l()(),N._31(7,0,null,0,1,"core-format-text",[],null,null,null,null,null)),N._30(8,540672,null,0,Fl.a,[N.t,nl.a,J.a,Ml.a,Cl.a,Rl.a,z.a,Ll.a,Nl.a,El.a,Q.a,ll.a,[2,Ul.a],[2,Al.a]],{text:[0,"text"],component:[1,"component"],componentId:[2,"componentId"]},null),(l()(),N._55(-1,0,["\n                        "]))],function(l,n){var u=n.component;l(n,1,0,n.parent.parent.context.$implicit.required);l(n,5,0,n.parent.parent.context.$implicit.itemnumber);l(n,8,0,n.parent.parent.context.$implicit.name,u.component,u.componentId)},null)}function r(l){return N._57(0,[(l()(),N._31(0,0,null,null,5,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._31(2,0,null,null,2,"p",[],null,null,null,null,null)),(l()(),N._31(3,0,null,null,1,"core-format-text",[],null,null,null,null,null)),N._30(4,540672,null,0,Fl.a,[N.t,nl.a,J.a,Ml.a,Cl.a,Rl.a,z.a,Ll.a,Nl.a,El.a,Q.a,ll.a,[2,Ul.a],[2,Al.a]],{text:[0,"text"],component:[1,"component"],componentId:[2,"componentId"]},null),(l()(),N._55(-1,null,["\n                                "]))],function(l,n){var u=n.component;l(n,4,0,n.parent.parent.parent.context.$implicit.presentation,u.component,u.componentId)},null)}function c(l){return N._57(0,[(l()(),N._31(0,0,null,null,10,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._31(2,0,null,null,7,"ion-input",[["autocorrect","off"],["type","text"]],[[1,"required",0],[1,"maxlength",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var e=!0;if("ngModelChange"===n){e=!1!==(l.parent.parent.parent.context.$implicit.value=u)&&e}return e},Tl.b,Tl.a)),N._30(3,16384,null,0,Hl.t,[],{required:[0,"required"]},null),N._30(4,540672,null,0,Hl.j,[],{maxlength:[0,"maxlength"]},null),N._50(1024,null,Hl.k,function(l,n){return[l,n]},[Hl.t,Hl.j]),N._30(6,671744,null,0,Hl.q,[[8,null],[2,Hl.k],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),N._50(2048,null,Hl.m,null,[Hl.q]),N._30(8,16384,null,0,Hl.n,[Hl.m],null,null),N._30(9,5423104,null,0,Kl.a,[$l.a,Rl.a,wl.a,Wl.a,N.t,N.V,[2,Al.a],[2,yl.a],[2,Hl.m],Bl.a],{type:[0,"type"],autocorrect:[1,"autocorrect"]},null),(l()(),N._55(-1,null,["\n                                "]))],function(l,n){l(n,3,0,n.parent.parent.parent.context.$implicit.required);l(n,4,0,N._34(1,"",n.parent.parent.parent.context.$implicit.maxlength,""));l(n,6,0,N._34(2,"",n.parent.parent.parent.context.$implicit.typ,"_",n.parent.parent.parent.context.$implicit.id,""),n.parent.parent.parent.context.$implicit.value);l(n,9,0,"text","off")},function(l,n){l(n,2,0,N._44(n,3).required?"":null,N._44(n,4).maxlength?N._44(n,4).maxlength:null,N._44(n,8).ngClassUntouched,N._44(n,8).ngClassTouched,N._44(n,8).ngClassPristine,N._44(n,8).ngClassDirty,N._44(n,8).ngClassValid,N._44(n,8).ngClassInvalid,N._44(n,8).ngClassPending)})}function _(l){return N._57(0,[(l()(),N._31(0,0,null,null,1,"span",[],null,null,null,null,null)),(l()(),N._55(-1,null,[", "]))],null,null)}function s(l){return N._57(0,[(l()(),N._31(0,0,null,null,5,"p",[["color","error"]],null,null,null,null,null)),(l()(),N._55(1,null,[""," [",""])),N._47(131072,Il.a,[Cl.a,N.j]),(l()(),N._26(16777216,null,null,1,null,_)),N._30(4,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(5,null,["","]"]))],function(l,n){l(n,4,0,n.parent.parent.parent.parent.context.$implicit.rangefrom&&n.parent.parent.parent.parent.context.$implicit.rangeto)},function(l,n){l(n,1,0,N._56(n,1,0,N._44(n,2).transform("addon.mod_feedback.numberoutofrange")),n.parent.parent.parent.parent.context.$implicit.rangefrom);l(n,5,0,n.parent.parent.parent.parent.context.$implicit.rangeto)})}function d(l){return N._57(0,[(l()(),N._31(0,0,null,null,12,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._31(2,0,null,null,6,"ion-input",[["type","number"]],[[1,"required",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var e=!0;if("ngModelChange"===n){e=!1!==(l.parent.parent.parent.context.$implicit.value=u)&&e}return e},Tl.b,Tl.a)),N._30(3,16384,null,0,Hl.t,[],{required:[0,"required"]},null),N._50(1024,null,Hl.k,function(l){return[l]},[Hl.t]),N._30(5,671744,null,0,Hl.q,[[8,null],[2,Hl.k],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),N._50(2048,null,Hl.m,null,[Hl.q]),N._30(7,16384,null,0,Hl.n,[Hl.m],null,null),N._30(8,5423104,null,0,Kl.a,[$l.a,Rl.a,wl.a,Wl.a,N.t,N.V,[2,Al.a],[2,yl.a],[2,Hl.m],Bl.a],{type:[0,"type"]},null),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._26(16777216,null,null,1,null,s)),N._30(11,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                                "]))],function(l,n){l(n,3,0,n.parent.parent.parent.context.$implicit.required);l(n,5,0,N._34(2,"",n.parent.parent.parent.context.$implicit.typ,"_",n.parent.parent.parent.context.$implicit.id,""),n.parent.parent.parent.context.$implicit.value);l(n,8,0,"number");l(n,11,0,n.parent.parent.parent.context.$implicit.hasError)},function(l,n){l(n,2,0,N._44(n,3).required?"":null,N._44(n,7).ngClassUntouched,N._44(n,7).ngClassTouched,N._44(n,7).ngClassPristine,N._44(n,7).ngClassDirty,N._44(n,7).ngClassValid,N._44(n,7).ngClassInvalid,N._44(n,7).ngClassPending)})}function p(l){return N._57(0,[(l()(),N._31(0,0,null,null,9,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._31(2,0,null,null,6,"ion-textarea",[],[[1,"aria-multiline",0],[1,"required",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var e=!0;if("ngModelChange"===n){e=!1!==(l.parent.parent.parent.context.$implicit.value=u)&&e}return e},Tl.b,Tl.a)),N._30(3,16384,null,0,Hl.t,[],{required:[0,"required"]},null),N._50(1024,null,Hl.k,function(l){return[l]},[Hl.t]),N._30(5,671744,null,0,Hl.q,[[8,null],[2,Hl.k],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),N._50(2048,null,Hl.m,null,[Hl.q]),N._30(7,16384,null,0,Hl.n,[Hl.m],null,null),N._30(8,5423104,null,0,Kl.a,[$l.a,Rl.a,wl.a,Wl.a,N.t,N.V,[2,Al.a],[2,yl.a],[2,Hl.m],Bl.a],null,null),(l()(),N._55(-1,null,["\n                                "]))],function(l,n){l(n,3,0,n.parent.parent.parent.context.$implicit.required);l(n,5,0,N._34(2,"",n.parent.parent.parent.context.$implicit.typ,"_",n.parent.parent.parent.context.$implicit.id,""),n.parent.parent.parent.context.$implicit.value)},function(l,n){l(n,2,0,!0,N._44(n,3).required?"":null,N._44(n,7).ngClassUntouched,N._44(n,7).ngClassTouched,N._44(n,7).ngClassPristine,N._44(n,7).ngClassDirty,N._44(n,7).ngClassValid,N._44(n,7).ngClassInvalid,N._44(n,7).ngClassPending)})}function f(l){return N._57(0,[(l()(),N._31(0,0,null,null,14,"ion-item",[["class","item item-block"]],null,null,null,Pl.b,Pl.a)),N._30(1,1097728,null,3,yl.a,[wl.a,$l.a,N.t,N.V,[2,Vl.a]],null,null),N._52(335544320,11,{contentLabel:0}),N._52(603979776,12,{_buttons:1}),N._52(603979776,13,{_icons:1}),N._30(5,16384,null,0,Gl.a,[],null,null),(l()(),N._55(-1,2,["\n                                            "])),(l()(),N._31(7,0,null,1,3,"ion-label",[],null,null,null,null,null)),N._30(8,16384,[[11,4],[7,4]],0,Ol.a,[$l.a,N.t,N.V,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),N._31(9,0,null,null,1,"core-format-text",[],null,null,null,null,null)),N._30(10,540672,null,0,Fl.a,[N.t,nl.a,J.a,Ml.a,Cl.a,Rl.a,z.a,Ll.a,Nl.a,El.a,Q.a,ll.a,[2,Ul.a],[2,Al.a]],{text:[0,"text"],component:[1,"component"],componentId:[2,"componentId"]},null),(l()(),N._55(-1,2,["\n                                            "])),(l()(),N._31(12,0,null,4,1,"ion-radio",[],[[2,"radio-disabled",null]],[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==N._44(l,13)._click(u)&&e}return e},Jl.b,Jl.a)),N._30(13,245760,null,0,zl.a,[wl.a,$l.a,N.t,N.V,[2,yl.a],[2,Ql.a]],{value:[0,"value"]},null),(l()(),N._55(-1,2,["\n                                        "]))],function(l,n){var u=n.component;l(n,10,0,n.context.$implicit.label,u.component,u.componentId);l(n,13,0,n.context.$implicit.value)},function(l,n){l(n,12,0,N._44(n,13)._disabled)})}function m(l){return N._57(0,[(l()(),N._31(0,0,null,null,16,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._31(2,0,null,null,13,"ion-list",[["radio-group",""],["role","radiogroup"]],[[1,"required",0],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(l,n,u){var e=!0;if("ngModelChange"===n){e=!1!==(l.parent.parent.parent.context.$implicit.value=u)&&e}return e},null,null)),N._30(3,16384,null,0,Hl.t,[],{required:[0,"required"]},null),N._50(1024,null,Hl.k,function(l){return[l]},[Hl.t]),N._30(5,1064960,null,1,Ql.a,[N.V,N.t,N.j],null,null),N._52(335544320,10,{_header:0}),N._50(1024,null,Hl.l,function(l){return[l]},[Ql.a]),N._30(8,671744,null,0,Hl.q,[[8,null],[2,Hl.k],[8,null],[2,Hl.l]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),N._50(2048,null,Hl.m,null,[Hl.q]),N._30(10,16384,null,0,Hl.n,[Hl.m],null,null),N._30(11,16384,null,0,Xl.a,[$l.a,N.t,N.V,Rl.a,Yl.l,Bl.a],null,null),(l()(),N._55(-1,null,["\n                                        "])),(l()(),N._26(16777216,null,null,1,null,f)),N._30(14,802816,null,0,Dl.j,[N._11,N._6,N.E],{ngForOf:[0,"ngForOf"]},null),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._55(-1,null,["\n                                "]))],function(l,n){l(n,3,0,n.parent.parent.parent.context.$implicit.required);l(n,8,0,N._34(2,"",n.parent.parent.parent.context.$implicit.typ,"_",n.parent.parent.parent.context.$implicit.id,""),n.parent.parent.parent.context.$implicit.value);l(n,14,0,n.parent.parent.parent.context.$implicit.choices)},function(l,n){l(n,2,0,N._44(n,3).required?"":null,N._44(n,10).ngClassUntouched,N._44(n,10).ngClassTouched,N._44(n,10).ngClassPristine,N._44(n,10).ngClassDirty,N._44(n,10).ngClassValid,N._44(n,10).ngClassInvalid,N._44(n,10).ngClassPending)})}function g(l){return N._57(0,[(l()(),N._31(0,0,null,null,20,"ion-item",[["class","item item-block"]],null,null,null,Pl.b,Pl.a)),N._30(1,1097728,null,3,yl.a,[wl.a,$l.a,N.t,N.V,[2,Vl.a]],null,null),N._52(335544320,14,{contentLabel:0}),N._52(603979776,15,{_buttons:1}),N._52(603979776,16,{_icons:1}),N._30(5,16384,null,0,Gl.a,[],null,null),(l()(),N._55(-1,2,["\n                                        "])),(l()(),N._31(7,0,null,1,3,"ion-label",[],null,null,null,null,null)),N._30(8,16384,[[14,4],[7,4]],0,Ol.a,[$l.a,N.t,N.V,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),N._31(9,0,null,null,1,"core-format-text",[],null,null,null,null,null)),N._30(10,540672,null,0,Fl.a,[N.t,nl.a,J.a,Ml.a,Cl.a,Rl.a,z.a,Ll.a,Nl.a,El.a,Q.a,ll.a,[2,Ul.a],[2,Al.a]],{text:[0,"text"],component:[1,"component"],componentId:[2,"componentId"]},null),(l()(),N._55(-1,2,["\n                                        "])),(l()(),N._31(12,0,null,0,7,"ion-checkbox",[["value","option.value"]],[[1,"required",0],[2,"checkbox-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==N._44(l,15)._click(u)&&e}if("ngModelChange"===n){e=!1!==(l.context.$implicit.checked=u)&&e}return e},Zl.b,Zl.a)),N._30(13,16384,null,0,Hl.t,[],{required:[0,"required"]},null),N._50(1024,null,Hl.k,function(l){return[l]},[Hl.t]),N._30(15,1228800,null,0,ln.a,[$l.a,wl.a,[2,yl.a],N.t,N.V],null,null),N._50(1024,null,Hl.l,function(l){return[l]},[ln.a]),N._30(17,671744,null,0,Hl.q,[[8,null],[2,Hl.k],[8,null],[2,Hl.l]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),N._50(2048,null,Hl.m,null,[Hl.q]),N._30(19,16384,null,0,Hl.n,[Hl.m],null,null),(l()(),N._55(-1,2,["\n                                    "]))],function(l,n){var u=n.component;l(n,10,0,n.context.$implicit.label,u.component,u.componentId);l(n,13,0,n.parent.parent.parent.parent.context.$implicit.required);l(n,17,0,N._34(2,"",n.parent.parent.parent.parent.context.$implicit.typ,"_",n.parent.parent.parent.parent.context.$implicit.id,""),n.context.$implicit.checked)},function(l,n){l(n,12,0,N._44(n,13).required?"":null,N._44(n,15)._disabled,N._44(n,19).ngClassUntouched,N._44(n,19).ngClassTouched,N._44(n,19).ngClassPristine,N._44(n,19).ngClassDirty,N._44(n,19).ngClassValid,N._44(n,19).ngClassInvalid,N._44(n,19).ngClassPending)})}function h(l){return N._57(0,[(l()(),N._31(0,0,null,null,5,"ion-list",[],null,null,null,null,null)),N._30(1,16384,null,0,Xl.a,[$l.a,N.t,N.V,Rl.a,Yl.l,Bl.a],null,null),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._26(16777216,null,null,1,null,g)),N._30(4,802816,null,0,Dl.j,[N._11,N._6,N.E],{ngForOf:[0,"ngForOf"]},null),(l()(),N._55(-1,null,["\n                                "]))],function(l,n){l(n,4,0,n.parent.parent.parent.context.$implicit.choices)},null)}function b(l){return N._57(0,[(l()(),N._31(0,0,null,null,3,"ion-option",[],null,null,null,null,null)),N._30(1,16384,[[17,4]],0,nn.a,[N.t],{value:[0,"value"]},null),(l()(),N._31(2,0,null,null,1,"core-format-text",[],null,null,null,null,null)),N._30(3,540672,null,0,Fl.a,[N.t,nl.a,J.a,Ml.a,Cl.a,Rl.a,z.a,Ll.a,Nl.a,El.a,Q.a,ll.a,[2,Ul.a],[2,Al.a]],{text:[0,"text"],component:[1,"component"],componentId:[2,"componentId"]},null)],function(l,n){var u=n.component;l(n,1,0,n.context.$implicit.value);l(n,3,0,n.context.$implicit.label,u.component,u.componentId)},null)}function k(l){return N._57(0,[(l()(),N._31(0,0,null,null,15,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._31(2,0,null,null,12,"ion-select",[["interface","popover"]],[[1,"required",0],[2,"select-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"],[null,"keyup.space"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==N._44(l,5)._click(u)&&e}if("keyup.space"===n){e=!1!==N._44(l,5)._keyup()&&e}if("ngModelChange"===n){e=!1!==(l.parent.parent.parent.context.$implicit.value=u)&&e}return e},un.b,un.a)),N._30(3,16384,null,0,Hl.t,[],{required:[0,"required"]},null),N._50(1024,null,Hl.k,function(l){return[l]},[Hl.t]),N._30(5,1228800,null,1,en.a,[Wl.a,wl.a,$l.a,N.t,N.V,[2,yl.a],tn.a],{interface:[0,"interface"]},null),N._52(603979776,17,{options:1}),N._50(1024,null,Hl.l,function(l){return[l]},[en.a]),N._30(8,671744,null,0,Hl.q,[[8,null],[2,Hl.k],[8,null],[2,Hl.l]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),N._50(2048,null,Hl.m,null,[Hl.q]),N._30(10,16384,null,0,Hl.n,[Hl.m],null,null),(l()(),N._55(-1,null,["\n                                        "])),(l()(),N._26(16777216,null,null,1,null,b)),N._30(13,802816,null,0,Dl.j,[N._11,N._6,N.E],{ngForOf:[0,"ngForOf"]},null),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._55(-1,null,["\n                                "]))],function(l,n){l(n,3,0,n.parent.parent.parent.context.$implicit.required);l(n,5,0,"popover");l(n,8,0,N._34(2,"",n.parent.parent.parent.context.$implicit.typ,"_",n.parent.parent.parent.context.$implicit.id,""),n.parent.parent.parent.context.$implicit.value);l(n,13,0,n.parent.parent.parent.context.$implicit.choices)},function(l,n){l(n,2,0,N._44(n,3).required?"":null,N._44(n,5)._disabled,N._44(n,10).ngClassUntouched,N._44(n,10).ngClassTouched,N._44(n,10).ngClassPristine,N._44(n,10).ngClassDirty,N._44(n,10).ngClassValid,N._44(n,10).ngClassInvalid,N._44(n,10).ngClassPending)})}function v(l){return N._57(0,[(l()(),N._31(0,0,null,null,1,"core-recaptcha",[["modelValueName","value"]],null,null,null,an.b,an.a)),N._30(1,114688,null,0,on.a,[nl.a,rn.a,Ml.a,cn.a],{model:[0,"model"],publicKey:[1,"publicKey"],modelValueName:[2,"modelValueName"]},null)],function(l,n){l(n,1,0,n.parent.parent.parent.parent.context.$implicit,n.parent.parent.parent.parent.context.$implicit.captcha.recaptchapublickey,"value")},null)}function x(l){return N._57(0,[(l()(),N._31(0,0,null,null,5,"div",[["class","core-warning-card"],["icon-start",""]],null,null,null,null,null)),(l()(),N._55(-1,null,["\n                                        "])),(l()(),N._31(2,0,null,null,1,"ion-icon",[["name","warning"],["role","img"]],[[2,"hide",null]],null,null,null,null)),N._30(3,147456,null,0,_n.a,[$l.a,N.t,N.V],{name:[0,"name"]},null),(l()(),N._55(4,null,["\n                                        ","\n                                    "])),N._47(131072,Il.a,[Cl.a,N.j])],function(l,n){l(n,3,0,"warning")},function(l,n){l(n,2,0,N._44(n,3)._hidden);l(n,4,0,N._56(n,4,0,N._44(n,5).transform("addon.mod_feedback.captchaofflinewarning")))})}function I(l){return N._57(0,[(l()(),N._31(0,0,null,null,7,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._26(16777216,null,null,1,null,v)),N._30(3,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                                    "])),(l()(),N._26(16777216,null,null,1,null,x)),N._30(6,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                                "]))],function(l,n){var u=n.component;l(n,3,0,!u.preview&&!u.offline);l(n,6,0,!u.preview&&(!n.parent.parent.parent.context.$implicit.captcha||u.offline))},null)}function C(l){return N._57(0,[(l()(),N._31(0,0,null,null,29,"div",[["class","addon-mod_feedback-form-content"],["item-content",""]],null,null,null,null,null)),(l()(),N._55(-1,null,["\n                            "])),(l()(),N._31(2,0,null,null,26,null,null,null,null,null,null,null)),N._30(3,16384,null,0,Dl.o,[],{ngSwitch:[0,"ngSwitch"]},null),(l()(),N._55(-1,null,["\n                                "])),(l()(),N._26(16777216,null,null,1,null,r)),N._30(6,278528,null,0,Dl.p,[N._11,N._6,Dl.o],{ngSwitchCase:[0,"ngSwitchCase"]},null),(l()(),N._55(-1,null,["\n                                "])),(l()(),N._26(16777216,null,null,1,null,c)),N._30(9,278528,null,0,Dl.p,[N._11,N._6,Dl.o],{ngSwitchCase:[0,"ngSwitchCase"]},null),(l()(),N._55(-1,null,["\n                                "])),(l()(),N._26(16777216,null,null,1,null,d)),N._30(12,278528,null,0,Dl.p,[N._11,N._6,Dl.o],{ngSwitchCase:[0,"ngSwitchCase"]},null),(l()(),N._55(-1,null,["\n                                "])),(l()(),N._26(16777216,null,null,1,null,p)),N._30(15,278528,null,0,Dl.p,[N._11,N._6,Dl.o],{ngSwitchCase:[0,"ngSwitchCase"]},null),(l()(),N._55(-1,null,["\n                                "])),(l()(),N._26(16777216,null,null,1,null,m)),N._30(18,278528,null,0,Dl.p,[N._11,N._6,Dl.o],{ngSwitchCase:[0,"ngSwitchCase"]},null),(l()(),N._55(-1,null,["\n                                "])),(l()(),N._26(16777216,null,null,1,null,h)),N._30(21,278528,null,0,Dl.p,[N._11,N._6,Dl.o],{ngSwitchCase:[0,"ngSwitchCase"]},null),(l()(),N._55(-1,null,["\n                                "])),(l()(),N._26(16777216,null,null,1,null,k)),N._30(24,278528,null,0,Dl.p,[N._11,N._6,Dl.o],{ngSwitchCase:[0,"ngSwitchCase"]},null),(l()(),N._55(-1,null,["\n                                "])),(l()(),N._26(16777216,null,null,1,null,I)),N._30(27,278528,null,0,Dl.p,[N._11,N._6,Dl.o],{ngSwitchCase:[0,"ngSwitchCase"]},null),(l()(),N._55(-1,null,["\n                            "])),(l()(),N._55(-1,null,["\n                        "]))],function(l,n){l(n,3,0,n.parent.parent.context.$implicit.template);l(n,6,0,"label");l(n,9,0,"textfield");l(n,12,0,"numeric");l(n,15,0,"textarea");l(n,18,0,"multichoice-r");l(n,21,0,"multichoice-c");l(n,24,0,"multichoice-d");l(n,27,0,"captcha")},null)}function P(l){return N._57(0,[(l()(),N._31(0,0,null,null,12,"ion-item",[["class","item item-block"],["text-wrap",""]],[[2,"core-danger-item",null]],null,null,Pl.b,Pl.a)),N._30(1,1097728,null,3,yl.a,[wl.a,$l.a,N.t,N.V,[2,Vl.a]],{color:[0,"color"]},null),N._52(603979776,7,{contentLabel:0}),N._52(603979776,8,{_buttons:1}),N._52(603979776,9,{_icons:1}),N._30(5,16384,null,0,Gl.a,[],null,null),(l()(),N._55(-1,2,["\n                        "])),(l()(),N._26(16777216,null,1,1,null,o)),N._30(8,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,2,["\n                        "])),(l()(),N._26(16777216,null,3,1,null,C)),N._30(11,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,2,["\n                    "]))],function(l,n){l(n,1,0,n.parent.context.$implicit.dependitem>0?"light":"");l(n,8,0,n.parent.context.$implicit.name);l(n,11,0,n.parent.context.$implicit.template)},function(l,n){l(n,0,0,n.parent.context.$implicit.isEmpty||n.parent.context.$implicit.hasError)})}function y(l){return N._57(0,[(l()(),N._31(0,0,null,null,7,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n                    "])),(l()(),N._26(16777216,null,null,1,null,a)),N._30(3,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                    "])),(l()(),N._26(16777216,null,null,1,null,P)),N._30(6,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                "]))],function(l,n){l(n,3,0,"pagebreak"==n.context.$implicit.typ);l(n,6,0,"pagebreak"!=n.context.$implicit.typ)},null)}function w(l){return N._57(0,[(l()(),N._31(0,0,null,null,10,"ion-col",[["class","col"]],null,null,null,null,null)),N._30(1,16384,null,0,sn.a,[],null,null),(l()(),N._55(-1,null,["\n                            "])),(l()(),N._31(3,0,null,null,6,"button",[["block",""],["icon-start",""],["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.gotoPage(!0)&&e}return e},dn.b,dn.a)),N._30(4,1097728,null,0,pn.a,[[8,""],$l.a,N.t,N.V],{outline:[0,"outline"],block:[1,"block"]},null),(l()(),N._55(-1,0,["\n                                "])),(l()(),N._31(6,0,null,0,1,"ion-icon",[["name","arrow-back"],["role","img"]],[[2,"hide",null]],null,null,null,null)),N._30(7,147456,null,0,_n.a,[$l.a,N.t,N.V],{name:[0,"name"]},null),(l()(),N._55(8,0,["\n                                ","\n                            "])),N._47(131072,Il.a,[Cl.a,N.j]),(l()(),N._55(-1,null,["\n                        "]))],function(l,n){l(n,4,0,"","");l(n,7,0,"arrow-back")},function(l,n){l(n,6,0,N._44(n,7)._hidden);l(n,8,0,N._56(n,8,0,N._44(n,9).transform("addon.mod_feedback.previous_page")))})}function $(l){return N._57(0,[(l()(),N._31(0,0,null,null,10,"ion-col",[["class","col"]],null,null,null,null,null)),N._30(1,16384,null,0,sn.a,[],null,null),(l()(),N._55(-1,null,["\n                            "])),(l()(),N._31(3,0,null,null,6,"button",[["block",""],["icon-end",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.gotoPage(!1)&&e}return e},dn.b,dn.a)),N._30(4,1097728,null,0,pn.a,[[8,""],$l.a,N.t,N.V],{block:[0,"block"]},null),(l()(),N._55(5,0,["\n                                ","\n                                "])),N._47(131072,Il.a,[Cl.a,N.j]),(l()(),N._31(7,0,null,0,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),N._30(8,147456,null,0,_n.a,[$l.a,N.t,N.V],{name:[0,"name"]},null),(l()(),N._55(-1,0,["\n                            "])),(l()(),N._55(-1,null,["\n                        "]))],function(l,n){l(n,4,0,"");l(n,8,0,"arrow-forward")},function(l,n){l(n,5,0,N._56(n,5,0,N._44(n,6).transform("addon.mod_feedback.next_page")));l(n,7,0,N._44(n,8)._hidden)})}function V(l){return N._57(0,[(l()(),N._31(0,0,null,null,7,"ion-col",[["class","col"]],null,null,null,null,null)),N._30(1,16384,null,0,sn.a,[],null,null),(l()(),N._55(-1,null,["\n                            "])),(l()(),N._31(3,0,null,null,3,"button",[["block",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.gotoPage(!1)&&e}return e},dn.b,dn.a)),N._30(4,1097728,null,0,pn.a,[[8,""],$l.a,N.t,N.V],{block:[0,"block"]},null),(l()(),N._55(5,0,["\n                                ","\n                            "])),N._47(131072,Il.a,[Cl.a,N.j]),(l()(),N._55(-1,null,["\n                        "]))],function(l,n){l(n,4,0,"")},function(l,n){l(n,5,0,N._56(n,5,0,N._44(n,6).transform("addon.mod_feedback.save_entries")))})}function q(l){return N._57(0,[(l()(),N._31(0,0,null,null,43,null,null,null,null,null,null,null)),(l()(),N._55(-1,null,["\n            "])),(l()(),N._31(2,0,null,null,40,"ion-list",[["no-margin",""]],null,null,null,null,null)),N._30(3,16384,null,0,Xl.a,[$l.a,N.t,N.V,Rl.a,Yl.l,Bl.a],null,null),(l()(),N._55(-1,null,["\n                "])),(l()(),N._31(5,0,null,null,16,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,Pl.b,Pl.a)),N._30(6,1097728,null,3,yl.a,[wl.a,$l.a,N.t,N.V,[2,Vl.a]],null,null),N._52(335544320,1,{contentLabel:0}),N._52(603979776,2,{_buttons:1}),N._52(603979776,3,{_icons:1}),N._30(10,16384,null,0,Gl.a,[],null,null),(l()(),N._55(-1,2,["\n                    "])),(l()(),N._31(12,0,null,2,2,"h2",[],null,null,null,null,null)),(l()(),N._55(13,null,["",""])),N._47(131072,Il.a,[Cl.a,N.j]),(l()(),N._55(-1,2,["\n                    "])),(l()(),N._26(16777216,null,2,1,null,e)),N._30(17,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,2,["\n                    "])),(l()(),N._26(16777216,null,2,1,null,t)),N._30(20,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,2,["\n                "])),(l()(),N._55(-1,null,["\n                "])),(l()(),N._26(16777216,null,null,1,null,y)),N._30(24,802816,null,0,Dl.j,[N._11,N._6,N.E],{ngForOf:[0,"ngForOf"]},null),(l()(),N._55(-1,null,["\n                "])),(l()(),N._31(26,0,null,null,15,"ion-grid",[["class","grid"]],null,null,null,null,null)),N._30(27,16384,null,0,fn.a,[],null,null),(l()(),N._55(-1,null,["\n                    "])),(l()(),N._31(29,0,null,null,11,"ion-row",[["align-items-center",""],["class","row"]],null,null,null,null,null)),N._30(30,16384,null,0,mn.a,[],null,null),(l()(),N._55(-1,null,["\n                        "])),(l()(),N._26(16777216,null,null,1,null,w)),N._30(33,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                        "])),(l()(),N._26(16777216,null,null,1,null,$)),N._30(36,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                        "])),(l()(),N._26(16777216,null,null,1,null,V)),N._30(39,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                    "])),(l()(),N._55(-1,null,["\n                "])),(l()(),N._55(-1,null,["\n            "])),(l()(),N._55(-1,null,["\n        "]))],function(l,n){var u=n.component;l(n,17,0,u.access.isanonymous);l(n,20,0,!u.access.isanonymous);l(n,24,0,u.items);l(n,33,0,u.hasPrevPage);l(n,36,0,u.hasNextPage);l(n,39,0,!u.hasNextPage)},function(l,n){l(n,13,0,N._56(n,13,0,N._44(n,14).transform("addon.mod_feedback.mode")))})}function j(l){return N._57(0,[(l()(),N._31(0,0,null,null,2,"p",[],null,null,null,null,null)),(l()(),N._55(1,null,["",""])),N._47(131072,Il.a,[Cl.a,N.j])],null,function(l,n){l(n,1,0,N._56(n,1,0,N._44(n,2).transform("addon.mod_feedback.this_feedback_is_already_submitted")))})}function S(l){return N._57(0,[(l()(),N._31(0,0,null,null,2,"p",[],null,null,null,null,null)),(l()(),N._55(1,null,["",""])),N._47(131072,Il.a,[Cl.a,N.j])],null,function(l,n){l(n,1,0,N._56(n,1,0,N._44(n,2).transform("addon.mod_feedback.feedback_submitted_offline")))})}function M(l){return N._57(0,[(l()(),N._31(0,0,null,null,2,"p",[],null,null,null,null,null)),(l()(),N._31(1,0,null,null,1,"core-format-text",[["componentId","componentId"]],null,null,null,null,null)),N._30(2,540672,null,0,Fl.a,[N.t,nl.a,J.a,Ml.a,Cl.a,Rl.a,z.a,Ll.a,Nl.a,El.a,Q.a,ll.a,[2,Ul.a],[2,Al.a]],{text:[0,"text"],component:[1,"component"],componentId:[2,"componentId"]},null)],function(l,n){var u=n.component;l(n,2,0,u.completionPageContents,u.component,"componentId")},null)}function O(l){return N._57(0,[(l()(),N._31(0,0,null,null,13,"div",[["class","core-success-card"],["icon-start",""]],null,null,null,null,null)),(l()(),N._55(-1,null,["\n            "])),(l()(),N._31(2,0,null,null,1,"ion-icon",[["name","checkmark"],["role","img"]],[[2,"hide",null]],null,null,null,null)),N._30(3,147456,null,0,_n.a,[$l.a,N.t,N.V],{name:[0,"name"]},null),(l()(),N._55(-1,null,["\n            "])),(l()(),N._26(16777216,null,null,1,null,j)),N._30(6,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n            "])),(l()(),N._26(16777216,null,null,1,null,S)),N._30(9,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n            "])),(l()(),N._26(16777216,null,null,1,null,M)),N._30(12,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n        "]))],function(l,n){var u=n.component;l(n,3,0,"checkmark");l(n,6,0,!u.completionPageContents&&!u.completedOffline);l(n,9,0,!u.completionPageContents&&u.completedOffline);l(n,12,0,u.completionPageContents)},function(l,n){l(n,2,0,N._44(n,3)._hidden)})}function D(l){return N._57(0,[(l()(),N._31(0,0,null,null,10,"ion-col",[["class","col"]],null,null,null,null,null)),N._30(1,16384,null,0,sn.a,[],null,null),(l()(),N._55(-1,null,["\n                    "])),(l()(),N._31(3,0,null,null,6,"button",[["block",""],["icon-start",""],["ion-button",""],["outline",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.showAnalysis()&&e}return e},dn.b,dn.a)),N._30(4,1097728,null,0,pn.a,[[8,""],$l.a,N.t,N.V],{outline:[0,"outline"],block:[1,"block"]},null),(l()(),N._55(-1,0,["\n                        "])),(l()(),N._31(6,0,null,0,1,"ion-icon",[["name","stats"],["role","img"]],[[2,"hide",null]],null,null,null,null)),N._30(7,147456,null,0,_n.a,[$l.a,N.t,N.V],{name:[0,"name"]},null),(l()(),N._55(8,0,["\n                        ","\n                    "])),N._47(131072,Il.a,[Cl.a,N.j]),(l()(),N._55(-1,null,["\n                "]))],function(l,n){l(n,4,0,"","");l(n,7,0,"stats")},function(l,n){l(n,6,0,N._44(n,7)._hidden);l(n,8,0,N._56(n,8,0,N._44(n,9).transform("addon.mod_feedback.completed_feedbacks")))})}function F(l){return N._57(0,[(l()(),N._31(0,0,null,null,10,"ion-col",[["class","col"]],null,null,null,null,null)),N._30(1,16384,null,0,sn.a,[],null,null),(l()(),N._55(-1,null,["\n                    "])),(l()(),N._31(3,0,null,null,6,"button",[["block",""],["icon-end",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.continue()&&e}return e},dn.b,dn.a)),N._30(4,1097728,null,0,pn.a,[[8,""],$l.a,N.t,N.V],{block:[0,"block"]},null),(l()(),N._55(5,0,["\n                        ","\n                        "])),N._47(131072,Il.a,[Cl.a,N.j]),(l()(),N._31(7,0,null,0,1,"ion-icon",[["name","arrow-forward"],["role","img"]],[[2,"hide",null]],null,null,null,null)),N._30(8,147456,null,0,_n.a,[$l.a,N.t,N.V],{name:[0,"name"]},null),(l()(),N._55(-1,0,["\n                    "])),(l()(),N._55(-1,null,["\n                "]))],function(l,n){l(n,4,0,"");l(n,8,0,"arrow-forward")},function(l,n){l(n,5,0,N._56(n,5,0,N._44(n,6).transform("core.continue")));l(n,7,0,N._44(n,8)._hidden)})}function R(l){return N._57(0,[(l()(),N._31(0,0,null,null,12,"ion-grid",[["class","grid"]],null,null,null,null,null)),N._30(1,16384,null,0,fn.a,[],null,null),(l()(),N._55(-1,null,["\n            "])),(l()(),N._31(3,0,null,null,8,"ion-row",[["align-items-center",""],["class","row"]],null,null,null,null,null)),N._30(4,16384,null,0,mn.a,[],null,null),(l()(),N._55(-1,null,["\n                "])),(l()(),N._26(16777216,null,null,1,null,D)),N._30(7,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n                "])),(l()(),N._26(16777216,null,null,1,null,F)),N._30(10,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,null,["\n            "])),(l()(),N._55(-1,null,["\n        "]))],function(l,n){var u=n.component;l(n,7,0,u.access.canviewanalysis);l(n,10,0,u.hasNextPage)},null)}function L(l){return N._57(0,[(l()(),N._31(0,0,null,null,11,"ion-header",[],null,null,null,null,null)),N._30(1,16384,null,0,gn.a,[$l.a,N.t,N.V,[2,hn.a]],null,null),(l()(),N._55(-1,null,["\n    "])),(l()(),N._31(3,0,null,null,7,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,bn.b,bn.a)),N._30(4,49152,null,0,kn.a,[Wl.a,[2,hn.a],[2,Ul.a],$l.a,N.t,N.V],null,null),(l()(),N._55(-1,3,["\n        "])),(l()(),N._31(6,0,null,3,3,"ion-title",[],null,null,null,vn.b,vn.a)),N._30(7,49152,null,0,xn.a,[$l.a,N.t,N.V,[2,In.a],[2,kn.a]],null,null),(l()(),N._31(8,0,null,0,1,"core-format-text",[],null,null,null,null,null)),N._30(9,540672,null,0,Fl.a,[N.t,nl.a,J.a,Ml.a,Cl.a,Rl.a,z.a,Ll.a,Nl.a,El.a,Q.a,ll.a,[2,Ul.a],[2,Al.a]],{text:[0,"text"]},null),(l()(),N._55(-1,3,["\n    "])),(l()(),N._55(-1,null,["\n"])),(l()(),N._55(-1,null,["\n"])),(l()(),N._31(13,0,null,null,15,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,Cn.b,Cn.a)),N._30(14,4374528,null,0,Al.a,[$l.a,Rl.a,Bl.a,N.t,N.V,Wl.a,Pn.a,N.M,[2,hn.a],[2,Ul.a]],null,null),(l()(),N._55(-1,1,["\n    "])),(l()(),N._31(16,0,null,1,11,"core-loading",[],null,null,null,yn.b,yn.a)),N._30(17,638976,null,0,wn.a,[Cl.a,N.t],{hideUntil:[0,"hideUntil"]},null),(l()(),N._55(-1,0,["\n        "])),(l()(),N._26(16777216,null,0,1,null,q)),N._30(20,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,0,["\n\n        "])),(l()(),N._26(16777216,null,0,1,null,O)),N._30(23,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,0,["\n\n        "])),(l()(),N._26(16777216,null,0,1,null,R)),N._30(26,16384,null,0,Dl.k,[N._11,N._6],{ngIf:[0,"ngIf"]},null),(l()(),N._55(-1,0,["\n    "])),(l()(),N._55(-1,1,["\n"])),(l()(),N._55(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,9,0,u.title);l(n,17,0,u.feedbackLoaded);l(n,20,0,u.items&&u.items.length);l(n,23,0,u.completed);l(n,26,0,u.completed)},function(l,n){l(n,3,0,N._44(n,4)._hidden,N._44(n,4)._sbPadding);l(n,13,0,N._44(n,14).statusbarPadding,N._44(n,14)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var N=u(0),E=u(9),U=u(7),A=u(30),T=u(31),H=u(618),K=u(189),W=u(123),B=u(257),G=u(266),J=u(6),z=u(4),Q=u(12),X=u(21),Y=u(14),Z=u(113),ll=u(22),nl=u(1),ul=this&&this.__decorate||function(l,n,u,e){var t,a=arguments.length,i=a<3?n:null===e?e=Object.getOwnPropertyDescriptor(n,u):e;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(l,n,u,e);else for(var o=l.length-1;o>=0;o--)(t=l[o])&&(i=(a<3?t(i):a>3?t(n,u,i):t(n,u))||i);return a>3&&i&&Object.defineProperty(n,u,i),i},el=this&&this.__metadata||function(l,n){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(l,n)},tl=this&&this.__param||function(l,n){return function(u,e){n(u,e,l)}},al=function(){function l(l,n,u,e,t,a,i,o,r,c,_,s,d,p,f,m){var g=this;this.feedbackProvider=n,this.appProvider=u,this.utils=e,this.domUtils=t,this.navCtrl=a,this.feedbackHelper=i,this.courseProvider=o,this.eventsProvider=r,this.feedbackSync=c,this.translate=s,this.loginHelper=d,this.linkHelper=p,this.content=m,this.forceLeave=!1,this.preview=!1,this.component=W.a.COMPONENT,this.offline=!1,this.feedbackLoaded=!1,this.items=[],this.hasPrevPage=!1,this.hasNextPage=!1,this.completed=!1,this.completedOffline=!1,this.module=l.get("module"),this.courseId=l.get("courseId"),this.currentPage=l.get("page"),this.title=l.get("title"),this.preview=!!l.get("preview"),this.componentId=l.get("moduleId")||this.module.id,this.currentSite=f.getCurrentSite(),this.onlineObserver=_.onchange().subscribe(function(l){g.offline=!l})}return l.prototype.ionViewDidLoad=function(){var l=this;this.fetchData().then(function(){l.feedbackProvider.logView(l.feedback.id,!0).then(function(){l.courseProvider.checkModuleCompletion(l.courseId,l.module.completionstatus)})})},l.prototype.ionViewDidEnter=function(){this.forceLeave=!1},l.prototype.ionViewCanLeave=function(){if(this.forceLeave)return!0;if(!this.preview){var l=this.feedbackHelper.getPageItemsResponses(this.items);if(this.items&&!this.completed&&this.originalData&&!this.utils.basicLeftCompare(l,this.originalData,3))return this.domUtils.showConfirm(this.translate.instant("core.confirmcanceledit"))}return Promise.resolve()},l.prototype.fetchData=function(){var l=this;return this.offline=!this.appProvider.isOnline(),this.feedbackProvider.getFeedback(this.courseId,this.module.id).then(function(n){return l.feedback=n,l.title=l.feedback.name||l.title,l.fetchAccessData()}).then(function(n){return l.preview||!n.cansubmit||n.isempty?(l.preview=!0,Promise.resolve(0)):void 0===l.currentPage?l.feedbackProvider.getResumePage(l.feedback.id,l.offline,!0):Promise.resolve(l.currentPage)}).catch(function(n){return l.offline||l.utils.isWebServiceError(n)?Promise.reject(n):(l.offline=!0,l.feedbackProvider.getResumePage(l.feedback.id,!0))}).then(function(n){return l.fetchFeedbackPageData(n||0)}).catch(function(n){return l.domUtils.showErrorModalDefault(n,"core.course.errorgetmodule",!0),l.forceLeave=!0,l.navCtrl.pop(),Promise.reject(null)}).finally(function(){l.feedbackLoaded=!0})},l.prototype.fetchAccessData=function(){var l=this;return this.feedbackProvider.getFeedbackAccessInformation(this.feedback.id,this.offline,!0).catch(function(n){return l.offline||l.utils.isWebServiceError(n)?Promise.reject(n):(l.offline=!0,l.feedbackProvider.getFeedbackAccessInformation(l.feedback.id,!0))}).then(function(n){return l.access=n,n})},l.prototype.fetchFeedbackPageData=function(l){var n=this;void 0===l&&(l=0);var u;return this.items=[],this.preview?u=this.feedbackProvider.getItems(this.feedback.id):(this.currentPage=l,u=this.feedbackProvider.getPageItemsWithValues(this.feedback.id,l,this.offline,!0).catch(function(u){return n.offline||n.utils.isWebServiceError(u)?Promise.reject(u):(n.offline=!0,n.feedbackProvider.getPageItemsWithValues(n.feedback.id,l,!0))}).then(function(l){return n.hasPrevPage=!!l.hasprevpage,n.hasNextPage=!!l.hasnextpage,l})),u.then(function(l){if(n.items=l.items.map(function(l){return n.feedbackHelper.getItemForm(l,n.preview)}).filter(function(l){return l}),!n.preview){var u=n.utils.clone(n.items);n.originalData=n.feedbackHelper.getPageItemsResponses(u)}})},l.prototype.gotoPage=function(l){var n=this;this.content&&this.content.scrollToTop(),this.feedbackLoaded=!1;var u=this.feedbackHelper.getPageItemsResponses(this.items),e=this.items.some(function(l){return l.isEmpty||l.hasError});return this.feedbackSync.syncFeedback(this.feedback.id).catch(function(){}).then(function(){return n.feedbackProvider.processPage(n.feedback.id,n.currentPage,u,l,e,n.courseId).then(function(l){var u=parseInt(l.jumpto,10);if(l.completed){n.items=[],n.completed=!0,n.completedOffline=!!l.offline,n.completionPageContents=l.completionpagecontents,n.siteAfterSubmit=l.siteaftersubmit,n.submitted=!0;var e=[];return e.push(n.feedbackProvider.invalidateFeedbackAccessInformationData(n.feedback.id)),e.push(n.feedbackProvider.invalidateResumePageData(n.feedback.id)),Promise.all(e).then(function(){return n.fetchAccessData()})}return isNaN(u)||u==n.currentPage?Promise.resolve():(n.submitted=!0,n.feedbackProvider.invalidateResumePageData(n.feedback.id),n.fetchFeedbackPageData(u))})}).catch(function(l){return n.domUtils.showErrorModalDefault(l,"core.course.errorgetmodule",!0),Promise.reject(null)}).finally(function(){n.feedbackLoaded=!0})},l.prototype.showAnalysis=function(){this.submitted="analysis",this.feedbackHelper.openFeature("analysis",this.navCtrl,this.module,this.courseId)},l.prototype.continue=function(){var l=this;if(this.siteAfterSubmit){var n=this.domUtils.showModalLoading();this.linkHelper.handleLink(this.siteAfterSubmit).then(function(n){if(!n)return l.currentSite.openInBrowserWithAutoLoginIfSameSite(l.siteAfterSubmit)}).finally(function(){n.dismiss()})}else this.loginHelper.redirect("CoreCourseSectionPage",{course:{id:this.courseId}},this.currentSite.getId())},l.prototype.ngOnDestroy=function(){if(this.submitted){this.eventsProvider.trigger(W.a.FORM_SUBMITTED,{feedbackId:this.feedback.id,tab:"analysis"==this.submitted?"analysis":"overview"})}this.onlineObserver&&this.onlineObserver.unsubscribe()},l=ul([Object(N.m)({selector:"page-addon-mod-feedback-form",templateUrl:"form.html"}),tl(15,Object(N.N)()),el("design:paramtypes",[E.r,W.a,Q.a,z.a,J.a,E.q,B.a,Y.a,X.a,G.a,K.a,U.c,Z.a,ll.a,nl.a,E.f])],l)}(),il=this&&this.__decorate||function(l,n,u,e){var t,a=arguments.length,i=a<3?n:null===e?e=Object.getOwnPropertyDescriptor(n,u):e;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(l,n,u,e);else for(var o=l.length-1;o>=0;o--)(t=l[o])&&(i=(a<3?t(i):a>3?t(n,u,i):t(n,u))||i);return a>3&&i&&Object.defineProperty(n,u,i),i},ol=function(){function l(){}return l=il([Object(N.I)({declarations:[al],imports:[A.a,T.a,H.a,E.l.forChild(al),U.b.forChild()]})],l)}(),rl=u(1243),cl=u(1244),_l=u(1245),sl=u(1246),dl=u(1247),pl=u(1248),fl=u(1249),ml=u(1250),gl=u(1251),hl=u(1254),bl=u(1255),kl=u(1256),vl=u(1257),xl=u(1266),Il=u(28),Cl=u(15),Pl=u(33),yl=u(19),wl=u(18),$l=u(3),Vl=u(29),ql=u(184),jl=u(89),Sl=u(81),Ml=u(10),Ol=u(61),Dl=u(8),Fl=u(39),Rl=u(13),Ll=u(23),Nl=u(2),El=u(16),Ul=u(20),Al=u(24),Tl=u(94),Hl=u(17),Kl=u(76),Wl=u(27),Bl=u(25),Gl=u(32),Jl=u(174),zl=u(135),Ql=u(124),Xl=u(75),Yl=u(35),Zl=u(208),ln=u(153),nn=u(102),un=u(118),en=u(103),tn=u(48),an=u(1854),on=u(1270),rn=u(131),cn=u(206),_n=u(38),sn=u(120),dn=u(43),pn=u(37),fn=u(142),mn=u(121),gn=u(402),hn=u(34),bn=u(1252),kn=u(182),vn=u(1253),xn=u(315),In=u(227),Cn=u(183),Pn=u(93),yn=u(57),wn=u(55),$n=u(54),Vn=N._29({encapsulation:2,styles:[],data:{}}),qn=N._27("page-addon-mod-feedback-form",al,function(l){return N._57(0,[(l()(),N._31(0,0,null,null,1,"page-addon-mod-feedback-form",[],null,null,null,L,Vn)),N._30(1,180224,null,0,al,[$n.a,W.a,Q.a,z.a,J.a,Ul.a,B.a,Y.a,X.a,G.a,K.a,Cl.a,Z.a,ll.a,nl.a,[2,Al.a]],null,null)],null,null)},{},{},[]),jn=u(311),Sn=u(312),Mn=u(314),On=u(313),Dn=u(401),Fn=u(615),Rn=u(111),Ln=u(70),Nn=u(228);u.d(n,"AddonModFeedbackFormPageModuleNgFactory",function(){return En});var En=N._28(ol,[],function(l){return N._40([N._41(512,N.o,N._21,[[8,[rl.a,cl.a,_l.a,sl.a,dl.a,pl.a,fl.a,ml.a,gl.a,hl.a,bl.a,kl.a,vl.a,xl.a,qn]],[3,N.o],N.K]),N._41(4608,Dl.m,Dl.l,[N.G,[2,Dl.v]]),N._41(4608,Hl.x,Hl.x,[]),N._41(4608,Hl.d,Hl.d,[]),N._41(4608,jn.b,jn.a,[]),N._41(4608,Sn.a,Sn.b,[]),N._41(4608,Mn.b,Mn.a,[]),N._41(4608,On.b,On.a,[]),N._41(4608,Cl.a,Cl.a,[Dn.a,jn.b,Sn.a,Mn.b,On.b,Cl.b,Cl.c]),N._41(512,A.a,A.a,[]),N._41(512,Dl.b,Dl.b,[]),N._41(512,Hl.v,Hl.v,[]),N._41(512,Hl.i,Hl.i,[]),N._41(512,Hl.s,Hl.s,[]),N._41(512,Fn.a,Fn.a,[]),N._41(512,U.b,U.b,[]),N._41(512,Rn.a,Rn.a,[]),N._41(512,T.a,T.a,[]),N._41(512,Ln.a,Ln.a,[]),N._41(512,H.a,H.a,[]),N._41(512,Fn.b,Fn.b,[]),N._41(512,ol,ol,[]),N._41(256,Cl.c,void 0,[]),N._41(256,Cl.b,void 0,[]),N._41(256,Nn.a,al,[])])})},1854:function(l,n,u){"use strict";function e(l){return c._57(0,[(l()(),c._31(0,0,null,null,3,"button",[["block",""],["ion-button",""],["type","button"]],null,[[null,"click"]],function(l,n,u){var e=!0;if("click"===n){e=!1!==l.component.answerRecaptcha()&&e}return e},_.b,_.a)),c._30(1,1097728,null,0,s.a,[[8,""],d.a,c.t,c.V],{block:[0,"block"]},null),(l()(),c._55(2,0,["",""])),c._47(131072,p.a,[f.a,c.j])],function(l,n){l(n,1,0,"")},function(l,n){l(n,2,0,c._56(n,2,0,c._44(n,3).transform("core.answer")))})}function t(l){return c._57(0,[(l()(),c._31(0,0,null,null,2,"p",[["class","text-success"]],null,null,null,null,null)),(l()(),c._55(1,null,["",""])),c._47(131072,p.a,[f.a,c.j])],null,function(l,n){l(n,1,0,c._56(n,1,0,c._44(n,2).transform("core.answered")))})}function a(l){return c._57(0,[(l()(),c._31(0,0,null,null,2,"p",[["class","text-danger"]],null,null,null,null,null)),(l()(),c._55(1,null,["",""])),c._47(131072,p.a,[f.a,c.j])],null,function(l,n){l(n,1,0,c._56(n,1,0,c._44(n,2).transform("core.login.recaptchaexpired")))})}function i(l){return c._57(0,[(l()(),c._31(0,0,null,null,12,"div",[],null,null,null,null,null)),(l()(),c._55(-1,null,["\n    "])),(l()(),c._55(-1,null,["\n    "])),(l()(),c._55(-1,null,["\n    "])),(l()(),c._26(16777216,null,null,1,null,e)),c._30(5,16384,null,0,m.k,[c._11,c._6],{ngIf:[0,"ngIf"]},null),(l()(),c._55(-1,null,["\n    "])),(l()(),c._26(16777216,null,null,1,null,t)),c._30(8,16384,null,0,m.k,[c._11,c._6],{ngIf:[0,"ngIf"]},null),(l()(),c._55(-1,null,["\n    "])),(l()(),c._26(16777216,null,null,1,null,a)),c._30(11,16384,null,0,m.k,[c._11,c._6],{ngIf:[0,"ngIf"]},null),(l()(),c._55(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,5,0,!u.model[u.modelValueName]);l(n,8,0,u.model[u.modelValueName]);l(n,11,0,u.expired)},null)}function o(l){return c._57(0,[(l()(),c._31(0,0,null,null,5,"div",[["class","core-warning-card"],["icon-start",""]],null,null,null,null,null)),(l()(),c._55(-1,null,["\n    "])),(l()(),c._31(2,0,null,null,1,"ion-icon",[["name","warning"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c._30(3,147456,null,0,g.a,[d.a,c.t,c.V],{name:[0,"name"]},null),(l()(),c._55(4,null,["\n    ","\n"])),c._47(131072,p.a,[f.a,c.j])],function(l,n){l(n,3,0,"warning")},function(l,n){l(n,2,0,c._44(n,3)._hidden);l(n,4,0,c._56(n,4,0,c._44(n,5).transform("core.errorloadingcontent")))})}function r(l){return c._57(0,[(l()(),c._55(-1,null,["\n"])),(l()(),c._26(16777216,null,null,1,null,i)),c._30(2,16384,null,0,m.k,[c._11,c._6],{ngIf:[0,"ngIf"]},null),(l()(),c._55(-1,null,["\n\n"])),(l()(),c._55(-1,null,["\n"])),(l()(),c._26(16777216,null,null,1,null,o)),c._30(6,16384,null,0,m.k,[c._11,c._6],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,u.publicKey);l(n,6,0,!u.challengehash&&u.challengeimage)},null)}u.d(n,"a",function(){return I}),n.b=r;var c=u(0),_=u(43),s=u(37),d=u(3),p=u(28),f=u(15),m=u(8),g=u(38),h=u(1270),b=u(1),k=u(131),v=u(10),x=u(206),I=c._29({encapsulation:2,styles:[],data:{}});c._27("core-recaptcha",h.a,function(l){return c._57(0,[(l()(),c._31(0,0,null,null,1,"core-recaptcha",[],null,null,null,r,I)),c._30(1,114688,null,0,h.a,[b.a,k.a,v.a,x.a],null,null)],function(l,n){l(n,1,0)},null)},{model:"model",publicKey:"publicKey",modelValueName:"modelValueName",siteUrl:"siteUrl"},{},[])}});
+webpackJsonp([27],{
+
+/***/ 1760:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 1 modules
+var directives_module = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./src/addon/mod/feedback/components/components.module.ts
+var components_components_module = __webpack_require__(618);
+
+// EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
+var _ionic_native_network = __webpack_require__(189);
+
+// EXTERNAL MODULE: ./src/addon/mod/feedback/providers/feedback.ts
+var feedback = __webpack_require__(123);
+
+// EXTERNAL MODULE: ./src/addon/mod/feedback/providers/helper.ts
+var helper = __webpack_require__(257);
+
+// EXTERNAL MODULE: ./src/addon/mod/feedback/providers/sync.ts
+var sync = __webpack_require__(266);
+
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils_utils = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./src/providers/app.ts
+var app = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./src/core/course/providers/course.ts
+var course = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./src/core/login/providers/helper.ts
+var providers_helper = __webpack_require__(113);
+
+// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
+var contentlinks_providers_helper = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
+
+// CONCATENATED MODULE: ./src/addon/mod/feedback/pages/form/form.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Page that displays feedback form.
+ */
+var form_AddonModFeedbackFormPage = /** @class */ (function () {
+    function AddonModFeedbackFormPage(navParams, feedbackProvider, appProvider, utils, domUtils, navCtrl, feedbackHelper, courseProvider, eventsProvider, feedbackSync, network, translate, loginHelper, linkHelper, sitesProvider, content) {
+        var _this = this;
+        this.feedbackProvider = feedbackProvider;
+        this.appProvider = appProvider;
+        this.utils = utils;
+        this.domUtils = domUtils;
+        this.navCtrl = navCtrl;
+        this.feedbackHelper = feedbackHelper;
+        this.courseProvider = courseProvider;
+        this.eventsProvider = eventsProvider;
+        this.feedbackSync = feedbackSync;
+        this.translate = translate;
+        this.loginHelper = loginHelper;
+        this.linkHelper = linkHelper;
+        this.content = content;
+        this.forceLeave = false;
+        this.preview = false;
+        this.component = feedback["a" /* AddonModFeedbackProvider */].COMPONENT;
+        this.offline = false;
+        this.feedbackLoaded = false;
+        this.items = [];
+        this.hasPrevPage = false;
+        this.hasNextPage = false;
+        this.completed = false;
+        this.completedOffline = false;
+        this.module = navParams.get('module');
+        this.courseId = navParams.get('courseId');
+        this.currentPage = navParams.get('page');
+        this.title = navParams.get('title');
+        this.preview = !!navParams.get('preview');
+        this.componentId = navParams.get('moduleId') || this.module.id;
+        this.currentSite = sitesProvider.getCurrentSite();
+        // Refresh online status when changes.
+        this.onlineObserver = network.onchange().subscribe(function (online) {
+            _this.offline = !online;
+        });
+    }
+    /**
+     * View loaded.
+     */
+    AddonModFeedbackFormPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.fetchData().then(function () {
+            _this.feedbackProvider.logView(_this.feedback.id, true).then(function () {
+                _this.courseProvider.checkModuleCompletion(_this.courseId, _this.module.completionstatus);
+            });
+        });
+    };
+    /**
+     * View entered.
+     */
+    AddonModFeedbackFormPage.prototype.ionViewDidEnter = function () {
+        this.forceLeave = false;
+    };
+    /**
+     * Check if we can leave the page or not.
+     *
+     * @return {boolean | Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    AddonModFeedbackFormPage.prototype.ionViewCanLeave = function () {
+        if (this.forceLeave) {
+            return true;
+        }
+        if (!this.preview) {
+            var responses = this.feedbackHelper.getPageItemsResponses(this.items);
+            if (this.items && !this.completed && this.originalData) {
+                // Form submitted. Check if there is any change.
+                if (!this.utils.basicLeftCompare(responses, this.originalData, 3)) {
+                    return this.domUtils.showConfirm(this.translate.instant('core.confirmcanceledit'));
+                }
+            }
+        }
+        return Promise.resolve();
+    };
+    /**
+     * Fetch all the data required for the view.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModFeedbackFormPage.prototype.fetchData = function () {
+        var _this = this;
+        this.offline = !this.appProvider.isOnline();
+        return this.feedbackProvider.getFeedback(this.courseId, this.module.id).then(function (feedbackData) {
+            _this.feedback = feedbackData;
+            _this.title = _this.feedback.name || _this.title;
+            return _this.fetchAccessData();
+        }).then(function (accessData) {
+            if (!_this.preview && accessData.cansubmit && !accessData.isempty) {
+                return typeof _this.currentPage == 'undefined' ?
+                    _this.feedbackProvider.getResumePage(_this.feedback.id, _this.offline, true) :
+                    Promise.resolve(_this.currentPage);
+            }
+            else {
+                _this.preview = true;
+                return Promise.resolve(0);
+            }
+        }).catch(function (error) {
+            if (!_this.offline && !_this.utils.isWebServiceError(error)) {
+                // If it fails, go offline.
+                _this.offline = true;
+                return _this.feedbackProvider.getResumePage(_this.feedback.id, true);
+            }
+            return Promise.reject(error);
+        }).then(function (page) {
+            return _this.fetchFeedbackPageData(page || 0);
+        }).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+            _this.forceLeave = true;
+            _this.navCtrl.pop();
+            return Promise.reject(null);
+        }).finally(function () {
+            _this.feedbackLoaded = true;
+        });
+    };
+    /**
+     * Fetch access information.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModFeedbackFormPage.prototype.fetchAccessData = function () {
+        var _this = this;
+        return this.feedbackProvider.getFeedbackAccessInformation(this.feedback.id, this.offline, true).catch(function (error) {
+            if (!_this.offline && !_this.utils.isWebServiceError(error)) {
+                // If it fails, go offline.
+                _this.offline = true;
+                return _this.feedbackProvider.getFeedbackAccessInformation(_this.feedback.id, true);
+            }
+            return Promise.reject(error);
+        }).then(function (accessData) {
+            _this.access = accessData;
+            return accessData;
+        });
+    };
+    AddonModFeedbackFormPage.prototype.fetchFeedbackPageData = function (page) {
+        var _this = this;
+        if (page === void 0) { page = 0; }
+        var promise;
+        this.items = [];
+        if (this.preview) {
+            promise = this.feedbackProvider.getItems(this.feedback.id);
+        }
+        else {
+            this.currentPage = page;
+            promise = this.feedbackProvider.getPageItemsWithValues(this.feedback.id, page, this.offline, true).catch(function (error) {
+                if (!_this.offline && !_this.utils.isWebServiceError(error)) {
+                    // If it fails, go offline.
+                    _this.offline = true;
+                    return _this.feedbackProvider.getPageItemsWithValues(_this.feedback.id, page, true);
+                }
+                return Promise.reject(error);
+            }).then(function (response) {
+                _this.hasPrevPage = !!response.hasprevpage;
+                _this.hasNextPage = !!response.hasnextpage;
+                return response;
+            });
+        }
+        return promise.then(function (response) {
+            _this.items = response.items.map(function (itemData) {
+                return _this.feedbackHelper.getItemForm(itemData, _this.preview);
+            }).filter(function (itemData) {
+                // Filter items with errors.
+                return itemData;
+            });
+            if (!_this.preview) {
+                var itemsCopy = _this.utils.clone(_this.items); // Copy the array to avoid modifications.
+                _this.originalData = _this.feedbackHelper.getPageItemsResponses(itemsCopy);
+            }
+        });
+    };
+    /**
+     * Function to allow page navigation through the questions form.
+     *
+     * @param  {boolean}       goPrevious If true it will go back to the previous page, if false, it will go forward.
+     * @return {Promise<void>}            Resolved when done.
+     */
+    AddonModFeedbackFormPage.prototype.gotoPage = function (goPrevious) {
+        var _this = this;
+        this.content && this.content.scrollToTop();
+        this.feedbackLoaded = false;
+        var responses = this.feedbackHelper.getPageItemsResponses(this.items), formHasErrors = this.items.some(function (item) {
+            return item.isEmpty || item.hasError;
+        });
+        // Sync other pages first.
+        return this.feedbackSync.syncFeedback(this.feedback.id).catch(function () {
+            // Ignore errors.
+        }).then(function () {
+            return _this.feedbackProvider.processPage(_this.feedback.id, _this.currentPage, responses, goPrevious, formHasErrors, _this.courseId).then(function (response) {
+                var jumpTo = parseInt(response.jumpto, 10);
+                if (response.completed) {
+                    // Form is completed, show completion message and buttons.
+                    _this.items = [];
+                    _this.completed = true;
+                    _this.completedOffline = !!response.offline;
+                    _this.completionPageContents = response.completionpagecontents;
+                    _this.siteAfterSubmit = response.siteaftersubmit;
+                    _this.submitted = true;
+                    // Invalidate access information so user will see home page updated (continue form or completion messages).
+                    var promises = [];
+                    promises.push(_this.feedbackProvider.invalidateFeedbackAccessInformationData(_this.feedback.id));
+                    promises.push(_this.feedbackProvider.invalidateResumePageData(_this.feedback.id));
+                    return Promise.all(promises).then(function () {
+                        return _this.fetchAccessData();
+                    });
+                }
+                else if (isNaN(jumpTo) || jumpTo == _this.currentPage) {
+                    // Errors on questions, stay in page.
+                    return Promise.resolve();
+                }
+                else {
+                    _this.submitted = true;
+                    // Invalidate access information so user will see home page updated (continue form).
+                    _this.feedbackProvider.invalidateResumePageData(_this.feedback.id);
+                    // Fetch the new page.
+                    return _this.fetchFeedbackPageData(jumpTo);
+                }
+            });
+        }).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+            return Promise.reject(null);
+        }).finally(function () {
+            _this.feedbackLoaded = true;
+        });
+    };
+    /**
+     * Function to link implemented features.
+     */
+    AddonModFeedbackFormPage.prototype.showAnalysis = function () {
+        this.submitted = 'analysis';
+        this.feedbackHelper.openFeature('analysis', this.navCtrl, this.module, this.courseId);
+    };
+    /**
+     * Function to go to the page after submit.
+     */
+    AddonModFeedbackFormPage.prototype.continue = function () {
+        var _this = this;
+        if (this.siteAfterSubmit) {
+            var modal_1 = this.domUtils.showModalLoading();
+            this.linkHelper.handleLink(this.siteAfterSubmit).then(function (treated) {
+                if (!treated) {
+                    return _this.currentSite.openInBrowserWithAutoLoginIfSameSite(_this.siteAfterSubmit);
+                }
+            }).finally(function () {
+                modal_1.dismiss();
+            });
+        }
+        else {
+            // Use redirect to make the course the new history root (to avoid "loops" in history).
+            this.loginHelper.redirect('CoreCourseSectionPage', {
+                course: { id: this.courseId }
+            }, this.currentSite.getId());
+        }
+    };
+    /**
+     * Component being destroyed.
+     */
+    AddonModFeedbackFormPage.prototype.ngOnDestroy = function () {
+        if (this.submitted) {
+            var tab = this.submitted == 'analysis' ? 'analysis' : 'overview';
+            // If form has been submitted, the info has been already invalidated but we should update index view.
+            this.eventsProvider.trigger(feedback["a" /* AddonModFeedbackProvider */].FORM_SUBMITTED, { feedbackId: this.feedback.id, tab: tab });
+        }
+        this.onlineObserver && this.onlineObserver.unsubscribe();
+    };
+    AddonModFeedbackFormPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-addon-mod-feedback-form',
+            templateUrl: 'form.html',
+        }),
+        __param(15, Object(core["N" /* Optional */])()),
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], feedback["a" /* AddonModFeedbackProvider */], app["a" /* CoreAppProvider */],
+            utils_utils["a" /* CoreUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], ionic_angular["q" /* NavController */],
+            helper["a" /* AddonModFeedbackHelperProvider */], course["a" /* CoreCourseProvider */],
+            events["a" /* CoreEventsProvider */], sync["a" /* AddonModFeedbackSyncProvider */], _ionic_native_network["a" /* Network */],
+            _ngx_translate_core["c" /* TranslateService */], providers_helper["a" /* CoreLoginHelperProvider */],
+            contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], sites["a" /* CoreSitesProvider */],
+            ionic_angular["f" /* Content */]])
+    ], AddonModFeedbackFormPage);
+    return AddonModFeedbackFormPage;
+}());
+
+//# sourceMappingURL=form.js.map
+// CONCATENATED MODULE: ./src/addon/mod/feedback/pages/form/form.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var form_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+var form_module_AddonModFeedbackFormPageModule = /** @class */ (function () {
+    function AddonModFeedbackFormPageModule() {
+    }
+    AddonModFeedbackFormPageModule = form_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                form_AddonModFeedbackFormPage,
+            ],
+            imports: [
+                directives_module["a" /* CoreDirectivesModule */],
+                components_module["a" /* CoreComponentsModule */],
+                components_components_module["a" /* AddonModFeedbackComponentsModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(form_AddonModFeedbackFormPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], AddonModFeedbackFormPageModule);
+    return AddonModFeedbackFormPageModule;
+}());
+
+//# sourceMappingURL=form.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1243);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1244);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1245);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1246);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1248);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1249);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1250);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1251);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1254);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1255);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1256);
+
+// EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ngfactory.js
+var unsupported_module_ngfactory = __webpack_require__(1257);
+
+// EXTERNAL MODULE: ./src/addon/mod/feedback/components/index/index.ngfactory.js
+var index_ngfactory = __webpack_require__(1266);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
+var item_divider = __webpack_require__(184);
+
+// EXTERNAL MODULE: ./src/components/mark-required/mark-required.ngfactory.js
+var mark_required_ngfactory = __webpack_require__(89);
+
+// EXTERNAL MODULE: ./src/components/mark-required/mark-required.ts
+var mark_required = __webpack_require__(81);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
+var label = __webpack_require__(61);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./src/directives/format-text.ts
+var format_text = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./src/providers/utils/url.ts
+var url = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./src/providers/logger.ts
+var logger = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./src/providers/filepool.ts
+var filepool = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content_content = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.ngfactory.js
+var input_ngfactory = __webpack_require__(94);
+
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
+var input = __webpack_require__(76);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app_app = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.ngfactory.js
+var radio_button_ngfactory = __webpack_require__(174);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
+var radio_button = __webpack_require__(135);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-group.js
+var radio_group = __webpack_require__(124);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
+var list = __webpack_require__(75);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.ngfactory.js
+var checkbox_ngfactory = __webpack_require__(208);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
+var checkbox_checkbox = __webpack_require__(153);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/option/option.js
+var option_option = __webpack_require__(102);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
+var select_ngfactory = __webpack_require__(118);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
+var select_select = __webpack_require__(103);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
+var deep_linker = __webpack_require__(48);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ngfactory.js
+var recaptcha_ngfactory = __webpack_require__(1854);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ts
+var recaptcha = __webpack_require__(1270);
+
+// EXTERNAL MODULE: ./src/providers/lang.ts
+var lang = __webpack_require__(131);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
+var modal_controller = __webpack_require__(206);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
+var col = __webpack_require__(120);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
+var grid = __webpack_require__(142);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
+var row = __webpack_require__(121);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(402);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1252);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(182);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1253);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(315);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(57);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(55);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(54);
+
+// CONCATENATED MODULE: ./src/addon/mod/feedback/pages/form/form.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonModFeedbackFormPage = [];
+var RenderType_AddonModFeedbackFormPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModFeedbackFormPage, data: {} });
+
+function View_AddonModFeedbackFormPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("addon.mod_feedback.anonymous")); _ck(_v, 1, 0, currVal_0); }); }
+function View_AddonModFeedbackFormPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("addon.mod_feedback.non_anonymous")); _ck(_v, 1, 0, currVal_0); }); }
+function View_AddonModFeedbackFormPage_5(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-item-divider", [["class", "item item-divider"], ["color", "light"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], { color: [0, "color"] }, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_divider["a" /* ItemDivider */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"] }, null)], function (_ck, _v) { var currVal_0 = "light"; _ck(_v, 1, 0, currVal_0); var currVal_1 = "light"; _ck(_v, 5, 0, currVal_1); }, null); }
+function View_AddonModFeedbackFormPage_8(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ". "]))], null, function (_ck, _v) { var currVal_0 = _v.parent.parent.parent.context.$implicit.itemnumber; _ck(_v, 1, 0, currVal_0); }); }
+function View_AddonModFeedbackFormPage_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 9, "ion-label", [["stacked", ""]], null, null, null, mark_required_ngfactory["b" /* View_CoreMarkRequiredComponent_0 */], mark_required_ngfactory["a" /* RenderType_CoreMarkRequiredComponent */])), core["_30" /* ɵdid */](1, 4308992, null, 0, mark_required["a" /* CoreMarkRequiredComponent */], [core["t" /* ElementRef */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], utils_utils["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), core["_30" /* ɵdid */](2, 16384, [[7, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                            "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModFeedbackFormPage_8)), core["_30" /* ɵdid */](5, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                            "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](8, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content_content["a" /* Content */]]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.parent.parent.context.$implicit.required; _ck(_v, 1, 0, currVal_0); var currVal_1 = _v.parent.parent.context.$implicit.itemnumber; _ck(_v, 5, 0, currVal_1); var currVal_2 = _v.parent.parent.context.$implicit.name; var currVal_3 = _co.component; var currVal_4 = _co.componentId; _ck(_v, 8, 0, currVal_2, currVal_3, currVal_4); }, null); }
+function View_AddonModFeedbackFormPage_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](4, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content_content["a" /* Content */]]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.parent.parent.parent.context.$implicit.presentation; var currVal_1 = _co.component; var currVal_2 = _co.componentId; _ck(_v, 4, 0, currVal_0, currVal_1, currVal_2); }, null); }
+function View_AddonModFeedbackFormPage_11(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 10, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 7, "ion-input", [["autocorrect", "off"], ["type", "text"]], [[1, "required", 0], [1, "maxlength", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"]], function (_v, en, $event) { var ad = true; if (("ngModelChange" === en)) {
+        var pd_0 = ((_v.parent.parent.parent.context.$implicit.value = $event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, input_ngfactory["b" /* View_TextInput_0 */], input_ngfactory["a" /* RenderType_TextInput */])), core["_30" /* ɵdid */](3, 16384, null, 0, esm5_forms["t" /* RequiredValidator */], [], { required: [0, "required"] }, null), core["_30" /* ɵdid */](4, 540672, null, 0, esm5_forms["j" /* MaxLengthValidator */], [], { maxlength: [0, "maxlength"] }, null), core["_50" /* ɵprd */](1024, null, esm5_forms["k" /* NG_VALIDATORS */], function (p0_0, p1_0) { return [p0_0, p1_0]; }, [esm5_forms["t" /* RequiredValidator */], esm5_forms["j" /* MaxLengthValidator */]]), core["_30" /* ɵdid */](6, 671744, null, 0, esm5_forms["q" /* NgModel */], [[8, null], [2, esm5_forms["k" /* NG_VALIDATORS */]], [8, null], [8, null]], { name: [0, "name"], model: [1, "model"] }, { update: "ngModelChange" }), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](8, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](9, 5423104, null, 0, input["a" /* TextInput */], [config["a" /* Config */], platform["a" /* Platform */], util_form["a" /* Form */], app_app["a" /* App */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, content_content["a" /* Content */]], [2, item["a" /* Item */]], [2, esm5_forms["m" /* NgControl */]], dom_controller["a" /* DomController */]], { type: [0, "type"], autocorrect: [1, "autocorrect"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "]))], function (_ck, _v) { var currVal_9 = _v.parent.parent.parent.context.$implicit.required; _ck(_v, 3, 0, currVal_9); var currVal_10 = core["_34" /* ɵinlineInterpolate */](1, "", _v.parent.parent.parent.context.$implicit.maxlength, ""); _ck(_v, 4, 0, currVal_10); var currVal_11 = core["_34" /* ɵinlineInterpolate */](2, "", _v.parent.parent.parent.context.$implicit.typ, "_", _v.parent.parent.parent.context.$implicit.id, ""); var currVal_12 = _v.parent.parent.parent.context.$implicit.value; _ck(_v, 6, 0, currVal_11, currVal_12); var currVal_13 = "text"; var currVal_14 = "off"; _ck(_v, 9, 0, currVal_13, currVal_14); }, function (_ck, _v) { var currVal_0 = (core["_44" /* ɵnov */](_v, 3).required ? "" : null); var currVal_1 = (core["_44" /* ɵnov */](_v, 4).maxlength ? core["_44" /* ɵnov */](_v, 4).maxlength : null); var currVal_2 = core["_44" /* ɵnov */](_v, 8).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 8).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 8).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 8).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 8).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 8).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 8).ngClassPending; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); }); }
+function View_AddonModFeedbackFormPage_14(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, [", "]))], null, null); }
+function View_AddonModFeedbackFormPage_13(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "p", [["color", "error"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", " [", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_14)), core["_30" /* ɵdid */](4, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](5, null, ["", "]"]))], function (_ck, _v) { var currVal_2 = (_v.parent.parent.parent.parent.context.$implicit.rangefrom && _v.parent.parent.parent.parent.context.$implicit.rangeto); _ck(_v, 4, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("addon.mod_feedback.numberoutofrange")); var currVal_1 = _v.parent.parent.parent.parent.context.$implicit.rangefrom; _ck(_v, 1, 0, currVal_0, currVal_1); var currVal_3 = _v.parent.parent.parent.parent.context.$implicit.rangeto; _ck(_v, 5, 0, currVal_3); }); }
+function View_AddonModFeedbackFormPage_12(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 12, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 6, "ion-input", [["type", "number"]], [[1, "required", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"]], function (_v, en, $event) { var ad = true; if (("ngModelChange" === en)) {
+        var pd_0 = ((_v.parent.parent.parent.context.$implicit.value = $event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, input_ngfactory["b" /* View_TextInput_0 */], input_ngfactory["a" /* RenderType_TextInput */])), core["_30" /* ɵdid */](3, 16384, null, 0, esm5_forms["t" /* RequiredValidator */], [], { required: [0, "required"] }, null), core["_50" /* ɵprd */](1024, null, esm5_forms["k" /* NG_VALIDATORS */], function (p0_0) { return [p0_0]; }, [esm5_forms["t" /* RequiredValidator */]]), core["_30" /* ɵdid */](5, 671744, null, 0, esm5_forms["q" /* NgModel */], [[8, null], [2, esm5_forms["k" /* NG_VALIDATORS */]], [8, null], [8, null]], { name: [0, "name"], model: [1, "model"] }, { update: "ngModelChange" }), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](7, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](8, 5423104, null, 0, input["a" /* TextInput */], [config["a" /* Config */], platform["a" /* Platform */], util_form["a" /* Form */], app_app["a" /* App */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, content_content["a" /* Content */]], [2, item["a" /* Item */]], [2, esm5_forms["m" /* NgControl */]], dom_controller["a" /* DomController */]], { type: [0, "type"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_13)), core["_30" /* ɵdid */](11, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "]))], function (_ck, _v) { var currVal_8 = _v.parent.parent.parent.context.$implicit.required; _ck(_v, 3, 0, currVal_8); var currVal_9 = core["_34" /* ɵinlineInterpolate */](2, "", _v.parent.parent.parent.context.$implicit.typ, "_", _v.parent.parent.parent.context.$implicit.id, ""); var currVal_10 = _v.parent.parent.parent.context.$implicit.value; _ck(_v, 5, 0, currVal_9, currVal_10); var currVal_11 = "number"; _ck(_v, 8, 0, currVal_11); var currVal_12 = _v.parent.parent.parent.context.$implicit.hasError; _ck(_v, 11, 0, currVal_12); }, function (_ck, _v) { var currVal_0 = (core["_44" /* ɵnov */](_v, 3).required ? "" : null); var currVal_1 = core["_44" /* ɵnov */](_v, 7).ngClassUntouched; var currVal_2 = core["_44" /* ɵnov */](_v, 7).ngClassTouched; var currVal_3 = core["_44" /* ɵnov */](_v, 7).ngClassPristine; var currVal_4 = core["_44" /* ɵnov */](_v, 7).ngClassDirty; var currVal_5 = core["_44" /* ɵnov */](_v, 7).ngClassValid; var currVal_6 = core["_44" /* ɵnov */](_v, 7).ngClassInvalid; var currVal_7 = core["_44" /* ɵnov */](_v, 7).ngClassPending; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); }); }
+function View_AddonModFeedbackFormPage_15(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 9, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 6, "ion-textarea", [], [[1, "aria-multiline", 0], [1, "required", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"]], function (_v, en, $event) { var ad = true; if (("ngModelChange" === en)) {
+        var pd_0 = ((_v.parent.parent.parent.context.$implicit.value = $event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, input_ngfactory["b" /* View_TextInput_0 */], input_ngfactory["a" /* RenderType_TextInput */])), core["_30" /* ɵdid */](3, 16384, null, 0, esm5_forms["t" /* RequiredValidator */], [], { required: [0, "required"] }, null), core["_50" /* ɵprd */](1024, null, esm5_forms["k" /* NG_VALIDATORS */], function (p0_0) { return [p0_0]; }, [esm5_forms["t" /* RequiredValidator */]]), core["_30" /* ɵdid */](5, 671744, null, 0, esm5_forms["q" /* NgModel */], [[8, null], [2, esm5_forms["k" /* NG_VALIDATORS */]], [8, null], [8, null]], { name: [0, "name"], model: [1, "model"] }, { update: "ngModelChange" }), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](7, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](8, 5423104, null, 0, input["a" /* TextInput */], [config["a" /* Config */], platform["a" /* Platform */], util_form["a" /* Form */], app_app["a" /* App */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, content_content["a" /* Content */]], [2, item["a" /* Item */]], [2, esm5_forms["m" /* NgControl */]], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "]))], function (_ck, _v) { var currVal_9 = _v.parent.parent.parent.context.$implicit.required; _ck(_v, 3, 0, currVal_9); var currVal_10 = core["_34" /* ɵinlineInterpolate */](2, "", _v.parent.parent.parent.context.$implicit.typ, "_", _v.parent.parent.parent.context.$implicit.id, ""); var currVal_11 = _v.parent.parent.parent.context.$implicit.value; _ck(_v, 5, 0, currVal_10, currVal_11); }, function (_ck, _v) { var currVal_0 = true; var currVal_1 = (core["_44" /* ɵnov */](_v, 3).required ? "" : null); var currVal_2 = core["_44" /* ɵnov */](_v, 7).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 7).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 7).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 7).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 7).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 7).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 7).ngClassPending; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); }); }
+function View_AddonModFeedbackFormPage_17(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 14, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 11, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 12, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 13, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                                            "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 3, "ion-label", [], null, null, null, null, null)), core["_30" /* ɵdid */](8, 16384, [[11, 4], [7, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, null], [8, null], [8, null]], null, null), (_l()(), core["_31" /* ɵeld */](9, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](10, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content_content["a" /* Content */]]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                                            "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 4, 1, "ion-radio", [], [[2, "radio-disabled", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 13)._click($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, radio_button_ngfactory["b" /* View_RadioButton_0 */], radio_button_ngfactory["a" /* RenderType_RadioButton */])), core["_30" /* ɵdid */](13, 245760, null, 0, radio_button["a" /* RadioButton */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], [2, radio_group["a" /* RadioGroup */]]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                                        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.label; var currVal_1 = _co.component; var currVal_2 = _co.componentId; _ck(_v, 10, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = _v.context.$implicit.value; _ck(_v, 13, 0, currVal_4); }, function (_ck, _v) { var currVal_3 = core["_44" /* ɵnov */](_v, 13)._disabled; _ck(_v, 12, 0, currVal_3); }); }
+function View_AddonModFeedbackFormPage_16(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 16, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 13, "ion-list", [["radio-group", ""], ["role", "radiogroup"]], [[1, "required", 0], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"]], function (_v, en, $event) { var ad = true; if (("ngModelChange" === en)) {
+        var pd_0 = ((_v.parent.parent.parent.context.$implicit.value = $event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](3, 16384, null, 0, esm5_forms["t" /* RequiredValidator */], [], { required: [0, "required"] }, null), core["_50" /* ɵprd */](1024, null, esm5_forms["k" /* NG_VALIDATORS */], function (p0_0) { return [p0_0]; }, [esm5_forms["t" /* RequiredValidator */]]), core["_30" /* ɵdid */](5, 1064960, null, 1, radio_group["a" /* RadioGroup */], [core["V" /* Renderer */], core["t" /* ElementRef */], core["j" /* ChangeDetectorRef */]], null, null), core["_52" /* ɵqud */](335544320, 10, { _header: 0 }), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [radio_group["a" /* RadioGroup */]]), core["_30" /* ɵdid */](8, 671744, null, 0, esm5_forms["q" /* NgModel */], [[8, null], [2, esm5_forms["k" /* NG_VALIDATORS */]], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"], model: [1, "model"] }, { update: "ngModelChange" }), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](10, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](11, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_17)), core["_30" /* ɵdid */](14, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "]))], function (_ck, _v) { var currVal_8 = _v.parent.parent.parent.context.$implicit.required; _ck(_v, 3, 0, currVal_8); var currVal_9 = core["_34" /* ɵinlineInterpolate */](2, "", _v.parent.parent.parent.context.$implicit.typ, "_", _v.parent.parent.parent.context.$implicit.id, ""); var currVal_10 = _v.parent.parent.parent.context.$implicit.value; _ck(_v, 8, 0, currVal_9, currVal_10); var currVal_11 = _v.parent.parent.parent.context.$implicit.choices; _ck(_v, 14, 0, currVal_11); }, function (_ck, _v) { var currVal_0 = (core["_44" /* ɵnov */](_v, 3).required ? "" : null); var currVal_1 = core["_44" /* ɵnov */](_v, 10).ngClassUntouched; var currVal_2 = core["_44" /* ɵnov */](_v, 10).ngClassTouched; var currVal_3 = core["_44" /* ɵnov */](_v, 10).ngClassPristine; var currVal_4 = core["_44" /* ɵnov */](_v, 10).ngClassDirty; var currVal_5 = core["_44" /* ɵnov */](_v, 10).ngClassValid; var currVal_6 = core["_44" /* ɵnov */](_v, 10).ngClassInvalid; var currVal_7 = core["_44" /* ɵnov */](_v, 10).ngClassPending; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); }); }
+function View_AddonModFeedbackFormPage_19(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 20, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 14, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 15, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 16, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                                        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 3, "ion-label", [], null, null, null, null, null)), core["_30" /* ɵdid */](8, 16384, [[14, 4], [7, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, null], [8, null], [8, null]], null, null), (_l()(), core["_31" /* ɵeld */](9, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](10, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content_content["a" /* Content */]]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                                        "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 0, 7, "ion-checkbox", [["value", "option.value"]], [[1, "required", 0], [2, "checkbox-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 15)._click($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("ngModelChange" === en)) {
+        var pd_1 = ((_v.context.$implicit.checked = $event) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, checkbox_ngfactory["b" /* View_Checkbox_0 */], checkbox_ngfactory["a" /* RenderType_Checkbox */])), core["_30" /* ɵdid */](13, 16384, null, 0, esm5_forms["t" /* RequiredValidator */], [], { required: [0, "required"] }, null), core["_50" /* ɵprd */](1024, null, esm5_forms["k" /* NG_VALIDATORS */], function (p0_0) { return [p0_0]; }, [esm5_forms["t" /* RequiredValidator */]]), core["_30" /* ɵdid */](15, 1228800, null, 0, checkbox_checkbox["a" /* Checkbox */], [config["a" /* Config */], util_form["a" /* Form */], [2, item["a" /* Item */]], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [checkbox_checkbox["a" /* Checkbox */]]), core["_30" /* ɵdid */](17, 671744, null, 0, esm5_forms["q" /* NgModel */], [[8, null], [2, esm5_forms["k" /* NG_VALIDATORS */]], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"], model: [1, "model"] }, { update: "ngModelChange" }), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](19, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                                    "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.label; var currVal_1 = _co.component; var currVal_2 = _co.componentId; _ck(_v, 10, 0, currVal_0, currVal_1, currVal_2); var currVal_12 = _v.parent.parent.parent.parent.context.$implicit.required; _ck(_v, 13, 0, currVal_12); var currVal_13 = core["_34" /* ɵinlineInterpolate */](2, "", _v.parent.parent.parent.parent.context.$implicit.typ, "_", _v.parent.parent.parent.parent.context.$implicit.id, ""); var currVal_14 = _v.context.$implicit.checked; _ck(_v, 17, 0, currVal_13, currVal_14); }, function (_ck, _v) { var currVal_3 = (core["_44" /* ɵnov */](_v, 13).required ? "" : null); var currVal_4 = core["_44" /* ɵnov */](_v, 15)._disabled; var currVal_5 = core["_44" /* ɵnov */](_v, 19).ngClassUntouched; var currVal_6 = core["_44" /* ɵnov */](_v, 19).ngClassTouched; var currVal_7 = core["_44" /* ɵnov */](_v, 19).ngClassPristine; var currVal_8 = core["_44" /* ɵnov */](_v, 19).ngClassDirty; var currVal_9 = core["_44" /* ɵnov */](_v, 19).ngClassValid; var currVal_10 = core["_44" /* ɵnov */](_v, 19).ngClassInvalid; var currVal_11 = core["_44" /* ɵnov */](_v, 19).ngClassPending; _ck(_v, 12, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11); }); }
+function View_AddonModFeedbackFormPage_18(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-list", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_19)), core["_30" /* ɵdid */](4, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "]))], function (_ck, _v) { var currVal_0 = _v.parent.parent.parent.context.$implicit.choices; _ck(_v, 4, 0, currVal_0); }, null); }
+function View_AddonModFeedbackFormPage_21(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 3, "ion-option", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[17, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](3, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content_content["a" /* Content */]]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.value; _ck(_v, 1, 0, currVal_0); var currVal_1 = _v.context.$implicit.label; var currVal_2 = _co.component; var currVal_3 = _co.componentId; _ck(_v, 3, 0, currVal_1, currVal_2, currVal_3); }, null); }
+function View_AddonModFeedbackFormPage_20(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 15, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 12, "ion-select", [["interface", "popover"]], [[1, "required", 0], [2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 5)._click($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("keyup.space" === en)) {
+        var pd_1 = (core["_44" /* ɵnov */](_v, 5)._keyup() !== false);
+        ad = (pd_1 && ad);
+    } if (("ngModelChange" === en)) {
+        var pd_2 = ((_v.parent.parent.parent.context.$implicit.value = $event) !== false);
+        ad = (pd_2 && ad);
+    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](3, 16384, null, 0, esm5_forms["t" /* RequiredValidator */], [], { required: [0, "required"] }, null), core["_50" /* ɵprd */](1024, null, esm5_forms["k" /* NG_VALIDATORS */], function (p0_0) { return [p0_0]; }, [esm5_forms["t" /* RequiredValidator */]]), core["_30" /* ɵdid */](5, 1228800, null, 1, select_select["a" /* Select */], [app_app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], { interface: [0, "interface"] }, null), core["_52" /* ɵqud */](603979776, 17, { options: 1 }), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](8, 671744, null, 0, esm5_forms["q" /* NgModel */], [[8, null], [2, esm5_forms["k" /* NG_VALIDATORS */]], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"], model: [1, "model"] }, { update: "ngModelChange" }), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](10, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_21)), core["_30" /* ɵdid */](13, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "]))], function (_ck, _v) { var currVal_9 = _v.parent.parent.parent.context.$implicit.required; _ck(_v, 3, 0, currVal_9); var currVal_10 = "popover"; _ck(_v, 5, 0, currVal_10); var currVal_11 = core["_34" /* ɵinlineInterpolate */](2, "", _v.parent.parent.parent.context.$implicit.typ, "_", _v.parent.parent.parent.context.$implicit.id, ""); var currVal_12 = _v.parent.parent.parent.context.$implicit.value; _ck(_v, 8, 0, currVal_11, currVal_12); var currVal_13 = _v.parent.parent.parent.context.$implicit.choices; _ck(_v, 13, 0, currVal_13); }, function (_ck, _v) { var currVal_0 = (core["_44" /* ɵnov */](_v, 3).required ? "" : null); var currVal_1 = core["_44" /* ɵnov */](_v, 5)._disabled; var currVal_2 = core["_44" /* ɵnov */](_v, 10).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 10).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 10).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 10).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 10).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 10).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 10).ngClassPending; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); }); }
+function View_AddonModFeedbackFormPage_23(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-recaptcha", [["modelValueName", "value"]], null, null, null, recaptcha_ngfactory["b" /* View_CoreRecaptchaComponent_0 */], recaptcha_ngfactory["a" /* RenderType_CoreRecaptchaComponent */])), core["_30" /* ɵdid */](1, 114688, null, 0, recaptcha["a" /* CoreRecaptchaComponent */], [sites["a" /* CoreSitesProvider */], lang["a" /* CoreLangProvider */], utils_text["a" /* CoreTextUtilsProvider */], modal_controller["a" /* ModalController */]], { model: [0, "model"], publicKey: [1, "publicKey"], modelValueName: [2, "modelValueName"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.parent.parent.parent.context.$implicit; var currVal_1 = _v.parent.parent.parent.parent.context.$implicit.captcha.recaptchapublickey; var currVal_2 = "value"; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
+function View_AddonModFeedbackFormPage_24(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "div", [["class", "core-warning-card"], ["icon-start", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                        "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 1, "ion-icon", [["name", "warning"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](3, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](4, null, ["\n                                        ", "\n                                    "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_1 = "warning"; _ck(_v, 3, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 3)._hidden; _ck(_v, 2, 0, currVal_0); var currVal_2 = core["_56" /* ɵunv */](_v, 4, 0, core["_44" /* ɵnov */](_v, 5).transform("addon.mod_feedback.captchaofflinewarning")); _ck(_v, 4, 0, currVal_2); }); }
+function View_AddonModFeedbackFormPage_22(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_23)), core["_30" /* ɵdid */](3, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_24)), core["_30" /* ɵdid */](6, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (!_co.preview && !_co.offline); _ck(_v, 3, 0, currVal_0); var currVal_1 = (!_co.preview && (!_v.parent.parent.parent.context.$implicit.captcha || _co.offline)); _ck(_v, 6, 0, currVal_1); }, null); }
+function View_AddonModFeedbackFormPage_9(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 29, "div", [["class", "addon-mod_feedback-form-content"], ["item-content", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                            "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 26, null, null, null, null, null, null, null)), core["_30" /* ɵdid */](3, 16384, null, 0, common["o" /* NgSwitch */], [], { ngSwitch: [0, "ngSwitch"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_10)), core["_30" /* ɵdid */](6, 278528, null, 0, common["p" /* NgSwitchCase */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], common["o" /* NgSwitch */]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_11)), core["_30" /* ɵdid */](9, 278528, null, 0, common["p" /* NgSwitchCase */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], common["o" /* NgSwitch */]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_12)), core["_30" /* ɵdid */](12, 278528, null, 0, common["p" /* NgSwitchCase */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], common["o" /* NgSwitch */]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_15)), core["_30" /* ɵdid */](15, 278528, null, 0, common["p" /* NgSwitchCase */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], common["o" /* NgSwitch */]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_16)), core["_30" /* ɵdid */](18, 278528, null, 0, common["p" /* NgSwitchCase */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], common["o" /* NgSwitch */]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_18)), core["_30" /* ɵdid */](21, 278528, null, 0, common["p" /* NgSwitchCase */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], common["o" /* NgSwitch */]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_20)), core["_30" /* ɵdid */](24, 278528, null, 0, common["p" /* NgSwitchCase */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], common["o" /* NgSwitch */]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_22)), core["_30" /* ɵdid */](27, 278528, null, 0, common["p" /* NgSwitchCase */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], common["o" /* NgSwitch */]], { ngSwitchCase: [0, "ngSwitchCase"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                        "]))], function (_ck, _v) { var currVal_0 = _v.parent.parent.context.$implicit.template; _ck(_v, 3, 0, currVal_0); var currVal_1 = "label"; _ck(_v, 6, 0, currVal_1); var currVal_2 = "textfield"; _ck(_v, 9, 0, currVal_2); var currVal_3 = "numeric"; _ck(_v, 12, 0, currVal_3); var currVal_4 = "textarea"; _ck(_v, 15, 0, currVal_4); var currVal_5 = "multichoice-r"; _ck(_v, 18, 0, currVal_5); var currVal_6 = "multichoice-c"; _ck(_v, 21, 0, currVal_6); var currVal_7 = "multichoice-d"; _ck(_v, 24, 0, currVal_7); var currVal_8 = "captcha"; _ck(_v, 27, 0, currVal_8); }, null); }
+function View_AddonModFeedbackFormPage_6(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 12, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], [[2, "core-danger-item", null]], null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], { color: [0, "color"] }, null), core["_52" /* ɵqud */](603979776, 7, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 8, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 9, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 1, 1, null, View_AddonModFeedbackFormPage_7)), core["_30" /* ɵdid */](8, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 3, 1, null, View_AddonModFeedbackFormPage_9)), core["_30" /* ɵdid */](11, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "]))], function (_ck, _v) { var currVal_1 = ((_v.parent.context.$implicit.dependitem > 0) ? "light" : ""); _ck(_v, 1, 0, currVal_1); var currVal_2 = _v.parent.context.$implicit.name; _ck(_v, 8, 0, currVal_2); var currVal_3 = _v.parent.context.$implicit.template; _ck(_v, 11, 0, currVal_3); }, function (_ck, _v) { var currVal_0 = (_v.parent.context.$implicit.isEmpty || _v.parent.context.$implicit.hasError); _ck(_v, 0, 0, currVal_0); }); }
+function View_AddonModFeedbackFormPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_5)), core["_30" /* ɵdid */](3, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_6)), core["_30" /* ɵdid */](6, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], function (_ck, _v) { var currVal_0 = (_v.context.$implicit.typ == "pagebreak"); _ck(_v, 3, 0, currVal_0); var currVal_1 = (_v.context.$implicit.typ != "pagebreak"); _ck(_v, 6, 0, currVal_1); }, null); }
+function View_AddonModFeedbackFormPage_25(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 10, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 6, "button", [["block", ""], ["icon-start", ""], ["ion-button", ""], ["outline", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.gotoPage(true) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](4, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { outline: [0, "outline"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                                "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 0, 1, "ion-icon", [["name", "arrow-back"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](7, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](8, 0, ["\n                                ", "\n                            "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                        "]))], function (_ck, _v) { var currVal_0 = ""; var currVal_1 = ""; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = "arrow-back"; _ck(_v, 7, 0, currVal_3); }, function (_ck, _v) { var currVal_2 = core["_44" /* ɵnov */](_v, 7)._hidden; _ck(_v, 6, 0, currVal_2); var currVal_4 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("addon.mod_feedback.previous_page")); _ck(_v, 8, 0, currVal_4); }); }
+function View_AddonModFeedbackFormPage_26(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 10, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 6, "button", [["block", ""], ["icon-end", ""], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.gotoPage(false) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](4, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](5, 0, ["\n                                ", "\n                                "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_31" /* ɵeld */](7, 0, null, 0, 1, "ion-icon", [["name", "arrow-forward"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](8, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                        "]))], function (_ck, _v) { var currVal_0 = ""; _ck(_v, 4, 0, currVal_0); var currVal_3 = "arrow-forward"; _ck(_v, 8, 0, currVal_3); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 5, 0, core["_44" /* ɵnov */](_v, 6).transform("addon.mod_feedback.next_page")); _ck(_v, 5, 0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 8)._hidden; _ck(_v, 7, 0, currVal_2); }); }
+function View_AddonModFeedbackFormPage_27(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 3, "button", [["block", ""], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.gotoPage(false) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](4, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](5, 0, ["\n                                ", "\n                            "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                        "]))], function (_ck, _v) { var currVal_0 = ""; _ck(_v, 4, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 5, 0, core["_44" /* ɵnov */](_v, 6).transform("addon.mod_feedback.save_entries")); _ck(_v, 5, 0, currVal_1); }); }
+function View_AddonModFeedbackFormPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 43, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 40, "ion-list", [["no-margin", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](3, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 16, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](6, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](10, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 2, 2, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](13, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, 2, 1, null, View_AddonModFeedbackFormPage_2)), core["_30" /* ɵdid */](17, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, 2, 1, null, View_AddonModFeedbackFormPage_3)), core["_30" /* ɵdid */](20, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_4)), core["_30" /* ɵdid */](24, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](26, 0, null, null, 15, "ion-grid", [["class", "grid"]], null, null, null, null, null)), core["_30" /* ɵdid */](27, 16384, null, 0, grid["a" /* Grid */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](29, 0, null, null, 11, "ion-row", [["align-items-center", ""], ["class", "row"]], null, null, null, null, null)), core["_30" /* ɵdid */](30, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_25)), core["_30" /* ɵdid */](33, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_26)), core["_30" /* ɵdid */](36, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_27)), core["_30" /* ɵdid */](39, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.access.isanonymous; _ck(_v, 17, 0, currVal_1); var currVal_2 = !_co.access.isanonymous; _ck(_v, 20, 0, currVal_2); var currVal_3 = _co.items; _ck(_v, 24, 0, currVal_3); var currVal_4 = _co.hasPrevPage; _ck(_v, 33, 0, currVal_4); var currVal_5 = _co.hasNextPage; _ck(_v, 36, 0, currVal_5); var currVal_6 = !_co.hasNextPage; _ck(_v, 39, 0, currVal_6); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 13, 0, core["_44" /* ɵnov */](_v, 14).transform("addon.mod_feedback.mode")); _ck(_v, 13, 0, currVal_0); }); }
+function View_AddonModFeedbackFormPage_29(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("addon.mod_feedback.this_feedback_is_already_submitted")); _ck(_v, 1, 0, currVal_0); }); }
+function View_AddonModFeedbackFormPage_30(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("addon.mod_feedback.feedback_submitted_offline")); _ck(_v, 1, 0, currVal_0); }); }
+function View_AddonModFeedbackFormPage_31(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "core-format-text", [["componentId", "componentId"]], null, null, null, null, null)), core["_30" /* ɵdid */](2, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content_content["a" /* Content */]]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.completionPageContents; var currVal_1 = _co.component; var currVal_2 = "componentId"; _ck(_v, 2, 0, currVal_0, currVal_1, currVal_2); }, null); }
+function View_AddonModFeedbackFormPage_28(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 13, "div", [["class", "core-success-card"], ["icon-start", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 1, "ion-icon", [["name", "checkmark"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](3, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_29)), core["_30" /* ɵdid */](6, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_30)), core["_30" /* ɵdid */](9, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_31)), core["_30" /* ɵdid */](12, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = "checkmark"; _ck(_v, 3, 0, currVal_1); var currVal_2 = (!_co.completionPageContents && !_co.completedOffline); _ck(_v, 6, 0, currVal_2); var currVal_3 = (!_co.completionPageContents && _co.completedOffline); _ck(_v, 9, 0, currVal_3); var currVal_4 = _co.completionPageContents; _ck(_v, 12, 0, currVal_4); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 3)._hidden; _ck(_v, 2, 0, currVal_0); }); }
+function View_AddonModFeedbackFormPage_33(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 10, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 6, "button", [["block", ""], ["icon-start", ""], ["ion-button", ""], ["outline", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.showAnalysis() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](4, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { outline: [0, "outline"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                        "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 0, 1, "ion-icon", [["name", "stats"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](7, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](8, 0, ["\n                        ", "\n                    "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], function (_ck, _v) { var currVal_0 = ""; var currVal_1 = ""; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = "stats"; _ck(_v, 7, 0, currVal_3); }, function (_ck, _v) { var currVal_2 = core["_44" /* ɵnov */](_v, 7)._hidden; _ck(_v, 6, 0, currVal_2); var currVal_4 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("addon.mod_feedback.completed_feedbacks")); _ck(_v, 8, 0, currVal_4); }); }
+function View_AddonModFeedbackFormPage_34(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 10, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 6, "button", [["block", ""], ["icon-end", ""], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.continue() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](4, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](5, 0, ["\n                        ", "\n                        "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_31" /* ɵeld */](7, 0, null, 0, 1, "ion-icon", [["name", "arrow-forward"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](8, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], function (_ck, _v) { var currVal_0 = ""; _ck(_v, 4, 0, currVal_0); var currVal_3 = "arrow-forward"; _ck(_v, 8, 0, currVal_3); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 5, 0, core["_44" /* ɵnov */](_v, 6).transform("core.continue")); _ck(_v, 5, 0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 8)._hidden; _ck(_v, 7, 0, currVal_2); }); }
+function View_AddonModFeedbackFormPage_32(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 12, "ion-grid", [["class", "grid"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, grid["a" /* Grid */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 8, "ion-row", [["align-items-center", ""], ["class", "row"]], null, null, null, null, null)), core["_30" /* ɵdid */](4, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_33)), core["_30" /* ɵdid */](7, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModFeedbackFormPage_34)), core["_30" /* ɵdid */](10, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.access.canviewanalysis; _ck(_v, 7, 0, currVal_0); var currVal_1 = _co.hasNextPage; _ck(_v, 10, 0, currVal_1); }, null); }
+function View_AddonModFeedbackFormPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 11, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 7, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](7, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_31" /* ɵeld */](8, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](9, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content_content["a" /* Content */]]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](13, 0, null, null, 15, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](14, 4374528, null, 0, content_content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, 1, 11, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](17, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModFeedbackFormPage_1)), core["_30" /* ɵdid */](20, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModFeedbackFormPage_28)), core["_30" /* ɵdid */](23, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModFeedbackFormPage_32)), core["_30" /* ɵdid */](26, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.title; _ck(_v, 9, 0, currVal_2); var currVal_5 = _co.feedbackLoaded; _ck(_v, 17, 0, currVal_5); var currVal_6 = (_co.items && _co.items.length); _ck(_v, 20, 0, currVal_6); var currVal_7 = _co.completed; _ck(_v, 23, 0, currVal_7); var currVal_8 = _co.completed; _ck(_v, 26, 0, currVal_8); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_3 = core["_44" /* ɵnov */](_v, 14).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 14)._hasRefresher; _ck(_v, 13, 0, currVal_3, currVal_4); }); }
+function View_AddonModFeedbackFormPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-feedback-form", [], null, null, null, View_AddonModFeedbackFormPage_0, RenderType_AddonModFeedbackFormPage)), core["_30" /* ɵdid */](1, 180224, null, 0, form_AddonModFeedbackFormPage, [nav_params["a" /* NavParams */], feedback["a" /* AddonModFeedbackProvider */], app["a" /* CoreAppProvider */], utils_utils["a" /* CoreUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], nav_controller["a" /* NavController */], helper["a" /* AddonModFeedbackHelperProvider */], course["a" /* CoreCourseProvider */], events["a" /* CoreEventsProvider */], sync["a" /* AddonModFeedbackSyncProvider */], _ionic_native_network["a" /* Network */], translate_service["a" /* TranslateService */], providers_helper["a" /* CoreLoginHelperProvider */], contentlinks_providers_helper["a" /* CoreContentLinksHelperProvider */], sites["a" /* CoreSitesProvider */], [2, content_content["a" /* Content */]]], null, null)], null, null); }
+var AddonModFeedbackFormPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-feedback-form", form_AddonModFeedbackFormPage, View_AddonModFeedbackFormPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=form.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(311);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(312);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(314);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(313);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(401);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(615);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
+var pipes_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./src/core/course/components/components.module.ts
+var course_components_components_module = __webpack_require__(70);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(228);
+
+// CONCATENATED MODULE: ./src/addon/mod/feedback/pages/form/form.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModFeedbackFormPageModuleNgFactory", function() { return AddonModFeedbackFormPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AddonModFeedbackFormPageModuleNgFactory = core["_28" /* ɵcmf */](form_module_AddonModFeedbackFormPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], unsupported_module_ngfactory["a" /* CoreCourseUnsupportedModuleComponentNgFactory */], index_ngfactory["a" /* AddonModFeedbackIndexComponentNgFactory */], AddonModFeedbackFormPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, course_components_components_module["a" /* CoreCourseComponentsModule */], course_components_components_module["a" /* CoreCourseComponentsModule */], []), core["_41" /* ɵmpd */](512, components_components_module["a" /* AddonModFeedbackComponentsModule */], components_components_module["a" /* AddonModFeedbackComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, form_module_AddonModFeedbackFormPageModule, form_module_AddonModFeedbackFormPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], form_AddonModFeedbackFormPage, [])]); });
+
+//# sourceMappingURL=form.module.ngfactory.js.map
+
+/***/ }),
+
+/***/ 1854:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RenderType_CoreRecaptchaComponent; });
+/* harmony export (immutable) */ __webpack_exports__["b"] = View_CoreRecaptchaComponent_0;
+/* unused harmony export View_CoreRecaptchaComponent_Host_0 */
+/* unused harmony export CoreRecaptchaComponentNgFactory */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_components_button_button_ngfactory__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_components_button_button__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_config_config__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core_src_translate_pipe__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core_src_translate_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_icon_icon__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__recaptcha__ = __webpack_require__(1270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_sites__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_lang__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_utils_text__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__ = __webpack_require__(206);
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_CoreRecaptchaComponent = [];
+var RenderType_CoreRecaptchaComponent = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreRecaptchaComponent, data: {} });
+
+function View_CoreRecaptchaComponent_2(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 3, "button", [["block", ""], ["ion-button", ""], ["type", "button"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.answerRecaptcha() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, __WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_components_button_button_ngfactory__["b" /* View_Button_0 */], __WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_components_button_button_ngfactory__["a" /* RenderType_Button */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 1097728, null, 0, __WEBPACK_IMPORTED_MODULE_2_ionic_angular_components_button_button__["a" /* Button */], [[8, ""], __WEBPACK_IMPORTED_MODULE_3_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](2, 0, ["", ""])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_47" /* ɵpid */](131072, __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core_src_translate_pipe__["a" /* TranslatePipe */], [__WEBPACK_IMPORTED_MODULE_5__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = ""; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_56" /* ɵunv */](_v, 2, 0, __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 3).transform("core.answer")); _ck(_v, 2, 0, currVal_1); }); }
+function View_CoreRecaptchaComponent_3(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 2, "p", [["class", "text-success"]], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](1, null, ["", ""])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_47" /* ɵpid */](131072, __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core_src_translate_pipe__["a" /* TranslatePipe */], [__WEBPACK_IMPORTED_MODULE_5__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var currVal_0 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_56" /* ɵunv */](_v, 1, 0, __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 2).transform("core.answered")); _ck(_v, 1, 0, currVal_0); }); }
+function View_CoreRecaptchaComponent_4(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 2, "p", [["class", "text-danger"]], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](1, null, ["", ""])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_47" /* ɵpid */](131072, __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core_src_translate_pipe__["a" /* TranslatePipe */], [__WEBPACK_IMPORTED_MODULE_5__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var currVal_0 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_56" /* ɵunv */](_v, 1, 0, __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 2).transform("core.login.recaptchaexpired")); _ck(_v, 1, 0, currVal_0); }); }
+function View_CoreRecaptchaComponent_1(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 12, "div", [], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreRecaptchaComponent_2)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](5, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["k" /* NgIf */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewContainerRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreRecaptchaComponent_3)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](8, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["k" /* NgIf */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewContainerRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreRecaptchaComponent_4)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](11, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["k" /* NgIf */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewContainerRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.model[_co.modelValueName]; _ck(_v, 5, 0, currVal_0); var currVal_1 = _co.model[_co.modelValueName]; _ck(_v, 8, 0, currVal_1); var currVal_2 = _co.expired; _ck(_v, 11, 0, currVal_2); }, null); }
+function View_CoreRecaptchaComponent_5(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 5, "div", [["class", "core-warning-card"], ["icon-start", ""]], null, null, null, null, null)), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](2, 0, null, null, 1, "ion-icon", [["name", "warning"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](3, 147456, null, 0, __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_icon_icon__["a" /* Icon */], [__WEBPACK_IMPORTED_MODULE_3_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](4, null, ["\n    ", "\n"])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_47" /* ɵpid */](131072, __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core_src_translate_pipe__["a" /* TranslatePipe */], [__WEBPACK_IMPORTED_MODULE_5__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_1 = "warning"; _ck(_v, 3, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 3)._hidden; _ck(_v, 2, 0, currVal_0); var currVal_2 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_56" /* ɵunv */](_v, 4, 0, __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 5).transform("core.errorloadingcontent")); _ck(_v, 4, 0, currVal_2); }); }
+function View_CoreRecaptchaComponent_0(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreRecaptchaComponent_1)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](2, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["k" /* NgIf */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewContainerRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n\n"])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreRecaptchaComponent_5)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](6, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_6__angular_common__["k" /* NgIf */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewContainerRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.publicKey; _ck(_v, 2, 0, currVal_0); var currVal_1 = (!_co.challengehash && _co.challengeimage); _ck(_v, 6, 0, currVal_1); }, null); }
+function View_CoreRecaptchaComponent_Host_0(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 1, "core-recaptcha", [], null, null, null, View_CoreRecaptchaComponent_0, RenderType_CoreRecaptchaComponent)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 114688, null, 0, __WEBPACK_IMPORTED_MODULE_8__recaptcha__["a" /* CoreRecaptchaComponent */], [__WEBPACK_IMPORTED_MODULE_9__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_10__providers_lang__["a" /* CoreLangProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__["a" /* ModalController */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var CoreRecaptchaComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf */]("core-recaptcha", __WEBPACK_IMPORTED_MODULE_8__recaptcha__["a" /* CoreRecaptchaComponent */], View_CoreRecaptchaComponent_Host_0, { model: "model", publicKey: "publicKey", modelValueName: "modelValueName", siteUrl: "siteUrl" }, {}, []);
+
+//# sourceMappingURL=recaptcha.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=27.js.map

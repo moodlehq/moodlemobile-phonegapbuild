@@ -1,1 +1,745 @@
-webpackJsonp([55],{1807:function(n,l,e){"use strict";function t(n){return b._57(0,[b._47(0,Y.a,[Z.a,I.a]),(n()(),b._31(1,0,null,null,2,"span",[],null,null,null,null,null)),(n()(),b._55(2,null,["",""])),b._49(3,1)],null,function(n,l){var e=l.component;n(l,2,0,b._56(l,2,0,n(l,3,0,b._44(l,0),e.time/1e3)))})}function i(n){return b._57(0,[(n()(),b._31(0,0,null,null,3,"button",[["ion-button",""]],null,[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.done()&&t}return t},G.b,G.a)),b._30(1,1097728,[[8,4]],0,H.a,[[8,""],J.a,b.t,b.V],null,null),(n()(),b._55(2,0,["",""])),b._47(131072,K.a,[N.a,b.j])],null,function(n,l){n(l,2,0,b._56(l,2,0,b._44(l,3).transform("core.done")))})}function a(n){return b._57(0,[(n()(),b._31(0,0,[[1,0],["streamVideo",1]],null,0,"video",[["autoplay",""],["class","core-webcam-stream"]],[[8,"hidden",0]],null,null,null,null))],null,function(n,l){n(l,0,0,l.component.hasCaptured)})}function u(n){return b._57(0,[(n()(),b._31(0,0,[[2,0],["previewVideo",1]],null,0,"video",[["class","core-webcam-video-captured"],["controls",""]],[[8,"hidden",0]],null,null,null,null))],null,function(n,l){n(l,0,0,!l.component.hasCaptured)})}function o(n){return b._57(0,[(n()(),b._31(0,0,[[3,0],["imgCanvas",1]],null,0,"canvas",[["class","core-webcam-image-canvas"]],null,null,null,null,null))],null,null)}function r(n){return b._57(0,[(n()(),b._31(0,0,[[4,0],["previewImage",1]],null,1,"img",[["class","core-webcam-image"]],[[8,"hidden",0],[8,"alt",0]],null,null,null,null)),b._47(131072,K.a,[N.a,b.j])],null,function(n,l){n(l,0,0,!l.component.hasCaptured,b._34(1,"",b._56(l,0,1,b._44(l,1).transform("core.capturedimage")),""))})}function s(n){return b._57(0,[(n()(),b._31(0,0,null,null,5,"div",[["class","core-audio-record-container"]],null,null,null,null,null)),(n()(),b._55(-1,null,["\n                "])),(n()(),b._31(2,0,[[5,0],["streamAudio",1]],null,0,"canvas",[["class","core-audio-canvas"]],[[8,"hidden",0]],null,null,null,null)),(n()(),b._55(-1,null,["\n                "])),(n()(),b._31(4,0,[[6,0],["previewAudio",1]],null,0,"audio",[["class","core-audio-captured"],["controls",""]],[[8,"hidden",0]],null,null,null,null)),(n()(),b._55(-1,null,["\n            "]))],null,function(n,l){var e=l.component;n(l,2,0,e.hasCaptured);n(l,4,0,!e.hasCaptured)})}function c(n){return b._57(0,[(n()(),b._31(0,0,null,null,1,"ion-icon",[["name","microphone"],["role","img"]],[[2,"hide",null]],null,null,null,null)),b._30(1,147456,null,0,Q.a,[J.a,b.t,b.V],{name:[0,"name"]},null)],function(n,l){n(l,1,0,"microphone")},function(n,l){n(l,0,0,b._44(l,1)._hidden)})}function d(n){return b._57(0,[(n()(),b._31(0,0,null,null,1,"ion-icon",[["name","videocam"],["role","img"]],[[2,"hide",null]],null,null,null,null)),b._30(1,147456,null,0,Q.a,[J.a,b.t,b.V],{name:[0,"name"]},null)],function(n,l){n(l,1,0,"videocam")},function(n,l){n(l,0,0,b._44(l,1)._hidden)})}function _(n){return b._57(0,[(n()(),b._31(0,0,null,null,1,"ion-icon",[["name","camera"],["role","img"]],[[2,"hide",null]],null,null,null,null)),b._30(1,147456,null,0,Q.a,[J.a,b.t,b.V],{name:[0,"name"]},null)],function(n,l){n(l,1,0,"camera")},function(n,l){n(l,0,0,b._44(l,1)._hidden)})}function m(n){return b._57(0,[(n()(),b._31(0,0,null,null,1,"ion-icon",[["name","square"],["role","img"]],[[2,"hide",null]],null,null,null,null)),b._30(1,147456,null,0,Q.a,[J.a,b.t,b.V],{name:[0,"name"]},null)],function(n,l){n(l,1,0,"square")},function(n,l){n(l,0,0,b._44(l,1)._hidden)})}function h(n){return b._57(0,[(n()(),b._31(0,0,null,null,14,"button",[["clear",""],["icon-only",""],["ion-button",""]],[[1,"aria-label",0]],[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.actionClicked()&&t}return t},G.b,G.a)),b._30(1,1097728,null,0,H.a,[[8,""],J.a,b.t,b.V],{clear:[0,"clear"]},null),(n()(),b._55(-1,0,["\n                "])),(n()(),b._26(16777216,null,0,1,null,c)),b._30(4,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,0,["\n                "])),(n()(),b._26(16777216,null,0,1,null,d)),b._30(7,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,0,["\n                "])),(n()(),b._26(16777216,null,0,1,null,_)),b._30(10,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,0,["\n                "])),(n()(),b._26(16777216,null,0,1,null,m)),b._30(13,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,0,["\n            "]))],function(n,l){var e=l.component;n(l,1,0,"");n(l,4,0,!e.isCapturing&&e.isAudio);n(l,7,0,!e.isCapturing&&e.isVideo);n(l,10,0,e.isImage);n(l,13,0,e.isCapturing)},function(n,l){n(l,0,0,l.component.title)})}function p(n){return b._57(0,[(n()(),b._31(0,0,null,null,6,"button",[["clear",""],["icon-only",""],["ion-button",""]],[[1,"aria-label",0]],[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.discard()&&t}return t},G.b,G.a)),b._30(1,1097728,null,0,H.a,[[8,""],J.a,b.t,b.V],{clear:[0,"clear"]},null),b._47(131072,K.a,[N.a,b.j]),(n()(),b._55(-1,0,["\n                "])),(n()(),b._31(4,0,null,0,1,"ion-icon",[["name","trash"],["role","img"]],[[2,"hide",null]],null,null,null,null)),b._30(5,147456,null,0,Q.a,[J.a,b.t,b.V],{name:[0,"name"]},null),(n()(),b._55(-1,0,["\n            "]))],function(n,l){n(l,1,0,"");n(l,5,0,"trash")},function(n,l){n(l,0,0,b._56(l,0,0,b._44(l,2).transform("core.discard")));n(l,4,0,b._44(l,5)._hidden)})}function f(n){return b._57(0,[(n()(),b._31(0,0,null,null,1,"core-chrono",[],[[8,"hidden",0]],[[null,"onEnd"]],function(n,l,e){var t=!0;if("onEnd"===l){t=!1!==n.component.stopCapturing()&&t}return t},t,nn)),b._30(1,770048,null,0,$.a,[b.j],{running:[0,"running"],endTime:[1,"endTime"],reset:[2,"reset"]},{onEnd:"onEnd"})],function(n,l){var e=l.component;n(l,1,0,e.isCapturing,e.maxTime,e.resetChrono)},function(n,l){n(l,0,0,l.component.hasCaptured)})}function g(n){return b._57(0,[(n()(),b._31(0,0,null,null,22,"ion-row",[["class","row"]],null,null,null,null,null)),b._30(1,16384,null,0,ln.a,[],null,null),(n()(),b._55(-1,null,["\n        "])),(n()(),b._31(3,0,null,null,1,"ion-col",[["class","col"]],null,null,null,null,null)),b._30(4,16384,null,0,en.a,[],null,null),(n()(),b._55(-1,null,["\n        "])),(n()(),b._31(6,0,null,null,8,"ion-col",[["class","col"],["text-center",""]],null,null,null,null,null)),b._30(7,16384,null,0,en.a,[],null,null),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,h)),b._30(10,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,p)),b._30(13,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n        "])),(n()(),b._55(-1,null,["\n        "])),(n()(),b._31(16,0,null,null,5,"ion-col",[["class","chrono-container col"],["padding",""],["text-right",""]],null,null,null,null,null)),b._30(17,16384,null,0,en.a,[],null,null),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,f)),b._30(20,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n        "])),(n()(),b._55(-1,null,["\n    "]))],function(n,l){var e=l.component;n(l,10,0,!e.hasCaptured);n(l,13,0,e.hasCaptured);n(l,20,0,!e.isImage)},null)}function v(n){return b._57(0,[b._52(671088640,1,{streamVideo:0}),b._52(671088640,2,{previewVideo:0}),b._52(671088640,3,{imgCanvas:0}),b._52(671088640,4,{previewImage:0}),b._52(671088640,5,{streamAudio:0}),b._52(671088640,6,{previewAudio:0}),(n()(),b._31(6,0,null,null,29,"ion-header",[],null,null,null,null,null)),b._30(7,16384,null,0,tn.a,[J.a,b.t,b.V,[2,an.a]],null,null),(n()(),b._55(-1,null,["\n    "])),(n()(),b._31(9,0,null,null,25,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,un.b,un.a)),b._30(10,49152,null,0,on.a,[rn.a,[2,an.a],[2,sn.a],J.a,b.t,b.V],null,null),(n()(),b._55(-1,3,["\n        "])),(n()(),b._31(12,0,null,1,8,"ion-buttons",[["start",""]],null,null,null,null,null)),b._30(13,16384,null,1,cn.a,[J.a,b.t,b.V,[2,dn.a],[2,on.a]],null,null),b._52(603979776,7,{_buttons:1}),(n()(),b._55(-1,null,["\n            "])),(n()(),b._31(16,0,null,null,3,"button",[["ion-button",""]],null,[[null,"click"]],function(n,l,e){var t=!0;if("click"===l){t=!1!==n.component.cancel()&&t}return t},G.b,G.a)),b._30(17,1097728,[[7,4]],0,H.a,[[8,""],J.a,b.t,b.V],null,null),(n()(),b._55(18,0,["",""])),b._47(131072,K.a,[N.a,b.j]),(n()(),b._55(-1,null,["\n        "])),(n()(),b._55(-1,3,["\n\n        "])),(n()(),b._31(22,0,null,3,3,"ion-title",[],null,null,null,_n.b,_n.a)),b._30(23,49152,null,0,mn.a,[J.a,b.t,b.V,[2,dn.a],[2,on.a]],null,null),(n()(),b._55(24,0,["",""])),b._47(131072,K.a,[N.a,b.j]),(n()(),b._55(-1,3,["\n\n        "])),(n()(),b._31(27,0,null,2,6,"ion-buttons",[["end",""]],null,null,null,null,null)),b._30(28,16384,null,1,cn.a,[J.a,b.t,b.V,[2,dn.a],[2,on.a]],null,null),b._52(603979776,8,{_buttons:1}),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,i)),b._30(32,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n        "])),(n()(),b._55(-1,3,["\n    "])),(n()(),b._55(-1,null,["\n"])),(n()(),b._55(-1,null,["\n"])),(n()(),b._31(37,0,null,null,28,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,hn.b,hn.a)),b._30(38,4374528,null,0,pn.a,[J.a,fn.a,gn.a,b.t,b.V,rn.a,vn.a,b.M,[2,an.a],[2,sn.a]],null,null),(n()(),b._55(-1,1,["\n    "])),(n()(),b._31(40,0,null,1,24,"core-loading",[],null,null,null,bn.b,bn.a)),b._30(41,638976,null,0,wn.a,[N.a,b.t],{hideUntil:[0,"hideUntil"]},null),(n()(),b._55(-1,0,["\n        "])),(n()(),b._31(43,0,null,0,20,"div",[["class","core-av-wrapper"]],null,null,null,null,null)),(n()(),b._55(-1,null,["\n            "])),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,a)),b._30(47,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n\n            "])),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,u)),b._30(51,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n\n            "])),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,o)),b._30(55,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,r)),b._30(58,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n\n            "])),(n()(),b._55(-1,null,["\n            "])),(n()(),b._26(16777216,null,null,1,null,s)),b._30(62,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n        "])),(n()(),b._55(-1,0,["\n    "])),(n()(),b._55(-1,1,["\n"])),(n()(),b._55(-1,null,["\n\n"])),(n()(),b._31(67,0,null,null,5,"ion-footer",[],null,null,null,null,null)),b._30(68,16384,null,0,yn.a,[J.a,b.t,b.V,[2,an.a]],null,null),(n()(),b._55(-1,null,["\n    "])),(n()(),b._26(16777216,null,null,1,null,g)),b._30(71,16384,null,0,X.k,[b._11,b._6],{ngIf:[0,"ngIf"]},null),(n()(),b._55(-1,null,["\n"])),(n()(),b._55(-1,null,["\n\n"]))],function(n,l){var e=l.component;n(l,32,0,e.hasCaptured);n(l,41,0,e.readyToCapture);n(l,47,0,!e.isAudio);n(l,51,0,e.isVideo);n(l,55,0,e.isImage);n(l,58,0,e.isImage);n(l,62,0,e.isAudio);n(l,71,0,e.readyToCapture)},function(n,l){var e=l.component;n(l,9,0,b._44(l,10)._hidden,b._44(l,10)._sbPadding);n(l,18,0,b._56(l,18,0,b._44(l,19).transform("core.cancel")));n(l,24,0,b._56(l,24,0,b._44(l,25).transform(e.title)));n(l,37,0,b._44(l,38).statusbarPadding,b._44(l,38)._hasRefresher)})}Object.defineProperty(l,"__esModule",{value:!0});var b=e(0),w=e(9),y=e(42),C=e(6),I=e(10),V=e(40),E=this&&this.__decorate||function(n,l,e,t){var i,a=arguments.length,u=a<3?l:null===t?t=Object.getOwnPropertyDescriptor(l,e):t;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)u=Reflect.decorate(n,l,e,t);else for(var o=n.length-1;o>=0;o--)(i=n[o])&&(u=(a<3?i(u):a>3?i(l,e,u):i(l,e))||u);return a>3&&u&&Object.defineProperty(l,e,u),u},k=this&&this.__metadata||function(n,l){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(n,l)},j=function(){function n(n,l,e,t,i,a,u){this.viewCtrl=n,this.domUtils=e,this.timeUtils=t,this.fileProvider=i,this.textUtils=a,this.cdr=u,this.window=window,this.type=l.get("type"),this.maxTime=l.get("maxTime"),this.facingMode=l.get("facingMode")||"environment",this.mimetype=l.get("mimetype"),this.extension=l.get("extension"),this.quality=l.get("quality")||.92,this.returnDataUrl=!!l.get("returnDataUrl")}return n.prototype.ngOnInit=function(){var n=this;this.initVariables();var l={video:!this.isAudio&&{facingMode:this.facingMode},audio:!this.isImage};navigator.mediaDevices.getUserMedia(l).then(function(l){var e=[];if(n.localMediaStream=l,n.isImage||(n.isVideo?n.previewMedia=n.previewVideo.nativeElement:(n.previewMedia=n.previewAudio.nativeElement,n.initAudioDrawer(n.localMediaStream),n.audioDrawer.start()),n.mediaRecorder=new n.window.MediaRecorder(n.localMediaStream,{mimeType:n.mimetype}),n.mediaRecorder.ondataavailable=function(n){n.data.size>0&&e.push(n.data)},n.mediaRecorder.onstop=function(){n.mediaBlob=new Blob(e),e=[],n.previewMedia.src=window.URL.createObjectURL(n.mediaBlob)}),n.isImage||n.isVideo){var t,i=!1;n.streamVideo.nativeElement.onloadedmetadata=function(){i||(i=!0,clearTimeout(t),n.readyToCapture=!0,n.streamVideo.nativeElement.onloadedmetadata=null,n.cdr.detectChanges())},n.streamVideo.nativeElement.src=window.URL.createObjectURL(n.localMediaStream),t=setTimeout(function(){i||(i=!0,n.dismissWithError(-1,"Cannot connect to webcam."))},1e4)}else n.readyToCapture=!0}).catch(function(l){n.dismissWithError(-1,l.message||l)})},n.prototype.initAudioDrawer=function(n){var l=!0,e=!1,t=new(this.window.AudioContext||this.window.webkitAudioContext),i=this.streamAudio.nativeElement.getContext("2d"),a=t.createMediaStreamSource(n),u=t.createAnalyser(),o=u.frequencyBinCount,r=new Uint8Array(o),s=this.streamAudio.nativeElement.width,c=this.streamAudio.nativeElement.height,d=function(){if(e&&(requestAnimationFrame(d),!(l=!l))){var n=s/o,t=0;u.getByteTimeDomainData(r),i.fillStyle="rgb(200, 200, 200)",i.fillRect(0,0,s,c),i.lineWidth=1,i.strokeStyle="rgb(0, 0, 0)",i.beginPath();for(var a=0;a<o;a++){var _=r[a]/128*c/2;0===a?i.moveTo(t,_):i.lineTo(t,_),t+=n}i.lineTo(s,c/2),i.stroke()}};u.fftSize=2048,a.connect(u),this.audioDrawer={start:function(){e||(e=!0,d())},stop:function(){e=!1}}},n.prototype.initVariables=function(){"captureimage"==this.type&&(this.isCaptureImage=!0,this.type="image"),"video"==this.type?(this.isVideo=!0,this.title="core.capturevideo"):"audio"==this.type?(this.isAudio=!0,this.title="core.captureaudio"):"image"==this.type&&(this.isImage=!0,this.title="core.captureimage")},n.prototype.actionClicked=function(){var n=this;if(this.isCapturing)this.stopCapturing(),this.cdr.detectChanges();else if(this.isImage){var l=this.streamVideo.nativeElement.videoWidth,e=this.streamVideo.nativeElement.videoHeight,t=this.domUtils.showModalLoading();this.imgCanvas.nativeElement.width=l,this.imgCanvas.nativeElement.height=e,this.imgCanvas.nativeElement.getContext("2d").drawImage(this.streamVideo.nativeElement,0,0,l,e),this.imgCanvas.nativeElement.toBlob(function(l){t.dismiss(),n.mediaBlob=l,n.previewImage.nativeElement.setAttribute("src",window.URL.createObjectURL(n.mediaBlob)),n.hasCaptured=!0},this.mimetype,this.quality)}else this.isCapturing=!0,this.resetChrono=!1,this.mediaRecorder.start(),this.cdr.detectChanges()},n.prototype.cancel=function(){this.dismissWithError(3,"Canceled.","Camera cancelled")},n.prototype.discard=function(){this.previewMedia&&this.previewMedia.pause(),this.streamVideo&&this.streamVideo.nativeElement.play(),this.audioDrawer&&this.audioDrawer.start(),this.hasCaptured=!1,this.isCapturing=!1,this.resetChrono=!0,delete this.mediaBlob,this.cdr.detectChanges()},n.prototype.dismissWithData=function(n){this.viewCtrl.dismiss(n,"success")},n.prototype.dismissWithError=function(n,l,e){this.viewCtrl.dismiss(this.isImage&&!this.isCaptureImage?e||l:{code:n,message:l},"error")},n.prototype.done=function(){var n=this;if(this.returnDataUrl)this.dismissWithData(this.imgCanvas.nativeElement.toDataURL(this.mimetype,this.quality));else if(this.mediaBlob){var l=this.type+"_"+this.timeUtils.readableTimestamp()+"."+this.extension,e=this.textUtils.concatenatePaths(y.a.TMPFOLDER,"media/"+l),t=this.domUtils.showModalLoading();this.fileProvider.writeFile(e,this.mediaBlob).then(function(l){n.isImage&&!n.isCaptureImage?n.dismissWithData(l.toURL()):(l.getFormatData=function(n,l){},n.dismissWithData([l]))}).catch(function(l){n.domUtils.showErrorModal(l)}).finally(function(){t.dismiss()})}else this.domUtils.showErrorModal("Please capture the media first.")},n.prototype.stopCapturing=function(){this.streamVideo&&this.streamVideo.nativeElement.pause(),this.audioDrawer&&this.audioDrawer.stop(),this.mediaRecorder&&this.mediaRecorder.stop(),this.isCapturing=!1,this.hasCaptured=!0},n.prototype.ngOnDestroy=function(){this.localMediaStream.getTracks().forEach(function(n){n.stop()}),this.streamVideo&&this.streamVideo.nativeElement.pause(),this.previewMedia&&this.previewMedia.pause(),this.audioDrawer&&this.audioDrawer.stop(),delete this.mediaBlob},E([Object(b._9)("streamVideo"),k("design:type",b.t)],n.prototype,"streamVideo",void 0),E([Object(b._9)("previewVideo"),k("design:type",b.t)],n.prototype,"previewVideo",void 0),E([Object(b._9)("imgCanvas"),k("design:type",b.t)],n.prototype,"imgCanvas",void 0),E([Object(b._9)("previewImage"),k("design:type",b.t)],n.prototype,"previewImage",void 0),E([Object(b._9)("streamAudio"),k("design:type",b.t)],n.prototype,"streamAudio",void 0),E([Object(b._9)("previewAudio"),k("design:type",b.t)],n.prototype,"previewAudio",void 0),n=E([Object(b.m)({selector:"page-core-emulator-capture-media",templateUrl:"capture-media.html"}),k("design:paramtypes",[w.z,w.r,C.a,V.a,y.a,I.a,b.j])],n)}(),M=e(7),R=e(31),D=this&&this.__decorate||function(n,l,e,t){var i,a=arguments.length,u=a<3?l:null===t?t=Object.getOwnPropertyDescriptor(l,e):t;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)u=Reflect.decorate(n,l,e,t);else for(var o=n.length-1;o>=0;o--)(i=n[o])&&(u=(a<3?i(u):a>3?i(l,e,u):i(l,e))||u);return a>3&&u&&Object.defineProperty(l,e,u),u},A=function(){function n(){}return n=D([Object(b.I)({declarations:[j],imports:[R.a,w.l.forChild(j),M.b.forChild()]})],n)}(),U=e(1243),T=e(1244),O=e(1245),x=e(1246),P=e(1247),B=e(1248),L=e(1249),S=e(1250),W=e(1251),q=e(1254),F=e(1255),z=e(1256),G=e(43),H=e(37),J=e(3),K=e(28),N=e(15),Q=e(38),X=e(8),Y=e(1285),Z=e(2),$=e(1291),nn=b._29({encapsulation:2,styles:[],data:{}}),ln=(b._27("core-chrono",$.a,function(n){return b._57(0,[(n()(),b._31(0,0,null,null,1,"core-chrono",[],null,null,null,t,nn)),b._30(1,770048,null,0,$.a,[b.j],null,null)],function(n,l){n(l,1,0)},null)},{running:"running",startTime:"startTime",endTime:"endTime",reset:"reset"},{onEnd:"onEnd"},[]),e(121)),en=e(120),tn=e(402),an=e(34),un=e(1252),on=e(182),rn=e(27),sn=e(20),cn=e(403),dn=e(227),_n=e(1253),mn=e(315),hn=e(183),pn=e(24),fn=e(13),gn=e(25),vn=e(93),bn=e(57),wn=e(55),yn=e(635),Cn=e(54),In=b._29({encapsulation:2,styles:[],data:{}}),Vn=b._27("page-core-emulator-capture-media",j,function(n){return b._57(0,[(n()(),b._31(0,0,null,null,1,"page-core-emulator-capture-media",[],null,null,null,v,In)),b._30(1,245760,null,0,j,[an.a,Cn.a,C.a,V.a,y.a,I.a,b.j],null,null)],function(n,l){n(l,1,0)},null)},{},{},[]),En=e(17),kn=e(311),jn=e(312),Mn=e(314),Rn=e(313),Dn=e(401),An=e(615),Un=e(30),Tn=e(111),On=e(228);e.d(l,"CoreEmulatorCaptureMediaPageModuleNgFactory",function(){return xn});var xn=b._28(A,[],function(n){return b._40([b._41(512,b.o,b._21,[[8,[U.a,T.a,O.a,x.a,P.a,B.a,L.a,S.a,W.a,q.a,F.a,z.a,Vn]],[3,b.o],b.K]),b._41(4608,X.m,X.l,[b.G,[2,X.v]]),b._41(4608,En.x,En.x,[]),b._41(4608,En.d,En.d,[]),b._41(4608,kn.b,kn.a,[]),b._41(4608,jn.a,jn.b,[]),b._41(4608,Mn.b,Mn.a,[]),b._41(4608,Rn.b,Rn.a,[]),b._41(4608,N.a,N.a,[Dn.a,kn.b,jn.a,Mn.b,Rn.b,N.b,N.c]),b._41(512,X.b,X.b,[]),b._41(512,En.v,En.v,[]),b._41(512,En.i,En.i,[]),b._41(512,En.s,En.s,[]),b._41(512,An.a,An.a,[]),b._41(512,M.b,M.b,[]),b._41(512,Un.a,Un.a,[]),b._41(512,Tn.a,Tn.a,[]),b._41(512,R.a,R.a,[]),b._41(512,An.b,An.b,[]),b._41(512,A,A,[]),b._41(256,N.c,void 0,[]),b._41(256,N.b,void 0,[]),b._41(256,On.a,j,[])])})}});
+webpackJsonp([55],{
+
+/***/ 1807:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./src/providers/file.ts
+var file = __webpack_require__(42);
+
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./src/providers/utils/time.ts
+var time = __webpack_require__(40);
+
+// CONCATENATED MODULE: ./src/core/emulator/pages/capture-media/capture-media.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Page to capture media in browser or desktop.
+ */
+var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
+    function CoreEmulatorCaptureMediaPage(viewCtrl, params, domUtils, timeUtils, fileProvider, textUtils, cdr) {
+        this.viewCtrl = viewCtrl;
+        this.domUtils = domUtils;
+        this.timeUtils = timeUtils;
+        this.fileProvider = fileProvider;
+        this.textUtils = textUtils;
+        this.cdr = cdr;
+        this.window = window;
+        this.type = params.get('type');
+        this.maxTime = params.get('maxTime');
+        this.facingMode = params.get('facingMode') || 'environment';
+        this.mimetype = params.get('mimetype');
+        this.extension = params.get('extension');
+        this.quality = params.get('quality') || 0.92;
+        this.returnDataUrl = !!params.get('returnDataUrl');
+    }
+    /**
+     * Component being initialized.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.ngOnInit = function () {
+        var _this = this;
+        this.initVariables();
+        var constraints = {
+            video: this.isAudio ? false : { facingMode: this.facingMode },
+            audio: !this.isImage
+        };
+        navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
+            var chunks = [];
+            _this.localMediaStream = stream;
+            if (!_this.isImage) {
+                if (_this.isVideo) {
+                    _this.previewMedia = _this.previewVideo.nativeElement;
+                }
+                else {
+                    _this.previewMedia = _this.previewAudio.nativeElement;
+                    _this.initAudioDrawer(_this.localMediaStream);
+                    _this.audioDrawer.start();
+                }
+                _this.mediaRecorder = new _this.window.MediaRecorder(_this.localMediaStream, { mimeType: _this.mimetype });
+                // When video or audio is recorded, add it to the list of chunks.
+                _this.mediaRecorder.ondataavailable = function (e) {
+                    if (e.data.size > 0) {
+                        chunks.push(e.data);
+                    }
+                };
+                // When recording stops, create a Blob element with the recording and set it to the video or audio.
+                _this.mediaRecorder.onstop = function () {
+                    _this.mediaBlob = new Blob(chunks);
+                    chunks = [];
+                    _this.previewMedia.src = window.URL.createObjectURL(_this.mediaBlob);
+                };
+            }
+            if (_this.isImage || _this.isVideo) {
+                var hasLoaded_1 = false, waitTimeout_1;
+                // Listen for stream ready to display the stream.
+                _this.streamVideo.nativeElement.onloadedmetadata = function () {
+                    if (hasLoaded_1) {
+                        // Already loaded or timeout triggered, stop.
+                        return;
+                    }
+                    hasLoaded_1 = true;
+                    clearTimeout(waitTimeout_1);
+                    _this.readyToCapture = true;
+                    _this.streamVideo.nativeElement.onloadedmetadata = null;
+                    // Force change detection. Angular doesn't detect these async operations.
+                    _this.cdr.detectChanges();
+                };
+                // Set the stream as the source of the video.
+                _this.streamVideo.nativeElement.src = window.URL.createObjectURL(_this.localMediaStream);
+                // If stream isn't ready in a while, show error.
+                waitTimeout_1 = setTimeout(function () {
+                    if (!hasLoaded_1) {
+                        // Show error.
+                        hasLoaded_1 = true;
+                        _this.dismissWithError(-1, 'Cannot connect to webcam.');
+                    }
+                }, 10000);
+            }
+            else {
+                // It's ready to capture.
+                _this.readyToCapture = true;
+            }
+        }).catch(function (error) {
+            _this.dismissWithError(-1, error.message || error);
+        });
+    };
+    /**
+     * Initialize the audio drawer. This code has been extracted from MDN's example on MediaStream Recording:
+     * https://github.com/mdn/web-dictaphone
+     *
+     * @param {MediaStream} stream Stream returned by getUserMedia.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.initAudioDrawer = function (stream) {
+        var skip = true, running = false;
+        var audioCtx = new (this.window.AudioContext || this.window.webkitAudioContext)(), canvasCtx = this.streamAudio.nativeElement.getContext('2d'), source = audioCtx.createMediaStreamSource(stream), analyser = audioCtx.createAnalyser(), bufferLength = analyser.frequencyBinCount, dataArray = new Uint8Array(bufferLength), width = this.streamAudio.nativeElement.width, height = this.streamAudio.nativeElement.height, drawAudio = function () {
+            if (!running) {
+                return;
+            }
+            // Update the draw every animation frame.
+            requestAnimationFrame(drawAudio);
+            // Skip half of the frames to improve performance, shouldn't affect the smoothness.
+            skip = !skip;
+            if (skip) {
+                return;
+            }
+            var sliceWidth = width / bufferLength;
+            var x = 0;
+            analyser.getByteTimeDomainData(dataArray);
+            canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+            canvasCtx.fillRect(0, 0, width, height);
+            canvasCtx.lineWidth = 1;
+            canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+            canvasCtx.beginPath();
+            for (var i = 0; i < bufferLength; i++) {
+                var v = dataArray[i] / 128.0, y = v * height / 2;
+                if (i === 0) {
+                    canvasCtx.moveTo(x, y);
+                }
+                else {
+                    canvasCtx.lineTo(x, y);
+                }
+                x += sliceWidth;
+            }
+            canvasCtx.lineTo(width, height / 2);
+            canvasCtx.stroke();
+        };
+        analyser.fftSize = 2048;
+        source.connect(analyser);
+        this.audioDrawer = {
+            start: function () {
+                if (running) {
+                    return;
+                }
+                running = true;
+                drawAudio();
+            },
+            stop: function () {
+                running = false;
+            }
+        };
+    };
+    /**
+     * Initialize some variables based on the params.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.initVariables = function () {
+        if (this.type == 'captureimage') {
+            this.isCaptureImage = true;
+            this.type = 'image';
+        }
+        // Initialize some data based on the type of media to capture.
+        if (this.type == 'video') {
+            this.isVideo = true;
+            this.title = 'core.capturevideo';
+        }
+        else if (this.type == 'audio') {
+            this.isAudio = true;
+            this.title = 'core.captureaudio';
+        }
+        else if (this.type == 'image') {
+            this.isImage = true;
+            this.title = 'core.captureimage';
+        }
+    };
+    /**
+     * Main action clicked: record or stop recording.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.actionClicked = function () {
+        var _this = this;
+        if (this.isCapturing) {
+            // It's capturing, stop.
+            this.stopCapturing();
+            this.cdr.detectChanges();
+        }
+        else {
+            if (!this.isImage) {
+                // Start the capture.
+                this.isCapturing = true;
+                this.resetChrono = false;
+                this.mediaRecorder.start();
+                this.cdr.detectChanges();
+            }
+            else {
+                // Get the image from the video and set it to the canvas, using video width/height.
+                var width = this.streamVideo.nativeElement.videoWidth, height = this.streamVideo.nativeElement.videoHeight, loadingModal_1 = this.domUtils.showModalLoading();
+                this.imgCanvas.nativeElement.width = width;
+                this.imgCanvas.nativeElement.height = height;
+                this.imgCanvas.nativeElement.getContext('2d').drawImage(this.streamVideo.nativeElement, 0, 0, width, height);
+                // Convert the image to blob and show it in an image element.
+                this.imgCanvas.nativeElement.toBlob(function (blob) {
+                    loadingModal_1.dismiss();
+                    _this.mediaBlob = blob;
+                    _this.previewImage.nativeElement.setAttribute('src', window.URL.createObjectURL(_this.mediaBlob));
+                    _this.hasCaptured = true;
+                }, this.mimetype, this.quality);
+            }
+        }
+    };
+    /**
+     * User cancelled.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.cancel = function () {
+        // Send a "cancelled" error like the Cordova plugin does.
+        this.dismissWithError(3, 'Canceled.', 'Camera cancelled');
+    };
+    /**
+     * Discard the captured media.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.discard = function () {
+        this.previewMedia && this.previewMedia.pause();
+        this.streamVideo && this.streamVideo.nativeElement.play();
+        this.audioDrawer && this.audioDrawer.start();
+        this.hasCaptured = false;
+        this.isCapturing = false;
+        this.resetChrono = true;
+        delete this.mediaBlob;
+        this.cdr.detectChanges();
+    };
+    /**
+     * Close the modal, returning some data (success).
+     *
+     * @param {any} data Data to return.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.dismissWithData = function (data) {
+        this.viewCtrl.dismiss(data, 'success');
+    };
+    /**
+     * Close the modal, returning an error.
+     *
+     * @param {number} code Error code. Will not be used if it's a Camera capture.
+     * @param {string} message Error message.
+     * @param {string} [cameraMessage] A specific message to use if it's a Camera capture. If not set, message will be used.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.dismissWithError = function (code, message, cameraMessage) {
+        var isCamera = this.isImage && !this.isCaptureImage, error = isCamera ? (cameraMessage || message) : { code: code, message: message };
+        this.viewCtrl.dismiss(error, 'error');
+    };
+    /**
+     * Done capturing, write the file.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.done = function () {
+        var _this = this;
+        if (this.returnDataUrl) {
+            // Return the image as a base64 string.
+            this.dismissWithData(this.imgCanvas.nativeElement.toDataURL(this.mimetype, this.quality));
+            return;
+        }
+        if (!this.mediaBlob) {
+            // Shouldn't happen.
+            this.domUtils.showErrorModal('Please capture the media first.');
+            return;
+        }
+        // Create the file and return it.
+        var fileName = this.type + '_' + this.timeUtils.readableTimestamp() + '.' + this.extension, path = this.textUtils.concatenatePaths(file["a" /* CoreFileProvider */].TMPFOLDER, 'media/' + fileName), loadingModal = this.domUtils.showModalLoading();
+        this.fileProvider.writeFile(path, this.mediaBlob).then(function (fileEntry) {
+            if (_this.isImage && !_this.isCaptureImage) {
+                _this.dismissWithData(fileEntry.toURL());
+            }
+            else {
+                // The capture plugin returns a MediaFile, not a FileEntry.
+                // The only difference is that it supports a new function that won't be supported in desktop.
+                fileEntry.getFormatData = function (successFn, errorFn) {
+                    // Nothing to do.
+                };
+                _this.dismissWithData([fileEntry]);
+            }
+        }).catch(function (err) {
+            _this.domUtils.showErrorModal(err);
+        }).finally(function () {
+            loadingModal.dismiss();
+        });
+    };
+    /**
+     * Stop capturing. Only for video and audio.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.stopCapturing = function () {
+        this.streamVideo && this.streamVideo.nativeElement.pause();
+        this.audioDrawer && this.audioDrawer.stop();
+        this.mediaRecorder && this.mediaRecorder.stop();
+        this.isCapturing = false;
+        this.hasCaptured = true;
+    };
+    /**
+     * Page destroyed.
+     */
+    CoreEmulatorCaptureMediaPage.prototype.ngOnDestroy = function () {
+        var tracks = this.localMediaStream.getTracks();
+        tracks.forEach(function (track) {
+            track.stop();
+        });
+        this.streamVideo && this.streamVideo.nativeElement.pause();
+        this.previewMedia && this.previewMedia.pause();
+        this.audioDrawer && this.audioDrawer.stop();
+        delete this.mediaBlob;
+    };
+    __decorate([
+        Object(core["_9" /* ViewChild */])('streamVideo'),
+        __metadata("design:type", core["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "streamVideo", void 0);
+    __decorate([
+        Object(core["_9" /* ViewChild */])('previewVideo'),
+        __metadata("design:type", core["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "previewVideo", void 0);
+    __decorate([
+        Object(core["_9" /* ViewChild */])('imgCanvas'),
+        __metadata("design:type", core["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "imgCanvas", void 0);
+    __decorate([
+        Object(core["_9" /* ViewChild */])('previewImage'),
+        __metadata("design:type", core["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "previewImage", void 0);
+    __decorate([
+        Object(core["_9" /* ViewChild */])('streamAudio'),
+        __metadata("design:type", core["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "streamAudio", void 0);
+    __decorate([
+        Object(core["_9" /* ViewChild */])('previewAudio'),
+        __metadata("design:type", core["t" /* ElementRef */])
+    ], CoreEmulatorCaptureMediaPage.prototype, "previewAudio", void 0);
+    CoreEmulatorCaptureMediaPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-core-emulator-capture-media',
+            templateUrl: 'capture-media.html',
+        }),
+        __metadata("design:paramtypes", [ionic_angular["z" /* ViewController */], ionic_angular["r" /* NavParams */], dom["a" /* CoreDomUtilsProvider */],
+            time["a" /* CoreTimeUtilsProvider */], file["a" /* CoreFileProvider */],
+            utils_text["a" /* CoreTextUtilsProvider */], core["j" /* ChangeDetectorRef */]])
+    ], CoreEmulatorCaptureMediaPage);
+    return CoreEmulatorCaptureMediaPage;
+}());
+
+//# sourceMappingURL=capture-media.js.map
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(31);
+
+// CONCATENATED MODULE: ./src/core/emulator/pages/capture-media/capture-media.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var capture_media_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var capture_media_module_CoreEmulatorCaptureMediaPageModule = /** @class */ (function () {
+    function CoreEmulatorCaptureMediaPageModule() {
+    }
+    CoreEmulatorCaptureMediaPageModule = capture_media_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                capture_media_CoreEmulatorCaptureMediaPage
+            ],
+            imports: [
+                components_module["a" /* CoreComponentsModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(capture_media_CoreEmulatorCaptureMediaPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ]
+        })
+    ], CoreEmulatorCaptureMediaPageModule);
+    return CoreEmulatorCaptureMediaPageModule;
+}());
+
+//# sourceMappingURL=capture-media.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1243);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1244);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1245);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1246);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1248);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1249);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1250);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1251);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1254);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1255);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1256);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./src/pipes/seconds-to-hms.ts
+var seconds_to_hms = __webpack_require__(1285);
+
+// EXTERNAL MODULE: ./src/providers/logger.ts
+var logger = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./src/components/chrono/chrono.ts
+var chrono = __webpack_require__(1291);
+
+// CONCATENATED MODULE: ./src/components/chrono/chrono.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+var styles_CoreChronoComponent = [];
+var RenderType_CoreChronoComponent = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreChronoComponent, data: {} });
+
+function View_CoreChronoComponent_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, seconds_to_hms["a" /* CoreSecondsToHMSPipe */], [logger["a" /* CoreLoggerProvider */], utils_text["a" /* CoreTextUtilsProvider */]]), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 2, "span", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](2, null, ["", ""])), core["_49" /* ɵppd */](3, 1)], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 2, 0, _ck(_v, 3, 0, core["_44" /* ɵnov */](_v, 0), (_co.time / 1000))); _ck(_v, 2, 0, currVal_0); }); }
+function View_CoreChronoComponent_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-chrono", [], null, null, null, View_CoreChronoComponent_0, RenderType_CoreChronoComponent)), core["_30" /* ɵdid */](1, 770048, null, 0, chrono["a" /* CoreChronoComponent */], [core["j" /* ChangeDetectorRef */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var CoreChronoComponentNgFactory = core["_27" /* ɵccf */]("core-chrono", chrono["a" /* CoreChronoComponent */], View_CoreChronoComponent_Host_0, { running: "running", startTime: "startTime", endTime: "endTime", reset: "reset" }, { onEnd: "onEnd" }, []);
+
+//# sourceMappingURL=chrono.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
+var row = __webpack_require__(121);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
+var col = __webpack_require__(120);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(402);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1252);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(182);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(403);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1253);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(315);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(57);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(55);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-footer.js
+var toolbar_footer = __webpack_require__(635);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(54);
+
+// CONCATENATED MODULE: ./src/core/emulator/pages/capture-media/capture-media.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_CoreEmulatorCaptureMediaPage = [];
+var RenderType_CoreEmulatorCaptureMediaPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreEmulatorCaptureMediaPage, data: {} });
+
+function View_CoreEmulatorCaptureMediaPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 3, "button", [["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.done() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, [[8, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](2, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 2, 0, core["_44" /* ɵnov */](_v, 3).transform("core.done")); _ck(_v, 2, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, [[1, 0], ["streamVideo", 1]], null, 0, "video", [["autoplay", ""], ["class", "core-webcam-stream"]], [[8, "hidden", 0]], null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.hasCaptured; _ck(_v, 0, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, [[2, 0], ["previewVideo", 1]], null, 0, "video", [["class", "core-webcam-video-captured"], ["controls", ""]], [[8, "hidden", 0]], null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.hasCaptured; _ck(_v, 0, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, [[3, 0], ["imgCanvas", 1]], null, 0, "canvas", [["class", "core-webcam-image-canvas"]], null, null, null, null, null))], null, null); }
+function View_CoreEmulatorCaptureMediaPage_5(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, [[4, 0], ["previewImage", 1]], null, 1, "img", [["class", "core-webcam-image"]], [[8, "hidden", 0], [8, "alt", 0]], null, null, null, null)), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.hasCaptured; var currVal_1 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 0, 1, core["_44" /* ɵnov */](_v, 1).transform("core.capturedimage")), ""); _ck(_v, 0, 0, currVal_0, currVal_1); }); }
+function View_CoreEmulatorCaptureMediaPage_6(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "div", [["class", "core-audio-record-container"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](2, 0, [[5, 0], ["streamAudio", 1]], null, 0, "canvas", [["class", "core-audio-canvas"]], [[8, "hidden", 0]], null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](4, 0, [[6, 0], ["previewAudio", 1]], null, 0, "audio", [["class", "core-audio-captured"], ["controls", ""]], [[8, "hidden", 0]], null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.hasCaptured; _ck(_v, 2, 0, currVal_0); var currVal_1 = !_co.hasCaptured; _ck(_v, 4, 0, currVal_1); }); }
+function View_CoreEmulatorCaptureMediaPage_9(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "ion-icon", [["name", "microphone"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](1, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null)], function (_ck, _v) { var currVal_1 = "microphone"; _ck(_v, 1, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1)._hidden; _ck(_v, 0, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "ion-icon", [["name", "videocam"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](1, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null)], function (_ck, _v) { var currVal_1 = "videocam"; _ck(_v, 1, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1)._hidden; _ck(_v, 0, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_11(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "ion-icon", [["name", "camera"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](1, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null)], function (_ck, _v) { var currVal_1 = "camera"; _ck(_v, 1, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1)._hidden; _ck(_v, 0, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_12(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "ion-icon", [["name", "square"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](1, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null)], function (_ck, _v) { var currVal_1 = "square"; _ck(_v, 1, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1)._hidden; _ck(_v, 0, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_8(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 14, "button", [["clear", ""], ["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.actionClicked() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { clear: [0, "clear"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreEmulatorCaptureMediaPage_9)), core["_30" /* ɵdid */](4, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreEmulatorCaptureMediaPage_10)), core["_30" /* ɵdid */](7, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreEmulatorCaptureMediaPage_11)), core["_30" /* ɵdid */](10, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreEmulatorCaptureMediaPage_12)), core["_30" /* ɵdid */](13, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = ""; _ck(_v, 1, 0, currVal_1); var currVal_2 = (!_co.isCapturing && _co.isAudio); _ck(_v, 4, 0, currVal_2); var currVal_3 = (!_co.isCapturing && _co.isVideo); _ck(_v, 7, 0, currVal_3); var currVal_4 = _co.isImage; _ck(_v, 10, 0, currVal_4); var currVal_5 = _co.isCapturing; _ck(_v, 13, 0, currVal_5); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 0, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_13(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "button", [["clear", ""], ["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.discard() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { clear: [0, "clear"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, 0, 1, "ion-icon", [["name", "trash"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](5, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var currVal_1 = ""; _ck(_v, 1, 0, currVal_1); var currVal_3 = "trash"; _ck(_v, 5, 0, currVal_3); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 0, 0, core["_44" /* ɵnov */](_v, 2).transform("core.discard")); _ck(_v, 0, 0, currVal_0); var currVal_2 = core["_44" /* ɵnov */](_v, 5)._hidden; _ck(_v, 4, 0, currVal_2); }); }
+function View_CoreEmulatorCaptureMediaPage_14(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-chrono", [], [[8, "hidden", 0]], [[null, "onEnd"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("onEnd" === en)) {
+        var pd_0 = (_co.stopCapturing() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, View_CoreChronoComponent_0, RenderType_CoreChronoComponent)), core["_30" /* ɵdid */](1, 770048, null, 0, chrono["a" /* CoreChronoComponent */], [core["j" /* ChangeDetectorRef */]], { running: [0, "running"], endTime: [1, "endTime"], reset: [2, "reset"] }, { onEnd: "onEnd" })], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.isCapturing; var currVal_2 = _co.maxTime; var currVal_3 = _co.resetChrono; _ck(_v, 1, 0, currVal_1, currVal_2, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.hasCaptured; _ck(_v, 0, 0, currVal_0); }); }
+function View_CoreEmulatorCaptureMediaPage_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 22, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 1, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](4, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, null, 8, "ion-col", [["class", "col"], ["text-center", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](7, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_8)), core["_30" /* ɵdid */](10, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_13)), core["_30" /* ɵdid */](13, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, null, 5, "ion-col", [["class", "chrono-container col"], ["padding", ""], ["text-right", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](17, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_14)), core["_30" /* ɵdid */](20, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.hasCaptured; _ck(_v, 10, 0, currVal_0); var currVal_1 = _co.hasCaptured; _ck(_v, 13, 0, currVal_1); var currVal_2 = !_co.isImage; _ck(_v, 20, 0, currVal_2); }, null); }
+function View_CoreEmulatorCaptureMediaPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](671088640, 1, { streamVideo: 0 }), core["_52" /* ɵqud */](671088640, 2, { previewVideo: 0 }), core["_52" /* ɵqud */](671088640, 3, { imgCanvas: 0 }), core["_52" /* ɵqud */](671088640, 4, { previewImage: 0 }), core["_52" /* ɵqud */](671088640, 5, { streamAudio: 0 }), core["_52" /* ɵqud */](671088640, 6, { previewAudio: 0 }), (_l()(), core["_31" /* ɵeld */](6, 0, null, null, 29, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](7, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](9, 0, null, null, 25, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](10, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 1, 8, "ion-buttons", [["start", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](13, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 7, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, null, 3, "button", [["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.cancel() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](17, 1097728, [[7, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](18, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n\n        "])), (_l()(), core["_31" /* ɵeld */](22, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](23, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](24, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n\n        "])), (_l()(), core["_31" /* ɵeld */](27, 0, null, 2, 6, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](28, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 8, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_1)), core["_30" /* ɵdid */](32, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](37, 0, null, null, 28, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](38, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](40, 0, null, 1, 24, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](41, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](43, 0, null, 0, 20, "div", [["class", "core-av-wrapper"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_2)), core["_30" /* ɵdid */](47, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_3)), core["_30" /* ɵdid */](51, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_4)), core["_30" /* ɵdid */](55, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_5)), core["_30" /* ɵdid */](58, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_6)), core["_30" /* ɵdid */](62, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n"])), (_l()(), core["_31" /* ɵeld */](67, 0, null, null, 5, "ion-footer", [], null, null, null, null, null)), core["_30" /* ɵdid */](68, 16384, null, 0, toolbar_footer["a" /* Footer */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreEmulatorCaptureMediaPage_7)), core["_30" /* ɵdid */](71, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = _co.hasCaptured; _ck(_v, 32, 0, currVal_4); var currVal_7 = _co.readyToCapture; _ck(_v, 41, 0, currVal_7); var currVal_8 = !_co.isAudio; _ck(_v, 47, 0, currVal_8); var currVal_9 = _co.isVideo; _ck(_v, 51, 0, currVal_9); var currVal_10 = _co.isImage; _ck(_v, 55, 0, currVal_10); var currVal_11 = _co.isImage; _ck(_v, 58, 0, currVal_11); var currVal_12 = _co.isAudio; _ck(_v, 62, 0, currVal_12); var currVal_13 = _co.readyToCapture; _ck(_v, 71, 0, currVal_13); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 10)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 10)._sbPadding; _ck(_v, 9, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 18, 0, core["_44" /* ɵnov */](_v, 19).transform("core.cancel")); _ck(_v, 18, 0, currVal_2); var currVal_3 = core["_56" /* ɵunv */](_v, 24, 0, core["_44" /* ɵnov */](_v, 25).transform(_co.title)); _ck(_v, 24, 0, currVal_3); var currVal_5 = core["_44" /* ɵnov */](_v, 38).statusbarPadding; var currVal_6 = core["_44" /* ɵnov */](_v, 38)._hasRefresher; _ck(_v, 37, 0, currVal_5, currVal_6); }); }
+function View_CoreEmulatorCaptureMediaPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-emulator-capture-media", [], null, null, null, View_CoreEmulatorCaptureMediaPage_0, RenderType_CoreEmulatorCaptureMediaPage)), core["_30" /* ɵdid */](1, 245760, null, 0, capture_media_CoreEmulatorCaptureMediaPage, [view_controller["a" /* ViewController */], nav_params["a" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */], file["a" /* CoreFileProvider */], utils_text["a" /* CoreTextUtilsProvider */], core["j" /* ChangeDetectorRef */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var CoreEmulatorCaptureMediaPageNgFactory = core["_27" /* ɵccf */]("page-core-emulator-capture-media", capture_media_CoreEmulatorCaptureMediaPage, View_CoreEmulatorCaptureMediaPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=capture-media.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(311);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(312);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(314);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(313);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(401);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(615);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 1 modules
+var directives_module = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
+var pipes_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(228);
+
+// CONCATENATED MODULE: ./src/core/emulator/pages/capture-media/capture-media.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreEmulatorCaptureMediaPageModuleNgFactory", function() { return CoreEmulatorCaptureMediaPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var CoreEmulatorCaptureMediaPageModuleNgFactory = core["_28" /* ɵcmf */](capture_media_module_CoreEmulatorCaptureMediaPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], CoreEmulatorCaptureMediaPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, capture_media_module_CoreEmulatorCaptureMediaPageModule, capture_media_module_CoreEmulatorCaptureMediaPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], capture_media_CoreEmulatorCaptureMediaPage, [])]); });
+
+//# sourceMappingURL=capture-media.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=55.js.map

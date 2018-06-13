@@ -1,1 +1,488 @@
-webpackJsonp([96],{1753:function(l,n,t){"use strict";function e(l){return o._57(0,[(l()(),o._31(0,0,null,null,17,null,null,null,null,null,null,null)),(l()(),o._55(-1,null,["\n                "])),(l()(),o._31(2,0,null,null,6,"button",[["clear",""],["icon-left",""],["ion-button",""]],null,[[null,"click"]],function(l,n,t){var e=!0;if("click"===n){e=!1!==l.component.talkTo(l.parent.context.$implicit)&&e}return e},T.b,T.a)),o._30(3,1097728,[[3,4]],0,D.a,[[8,""],L.a,o.t,o.V],{clear:[0,"clear"]},null),(l()(),o._55(-1,0,["\n                    "])),(l()(),o._31(5,0,null,0,1,"ion-icon",[["name","chatboxes"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o._30(6,147456,null,0,E.a,[L.a,o.t,o.V],{name:[0,"name"]},null),(l()(),o._55(7,0,["\n                    ","\n                "])),o._47(131072,F.a,[z.a,o.j]),(l()(),o._55(-1,null,["\n                "])),(l()(),o._31(10,0,null,null,6,"button",[["clear",""],["icon-left",""],["ion-button",""]],null,[[null,"click"]],function(l,n,t){var e=!0;if("click"===n){e=!1!==l.component.beepTo(l.parent.context.$implicit)&&e}return e},T.b,T.a)),o._30(11,1097728,[[3,4]],0,D.a,[[8,""],L.a,o.t,o.V],{clear:[0,"clear"]},null),(l()(),o._55(-1,0,["\n                    "])),(l()(),o._31(13,0,null,0,1,"ion-icon",[["name","notifications"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o._30(14,147456,null,0,E.a,[L.a,o.t,o.V],{name:[0,"name"]},null),(l()(),o._55(15,0,["\n                    ","\n                "])),o._47(131072,F.a,[z.a,o.j]),(l()(),o._55(-1,null,["\n            "]))],function(l,n){l(n,3,0,"");l(n,6,0,"chatboxes");l(n,11,0,"");l(n,14,0,"notifications")},function(l,n){l(n,5,0,o._44(n,6)._hidden);l(n,7,0,o._56(n,7,0,o._44(n,8).transform("addon.mod_chat.talk")));l(n,13,0,o._44(n,14)._hidden);l(n,15,0,o._56(n,15,0,o._44(n,16).transform("addon.mod_chat.beep")))})}function a(l){return o._57(0,[(l()(),o._31(0,0,null,null,22,"ion-item",[["class","item item-block"],["text-wrap",""]],[[2,"addon-mod-chat-user",null]],null,null,A.b,A.a)),o._30(1,1097728,null,3,G.a,[J.a,L.a,o.t,o.V,[2,K.a]],null,null),o._52(335544320,2,{contentLabel:0}),o._52(603979776,3,{_buttons:1}),o._52(603979776,4,{_icons:1}),o._30(5,16384,null,0,N.a,[],null,null),(l()(),o._55(-1,2,["\n            "])),(l()(),o._31(7,0,null,0,7,"ion-avatar",[["item-start",""]],null,null,null,null,null)),o._30(8,16384,null,0,S.a,[],null,null),(l()(),o._55(-1,null,["\n                "])),(l()(),o._31(10,0,null,null,3,"img",[["core-external-content",""],["onError","this.src='assets/img/user-avatar.png'"],["role","presentation"]],[[8,"src",4],[8,"alt",0]],null,null,null,null)),o._30(11,4210688,null,0,q.a,[o.t,B.a,H.a,Q.a,f.a,h.a,W.a,d.a],null,null),o._48(12,{$a:0}),o._47(131072,F.a,[z.a,o.j]),(l()(),o._55(-1,null,["\n            "])),(l()(),o._55(-1,2,["\n            "])),(l()(),o._31(16,0,null,2,2,"h2",[],null,null,null,null,null)),(l()(),o._31(17,0,null,null,1,"core-format-text",[],null,null,null,null,null)),o._30(18,540672,null,0,X.a,[o.t,f.a,h.a,Y.a,z.a,Q.a,Z.a,W.a,B.a,H.a,d.a,ll.a,[2,nl.a],[2,tl.a]],{text:[0,"text"]},null),(l()(),o._55(-1,2,["\n            "])),(l()(),o._26(16777216,null,2,1,null,e)),o._30(21,16384,null,0,el.k,[o._11,o._6],{ngIf:[0,"ngIf"]},null),(l()(),o._55(-1,2,["\n        "]))],function(l,n){var t=n.component;l(n,18,0,n.context.$implicit.fullname);l(n,21,0,t.currentUserId!=n.context.$implicit.id&&t.isOnline)},function(l,n){var t=n.component;l(n,0,0,t.currentUserId!=n.context.$implicit.id&&t.isOnline);l(n,10,0,n.context.$implicit.profileimageurl,o._56(n,10,1,o._44(n,13).transform("core.pictureof",l(n,12,0,n.context.$implicit.fullname))))})}function u(l){return o._57(0,[(l()(),o._31(0,0,null,null,24,"ion-header",[],null,null,null,null,null)),o._30(1,16384,null,0,al.a,[L.a,o.t,o.V,[2,ul.a]],null,null),(l()(),o._55(-1,null,["\n    "])),(l()(),o._31(3,0,null,null,20,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,ol.b,ol.a)),o._30(4,49152,null,0,il.a,[rl.a,[2,ul.a],[2,nl.a],L.a,o.t,o.V],null,null),(l()(),o._55(-1,3,["\n        "])),(l()(),o._31(6,0,null,3,3,"ion-title",[],null,null,null,sl.b,sl.a)),o._30(7,49152,null,0,cl.a,[L.a,o.t,o.V,[2,_l.a],[2,il.a]],null,null),(l()(),o._55(8,0,["",""])),o._47(131072,F.a,[z.a,o.j]),(l()(),o._55(-1,3,["\n        "])),(l()(),o._31(11,0,null,2,11,"ion-buttons",[["end",""]],null,null,null,null,null)),o._30(12,16384,null,1,dl.a,[L.a,o.t,o.V,[2,_l.a],[2,il.a]],null,null),o._52(603979776,1,{_buttons:1}),(l()(),o._55(-1,null,["\n            "])),(l()(),o._31(15,0,null,null,6,"button",[["icon-only",""],["ion-button",""]],[[1,"aria-label",0]],[[null,"click"]],function(l,n,t){var e=!0;if("click"===n){e=!1!==l.component.closeModal()&&e}return e},T.b,T.a)),o._30(16,1097728,[[1,4]],0,D.a,[[8,""],L.a,o.t,o.V],null,null),o._47(131072,F.a,[z.a,o.j]),(l()(),o._55(-1,0,["\n                "])),(l()(),o._31(19,0,null,0,1,"ion-icon",[["name","close"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o._30(20,147456,null,0,E.a,[L.a,o.t,o.V],{name:[0,"name"]},null),(l()(),o._55(-1,0,["\n            "])),(l()(),o._55(-1,null,["\n        "])),(l()(),o._55(-1,3,["\n    "])),(l()(),o._55(-1,null,["\n"])),(l()(),o._55(-1,null,["\n"])),(l()(),o._31(26,0,null,null,9,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,fl.b,fl.a)),o._30(27,4374528,null,0,tl.a,[L.a,Q.a,hl.a,o.t,o.V,rl.a,bl.a,o.M,[2,ul.a],[2,nl.a]],null,null),(l()(),o._55(-1,1,["\n    "])),(l()(),o._31(29,0,null,1,5,"core-loading",[],null,null,null,pl.b,pl.a)),o._30(30,638976,null,0,ml.a,[z.a,o.t],{hideUntil:[0,"hideUntil"]},null),(l()(),o._55(-1,0,["\n        "])),(l()(),o._26(16777216,null,0,1,null,a)),o._30(33,802816,null,0,el.j,[o._11,o._6,o.E],{ngForOf:[0,"ngForOf"]},null),(l()(),o._55(-1,0,["\n    "])),(l()(),o._55(-1,1,["\n"])),(l()(),o._55(-1,null,["\n"]))],function(l,n){var t=n.component;l(n,20,0,"close");l(n,30,0,t.usersLoaded);l(n,33,0,t.users)},function(l,n){l(n,3,0,o._44(n,4)._hidden,o._44(n,4)._sbPadding);l(n,8,0,o._56(n,8,0,o._44(n,9).transform("addon.mod_chat.currentusers")));l(n,15,0,o._56(n,15,0,o._44(n,17).transform("core.close")));l(n,19,0,o._44(n,20)._hidden);l(n,26,0,o._44(n,27).statusbarPadding,o._44(n,27)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var o=t(0),i=t(9),r=t(7),s=t(31),c=t(30),_=t(111),d=t(12),f=t(1),h=t(6),b=t(321),p=t(189),m=this&&this.__decorate||function(l,n,t,e){var a,u=arguments.length,o=u<3?n:null===e?e=Object.getOwnPropertyDescriptor(n,t):e;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(l,n,t,e);else for(var i=l.length-1;i>=0;i--)(a=l[i])&&(o=(u<3?a(o):u>3?a(n,t,o):a(n,t))||o);return u>3&&o&&Object.defineProperty(n,t,o),o},v=this&&this.__metadata||function(l,n){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(l,n)},g=function(){function l(l,n,t,e,a,u,o){var i=this;this.appProvider=t,this.sitesProvider=e,this.viewCtrl=a,this.domUtils=u,this.chatProvider=o,this.users=[],this.usersLoaded=!1,this.sessionId=l.get("sessionId"),this.isOnline=this.appProvider.isOnline(),this.currentUserId=this.sitesProvider.getCurrentSiteUserId(),this.onlineObserver=n.onchange().subscribe(function(l){i.isOnline=i.appProvider.isOnline()})}return l.prototype.ionViewDidLoad=function(){var l=this;this.chatProvider.getChatUsers(this.sessionId).then(function(n){l.users=n.users}).catch(function(n){l.domUtils.showErrorModalDefault(n,"addon.mod_chat.errorwhilegettingchatusers",!0)}).finally(function(){l.usersLoaded=!0})},l.prototype.closeModal=function(){this.viewCtrl.dismiss()},l.prototype.talkTo=function(l){this.viewCtrl.dismiss({talkTo:l.fullname})},l.prototype.beepTo=function(l){this.viewCtrl.dismiss({beepTo:l.id})},l.prototype.ngOnDestroy=function(){this.onlineObserver&&this.onlineObserver.unsubscribe()},l=m([Object(o.m)({selector:"page-addon-mod-chat-users",templateUrl:"users.html"}),v("design:paramtypes",[i.r,p.a,d.a,f.a,i.z,h.a,b.a])],l)}(),y=this&&this.__decorate||function(l,n,t,e){var a,u=arguments.length,o=u<3?n:null===e?e=Object.getOwnPropertyDescriptor(n,t):e;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(l,n,t,e);else for(var i=l.length-1;i>=0;i--)(a=l[i])&&(o=(u<3?a(o):u>3?a(n,t,o):a(n,t))||o);return u>3&&o&&Object.defineProperty(n,t,o),o},O=function(){function l(){}return l=y([Object(o.I)({declarations:[g],imports:[s.a,c.a,_.a,i.l.forChild(g),r.b.forChild()]})],l)}(),j=t(1243),x=t(1244),P=t(1245),k=t(1246),V=t(1247),w=t(1248),U=t(1249),I=t(1250),R=t(1251),C=t(1254),$=t(1255),M=t(1256),T=t(43),D=t(37),L=t(3),E=t(38),F=t(28),z=t(15),A=t(33),G=t(19),J=t(18),K=t(29),N=t(32),S=t(185),q=t(166),B=t(2),H=t(16),Q=t(13),W=t(23),X=t(39),Y=t(10),Z=t(4),ll=t(22),nl=t(20),tl=t(24),el=t(8),al=t(402),ul=t(34),ol=t(1252),il=t(182),rl=t(27),sl=t(1253),cl=t(315),_l=t(227),dl=t(403),fl=t(183),hl=t(25),bl=t(93),pl=t(57),ml=t(55),vl=t(54),gl=o._29({encapsulation:2,styles:[],data:{}}),yl=o._27("page-addon-mod-chat-users",g,function(l){return o._57(0,[(l()(),o._31(0,0,null,null,1,"page-addon-mod-chat-users",[],null,null,null,u,gl)),o._30(1,180224,null,0,g,[vl.a,p.a,d.a,f.a,ul.a,h.a,b.a],null,null)],null,null)},{},{},[]),Ol=t(17),jl=t(311),xl=t(312),Pl=t(314),kl=t(313),Vl=t(401),wl=t(615),Ul=t(228);t.d(n,"AddonModChatUsersPageModuleNgFactory",function(){return Il});var Il=o._28(O,[],function(l){return o._40([o._41(512,o.o,o._21,[[8,[j.a,x.a,P.a,k.a,V.a,w.a,U.a,I.a,R.a,C.a,$.a,M.a,yl]],[3,o.o],o.K]),o._41(4608,el.m,el.l,[o.G,[2,el.v]]),o._41(4608,Ol.x,Ol.x,[]),o._41(4608,Ol.d,Ol.d,[]),o._41(4608,jl.b,jl.a,[]),o._41(4608,xl.a,xl.b,[]),o._41(4608,Pl.b,Pl.a,[]),o._41(4608,kl.b,kl.a,[]),o._41(4608,z.a,z.a,[Vl.a,jl.b,xl.a,Pl.b,kl.b,z.b,z.c]),o._41(512,el.b,el.b,[]),o._41(512,Ol.v,Ol.v,[]),o._41(512,Ol.i,Ol.i,[]),o._41(512,Ol.s,Ol.s,[]),o._41(512,wl.a,wl.a,[]),o._41(512,r.b,r.b,[]),o._41(512,c.a,c.a,[]),o._41(512,_.a,_.a,[]),o._41(512,s.a,s.a,[]),o._41(512,wl.b,wl.b,[]),o._41(512,O,O,[]),o._41(256,z.c,void 0,[]),o._41(256,z.b,void 0,[]),o._41(256,Ul.a,g,[])])})}});
+webpackJsonp([96],{
+
+/***/ 1753:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 1 modules
+var directives_module = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
+var pipes_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./src/providers/app.ts
+var app = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/addon/mod/chat/providers/chat.ts
+var chat = __webpack_require__(321);
+
+// EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
+var network = __webpack_require__(189);
+
+// CONCATENATED MODULE: ./src/addon/mod/chat/pages/users/users.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+/**
+ * Page that displays the chat session users.
+ */
+var users_AddonModChatUsersPage = /** @class */ (function () {
+    function AddonModChatUsersPage(navParams, network, appProvider, sitesProvider, viewCtrl, domUtils, chatProvider) {
+        var _this = this;
+        this.appProvider = appProvider;
+        this.sitesProvider = sitesProvider;
+        this.viewCtrl = viewCtrl;
+        this.domUtils = domUtils;
+        this.chatProvider = chatProvider;
+        this.users = [];
+        this.usersLoaded = false;
+        this.sessionId = navParams.get('sessionId');
+        this.isOnline = this.appProvider.isOnline();
+        this.currentUserId = this.sitesProvider.getCurrentSiteUserId();
+        this.onlineObserver = network.onchange().subscribe(function (online) {
+            _this.isOnline = _this.appProvider.isOnline();
+        });
+    }
+    /**
+     * View loaded.
+     */
+    AddonModChatUsersPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.chatProvider.getChatUsers(this.sessionId).then(function (data) {
+            _this.users = data.users;
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'addon.mod_chat.errorwhilegettingchatusers', true);
+        }).finally(function () {
+            _this.usersLoaded = true;
+        });
+    };
+    /**
+     * Close the chat users modal.
+     */
+    AddonModChatUsersPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    /**
+     * Add "To user:".
+     *
+     * @param {any} user User object.
+     */
+    AddonModChatUsersPage.prototype.talkTo = function (user) {
+        this.viewCtrl.dismiss({ talkTo: user.fullname });
+    };
+    /**
+     * Beep a user.
+     *
+     * @param {any} user User object.
+     */
+    AddonModChatUsersPage.prototype.beepTo = function (user) {
+        this.viewCtrl.dismiss({ beepTo: user.id });
+    };
+    /**
+     * Page destroyed.
+     */
+    AddonModChatUsersPage.prototype.ngOnDestroy = function () {
+        this.onlineObserver && this.onlineObserver.unsubscribe();
+    };
+    AddonModChatUsersPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-addon-mod-chat-users',
+            templateUrl: 'users.html',
+        }),
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], network["a" /* Network */], app["a" /* CoreAppProvider */],
+            sites["a" /* CoreSitesProvider */], ionic_angular["z" /* ViewController */],
+            dom["a" /* CoreDomUtilsProvider */], chat["a" /* AddonModChatProvider */]])
+    ], AddonModChatUsersPage);
+    return AddonModChatUsersPage;
+}());
+
+//# sourceMappingURL=users.js.map
+// CONCATENATED MODULE: ./src/addon/mod/chat/pages/users/users.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var users_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+var users_module_AddonModChatUsersPageModule = /** @class */ (function () {
+    function AddonModChatUsersPageModule() {
+    }
+    AddonModChatUsersPageModule = users_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                users_AddonModChatUsersPage,
+            ],
+            imports: [
+                components_module["a" /* CoreComponentsModule */],
+                directives_module["a" /* CoreDirectivesModule */],
+                pipes_module["a" /* CorePipesModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(users_AddonModChatUsersPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], AddonModChatUsersPageModule);
+    return AddonModChatUsersPageModule;
+}());
+
+//# sourceMappingURL=users.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1243);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1244);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1245);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1246);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1248);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1249);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1250);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1251);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1254);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1255);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1256);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
+var avatar = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./src/directives/external-content.ts
+var external_content = __webpack_require__(166);
+
+// EXTERNAL MODULE: ./src/providers/logger.ts
+var logger = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./src/providers/filepool.ts
+var filepool = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./src/providers/utils/url.ts
+var url = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./src/directives/format-text.ts
+var format_text = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
+var helper = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(402);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1252);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(182);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app_app = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1253);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(315);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(403);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(57);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(55);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(54);
+
+// CONCATENATED MODULE: ./src/addon/mod/chat/pages/users/users.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonModChatUsersPage = [];
+var RenderType_AddonModChatUsersPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModChatUsersPage, data: {} });
+
+function View_AddonModChatUsersPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 17, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 6, "button", [["clear", ""], ["icon-left", ""], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.talkTo(_v.parent.context.$implicit) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](3, 1097728, [[3, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { clear: [0, "clear"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, 0, 1, "ion-icon", [["name", "chatboxes"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](6, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](7, 0, ["\n                    ", "\n                "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, null, 6, "button", [["clear", ""], ["icon-left", ""], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.beepTo(_v.parent.context.$implicit) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](11, 1097728, [[3, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { clear: [0, "clear"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 0, 1, "ion-icon", [["name", "notifications"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](14, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](15, 0, ["\n                    ", "\n                "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], function (_ck, _v) { var currVal_0 = ""; _ck(_v, 3, 0, currVal_0); var currVal_2 = "chatboxes"; _ck(_v, 6, 0, currVal_2); var currVal_4 = ""; _ck(_v, 11, 0, currVal_4); var currVal_6 = "notifications"; _ck(_v, 14, 0, currVal_6); }, function (_ck, _v) { var currVal_1 = core["_44" /* ɵnov */](_v, 6)._hidden; _ck(_v, 5, 0, currVal_1); var currVal_3 = core["_56" /* ɵunv */](_v, 7, 0, core["_44" /* ɵnov */](_v, 8).transform("addon.mod_chat.talk")); _ck(_v, 7, 0, currVal_3); var currVal_5 = core["_44" /* ɵnov */](_v, 14)._hidden; _ck(_v, 13, 0, currVal_5); var currVal_7 = core["_56" /* ɵunv */](_v, 15, 0, core["_44" /* ɵnov */](_v, 16).transform("addon.mod_chat.beep")); _ck(_v, 15, 0, currVal_7); }); }
+function View_AddonModChatUsersPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 22, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], [[2, "addon-mod-chat-user", null]], null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 2, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 4, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 0, 7, "ion-avatar", [["item-start", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](8, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, null, 3, "img", [["core-external-content", ""], ["onError", "this.src='assets/img/user-avatar.png'"], ["role", "presentation"]], [[8, "src", 4], [8, "alt", 0]], null, null, null, null)), core["_30" /* ɵdid */](11, 4210688, null, 0, external_content["a" /* CoreExternalContentDirective */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], platform["a" /* Platform */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], app["a" /* CoreAppProvider */]], null, null), core["_48" /* ɵpod */](12, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, 2, 2, "h2", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](17, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](18, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, 2, 1, null, View_AddonModChatUsersPage_2)), core["_30" /* ɵdid */](21, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_3 = _v.context.$implicit.fullname; _ck(_v, 18, 0, currVal_3); var currVal_4 = ((_co.currentUserId != _v.context.$implicit.id) && _co.isOnline); _ck(_v, 21, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((_co.currentUserId != _v.context.$implicit.id) && _co.isOnline); _ck(_v, 0, 0, currVal_0); var currVal_1 = _v.context.$implicit.profileimageurl; var currVal_2 = core["_56" /* ɵunv */](_v, 10, 1, core["_44" /* ɵnov */](_v, 13).transform("core.pictureof", _ck(_v, 12, 0, _v.context.$implicit.fullname))); _ck(_v, 10, 0, currVal_1, currVal_2); }); }
+function View_AddonModChatUsersPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 24, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 20, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](7, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](8, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 2, 11, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](12, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, null, 6, "button", [["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.closeModal() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](16, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, 0, 1, "ion-icon", [["name", "close"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](20, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](26, 0, null, null, 9, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](27, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](29, 0, null, 1, 5, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](30, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModChatUsersPage_1)), core["_30" /* ɵdid */](33, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_5 = "close"; _ck(_v, 20, 0, currVal_5); var currVal_8 = _co.usersLoaded; _ck(_v, 30, 0, currVal_8); var currVal_9 = _co.users; _ck(_v, 33, 0, currVal_9); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("addon.mod_chat.currentusers")); _ck(_v, 8, 0, currVal_2); var currVal_3 = core["_56" /* ɵunv */](_v, 15, 0, core["_44" /* ɵnov */](_v, 17).transform("core.close")); _ck(_v, 15, 0, currVal_3); var currVal_4 = core["_44" /* ɵnov */](_v, 20)._hidden; _ck(_v, 19, 0, currVal_4); var currVal_6 = core["_44" /* ɵnov */](_v, 27).statusbarPadding; var currVal_7 = core["_44" /* ɵnov */](_v, 27)._hasRefresher; _ck(_v, 26, 0, currVal_6, currVal_7); }); }
+function View_AddonModChatUsersPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-chat-users", [], null, null, null, View_AddonModChatUsersPage_0, RenderType_AddonModChatUsersPage)), core["_30" /* ɵdid */](1, 180224, null, 0, users_AddonModChatUsersPage, [nav_params["a" /* NavParams */], network["a" /* Network */], app["a" /* CoreAppProvider */], sites["a" /* CoreSitesProvider */], view_controller["a" /* ViewController */], dom["a" /* CoreDomUtilsProvider */], chat["a" /* AddonModChatProvider */]], null, null)], null, null); }
+var AddonModChatUsersPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-chat-users", users_AddonModChatUsersPage, View_AddonModChatUsersPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=users.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(311);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(312);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(314);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(313);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(401);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(615);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(228);
+
+// CONCATENATED MODULE: ./src/addon/mod/chat/pages/users/users.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatUsersPageModuleNgFactory", function() { return AddonModChatUsersPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AddonModChatUsersPageModuleNgFactory = core["_28" /* ɵcmf */](users_module_AddonModChatUsersPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], AddonModChatUsersPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, users_module_AddonModChatUsersPageModule, users_module_AddonModChatUsersPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], users_AddonModChatUsersPage, [])]); });
+
+//# sourceMappingURL=users.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=96.js.map

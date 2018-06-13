@@ -1,1 +1,400 @@
-webpackJsonp([56],{1806:function(l,n,u){"use strict";function a(l){return e._57(0,[(l()(),e._31(0,0,null,null,24,"ion-header",[],null,null,null,null,null)),e._30(1,16384,null,0,R.a,[O.a,e.t,e.V,[2,k.a]],null,null),(l()(),e._55(-1,null,["\n    "])),(l()(),e._31(3,0,null,null,20,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,S.b,S.a)),e._30(4,49152,null,0,D.a,[M.a,[2,k.a],[2,x.a],O.a,e.t,e.V],null,null),(l()(),e._55(-1,3,["\n        "])),(l()(),e._31(6,0,null,3,3,"ion-title",[],null,null,null,I.b,I.a)),e._30(7,49152,null,0,U.a,[O.a,e.t,e.V,[2,q.a],[2,D.a]],null,null),(l()(),e._55(8,0,["",""])),e._47(131072,L.a,[T.a,e.j]),(l()(),e._55(-1,3,["\n\n        "])),(l()(),e._31(11,0,null,2,11,"ion-buttons",[["end",""]],null,null,null,null,null)),e._30(12,16384,null,1,z.a,[O.a,e.t,e.V,[2,q.a],[2,D.a]],null,null),e._52(603979776,1,{_buttons:1}),(l()(),e._55(-1,null,["\n            "])),(l()(),e._31(15,0,null,null,6,"button",[["icon-only",""],["ion-button",""]],[[1,"aria-label",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.close()&&a}return a},E.b,E.a)),e._30(16,1097728,[[1,4]],0,F.a,[[8,""],O.a,e.t,e.V],null,null),e._47(131072,L.a,[T.a,e.j]),(l()(),e._55(-1,0,["\n                "])),(l()(),e._31(19,0,null,0,1,"ion-icon",[["name","close"],["role","img"]],[[2,"hide",null]],null,null,null,null)),e._30(20,147456,null,0,G.a,[O.a,e.t,e.V],{name:[0,"name"]},null),(l()(),e._55(-1,0,["\n            "])),(l()(),e._55(-1,null,["\n        "])),(l()(),e._55(-1,3,["\n    "])),(l()(),e._55(-1,null,["\n"])),(l()(),e._55(-1,null,["\n"])),(l()(),e._31(26,0,null,null,42,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,J.b,J.a)),e._30(27,4374528,null,0,K.a,[O.a,N.a,A.a,e.t,e.V,M.a,B.a,e.M,[2,k.a],[2,x.a]],null,null),(l()(),e._55(-1,1,["\n    "])),(l()(),e._31(29,0,null,1,38,"form",[["ion-list",""],["novalidate",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngSubmit"],[null,"submit"],[null,"reset"]],function(l,n,u){var a=!0,t=l.component;if("submit"===n){a=!1!==e._44(l,31).onSubmit(u)&&a}if("reset"===n){a=!1!==e._44(l,31).onReset()&&a}if("ngSubmit"===n){a=!1!==t.submitPassword(e._44(l,31).value.password)&&a}return a},null,null)),e._30(30,16384,null,0,H.w,[],null,null),e._30(31,4210688,[["f",4]],0,H.p,[[8,null],[8,null]],null,{ngSubmit:"ngSubmit"}),e._50(2048,null,H.b,null,[H.p]),e._30(33,16384,null,0,H.o,[H.b],null,null),(l()(),e._55(-1,null,["\n        "])),(l()(),e._31(35,0,null,null,18,"ion-item",[["class","item item-block"]],null,null,null,Q.b,Q.a)),e._30(36,1097728,null,3,W.a,[X.a,O.a,e.t,e.V,[2,Y.a]],null,null),e._52(335544320,2,{contentLabel:0}),e._52(603979776,3,{_buttons:1}),e._52(603979776,4,{_icons:1}),e._30(40,16384,null,0,Z.a,[],null,null),(l()(),e._55(-1,2,["\n            "])),(l()(),e._31(42,0,null,3,10,"core-show-password",[["item-content",""]],null,null,null,$.b,$.a)),e._30(43,4308992,null,0,ll.a,[e.t,nl.a],{name:[0,"name"]},null),(l()(),e._55(-1,0,["\n                "])),(l()(),e._31(45,0,null,0,6,"ion-input",[["class","core-ioninput-password"],["name","password"],["ngModel",""],["text-wrap",""],["type","password"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],null,null,ul.b,ul.a)),e._30(46,81920,null,0,al.a,[e.t,el.a,nl.a,[2,x.a]],null,null),e._30(47,671744,null,0,H.q,[[2,H.b],[8,null],[8,null],[8,null]],{name:[0,"name"],model:[1,"model"]},null),e._50(2048,null,H.m,null,[H.q]),e._30(49,16384,null,0,H.n,[H.m],null,null),e._30(50,5423104,null,0,tl.a,[O.a,N.a,X.a,M.a,e.t,e.V,[2,K.a],[2,W.a],[2,H.m],A.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),e._47(131072,L.a,[T.a,e.j]),(l()(),e._55(-1,0,["\n            "])),(l()(),e._55(-1,2,["\n        "])),(l()(),e._55(-1,null,["\n        "])),(l()(),e._31(55,0,null,null,11,"ion-item",[["class","item item-block"]],null,null,null,Q.b,Q.a)),e._30(56,1097728,null,3,W.a,[X.a,O.a,e.t,e.V,[2,Y.a]],null,null),e._52(335544320,5,{contentLabel:0}),e._52(603979776,6,{_buttons:1}),e._52(603979776,7,{_icons:1}),e._30(60,16384,null,0,Z.a,[],null,null),(l()(),e._55(-1,2,["\n            "])),(l()(),e._31(62,0,null,2,3,"button",[["block",""],["ion-button",""]],[[8,"disabled",0]],null,null,E.b,E.a)),e._30(63,1097728,[[6,4]],0,F.a,[[8,""],O.a,e.t,e.V],{block:[0,"block"]},null),(l()(),e._55(64,0,["",""])),e._47(131072,L.a,[T.a,e.j]),(l()(),e._55(-1,2,["\n        "])),(l()(),e._55(-1,null,["\n    "])),(l()(),e._55(-1,1,["\n"])),(l()(),e._55(-1,null,["\n"]))],function(l,n){l(n,20,0,"close");l(n,43,0,"password"),l(n,46,0);l(n,47,0,"password","");l(n,50,0,"password",e._34(1,"",e._56(n,50,1,e._44(n,51).transform("core.courses.password")),""));l(n,63,0,"")},function(l,n){l(n,3,0,e._44(n,4)._hidden,e._44(n,4)._sbPadding);l(n,8,0,e._56(n,8,0,e._44(n,9).transform("core.courses.selfenrolment")));l(n,15,0,e._56(n,15,0,e._44(n,17).transform("core.close")));l(n,19,0,e._44(n,20)._hidden);l(n,26,0,e._44(n,27).statusbarPadding,e._44(n,27)._hasRefresher);l(n,29,0,e._44(n,33).ngClassUntouched,e._44(n,33).ngClassTouched,e._44(n,33).ngClassPristine,e._44(n,33).ngClassDirty,e._44(n,33).ngClassValid,e._44(n,33).ngClassInvalid,e._44(n,33).ngClassPending);l(n,45,0,e._44(n,49).ngClassUntouched,e._44(n,49).ngClassTouched,e._44(n,49).ngClassPristine,e._44(n,49).ngClassDirty,e._44(n,49).ngClassValid,e._44(n,49).ngClassInvalid,e._44(n,49).ngClassPending);l(n,62,0,!e._44(n,31).value.password);l(n,64,0,e._56(n,64,0,e._44(n,65).transform("core.courses.enrolme")))})}Object.defineProperty(n,"__esModule",{value:!0});var e=u(0),t=u(9),o=this&&this.__decorate||function(l,n,u,a){var e,t=arguments.length,o=t<3?n:null===a?a=Object.getOwnPropertyDescriptor(n,u):a;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(l,n,u,a);else for(var s=l.length-1;s>=0;s--)(e=l[s])&&(o=(t<3?e(o):t>3?e(n,u,o):e(n,u))||o);return t>3&&o&&Object.defineProperty(n,u,o),o},s=this&&this.__metadata||function(l,n){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(l,n)},_=function(){function l(l){this.viewCtrl=l}return l.prototype.close=function(){this.viewCtrl.dismiss()},l.prototype.submitPassword=function(l){this.viewCtrl.dismiss(l)},l=o([Object(e.m)({selector:"page-core-courses-self-enrol-password",templateUrl:"self-enrol-password.html"}),s("design:paramtypes",[t.z])],l)}(),r=u(7),i=u(31),c=u(30),d=this&&this.__decorate||function(l,n,u,a){var e,t=arguments.length,o=t<3?n:null===a?a=Object.getOwnPropertyDescriptor(n,u):a;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)o=Reflect.decorate(l,n,u,a);else for(var s=l.length-1;s>=0;s--)(e=l[s])&&(o=(t<3?e(o):t>3?e(n,u,o):e(n,u))||o);return t>3&&o&&Object.defineProperty(n,u,o),o},b=function(){function l(){}return l=d([Object(e.I)({declarations:[_],imports:[i.a,c.a,t.l.forChild(_),r.b.forChild()]})],l)}(),f=u(1243),p=u(1244),g=u(1245),m=u(1246),h=u(1247),v=u(1248),w=u(1249),y=u(1250),C=u(1251),P=u(1254),j=u(1255),V=u(1256),R=u(402),O=u(3),k=u(34),S=u(1252),D=u(182),M=u(27),x=u(20),I=u(1253),U=u(315),q=u(227),L=u(28),T=u(15),z=u(403),E=u(43),F=u(37),G=u(38),J=u(183),K=u(24),N=u(13),A=u(25),B=u(93),H=u(17),Q=u(33),W=u(19),X=u(18),Y=u(29),Z=u(32),$=u(623),ll=u(320),nl=u(4),ul=u(94),al=u(319),el=u(6),tl=u(76),ol=e._29({encapsulation:2,styles:[],data:{}}),sl=e._27("page-core-courses-self-enrol-password",_,function(l){return e._57(0,[(l()(),e._31(0,0,null,null,1,"page-core-courses-self-enrol-password",[],null,null,null,a,ol)),e._30(1,49152,null,0,_,[k.a],null,null)],null,null)},{},{},[]),_l=u(8),rl=u(311),il=u(312),cl=u(314),dl=u(313),bl=u(401),fl=u(615),pl=u(111),gl=u(228);u.d(n,"CoreCoursesSelfEnrolPasswordPageModuleNgFactory",function(){return ml});var ml=e._28(b,[],function(l){return e._40([e._41(512,e.o,e._21,[[8,[f.a,p.a,g.a,m.a,h.a,v.a,w.a,y.a,C.a,P.a,j.a,V.a,sl]],[3,e.o],e.K]),e._41(4608,_l.m,_l.l,[e.G,[2,_l.v]]),e._41(4608,H.x,H.x,[]),e._41(4608,H.d,H.d,[]),e._41(4608,rl.b,rl.a,[]),e._41(4608,il.a,il.b,[]),e._41(4608,cl.b,cl.a,[]),e._41(4608,dl.b,dl.a,[]),e._41(4608,T.a,T.a,[bl.a,rl.b,il.a,cl.b,dl.b,T.b,T.c]),e._41(512,_l.b,_l.b,[]),e._41(512,H.v,H.v,[]),e._41(512,H.i,H.i,[]),e._41(512,H.s,H.s,[]),e._41(512,fl.a,fl.a,[]),e._41(512,r.b,r.b,[]),e._41(512,c.a,c.a,[]),e._41(512,pl.a,pl.a,[]),e._41(512,i.a,i.a,[]),e._41(512,fl.b,fl.b,[]),e._41(512,b,b,[]),e._41(256,T.c,void 0,[]),e._41(256,T.b,void 0,[]),e._41(256,gl.a,_,[])])})}});
+webpackJsonp([56],{
+
+/***/ 1806:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(9);
+
+// CONCATENATED MODULE: ./src/core/courses/pages/self-enrol-password/self-enrol-password.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Page that displays a form to enter a password to self enrol in a course.
+ */
+var self_enrol_password_CoreCoursesSelfEnrolPasswordPage = /** @class */ (function () {
+    function CoreCoursesSelfEnrolPasswordPage(viewCtrl) {
+        this.viewCtrl = viewCtrl;
+    }
+    /**
+     * Close help modal.
+     */
+    CoreCoursesSelfEnrolPasswordPage.prototype.close = function () {
+        this.viewCtrl.dismiss();
+    };
+    /**
+     * Submit password.
+     *
+     * @param {string} password Password to submit.
+     */
+    CoreCoursesSelfEnrolPasswordPage.prototype.submitPassword = function (password) {
+        this.viewCtrl.dismiss(password);
+    };
+    CoreCoursesSelfEnrolPasswordPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-core-courses-self-enrol-password',
+            templateUrl: 'self-enrol-password.html',
+        }),
+        __metadata("design:paramtypes", [ionic_angular["z" /* ViewController */]])
+    ], CoreCoursesSelfEnrolPasswordPage);
+    return CoreCoursesSelfEnrolPasswordPage;
+}());
+
+//# sourceMappingURL=self-enrol-password.js.map
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 1 modules
+var directives_module = __webpack_require__(30);
+
+// CONCATENATED MODULE: ./src/core/courses/pages/self-enrol-password/self-enrol-password.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var self_enrol_password_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var self_enrol_password_module_CoreCoursesSelfEnrolPasswordPageModule = /** @class */ (function () {
+    function CoreCoursesSelfEnrolPasswordPageModule() {
+    }
+    CoreCoursesSelfEnrolPasswordPageModule = self_enrol_password_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                self_enrol_password_CoreCoursesSelfEnrolPasswordPage
+            ],
+            imports: [
+                components_module["a" /* CoreComponentsModule */],
+                directives_module["a" /* CoreDirectivesModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(self_enrol_password_CoreCoursesSelfEnrolPasswordPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild(),
+            ]
+        })
+    ], CoreCoursesSelfEnrolPasswordPageModule);
+    return CoreCoursesSelfEnrolPasswordPageModule;
+}());
+
+//# sourceMappingURL=self-enrol-password.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1243);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1244);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1245);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1246);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1248);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1249);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1250);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1251);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1254);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1255);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1256);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(402);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1252);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(182);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1253);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(315);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(403);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./src/components/show-password/show-password.ngfactory.js
+var show_password_ngfactory = __webpack_require__(623);
+
+// EXTERNAL MODULE: ./src/components/show-password/show-password.ts
+var show_password = __webpack_require__(320);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.ngfactory.js
+var input_ngfactory = __webpack_require__(94);
+
+// EXTERNAL MODULE: ./src/directives/auto-focus.ts
+var auto_focus = __webpack_require__(319);
+
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
+var input = __webpack_require__(76);
+
+// CONCATENATED MODULE: ./src/core/courses/pages/self-enrol-password/self-enrol-password.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_CoreCoursesSelfEnrolPasswordPage = [];
+var RenderType_CoreCoursesSelfEnrolPasswordPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreCoursesSelfEnrolPasswordPage, data: {} });
+
+function View_CoreCoursesSelfEnrolPasswordPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 24, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 20, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](7, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](8, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n\n        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 2, 11, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](12, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, null, 6, "button", [["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.close() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](16, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, 0, 1, "ion-icon", [["name", "close"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](20, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](26, 0, null, null, 42, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](27, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](29, 0, null, 1, 38, "form", [["ion-list", ""], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngSubmit"], [null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("submit" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 31).onSubmit($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("reset" === en)) {
+        var pd_1 = (core["_44" /* ɵnov */](_v, 31).onReset() !== false);
+        ad = (pd_1 && ad);
+    } if (("ngSubmit" === en)) {
+        var pd_2 = (_co.submitPassword(core["_44" /* ɵnov */](_v, 31).value.password) !== false);
+        ad = (pd_2 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](30, 16384, null, 0, esm5_forms["w" /* ɵbf */], [], null, null), core["_30" /* ɵdid */](31, 4210688, [["f", 4]], 0, esm5_forms["p" /* NgForm */], [[8, null], [8, null]], null, { ngSubmit: "ngSubmit" }), core["_50" /* ɵprd */](2048, null, esm5_forms["b" /* ControlContainer */], null, [esm5_forms["p" /* NgForm */]]), core["_30" /* ɵdid */](33, 16384, null, 0, esm5_forms["o" /* NgControlStatusGroup */], [esm5_forms["b" /* ControlContainer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](35, 0, null, null, 18, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](36, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 2, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 4, { _icons: 1 }), core["_30" /* ɵdid */](40, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](42, 0, null, 3, 10, "core-show-password", [["item-content", ""]], null, null, null, show_password_ngfactory["b" /* View_CoreShowPasswordComponent_0 */], show_password_ngfactory["a" /* RenderType_CoreShowPasswordComponent */])), core["_30" /* ɵdid */](43, 4308992, null, 0, show_password["a" /* CoreShowPasswordComponent */], [core["t" /* ElementRef */], utils["a" /* CoreUtilsProvider */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](45, 0, null, 0, 6, "ion-input", [["class", "core-ioninput-password"], ["name", "password"], ["ngModel", ""], ["text-wrap", ""], ["type", "password"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, input_ngfactory["b" /* View_TextInput_0 */], input_ngfactory["a" /* RenderType_TextInput */])), core["_30" /* ɵdid */](46, 81920, null, 0, auto_focus["a" /* CoreAutoFocusDirective */], [core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */], utils["a" /* CoreUtilsProvider */], [2, nav_controller["a" /* NavController */]]], null, null), core["_30" /* ɵdid */](47, 671744, null, 0, esm5_forms["q" /* NgModel */], [[2, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [8, null]], { name: [0, "name"], model: [1, "model"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](49, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](50, 5423104, null, 0, input["a" /* TextInput */], [config["a" /* Config */], platform["a" /* Platform */], util_form["a" /* Form */], app["a" /* App */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, content["a" /* Content */]], [2, item["a" /* Item */]], [2, esm5_forms["m" /* NgControl */]], dom_controller["a" /* DomController */]], { type: [0, "type"], placeholder: [1, "placeholder"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](55, 0, null, null, 11, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](56, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 5, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 6, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 7, { _icons: 1 }), core["_30" /* ɵdid */](60, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](62, 0, null, 2, 3, "button", [["block", ""], ["ion-button", ""]], [[8, "disabled", 0]], null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](63, 1097728, [[6, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](64, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var currVal_5 = "close"; _ck(_v, 20, 0, currVal_5); var currVal_15 = "password"; _ck(_v, 43, 0, currVal_15); _ck(_v, 46, 0); var currVal_23 = "password"; var currVal_24 = ""; _ck(_v, 47, 0, currVal_23, currVal_24); var currVal_25 = "password"; var currVal_26 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 50, 1, core["_44" /* ɵnov */](_v, 51).transform("core.courses.password")), ""); _ck(_v, 50, 0, currVal_25, currVal_26); var currVal_28 = ""; _ck(_v, 63, 0, currVal_28); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("core.courses.selfenrolment")); _ck(_v, 8, 0, currVal_2); var currVal_3 = core["_56" /* ɵunv */](_v, 15, 0, core["_44" /* ɵnov */](_v, 17).transform("core.close")); _ck(_v, 15, 0, currVal_3); var currVal_4 = core["_44" /* ɵnov */](_v, 20)._hidden; _ck(_v, 19, 0, currVal_4); var currVal_6 = core["_44" /* ɵnov */](_v, 27).statusbarPadding; var currVal_7 = core["_44" /* ɵnov */](_v, 27)._hasRefresher; _ck(_v, 26, 0, currVal_6, currVal_7); var currVal_8 = core["_44" /* ɵnov */](_v, 33).ngClassUntouched; var currVal_9 = core["_44" /* ɵnov */](_v, 33).ngClassTouched; var currVal_10 = core["_44" /* ɵnov */](_v, 33).ngClassPristine; var currVal_11 = core["_44" /* ɵnov */](_v, 33).ngClassDirty; var currVal_12 = core["_44" /* ɵnov */](_v, 33).ngClassValid; var currVal_13 = core["_44" /* ɵnov */](_v, 33).ngClassInvalid; var currVal_14 = core["_44" /* ɵnov */](_v, 33).ngClassPending; _ck(_v, 29, 0, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14); var currVal_16 = core["_44" /* ɵnov */](_v, 49).ngClassUntouched; var currVal_17 = core["_44" /* ɵnov */](_v, 49).ngClassTouched; var currVal_18 = core["_44" /* ɵnov */](_v, 49).ngClassPristine; var currVal_19 = core["_44" /* ɵnov */](_v, 49).ngClassDirty; var currVal_20 = core["_44" /* ɵnov */](_v, 49).ngClassValid; var currVal_21 = core["_44" /* ɵnov */](_v, 49).ngClassInvalid; var currVal_22 = core["_44" /* ɵnov */](_v, 49).ngClassPending; _ck(_v, 45, 0, currVal_16, currVal_17, currVal_18, currVal_19, currVal_20, currVal_21, currVal_22); var currVal_27 = !core["_44" /* ɵnov */](_v, 31).value.password; _ck(_v, 62, 0, currVal_27); var currVal_29 = core["_56" /* ɵunv */](_v, 64, 0, core["_44" /* ɵnov */](_v, 65).transform("core.courses.enrolme")); _ck(_v, 64, 0, currVal_29); }); }
+function View_CoreCoursesSelfEnrolPasswordPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-courses-self-enrol-password", [], null, null, null, View_CoreCoursesSelfEnrolPasswordPage_0, RenderType_CoreCoursesSelfEnrolPasswordPage)), core["_30" /* ɵdid */](1, 49152, null, 0, self_enrol_password_CoreCoursesSelfEnrolPasswordPage, [view_controller["a" /* ViewController */]], null, null)], null, null); }
+var CoreCoursesSelfEnrolPasswordPageNgFactory = core["_27" /* ɵccf */]("page-core-courses-self-enrol-password", self_enrol_password_CoreCoursesSelfEnrolPasswordPage, View_CoreCoursesSelfEnrolPasswordPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=self-enrol-password.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(311);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(312);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(314);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(313);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(401);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(615);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
+var pipes_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(228);
+
+// CONCATENATED MODULE: ./src/core/courses/pages/self-enrol-password/self-enrol-password.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesSelfEnrolPasswordPageModuleNgFactory", function() { return CoreCoursesSelfEnrolPasswordPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var CoreCoursesSelfEnrolPasswordPageModuleNgFactory = core["_28" /* ɵcmf */](self_enrol_password_module_CoreCoursesSelfEnrolPasswordPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], CoreCoursesSelfEnrolPasswordPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, self_enrol_password_module_CoreCoursesSelfEnrolPasswordPageModule, self_enrol_password_module_CoreCoursesSelfEnrolPasswordPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], self_enrol_password_CoreCoursesSelfEnrolPasswordPage, [])]); });
+
+//# sourceMappingURL=self-enrol-password.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=56.js.map

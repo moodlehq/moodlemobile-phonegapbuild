@@ -1,1 +1,1098 @@
-webpackJsonp([85],{1765:function(n,l,u){"use strict";function t(n){return L._57(0,[(n()(),L._31(0,0,null,null,5,"ion-note",[["float-right",""],["padding-left",""]],null,null,null,null,null)),L._30(1,16384,null,0,Mn.a,[bn.a,L.t,L.V],null,null),(n()(),L._31(2,0,null,null,1,"ion-icon",[["name","time"],["role","img"]],[[2,"hide",null]],null,null,null,null)),L._30(3,147456,null,0,Un.a,[bn.a,L.t,L.V],{name:[0,"name"]},null),(n()(),L._55(4,null,[" ",""])),L._47(131072,Rn.a,[Cn.a,L.j])],function(n,l){n(l,3,0,"time")},function(n,l){n(l,2,0,L._44(l,3)._hidden);n(l,4,0,L._56(l,4,0,L._44(l,5).transform("core.notsent")))})}function o(n){return L._57(0,[(n()(),L._31(0,0,null,null,4,"div",[],null,null,null,null,null)),(n()(),L._31(1,0,null,null,1,"ion-icon",[["name","record"],["role","img"]],[[2,"hide",null]],null,null,null,null)),L._30(2,147456,null,0,Un.a,[bn.a,L.t,L.V],{name:[0,"name"]},null),(n()(),L._55(3,null,[" ",""])),L._47(131072,Rn.a,[Cn.a,L.j])],function(n,l){n(l,2,0,"record")},function(n,l){n(l,1,0,L._44(l,2)._hidden);n(l,3,0,L._56(l,3,0,L._44(l,4).transform("addon.mod_forum.unread")))})}function e(n){return L._57(0,[(n()(),L._31(0,0,null,null,6,"ion-note",[["float-right",""],["padding-left",""]],null,null,null,null,null)),L._30(1,16384,null,0,Mn.a,[bn.a,L.t,L.V],null,null),(n()(),L._55(2,null,["\n            ","\n            "])),L._49(3,1),(n()(),L._26(16777216,null,null,1,null,o)),L._30(5,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n        "]))],function(n,l){n(l,5,0,l.component.unread)},function(n,l){var u=l.component;n(l,2,0,L._56(l,2,0,n(l,3,0,L._44(l.parent,0),u.post.modified)))})}function a(n){return L._57(0,[(n()(),L._31(0,0,null,null,1,"core-file",[],null,null,null,Nn.b,Nn.a)),L._30(1,245760,null,0,$n.a,[$.a,q.a,H.a,xn.a,F.a,Hn.a,qn.a,N.a],{file:[0,"file"],component:[1,"component"],componentId:[2,"componentId"]},null)],function(n,l){var u=l.component;n(l,1,0,l.parent.context.$implicit,u.component,u.componentId)},null)}function i(n){return L._57(0,[(n()(),L._31(0,0,null,null,1,"core-local-file",[],null,null,null,Yn.b,Yn.a)),L._30(1,114688,null,0,zn.a,[qn.a,q.a,Cn.a,kn.a,Wn.a,H.a],{file:[0,"file"]},null)],function(n,l){n(l,1,0,l.parent.context.$implicit)},null)}function r(n){return L._57(0,[(n()(),L._31(0,0,null,null,9,"div",[],null,null,null,null,null)),(n()(),L._55(-1,null,["\n        "])),(n()(),L._55(-1,null,["\n        "])),(n()(),L._26(16777216,null,null,1,null,a)),L._30(4,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n        "])),(n()(),L._55(-1,null,["\n        "])),(n()(),L._26(16777216,null,null,1,null,i)),L._30(8,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n    "]))],function(n,l){n(l,4,0,!l.context.$implicit.name);n(l,8,0,l.context.$implicit.name)},null)}function s(n){return L._57(0,[(n()(),L._31(0,0,null,null,14,"ion-item",[["class","item item-block"],["text-right",""]],null,null,null,Bn.b,Bn.a)),L._30(1,1097728,null,3,Gn.a,[Jn.a,bn.a,L.t,L.V,[2,Kn.a]],null,null),L._52(335544320,4,{contentLabel:0}),L._52(603979776,5,{_buttons:1}),L._52(603979776,6,{_icons:1}),L._30(5,16384,null,0,Qn.a,[],null,null),(n()(),L._55(-1,2,["\n    "])),(n()(),L._31(7,0,null,2,6,"button",[["clear",""],["icon-left",""],["ion-button",""],["small",""]],[[1,"aria-controls",0],[1,"aria-expanded",0]],[[null,"click"]],function(n,l,u){var t=!0;if("click"===l){t=!1!==n.component.showReply()&&t}return t},Xn.b,Xn.a)),L._30(8,1097728,[[5,4]],0,Zn.a,[[8,""],bn.a,L.t,L.V],{small:[0,"small"],clear:[1,"clear"]},null),(n()(),L._55(-1,0,["\n        "])),(n()(),L._31(10,0,null,0,1,"ion-icon",[["name","undo"],["role","img"]],[[2,"hide",null]],null,null,null,null)),L._30(11,147456,null,0,Un.a,[bn.a,L.t,L.V],{name:[0,"name"]},null),(n()(),L._55(12,0,[" ","\n    "])),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,2,["\n"]))],function(n,l){n(l,8,0,"","");n(l,11,0,"undo")},function(n,l){var u=l.component;n(l,7,0,"addon-forum-reply-edit-form-"+u.uniqueId,u.replyData.replyingTo===u.post.id);n(l,10,0,L._44(l,11)._hidden);n(l,12,0,L._56(l,12,0,L._44(l,13).transform("addon.mod_forum.reply")))})}function c(n){return L._57(0,[(n()(),L._31(0,0,null,null,14,"ion-item",[["class","item item-block"],["text-right",""]],null,null,null,Bn.b,Bn.a)),L._30(1,1097728,null,3,Gn.a,[Jn.a,bn.a,L.t,L.V,[2,Kn.a]],null,null),L._52(335544320,7,{contentLabel:0}),L._52(603979776,8,{_buttons:1}),L._52(603979776,9,{_icons:1}),L._30(5,16384,null,0,Qn.a,[],null,null),(n()(),L._55(-1,2,["\n    "])),(n()(),L._31(7,0,null,2,6,"button",[["clear",""],["icon-left",""],["ion-button",""],["small",""]],[[1,"aria-controls",0],[1,"aria-expanded",0]],[[null,"click"]],function(n,l,u){var t=!0;if("click"===l){t=!1!==n.component.editReply()&&t}return t},Xn.b,Xn.a)),L._30(8,1097728,[[8,4]],0,Zn.a,[[8,""],bn.a,L.t,L.V],{small:[0,"small"],clear:[1,"clear"]},null),(n()(),L._55(-1,0,["\n        "])),(n()(),L._31(10,0,null,0,1,"ion-icon",[["name","create"],["role","img"]],[[2,"hide",null]],null,null,null,null)),L._30(11,147456,null,0,Un.a,[bn.a,L.t,L.V],{name:[0,"name"]},null),(n()(),L._55(12,0,[" ","\n    "])),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,2,["\n"]))],function(n,l){n(l,8,0,"","");n(l,11,0,"create")},function(n,l){var u=l.component;n(l,7,0,"addon-forum-reply-edit-form-"+u.uniqueId,u.replyData.replyingTo===u.post.parent);n(l,10,0,L._44(l,11)._hidden);n(l,12,0,L._56(l,12,0,L._44(l,13).transform("addon.mod_forum.edit")))})}function _(n){return L._57(0,[(n()(),L._31(0,0,null,null,1,"core-attachments",[],null,null,null,nl.b,nl.a)),L._30(1,114688,null,0,ll.a,[F.a,H.a,kn.a,Y.a,Cn.a,ul.a],{files:[0,"files"],maxSize:[1,"maxSize"],maxSubmissions:[2,"maxSubmissions"],component:[3,"component"],componentId:[4,"componentId"],allowOffline:[5,"allowOffline"]},null)],function(n,l){var u=l.component;n(l,1,0,u.replyData.files,u.forum.maxbytes,u.forum.maxattachments,u.component,u.forum.cmid,!0)},null)}function d(n){return L._57(0,[(n()(),L._31(0,0,null,null,11,"ion-row",[["class","row"]],null,null,null,null,null)),L._30(1,16384,null,0,tl.a,[],null,null),(n()(),L._55(-1,null,["\n            "])),(n()(),L._31(3,0,null,null,7,"ion-col",[["class","col"]],null,null,null,null,null)),L._30(4,16384,null,0,ol.a,[],null,null),(n()(),L._55(-1,null,["\n                "])),(n()(),L._31(6,0,null,null,3,"button",[["block",""],["color","light"],["ion-button",""]],null,[[null,"click"]],function(n,l,u){var t=!0;if("click"===l){t=!1!==n.component.discard()&&t}return t},Xn.b,Xn.a)),L._30(7,1097728,null,0,Zn.a,[[8,""],bn.a,L.t,L.V],{color:[0,"color"],block:[1,"block"]},null),(n()(),L._55(8,0,["",""])),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,null,["\n            "])),(n()(),L._55(-1,null,["\n        "]))],function(n,l){n(l,7,0,"light","")},function(n,l){n(l,8,0,L._56(l,8,0,L._44(l,9).transform("core.discard")))})}function f(n){return L._57(0,[(n()(),L._31(0,0,null,null,71,"ion-list",[],[[8,"id",0]],null,null,null,null)),L._30(1,16384,null,0,el.a,[bn.a,L.t,L.V,Dn.a,al.l,il.a],null,null),(n()(),L._55(-1,null,["\n    "])),(n()(),L._31(3,0,null,null,18,"ion-item",[["class","item item-block"]],null,null,null,Bn.b,Bn.a)),L._30(4,1097728,null,3,Gn.a,[Jn.a,bn.a,L.t,L.V,[2,Kn.a]],null,null),L._52(335544320,10,{contentLabel:0}),L._52(603979776,11,{_buttons:1}),L._52(603979776,12,{_icons:1}),L._30(8,16384,null,0,Qn.a,[],null,null),(n()(),L._55(-1,2,["\n        "])),(n()(),L._31(10,0,null,1,3,"ion-label",[["stacked",""]],null,null,null,null,null)),L._30(11,16384,[[10,4]],0,rl.a,[bn.a,L.t,L.V,[8,null],[8,""],[8,null],[8,null]],null,null),(n()(),L._55(12,null,["",""])),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,2,["\n        "])),(n()(),L._31(15,0,null,3,5,"ion-input",[["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,u){var t=!0;if("ngModelChange"===l){t=!1!==(n.component.replyData.subject=u)&&t}return t},sl.b,sl.a)),L._30(16,671744,null,0,cl.q,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),L._50(2048,null,cl.m,null,[cl.q]),L._30(18,16384,null,0,cl.n,[cl.m],null,null),L._30(19,5423104,null,0,_l.a,[bn.a,Dn.a,Jn.a,dl.a,L.t,L.V,[2,wn.a],[2,Gn.a],[2,cl.m],il.a],{type:[0,"type"],placeholder:[1,"placeholder"]},null),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,2,["\n    "])),(n()(),L._55(-1,null,["\n    "])),(n()(),L._31(23,0,null,null,15,"ion-item",[["class","item item-block"]],null,null,null,Bn.b,Bn.a)),L._30(24,1097728,null,3,Gn.a,[Jn.a,bn.a,L.t,L.V,[2,Kn.a]],null,null),L._52(335544320,13,{contentLabel:0}),L._52(603979776,14,{_buttons:1}),L._52(603979776,15,{_icons:1}),L._30(28,16384,null,0,Qn.a,[],null,null),(n()(),L._55(-1,2,["\n        "])),(n()(),L._31(30,0,null,1,3,"ion-label",[["stacked",""]],null,null,null,null,null)),L._30(31,16384,[[13,4]],0,rl.a,[bn.a,L.t,L.V,[8,null],[8,""],[8,null],[8,null]],null,null),(n()(),L._55(32,null,["",""])),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,2,["\n        "])),(n()(),L._31(35,0,null,3,2,"core-rich-text-editor",[["item-content",""]],null,[[null,"contentChanged"]],function(n,l,u){var t=!0;if("contentChanged"===l){t=!1!==n.component.onMessageChange(u)&&t}return t},fl.b,fl.a)),L._30(36,1228800,null,0,ml.a,[H.a,pl.a,jn.a,$.a,xn.a,[2,wn.a],L.t],{placeholder:[0,"placeholder"],control:[1,"control"],name:[2,"name"],component:[3,"component"],componentId:[4,"componentId"]},{contentChanged:"contentChanged"}),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,2,["\n    "])),(n()(),L._55(-1,null,["\n    "])),(n()(),L._26(16777216,null,null,1,null,_)),L._30(41,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n    "])),(n()(),L._31(43,0,null,null,27,"ion-grid",[["class","grid"]],null,null,null,null,null)),L._30(44,16384,null,0,hl.a,[],null,null),(n()(),L._55(-1,null,["\n        "])),(n()(),L._31(46,0,null,null,20,"ion-row",[["class","row"]],null,null,null,null,null)),L._30(47,16384,null,0,tl.a,[],null,null),(n()(),L._55(-1,null,["\n            "])),(n()(),L._31(49,0,null,null,7,"ion-col",[["class","col"]],null,null,null,null,null)),L._30(50,16384,null,0,ol.a,[],null,null),(n()(),L._55(-1,null,["\n                "])),(n()(),L._31(52,0,null,null,3,"button",[["block",""],["ion-button",""]],[[8,"disabled",0]],[[null,"click"]],function(n,l,u){var t=!0;if("click"===l){t=!1!==n.component.reply()&&t}return t},Xn.b,Xn.a)),L._30(53,1097728,null,0,Zn.a,[[8,""],bn.a,L.t,L.V],{block:[0,"block"]},null),(n()(),L._55(54,0,["",""])),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,null,["\n            "])),(n()(),L._55(-1,null,["\n            "])),(n()(),L._31(58,0,null,null,7,"ion-col",[["class","col"]],null,null,null,null,null)),L._30(59,16384,null,0,ol.a,[],null,null),(n()(),L._55(-1,null,["\n                "])),(n()(),L._31(61,0,null,null,3,"button",[["block",""],["color","light"],["ion-button",""]],null,[[null,"click"]],function(n,l,u){var t=!0;if("click"===l){t=!1!==n.component.cancel()&&t}return t},Xn.b,Xn.a)),L._30(62,1097728,null,0,Zn.a,[[8,""],bn.a,L.t,L.V],{color:[0,"color"],block:[1,"block"]},null),(n()(),L._55(63,0,["",""])),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,null,["\n            "])),(n()(),L._55(-1,null,["\n        "])),(n()(),L._55(-1,null,["\n        "])),(n()(),L._26(16777216,null,null,1,null,d)),L._30(69,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n    "])),(n()(),L._55(-1,null,["\n"]))],function(n,l){var u=l.component;n(l,16,0,u.replyData.subject);n(l,19,0,"text",L._56(l,19,1,L._44(l,20).transform("addon.mod_forum.subject")));n(l,36,0,L._56(l,36,0,L._44(l,37).transform("addon.mod_forum.message")),u.messageControl,"mod_forum_reply_"+u.post.id,u.component,u.componentId);n(l,41,0,u.forum.id&&u.forum.maxattachments>0);n(l,53,0,"");n(l,62,0,"light","");n(l,69,0,u.replyData.isEditing)},function(n,l){var u=l.component;n(l,0,0,"addon-forum-reply-edit-form-"+u.uniqueId);n(l,12,0,L._56(l,12,0,L._44(l,13).transform("addon.mod_forum.subject")));n(l,15,0,L._44(l,18).ngClassUntouched,L._44(l,18).ngClassTouched,L._44(l,18).ngClassPristine,L._44(l,18).ngClassDirty,L._44(l,18).ngClassValid,L._44(l,18).ngClassInvalid,L._44(l,18).ngClassPending);n(l,32,0,L._56(l,32,0,L._44(l,33).transform("addon.mod_forum.message")));n(l,52,0,""==u.replyData.subject||null==u.replyData.message);n(l,54,0,L._56(l,54,0,L._44(l,55).transform("addon.mod_forum.posttoforum")));n(l,63,0,L._56(l,63,0,L._44(l,64).transform("core.cancel")))})}function m(n){return L._57(0,[L._47(0,gl.a,[On.a,Cn.a]),(n()(),L._31(1,0,null,null,28,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,Bn.b,Bn.a)),L._30(2,1097728,null,3,Gn.a,[Jn.a,bn.a,L.t,L.V,[2,Kn.a]],null,null),L._52(335544320,1,{contentLabel:0}),L._52(603979776,2,{_buttons:1}),L._52(603979776,3,{_icons:1}),L._30(6,16384,null,0,Qn.a,[],null,null),(n()(),L._55(-1,2,["\n    "])),(n()(),L._31(8,0,null,0,7,"ion-avatar",[["item-start",""]],null,[[null,"click"]],function(n,l,u){var t=!0,o=n.component;if("click"===l){t=!1!==o.openUserProfile(o.post.userid)&&t}return t},null,null)),L._30(9,16384,null,0,Il.a,[],null,null),(n()(),L._55(-1,null,["\n        "])),(n()(),L._31(11,0,null,null,3,"img",[["core-external-content",""],["onError","this.src='assets/img/user-avatar.png'"],["role","presentation"]],[[8,"src",4],[8,"alt",0]],null,null,null,null)),L._30(12,4210688,null,0,bl.a,[L.t,On.a,xn.a,Dn.a,$.a,H.a,jn.a,F.a],null,null),L._48(13,{$a:0}),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,null,["\n    "])),(n()(),L._55(-1,2,["\n    "])),(n()(),L._31(17,0,null,2,2,"h2",[],null,null,null,null,null)),(n()(),L._31(18,0,null,null,1,"span",[],[[2,"core-bold",null]],null,null,null,null)),(n()(),L._55(19,null,["",""])),(n()(),L._55(-1,2,["\n    "])),(n()(),L._31(21,0,null,2,7,"p",[],null,null,null,null,null)),(n()(),L._55(-1,null,["\n        "])),(n()(),L._26(16777216,null,null,1,null,t)),L._30(24,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n        "])),(n()(),L._26(16777216,null,null,1,null,e)),L._30(27,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(28,null,["\n        ","\n    "])),(n()(),L._55(-1,2,["\n"])),(n()(),L._55(-1,null,["\n"])),(n()(),L._31(31,0,null,null,8,"ion-card-content",[],null,null,null,null,null)),L._30(32,16384,null,0,vl.a,[bn.a,L.t,L.V],null,null),(n()(),L._55(-1,null,["\n    "])),(n()(),L._31(34,0,null,null,1,"core-format-text",[],null,null,null,null,null)),L._30(35,540672,null,0,Pn.a,[L.t,$.a,H.a,kn.a,Cn.a,Dn.a,q.a,jn.a,On.a,xn.a,F.a,Sn.a,[2,Vn.a],[2,wn.a]],{text:[0,"text"],component:[1,"component"],componentId:[2,"componentId"]},null),(n()(),L._55(-1,null,["\n    "])),(n()(),L._26(16777216,null,null,1,null,r)),L._30(38,802816,null,0,Fn.j,[L._11,L._6,L.E],{ngForOf:[0,"ngForOf"]},null),(n()(),L._55(-1,null,["\n"])),(n()(),L._55(-1,null,["\n"])),(n()(),L._26(16777216,null,null,1,null,s)),L._30(42,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n"])),(n()(),L._26(16777216,null,null,1,null,c)),L._30(45,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n"])),(n()(),L._26(16777216,null,null,1,null,f)),L._30(48,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n"]))],function(n,l){var u=l.component;n(l,24,0,!u.post.modified);n(l,27,0,u.post.modified);n(l,35,0,u.post.message,u.component,u.componentId);n(l,38,0,u.post.attachments);n(l,42,0,u.post.id&&u.post.canreply);n(l,45,0,!(u.post.id||u.replyData.isEditing&&u.replyData.replyingTo==u.post.parent));n(l,48,0,u.post.id&&!u.replyData.isEditing&&u.replyData.replyingTo==u.post.id||!u.post.id&&u.replyData.isEditing&&u.replyData.replyingTo==u.post.parent)},function(n,l){var u=l.component;n(l,11,0,u.post.userpictureurl,L._56(l,11,1,L._44(l,14).transform("core.pictureof",n(l,13,0,u.post.userfullname))));n(l,18,0,0==u.post.parent);n(l,19,0,u.post.subject);n(l,28,0,u.post.userfullname)})}function p(n){return L._57(0,[(n()(),L._31(0,0,null,null,3,"ion-title",[],null,null,null,gn.b,gn.a)),L._30(1,49152,null,0,In.a,[bn.a,L.t,L.V,[2,vn.a],[2,yn.a]],null,null),(n()(),L._31(2,0,null,0,1,"core-format-text",[],null,null,null,null,null)),L._30(3,540672,null,0,Pn.a,[L.t,$.a,H.a,kn.a,Cn.a,Dn.a,q.a,jn.a,On.a,xn.a,F.a,Sn.a,[2,Vn.a],[2,wn.a]],{text:[0,"text"]},null)],function(n,l){n(l,3,0,l.component.discussion.subject)},null)}function h(n){return L._57(0,[(n()(),L._31(0,0,null,null,2,"core-context-menu-item",[],null,[[null,"action"]],function(n,l,u){var t=!0;if("action"===l){t=!1!==n.component.doRefresh(null,u)&&t}return t},Ln.b,Ln.a)),L._30(1,770048,null,0,Tn.a,[En.a],{content:[0,"content"],iconAction:[1,"iconAction"],closeOnClick:[2,"closeOnClick"],priority:[3,"priority"]},{action:"action"}),L._47(131072,Rn.a,[Cn.a,L.j])],function(n,l){var u=l.component;n(l,1,0,L._56(l,1,0,L._44(l,2).transform("addon.mod_forum.refreshposts")),u.refreshIcon,!1,650)},null)}function g(n){return L._57(0,[(n()(),L._31(0,0,null,null,2,"core-context-menu-item",[],null,[[null,"action"]],function(n,l,u){var t=!0;if("action"===l){t=!1!==n.component.doRefresh(null,u,!0)&&t}return t},Ln.b,Ln.a)),L._30(1,770048,null,0,Tn.a,[En.a],{content:[0,"content"],iconAction:[1,"iconAction"],closeOnClick:[2,"closeOnClick"],priority:[3,"priority"]},{action:"action"}),L._47(131072,Rn.a,[Cn.a,L.j])],function(n,l){var u=l.component;n(l,1,0,L._56(l,1,0,L._44(l,2).transform("core.settings.synchronizenow")),u.syncIcon,!1,550)},null)}function I(n){return L._57(0,[(n()(),L._31(0,0,null,null,7,"ion-card",[["class","core-warning-card"]],null,null,null,null,null)),L._30(1,16384,null,0,An.a,[bn.a,L.t,L.V],null,null),(n()(),L._55(-1,null,["\n            "])),(n()(),L._31(3,0,null,null,1,"ion-icon",[["name","warning"],["role","img"]],[[2,"hide",null]],null,null,null,null)),L._30(4,147456,null,0,Un.a,[bn.a,L.t,L.V],{name:[0,"name"]},null),(n()(),L._55(5,null,[" ","\n        "])),L._48(6,{$a:0}),L._47(131072,Rn.a,[Cn.a,L.j])],function(n,l){n(l,4,0,"warning")},function(n,l){var u=l.component;n(l,3,0,L._44(l,4)._hidden);n(l,5,0,L._56(l,5,0,L._44(l,7).transform("core.hasdatatosync",n(l,6,0,u.discussionStr))))})}function b(n){return L._57(0,[(n()(),L._31(0,0,null,null,6,"ion-card",[["class","core-warning-card"]],null,null,null,null,null)),L._30(1,16384,null,0,An.a,[bn.a,L.t,L.V],null,null),(n()(),L._55(-1,null,["\n            "])),(n()(),L._31(3,0,null,null,1,"ion-icon",[["name","warning"],["role","img"]],[[2,"hide",null]],null,null,null,null)),L._30(4,147456,null,0,Un.a,[bn.a,L.t,L.V],{name:[0,"name"]},null),(n()(),L._55(5,null,[" ","\n        "])),L._47(131072,Rn.a,[Cn.a,L.j])],function(n,l){n(l,4,0,"warning")},function(n,l){n(l,3,0,L._44(l,4)._hidden);n(l,5,0,L._56(l,5,0,L._44(l,6).transform("addon.mod_forum.discussionlocked")))})}function v(n){return L._57(0,[(n()(),L._31(0,0,null,null,5,"ion-card",[["margin-bottom",""]],null,null,null,null,null)),L._30(1,16384,null,0,An.a,[bn.a,L.t,L.V],null,null),(n()(),L._55(-1,null,["\n            "])),(n()(),L._31(3,0,null,null,1,"addon-mod-forum-post",[],null,[[null,"onPostChange"]],function(n,l,u){var t=!0;if("onPostChange"===l){t=!1!==n.component.postListChanged()&&t}return t},m,kl)),L._30(4,245760,null,0,yl.a,[Vn.a,Y.a,Pl.a,H.a,kn.a,Cn.a,W.a,G.a,B.a,J.a,[2,z.a]],{post:[0,"post"],courseId:[1,"courseId"],discussionId:[2,"discussionId"],component:[3,"component"],componentId:[4,"componentId"],replyData:[5,"replyData"],originalData:[6,"originalData"],trackPosts:[7,"trackPosts"],forum:[8,"forum"],defaultSubject:[9,"defaultSubject"]},{onPostChange:"onPostChange"}),(n()(),L._55(-1,null,["\n        "]))],function(n,l){var u=l.component;n(l,4,0,u.discussion,u.courseId,u.discussionId,u.component,u.componentId,u.replyData,u.originalData,u.trackPosts,u.forum,u.defaultSubject)},null)}function y(n){return L._57(0,[(n()(),L._31(0,0,null,null,5,"ion-item-divider",[["class","item item-divider"],["color","light"]],null,null,null,Bn.b,Bn.a)),L._30(1,1097728,null,3,Gn.a,[Jn.a,bn.a,L.t,L.V,[2,Kn.a]],{color:[0,"color"]},null),L._52(335544320,4,{contentLabel:0}),L._52(603979776,5,{_buttons:1}),L._52(603979776,6,{_icons:1}),L._30(5,16384,null,0,Cl.a,[bn.a,L.t,L.V],{color:[0,"color"]},null)],function(n,l){n(l,1,0,"light");n(l,5,0,"light")},null)}function P(n){return L._57(0,[(n()(),L._31(0,0,null,null,7,null,null,null,null,null,null,null)),(n()(),L._55(-1,null,["\n                "])),(n()(),L._26(16777216,null,null,1,null,y)),L._30(3,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n                "])),(n()(),L._31(5,0,null,null,1,"addon-mod-forum-post",[],null,[[null,"onPostChange"]],function(n,l,u){var t=!0;if("onPostChange"===l){t=!1!==n.component.postListChanged()&&t}return t},m,kl)),L._30(6,245760,null,0,yl.a,[Vn.a,Y.a,Pl.a,H.a,kn.a,Cn.a,W.a,G.a,B.a,J.a,[2,z.a]],{post:[0,"post"],courseId:[1,"courseId"],discussionId:[2,"discussionId"],component:[3,"component"],componentId:[4,"componentId"],replyData:[5,"replyData"],originalData:[6,"originalData"],trackPosts:[7,"trackPosts"],forum:[8,"forum"],defaultSubject:[9,"defaultSubject"]},{onPostChange:"onPostChange"}),(n()(),L._55(-1,null,["\n            "]))],function(n,l){var u=l.component;n(l,3,0,!l.context.first);n(l,6,0,l.context.$implicit,u.courseId,u.discussionId,u.component,u.componentId,u.replyData,u.originalData,u.trackPosts,u.forum,u.defaultSubject)},null)}function k(n){return L._57(0,[(n()(),L._31(0,0,null,null,5,"ion-card",[],null,null,null,null,null)),L._30(1,16384,null,0,An.a,[bn.a,L.t,L.V],null,null),(n()(),L._55(-1,null,["\n            "])),(n()(),L._26(16777216,null,null,1,null,P)),L._30(4,802816,null,0,Fn.j,[L._11,L._6,L.E],{ngForOf:[0,"ngForOf"]},null),(n()(),L._55(-1,null,["\n        "]))],function(n,l){n(l,4,0,l.component.posts)},null)}function C(n){return L._57(0,[(n()(),L._31(0,0,null,null,0,null,null,null,null,null,null,null))],null,null)}function D(n){return L._57(0,[(n()(),L._31(0,0,null,null,5,null,null,null,null,null,null,null)),(n()(),L._55(-1,null,["\n                "])),(n()(),L._26(16777216,null,null,2,null,C)),L._30(3,540672,null,0,Fn.r,[L._11],{ngTemplateOutletContext:[0,"ngTemplateOutletContext"],ngTemplateOutlet:[1,"ngTemplateOutlet"]},null),L._48(4,{post:0}),(n()(),L._55(-1,null,["\n            "]))],function(n,l){n(l,3,0,n(l,4,0,l.context.$implicit),L._44(l.parent.parent,75))},null)}function j(n){return L._57(0,[(n()(),L._31(0,0,null,null,4,null,null,null,null,null,null,null)),(n()(),L._55(-1,null,["\n            "])),(n()(),L._26(16777216,null,null,1,null,D)),L._30(3,802816,null,0,Fn.j,[L._11,L._6,L.E],{ngForOf:[0,"ngForOf"]},null),(n()(),L._55(-1,null,["\n        "]))],function(n,l){n(l,3,0,l.component.posts)},null)}function O(n){return L._57(0,[(n()(),L._31(0,0,null,null,0,null,null,null,null,null,null,null))],null,null)}function x(n){return L._57(0,[(n()(),L._31(0,0,null,null,5,null,null,null,null,null,null,null)),(n()(),L._55(-1,null,["\n                    "])),(n()(),L._26(16777216,null,null,2,null,O)),L._30(3,540672,null,0,Fn.r,[L._11],{ngTemplateOutletContext:[0,"ngTemplateOutletContext"],ngTemplateOutlet:[1,"ngTemplateOutlet"]},null),L._48(4,{post:0}),(n()(),L._55(-1,null,["\n                "]))],function(n,l){n(l,3,0,n(l,4,0,l.context.$implicit),L._44(l.parent.parent.parent,75))},null)}function S(n){return L._57(0,[(n()(),L._31(0,0,null,null,4,"div",[["padding-left",""]],null,null,null,null,null)),(n()(),L._55(-1,null,["\n                "])),(n()(),L._26(16777216,null,null,1,null,x)),L._30(3,802816,null,0,Fn.j,[L._11,L._6,L.E],{ngForOf:[0,"ngForOf"]},null),(n()(),L._55(-1,null,["\n            "]))],function(n,l){n(l,3,0,l.parent.context.post.children)},null)}function V(n){return L._57(0,[(n()(),L._55(-1,null,["\n            "])),(n()(),L._31(1,0,null,null,5,"ion-card",[],null,null,null,null,null)),L._30(2,16384,null,0,An.a,[bn.a,L.t,L.V],null,null),(n()(),L._55(-1,null,["\n                "])),(n()(),L._31(4,0,null,null,1,"addon-mod-forum-post",[],null,[[null,"onPostChange"]],function(n,l,u){var t=!0;if("onPostChange"===l){t=!1!==n.component.postListChanged()&&t}return t},m,kl)),L._30(5,245760,null,0,yl.a,[Vn.a,Y.a,Pl.a,H.a,kn.a,Cn.a,W.a,G.a,B.a,J.a,[2,z.a]],{post:[0,"post"],courseId:[1,"courseId"],discussionId:[2,"discussionId"],component:[3,"component"],componentId:[4,"componentId"],replyData:[5,"replyData"],originalData:[6,"originalData"],trackPosts:[7,"trackPosts"],forum:[8,"forum"],defaultSubject:[9,"defaultSubject"]},{onPostChange:"onPostChange"}),(n()(),L._55(-1,null,["\n            "])),(n()(),L._55(-1,null,["\n            "])),(n()(),L._26(16777216,null,null,1,null,S)),L._30(9,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,null,["\n        "]))],function(n,l){var u=l.component;n(l,5,0,l.context.post,u.courseId,u.discussionId,u.component,u.componentId,u.replyData,u.originalData,u.trackPosts,u.forum,u.defaultSubject);n(l,9,0,l.context.post.children.length&&l.context.post.children[0].subject)},null)}function w(n){return L._57(0,[L._52(402653184,1,{content:0}),(n()(),L._31(1,0,null,null,15,"ion-header",[],null,null,null,null,null)),L._30(2,16384,null,0,Dl.a,[bn.a,L.t,L.V,[2,jl.a]],null,null),(n()(),L._55(-1,null,["\n    "])),(n()(),L._31(4,0,null,null,11,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,Ol.b,Ol.a)),L._30(5,49152,null,0,yn.a,[dl.a,[2,jl.a],[2,Vn.a],bn.a,L.t,L.V],null,null),(n()(),L._55(-1,3,["\n        "])),(n()(),L._26(16777216,null,3,1,null,p)),L._30(8,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,3,["\n        "])),(n()(),L._31(10,0,null,2,4,"ion-buttons",[["end",""]],null,null,null,null,null)),L._30(11,16384,null,1,xl.a,[bn.a,L.t,L.V,[2,vn.a],[2,yn.a]],null,null),L._52(603979776,2,{_buttons:1}),(n()(),L._55(-1,null,["\n            "])),(n()(),L._55(-1,null,["\n        "])),(n()(),L._55(-1,3,["\n    "])),(n()(),L._55(-1,null,["\n"])),(n()(),L._55(-1,null,["\n"])),(n()(),L._31(18,0,null,null,25,"core-navbar-buttons",[["end",""]],null,null,null,Sl.b,Sl.a)),L._30(19,245760,null,1,Vl.a,[L.t,On.a,H.a],null,null),L._52(603979776,3,{buttons:1}),(n()(),L._55(-1,0,["\n    "])),(n()(),L._31(22,0,null,0,20,"core-context-menu",[],null,null,null,wl.b,wl.a)),L._30(23,245760,null,0,En.a,[Cn.a,Ll.a,L.t,H.a,[2,Tl.a]],null,null),(n()(),L._55(-1,0,["\n        "])),(n()(),L._26(16777216,null,0,1,null,h)),L._30(26,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,0,["\n        "])),(n()(),L._26(16777216,null,0,1,null,g)),L._30(29,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,0,["\n        "])),(n()(),L._31(31,0,null,0,2,"core-context-menu-item",[["iconAction","arrow-round-down"]],null,[[null,"action"]],function(n,l,u){var t=!0;if("action"===l){t=!1!==n.component.changeSort("flat-oldest")&&t}return t},Ln.b,Ln.a)),L._30(32,770048,null,0,Tn.a,[En.a],{content:[0,"content"],iconAction:[1,"iconAction"],priority:[2,"priority"],hidden:[3,"hidden"]},{action:"action"}),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,0,["\n        "])),(n()(),L._31(35,0,null,0,2,"core-context-menu-item",[["iconAction","arrow-round-up"]],null,[[null,"action"]],function(n,l,u){var t=!0;if("action"===l){t=!1!==n.component.changeSort("flat-newest")&&t}return t},Ln.b,Ln.a)),L._30(36,770048,null,0,Tn.a,[En.a],{content:[0,"content"],iconAction:[1,"iconAction"],priority:[2,"priority"],hidden:[3,"hidden"]},{action:"action"}),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,0,["\n        "])),(n()(),L._31(39,0,null,0,2,"core-context-menu-item",[["iconAction","swap"]],null,[[null,"action"]],function(n,l,u){var t=!0;if("action"===l){t=!1!==n.component.changeSort("nested")&&t}return t},Ln.b,Ln.a)),L._30(40,770048,null,0,Tn.a,[En.a],{content:[0,"content"],iconAction:[1,"iconAction"],priority:[2,"priority"],hidden:[3,"hidden"]},{action:"action"}),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,0,["\n    "])),(n()(),L._55(-1,0,["\n"])),(n()(),L._55(-1,null,["\n"])),(n()(),L._31(45,0,null,null,32,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,El.b,El.a)),L._30(46,4374528,[[1,4]],0,wn.a,[bn.a,Dn.a,il.a,L.t,L.V,dl.a,Rl.a,L.M,[2,jl.a],[2,Vn.a]],null,null),(n()(),L._55(-1,1,["\n    "])),(n()(),L._31(48,0,null,2,6,"ion-refresher",[],[[2,"refresher-active",null],[4,"top",null]],[[null,"ionRefresh"]],function(n,l,u){var t=!0;if("ionRefresh"===l){t=!1!==n.component.doRefresh(u)&&t}return t},null,null)),L._30(49,212992,null,0,Al.a,[Dn.a,wn.a,L.M,al.l],{enabled:[0,"enabled"]},{ionRefresh:"ionRefresh"}),(n()(),L._55(-1,null,["\n        "])),(n()(),L._31(51,0,null,null,2,"ion-refresher-content",[],[[1,"state",0]],null,null,Ul.b,Ul.a)),L._30(52,114688,null,0,Ml.a,[Al.a,bn.a],{pullingText:[0,"pullingText"]},null),L._47(131072,Rn.a,[Cn.a,L.j]),(n()(),L._55(-1,null,["\n    "])),(n()(),L._55(-1,1,["\n\n    "])),(n()(),L._31(56,0,null,1,20,"core-loading",[],null,null,null,Fl.b,Fl.a)),L._30(57,638976,null,0,Nl.a,[Cn.a,L.t],{hideUntil:[0,"hideUntil"]},null),(n()(),L._55(-1,0,["\n        "])),(n()(),L._55(-1,0,["\n        "])),(n()(),L._26(16777216,null,0,1,null,I)),L._30(61,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,0,["\n\n        "])),(n()(),L._26(16777216,null,0,1,null,b)),L._30(64,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,0,["\n\n        "])),(n()(),L._26(16777216,null,0,1,null,v)),L._30(67,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,0,["\n\n        "])),(n()(),L._26(16777216,null,0,1,null,k)),L._30(70,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,0,["\n\n        "])),(n()(),L._26(16777216,null,0,1,null,j)),L._30(73,16384,null,0,Fn.k,[L._11,L._6],{ngIf:[0,"ngIf"]},null),(n()(),L._55(-1,0,["\n\n        "])),(n()(),L._26(0,[["nestedPosts",2]],0,0,null,V)),(n()(),L._55(-1,0,["\n    "])),(n()(),L._55(-1,1,["\n"])),(n()(),L._55(-1,null,["\n"]))],function(n,l){var u=l.component;n(l,8,0,u.discussion),n(l,19,0),n(l,23,0);n(l,26,0,u.discussionLoaded&&!u.postHasOffline&&u.isOnline);n(l,29,0,u.discussionLoaded&&!u.isSplitViewOn&&u.postHasOffline&&u.isOnline);n(l,32,0,L._56(l,32,0,L._44(l,33).transform("addon.mod_forum.modeflatoldestfirst")),"arrow-round-down",500,"flat-oldest"==u.sort);n(l,36,0,L._56(l,36,0,L._44(l,37).transform("addon.mod_forum.modeflatnewestfirst")),"arrow-round-up",450,"flat-newest"==u.sort);n(l,40,0,L._56(l,40,0,L._44(l,41).transform("addon.mod_forum.modenested")),"swap",400,"nested"==u.sort);n(l,49,0,u.discussionLoaded);n(l,52,0,L._34(1,"",L._56(l,52,0,L._44(l,53).transform("core.pulltorefresh")),""));n(l,57,0,u.discussionLoaded);n(l,61,0,u.postHasOffline);n(l,64,0,u.locked);n(l,67,0,u.discussion);n(l,70,0,"nested"!=u.sort);n(l,73,0,"nested"==u.sort)},function(n,l){n(l,4,0,L._44(l,5)._hidden,L._44(l,5)._sbPadding);n(l,45,0,L._44(l,46).statusbarPadding,L._44(l,46)._hasRefresher);n(l,48,0,"inactive"!==L._44(l,49).state,L._44(l,49)._top);n(l,51,0,L._44(l,52).r.state)})}Object.defineProperty(l,"__esModule",{value:!0});var L=u(0),T=u(9),E=u(7),R=u(31),A=u(30),U=u(630),M=u(189),F=u(12),N=u(21),$=u(1),H=u(6),q=u(4),Y=u(74),z=u(128),W=u(155),B=u(190),G=u(232),J=u(233),K=this&&this.__decorate||function(n,l,u,t){var o,e=arguments.length,a=e<3?l:null===t?t=Object.getOwnPropertyDescriptor(l,u):t;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(n,l,u,t);else for(var i=n.length-1;i>=0;i--)(o=n[i])&&(a=(e<3?o(a):e>3?o(l,u,a):o(l,u))||a);return e>3&&a&&Object.defineProperty(l,u,a),a},Q=this&&this.__metadata||function(n,l){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(n,l)},X=this&&this.__param||function(n,l){return function(u,t){l(u,t,n)}},Z=function(){function n(n,l,u,t,o,e,a,i,r,s,c,_,d,f){var m=this;this.appProvider=u,this.eventsProvider=t,this.sitesProvider=o,this.domUtils=e,this.utils=a,this.translate=i,this.uploaderProvider=r,this.forumProvider=s,this.forumOffline=c,this.forumHelper=_,this.forumSync=d,this.svComponent=f,this.discussionLoaded=!1,this.sort="flat-oldest",this.replyData={replyingTo:0,isEditing:!1,subject:"",message:null,files:[]},this.originalData={subject:null,message:null,files:[]},this.refreshIcon="spinner",this.syncIcon="spinner",this.courseId=n.get("courseId"),this.cmId=n.get("cmId"),this.forumId=n.get("forumId"),this.discussionId=n.get("discussionId"),this.trackPosts=n.get("trackPosts"),this.locked=n.get("locked"),this.isOnline=this.appProvider.isOnline(),this.onlineObserver=l.onchange().subscribe(function(n){m.isOnline=m.appProvider.isOnline()}),this.isSplitViewOn=this.svComponent&&this.svComponent.isOn()}return n.prototype.ionViewDidLoad=function(){this.fetchPosts(!0,!1,!0)},n.prototype.ionViewDidEnter=function(){var n=this;this.syncObserver=this.eventsProvider.on(J.a.AUTO_SYNCED,function(l){l.forumId==n.forumId&&n.discussionId==l.discussionId&&l.userId==n.sitesProvider.getCurrentSiteUserId()&&(n.discussionLoaded=!1,n.refreshPosts())},this.sitesProvider.getCurrentSiteId()),this.syncManualObserver=this.eventsProvider.on(J.a.MANUAL_SYNCED,function(l){"discussion"!=l.source&&l.forumId==n.forumId&&l.userId==n.sitesProvider.getCurrentSiteUserId()&&(n.discussionLoaded=!1,n.refreshPosts())},this.sitesProvider.getCurrentSiteId()),this.eventsProvider.trigger(W.a.VIEW_DISCUSSION_EVENT,{forumId:this.forumId,discussion:this.discussionId},this.sitesProvider.getCurrentSiteId())},n.prototype.ionViewCanLeave=function(){var n=this;return(this.forumHelper.hasPostDataChanged(this.replyData,this.originalData)?this.domUtils.showConfirm(this.translate.instant("core.confirmcanceledit")):Promise.resolve()).then(function(){n.uploaderProvider.clearTmpFiles(n.replyData.files)})},n.prototype.fetchForum=function(){return this.courseId&&this.cmId?this.forumProvider.getForum(this.courseId,this.cmId):this.courseId&&this.forumId?this.forumProvider.getForumById(this.courseId,this.forumId):Promise.reject(null)},n.prototype.fetchPosts=function(n,l,u){var t=this,o=[],e=[],a=!1;return(n?this.syncDiscussion(l).catch(function(){}):Promise.resolve()).then(function(){return t.forumProvider.getDiscussionPosts(t.discussionId).then(function(n){o=n}).then(function(){return t.forumOffline.getDiscussionReplies(t.discussionId).then(function(n){t.postHasOffline=!!n.length;var l=[],u={};return o.forEach(function(n){u[n.id]=n,a=a||!n.postread}),n.forEach(function(n){t.forumId||(t.forumId=n.forumid),t.courseId||(t.courseId=n.courseid),l.push(t.forumHelper.convertOfflineReplyToOnline(n).then(function(n){e.push(n),u[n.parent].canreply=!1}))}),Promise.all(l).then(function(){o=t.utils.objectToArray(u)})})})}).then(function(){var n=e.concat(o);if(t.discussion=t.forumProvider.extractStartingPost(n),"nested"==t.sort)t.forumProvider.sortDiscussionPosts(n,"ASC"),t.posts=t.utils.formatTree(n,"parent","id",t.discussion.id);else{t.forumProvider.sortDiscussionPosts(n,"flat-newest"==t.sort?"DESC":"ASC"),t.posts=n}return t.defaultSubject=t.translate.instant("addon.mod_forum.re")+" "+t.discussion.subject,t.replyData.subject=t.defaultSubject,t.fetchForum().then(function(n){t.discussion.userfullname&&0==t.discussion.parent&&"single"==n.type&&(t.discussion.userfullname=null),void 0!==n.istracked&&(t.trackPosts=n.istracked),t.forumId=n.id,t.cmId=n.cmid,t.forum=n}).catch(function(){t.forum={}})}).catch(function(n){t.domUtils.showErrorModal(n)}).finally(function(){t.discussionLoaded=!0,t.refreshIcon="refresh",t.syncIcon="sync",(u||a&&t.trackPosts)&&t.forumProvider.logDiscussionView(t.discussionId).catch(function(){})})},n.prototype.syncDiscussion=function(n){var l=this;return this.forumSync.syncDiscussionReplies(this.discussionId).then(function(n){return n.warnings&&n.warnings.length&&l.domUtils.showErrorModal(n.warnings[0]),n&&n.updated&&l.eventsProvider.trigger(J.a.MANUAL_SYNCED,{forumId:l.forumId,userId:l.sitesProvider.getCurrentSiteUserId(),source:"discussion"},l.sitesProvider.getCurrentSiteId()),n.updated}).catch(function(u){return n&&l.domUtils.showErrorModalDefault(u,"core.errorsync",!0),Promise.reject(null)})},n.prototype.doRefresh=function(n,l,u){return void 0===u&&(u=!1),this.discussionLoaded?this.refreshPosts(!0,u).finally(function(){n&&n.complete(),l&&l()}):Promise.resolve()},n.prototype.refreshPosts=function(n,l){var u=this;return this.content&&this.content.scrollToTop(),this.refreshIcon="spinner",this.syncIcon="spinner",this.forumProvider.invalidateDiscussionPosts(this.discussionId).catch(function(){}).then(function(){return u.fetchPosts(n,l)})},n.prototype.changeSort=function(n){return this.discussionLoaded=!1,this.sort=n,this.content&&this.content.scrollToTop(),this.fetchPosts()},n.prototype.postListChanged=function(){var n=this;this.eventsProvider.trigger(W.a.REPLY_DISCUSSION_EVENT,{forumId:this.forumId,discussionId:this.discussionId,cmId:this.cmId},this.sitesProvider.getCurrentSiteId()),this.discussionLoaded=!1,this.refreshPosts().finally(function(){n.discussionLoaded=!0})},n.prototype.ionViewWillLeave=function(){this.syncObserver&&this.syncObserver.off(),this.syncManualObserver&&this.syncManualObserver.off()},n.prototype.ngOnDestroy=function(){this.onlineObserver&&this.onlineObserver.unsubscribe()},K([Object(L._9)(T.f),Q("design:type",T.f)],n.prototype,"content",void 0),n=K([Object(L.m)({selector:"page-addon-mod-forum-discussion",templateUrl:"discussion.html"}),X(13,Object(L.N)()),Q("design:paramtypes",[T.r,M.a,F.a,N.a,$.a,H.a,q.a,E.c,Y.a,W.a,B.a,G.a,J.a,z.a])],n)}(),nn=this&&this.__decorate||function(n,l,u,t){var o,e=arguments.length,a=e<3?l:null===t?t=Object.getOwnPropertyDescriptor(l,u):t;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(n,l,u,t);else for(var i=n.length-1;i>=0;i--)(o=n[i])&&(a=(e<3?o(a):e>3?o(l,u,a):o(l,u))||a);return e>3&&a&&Object.defineProperty(l,u,a),a},ln=function(){function n(){}return n=nn([Object(L.I)({declarations:[Z],imports:[R.a,A.a,U.a,T.l.forChild(Z),E.b.forChild()]})],n)}(),un=u(1243),tn=u(1244),on=u(1245),en=u(1246),an=u(1247),rn=u(1248),sn=u(1249),cn=u(1250),_n=u(1251),dn=u(1254),fn=u(1255),mn=u(1256),pn=u(1257),hn=u(1288),gn=u(1253),In=u(315),bn=u(3),vn=u(227),yn=u(182),Pn=u(39),kn=u(10),Cn=u(15),Dn=u(13),jn=u(23),On=u(2),xn=u(16),Sn=u(22),Vn=u(20),wn=u(24),Ln=u(78),Tn=u(71),En=u(67),Rn=u(28),An=u(112),Un=u(38),Mn=u(231),Fn=u(8),Nn=u(204),$n=u(168),Hn=u(119),qn=u(68),Yn=u(443),zn=u(270),Wn=u(42),Bn=u(33),Gn=u(19),Jn=u(18),Kn=u(29),Qn=u(32),Xn=u(43),Zn=u(37),nl=u(416),ll=u(265),ul=u(114),tl=u(121),ol=u(120),el=u(75),al=u(35),il=u(25),rl=u(61),sl=u(94),cl=u(17),_l=u(76),dl=u(27),fl=u(260),ml=u(210),pl=u(157),hl=u(142),gl=u(412),Il=u(185),bl=u(166),vl=u(417),yl=u(1299),Pl=u(85),kl=L._29({encapsulation:2,styles:[],data:{}}),Cl=(L._27("addon-mod-forum-post",yl.a,function(n){return L._57(0,[(n()(),L._31(0,0,null,null,1,"addon-mod-forum-post",[],null,null,null,m,kl)),L._30(1,245760,null,0,yl.a,[Vn.a,Y.a,Pl.a,H.a,kn.a,Cn.a,W.a,G.a,B.a,J.a,[2,z.a]],null,null)],function(n,l){n(l,1,0)},null)},{post:"post",courseId:"courseId",discussionId:"discussionId",component:"component",componentId:"componentId",replyData:"replyData",originalData:"originalData",trackPosts:"trackPosts",forum:"forum",defaultSubject:"defaultSubject"},{onPostChange:"onPostChange"},[]),u(184)),Dl=u(402),jl=u(34),Ol=u(1252),xl=u(403),Sl=u(80),Vl=u(72),wl=u(77),Ll=u(65),Tl=u(66),El=u(183),Rl=u(93),Al=u(139),Ul=u(203),Ml=u(150),Fl=u(57),Nl=u(55),$l=u(54),Hl=L._29({encapsulation:2,styles:[],data:{}}),ql=L._27("page-addon-mod-forum-discussion",Z,function(n){return L._57(0,[(n()(),L._31(0,0,null,null,1,"page-addon-mod-forum-discussion",[],null,null,null,w,Hl)),L._30(1,180224,null,0,Z,[$l.a,M.a,F.a,N.a,$.a,H.a,q.a,Cn.a,Y.a,W.a,B.a,G.a,J.a,[2,z.a]],null,null)],null,null)},{},{},[]),Yl=u(311),zl=u(312),Wl=u(314),Bl=u(313),Gl=u(401),Jl=u(615),Kl=u(111),Ql=u(70),Xl=u(228);u.d(l,"AddonModForumDiscussionPageModuleNgFactory",function(){return Zl});var Zl=L._28(ln,[],function(n){return L._40([L._41(512,L.o,L._21,[[8,[un.a,tn.a,on.a,en.a,an.a,rn.a,sn.a,cn.a,_n.a,dn.a,fn.a,mn.a,pn.a,hn.a,ql]],[3,L.o],L.K]),L._41(4608,Fn.m,Fn.l,[L.G,[2,Fn.v]]),L._41(4608,cl.x,cl.x,[]),L._41(4608,cl.d,cl.d,[]),L._41(4608,Yl.b,Yl.a,[]),L._41(4608,zl.a,zl.b,[]),L._41(4608,Wl.b,Wl.a,[]),L._41(4608,Bl.b,Bl.a,[]),L._41(4608,Cn.a,Cn.a,[Gl.a,Yl.b,zl.a,Wl.b,Bl.b,Cn.b,Cn.c]),L._41(512,Fn.b,Fn.b,[]),L._41(512,cl.v,cl.v,[]),L._41(512,cl.i,cl.i,[]),L._41(512,cl.s,cl.s,[]),L._41(512,Jl.a,Jl.a,[]),L._41(512,E.b,E.b,[]),L._41(512,A.a,A.a,[]),L._41(512,Kl.a,Kl.a,[]),L._41(512,R.a,R.a,[]),L._41(512,Ql.a,Ql.a,[]),L._41(512,U.a,U.a,[]),L._41(512,Jl.b,Jl.b,[]),L._41(512,ln,ln,[]),L._41(256,Cn.c,void 0,[]),L._41(256,Cn.b,void 0,[]),L._41(256,Xl.a,Z,[])])})}});
+webpackJsonp([85],{
+
+/***/ 1765:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 1 modules
+var directives_module = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./src/addon/mod/forum/components/components.module.ts
+var components_components_module = __webpack_require__(630);
+
+// EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
+var network = __webpack_require__(189);
+
+// EXTERNAL MODULE: ./src/providers/app.ts
+var app = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
+var fileuploader = __webpack_require__(74);
+
+// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
+var split_view = __webpack_require__(128);
+
+// EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
+var forum = __webpack_require__(155);
+
+// EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
+var offline = __webpack_require__(190);
+
+// EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
+var helper = __webpack_require__(232);
+
+// EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
+var sync = __webpack_require__(233);
+
+// CONCATENATED MODULE: ./src/addon/mod/forum/pages/discussion/discussion.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Page that displays a forum discussion.
+ */
+var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
+    function AddonModForumDiscussionPage(navParams, network, appProvider, eventsProvider, sitesProvider, domUtils, utils, translate, uploaderProvider, forumProvider, forumOffline, forumHelper, forumSync, svComponent) {
+        var _this = this;
+        this.appProvider = appProvider;
+        this.eventsProvider = eventsProvider;
+        this.sitesProvider = sitesProvider;
+        this.domUtils = domUtils;
+        this.utils = utils;
+        this.translate = translate;
+        this.uploaderProvider = uploaderProvider;
+        this.forumProvider = forumProvider;
+        this.forumOffline = forumOffline;
+        this.forumHelper = forumHelper;
+        this.forumSync = forumSync;
+        this.svComponent = svComponent;
+        this.discussionLoaded = false;
+        this.sort = 'flat-oldest';
+        this.replyData = {
+            replyingTo: 0,
+            isEditing: false,
+            subject: '',
+            message: null,
+            files: [],
+        };
+        this.originalData = {
+            subject: null,
+            message: null,
+            files: [],
+        };
+        this.refreshIcon = 'spinner';
+        this.syncIcon = 'spinner';
+        this.courseId = navParams.get('courseId');
+        this.cmId = navParams.get('cmId');
+        this.forumId = navParams.get('forumId');
+        this.discussionId = navParams.get('discussionId');
+        this.trackPosts = navParams.get('trackPosts');
+        this.locked = navParams.get('locked');
+        this.isOnline = this.appProvider.isOnline();
+        this.onlineObserver = network.onchange().subscribe(function (online) {
+            _this.isOnline = _this.appProvider.isOnline();
+        });
+        this.isSplitViewOn = this.svComponent && this.svComponent.isOn();
+    }
+    /**
+     * View loaded.
+     */
+    AddonModForumDiscussionPage.prototype.ionViewDidLoad = function () {
+        this.fetchPosts(true, false, true);
+    };
+    /**
+     * User entered the page that contains the component.
+     */
+    AddonModForumDiscussionPage.prototype.ionViewDidEnter = function () {
+        var _this = this;
+        // Refresh data if this discussion is synchronized automatically.
+        this.syncObserver = this.eventsProvider.on(sync["a" /* AddonModForumSyncProvider */].AUTO_SYNCED, function (data) {
+            if (data.forumId == _this.forumId && _this.discussionId == data.discussionId
+                && data.userId == _this.sitesProvider.getCurrentSiteUserId()) {
+                // Refresh the data.
+                _this.discussionLoaded = false;
+                _this.refreshPosts();
+            }
+        }, this.sitesProvider.getCurrentSiteId());
+        // Refresh data if this forum discussion is synchronized from discussions list.
+        this.syncManualObserver = this.eventsProvider.on(sync["a" /* AddonModForumSyncProvider */].MANUAL_SYNCED, function (data) {
+            if (data.source != 'discussion' && data.forumId == _this.forumId &&
+                data.userId == _this.sitesProvider.getCurrentSiteUserId()) {
+                // Refresh the data.
+                _this.discussionLoaded = false;
+                _this.refreshPosts();
+            }
+        }, this.sitesProvider.getCurrentSiteId());
+        // Trigger view event, to highlight the current opened discussion in the split view.
+        this.eventsProvider.trigger(forum["a" /* AddonModForumProvider */].VIEW_DISCUSSION_EVENT, {
+            forumId: this.forumId,
+            discussion: this.discussionId,
+        }, this.sitesProvider.getCurrentSiteId());
+    };
+    /**
+     * Check if we can leave the page or not.
+     *
+     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    AddonModForumDiscussionPage.prototype.ionViewCanLeave = function () {
+        var _this = this;
+        var promise;
+        if (this.forumHelper.hasPostDataChanged(this.replyData, this.originalData)) {
+            // Show confirmation if some data has been modified.
+            promise = this.domUtils.showConfirm(this.translate.instant('core.confirmcanceledit'));
+        }
+        else {
+            promise = Promise.resolve();
+        }
+        return promise.then(function () {
+            // Delete the local files from the tmp folder.
+            _this.uploaderProvider.clearTmpFiles(_this.replyData.files);
+        });
+    };
+    /**
+     * Convenience function to get the forum.
+     *
+     * @return {Promise<any>} Promise resolved with the forum.
+     */
+    AddonModForumDiscussionPage.prototype.fetchForum = function () {
+        if (this.courseId && this.cmId) {
+            return this.forumProvider.getForum(this.courseId, this.cmId);
+        }
+        else if (this.courseId && this.forumId) {
+            return this.forumProvider.getForumById(this.courseId, this.forumId);
+        }
+        else {
+            // Cannot get the forum.
+            return Promise.reject(null);
+        }
+    };
+    /**
+     * Convenience function to get forum discussions.
+     *
+     * @param  {boolean} [sync]            Whether to try to synchronize the discussion.
+     * @param  {boolean} [showErrors]      Whether to show errors in a modal.
+     * @param  {boolean} [forceMarkAsRead] Whether to mark all posts as read.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.fetchPosts = function (sync, showErrors, forceMarkAsRead) {
+        var _this = this;
+        var syncPromise;
+        if (sync) {
+            // Try to synchronize the forum.
+            syncPromise = this.syncDiscussion(showErrors).catch(function () {
+                // Ignore errors.
+            });
+        }
+        else {
+            syncPromise = Promise.resolve();
+        }
+        var onlinePosts = [];
+        var offlineReplies = [];
+        var hasUnreadPosts = false;
+        return syncPromise.then(function () {
+            return _this.forumProvider.getDiscussionPosts(_this.discussionId).then(function (posts) {
+                onlinePosts = posts;
+            }).then(function () {
+                // Check if there are responses stored in offline.
+                return _this.forumOffline.getDiscussionReplies(_this.discussionId).then(function (replies) {
+                    _this.postHasOffline = !!replies.length;
+                    var convertPromises = [];
+                    // Index posts to allow quick access. Also check unread field.
+                    var posts = {};
+                    onlinePosts.forEach(function (post) {
+                        posts[post.id] = post;
+                        hasUnreadPosts = hasUnreadPosts || !post.postread;
+                    });
+                    replies.forEach(function (offlineReply) {
+                        // If we don't have forumId and courseId, get it from the post.
+                        if (!_this.forumId) {
+                            _this.forumId = offlineReply.forumid;
+                        }
+                        if (!_this.courseId) {
+                            _this.courseId = offlineReply.courseid;
+                        }
+                        convertPromises.push(_this.forumHelper.convertOfflineReplyToOnline(offlineReply).then(function (reply) {
+                            offlineReplies.push(reply);
+                            // Disable reply of the parent. Reply in offline to the same post is not allowed, edit instead.
+                            posts[reply.parent].canreply = false;
+                        }));
+                    });
+                    return Promise.all(convertPromises).then(function () {
+                        // Convert back to array.
+                        onlinePosts = _this.utils.objectToArray(posts);
+                    });
+                });
+            });
+        }).then(function () {
+            var posts = offlineReplies.concat(onlinePosts);
+            _this.discussion = _this.forumProvider.extractStartingPost(posts);
+            // If sort type is nested, normal sorting is disabled and nested posts will be displayed.
+            if (_this.sort == 'nested') {
+                // Sort first by creation date to make format tree work.
+                _this.forumProvider.sortDiscussionPosts(posts, 'ASC');
+                _this.posts = _this.utils.formatTree(posts, 'parent', 'id', _this.discussion.id);
+            }
+            else {
+                // Set default reply subject.
+                var direction = _this.sort == 'flat-newest' ? 'DESC' : 'ASC';
+                _this.forumProvider.sortDiscussionPosts(posts, direction);
+                _this.posts = posts;
+            }
+            _this.defaultSubject = _this.translate.instant('addon.mod_forum.re') + ' ' + _this.discussion.subject;
+            _this.replyData.subject = _this.defaultSubject;
+            // Now try to get the forum.
+            return _this.fetchForum().then(function (forum) {
+                if (_this.discussion.userfullname && _this.discussion.parent == 0 && forum.type == 'single') {
+                    // Hide author for first post and type single.
+                    _this.discussion.userfullname = null;
+                }
+                // "forum.istracked" is more reliable than "trackPosts".
+                if (typeof forum.istracked != 'undefined') {
+                    _this.trackPosts = forum.istracked;
+                }
+                _this.forumId = forum.id;
+                _this.cmId = forum.cmid;
+                _this.forum = forum;
+            }).catch(function () {
+                // Ignore errors.
+                _this.forum = {};
+            });
+        }).catch(function (message) {
+            _this.domUtils.showErrorModal(message);
+        }).finally(function () {
+            _this.discussionLoaded = true;
+            _this.refreshIcon = 'refresh';
+            _this.syncIcon = 'sync';
+            if (forceMarkAsRead || (hasUnreadPosts && _this.trackPosts)) {
+                // // Add log in Moodle and mark unread posts as readed.
+                _this.forumProvider.logDiscussionView(_this.discussionId).catch(function () {
+                    // Ignore errors.
+                });
+            }
+        });
+    };
+    /**
+     * Tries to synchronize the posts discussion.
+     *
+     * @param  {boolean} showErrors Whether to show errors in a modal.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.syncDiscussion = function (showErrors) {
+        var _this = this;
+        return this.forumSync.syncDiscussionReplies(this.discussionId).then(function (result) {
+            if (result.warnings && result.warnings.length) {
+                _this.domUtils.showErrorModal(result.warnings[0]);
+            }
+            if (result && result.updated) {
+                // Sync successful, send event.
+                _this.eventsProvider.trigger(sync["a" /* AddonModForumSyncProvider */].MANUAL_SYNCED, {
+                    forumId: _this.forumId,
+                    userId: _this.sitesProvider.getCurrentSiteUserId(),
+                    source: 'discussion'
+                }, _this.sitesProvider.getCurrentSiteId());
+            }
+            return result.updated;
+        }).catch(function (error) {
+            if (showErrors) {
+                _this.domUtils.showErrorModalDefault(error, 'core.errorsync', true);
+            }
+            return Promise.reject(null);
+        });
+    };
+    /**
+     * Refresh the data.
+     *
+     * @param {any}       [refresher] Refresher.
+     * @param {Function}  [done] Function to call when done.
+     * @param {boolean}   [showErrors=false] If show errors to the user of hide them.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.doRefresh = function (refresher, done, showErrors) {
+        if (showErrors === void 0) { showErrors = false; }
+        if (this.discussionLoaded) {
+            return this.refreshPosts(true, showErrors).finally(function () {
+                refresher && refresher.complete();
+                done && done();
+            });
+        }
+        return Promise.resolve();
+    };
+    /**
+     * Refresh posts.
+     *
+     * @param  {boolean} [sync]       Whether to try to synchronize the discussion.
+     * @param  {boolean} [showErrors] Whether to show errors in a modal.
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.refreshPosts = function (sync, showErrors) {
+        var _this = this;
+        this.content && this.content.scrollToTop();
+        this.refreshIcon = 'spinner';
+        this.syncIcon = 'spinner';
+        return this.forumProvider.invalidateDiscussionPosts(this.discussionId).catch(function () {
+            // Ignore errors.
+        }).then(function () {
+            return _this.fetchPosts(sync, showErrors);
+        });
+    };
+    /**
+     * Function to change posts sorting
+     *
+     * @param  {SortType} type Sort type.
+     * @return {Promise<any>} Promised resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.changeSort = function (type) {
+        this.discussionLoaded = false;
+        this.sort = type;
+        this.content && this.content.scrollToTop();
+        return this.fetchPosts();
+    };
+    /**
+     * New post added.
+     */
+    AddonModForumDiscussionPage.prototype.postListChanged = function () {
+        var _this = this;
+        // Trigger an event to notify a new reply.
+        var data = {
+            forumId: this.forumId,
+            discussionId: this.discussionId,
+            cmId: this.cmId
+        };
+        this.eventsProvider.trigger(forum["a" /* AddonModForumProvider */].REPLY_DISCUSSION_EVENT, data, this.sitesProvider.getCurrentSiteId());
+        this.discussionLoaded = false;
+        this.refreshPosts().finally(function () {
+            _this.discussionLoaded = true;
+        });
+    };
+    /**
+     * Runs when the page is about to leave and no longer be the active page.
+     */
+    AddonModForumDiscussionPage.prototype.ionViewWillLeave = function () {
+        this.syncObserver && this.syncObserver.off();
+        this.syncManualObserver && this.syncManualObserver.off();
+    };
+    /**
+     * Page destroyed.
+     */
+    AddonModForumDiscussionPage.prototype.ngOnDestroy = function () {
+        this.onlineObserver && this.onlineObserver.unsubscribe();
+    };
+    __decorate([
+        Object(core["_9" /* ViewChild */])(ionic_angular["f" /* Content */]),
+        __metadata("design:type", ionic_angular["f" /* Content */])
+    ], AddonModForumDiscussionPage.prototype, "content", void 0);
+    AddonModForumDiscussionPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-addon-mod-forum-discussion',
+            templateUrl: 'discussion.html',
+        }),
+        __param(13, Object(core["N" /* Optional */])()),
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */],
+            network["a" /* Network */],
+            app["a" /* CoreAppProvider */],
+            events["a" /* CoreEventsProvider */],
+            sites["a" /* CoreSitesProvider */],
+            dom["a" /* CoreDomUtilsProvider */],
+            utils["a" /* CoreUtilsProvider */],
+            _ngx_translate_core["c" /* TranslateService */],
+            fileuploader["a" /* CoreFileUploaderProvider */],
+            forum["a" /* AddonModForumProvider */],
+            offline["a" /* AddonModForumOfflineProvider */],
+            helper["a" /* AddonModForumHelperProvider */],
+            sync["a" /* AddonModForumSyncProvider */],
+            split_view["a" /* CoreSplitViewComponent */]])
+    ], AddonModForumDiscussionPage);
+    return AddonModForumDiscussionPage;
+}());
+
+//# sourceMappingURL=discussion.js.map
+// CONCATENATED MODULE: ./src/addon/mod/forum/pages/discussion/discussion.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var discussion_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+var discussion_module_AddonModForumDiscussionPageModule = /** @class */ (function () {
+    function AddonModForumDiscussionPageModule() {
+    }
+    AddonModForumDiscussionPageModule = discussion_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                discussion_AddonModForumDiscussionPage,
+            ],
+            imports: [
+                components_module["a" /* CoreComponentsModule */],
+                directives_module["a" /* CoreDirectivesModule */],
+                components_components_module["a" /* AddonModForumComponentsModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(discussion_AddonModForumDiscussionPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], AddonModForumDiscussionPageModule);
+    return AddonModForumDiscussionPageModule;
+}());
+
+//# sourceMappingURL=discussion.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1243);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1244);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1245);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1246);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1248);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1249);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1250);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1251);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1254);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1255);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1256);
+
+// EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ngfactory.js
+var unsupported_module_ngfactory = __webpack_require__(1257);
+
+// EXTERNAL MODULE: ./src/addon/mod/forum/components/index/index.ngfactory.js
+var index_ngfactory = __webpack_require__(1288);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1253);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(315);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(182);
+
+// EXTERNAL MODULE: ./src/directives/format-text.ts
+var format_text = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./src/providers/utils/url.ts
+var url = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./src/providers/logger.ts
+var logger = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./src/providers/filepool.ts
+var filepool = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
+var providers_helper = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ngfactory.js
+var context_menu_item_ngfactory = __webpack_require__(78);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ts
+var context_menu_item = __webpack_require__(71);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
+var context_menu = __webpack_require__(67);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
+var card = __webpack_require__(112);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
+var note = __webpack_require__(231);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
+var file_ngfactory = __webpack_require__(204);
+
+// EXTERNAL MODULE: ./src/components/file/file.ts
+var file = __webpack_require__(168);
+
+// EXTERNAL MODULE: ./src/providers/file-helper.ts
+var file_helper = __webpack_require__(119);
+
+// EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
+var mimetype = __webpack_require__(68);
+
+// EXTERNAL MODULE: ./src/components/local-file/local-file.ngfactory.js
+var local_file_ngfactory = __webpack_require__(443);
+
+// EXTERNAL MODULE: ./src/components/local-file/local-file.ts
+var local_file = __webpack_require__(270);
+
+// EXTERNAL MODULE: ./src/providers/file.ts
+var providers_file = __webpack_require__(42);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
+var attachments_ngfactory = __webpack_require__(416);
+
+// EXTERNAL MODULE: ./src/components/attachments/attachments.ts
+var attachments = __webpack_require__(265);
+
+// EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
+var fileuploader_providers_helper = __webpack_require__(114);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
+var row = __webpack_require__(121);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
+var col = __webpack_require__(120);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
+var list = __webpack_require__(75);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
+var label = __webpack_require__(61);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.ngfactory.js
+var input_ngfactory = __webpack_require__(94);
+
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
+var input = __webpack_require__(76);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app_app = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
+var rich_text_editor_ngfactory = __webpack_require__(260);
+
+// EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
+var rich_text_editor = __webpack_require__(210);
+
+// EXTERNAL MODULE: ./node_modules/@ionic-native/keyboard/index.js
+var keyboard = __webpack_require__(157);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
+var grid = __webpack_require__(142);
+
+// EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
+var date_day_or_time = __webpack_require__(412);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
+var avatar = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./src/directives/external-content.ts
+var external_content = __webpack_require__(166);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-content.js
+var card_content = __webpack_require__(417);
+
+// EXTERNAL MODULE: ./src/addon/mod/forum/components/post/post.ts
+var post = __webpack_require__(1299);
+
+// EXTERNAL MODULE: ./src/providers/sync.ts
+var providers_sync = __webpack_require__(85);
+
+// CONCATENATED MODULE: ./src/addon/mod/forum/components/post/post.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonModForumPostComponent = [];
+var RenderType_AddonModForumPostComponent = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModForumPostComponent, data: {} });
+
+function View_AddonModForumPostComponent_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-note", [["float-right", ""], ["padding-left", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, note["a" /* Note */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 1, "ion-icon", [["name", "time"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](3, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](4, null, [" ", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_1 = "time"; _ck(_v, 3, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 3)._hidden; _ck(_v, 2, 0, currVal_0); var currVal_2 = core["_56" /* ɵunv */](_v, 4, 0, core["_44" /* ɵnov */](_v, 5).transform("core.notsent")); _ck(_v, 4, 0, currVal_2); }); }
+function View_AddonModForumPostComponent_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "ion-icon", [["name", "record"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](2, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](3, null, [" ", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_1 = "record"; _ck(_v, 2, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 2)._hidden; _ck(_v, 1, 0, currVal_0); var currVal_2 = core["_56" /* ɵunv */](_v, 3, 0, core["_44" /* ɵnov */](_v, 4).transform("addon.mod_forum.unread")); _ck(_v, 3, 0, currVal_2); }); }
+function View_AddonModForumPostComponent_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "ion-note", [["float-right", ""], ["padding-left", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, note["a" /* Note */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](2, null, ["\n            ", "\n            "])), core["_49" /* ɵppd */](3, 1), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_3)), core["_30" /* ɵdid */](5, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.unread; _ck(_v, 5, 0, currVal_1); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 2, 0, _ck(_v, 3, 0, core["_44" /* ɵnov */](_v.parent, 0), _co.post.modified)); _ck(_v, 2, 0, currVal_0); }); }
+function View_AddonModForumPostComponent_5(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-file", [], null, null, null, file_ngfactory["b" /* View_CoreFileComponent_0 */], file_ngfactory["a" /* RenderType_CoreFileComponent */])), core["_30" /* ɵdid */](1, 245760, null, 0, file["a" /* CoreFileComponent */], [sites["a" /* CoreSitesProvider */], utils["a" /* CoreUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], file_helper["a" /* CoreFileHelperProvider */], mimetype["a" /* CoreMimetypeUtilsProvider */], events["a" /* CoreEventsProvider */]], { file: [0, "file"], component: [1, "component"], componentId: [2, "componentId"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.parent.context.$implicit; var currVal_1 = _co.component; var currVal_2 = _co.componentId; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
+function View_AddonModForumPostComponent_6(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-local-file", [], null, null, null, local_file_ngfactory["b" /* View_CoreLocalFileComponent_0 */], local_file_ngfactory["a" /* RenderType_CoreLocalFileComponent */])), core["_30" /* ɵdid */](1, 114688, null, 0, local_file["a" /* CoreLocalFileComponent */], [mimetype["a" /* CoreMimetypeUtilsProvider */], utils["a" /* CoreUtilsProvider */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], providers_file["a" /* CoreFileProvider */], dom["a" /* CoreDomUtilsProvider */]], { file: [0, "file"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit; _ck(_v, 1, 0, currVal_0); }, null); }
+function View_AddonModForumPostComponent_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 9, "div", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_5)), core["_30" /* ɵdid */](4, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_6)), core["_30" /* ɵdid */](8, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "]))], function (_ck, _v) { var currVal_0 = !_v.context.$implicit.name; _ck(_v, 4, 0, currVal_0); var currVal_1 = _v.context.$implicit.name; _ck(_v, 8, 0, currVal_1); }, null); }
+function View_AddonModForumPostComponent_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 14, "ion-item", [["class", "item item-block"], ["text-right", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 2, 6, "button", [["clear", ""], ["icon-left", ""], ["ion-button", ""], ["small", ""]], [[1, "aria-controls", 0], [1, "aria-expanded", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.showReply() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](8, 1097728, [[5, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { small: [0, "small"], clear: [1, "clear"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 1, "ion-icon", [["name", "undo"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](11, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](12, 0, [" ", "\n    "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n"]))], function (_ck, _v) { var currVal_2 = ""; var currVal_3 = ""; _ck(_v, 8, 0, currVal_2, currVal_3); var currVal_5 = "undo"; _ck(_v, 11, 0, currVal_5); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ("addon-forum-reply-edit-form-" + _co.uniqueId); var currVal_1 = (_co.replyData.replyingTo === _co.post.id); _ck(_v, 7, 0, currVal_0, currVal_1); var currVal_4 = core["_44" /* ɵnov */](_v, 11)._hidden; _ck(_v, 10, 0, currVal_4); var currVal_6 = core["_56" /* ɵunv */](_v, 12, 0, core["_44" /* ɵnov */](_v, 13).transform("addon.mod_forum.reply")); _ck(_v, 12, 0, currVal_6); }); }
+function View_AddonModForumPostComponent_8(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 14, "ion-item", [["class", "item item-block"], ["text-right", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 7, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 8, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 9, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 2, 6, "button", [["clear", ""], ["icon-left", ""], ["ion-button", ""], ["small", ""]], [[1, "aria-controls", 0], [1, "aria-expanded", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.editReply() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](8, 1097728, [[8, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { small: [0, "small"], clear: [1, "clear"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 1, "ion-icon", [["name", "create"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](11, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](12, 0, [" ", "\n    "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n"]))], function (_ck, _v) { var currVal_2 = ""; var currVal_3 = ""; _ck(_v, 8, 0, currVal_2, currVal_3); var currVal_5 = "create"; _ck(_v, 11, 0, currVal_5); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ("addon-forum-reply-edit-form-" + _co.uniqueId); var currVal_1 = (_co.replyData.replyingTo === _co.post.parent); _ck(_v, 7, 0, currVal_0, currVal_1); var currVal_4 = core["_44" /* ɵnov */](_v, 11)._hidden; _ck(_v, 10, 0, currVal_4); var currVal_6 = core["_56" /* ɵunv */](_v, 12, 0, core["_44" /* ɵnov */](_v, 13).transform("addon.mod_forum.edit")); _ck(_v, 12, 0, currVal_6); }); }
+function View_AddonModForumPostComponent_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-attachments", [], null, null, null, attachments_ngfactory["b" /* View_CoreAttachmentsComponent_0 */], attachments_ngfactory["a" /* RenderType_CoreAttachmentsComponent */])), core["_30" /* ɵdid */](1, 114688, null, 0, attachments["a" /* CoreAttachmentsComponent */], [app["a" /* CoreAppProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], fileuploader["a" /* CoreFileUploaderProvider */], translate_service["a" /* TranslateService */], fileuploader_providers_helper["a" /* CoreFileUploaderHelperProvider */]], { files: [0, "files"], maxSize: [1, "maxSize"], maxSubmissions: [2, "maxSubmissions"], component: [3, "component"], componentId: [4, "componentId"], allowOffline: [5, "allowOffline"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.replyData.files; var currVal_1 = _co.forum.maxbytes; var currVal_2 = _co.forum.maxattachments; var currVal_3 = _co.component; var currVal_4 = _co.forum.cmid; var currVal_5 = true; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); }, null); }
+function View_AddonModForumPostComponent_11(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 11, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 7, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](4, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, null, 3, "button", [["block", ""], ["color", "light"], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.discard() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](7, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](8, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var currVal_0 = "light"; var currVal_1 = ""; _ck(_v, 7, 0, currVal_0, currVal_1); }, function (_ck, _v) { var currVal_2 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("core.discard")); _ck(_v, 8, 0, currVal_2); }); }
+function View_AddonModForumPostComponent_9(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 71, "ion-list", [], [[8, "id", 0]], null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 18, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](4, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 10, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 11, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 12, { _icons: 1 }), core["_30" /* ɵdid */](8, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 1, 3, "ion-label", [["stacked", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](11, 16384, [[10, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](12, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, 3, 5, "ion-input", [["type", "text"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("ngModelChange" === en)) {
+        var pd_0 = ((_co.replyData.subject = $event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, input_ngfactory["b" /* View_TextInput_0 */], input_ngfactory["a" /* RenderType_TextInput */])), core["_30" /* ɵdid */](16, 671744, null, 0, esm5_forms["q" /* NgModel */], [[8, null], [8, null], [8, null], [8, null]], { model: [0, "model"] }, { update: "ngModelChange" }), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](18, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](19, 5423104, null, 0, input["a" /* TextInput */], [config["a" /* Config */], platform["a" /* Platform */], util_form["a" /* Form */], app_app["a" /* App */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, content["a" /* Content */]], [2, item["a" /* Item */]], [2, esm5_forms["m" /* NgControl */]], dom_controller["a" /* DomController */]], { type: [0, "type"], placeholder: [1, "placeholder"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](23, 0, null, null, 15, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](24, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 13, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 14, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 15, { _icons: 1 }), core["_30" /* ɵdid */](28, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](30, 0, null, 1, 3, "ion-label", [["stacked", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](31, 16384, [[13, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](32, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](35, 0, null, 3, 2, "core-rich-text-editor", [["item-content", ""]], null, [[null, "contentChanged"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("contentChanged" === en)) {
+        var pd_0 = (_co.onMessageChange($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, rich_text_editor_ngfactory["b" /* View_CoreRichTextEditorComponent_0 */], rich_text_editor_ngfactory["a" /* RenderType_CoreRichTextEditorComponent */])), core["_30" /* ɵdid */](36, 1228800, null, 0, rich_text_editor["a" /* CoreRichTextEditorComponent */], [dom["a" /* CoreDomUtilsProvider */], keyboard["a" /* Keyboard */], url["a" /* CoreUrlUtilsProvider */], sites["a" /* CoreSitesProvider */], filepool["a" /* CoreFilepoolProvider */], [2, content["a" /* Content */]], core["t" /* ElementRef */]], { placeholder: [0, "placeholder"], control: [1, "control"], name: [2, "name"], component: [3, "component"], componentId: [4, "componentId"] }, { contentChanged: "contentChanged" }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_10)), core["_30" /* ɵdid */](41, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](43, 0, null, null, 27, "ion-grid", [["class", "grid"]], null, null, null, null, null)), core["_30" /* ɵdid */](44, 16384, null, 0, grid["a" /* Grid */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](46, 0, null, null, 20, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_30" /* ɵdid */](47, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](49, 0, null, null, 7, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](50, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](52, 0, null, null, 3, "button", [["block", ""], ["ion-button", ""]], [[8, "disabled", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.reply() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](53, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](54, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](58, 0, null, null, 7, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](59, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](61, 0, null, null, 3, "button", [["block", ""], ["color", "light"], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.cancel() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](62, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](63, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_11)), core["_30" /* ɵdid */](69, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_9 = _co.replyData.subject; _ck(_v, 16, 0, currVal_9); var currVal_10 = "text"; var currVal_11 = core["_56" /* ɵunv */](_v, 19, 1, core["_44" /* ɵnov */](_v, 20).transform("addon.mod_forum.subject")); _ck(_v, 19, 0, currVal_10, currVal_11); var currVal_13 = core["_56" /* ɵunv */](_v, 36, 0, core["_44" /* ɵnov */](_v, 37).transform("addon.mod_forum.message")); var currVal_14 = _co.messageControl; var currVal_15 = ("mod_forum_reply_" + _co.post.id); var currVal_16 = _co.component; var currVal_17 = _co.componentId; _ck(_v, 36, 0, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17); var currVal_18 = (_co.forum.id && (_co.forum.maxattachments > 0)); _ck(_v, 41, 0, currVal_18); var currVal_20 = ""; _ck(_v, 53, 0, currVal_20); var currVal_22 = "light"; var currVal_23 = ""; _ck(_v, 62, 0, currVal_22, currVal_23); var currVal_25 = _co.replyData.isEditing; _ck(_v, 69, 0, currVal_25); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ("addon-forum-reply-edit-form-" + _co.uniqueId); _ck(_v, 0, 0, currVal_0); var currVal_1 = core["_56" /* ɵunv */](_v, 12, 0, core["_44" /* ɵnov */](_v, 13).transform("addon.mod_forum.subject")); _ck(_v, 12, 0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 18).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 18).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 18).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 18).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 18).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 18).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 18).ngClassPending; _ck(_v, 15, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); var currVal_12 = core["_56" /* ɵunv */](_v, 32, 0, core["_44" /* ɵnov */](_v, 33).transform("addon.mod_forum.message")); _ck(_v, 32, 0, currVal_12); var currVal_19 = ((_co.replyData.subject == "") || (_co.replyData.message == null)); _ck(_v, 52, 0, currVal_19); var currVal_21 = core["_56" /* ɵunv */](_v, 54, 0, core["_44" /* ɵnov */](_v, 55).transform("addon.mod_forum.posttoforum")); _ck(_v, 54, 0, currVal_21); var currVal_24 = core["_56" /* ɵunv */](_v, 63, 0, core["_44" /* ɵnov */](_v, 64).transform("core.cancel")); _ck(_v, 63, 0, currVal_24); }); }
+function View_AddonModForumPostComponent_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, date_day_or_time["a" /* CoreDateDayOrTimePipe */], [logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */]]), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 28, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](2, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](6, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_31" /* ɵeld */](8, 0, null, 0, 7, "ion-avatar", [["item-start", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.openUserProfile(_co.post.userid) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](9, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, null, 3, "img", [["core-external-content", ""], ["onError", "this.src='assets/img/user-avatar.png'"], ["role", "presentation"]], [[8, "src", 4], [8, "alt", 0]], null, null, null, null)), core["_30" /* ɵdid */](12, 4210688, null, 0, external_content["a" /* CoreExternalContentDirective */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], platform["a" /* Platform */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], app["a" /* CoreAppProvider */]], null, null), core["_48" /* ɵpod */](13, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_31" /* ɵeld */](17, 0, null, 2, 2, "h2", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](18, 0, null, null, 1, "span", [], [[2, "core-bold", null]], null, null, null, null)), (_l()(), core["_55" /* ɵted */](19, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_31" /* ɵeld */](21, 0, null, 2, 7, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_1)), core["_30" /* ɵdid */](24, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_2)), core["_30" /* ɵdid */](27, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](28, null, ["\n        ", "\n    "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](31, 0, null, null, 8, "ion-card-content", [], null, null, null, null, null)), core["_30" /* ɵdid */](32, 16384, null, 0, card_content["a" /* CardContent */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](34, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](35, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_4)), core["_30" /* ɵdid */](38, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_7)), core["_30" /* ɵdid */](42, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_8)), core["_30" /* ɵdid */](45, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_9)), core["_30" /* ɵdid */](48, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = !_co.post.modified; _ck(_v, 24, 0, currVal_4); var currVal_5 = _co.post.modified; _ck(_v, 27, 0, currVal_5); var currVal_7 = _co.post.message; var currVal_8 = _co.component; var currVal_9 = _co.componentId; _ck(_v, 35, 0, currVal_7, currVal_8, currVal_9); var currVal_10 = _co.post.attachments; _ck(_v, 38, 0, currVal_10); var currVal_11 = (_co.post.id && _co.post.canreply); _ck(_v, 42, 0, currVal_11); var currVal_12 = (!_co.post.id && (!_co.replyData.isEditing || (_co.replyData.replyingTo != _co.post.parent))); _ck(_v, 45, 0, currVal_12); var currVal_13 = (((_co.post.id && !_co.replyData.isEditing) && (_co.replyData.replyingTo == _co.post.id)) || ((!_co.post.id && _co.replyData.isEditing) && (_co.replyData.replyingTo == _co.post.parent))); _ck(_v, 48, 0, currVal_13); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.post.userpictureurl; var currVal_1 = core["_56" /* ɵunv */](_v, 11, 1, core["_44" /* ɵnov */](_v, 14).transform("core.pictureof", _ck(_v, 13, 0, _co.post.userfullname))); _ck(_v, 11, 0, currVal_0, currVal_1); var currVal_2 = (_co.post.parent == 0); _ck(_v, 18, 0, currVal_2); var currVal_3 = _co.post.subject; _ck(_v, 19, 0, currVal_3); var currVal_6 = _co.post.userfullname; _ck(_v, 28, 0, currVal_6); }); }
+function View_AddonModForumPostComponent_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "addon-mod-forum-post", [], null, null, null, View_AddonModForumPostComponent_0, RenderType_AddonModForumPostComponent)), core["_30" /* ɵdid */](1, 245760, null, 0, post["a" /* AddonModForumPostComponent */], [nav_controller["a" /* NavController */], fileuploader["a" /* CoreFileUploaderProvider */], providers_sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], forum["a" /* AddonModForumProvider */], helper["a" /* AddonModForumHelperProvider */], offline["a" /* AddonModForumOfflineProvider */], sync["a" /* AddonModForumSyncProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var AddonModForumPostComponentNgFactory = core["_27" /* ɵccf */]("addon-mod-forum-post", post["a" /* AddonModForumPostComponent */], View_AddonModForumPostComponent_Host_0, { post: "post", courseId: "courseId", discussionId: "discussionId", component: "component", componentId: "componentId", replyData: "replyData", originalData: "originalData", trackPosts: "trackPosts", forum: "forum", defaultSubject: "defaultSubject" }, { onPostChange: "onPostChange" }, []);
+
+//# sourceMappingURL=post.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
+var item_divider = __webpack_require__(184);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(402);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1252);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(403);
+
+// EXTERNAL MODULE: ./src/components/navbar-buttons/navbar-buttons.ngfactory.js
+var navbar_buttons_ngfactory = __webpack_require__(80);
+
+// EXTERNAL MODULE: ./src/components/navbar-buttons/navbar-buttons.ts
+var navbar_buttons = __webpack_require__(72);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
+var context_menu_ngfactory = __webpack_require__(77);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
+var popover_controller = __webpack_require__(65);
+
+// EXTERNAL MODULE: ./src/components/tabs/tab.ts
+var tab = __webpack_require__(66);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var platform_keyboard = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
+var refresher = __webpack_require__(139);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
+var refresher_content_ngfactory = __webpack_require__(203);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
+var refresher_content = __webpack_require__(150);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(57);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(55);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(54);
+
+// CONCATENATED MODULE: ./src/addon/mod/forum/pages/discussion/discussion.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonModForumDiscussionPage = [];
+var RenderType_AddonModForumDiscussionPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModForumDiscussionPage, data: {} });
+
+function View_AddonModForumDiscussionPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](1, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_31" /* ɵeld */](2, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](3, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]]], { text: [0, "text"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.discussion.subject; _ck(_v, 3, 0, currVal_0); }, null); }
+function View_AddonModForumDiscussionPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-context-menu-item", [], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
+        var pd_0 = (_co.doRefresh(null, $event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, context_menu_item_ngfactory["b" /* View_CoreContextMenuItemComponent_0 */], context_menu_item_ngfactory["a" /* RenderType_CoreContextMenuItemComponent */])), core["_30" /* ɵdid */](1, 770048, null, 0, context_menu_item["a" /* CoreContextMenuItemComponent */], [context_menu["a" /* CoreContextMenuComponent */]], { content: [0, "content"], iconAction: [1, "iconAction"], closeOnClick: [2, "closeOnClick"], priority: [3, "priority"] }, { action: "action" }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("addon.mod_forum.refreshposts")); var currVal_1 = _co.refreshIcon; var currVal_2 = false; var currVal_3 = 650; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3); }, null); }
+function View_AddonModForumDiscussionPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-context-menu-item", [], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
+        var pd_0 = (_co.doRefresh(null, $event, true) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, context_menu_item_ngfactory["b" /* View_CoreContextMenuItemComponent_0 */], context_menu_item_ngfactory["a" /* RenderType_CoreContextMenuItemComponent */])), core["_30" /* ɵdid */](1, 770048, null, 0, context_menu_item["a" /* CoreContextMenuItemComponent */], [context_menu["a" /* CoreContextMenuComponent */]], { content: [0, "content"], iconAction: [1, "iconAction"], closeOnClick: [2, "closeOnClick"], priority: [3, "priority"] }, { action: "action" }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("core.settings.synchronizenow")); var currVal_1 = _co.syncIcon; var currVal_2 = false; var currVal_3 = 550; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3); }, null); }
+function View_AddonModForumDiscussionPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, "ion-card", [["class", "core-warning-card"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 1, "ion-icon", [["name", "warning"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](4, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](5, null, [" ", "\n        "])), core["_48" /* ɵpod */](6, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_1 = "warning"; _ck(_v, 4, 0, currVal_1); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; _ck(_v, 3, 0, currVal_0); var currVal_2 = core["_56" /* ɵunv */](_v, 5, 0, core["_44" /* ɵnov */](_v, 7).transform("core.hasdatatosync", _ck(_v, 6, 0, _co.discussionStr))); _ck(_v, 5, 0, currVal_2); }); }
+function View_AddonModForumDiscussionPage_5(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "ion-card", [["class", "core-warning-card"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 1, "ion-icon", [["name", "warning"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](4, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](5, null, [" ", "\n        "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_1 = "warning"; _ck(_v, 4, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; _ck(_v, 3, 0, currVal_0); var currVal_2 = core["_56" /* ɵunv */](_v, 5, 0, core["_44" /* ɵnov */](_v, 6).transform("addon.mod_forum.discussionlocked")); _ck(_v, 5, 0, currVal_2); }); }
+function View_AddonModForumDiscussionPage_6(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-card", [["margin-bottom", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 1, "addon-mod-forum-post", [], null, [[null, "onPostChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("onPostChange" === en)) {
+        var pd_0 = (_co.postListChanged() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, View_AddonModForumPostComponent_0, RenderType_AddonModForumPostComponent)), core["_30" /* ɵdid */](4, 245760, null, 0, post["a" /* AddonModForumPostComponent */], [nav_controller["a" /* NavController */], fileuploader["a" /* CoreFileUploaderProvider */], providers_sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], forum["a" /* AddonModForumProvider */], helper["a" /* AddonModForumHelperProvider */], offline["a" /* AddonModForumOfflineProvider */], sync["a" /* AddonModForumSyncProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], { post: [0, "post"], courseId: [1, "courseId"], discussionId: [2, "discussionId"], component: [3, "component"], componentId: [4, "componentId"], replyData: [5, "replyData"], originalData: [6, "originalData"], trackPosts: [7, "trackPosts"], forum: [8, "forum"], defaultSubject: [9, "defaultSubject"] }, { onPostChange: "onPostChange" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.discussion; var currVal_1 = _co.courseId; var currVal_2 = _co.discussionId; var currVal_3 = _co.component; var currVal_4 = _co.componentId; var currVal_5 = _co.replyData; var currVal_6 = _co.originalData; var currVal_7 = _co.trackPosts; var currVal_8 = _co.forum; var currVal_9 = _co.defaultSubject; _ck(_v, 4, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9); }, null); }
+function View_AddonModForumDiscussionPage_9(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-item-divider", [["class", "item item-divider"], ["color", "light"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], { color: [0, "color"] }, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_divider["a" /* ItemDivider */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"] }, null)], function (_ck, _v) { var currVal_0 = "light"; _ck(_v, 1, 0, currVal_0); var currVal_1 = "light"; _ck(_v, 5, 0, currVal_1); }, null); }
+function View_AddonModForumDiscussionPage_8(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumDiscussionPage_9)), core["_30" /* ɵdid */](3, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 1, "addon-mod-forum-post", [], null, [[null, "onPostChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("onPostChange" === en)) {
+        var pd_0 = (_co.postListChanged() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, View_AddonModForumPostComponent_0, RenderType_AddonModForumPostComponent)), core["_30" /* ɵdid */](6, 245760, null, 0, post["a" /* AddonModForumPostComponent */], [nav_controller["a" /* NavController */], fileuploader["a" /* CoreFileUploaderProvider */], providers_sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], forum["a" /* AddonModForumProvider */], helper["a" /* AddonModForumHelperProvider */], offline["a" /* AddonModForumOfflineProvider */], sync["a" /* AddonModForumSyncProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], { post: [0, "post"], courseId: [1, "courseId"], discussionId: [2, "discussionId"], component: [3, "component"], componentId: [4, "componentId"], replyData: [5, "replyData"], originalData: [6, "originalData"], trackPosts: [7, "trackPosts"], forum: [8, "forum"], defaultSubject: [9, "defaultSubject"] }, { onPostChange: "onPostChange" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_v.context.first; _ck(_v, 3, 0, currVal_0); var currVal_1 = _v.context.$implicit; var currVal_2 = _co.courseId; var currVal_3 = _co.discussionId; var currVal_4 = _co.component; var currVal_5 = _co.componentId; var currVal_6 = _co.replyData; var currVal_7 = _co.originalData; var currVal_8 = _co.trackPosts; var currVal_9 = _co.forum; var currVal_10 = _co.defaultSubject; _ck(_v, 6, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10); }, null); }
+function View_AddonModForumDiscussionPage_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumDiscussionPage_8)), core["_30" /* ɵdid */](4, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.posts; _ck(_v, 4, 0, currVal_0); }, null); }
+function View_AddonModForumDiscussionPage_12(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 0, null, null, null, null, null, null, null))], null, null); }
+function View_AddonModForumDiscussionPage_11(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 2, null, View_AddonModForumDiscussionPage_12)), core["_30" /* ɵdid */](3, 540672, null, 0, common["r" /* NgTemplateOutlet */], [core["_11" /* ViewContainerRef */]], { ngTemplateOutletContext: [0, "ngTemplateOutletContext"], ngTemplateOutlet: [1, "ngTemplateOutlet"] }, null), core["_48" /* ɵpod */](4, { post: 0 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], function (_ck, _v) { var currVal_0 = _ck(_v, 4, 0, _v.context.$implicit); var currVal_1 = core["_44" /* ɵnov */](_v.parent.parent, 75); _ck(_v, 3, 0, currVal_0, currVal_1); }, null); }
+function View_AddonModForumDiscussionPage_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 4, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumDiscussionPage_11)), core["_30" /* ɵdid */](3, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.posts; _ck(_v, 3, 0, currVal_0); }, null); }
+function View_AddonModForumDiscussionPage_16(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 0, null, null, null, null, null, null, null))], null, null); }
+function View_AddonModForumDiscussionPage_15(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 2, null, View_AddonModForumDiscussionPage_16)), core["_30" /* ɵdid */](3, 540672, null, 0, common["r" /* NgTemplateOutlet */], [core["_11" /* ViewContainerRef */]], { ngTemplateOutletContext: [0, "ngTemplateOutletContext"], ngTemplateOutlet: [1, "ngTemplateOutlet"] }, null), core["_48" /* ɵpod */](4, { post: 0 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], function (_ck, _v) { var currVal_0 = _ck(_v, 4, 0, _v.context.$implicit); var currVal_1 = core["_44" /* ɵnov */](_v.parent.parent.parent, 75); _ck(_v, 3, 0, currVal_0, currVal_1); }, null); }
+function View_AddonModForumDiscussionPage_14(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 4, "div", [["padding-left", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumDiscussionPage_15)), core["_30" /* ɵdid */](3, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], function (_ck, _v) { var currVal_0 = _v.parent.context.post.children; _ck(_v, 3, 0, currVal_0); }, null); }
+function View_AddonModForumDiscussionPage_13(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 5, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, null, 1, "addon-mod-forum-post", [], null, [[null, "onPostChange"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("onPostChange" === en)) {
+        var pd_0 = (_co.postListChanged() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, View_AddonModForumPostComponent_0, RenderType_AddonModForumPostComponent)), core["_30" /* ɵdid */](5, 245760, null, 0, post["a" /* AddonModForumPostComponent */], [nav_controller["a" /* NavController */], fileuploader["a" /* CoreFileUploaderProvider */], providers_sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], forum["a" /* AddonModForumProvider */], helper["a" /* AddonModForumHelperProvider */], offline["a" /* AddonModForumOfflineProvider */], sync["a" /* AddonModForumSyncProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], { post: [0, "post"], courseId: [1, "courseId"], discussionId: [2, "discussionId"], component: [3, "component"], componentId: [4, "componentId"], replyData: [5, "replyData"], originalData: [6, "originalData"], trackPosts: [7, "trackPosts"], forum: [8, "forum"], defaultSubject: [9, "defaultSubject"] }, { onPostChange: "onPostChange" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumDiscussionPage_14)), core["_30" /* ɵdid */](9, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.post; var currVal_1 = _co.courseId; var currVal_2 = _co.discussionId; var currVal_3 = _co.component; var currVal_4 = _co.componentId; var currVal_5 = _co.replyData; var currVal_6 = _co.originalData; var currVal_7 = _co.trackPosts; var currVal_8 = _co.forum; var currVal_9 = _co.defaultSubject; _ck(_v, 5, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9); var currVal_10 = (_v.context.post.children.length && _v.context.post.children[0].subject); _ck(_v, 9, 0, currVal_10); }, null); }
+function View_AddonModForumDiscussionPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { content: 0 }), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 15, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, null, 11, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](5, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 3, 1, null, View_AddonModForumDiscussionPage_1)), core["_30" /* ɵdid */](8, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 2, 4, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](11, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](18, 0, null, null, 25, "core-navbar-buttons", [["end", ""]], null, null, null, navbar_buttons_ngfactory["b" /* View_CoreNavBarButtonsComponent_0 */], navbar_buttons_ngfactory["a" /* RenderType_CoreNavBarButtonsComponent */])), core["_30" /* ɵdid */](19, 245760, null, 1, navbar_buttons["a" /* CoreNavBarButtonsComponent */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], dom["a" /* CoreDomUtilsProvider */]], null, null), core["_52" /* ɵqud */](603979776, 3, { buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](22, 0, null, 0, 20, "core-context-menu", [], null, null, null, context_menu_ngfactory["b" /* View_CoreContextMenuComponent_0 */], context_menu_ngfactory["a" /* RenderType_CoreContextMenuComponent */])), core["_30" /* ɵdid */](23, 245760, null, 0, context_menu["a" /* CoreContextMenuComponent */], [translate_service["a" /* TranslateService */], popover_controller["a" /* PopoverController */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */], [2, tab["a" /* CoreTabComponent */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_2)), core["_30" /* ɵdid */](26, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_3)), core["_30" /* ɵdid */](29, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](31, 0, null, 0, 2, "core-context-menu-item", [["iconAction", "arrow-round-down"]], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
+        var pd_0 = (_co.changeSort("flat-oldest") !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, context_menu_item_ngfactory["b" /* View_CoreContextMenuItemComponent_0 */], context_menu_item_ngfactory["a" /* RenderType_CoreContextMenuItemComponent */])), core["_30" /* ɵdid */](32, 770048, null, 0, context_menu_item["a" /* CoreContextMenuItemComponent */], [context_menu["a" /* CoreContextMenuComponent */]], { content: [0, "content"], iconAction: [1, "iconAction"], priority: [2, "priority"], hidden: [3, "hidden"] }, { action: "action" }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](35, 0, null, 0, 2, "core-context-menu-item", [["iconAction", "arrow-round-up"]], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
+        var pd_0 = (_co.changeSort("flat-newest") !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, context_menu_item_ngfactory["b" /* View_CoreContextMenuItemComponent_0 */], context_menu_item_ngfactory["a" /* RenderType_CoreContextMenuItemComponent */])), core["_30" /* ɵdid */](36, 770048, null, 0, context_menu_item["a" /* CoreContextMenuItemComponent */], [context_menu["a" /* CoreContextMenuComponent */]], { content: [0, "content"], iconAction: [1, "iconAction"], priority: [2, "priority"], hidden: [3, "hidden"] }, { action: "action" }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](39, 0, null, 0, 2, "core-context-menu-item", [["iconAction", "swap"]], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
+        var pd_0 = (_co.changeSort("nested") !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, context_menu_item_ngfactory["b" /* View_CoreContextMenuItemComponent_0 */], context_menu_item_ngfactory["a" /* RenderType_CoreContextMenuItemComponent */])), core["_30" /* ɵdid */](40, 770048, null, 0, context_menu_item["a" /* CoreContextMenuItemComponent */], [context_menu["a" /* CoreContextMenuComponent */]], { content: [0, "content"], iconAction: [1, "iconAction"], priority: [2, "priority"], hidden: [3, "hidden"] }, { action: "action" }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](45, 0, null, null, 32, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](46, 4374528, [[1, 4]], 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], platform_keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](48, 0, null, 2, 6, "ion-refresher", [], [[2, "refresher-active", null], [4, "top", null]], [[null, "ionRefresh"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("ionRefresh" === en)) {
+        var pd_0 = (_co.doRefresh($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](49, 212992, null, 0, refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](51, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](52, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n\n    "])), (_l()(), core["_31" /* ɵeld */](56, 0, null, 1, 20, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](57, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_4)), core["_30" /* ɵdid */](61, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_5)), core["_30" /* ɵdid */](64, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_6)), core["_30" /* ɵdid */](67, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_7)), core["_30" /* ɵdid */](70, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_10)), core["_30" /* ɵdid */](73, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](0, [["nestedPosts", 2]], 0, 0, null, View_AddonModForumDiscussionPage_13)), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.discussion; _ck(_v, 8, 0, currVal_2); _ck(_v, 19, 0); _ck(_v, 23, 0); var currVal_3 = ((_co.discussionLoaded && !_co.postHasOffline) && _co.isOnline); _ck(_v, 26, 0, currVal_3); var currVal_4 = (((_co.discussionLoaded && !_co.isSplitViewOn) && _co.postHasOffline) && _co.isOnline); _ck(_v, 29, 0, currVal_4); var currVal_5 = core["_56" /* ɵunv */](_v, 32, 0, core["_44" /* ɵnov */](_v, 33).transform("addon.mod_forum.modeflatoldestfirst")); var currVal_6 = "arrow-round-down"; var currVal_7 = 500; var currVal_8 = (_co.sort == "flat-oldest"); _ck(_v, 32, 0, currVal_5, currVal_6, currVal_7, currVal_8); var currVal_9 = core["_56" /* ɵunv */](_v, 36, 0, core["_44" /* ɵnov */](_v, 37).transform("addon.mod_forum.modeflatnewestfirst")); var currVal_10 = "arrow-round-up"; var currVal_11 = 450; var currVal_12 = (_co.sort == "flat-newest"); _ck(_v, 36, 0, currVal_9, currVal_10, currVal_11, currVal_12); var currVal_13 = core["_56" /* ɵunv */](_v, 40, 0, core["_44" /* ɵnov */](_v, 41).transform("addon.mod_forum.modenested")); var currVal_14 = "swap"; var currVal_15 = 400; var currVal_16 = (_co.sort == "nested"); _ck(_v, 40, 0, currVal_13, currVal_14, currVal_15, currVal_16); var currVal_21 = _co.discussionLoaded; _ck(_v, 49, 0, currVal_21); var currVal_23 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 52, 0, core["_44" /* ɵnov */](_v, 53).transform("core.pulltorefresh")), ""); _ck(_v, 52, 0, currVal_23); var currVal_24 = _co.discussionLoaded; _ck(_v, 57, 0, currVal_24); var currVal_25 = _co.postHasOffline; _ck(_v, 61, 0, currVal_25); var currVal_26 = _co.locked; _ck(_v, 64, 0, currVal_26); var currVal_27 = _co.discussion; _ck(_v, 67, 0, currVal_27); var currVal_28 = (_co.sort != "nested"); _ck(_v, 70, 0, currVal_28); var currVal_29 = (_co.sort == "nested"); _ck(_v, 73, 0, currVal_29); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_17 = core["_44" /* ɵnov */](_v, 46).statusbarPadding; var currVal_18 = core["_44" /* ɵnov */](_v, 46)._hasRefresher; _ck(_v, 45, 0, currVal_17, currVal_18); var currVal_19 = (core["_44" /* ɵnov */](_v, 49).state !== "inactive"); var currVal_20 = core["_44" /* ɵnov */](_v, 49)._top; _ck(_v, 48, 0, currVal_19, currVal_20); var currVal_22 = core["_44" /* ɵnov */](_v, 52).r.state; _ck(_v, 51, 0, currVal_22); }); }
+function View_AddonModForumDiscussionPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-forum-discussion", [], null, null, null, View_AddonModForumDiscussionPage_0, RenderType_AddonModForumDiscussionPage)), core["_30" /* ɵdid */](1, 180224, null, 0, discussion_AddonModForumDiscussionPage, [nav_params["a" /* NavParams */], network["a" /* Network */], app["a" /* CoreAppProvider */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils["a" /* CoreUtilsProvider */], translate_service["a" /* TranslateService */], fileuploader["a" /* CoreFileUploaderProvider */], forum["a" /* AddonModForumProvider */], offline["a" /* AddonModForumOfflineProvider */], helper["a" /* AddonModForumHelperProvider */], sync["a" /* AddonModForumSyncProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], null, null)], null, null); }
+var AddonModForumDiscussionPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-forum-discussion", discussion_AddonModForumDiscussionPage, View_AddonModForumDiscussionPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=discussion.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(311);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(312);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(314);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(313);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(401);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(615);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
+var pipes_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./src/core/course/components/components.module.ts
+var course_components_components_module = __webpack_require__(70);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(228);
+
+// CONCATENATED MODULE: ./src/addon/mod/forum/pages/discussion/discussion.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModForumDiscussionPageModuleNgFactory", function() { return AddonModForumDiscussionPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AddonModForumDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](discussion_module_AddonModForumDiscussionPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], unsupported_module_ngfactory["a" /* CoreCourseUnsupportedModuleComponentNgFactory */], index_ngfactory["a" /* AddonModForumIndexComponentNgFactory */], AddonModForumDiscussionPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, course_components_components_module["a" /* CoreCourseComponentsModule */], course_components_components_module["a" /* CoreCourseComponentsModule */], []), core["_41" /* ɵmpd */](512, components_components_module["a" /* AddonModForumComponentsModule */], components_components_module["a" /* AddonModForumComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, discussion_module_AddonModForumDiscussionPageModule, discussion_module_AddonModForumDiscussionPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], discussion_AddonModForumDiscussionPage, [])]); });
+
+//# sourceMappingURL=discussion.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=85.js.map

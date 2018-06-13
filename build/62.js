@@ -1,1 +1,786 @@
-webpackJsonp([62],{1793:function(n,l,t){"use strict";function i(n){return s._57(0,[(n()(),s._31(0,0,null,null,10,"ion-col",[["class","col"]],null,null,null,null,null)),s._30(1,16384,null,0,mn.a,[],null,null),(n()(),s._55(-1,null,["\n        "])),(n()(),s._31(3,0,null,null,6,"button",[["clear",""],["icon-left",""],["ion-button",""],["small",""]],null,[[null,"click"]],function(n,l,t){var i=!0;if("click"===l){i=!1!==n.context.$implicit.action()&&i}return i},bn.b,bn.a)),s._30(4,1097728,null,0,gn.a,[[8,""],B.a,s.t,s.V],{small:[0,"small"],clear:[1,"clear"]},null),(n()(),s._55(-1,0,["\n            "])),(n()(),s._31(6,0,null,0,1,"ion-icon",[["role","img"]],[[2,"hide",null]],null,null,null,null)),s._30(7,147456,null,0,z.a,[B.a,s.t,s.V],{name:[0,"name"]},null),(n()(),s._55(8,0,["\n            ","\n        "])),s._47(131072,fn.a,[_n.a,s.j]),(n()(),s._55(-1,null,["\n    "]))],function(n,l){n(l,4,0,"","");n(l,7,0,s._34(1,"",l.context.$implicit.icon,""))},function(n,l){n(l,6,0,s._44(l,7)._hidden);n(l,8,0,s._56(l,8,0,s._44(l,9).transform(l.context.$implicit.message)))})}function e(n){return s._57(0,[(n()(),s._31(0,0,null,null,5,"ion-row",[["class","row"]],null,null,null,null,null)),s._30(1,16384,null,0,vn.a,[],null,null),(n()(),s._55(-1,null,["\n    "])),(n()(),s._26(16777216,null,null,1,null,i)),s._30(4,802816,null,0,m.j,[s._11,s._6,s.E],{ngForOf:[0,"ngForOf"]},null),(n()(),s._55(-1,null,["\n"]))],function(n,l){n(l,4,0,l.component.actions)},null)}function o(n){return s._57(0,[(n()(),s._26(16777216,null,null,1,null,e)),s._30(1,16384,null,0,m.k,[s._11,s._6],{ngIf:[0,"ngIf"]},null),(n()(),s._55(-1,null,["\n"]))],function(n,l){var t=l.component;n(l,1,0,t.actions&&t.actions.length>0)},null)}function a(n){return s._57(0,[(n()(),s._31(0,0,null,null,2,"div",[["item-end",""]],null,null,null,null,null)),(n()(),s._31(1,0,null,null,1,"ion-icon",[["color","primary"],["name","record"],["role","img"]],[[2,"hide",null]],null,null,null,null)),s._30(2,147456,[[3,4]],0,z.a,[B.a,s.t,s.V],{color:[0,"color"],name:[1,"name"]},null)],function(n,l){n(l,2,0,"primary","record")},function(n,l){n(l,1,0,s._44(l,2)._hidden)})}function u(n){return s._57(0,[(n()(),s._31(0,0,null,null,46,"ion-card",[],null,null,null,null,null)),s._30(1,16384,null,0,Q.a,[B.a,s.t,s.V],null,null),(n()(),s._55(-1,null,["\n            "])),(n()(),s._31(3,0,null,null,26,"ion-item",[["class","item item-block"]],null,null,null,W.b,W.a)),s._30(4,1097728,null,3,X.a,[Y.a,B.a,s.t,s.V,[2,Z.a]],null,null),s._52(335544320,1,{contentLabel:0}),s._52(603979776,2,{_buttons:1}),s._52(603979776,3,{_icons:1}),s._30(8,16384,null,0,nn.a,[],null,null),(n()(),s._55(-1,2,["\n                "])),(n()(),s._31(10,0,null,0,8,"ion-avatar",[["core-user-link",""],["item-start",""]],null,null,null,null,null)),s._30(11,81920,null,0,ln.a,[s.t,[2,tn.a]],{userId:[0,"userId"],courseId:[1,"courseId"]},null),s._30(12,16384,null,0,en.a,[],null,null),(n()(),s._55(-1,null,["\n                    "])),(n()(),s._31(14,0,null,null,3,"img",[["core-external-content",""],["role","presentation"]],[[8,"src",4],[8,"alt",0]],null,null,null,null)),s._30(15,4210688,null,0,on.a,[s.t,an.a,un.a,rn.a,N.a,R.a,cn.a,sn.a],null,null),s._48(16,{$a:0}),s._47(131072,fn.a,[_n.a,s.j]),(n()(),s._55(-1,null,["\n                "])),(n()(),s._55(-1,2,["\n                "])),(n()(),s._31(20,0,null,2,1,"h2",[],null,null,null,null,null)),(n()(),s._55(21,null,["",""])),(n()(),s._55(-1,2,["\n                "])),(n()(),s._26(16777216,null,4,1,null,a)),s._30(24,16384,null,0,m.k,[s._11,s._6],{ngIf:[0,"ngIf"]},null),(n()(),s._55(-1,2,["\n                "])),(n()(),s._31(26,0,null,2,2,"p",[],null,null,null,null,null)),(n()(),s._55(27,null,["",""])),s._49(28,1),(n()(),s._55(-1,2,["\n            "])),(n()(),s._55(-1,null,["\n            "])),(n()(),s._31(31,0,null,null,11,"ion-item",[["class","item item-block"],["text-wrap",""]],null,null,null,W.b,W.a)),s._30(32,1097728,null,3,X.a,[Y.a,B.a,s.t,s.V,[2,Z.a]],null,null),s._52(335544320,4,{contentLabel:0}),s._52(603979776,5,{_buttons:1}),s._52(603979776,6,{_icons:1}),s._30(36,16384,null,0,nn.a,[],null,null),(n()(),s._55(-1,2,["\n                "])),(n()(),s._31(38,0,null,2,3,"p",[],null,null,null,null,null)),(n()(),s._31(39,0,null,null,2,"core-format-text",[],null,null,null,null,null)),s._30(40,540672,null,0,dn.a,[s.t,N.a,R.a,j.a,_n.a,rn.a,P.a,cn.a,an.a,un.a,sn.a,hn.a,[2,tn.a],[2,pn.a]],{text:[0,"text"]},null),s._49(41,1),(n()(),s._55(-1,2,["\n            "])),(n()(),s._55(-1,null,["\n            "])),(n()(),s._31(44,0,null,null,1,"addon-notifications-actions",[],null,null,null,o,yn)),s._30(45,114688,null,0,y,[b.a],{contextUrl:[0,"contextUrl"],courseId:[1,"courseId"]},null),(n()(),s._55(-1,null,["\n        "]))],function(n,l){n(l,11,0,l.context.$implicit.useridfrom,l.context.$implicit.courseid);n(l,24,0,!l.context.$implicit.timeread);n(l,40,0,s._56(l,40,0,n(l,41,0,s._44(l.parent,1),l.context.$implicit.mobiletext)));n(l,45,0,l.context.$implicit.contexturl,l.context.$implicit.courseid)},function(n,l){n(l,14,0,l.context.$implicit.profileimageurlfrom||"assets/img/user-avatar.png",s._56(l,14,1,s._44(l,17).transform("core.pictureof",n(l,16,0,l.context.$implicit.userfromfullname))));n(l,21,0,l.context.$implicit.userfromfullname);n(l,27,0,s._56(l,27,0,n(l,28,0,s._44(l.parent,0),l.context.$implicit.timecreated)))})}function r(n){return s._57(0,[(n()(),s._31(0,0,null,null,2,"core-empty-box",[["icon","notifications"]],null,null,null,xn.b,xn.a)),s._30(1,49152,null,0,On.a,[],{message:[0,"message"],icon:[1,"icon"]},null),s._47(131072,fn.a,[_n.a,s.j])],function(n,l){n(l,1,0,s._56(l,1,0,s._44(l,2).transform("addon.notifications.therearentnotificationsyet")),"notifications")},null)}function c(n){return s._57(0,[s._47(0,Rn.a,[an.a,_n.a]),s._47(0,jn.a,[]),(n()(),s._31(2,0,null,null,11,"ion-header",[],null,null,null,null,null)),s._30(3,16384,null,0,In.a,[B.a,s.t,s.V,[2,Nn.a]],null,null),(n()(),s._55(-1,null,["\n    "])),(n()(),s._31(5,0,null,null,7,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,Pn.b,Pn.a)),s._30(6,49152,null,0,Ln.a,[Dn.a,[2,Nn.a],[2,tn.a],B.a,s.t,s.V],null,null),(n()(),s._55(-1,3,["\n        "])),(n()(),s._31(8,0,null,3,3,"ion-title",[],null,null,null,Cn.b,Cn.a)),s._30(9,49152,null,0,Mn.a,[B.a,s.t,s.V,[2,Un.a],[2,Ln.a]],null,null),(n()(),s._55(10,0,["",""])),s._47(131072,fn.a,[_n.a,s.j]),(n()(),s._55(-1,3,["\n    "])),(n()(),s._55(-1,null,["\n"])),(n()(),s._55(-1,null,["\n"])),(n()(),s._31(15,0,null,null,27,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,kn.b,kn.a)),s._30(16,4374528,null,0,pn.a,[B.a,rn.a,$n.a,s.t,s.V,Dn.a,En.a,s.M,[2,Nn.a],[2,tn.a]],null,null),(n()(),s._55(-1,1,["\n    "])),(n()(),s._31(18,0,null,2,6,"ion-refresher",[],[[2,"refresher-active",null],[4,"top",null]],[[null,"ionRefresh"]],function(n,l,t){var i=!0;if("ionRefresh"===l){i=!1!==n.component.refreshNotifications(t)&&i}return i},null,null)),s._30(19,212992,null,0,Vn.a,[rn.a,pn.a,s.M,wn.l],{enabled:[0,"enabled"]},{ionRefresh:"ionRefresh"}),(n()(),s._55(-1,null,["\n        "])),(n()(),s._31(21,0,null,null,2,"ion-refresher-content",[],[[1,"state",0]],null,null,Tn.b,Tn.a)),s._30(22,114688,null,0,An.a,[Vn.a,B.a],{pullingText:[0,"pullingText"]},null),s._47(131072,fn.a,[_n.a,s.j]),(n()(),s._55(-1,null,["\n    "])),(n()(),s._55(-1,1,["\n    "])),(n()(),s._31(26,0,null,1,15,"core-loading",[],null,null,null,Fn.b,Fn.a)),s._30(27,638976,null,0,Sn.a,[_n.a,s.t],{hideUntil:[0,"hideUntil"]},null),(n()(),s._55(-1,0,["\n        "])),(n()(),s._26(16777216,null,0,1,null,u)),s._30(30,802816,null,0,m.j,[s._11,s._6,s.E],{ngForOf:[0,"ngForOf"]},null),(n()(),s._55(-1,0,["\n        "])),(n()(),s._26(16777216,null,0,1,null,r)),s._30(33,16384,null,0,m.k,[s._11,s._6],{ngIf:[0,"ngIf"]},null),(n()(),s._55(-1,0,["\n        "])),(n()(),s._31(35,0,null,0,5,"ion-infinite-scroll",[],null,[[null,"ionInfinite"]],function(n,l,t){var i=!0;if("ionInfinite"===l){i=!1!==n.component.loadMoreNotifications(t)&&i}return i},null,null)),s._30(36,1196032,null,0,Gn.a,[pn.a,s.M,s.t,$n.a],{enabled:[0,"enabled"]},{ionInfinite:"ionInfinite"}),(n()(),s._55(-1,null,["\n            "])),(n()(),s._31(38,0,null,null,1,"ion-infinite-scroll-content",[],[[1,"state",0]],null,null,Hn.b,Hn.a)),s._30(39,114688,null,0,Jn.a,[Gn.a,B.a],null,null),(n()(),s._55(-1,null,["\n        "])),(n()(),s._55(-1,0,["\n    "])),(n()(),s._55(-1,1,["\n"])),(n()(),s._55(-1,null,["\n"]))],function(n,l){var t=l.component;n(l,19,0,t.notificationsLoaded);n(l,22,0,s._34(1,"",s._56(l,22,0,s._44(l,23).transform("core.pulltorefresh")),""));n(l,27,0,t.notificationsLoaded);n(l,30,0,t.notifications);n(l,33,0,!t.notifications||t.notifications.length<=0);n(l,36,0,t.canLoadMore),n(l,39,0)},function(n,l){n(l,5,0,s._44(l,6)._hidden,s._44(l,6)._sbPadding);n(l,10,0,s._56(l,10,0,s._44(l,11).transform("addon.notifications.notifications")));n(l,15,0,s._44(l,16).statusbarPadding,s._44(l,16)._hasRefresher);n(l,18,0,"inactive"!==s._44(l,19).state,s._44(l,19)._top);n(l,21,0,s._44(l,22).r.state);n(l,38,0,s._44(l,39).inf.state)})}Object.defineProperty(l,"__esModule",{value:!0});var s=t(0),f=t(9),_=t(7),d=t(31),h=t(30),p=t(111),m=t(8),b=t(58),g=this&&this.__decorate||function(n,l,t,i){var e,o=arguments.length,a=o<3?l:null===i?i=Object.getOwnPropertyDescriptor(l,t):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(n,l,t,i);else for(var u=n.length-1;u>=0;u--)(e=n[u])&&(a=(o<3?e(a):o>3?e(l,t,a):e(l,t))||a);return o>3&&a&&Object.defineProperty(l,t,a),a},v=this&&this.__metadata||function(n,l){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(n,l)},y=function(){function n(n){this.contentLinksDelegate=n,this.actions=[]}return n.prototype.ngOnInit=function(){var n=this;this.contentLinksDelegate.getActionsFor(this.contextUrl,this.courseId).then(function(l){n.actions=l})},g([Object(s.D)(),v("design:type",String)],n.prototype,"contextUrl",void 0),g([Object(s.D)(),v("design:type",Number)],n.prototype,"courseId",void 0),n=g([Object(s.m)({selector:"addon-notifications-actions",templateUrl:"addon-notifications-actions.html"}),v("design:paramtypes",[b.a])],n)}(),x=this&&this.__decorate||function(n,l,t,i){var e,o=arguments.length,a=o<3?l:null===i?i=Object.getOwnPropertyDescriptor(l,t):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(n,l,t,i);else for(var u=n.length-1;u>=0;u--)(e=n[u])&&(a=(o<3?e(a):o>3?e(l,t,a):e(l,t))||a);return o>3&&a&&Object.defineProperty(l,t,a),a},O=function(){function n(){}return n=x([Object(s.I)({declarations:[y],imports:[m.b,f.k,_.b.forChild()],providers:[],exports:[y]})],n)}(),R=t(6),j=t(10),I=t(21),N=t(1),P=t(4),L=t(263),D=t(211),C=this&&this.__decorate||function(n,l,t,i){var e,o=arguments.length,a=o<3?l:null===i?i=Object.getOwnPropertyDescriptor(l,t):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(n,l,t,i);else for(var u=n.length-1;u>=0;u--)(e=n[u])&&(a=(o<3?e(a):o>3?e(l,t,a):e(l,t))||a);return o>3&&a&&Object.defineProperty(l,t,a),a},M=this&&this.__metadata||function(n,l){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(n,l)},U=function(){function n(n,l,t,i,e,o,a,u){this.domUtils=l,this.eventsProvider=t,this.sitesProvider=i,this.textUtils=e,this.utils=o,this.notificationsProvider=a,this.pushNotificationsDelegate=u,this.notifications=[],this.notificationsLoaded=!1,this.canLoadMore=!1,this.readCount=0,this.unreadCount=0}return n.prototype.ionViewDidLoad=function(){var n=this;this.fetchNotifications().finally(function(){n.notificationsLoaded=!0}),this.cronObserver=this.eventsProvider.on(L.a.READ_CRON_EVENT,function(){return n.refreshNotifications()},this.sitesProvider.getCurrentSiteId()),this.pushObserver=this.pushNotificationsDelegate.on("receive").subscribe(function(l){n.utils.isTrueOrOne(l.notif)&&n.sitesProvider.isCurrentSite(l.site)&&n.refreshNotifications()})},n.prototype.fetchNotifications=function(n){var l=this;n&&(this.readCount=0,this.unreadCount=0);var t=L.a.LIST_LIMIT;return this.notificationsProvider.getUnreadNotifications(this.unreadCount,t).then(function(i){var e;if(i.forEach(l.formatText.bind(l)),l.unreadCount+=i.length,i.length<t){var o=t-i.length;e=l.notificationsProvider.getReadNotifications(l.readCount,o).then(function(t){t.forEach(l.formatText.bind(l)),l.readCount+=t.length,l.notifications=n?i.concat(t):l.notifications.concat(i,t),l.canLoadMore=t.length>=o}).catch(function(n){0==i.length&&(l.domUtils.showErrorModalDefault(n,"addon.notifications.errorgetnotifications",!0),l.canLoadMore=!1)})}else e=Promise.resolve(),l.notifications=n?i:l.notifications.concat(i),l.canLoadMore=!0;return e.then(function(){l.markNotificationsAsRead(i)})}).catch(function(n){l.domUtils.showErrorModalDefault(n,"addon.notifications.errorgetnotifications",!0),l.canLoadMore=!1})},n.prototype.markNotificationsAsRead=function(n){var l=this;if(n.length>0){var t=n.map(function(n){return l.notificationsProvider.markNotificationRead(n.id)});Promise.all(t).finally(function(){l.notificationsProvider.invalidateNotificationsList().finally(function(){var n=l.sitesProvider.getCurrentSiteId();l.eventsProvider.trigger(L.a.READ_CHANGED_EVENT,null,n)})})}},n.prototype.refreshNotifications=function(n){var l=this;this.notificationsProvider.invalidateNotificationsList().finally(function(){return l.fetchNotifications(!0).finally(function(){n&&n.complete()})})},n.prototype.loadMoreNotifications=function(n){this.fetchNotifications().finally(function(){n.complete()})},n.prototype.formatText=function(n){var l=n.mobiletext.replace(/-{4,}/gi,"");n.mobiletext=this.textUtils.replaceNewLines(l,"<br>")},n.prototype.ngOnDestroy=function(){this.cronObserver&&this.cronObserver.off(),this.pushObserver&&this.pushObserver.unsubscribe()},n=C([Object(s.m)({selector:"page-addon-notifications-list",templateUrl:"list.html"}),M("design:paramtypes",[f.r,R.a,I.a,N.a,j.a,P.a,L.a,D.a])],n)}(),k=this&&this.__decorate||function(n,l,t,i){var e,o=arguments.length,a=o<3?l:null===i?i=Object.getOwnPropertyDescriptor(l,t):i;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)a=Reflect.decorate(n,l,t,i);else for(var u=n.length-1;u>=0;u--)(e=n[u])&&(a=(o<3?e(a):o>3?e(l,t,a):e(l,t))||a);return o>3&&a&&Object.defineProperty(l,t,a),a},$=function(){function n(){}return n=k([Object(s.I)({declarations:[U],imports:[d.a,h.a,p.a,f.l.forChild(U),_.b.forChild(),O]})],n)}(),E=t(1243),V=t(1244),w=t(1245),T=t(1246),A=t(1247),F=t(1248),S=t(1249),G=t(1250),H=t(1251),J=t(1254),K=t(1255),q=t(1256),z=t(38),B=t(3),Q=t(112),W=t(33),X=t(19),Y=t(18),Z=t(29),nn=t(32),ln=t(258),tn=t(20),en=t(185),on=t(166),an=t(2),un=t(16),rn=t(13),cn=t(23),sn=t(12),fn=t(28),_n=t(15),dn=t(39),hn=t(22),pn=t(24),mn=t(120),bn=t(43),gn=t(37),vn=t(121),yn=s._29({encapsulation:2,styles:[],data:{}}),xn=(s._27("addon-notifications-actions",y,function(n){return s._57(0,[(n()(),s._31(0,0,null,null,1,"addon-notifications-actions",[],null,null,null,o,yn)),s._30(1,114688,null,0,y,[b.a],null,null)],function(n,l){n(l,1,0)},null)},{contextUrl:"contextUrl",courseId:"courseId"},{},[]),t(151)),On=t(129),Rn=t(412),jn=t(1322),In=t(402),Nn=t(34),Pn=t(1252),Ln=t(182),Dn=t(27),Cn=t(1253),Mn=t(315),Un=t(227),kn=t(183),$n=t(25),En=t(93),Vn=t(139),wn=t(35),Tn=t(203),An=t(150),Fn=t(57),Sn=t(55),Gn=t(212),Hn=t(413),Jn=t(235),Kn=t(54),qn=s._29({encapsulation:2,styles:[],data:{}}),zn=s._27("page-addon-notifications-list",U,function(n){return s._57(0,[(n()(),s._31(0,0,null,null,1,"page-addon-notifications-list",[],null,null,null,c,qn)),s._30(1,180224,null,0,U,[Kn.a,R.a,I.a,N.a,j.a,P.a,L.a,D.a],null,null)],null,null)},{},{},[]),Bn=t(17),Qn=t(311),Wn=t(312),Xn=t(314),Yn=t(313),Zn=t(401),nl=t(615),ll=t(228);t.d(l,"AddonNotificationsListPageModuleNgFactory",function(){return tl});var tl=s._28($,[],function(n){return s._40([s._41(512,s.o,s._21,[[8,[E.a,V.a,w.a,T.a,A.a,F.a,S.a,G.a,H.a,J.a,K.a,q.a,zn]],[3,s.o],s.K]),s._41(4608,m.m,m.l,[s.G,[2,m.v]]),s._41(4608,Bn.x,Bn.x,[]),s._41(4608,Bn.d,Bn.d,[]),s._41(4608,Qn.b,Qn.a,[]),s._41(4608,Wn.a,Wn.b,[]),s._41(4608,Xn.b,Xn.a,[]),s._41(4608,Yn.b,Yn.a,[]),s._41(4608,_n.a,_n.a,[Zn.a,Qn.b,Wn.a,Xn.b,Yn.b,_n.b,_n.c]),s._41(512,m.b,m.b,[]),s._41(512,Bn.v,Bn.v,[]),s._41(512,Bn.i,Bn.i,[]),s._41(512,Bn.s,Bn.s,[]),s._41(512,nl.a,nl.a,[]),s._41(512,_.b,_.b,[]),s._41(512,h.a,h.a,[]),s._41(512,p.a,p.a,[]),s._41(512,d.a,d.a,[]),s._41(512,nl.b,nl.b,[]),s._41(512,O,O,[]),s._41(512,$,$,[]),s._41(256,_n.c,void 0,[]),s._41(256,_n.b,void 0,[]),s._41(256,ll.a,U,[])])})}});
+webpackJsonp([62],{
+
+/***/ 1793:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 1 modules
+var directives_module = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
+var pipes_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./src/core/contentlinks/providers/delegate.ts
+var delegate = __webpack_require__(58);
+
+// CONCATENATED MODULE: ./src/addon/notifications/components/actions/actions.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Component that displays the actions for a notification.
+ */
+var actions_AddonNotificationsActionsComponent = /** @class */ (function () {
+    function AddonNotificationsActionsComponent(contentLinksDelegate) {
+        this.contentLinksDelegate = contentLinksDelegate;
+        this.actions = [];
+    }
+    /**
+     * Component being initialized.
+     */
+    AddonNotificationsActionsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.contentLinksDelegate.getActionsFor(this.contextUrl, this.courseId).then(function (actions) {
+            _this.actions = actions;
+        });
+    };
+    __decorate([
+        Object(core["D" /* Input */])(),
+        __metadata("design:type", String)
+    ], AddonNotificationsActionsComponent.prototype, "contextUrl", void 0);
+    __decorate([
+        Object(core["D" /* Input */])(),
+        __metadata("design:type", Number)
+    ], AddonNotificationsActionsComponent.prototype, "courseId", void 0);
+    AddonNotificationsActionsComponent = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'addon-notifications-actions',
+            templateUrl: 'addon-notifications-actions.html',
+        }),
+        __metadata("design:paramtypes", [delegate["a" /* CoreContentLinksDelegate */]])
+    ], AddonNotificationsActionsComponent);
+    return AddonNotificationsActionsComponent;
+}());
+
+//# sourceMappingURL=actions.js.map
+// CONCATENATED MODULE: ./src/addon/notifications/components/components.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var components_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+var components_module_AddonNotificationsComponentsModule = /** @class */ (function () {
+    function AddonNotificationsComponentsModule() {
+    }
+    AddonNotificationsComponentsModule = components_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                actions_AddonNotificationsActionsComponent
+            ],
+            imports: [
+                common["b" /* CommonModule */],
+                ionic_angular["k" /* IonicModule */],
+                _ngx_translate_core["b" /* TranslateModule */].forChild(),
+            ],
+            providers: [],
+            exports: [
+                actions_AddonNotificationsActionsComponent
+            ],
+        })
+    ], AddonNotificationsComponentsModule);
+    return AddonNotificationsComponentsModule;
+}());
+
+//# sourceMappingURL=components.module.js.map
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./src/addon/notifications/providers/notifications.ts
+var providers_notifications = __webpack_require__(263);
+
+// EXTERNAL MODULE: ./src/addon/pushnotifications/providers/delegate.ts
+var providers_delegate = __webpack_require__(211);
+
+// CONCATENATED MODULE: ./src/addon/notifications/pages/list/list.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var list___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var list___metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+/**
+ * Page that displays the list of notifications.
+ */
+var list_AddonNotificationsListPage = /** @class */ (function () {
+    function AddonNotificationsListPage(navParams, domUtils, eventsProvider, sitesProvider, textUtils, utils, notificationsProvider, pushNotificationsDelegate) {
+        this.domUtils = domUtils;
+        this.eventsProvider = eventsProvider;
+        this.sitesProvider = sitesProvider;
+        this.textUtils = textUtils;
+        this.utils = utils;
+        this.notificationsProvider = notificationsProvider;
+        this.pushNotificationsDelegate = pushNotificationsDelegate;
+        this.notifications = [];
+        this.notificationsLoaded = false;
+        this.canLoadMore = false;
+        this.readCount = 0;
+        this.unreadCount = 0;
+    }
+    /**
+     * View loaded.
+     */
+    AddonNotificationsListPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        this.fetchNotifications().finally(function () {
+            _this.notificationsLoaded = true;
+        });
+        this.cronObserver = this.eventsProvider.on(providers_notifications["a" /* AddonNotificationsProvider */].READ_CRON_EVENT, function () { return _this.refreshNotifications(); }, this.sitesProvider.getCurrentSiteId());
+        this.pushObserver = this.pushNotificationsDelegate.on('receive').subscribe(function (notification) {
+            // New notification received. If it's from current site, refresh the data.
+            if (_this.utils.isTrueOrOne(notification.notif) && _this.sitesProvider.isCurrentSite(notification.site)) {
+                _this.refreshNotifications();
+            }
+        });
+    };
+    /**
+     * Convenience function to get notifications. Gets unread notifications first.
+     *
+     * @param {boolean} refreh Whether we're refreshing data.
+     * @return {Promise<any>} Resolved when done.
+     */
+    AddonNotificationsListPage.prototype.fetchNotifications = function (refresh) {
+        var _this = this;
+        if (refresh) {
+            this.readCount = 0;
+            this.unreadCount = 0;
+        }
+        var limit = providers_notifications["a" /* AddonNotificationsProvider */].LIST_LIMIT;
+        return this.notificationsProvider.getUnreadNotifications(this.unreadCount, limit).then(function (unread) {
+            var promise;
+            unread.forEach(_this.formatText.bind(_this));
+            /* Don't add the unread notifications to this.notifications yet. If there are no unread notifications
+               that causes that the "There are no notifications" message is shown in pull to refresh. */
+            _this.unreadCount += unread.length;
+            if (unread.length < limit) {
+                // Limit not reached. Get read notifications until reach the limit.
+                var readLimit_1 = limit - unread.length;
+                promise = _this.notificationsProvider.getReadNotifications(_this.readCount, readLimit_1).then(function (read) {
+                    read.forEach(_this.formatText.bind(_this));
+                    _this.readCount += read.length;
+                    if (refresh) {
+                        _this.notifications = unread.concat(read);
+                    }
+                    else {
+                        _this.notifications = _this.notifications.concat(unread, read);
+                    }
+                    _this.canLoadMore = read.length >= readLimit_1;
+                }).catch(function (error) {
+                    if (unread.length == 0) {
+                        _this.domUtils.showErrorModalDefault(error, 'addon.notifications.errorgetnotifications', true);
+                        _this.canLoadMore = false; // Set to false to prevent infinite calls with infinite-loading.
+                    }
+                });
+            }
+            else {
+                promise = Promise.resolve();
+                if (refresh) {
+                    _this.notifications = unread;
+                }
+                else {
+                    _this.notifications = _this.notifications.concat(unread);
+                }
+                _this.canLoadMore = true;
+            }
+            return promise.then(function () {
+                // Mark retrieved notifications as read if they are not.
+                _this.markNotificationsAsRead(unread);
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'addon.notifications.errorgetnotifications', true);
+            _this.canLoadMore = false; // Set to false to prevent infinite calls with infinite-loading.
+        });
+    };
+    /**
+     * Mark notifications as read.
+     *
+     * @param {any[]} notifications Array of notification objects.
+     */
+    AddonNotificationsListPage.prototype.markNotificationsAsRead = function (notifications) {
+        var _this = this;
+        if (notifications.length > 0) {
+            var promises = notifications.map(function (notification) {
+                return _this.notificationsProvider.markNotificationRead(notification.id);
+            });
+            Promise.all(promises).finally(function () {
+                _this.notificationsProvider.invalidateNotificationsList().finally(function () {
+                    var siteId = _this.sitesProvider.getCurrentSiteId();
+                    _this.eventsProvider.trigger(providers_notifications["a" /* AddonNotificationsProvider */].READ_CHANGED_EVENT, null, siteId);
+                });
+            });
+        }
+    };
+    /**
+     * Refresh notifications.
+     *
+     * @param {any} [refresher] Refresher.
+     */
+    AddonNotificationsListPage.prototype.refreshNotifications = function (refresher) {
+        var _this = this;
+        this.notificationsProvider.invalidateNotificationsList().finally(function () {
+            return _this.fetchNotifications(true).finally(function () {
+                if (refresher) {
+                    refresher.complete();
+                }
+            });
+        });
+    };
+    /**
+     * Load more results.
+     *
+     * @param {any} infiniteScroll The infinit scroll instance.
+     */
+    AddonNotificationsListPage.prototype.loadMoreNotifications = function (infiniteScroll) {
+        this.fetchNotifications().finally(function () {
+            infiniteScroll.complete();
+        });
+    };
+    /**
+     * Formats the text of a notification.
+     *
+     * @param {any} notification The notification object.
+     */
+    AddonNotificationsListPage.prototype.formatText = function (notification) {
+        var text = notification.mobiletext.replace(/-{4,}/ig, '');
+        notification.mobiletext = this.textUtils.replaceNewLines(text, '<br>');
+    };
+    /**
+     * Page destroyed.
+     */
+    AddonNotificationsListPage.prototype.ngOnDestroy = function () {
+        this.cronObserver && this.cronObserver.off();
+        this.pushObserver && this.pushObserver.unsubscribe();
+    };
+    AddonNotificationsListPage = list___decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-addon-notifications-list',
+            templateUrl: 'list.html',
+        }),
+        list___metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */],
+            sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */],
+            utils["a" /* CoreUtilsProvider */], providers_notifications["a" /* AddonNotificationsProvider */],
+            providers_delegate["a" /* AddonPushNotificationsDelegate */]])
+    ], AddonNotificationsListPage);
+    return AddonNotificationsListPage;
+}());
+
+//# sourceMappingURL=list.js.map
+// CONCATENATED MODULE: ./src/addon/notifications/pages/list/list.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var list_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+var list_module_AddonNotificationsListPageModule = /** @class */ (function () {
+    function AddonNotificationsListPageModule() {
+    }
+    AddonNotificationsListPageModule = list_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                list_AddonNotificationsListPage,
+            ],
+            imports: [
+                components_module["a" /* CoreComponentsModule */],
+                directives_module["a" /* CoreDirectivesModule */],
+                pipes_module["a" /* CorePipesModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(list_AddonNotificationsListPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild(),
+                components_module_AddonNotificationsComponentsModule,
+            ],
+        })
+    ], AddonNotificationsListPageModule);
+    return AddonNotificationsListPageModule;
+}());
+
+//# sourceMappingURL=list.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1243);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1244);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1245);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1246);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1248);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1249);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1250);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1251);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1254);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1255);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1256);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
+var card = __webpack_require__(112);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./src/directives/user-link.ts
+var user_link = __webpack_require__(258);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
+var avatar = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./src/directives/external-content.ts
+var external_content = __webpack_require__(166);
+
+// EXTERNAL MODULE: ./src/providers/logger.ts
+var logger = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./src/providers/filepool.ts
+var filepool = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./src/providers/utils/url.ts
+var url = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./src/providers/app.ts
+var app = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./src/directives/format-text.ts
+var format_text = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
+var helper = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
+var col = __webpack_require__(120);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
+var row = __webpack_require__(121);
+
+// CONCATENATED MODULE: ./src/addon/notifications/components/actions/actions.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonNotificationsActionsComponent = [];
+var RenderType_AddonNotificationsActionsComponent = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonNotificationsActionsComponent, data: {} });
+
+function View_AddonNotificationsActionsComponent_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 10, "ion-col", [["class", "col"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 6, "button", [["clear", ""], ["icon-left", ""], ["ion-button", ""], ["small", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (_v.context.$implicit.action() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](4, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { small: [0, "small"], clear: [1, "clear"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 0, 1, "ion-icon", [["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](7, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](8, 0, ["\n            ", "\n        "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "]))], function (_ck, _v) { var currVal_0 = ""; var currVal_1 = ""; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = core["_34" /* ɵinlineInterpolate */](1, "", _v.context.$implicit.icon, ""); _ck(_v, 7, 0, currVal_3); }, function (_ck, _v) { var currVal_2 = core["_44" /* ɵnov */](_v, 7)._hidden; _ck(_v, 6, 0, currVal_2); var currVal_4 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform(_v.context.$implicit.message)); _ck(_v, 8, 0, currVal_4); }); }
+function View_AddonNotificationsActionsComponent_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonNotificationsActionsComponent_2)), core["_30" /* ɵdid */](4, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.actions; _ck(_v, 4, 0, currVal_0); }, null); }
+function View_AddonNotificationsActionsComponent_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonNotificationsActionsComponent_1)), core["_30" /* ɵdid */](1, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.actions && (_co.actions.length > 0)); _ck(_v, 1, 0, currVal_0); }, null); }
+function View_AddonNotificationsActionsComponent_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "addon-notifications-actions", [], null, null, null, View_AddonNotificationsActionsComponent_0, RenderType_AddonNotificationsActionsComponent)), core["_30" /* ɵdid */](1, 114688, null, 0, actions_AddonNotificationsActionsComponent, [delegate["a" /* CoreContentLinksDelegate */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var AddonNotificationsActionsComponentNgFactory = core["_27" /* ɵccf */]("addon-notifications-actions", actions_AddonNotificationsActionsComponent, View_AddonNotificationsActionsComponent_Host_0, { contextUrl: "contextUrl", courseId: "courseId" }, {}, []);
+
+//# sourceMappingURL=actions.ngfactory.js.map
+// EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
+var empty_box_ngfactory = __webpack_require__(151);
+
+// EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
+var empty_box = __webpack_require__(129);
+
+// EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
+var date_day_or_time = __webpack_require__(412);
+
+// EXTERNAL MODULE: ./src/pipes/create-links.ts
+var create_links = __webpack_require__(1322);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(402);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1252);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(182);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app_app = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1253);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(315);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(183);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
+var refresher = __webpack_require__(139);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
+var refresher_content_ngfactory = __webpack_require__(203);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
+var refresher_content = __webpack_require__(150);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(57);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(55);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/infinite-scroll/infinite-scroll.js
+var infinite_scroll = __webpack_require__(212);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/infinite-scroll/infinite-scroll-content.ngfactory.js
+var infinite_scroll_content_ngfactory = __webpack_require__(413);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/infinite-scroll/infinite-scroll-content.js
+var infinite_scroll_content = __webpack_require__(235);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(54);
+
+// CONCATENATED MODULE: ./src/addon/notifications/pages/list/list.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonNotificationsListPage = [];
+var RenderType_AddonNotificationsListPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonNotificationsListPage, data: {} });
+
+function View_AddonNotificationsListPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "div", [["item-end", ""]], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "ion-icon", [["color", "primary"], ["name", "record"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](2, 147456, [[3, 4]], 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], name: [1, "name"] }, null)], function (_ck, _v) { var currVal_1 = "primary"; var currVal_2 = "record"; _ck(_v, 2, 0, currVal_1, currVal_2); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 2)._hidden; _ck(_v, 1, 0, currVal_0); }); }
+function View_AddonNotificationsListPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 46, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 26, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](4, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](8, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 8, "ion-avatar", [["core-user-link", ""], ["item-start", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](11, 81920, null, 0, user_link["a" /* CoreUserLinkDirective */], [core["t" /* ElementRef */], [2, nav_controller["a" /* NavController */]]], { userId: [0, "userId"], courseId: [1, "courseId"] }, null), core["_30" /* ɵdid */](12, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](14, 0, null, null, 3, "img", [["core-external-content", ""], ["role", "presentation"]], [[8, "src", 4], [8, "alt", 0]], null, null, null, null)), core["_30" /* ɵdid */](15, 4210688, null, 0, external_content["a" /* CoreExternalContentDirective */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], platform["a" /* Platform */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], app["a" /* CoreAppProvider */]], null, null), core["_48" /* ɵpod */](16, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 2, 1, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](21, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 4, 1, null, View_AddonNotificationsListPage_2)), core["_30" /* ɵdid */](24, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](26, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](27, null, ["", ""])), core["_49" /* ɵppd */](28, 1), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](31, 0, null, null, 11, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](32, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](36, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](38, 0, null, 2, 3, "p", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](39, 0, null, null, 2, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](40, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]]], { text: [0, "text"] }, null), core["_49" /* ɵppd */](41, 1), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](44, 0, null, null, 1, "addon-notifications-actions", [], null, null, null, View_AddonNotificationsActionsComponent_0, RenderType_AddonNotificationsActionsComponent)), core["_30" /* ɵdid */](45, 114688, null, 0, actions_AddonNotificationsActionsComponent, [delegate["a" /* CoreContentLinksDelegate */]], { contextUrl: [0, "contextUrl"], courseId: [1, "courseId"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit.useridfrom; var currVal_1 = _v.context.$implicit.courseid; _ck(_v, 11, 0, currVal_0, currVal_1); var currVal_5 = !_v.context.$implicit.timeread; _ck(_v, 24, 0, currVal_5); var currVal_7 = core["_56" /* ɵunv */](_v, 40, 0, _ck(_v, 41, 0, core["_44" /* ɵnov */](_v.parent, 1), _v.context.$implicit.mobiletext)); _ck(_v, 40, 0, currVal_7); var currVal_8 = _v.context.$implicit.contexturl; var currVal_9 = _v.context.$implicit.courseid; _ck(_v, 45, 0, currVal_8, currVal_9); }, function (_ck, _v) { var currVal_2 = (_v.context.$implicit.profileimageurlfrom || "assets/img/user-avatar.png"); var currVal_3 = core["_56" /* ɵunv */](_v, 14, 1, core["_44" /* ɵnov */](_v, 17).transform("core.pictureof", _ck(_v, 16, 0, _v.context.$implicit.userfromfullname))); _ck(_v, 14, 0, currVal_2, currVal_3); var currVal_4 = _v.context.$implicit.userfromfullname; _ck(_v, 21, 0, currVal_4); var currVal_6 = core["_56" /* ɵunv */](_v, 27, 0, _ck(_v, 28, 0, core["_44" /* ɵnov */](_v.parent, 0), _v.context.$implicit.timecreated)); _ck(_v, 27, 0, currVal_6); }); }
+function View_AddonNotificationsListPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-empty-box", [["icon", "notifications"]], null, null, null, empty_box_ngfactory["b" /* View_CoreEmptyBoxComponent_0 */], empty_box_ngfactory["a" /* RenderType_CoreEmptyBoxComponent */])), core["_30" /* ɵdid */](1, 49152, null, 0, empty_box["a" /* CoreEmptyBoxComponent */], [], { message: [0, "message"], icon: [1, "icon"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("addon.notifications.therearentnotificationsyet")); var currVal_1 = "notifications"; _ck(_v, 1, 0, currVal_0, currVal_1); }, null); }
+function View_AddonNotificationsListPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, date_day_or_time["a" /* CoreDateDayOrTimePipe */], [logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */]]), core["_47" /* ɵpid */](0, create_links["a" /* CoreCreateLinksPipe */], []), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 11, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](3, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 7, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](6, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](8, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](9, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](10, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](15, 0, null, null, 27, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](16, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](18, 0, null, 2, 6, "ion-refresher", [], [[2, "refresher-active", null], [4, "top", null]], [[null, "ionRefresh"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("ionRefresh" === en)) {
+        var pd_0 = (_co.refreshNotifications($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](19, 212992, null, 0, refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](21, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](22, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](26, 0, null, 1, 15, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](27, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonNotificationsListPage_1)), core["_30" /* ɵdid */](30, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonNotificationsListPage_3)), core["_30" /* ɵdid */](33, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](35, 0, null, 0, 5, "ion-infinite-scroll", [], null, [[null, "ionInfinite"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("ionInfinite" === en)) {
+        var pd_0 = (_co.loadMoreNotifications($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](36, 1196032, null, 0, infinite_scroll["a" /* InfiniteScroll */], [content["a" /* Content */], core["M" /* NgZone */], core["t" /* ElementRef */], dom_controller["a" /* DomController */]], { enabled: [0, "enabled"] }, { ionInfinite: "ionInfinite" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](38, 0, null, null, 1, "ion-infinite-scroll-content", [], [[1, "state", 0]], null, null, infinite_scroll_content_ngfactory["b" /* View_InfiniteScrollContent_0 */], infinite_scroll_content_ngfactory["a" /* RenderType_InfiniteScrollContent */])), core["_30" /* ɵdid */](39, 114688, null, 0, infinite_scroll_content["a" /* InfiniteScrollContent */], [infinite_scroll["a" /* InfiniteScroll */], config["a" /* Config */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.notificationsLoaded; _ck(_v, 19, 0, currVal_7); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 22, 0, core["_44" /* ɵnov */](_v, 23).transform("core.pulltorefresh")), ""); _ck(_v, 22, 0, currVal_9); var currVal_10 = _co.notificationsLoaded; _ck(_v, 27, 0, currVal_10); var currVal_11 = _co.notifications; _ck(_v, 30, 0, currVal_11); var currVal_12 = (!_co.notifications || (_co.notifications.length <= 0)); _ck(_v, 33, 0, currVal_12); var currVal_13 = _co.canLoadMore; _ck(_v, 36, 0, currVal_13); _ck(_v, 39, 0); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 6)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 6)._sbPadding; _ck(_v, 5, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 11).transform("addon.notifications.notifications")); _ck(_v, 10, 0, currVal_2); var currVal_3 = core["_44" /* ɵnov */](_v, 16).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 16)._hasRefresher; _ck(_v, 15, 0, currVal_3, currVal_4); var currVal_5 = (core["_44" /* ɵnov */](_v, 19).state !== "inactive"); var currVal_6 = core["_44" /* ɵnov */](_v, 19)._top; _ck(_v, 18, 0, currVal_5, currVal_6); var currVal_8 = core["_44" /* ɵnov */](_v, 22).r.state; _ck(_v, 21, 0, currVal_8); var currVal_14 = core["_44" /* ɵnov */](_v, 39).inf.state; _ck(_v, 38, 0, currVal_14); }); }
+function View_AddonNotificationsListPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-notifications-list", [], null, null, null, View_AddonNotificationsListPage_0, RenderType_AddonNotificationsListPage)), core["_30" /* ɵdid */](1, 180224, null, 0, list_AddonNotificationsListPage, [nav_params["a" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */], providers_notifications["a" /* AddonNotificationsProvider */], providers_delegate["a" /* AddonPushNotificationsDelegate */]], null, null)], null, null); }
+var AddonNotificationsListPageNgFactory = core["_27" /* ɵccf */]("page-addon-notifications-list", list_AddonNotificationsListPage, View_AddonNotificationsListPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=list.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(311);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(312);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(314);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(313);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(401);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(615);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(228);
+
+// CONCATENATED MODULE: ./src/addon/notifications/pages/list/list.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotificationsListPageModuleNgFactory", function() { return AddonNotificationsListPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AddonNotificationsListPageModuleNgFactory = core["_28" /* ɵcmf */](list_module_AddonNotificationsListPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], AddonNotificationsListPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, components_module_AddonNotificationsComponentsModule, components_module_AddonNotificationsComponentsModule, []), core["_41" /* ɵmpd */](512, list_module_AddonNotificationsListPageModule, list_module_AddonNotificationsListPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], list_AddonNotificationsListPage, [])]); });
+
+//# sourceMappingURL=list.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=62.js.map
