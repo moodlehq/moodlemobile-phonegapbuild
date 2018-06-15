@@ -57,7 +57,7 @@
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashScreenDelay" value="15000" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
