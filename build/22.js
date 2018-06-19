@@ -1,6 +1,6 @@
 webpackJsonp([22],{
 
-/***/ 1829:
+/***/ 1840:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(7);
+var _ngx_translate_core = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -22,7 +22,7 @@ var components_module = __webpack_require__(32);
 var directives_module = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/components.module.ts
-var components_components_module = __webpack_require__(423);
+var components_components_module = __webpack_require__(425);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(17);
@@ -37,31 +37,31 @@ var sites = __webpack_require__(1);
 var sync = __webpack_require__(80);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(5);
+var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
-var course = __webpack_require__(16);
+var course = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(159);
+var helper = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/workshop.ts
-var workshop = __webpack_require__(147);
+var workshop = __webpack_require__(148);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
-var providers_helper = __webpack_require__(162);
+var providers_helper = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
-var offline = __webpack_require__(145);
+var offline = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/sync.ts
-var providers_sync = __webpack_require__(278);
+var providers_sync = __webpack_require__(280);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/assessment/assessment.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -357,18 +357,12 @@ var assessment_AddonModWorkshopAssessmentPage = /** @class */ (function () {
      */
     AddonModWorkshopAssessmentPage.prototype.sendEvaluation = function () {
         var _this = this;
-        var modal = this.domUtils.showModalLoading('core.sending', true);
-        // Check if rich text editor is enabled or not.
-        return this.domUtils.isRichTextEditorEnabled().then(function (rteEnabled) {
-            var inputData = _this.evaluateForm.value;
-            inputData.grade = inputData.grade >= 0 ? inputData.grade : '';
-            if (!rteEnabled) {
-                // Rich text editor not enabled, add some HTML to the message if needed.
-                inputData.text = _this.textUtils.formatHtmlLines(inputData.text);
-            }
-            // Try to send it to server.
-            return _this.workshopProvider.evaluateAssessment(_this.workshopId, _this.assessmentId, _this.courseId, inputData.text, inputData.weight, inputData.grade);
-        }).then(function () {
+        var modal = this.domUtils.showModalLoading('core.sending', true), inputData = this.evaluateForm.value;
+        inputData.grade = inputData.grade >= 0 ? inputData.grade : '';
+        // Add some HTML to the message if needed.
+        inputData.text = this.textUtils.formatHtmlLines(inputData.text);
+        // Try to send it to server.
+        return this.workshopProvider.evaluateAssessment(this.workshopId, this.assessmentId, this.courseId, inputData.text, inputData.weight, inputData.grade).then(function () {
             var data = {
                 workshopId: _this.workshopId,
                 assessmentId: _this.assessmentId,
@@ -458,58 +452,58 @@ var assessment_module_AddonModWorkshopAssessmentPageModule = /** @class */ (func
 
 //# sourceMappingURL=assessment.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1274);
+var action_sheet_component_ngfactory = __webpack_require__(1284);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1275);
+var alert_component_ngfactory = __webpack_require__(1285);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1276);
+var app_root_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1277);
+var loading_component_ngfactory = __webpack_require__(1287);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1278);
+var modal_component_ngfactory = __webpack_require__(1288);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1279);
+var picker_component_ngfactory = __webpack_require__(1289);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1280);
+var popover_component_ngfactory = __webpack_require__(1290);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1281);
+var select_popover_component_ngfactory = __webpack_require__(1291);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1282);
+var toast_component_ngfactory = __webpack_require__(1292);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1285);
+var context_menu_popover_ngfactory = __webpack_require__(1295);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1286);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1296);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1287);
+var recaptchamodal_ngfactory = __webpack_require__(1297);
 
 // EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ngfactory.js
-var unsupported_module_ngfactory = __webpack_require__(1288);
+var unsupported_module_ngfactory = __webpack_require__(1298);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1314);
+var index_ngfactory = __webpack_require__(1323);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(174);
+var avatar = __webpack_require__(176);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(156);
+var external_content = __webpack_require__(157);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(2);
+var logger = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(14);
+var filepool = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(13);
@@ -518,7 +512,7 @@ var platform = __webpack_require__(13);
 var url = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(12);
+var app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/directives/user-link.ts
 var user_link = __webpack_require__(239);
@@ -530,34 +524,34 @@ var nav_controller = __webpack_require__(20);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(15);
+var translate_service = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
 var badge = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
-var config = __webpack_require__(4);
+var config = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ngfactory.js
-var assessment_strategy_ngfactory = __webpack_require__(1898);
+var assessment_strategy_ngfactory = __webpack_require__(1909);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ts
-var assessment_strategy = __webpack_require__(1298);
+var assessment_strategy = __webpack_require__(1307);
 
 // EXTERNAL MODULE: ./src/providers/file-session.ts
-var file_session = __webpack_require__(136);
+var file_session = __webpack_require__(137);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
-var utils = __webpack_require__(3);
+var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(72);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/assessment-strategy-delegate.ts
-var assessment_strategy_delegate = __webpack_require__(181);
+var assessment_strategy_delegate = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/option/option.js
-var option_option = __webpack_require__(97);
+var option_option = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(33);
@@ -575,7 +569,7 @@ var item_reorder = __webpack_require__(28);
 var item_content = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/components/mark-required/mark-required.ngfactory.js
-var mark_required_ngfactory = __webpack_require__(78);
+var mark_required_ngfactory = __webpack_require__(79);
 
 // EXTERNAL MODULE: ./src/components/mark-required/mark-required.ts
 var mark_required = __webpack_require__(69);
@@ -584,10 +578,10 @@ var mark_required = __webpack_require__(69);
 var label = __webpack_require__(58);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(111);
+var select_ngfactory = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
-var select_select = __webpack_require__(98);
+var select_select = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(26);
@@ -599,13 +593,13 @@ var deep_linker = __webpack_require__(47);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
-var rich_text_editor_ngfactory = __webpack_require__(264);
+var rich_text_editor_ngfactory = __webpack_require__(266);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
 var rich_text_editor = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/keyboard/index.js
-var keyboard = __webpack_require__(161);
+var keyboard = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(24);
@@ -626,28 +620,28 @@ var format_text = __webpack_require__(37);
 var contentlinks_providers_helper = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(414);
+var toolbar_header = __webpack_require__(416);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1283);
+var navbar_ngfactory = __webpack_require__(1293);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(189);
+var navbar = __webpack_require__(190);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1284);
+var toolbar_title_ngfactory = __webpack_require__(1294);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(324);
+var toolbar_title = __webpack_require__(326);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(415);
+var toolbar_item = __webpack_require__(417);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(44);
@@ -656,28 +650,28 @@ var button_ngfactory = __webpack_require__(44);
 var button_button = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(190);
+var content_ngfactory = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var platform_keyboard = __webpack_require__(101);
+var platform_keyboard = __webpack_require__(97);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(141);
+var refresher = __webpack_require__(129);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(210);
+var refresher_content_ngfactory = __webpack_require__(191);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(155);
+var refresher_content = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
-var loading_ngfactory = __webpack_require__(57);
+var loading_ngfactory = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
-var loading = __webpack_require__(50);
+var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(56);
+var nav_params = __webpack_require__(57);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/assessment/assessment.ngfactory.js
 /**
@@ -772,21 +766,21 @@ function View_AddonModWorkshopAssessmentPage_6(_l) { return core["_57" /* ɵvid 
 function View_AddonModWorkshopAssessmentPage_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 3, "ion-badge", [["color", "danger"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, badge["a" /* Badge */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["\n                ", "\n            "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = "danger"; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 2, 0, core["_44" /* ɵnov */](_v, 3).transform("addon.mod_workshop.notassessed")); _ck(_v, 2, 0, currVal_1); }); }
 function View_AddonModWorkshopAssessmentPage_8(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "addon-mod-workshop-assessment-strategy", [], null, null, null, assessment_strategy_ngfactory["b" /* View_AddonModWorkshopAssessmentStrategyComponent_0 */], assessment_strategy_ngfactory["a" /* RenderType_AddonModWorkshopAssessmentStrategyComponent */])), core["_30" /* ɵdid */](1, 245760, null, 0, assessment_strategy["a" /* AddonModWorkshopAssessmentStrategyComponent */], [translate_service["a" /* TranslateService */], core["C" /* Injector */], events["a" /* CoreEventsProvider */], file_session["a" /* CoreFileSessionProvider */], sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */], sites["a" /* CoreSitesProvider */], fileuploader["a" /* CoreFileUploaderProvider */], workshop["a" /* AddonModWorkshopProvider */], providers_helper["a" /* AddonModWorkshopHelperProvider */], offline["a" /* AddonModWorkshopOfflineProvider */], assessment_strategy_delegate["a" /* AddonWorkshopAssessmentStrategyDelegate */]], { workshop: [0, "workshop"], access: [1, "access"], assessmentId: [2, "assessmentId"], userId: [3, "userId"], strategy: [4, "strategy"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.workshop; var currVal_1 = _co.access; var currVal_2 = _co.assessmentId; var currVal_3 = _co.profile.id; var currVal_4 = _co.strategy; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4); }, null); }
 function View_AddonModWorkshopAssessmentPage_11(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-option", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[11, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = _v.context.$implicit; _ck(_v, 2, 0, currVal_1); }); }
-function View_AddonModWorkshopAssessmentPage_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 26, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 8, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 9, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 10, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 4, "ion-label", [["core-mark-required", "true"], ["stacked", ""]], null, null, null, mark_required_ngfactory["b" /* View_CoreMarkRequiredComponent_0 */], mark_required_ngfactory["a" /* RenderType_CoreMarkRequiredComponent */])), core["_30" /* ɵdid */](8, 4308992, null, 0, mark_required["a" /* CoreMarkRequiredComponent */], [core["t" /* ElementRef */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), core["_30" /* ɵdid */](9, 16384, [[8, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](10, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 3, 12, "ion-select", [["formControlName", "weight"], ["required", "true"]], [[1, "required", 0], [2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+function View_AddonModWorkshopAssessmentPage_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 26, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 8, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 9, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 10, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 4, "ion-label", [["core-mark-required", "true"], ["stacked", ""]], null, null, null, mark_required_ngfactory["b" /* View_CoreMarkRequiredComponent_0 */], mark_required_ngfactory["a" /* RenderType_CoreMarkRequiredComponent */])), core["_30" /* ɵdid */](8, 4308992, null, 0, mark_required["a" /* CoreMarkRequiredComponent */], [core["t" /* ElementRef */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), core["_30" /* ɵdid */](9, 16384, [[8, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](10, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 3, 12, "ion-select", [["formControlName", "weight"], ["interface", "popover"], ["required", "true"]], [[1, "required", 0], [2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
         var pd_0 = (core["_44" /* ɵnov */](_v, 16)._click($event) !== false);
         ad = (pd_0 && ad);
     } if (("keyup.space" === en)) {
         var pd_1 = (core["_44" /* ɵnov */](_v, 16)._keyup() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](14, 16384, null, 0, esm5_forms["t" /* RequiredValidator */], [], { required: [0, "required"] }, null), core["_50" /* ɵprd */](1024, null, esm5_forms["k" /* NG_VALIDATORS */], function (p0_0) { return [p0_0]; }, [esm5_forms["t" /* RequiredValidator */]]), core["_30" /* ɵdid */](16, 1228800, null, 1, select_select["a" /* Select */], [app_app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], null, null), core["_52" /* ɵqud */](603979776, 11, { options: 1 }), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](19, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [2, esm5_forms["k" /* NG_VALIDATORS */]], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](21, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModWorkshopAssessmentPage_11)), core["_30" /* ɵdid */](24, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = "true"; _ck(_v, 8, 0, currVal_0); var currVal_11 = "true"; _ck(_v, 14, 0, currVal_11); var currVal_12 = "weight"; _ck(_v, 19, 0, currVal_12); var currVal_13 = _co.weights; _ck(_v, 24, 0, currVal_13); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 11).transform("addon.mod_workshop.assessmentweight")); _ck(_v, 10, 0, currVal_1); var currVal_2 = (core["_44" /* ɵnov */](_v, 14).required ? "" : null); var currVal_3 = core["_44" /* ɵnov */](_v, 16)._disabled; var currVal_4 = core["_44" /* ɵnov */](_v, 21).ngClassUntouched; var currVal_5 = core["_44" /* ɵnov */](_v, 21).ngClassTouched; var currVal_6 = core["_44" /* ɵnov */](_v, 21).ngClassPristine; var currVal_7 = core["_44" /* ɵnov */](_v, 21).ngClassDirty; var currVal_8 = core["_44" /* ɵnov */](_v, 21).ngClassValid; var currVal_9 = core["_44" /* ɵnov */](_v, 21).ngClassInvalid; var currVal_10 = core["_44" /* ɵnov */](_v, 21).ngClassPending; _ck(_v, 13, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10); }); }
+    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](14, 16384, null, 0, esm5_forms["t" /* RequiredValidator */], [], { required: [0, "required"] }, null), core["_50" /* ɵprd */](1024, null, esm5_forms["k" /* NG_VALIDATORS */], function (p0_0) { return [p0_0]; }, [esm5_forms["t" /* RequiredValidator */]]), core["_30" /* ɵdid */](16, 1228800, null, 1, select_select["a" /* Select */], [app_app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], { interface: [0, "interface"] }, null), core["_52" /* ɵqud */](603979776, 11, { options: 1 }), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](19, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [2, esm5_forms["k" /* NG_VALIDATORS */]], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](21, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModWorkshopAssessmentPage_11)), core["_30" /* ɵdid */](24, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = "true"; _ck(_v, 8, 0, currVal_0); var currVal_11 = "true"; _ck(_v, 14, 0, currVal_11); var currVal_12 = "popover"; _ck(_v, 16, 0, currVal_12); var currVal_13 = "weight"; _ck(_v, 19, 0, currVal_13); var currVal_14 = _co.weights; _ck(_v, 24, 0, currVal_14); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 11).transform("addon.mod_workshop.assessmentweight")); _ck(_v, 10, 0, currVal_1); var currVal_2 = (core["_44" /* ɵnov */](_v, 14).required ? "" : null); var currVal_3 = core["_44" /* ɵnov */](_v, 16)._disabled; var currVal_4 = core["_44" /* ɵnov */](_v, 21).ngClassUntouched; var currVal_5 = core["_44" /* ɵnov */](_v, 21).ngClassTouched; var currVal_6 = core["_44" /* ɵnov */](_v, 21).ngClassPristine; var currVal_7 = core["_44" /* ɵnov */](_v, 21).ngClassDirty; var currVal_8 = core["_44" /* ɵnov */](_v, 21).ngClassValid; var currVal_9 = core["_44" /* ɵnov */](_v, 21).ngClassInvalid; var currVal_10 = core["_44" /* ɵnov */](_v, 21).ngClassPending; _ck(_v, 13, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10); }); }
 function View_AddonModWorkshopAssessmentPage_13(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-option", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[18, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit.value; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = _v.context.$implicit.label; _ck(_v, 2, 0, currVal_1); }); }
-function View_AddonModWorkshopAssessmentPage_12(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 23, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 15, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 16, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 17, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 3, "ion-label", [["stacked", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](8, 16384, [[15, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](9, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 3, 10, "ion-select", [["formControlName", "grade"]], [[2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+function View_AddonModWorkshopAssessmentPage_12(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 23, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 15, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 16, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 17, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 3, "ion-label", [["stacked", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](8, 16384, [[15, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](9, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 3, 10, "ion-select", [["formControlName", "grade"], ["interface", "popover"]], [[2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
         var pd_0 = (core["_44" /* ɵnov */](_v, 13)._click($event) !== false);
         ad = (pd_0 && ad);
     } if (("keyup.space" === en)) {
         var pd_1 = (core["_44" /* ɵnov */](_v, 13)._keyup() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](13, 1228800, null, 1, select_select["a" /* Select */], [app_app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], null, null), core["_52" /* ɵqud */](603979776, 18, { options: 1 }), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](16, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](18, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModWorkshopAssessmentPage_13)), core["_30" /* ɵdid */](21, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_9 = "grade"; _ck(_v, 16, 0, currVal_9); var currVal_10 = _co.evaluationGrades; _ck(_v, 21, 0, currVal_10); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("addon.mod_workshop.gradinggradeover")); _ck(_v, 9, 0, currVal_0); var currVal_1 = core["_44" /* ɵnov */](_v, 13)._disabled; var currVal_2 = core["_44" /* ɵnov */](_v, 18).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 18).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 18).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 18).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 18).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 18).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 18).ngClassPending; _ck(_v, 12, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); }); }
+    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](13, 1228800, null, 1, select_select["a" /* Select */], [app_app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], { interface: [0, "interface"] }, null), core["_52" /* ɵqud */](603979776, 18, { options: 1 }), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](16, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](18, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModWorkshopAssessmentPage_13)), core["_30" /* ɵdid */](21, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_9 = "popover"; _ck(_v, 13, 0, currVal_9); var currVal_10 = "grade"; _ck(_v, 16, 0, currVal_10); var currVal_11 = _co.evaluationGrades; _ck(_v, 21, 0, currVal_11); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("addon.mod_workshop.gradinggradeover")); _ck(_v, 9, 0, currVal_0); var currVal_1 = core["_44" /* ɵnov */](_v, 13)._disabled; var currVal_2 = core["_44" /* ɵnov */](_v, 18).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 18).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 18).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 18).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 18).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 18).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 18).ngClassPending; _ck(_v, 12, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); }); }
 function View_AddonModWorkshopAssessmentPage_14(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 17, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 19, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 20, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 21, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 3, "ion-label", [["stacked", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](8, 16384, [[19, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](9, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 3, 4, "core-rich-text-editor", [["formControlName", "text"], ["item-content", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, rich_text_editor_ngfactory["b" /* View_CoreRichTextEditorComponent_0 */], rich_text_editor_ngfactory["a" /* RenderType_CoreRichTextEditorComponent */])), core["_30" /* ɵdid */](13, 1228800, null, 0, rich_text_editor["a" /* CoreRichTextEditorComponent */], [dom["a" /* CoreDomUtilsProvider */], keyboard["a" /* Keyboard */], url["a" /* CoreUrlUtilsProvider */], sites["a" /* CoreSitesProvider */], filepool["a" /* CoreFilepoolProvider */], [2, content["a" /* Content */]], core["t" /* ElementRef */]], { control: [0, "control"] }, null), core["_30" /* ɵdid */](14, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [8, null]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](16, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_8 = _co.evaluateForm.controls["text"]; _ck(_v, 13, 0, currVal_8); var currVal_9 = "text"; _ck(_v, 14, 0, currVal_9); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("addon.mod_workshop.feedbackreviewer")); _ck(_v, 9, 0, currVal_0); var currVal_1 = core["_44" /* ɵnov */](_v, 16).ngClassUntouched; var currVal_2 = core["_44" /* ɵnov */](_v, 16).ngClassTouched; var currVal_3 = core["_44" /* ɵnov */](_v, 16).ngClassPristine; var currVal_4 = core["_44" /* ɵnov */](_v, 16).ngClassDirty; var currVal_5 = core["_44" /* ɵnov */](_v, 16).ngClassValid; var currVal_6 = core["_44" /* ɵnov */](_v, 16).ngClassInvalid; var currVal_7 = core["_44" /* ɵnov */](_v, 16).ngClassPending; _ck(_v, 12, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); }); }
 function View_AddonModWorkshopAssessmentPage_9(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 41, "form", [["ion-list", ""], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
         var pd_0 = (core["_44" /* ɵnov */](_v, 2).onSubmit($event) !== false);
@@ -810,25 +804,25 @@ var AddonModWorkshopAssessmentPageNgFactory = core["_27" /* ɵccf */]("page-addo
 
 //# sourceMappingURL=assessment.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(320);
+var translate_loader = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(321);
+var translate_compiler = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(323);
+var translate_parser = __webpack_require__(325);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(322);
+var missing_translation_handler = __webpack_require__(324);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(413);
+var translate_store = __webpack_require__(415);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(633);
+var ionic_angular_module = __webpack_require__(636);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(110);
+var pipes_module = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
 var course_components_components_module = __webpack_require__(70);
@@ -884,7 +878,7 @@ var AddonModWorkshopAssessmentPageModuleNgFactory = core["_28" /* ɵcmf */](asse
 
 /***/ }),
 
-/***/ 1898:
+/***/ 1909:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -893,66 +887,66 @@ var AddonModWorkshopAssessmentPageModuleNgFactory = core["_28" /* ɵcmf */](asse
 /* unused harmony export View_AddonModWorkshopAssessmentStrategyComponent_Host_0 */
 /* unused harmony export AddonModWorkshopAssessmentStrategyComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(1289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(1299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core_src_translate_pipe__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_input_errors_input_errors_ngfactory__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_input_errors_input_errors__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ionic_angular_components_item_item__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_util_form__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic_angular_components_item_item_reorder__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ionic_angular_components_item_item_content__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_mark_required_mark_required_ngfactory__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_mark_required_mark_required_ngfactory__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_ionic_angular_components_label_label__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_mark_required_mark_required__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_utils_text__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_utils_utils__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_rich_text_editor_rich_text_editor_ngfactory__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_utils_text__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_utils_utils__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_rich_text_editor_rich_text_editor_ngfactory__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_rich_text_editor_rich_text_editor__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_keyboard_index__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_keyboard_index__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_utils_url__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_sites__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_filepool__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_filepool__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ionic_angular_components_content_content__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__angular_common__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_attachments_attachments_ngfactory__ = __webpack_require__(424);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments__ = __webpack_require__(268);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_app__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_attachments_attachments_ngfactory__ = __webpack_require__(426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_app__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__core_fileuploader_providers_fileuploader__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__core_fileuploader_providers_helper__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_ionic_angular_components_option_option__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__node_modules_ionic_angular_components_select_select_ngfactory__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_ionic_angular_components_select_select__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__core_fileuploader_providers_helper__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34_ionic_angular_components_option_option__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__node_modules_ionic_angular_components_select_select_ngfactory__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_ionic_angular_components_select_select__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_ionic_angular_components_app_app__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_ionic_angular_navigation_deep_linker__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__angular_forms__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__directives_format_text__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41_ionic_angular_platform_platform__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__core_contentlinks_providers_helper__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_file_file_ngfactory__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_file_file__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__providers_file_helper__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_file_file_ngfactory__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_file_file__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__providers_file_helper__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__providers_utils_mimetype__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__providers_events__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_local_file_local_file_ngfactory__ = __webpack_require__(334);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_local_file_local_file_ngfactory__ = __webpack_require__(336);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_local_file_local_file__ = __webpack_require__(245);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__providers_file__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51_ionic_angular_components_card_card__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_loading_loading_ngfactory__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_loading_loading__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__assessment_strategy__ = __webpack_require__(1298);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__providers_file_session__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51_ionic_angular_components_card_card__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_loading_loading_ngfactory__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_loading_loading__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__assessment_strategy__ = __webpack_require__(1307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__providers_file_session__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__providers_sync__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__providers_workshop__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__providers_helper__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__providers_offline__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__providers_assessment_strategy_delegate__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__providers_workshop__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__providers_helper__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__providers_offline__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__providers_assessment_strategy_delegate__ = __webpack_require__(182);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -1032,7 +1026,7 @@ function View_AddonModWorkshopAssessmentStrategyComponent_4(_l) { return __WEBPA
     } return ad; }, __WEBPACK_IMPORTED_MODULE_21__components_rich_text_editor_rich_text_editor_ngfactory__["b" /* View_CoreRichTextEditorComponent_0 */], __WEBPACK_IMPORTED_MODULE_21__components_rich_text_editor_rich_text_editor_ngfactory__["a" /* RenderType_CoreRichTextEditorComponent */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](14, 1228800, null, 0, __WEBPACK_IMPORTED_MODULE_22__components_rich_text_editor_rich_text_editor__["a" /* CoreRichTextEditorComponent */], [__WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_23__ionic_native_keyboard_index__["a" /* Keyboard */], __WEBPACK_IMPORTED_MODULE_24__providers_utils_url__["a" /* CoreUrlUtilsProvider */], __WEBPACK_IMPORTED_MODULE_25__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_26__providers_filepool__["a" /* CoreFilepoolProvider */], [2, __WEBPACK_IMPORTED_MODULE_27_ionic_angular_components_content_content__["a" /* Content */]], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]], { control: [0, "control"], component: [1, "component"], componentId: [2, "componentId"] }, { contentChanged: "contentChanged" }), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵand */](16777216, null, 3, 1, null, View_AddonModWorkshopAssessmentStrategyComponent_5)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](17, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_28__angular_common__["k" /* NgIf */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewContainerRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.overallFeedkbackRequired; _ck(_v, 9, 0, currVal_0); var currVal_2 = _co.feedbackControl; var currVal_3 = _co.component; var currVal_4 = _co.workshop.coursemodule; _ck(_v, 14, 0, currVal_2, currVal_3, currVal_4); var currVal_5 = (_co.overallFeedkbackRequired && _co.fieldErrors["feedbackauthor"]); _ck(_v, 17, 0, currVal_5); }, function (_ck, _v) { var currVal_1 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_56" /* ɵunv */](_v, 10, 0, __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 11).transform("addon.mod_workshop.feedbackauthor")); _ck(_v, 10, 0, currVal_1); }); }
 function View_AddonModWorkshopAssessmentStrategyComponent_6(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 1, "core-attachments", [], null, null, null, __WEBPACK_IMPORTED_MODULE_29__components_attachments_attachments_ngfactory__["b" /* View_CoreAttachmentsComponent_0 */], __WEBPACK_IMPORTED_MODULE_29__components_attachments_attachments_ngfactory__["a" /* RenderType_CoreAttachmentsComponent */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 114688, null, 0, __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments__["a" /* CoreAttachmentsComponent */], [__WEBPACK_IMPORTED_MODULE_31__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_19__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_32__core_fileuploader_providers_fileuploader__["a" /* CoreFileUploaderProvider */], __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_33__core_fileuploader_providers_helper__["a" /* CoreFileUploaderHelperProvider */]], { files: [0, "files"], maxSize: [1, "maxSize"], maxSubmissions: [2, "maxSubmissions"], component: [3, "component"], componentId: [4, "componentId"], allowOffline: [5, "allowOffline"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.data.assessment.feedbackattachmentfiles; var currVal_1 = _co.workshop.overallfeedbackmaxbytes; var currVal_2 = _co.workshop.overallfeedbackfiles; var currVal_3 = _co.component; var currVal_4 = _co.componentId; var currVal_5 = true; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); }, null); }
 function View_AddonModWorkshopAssessmentStrategyComponent_8(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 2, "ion-option", [], null, null, null, null, null)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 16384, [[10, 4]], 0, __WEBPACK_IMPORTED_MODULE_34_ionic_angular_components_option_option__["a" /* Option */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = _v.context.$implicit; _ck(_v, 2, 0, currVal_1); }); }
-function View_AddonModWorkshopAssessmentStrategyComponent_7(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 24, "ion-item", [["class", "item item-block"]], null, null, null, __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_item_item_ngfactory__["b" /* View_Item_0 */], __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_item_item_ngfactory__["a" /* RenderType_Item */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 1097728, null, 3, __WEBPACK_IMPORTED_MODULE_11_ionic_angular_components_item_item__["a" /* Item */], [__WEBPACK_IMPORTED_MODULE_12_ionic_angular_util_form__["a" /* Form */], __WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */], [2, __WEBPACK_IMPORTED_MODULE_14_ionic_angular_components_item_item_reorder__["a" /* ItemReorder */]]], null, null), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](335544320, 7, { contentLabel: 0 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](603979776, 8, { _buttons: 1 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](603979776, 9, { _icons: 1 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](5, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_15_ionic_angular_components_item_item_content__["a" /* ItemContent */], [], null, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](7, 0, null, 1, 4, "ion-label", [["stacked", ""]], null, null, null, __WEBPACK_IMPORTED_MODULE_16__components_mark_required_mark_required_ngfactory__["b" /* View_CoreMarkRequiredComponent_0 */], __WEBPACK_IMPORTED_MODULE_16__components_mark_required_mark_required_ngfactory__["a" /* RenderType_CoreMarkRequiredComponent */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](8, 16384, [[7, 4]], 0, __WEBPACK_IMPORTED_MODULE_17_ionic_angular_components_label_label__["a" /* Label */], [__WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](9, 4308992, null, 0, __WEBPACK_IMPORTED_MODULE_18__components_mark_required_mark_required__["a" /* CoreMarkRequiredComponent */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_19__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_20__providers_utils_utils__["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](10, 0, ["", ""])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_47" /* ɵpid */](131072, __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core_src_translate_pipe__["a" /* TranslatePipe */], [__WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]]), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](13, 0, null, 3, 10, "ion-select", [], [[2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+function View_AddonModWorkshopAssessmentStrategyComponent_7(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 24, "ion-item", [["class", "item item-block"]], null, null, null, __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_item_item_ngfactory__["b" /* View_Item_0 */], __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_item_item_ngfactory__["a" /* RenderType_Item */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 1097728, null, 3, __WEBPACK_IMPORTED_MODULE_11_ionic_angular_components_item_item__["a" /* Item */], [__WEBPACK_IMPORTED_MODULE_12_ionic_angular_util_form__["a" /* Form */], __WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */], [2, __WEBPACK_IMPORTED_MODULE_14_ionic_angular_components_item_item_reorder__["a" /* ItemReorder */]]], null, null), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](335544320, 7, { contentLabel: 0 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](603979776, 8, { _buttons: 1 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](603979776, 9, { _icons: 1 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](5, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_15_ionic_angular_components_item_item_content__["a" /* ItemContent */], [], null, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](7, 0, null, 1, 4, "ion-label", [["stacked", ""]], null, null, null, __WEBPACK_IMPORTED_MODULE_16__components_mark_required_mark_required_ngfactory__["b" /* View_CoreMarkRequiredComponent_0 */], __WEBPACK_IMPORTED_MODULE_16__components_mark_required_mark_required_ngfactory__["a" /* RenderType_CoreMarkRequiredComponent */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](8, 16384, [[7, 4]], 0, __WEBPACK_IMPORTED_MODULE_17_ionic_angular_components_label_label__["a" /* Label */], [__WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](9, 4308992, null, 0, __WEBPACK_IMPORTED_MODULE_18__components_mark_required_mark_required__["a" /* CoreMarkRequiredComponent */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_19__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_20__providers_utils_utils__["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](10, 0, ["", ""])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_47" /* ɵpid */](131072, __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core_src_translate_pipe__["a" /* TranslatePipe */], [__WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */]]), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](13, 0, null, 3, 10, "ion-select", [["interface", "popover"]], [[2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (__WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 14)._click($event) !== false);
         ad = (pd_0 && ad);
     } if (("keyup.space" === en)) {
@@ -1041,7 +1035,7 @@ function View_AddonModWorkshopAssessmentStrategyComponent_7(_l) { return __WEBPA
     } if (("ngModelChange" === en)) {
         var pd_2 = ((_co.weight = $event) !== false);
         ad = (pd_2 && ad);
-    } return ad; }, __WEBPACK_IMPORTED_MODULE_35__node_modules_ionic_angular_components_select_select_ngfactory__["b" /* View_Select_0 */], __WEBPACK_IMPORTED_MODULE_35__node_modules_ionic_angular_components_select_select_ngfactory__["a" /* RenderType_Select */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](14, 1228800, null, 1, __WEBPACK_IMPORTED_MODULE_36_ionic_angular_components_select_select__["a" /* Select */], [__WEBPACK_IMPORTED_MODULE_37_ionic_angular_components_app_app__["a" /* App */], __WEBPACK_IMPORTED_MODULE_12_ionic_angular_util_form__["a" /* Form */], __WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */], [2, __WEBPACK_IMPORTED_MODULE_11_ionic_angular_components_item_item__["a" /* Item */]], __WEBPACK_IMPORTED_MODULE_38_ionic_angular_navigation_deep_linker__["a" /* DeepLinker */]], null, null), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](603979776, 10, { options: 1 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_50" /* ɵprd */](1024, null, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [__WEBPACK_IMPORTED_MODULE_36_ionic_angular_components_select_select__["a" /* Select */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](17, 671744, null, 0, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["q" /* NgModel */], [[2, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["b" /* ControlContainer */]], [8, null], [8, null], [2, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["l" /* NG_VALUE_ACCESSOR */]]], { model: [0, "model"] }, { update: "ngModelChange" }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_50" /* ɵprd */](2048, null, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["m" /* NgControl */], null, [__WEBPACK_IMPORTED_MODULE_39__angular_forms__["q" /* NgModel */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](19, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["n" /* NgControlStatus */], [__WEBPACK_IMPORTED_MODULE_39__angular_forms__["m" /* NgControl */]], null, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModWorkshopAssessmentStrategyComponent_8)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](22, 802816, null, 0, __WEBPACK_IMPORTED_MODULE_28__angular_common__["j" /* NgForOf */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewContainerRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* TemplateRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = true; _ck(_v, 9, 0, currVal_0); var currVal_10 = _co.weight; _ck(_v, 17, 0, currVal_10); var currVal_11 = _co.weights; _ck(_v, 22, 0, currVal_11); }, function (_ck, _v) { var currVal_1 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_56" /* ɵunv */](_v, 10, 0, __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 11).transform("addon.mod_workshop.assessmentweight")); _ck(_v, 10, 0, currVal_1); var currVal_2 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 14)._disabled; var currVal_3 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassUntouched; var currVal_4 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassTouched; var currVal_5 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassPristine; var currVal_6 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassDirty; var currVal_7 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassValid; var currVal_8 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassInvalid; var currVal_9 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassPending; _ck(_v, 13, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9); }); }
+    } return ad; }, __WEBPACK_IMPORTED_MODULE_35__node_modules_ionic_angular_components_select_select_ngfactory__["b" /* View_Select_0 */], __WEBPACK_IMPORTED_MODULE_35__node_modules_ionic_angular_components_select_select_ngfactory__["a" /* RenderType_Select */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](14, 1228800, null, 1, __WEBPACK_IMPORTED_MODULE_36_ionic_angular_components_select_select__["a" /* Select */], [__WEBPACK_IMPORTED_MODULE_37_ionic_angular_components_app_app__["a" /* App */], __WEBPACK_IMPORTED_MODULE_12_ionic_angular_util_form__["a" /* Form */], __WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */], [2, __WEBPACK_IMPORTED_MODULE_11_ionic_angular_components_item_item__["a" /* Item */]], __WEBPACK_IMPORTED_MODULE_38_ionic_angular_navigation_deep_linker__["a" /* DeepLinker */]], { interface: [0, "interface"] }, null), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](603979776, 10, { options: 1 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_50" /* ɵprd */](1024, null, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [__WEBPACK_IMPORTED_MODULE_36_ionic_angular_components_select_select__["a" /* Select */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](17, 671744, null, 0, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["q" /* NgModel */], [[2, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["b" /* ControlContainer */]], [8, null], [8, null], [2, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["l" /* NG_VALUE_ACCESSOR */]]], { model: [0, "model"] }, { update: "ngModelChange" }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_50" /* ɵprd */](2048, null, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["m" /* NgControl */], null, [__WEBPACK_IMPORTED_MODULE_39__angular_forms__["q" /* NgModel */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](19, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_39__angular_forms__["n" /* NgControlStatus */], [__WEBPACK_IMPORTED_MODULE_39__angular_forms__["m" /* NgControl */]], null, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModWorkshopAssessmentStrategyComponent_8)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](22, 802816, null, 0, __WEBPACK_IMPORTED_MODULE_28__angular_common__["j" /* NgForOf */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_11" /* ViewContainerRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_6" /* TemplateRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = true; _ck(_v, 9, 0, currVal_0); var currVal_10 = "popover"; _ck(_v, 14, 0, currVal_10); var currVal_11 = _co.weight; _ck(_v, 17, 0, currVal_11); var currVal_12 = _co.weights; _ck(_v, 22, 0, currVal_12); }, function (_ck, _v) { var currVal_1 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_56" /* ɵunv */](_v, 10, 0, __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 11).transform("addon.mod_workshop.assessmentweight")); _ck(_v, 10, 0, currVal_1); var currVal_2 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 14)._disabled; var currVal_3 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassUntouched; var currVal_4 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassTouched; var currVal_5 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassPristine; var currVal_6 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassDirty; var currVal_7 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassValid; var currVal_8 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassInvalid; var currVal_9 = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_44" /* ɵnov */](_v, 19).ngClassPending; _ck(_v, 13, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9); }); }
 function View_AddonModWorkshopAssessmentStrategyComponent_9(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 9, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_item_item_ngfactory__["b" /* View_Item_0 */], __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_item_item_ngfactory__["a" /* RenderType_Item */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 1097728, null, 3, __WEBPACK_IMPORTED_MODULE_11_ionic_angular_components_item_item__["a" /* Item */], [__WEBPACK_IMPORTED_MODULE_12_ionic_angular_util_form__["a" /* Form */], __WEBPACK_IMPORTED_MODULE_13_ionic_angular_config_config__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */], [2, __WEBPACK_IMPORTED_MODULE_14_ionic_angular_components_item_item_reorder__["a" /* ItemReorder */]]], null, null), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](335544320, 11, { contentLabel: 0 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](603979776, 12, { _buttons: 1 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_52" /* ɵqud */](603979776, 13, { _icons: 1 }), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](5, 16384, null, 0, __WEBPACK_IMPORTED_MODULE_15_ionic_angular_components_item_item_content__["a" /* ItemContent */], [], null, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](7, 0, null, 2, 1, "core-format-text", [], null, null, null, null, null)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](8, 540672, null, 0, __WEBPACK_IMPORTED_MODULE_40__directives_format_text__["a" /* CoreFormatTextDirective */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_25__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_19__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_41_ionic_angular_platform_platform__["a" /* Platform */], __WEBPACK_IMPORTED_MODULE_20__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_24__providers_utils_url__["a" /* CoreUrlUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_logger__["a" /* CoreLoggerProvider */], __WEBPACK_IMPORTED_MODULE_26__providers_filepool__["a" /* CoreFilepoolProvider */], __WEBPACK_IMPORTED_MODULE_31__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_42__core_contentlinks_providers_helper__["a" /* CoreContentLinksHelperProvider */], [2, __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__["a" /* NavController */]], [2, __WEBPACK_IMPORTED_MODULE_27_ionic_angular_components_content_content__["a" /* Content */]]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.data.assessment.feedbackauthor; var currVal_1 = _co.component; var currVal_2 = _co.componentId; _ck(_v, 8, 0, currVal_0, currVal_1, currVal_2); }, null); }
 function View_AddonModWorkshopAssessmentStrategyComponent_12(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 1, "core-file", [], null, null, null, __WEBPACK_IMPORTED_MODULE_43__components_file_file_ngfactory__["b" /* View_CoreFileComponent_0 */], __WEBPACK_IMPORTED_MODULE_43__components_file_file_ngfactory__["a" /* RenderType_CoreFileComponent */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 245760, null, 0, __WEBPACK_IMPORTED_MODULE_44__components_file_file__["a" /* CoreFileComponent */], [__WEBPACK_IMPORTED_MODULE_25__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_20__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_26__providers_filepool__["a" /* CoreFilepoolProvider */], __WEBPACK_IMPORTED_MODULE_31__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_45__providers_file_helper__["a" /* CoreFileHelperProvider */], __WEBPACK_IMPORTED_MODULE_46__providers_utils_mimetype__["a" /* CoreMimetypeUtilsProvider */], __WEBPACK_IMPORTED_MODULE_47__providers_events__["a" /* CoreEventsProvider */]], { file: [0, "file"], component: [1, "component"], componentId: [2, "componentId"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.parent.context.$implicit; var currVal_1 = _co.component; var currVal_2 = _co.componentId; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
 function View_AddonModWorkshopAssessmentStrategyComponent_13(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 1, "core-local-file", [], null, null, null, __WEBPACK_IMPORTED_MODULE_48__components_local_file_local_file_ngfactory__["b" /* View_CoreLocalFileComponent_0 */], __WEBPACK_IMPORTED_MODULE_48__components_local_file_local_file_ngfactory__["a" /* RenderType_CoreLocalFileComponent */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 114688, null, 0, __WEBPACK_IMPORTED_MODULE_49__components_local_file_local_file__["a" /* CoreLocalFileComponent */], [__WEBPACK_IMPORTED_MODULE_46__providers_utils_mimetype__["a" /* CoreMimetypeUtilsProvider */], __WEBPACK_IMPORTED_MODULE_20__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_19__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_50__providers_file__["a" /* CoreFileProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */]], { file: [0, "file"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit; _ck(_v, 1, 0, currVal_0); }, null); }
