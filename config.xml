@@ -141,7 +141,7 @@
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
     <gap:plugin name="cordova-clipboard" source="npm" />
     <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
-    <gap:plugin name="phonegap-plugin-push" source="npm" version="1.9.2">
+    <gap:plugin name="phonegap-plugin-push" source="npm" version="1.11.1">
         <param name="SENDER_ID" value="694767596569" />
     </gap:plugin>
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm" >
