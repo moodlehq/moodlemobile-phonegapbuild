@@ -107,8 +107,10 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
                     // Check if the redirect page is the root page of any of the tabs.
                     _this.initialTab = 0;
                     for (var i = 0; i < _this.tabs.length; i++) {
-                        if (_this.tabs[i].page == _this.redirectPage) {
+                        var tab = _this.tabs[i];
+                        if (tab.page == _this.redirectPage) {
                             _this.initialTab = i + 1;
+                            tab.pageParams = Object.assign(tab.pageParams || {}, _this.redirectParams);
                             break;
                         }
                     }
