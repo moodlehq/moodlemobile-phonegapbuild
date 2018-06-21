@@ -126,10 +126,6 @@
 
     <gap:plugin name="cordova-plugin-camera" source="npm" />
     <gap:plugin name="cordova-plugin-media-capture" source="npm" >
-        <param name="CAMERA_USAGE_DESCRIPTION" value="We'd like to access your camera to let you take a photo"/>
-        <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We'd like to access your photo library to let you pick a photo"/>
-        <param name="MICROPHONE_USAGE_DESCRIPTION" value="We'd like to access your microphone to let you record an audio"/>
-    </gap:plugin>
     <gap:plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-file" source="npm" />
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
@@ -165,7 +161,17 @@
 
     <!-- See MOBILE-892 -->
     <preference name="permissions" value="none"/>
-
+        
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+      <string>need camera access to take pictures</string>
+    </edit-config>
+    <edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge">
+      <string>need microphone access to record sounds</string>
+    </edit-config>
+    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+      <string>need to photo library access to get pictures from there</string>
+    </edit-config>
+            
     <gap:config-file platform="android" parent="/manifest" mode="delete">
         <uses-permission android:name="android.permission.WRITE_CONTACTS" />
         <uses-permission android:name="android.permission.READ_CONTACTS" />
