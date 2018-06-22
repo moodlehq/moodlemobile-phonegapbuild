@@ -77,6 +77,7 @@
     "addon.coursecompletion.completecourse": "Complete course",
     "addon.coursecompletion.completed": "Completed",
     "addon.coursecompletion.completiondate": "Completion date",
+    "addon.coursecompletion.completionmenuitem": "Completion",
     "addon.coursecompletion.couldnotloadreport": "Could not load the course completion report. Please try again later.",
     "addon.coursecompletion.coursecompletion": "Course completion",
     "addon.coursecompletion.criteria": "Criteria",
