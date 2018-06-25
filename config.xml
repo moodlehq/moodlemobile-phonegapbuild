@@ -16,7 +16,7 @@
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
-        <string>3.5.0</string>
+        <string>3.5.1</string>
     </edit-config>
 
     <gap:platform name="ios" />
