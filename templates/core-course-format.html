@@ -1,8 +1,15 @@
+<!-- Buttons to add to the header. *ngIf is needed, otherwise the component is executed too soon and doesn't find the header. -->
+<core-navbar-buttons end *ngIf="loaded">
+    <core-context-menu>
+        <core-context-menu-item [hidden]="!displaySectionSelector || !sections || !sections.length" [priority]="500" [content]="'core.course.sections' | translate" (action)="showSectionSelector($event)" iconAction="menu"></core-context-menu-item>
+    </core-context-menu>
+</core-navbar-buttons>
+
 <!-- Default course format. -->
 <core-dynamic-component [component]="courseFormatComponent" [data]="data">
     <!-- Course summary. By default we only display the course progress. -->
     <core-dynamic-component [component]="courseSummaryComponent" [data]="data">
-        <ion-list no-lines>
+        <ion-list no-lines *ngIf="course.imageThumb || (course.progress != null && course.progress >= 0)" class="core-format-progress-list">
             <div *ngIf="course.imageThumb" class="core-course-thumb">
                 <img [src]="course.imageThumb" core-external-content alt=""/>
             </div>
@@ -16,10 +23,10 @@
         <!-- Section selector. -->
         <core-dynamic-component [component]="sectionSelectorComponent" [data]="data">
             <div text-wrap *ngIf="displaySectionSelector && sections && sections.length" no-padding class="clearfix">
-                <!-- @todo: How to display availabilityinfo and not visible messages? -->
-                <ion-select [ngModel]="selectedSection" (ngModelChange)="sectionChanged($event)" [compareWith]="compareSections" [selectOptions]="selectOptions" float-start interface="popover">
-                    <ion-option *ngFor="let section of sections" [value]="section">{{section.formattedName || section.name}}</ion-option>
-                </ion-select>
+                <button float-start ion-button (click)="showSectionSelector($event)" clear class="core-button-select button-no-uppercase">
+                    {{selectedSection && (selectedSection.formattedName || selectedSection.name) || 'core.course.sections' | translate }}
+                    <ion-icon name="arrow-dropdown" ios="md-arrow-dropdown"></ion-icon>
+                </button>
                 <!-- Section download. -->
                 <ng-container *ngTemplateOutlet="sectionDownloadTemplate; context: {section: selectedSection}"></ng-container>
             </div>

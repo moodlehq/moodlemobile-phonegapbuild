@@ -3,21 +3,21 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.moodle.moodlemobile"
-        versionCode = "20240"
+        versionCode = "35000"
         version   = "3.5.0">
-    <name>Moodle Mobile</name>
+    <name>Moodle</name>
 
     <description>
-        Moodle Mobile official app
+        Moodle official app
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
         Moodle Mobile team
     </author>
 
-    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-        <string>3.4.2</string>
-    </gap:config-file>
+    <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
+        <string>3.5.0</string>
+    </edit-config>
 
     <gap:platform name="ios" />
     <gap:platform name="android" />
@@ -57,7 +57,7 @@
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashScreenDelay" value="15000" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
@@ -125,11 +125,7 @@
     </platform>
 
     <gap:plugin name="cordova-plugin-camera" source="npm" />
-    <gap:plugin name="cordova-plugin-media-capture" source="npm" >
-        <param name="CAMERA_USAGE_DESCRIPTION" value="We'd like to access your camera to let you take a photo"/>
-        <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We'd like to access your photo library to let you pick a photo"/>
-        <param name="MICROPHONE_USAGE_DESCRIPTION" value="We'd like to access your microphone to let you record an audio"/>
-    </gap:plugin>
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" />
     <gap:plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-file" source="npm" />
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
@@ -141,7 +137,7 @@
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
     <gap:plugin name="cordova-clipboard" source="npm" />
     <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
-    <gap:plugin name="phonegap-plugin-push" source="npm" >
+    <gap:plugin name="phonegap-plugin-push" source="npm" version="1.11.1">
         <param name="SENDER_ID" value="694767596569" />
     </gap:plugin>
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm" >
@@ -159,21 +155,22 @@
         <param name="ANDROID_SUPPORT_VERSION" value="27.1.0" />
     </gap:plugin>
 
-    <gap:config-file platform="android" parent="/manifest">
-         <application android:debuggable="true" />
-    </gap:config-file>
+    <!-- @todo: Android debuggable. -->
 
     <!-- See MOBILE-892 -->
     <preference name="permissions" value="none"/>
 
-    <gap:config-file platform="android" parent="/manifest" mode="delete">
-        <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
-        <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-        <uses-permission android:name="android.permission.VIBRATE"/>
-    </gap:config-file>
+    <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need camera access to take pictures</string>
+    </edit-config>
+    <edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need microphone access to record sounds</string>
+    </edit-config>
+    <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+        <string>need to photo library access to get pictures from there</string>
+    </edit-config>
 
-    <gap:config-file platform="ios" parent="CFBundleDocumentTypes" mode="add">
+    <config-file target="*-Info.plist" parent="CFBundleDocumentTypes">
         <array>
             <dict>
                 <key>CFBundleTypeName</key>
@@ -551,16 +548,5 @@
                 </array>
             </dict>
         </array>
-    </gap:config-file>
-
-    <gap:config-file platform="ios" parent="NSAppTransportSecurity" mode="add">
-        <dict>
-            <key>NSAllowsArbitraryLoads</key><true/>
-        </dict>
-    </gap:config-file>
-
-    <gap:config-file platform="ios" parent="NSPhotoLibraryUsageDescription">
-        <string>We'd like to access your photo library to let you upload a photo or image to the site.</string>
-    </gap:config-file>
-
+    </config-file>
 </widget>
