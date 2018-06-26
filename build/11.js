@@ -125,7 +125,7 @@ var my_courses_CoreCoursesMyCoursesPage = /** @class */ (function () {
                 return course.id;
             });
             _this.courseIds = courseIds.join(',');
-            if (_this.courseIds) {
+            if (_this.courseIds && _this.coursesProvider.isGetCoursesByFieldAvailable()) {
                 // Load course image of all the courses.
                 promises.push(_this.coursesProvider.getCoursesByField('ids', _this.courseIds).then(function (coursesInfo) {
                     coursesInfo = _this.utils.arrayToObject(coursesInfo, 'id');
@@ -140,12 +140,14 @@ var my_courses_CoreCoursesMyCoursesPage = /** @class */ (function () {
                     });
                 }));
             }
-            promises.push(_this.coursesProvider.getCoursesAdminAndNavOptions(courseIds).then(function (options) {
-                courses.forEach(function (course) {
-                    course.navOptions = options.navOptions[course.id];
-                    course.admOptions = options.admOptions[course.id];
-                });
-            }));
+            if (_this.coursesProvider.canGetAdminAndNavOptions()) {
+                promises.push(_this.coursesProvider.getCoursesAdminAndNavOptions(courseIds).then(function (options) {
+                    courses.forEach(function (course) {
+                        course.navOptions = options.navOptions[course.id];
+                        course.admOptions = options.admOptions[course.id];
+                    });
+                }));
+            }
             return Promise.all(promises).then(function () {
                 _this.courses = courses;
                 _this.filteredCourses = _this.courses;

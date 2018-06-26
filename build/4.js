@@ -257,15 +257,17 @@ var my_overview_CoreCoursesMyOverviewPage = /** @class */ (function () {
             var promises = [], courseIds = courses.map(function (course) {
                 return course.id;
             });
-            // Load course options of the course.
-            promises.push(_this.coursesProvider.getCoursesAdminAndNavOptions(courseIds).then(function (options) {
-                courses.forEach(function (course) {
-                    course.navOptions = options.navOptions[course.id];
-                    course.admOptions = options.admOptions[course.id];
-                });
-            }));
+            if (_this.coursesProvider.canGetAdminAndNavOptions()) {
+                // Load course options of the course.
+                promises.push(_this.coursesProvider.getCoursesAdminAndNavOptions(courseIds).then(function (options) {
+                    courses.forEach(function (course) {
+                        course.navOptions = options.navOptions[course.id];
+                        course.admOptions = options.admOptions[course.id];
+                    });
+                }));
+            }
             _this.courseIds = courseIds.join(',');
-            if (_this.courseIds) {
+            if (_this.courseIds && _this.coursesProvider.isGetCoursesByFieldAvailable()) {
                 // Load course image of all the courses.
                 promises.push(_this.coursesProvider.getCoursesByField('ids', _this.courseIds).then(function (coursesInfo) {
                     coursesInfo = _this.utils.arrayToObject(coursesInfo, 'id');
