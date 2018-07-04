@@ -104,7 +104,6 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
         this.svComponent = svComponent;
         this.userLoaded = false;
         this.isLoadingHandlers = false;
-        this.user = {};
         this.isDeleted = false;
         this.canChangeProfilePicture = false;
         this.actionHandlers = [];
@@ -121,7 +120,7 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
                 this.site.wsAvailable('core_user_update_picture') &&
                 !this.userProvider.isUpdatePictureDisabledInSite(this.site);
         this.obsProfileRefreshed = eventsProvider.on(providers_user["a" /* CoreUserProvider */].PROFILE_REFRESHED, function (data) {
-            if (typeof data.user != 'undefined') {
+            if (_this.user && typeof data.user != 'undefined') {
                 _this.user.email = data.user.email;
                 _this.user.address = _this.userHelper.formatAddress('', data.user.city, data.user.country);
             }
@@ -171,7 +170,10 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
                 _this.isLoadingHandlers = !_this.userDelegate.areHandlersLoaded();
             });
         }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'core.user.errorloaduser', true);
+            // Error is null for deleted users, do not show the modal.
+            if (error) {
+                _this.domUtils.showErrorModal(error);
+            }
         });
     };
     /**

@@ -43,7 +43,7 @@ var utils_text = __webpack_require__(11);
 var course = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
-var helper = __webpack_require__(40);
+var helper = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki.ts
 var wiki = __webpack_require__(202);

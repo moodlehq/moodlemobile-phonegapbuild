@@ -264,7 +264,7 @@ var translate_service = __webpack_require__(16);
 var siteplugins = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
-var helper = __webpack_require__(40);
+var helper = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-prefetch-delegate.ts
 var module_prefetch_delegate = __webpack_require__(49);

@@ -34,7 +34,7 @@ var dom = __webpack_require__(3);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(42);
+var time = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/core/question/providers/helper.ts
 var helper = __webpack_require__(113);

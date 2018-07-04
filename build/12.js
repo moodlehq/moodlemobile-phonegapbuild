@@ -27,6 +27,9 @@ var pipes_module = __webpack_require__(106);
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(10);
 
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(20);
+
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(4);
 
@@ -82,11 +85,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Page that displays a chat session.
  */
 var chat_AddonModChatChatPage = /** @class */ (function () {
-    function AddonModChatChatPage(navParams, logger, network, zone, navCtrl, chatProvider, appProvider, sitesProvider, modalCtrl, domUtils, textUtils) {
+    function AddonModChatChatPage(navParams, logger, network, zone, navCtrl, chatProvider, appProvider, sitesProvider, modalCtrl, domUtils, textUtils, eventsProvider) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.chatProvider = chatProvider;
@@ -94,6 +98,7 @@ var chat_AddonModChatChatPage = /** @class */ (function () {
         this.modalCtrl = modalCtrl;
         this.domUtils = domUtils;
         this.textUtils = textUtils;
+        this.eventsProvider = eventsProvider;
         this.loaded = false;
         this.messages = [];
         this.lastTime = 0;
@@ -130,6 +135,10 @@ var chat_AddonModChatChatPage = /** @class */ (function () {
             _this.navCtrl.pop();
         }).finally(function () {
             _this.loaded = true;
+        });
+        // Recalculate footer position when keyboard is shown or hidden.
+        this.keyboardObserver = this.eventsProvider.on(events["a" /* CoreEventsProvider */].KEYBOARD_CHANGE, function (isOn) {
+            _this.content.resize();
         });
     };
     /**
@@ -342,6 +351,7 @@ var chat_AddonModChatChatPage = /** @class */ (function () {
      */
     AddonModChatChatPage.prototype.ngOnDestroy = function () {
         this.onlineObserver && this.onlineObserver.unsubscribe();
+        this.keyboardObserver && this.keyboardObserver.off();
         this.stopPolling();
         this.viewDestroyed = true;
     };
@@ -356,7 +366,8 @@ var chat_AddonModChatChatPage = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], logger["a" /* CoreLoggerProvider */], network["a" /* Network */], core["M" /* NgZone */], ionic_angular["q" /* NavController */],
             chat["a" /* AddonModChatProvider */], app["a" /* CoreAppProvider */], sites["a" /* CoreSitesProvider */],
-            ionic_angular["o" /* ModalController */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */]])
+            ionic_angular["o" /* ModalController */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */],
+            events["a" /* CoreEventsProvider */]])
     ], AddonModChatChatPage);
     return AddonModChatChatPage;
 }());
@@ -638,6 +649,7 @@ var modal_controller = __webpack_require__(197);
 
 
 
+
 var styles_AddonModChatChatPage = [];
 var RenderType_AddonModChatChatPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModChatChatPage, data: {} });
 
@@ -668,7 +680,7 @@ function View_AddonModChatChatPage_11(_l) { return core["_57" /* ɵvid */](0, [(
         ad = (pd_0 && ad);
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](2, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = "light"; var currVal_1 = ""; _ck(_v, 1, 0, currVal_0, currVal_1); }, function (_ck, _v) { var currVal_2 = core["_56" /* ɵunv */](_v, 2, 0, core["_44" /* ɵnov */](_v, 3).transform("core.login.reconnect")); _ck(_v, 2, 0, currVal_2); }); }
 function View_AddonModChatChatPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, format_date["a" /* CoreFormatDatePipe */], [logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */]]), core["_52" /* ɵqud */](402653184, 1, { content: 0 }), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 19, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](3, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 15, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](6, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](8, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](9, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](11, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 2, 6, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](14, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModChatChatPage_1)), core["_30" /* ɵdid */](18, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](23, 0, null, null, 15, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](24, 4374528, [[1, 4]], 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](26, 0, null, 1, 11, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](27, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](29, 0, null, 0, 7, "div", [["aria-live", "polite"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModChatChatPage_2)), core["_30" /* ɵdid */](32, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModChatChatPage_8)), core["_30" /* ɵdid */](35, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](40, 0, null, null, 15, "ion-footer", [["class", "footer-adjustable"], ["color", "light"]], null, null, null, null, null)), core["_30" /* ɵdid */](41, 16384, null, 0, toolbar_footer["a" /* Footer */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], { color: [0, "color"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](43, 0, null, null, 11, "ion-toolbar", [["class", "toolbar"], ["color", "light"], ["position", "bottom"]], [[2, "statusbar-padding", null]], null, null, toolbar_ngfactory["b" /* View_Toolbar_0 */], toolbar_ngfactory["a" /* RenderType_Toolbar */])), core["_30" /* ɵdid */](44, 49152, null, 0, toolbar["a" /* Toolbar */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 3, 1, null, View_AddonModChatChatPage_9)), core["_30" /* ɵdid */](47, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 3, 1, null, View_AddonModChatChatPage_10)), core["_30" /* ɵdid */](50, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 3, 1, null, View_AddonModChatChatPage_11)), core["_30" /* ɵdid */](53, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.title; _ck(_v, 11, 0, currVal_2); var currVal_3 = _co.loaded; _ck(_v, 18, 0, currVal_3); var currVal_6 = _co.loaded; _ck(_v, 27, 0, currVal_6); var currVal_7 = _co.messages; _ck(_v, 32, 0, currVal_7); var currVal_8 = (!_co.messages || (_co.messages.length <= 0)); _ck(_v, 35, 0, currVal_8); var currVal_9 = "light"; _ck(_v, 41, 0, currVal_9); var currVal_11 = "light"; _ck(_v, 44, 0, currVal_11); var currVal_12 = !_co.isOnline; _ck(_v, 47, 0, currVal_12); var currVal_13 = ((_co.isOnline && _co.polling) && _co.loaded); _ck(_v, 50, 0, currVal_13); var currVal_14 = ((_co.isOnline && !_co.polling) && _co.loaded); _ck(_v, 53, 0, currVal_14); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 6)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 6)._sbPadding; _ck(_v, 5, 0, currVal_0, currVal_1); var currVal_4 = core["_44" /* ɵnov */](_v, 24).statusbarPadding; var currVal_5 = core["_44" /* ɵnov */](_v, 24)._hasRefresher; _ck(_v, 23, 0, currVal_4, currVal_5); var currVal_10 = core["_44" /* ɵnov */](_v, 44)._sbPadding; _ck(_v, 43, 0, currVal_10); }); }
-function View_AddonModChatChatPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-chat-chat", [], null, null, null, View_AddonModChatChatPage_0, RenderType_AddonModChatChatPage)), core["_30" /* ɵdid */](1, 180224, null, 0, chat_AddonModChatChatPage, [nav_params["a" /* NavParams */], logger["a" /* CoreLoggerProvider */], network["a" /* Network */], core["M" /* NgZone */], nav_controller["a" /* NavController */], chat["a" /* AddonModChatProvider */], app["a" /* CoreAppProvider */], sites["a" /* CoreSitesProvider */], modal_controller["a" /* ModalController */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */]], null, null)], null, null); }
+function View_AddonModChatChatPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-chat-chat", [], null, null, null, View_AddonModChatChatPage_0, RenderType_AddonModChatChatPage)), core["_30" /* ɵdid */](1, 180224, null, 0, chat_AddonModChatChatPage, [nav_params["a" /* NavParams */], logger["a" /* CoreLoggerProvider */], network["a" /* Network */], core["M" /* NgZone */], nav_controller["a" /* NavController */], chat["a" /* AddonModChatProvider */], app["a" /* CoreAppProvider */], sites["a" /* CoreSitesProvider */], modal_controller["a" /* ModalController */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], events["a" /* CoreEventsProvider */]], null, null)], null, null); }
 var AddonModChatChatPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-chat-chat", chat_AddonModChatChatPage, View_AddonModChatChatPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=chat.ngfactory.js.map

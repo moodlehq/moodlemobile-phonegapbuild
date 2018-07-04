@@ -217,6 +217,10 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
                 _this.loaded = true;
             });
         });
+        // Recalculate footer position when keyboard is shown or hidden.
+        this.keyboardObserver = this.eventsProvider.on(events["a" /* CoreEventsProvider */].KEYBOARD_CHANGE, function (isOn) {
+            _this.content.resize();
+        });
     };
     /**
      * Runs when the page has fully entered and is now the active page.
@@ -686,6 +690,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
         // Unset again, just in case.
         this.unsetPolling();
         this.syncObserver && this.syncObserver.off();
+        this.keyboardObserver && this.keyboardObserver.off();
         this.viewDestroyed = true;
     };
     __decorate([

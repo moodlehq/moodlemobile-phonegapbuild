@@ -192,7 +192,7 @@ var iframe = __webpack_require__(276);
 var logger = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
-var file = __webpack_require__(41);
+var file = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
 var url = __webpack_require__(23);

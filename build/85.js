@@ -296,7 +296,7 @@ var lesson_sync = __webpack_require__(278);
 var prefetch_handler = __webpack_require__(286);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(42);
+var time = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
 var user = __webpack_require__(43);

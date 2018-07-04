@@ -40,7 +40,7 @@ var options_delegate = __webpack_require__(167);
 var course = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
-var helper = __webpack_require__(40);
+var helper = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/core/course/providers/format-delegate.ts
 var format_delegate = __webpack_require__(145);

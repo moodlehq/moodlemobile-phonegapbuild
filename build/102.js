@@ -270,7 +270,7 @@ var translate_pipe = __webpack_require__(27);
 var chat = __webpack_require__(333);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(42);
+var time = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(57);

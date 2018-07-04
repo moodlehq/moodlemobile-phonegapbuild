@@ -31,7 +31,7 @@ var utils = __webpack_require__(2);
 var courses = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
-var helper = __webpack_require__(40);
+var helper = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/core/course/providers/options-delegate.ts
 var options_delegate = __webpack_require__(167);
@@ -792,7 +792,7 @@ var SearchbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵ
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__angular_platform_browser__ = __webpack_require__(85);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_ionic_angular_components_card_card__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__course_progress__ = __webpack_require__(1314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__course_providers_helper__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__course_providers_helper__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__course_providers_format_delegate__ = __webpack_require__(145);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__course_providers_course__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__providers_events__ = __webpack_require__(20);

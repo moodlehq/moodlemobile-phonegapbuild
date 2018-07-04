@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(9);
 var _ngx_translate_core = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
-var file = __webpack_require__(41);
+var file = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(15);

@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(5);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
-var helper = __webpack_require__(40);
+var helper = __webpack_require__(41);
 
 // CONCATENATED MODULE: ./src/core/sitehome/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -475,7 +475,7 @@ var module_module = __webpack_require__(1304);
 var module_prefetch_delegate = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
-var providers_helper = __webpack_require__(40);
+var providers_helper = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(20);
@@ -645,7 +645,7 @@ var module_module = __webpack_require__(1304);
 var module_prefetch_delegate = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
-var providers_helper = __webpack_require__(40);
+var providers_helper = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(20);

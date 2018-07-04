@@ -25,7 +25,7 @@ var constants = __webpack_require__(55);
 var config = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
-var file = __webpack_require__(41);
+var file = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(20);

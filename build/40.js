@@ -22,7 +22,7 @@ var _ionic_native_device = __webpack_require__(433);
 var app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
-var file = __webpack_require__(41);
+var file = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
 var init = __webpack_require__(151);

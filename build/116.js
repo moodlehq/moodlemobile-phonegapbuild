@@ -28,7 +28,7 @@ var pipes_module = __webpack_require__(106);
 var badges = __webpack_require__(274);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(42);
+var time = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(3);
