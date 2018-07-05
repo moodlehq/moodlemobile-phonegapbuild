@@ -1,6 +1,6 @@
 webpackJsonp([97],{
 
-/***/ 1806:
+/***/ 1804:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,10 +19,10 @@ var _ngx_translate_core = __webpack_require__(5);
 var directives_module = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/components.module.ts + 2 modules
-var components_module = __webpack_require__(421);
+var components_module = __webpack_require__(420);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ts
-var index = __webpack_require__(458);
+var index = __webpack_require__(439);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -280,7 +280,7 @@ var providers_helper = __webpack_require__(244);
 var offline = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/sync.ts
-var sync = __webpack_require__(283);
+var sync = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(40);
@@ -397,7 +397,7 @@ var components_components_module = __webpack_require__(32);
 var course_components_components_module = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(420);
+var compile_html_module = __webpack_require__(421);
 
 // EXTERNAL MODULE: ./src/core/comments/components/components.module.ts
 var comments_components_components_module = __webpack_require__(423);

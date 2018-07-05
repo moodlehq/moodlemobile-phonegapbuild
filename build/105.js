@@ -40,7 +40,7 @@ var utils_text = __webpack_require__(11);
 var files = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/helper.ts
-var helper = __webpack_require__(663);
+var helper = __webpack_require__(664);
 
 // CONCATENATED MODULE: ./src/addon/files/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas

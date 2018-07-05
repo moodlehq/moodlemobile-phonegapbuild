@@ -19,10 +19,10 @@ var _ngx_translate_core = __webpack_require__(5);
 var directives_module = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/addon/mod/survey/components/components.module.ts
-var components_module = __webpack_require__(678);
+var components_module = __webpack_require__(679);
 
 // EXTERNAL MODULE: ./src/addon/mod/survey/components/index/index.ts
-var index = __webpack_require__(454);
+var index = __webpack_require__(455);
 
 // CONCATENATED MODULE: ./src/addon/mod/survey/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

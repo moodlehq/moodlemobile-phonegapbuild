@@ -82,7 +82,7 @@ var phase_AddonModWorkshopPhaseSelectorPage = /** @class */ (function () {
 
 //# sourceMappingURL=phase.js.map
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(420);
+var compile_html_module = __webpack_require__(421);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/phase/phase.module.ts
 // (C) Copyright 2015 Martin Dougiamas

@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 1865:
+/***/ 1864:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -198,7 +198,7 @@ var split_view_ngfactory = __webpack_require__(422);
 var split_view = __webpack_require__(130);
 
 // EXTERNAL MODULE: ./src/core/grades/components/course/course.ts
-var course = __webpack_require__(439);
+var course = __webpack_require__(440);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
 var grades = __webpack_require__(137);

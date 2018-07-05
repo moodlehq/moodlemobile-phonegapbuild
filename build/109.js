@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(9);
 var _ngx_translate_core = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/addon/competency/components/components.module.ts
-var components_module = __webpack_require__(661);
+var components_module = __webpack_require__(662);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/coursecompetencies/coursecompetencies.ts
 // (C) Copyright 2015 Martin Dougiamas

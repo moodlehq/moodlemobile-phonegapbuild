@@ -46,7 +46,7 @@ var sites = __webpack_require__(1);
 var local_notifications = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ts
-var course_picker_menu_popover = __webpack_require__(683);
+var course_picker_menu_popover = __webpack_require__(684);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var providers_events = __webpack_require__(20);

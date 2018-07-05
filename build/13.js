@@ -1,6 +1,6 @@
 webpackJsonp([13],{
 
-/***/ 1791:
+/***/ 1793:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -806,7 +806,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1297);
 var recaptchamodal_ngfactory = __webpack_require__(1298);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/chip/chip.js
-var chip = __webpack_require__(682);
+var chip = __webpack_require__(683);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -959,7 +959,7 @@ var gesture_controller = __webpack_require__(35);
 var toolbar_footer = __webpack_require__(658);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1901);
+var toolbar_ngfactory = __webpack_require__(1904);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ngfactory.js
 var send_message_form_ngfactory = __webpack_require__(1906);
@@ -1147,7 +1147,7 @@ var AddonMessagesDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](discuss
 
 /***/ }),
 
-/***/ 1901:
+/***/ 1904:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -1,6 +1,6 @@
 webpackJsonp([85],{
 
-/***/ 1821:
+/***/ 1822:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,10 +19,10 @@ var _ngx_translate_core = __webpack_require__(5);
 var directives_module = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/components/components.module.ts
-var components_module = __webpack_require__(672);
+var components_module = __webpack_require__(673);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/components/index/index.ts
-var index = __webpack_require__(448);
+var index = __webpack_require__(449);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

@@ -19,10 +19,10 @@ var _ngx_translate_core = __webpack_require__(5);
 var directives_module = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/components.module.ts
-var components_module = __webpack_require__(677);
+var components_module = __webpack_require__(678);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/index/index.ts
-var index = __webpack_require__(453);
+var index = __webpack_require__(454);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

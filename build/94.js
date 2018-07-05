@@ -1,6 +1,6 @@
 webpackJsonp([94],{
 
-/***/ 1810:
+/***/ 1809:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(30);
 var components_module = __webpack_require__(641);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/components/index/index.ts
-var index = __webpack_require__(442);
+var index = __webpack_require__(443);
 
 // CONCATENATED MODULE: ./src/addon/mod/feedback/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

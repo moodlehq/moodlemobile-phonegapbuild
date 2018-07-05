@@ -22,7 +22,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/sharedfiles/providers/helper.ts
-var helper = __webpack_require__(441);
+var helper = __webpack_require__(442);
 
 // CONCATENATED MODULE: ./src/core/sharedfiles/pages/choose-site/choose-site.ts
 // (C) Copyright 2015 Martin Dougiamas

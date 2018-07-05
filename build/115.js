@@ -432,7 +432,7 @@ var loading = __webpack_require__(48);
 var card_content = __webpack_require__(432);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-title.js
-var card_title = __webpack_require__(681);
+var card_title = __webpack_require__(682);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(57);

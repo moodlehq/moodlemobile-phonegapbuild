@@ -19,10 +19,10 @@ var _ngx_translate_core = __webpack_require__(5);
 var directives_module = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/addon/mod/resource/components/components.module.ts
-var components_module = __webpack_require__(676);
+var components_module = __webpack_require__(677);
 
 // EXTERNAL MODULE: ./src/addon/mod/resource/components/index/index.ts
-var index = __webpack_require__(452);
+var index = __webpack_require__(453);
 
 // CONCATENATED MODULE: ./src/addon/mod/resource/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
