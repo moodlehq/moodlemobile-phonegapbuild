@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(30);
 var components_module = __webpack_require__(674);
 
 // EXTERNAL MODULE: ./src/addon/mod/lti/components/index/index.ts
-var index = __webpack_require__(450);
+var index = __webpack_require__(449);
 
 // CONCATENATED MODULE: ./src/addon/mod/lti/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

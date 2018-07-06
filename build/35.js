@@ -358,7 +358,7 @@ var pipes_module = __webpack_require__(106);
 var components_components_module = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(421);
+var compile_html_module = __webpack_require__(420);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(238);

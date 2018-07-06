@@ -1,6 +1,6 @@
 webpackJsonp([39],{
 
-/***/ 1881:
+/***/ 1882:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(9);
 var _ngx_translate_core = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/core/settings/providers/delegate.ts
-var delegate = __webpack_require__(283);
+var delegate = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(130);

@@ -186,7 +186,7 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/core/grades/components/course/course.ts
-var course = __webpack_require__(440);
+var course = __webpack_require__(439);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
 var grades = __webpack_require__(137);

@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(30);
 var components_module = __webpack_require__(679);
 
 // EXTERNAL MODULE: ./src/addon/mod/survey/components/index/index.ts
-var index = __webpack_require__(455);
+var index = __webpack_require__(454);
 
 // CONCATENATED MODULE: ./src/addon/mod/survey/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

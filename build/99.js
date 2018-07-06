@@ -1,6 +1,6 @@
 webpackJsonp([99],{
 
-/***/ 1805:
+/***/ 1806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,10 +25,10 @@ var components_module = __webpack_require__(32);
 var components_components_module = __webpack_require__(423);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(421);
+var compile_html_module = __webpack_require__(420);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/components.module.ts + 2 modules
-var data_components_components_module = __webpack_require__(420);
+var data_components_components_module = __webpack_require__(421);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(17);

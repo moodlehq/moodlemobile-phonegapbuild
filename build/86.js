@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(30);
 var components_module = __webpack_require__(672);
 
 // EXTERNAL MODULE: ./src/addon/mod/imscp/components/index/index.ts
-var index = __webpack_require__(448);
+var index = __webpack_require__(447);
 
 // CONCATENATED MODULE: ./src/addon/mod/imscp/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

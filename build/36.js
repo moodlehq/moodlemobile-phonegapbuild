@@ -28,7 +28,7 @@ var sites = __webpack_require__(1);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/core/sharedfiles/providers/sharedfiles.ts
-var sharedfiles = __webpack_require__(441);
+var sharedfiles = __webpack_require__(440);
 
 // CONCATENATED MODULE: ./src/core/sharedfiles/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas
