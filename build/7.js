@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 1830:
+/***/ 1831:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -910,7 +910,7 @@ var translate_pipe = __webpack_require__(27);
 var icon = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1904);
+var toolbar_ngfactory = __webpack_require__(1901);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(237);
@@ -1264,7 +1264,7 @@ var AddonModQuizPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_modul
 
 /***/ }),
 
-/***/ 1904:
+/***/ 1901:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
