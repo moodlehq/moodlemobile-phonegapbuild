@@ -59,7 +59,8 @@
 
     <preference name="AndroidPersistentFileLocation"    value="Compatibility" />
     <preference name="iosPersistentFileLocation"        value="Compatibility" />
-
+    <preference name="AutoHideSplashScreen" value="true"/>
+        
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
 
