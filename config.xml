@@ -5,14 +5,14 @@
         id        = "slate.moodlemobile"
         versionCode = "20230"
         version   = "3.4.2">
-    <name>SLATE by theopenschool.in</name>
+    <name>SLATE Mobile</name>
 
     <description>
-        SLATE moodle mobile app by TheOpenSchool
+        SLATE Moodle official app
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team + TheOpenSource team (Madhav)
+        Moodle Mobile team + Madhav
     </author>
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
@@ -59,8 +59,11 @@
 
     <preference name="AndroidPersistentFileLocation"    value="Compatibility" />
     <preference name="iosPersistentFileLocation"        value="Compatibility" />
-    <preference name="AutoHideSplashScreen" value="true"/>
-        
+	
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen"/>
+    </feature>
+	
     <icon src="icon.png" />
     <gap:splash src="splash.png" />
 
@@ -149,7 +152,7 @@
     <gap:plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
 
     <gap:config-file platform="android" parent="/manifest">
-         <application android:debuggable="true" />
+         <application android:debuggable="false" />
     </gap:config-file>
 
     <!-- See MOBILE-892 -->
