@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "35100"
+        id        = "lms.gsdacs.gsdacslms"
+        versionCode = "2019"
         android-versionCode="35100"
-        version   = "3.5.1">
-    <name>Moodle</name>
+        version   = "2.0">
+    <name>GSDACS LMS APP</name>
 
     <description>
-        Moodle official app
+        GSDACS LMS Official APP
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team
+    <author href="https://gsdacs.org" email="techsupport@gsdacs.org">
+        GSDACS IT Department
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
-        <string>3.5.11</string>
+        <string>2.0</string>
     </edit-config>
 
     <gap:platform name="ios" />
