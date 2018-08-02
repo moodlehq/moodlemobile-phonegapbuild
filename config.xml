@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "lms.gsdacs.gsdacslms"
+        id        = "org.gsdacs.gsdacslms"
         versionCode = "2019"
         android-versionCode="35100"
         version   = "2.0">
@@ -304,9 +304,9 @@
                   <string>public.audio</string>
                   <string>public.mp3</string>
                   <string>public.mpeg-4-audio</string>
-                  <string>com.apple.protected-​mpeg-4-audio</string>
+                  <string>com.apple.protected-?mpeg-4-audio</string>
                   <string>public.aifc-audio</string>
-                  <string>com.apple.coreaudio-​format</string>
+                  <string>com.apple.coreaudio-?format</string>
                   <string>public.aiff-audio</string>
                 </array>
             </dict>
@@ -408,14 +408,14 @@
                   <string>public.text</string>
                   <string>public.plain-text</string>
                   <string>public.utf8-plain-text</string>
-                  <string>public.utf16-external-plain-​text</string>
+                  <string>public.utf16-external-plain-?text</string>
                   <string>public.utf16-plain-text</string>
-                  <string>com.apple.traditional-mac-​plain-text</string>
+                  <string>com.apple.traditional-mac-?plain-text</string>
                   <string>public.source-code</string>
                   <string>public.c-source</string>
                   <string>public.objective-c-source</string>
                   <string>public.c-plus-plus-source</string>
-                  <string>public.objective-c-plus-​plus-source</string>
+                  <string>public.objective-c-plus-?plus-source</string>
                   <string>public.c-header</string>
                   <string>public.c-plus-plus-header</string>
                   <string>com.sun.java-source</string>
@@ -480,7 +480,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.microsoft.waveform-​audio</string>
+                  <string>com.microsoft.waveform-?audio</string>
                 </array>
             </dict>
             <dict>
@@ -511,7 +511,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.microsoft.powerpoint.​ppt</string>
+                  <string>com.microsoft.powerpoint.?ppt</string>
                   <string>org.openxmlformats.presentationml.presentation</string>
                 </array>
             </dict>
