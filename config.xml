@@ -59,6 +59,7 @@
     <preference name="AllowInlineMediaPlayback" value="true" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashScreenDelay" value="15000" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
@@ -123,6 +124,7 @@
         <splash src="resources/ios/splash/Default~iphone.png" width="320" height="480"/>
         <splash src="resources/ios/splash/Default-Landscape@~ipadpro.png" width="2732" height="2048"/>
         <splash src="resources/ios/splash/Default-Portrait@~ipadpro.png" width="2048" height="2732"/>
+        <splash src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" height="2732"/>
     </platform>
 
     <gap:plugin name="cordova-plugin-camera" source="npm" />
