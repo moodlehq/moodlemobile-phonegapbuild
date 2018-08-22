@@ -164,13 +164,13 @@
     <preference name="permissions" value="none"/>
 
     <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
-        <string>need camera access to take pictures</string>
+        <string>We need camera access to take pictures so you can attach them as part of your submissions.</string>
     </edit-config>
     <edit-config target="NSMicrophoneUsageDescription" file="*-Info.plist" mode="merge">
-        <string>need microphone access to record sounds</string>
+        <string>We need microphone access to record sounds so you can attach them as part of your submissions.</string>
     </edit-config>
     <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-        <string>need to photo library access to get pictures from there</string>
+        <string>We need photo library access to get pictures from there so you can attach them as part of your submissions.</string>
     </edit-config>
 
     <config-file target="*-Info.plist" parent="CFBundleDocumentTypes">
