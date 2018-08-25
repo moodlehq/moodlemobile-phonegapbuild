@@ -139,7 +139,7 @@
     <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" version="1.0.1" />
 
     <gap:plugin name="phonegap-plugin-push" source="npm" version="1.9.2">
-        <param name="SENDER_ID" value="694767596569" />
+        <param name="SENDER_ID" value="310846153621" />
     </gap:plugin>
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm" version="4.3.0">
         <param name="URL_SCHEME" value="moodlemobile" />
