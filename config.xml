@@ -63,7 +63,7 @@
     <gap:splash src="splash.png" />
 
     <platform name="android">
-        <resource-file src="google-services.json" target="app/google-services.json" />
+        <resource-file src="google-services.json" target="google-services.json" />
         <icon src="resources/android/icon/drawable-ldpi-icon.png" qualifier="ldpi"/>
         <icon src="resources/android/icon/drawable-mdpi-icon.png" qualifier="mdpi"/>
         <icon src="resources/android/icon/drawable-hdpi-icon.png" qualifier="hdpi"/>
