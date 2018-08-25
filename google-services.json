@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "300068415291",
+    "firebase_url": "https://aqdasdasdad.firebaseio.com",
+    "project_id": "aqdasdasdad",
+    "storage_bucket": "aqdasdasdad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300068415291:android:914ceb1eca331188",
+        "android_client_info": {
+          "package_name": "om.allinoneclasses.allinonemobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "300068415291-bujn0hd01vg65nqtdcjhu4gktsk66l8b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUiiw6-nwx8i5uUIBBaOnJNRqLP_lhHyc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
