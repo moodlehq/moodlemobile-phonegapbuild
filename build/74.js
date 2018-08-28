@@ -1,6 +1,6 @@
 webpackJsonp([74],{
 
-/***/ 1836:
+/***/ 1816:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,32 +18,32 @@ var _ngx_translate_core = __webpack_require__(5);
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
 
-// EXTERNAL MODULE: ./src/directives/directives.module.ts + 1 modules
-var directives_module = __webpack_require__(30);
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
+var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(20);
+var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/sync.ts
-var sync = __webpack_require__(81);
+var sync = __webpack_require__(83);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(40);
+var time = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm.ts
-var providers_scorm = __webpack_require__(181);
+var providers_scorm = __webpack_require__(183);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/helper.ts
-var helper = __webpack_require__(339);
+var helper = __webpack_require__(337);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm-sync.ts
-var scorm_sync = __webpack_require__(279);
+var scorm_sync = __webpack_require__(276);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/classes/data-model-12.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -859,7 +859,7 @@ var data_model_12_AddonModScormDataModel12 = /** @class */ (function () {
 
 //# sourceMappingURL=data-model-12.js.map
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/toc-popover/toc-popover.ts
-var toc_popover = __webpack_require__(686);
+var toc_popover = __webpack_require__(680);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -1259,7 +1259,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
             selector: 'page-addon-mod-scorm-player',
             templateUrl: 'player.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], ionic_angular["t" /* PopoverController */], events["a" /* CoreEventsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], ionic_angular["u" /* PopoverController */], events["a" /* CoreEventsProvider */],
             sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */],
             dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */],
             providers_scorm["a" /* AddonModScormProvider */], helper["a" /* AddonModScormHelperProvider */],
@@ -1316,100 +1316,88 @@ var player_module_AddonModScormPlayerPageModule = /** @class */ (function () {
 
 //# sourceMappingURL=player.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1285);
+var action_sheet_component_ngfactory = __webpack_require__(1273);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1286);
+var alert_component_ngfactory = __webpack_require__(1274);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1287);
+var app_root_ngfactory = __webpack_require__(1275);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1288);
+var loading_component_ngfactory = __webpack_require__(1276);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1289);
+var modal_component_ngfactory = __webpack_require__(1277);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1290);
+var picker_component_ngfactory = __webpack_require__(1278);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1291);
+var popover_component_ngfactory = __webpack_require__(1279);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1292);
+var select_popover_component_ngfactory = __webpack_require__(1280);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1293);
+var toast_component_ngfactory = __webpack_require__(1281);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1296);
+var context_menu_popover_ngfactory = __webpack_require__(1284);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1297);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1285);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1298);
+var recaptchamodal_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(44);
+var button_ngfactory = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(38);
+var button_button = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon = __webpack_require__(39);
+var icon = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(178);
+var spinner_ngfactory = __webpack_require__(180);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
-var spinner = __webpack_require__(132);
+var spinner = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ngfactory.js
-var iframe_ngfactory = __webpack_require__(431);
+var iframe_ngfactory = __webpack_require__(429);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ts
-var iframe = __webpack_require__(276);
+var iframe = __webpack_require__(273);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(4);
 
-// EXTERNAL MODULE: ./src/providers/file.ts
-var file = __webpack_require__(42);
-
-// EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(23);
-
-// EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(11);
-
-// EXTERNAL MODULE: ./src/providers/utils/utils.ts
-var utils = __webpack_require__(2);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(13);
+// EXTERNAL MODULE: ./src/providers/utils/iframe.ts
+var utils_iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(85);
+var platform_browser = __webpack_require__(87);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(27);
+var translate_pipe = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(16);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(418);
+var toolbar_header = __webpack_require__(415);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
-var view_controller = __webpack_require__(34);
+var view_controller = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1294);
+var navbar_ngfactory = __webpack_require__(1282);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(191);
@@ -1420,20 +1408,35 @@ var app = __webpack_require__(26);
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
 
+// EXTERNAL MODULE: ./src/directives/back-button.ts
+var back_button = __webpack_require__(633);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(14);
+
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1295);
+var toolbar_title_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(326);
+var toolbar_title = __webpack_require__(324);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(237);
+var toolbar = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
-var format_text = __webpack_require__(37);
+var format_text = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(11);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./src/providers/utils/url.ts
+var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(15);
+var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(10);
@@ -1442,40 +1445,43 @@ var providers_app = __webpack_require__(10);
 var providers_helper = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(24);
+var content = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
+var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(419);
+var toolbar_item = __webpack_require__(416);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(97);
+var keyboard = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
-var loading_ngfactory = __webpack_require__(54);
+var loading_ngfactory = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
-var loading = __webpack_require__(48);
+var loading = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ngfactory.js
-var navigation_bar_ngfactory = __webpack_require__(1371);
+var navigation_bar_ngfactory = __webpack_require__(1359);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ts
 var navigation_bar = __webpack_require__(459);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(57);
+var nav_params = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
-var popover_controller = __webpack_require__(64);
+var popover_controller = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.ngfactory.js
 /**
@@ -1536,6 +1542,8 @@ var popover_controller = __webpack_require__(64);
 
 
 
+
+
 var styles_AddonModScormPlayerPage = [];
 var RenderType_AddonModScormPlayerPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModScormPlayerPage, data: {} });
 
@@ -1544,42 +1552,42 @@ function View_AddonModScormPlayerPage_1(_l) { return core["_57" /* ɵvid */](0, 
         ad = (pd_0 && ad);
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, 0, 1, "ion-icon", [["name", "bookmark"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](4, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var currVal_1 = "bookmark"; _ck(_v, 4, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; _ck(_v, 3, 0, currVal_0); }); }
 function View_AddonModScormPlayerPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "ion-spinner", [], [[2, "spinner-paused", null]], null, null, spinner_ngfactory["b" /* View_Spinner_0 */], spinner_ngfactory["a" /* RenderType_Spinner */])), core["_30" /* ɵdid */](1, 114688, null, 0, spinner["a" /* Spinner */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1)._paused; _ck(_v, 0, 0, currVal_0); }); }
-function View_AddonModScormPlayerPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-iframe", [], null, null, null, iframe_ngfactory["b" /* View_CoreIframeComponent_0 */], iframe_ngfactory["a" /* RenderType_CoreIframeComponent */])), core["_30" /* ɵdid */](1, 638976, null, 0, iframe["a" /* CoreIframeComponent */], [logger["a" /* CoreLoggerProvider */], file["a" /* CoreFileProvider */], url["a" /* CoreUrlUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], sites["a" /* CoreSitesProvider */], platform["a" /* Platform */], platform_browser["c" /* DomSanitizer */]], { src: [0, "src"], iframeWidth: [1, "iframeWidth"], iframeHeight: [2, "iframeHeight"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.src; var currVal_1 = (_co.scorm.popup ? _co.scorm.width : undefined); var currVal_2 = (_co.scorm.popup ? _co.scorm.height : undefined); _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
+function View_AddonModScormPlayerPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-iframe", [], null, null, null, iframe_ngfactory["b" /* View_CoreIframeComponent_0 */], iframe_ngfactory["a" /* RenderType_CoreIframeComponent */])), core["_30" /* ɵdid */](1, 638976, null, 0, iframe["a" /* CoreIframeComponent */], [logger["a" /* CoreLoggerProvider */], utils_iframe["a" /* CoreIframeUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], platform_browser["c" /* DomSanitizer */]], { src: [0, "src"], iframeWidth: [1, "iframeWidth"], iframeHeight: [2, "iframeHeight"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.src; var currVal_1 = (_co.scorm.popup ? _co.scorm.width : undefined); var currVal_2 = (_co.scorm.popup ? _co.scorm.height : undefined); _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
 function View_AddonModScormPlayerPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform(_co.errorMessage)); _ck(_v, 1, 0, currVal_0); }); }
-function View_AddonModScormPlayerPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 22, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 18, "ion-navbar", [["class", "toolbar"]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](7, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_31" /* ɵeld */](8, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](9, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], providers_app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n\n        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 2, 9, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](12, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModScormPlayerPage_1)), core["_30" /* ɵdid */](16, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModScormPlayerPage_2)), core["_30" /* ɵdid */](19, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](24, 0, null, null, 15, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](25, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](27, 0, null, 1, 11, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](28, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](30, 0, null, 0, 1, "core-navigation-bar", [], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
+function View_AddonModScormPlayerPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 23, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 19, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_31" /* ɵeld */](9, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](10, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], providers_app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], utils_iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n\n        "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 2, 9, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](13, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModScormPlayerPage_1)), core["_30" /* ɵdid */](17, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModScormPlayerPage_2)), core["_30" /* ɵdid */](20, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](25, 0, null, null, 15, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](26, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](28, 0, null, 1, 11, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](29, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](31, 0, null, 0, 1, "core-navigation-bar", [], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
         var pd_0 = (_co.loadSco($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, navigation_bar_ngfactory["b" /* View_CoreNavigationBarComponent_0 */], navigation_bar_ngfactory["a" /* RenderType_CoreNavigationBarComponent */])), core["_30" /* ɵdid */](31, 49152, null, 0, navigation_bar["a" /* CoreNavigationBarComponent */], [utils_text["a" /* CoreTextUtilsProvider */]], { previous: [0, "previous"], next: [1, "next"] }, { action: "action" }), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModScormPlayerPage_3)), core["_30" /* ɵdid */](34, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModScormPlayerPage_4)), core["_30" /* ɵdid */](37, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.title; _ck(_v, 9, 0, currVal_2); var currVal_3 = (((_co.showToc && !_co.loadingToc) && _co.toc) && _co.toc.length); _ck(_v, 16, 0, currVal_3); var currVal_4 = (_co.showToc && _co.loadingToc); _ck(_v, 19, 0, currVal_4); var currVal_7 = _co.loaded; _ck(_v, 28, 0, currVal_7); var currVal_8 = _co.previousSco; var currVal_9 = _co.nextSco; _ck(_v, 31, 0, currVal_8, currVal_9); var currVal_10 = (_co.loaded && _co.src); _ck(_v, 34, 0, currVal_10); var currVal_11 = (!_co.src && _co.errorMessage); _ck(_v, 37, 0, currVal_11); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_5 = core["_44" /* ɵnov */](_v, 25).statusbarPadding; var currVal_6 = core["_44" /* ɵnov */](_v, 25)._hasRefresher; _ck(_v, 24, 0, currVal_5, currVal_6); }); }
+    } return ad; }, navigation_bar_ngfactory["b" /* View_CoreNavigationBarComponent_0 */], navigation_bar_ngfactory["a" /* RenderType_CoreNavigationBarComponent */])), core["_30" /* ɵdid */](32, 49152, null, 0, navigation_bar["a" /* CoreNavigationBarComponent */], [utils_text["a" /* CoreTextUtilsProvider */]], { previous: [0, "previous"], next: [1, "next"] }, { action: "action" }), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModScormPlayerPage_3)), core["_30" /* ɵdid */](35, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModScormPlayerPage_4)), core["_30" /* ɵdid */](38, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_2 = _co.title; _ck(_v, 10, 0, currVal_2); var currVal_3 = (((_co.showToc && !_co.loadingToc) && _co.toc) && _co.toc.length); _ck(_v, 17, 0, currVal_3); var currVal_4 = (_co.showToc && _co.loadingToc); _ck(_v, 20, 0, currVal_4); var currVal_7 = _co.loaded; _ck(_v, 29, 0, currVal_7); var currVal_8 = _co.previousSco; var currVal_9 = _co.nextSco; _ck(_v, 32, 0, currVal_8, currVal_9); var currVal_10 = (_co.loaded && _co.src); _ck(_v, 35, 0, currVal_10); var currVal_11 = (!_co.src && _co.errorMessage); _ck(_v, 38, 0, currVal_11); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_5 = core["_44" /* ɵnov */](_v, 26).statusbarPadding; var currVal_6 = core["_44" /* ɵnov */](_v, 26)._hasRefresher; _ck(_v, 25, 0, currVal_5, currVal_6); }); }
 function View_AddonModScormPlayerPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-scorm-player", [], null, null, null, View_AddonModScormPlayerPage_0, RenderType_AddonModScormPlayerPage)), core["_30" /* ɵdid */](1, 245760, null, 0, player_AddonModScormPlayerPage, [nav_params["a" /* NavParams */], popover_controller["a" /* PopoverController */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */], providers_scorm["a" /* AddonModScormProvider */], helper["a" /* AddonModScormHelperProvider */], scorm_sync["a" /* AddonModScormSyncProvider */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var AddonModScormPlayerPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-scorm-player", player_AddonModScormPlayerPage, View_AddonModScormPlayerPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=player.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(17);
+var esm5_forms = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(322);
+var translate_loader = __webpack_require__(320);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(323);
+var translate_compiler = __webpack_require__(321);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(325);
+var translate_parser = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(324);
+var missing_translation_handler = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(417);
+var translate_store = __webpack_require__(414);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(638);
+var ionic_angular_module = __webpack_require__(632);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(106);
+var pipes_module = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(238);
+var module_loader = __webpack_require__(237);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.module.ngfactory.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModScormPlayerPageModuleNgFactory", function() { return AddonModScormPlayerPageModuleNgFactory; });
