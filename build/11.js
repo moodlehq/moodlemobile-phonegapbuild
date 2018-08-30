@@ -175,7 +175,7 @@ var my_courses_CoreCoursesMyCoursesPage = /** @class */ (function () {
         if (this.showFilter) {
             setTimeout(function () {
                 _this.searchbar.setFocus();
-            });
+            }, 500);
         }
     };
     /**
