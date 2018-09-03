@@ -731,6 +731,7 @@
     "addon.notes.userwithid": "User with ID {{id}}",
     "addon.notes.warningnotenotsent": "Couldn't add note(s) to course {{course}}. {{error}}",
     "addon.notifications.errorgetnotifications": "Error getting notifications.",
+    "addon.notifications.markallread": "Mark all as read",
     "addon.notifications.notificationpreferences": "Notification preferences",
     "addon.notifications.notifications": "Notifications",
     "addon.notifications.playsound": "Play sound",
