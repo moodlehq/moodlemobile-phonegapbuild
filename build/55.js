@@ -212,7 +212,7 @@ var dom = __webpack_require__(3);
 var nav_params = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(166);
+var helper = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(10);

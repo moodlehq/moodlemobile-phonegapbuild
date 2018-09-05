@@ -284,7 +284,7 @@ var iframe = __webpack_require__(37);
 var toolbar_item = __webpack_require__(417);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(25);
@@ -308,7 +308,7 @@ var refresher_content = __webpack_require__(144);
 var translate_pipe = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki.ts
-var wiki = __webpack_require__(201);
+var wiki = __webpack_require__(202);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki-offline.ts
 var wiki_offline = __webpack_require__(247);

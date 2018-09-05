@@ -323,7 +323,7 @@ var toolbar = __webpack_require__(236);
 var navbar = __webpack_require__(191);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(178);
+var avatar = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(162);
@@ -398,7 +398,7 @@ var iframe = __webpack_require__(37);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(211);
+var badge = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./src/pipes/to-locale-string.ts
 var to_locale_string = __webpack_require__(637);
@@ -419,7 +419,7 @@ var app_app = __webpack_require__(26);
 var back_button = __webpack_require__(632);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(25);

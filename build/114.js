@@ -506,10 +506,10 @@ var empty_box_ngfactory = __webpack_require__(164);
 var empty_box = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(212);
+var icon_ngfactory = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
-var icon_icon = __webpack_require__(179);
+var icon_icon = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(33);
@@ -626,7 +626,7 @@ var split_view_ngfactory = __webpack_require__(420);
 var fileuploader = __webpack_require__(62);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(99);

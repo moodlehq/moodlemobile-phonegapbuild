@@ -256,7 +256,7 @@ var iframe = __webpack_require__(37);
 var toolbar_item = __webpack_require__(417);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(25);
@@ -289,10 +289,10 @@ var offline = __webpack_require__(148);
 var groups = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(196);
+var modal_controller = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
-var providers_helper = __webpack_require__(168);
+var providers_helper = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/sync.ts
 var sync = __webpack_require__(278);

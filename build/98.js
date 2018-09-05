@@ -55,7 +55,7 @@ var data = __webpack_require__(93);
 var helper = __webpack_require__(242);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/offline.ts
-var offline = __webpack_require__(200);
+var offline = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/sync.ts
 var sync = __webpack_require__(280);
@@ -576,7 +576,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(25);

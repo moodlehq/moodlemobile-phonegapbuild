@@ -267,7 +267,7 @@ var forum = __webpack_require__(152);
 var providers_helper = __webpack_require__(240);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
-var offline = __webpack_require__(199);
+var offline = __webpack_require__(200);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
 var sync = __webpack_require__(241);

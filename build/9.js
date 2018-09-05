@@ -215,7 +215,7 @@ var toolbar = __webpack_require__(236);
 var translate_pipe = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(23);
@@ -463,10 +463,10 @@ var translate_pipe = __webpack_require__(29);
 var icon = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(212);
+var icon_ngfactory = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
-var icon_icon = __webpack_require__(179);
+var icon_icon = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
 var spinner_ngfactory = __webpack_require__(180);
@@ -475,7 +475,7 @@ var spinner_ngfactory = __webpack_require__(180);
 var spinner = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(211);
+var badge = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(39);
@@ -736,10 +736,10 @@ var nav_push_anchor = __webpack_require__(265);
 var deep_linker = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(212);
+var icon_ngfactory = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
-var icon = __webpack_require__(179);
+var icon = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(29);

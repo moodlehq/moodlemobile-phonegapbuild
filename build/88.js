@@ -312,7 +312,7 @@ var item_reorder = __webpack_require__(27);
 var item_content = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(178);
+var avatar = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(162);
@@ -324,10 +324,10 @@ var translate_pipe = __webpack_require__(29);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(194);
+var file_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(165);
+var file = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
 var file_helper = __webpack_require__(122);
@@ -357,7 +357,7 @@ var app_app = __webpack_require__(26);
 var back_button = __webpack_require__(632);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(25);

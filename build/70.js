@@ -31,7 +31,7 @@ var events = __webpack_require__(12);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/sync.ts
-var sync = __webpack_require__(83);
+var sync = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(3);
@@ -46,7 +46,7 @@ var course = __webpack_require__(15);
 var helper = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki.ts
-var wiki = __webpack_require__(201);
+var wiki = __webpack_require__(202);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki-offline.ts
 var wiki_offline = __webpack_require__(247);
@@ -663,7 +663,7 @@ var translate_pipe = __webpack_require__(29);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(211);
+var badge = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(416);
@@ -729,7 +729,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(99);

@@ -125,21 +125,6 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
         });
     };
     /**
-     * Check if we can leave the page or not.
-     *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
-     */
-    AddonModAssignSubmissionListPage.prototype.ionViewCanLeave = function () {
-        // If split view is enabled, check if we can leave the details page.
-        if (this.splitviewCtrl.isOn()) {
-            var detailsPage = this.splitviewCtrl.getDetailsNav().getActive().instance;
-            if (detailsPage && detailsPage.ionViewCanLeave) {
-                return detailsPage.ionViewCanLeave();
-            }
-        }
-        return true;
-    };
-    /**
      * Fetch assignment data.
      *
      * @return {Promise<any>} Promise resolved when done.
@@ -392,7 +377,7 @@ var translate_pipe = __webpack_require__(29);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(178);
+var avatar = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(162);
@@ -419,7 +404,7 @@ var utils = __webpack_require__(2);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(211);
+var badge = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -497,7 +482,7 @@ var split_view_ngfactory = __webpack_require__(420);
 var fileuploader = __webpack_require__(62);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(25);

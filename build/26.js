@@ -34,7 +34,7 @@ var groups = __webpack_require__(63);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/sync.ts
-var sync = __webpack_require__(83);
+var sync = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(3);
@@ -58,7 +58,7 @@ var rich_text_editor = __webpack_require__(213);
 var forum = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
-var offline = __webpack_require__(199);
+var offline = __webpack_require__(200);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
 var helper = __webpack_require__(240);
@@ -809,7 +809,7 @@ var toolbar = __webpack_require__(236);
 var toolbar_item = __webpack_require__(417);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(177);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(99);
