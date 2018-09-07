@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 1856:
+/***/ 1857:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -144,8 +144,8 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
             selector: 'page-core-mainmenu',
             templateUrl: 'menu.html',
         }),
-        __metadata("design:paramtypes", [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */], ionic_angular["r" /* NavParams */],
-            ionic_angular["q" /* NavController */]])
+        __metadata("design:paramtypes", [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */], ionic_angular["s" /* NavParams */],
+            ionic_angular["r" /* NavController */]])
     ], CoreMainMenuPage);
     return CoreMainMenuPage;
 }());

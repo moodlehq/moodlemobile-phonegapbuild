@@ -1,6 +1,6 @@
 webpackJsonp([70],{
 
-/***/ 1818:
+/***/ 1819:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -527,7 +527,7 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
             selector: 'page-addon-mod-wiki-edit',
             templateUrl: 'edit.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], esm5_forms["d" /* FormBuilder */], ionic_angular["q" /* NavController */], sites["a" /* CoreSitesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], esm5_forms["d" /* FormBuilder */], ionic_angular["r" /* NavController */], sites["a" /* CoreSitesProvider */],
             sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */],
             _ngx_translate_core["c" /* TranslateService */], course["a" /* CoreCourseProvider */],
             events["a" /* CoreEventsProvider */], wiki["a" /* AddonModWikiProvider */],
@@ -702,7 +702,7 @@ var utils = __webpack_require__(2);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

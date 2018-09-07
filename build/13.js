@@ -1,6 +1,6 @@
 webpackJsonp([13],{
 
-/***/ 1770:
+/***/ 1771:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -37,7 +37,7 @@ var dom = __webpack_require__(3);
 var utils_utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var providers_logger = __webpack_require__(4);
+var providers_logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(10);
@@ -704,8 +704,8 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
             templateUrl: 'discussion.html',
             animations: [animations["b" /* coreSlideInOut */]]
         }),
-        __metadata("design:paramtypes", [events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], ionic_angular["r" /* NavParams */],
-            user["a" /* CoreUserProvider */], ionic_angular["q" /* NavController */], sync["a" /* AddonMessagesSyncProvider */],
+        __metadata("design:paramtypes", [events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], ionic_angular["s" /* NavParams */],
+            user["a" /* CoreUserProvider */], ionic_angular["r" /* NavController */], sync["a" /* AddonMessagesSyncProvider */],
             dom["a" /* CoreDomUtilsProvider */], messages["a" /* AddonMessagesProvider */], providers_logger["a" /* CoreLoggerProvider */],
             utils_utils["a" /* CoreUtilsProvider */], app["a" /* CoreAppProvider */], _ngx_translate_core["c" /* TranslateService */]])
     ], AddonMessagesDiscussionPage);
@@ -969,7 +969,7 @@ var gesture_controller = __webpack_require__(36);
 var toolbar_footer = __webpack_require__(652);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1880);
+var toolbar_ngfactory = __webpack_require__(1883);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ngfactory.js
 var send_message_form_ngfactory = __webpack_require__(1885);
@@ -1160,7 +1160,7 @@ var AddonMessagesDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](discuss
 
 /***/ }),
 
-/***/ 1880:
+/***/ 1883:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

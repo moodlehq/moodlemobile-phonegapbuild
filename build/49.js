@@ -147,7 +147,7 @@ var init_CoreLoginInitPage = /** @class */ (function () {
             selector: 'page-core-login-init',
             templateUrl: 'init.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], app["a" /* CoreAppProvider */], init["a" /* CoreInitDelegate */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], app["a" /* CoreAppProvider */], init["a" /* CoreInitDelegate */],
             sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */],
             splash_screen["a" /* SplashScreen */]])
     ], CoreLoginInitPage);

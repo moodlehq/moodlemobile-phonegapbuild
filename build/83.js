@@ -61,14 +61,14 @@ var password_modal_AddonModLessonPasswordModalPage = /** @class */ (function () 
             selector: 'page-addon-mod-lesson-password-modal',
             templateUrl: 'password-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["C" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */]])
     ], AddonModLessonPasswordModalPage);
     return AddonModLessonPasswordModalPage;
 }());
 
 //# sourceMappingURL=password-modal.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);

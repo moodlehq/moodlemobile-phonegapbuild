@@ -1,6 +1,6 @@
 webpackJsonp([76],{
 
-/***/ 1811:
+/***/ 1810:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(18);
@@ -140,8 +140,8 @@ var preflight_modal_AddonModQuizPreflightModalPage = /** @class */ (function () 
             selector: 'page-addon-mod-quiz-preflight-modal',
             templateUrl: 'preflight-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */], sites["a" /* CoreSitesProvider */],
-            ionic_angular["C" /* ViewController */], access_rules_delegate["a" /* AddonModQuizAccessRuleDelegate */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */], sites["a" /* CoreSitesProvider */],
+            ionic_angular["D" /* ViewController */], access_rules_delegate["a" /* AddonModQuizAccessRuleDelegate */],
             core["C" /* Injector */], dom["a" /* CoreDomUtilsProvider */]])
     ], AddonModQuizPreflightModalPage);
     return AddonModQuizPreflightModalPage;
@@ -261,7 +261,7 @@ var dynamic_component_ngfactory = __webpack_require__(1288);
 var dynamic_component = __webpack_require__(196);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);

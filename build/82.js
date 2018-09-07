@@ -1,6 +1,6 @@
 webpackJsonp([82],{
 
-/***/ 1804:
+/***/ 1803:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -252,7 +252,7 @@ var user_retake_AddonModLessonUserRetakePage = /** @class */ (function () {
             selector: 'page-addon-mod-lesson-user-retake',
             templateUrl: 'user-retake.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */],
             _ngx_translate_core["c" /* TranslateService */], dom["a" /* CoreDomUtilsProvider */],
             user["a" /* CoreUserProvider */], time["a" /* CoreTimeUtilsProvider */],
             lesson["a" /* AddonModLessonProvider */], helper["a" /* AddonModLessonHelperProvider */]])
@@ -352,7 +352,7 @@ var avatar = __webpack_require__(179);
 var external_content = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

@@ -111,7 +111,7 @@ var choose_site_CoreSharedFilesChooseSitePage = /** @class */ (function () {
             selector: 'page-core-shared-files-choose-site',
             templateUrl: 'choose-site.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], ionic_angular["r" /* NavParams */], helper["a" /* CoreSharedFilesHelperProvider */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], helper["a" /* CoreSharedFilesHelperProvider */],
             sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */],
             file["a" /* CoreFileProvider */]])
     ], CoreSharedFilesChooseSitePage);
@@ -120,7 +120,7 @@ var choose_site_CoreSharedFilesChooseSitePage = /** @class */ (function () {
 
 //# sourceMappingURL=choose-site.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -247,7 +247,7 @@ var utils = __webpack_require__(2);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

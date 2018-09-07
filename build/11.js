@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -257,14 +257,14 @@ var my_courses_CoreCoursesMyCoursesPage = /** @class */ (function () {
     };
     __decorate([
         Object(core["_9" /* ViewChild */])('searchbar'),
-        __metadata("design:type", ionic_angular["w" /* Searchbar */])
+        __metadata("design:type", ionic_angular["x" /* Searchbar */])
     ], CoreCoursesMyCoursesPage.prototype, "searchbar", void 0);
     CoreCoursesMyCoursesPage = __decorate([
         Object(core["m" /* Component */])({
             selector: 'page-core-courses-my-courses',
             templateUrl: 'my-courses.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], courses["a" /* CoreCoursesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], courses["a" /* CoreCoursesProvider */],
             dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */],
             sites["a" /* CoreSitesProvider */], providers_helper["a" /* CoreCourseHelperProvider */],
             options_delegate["a" /* CoreCourseOptionsDelegate */], helper["a" /* CoreCoursesHelperProvider */]])
@@ -755,7 +755,7 @@ var SearchbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵ
 /* unused harmony export CoreCoursesCourseProgressComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_external_content__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_logger__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_filepool__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_platform_platform__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(1);

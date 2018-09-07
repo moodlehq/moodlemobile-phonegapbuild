@@ -63,14 +63,14 @@ var self_enrol_password_CoreCoursesSelfEnrolPasswordPage = /** @class */ (functi
             selector: 'page-core-courses-self-enrol-password',
             templateUrl: 'self-enrol-password.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["C" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */]])
     ], CoreCoursesSelfEnrolPasswordPage);
     return CoreCoursesSelfEnrolPasswordPage;
 }());
 
 //# sourceMappingURL=self-enrol-password.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);

@@ -1,6 +1,6 @@
 webpackJsonp([45],{
 
-/***/ 1853:
+/***/ 1854:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -149,7 +149,7 @@ var site_policy_CoreLoginSitePolicyPage = /** @class */ (function () {
             selector: 'page-core-login-site-policy',
             templateUrl: 'site-policy.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], ionic_angular["r" /* NavParams */], helper["a" /* CoreLoginHelperProvider */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], helper["a" /* CoreLoginHelperProvider */],
             dom["a" /* CoreDomUtilsProvider */], sites["a" /* CoreSitesProvider */], utils["a" /* CoreUtilsProvider */],
             mimetype["a" /* CoreMimetypeUtilsProvider */]])
     ], CoreLoginSitePolicyPage);
@@ -158,7 +158,7 @@ var site_policy_CoreLoginSitePolicyPage = /** @class */ (function () {
 
 //# sourceMappingURL=site-policy.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -261,7 +261,7 @@ var iframe_ngfactory = __webpack_require__(430);
 var iframe = __webpack_require__(273);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var utils_iframe = __webpack_require__(37);

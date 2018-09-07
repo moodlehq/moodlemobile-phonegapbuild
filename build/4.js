@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -528,7 +528,7 @@ var my_overview_CoreCoursesMyOverviewPage = /** @class */ (function () {
     ], CoreCoursesMyOverviewPage.prototype, "tabsComponent", void 0);
     __decorate([
         Object(core["_9" /* ViewChild */])('searchbar'),
-        __metadata("design:type", ionic_angular["w" /* Searchbar */])
+        __metadata("design:type", ionic_angular["x" /* Searchbar */])
     ], CoreCoursesMyOverviewPage.prototype, "searchbar", void 0);
     __decorate([
         Object(core["_9" /* ViewChild */])(index["a" /* CoreSiteHomeIndexComponent */]),
@@ -539,7 +539,7 @@ var my_overview_CoreCoursesMyOverviewPage = /** @class */ (function () {
             selector: 'page-core-courses-my-overview',
             templateUrl: 'my-overview.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], providers_courses["a" /* CoreCoursesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], providers_courses["a" /* CoreCoursesProvider */],
             dom["a" /* CoreDomUtilsProvider */], my_overview["a" /* CoreCoursesMyOverviewProvider */],
             providers_helper["a" /* CoreCourseHelperProvider */], sites["a" /* CoreSitesProvider */],
             sitehome["a" /* CoreSiteHomeProvider */], options_delegate["a" /* CoreCourseOptionsDelegate */],
@@ -793,7 +793,7 @@ var grid = __webpack_require__(149);
 var external_content = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);
@@ -1314,7 +1314,7 @@ var utils = __webpack_require__(2);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);
@@ -1533,7 +1533,7 @@ var SearchbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵ
 /* unused harmony export CoreCoursesCourseProgressComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_external_content__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_logger__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_filepool__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_platform_platform__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(1);
@@ -1698,7 +1698,7 @@ var utils = __webpack_require__(2);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

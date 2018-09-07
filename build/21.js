@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/notifications/providers/notifications.ts
 var notifications = __webpack_require__(272);
@@ -316,7 +316,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
         __param(11, Object(core["N" /* Optional */])()),
         __metadata("design:paramtypes", [notifications["a" /* AddonNotificationsProvider */], dom["a" /* CoreDomUtilsProvider */],
             helper["a" /* CoreSettingsHelper */], user["a" /* CoreUserProvider */],
-            ionic_angular["q" /* NavController */], delegate["a" /* AddonMessageOutputDelegate */],
+            ionic_angular["r" /* NavController */], delegate["a" /* AddonMessageOutputDelegate */],
             app["a" /* CoreAppProvider */], config["a" /* CoreConfigProvider */], events["a" /* CoreEventsProvider */],
             local_notifications["a" /* CoreLocalNotificationsProvider */], sites["a" /* CoreSitesProvider */],
             split_view["a" /* CoreSplitViewComponent */]])
@@ -558,7 +558,7 @@ var navbar_buttons_ngfactory = __webpack_require__(87);
 var navbar_buttons = __webpack_require__(78);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(178);

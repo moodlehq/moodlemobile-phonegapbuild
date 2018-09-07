@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -139,7 +139,7 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
             selector: 'page-core-comments-viewer',
             templateUrl: 'viewer.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], sites["a" /* CoreSitesProvider */], user["a" /* CoreUserProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */], user["a" /* CoreUserProvider */],
             dom["a" /* CoreDomUtilsProvider */], _ngx_translate_core["c" /* TranslateService */],
             comments["a" /* CoreCommentsProvider */]])
     ], CoreCommentsViewerPage);
@@ -283,7 +283,7 @@ var avatar = __webpack_require__(179);
 var external_content = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

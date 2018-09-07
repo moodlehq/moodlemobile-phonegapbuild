@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./src/core/viewer/pages/image/image.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -63,7 +63,7 @@ var image_CoreViewerImagePage = /** @class */ (function () {
             selector: 'page-core-viewer-image',
             templateUrl: 'image.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["C" /* ViewController */], ionic_angular["r" /* NavParams */], _ngx_translate_core["c" /* TranslateService */]])
+        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */], ionic_angular["s" /* NavParams */], _ngx_translate_core["c" /* TranslateService */]])
     ], CoreViewerImagePage);
     return CoreViewerImagePage;
 }());
@@ -236,7 +236,7 @@ var ScrollNgFactory = core["_27" /* ɵccf */]("ion-scroll", scroll_scroll["a" /*
 var external_content = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

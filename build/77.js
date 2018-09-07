@@ -1,6 +1,6 @@
 webpackJsonp([77],{
 
-/***/ 1809:
+/***/ 1808:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,14 +74,14 @@ var navigation_modal_AddonModQuizNavigationModalPage = /** @class */ (function (
             selector: 'page-addon-mod-quiz-navigation-modal',
             templateUrl: 'navigation-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], ionic_angular["C" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["D" /* ViewController */]])
     ], AddonModQuizNavigationModalPage);
     return AddonModQuizNavigationModalPage;
 }());
 
 //# sourceMappingURL=navigation-modal.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(28);

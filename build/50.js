@@ -1,6 +1,6 @@
 webpackJsonp([50],{
 
-/***/ 1848:
+/***/ 1847:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(9);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(3);
@@ -117,7 +117,7 @@ var forgotten_password_CoreLoginForgottenPasswordPage = /** @class */ (function 
             selector: 'page-core-login-forgotten-password',
             templateUrl: 'forgotten-password.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], ionic_angular["r" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */],
             helper["a" /* CoreLoginHelperProvider */], dom["a" /* CoreDomUtilsProvider */]])
     ], CoreLoginForgottenPasswordPage);
     return CoreLoginForgottenPasswordPage;

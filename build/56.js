@@ -380,7 +380,7 @@ var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
             selector: 'page-core-emulator-capture-media',
             templateUrl: 'capture-media.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["C" /* ViewController */], ionic_angular["r" /* NavParams */], dom["a" /* CoreDomUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */], ionic_angular["s" /* NavParams */], dom["a" /* CoreDomUtilsProvider */],
             time["a" /* CoreTimeUtilsProvider */], file["a" /* CoreFileProvider */],
             utils_text["a" /* CoreTextUtilsProvider */], core["j" /* ChangeDetectorRef */]])
     ], CoreEmulatorCaptureMediaPage);
@@ -389,7 +389,7 @@ var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
 
 //# sourceMappingURL=capture-media.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -504,7 +504,7 @@ var common = __webpack_require__(8);
 var seconds_to_hms = __webpack_require__(1315);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/components/chrono/chrono.ts
 var chrono = __webpack_require__(1321);

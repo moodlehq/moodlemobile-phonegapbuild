@@ -1,6 +1,6 @@
 webpackJsonp([41],{
 
-/***/ 1857:
+/***/ 1856:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -139,7 +139,7 @@ var more_CoreMainMenuMorePage = /** @class */ (function () {
             templateUrl: 'more.html',
         }),
         __metadata("design:paramtypes", [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */],
-            ionic_angular["q" /* NavController */], mainmenu["a" /* CoreMainMenuProvider */],
+            ionic_angular["r" /* NavController */], mainmenu["a" /* CoreMainMenuProvider */],
             events["a" /* CoreEventsProvider */]])
     ], CoreMainMenuMorePage);
     return CoreMainMenuMorePage;
@@ -340,7 +340,7 @@ var format_text = __webpack_require__(39);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

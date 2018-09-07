@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(28);
@@ -132,7 +132,7 @@ var attempt_AddonModFeedbackAttemptPage = /** @class */ (function () {
             selector: 'page-addon-mod-feedback-attempt',
             templateUrl: 'attempt.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], feedback["a" /* AddonModFeedbackProvider */], ionic_angular["q" /* NavController */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], feedback["a" /* AddonModFeedbackProvider */], ionic_angular["r" /* NavController */],
             dom["a" /* CoreDomUtilsProvider */], helper["a" /* AddonModFeedbackHelperProvider */],
             utils_text["a" /* CoreTextUtilsProvider */]])
     ], AddonModFeedbackAttemptPage);
@@ -269,7 +269,7 @@ var avatar = __webpack_require__(179);
 var external_content = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(10);
@@ -462,9 +462,9 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
             selector: 'page-core-courses-course-preview',
             templateUrl: 'course-preview.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], ionic_angular["r" /* NavParams */], sites["a" /* CoreSitesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */],
             dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], app["a" /* CoreAppProvider */],
-            courses["a" /* CoreCoursesProvider */], ionic_angular["t" /* Platform */], ionic_angular["o" /* ModalController */],
+            courses["a" /* CoreCoursesProvider */], ionic_angular["u" /* Platform */], ionic_angular["p" /* ModalController */],
             _ngx_translate_core["c" /* TranslateService */], events["a" /* CoreEventsProvider */],
             options_delegate["a" /* CoreCourseOptionsDelegate */], helper["a" /* CoreCourseHelperProvider */],
             course["a" /* CoreCourseProvider */], format_delegate["a" /* CoreCourseFormatDelegate */],
@@ -571,7 +571,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1286);
 var external_content = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 1803:
+/***/ 1804:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -31,7 +31,7 @@ var app = __webpack_require__(10);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var providers_logger = __webpack_require__(4);
+var providers_logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -624,13 +624,13 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
             selector: 'page-addon-mod-lesson-player',
             templateUrl: 'player.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], providers_logger["a" /* CoreLoggerProvider */], _ngx_translate_core["c" /* TranslateService */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], providers_logger["a" /* CoreLoggerProvider */], _ngx_translate_core["c" /* TranslateService */],
             events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */],
-            sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], ionic_angular["u" /* PopoverController */],
+            sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], ionic_angular["v" /* PopoverController */],
             time["a" /* CoreTimeUtilsProvider */], lesson["a" /* AddonModLessonProvider */],
             helper["a" /* AddonModLessonHelperProvider */], lesson_sync["a" /* AddonModLessonSyncProvider */],
             lesson_offline["a" /* AddonModLessonOfflineProvider */], core["j" /* ChangeDetectorRef */],
-            ionic_angular["o" /* ModalController */], ionic_angular["q" /* NavController */], app["a" /* CoreAppProvider */],
+            ionic_angular["p" /* ModalController */], ionic_angular["r" /* NavController */], app["a" /* CoreAppProvider */],
             utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], esm5_forms["d" /* FormBuilder */]])
     ], AddonModLessonPlayerPage);
     return AddonModLessonPlayerPage;
@@ -1187,7 +1187,7 @@ var AddonModLessonPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_mod
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core_src_translate_pipe__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_seconds_to_hms__ = __webpack_require__(1315);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_logger__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_item_item__ = __webpack_require__(20);

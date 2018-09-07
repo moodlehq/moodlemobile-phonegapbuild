@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(28);
@@ -60,7 +60,7 @@ var course_CoreGradesCoursePage = /** @class */ (function () {
             selector: 'page-core-grades-course',
             templateUrl: 'course.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], sites["a" /* CoreSitesProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */]])
     ], CoreGradesCoursePage);
     return CoreGradesCoursePage;
 }());

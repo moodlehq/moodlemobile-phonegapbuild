@@ -71,14 +71,14 @@ var menu_modal_AddonModLessonMenuModalPage = /** @class */ (function () {
             selector: 'page-addon-mod-lesson-menu-modal',
             templateUrl: 'menu-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], ionic_angular["C" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["D" /* ViewController */]])
     ], AddonModLessonMenuModalPage);
     return AddonModLessonMenuModalPage;
 }());
 
 //# sourceMappingURL=menu-modal.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/menu-modal/menu-modal.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -241,7 +241,7 @@ var platform = __webpack_require__(14);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(22);

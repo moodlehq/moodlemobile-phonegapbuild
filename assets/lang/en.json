@@ -570,6 +570,7 @@
     "addon.mod_quiz.warningdatadiscardedfromfinished": "Attempt unfinished because some offline answers were discarded. Please review your answers then resubmit the attempt.",
     "addon.mod_quiz.yourfinalgradeis": "Your final grade for this quiz is {{$a}}.",
     "addon.mod_resource.errorwhileloadingthecontent": "Error while loading the content.",
+    "addon.mod_resource.modifieddate": "Modified {{$a}}",
     "addon.mod_resource.openthefile": "Open the file",
     "addon.mod_resource.uploadeddate": "Uploaded {{$a}}",
     "addon.mod_scorm.asset": "Asset",

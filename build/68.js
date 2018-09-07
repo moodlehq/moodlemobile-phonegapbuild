@@ -1,6 +1,6 @@
 webpackJsonp([68],{
 
-/***/ 1821:
+/***/ 1822:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -396,9 +396,9 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
             selector: 'page-addon-mod-workshop-edit-submission',
             templateUrl: 'edit-submission.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], sites["a" /* CoreSitesProvider */], fileuploader["a" /* CoreFileUploaderProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */], fileuploader["a" /* CoreFileUploaderProvider */],
             workshop["a" /* AddonModWorkshopProvider */], offline["a" /* AddonModWorkshopOfflineProvider */],
-            helper["a" /* AddonModWorkshopHelperProvider */], ionic_angular["q" /* NavController */],
+            helper["a" /* AddonModWorkshopHelperProvider */], ionic_angular["r" /* NavController */],
             file_session["a" /* CoreFileSessionProvider */], sync["a" /* CoreSyncProvider */],
             utils_text["a" /* CoreTextUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], esm5_forms["d" /* FormBuilder */],
             _ngx_translate_core["c" /* TranslateService */], events["a" /* CoreEventsProvider */]])

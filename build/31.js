@@ -68,7 +68,7 @@ var iframe_CoreViewerIframePage = /** @class */ (function () {
             selector: 'page-core-viewer-iframe',
             templateUrl: 'iframe.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], sites["a" /* CoreSitesProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */]])
     ], CoreViewerIframePage);
     return CoreViewerIframePage;
 }());
@@ -167,7 +167,7 @@ var iframe_ngfactory = __webpack_require__(430);
 var iframe = __webpack_require__(273);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var utils_iframe = __webpack_require__(37);
@@ -317,7 +317,7 @@ var translate_store = __webpack_require__(415);
 var ionic_angular_module = __webpack_require__(631);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
 var pipes_module = __webpack_require__(109);

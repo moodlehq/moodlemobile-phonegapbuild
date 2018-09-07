@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -245,7 +245,7 @@ var list_AddonFilesListPage = /** @class */ (function () {
             selector: 'page-addon-files-list',
             templateUrl: 'list.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */],
             dom["a" /* CoreDomUtilsProvider */], _ngx_translate_core["c" /* TranslateService */], app["a" /* CoreAppProvider */],
             files["a" /* AddonFilesProvider */], helper["a" /* AddonFilesHelperProvider */],
             utils_text["a" /* CoreTextUtilsProvider */]])
@@ -478,7 +478,7 @@ var format_text = __webpack_require__(39);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(22);

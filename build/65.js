@@ -96,7 +96,7 @@ var add_AddonNotesAddPage = /** @class */ (function () {
             selector: 'page-addon-notes-add',
             templateUrl: 'add.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], ionic_angular["C" /* ViewController */], app["a" /* CoreAppProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["D" /* ViewController */], app["a" /* CoreAppProvider */],
             dom["a" /* CoreDomUtilsProvider */], notes["a" /* AddonNotesProvider */]])
     ], AddonNotesAddPage);
     return AddonNotesAddPage;
@@ -104,7 +104,7 @@ var add_AddonNotesAddPage = /** @class */ (function () {
 
 //# sourceMappingURL=add.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(28);

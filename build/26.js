@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -567,8 +567,8 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
             templateUrl: 'new-discussion.html',
         }),
         __param(15, Object(core["N" /* Optional */])()),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */],
-            ionic_angular["q" /* NavController */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */],
+            ionic_angular["r" /* NavController */],
             _ngx_translate_core["c" /* TranslateService */],
             dom["a" /* CoreDomUtilsProvider */],
             events["a" /* CoreEventsProvider */],

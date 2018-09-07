@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/user/components/components.module.ts
 var components_module = __webpack_require__(424);
@@ -58,7 +58,7 @@ var participants_CoreUserParticipantsPage = /** @class */ (function () {
             selector: 'page-core-user-participants',
             templateUrl: 'participants.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */]])
     ], CoreUserParticipantsPage);
     return CoreUserParticipantsPage;
 }());

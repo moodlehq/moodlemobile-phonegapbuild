@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(28);
@@ -332,11 +332,11 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
             selector: 'page-addon-mod-data-entry',
             templateUrl: 'entry.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], utils_utils["a" /* CoreUtilsProvider */], groups["a" /* CoreGroupsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], utils_utils["a" /* CoreUtilsProvider */], groups["a" /* CoreGroupsProvider */],
             dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */],
             course["a" /* CoreCourseProvider */], data["a" /* AddonModDataProvider */],
             offline["a" /* AddonModDataOfflineProvider */], helper["a" /* AddonModDataHelperProvider */],
-            sites["a" /* CoreSitesProvider */], ionic_angular["q" /* NavController */],
+            sites["a" /* CoreSitesProvider */], ionic_angular["r" /* NavController */],
             events["a" /* CoreEventsProvider */]])
     ], AddonModDataEntryPage);
     return AddonModDataEntryPage;
@@ -555,7 +555,7 @@ var utils_text = __webpack_require__(11);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

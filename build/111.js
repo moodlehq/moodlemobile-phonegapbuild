@@ -1,6 +1,6 @@
 webpackJsonp([111],{
 
-/***/ 1762:
+/***/ 1761:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -215,7 +215,7 @@ var competency_AddonCompetencyCompetencyPage = /** @class */ (function () {
             templateUrl: 'competency.html',
         }),
         __param(5, Object(core["N" /* Optional */])()),
-        __metadata("design:paramtypes", [ionic_angular["q" /* NavController */], ionic_angular["r" /* NavParams */], _ngx_translate_core["c" /* TranslateService */],
+        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], _ngx_translate_core["c" /* TranslateService */],
             sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */],
             split_view["a" /* CoreSplitViewComponent */], competency["a" /* AddonCompetencyProvider */]])
     ], AddonCompetencyCompetencyPage);
@@ -329,7 +329,7 @@ var avatar = __webpack_require__(179);
 var external_content = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

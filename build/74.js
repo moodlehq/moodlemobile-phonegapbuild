@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -1259,7 +1259,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
             selector: 'page-addon-mod-scorm-player',
             templateUrl: 'player.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], ionic_angular["u" /* PopoverController */], events["a" /* CoreEventsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["v" /* PopoverController */], events["a" /* CoreEventsProvider */],
             sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */],
             dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */],
             providers_scorm["a" /* AddonModScormProvider */], helper["a" /* AddonModScormHelperProvider */],
@@ -1376,7 +1376,7 @@ var iframe_ngfactory = __webpack_require__(430);
 var iframe = __webpack_require__(273);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var utils_iframe = __webpack_require__(37);

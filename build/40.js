@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/device/index.js
 var _ionic_native_device = __webpack_require__(433);
@@ -131,7 +131,7 @@ var about_CoreSettingsAboutPage = /** @class */ (function () {
             selector: 'page-core-settings-about',
             templateUrl: 'about.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* Platform */], _ionic_native_device["a" /* Device */], app["a" /* CoreAppProvider */], file["a" /* CoreFileProvider */],
+        __metadata("design:paramtypes", [ionic_angular["u" /* Platform */], _ionic_native_device["a" /* Device */], app["a" /* CoreAppProvider */], file["a" /* CoreFileProvider */],
             init["a" /* CoreInitDelegate */], lang["a" /* CoreLangProvider */], sites["a" /* CoreSitesProvider */],
             local_notifications["a" /* CoreLocalNotificationsProvider */]])
     ], CoreSettingsAboutPage);
@@ -293,7 +293,7 @@ var common = __webpack_require__(8);
 var format_date = __webpack_require__(325);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(416);

@@ -1,6 +1,6 @@
 webpackJsonp([47],{
 
-/***/ 1851:
+/***/ 1850:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57,14 +57,14 @@ var site_error_CoreLoginSiteErrorPage = /** @class */ (function () {
             selector: 'page-core-login-site-error',
             templateUrl: 'site-error.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["C" /* ViewController */], ionic_angular["r" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */], ionic_angular["s" /* NavParams */]])
     ], CoreLoginSiteErrorPage);
     return CoreLoginSiteErrorPage;
 }());
 
 //# sourceMappingURL=site-error.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(28);
@@ -168,7 +168,7 @@ var utils = __webpack_require__(2);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

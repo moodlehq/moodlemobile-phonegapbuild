@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
 var utils_text = __webpack_require__(11);
@@ -67,7 +67,7 @@ var text_CoreViewerTextPage = /** @class */ (function () {
             selector: 'page-core-viewer-text',
             templateUrl: 'text.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["C" /* ViewController */], ionic_angular["r" /* NavParams */], utils_text["a" /* CoreTextUtilsProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */], ionic_angular["s" /* NavParams */], utils_text["a" /* CoreTextUtilsProvider */]])
     ], CoreViewerTextPage);
     return CoreViewerTextPage;
 }());
@@ -273,7 +273,7 @@ var format_text = __webpack_require__(39);
 var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(22);

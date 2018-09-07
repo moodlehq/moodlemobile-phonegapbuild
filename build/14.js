@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(81);
@@ -135,9 +135,9 @@ var about_CoreUserAboutPage = /** @class */ (function () {
             selector: 'page-core-user-about',
             templateUrl: 'about.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavParams */], user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */],
             dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */], platform_browser["c" /* DomSanitizer */],
-            sites["a" /* CoreSitesProvider */], ionic_angular["t" /* Platform */]])
+            sites["a" /* CoreSitesProvider */], ionic_angular["u" /* Platform */]])
     ], CoreUserAboutPage);
     return CoreUserAboutPage;
 }());
@@ -294,7 +294,7 @@ var utils_text = __webpack_require__(11);
 var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);
@@ -559,7 +559,7 @@ var CoreUserAboutPageModuleNgFactory = core["_28" /* ɵcmf */](about_module_Core
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(1288);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_profile_field__ = __webpack_require__(1302);

@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -156,7 +156,7 @@ var issued_badge_AddonBadgesIssuedBadgePage = /** @class */ (function () {
             selector: 'page-addon-badges-issued-badge',
             templateUrl: 'issued-badge.html',
         }),
-        __metadata("design:paramtypes", [badges["a" /* AddonBadgesProvider */], ionic_angular["r" /* NavParams */], sites["a" /* CoreSitesProvider */],
+        __metadata("design:paramtypes", [badges["a" /* AddonBadgesProvider */], ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */],
             dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */],
             user["a" /* CoreUserProvider */], courses["a" /* CoreCoursesProvider */]])
     ], AddonBadgesIssuedBadgePage);
@@ -252,7 +252,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1286);
 var external_content = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);
