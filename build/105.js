@@ -37,7 +37,7 @@ var dom = __webpack_require__(3);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/files.ts
-var files = __webpack_require__(338);
+var files = __webpack_require__(339);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/helper.ts
 var helper = __webpack_require__(658);
@@ -433,13 +433,13 @@ var loading_ngfactory = __webpack_require__(56);
 var loading = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.ngfactory.js
-var fab_container_ngfactory = __webpack_require__(339);
+var fab_container_ngfactory = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
 var fab_container = __webpack_require__(222);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
-var fab_ngfactory = __webpack_require__(340);
+var fab_ngfactory = __webpack_require__(341);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.js
 var fab = __webpack_require__(186);
@@ -448,7 +448,7 @@ var fab = __webpack_require__(186);
 var icon = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(416);
+var toolbar_header = __webpack_require__(417);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(35);
@@ -635,7 +635,7 @@ var translate_parser = __webpack_require__(323);
 var missing_translation_handler = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(415);
+var translate_store = __webpack_require__(416);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(631);

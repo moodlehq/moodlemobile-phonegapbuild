@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 1839:
+/***/ 1838:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34,7 +34,7 @@ var providers_courses = __webpack_require__(72);
 var helper = __webpack_require__(644);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/my-overview.ts
-var my_overview = __webpack_require__(341);
+var my_overview = __webpack_require__(342);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
 var providers_helper = __webpack_require__(43);
@@ -832,7 +832,7 @@ var item_content = __webpack_require__(30);
 var directives_link = __webpack_require__(198);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-group.js
-var item_group = __webpack_require__(427);
+var item_group = __webpack_require__(428);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
 var item_divider = __webpack_require__(163);
@@ -928,7 +928,7 @@ var CoreCoursesOverviewEventsComponentNgFactory = core["_27" /* ɵccf */]("core-
 
 //# sourceMappingURL=overview-events.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(416);
+var toolbar_header = __webpack_require__(417);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
 var navbar_ngfactory = __webpack_require__(1282);
@@ -949,13 +949,13 @@ var toolbar_title = __webpack_require__(324);
 var toolbar = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(417);
+var toolbar_item = __webpack_require__(418);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(422);
+var tabs_ngfactory = __webpack_require__(423);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(423);
+var tab_ngfactory = __webpack_require__(424);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
 var tab = __webpack_require__(69);
@@ -1153,7 +1153,7 @@ var translate_parser = __webpack_require__(323);
 var missing_translation_handler = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(415);
+var translate_store = __webpack_require__(416);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(631);

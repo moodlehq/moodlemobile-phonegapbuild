@@ -1,6 +1,6 @@
 webpackJsonp([82],{
 
-/***/ 1803:
+/***/ 1804:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -490,7 +490,7 @@ var platform_browser = __webpack_require__(81);
 var format_date = __webpack_require__(325);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(416);
+var toolbar_header = __webpack_require__(417);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(35);
@@ -681,7 +681,7 @@ var translate_parser = __webpack_require__(323);
 var missing_translation_handler = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(415);
+var translate_store = __webpack_require__(416);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(631);

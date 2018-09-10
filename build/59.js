@@ -1,6 +1,6 @@
 webpackJsonp([59],{
 
-/***/ 1832:
+/***/ 1833:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -183,7 +183,7 @@ var translate_pipe = __webpack_require__(29);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(416);
+var toolbar_header = __webpack_require__(417);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -258,7 +258,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(417);
+var toolbar_item = __webpack_require__(418);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
 var context_menu_ngfactory = __webpack_require__(85);
@@ -282,7 +282,7 @@ var dom_controller = __webpack_require__(25);
 var keyboard = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ts
-var unsupported_module = __webpack_require__(345);
+var unsupported_module = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);
@@ -375,7 +375,7 @@ var translate_parser = __webpack_require__(323);
 var missing_translation_handler = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(415);
+var translate_store = __webpack_require__(416);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(631);
