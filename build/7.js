@@ -949,7 +949,7 @@ var translate_pipe = __webpack_require__(29);
 var icon = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1883);
+var toolbar_ngfactory = __webpack_require__(1880);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(236);
@@ -1309,7 +1309,7 @@ var AddonModQuizPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_modul
 
 /***/ }),
 
-/***/ 1883:
+/***/ 1880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
