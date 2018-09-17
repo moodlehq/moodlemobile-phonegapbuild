@@ -1,39 +1,86 @@
 webpackJsonp([43],{
 
-/***/ 1855:
+/***/ 1838:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesCoursePreviewPageModule", function() { return CoreCoursesCoursePreviewPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__course_preview__ = __webpack_require__(1963);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(67);
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
-// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
-var core = __webpack_require__(0);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
-var ionic_angular = __webpack_require__(9);
 
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(4);
 
-// EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(5);
 
-// EXTERNAL MODULE: ./src/providers/sites.ts
-var sites = __webpack_require__(1);
 
-// EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(3);
 
-// EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(11);
+var CoreCoursesCoursePreviewPageModule = /** @class */ (function () {
+    function CoreCoursesCoursePreviewPageModule() {
+    }
+    CoreCoursesCoursePreviewPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__course_preview__["a" /* CoreCoursesCoursePreviewPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__course_preview__["a" /* CoreCoursesCoursePreviewPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], CoreCoursesCoursePreviewPageModule);
+    return CoreCoursesCoursePreviewPageModule;
+}());
 
-// EXTERNAL MODULE: ./src/addon/pushnotifications/providers/pushnotifications.ts
-var pushnotifications = __webpack_require__(333);
+//# sourceMappingURL=course-preview.module.js.map
 
-// EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var helper = __webpack_require__(124);
+/***/ }),
 
-// CONCATENATED MODULE: ./src/core/login/pages/sites/sites.ts
+/***/ 1963:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesCoursePreviewPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_app__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_sites__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_courses__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_course_providers_options_delegate__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_course_providers_helper__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__core_course_providers_format_delegate__ = __webpack_require__(98);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -64,471 +111,403 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
 /**
- * Page that displays the list of stored sites.
+ * Page that allows "previewing" a course and enrolling in it if enabled and not enrolled.
  */
-var sites_CoreLoginSitesPage = /** @class */ (function () {
-    function CoreLoginSitesPage(domUtils, textUtils, sitesProvider, loginHelper, logger, translate, pushNotificationsProvider) {
+var CoreCoursesCoursePreviewPage = /** @class */ (function () {
+    function CoreCoursesCoursePreviewPage(navCtrl, navParams, sitesProvider, domUtils, textUtils, appProvider, coursesProvider, platform, modalCtrl, translate, eventsProvider, courseOptionsDelegate, courseHelper, courseProvider, courseFormatDelegate, zone) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.sitesProvider = sitesProvider;
         this.domUtils = domUtils;
         this.textUtils = textUtils;
-        this.sitesProvider = sitesProvider;
-        this.loginHelper = loginHelper;
+        this.coursesProvider = coursesProvider;
+        this.platform = platform;
+        this.modalCtrl = modalCtrl;
         this.translate = translate;
-        this.pushNotificationsProvider = pushNotificationsProvider;
-        this.logger = logger.getInstance('CoreLoginSitesPage');
+        this.eventsProvider = eventsProvider;
+        this.courseOptionsDelegate = courseOptionsDelegate;
+        this.courseHelper = courseHelper;
+        this.courseProvider = courseProvider;
+        this.courseFormatDelegate = courseFormatDelegate;
+        this.zone = zone;
+        this.canAccessCourse = true;
+        this.component = 'CoreCoursesCoursePreview';
+        this.selfEnrolInstances = [];
+        this.avoidOpenCourse = false;
+        this.prefetchCourseData = {
+            prefetchCourseIcon: 'spinner',
+            title: 'core.course.downloadcourse'
+        };
+        this.isGuestEnabled = false;
+        this.waitStart = 0;
+        this.pageDestroyed = false;
+        this.course = navParams.get('course');
+        this.avoidOpenCourse = navParams.get('avoidOpenCourse');
+        this.isMobile = appProvider.isMobile();
+        this.isDesktop = appProvider.isDesktop();
+        this.downloadCourseEnabled = !this.coursesProvider.isDownloadCourseDisabledInSite();
+        if (this.downloadCourseEnabled) {
+            // Listen for status change in course.
+            this.courseStatusObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */].COURSE_STATUS_CHANGED, function (data) {
+                if (data.courseId == _this.course.id) {
+                    _this.updateCourseStatus(data.status);
+                }
+            }, this.sitesProvider.getCurrentSiteId());
+        }
     }
     /**
      * View loaded.
      */
-    CoreLoginSitesPage.prototype.ionViewDidLoad = function () {
+    CoreCoursesCoursePreviewPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.sitesProvider.getSortedSites().then(function (sites) {
-            // Remove protocol from the url to show more url text.
-            _this.sites = sites.map(function (site) {
-                site.siteUrl = site.siteUrl.replace(/^https?:\/\//, '');
-                site.badge = 0;
-                _this.pushNotificationsProvider.getSiteCounter(site.id).then(function (counter) {
-                    site.badge = counter;
-                });
-                return site;
-            });
-            _this.showDelete = false;
-        }).catch(function () {
-            // Shouldn't happen.
-        });
-    };
-    /**
-     * Go to the page to add a site.
-     */
-    CoreLoginSitesPage.prototype.add = function () {
-        this.loginHelper.goToAddSite(false, true);
-    };
-    /**
-     * Delete a site.
-     *
-     * @param {Event} e Click event.
-     * @param {number} index Position of the site.
-     */
-    CoreLoginSitesPage.prototype.deleteSite = function (e, index) {
-        var _this = this;
-        e.stopPropagation();
-        var site = this.sites[index], siteName = site.siteName;
-        this.textUtils.formatText(siteName).then(function (siteName) {
-            _this.domUtils.showConfirm(_this.translate.instant('core.login.confirmdeletesite', { sitename: siteName })).then(function () {
-                _this.sitesProvider.deleteSite(site.id).then(function () {
-                    _this.sites.splice(index, 1);
-                    _this.showDelete = false;
-                    // If there are no sites left, go to add site.
-                    _this.sitesProvider.hasSites().then(function (hasSites) {
-                        if (!hasSites) {
-                            _this.loginHelper.goToAddSite(true, true);
-                        }
-                    });
-                }).catch(function (error) {
-                    _this.logger.error('Error deleting site ' + site.id, error);
-                    _this.domUtils.showErrorModalDefault(error, 'Delete site failed.');
-                    _this.domUtils.showErrorModal('core.login.errordeletesite', true);
-                });
-            }).catch(function () {
-                // User cancelled, nothing to do.
-            });
-        });
-    };
-    /**
-     * Login in a site.
-     *
-     * @param {string} siteId The site ID.
-     */
-    CoreLoginSitesPage.prototype.login = function (siteId) {
-        var _this = this;
-        var modal = this.domUtils.showModalLoading();
-        this.sitesProvider.loadSite(siteId).then(function () {
-            if (!_this.loginHelper.isSiteLoggedOut()) {
-                return _this.loginHelper.goToSiteInitialPage();
+        var currentSite = this.sitesProvider.getCurrentSite(), currentSiteUrl = currentSite && currentSite.getURL();
+        this.paypalEnabled = this.course.enrollmentmethods && this.course.enrollmentmethods.indexOf('paypal') > -1;
+        this.guestWSAvailable = this.coursesProvider.isGuestWSAvailable();
+        this.enrolUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'enrol/index.php?id=' + this.course.id);
+        this.courseUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'course/view.php?id=' + this.course.id);
+        this.paypalReturnUrl = this.textUtils.concatenatePaths(currentSiteUrl, 'enrol/paypal/return.php');
+        if (this.course.overviewfiles && this.course.overviewfiles.length > 0) {
+            this.course.imageThumb = this.course.overviewfiles[0].fileurl;
+        }
+        // Initialize the self enrol modal.
+        this.selfEnrolModal = this.modalCtrl.create('CoreCoursesSelfEnrolPasswordPage');
+        this.selfEnrolModal.onDidDismiss(function (password) {
+            if (typeof password != 'undefined') {
+                _this.selfEnrolInCourse(password, _this.currentInstanceId);
             }
+        });
+        this.getCourse().finally(function () {
+            if (!_this.downloadCourseEnabled) {
+                // Cannot download the whole course, stop.
+                return;
+            }
+            // Determine course prefetch icon.
+            _this.courseHelper.getCourseStatusIconAndTitle(_this.course.id).then(function (data) {
+                _this.prefetchCourseData.prefetchCourseIcon = data.icon;
+                _this.prefetchCourseData.title = data.title;
+                if (data.icon == 'spinner') {
+                    // Course is being downloaded. Get the download promise.
+                    var promise = _this.courseHelper.getCourseDownloadPromise(_this.course.id);
+                    if (promise) {
+                        // There is a download promise. If it fails, show an error.
+                        promise.catch(function (error) {
+                            if (!_this.pageDestroyed) {
+                                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
+                            }
+                        });
+                    }
+                    else {
+                        // No download, this probably means that the app was closed while downloading. Set previous status.
+                        _this.courseProvider.setCoursePreviousStatus(_this.course.id);
+                    }
+                }
+            });
+        });
+    };
+    /**
+     * Page destroyed.
+     */
+    CoreCoursesCoursePreviewPage.prototype.ngOnDestroy = function () {
+        this.pageDestroyed = true;
+        if (this.courseStatusObserver) {
+            this.courseStatusObserver.off();
+        }
+    };
+    /**
+     * Check if the user can access as guest.
+     *
+     * @return {Promise<boolean>} Promise resolved if can access as guest, rejected otherwise. Resolve param indicates if
+     *                            password is required for guest access.
+     */
+    CoreCoursesCoursePreviewPage.prototype.canAccessAsGuest = function () {
+        if (!this.isGuestEnabled) {
+            return Promise.reject(null);
+        }
+        // Search instance ID of guest enrolment method.
+        this.guestInstanceId = undefined;
+        for (var i = 0; i < this.enrollmentMethods.length; i++) {
+            var method = this.enrollmentMethods[i];
+            if (method.type == 'guest') {
+                this.guestInstanceId = method.id;
+                break;
+            }
+        }
+        if (this.guestInstanceId) {
+            return this.coursesProvider.getCourseGuestEnrolmentInfo(this.guestInstanceId).then(function (info) {
+                if (!info.status) {
+                    // Not active, reject.
+                    return Promise.reject(null);
+                }
+                return info.passwordrequired;
+            });
+        }
+        return Promise.reject(null);
+    };
+    /**
+     * Convenience function to get course. We use this to determine if a user can see the course or not.
+     *
+     * @param {boolean} refresh Whether the user is refreshing the data.
+     */
+    CoreCoursesCoursePreviewPage.prototype.getCourse = function (refresh) {
+        var _this = this;
+        // Get course enrolment methods.
+        this.selfEnrolInstances = [];
+        return this.coursesProvider.getCourseEnrolmentMethods(this.course.id).then(function (methods) {
+            _this.enrollmentMethods = methods;
+            _this.enrollmentMethods.forEach(function (method) {
+                if (method.type === 'self') {
+                    _this.selfEnrolInstances.push(method);
+                }
+                else if (_this.guestWSAvailable && method.type === 'guest') {
+                    _this.isGuestEnabled = true;
+                }
+            });
         }).catch(function (error) {
-            _this.logger.error('Error loading site ' + siteId, error);
-            _this.domUtils.showErrorModalDefault(error, 'Error loading site.');
+            _this.domUtils.showErrorModalDefault(error, 'Error getting enrolment data');
+        }).then(function () {
+            // Check if user is enrolled in the course.
+            return _this.coursesProvider.getUserCourse(_this.course.id).then(function (course) {
+                _this.isEnrolled = true;
+                return course;
+            }).catch(function () {
+                // The user is not enrolled in the course. Use getCourses to see if it's an admin/manager and can see the course.
+                _this.isEnrolled = false;
+                return _this.coursesProvider.getCourse(_this.course.id);
+            }).then(function (course) {
+                // Success retrieving the course, we can assume the user has permissions to view it.
+                _this.course.fullname = course.fullname || _this.course.fullname;
+                _this.course.summary = course.summary || _this.course.summary;
+                _this.canAccessCourse = true;
+            }).catch(function () {
+                // The user is not an admin/manager. Check if we can provide guest access to the course.
+                return _this.canAccessAsGuest().then(function (passwordRequired) {
+                    _this.canAccessCourse = !passwordRequired;
+                }).catch(function () {
+                    _this.canAccessCourse = false;
+                });
+            });
+        }).finally(function () {
+            _this.dataLoaded = true;
+        });
+    };
+    /**
+     * Open the course.
+     */
+    CoreCoursesCoursePreviewPage.prototype.openCourse = function () {
+        if (!this.canAccessCourse || this.avoidOpenCourse) {
+            // Course cannot be opened or we are avoiding opening because we accessed from inside a course.
+            return;
+        }
+        this.courseFormatDelegate.openCourse(this.navCtrl, this.course);
+    };
+    /**
+     * Enrol using PayPal.
+     */
+    CoreCoursesCoursePreviewPage.prototype.paypalEnrol = function () {
+        var _this = this;
+        var window, hasReturnedFromPaypal = false, inAppLoadSubscription, inAppFinishSubscription, inAppExitSubscription, appResumeSubscription;
+        var urlLoaded = function (event) {
+            if (event.url.indexOf(_this.paypalReturnUrl) != -1) {
+                hasReturnedFromPaypal = true;
+            }
+            else if (event.url.indexOf(_this.courseUrl) != -1 && hasReturnedFromPaypal) {
+                // User reached the course index page after returning from PayPal, close the InAppBrowser.
+                inAppClosed();
+                window.close();
+            }
+        }, inAppClosed = function () {
+            // InAppBrowser closed, refresh data.
+            unsubscribeAll();
+            if (!_this.dataLoaded) {
+                return;
+            }
+            _this.dataLoaded = false;
+            _this.refreshData();
+        }, unsubscribeAll = function () {
+            inAppLoadSubscription && inAppLoadSubscription.unsubscribe();
+            inAppFinishSubscription && inAppFinishSubscription.unsubscribe();
+            inAppExitSubscription && inAppExitSubscription.unsubscribe();
+            appResumeSubscription && appResumeSubscription.unsubscribe();
+        };
+        // Open the enrolment page in InAppBrowser.
+        this.sitesProvider.getCurrentSite().openInAppWithAutoLogin(this.enrolUrl).then(function (w) {
+            window = w;
+            if (_this.isDesktop || _this.isMobile) {
+                // Observe loaded pages in the InAppBrowser to check if the enrol process has ended.
+                inAppLoadSubscription = window.on('loadstart').subscribe(function (event) {
+                    // Execute the callback in the Angular zone, so change detection doesn't stop working.
+                    _this.zone.run(function () { return urlLoaded(event); });
+                });
+                // Observe window closed.
+                inAppExitSubscription = window.on('exit').subscribe(function () {
+                    // Execute the callback in the Angular zone, so change detection doesn't stop working.
+                    _this.zone.run(inAppClosed);
+                });
+            }
+            if (_this.isDesktop) {
+                // In desktop, also observe stop loading since some pages don't throw the loadstart event.
+                inAppFinishSubscription = window.on('loadstop').subscribe(urlLoaded);
+                // Since the user can switch windows, reload the data if he comes back to the app.
+                appResumeSubscription = _this.platform.resume.subscribe(function () {
+                    if (!_this.dataLoaded) {
+                        return;
+                    }
+                    _this.dataLoaded = false;
+                    _this.refreshData();
+                });
+            }
+        });
+    };
+    /**
+     * User clicked in a self enrol button.
+     *
+     * @param {number} instanceId The instance ID of the enrolment method.
+     */
+    CoreCoursesCoursePreviewPage.prototype.selfEnrolClicked = function (instanceId) {
+        var _this = this;
+        this.domUtils.showConfirm(this.translate.instant('core.courses.confirmselfenrol')).then(function () {
+            _this.selfEnrolInCourse('', instanceId);
+        }).catch(function () {
+            // User cancelled.
+        });
+    };
+    /**
+     * Self enrol in a course.
+     *
+     * @param {string} password Password to use.
+     * @param {number} instanceId The instance ID.
+     * @return {Promise<any>} Promise resolved when self enrolled.
+     */
+    CoreCoursesCoursePreviewPage.prototype.selfEnrolInCourse = function (password, instanceId) {
+        var _this = this;
+        var modal = this.domUtils.showModalLoading('core.loading', true);
+        return this.coursesProvider.selfEnrol(this.course.id, password, instanceId).then(function () {
+            // Close modal and refresh data.
+            _this.isEnrolled = true;
+            _this.dataLoaded = false;
+            // Sometimes the list of enrolled courses takes a while to be updated. Wait for it.
+            _this.waitForEnrolled(true).then(function () {
+                _this.refreshData().finally(function () {
+                    // My courses have been updated, trigger event.
+                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */].EVENT_MY_COURSES_UPDATED, {}, _this.sitesProvider.getCurrentSiteId());
+                });
+            });
+        }).catch(function (error) {
+            if (error && error.code === __WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */].ENROL_INVALID_KEY) {
+                // Invalid password, show the modal to enter the password.
+                _this.selfEnrolModal.present();
+                _this.currentInstanceId = instanceId;
+                if (!password) {
+                    // No password entered, don't show error.
+                    return;
+                }
+            }
+            _this.domUtils.showErrorModalDefault(error, 'core.courses.errorselfenrol', true);
         }).finally(function () {
             modal.dismiss();
         });
     };
     /**
-     * Toggle delete.
+     * Refresh the data.
+     *
+     * @param {any} [refresher] The refresher if this was triggered by a Pull To Refresh.
      */
-    CoreLoginSitesPage.prototype.toggleDelete = function () {
-        this.showDelete = !this.showDelete;
+    CoreCoursesCoursePreviewPage.prototype.refreshData = function (refresher) {
+        var _this = this;
+        var promises = [];
+        promises.push(this.coursesProvider.invalidateUserCourses());
+        promises.push(this.coursesProvider.invalidateCourse(this.course.id));
+        promises.push(this.coursesProvider.invalidateCourseEnrolmentMethods(this.course.id));
+        promises.push(this.courseOptionsDelegate.clearAndInvalidateCoursesOptions(this.course.id));
+        if (this.guestInstanceId) {
+            promises.push(this.coursesProvider.invalidateCourseGuestEnrolmentInfo(this.guestInstanceId));
+        }
+        return Promise.all(promises).finally(function () {
+            return _this.getCourse(true);
+        }).finally(function () {
+            if (refresher) {
+                refresher.complete();
+            }
+        });
     };
-    CoreLoginSitesPage = __decorate([
-        Object(core["m" /* Component */])({
-            selector: 'page-core-login-sites',
-            templateUrl: 'sites.html',
+    /**
+     * Update the course status icon and title.
+     *
+     * @param {string} status Status to show.
+     */
+    CoreCoursesCoursePreviewPage.prototype.updateCourseStatus = function (status) {
+        var statusData = this.courseHelper.getCourseStatusIconAndTitleFromStatus(status);
+        this.prefetchCourseData.prefetchCourseIcon = statusData.icon;
+        this.prefetchCourseData.title = statusData.title;
+    };
+    /**
+     * Wait for the user to be enrolled in the course.
+     *
+     * @param {boolean} first If it's the first call (true) or it's a recursive call (false).
+     * @return {Promise<any>} Promise resolved when enrolled or timeout.
+     */
+    CoreCoursesCoursePreviewPage.prototype.waitForEnrolled = function (first) {
+        var _this = this;
+        if (first) {
+            this.waitStart = Date.now();
+        }
+        // Check if user is enrolled in the course.
+        return this.coursesProvider.invalidateUserCourses().catch(function () {
+            // Ignore errors.
+        }).then(function () {
+            return _this.coursesProvider.getUserCourse(_this.course.id);
+        }).catch(function () {
+            // Not enrolled, wait a bit and try again.
+            if (_this.pageDestroyed || (Date.now() - _this.waitStart > 60000)) {
+                // Max time reached or the user left the view, stop.
+                return;
+            }
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    if (!_this.pageDestroyed) {
+                        // Wait again.
+                        _this.waitForEnrolled().then(resolve);
+                    }
+                    else {
+                        resolve();
+                    }
+                }, 5000);
+            });
+        });
+    };
+    /**
+     * Prefetch the course.
+     */
+    CoreCoursesCoursePreviewPage.prototype.prefetchCourse = function () {
+        var _this = this;
+        this.courseHelper.confirmAndPrefetchCourse(this.prefetchCourseData, this.course).catch(function (error) {
+            if (!_this.pageDestroyed) {
+                _this.domUtils.showErrorModalDefault(error, 'core.course.errordownloadingcourse', true);
+            }
+        });
+    };
+    CoreCoursesCoursePreviewPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-core-courses-course-preview',template:/*ion-inline-start:"/home/travis/build/crazyserver/moodlemobile2/src/core/courses/pages/course-preview/course-preview.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="course.fullname"></core-format-text></ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="dataLoaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="dataLoaded">\n\n        <ion-list *ngIf="course">\n            <div *ngIf="course.imageThumb" (click)="openCourse()" class="core-course-thumb">\n                <img [src]="course.imageThumb" core-external-content alt=""/>\n            </div>\n            <a ion-item text-wrap (click)="openCourse()" [title]="course.fullname" [attr.detail-none]=" avoidOpenCourse || !canAccessCourse">\n                <core-icon name="fa-graduation-cap" fixed-width item-start></core-icon>\n                <h2><core-format-text [text]="course.fullname"></core-format-text></h2>\n                <p *ngIf="course.categoryname"><core-format-text [text]="course.categoryname"></core-format-text></p>\n                <p *ngIf="course.startdate">{{course.startdate * 1000 | coreFormatDate:"dfdaymonthyear"}} <span *ngIf="course.enddate"> - {{course.enddate * 1000 | coreFormatDate:"dfdaymonthyear"}}</span></p>\n            </a>\n\n            <ion-item text-wrap *ngIf="course.summary" detail-none>\n                <core-format-text [text]="course.summary" maxHeight="120"></core-format-text>\n            </ion-item>\n\n            <ng-container text-wrap *ngIf="course.contacts && course.contacts.length">\n                <ion-item-divider color="light">{{ \'core.teachers\' | translate }}</ion-item-divider>\n                <a ion-item text-wrap *ngFor="let contact of course.contacts" core-user-link userId="{{contact.id}}" courseId="{{isEnrolled ? course.id : null}}" [attr.aria-label]="\'core.viewprofile\' | translate">\n                    <ion-avatar item-start>\n                        <img [src]="contact.userpictureurl" onError="this.src=\'assets/img/user-avatar.png\'" core-external-content [alt]="\'core.pictureof\' | translate:{$a: contact.userfullname}" role="presentation">\n                    </ion-avatar>\n                    <h2>{{contact.fullname}}</h2>\n                </a>\n                <ion-item-divider color="light"></ion-item-divider>\n            </ng-container>\n            <core-file *ngFor="let file of course.overviewfiles" [file]="file" [component]="component" [componentId]="course.id"></core-file>\n            <div *ngIf="!isEnrolled" detail-none>\n                <ion-item text-wrap *ngFor="let instance of selfEnrolInstances">\n                    <h2>{{ instance.name }}</h2>\n                    <button ion-button block margin-top (click)="selfEnrolClicked(instance.id)">{{ \'core.courses.enrolme\' | translate }}</button>\n                </ion-item>\n            </div>\n            <ion-item text-wrap *ngIf="!isEnrolled && paypalEnabled" detail-none>\n                <h2>{{ \'core.courses.paypalaccepted\' | translate }}</h2>\n                <p>{{ \'core.paymentinstant\' | translate }}</p>\n                <button ion-button block margin-top (click)="paypalEnrol()">{{ \'core.courses.sendpaymentbutton\' | translate }}</button>\n            </ion-item>\n            <ion-item *ngIf="!isEnrolled && !selfEnrolInstances.length && !paypalEnabled">\n                <p>{{ \'core.courses.notenrollable\' | translate }}</p>\n            </ion-item>\n            <a ion-item *ngIf="canAccessCourse && downloadCourseEnabled" (click)="prefetchCourse()" detail-none [attr.aria-label]="prefetchCourseData.title | translate">\n                <core-icon *ngIf="prefetchCourseData.prefetchCourseIcon != \'spinner\'" [name]="prefetchCourseData.prefetchCourseIcon" item-start></core-icon>\n                <ion-spinner *ngIf="prefetchCourseData.prefetchCourseIcon == \'spinner\'" item-start></ion-spinner>\n                <h2>{{ \'core.course.downloadcourse\' | translate }}</h2>\n            </a>\n            <a ion-item (click)="openCourse()" [title]="course.fullname" *ngIf="!avoidOpenCourse && canAccessCourse">\n                <ion-icon name="briefcase" item-start></ion-icon>\n                <h2>{{ \'core.course.contents\' | translate }}</h2>\n            </a>\n            <a ion-item [href]="courseUrl" core-link [title]="course.fullname">\n                <ion-icon name="open" item-start></ion-icon>\n                <h2>{{ \'core.openinbrowser\' | translate }}</h2>\n            </a>\n        </ion-list>\n    </core-loading>\n</ion-content>\n{{ \'core.openinbrowser\' | translate }}\n                        <ion-icon name="open"></ion-icon>'/*ion-inline-end:"/home/travis/build/crazyserver/moodlemobile2/src/core/courses/pages/course-preview/course-preview.html"*/,
         }),
-        __metadata("design:paramtypes", [dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */],
-            sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], logger["a" /* CoreLoggerProvider */],
-            _ngx_translate_core["c" /* TranslateService */], pushnotifications["a" /* AddonPushNotificationsProvider */]])
-    ], CoreLoginSitesPage);
-    return CoreLoginSitesPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */], __WEBPACK_IMPORTED_MODULE_5__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_utils_text__["a" /* CoreTextUtilsProvider */], __WEBPACK_IMPORTED_MODULE_3__providers_app__["a" /* CoreAppProvider */],
+            __WEBPACK_IMPORTED_MODULE_8__providers_courses__["a" /* CoreCoursesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_9__core_course_providers_options_delegate__["a" /* CoreCourseOptionsDelegate */], __WEBPACK_IMPORTED_MODULE_11__core_course_providers_helper__["a" /* CoreCourseHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_10__core_course_providers_course__["a" /* CoreCourseProvider */], __WEBPACK_IMPORTED_MODULE_12__core_course_providers_format_delegate__["a" /* CoreCourseFormatDelegate */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgZone */]])
+    ], CoreCoursesCoursePreviewPage);
+    return CoreCoursesCoursePreviewPage;
 }());
 
-//# sourceMappingURL=sites.js.map
-// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(28);
-
-// CONCATENATED MODULE: ./src/core/login/pages/sites/sites.module.ts
-// (C) Copyright 2015 Martin Dougiamas
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var sites_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-var sites_module_CoreLoginSitesPageModule = /** @class */ (function () {
-    function CoreLoginSitesPageModule() {
-    }
-    CoreLoginSitesPageModule = sites_module___decorate([
-        Object(core["I" /* NgModule */])({
-            declarations: [
-                sites_CoreLoginSitesPage,
-            ],
-            imports: [
-                directives_module["a" /* CoreDirectivesModule */],
-                ionic_angular["l" /* IonicPageModule */].forChild(sites_CoreLoginSitesPage),
-                _ngx_translate_core["b" /* TranslateModule */].forChild()
-            ],
-        })
-    ], CoreLoginSitesPageModule);
-    return CoreLoginSitesPageModule;
-}());
-
-//# sourceMappingURL=sites.module.js.map
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1273);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1274);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1275);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1276);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1277);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1278);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1279);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1280);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1281);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(45);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(40);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
-var config = __webpack_require__(6);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(29);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon = __webpack_require__(41);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(212);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
-var item_ngfactory = __webpack_require__(33);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
-var item = __webpack_require__(20);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
-var util_form = __webpack_require__(19);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
-var item_reorder = __webpack_require__(27);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
-var item_content = __webpack_require__(30);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(179);
-
-// EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(162);
-
-// EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(16);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(14);
-
-// EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(24);
-
-// EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(10);
-
-// EXTERNAL MODULE: ./src/providers/utils/utils.ts
-var utils = __webpack_require__(2);
-
-// EXTERNAL MODULE: ./src/directives/format-text.ts
-var format_text = __webpack_require__(39);
-
-// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
-var providers_helper = __webpack_require__(22);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(21);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(23);
-
-// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(34);
-
-// EXTERNAL MODULE: ./src/providers/utils/iframe.ts
-var iframe = __webpack_require__(37);
-
-// EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(12);
-
-// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
-var common = __webpack_require__(8);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(417);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
-var view_controller = __webpack_require__(35);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1282);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app_app = __webpack_require__(26);
-
-// EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(632);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1283);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(324);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(236);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(418);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(178);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(25);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(99);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(74);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(36);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.ngfactory.js
-var fab_container_ngfactory = __webpack_require__(340);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
-var fab_container = __webpack_require__(222);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
-var fab_ngfactory = __webpack_require__(341);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.js
-var fab = __webpack_require__(186);
-
-// CONCATENATED MODULE: ./src/core/login/pages/sites/sites.ngfactory.js
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var styles_CoreLoginSitesPage = [];
-var RenderType_CoreLoginSitesPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreLoginSitesPage, data: {} });
-
-function View_CoreLoginSitesPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "button", [["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.toggleDelete() !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, 0, 1, "ion-icon", [["ios", "md-create"], ["name", "create"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](5, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"], ios: [1, "ios"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var currVal_2 = "create"; var currVal_3 = "md-create"; _ck(_v, 5, 0, currVal_2, currVal_3); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 0, 0, core["_44" /* ɵnov */](_v, 2).transform("core.delete")); _ck(_v, 0, 0, currVal_0); var currVal_1 = core["_44" /* ɵnov */](_v, 5)._hidden; _ck(_v, 4, 0, currVal_1); }); }
-function View_CoreLoginSitesPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-badge", [["item-end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, badge["a" /* Badge */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], null, function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.badge; _ck(_v, 2, 0, currVal_0); }); }
-function View_CoreLoginSitesPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "button", [["clear", ""], ["color", "danger"], ["icon-only", ""], ["ion-button", ""], ["item-end", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.deleteSite($event, _v.parent.context.index) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, [[3, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], clear: [1, "clear"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, 0, 1, "ion-icon", [["name", "trash"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](5, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var currVal_1 = "danger"; var currVal_2 = ""; _ck(_v, 1, 0, currVal_1, currVal_2); var currVal_4 = "trash"; _ck(_v, 5, 0, currVal_4); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 0, 0, core["_44" /* ɵnov */](_v, 2).transform("core.delete")); _ck(_v, 0, 0, currVal_0); var currVal_3 = core["_44" /* ɵnov */](_v, 5)._hidden; _ck(_v, 4, 0, currVal_3); }); }
-function View_CoreLoginSitesPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 31, "a", [["class", "item item-block"], ["detail-none", ""], ["ion-item", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.login(_v.context.$implicit.id) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 2, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 4, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 0, 7, "ion-avatar", [["item-start", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](8, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, null, 3, "img", [["core-external-content", ""], ["onError", "this.src='assets/img/user-avatar.png'"], ["role", "presentation"]], [[8, "src", 4], [8, "alt", 0]], null, null, null, null)), core["_30" /* ɵdid */](11, 4210688, null, 0, external_content["a" /* CoreExternalContentDirective */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], platform["a" /* Platform */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], app["a" /* CoreAppProvider */], utils["a" /* CoreUtilsProvider */]], { siteId: [0, "siteId"] }, null), core["_48" /* ɵpod */](12, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, 2, 1, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](17, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](20, 0, null, null, 1, "core-format-text", [["clean", "true"]], null, null, null, null, null)), core["_30" /* ɵdid */](21, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"], siteId: [1, "siteId"], clean: [2, "clean"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](23, 0, null, 2, 1, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](24, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, 4, 1, null, View_CoreLoginSitesPage_3)), core["_30" /* ɵdid */](27, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, 4, 1, null, View_CoreLoginSitesPage_4)), core["_30" /* ɵdid */](30, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_2 = _v.context.$implicit.id; _ck(_v, 11, 0, currVal_2); var currVal_4 = _v.context.$implicit.siteName; var currVal_5 = _v.context.$implicit.id; var currVal_6 = "true"; _ck(_v, 21, 0, currVal_4, currVal_5, currVal_6); var currVal_8 = (!_co.showDelete && _v.context.$implicit.badge); _ck(_v, 27, 0, currVal_8); var currVal_9 = _co.showDelete; _ck(_v, 30, 0, currVal_9); }, function (_ck, _v) { var currVal_0 = _v.context.$implicit.avatar; var currVal_1 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 10, 1, core["_44" /* ɵnov */](_v, 13).transform("core.pictureof", _ck(_v, 12, 0, _v.context.$implicit.fullname))), ""); _ck(_v, 10, 0, currVal_0, currVal_1); var currVal_3 = _v.context.$implicit.fullName; _ck(_v, 17, 0, currVal_3); var currVal_7 = _v.context.$implicit.siteUrl; _ck(_v, 24, 0, currVal_7); }); }
-function View_CoreLoginSitesPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 20, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 16, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](9, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n\n        "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 2, 6, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](13, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginSitesPage_1)), core["_30" /* ɵdid */](17, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](22, 0, null, null, 23, "ion-content", [["class", "has-fab"]], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](23, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](25, 0, null, 1, 5, "ion-list", [], null, null, null, null, null)), core["_30" /* ɵdid */](26, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginSitesPage_2)), core["_30" /* ɵdid */](29, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](32, 0, null, 0, 12, "ion-fab", [["bottom", ""], ["end", ""]], null, null, null, fab_container_ngfactory["b" /* View_FabContainer_0 */], fab_container_ngfactory["a" /* RenderType_FabContainer */])), core["_30" /* ɵdid */](33, 1228800, null, 2, fab_container["a" /* FabContainer */], [platform["a" /* Platform */]], null, null), core["_52" /* ɵqud */](335544320, 5, { _mainButton: 0 }), core["_52" /* ɵqud */](603979776, 6, { _fabLists: 1 }), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](37, 0, null, 0, 6, "button", [["ion-fab", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.add() !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, fab_ngfactory["b" /* View_FabButton_0 */], fab_ngfactory["a" /* RenderType_FabButton */])), core["_30" /* ɵdid */](38, 49152, [[5, 4]], 0, fab["a" /* FabButton */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](41, 0, null, 0, 1, "ion-icon", [["name", "add"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](42, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_3 = (_co.sites && (_co.sites.length > 0)); _ck(_v, 17, 0, currVal_3); var currVal_6 = _co.sites; _ck(_v, 29, 0, currVal_6); var currVal_9 = "add"; _ck(_v, 42, 0, currVal_9); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("core.settings.sites")); _ck(_v, 9, 0, currVal_2); var currVal_4 = core["_44" /* ɵnov */](_v, 23).statusbarPadding; var currVal_5 = core["_44" /* ɵnov */](_v, 23)._hasRefresher; _ck(_v, 22, 0, currVal_4, currVal_5); var currVal_7 = core["_56" /* ɵunv */](_v, 37, 0, core["_44" /* ɵnov */](_v, 39).transform("core.add")); _ck(_v, 37, 0, currVal_7); var currVal_8 = core["_44" /* ɵnov */](_v, 42)._hidden; _ck(_v, 41, 0, currVal_8); }); }
-function View_CoreLoginSitesPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-login-sites", [], null, null, null, View_CoreLoginSitesPage_0, RenderType_CoreLoginSitesPage)), core["_30" /* ɵdid */](1, 49152, null, 0, sites_CoreLoginSitesPage, [dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */], pushnotifications["a" /* AddonPushNotificationsProvider */]], null, null)], null, null); }
-var CoreLoginSitesPageNgFactory = core["_27" /* ɵccf */]("page-core-login-sites", sites_CoreLoginSitesPage, View_CoreLoginSitesPage_Host_0, {}, {}, []);
-
-//# sourceMappingURL=sites.ngfactory.js.map
-// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(18);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(320);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(321);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(323);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(322);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(416);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(631);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(237);
-
-// CONCATENATED MODULE: ./src/core/login/pages/sites/sites.module.ngfactory.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitesPageModuleNgFactory", function() { return CoreLoginSitesPageModuleNgFactory; });
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var CoreLoginSitesPageModuleNgFactory = core["_28" /* ɵcmf */](sites_module_CoreLoginSitesPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], CoreLoginSitesPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, sites_module_CoreLoginSitesPageModule, sites_module_CoreLoginSitesPageModule, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], sites_CoreLoginSitesPage, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, [])]); });
-
-//# sourceMappingURL=sites.module.ngfactory.js.map
+//# sourceMappingURL=course-preview.js.map
 
 /***/ })
 
