@@ -1,6 +1,6 @@
 webpackJsonp([12],{
 
-/***/ 1779:
+/***/ 1780:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -533,7 +533,7 @@ var iframe = __webpack_require__(37);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ngfactory.js
-var send_message_form_ngfactory = __webpack_require__(1885);
+var send_message_form_ngfactory = __webpack_require__(1886);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ts
 var send_message_form = __webpack_require__(1299);
@@ -590,7 +590,7 @@ var loading = __webpack_require__(50);
 var toolbar_footer = __webpack_require__(652);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1880);
+var toolbar_ngfactory = __webpack_require__(1881);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(59);
@@ -764,7 +764,7 @@ var AddonModChatChatPageModuleNgFactory = core["_28" /* ɵcmf */](chat_module_Ad
 
 /***/ }),
 
-/***/ 1880:
+/***/ 1881:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -797,7 +797,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 
 /***/ }),
 
-/***/ 1885:
+/***/ 1886:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

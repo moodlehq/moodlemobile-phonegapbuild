@@ -1,6 +1,6 @@
 webpackJsonp([23],{
 
-/***/ 1812:
+/***/ 1813:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -504,7 +504,7 @@ var note = __webpack_require__(215);
 var item_divider = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ngfactory.js
-var question_ngfactory = __webpack_require__(1888);
+var question_ngfactory = __webpack_require__(1889);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ts
 var question = __webpack_require__(1311);
@@ -770,7 +770,7 @@ var AddonModQuizReviewPageModuleNgFactory = core["_28" /* ɵcmf */](review_modul
 
 /***/ }),
 
-/***/ 1888:
+/***/ 1889:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

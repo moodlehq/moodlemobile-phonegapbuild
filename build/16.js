@@ -1,6 +1,6 @@
 webpackJsonp([16],{
 
-/***/ 1859:
+/***/ 1860:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -260,7 +260,7 @@ var translate_pipe = __webpack_require__(29);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1874);
+var toggle_ngfactory = __webpack_require__(1875);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(633);
@@ -490,7 +490,7 @@ var CoreSettingsGeneralPageModuleNgFactory = core["_28" /* ɵcmf */](general_mod
 
 /***/ }),
 
-/***/ 1874:
+/***/ 1875:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

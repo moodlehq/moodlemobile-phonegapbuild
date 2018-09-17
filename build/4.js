@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 1838:
+/***/ 1839:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -706,7 +706,7 @@ var refresher_content_ngfactory = __webpack_require__(192);
 var refresher_content = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./src/core/sitehome/components/index/index.ngfactory.js + 5 modules
-var index_ngfactory = __webpack_require__(1893);
+var index_ngfactory = __webpack_require__(1894);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);
@@ -739,7 +739,7 @@ var empty_box_ngfactory = __webpack_require__(164);
 var empty_box = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.ngfactory.js
-var searchbar_ngfactory = __webpack_require__(1891);
+var searchbar_ngfactory = __webpack_require__(1892);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(18);
@@ -751,7 +751,7 @@ var searchbar = __webpack_require__(642);
 var col = __webpack_require__(114);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-progress/course-progress.ngfactory.js
-var course_progress_ngfactory = __webpack_require__(1892);
+var course_progress_ngfactory = __webpack_require__(1893);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-progress/course-progress.ts
 var course_progress = __webpack_require__(1303);
@@ -1215,7 +1215,7 @@ var CoreCoursesMyOverviewPageModuleNgFactory = core["_28" /* ɵcmf */](my_overvi
 
 /***/ }),
 
-/***/ 1879:
+/***/ 1880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1455,7 +1455,7 @@ var CoreCourseModuleComponentNgFactory = core["_27" /* ɵccf */]("core-course-mo
 
 /***/ }),
 
-/***/ 1891:
+/***/ 1892:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1523,7 +1523,7 @@ var SearchbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵ
 
 /***/ }),
 
-/***/ 1892:
+/***/ 1893:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1647,7 +1647,7 @@ var CoreCoursesCourseProgressComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__a
 
 /***/ }),
 
-/***/ 1893:
+/***/ 1894:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1725,7 +1725,7 @@ var iframe = __webpack_require__(37);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ngfactory.js + 1 modules
-var module_ngfactory = __webpack_require__(1879);
+var module_ngfactory = __webpack_require__(1880);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ts
 var module_module = __webpack_require__(1292);

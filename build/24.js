@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 1803:
+/***/ 1804:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -765,7 +765,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ngfactory.js
-var timer_ngfactory = __webpack_require__(1887);
+var timer_ngfactory = __webpack_require__(1888);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ts
 var timer = __webpack_require__(1300);
@@ -1175,7 +1175,7 @@ var AddonModLessonPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_mod
 
 /***/ }),
 
-/***/ 1887:
+/***/ 1888:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 1772:
+/***/ 1773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -201,7 +201,7 @@ var components_module = __webpack_require__(32);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/messages/components/components.module.ts
-var components_components_module = __webpack_require__(1881);
+var components_components_module = __webpack_require__(1882);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/settings/settings.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -288,7 +288,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1285);
 var recaptchamodal_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1874);
+var toggle_ngfactory = __webpack_require__(1875);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(633);
@@ -597,7 +597,7 @@ var AddonMessagesSettingsPageModuleNgFactory = core["_28" /* ɵcmf */](settings_
 
 /***/ }),
 
-/***/ 1874:
+/***/ 1875:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -649,7 +649,7 @@ var ToggleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf
 
 /***/ }),
 
-/***/ 1881:
+/***/ 1882:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -661,8 +661,8 @@ var ToggleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_discussions_discussions__ = __webpack_require__(1882);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_contacts_contacts__ = __webpack_require__(1883);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_discussions_discussions__ = __webpack_require__(1883);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_contacts_contacts__ = __webpack_require__(1884);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -722,7 +722,7 @@ var AddonMessagesComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 1882:
+/***/ 1883:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -981,7 +981,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 1883:
+/***/ 1884:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

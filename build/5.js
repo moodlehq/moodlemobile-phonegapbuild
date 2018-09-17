@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 1824:
+/***/ 1825:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(28);
 var components_components_module = __webpack_require__(426);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/pages/submission/submission.ts
-var submission = __webpack_require__(1890);
+var submission = __webpack_require__(1891);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/submission/submission.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -321,7 +321,7 @@ var AddonModWorkshopAssessmentComponentNgFactory = core["_27" /* ɵccf */]("addo
 var label = __webpack_require__(60);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1874);
+var toggle_ngfactory = __webpack_require__(1875);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(633);
@@ -354,7 +354,7 @@ var rich_text_editor_ngfactory = __webpack_require__(264);
 var rich_text_editor = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ngfactory.js
-var assessment_strategy_ngfactory = __webpack_require__(1889);
+var assessment_strategy_ngfactory = __webpack_require__(1890);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ts
 var assessment_strategy = __webpack_require__(1297);
@@ -652,7 +652,7 @@ var AddonModWorkshopSubmissionPageModuleNgFactory = core["_28" /* ɵcmf */](subm
 
 /***/ }),
 
-/***/ 1874:
+/***/ 1875:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -704,7 +704,7 @@ var ToggleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf
 
 /***/ }),
 
-/***/ 1889:
+/***/ 1890:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -884,7 +884,7 @@ var AddonModWorkshopAssessmentStrategyComponentNgFactory = __WEBPACK_IMPORTED_MO
 
 /***/ }),
 
-/***/ 1890:
+/***/ 1891:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1379,11 +1379,11 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=submission.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1895)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1896)(module)))
 
 /***/ }),
 
-/***/ 1895:
+/***/ 1896:
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {

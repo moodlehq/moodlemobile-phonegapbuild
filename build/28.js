@@ -1,6 +1,6 @@
 webpackJsonp([28],{
 
-/***/ 1769:
+/***/ 1770:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -292,7 +292,7 @@ var label = __webpack_require__(60);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1874);
+var toggle_ngfactory = __webpack_require__(1875);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(633);
@@ -518,7 +518,7 @@ var AddonMessageOutputAirnotifierDevicesPageModuleNgFactory = core["_28" /* ɵcm
 
 /***/ }),
 
-/***/ 1874:
+/***/ 1875:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

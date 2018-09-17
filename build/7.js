@@ -1,6 +1,6 @@
 webpackJsonp([7],{
 
-/***/ 1810:
+/***/ 1811:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -949,7 +949,7 @@ var translate_pipe = __webpack_require__(29);
 var icon = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1880);
+var toolbar_ngfactory = __webpack_require__(1881);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(236);
@@ -964,7 +964,7 @@ var toolbar_title = __webpack_require__(324);
 var navbar = __webpack_require__(191);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ngfactory.js
-var timer_ngfactory = __webpack_require__(1887);
+var timer_ngfactory = __webpack_require__(1888);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ts
 var timer = __webpack_require__(1300);
@@ -997,7 +997,7 @@ var item_reorder = __webpack_require__(27);
 var item_divider = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ngfactory.js
-var question_ngfactory = __webpack_require__(1888);
+var question_ngfactory = __webpack_require__(1889);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ts
 var question = __webpack_require__(1311);
@@ -1309,7 +1309,7 @@ var AddonModQuizPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_modul
 
 /***/ }),
 
-/***/ 1880:
+/***/ 1881:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1342,7 +1342,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 
 /***/ }),
 
-/***/ 1887:
+/***/ 1888:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1402,7 +1402,7 @@ var CoreTimerComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_
 
 /***/ }),
 
-/***/ 1888:
+/***/ 1889:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

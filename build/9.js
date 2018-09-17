@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 1865:
+/***/ 1866:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -239,7 +239,7 @@ var refresher_content_ngfactory = __webpack_require__(192);
 var refresher_content = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./src/core/sitehome/components/index/index.ngfactory.js + 5 modules
-var index_ngfactory = __webpack_require__(1893);
+var index_ngfactory = __webpack_require__(1894);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(3);
@@ -391,7 +391,7 @@ var CoreSiteHomeIndexPageModuleNgFactory = core["_28" /* ɵcmf */](index_module_
 
 /***/ }),
 
-/***/ 1879:
+/***/ 1880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -631,7 +631,7 @@ var CoreCourseModuleComponentNgFactory = core["_27" /* ɵccf */]("core-course-mo
 
 /***/ }),
 
-/***/ 1893:
+/***/ 1894:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -709,7 +709,7 @@ var iframe = __webpack_require__(37);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ngfactory.js + 1 modules
-var module_ngfactory = __webpack_require__(1879);
+var module_ngfactory = __webpack_require__(1880);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ts
 var module_module = __webpack_require__(1292);

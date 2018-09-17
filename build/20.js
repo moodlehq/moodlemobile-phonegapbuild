@@ -1,6 +1,6 @@
 webpackJsonp([20],{
 
-/***/ 1832:
+/***/ 1833:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -307,7 +307,7 @@ var navbar = __webpack_require__(191);
 var item_divider = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ngfactory.js + 1 modules
-var module_ngfactory = __webpack_require__(1879);
+var module_ngfactory = __webpack_require__(1880);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ts
 var module_module = __webpack_require__(1292);
@@ -675,7 +675,7 @@ var CoreCourseSectionPageModuleNgFactory = core["_28" /* ɵcmf */](section_modul
 
 /***/ }),
 
-/***/ 1879:
+/***/ 1880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

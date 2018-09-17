@@ -1,6 +1,6 @@
 webpackJsonp([19],{
 
-/***/ 1834:
+/***/ 1835:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -208,7 +208,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1285);
 var recaptchamodal_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-list-item/course-list-item.ngfactory.js
-var course_list_item_ngfactory = __webpack_require__(1884);
+var course_list_item_ngfactory = __webpack_require__(1885);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-list-item/course-list-item.ts
 var course_list_item = __webpack_require__(1294);
@@ -433,7 +433,7 @@ var CoreCoursesAvailableCoursesPageModuleNgFactory = core["_28" /* ɵcmf */](ava
 
 /***/ }),
 
-/***/ 1884:
+/***/ 1885:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
