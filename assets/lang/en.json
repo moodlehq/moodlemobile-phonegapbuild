@@ -1494,6 +1494,7 @@
     "core.settings.license": "License",
     "core.settings.localnotifavailable": "Local notifications available",
     "core.settings.locationhref": "Web view URL",
+    "core.settings.locked": "Locked",
     "core.settings.loggedin": "Online",
     "core.settings.loggedoff": "Offline",
     "core.settings.navigatorlanguage": "Navigator language",
