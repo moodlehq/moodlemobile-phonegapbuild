@@ -351,7 +351,7 @@ var item_reorder = __webpack_require__(27);
 var item_content = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(198);
+var directives_link = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
 var url = __webpack_require__(24);

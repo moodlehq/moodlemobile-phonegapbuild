@@ -304,7 +304,7 @@ var groups = __webpack_require__(63);
 var comments = __webpack_require__(155);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(197);
+var modal_controller = __webpack_require__(198);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(59);

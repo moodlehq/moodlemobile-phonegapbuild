@@ -289,7 +289,7 @@ var offline = __webpack_require__(148);
 var groups = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(197);
+var modal_controller = __webpack_require__(198);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
 var providers_helper = __webpack_require__(169);

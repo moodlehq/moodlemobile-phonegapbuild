@@ -582,7 +582,7 @@ var loading = __webpack_require__(49);
 var nav_params = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(197);
+var modal_controller = __webpack_require__(198);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/review/review.ngfactory.js
 /**

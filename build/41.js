@@ -277,7 +277,7 @@ var icon_ngfactory = __webpack_require__(194);
 var icon = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(198);
+var directives_link = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(3);

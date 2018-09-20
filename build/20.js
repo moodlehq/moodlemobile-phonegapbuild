@@ -334,7 +334,7 @@ var format = __webpack_require__(436);
 var format_delegate = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(197);
+var modal_controller = __webpack_require__(198);
 
 // CONCATENATED MODULE: ./src/core/course/components/format/format.ngfactory.js
 /**

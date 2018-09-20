@@ -1027,7 +1027,7 @@ var row = __webpack_require__(115);
 var item_content = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(198);
+var directives_link = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
 var card_header = __webpack_require__(269);
@@ -1069,7 +1069,7 @@ var nav_params = __webpack_require__(59);
 var popover_controller = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(197);
+var modal_controller = __webpack_require__(198);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/player/player.ngfactory.js
 /**
