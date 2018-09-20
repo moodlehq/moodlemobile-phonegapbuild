@@ -306,7 +306,7 @@ var select_ngfactory = __webpack_require__(113);
 var select_select = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
-var deep_linker = __webpack_require__(49);
+var deep_linker = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(8);

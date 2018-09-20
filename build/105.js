@@ -355,7 +355,7 @@ var config = __webpack_require__(6);
 var item = __webpack_require__(20);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
-var deep_linker = __webpack_require__(49);
+var deep_linker = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(18);
@@ -427,10 +427,10 @@ var empty_box_ngfactory = __webpack_require__(164);
 var empty_box = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
-var loading_ngfactory = __webpack_require__(56);
+var loading_ngfactory = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
-var loading = __webpack_require__(50);
+var loading = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.ngfactory.js
 var fab_container_ngfactory = __webpack_require__(340);

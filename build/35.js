@@ -272,7 +272,7 @@ var refresher_content = __webpack_require__(144);
 var translate_pipe = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/core/siteplugins/providers/siteplugins.ts
-var siteplugins = __webpack_require__(54);
+var siteplugins = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
 var helper = __webpack_require__(43);

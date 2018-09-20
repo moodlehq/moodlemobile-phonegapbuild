@@ -281,7 +281,7 @@ var plugin_content_ngfactory = __webpack_require__(465);
 var dom = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/siteplugins/providers/siteplugins.ts
-var siteplugins = __webpack_require__(54);
+var siteplugins = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(59);

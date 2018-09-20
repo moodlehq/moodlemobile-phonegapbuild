@@ -459,7 +459,7 @@ var select_ngfactory = __webpack_require__(113);
 var select_select = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
-var deep_linker = __webpack_require__(49);
+var deep_linker = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(18);
@@ -519,10 +519,10 @@ var CoreSitePickerComponentNgFactory = core["_27" /* ɵccf */]("core-site-picker
 var item_divider = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
-var loading_ngfactory = __webpack_require__(56);
+var loading_ngfactory = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
-var loading = __webpack_require__(50);
+var loading = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(59);
