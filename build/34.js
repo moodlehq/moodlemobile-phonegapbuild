@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(4);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/core/siteplugins/components/plugin-content/plugin-content.ts
-var plugin_content = __webpack_require__(141);
+var plugin_content = __webpack_require__(142);
 
 // CONCATENATED MODULE: ./src/core/siteplugins/pages/plugin-page/plugin-page.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -272,7 +272,7 @@ var gesture_controller = __webpack_require__(36);
 var refresher_content_ngfactory = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(144);
+var refresher_content = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/core/siteplugins/components/plugin-content/plugin-content.ngfactory.js
 var plugin_content_ngfactory = __webpack_require__(466);

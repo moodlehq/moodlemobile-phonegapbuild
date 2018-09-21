@@ -37,7 +37,7 @@ var providers_assign = __webpack_require__(67);
 var assign_offline = __webpack_require__(110);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/helper.ts
-var helper = __webpack_require__(145);
+var helper = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(34);
@@ -500,7 +500,7 @@ var gesture_controller = __webpack_require__(36);
 var refresher_content_ngfactory = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(144);
+var refresher_content = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(53);

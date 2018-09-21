@@ -25,7 +25,7 @@ var app = __webpack_require__(10);
 var file = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
-var init = __webpack_require__(153);
+var init = __webpack_require__(141);
 
 // EXTERNAL MODULE: ./src/providers/lang.ts
 var lang = __webpack_require__(135);

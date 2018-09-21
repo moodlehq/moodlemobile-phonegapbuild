@@ -55,7 +55,7 @@ var split_view = __webpack_require__(34);
 var rich_text_editor = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(152);
+var forum = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
 var offline = __webpack_require__(200);
@@ -821,7 +821,7 @@ var refresher = __webpack_require__(133);
 var refresher_content_ngfactory = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(144);
+var refresher_content = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(53);

@@ -19,7 +19,7 @@ var splash_screen = __webpack_require__(663);
 var app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
-var init = __webpack_require__(153);
+var init = __webpack_require__(141);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);

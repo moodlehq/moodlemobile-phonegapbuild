@@ -46,13 +46,13 @@ var utils_text = __webpack_require__(11);
 var fileuploader = __webpack_require__(62);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/workshop.ts
-var workshop = __webpack_require__(151);
+var workshop = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
 var helper = __webpack_require__(170);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
-var offline = __webpack_require__(148);
+var offline = __webpack_require__(149);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/edit-submission/edit-submission.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -622,7 +622,7 @@ var gesture_controller = __webpack_require__(36);
 var refresher_content_ngfactory = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(144);
+var refresher_content = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(53);
