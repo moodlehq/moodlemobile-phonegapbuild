@@ -575,7 +575,7 @@ var config = __webpack_require__(6);
 var toolbar = __webpack_require__(235);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(39);
@@ -632,7 +632,7 @@ var icon = __webpack_require__(41);
 var note = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(194);
+var icon_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon_icon = __webpack_require__(165);
@@ -641,7 +641,7 @@ var icon_icon = __webpack_require__(165);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(195);
+var file_ngfactory = __webpack_require__(196);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(167);
@@ -911,7 +911,7 @@ var keyboard = __webpack_require__(99);
 var refresher = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(192);
+var refresher_content_ngfactory = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(144);

@@ -640,7 +640,7 @@ var avatar = __webpack_require__(180);
 var item_divider = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(195);
+var file_ngfactory = __webpack_require__(196);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(167);
@@ -658,7 +658,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(194);
+var icon_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(165);
@@ -682,7 +682,7 @@ var gesture_controller = __webpack_require__(36);
 var dom_controller = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(197);
+var directives_link = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
 var format_date = __webpack_require__(325);
@@ -697,7 +697,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(26);
@@ -724,7 +724,7 @@ var keyboard = __webpack_require__(99);
 var refresher = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(192);
+var refresher_content_ngfactory = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(144);

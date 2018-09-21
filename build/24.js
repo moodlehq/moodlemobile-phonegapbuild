@@ -867,7 +867,7 @@ var list = __webpack_require__(74);
 var gesture_controller = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(197);
+var directives_link = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(418);
@@ -879,7 +879,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(633);

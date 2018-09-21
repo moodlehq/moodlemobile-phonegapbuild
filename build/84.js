@@ -187,7 +187,7 @@ var translate_pipe = __webpack_require__(28);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(195);
+var file_ngfactory = __webpack_require__(196);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(167);
@@ -268,7 +268,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(26);

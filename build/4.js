@@ -700,7 +700,7 @@ var refresher = __webpack_require__(133);
 var gesture_controller = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(192);
+var refresher_content_ngfactory = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(144);
@@ -715,7 +715,7 @@ var course = __webpack_require__(15);
 var module_prefetch_delegate = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(194);
+var icon_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon_icon = __webpack_require__(165);
@@ -829,7 +829,7 @@ var item_reorder = __webpack_require__(27);
 var item_content = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(197);
+var directives_link = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-group.js
 var item_group = __webpack_require__(430);
@@ -934,7 +934,7 @@ var toolbar_header = __webpack_require__(418);
 var navbar_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(633);
@@ -1287,7 +1287,7 @@ var translate_pipe = __webpack_require__(28);
 var icon = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(194);
+var icon_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon_icon = __webpack_require__(165);
@@ -1546,7 +1546,7 @@ var SearchbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵ
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_config_config__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ngx_translate_core_src_translate_pipe__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_icon_icon_ngfactory__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_icon_icon_ngfactory__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_icon_icon__ = __webpack_require__(165);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__node_modules_ionic_angular_components_spinner_spinner_ngfactory__ = __webpack_require__(166);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ionic_angular_components_spinner_spinner__ = __webpack_require__(130);
@@ -1752,7 +1752,7 @@ var nav_push_anchor = __webpack_require__(263);
 var deep_linker = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(194);
+var icon_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(165);

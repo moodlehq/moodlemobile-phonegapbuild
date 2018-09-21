@@ -186,7 +186,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(26);
@@ -261,7 +261,7 @@ var toolbar_item = __webpack_require__(419);
 var popover_controller = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/glossary.ts
-var glossary = __webpack_require__(182);
+var glossary = __webpack_require__(183);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/offline.ts
 var offline = __webpack_require__(219);

@@ -187,7 +187,7 @@ var refresher = __webpack_require__(133);
 var gesture_controller = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(192);
+var refresher_content_ngfactory = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(144);
@@ -259,7 +259,7 @@ var button_button = __webpack_require__(40);
 var col = __webpack_require__(114);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(194);
+var icon_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(165);
@@ -277,7 +277,7 @@ var empty_box = __webpack_require__(134);
 var dynamic_component_ngfactory = __webpack_require__(1289);
 
 // EXTERNAL MODULE: ./src/components/dynamic-component/dynamic-component.ts
-var dynamic_component = __webpack_require__(196);
+var dynamic_component = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ngfactory.js
 var infinite_loading_ngfactory = __webpack_require__(429);
@@ -307,7 +307,7 @@ var toolbar_item = __webpack_require__(419);
 var toolbar = __webpack_require__(235);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
 var item_divider = __webpack_require__(163);
@@ -759,7 +759,7 @@ var translate_pipe = __webpack_require__(28);
 var icon = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(194);
+var icon_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon_icon = __webpack_require__(165);

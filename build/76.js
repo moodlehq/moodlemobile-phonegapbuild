@@ -258,7 +258,7 @@ var item_divider = __webpack_require__(163);
 var dynamic_component_ngfactory = __webpack_require__(1289);
 
 // EXTERNAL MODULE: ./src/components/dynamic-component/dynamic-component.ts
-var dynamic_component = __webpack_require__(196);
+var dynamic_component = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -279,7 +279,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(26);

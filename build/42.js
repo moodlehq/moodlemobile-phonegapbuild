@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 1860:
+/***/ 1859:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -338,7 +338,7 @@ var spinner = __webpack_require__(130);
 var tab_highlight = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
-var split_pane = __webpack_require__(187);
+var split_pane = __webpack_require__(188);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

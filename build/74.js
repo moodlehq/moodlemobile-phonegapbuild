@@ -37,7 +37,7 @@ var dom = __webpack_require__(3);
 var time = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm.ts
-var providers_scorm = __webpack_require__(183);
+var providers_scorm = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/helper.ts
 var helper = __webpack_require__(337);
@@ -1400,7 +1400,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(191);
+var navbar = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(26);
