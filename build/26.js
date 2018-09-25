@@ -397,12 +397,14 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
      * Convenience function to update or return to discussions depending on device.
      *
      * @param {number} [discussionId] Id of the new discussion.
+     * @param {number} [discTimecreated] The time created of the discussion (if offline).
      */
-    AddonModForumNewDiscussionPage.prototype.returnToDiscussions = function (discussionId) {
+    AddonModForumNewDiscussionPage.prototype.returnToDiscussions = function (discussionId, discTimecreated) {
         var data = {
             forumId: this.forumId,
             cmId: this.cmId,
             discussionId: discussionId,
+            discTimecreated: discTimecreated
         };
         this.eventsProvider.trigger(forum["a" /* AddonModForumProvider */].NEW_DISCUSSION_EVENT, data, this.sitesProvider.getCurrentSiteId());
         // Delete the local files from the tmp folder.
@@ -497,7 +499,7 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
                 // Data sent to server, delete stored files (if any).
                 _this.forumHelper.deleteNewDiscussionStoredFiles(_this.forumId, discTimecreated);
             }
-            _this.returnToDiscussions(discussionId);
+            _this.returnToDiscussions(discussionId, discTimecreated);
         }).catch(function (message) {
             _this.domUtils.showErrorModalDefault(message, 'addon.mod_forum.cannotcreatediscussion', true);
         }).finally(function () {
