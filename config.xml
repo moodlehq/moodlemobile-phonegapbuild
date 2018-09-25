@@ -158,7 +158,9 @@
         <param name="ANDROID_SUPPORT_VERSION" value="27.1.0" />
     </gap:plugin>
 
-    <!-- @todo: Android debuggable. -->
+    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='Moodle']" mode="merge">
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true"></activity>
+    </edit-config>
 
     <!-- See MOBILE-892 -->
     <preference name="permissions" value="none"/>
