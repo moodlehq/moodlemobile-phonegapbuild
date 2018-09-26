@@ -17,6 +17,7 @@
     "addon.calendar.errorloadevents": "Error loading events.",
     "addon.calendar.eventendtime": "End time",
     "addon.calendar.eventstarttime": "Start time",
+    "addon.calendar.gotoactivity": "Go to activity",
     "addon.calendar.noevents": "There are no events",
     "addon.calendar.notifications": "Notifications",
     "addon.calendar.typecategory": "Category event",

@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 1777:
+/***/ 1776:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1095,14 +1095,14 @@ var AddonModAssignIndexComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53_ionic_angular_tap_click_haptic__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54_ionic_angular_gestures_gesture_controller__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__directives_link__ = __webpack_require__(181);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_tabs_tab_ngfactory__ = __webpack_require__(425);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_tabs_tab_ngfactory__ = __webpack_require__(424);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_tabs_tab__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_tabs_tabs__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_59_ionic_angular_components_badge_badge__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__pipes_format_date__ = __webpack_require__(325);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__components_loading_loading_ngfactory__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__components_loading_loading__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__components_tabs_tabs_ngfactory__ = __webpack_require__(424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__components_tabs_tabs_ngfactory__ = __webpack_require__(425);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__submission__ = __webpack_require__(635);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__providers_sync__ = __webpack_require__(84);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__providers_utils_time__ = __webpack_require__(42);

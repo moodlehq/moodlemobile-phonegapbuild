@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(9);
 var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/course/pages/section/section.ts
-var section = __webpack_require__(1318);
+var section = __webpack_require__(1317);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -481,7 +481,7 @@ var CoreCourseFormatComponentNgFactory = core["_27" /* ɵccf */]("core-course-fo
 
 //# sourceMappingURL=format.ngfactory.js.map
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(425);
+var tab_ngfactory = __webpack_require__(424);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ts
 var tabs = __webpack_require__(136);
@@ -502,7 +502,7 @@ var toolbar_title_ngfactory = __webpack_require__(1284);
 var toolbar_title = __webpack_require__(324);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(424);
+var tabs_ngfactory = __webpack_require__(425);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(59);

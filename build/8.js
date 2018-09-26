@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 1774:
+/***/ 1781:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -219,7 +219,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1286);
 var recaptchamodal_ngfactory = __webpack_require__(1287);
 
 // EXTERNAL MODULE: ./src/components/search-box/search-box.ngfactory.js
-var search_box_ngfactory = __webpack_require__(1317);
+var search_box_ngfactory = __webpack_require__(1318);
 
 // EXTERNAL MODULE: ./src/components/search-box/search-box.ts
 var search_box = __webpack_require__(431);
@@ -563,10 +563,10 @@ var split_view_ngfactory = __webpack_require__(422);
 var fileuploader = __webpack_require__(62);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(424);
+var tabs_ngfactory = __webpack_require__(425);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(425);
+var tab_ngfactory = __webpack_require__(424);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
 var tab = __webpack_require__(69);
