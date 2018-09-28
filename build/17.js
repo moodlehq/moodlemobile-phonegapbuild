@@ -305,7 +305,7 @@ var dom_controller = __webpack_require__(24);
 var keyboard = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./src/components/search-box/search-box.ngfactory.js
-var search_box_ngfactory = __webpack_require__(1318);
+var search_box_ngfactory = __webpack_require__(1317);
 
 // EXTERNAL MODULE: ./src/components/search-box/search-box.ts
 var search_box = __webpack_require__(431);

@@ -952,10 +952,10 @@ var toolbar = __webpack_require__(235);
 var toolbar_item = __webpack_require__(419);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(425);
+var tabs_ngfactory = __webpack_require__(424);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(424);
+var tab_ngfactory = __webpack_require__(425);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
 var tab = __webpack_require__(69);
