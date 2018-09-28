@@ -1,6 +1,6 @@
 webpackJsonp([14],{
 
-/***/ 1871:
+/***/ 1870:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,9 +14,6 @@ var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
 var _ngx_translate_core = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(81);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
 var user = __webpack_require__(44);
@@ -32,6 +29,9 @@ var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(11);
 
 // CONCATENATED MODULE: ./src/core/user/pages/about/about.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -68,22 +68,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Page that displays an user about page.
  */
 var about_CoreUserAboutPage = /** @class */ (function () {
-    function CoreUserAboutPage(navParams, userProvider, userHelper, domUtils, eventsProvider, sanitizer, sitesProvider, platform) {
+    function CoreUserAboutPage(navParams, userProvider, userHelper, domUtils, eventsProvider, sitesProvider, textUtils) {
         this.userProvider = userProvider;
         this.userHelper = userHelper;
         this.domUtils = domUtils;
         this.eventsProvider = eventsProvider;
-        this.sanitizer = sanitizer;
         this.sitesProvider = sitesProvider;
-        this.platform = platform;
+        this.textUtils = textUtils;
         this.userLoaded = false;
         this.hasContact = false;
         this.hasDetails = false;
-        this.isAndroid = false;
         this.user = {};
         this.userId = navParams.get('userId');
         this.courseId = navParams.get('courseId');
-        this.isAndroid = this.platform.is('android');
         this.siteId = this.sitesProvider.getCurrentSite().getId();
     }
     /**
@@ -103,7 +100,7 @@ var about_CoreUserAboutPage = /** @class */ (function () {
         return this.userProvider.getProfile(this.userId, this.courseId).then(function (user) {
             if (user.address) {
                 user.address = _this.userHelper.formatAddress(user.address, user.city, user.country);
-                user.encodedAddress = _this.sanitizer.bypassSecurityTrustUrl((_this.isAndroid ? 'geo:0,0?q=' : 'http://maps.google.com?q=') + encodeURIComponent(user.address));
+                user.encodedAddress = _this.textUtils.buildAddressURL(user.address);
             }
             _this.hasContact = user.email || user.phone1 || user.phone2 || user.city || user.country || user.address;
             _this.hasDetails = user.url || user.interests || (user.customfields && user.customfields.length > 0);
@@ -136,8 +133,8 @@ var about_CoreUserAboutPage = /** @class */ (function () {
             templateUrl: 'about.html',
         }),
         __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */],
-            dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */], platform_browser["c" /* DomSanitizer */],
-            sites["a" /* CoreSitesProvider */], ionic_angular["u" /* Platform */]])
+            dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */],
+            sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */]])
     ], CoreUserAboutPage);
     return CoreUserAboutPage;
 }());
@@ -286,9 +283,6 @@ var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(39);
-
-// EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -449,7 +443,6 @@ var nav_params = __webpack_require__(59);
 
 
 
-
 var styles_CoreUserAboutPage = [];
 var RenderType_CoreUserAboutPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreUserAboutPage, data: {} });
 
@@ -471,7 +464,7 @@ function View_CoreUserAboutPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()
         var pd_0 = (_co.refreshUser($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), core["_30" /* ɵdid */](18, 212992, null, 0, refresher_refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](21, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher_refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](25, 0, null, 1, 8, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](26, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreUserAboutPage_1)), core["_30" /* ɵdid */](29, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreUserAboutPage_14)), core["_30" /* ɵdid */](32, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_2 = _co.title; _ck(_v, 10, 0, currVal_2); var currVal_7 = _co.userLoaded; _ck(_v, 18, 0, currVal_7); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 21, 0, core["_44" /* ɵnov */](_v, 22).transform("core.pulltorefresh")), ""); _ck(_v, 21, 0, currVal_9); var currVal_10 = _co.userLoaded; _ck(_v, 26, 0, currVal_10); var currVal_11 = _co.user; _ck(_v, 29, 0, currVal_11); var currVal_12 = (!_co.user || ((!_co.hasContact && !_co.hasDetails) && !_co.user.description)); _ck(_v, 32, 0, currVal_12); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_3 = core["_44" /* ɵnov */](_v, 15).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 15)._hasRefresher; _ck(_v, 14, 0, currVal_3, currVal_4); var currVal_5 = (core["_44" /* ɵnov */](_v, 18).state !== "inactive"); var currVal_6 = core["_44" /* ɵnov */](_v, 18)._top; _ck(_v, 17, 0, currVal_5, currVal_6); var currVal_8 = core["_44" /* ɵnov */](_v, 21).r.state; _ck(_v, 20, 0, currVal_8); }); }
-function View_CoreUserAboutPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-user-about", [], null, null, null, View_CoreUserAboutPage_0, RenderType_CoreUserAboutPage)), core["_30" /* ɵdid */](1, 49152, null, 0, about_CoreUserAboutPage, [nav_params["a" /* NavParams */], user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */], platform_browser["c" /* DomSanitizer */], sites["a" /* CoreSitesProvider */], platform["a" /* Platform */]], null, null)], null, null); }
+function View_CoreUserAboutPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-user-about", [], null, null, null, View_CoreUserAboutPage_0, RenderType_CoreUserAboutPage)), core["_30" /* ɵdid */](1, 49152, null, 0, about_CoreUserAboutPage, [nav_params["a" /* NavParams */], user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */]], null, null)], null, null); }
 var CoreUserAboutPageNgFactory = core["_27" /* ɵccf */]("page-core-user-about", about_CoreUserAboutPage, View_CoreUserAboutPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=about.ngfactory.js.map

@@ -1273,6 +1273,7 @@
     "core.listsep": ",",
     "core.loading": "Loading",
     "core.loadmore": "Load more",
+    "core.location": "Location",
     "core.login.auth_email": "Email-based self-registration",
     "core.login.authenticating": "Authenticating",
     "core.login.cancel": "Cancel",
