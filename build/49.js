@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(9);
 var splash_screen = __webpack_require__(663);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(10);
+var app = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
 var init = __webpack_require__(141);
