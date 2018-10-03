@@ -31,7 +31,7 @@ var dom = __webpack_require__(3);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
-var courses = __webpack_require__(72);
+var courses = __webpack_require__(73);
 
 // EXTERNAL MODULE: ./src/core/course/providers/options-delegate.ts
 var options_delegate = __webpack_require__(172);

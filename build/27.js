@@ -504,10 +504,10 @@ var item_reorder = __webpack_require__(27);
 var item_divider = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/components/mark-required/mark-required.ngfactory.js
-var mark_required_ngfactory = __webpack_require__(82);
+var mark_required_ngfactory = __webpack_require__(80);
 
 // EXTERNAL MODULE: ./src/components/mark-required/mark-required.ts
-var mark_required = __webpack_require__(73);
+var mark_required = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
 var utils_text = __webpack_require__(10);

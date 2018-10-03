@@ -748,7 +748,7 @@ var translate_pipe = __webpack_require__(28);
 var all_course_list = __webpack_require__(1306);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
-var courses = __webpack_require__(72);
+var courses = __webpack_require__(73);
 
 // CONCATENATED MODULE: ./src/core/sitehome/components/all-course-list/all-course-list.ngfactory.js
 /**

@@ -25,7 +25,7 @@ var helper = __webpack_require__(647);
 var dom = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
-var courses = __webpack_require__(72);
+var courses = __webpack_require__(73);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
