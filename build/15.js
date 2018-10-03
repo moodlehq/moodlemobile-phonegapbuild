@@ -1,6 +1,6 @@
 webpackJsonp([15],{
 
-/***/ 1865:
+/***/ 1864:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -162,7 +162,7 @@ var components_module = __webpack_require__(32);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(104);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/synchronization/synchronization.module.ts
 // (C) Copyright 2015 Martin Dougiamas

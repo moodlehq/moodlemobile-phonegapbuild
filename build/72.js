@@ -279,13 +279,13 @@ var refresher_content = __webpack_require__(145);
 var translate_pipe = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/mod/survey/providers/survey.ts
-var survey = __webpack_require__(253);
+var survey = __webpack_require__(254);
 
 // EXTERNAL MODULE: ./src/addon/mod/survey/providers/helper.ts
 var providers_helper = __webpack_require__(288);
 
 // EXTERNAL MODULE: ./src/addon/mod/survey/providers/offline.ts
-var offline = __webpack_require__(254);
+var offline = __webpack_require__(255);
 
 // EXTERNAL MODULE: ./src/addon/mod/survey/providers/sync.ts
 var sync = __webpack_require__(289);
@@ -384,7 +384,7 @@ var translate_store = __webpack_require__(417);
 var ionic_angular_module = __webpack_require__(632);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_components_module = __webpack_require__(32);

@@ -284,7 +284,7 @@ var translate_pipe = __webpack_require__(28);
 var feedback = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/offline.ts
-var offline = __webpack_require__(250);
+var offline = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(63);
@@ -390,7 +390,7 @@ var translate_store = __webpack_require__(417);
 var ionic_angular_module = __webpack_require__(632);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_components_module = __webpack_require__(32);

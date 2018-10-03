@@ -282,7 +282,7 @@ var refresher_content = __webpack_require__(145);
 var translate_pipe = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/mod/book/providers/book.ts
-var book = __webpack_require__(246);
+var book = __webpack_require__(247);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);
@@ -387,7 +387,7 @@ var translate_store = __webpack_require__(417);
 var ionic_angular_module = __webpack_require__(632);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_components_module = __webpack_require__(32);

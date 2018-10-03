@@ -95,7 +95,7 @@ var settings_AddonCalendarSettingsPage = /** @class */ (function () {
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(104);
 
 // CONCATENATED MODULE: ./src/addon/calendar/pages/settings/settings.module.ts
 // (C) Copyright 2015 Martin Dougiamas

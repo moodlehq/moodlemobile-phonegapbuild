@@ -288,7 +288,7 @@ var course = __webpack_require__(15);
 var prefetch_handler = __webpack_require__(353);
 
 // EXTERNAL MODULE: ./src/addon/mod/resource/providers/helper.ts
-var providers_helper = __webpack_require__(252);
+var providers_helper = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(59);
@@ -384,7 +384,7 @@ var translate_store = __webpack_require__(417);
 var ionic_angular_module = __webpack_require__(632);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_components_module = __webpack_require__(32);
