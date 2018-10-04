@@ -1,6 +1,6 @@
 webpackJsonp([73],{
 
-/***/ 1819:
+/***/ 1817:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -180,7 +180,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1287);
 var unsupported_module_ngfactory = __webpack_require__(1288);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1342);
+var index_ngfactory = __webpack_require__(1341);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/toc-popover/toc-popover.ngfactory.js
 var toc_popover_ngfactory = __webpack_require__(1362);

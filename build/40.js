@@ -85,8 +85,8 @@ var about_CoreSettingsAboutPage = /** @class */ (function () {
         this.compilationTime = configconstants["a" /* CoreConfigConstants */].compilationtime;
         this.lastCommit = configconstants["a" /* CoreConfigConstants */].lastcommit;
         // Calculate the privacy policy to use.
-        this.privacyPolicy = currentSite.getStoredConfig('tool_mobile_apppolicy') || currentSite.getStoredConfig('sitepolicy') ||
-            configconstants["a" /* CoreConfigConstants */].privacypolicy;
+        this.privacyPolicy = (currentSite && (currentSite.getStoredConfig('tool_mobile_apppolicy') ||
+            currentSite.getStoredConfig('sitepolicy'))) || configconstants["a" /* CoreConfigConstants */].privacypolicy;
         this.navigator = window.navigator;
         if (window.location && window.location.href) {
             var url = window.location.href;
