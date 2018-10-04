@@ -116,7 +116,7 @@ var about_CoreSettingsAboutPage = /** @class */ (function () {
             _this.currentLanguage = lang;
         });
         this.networkStatus = appProvider.isOnline() ? 'core.online' : 'core.offline';
-        this.wifiConnection = appProvider.isNetworkAccessLimited() ? 'core.no' : 'core.yes';
+        this.wifiConnection = appProvider.isWifi() ? 'core.yes' : 'core.no';
         this.deviceWebWorkers = !!window['Worker'] && !!window['URL'] ? 'core.yes' : 'core.no';
         this.device = device;
         if (fileProvider.isAvailable()) {
