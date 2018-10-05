@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(5);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/components.module.ts
-var components_module = __webpack_require__(427);
+var components_module = __webpack_require__(428);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/index/index.ts
 var index = __webpack_require__(459);
@@ -172,7 +172,7 @@ var unsupported_module_ngfactory = __webpack_require__(1288);
 var index_ngfactory = __webpack_require__(1313);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(418);
+var toolbar_header = __webpack_require__(419);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -253,7 +253,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(419);
+var toolbar_item = __webpack_require__(420);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(179);
@@ -286,7 +286,7 @@ var workshop = __webpack_require__(152);
 var offline = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
-var groups = __webpack_require__(63);
+var groups = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
 var modal_controller = __webpack_require__(198);
@@ -387,7 +387,7 @@ var translate_parser = __webpack_require__(324);
 var missing_translation_handler = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(417);
+var translate_store = __webpack_require__(418);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(632);
@@ -399,7 +399,7 @@ var pipes_module = __webpack_require__(104);
 var components_components_module = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(75);
+var course_components_components_module = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(236);

@@ -40,7 +40,7 @@ var time = __webpack_require__(42);
 var providers_scorm = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/helper.ts
-var helper = __webpack_require__(337);
+var helper = __webpack_require__(338);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm-sync.ts
 var scorm_sync = __webpack_require__(276);
@@ -1370,10 +1370,10 @@ var spinner_ngfactory = __webpack_require__(166);
 var spinner = __webpack_require__(130);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ngfactory.js
-var iframe_ngfactory = __webpack_require__(432);
+var iframe_ngfactory = __webpack_require__(336);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ts
-var iframe = __webpack_require__(273);
+var iframe = __webpack_require__(244);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(4);
@@ -1382,7 +1382,7 @@ var logger = __webpack_require__(4);
 var utils_iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(79);
+var platform_browser = __webpack_require__(75);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(28);
@@ -1391,7 +1391,7 @@ var translate_pipe = __webpack_require__(28);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(418);
+var toolbar_header = __webpack_require__(419);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(35);
@@ -1451,7 +1451,7 @@ var content = __webpack_require__(23);
 var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(419);
+var toolbar_item = __webpack_require__(420);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(8);
@@ -1466,7 +1466,7 @@ var dom_controller = __webpack_require__(24);
 var keyboard = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
-var loading_ngfactory = __webpack_require__(53);
+var loading_ngfactory = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
 var loading = __webpack_require__(49);
@@ -1475,7 +1475,7 @@ var loading = __webpack_require__(49);
 var navigation_bar_ngfactory = __webpack_require__(679);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ts
-var navigation_bar = __webpack_require__(345);
+var navigation_bar = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(59);
@@ -1578,7 +1578,7 @@ var translate_parser = __webpack_require__(324);
 var missing_translation_handler = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(417);
+var translate_store = __webpack_require__(418);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(632);

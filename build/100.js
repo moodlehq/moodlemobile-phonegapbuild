@@ -171,7 +171,7 @@ var unsupported_module_ngfactory = __webpack_require__(1288);
 var index_ngfactory = __webpack_require__(1329);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(418);
+var toolbar_header = __webpack_require__(419);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -252,7 +252,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(419);
+var toolbar_item = __webpack_require__(420);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(179);
@@ -279,13 +279,13 @@ var refresher_content = __webpack_require__(145);
 var translate_pipe = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/mod/choice/providers/choice.ts
-var choice = __webpack_require__(248);
+var choice = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./src/addon/mod/choice/providers/offline.ts
-var offline = __webpack_require__(249);
+var offline = __webpack_require__(250);
 
 // EXTERNAL MODULE: ./src/addon/mod/choice/providers/sync.ts
-var sync = __webpack_require__(250);
+var sync = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(59);
@@ -374,7 +374,7 @@ var translate_parser = __webpack_require__(324);
 var missing_translation_handler = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(417);
+var translate_store = __webpack_require__(418);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(632);
@@ -386,7 +386,7 @@ var pipes_module = __webpack_require__(104);
 var components_components_module = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(75);
+var course_components_components_module = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(236);
