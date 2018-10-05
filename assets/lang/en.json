@@ -1478,6 +1478,8 @@
     "core.settings.cordovadeviceuuid": "Cordova device UUID",
     "core.settings.cordovaversion": "Cordova version",
     "core.settings.currentlanguage": "Current language",
+    "core.settings.debugdisplay": "Display debug messages",
+    "core.settings.debugdisplaydescription": "If enabled, error modals will display more data about the error if possible.",
     "core.settings.deletesitefiles": "Are you sure that you want to delete the downloaded files from the site '{{sitename}}'?",
     "core.settings.deletesitefilestitle": "Delete site files",
     "core.settings.deviceinfo": "Device info",
