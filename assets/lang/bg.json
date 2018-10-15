@@ -849,6 +849,8 @@
     "core.login.policyagreementclick": "Препратка към условията за ползване на сайта",
     "core.login.potentialidps": "Влизане с вашия профил от:",
     "core.login.reconnect": "Повторно свързване",
+    "core.login.reconnectdescription": "Вашият ключ за идентификация не е валиден или е изтекъл. Трябва да се свържете със сайта отново.",
+    "core.login.reconnectssodescription": "Вашият ключ за идентификация не е валиден или е изтекъл. Трябва да се свържете със сайта отново - да влезете в сайта през прозорец в браузър.",
     "core.login.security_question": "Въпрос за сигурност",
     "core.login.selectacountry": "Държава",
     "core.login.siteaddress": "Адрес на сайта",
