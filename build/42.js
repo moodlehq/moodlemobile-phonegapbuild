@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 1868:
+/***/ 1867:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,7 +25,7 @@ var sites = __webpack_require__(1);
 var mainmenu = __webpack_require__(658);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/delegate.ts
-var delegate = __webpack_require__(157);
+var delegate = __webpack_require__(173);
 
 // CONCATENATED MODULE: ./src/core/mainmenu/pages/menu/menu.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -80,7 +80,6 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
             return;
         }
         this.showTabs = true;
-        var site = this.sitesProvider.getCurrentSite(), displaySiteHome = site.getInfo() && site.getInfo().userhomepage === 0;
         this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
             handlers = handlers.slice(0, mainmenu["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Get main handlers.
             // Re-build the list of tabs. If a handler is already in the list, use existing object to prevent re-creating the tab.
@@ -102,31 +101,27 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
                 return b.priority - a.priority;
             });
             if (typeof _this.initialTab == 'undefined' && !_this.loaded) {
+                _this.initialTab = 0;
                 // Calculate the tab to load.
                 if (_this.redirectPage) {
                     // Check if the redirect page is the root page of any of the tabs.
-                    _this.initialTab = 0;
-                    for (var i = 0; i < _this.tabs.length; i++) {
-                        var tab = _this.tabs[i];
-                        if (tab.page == _this.redirectPage) {
-                            // Tab found. Set the params and unset the redirect page.
-                            _this.initialTab = i + 1;
-                            tab.pageParams = Object.assign(tab.pageParams || {}, _this.redirectParams);
-                            _this.redirectPage = null;
-                            _this.redirectParams = null;
-                            break;
-                        }
+                    var i = _this.tabs.findIndex(function (tab, i) {
+                        return tab.page == _this.redirectPage;
+                    });
+                    if (i >= 0) {
+                        // Tab found. Set the params and unset the redirect page.
+                        _this.initialTab = i + 1;
+                        _this.tabs[i].pageParams = Object.assign(_this.tabs[i].pageParams || {}, _this.redirectParams);
+                        _this.redirectPage = null;
+                        _this.redirectParams = null;
                     }
                 }
                 else {
-                    // By default, course overview will be loaded (3.3+). Check if we need to select Site Home or My Courses.
-                    for (var i = 0; i < _this.tabs.length; i++) {
-                        var handler = handlers[i];
-                        if ((displaySiteHome && handler.name == 'CoreSiteHome') ||
-                            (!displaySiteHome && handler.name == 'CoreCourses')) {
-                            _this.initialTab = i;
-                            break;
-                        }
+                    var i = handlers.findIndex(function (handler, i) {
+                        return handler.name == 'CoreDashboard';
+                    });
+                    if (i >= 0) {
+                        _this.initialTab = i;
                     }
                 }
             }
@@ -196,43 +191,43 @@ var menu_module_CoreMainMenuPageModule = /** @class */ (function () {
 
 //# sourceMappingURL=menu.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1282);
+var action_sheet_component_ngfactory = __webpack_require__(1281);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1283);
+var alert_component_ngfactory = __webpack_require__(1282);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1284);
+var app_root_ngfactory = __webpack_require__(1283);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1285);
+var loading_component_ngfactory = __webpack_require__(1284);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1286);
+var modal_component_ngfactory = __webpack_require__(1285);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1287);
+var picker_component_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1288);
+var popover_component_ngfactory = __webpack_require__(1287);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1289);
+var select_popover_component_ngfactory = __webpack_require__(1288);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1290);
+var toast_component_ngfactory = __webpack_require__(1289);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1293);
+var context_menu_popover_ngfactory = __webpack_require__(1292);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1294);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1293);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1295);
+var recaptchamodal_ngfactory = __webpack_require__(1294);
 
 // EXTERNAL MODULE: ./src/components/ion-tabs/ion-tab.ts
-var ion_tab = __webpack_require__(1333);
+var ion_tab = __webpack_require__(1332);
 
 // EXTERNAL MODULE: ./src/components/ion-tabs/ion-tabs.ts
 var ion_tabs = __webpack_require__(656);
@@ -329,13 +324,13 @@ var TabButtonNgFactory = core["_27" /* ɵccf */](".tab-button", tab_button["a" /
 
 //# sourceMappingURL=tab-button.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(167);
+var spinner_ngfactory = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(130);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab-highlight.js
-var tab_highlight = __webpack_require__(466);
+var tab_highlight = __webpack_require__(465);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
 var split_pane = __webpack_require__(189);
@@ -452,7 +447,7 @@ var translate_parser = __webpack_require__(324);
 var missing_translation_handler = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(423);
+var translate_store = __webpack_require__(422);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(637);
