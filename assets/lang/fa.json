@@ -934,7 +934,7 @@
     "core.hours": "ساعت",
     "core.imageviewer": "نمایشگر تصویر",
     "core.info": "توضیحات",
-    "core.labelsep": ":&nbsp;",
+    "core.labelsep": ": ",
     "core.lastaccess": "زمان آخرین دسترسی",
     "core.lastmodified": "آخرین تغییر",
     "core.layoutgrid": "جدول",

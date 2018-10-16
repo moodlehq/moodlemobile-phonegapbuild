@@ -357,7 +357,7 @@
     "addon.mod_lesson.numberofpagesviewed": "A megtekintett oldalak száma: {{$a}}",
     "addon.mod_lesson.numberofpagesviewednotice": "Megválaszolt kérdések száma: {{$a.nquestions}}; (Megválaszolandó legalább: {{$a.minquestions}})",
     "addon.mod_lesson.ongoingcustom": "{{$a.score}} pontot ért el az eddig elérhető {{$a.currenthigh}} pontból.",
-    "addon.mod_lesson.ongoingnormal": "{{$a-&gt;correct}} kérdést válaszolt meg helyesen az eddigi {{$a-&gt;viewed}} próbálkozásból",
+    "addon.mod_lesson.ongoingnormal": "{{$a->correct}} kérdést válaszolt meg helyesen az eddigi {{$a->viewed}} próbálkozásból",
     "addon.mod_lesson.or": "VAGY",
     "addon.mod_lesson.overview": "Áttekintés",
     "addon.mod_lesson.preview": "Előzetes megtekintés",
