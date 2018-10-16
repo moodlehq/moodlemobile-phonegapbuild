@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(29);
@@ -528,7 +528,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(192);
+var navbar = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(635);
@@ -555,7 +555,7 @@ var utils_text = __webpack_require__(9);
 var url = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);
@@ -591,7 +591,7 @@ var refresher = __webpack_require__(133);
 var gesture_controller = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(193);
+var refresher_content_ngfactory = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(145);
@@ -603,7 +603,7 @@ var loading_ngfactory = __webpack_require__(54);
 var loading = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ngfactory.js
-var compile_html_ngfactory = __webpack_require__(186);
+var compile_html_ngfactory = __webpack_require__(187);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
 var compile_html = __webpack_require__(157);

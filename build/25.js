@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(32);
@@ -40,7 +40,7 @@ var utils_text = __webpack_require__(9);
 var fileuploader = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/glossary.ts
-var glossary = __webpack_require__(183);
+var glossary = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/offline.ts
 var offline = __webpack_require__(219);
@@ -433,7 +433,7 @@ var toggle = __webpack_require__(636);
 var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/tap-click/haptic.js
-var haptic = __webpack_require__(194);
+var haptic = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(36);
@@ -451,7 +451,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(192);
+var navbar = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -478,7 +478,7 @@ var utils = __webpack_require__(2);
 var url = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);
@@ -765,7 +765,7 @@ var AddonModGlossaryNewDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](e
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__toggle__ = __webpack_require__(636);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util_form__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__platform_platform__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__tap_click_haptic__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__tap_click_haptic__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__item_item__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__gestures_gesture_controller__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__platform_dom_controller__ = __webpack_require__(24);

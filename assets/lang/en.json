@@ -1403,6 +1403,7 @@
     "core.more": "more",
     "core.mygroups": "My groups",
     "core.name": "Name",
+    "core.networkerroriframemsg": "This content is not available offline. Please connect to the internet and try again.",
     "core.networkerrormsg": "There was a problem connecting to the site. Please check your connection and try again.",
     "core.never": "Never",
     "core.next": "Next",

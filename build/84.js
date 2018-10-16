@@ -78,7 +78,7 @@ var menu_modal_AddonModLessonMenuModalPage = /** @class */ (function () {
 
 //# sourceMappingURL=menu-modal.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/menu-modal/menu-modal.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -187,7 +187,7 @@ var translate_pipe = __webpack_require__(28);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(196);
+var file_ngfactory = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(167);
@@ -241,7 +241,7 @@ var platform = __webpack_require__(14);
 var url = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(22);
@@ -268,7 +268,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(192);
+var navbar = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(26);

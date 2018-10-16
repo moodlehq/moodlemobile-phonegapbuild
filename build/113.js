@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar.ts
 var calendar = __webpack_require__(329);
@@ -174,7 +174,7 @@ var toast_component_ngfactory = __webpack_require__(1285);
 var duration = __webpack_require__(1324);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(42);
@@ -192,7 +192,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(192);
+var navbar = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(26);

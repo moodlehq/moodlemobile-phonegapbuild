@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
 var utils_text = __webpack_require__(9);
@@ -165,7 +165,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1289);
 var recaptchamodal_ngfactory = __webpack_require__(1290);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(196);
+var file_ngfactory = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(167);
@@ -213,7 +213,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(192);
+var navbar = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(26);
@@ -273,7 +273,7 @@ var format_text = __webpack_require__(39);
 var url = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(4);
+var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(22);

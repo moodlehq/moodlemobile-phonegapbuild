@@ -166,7 +166,7 @@ var site_CoreLoginSitePage = /** @class */ (function () {
 
 //# sourceMappingURL=site.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(5);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(29);
@@ -327,7 +327,7 @@ var view_controller = __webpack_require__(35);
 var navbar_ngfactory = __webpack_require__(1286);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(192);
+var navbar = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(635);
@@ -363,7 +363,7 @@ var keyboard = __webpack_require__(100);
 var nav_params = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(198);
+var modal_controller = __webpack_require__(199);
 
 // CONCATENATED MODULE: ./src/core/login/pages/site/site.ngfactory.js
 /**
