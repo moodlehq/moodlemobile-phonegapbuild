@@ -277,7 +277,7 @@ var select_ngfactory = __webpack_require__(114);
 var select_select = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
-var deep_linker = __webpack_require__(50);
+var deep_linker = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/option/option.js
 var option_option = __webpack_require__(101);

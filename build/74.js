@@ -1469,7 +1469,7 @@ var keyboard = __webpack_require__(100);
 var loading_ngfactory = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
-var loading = __webpack_require__(49);
+var loading = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ngfactory.js
 var navigation_bar_ngfactory = __webpack_require__(681);

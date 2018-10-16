@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(10);
 var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
-var constants = __webpack_require__(51);
+var constants = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -369,7 +369,7 @@ var keyboard = __webpack_require__(100);
 var loading_ngfactory = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
-var loading = __webpack_require__(49);
+var loading = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
 var item_divider = __webpack_require__(163);

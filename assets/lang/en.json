@@ -1349,6 +1349,7 @@
     "core.login.selectsite": "Please select your site:",
     "core.login.signupplugindisabled": "{{$a}} is not enabled.",
     "core.login.siteaddress": "Site address",
+    "core.login.sitehasredirect": "Your site contains at least one HTTP redirect. The app cannot follow redirects, this could be the issue that's preventing the app from connecting to your site.",
     "core.login.siteinmaintenance": "Your site is in maintenance mode",
     "core.login.sitepolicynotagreederror": "Site policy not agreed.",
     "core.login.siteurl": "Site URL",

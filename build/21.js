@@ -40,7 +40,7 @@ var config = __webpack_require__(173);
 var app = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
-var constants = __webpack_require__(51);
+var constants = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -495,7 +495,7 @@ var select_select = __webpack_require__(102);
 var app_app = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
-var deep_linker = __webpack_require__(50);
+var deep_linker = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
 var col = __webpack_require__(115);
@@ -582,7 +582,7 @@ var refresher_content = __webpack_require__(145);
 var loading_ngfactory = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
-var loading = __webpack_require__(49);
+var loading = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

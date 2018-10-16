@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(4);
 var app = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
-var constants = __webpack_require__(51);
+var constants = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
 var config = __webpack_require__(173);
@@ -323,7 +323,7 @@ var select_ngfactory = __webpack_require__(114);
 var select_select = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
-var deep_linker = __webpack_require__(50);
+var deep_linker = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(8);
