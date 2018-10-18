@@ -10,6 +10,7 @@
     "addon.badges.issuername": "発行者名",
     "addon.badges.nobadges": "利用できるバッジはありません。",
     "addon.badges.recipientdetails": "取得者詳細",
+    "addon.block_myoverview.all": "すべて",
     "addon.block_myoverview.future": "未来",
     "addon.block_myoverview.inprogress": "進行中",
     "addon.block_myoverview.morecourses": "コースをさらに",

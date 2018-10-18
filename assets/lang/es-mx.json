@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Nombre del emisor",
     "addon.badges.nobadges": "No hay insignias disponibles.",
     "addon.badges.recipientdetails": "Detalles de receptores",
+    "addon.block_myoverview.all": "Todo",
     "addon.block_myoverview.future": "Futuro",
     "addon.block_myoverview.inprogress": "En progreso",
     "addon.block_myoverview.morecourses": "Más cursos",

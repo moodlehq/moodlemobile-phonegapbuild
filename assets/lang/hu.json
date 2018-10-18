@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Az adományozó neve",
     "addon.badges.nobadges": "Nincs elérhető kitűző.",
     "addon.badges.recipientdetails": "A megjutalmazott adatai",
+    "addon.block_myoverview.all": "Összes",
     "addon.block_myoverview.future": "Jövőbeni",
     "addon.block_myoverview.inprogress": "Folyamatban lévő",
     "addon.block_myoverview.morecourses": "További kurzusok",

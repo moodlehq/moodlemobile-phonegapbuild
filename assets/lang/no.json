@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Navn på utsteder",
     "addon.badges.nobadges": "Det er ingen tilgjengelige utmerkelser.",
     "addon.badges.recipientdetails": "Mottakerdetaljer",
+    "addon.block_myoverview.all": "Alle",
     "addon.block_myoverview.future": "Fremtidige",
     "addon.block_myoverview.inprogress": "Aktive",
     "addon.block_myoverview.morecourses": "Flere kurs",
