@@ -147,7 +147,7 @@
     "addon.mod_assign.allowsubmissionsfromdate": "Povolit odevzdání úkolů od",
     "addon.mod_assign.allowsubmissionsfromdatesummary": "Odevzdat úkol bude možné od <strong>{{$a}}</strong>",
     "addon.mod_assign.applytoteam": "Použít hodnocení pro celou skupinu",
-    "addon.mod_assign.assignmentisdue": "Úkol je zpožděn",
+    "addon.mod_assign.assignmentisdue": "Úkol má být hotov do",
     "addon.mod_assign.attemptnumber": "Číslo pokusu",
     "addon.mod_assign.attemptreopenmethod": "Opětovné otevření pokusů",
     "addon.mod_assign.attemptreopenmethod_manual": "Ručně",
