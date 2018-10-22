@@ -13,13 +13,13 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(3);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
 var grades = __webpack_require__(139);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
+var dom = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
 var helper = __webpack_require__(168);

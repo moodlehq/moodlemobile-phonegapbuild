@@ -81,7 +81,7 @@ var navigation_modal_AddonModQuizNavigationModalPage = /** @class */ (function (
 
 //# sourceMappingURL=navigation-modal.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(3);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(28);

@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(3);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/course/pages/section/section.ts
 var section = __webpack_require__(1324);
@@ -139,7 +139,7 @@ var navbar_buttons = __webpack_require__(79);
 var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
+var dom = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
 var context_menu_ngfactory = __webpack_require__(85);
@@ -709,7 +709,7 @@ var module_completion = __webpack_require__(1300);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
+var dom = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);

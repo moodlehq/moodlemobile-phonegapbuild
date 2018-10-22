@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(9);
 var file = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
+var dom = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
 var utils_text = __webpack_require__(10);
@@ -389,7 +389,7 @@ var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
 
 //# sourceMappingURL=capture-media.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(3);
+var _ngx_translate_core = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(29);
