@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Κανένα μάθημα σε εξέλιξη",
     "addon.block_myoverview.nocoursespast": "Κανένα προηγούμενο μάθημα",
     "addon.block_myoverview.past": "Προηγούμενα",
+    "addon.block_myoverview.pluginname": "Επισκόπηση μαθημάτων",
+    "addon.block_recentcourses.nocourses": "Κανένα μάθημα",
     "addon.block_sitemainmenu.pluginname": "Κύριο μενού",
     "addon.calendar.calendar": "Ημερολόγιο",
     "addon.calendar.calendarevents": "Ημερολόγιο συμβάντων",

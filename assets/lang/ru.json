@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Нет текущих курсов",
     "addon.block_myoverview.nocoursespast": "Нет прошедших курсов",
     "addon.block_myoverview.past": "Прошедшие",
+    "addon.block_myoverview.pluginname": "Сводка по курсам",
+    "addon.block_recentcourses.nocourses": "Нет курсов",
     "addon.block_sitemainmenu.pluginname": "Основное меню",
     "addon.calendar.calendar": "Календарь",
     "addon.calendar.calendarevents": "События календаря",

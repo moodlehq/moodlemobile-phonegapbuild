@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Нема курсева који су току",
     "addon.block_myoverview.nocoursespast": "Нема прошлих курсева",
     "addon.block_myoverview.past": "Прошли",
+    "addon.block_myoverview.pluginname": "Преглед курсева",
+    "addon.block_recentcourses.nocourses": "Нема курсева",
     "addon.block_sitemainmenu.pluginname": "Главни мени",
     "addon.calendar.calendar": "Календар",
     "addon.calendar.calendarevents": "Догађаји у календару",

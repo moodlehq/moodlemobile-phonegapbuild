@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "טרם נרשמתם לקורס המתרחש כעת",
     "addon.block_myoverview.nocoursespast": "אינכם רשומים לקורס אשר הסתיימו",
     "addon.block_myoverview.past": "ארכיון",
+    "addon.block_myoverview.pluginname": "עדכונים בקורסים שלי",
+    "addon.block_recentcourses.nocourses": "אף קורס",
     "addon.block_sitemainmenu.pluginname": "תפריט ראשי",
     "addon.calendar.calendar": "לוח-שנה",
     "addon.calendar.calendarevents": "אירועי לוח שנה",

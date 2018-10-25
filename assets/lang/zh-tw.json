@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "沒有進行中的課程",
     "addon.block_myoverview.nocoursespast": "沒有過去的課程",
     "addon.block_myoverview.past": "過去",
+    "addon.block_myoverview.pluginname": "課程概觀",
+    "addon.block_recentcourses.nocourses": "沒有課程",
     "addon.block_sitemainmenu.pluginname": "主選單",
     "addon.calendar.calendar": "行事曆",
     "addon.calendar.calendarevents": "行事曆",

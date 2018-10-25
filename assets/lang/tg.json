@@ -8,6 +8,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Ягон пешравӣ дар ин курсҳо нестанд",
     "addon.block_myoverview.nocoursespast": "Курсҳои гузашта, нестанд",
     "addon.block_myoverview.past": "Гузашта",
+    "addon.block_myoverview.pluginname": "Азназаргузаронии курс",
+    "addon.block_recentcourses.nocourses": "Курсҳо нестанд",
     "addon.block_sitemainmenu.pluginname": "Meнюи асосӣ",
     "addon.calendar.calendar": "Тақвим",
     "addon.calendar.calendarevents": "Чорабиниҳои тақвимӣ",

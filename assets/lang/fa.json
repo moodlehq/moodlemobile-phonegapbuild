@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "هیچ درسِ درجریانی وجود ندارد",
     "addon.block_myoverview.nocoursespast": "هیچ درسی برای گذشته وجود ندارد",
     "addon.block_myoverview.past": "گذشته",
+    "addon.block_myoverview.pluginname": "نمای کلی درس",
+    "addon.block_recentcourses.nocourses": "هیچ درسی",
     "addon.block_sitemainmenu.pluginname": "منوی اصلی",
     "addon.calendar.calendar": "تقویم",
     "addon.calendar.calendarevents": "رویدادهای تقویم",

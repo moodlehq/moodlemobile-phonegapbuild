@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Non ci sono corsi in svolgimento",
     "addon.block_myoverview.nocoursespast": "Non ci sono corsi conclusi",
     "addon.block_myoverview.past": "Conclusi",
+    "addon.block_myoverview.pluginname": "Panoramica corsi",
+    "addon.block_recentcourses.nocourses": "Nessun corso",
     "addon.block_sitemainmenu.pluginname": "Menu principale",
     "addon.calendar.calendar": "Calendario",
     "addon.calendar.calendarevents": "Eventi nel calendario",

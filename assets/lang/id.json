@@ -1,5 +1,6 @@
 {
     "addon.block_activitymodules.pluginname": "Aktivitas",
+    "addon.block_recentcourses.nocourses": "Tidak ada kursus",
     "addon.block_sitemainmenu.pluginname": "Menu utama",
     "addon.calendar.calendar": "Kalender",
     "addon.calendar.calendarevents": "Kalender Acara",

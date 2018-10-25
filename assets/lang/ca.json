@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Actualment no s'està fent cap curs",
     "addon.block_myoverview.nocoursespast": "Cap curs passat",
     "addon.block_myoverview.past": "Passats",
+    "addon.block_myoverview.pluginname": "Resum del curs",
+    "addon.block_recentcourses.nocourses": "No hi ha cap curs",
     "addon.block_sitemainmenu.pluginname": "Menú principal",
     "addon.calendar.calendar": "Calendari",
     "addon.calendar.calendarevents": "Esdeveniments del calendari",

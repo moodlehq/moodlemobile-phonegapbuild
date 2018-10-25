@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Devam eden ders yok",
     "addon.block_myoverview.nocoursespast": "Geçmiş ders yok",
     "addon.block_myoverview.past": "Geçmiş",
+    "addon.block_myoverview.pluginname": "Derslere genel bakış",
+    "addon.block_recentcourses.nocourses": "Ders yok",
     "addon.block_sitemainmenu.pluginname": "Ana menü",
     "addon.calendar.calendar": "Takvim",
     "addon.calendar.eventendtime": "Bitiş süresi",

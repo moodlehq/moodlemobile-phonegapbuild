@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Ez dago martxan dagoen ikastarorik",
     "addon.block_myoverview.nocoursespast": "Ez dago ikastarorik iraganean",
     "addon.block_myoverview.past": "Iraganean",
+    "addon.block_myoverview.pluginname": "Ikuspegi orokorra",
+    "addon.block_recentcourses.nocourses": "Ez dago ikastarorik",
     "addon.block_sitemainmenu.pluginname": "Menu nagusia",
     "addon.calendar.calendar": "Egutegia",
     "addon.calendar.calendarevents": "Egutegiko gertakariak",

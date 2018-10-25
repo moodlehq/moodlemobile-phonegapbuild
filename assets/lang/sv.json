@@ -17,6 +17,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Inga pågående kurser",
     "addon.block_myoverview.nocoursespast": "Inga tidigare kurser",
     "addon.block_myoverview.past": "Tidigare",
+    "addon.block_myoverview.pluginname": "Kursöversikt",
+    "addon.block_recentcourses.nocourses": "Inga kurser",
     "addon.block_sitemainmenu.pluginname": "Huvudmeny",
     "addon.calendar.calendar": "Kalender",
     "addon.calendar.calendarevents": "Kalenderhändelser",

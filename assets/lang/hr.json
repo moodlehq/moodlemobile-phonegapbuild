@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Nema e-kolegija u tijeku",
     "addon.block_myoverview.nocoursespast": "Nema prošlih e-kolegija",
     "addon.block_myoverview.past": "Prošlo",
+    "addon.block_myoverview.pluginname": "Pregled e-kolegija",
+    "addon.block_recentcourses.nocourses": "Nema e-kolegija",
     "addon.block_sitemainmenu.pluginname": "Glavni izbornik",
     "addon.calendar.calendar": "Kalendar",
     "addon.calendar.calendarevents": "Događaji u kalendaru",

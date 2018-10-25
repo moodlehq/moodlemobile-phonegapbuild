@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Nėra vykstančių kursų",
     "addon.block_myoverview.nocoursespast": "Nėra pasibaigusių kursų",
     "addon.block_myoverview.past": "Pasibaigę",
+    "addon.block_myoverview.pluginname": "Kursų apžvalga",
+    "addon.block_recentcourses.nocourses": "Nėra kursų",
     "addon.block_sitemainmenu.pluginname": "Pagrindinis meniu",
     "addon.calendar.calendar": "Kalendorius",
     "addon.calendar.calendarevents": "Renginių kalendorius",

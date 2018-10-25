@@ -18,6 +18,8 @@
     "addon.block_myoverview.nocoursesinprogress": "Nenhuma disciplina a decorrer",
     "addon.block_myoverview.nocoursespast": "Nenhuma disciplina terminada",
     "addon.block_myoverview.past": "Passado",
+    "addon.block_myoverview.pluginname": "Visão global",
+    "addon.block_recentcourses.nocourses": "Em nenhuma disciplina",
     "addon.block_sitemainmenu.pluginname": "Menu principal",
     "addon.calendar.calendar": "Calendário",
     "addon.calendar.calendarevents": "Eventos do calendário",
