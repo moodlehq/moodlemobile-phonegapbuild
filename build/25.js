@@ -153,6 +153,8 @@ var form_AddonModFeedbackFormPage = /** @class */ (function () {
         this.fetchData().then(function () {
             _this.feedbackProvider.logView(_this.feedback.id, true).then(function () {
                 _this.courseProvider.checkModuleCompletion(_this.courseId, _this.module.completionstatus);
+            }).catch(function () {
+                // Ignore errors.
             });
         });
     };

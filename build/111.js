@@ -79,7 +79,9 @@ var competencysummary_AddonCompetencyCompetencySummaryPage = /** @class */ (func
     AddonCompetencyCompetencySummaryPage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.fetchCompetency().then(function () {
-            _this.competencyProvider.logCompetencyView(_this.competencyId);
+            _this.competencyProvider.logCompetencyView(_this.competencyId).catch(function () {
+                // Ignore errors.
+            });
         }).finally(function () {
             _this.competencyLoaded = true;
         });

@@ -93,10 +93,15 @@ var competency_AddonCompetencyCompetencyPage = /** @class */ (function () {
         var _this = this;
         this.fetchCompetency().then(function () {
             if (_this.planId) {
-                _this.competencyProvider.logCompetencyInPlanView(_this.planId, _this.competencyId, _this.planStatus, _this.userId);
+                _this.competencyProvider.logCompetencyInPlanView(_this.planId, _this.competencyId, _this.planStatus, _this.userId)
+                    .catch(function () {
+                    // Ignore errors.
+                });
             }
             else {
-                _this.competencyProvider.logCompetencyInCourseView(_this.courseId, _this.competencyId, _this.userId);
+                _this.competencyProvider.logCompetencyInCourseView(_this.courseId, _this.competencyId, _this.userId).catch(function () {
+                    // Ignore errors.
+                });
             }
         }).finally(function () {
             _this.competencyLoaded = true;

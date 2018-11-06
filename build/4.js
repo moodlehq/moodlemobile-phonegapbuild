@@ -1019,6 +1019,8 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
         this.fetchSubmissionData().then(function () {
             _this.workshopProvider.logViewSubmission(_this.submissionId).then(function () {
                 _this.courseProvider.checkModuleCompletion(_this.courseId, _this.module.completionstatus);
+            }).catch(function () {
+                // Ignore errors.
             });
         });
     };

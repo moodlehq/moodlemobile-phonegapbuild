@@ -81,7 +81,9 @@ var courses_CoreGradesCoursesPage = /** @class */ (function () {
                 _this.gotoCourseGrades(_this.grades[0].courseid);
             }
             // Add log in Moodle.
-            return _this.gradesProvider.logCoursesGradesView();
+            return _this.gradesProvider.logCoursesGradesView().catch(function () {
+                // Ignore errors.
+            });
         }).finally(function () {
             _this.gradesLoaded = true;
         });

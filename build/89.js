@@ -77,7 +77,9 @@ var entry_AddonModGlossaryEntryPage = /** @class */ (function () {
     AddonModGlossaryEntryPage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.fetchEntry().then(function () {
-            _this.glossaryProvider.logEntryView(_this.entry.id);
+            _this.glossaryProvider.logEntryView(_this.entry.id).catch(function () {
+                // Ignore errors.
+            });
         }).finally(function () {
             _this.loaded = true;
         });
