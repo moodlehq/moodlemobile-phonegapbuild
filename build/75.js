@@ -1115,7 +1115,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
     /**
      * Page will leave.
      */
-    AddonModScormPlayerPage.prototype.ionViewWillLeave = function () {
+    AddonModScormPlayerPage.prototype.ionViewWillUnload = function () {
         // Empty src when leaving the state so unload event is triggered in the iframe.
         this.src = '';
     };
