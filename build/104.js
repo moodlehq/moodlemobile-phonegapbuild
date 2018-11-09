@@ -171,7 +171,7 @@ var unsupported_module_ngfactory = __webpack_require__(1344);
 var index_ngfactory = __webpack_require__(1380);
 
 // EXTERNAL MODULE: ./src/addon/mod/book/components/toc-popover/toc-popover.ngfactory.js
-var toc_popover_ngfactory = __webpack_require__(1410);
+var toc_popover_ngfactory = __webpack_require__(1411);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(430);

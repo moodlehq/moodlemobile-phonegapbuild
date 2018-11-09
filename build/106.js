@@ -37,7 +37,7 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/files.ts
-var files = __webpack_require__(349);
+var files = __webpack_require__(350);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/helper.ts
 var helper = __webpack_require__(681);
@@ -433,13 +433,13 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.ngfactory.js
-var fab_container_ngfactory = __webpack_require__(350);
+var fab_container_ngfactory = __webpack_require__(351);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
 var fab_container = __webpack_require__(229);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
-var fab_ngfactory = __webpack_require__(351);
+var fab_ngfactory = __webpack_require__(352);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.js
 var fab = __webpack_require__(194);

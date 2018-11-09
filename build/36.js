@@ -359,7 +359,7 @@ var translate_pipe = __webpack_require__(26);
 var icon = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/pipes/bytes-to-size.ts
-var bytes_to_size = __webpack_require__(1407);
+var bytes_to_size = __webpack_require__(1408);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(430);

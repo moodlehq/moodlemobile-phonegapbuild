@@ -1086,7 +1086,6 @@
     "core.course.couldnotloadsectioncontent": "No se ha podido cargar el contenido de la sección, por favor inténtelo más tarde.",
     "core.course.couldnotloadsections": "No se ha podido cargar las secciones, por favor inténtelo más tarde.",
     "core.course.coursesummary": "Resumen del curso",
-    "core.course.downloadcourse": "Descargar curso",
     "core.course.errordownloadingcourse": "Error al descargar el curso.",
     "core.course.errordownloadingsection": "Error durante la descarga de la sección.",
     "core.course.errorgetmodule": "Se ha producido un error recuperando los datos del módulo.",

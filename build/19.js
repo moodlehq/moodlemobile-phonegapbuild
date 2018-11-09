@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var helper = __webpack_require__(671);
 
 // EXTERNAL MODULE: ./src/addon/messageoutput/providers/delegate.ts
-var delegate = __webpack_require__(353);
+var delegate = __webpack_require__(354);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
 var local_notifications = __webpack_require__(141);

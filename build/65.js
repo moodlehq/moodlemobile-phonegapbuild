@@ -617,7 +617,7 @@ var empty_box = __webpack_require__(116);
 var date_day_or_time = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./src/pipes/create-links.ts
-var create_links = __webpack_require__(1408);
+var create_links = __webpack_require__(1409);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(430);

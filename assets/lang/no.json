@@ -1049,6 +1049,7 @@
     "core.course": "Kurs",
     "core.course.contents": "Innhold",
     "core.course.coursesummary": "Kurssammendrag",
+    "core.course.downloadcourse": "Last ned kurs",
     "core.course.hiddenfromstudents": "Skjult for studenter",
     "core.course.hiddenoncoursepage": "Tilgjengelig, men ikke vist på kurssiden.",
     "core.course.overriddennotice": "Den endelige karakteren fra denne aktiviteten ble redigert manuelt.",

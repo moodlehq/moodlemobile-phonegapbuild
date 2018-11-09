@@ -890,6 +890,7 @@
     "core.course": "Kurs",
     "core.course.contents": "Zawartość",
     "core.course.coursesummary": "Podsumowanie kursu",
+    "core.course.downloadcourse": "Pobierz kurs",
     "core.course.hiddenfromstudents": "Ukryte przed studentami",
     "core.course.hiddenoncoursepage": "Dostępne, lecz nie wyświetlane na stronie kursu.",
     "core.course.overriddennotice": "Twoja ocena końcowa z tej aktywności została ręcznie zmieniona",

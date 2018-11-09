@@ -43,7 +43,7 @@ var providers_logger = __webpack_require__(5);
 var app = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/classes/animations.ts
-var animations = __webpack_require__(1409);
+var animations = __webpack_require__(1410);
 
 // EXTERNAL MODULE: ./node_modules/ts-md5/dist/md5.js
 var md5 = __webpack_require__(197);
@@ -840,7 +840,7 @@ var common = __webpack_require__(7);
 var item_ngfactory = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/directives/long-press.ts
-var long_press = __webpack_require__(1406);
+var long_press = __webpack_require__(1407);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
 var item = __webpack_require__(20);

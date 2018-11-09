@@ -1,6 +1,6 @@
 webpackJsonp([79],{
 
-/***/ 1869:
+/***/ 1865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -183,7 +183,7 @@ var unsupported_module_ngfactory = __webpack_require__(1344);
 var index_ngfactory = __webpack_require__(1391);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/connection-error/connection-error.ngfactory.js
-var connection_error_ngfactory = __webpack_require__(1413);
+var connection_error_ngfactory = __webpack_require__(1414);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(430);

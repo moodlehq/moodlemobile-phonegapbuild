@@ -956,6 +956,7 @@
     "core.course": "Kurzus",
     "core.course.contents": "Tartalomjegyzék",
     "core.course.coursesummary": "Kurzusösszegzés",
+    "core.course.downloadcourse": "Kurzus letöltése",
     "core.course.hiddenfromstudents": "Tanulók elől rejtve",
     "core.course.hiddenoncoursepage": "Elérhető,  de a kurzusoldalon nem látható",
     "core.course.overriddennotice": "A tevékenységgel kapcsolatos végső pontja kézzel módosítva lett.",

@@ -376,13 +376,13 @@ var list = __webpack_require__(76);
 var gesture_controller = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.ngfactory.js
-var fab_container_ngfactory = __webpack_require__(350);
+var fab_container_ngfactory = __webpack_require__(351);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
 var fab_container = __webpack_require__(229);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
-var fab_ngfactory = __webpack_require__(351);
+var fab_ngfactory = __webpack_require__(352);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.js
 var fab = __webpack_require__(194);

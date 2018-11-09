@@ -385,13 +385,13 @@ var translate_service = __webpack_require__(18);
 var icon = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.ngfactory.js
-var searchbar_ngfactory = __webpack_require__(1417);
+var searchbar_ngfactory = __webpack_require__(1397);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.js
-var searchbar = __webpack_require__(355);
+var searchbar = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);

@@ -171,7 +171,7 @@ var unsupported_module_ngfactory = __webpack_require__(1344);
 var index_ngfactory = __webpack_require__(1386);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/components/mode-picker/mode-picker.ngfactory.js
-var mode_picker_ngfactory = __webpack_require__(1411);
+var mode_picker_ngfactory = __webpack_require__(1412);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(430);

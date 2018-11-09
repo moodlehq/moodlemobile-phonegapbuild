@@ -197,7 +197,7 @@ var unsupported_module_ngfactory = __webpack_require__(1344);
 var index_ngfactory = __webpack_require__(1396);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/subwiki-picker/subwiki-picker.ngfactory.js
-var subwiki_picker_ngfactory = __webpack_require__(1415);
+var subwiki_picker_ngfactory = __webpack_require__(1416);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(430);

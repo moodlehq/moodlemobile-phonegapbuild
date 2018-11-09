@@ -166,7 +166,7 @@ var gesture_controller = __webpack_require__(37);
 var dom_controller = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/submission/submission.ngfactory.js
-var submission_ngfactory = __webpack_require__(1416);
+var submission_ngfactory = __webpack_require__(1417);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/submission/submission.ts
 var submission_submission = __webpack_require__(478);

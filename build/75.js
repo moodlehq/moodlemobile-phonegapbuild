@@ -1475,7 +1475,7 @@ var loading = __webpack_require__(47);
 var navigation_bar_ngfactory = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ts
-var navigation_bar = __webpack_require__(354);
+var navigation_bar = __webpack_require__(355);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);
