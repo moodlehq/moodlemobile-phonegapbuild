@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(28);
 var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./src/core/question/components/components.module.ts
-var components_components_module = __webpack_require__(1365);
+var components_components_module = __webpack_require__(1364);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -43,7 +43,7 @@ var helper = __webpack_require__(124);
 var quiz = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
-var providers_helper = __webpack_require__(273);
+var providers_helper = __webpack_require__(274);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/review/review.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -369,40 +369,40 @@ var review_module_AddonModQuizReviewPageModule = /** @class */ (function () {
 
 //# sourceMappingURL=review.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1331);
+var action_sheet_component_ngfactory = __webpack_require__(1330);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1332);
+var alert_component_ngfactory = __webpack_require__(1331);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1333);
+var app_root_ngfactory = __webpack_require__(1332);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1334);
+var loading_component_ngfactory = __webpack_require__(1333);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1335);
+var modal_component_ngfactory = __webpack_require__(1334);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1336);
+var picker_component_ngfactory = __webpack_require__(1335);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1337);
+var popover_component_ngfactory = __webpack_require__(1336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1338);
+var select_popover_component_ngfactory = __webpack_require__(1337);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1339);
+var toast_component_ngfactory = __webpack_require__(1338);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1342);
+var context_menu_popover_ngfactory = __webpack_require__(1341);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1343);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1342);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1344);
+var recaptchamodal_ngfactory = __webpack_require__(1343);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(44);
@@ -483,7 +483,7 @@ var events = __webpack_require__(12);
 var card = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(275);
+var card_header = __webpack_require__(276);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(7);
@@ -507,7 +507,7 @@ var item_divider = __webpack_require__(115);
 var question_ngfactory = __webpack_require__(1946);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ts
-var question = __webpack_require__(1366);
+var question = __webpack_require__(1365);
 
 // EXTERNAL MODULE: ./src/core/question/providers/delegate.ts
 var delegate = __webpack_require__(67);
@@ -534,7 +534,7 @@ var toolbar_header = __webpack_require__(430);
 var view_controller = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1340);
+var navbar_ngfactory = __webpack_require__(1339);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(199);
@@ -546,7 +546,7 @@ var app_app = __webpack_require__(31);
 var back_button = __webpack_require__(656);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1341);
+var toolbar_title_ngfactory = __webpack_require__(1340);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
 var toolbar_title = __webpack_require__(334);
@@ -779,7 +779,7 @@ var AddonModQuizReviewPageModuleNgFactory = core["_28" /* ɵcmf */](review_modul
 /* unused harmony export View_CoreQuestionComponent_Host_0 */
 /* unused harmony export CoreQuestionComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(1346);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(1345);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(22);
@@ -808,7 +808,7 @@ var AddonModQuizReviewPageModuleNgFactory = core["_28" /* ɵcmf */](review_modul
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_utils_iframe__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__question__ = __webpack_require__(1366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__question__ = __webpack_require__(1365);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_delegate__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_behaviour_delegate__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__providers_helper__ = __webpack_require__(124);

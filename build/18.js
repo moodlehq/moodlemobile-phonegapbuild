@@ -121,7 +121,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/core/courses/components/components.module.ts
-var components_components_module = __webpack_require__(270);
+var components_components_module = __webpack_require__(271);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/available-courses/available-courses.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -172,46 +172,46 @@ var available_courses_module_CoreCoursesAvailableCoursesPageModule = /** @class 
 
 //# sourceMappingURL=available-courses.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1331);
+var action_sheet_component_ngfactory = __webpack_require__(1330);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1332);
+var alert_component_ngfactory = __webpack_require__(1331);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1333);
+var app_root_ngfactory = __webpack_require__(1332);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1334);
+var loading_component_ngfactory = __webpack_require__(1333);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1335);
+var modal_component_ngfactory = __webpack_require__(1334);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1336);
+var picker_component_ngfactory = __webpack_require__(1335);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1337);
+var popover_component_ngfactory = __webpack_require__(1336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1338);
+var select_popover_component_ngfactory = __webpack_require__(1337);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1339);
+var toast_component_ngfactory = __webpack_require__(1338);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1342);
+var context_menu_popover_ngfactory = __webpack_require__(1341);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1343);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1342);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1344);
+var recaptchamodal_ngfactory = __webpack_require__(1343);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-list-item/course-list-item.ngfactory.js
 var course_list_item_ngfactory = __webpack_require__(1941);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-list-item/course-list-item.ts
-var course_list_item = __webpack_require__(1349);
+var course_list_item = __webpack_require__(1348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(22);
@@ -244,7 +244,7 @@ var config = __webpack_require__(6);
 var view_controller = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1340);
+var navbar_ngfactory = __webpack_require__(1339);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(199);
@@ -262,7 +262,7 @@ var platform = __webpack_require__(14);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1341);
+var toolbar_title_ngfactory = __webpack_require__(1340);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
 var toolbar_title = __webpack_require__(334);
@@ -471,7 +471,7 @@ var CoreCoursesAvailableCoursesPageModuleNgFactory = core["_28" /* ɵcmf */](ava
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_split_view_split_view__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_utils_iframe__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__providers_events__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__course_list_item__ = __webpack_require__(1349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__course_list_item__ = __webpack_require__(1348);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_courses__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__course_providers_format_delegate__ = __webpack_require__(123);
 /**

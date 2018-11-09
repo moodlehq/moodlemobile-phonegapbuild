@@ -141,49 +141,49 @@ var index_module_AddonModQuizIndexPageModule = /** @class */ (function () {
 
 //# sourceMappingURL=index.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1331);
+var action_sheet_component_ngfactory = __webpack_require__(1330);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1332);
+var alert_component_ngfactory = __webpack_require__(1331);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1333);
+var app_root_ngfactory = __webpack_require__(1332);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1334);
+var loading_component_ngfactory = __webpack_require__(1333);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1335);
+var modal_component_ngfactory = __webpack_require__(1334);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1336);
+var picker_component_ngfactory = __webpack_require__(1335);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1337);
+var popover_component_ngfactory = __webpack_require__(1336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1338);
+var select_popover_component_ngfactory = __webpack_require__(1337);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1339);
+var toast_component_ngfactory = __webpack_require__(1338);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1342);
+var context_menu_popover_ngfactory = __webpack_require__(1341);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1343);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1342);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1344);
+var recaptchamodal_ngfactory = __webpack_require__(1343);
 
 // EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ngfactory.js
-var unsupported_module_ngfactory = __webpack_require__(1345);
+var unsupported_module_ngfactory = __webpack_require__(1344);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1392);
+var index_ngfactory = __webpack_require__(1391);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/connection-error/connection-error.ngfactory.js
-var connection_error_ngfactory = __webpack_require__(1414);
+var connection_error_ngfactory = __webpack_require__(1413);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(430);
@@ -195,7 +195,7 @@ var config = __webpack_require__(6);
 var view_controller = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1340);
+var navbar_ngfactory = __webpack_require__(1339);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(199);
@@ -219,7 +219,7 @@ var translate_service = __webpack_require__(18);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1341);
+var toolbar_title_ngfactory = __webpack_require__(1340);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
 var toolbar_title = __webpack_require__(334);
@@ -297,7 +297,7 @@ var translate_pipe = __webpack_require__(26);
 var quiz = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
-var providers_helper = __webpack_require__(273);
+var providers_helper = __webpack_require__(274);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz-offline.ts
 var quiz_offline = __webpack_require__(233);
@@ -309,7 +309,7 @@ var quiz_sync = __webpack_require__(228);
 var behaviour_delegate = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/prefetch-handler.ts
-var prefetch_handler = __webpack_require__(294);
+var prefetch_handler = __webpack_require__(295);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

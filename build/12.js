@@ -1,6 +1,6 @@
 webpackJsonp([12],{
 
-/***/ 1827:
+/***/ 1826:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43,7 +43,7 @@ var providers_logger = __webpack_require__(5);
 var app = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/classes/animations.ts
-var animations = __webpack_require__(1410);
+var animations = __webpack_require__(1409);
 
 // EXTERNAL MODULE: ./node_modules/ts-md5/dist/md5.js
 var md5 = __webpack_require__(197);
@@ -771,40 +771,40 @@ var discussion_module_AddonMessagesDiscussionPageModule = /** @class */ (functio
 
 //# sourceMappingURL=discussion.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1331);
+var action_sheet_component_ngfactory = __webpack_require__(1330);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1332);
+var alert_component_ngfactory = __webpack_require__(1331);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1333);
+var app_root_ngfactory = __webpack_require__(1332);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1334);
+var loading_component_ngfactory = __webpack_require__(1333);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1335);
+var modal_component_ngfactory = __webpack_require__(1334);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1336);
+var picker_component_ngfactory = __webpack_require__(1335);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1337);
+var popover_component_ngfactory = __webpack_require__(1336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1338);
+var select_popover_component_ngfactory = __webpack_require__(1337);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1339);
+var toast_component_ngfactory = __webpack_require__(1338);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1342);
+var context_menu_popover_ngfactory = __webpack_require__(1341);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1343);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1342);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1344);
+var recaptchamodal_ngfactory = __webpack_require__(1343);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/chip/chip.js
 var chip = __webpack_require__(699);
@@ -840,7 +840,7 @@ var common = __webpack_require__(7);
 var item_ngfactory = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/directives/long-press.ts
-var long_press = __webpack_require__(1407);
+var long_press = __webpack_require__(1406);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
 var item = __webpack_require__(20);
@@ -900,7 +900,7 @@ var toolbar_header = __webpack_require__(430);
 var view_controller = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1340);
+var navbar_ngfactory = __webpack_require__(1339);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(199);
@@ -912,7 +912,7 @@ var app_app = __webpack_require__(31);
 var back_button = __webpack_require__(656);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1341);
+var toolbar_title_ngfactory = __webpack_require__(1340);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
 var toolbar_title = __webpack_require__(334);
@@ -954,7 +954,7 @@ var loading = __webpack_require__(47);
 var infinite_loading_ngfactory = __webpack_require__(442);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(276);
+var infinite_loading = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(76);
@@ -972,7 +972,7 @@ var toolbar_ngfactory = __webpack_require__(1937);
 var send_message_form_ngfactory = __webpack_require__(1943);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ts
-var send_message_form = __webpack_require__(1355);
+var send_message_form = __webpack_require__(1354);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);
@@ -1214,7 +1214,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ngx_translate_core_src_translate_pipe__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ngx_translate_core_src_translate_service__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ionic_angular_components_icon_icon__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__send_message_form__ = __webpack_require__(1355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__send_message_form__ = __webpack_require__(1354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_utils_text__ = __webpack_require__(10);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
