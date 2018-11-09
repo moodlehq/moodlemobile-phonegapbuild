@@ -1018,7 +1018,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
         var _this = this;
         this.fetchSubmissionData().then(function () {
             _this.workshopProvider.logViewSubmission(_this.submissionId).then(function () {
-                _this.courseProvider.checkModuleCompletion(_this.courseId, _this.module.completionstatus);
+                _this.courseProvider.checkModuleCompletion(_this.courseId, _this.module.completiondata);
             }).catch(function () {
                 // Ignore errors.
             });
