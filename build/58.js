@@ -288,7 +288,7 @@ var unsupported_module = __webpack_require__(356);
 var course = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-delegate.ts
-var module_delegate = __webpack_require__(54);
+var module_delegate = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

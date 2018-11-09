@@ -556,7 +556,7 @@ var translate_pipe = __webpack_require__(26);
 var all_course_list = __webpack_require__(1360);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
-var courses = __webpack_require__(55);
+var courses = __webpack_require__(54);
 
 // CONCATENATED MODULE: ./src/core/sitehome/components/all-course-list/all-course-list.ngfactory.js
 /**
@@ -723,7 +723,7 @@ var news = __webpack_require__(1364);
 var course = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-delegate.ts
-var module_delegate = __webpack_require__(54);
+var module_delegate = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/core/sitehome/providers/sitehome.ts
 var sitehome = __webpack_require__(204);

@@ -31,7 +31,7 @@ var calendar = __webpack_require__(337);
 var helper = __webpack_require__(666);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
-var courses = __webpack_require__(55);
+var courses = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);

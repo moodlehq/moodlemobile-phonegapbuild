@@ -22,7 +22,7 @@ var dom = __webpack_require__(4);
 var course = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-delegate.ts
-var module_delegate = __webpack_require__(54);
+var module_delegate = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/core/course/providers/helper.ts
 var helper = __webpack_require__(41);

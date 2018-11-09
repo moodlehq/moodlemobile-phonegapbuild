@@ -514,7 +514,7 @@ var course = __webpack_require__(15);
 var options_delegate = __webpack_require__(118);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
-var courses = __webpack_require__(55);
+var courses = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/core/course/providers/sync.ts
 var sync = __webpack_require__(357);
