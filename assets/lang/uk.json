@@ -166,6 +166,7 @@
     "addon.mod_assign.graded": "Оцінено",
     "addon.mod_assign.gradedby": "Оцінив",
     "addon.mod_assign.gradedon": "Оцінено на",
+    "addon.mod_assign.gradelocked": "Ця оцінка заблокована або змінена вручну в Журналі оцінок",
     "addon.mod_assign.gradenotsynced": "Оцінки не синхронізовані",
     "addon.mod_assign.gradeoutof": "Оцінка (макс. {{$a}})",
     "addon.mod_assign.gradingstatus": "Статус оцінення",

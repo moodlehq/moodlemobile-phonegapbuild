@@ -176,6 +176,7 @@
     "addon.mod_assign.graded": "Kalifikatua",
     "addon.mod_assign.gradedby": "Nork kalifikatua",
     "addon.mod_assign.gradedon": "Noiz kalifikatua",
+    "addon.mod_assign.gradelocked": "Kalifikazio hau blokeatu edo aldatu da kalifikazio-liburuan.",
     "addon.mod_assign.gradenotsynced": "Kalifikazioa ez da sinkronizatu",
     "addon.mod_assign.gradeoutof": "Kalifikazioa ({{$a}}-(e)ra arte)",
     "addon.mod_assign.gradingstatus": "Kalifikazioaren egoera",

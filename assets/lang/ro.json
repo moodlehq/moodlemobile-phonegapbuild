@@ -124,6 +124,7 @@
     "addon.mod_assign.graded": "Notat",
     "addon.mod_assign.gradedby": "Notat de",
     "addon.mod_assign.gradedon": "Notat în data de",
+    "addon.mod_assign.gradelocked": "Această notă este blocată sau suprascrisă în catalog.",
     "addon.mod_assign.gradeoutof": "O notă din {{$a}}",
     "addon.mod_assign.hiddenuser": "Participant",
     "addon.mod_assign.latesubmissionsaccepted": "Permis până în {{$a}}",

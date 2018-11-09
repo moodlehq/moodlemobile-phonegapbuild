@@ -170,6 +170,7 @@
     "addon.mod_assign.graded": "Bedømt",
     "addon.mod_assign.gradedby": "Bedømt af",
     "addon.mod_assign.gradedon": "Bedømt",
+    "addon.mod_assign.gradelocked": "Denne bedømmelse er låst eller overskrevet i karakterbogen.",
     "addon.mod_assign.gradenotsynced": "Karakterer ikke synkroniseret",
     "addon.mod_assign.gradeoutof": "Bedømmelse af {{$a}}",
     "addon.mod_assign.gradingstatus": "Vurderingsstatus",

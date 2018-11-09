@@ -156,6 +156,7 @@
     "addon.mod_assign.graded": "Betygssatt",
     "addon.mod_assign.gradedby": "Betygssatt av",
     "addon.mod_assign.gradedon": "Betygssatt den",
+    "addon.mod_assign.gradelocked": "Detta betyg är låst eller skrevs över i betygsboken/betygsrapporten.",
     "addon.mod_assign.gradeoutof": "Betyg ur {{$a}}",
     "addon.mod_assign.gradingstatus": "Betygssättningsstatus",
     "addon.mod_assign.groupsubmissionsettings": "Gruppinlämning inställningar",

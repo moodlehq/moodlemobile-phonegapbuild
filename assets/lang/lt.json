@@ -167,6 +167,7 @@
     "addon.mod_assign.graded": "Įvertinta",
     "addon.mod_assign.gradedby": "Įvertino",
     "addon.mod_assign.gradedon": "Įvertinta",
+    "addon.mod_assign.gradelocked": "Šis įvertis yra užrakintas arba pakeistas įverčių knygelėje.",
     "addon.mod_assign.gradeoutof": "Įvertinimas (iš galimų {{$a}})",
     "addon.mod_assign.gradingstatus": "Vertinimo būsena",
     "addon.mod_assign.groupsubmissionsettings": "Grupinio pateikimo nustatymai",

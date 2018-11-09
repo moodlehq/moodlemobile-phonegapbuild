@@ -150,6 +150,7 @@
     "addon.mod_assign.graded": "נבדק",
     "addon.mod_assign.gradedby": "נבדק על-ידי",
     "addon.mod_assign.gradedon": "הציון ניתן על",
+    "addon.mod_assign.gradelocked": "הציון נעול או שעודכן בגליון הציונים",
     "addon.mod_assign.gradeoutof": "ציון מתוך {{$a}}",
     "addon.mod_assign.gradingstatus": "מצב מתן הציון",
     "addon.mod_assign.groupsubmissionsettings": "הגדרות הגשה בקבוצות",

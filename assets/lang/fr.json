@@ -189,6 +189,7 @@
     "addon.mod_assign.graded": "Noté",
     "addon.mod_assign.gradedby": "Évalué par",
     "addon.mod_assign.gradedon": "Évalué le",
+    "addon.mod_assign.gradelocked": "Cette note est verrouillée ou modifiée dans le carnet de notes.",
     "addon.mod_assign.gradenotsynced": "Note non synchronisée",
     "addon.mod_assign.gradeoutof": "Note sur {{$a}}",
     "addon.mod_assign.gradingstatus": "Statut de l'évaluation",

@@ -170,6 +170,7 @@
     "addon.mod_assign.graded": "已評分",
     "addon.mod_assign.gradedby": "已評分由",
     "addon.mod_assign.gradedon": "評分標準",
+    "addon.mod_assign.gradelocked": "這一分數在這成績簿中是被鎖定或覆蓋的",
     "addon.mod_assign.gradeoutof": "得分(配分{{$a}})",
     "addon.mod_assign.gradingstatus": "評分狀態",
     "addon.mod_assign.groupsubmissionsettings": "群組繳交作業設定",

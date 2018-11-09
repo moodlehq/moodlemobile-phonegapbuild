@@ -162,6 +162,7 @@
     "addon.mod_assign.graded": "Calificado",
     "addon.mod_assign.gradedby": "Calificado por",
     "addon.mod_assign.gradedon": "Calificado sobre",
+    "addon.mod_assign.gradelocked": "Esta calificación está bloqueada o ha sido modificada en el libro de calificaciones",
     "addon.mod_assign.gradenotsynced": "Calificación no sincronizada",
     "addon.mod_assign.gradeoutof": "Calificación sobre {{$a}}",
     "addon.mod_assign.gradingstatus": "Estado de la calificación",

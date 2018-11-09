@@ -93,6 +93,7 @@
     "addon.mod_assign.graded": "Баҳо дода шуд",
     "addon.mod_assign.gradedby": "Баҳо дода шуд аз ҷониби",
     "addon.mod_assign.gradedon": "Баҳо барои",
+    "addon.mod_assign.gradelocked": "Ин баҳо маҳкам ва ё сбекоршуда дар журнал ба ҳисоб меравад",
     "addon.mod_assign.gradingstatus": "Ҳолати баҳодиҳӣ",
     "addon.mod_assign.hiddenuser": "Иштирокчӣ",
     "addon.mod_assign.markingworkflowstateinmarking": "Дар раванди баҳогузорӣ аст",

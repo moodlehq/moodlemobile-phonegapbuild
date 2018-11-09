@@ -190,6 +190,7 @@
     "addon.mod_assign.graded": "Beoordeeld",
     "addon.mod_assign.gradedby": "Beoordeeld door",
     "addon.mod_assign.gradedon": "Beoordeeld op",
+    "addon.mod_assign.gradelocked": "Dit cijfer is geblokkeerd of overschreven in de cijferlijst.",
     "addon.mod_assign.gradenotsynced": "Cijfer niet gesynchroniseerd",
     "addon.mod_assign.gradeoutof": "Cijfer op {{$a}}",
     "addon.mod_assign.gradingstatus": "Beoordelingsstatus",

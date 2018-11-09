@@ -141,6 +141,7 @@
     "addon.mod_assign.graded": "Notlandırıldı",
     "addon.mod_assign.gradedby": "",
     "addon.mod_assign.gradedon": "Not verildi",
+    "addon.mod_assign.gradelocked": "Bu not kilitli veya not defterinde geçersiz kılınmıştır.",
     "addon.mod_assign.gradeoutof": "{{$a}} Dışarıdan notu",
     "addon.mod_assign.gradingstatus": "Puan durumu",
     "addon.mod_assign.groupsubmissionsettings": "Grup gönderimleri ayarları",

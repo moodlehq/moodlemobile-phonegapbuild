@@ -172,6 +172,7 @@
     "addon.mod_assign.graded": "已评分",
     "addon.mod_assign.gradedby": "评分人",
     "addon.mod_assign.gradedon": "评分时间",
+    "addon.mod_assign.gradelocked": "该成绩在成绩册中被锁定或被覆盖",
     "addon.mod_assign.gradenotsynced": "成绩未同步",
     "addon.mod_assign.gradeoutof": "成绩（满分 {{$a}} ）",
     "addon.mod_assign.gradingstatus": "评分状态",

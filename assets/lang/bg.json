@@ -93,6 +93,7 @@
     "addon.mod_assign.graded": "Оценена",
     "addon.mod_assign.gradedby": "Оценено от",
     "addon.mod_assign.gradedon": "Оценено на",
+    "addon.mod_assign.gradelocked": "Тази оценка е заключена или е коригирана в дневника за оценки.",
     "addon.mod_assign.gradeoutof": "Оценка до {{$a}}",
     "addon.mod_assign.gradingstatus": "Състояние на оценяването",
     "addon.mod_assign.groupsubmissionsettings": "Настройки за групово предаване",

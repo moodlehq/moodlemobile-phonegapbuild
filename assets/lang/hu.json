@@ -137,6 +137,7 @@
     "addon.mod_assign.graded": "Pontozott",
     "addon.mod_assign.gradedby": "Osztályozta",
     "addon.mod_assign.gradedon": "Osztályozás időpontja",
+    "addon.mod_assign.gradelocked": "Ez az osztályzat zárolva van vagy felülírták az osztályozónaplóban",
     "addon.mod_assign.gradeoutof": "{{$a}} pontból",
     "addon.mod_assign.gradingstatus": "Osztályozás állapota",
     "addon.mod_assign.groupsubmissionsettings": "Csoportos leadás beállításai",
