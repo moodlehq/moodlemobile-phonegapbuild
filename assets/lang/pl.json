@@ -1002,6 +1002,7 @@
     "core.login.missingfirstname": "Pominięto imię",
     "core.login.missinglastname": "Pominięto nazwisko",
     "core.login.mobileservicesnotenabled": "Usługi mobilne nie są włączone w Twojej witrynie. Proszę, skontaktuj się z administratorem serwisu Moodle jeśli uważasz mobilny dostęp powinien być włączony.",
+    "core.login.mustconfirm": "Musisz potwierdzić swoją nazwę użytkownika",
     "core.login.newaccount": "Nowe konto",
     "core.login.password": "Hasło",
     "core.login.passwordforgotten": "Zapomniane hasło",

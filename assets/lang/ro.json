@@ -1023,6 +1023,7 @@
     "core.login.missingfirstname": "Lipseşte prenumele",
     "core.login.missinglastname": "Lipseşte numele de familie",
     "core.login.mobileservicesnotenabled": "Serviciile mobile nu sunt activate pe siteul dumneavoastră. Vă rugăm să contactați administratorul siteului dacă considerați necesară activarea accesului mobil.",
+    "core.login.mustconfirm": "Trebuie să confirmaţi autentificarea",
     "core.login.newaccount": "Cont nou",
     "core.login.newsitedescription": "Introduceți adresa URL a siteului dumneavoastră, dar există posibilitatea ca acesta să nu fie configurat pentru a funcționa cu această aplicație.",
     "core.login.notloggedin": "Trebuie să fiți logat.",

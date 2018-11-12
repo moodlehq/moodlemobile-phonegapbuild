@@ -972,6 +972,7 @@
     "core.login.missingemail": "Nedostaje adresa e-pošte",
     "core.login.missingfirstname": "Nedostaje ime",
     "core.login.missinglastname": "Nedostaje prezime",
+    "core.login.mustconfirm": "Morate potvrditi vašu prijavu sustavu (login)",
     "core.login.newaccount": "Novi korisnički račun",
     "core.login.notloggedin": "Morate biti prijavljeni",
     "core.login.password": "Lozinka",

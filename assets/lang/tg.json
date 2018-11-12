@@ -878,6 +878,7 @@
     "core.login.missingemail": "Майдонро пур кунед",
     "core.login.missingfirstname": "Майдонро пур кунед",
     "core.login.missinglastname": "Майдонро пур кунед",
+    "core.login.mustconfirm": "Сабти баҳисобгириро тасдиқ кунед",
     "core.login.newaccount": "Сабти баҳисобгирии нав",
     "core.login.notloggedin": "Шумо бояд ворид шавед.",
     "core.login.password": "Ниҳонвожа",

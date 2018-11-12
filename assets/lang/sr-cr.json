@@ -1320,6 +1320,7 @@
     "core.login.missingfirstname": "Недостаје име",
     "core.login.missinglastname": "Недостаје презиме",
     "core.login.mobileservicesnotenabled": "Мобилни сервиси нису омогућени на вашем сајту. Обратите се администратору вашег Moodle сајта ако мислите да мобилни приступ треба да буде омогућен.",
+    "core.login.mustconfirm": "Морате потврдити своју пријаву на систем",
     "core.login.newaccount": "Нови кориснички налог",
     "core.login.newsitedescription": "Унесите  URL адресу вашег Moodle сајта. Имајте на уму да сајт можда није конфигурисан да ради са овом апликацијом.",
     "core.login.notloggedin": "Морате бити пријављени.",

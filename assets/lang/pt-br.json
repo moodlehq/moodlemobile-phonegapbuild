@@ -1298,6 +1298,7 @@
     "core.login.missingfirstname": "Está faltando o primeiro nome",
     "core.login.missinglastname": "Está faltando o sobrenome",
     "core.login.mobileservicesnotenabled": "Os serviços móveis não estão habilitados no seu Moodle. Por favor contate a administradora do seu Moodle se achar que o acesso móvel deveria estar habilitado",
+    "core.login.mustconfirm": "Você precisa confirmar o seu acesso",
     "core.login.newaccount": "Nova conta",
     "core.login.newsitedescription": "Por favor, digite a URL do seu site Moodle. Note que, pode ser que ele não esteja configurado para trabalhar com este app.",
     "core.login.notloggedin": "Você precisa estar logado.",

@@ -1324,6 +1324,7 @@
     "core.login.missingfirstname": "Falta el nom",
     "core.login.missinglastname": "Falten els cognoms",
     "core.login.mobileservicesnotenabled": "El lloc Moodle no té habilitats els serveis mòbils. Contacteu amb l'administració del vostre Moodle si penseu que haurien d'estar habilitats.",
+    "core.login.mustconfirm": "Necessiteu confirmar el vostre inici de sessió",
     "core.login.newaccount": "Nou compte",
     "core.login.newsitedescription": "Introduïu l'URL del vostre lloc Moodle. Tingueu en compte que podria no estar configurat per treballar amb aquesta aplicació.",
     "core.login.notloggedin": "Heu d'entrar al lloc.",

@@ -869,6 +869,7 @@
     "core.login.missingfirstname": "Даденото име липсва",
     "core.login.missinglastname": "Липсва фамилия",
     "core.login.mobileservicesnotenabled": "Услугите от Moodle не са активирани на Вашия сайт. Моля, свържете се с администратор на Moodle, ако мислите, че мобилния достъп трябва да бъде разрешен.",
+    "core.login.mustconfirm": "Трябва да потвърдите своето влизане",
     "core.login.newaccount": "Нова потребителска регистрация",
     "core.login.notloggedin": "Трябва са сте влезли в сайта.",
     "core.login.password": "Парола",

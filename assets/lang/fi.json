@@ -1233,6 +1233,7 @@
     "core.login.missingfirstname": "Puuttuva etunimi",
     "core.login.missinglastname": "Puuttuva sukunimi",
     "core.login.mobileservicesnotenabled": "Mobiilipalvelut eivät ole tällä hetkellä päällä järjestelmässä. Ole hyvä ja ota yhteyttä järjestelmän pääkäyttäjään ja pyydä heitä ottamaan mobiilipalvelut käyttöön.",
+    "core.login.mustconfirm": "Vahvista kirjautumisesi",
     "core.login.newaccount": "Uusi tunnus",
     "core.login.newsitedescription": "Ole hyvä ja kirjoita Moodle-sivuston verkko-osoite (URL). Ota huomioon, että mobiilipalvelut eivät välttämättä ole kytkettyinä päälle järjestelmässä.",
     "core.login.notloggedin": "Sinun täytyy olla kirjautuneena sisään.",

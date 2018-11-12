@@ -1284,6 +1284,7 @@
     "core.login.missingfirstname": "Falta el nombre dado",
     "core.login.missinglastname": "Falta el apellido(s)",
     "core.login.mobileservicesnotenabled": "El acceso móvil no está habilitado para este sitio, por favor, contacte con su administrador si piensa que debería estar habilitado.",
+    "core.login.mustconfirm": "Necesita confirmar el acceso",
     "core.login.newaccount": "Nueva cuenta",
     "core.login.newsitedescription": "Introduzca la URL de su sitio Moodle. Tenga en cuenta que podría no estar configurado para trabajar con esta aplicación.",
     "core.login.notloggedin": "Ha de entrar al sitio.",

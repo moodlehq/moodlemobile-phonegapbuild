@@ -1109,6 +1109,7 @@
     "core.login.missingfirstname": "Förnamn saknas",
     "core.login.missinglastname": "Efternamn saknas",
     "core.login.mobileservicesnotenabled": "Mobila tjänster är inte aktiverade på din sida. Vänligen kontakta din Moodleadministrator om du tycker att mobil åtkomst ska aktiveras.",
+    "core.login.mustconfirm": "Du måste bekräfta Din inloggning.",
     "core.login.newaccount": "Nytt konto",
     "core.login.newsitedescription": "Ange webbadressen till din Moodle webbplats. Observera att den kan vara konfigurerad så att den inte fungerar med appen",
     "core.login.notloggedin": "Du måste vara inloggad.",

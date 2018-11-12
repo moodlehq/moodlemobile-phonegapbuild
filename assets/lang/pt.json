@@ -1327,6 +1327,7 @@
     "core.login.missingfirstname": "Falta o nome",
     "core.login.missinglastname": "Falta o apelido",
     "core.login.mobileservicesnotenabled": "O seu site não permite acesso através da Mobile App. Por favor, contacte o administrador se pretender que esta funcionalidade seja ativada.",
+    "core.login.mustconfirm": "Precisa confirmar a sua autenticação",
     "core.login.newaccount": "Nova conta",
     "core.login.newsitedescription": "Por favor, digite o URL do seu site Moodle. Note que o mesmo poderá não estar configurado para funcionar nesta aplicação.",
     "core.login.notloggedin": "Precisa de estar autenticado.",

@@ -244,7 +244,7 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
                 }
             });
         }).catch(function (error) {
-            _this.loginHelper.treatUserTokenError(siteUrl, error);
+            _this.loginHelper.treatUserTokenError(siteUrl, error, username, password);
         }).finally(function () {
             modal.dismiss();
         });

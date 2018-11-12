@@ -800,6 +800,7 @@
     "core.login.missingemail": "العنوان البريدي  لم يتم تحدده",
     "core.login.missingfirstname": "الاسم الأول  لم يتم تحدده",
     "core.login.missinglastname": "الاسم الأخير  لم يتم تحدده",
+    "core.login.mustconfirm": "أنت تحتاج إلى تأكيد الدخول",
     "core.login.newaccount": "حساب مشترك جديد",
     "core.login.newsitedescription": "من فضلك أدخل رابط موقع نظام التعلم الإلكتروني مودل الخاص بك. لاحظ انه من الممكن أن يكون لم يتم إعداده للعمل مع هذا التطبيق.",
     "core.login.password": "كلمة المرور",

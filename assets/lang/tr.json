@@ -1047,6 +1047,7 @@
     "core.login.missingfirstname": "Adı eksik",
     "core.login.missinglastname": "Soyadı eksik",
     "core.login.mobileservicesnotenabled": "Mobil Hizmetler sitenizde etkin değildir. Mobil erişimin etkin olduğunu düşünüyorsanız,  Lütfen Moodle site yöneticinize başvurun.",
+    "core.login.mustconfirm": "Girişinizi onaylamalısınız",
     "core.login.newaccount": "Yeni hesap",
     "core.login.newsitedescription": "Lütfen moodle sitenizin URL'sin giriniz. Sitenizin bu uygulama ile çalışacak şekilde yapılandırılmamış olabileceğini de göz önünde bulundurun.",
     "core.login.notloggedin": "Giriş yapmanız gerekiyor.",

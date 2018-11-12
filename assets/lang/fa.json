@@ -1002,6 +1002,7 @@
     "core.login.missingfirstname": "نام را وارد کنید",
     "core.login.missinglastname": "نام خانوادگی را وارد کنید",
     "core.login.mobileservicesnotenabled": "سرویس دسترسی موبایل در سایت شما فعال نیست",
+    "core.login.mustconfirm": "شما نیاز به تایید حساب کاربری خود دارید",
     "core.login.newaccount": "حساب کاربری جدید",
     "core.login.password": "رمز ورود",
     "core.login.passwordforgotten": "رمز ورود فراموش شده",

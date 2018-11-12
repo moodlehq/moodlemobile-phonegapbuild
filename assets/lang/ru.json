@@ -1319,6 +1319,7 @@
     "core.login.missingfirstname": "Заполните поле",
     "core.login.missinglastname": "Заполните поле",
     "core.login.mobileservicesnotenabled": "Мобильный доступ отключен на вашем сайте. Пожалуйста, обратитесь к администратору вашего сайта, если вы считаете что мобильный доступ должен быть включен.",
+    "core.login.mustconfirm": "Подтвердите учетную запись",
     "core.login.newaccount": "Новая учетная запись",
     "core.login.newsitedescription": "Пожалуйста, введите URL-адрес своего сайта Moodle. Учтите, что он может быть не настроен для работы с этим приложением.",
     "core.login.notloggedin": "Вы должны быть идентифицированы.",

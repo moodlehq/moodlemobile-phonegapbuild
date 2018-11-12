@@ -1267,6 +1267,7 @@
     "core.login.missingfirstname": "名没填",
     "core.login.missinglastname": "姓没填",
     "core.login.mobileservicesnotenabled": "您的站点没有启用移动服务，如果您觉得有必要开启移动接入功能，请与站点管理员联系。",
+    "core.login.mustconfirm": "您必须确认一下您的登录",
     "core.login.newaccount": "新帐号",
     "core.login.newsitedescription": "请输入您的Moodle站点的URL。注意，它可能不会被配置为在这个应用程序中工作。",
     "core.login.notloggedin": "您需要登录。",

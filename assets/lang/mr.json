@@ -794,6 +794,7 @@
     "core.login.missingfirstname": "नाव दिलेले नाही",
     "core.login.missinglastname": "आडनाव दिलेले नाही",
     "core.login.mobileservicesnotenabled": "मोबाइल सेवा आपल्या साइटवर सक्षम नाहीत. कृपया मोबाइल प्रवेश सक्षम असावा असे आपल्याला वाटत असल्यास आपल्या मूडल साइट प्रशासकाशी संपर्क साधा",
+    "core.login.mustconfirm": "तुम्हाला तुमच्या लॉग-ईनची खात्री करावी लागेल.",
     "core.login.newaccount": "नवीन",
     "core.login.newsitedescription": "कृपया आपल्या मूडल साइटची URL प्रविष्ट करा लक्षात ठेवा कदाचित या अॅप सह कार्य करण्यासाठी कॉन्फिगर केले जाऊ शकत नाही.",
     "core.login.notloggedin": "आपल्याला लॉग इन करणे आवश्यक आहे",

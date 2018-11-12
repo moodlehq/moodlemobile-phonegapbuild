@@ -776,6 +776,7 @@
     "core.login.missingfirstname": "Nama depan tidak diisi",
     "core.login.missinglastname": "Nama akhir tidak diisi",
     "core.login.mobileservicesnotenabled": "Layanan Mobile tidak aktif di situs Anda. Silahkan hubungi kontak administrator jika menurut Anda akses mobile perlu diaktifkan.",
+    "core.login.mustconfirm": "Anda perlu mengkonfirmasikan login Anda",
     "core.login.newaccount": "Anggota baru",
     "core.login.newsitedescription": "Silahkan masukkan URL situs Mobile. Perlu diperhatikan bahwa ini mungkin tidak dikonfigurasi untuk bekerja dengan aplikasi ini.",
     "core.login.notloggedin": "Anda butuh log in.",

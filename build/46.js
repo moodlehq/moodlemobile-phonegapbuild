@@ -1,6 +1,6 @@
 webpackJsonp([46],{
 
-/***/ 1913:
+/***/ 1914:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -160,7 +160,7 @@ var reconnect_CoreLoginReconnectPage = /** @class */ (function () {
                 });
             });
         }).catch(function (error) {
-            _this.loginHelper.treatUserTokenError(siteUrl, error);
+            _this.loginHelper.treatUserTokenError(siteUrl, error, username, password);
         }).finally(function () {
             modal.dismiss();
         });

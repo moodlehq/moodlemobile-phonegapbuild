@@ -116,7 +116,7 @@ var site_CoreLoginSitePage = /** @class */ (function () {
                     _this.domUtils.showErrorModal(error);
                 });
             }, function (error) {
-                _this.loginHelper.treatUserTokenError(siteData.url, error);
+                _this.loginHelper.treatUserTokenError(siteData.url, error, siteData.username, siteData.password);
             }).finally(function () {
                 modal.dismiss();
             });

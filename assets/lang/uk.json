@@ -1241,6 +1241,7 @@
     "core.login.missingfirstname": "Не вказано ім'я",
     "core.login.missinglastname": "Не вказано прізвище",
     "core.login.mobileservicesnotenabled": "Мобільні послуги не включені в вашому сайті. Будь ласка, зверніться до адміністратора вашого Moodle сайт, якщо ви вважаєте, що мобільний доступ повинен бути включений.",
+    "core.login.mustconfirm": "Підтвердіть обліковий запис",
     "core.login.newaccount": "Новий обліковий запис",
     "core.login.newsitedescription": "Будь ласка, введіть адресу вашого сайту Moodle. Зверніть увагу, що це може бути не налаштоване для роботи з цим додатком.",
     "core.login.notloggedin": "Ви повинні увійти в систему.",

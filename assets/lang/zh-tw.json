@@ -1268,6 +1268,7 @@
     "core.login.missingfirstname": "缺少名字資料",
     "core.login.missinglastname": "缺少姓氏資料",
     "core.login.mobileservicesnotenabled": "您的網站並未啟用行動服務. 如果您想使用此功能, 請連絡您的Moodle網站管理員.",
+    "core.login.mustconfirm": "您必須確認一下您的登入",
     "core.login.newaccount": "新帳號",
     "core.login.newsitedescription": "請輸入您的Moodle平台網址. 注意平台需要先設定好才能使用這個應用程式.",
     "core.login.notloggedin": "你必須先登入",

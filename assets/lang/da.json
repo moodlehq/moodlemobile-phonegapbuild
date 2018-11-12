@@ -1280,6 +1280,7 @@
     "core.login.missingfirstname": "Mangler fornavn",
     "core.login.missinglastname": "Mangler efternavn",
     "core.login.mobileservicesnotenabled": "Mobiladgang er ikke aktiveret på din side. Kontakt venligst din Moodles administrator, hvis du ønsker mobiladgang aktiveret.",
+    "core.login.mustconfirm": "Du skal bekræfte din konto",
     "core.login.newaccount": "Ny konto",
     "core.login.newsitedescription": "Skriv din Moodles webadresse. Bemærk at Moodle kan være konfigureret, så den ikke virker med denne app.",
     "core.login.notloggedin": "Du skal være logget på.",

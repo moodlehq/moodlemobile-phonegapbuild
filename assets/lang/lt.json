@@ -1272,6 +1272,7 @@
     "core.login.missingfirstname": "Nėra pavadinimo",
     "core.login.missinglastname": "Nėra pavardės",
     "core.login.mobileservicesnotenabled": "Mobilios paslaugos neįgalintos. Susisiekite su Moodle svetainės administratoriumi, jei šios paslaugos reikalingos.",
+    "core.login.mustconfirm": "Turite patvirtinti savo paskyrą",
     "core.login.newaccount": "Nauja paskyra",
     "core.login.newsitedescription": "Įveskite Moodle svetainės URL adresą. Atkreipkite dėmesį, kad gali būti nesukonfigūruotas dirbti su šia programėle.",
     "core.login.notloggedin": "Turite prisijungti",
