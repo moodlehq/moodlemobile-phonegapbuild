@@ -195,9 +195,17 @@ var my_courses_CoreCoursesMyCoursesPage = /** @class */ (function () {
             this.filteredCourses = this.courses;
         }
         else {
-            this.filteredCourses = this.courses.filter(function (course) {
-                return course.fullname.toLowerCase().indexOf(newValue) > -1;
-            });
+            // Use displayname if avalaible, or fullname if not.
+            if (this.courses.length > 0 && typeof this.courses[0].displayname != 'undefined') {
+                this.filteredCourses = this.courses.filter(function (course) {
+                    return course.displayname.toLowerCase().indexOf(newValue) > -1;
+                });
+            }
+            else {
+                this.filteredCourses = this.courses.filter(function (course) {
+                    return course.fullname.toLowerCase().indexOf(newValue) > -1;
+                });
+            }
         }
     };
     /**
