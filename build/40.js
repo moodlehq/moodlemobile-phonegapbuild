@@ -81,6 +81,10 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
         }
         this.showTabs = true;
         this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
+            // Remove the handlers that should only appear in the More menu.
+            handlers = handlers.filter(function (handler) {
+                return !handler.onlyInMore;
+            });
             handlers = handlers.slice(0, mainmenu["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Get main handlers.
             // Re-build the list of tabs. If a handler is already in the list, use existing object to prevent re-creating the tab.
             var newTabs = [];

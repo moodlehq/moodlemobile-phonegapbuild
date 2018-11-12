@@ -76,7 +76,17 @@ var more_CoreMainMenuMorePage = /** @class */ (function () {
         var _this = this;
         // Load the handlers.
         this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
-            _this.handlers = handlers.slice(mainmenu["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Remove the main handlers.
+            // Calculate the main handlers to not display them in this view.
+            var mainHandlers = handlers.filter(function (handler) {
+                return !handler.onlyInMore;
+            }).slice(0, mainmenu["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS);
+            // Get only the handlers that don't appear in the main view.
+            _this.handlers = [];
+            handlers.forEach(function (handler) {
+                if (mainHandlers.indexOf(handler) == -1) {
+                    _this.handlers.push(handler);
+                }
+            });
             _this.handlersLoaded = _this.menuDelegate.areHandlersLoaded();
         });
     };
