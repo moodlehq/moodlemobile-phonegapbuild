@@ -954,7 +954,7 @@ var loading = __webpack_require__(47);
 var infinite_loading_ngfactory = __webpack_require__(444);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(279);
+var infinite_loading = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(76);

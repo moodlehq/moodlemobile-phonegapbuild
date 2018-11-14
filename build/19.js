@@ -513,7 +513,7 @@ var note = __webpack_require__(225);
 var row = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list-header.js
-var list_header = __webpack_require__(280);
+var list_header = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
 var card = __webpack_require__(86);

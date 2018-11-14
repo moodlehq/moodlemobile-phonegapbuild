@@ -260,7 +260,7 @@ var common = __webpack_require__(7);
 var infinite_loading_ngfactory = __webpack_require__(444);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(279);
+var infinite_loading = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(432);
