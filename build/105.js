@@ -131,7 +131,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
      */
     AddonModAssignSubmissionListPage.prototype.fetchAssignment = function () {
         var _this = this;
-        var participants, submissionsData;
+        var participants, submissionsData, grades;
         // Get assignment data.
         return this.assignProvider.getAssignment(this.courseId, this.moduleId).then(function (assign) {
             _this.title = assign.name || _this.title;
@@ -152,6 +152,13 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
             }).catch(function () {
                 _this.haveAllParticipants = false;
             });
+        }).then(function () {
+            if (!_this.assign.markingworkflow) {
+                // Get assignment grades only if workflow is not enabled to check grading date.
+                return _this.assignProvider.getAssignmentGrades(_this.assign.id).then(function (assignmentGrades) {
+                    grades = assignmentGrades;
+                });
+            }
         }).then(function () {
             // We want to show the user data on each submission.
             return _this.assignProvider.getSubmissionsUserData(submissionsData.submissions, _this.courseId, _this.assign.id, _this.assign.blindmarking && !_this.assign.revealidentities, participants);
@@ -179,6 +186,17 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
                         return promise.then(function (add) {
                             if (!add) {
                                 return;
+                            }
+                            if (submission.gradingstatus == 'graded' && !_this.assign.markingworkflow) {
+                                // Get the last grade of the submission.
+                                var grade = grades.filter(function (grade) {
+                                    return grade.userid == submission.userid;
+                                }).reduce(function (a, b) {
+                                    return (a.timemodified > b.timemodified ? a : b);
+                                });
+                                if (grade && grade.timemodified < submission.timemodified) {
+                                    submission.gradingstatus = providers_assign["a" /* AddonModAssignProvider */].GRADED_FOLLOWUP_SUBMIT;
+                                }
                             }
                             submission.statusColor = _this.assignProvider.getSubmissionStatusColor(submission.status);
                             submission.gradingColor = _this.assignProvider.getSubmissionGradingStatusColor(submission.gradingstatus);
@@ -242,6 +260,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
         if (this.assign) {
             promises.push(this.assignProvider.invalidateAllSubmissionData(this.assign.id));
             promises.push(this.assignProvider.invalidateAssignmentUserMappingsData(this.assign.id));
+            promises.push(this.assignProvider.invalidateAssignmentGradesData(this.assign.id));
             promises.push(this.assignProvider.invalidateListParticipantsData(this.assign.id));
         }
         return Promise.all(promises).finally(function () {

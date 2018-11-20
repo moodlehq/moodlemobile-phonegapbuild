@@ -201,6 +201,7 @@
     "addon.mod_assign.grade": "Bewertung",
     "addon.mod_assign.graded": "Bewertet",
     "addon.mod_assign.gradedby": "Bewertet von",
+    "addon.mod_assign.gradedfollowupsubmit": "Bewertet - empfangene Abgabe nachverfolgen",
     "addon.mod_assign.gradedon": "Bewertet am",
     "addon.mod_assign.gradelocked": "Diese Bewertung ist gesperrt oder wurde im Bewertungsbereich überschrieben.",
     "addon.mod_assign.gradenotsynced": "Bewertung nicht synchronisiert",

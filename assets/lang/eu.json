@@ -175,6 +175,7 @@
     "addon.mod_assign.grade": "Kalifikazioa",
     "addon.mod_assign.graded": "Kalifikatua",
     "addon.mod_assign.gradedby": "Nork kalifikatua",
+    "addon.mod_assign.gradedfollowupsubmit": "Kalifikatuta - bidalketaren jakinarazpena jaso da",
     "addon.mod_assign.gradedon": "Noiz kalifikatua",
     "addon.mod_assign.gradelocked": "Kalifikazio hau blokeatu edo aldatu da kalifikazio-liburuan.",
     "addon.mod_assign.gradenotsynced": "Kalifikazioa ez da sinkronizatu",

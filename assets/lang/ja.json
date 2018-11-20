@@ -199,6 +199,7 @@
     "addon.mod_assign.grade": "評定",
     "addon.mod_assign.graded": "評定済み",
     "addon.mod_assign.gradedby": "評定者",
+    "addon.mod_assign.gradedfollowupsubmit": "評定済み - フォローアップ提出受信済み",
     "addon.mod_assign.gradedon": "評定日時",
     "addon.mod_assign.gradelocked": "この評点はロックされているか評定表内で上書きされています。",
     "addon.mod_assign.gradenotsynced": "評定が同期できませんでした",
