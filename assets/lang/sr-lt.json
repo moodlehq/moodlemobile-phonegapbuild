@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Ime/naziv izdavača bedža",
     "addon.badges.nobadges": "Nema dostupnih bedževa",
     "addon.badges.recipientdetails": "Detalji o primaocu",
+    "addon.badges.warnexpired": "(Ovaj bedž je istekao!)",
     "addon.block_activitymodules.pluginname": "Aktivnosti",
     "addon.block_myoverview.future": "Budući",
     "addon.block_myoverview.inprogress": "U toku",

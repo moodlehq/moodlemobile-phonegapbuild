@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Nombre del emisor",
     "addon.badges.nobadges": "No hay insignias disponibles",
     "addon.badges.recipientdetails": "Detalles del destinatario",
+    "addon.badges.warnexpired": "(¡Esta insignia ha expirado!)",
     "addon.block_activitymodules.pluginname": "Actividades",
     "addon.block_myoverview.future": "Futuros",
     "addon.block_myoverview.inprogress": "En progreso",

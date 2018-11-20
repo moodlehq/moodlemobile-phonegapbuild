@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Ime izdavača",
     "addon.badges.nobadges": "Nema dostupnih značaka.",
     "addon.badges.recipientdetails": "Podaci o dobitniku",
+    "addon.badges.warnexpired": "(Ova značka je istekla!)",
     "addon.block_activitymodules.pluginname": "Aktivnosti",
     "addon.block_myoverview.future": "Buduće",
     "addon.block_myoverview.inprogress": "U tijeku",

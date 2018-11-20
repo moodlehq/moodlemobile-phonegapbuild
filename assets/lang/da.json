@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Udsteders navn",
     "addon.badges.nobadges": "Der er ingen tilgængelige badges.",
     "addon.badges.recipientdetails": "Modtagerdata",
+    "addon.badges.warnexpired": "(Badgen er udgået!)",
     "addon.block_activitymodules.pluginname": "Aktiviteter",
     "addon.block_myoverview.future": "Fremtidige",
     "addon.block_myoverview.inprogress": "I gang",

@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Emailearen izena",
     "addon.badges.nobadges": "Ez dago dominarik eskura.",
     "addon.badges.recipientdetails": "Jasotzailearen zehaztasunak",
+    "addon.badges.warnexpired": "(Domina hau iraungita dago!)",
     "addon.block_activitymodules.pluginname": "Jarduerak",
     "addon.block_myoverview.future": "Etorkizunean",
     "addon.block_myoverview.inprogress": "Martxan",

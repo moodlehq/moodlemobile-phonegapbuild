@@ -10,6 +10,7 @@
     "addon.badges.issuername": "שם מעניק ההישג",
     "addon.badges.nobadges": "אין הישגים זמינים.",
     "addon.badges.recipientdetails": "פרטי המכותב",
+    "addon.badges.warnexpired": "(תוקפו של הישג זה פג!)",
     "addon.block_activitymodules.pluginname": "פעילויות",
     "addon.block_myoverview.future": "עתידי",
     "addon.block_myoverview.inprogress": "בלמידה",

@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Όνομα εκδότη",
     "addon.badges.nobadges": "Δεν υπάρχουν διαθέσιμα διακριτικά",
     "addon.badges.recipientdetails": "Στοιχεία αποδέκτη",
+    "addon.badges.warnexpired": "(Το διακριτικό αυτό έληξε!)",
     "addon.block_activitymodules.pluginname": "Δραστηριότητες",
     "addon.block_myoverview.future": "Μελλοντικά",
     "addon.block_myoverview.inprogress": "Σε εξέλιξη",

@@ -9,6 +9,7 @@
     "addon.badges.issuerdetails": "Utfärdarens detaljer",
     "addon.badges.issuername": "Utfärdarens namn",
     "addon.badges.nobadges": "Det finns inga märken tillgängliga.",
+    "addon.badges.warnexpired": "(Det här märket har förfallit!)",
     "addon.block_activitymodules.pluginname": "Aktiviteter",
     "addon.block_myoverview.future": "Kommande",
     "addon.block_myoverview.inprogress": "Pågående",

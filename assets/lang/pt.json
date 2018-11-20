@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Nome do emissor",
     "addon.badges.nobadges": "Não existem Medalhas disponíveis.",
     "addon.badges.recipientdetails": "Detalhes do condecorado",
+    "addon.badges.warnexpired": "(A validade desta Medalha terminou!)",
     "addon.block_activitymodules.pluginname": "Atividades",
     "addon.block_myoverview.future": "Próximos 30 dias",
     "addon.block_myoverview.inprogress": "Em progresso",

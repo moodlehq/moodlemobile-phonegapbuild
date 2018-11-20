@@ -10,6 +10,7 @@
     "addon.badges.issuername": "授勋机构名称",
     "addon.badges.nobadges": "没有可用的勋章",
     "addon.badges.recipientdetails": "获得者详情",
+    "addon.badges.warnexpired": "（此勋章已过期！）",
     "addon.block_activitymodules.pluginname": "活动",
     "addon.block_myoverview.future": "未来",
     "addon.block_myoverview.inprogress": "进行中",

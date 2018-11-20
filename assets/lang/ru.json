@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Наименование эмитента",
     "addon.badges.nobadges": "Нет доступных значков.",
     "addon.badges.recipientdetails": "Сведения о получателе",
+    "addon.badges.warnexpired": "(Срок действия этого значка истек!)",
     "addon.block_activitymodules.pluginname": "Элементы курса",
     "addon.block_myoverview.future": "Предстоящие",
     "addon.block_myoverview.inprogress": "Текущие",

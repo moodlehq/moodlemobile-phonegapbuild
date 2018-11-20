@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Suteikėjo vardas",
     "addon.badges.nobadges": "Nėra sukurtų pasiekimų.",
     "addon.badges.recipientdetails": "Informacija apie gavėją",
+    "addon.badges.warnexpired": "(Šis pasiekimas baigė galioti!)",
     "addon.block_activitymodules.pluginname": "Veiklos",
     "addon.block_myoverview.future": "Būsimi",
     "addon.block_myoverview.inprogress": "Vykstantys",

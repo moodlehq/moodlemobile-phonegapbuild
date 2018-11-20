@@ -9,6 +9,7 @@
     "addon.badges.issuername": "Osaamismerkin myöntäjän nimi",
     "addon.badges.nobadges": "Yhtään osaamismerkkiä ei ole tarjolla",
     "addon.badges.recipientdetails": "Vastaanottajan tiedot",
+    "addon.badges.warnexpired": "(Tämä osaamismerkki on vanhentunut)",
     "addon.block_activitymodules.pluginname": "Aktiviteetit",
     "addon.block_myoverview.future": "Tulevat kurssit",
     "addon.block_myoverview.inprogress": "Keskeneräiset kurssit",

@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Ім’я видавця",
     "addon.badges.nobadges": "Немає доступних відзнак.",
     "addon.badges.recipientdetails": "Деталі отримувача",
+    "addon.badges.warnexpired": "(Ця відзнака не актуальна!)",
     "addon.block_activitymodules.pluginname": "Види діяльності",
     "addon.block_myoverview.future": "Заплановані",
     "addon.block_myoverview.inprogress": "В процесі",

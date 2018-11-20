@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Çıkaranın adı",
     "addon.badges.nobadges": "Uygun nişan bulunmuyor.",
     "addon.badges.recipientdetails": "Alıcı bilgileri",
+    "addon.badges.warnexpired": "(Bu nişan zaman aşımına uğramış!)",
     "addon.block_activitymodules.pluginname": "Etkinlikler",
     "addon.block_myoverview.future": "Gelecek",
     "addon.block_myoverview.inprogress": "Devam eden",

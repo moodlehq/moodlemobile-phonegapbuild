@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Nome di chi rilascia il badge",
     "addon.badges.nobadges": "Non sono presenti badge.",
     "addon.badges.recipientdetails": "Dettagli destinatario",
+    "addon.badges.warnexpired": "(Questo badge è scaduto!)",
     "addon.block_activitymodules.pluginname": "Attività",
     "addon.block_myoverview.future": "Prossimi",
     "addon.block_myoverview.inprogress": "In svolgimento",

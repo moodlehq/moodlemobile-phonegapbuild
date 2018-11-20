@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Nume emitent",
     "addon.badges.nobadges": "Nu există ecusoane disponibile",
     "addon.badges.recipientdetails": "Detalii recipient",
+    "addon.badges.warnexpired": "(Acest ecuson a expirat!)",
     "addon.block_activitymodules.pluginname": "Activităţi",
     "addon.block_myoverview.future": "Viitoare",
     "addon.block_myoverview.inprogress": "În desfășurare",

@@ -10,6 +10,7 @@
     "addon.badges.issuername": "Nom de l'atorgador",
     "addon.badges.nobadges": "No hi ha insígnies disponibles.",
     "addon.badges.recipientdetails": "Detalls del receptor",
+    "addon.badges.warnexpired": "(Aquesta insígnia ha expirat!)",
     "addon.block_activitymodules.pluginname": "Activitats",
     "addon.block_myoverview.future": "Futurs",
     "addon.block_myoverview.inprogress": "Actuals",
