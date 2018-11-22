@@ -15,7 +15,6 @@
     "addon.files.emptyfilelist": "Keine Dateien",
     "addon.files.erroruploadnotworking": "Im Moment können keine Dateien zur Website hochgeladen werden.",
     "addon.messageoutput_airnotifier.processorsettingsdesc": "Geräte konfigurieren",
-    "addon.messages.blockcontactconfirm": "Möchtest du von dieser Person keine Mitteilungen mehr empfangen?",
     "addon.messages.contactlistempty": "Die Kontaktliste ist leer.",
     "addon.messages.contactname": "Name",
     "addon.messages.errordeletemessage": "Fehler beim Löschen der Mitteilung",
