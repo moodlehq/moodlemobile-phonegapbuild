@@ -1,6 +1,6 @@
 webpackJsonp([91],{
 
-/***/ 1860:
+/***/ 1864:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/components/components.module.ts
-var components_components_module = __webpack_require__(673);
+var components_components_module = __webpack_require__(675);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
 var _ionic_native_network = __webpack_require__(189);
@@ -49,16 +49,16 @@ var fileuploader = __webpack_require__(66);
 var split_view = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(164);
+var forum = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
 var offline = __webpack_require__(206);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
-var helper = __webpack_require__(250);
+var helper = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
-var providers_sync = __webpack_require__(251);
+var providers_sync = __webpack_require__(252);
 
 // CONCATENATED MODULE: ./src/addon/mod/forum/pages/discussion/discussion.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -521,58 +521,58 @@ var discussion_module_AddonModForumDiscussionPageModule = /** @class */ (functio
 
 //# sourceMappingURL=discussion.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1340);
+var action_sheet_component_ngfactory = __webpack_require__(1343);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1341);
+var alert_component_ngfactory = __webpack_require__(1344);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1342);
+var app_root_ngfactory = __webpack_require__(1345);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1343);
+var loading_component_ngfactory = __webpack_require__(1346);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1344);
+var modal_component_ngfactory = __webpack_require__(1347);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1345);
+var picker_component_ngfactory = __webpack_require__(1348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1346);
+var popover_component_ngfactory = __webpack_require__(1349);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1347);
+var select_popover_component_ngfactory = __webpack_require__(1350);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1348);
+var toast_component_ngfactory = __webpack_require__(1351);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1351);
+var context_menu_popover_ngfactory = __webpack_require__(1354);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1352);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1355);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1353);
+var recaptchamodal_ngfactory = __webpack_require__(1356);
 
 // EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ngfactory.js
-var unsupported_module_ngfactory = __webpack_require__(1354);
+var unsupported_module_ngfactory = __webpack_require__(1357);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1383);
+var index_ngfactory = __webpack_require__(1386);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1350);
+var toolbar_title_ngfactory = __webpack_require__(1353);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(334);
+var toolbar_title = __webpack_require__(335);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(245);
+var toolbar = __webpack_require__(247);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(200);
@@ -584,13 +584,13 @@ var format_text = __webpack_require__(39);
 var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(26);
+var url = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -599,7 +599,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
-var providers_helper = __webpack_require__(17);
+var providers_helper = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -620,16 +620,16 @@ var context_menu_item = __webpack_require__(79);
 var context_menu = __webpack_require__(72);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(25);
+var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
 var card = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon = __webpack_require__(44);
+var icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(225);
+var note = __webpack_require__(226);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
 var icon_ngfactory = __webpack_require__(135);
@@ -644,7 +644,7 @@ var common = __webpack_require__(7);
 var file_ngfactory = __webpack_require__(203);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(172);
+var file = __webpack_require__(171);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
 var file_helper = __webpack_require__(132);
@@ -653,10 +653,10 @@ var file_helper = __webpack_require__(132);
 var mimetype = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/components/local-file/local-file.ngfactory.js
-var local_file_ngfactory = __webpack_require__(342);
+var local_file_ngfactory = __webpack_require__(343);
 
 // EXTERNAL MODULE: ./src/components/local-file/local-file.ts
-var local_file = __webpack_require__(253);
+var local_file = __webpack_require__(254);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var providers_file = __webpack_require__(49);
@@ -671,22 +671,22 @@ var item = __webpack_require__(20);
 var util_form = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
-var item_reorder = __webpack_require__(24);
+var item_reorder = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
 var item_content = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(45);
+var button_ngfactory = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
 var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(443);
+var attachments_ngfactory = __webpack_require__(444);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
-var attachments = __webpack_require__(277);
+var attachments = __webpack_require__(278);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
 var fileuploader_providers_helper = __webpack_require__(133);
@@ -722,31 +722,34 @@ var input = __webpack_require__(78);
 var app_app = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
-var rich_text_editor_ngfactory = __webpack_require__(274);
+var rich_text_editor_ngfactory = __webpack_require__(275);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
-var rich_text_editor = __webpack_require__(223);
+var rich_text_editor = __webpack_require__(224);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
 var grid = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
-var date_day_or_time = __webpack_require__(340);
+var date_day_or_time = __webpack_require__(341);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(278);
+var card_header = __webpack_require__(279);
+
+// EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
+var user_avatar_ngfactory = __webpack_require__(221);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(186);
+var avatar = __webpack_require__(185);
 
-// EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(147);
+// EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
+var user_avatar = __webpack_require__(186);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-content.js
-var card_content = __webpack_require__(447);
+var card_content = __webpack_require__(448);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/components/post/post.ts
-var post = __webpack_require__(1394);
+var post = __webpack_require__(1397);
 
 // EXTERNAL MODULE: ./src/providers/sync.ts
 var src_providers_sync = __webpack_require__(83);
@@ -758,6 +761,7 @@ var src_providers_sync = __webpack_require__(83);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
+
 
 
 
@@ -860,10 +864,10 @@ function View_AddonModForumPostComponent_9(_l) { return core["_57" /* ɵvid */](
         var pd_0 = (_co.cancel() !== false);
         ad = (pd_0 && ad);
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](62, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](63, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_11)), core["_30" /* ɵdid */](69, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_9 = _co.replyData.subject; _ck(_v, 16, 0, currVal_9); var currVal_10 = "text"; var currVal_11 = core["_56" /* ɵunv */](_v, 19, 1, core["_44" /* ɵnov */](_v, 20).transform("addon.mod_forum.subject")); _ck(_v, 19, 0, currVal_10, currVal_11); var currVal_13 = core["_56" /* ɵunv */](_v, 36, 0, core["_44" /* ɵnov */](_v, 37).transform("addon.mod_forum.message")); var currVal_14 = _co.messageControl; var currVal_15 = ("mod_forum_reply_" + _co.post.id); var currVal_16 = _co.component; var currVal_17 = _co.componentId; _ck(_v, 36, 0, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17); var currVal_18 = (_co.forum.id && (_co.forum.maxattachments > 0)); _ck(_v, 41, 0, currVal_18); var currVal_20 = ""; _ck(_v, 53, 0, currVal_20); var currVal_22 = "light"; var currVal_23 = ""; _ck(_v, 62, 0, currVal_22, currVal_23); var currVal_25 = _co.replyData.isEditing; _ck(_v, 69, 0, currVal_25); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = ("addon-forum-reply-edit-form-" + _co.uniqueId); _ck(_v, 0, 0, currVal_0); var currVal_1 = core["_56" /* ɵunv */](_v, 12, 0, core["_44" /* ɵnov */](_v, 13).transform("addon.mod_forum.subject")); _ck(_v, 12, 0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 18).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 18).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 18).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 18).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 18).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 18).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 18).ngClassPending; _ck(_v, 15, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); var currVal_12 = core["_56" /* ɵunv */](_v, 32, 0, core["_44" /* ɵnov */](_v, 33).transform("addon.mod_forum.message")); _ck(_v, 32, 0, currVal_12); var currVal_19 = ((_co.replyData.subject == "") || (_co.replyData.message == null)); _ck(_v, 52, 0, currVal_19); var currVal_21 = core["_56" /* ɵunv */](_v, 54, 0, core["_44" /* ɵnov */](_v, 55).transform("addon.mod_forum.posttoforum")); _ck(_v, 54, 0, currVal_21); var currVal_24 = core["_56" /* ɵunv */](_v, 63, 0, core["_44" /* ɵnov */](_v, 64).transform("core.cancel")); _ck(_v, 63, 0, currVal_24); }); }
-function View_AddonModForumPostComponent_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, date_day_or_time["a" /* CoreDateDayOrTimePipe */], [logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */]]), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 33, "ion-card-header", [["no-padding", ""], ["text-wrap", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](2, 16384, null, 0, card_header["a" /* CardHeader */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, null, 29, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](5, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](9, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 0, 7, "ion-avatar", [["item-start", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+function View_AddonModForumPostComponent_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, date_day_or_time["a" /* CoreDateDayOrTimePipe */], [logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */]]), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 28, "ion-card-header", [["no-padding", ""], ["text-wrap", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](2, 16384, null, 0, card_header["a" /* CardHeader */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, null, 24, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](5, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](9, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 0, 2, "ion-avatar", [["core-user-avatar", ""], ["item-start", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.openUserProfile(_co.post.userid) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), core["_30" /* ɵdid */](12, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](14, 0, null, null, 3, "img", [["core-external-content", ""], ["onError", "this.src='assets/img/user-avatar.png'"], ["role", "presentation"]], [[8, "src", 4], [8, "alt", 0]], null, null, null, null)), core["_30" /* ɵdid */](15, 4210688, null, 0, external_content["a" /* CoreExternalContentDirective */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], platform["a" /* Platform */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], app["a" /* CoreAppProvider */], utils_utils["a" /* CoreUtilsProvider */]], null, null), core["_48" /* ɵpod */](16, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 2, 3, "h2", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](21, 0, null, null, 2, "span", [], [[2, "core-bold", null]], null, null, null, null)), (_l()(), core["_31" /* ɵeld */](22, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](23, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](25, 0, null, 2, 7, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_1)), core["_30" /* ɵdid */](28, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_2)), core["_30" /* ɵdid */](31, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](32, null, ["\n            ", "\n        "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](36, 0, null, null, 11, "ion-card-content", [["padding-top", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](37, 16384, null, 0, card_content["a" /* CardContent */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](39, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](40, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](42, 0, null, null, 4, "div", [["no-lines", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_4)), core["_30" /* ɵdid */](45, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_7)), core["_30" /* ɵdid */](50, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_8)), core["_30" /* ɵdid */](53, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_9)), core["_30" /* ɵdid */](56, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_3 = _co.post.subject; _ck(_v, 23, 0, currVal_3); var currVal_4 = !_co.post.modified; _ck(_v, 28, 0, currVal_4); var currVal_5 = _co.post.modified; _ck(_v, 31, 0, currVal_5); var currVal_7 = _co.post.message; var currVal_8 = _co.component; var currVal_9 = _co.componentId; _ck(_v, 40, 0, currVal_7, currVal_8, currVal_9); var currVal_10 = _co.post.attachments; _ck(_v, 45, 0, currVal_10); var currVal_11 = (_co.post.id && _co.post.canreply); _ck(_v, 50, 0, currVal_11); var currVal_12 = (!_co.post.id && (!_co.replyData.isEditing || (_co.replyData.replyingTo != _co.post.parent))); _ck(_v, 53, 0, currVal_12); var currVal_13 = (((_co.post.id && !_co.replyData.isEditing) && (_co.replyData.replyingTo == _co.post.id)) || ((!_co.post.id && _co.replyData.isEditing) && (_co.replyData.replyingTo == _co.post.parent))); _ck(_v, 56, 0, currVal_13); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.post.userpictureurl; var currVal_1 = core["_56" /* ɵunv */](_v, 14, 1, core["_44" /* ɵnov */](_v, 17).transform("core.pictureof", _ck(_v, 16, 0, _co.post.userfullname))); _ck(_v, 14, 0, currVal_0, currVal_1); var currVal_2 = (_co.post.parent == 0); _ck(_v, 21, 0, currVal_2); var currVal_6 = _co.post.userfullname; _ck(_v, 32, 0, currVal_6); }); }
+    } return ad; }, user_avatar_ngfactory["b" /* View_CoreUserAvatarComponent_0 */], user_avatar_ngfactory["a" /* RenderType_CoreUserAvatarComponent */])), core["_30" /* ɵdid */](12, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), core["_30" /* ɵdid */](13, 638976, null, 0, user_avatar["a" /* CoreUserAvatarComponent */], [nav_controller["a" /* NavController */], sites["a" /* CoreSitesProvider */]], { user: [0, "user"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, 2, 3, "h2", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](16, 0, null, null, 2, "span", [], [[2, "core-bold", null]], null, null, null, null)), (_l()(), core["_31" /* ɵeld */](17, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](18, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 2, 7, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_1)), core["_30" /* ɵdid */](23, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_2)), core["_30" /* ɵdid */](26, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](27, null, ["\n            ", "\n        "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](31, 0, null, null, 11, "ion-card-content", [["padding-top", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](32, 16384, null, 0, card_content["a" /* CardContent */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](34, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](35, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"], component: [1, "component"], componentId: [2, "componentId"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](37, 0, null, null, 4, "div", [["no-lines", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_4)), core["_30" /* ɵdid */](40, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_7)), core["_30" /* ɵdid */](45, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_8)), core["_30" /* ɵdid */](48, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_9)), core["_30" /* ɵdid */](51, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.post; _ck(_v, 13, 0, currVal_0); var currVal_2 = _co.post.subject; _ck(_v, 18, 0, currVal_2); var currVal_3 = !_co.post.modified; _ck(_v, 23, 0, currVal_3); var currVal_4 = _co.post.modified; _ck(_v, 26, 0, currVal_4); var currVal_6 = _co.post.message; var currVal_7 = _co.component; var currVal_8 = _co.componentId; _ck(_v, 35, 0, currVal_6, currVal_7, currVal_8); var currVal_9 = _co.post.attachments; _ck(_v, 40, 0, currVal_9); var currVal_10 = (_co.post.id && _co.post.canreply); _ck(_v, 45, 0, currVal_10); var currVal_11 = (!_co.post.id && (!_co.replyData.isEditing || (_co.replyData.replyingTo != _co.post.parent))); _ck(_v, 48, 0, currVal_11); var currVal_12 = (((_co.post.id && !_co.replyData.isEditing) && (_co.replyData.replyingTo == _co.post.id)) || ((!_co.post.id && _co.replyData.isEditing) && (_co.replyData.replyingTo == _co.post.parent))); _ck(_v, 51, 0, currVal_12); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = (_co.post.parent == 0); _ck(_v, 16, 0, currVal_1); var currVal_5 = _co.post.userfullname; _ck(_v, 27, 0, currVal_5); }); }
 function View_AddonModForumPostComponent_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "addon-mod-forum-post", [], null, null, null, View_AddonModForumPostComponent_0, RenderType_AddonModForumPostComponent)), core["_30" /* ɵdid */](1, 245760, null, 0, post["a" /* AddonModForumPostComponent */], [nav_controller["a" /* NavController */], fileuploader["a" /* CoreFileUploaderProvider */], src_providers_sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], forum["a" /* AddonModForumProvider */], helper["a" /* AddonModForumHelperProvider */], offline["a" /* AddonModForumOfflineProvider */], providers_sync["a" /* AddonModForumSyncProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var AddonModForumPostComponentNgFactory = core["_27" /* ɵccf */]("addon-mod-forum-post", post["a" /* AddonModForumPostComponent */], View_AddonModForumPostComponent_Host_0, { post: "post", courseId: "courseId", discussionId: "discussionId", component: "component", componentId: "componentId", replyData: "replyData", originalData: "originalData", trackPosts: "trackPosts", forum: "forum", defaultSubject: "defaultSubject" }, { onPostChange: "onPostChange" }, []);
 
@@ -872,19 +876,19 @@ var AddonModForumPostComponentNgFactory = core["_27" /* ɵccf */]("addon-mod-for
 var item_divider = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(432);
+var toolbar_header = __webpack_require__(433);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1349);
+var navbar_ngfactory = __webpack_require__(1352);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(660);
+var back_button = __webpack_require__(661);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(433);
+var toolbar_item = __webpack_require__(434);
 
 // EXTERNAL MODULE: ./src/components/navbar-buttons/navbar-buttons.ngfactory.js
 var navbar_buttons_ngfactory = __webpack_require__(84);
@@ -902,7 +906,7 @@ var popover_controller = __webpack_require__(62);
 var tab = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(185);
+var content_ngfactory = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(108);
@@ -914,7 +918,7 @@ var refresher = __webpack_require__(145);
 var refresher_content_ngfactory = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(158);
+var refresher_content = __webpack_require__(157);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);
@@ -1050,22 +1054,22 @@ var AddonModForumDiscussionPageNgFactory = core["_27" /* ɵccf */]("page-addon-m
 
 //# sourceMappingURL=discussion.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(330);
+var translate_loader = __webpack_require__(331);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(331);
+var translate_compiler = __webpack_require__(332);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(333);
+var translate_parser = __webpack_require__(334);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(332);
+var missing_translation_handler = __webpack_require__(333);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(431);
+var translate_store = __webpack_require__(432);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(659);
+var ionic_angular_module = __webpack_require__(660);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
 var pipes_module = __webpack_require__(107);
@@ -1074,7 +1078,7 @@ var pipes_module = __webpack_require__(107);
 var course_components_components_module = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(246);
+var module_loader = __webpack_require__(248);
 
 // CONCATENATED MODULE: ./src/addon/mod/forum/pages/discussion/discussion.module.ngfactory.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModForumDiscussionPageModuleNgFactory", function() { return AddonModForumDiscussionPageModuleNgFactory; });
