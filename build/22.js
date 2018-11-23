@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(28);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -624,13 +624,13 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
             selector: 'page-addon-mod-lesson-player',
             templateUrl: 'player.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], providers_logger["a" /* CoreLoggerProvider */], _ngx_translate_core["c" /* TranslateService */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], providers_logger["a" /* CoreLoggerProvider */], _ngx_translate_core["c" /* TranslateService */],
             events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */],
-            sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], ionic_angular["v" /* PopoverController */],
+            sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], ionic_angular["w" /* PopoverController */],
             time["a" /* CoreTimeUtilsProvider */], lesson["a" /* AddonModLessonProvider */],
             helper["a" /* AddonModLessonHelperProvider */], lesson_sync["a" /* AddonModLessonSyncProvider */],
             lesson_offline["a" /* AddonModLessonOfflineProvider */], core["j" /* ChangeDetectorRef */],
-            ionic_angular["p" /* ModalController */], ionic_angular["r" /* NavController */], app["a" /* CoreAppProvider */],
+            ionic_angular["q" /* ModalController */], ionic_angular["s" /* NavController */], app["a" /* CoreAppProvider */],
             utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], esm5_forms["d" /* FormBuilder */]])
     ], AddonModLessonPlayerPage);
     return AddonModLessonPlayerPage;
@@ -741,7 +741,7 @@ var icon = __webpack_require__(45);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -1188,7 +1188,7 @@ var AddonModLessonPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_mod
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_seconds_to_hms__ = __webpack_require__(1384);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_logger__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_item_item__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ionic_angular_util_form__ = __webpack_require__(19);

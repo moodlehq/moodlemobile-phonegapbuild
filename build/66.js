@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -96,7 +96,7 @@ var add_AddonNotesAddPage = /** @class */ (function () {
             selector: 'page-addon-notes-add',
             templateUrl: 'add.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["D" /* ViewController */], app["a" /* CoreAppProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */], app["a" /* CoreAppProvider */],
             dom["a" /* CoreDomUtilsProvider */], notes["a" /* AddonNotesProvider */]])
     ], AddonNotesAddPage);
     return AddonNotesAddPage;

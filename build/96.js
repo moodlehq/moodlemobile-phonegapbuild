@@ -37,7 +37,7 @@ var helper = __webpack_require__(276);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./src/addon/mod/feedback/pages/attempt/attempt.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -132,7 +132,7 @@ var attempt_AddonModFeedbackAttemptPage = /** @class */ (function () {
             selector: 'page-addon-mod-feedback-attempt',
             templateUrl: 'attempt.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], feedback["a" /* AddonModFeedbackProvider */], ionic_angular["r" /* NavController */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], feedback["a" /* AddonModFeedbackProvider */], ionic_angular["s" /* NavController */],
             dom["a" /* CoreDomUtilsProvider */], helper["a" /* AddonModFeedbackHelperProvider */],
             utils_text["a" /* CoreTextUtilsProvider */]])
     ], AddonModFeedbackAttemptPage);
@@ -305,7 +305,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

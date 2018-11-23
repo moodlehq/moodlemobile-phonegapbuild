@@ -19,7 +19,7 @@ var file = __webpack_require__(49);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(46);
@@ -380,7 +380,7 @@ var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
             selector: 'page-core-emulator-capture-media',
             templateUrl: 'capture-media.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */], ionic_angular["s" /* NavParams */], dom["a" /* CoreDomUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */], ionic_angular["t" /* NavParams */], dom["a" /* CoreDomUtilsProvider */],
             time["a" /* CoreTimeUtilsProvider */], file["a" /* CoreFileProvider */],
             utils_text["a" /* CoreTextUtilsProvider */], core["j" /* ChangeDetectorRef */]])
     ], CoreEmulatorCaptureMediaPage);

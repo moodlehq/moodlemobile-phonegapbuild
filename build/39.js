@@ -149,7 +149,7 @@ var more_CoreMainMenuMorePage = /** @class */ (function () {
             templateUrl: 'more.html',
         }),
         __metadata("design:paramtypes", [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */],
-            ionic_angular["r" /* NavController */], mainmenu["a" /* CoreMainMenuProvider */],
+            ionic_angular["s" /* NavController */], mainmenu["a" /* CoreMainMenuProvider */],
             events["a" /* CoreEventsProvider */]])
     ], CoreMainMenuMorePage);
     return CoreMainMenuMorePage;
@@ -347,7 +347,7 @@ var toolbar = __webpack_require__(247);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -356,7 +356,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(36);

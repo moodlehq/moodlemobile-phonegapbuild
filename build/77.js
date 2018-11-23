@@ -140,8 +140,8 @@ var preflight_modal_AddonModQuizPreflightModalPage = /** @class */ (function () 
             selector: 'page-addon-mod-quiz-preflight-modal',
             templateUrl: 'preflight-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */], sites["a" /* CoreSitesProvider */],
-            ionic_angular["D" /* ViewController */], access_rules_delegate["a" /* AddonModQuizAccessRuleDelegate */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */], sites["a" /* CoreSitesProvider */],
+            ionic_angular["E" /* ViewController */], access_rules_delegate["a" /* AddonModQuizAccessRuleDelegate */],
             core["C" /* Injector */], dom["a" /* CoreDomUtilsProvider */]])
     ], AddonModQuizPreflightModalPage);
     return AddonModQuizPreflightModalPage;

@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -179,9 +179,9 @@ var site_CoreLoginSitePage = /** @class */ (function () {
             selector: 'page-core-login-site',
             templateUrl: 'site.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["r" /* NavController */], esm5_forms["d" /* FormBuilder */], app["a" /* CoreAppProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["s" /* NavController */], esm5_forms["d" /* FormBuilder */], app["a" /* CoreAppProvider */],
             sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */],
-            ionic_angular["p" /* ModalController */], dom["a" /* CoreDomUtilsProvider */]])
+            ionic_angular["q" /* ModalController */], dom["a" /* CoreDomUtilsProvider */]])
     ], CoreLoginSitePage);
     return CoreLoginSitePage;
 }());

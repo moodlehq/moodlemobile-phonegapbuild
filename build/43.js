@@ -149,7 +149,7 @@ var site_policy_CoreLoginSitePolicyPage = /** @class */ (function () {
             selector: 'page-core-login-site-policy',
             templateUrl: 'site-policy.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], helper["a" /* CoreLoginHelperProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], helper["a" /* CoreLoginHelperProvider */],
             dom["a" /* CoreDomUtilsProvider */], sites["a" /* CoreSitesProvider */], utils["a" /* CoreUtilsProvider */],
             mimetype["a" /* CoreMimetypeUtilsProvider */]])
     ], CoreLoginSitePolicyPage);

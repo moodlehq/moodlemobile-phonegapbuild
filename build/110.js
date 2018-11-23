@@ -59,7 +59,7 @@ var coursecompetencies_AddonCompetencyCourseCompetenciesPage = /** @class */ (fu
             selector: 'page-addon-competency-coursecompetencies',
             templateUrl: 'coursecompetencies.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */]])
     ], AddonCompetencyCourseCompetenciesPage);
     return AddonCompetencyCourseCompetenciesPage;
 }());
@@ -199,7 +199,7 @@ var translate_pipe = __webpack_require__(24);
 var course = __webpack_require__(479);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);

@@ -332,11 +332,11 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
             selector: 'page-addon-mod-data-entry',
             templateUrl: 'entry.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], utils_utils["a" /* CoreUtilsProvider */], groups["a" /* CoreGroupsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], utils_utils["a" /* CoreUtilsProvider */], groups["a" /* CoreGroupsProvider */],
             dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */],
             course["a" /* CoreCourseProvider */], data["a" /* AddonModDataProvider */],
             offline["a" /* AddonModDataOfflineProvider */], helper["a" /* AddonModDataHelperProvider */],
-            sites["a" /* CoreSitesProvider */], ionic_angular["r" /* NavController */],
+            sites["a" /* CoreSitesProvider */], ionic_angular["s" /* NavController */],
             events["a" /* CoreEventsProvider */]])
     ], AddonModDataEntryPage);
     return AddonModDataEntryPage;
@@ -549,7 +549,7 @@ var toolbar = __webpack_require__(247);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
 var url = __webpack_require__(25);
@@ -561,7 +561,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

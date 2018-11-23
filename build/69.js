@@ -40,7 +40,7 @@ var file_session = __webpack_require__(152);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(66);
@@ -424,9 +424,9 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
             selector: 'page-addon-mod-workshop-edit-submission',
             templateUrl: 'edit-submission.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */], fileuploader["a" /* CoreFileUploaderProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */], fileuploader["a" /* CoreFileUploaderProvider */],
             workshop["a" /* AddonModWorkshopProvider */], offline["a" /* AddonModWorkshopOfflineProvider */],
-            helper["a" /* AddonModWorkshopHelperProvider */], ionic_angular["r" /* NavController */],
+            helper["a" /* AddonModWorkshopHelperProvider */], ionic_angular["s" /* NavController */],
             file_session["a" /* CoreFileSessionProvider */], sync["a" /* CoreSyncProvider */],
             utils_text["a" /* CoreTextUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], esm5_forms["d" /* FormBuilder */],
             _ngx_translate_core["c" /* TranslateService */], events["a" /* CoreEventsProvider */]])
@@ -578,7 +578,7 @@ var attachments_ngfactory = __webpack_require__(445);
 var attachments = __webpack_require__(278);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
 var providers_helper = __webpack_require__(133);

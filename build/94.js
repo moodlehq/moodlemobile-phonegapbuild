@@ -187,9 +187,9 @@ var nonrespondents_AddonModFeedbackNonRespondentsPage = /** @class */ (function 
             selector: 'page-addon-mod-feedback-nonrespondents',
             templateUrl: 'nonrespondents.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], feedback["a" /* AddonModFeedbackProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], feedback["a" /* AddonModFeedbackProvider */],
             groups["a" /* CoreGroupsProvider */], dom["a" /* CoreDomUtilsProvider */],
-            helper["a" /* AddonModFeedbackHelperProvider */], ionic_angular["r" /* NavController */]])
+            helper["a" /* AddonModFeedbackHelperProvider */], ionic_angular["s" /* NavController */]])
     ], AddonModFeedbackNonRespondentsPage);
     return AddonModFeedbackNonRespondentsPage;
 }());
@@ -355,7 +355,7 @@ var avatar = __webpack_require__(185);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -373,7 +373,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

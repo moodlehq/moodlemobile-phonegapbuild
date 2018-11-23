@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var splash_screen = __webpack_require__(692);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
 var init = __webpack_require__(153);
@@ -147,7 +147,7 @@ var init_CoreLoginInitPage = /** @class */ (function () {
             selector: 'page-core-login-init',
             templateUrl: 'init.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], app["a" /* CoreAppProvider */], init["a" /* CoreInitDelegate */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], app["a" /* CoreAppProvider */], init["a" /* CoreInitDelegate */],
             sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */],
             splash_screen["a" /* SplashScreen */]])
     ], CoreLoginInitPage);

@@ -114,7 +114,7 @@ var grade_CoreGradesGradePage = /** @class */ (function () {
             templateUrl: 'grade.html',
         }),
         __metadata("design:paramtypes", [grades["a" /* CoreGradesProvider */], dom["a" /* CoreDomUtilsProvider */],
-            helper["a" /* CoreGradesHelperProvider */], ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */]])
+            helper["a" /* CoreGradesHelperProvider */], ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */]])
     ], CoreGradesGradePage);
     return CoreGradesGradePage;
 }());
@@ -269,7 +269,7 @@ var common = __webpack_require__(7);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -281,7 +281,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(36);

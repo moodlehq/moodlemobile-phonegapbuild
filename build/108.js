@@ -134,7 +134,7 @@ var planlist_AddonCompetencyPlanListPage = /** @class */ (function () {
             selector: 'page-addon-competency-planlist',
             templateUrl: 'planlist.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], competency["a" /* AddonCompetencyProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], competency["a" /* AddonCompetencyProvider */]])
     ], AddonCompetencyPlanListPage);
     return AddonCompetencyPlanListPage;
 }());

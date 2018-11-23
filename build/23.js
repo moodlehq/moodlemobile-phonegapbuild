@@ -34,7 +34,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(66);
@@ -277,8 +277,8 @@ var edit_AddonModGlossaryEditPage = /** @class */ (function () {
             selector: 'page-addon-mod-glossary-edit',
             templateUrl: 'edit.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */],
-            ionic_angular["r" /* NavController */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */],
+            ionic_angular["s" /* NavController */],
             _ngx_translate_core["c" /* TranslateService */],
             dom["a" /* CoreDomUtilsProvider */],
             events["a" /* CoreEventsProvider */],
@@ -484,7 +484,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

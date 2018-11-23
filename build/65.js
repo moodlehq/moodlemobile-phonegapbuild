@@ -143,7 +143,7 @@ var components_module_AddonNotificationsComponentsModule = /** @class */ (functi
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -386,7 +386,7 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
             selector: 'page-addon-notifications-list',
             templateUrl: 'list.html',
         }),
-        list___metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */],
+        list___metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */],
             sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */],
             utils["a" /* CoreUtilsProvider */], providers_notifications["a" /* AddonNotificationsProvider */],
             providers_delegate["a" /* AddonPushNotificationsDelegate */]])
@@ -554,7 +554,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);

@@ -59,7 +59,7 @@ var report_AddonCourseCompletionReportPage = /** @class */ (function () {
             selector: 'page-addon-course-completion-report',
             templateUrl: 'report.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */]])
     ], AddonCourseCompletionReportPage);
     return AddonCourseCompletionReportPage;
 }());

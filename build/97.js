@@ -31,7 +31,7 @@ var utils_utils = __webpack_require__(2);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
 var fields_delegate = __webpack_require__(114);
@@ -222,7 +222,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
             selector: 'page-addon-mod-data-search',
             templateUrl: 'search.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["D" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */],
             dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */],
             utils_text["a" /* CoreTextUtilsProvider */]])
     ], AddonModDataSearchPage);

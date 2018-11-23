@@ -88,7 +88,7 @@ var list_CoreSettingsListPage = /** @class */ (function () {
             selector: 'page-core-settings-list',
             templateUrl: 'list.html',
         }),
-        __metadata("design:paramtypes", [delegate["a" /* CoreSettingsDelegate */], ionic_angular["u" /* Platform */], ionic_angular["s" /* NavParams */]])
+        __metadata("design:paramtypes", [delegate["a" /* CoreSettingsDelegate */], ionic_angular["v" /* Platform */], ionic_angular["t" /* NavParams */]])
     ], CoreSettingsListPage);
     return CoreSettingsListPage;
 }());

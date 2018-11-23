@@ -79,7 +79,7 @@ var plugin_page_CoreSitePluginsPluginPage = /** @class */ (function () {
             selector: 'page-core-site-plugins-plugin',
             templateUrl: 'plugin-page.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */]])
     ], CoreSitePluginsPluginPage);
     return CoreSitePluginsPluginPage;
 }());

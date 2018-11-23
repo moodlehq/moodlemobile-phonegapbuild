@@ -265,14 +265,14 @@ var my_courses_CoreCoursesMyCoursesPage = /** @class */ (function () {
     };
     __decorate([
         Object(core["_9" /* ViewChild */])('searchbar'),
-        __metadata("design:type", ionic_angular["x" /* Searchbar */])
+        __metadata("design:type", ionic_angular["y" /* Searchbar */])
     ], CoreCoursesMyCoursesPage.prototype, "searchbar", void 0);
     CoreCoursesMyCoursesPage = __decorate([
         Object(core["m" /* Component */])({
             selector: 'page-core-courses-my-courses',
             templateUrl: 'my-courses.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], courses["a" /* CoreCoursesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], courses["a" /* CoreCoursesProvider */],
             dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */],
             sites["a" /* CoreSitesProvider */], providers_helper["a" /* CoreCourseHelperProvider */],
             options_delegate["a" /* CoreCourseOptionsDelegate */], helper["a" /* CoreCoursesHelperProvider */]])

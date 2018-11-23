@@ -58,7 +58,7 @@ var participants_CoreUserParticipantsPage = /** @class */ (function () {
             selector: 'page-core-user-participants',
             templateUrl: 'participants.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */]])
     ], CoreUserParticipantsPage);
     return CoreUserParticipantsPage;
 }());

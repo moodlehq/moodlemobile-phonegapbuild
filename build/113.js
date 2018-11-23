@@ -170,7 +170,7 @@ var competencies_AddonCompetencyCompetenciesPage = /** @class */ (function () {
             selector: 'page-addon-competency-competencies',
             templateUrl: 'competencies.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], _ngx_translate_core["c" /* TranslateService */], dom["a" /* CoreDomUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], _ngx_translate_core["c" /* TranslateService */], dom["a" /* CoreDomUtilsProvider */],
             competency["a" /* AddonCompetencyProvider */]])
     ], AddonCompetencyCompetenciesPage);
     return AddonCompetencyCompetenciesPage;

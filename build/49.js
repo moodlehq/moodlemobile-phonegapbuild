@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -295,7 +295,7 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
             selector: 'page-core-login-credentials',
             templateUrl: 'credentials.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], esm5_forms["d" /* FormBuilder */], app["a" /* CoreAppProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], esm5_forms["d" /* FormBuilder */], app["a" /* CoreAppProvider */],
             sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */],
             dom["a" /* CoreDomUtilsProvider */], _ngx_translate_core["c" /* TranslateService */], utils_utils["a" /* CoreUtilsProvider */],
             events["a" /* CoreEventsProvider */], delegate["a" /* CoreContentLinksDelegate */],
@@ -421,7 +421,7 @@ var icon = __webpack_require__(45);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);

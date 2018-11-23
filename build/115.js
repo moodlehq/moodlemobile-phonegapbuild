@@ -52,7 +52,7 @@ var course_picker_menu_popover = __webpack_require__(707);
 var providers_events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(33);
@@ -400,11 +400,11 @@ var list_AddonCalendarListPage = /** @class */ (function () {
             selector: 'page-addon-calendar-list',
             templateUrl: 'list.html',
         }),
-        __metadata("design:paramtypes", [_ngx_translate_core["c" /* TranslateService */], calendar["a" /* AddonCalendarProvider */], ionic_angular["s" /* NavParams */],
+        __metadata("design:paramtypes", [_ngx_translate_core["c" /* TranslateService */], calendar["a" /* AddonCalendarProvider */], ionic_angular["t" /* NavParams */],
             dom["a" /* CoreDomUtilsProvider */], courses["a" /* CoreCoursesProvider */], utils_utils["a" /* CoreUtilsProvider */],
             helper["a" /* AddonCalendarHelperProvider */], sites["a" /* CoreSitesProvider */],
-            local_notifications["a" /* CoreLocalNotificationsProvider */], ionic_angular["v" /* PopoverController */],
-            providers_events["a" /* CoreEventsProvider */], ionic_angular["r" /* NavController */], app["a" /* CoreAppProvider */]])
+            local_notifications["a" /* CoreLocalNotificationsProvider */], ionic_angular["w" /* PopoverController */],
+            providers_events["a" /* CoreEventsProvider */], ionic_angular["s" /* NavController */], app["a" /* CoreAppProvider */]])
     ], AddonCalendarListPage);
     return AddonCalendarListPage;
 }());
@@ -546,7 +546,7 @@ var common = __webpack_require__(7);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);

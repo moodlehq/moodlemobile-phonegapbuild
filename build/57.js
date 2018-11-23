@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -28,7 +28,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
 var courses = __webpack_require__(50);
@@ -462,9 +462,9 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
             selector: 'page-core-courses-course-preview',
             templateUrl: 'course-preview.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */],
             dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], app["a" /* CoreAppProvider */],
-            courses["a" /* CoreCoursesProvider */], ionic_angular["u" /* Platform */], ionic_angular["p" /* ModalController */],
+            courses["a" /* CoreCoursesProvider */], ionic_angular["v" /* Platform */], ionic_angular["q" /* ModalController */],
             _ngx_translate_core["c" /* TranslateService */], events["a" /* CoreEventsProvider */],
             options_delegate["a" /* CoreCourseOptionsDelegate */], helper["a" /* CoreCourseHelperProvider */],
             course["a" /* CoreCourseProvider */], format_delegate["a" /* CoreCourseFormatDelegate */],

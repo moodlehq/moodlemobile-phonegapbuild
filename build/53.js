@@ -60,7 +60,7 @@ var course_CoreGradesCoursePage = /** @class */ (function () {
             selector: 'page-core-grades-course',
             templateUrl: 'course.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */]])
     ], CoreGradesCoursePage);
     return CoreGradesCoursePage;
 }());
@@ -215,7 +215,7 @@ var nav_params = __webpack_require__(60);
 var helper = __webpack_require__(172);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(33);

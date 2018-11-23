@@ -22,7 +22,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -34,7 +34,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/files.ts
 var files = __webpack_require__(351);
@@ -245,7 +245,7 @@ var list_AddonFilesListPage = /** @class */ (function () {
             selector: 'page-addon-files-list',
             templateUrl: 'list.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */],
             dom["a" /* CoreDomUtilsProvider */], _ngx_translate_core["c" /* TranslateService */], app["a" /* CoreAppProvider */],
             files["a" /* AddonFilesProvider */], helper["a" /* AddonFilesHelperProvider */],
             utils_text["a" /* CoreTextUtilsProvider */]])

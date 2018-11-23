@@ -55,7 +55,7 @@ var site_help_CoreLoginSiteHelpPage = /** @class */ (function () {
             selector: 'page-core-login-site-help',
             templateUrl: 'site-help.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */]])
     ], CoreLoginSiteHelpPage);
     return CoreLoginSiteHelpPage;
 }());
@@ -217,7 +217,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -232,7 +232,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);

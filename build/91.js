@@ -28,7 +28,7 @@ var components_components_module = __webpack_require__(676);
 var _ionic_native_network = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -452,7 +452,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
             templateUrl: 'discussion.html',
         }),
         __param(14, Object(core["N" /* Optional */])()),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */],
             _ionic_native_network["a" /* Network */],
             core["M" /* NgZone */],
             app["a" /* CoreAppProvider */],
@@ -581,7 +581,7 @@ var navbar = __webpack_require__(200);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);

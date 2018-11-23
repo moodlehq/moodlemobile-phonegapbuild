@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(28);
 var pipes_module = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -138,8 +138,8 @@ var users_AddonModChatUsersPage = /** @class */ (function () {
             selector: 'page-addon-mod-chat-users',
             templateUrl: 'users.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], network["a" /* Network */], core["M" /* NgZone */], app["a" /* CoreAppProvider */],
-            sites["a" /* CoreSitesProvider */], ionic_angular["D" /* ViewController */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], network["a" /* Network */], core["M" /* NgZone */], app["a" /* CoreAppProvider */],
+            sites["a" /* CoreSitesProvider */], ionic_angular["E" /* ViewController */],
             dom["a" /* CoreDomUtilsProvider */], chat["a" /* AddonModChatProvider */]])
     ], AddonModChatUsersPage);
     return AddonModChatUsersPage;
@@ -279,7 +279,7 @@ var avatar = __webpack_require__(185);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);

@@ -63,7 +63,7 @@ var image_CoreViewerImagePage = /** @class */ (function () {
             selector: 'page-core-viewer-image',
             templateUrl: 'image.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */], ionic_angular["s" /* NavParams */], _ngx_translate_core["c" /* TranslateService */]])
+        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */], ionic_angular["t" /* NavParams */], _ngx_translate_core["c" /* TranslateService */]])
     ], CoreViewerImagePage);
     return CoreViewerImagePage;
 }());
@@ -251,7 +251,7 @@ var dom = __webpack_require__(4);
 var url = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

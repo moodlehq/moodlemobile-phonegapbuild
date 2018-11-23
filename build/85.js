@@ -71,7 +71,7 @@ var menu_modal_AddonModLessonMenuModalPage = /** @class */ (function () {
             selector: 'page-addon-mod-lesson-menu-modal',
             templateUrl: 'menu-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["D" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */]])
     ], AddonModLessonMenuModalPage);
     return AddonModLessonMenuModalPage;
 }());
@@ -205,7 +205,7 @@ var dom = __webpack_require__(4);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
 var file_helper = __webpack_require__(132);
@@ -217,7 +217,7 @@ var mimetype = __webpack_require__(64);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
 var item_content = __webpack_require__(31);

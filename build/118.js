@@ -155,7 +155,7 @@ var issued_badge_AddonBadgesIssuedBadgePage = /** @class */ (function () {
             selector: 'page-addon-badges-issued-badge',
             templateUrl: 'issued-badge.html',
         }),
-        __metadata("design:paramtypes", [badges["a" /* AddonBadgesProvider */], ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */],
+        __metadata("design:paramtypes", [badges["a" /* AddonBadgesProvider */], ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */],
             dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */],
             user["a" /* CoreUserProvider */], courses["a" /* CoreCoursesProvider */]])
     ], AddonBadgesIssuedBadgePage);
@@ -263,7 +263,7 @@ var platform = __webpack_require__(14);
 var url = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -305,7 +305,7 @@ var item_content = __webpack_require__(31);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);

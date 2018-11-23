@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./src/core/course/pages/unsupported-module/unsupported-module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -65,7 +65,7 @@ var unsupported_module_CoreCourseUnsupportedModulePage = /** @class */ (function
             selector: 'page-core-course-unsupported-module',
             templateUrl: 'unsupported-module.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], _ngx_translate_core["c" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], _ngx_translate_core["c" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */]])
     ], CoreCourseUnsupportedModulePage);
     return CoreCourseUnsupportedModulePage;
 }());
@@ -243,7 +243,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);

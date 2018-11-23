@@ -68,7 +68,7 @@ var iframe_CoreViewerIframePage = /** @class */ (function () {
             selector: 'page-core-viewer-iframe',
             templateUrl: 'iframe.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */]])
     ], CoreViewerIframePage);
     return CoreViewerIframePage;
 }());

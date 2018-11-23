@@ -117,7 +117,7 @@ var forgotten_password_CoreLoginForgottenPasswordPage = /** @class */ (function 
             selector: 'page-core-login-forgotten-password',
             templateUrl: 'forgotten-password.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */],
             helper["a" /* CoreLoginHelperProvider */], dom["a" /* CoreDomUtilsProvider */]])
     ], CoreLoginForgottenPasswordPage);
     return CoreLoginForgottenPasswordPage;

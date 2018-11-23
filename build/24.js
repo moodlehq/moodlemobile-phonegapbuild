@@ -40,7 +40,7 @@ var sync = __webpack_require__(83);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils_utils = __webpack_require__(2);
@@ -569,8 +569,8 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
             templateUrl: 'new-discussion.html',
         }),
         __param(15, Object(core["N" /* Optional */])()),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */],
-            ionic_angular["r" /* NavController */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */],
+            ionic_angular["s" /* NavController */],
             _ngx_translate_core["c" /* TranslateService */],
             dom["a" /* CoreDomUtilsProvider */],
             events["a" /* CoreEventsProvider */],
@@ -742,7 +742,7 @@ var attachments_ngfactory = __webpack_require__(445);
 var attachments = __webpack_require__(278);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
 var providers_helper = __webpack_require__(133);

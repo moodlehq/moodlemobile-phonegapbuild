@@ -75,7 +75,7 @@ var module_index_CoreSitePluginsModuleIndexPage = /** @class */ (function () {
             selector: 'page-core-site-plugins-module-index',
             templateUrl: 'module-index.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */]])
     ], CoreSitePluginsModuleIndexPage);
     return CoreSitePluginsModuleIndexPage;
 }());
@@ -281,7 +281,7 @@ var helper = __webpack_require__(40);
 var module_prefetch_delegate = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

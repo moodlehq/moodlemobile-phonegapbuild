@@ -118,7 +118,7 @@ var choose_site_CoreContentLinksChooseSitePage = /** @class */ (function () {
             selector: 'page-core-content-links-choose-site',
             templateUrl: 'choose-site.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], delegate["a" /* CoreContentLinksDelegate */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], delegate["a" /* CoreContentLinksDelegate */],
             sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */],
             helper["a" /* CoreContentLinksHelperProvider */]])
     ], CoreContentLinksChooseSitePage);
@@ -239,7 +239,7 @@ var item_content = __webpack_require__(31);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);
@@ -260,7 +260,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);

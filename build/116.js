@@ -37,7 +37,7 @@ var courses = __webpack_require__(50);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -236,7 +236,7 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
             selector: 'page-addon-calendar-event',
             templateUrl: 'event.html',
         }),
-        __metadata("design:paramtypes", [_ngx_translate_core["c" /* TranslateService */], calendar["a" /* AddonCalendarProvider */], ionic_angular["s" /* NavParams */],
+        __metadata("design:paramtypes", [_ngx_translate_core["c" /* TranslateService */], calendar["a" /* AddonCalendarProvider */], ionic_angular["t" /* NavParams */],
             dom["a" /* CoreDomUtilsProvider */], courses["a" /* CoreCoursesProvider */], time["a" /* CoreTimeUtilsProvider */],
             helper["a" /* AddonCalendarHelperProvider */], sites["a" /* CoreSitesProvider */],
             local_notifications["a" /* CoreLocalNotificationsProvider */], course["a" /* CoreCourseProvider */],
@@ -394,7 +394,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(36);

@@ -74,7 +74,7 @@ var index_CoreSiteHomeIndexPage = /** @class */ (function () {
             selector: 'page-core-sitehome-index',
             templateUrl: 'index.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["r" /* NavController */], helper["a" /* CoreCourseHelperProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["s" /* NavController */], helper["a" /* CoreCourseHelperProvider */],
             sites["a" /* CoreSitesProvider */]])
     ], CoreSiteHomeIndexPage);
     return CoreSiteHomeIndexPage;
@@ -475,7 +475,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);
@@ -496,7 +496,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);

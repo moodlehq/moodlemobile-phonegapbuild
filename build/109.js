@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(28);
 var pipes_module = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -178,7 +178,7 @@ var plan_AddonCompetencyPlanPage = /** @class */ (function () {
             templateUrl: 'plan.html',
         }),
         __param(5, Object(core["N" /* Optional */])()),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], _ngx_translate_core["c" /* TranslateService */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], _ngx_translate_core["c" /* TranslateService */],
             app["a" /* CoreAppProvider */], dom["a" /* CoreDomUtilsProvider */],
             split_view["a" /* CoreSplitViewComponent */], competency["a" /* AddonCompetencyProvider */],
             helper["a" /* AddonCompetencyHelperProvider */]])
@@ -323,7 +323,7 @@ var avatar = __webpack_require__(185);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);

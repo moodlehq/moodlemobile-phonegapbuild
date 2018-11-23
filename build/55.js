@@ -63,7 +63,7 @@ var self_enrol_password_CoreCoursesSelfEnrolPasswordPage = /** @class */ (functi
             selector: 'page-core-courses-self-enrol-password',
             templateUrl: 'self-enrol-password.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */]])
     ], CoreCoursesSelfEnrolPasswordPage);
     return CoreCoursesSelfEnrolPasswordPage;
 }());

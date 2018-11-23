@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var _ionic_native_device = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var file = __webpack_require__(49);
@@ -132,7 +132,7 @@ var about_CoreSettingsAboutPage = /** @class */ (function () {
             selector: 'page-core-settings-about',
             templateUrl: 'about.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["u" /* Platform */], _ionic_native_device["a" /* Device */], app["a" /* CoreAppProvider */], file["a" /* CoreFileProvider */],
+        __metadata("design:paramtypes", [ionic_angular["v" /* Platform */], _ionic_native_device["a" /* Device */], app["a" /* CoreAppProvider */], file["a" /* CoreFileProvider */],
             init["a" /* CoreInitDelegate */], lang["a" /* CoreLangProvider */], sites["a" /* CoreSitesProvider */],
             local_notifications["a" /* CoreLocalNotificationsProvider */]])
     ], CoreSettingsAboutPage);

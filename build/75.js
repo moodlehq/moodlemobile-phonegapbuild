@@ -1259,7 +1259,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
             selector: 'page-addon-mod-scorm-player',
             templateUrl: 'player.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], ionic_angular["v" /* PopoverController */], events["a" /* CoreEventsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["w" /* PopoverController */], events["a" /* CoreEventsProvider */],
             sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */],
             dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */],
             providers_scorm["a" /* AddonModScormProvider */], helper["a" /* AddonModScormHelperProvider */],
@@ -1427,7 +1427,7 @@ var toolbar = __webpack_require__(247);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -1439,7 +1439,7 @@ var url = __webpack_require__(25);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

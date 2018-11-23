@@ -31,7 +31,7 @@ var events = __webpack_require__(12);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./src/core/user/pages/about/about.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -132,7 +132,7 @@ var about_CoreUserAboutPage = /** @class */ (function () {
             selector: 'page-core-user-about',
             templateUrl: 'about.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */],
             dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */],
             sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */]])
     ], CoreUserAboutPage);
@@ -294,7 +294,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(36);

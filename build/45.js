@@ -57,7 +57,7 @@ var site_error_CoreLoginSiteErrorPage = /** @class */ (function () {
             selector: 'page-core-login-site-error',
             templateUrl: 'site-error.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */], ionic_angular["s" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */], ionic_angular["t" /* NavParams */]])
     ], CoreLoginSiteErrorPage);
     return CoreLoginSiteErrorPage;
 }());
@@ -156,7 +156,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -174,7 +174,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);

@@ -25,7 +25,7 @@ var file = __webpack_require__(49);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/sharedfiles/providers/sharedfiles.ts
 var sharedfiles = __webpack_require__(459);
@@ -206,9 +206,9 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
             selector: 'page-core-shared-files-list',
             templateUrl: 'list.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["D" /* ViewController */], ionic_angular["s" /* NavParams */], sharedfiles["a" /* CoreSharedFilesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */], ionic_angular["t" /* NavParams */], sharedfiles["a" /* CoreSharedFilesProvider */],
             sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */], _ngx_translate_core["c" /* TranslateService */],
-            file["a" /* CoreFileProvider */], events["a" /* CoreEventsProvider */], ionic_angular["r" /* NavController */]])
+            file["a" /* CoreFileProvider */], events["a" /* CoreEventsProvider */], ionic_angular["s" /* NavController */]])
     ], CoreSharedFilesListPage);
     return CoreSharedFilesListPage;
 }());
@@ -417,7 +417,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);

@@ -37,7 +37,7 @@ var sync = __webpack_require__(83);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);
@@ -527,7 +527,7 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
             selector: 'page-addon-mod-wiki-edit',
             templateUrl: 'edit.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], esm5_forms["d" /* FormBuilder */], ionic_angular["r" /* NavController */], sites["a" /* CoreSitesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], esm5_forms["d" /* FormBuilder */], ionic_angular["s" /* NavController */], sites["a" /* CoreSitesProvider */],
             sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */],
             _ngx_translate_core["c" /* TranslateService */], course["a" /* CoreCourseProvider */],
             events["a" /* CoreEventsProvider */], wiki["a" /* AddonModWikiProvider */],
@@ -708,7 +708,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

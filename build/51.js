@@ -58,7 +58,7 @@ var coursesplit_CoreGradesCourseSplitPage = /** @class */ (function () {
             selector: 'page-core-grades-course-split',
             templateUrl: 'coursesplit.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */]])
     ], CoreGradesCourseSplitPage);
     return CoreGradesCourseSplitPage;
 }());
@@ -230,7 +230,7 @@ var nav_params = __webpack_require__(60);
 var helper = __webpack_require__(172);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.ngfactory.js
 /**

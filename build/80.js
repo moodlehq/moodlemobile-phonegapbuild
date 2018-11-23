@@ -190,7 +190,7 @@ var attempt_AddonModQuizAttemptPage = /** @class */ (function () {
             selector: 'page-addon-mod-quiz-attempt',
             templateUrl: 'attempt.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], quiz["a" /* AddonModQuizProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], quiz["a" /* AddonModQuizProvider */],
             helper["a" /* AddonModQuizHelperProvider */]])
     ], AddonModQuizAttemptPage);
     return AddonModQuizAttemptPage;
@@ -286,7 +286,7 @@ var format_text = __webpack_require__(39);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);
@@ -307,7 +307,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

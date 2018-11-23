@@ -254,11 +254,11 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
             templateUrl: 'profile.html',
         }),
         __param(12, Object(core["N" /* Optional */])()),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], providers_user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], providers_user["a" /* CoreUserProvider */], helper["a" /* CoreUserHelperProvider */],
             dom["a" /* CoreDomUtilsProvider */], _ngx_translate_core["c" /* TranslateService */], events["a" /* CoreEventsProvider */],
             courses["a" /* CoreCoursesProvider */], sites["a" /* CoreSitesProvider */],
             mimetype["a" /* CoreMimetypeUtilsProvider */], providers_helper["a" /* CoreFileUploaderHelperProvider */],
-            user_delegate["a" /* CoreUserDelegate */], ionic_angular["r" /* NavController */],
+            user_delegate["a" /* CoreUserDelegate */], ionic_angular["s" /* NavController */],
             split_view["a" /* CoreSplitViewComponent */]])
     ], CoreUserProfilePage);
     return CoreUserProfilePage;
@@ -363,7 +363,7 @@ var config = __webpack_require__(6);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);
@@ -384,7 +384,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var contentlinks_providers_helper = __webpack_require__(18);

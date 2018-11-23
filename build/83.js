@@ -31,7 +31,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(46);
@@ -252,7 +252,7 @@ var user_retake_AddonModLessonUserRetakePage = /** @class */ (function () {
             selector: 'page-addon-mod-lesson-user-retake',
             templateUrl: 'user-retake.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavParams */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */],
             _ngx_translate_core["c" /* TranslateService */], dom["a" /* CoreDomUtilsProvider */],
             user["a" /* CoreUserProvider */], time["a" /* CoreTimeUtilsProvider */],
             lesson["a" /* AddonModLessonProvider */], helper["a" /* AddonModLessonHelperProvider */]])
@@ -427,7 +427,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(11);
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

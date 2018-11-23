@@ -220,7 +220,7 @@ var competency_AddonCompetencyCompetencyPage = /** @class */ (function () {
             templateUrl: 'competency.html',
         }),
         __param(5, Object(core["N" /* Optional */])()),
-        __metadata("design:paramtypes", [ionic_angular["r" /* NavController */], ionic_angular["s" /* NavParams */], _ngx_translate_core["c" /* TranslateService */],
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], _ngx_translate_core["c" /* TranslateService */],
             sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */],
             split_view["a" /* CoreSplitViewComponent */], competency["a" /* AddonCompetencyProvider */]])
     ], AddonCompetencyCompetencyPage);
@@ -361,7 +361,7 @@ var avatar = __webpack_require__(185);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(9);
+var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);
@@ -382,7 +382,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);

@@ -37,7 +37,7 @@ var local_notifications = __webpack_require__(142);
 var config = __webpack_require__(176);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(11);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
 var constants = __webpack_require__(38);
@@ -316,7 +316,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
         __param(11, Object(core["N" /* Optional */])()),
         __metadata("design:paramtypes", [notifications["a" /* AddonNotificationsProvider */], dom["a" /* CoreDomUtilsProvider */],
             helper["a" /* CoreSettingsHelper */], user["a" /* CoreUserProvider */],
-            ionic_angular["r" /* NavController */], delegate["a" /* AddonMessageOutputDelegate */],
+            ionic_angular["s" /* NavController */], delegate["a" /* AddonMessageOutputDelegate */],
             app["a" /* CoreAppProvider */], config["a" /* CoreConfigProvider */], events["a" /* CoreEventsProvider */],
             local_notifications["a" /* CoreLocalNotificationsProvider */], sites["a" /* CoreSitesProvider */],
             split_view["a" /* CoreSplitViewComponent */]])
