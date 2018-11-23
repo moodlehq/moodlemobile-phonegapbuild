@@ -1,6 +1,6 @@
 webpackJsonp([37],{
 
-/***/ 1933:
+/***/ 1934:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -258,7 +258,7 @@ var toolbar = __webpack_require__(247);
 var toolbar_item = __webpack_require__(435);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
-var split_view_ngfactory = __webpack_require__(438);
+var split_view_ngfactory = __webpack_require__(436);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(66);
@@ -336,7 +336,7 @@ function View_CoreSettingsListPage_1(_l) { return core["_57" /* ɵvid */](0, [(_
         var pd_0 = (_co.openHandler("CoreSharedFilesListPage", { manage: true }) !== false);
         ad = (pd_0 && ad);
     } return ad; }, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 12, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 13, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 14, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](8, 0, null, 0, 1, "ion-icon", [["item-start", ""], ["name", "folder"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](9, 147456, [[14, 4]], 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](12, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var currVal_3 = "folder"; _ck(_v, 9, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 0, 0, core["_44" /* ɵnov */](_v, 6).transform("core.sharedfiles.sharedfiles")); var currVal_1 = ("CoreSharedFilesListPage" == _co.selectedPage); _ck(_v, 0, 0, currVal_0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 9)._hidden; _ck(_v, 8, 0, currVal_2); var currVal_4 = core["_56" /* ɵunv */](_v, 12, 0, core["_44" /* ɵnov */](_v, 13).transform("core.sharedfiles.sharedfiles")); _ck(_v, 12, 0, currVal_4); }); }
-function View_CoreSettingsListPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-icon", [["item-start", ""]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](1, 114688, null, 0, icon_icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */]], { name: [0, "name"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.icon; _ck(_v, 1, 0, currVal_0); }, null); }
+function View_CoreSettingsListPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-icon", [["item-start", ""]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](1, 245760, null, 0, icon_icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */]], { name: [0, "name"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.icon; _ck(_v, 1, 0, currVal_0); }, null); }
 function View_CoreSettingsListPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 16, "a", [["class", "item item-block"], ["detail-push", ""], ["ion-item", ""]], [[8, "title", 0], [2, "core-split-item-selected", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.openHandler(_v.context.$implicit.page, _v.context.$implicit.params) !== false);
         ad = (pd_0 && ad);

@@ -1,6 +1,6 @@
 webpackJsonp([61],{
 
-/***/ 1903:
+/***/ 1904:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -265,7 +265,7 @@ var translate_service = __webpack_require__(17);
 var module_ngfactory = __webpack_require__(1365);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ts
-var module_module = __webpack_require__(442);
+var module_module = __webpack_require__(443);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);

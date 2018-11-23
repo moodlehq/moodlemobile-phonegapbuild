@@ -828,7 +828,7 @@ var translate_service = __webpack_require__(17);
 var icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(226);
+var note = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(44);
@@ -936,7 +936,7 @@ var navbar_buttons = __webpack_require__(77);
 var user_link = __webpack_require__(671);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(228);
+var external_content = __webpack_require__(227);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(184);
@@ -954,10 +954,10 @@ var loading_ngfactory = __webpack_require__(48);
 var loading = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ngfactory.js
-var infinite_loading_ngfactory = __webpack_require__(446);
+var infinite_loading_ngfactory = __webpack_require__(442);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(281);
+var infinite_loading = __webpack_require__(279);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(76);
@@ -969,10 +969,10 @@ var gesture_controller = __webpack_require__(37);
 var toolbar_footer = __webpack_require__(681);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1952);
+var toolbar_ngfactory = __webpack_require__(1953);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ngfactory.js
-var send_message_form_ngfactory = __webpack_require__(1958);
+var send_message_form_ngfactory = __webpack_require__(1959);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ts
 var send_message_form = __webpack_require__(1369);
@@ -1159,7 +1159,7 @@ var AddonMessagesDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](discuss
 
 /***/ }),
 
-/***/ 1952:
+/***/ 1953:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1192,7 +1192,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 
 /***/ }),
 
-/***/ 1958:
+/***/ 1959:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

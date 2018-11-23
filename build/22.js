@@ -1,6 +1,6 @@
 webpackJsonp([22],{
 
-/***/ 1875:
+/***/ 1876:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -765,7 +765,7 @@ var split_view = __webpack_require__(33);
 var iframe = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ngfactory.js
-var timer_ngfactory = __webpack_require__(1960);
+var timer_ngfactory = __webpack_require__(1961);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ts
 var timer = __webpack_require__(1370);
@@ -819,7 +819,7 @@ var radio_button = __webpack_require__(137);
 var radio_group = __webpack_require__(128);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.ngfactory.js
-var checkbox_ngfactory = __webpack_require__(227);
+var checkbox_ngfactory = __webpack_require__(228);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
 var checkbox_checkbox = __webpack_require__(175);
@@ -855,7 +855,7 @@ var card = __webpack_require__(86);
 var progress_bar_ngfactory = __webpack_require__(447);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(280);
+var progress_bar = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(73);
@@ -1175,7 +1175,7 @@ var AddonModLessonPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_mod
 
 /***/ }),
 
-/***/ 1960:
+/***/ 1961:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1186,7 +1186,7 @@ var AddonModLessonPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_mod
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core_src_translate_pipe__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_seconds_to_hms__ = __webpack_require__(1384);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_seconds_to_hms__ = __webpack_require__(1385);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(29);

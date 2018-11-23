@@ -110,6 +110,7 @@
     "addon.messageoutput_airnotifier.processorsettingsdesc": "Configura els dispositius",
     "addon.messages.addcontact": "Afegeix contacte",
     "addon.messages.blocknoncontacts": "Impedeix que m'enviïn missatges els usuaris que no siguin a la meva llista de contactes",
+    "addon.messages.contactblocked": "Contacte blocat",
     "addon.messages.contactlistempty": "La llista de contactes és buida",
     "addon.messages.contactname": "Nom del contacte",
     "addon.messages.contacts": "Contactes",

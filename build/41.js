@@ -1,6 +1,6 @@
 webpackJsonp([41],{
 
-/***/ 1928:
+/***/ 1929:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -286,7 +286,7 @@ var item_content = __webpack_require__(31);
 var avatar = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(228);
+var external_content = __webpack_require__(227);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

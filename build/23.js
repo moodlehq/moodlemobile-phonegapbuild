@@ -1,6 +1,6 @@
 webpackJsonp([23],{
 
-/***/ 1868:
+/***/ 1869:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -424,7 +424,7 @@ var common = __webpack_require__(7);
 var item_divider = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1947);
+var toggle_ngfactory = __webpack_require__(1948);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(663);
@@ -538,7 +538,7 @@ var rich_text_editor = __webpack_require__(224);
 var auto_rows = __webpack_require__(345);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(445);
+var attachments_ngfactory = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(278);
@@ -749,7 +749,7 @@ var AddonModGlossaryNewDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](e
 
 /***/ }),
 
-/***/ 1947:
+/***/ 1948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -1,6 +1,6 @@
 webpackJsonp([25],{
 
-/***/ 1860:
+/***/ 1861:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -581,7 +581,7 @@ var list = __webpack_require__(76);
 var gesture_controller = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.ngfactory.js
-var checkbox_ngfactory = __webpack_require__(227);
+var checkbox_ngfactory = __webpack_require__(228);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
 var checkbox_checkbox = __webpack_require__(175);
@@ -599,7 +599,7 @@ var select_select = __webpack_require__(92);
 var deep_linker = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ngfactory.js
-var recaptcha_ngfactory = __webpack_require__(1959);
+var recaptcha_ngfactory = __webpack_require__(1960);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ts
 var recaptcha = __webpack_require__(1371);
@@ -913,7 +913,7 @@ var AddonModFeedbackFormPageModuleNgFactory = core["_28" /* ɵcmf */](form_modul
 
 /***/ }),
 
-/***/ 1959:
+/***/ 1960:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -1,6 +1,6 @@
 webpackJsonp([28],{
 
-/***/ 1945:
+/***/ 1946:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -233,7 +233,7 @@ var ScrollNgFactory = core["_27" /* ɵccf */]("ion-scroll", scroll_scroll["a" /*
 
 //# sourceMappingURL=scroll.ngfactory.js.map
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(228);
+var external_content = __webpack_require__(227);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);

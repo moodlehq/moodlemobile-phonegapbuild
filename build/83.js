@@ -1,6 +1,6 @@
 webpackJsonp([83],{
 
-/***/ 1876:
+/***/ 1877:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -448,7 +448,7 @@ var iframe = __webpack_require__(36);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.ngfactory.js
-var checkbox_ngfactory = __webpack_require__(227);
+var checkbox_ngfactory = __webpack_require__(228);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
 var checkbox_checkbox = __webpack_require__(175);
@@ -457,7 +457,7 @@ var checkbox_checkbox = __webpack_require__(175);
 var card = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(279);
+var card_header = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(76);
@@ -484,7 +484,7 @@ var avatar = __webpack_require__(185);
 var progress_bar_ngfactory = __webpack_require__(447);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(280);
+var progress_bar = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(73);

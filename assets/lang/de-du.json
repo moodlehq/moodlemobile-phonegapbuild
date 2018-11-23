@@ -31,6 +31,7 @@
     "addon.messages.type_search": "Suchergebnisse",
     "addon.messages.type_strangers": "Weitere Personen",
     "addon.messages.warningmessagenotsent": "Die Mitteilung an {{user}} konnte nicht gesendet werden. {{error}}",
+    "addon.messages.you": "Du:",
     "addon.mod_assign.acceptsubmissionstatement": "Bestätige das Abgabestatement zur Eigenständigkeit.",
     "addon.mod_assign.cannoteditduetostatementsubmission": "Du kannst in der App keine Abgabe hinzufügen oder bearbeiten, weil kein Abgabestatement von der Website abgerufen werden konnte.",
     "addon.mod_assign.cannotgradefromapp": "Manche Bewertungsmethoden werden von der App bisher nicht unterstützt und können nicht verändert werden.",

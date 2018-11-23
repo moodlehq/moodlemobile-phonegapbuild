@@ -1,6 +1,6 @@
 webpackJsonp([91],{
 
-/***/ 1865:
+/***/ 1866:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -629,7 +629,7 @@ var card = __webpack_require__(86);
 var icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(226);
+var note = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
 var icon_ngfactory = __webpack_require__(135);
@@ -683,7 +683,7 @@ var button_ngfactory = __webpack_require__(44);
 var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(445);
+var attachments_ngfactory = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(278);
@@ -731,10 +731,10 @@ var rich_text_editor = __webpack_require__(224);
 var grid = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
-var date_day_or_time = __webpack_require__(341);
+var date_day_or_time = __webpack_require__(339);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(279);
+var card_header = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(221);
@@ -833,7 +833,7 @@ var styles_AddonModForumPostComponent = [];
 var RenderType_AddonModForumPostComponent = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModForumPostComponent, data: {} });
 
 function View_AddonModForumPostComponent_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-note", [["float-end", ""], ["padding-left", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, note["a" /* Note */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 1, "ion-icon", [["name", "time"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](3, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](4, null, [" ", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_1 = "time"; _ck(_v, 3, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 3)._hidden; _ck(_v, 2, 0, currVal_0); var currVal_2 = core["_56" /* ɵunv */](_v, 4, 0, core["_44" /* ɵnov */](_v, 5).transform("core.notsent")); _ck(_v, 4, 0, currVal_2); }); }
-function View_AddonModForumPostComponent_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "core-icon", [["color", "primary"], ["name", "fa-circle"]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](2, 114688, null, 0, icon_icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */]], { name: [0, "name"], color: [1, "color"] }, null), (_l()(), core["_55" /* ɵted */](3, null, [" ", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = "fa-circle"; var currVal_1 = "primary"; _ck(_v, 2, 0, currVal_0, currVal_1); }, function (_ck, _v) { var currVal_2 = core["_56" /* ɵunv */](_v, 3, 0, core["_44" /* ɵnov */](_v, 4).transform("addon.mod_forum.unread")); _ck(_v, 3, 0, currVal_2); }); }
+function View_AddonModForumPostComponent_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 4, "div", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "core-icon", [["color", "primary"], ["name", "fa-circle"]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](2, 245760, null, 0, icon_icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */]], { name: [0, "name"], color: [1, "color"] }, null), (_l()(), core["_55" /* ɵted */](3, null, [" ", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = "fa-circle"; var currVal_1 = "primary"; _ck(_v, 2, 0, currVal_0, currVal_1); }, function (_ck, _v) { var currVal_2 = core["_56" /* ɵunv */](_v, 3, 0, core["_44" /* ɵnov */](_v, 4).transform("addon.mod_forum.unread")); _ck(_v, 3, 0, currVal_2); }); }
 function View_AddonModForumPostComponent_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "ion-note", [["float-end", ""], ["padding-left", ""], ["text-end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, note["a" /* Note */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](2, null, ["\n                ", "\n                "])), core["_49" /* ɵppd */](3, 1), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModForumPostComponent_3)), core["_30" /* ɵdid */](5, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = (_co.trackPosts && !_co.post.postread); _ck(_v, 5, 0, currVal_1); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_56" /* ɵunv */](_v, 2, 0, _ck(_v, 3, 0, core["_44" /* ɵnov */](_v.parent, 0), _co.post.modified)); _ck(_v, 2, 0, currVal_0); }); }
 function View_AddonModForumPostComponent_5(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-file", [], null, null, null, file_ngfactory["b" /* View_CoreFileComponent_0 */], file_ngfactory["a" /* RenderType_CoreFileComponent */])), core["_30" /* ɵdid */](1, 245760, null, 0, file["a" /* CoreFileComponent */], [sites["a" /* CoreSitesProvider */], utils_utils["a" /* CoreUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], file_helper["a" /* CoreFileHelperProvider */], mimetype["a" /* CoreMimetypeUtilsProvider */], events["a" /* CoreEventsProvider */], utils_text["a" /* CoreTextUtilsProvider */]], { file: [0, "file"], component: [1, "component"], componentId: [2, "componentId"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.parent.context.$implicit; var currVal_1 = _co.component; var currVal_2 = _co.componentId; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
 function View_AddonModForumPostComponent_6(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-local-file", [], null, null, null, local_file_ngfactory["b" /* View_CoreLocalFileComponent_0 */], local_file_ngfactory["a" /* RenderType_CoreLocalFileComponent */])), core["_30" /* ɵdid */](1, 114688, null, 0, local_file["a" /* CoreLocalFileComponent */], [mimetype["a" /* CoreMimetypeUtilsProvider */], utils_utils["a" /* CoreUtilsProvider */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], providers_file["a" /* CoreFileProvider */], dom["a" /* CoreDomUtilsProvider */]], { file: [0, "file"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit; _ck(_v, 1, 0, currVal_0); }, null); }

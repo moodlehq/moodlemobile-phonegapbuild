@@ -1,6 +1,6 @@
 webpackJsonp([89],{
 
-/***/ 1869:
+/***/ 1870:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -296,7 +296,7 @@ var iframe = __webpack_require__(36);
 var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(226);
+var note = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(29);
@@ -344,7 +344,7 @@ var translate_pipe = __webpack_require__(24);
 var card = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
-var date_day_or_time = __webpack_require__(341);
+var date_day_or_time = __webpack_require__(339);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);

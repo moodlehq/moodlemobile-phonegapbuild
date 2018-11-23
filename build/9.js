@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 1920:
+/***/ 1921:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -358,7 +358,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/core/user/components/components.module.ts
-var components_components_module = __webpack_require__(443);
+var components_components_module = __webpack_require__(444);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -445,7 +445,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1356);
 var recaptchamodal_ngfactory = __webpack_require__(1357);
 
 // EXTERNAL MODULE: ./src/core/user/components/participants/participants.ngfactory.js
-var participants_ngfactory = __webpack_require__(1383);
+var participants_ngfactory = __webpack_require__(1384);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(44);
@@ -562,13 +562,13 @@ var input_errors_ngfactory = __webpack_require__(89);
 var input_errors = __webpack_require__(81);
 
 // EXTERNAL MODULE: ./src/core/user/components/user-profile-field/user-profile-field.ngfactory.js
-var user_profile_field_ngfactory = __webpack_require__(1965);
+var user_profile_field_ngfactory = __webpack_require__(1966);
 
 // EXTERNAL MODULE: ./src/core/user/components/user-profile-field/user-profile-field.ts
-var user_profile_field = __webpack_require__(1372);
+var user_profile_field = __webpack_require__(1373);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ngfactory.js
-var recaptcha_ngfactory = __webpack_require__(1959);
+var recaptcha_ngfactory = __webpack_require__(1960);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ts
 var recaptcha = __webpack_require__(1371);
@@ -583,7 +583,7 @@ var modal_controller = __webpack_require__(204);
 var directives_link = __webpack_require__(188);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.ngfactory.js
-var checkbox_ngfactory = __webpack_require__(227);
+var checkbox_ngfactory = __webpack_require__(228);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
 var checkbox_checkbox = __webpack_require__(175);
@@ -592,7 +592,7 @@ var checkbox_checkbox = __webpack_require__(175);
 var show_password_ngfactory = __webpack_require__(672);
 
 // EXTERNAL MODULE: ./src/components/show-password/show-password.ts
-var show_password = __webpack_require__(339);
+var show_password = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);
@@ -876,7 +876,7 @@ var CoreLoginCredentialsPageModuleNgFactory = core["_28" /* ɵcmf */](email_sign
 
 /***/ }),
 
-/***/ 1959:
+/***/ 1960:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -935,7 +935,7 @@ var CoreRecaptchaComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core_
 
 /***/ }),
 
-/***/ 1965:
+/***/ 1966:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -949,7 +949,7 @@ var CoreRecaptchaComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core_
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_profile_field__ = __webpack_require__(1372);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_profile_field__ = __webpack_require__(1373);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_user_profile_field_delegate__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_utils__ = __webpack_require__(2);
 /**

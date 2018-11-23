@@ -1,6 +1,6 @@
 webpackJsonp([68],{
 
-/***/ 1894:
+/***/ 1895:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/components.module.ts
-var components_module = __webpack_require__(444);
+var components_module = __webpack_require__(445);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/index/index.ts
 var index = __webpack_require__(476);
@@ -169,7 +169,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1357);
 var unsupported_module_ngfactory = __webpack_require__(1358);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1381);
+var index_ngfactory = __webpack_require__(1382);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);

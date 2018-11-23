@@ -1,6 +1,6 @@
 webpackJsonp([14],{
 
-/***/ 1935:
+/***/ 1936:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -378,7 +378,7 @@ var item_divider = __webpack_require__(109);
 var label = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1947);
+var toggle_ngfactory = __webpack_require__(1948);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(663);
@@ -542,7 +542,7 @@ var CoreSettingsSynchronizationPageModuleNgFactory = core["_28" /* ɵcmf */](syn
 
 /***/ }),
 
-/***/ 1947:
+/***/ 1948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

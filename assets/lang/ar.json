@@ -42,6 +42,7 @@
     "addon.files.sitefiles": "ملفات الموقع",
     "addon.messages.addcontact": "أضف جهة أتصال",
     "addon.messages.blocknoncontacts": "امنع المستخدمين الذين ليسوا في قائمة اتصالاتي من مراسلتي",
+    "addon.messages.contactblocked": "تم حظر جهة الاتصال",
     "addon.messages.contactlistempty": "قائمة الاتصال فارغة",
     "addon.messages.contacts": "جهات اتصال",
     "addon.messages.errordeletemessage": "خطأ عند حذف الرسالة",

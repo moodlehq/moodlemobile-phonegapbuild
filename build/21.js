@@ -1,6 +1,6 @@
 webpackJsonp([21],{
 
-/***/ 1884:
+/***/ 1885:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(28);
 var pipes_module = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./src/core/question/components/components.module.ts
-var components_components_module = __webpack_require__(1379);
+var components_components_module = __webpack_require__(1380);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -483,7 +483,7 @@ var events = __webpack_require__(12);
 var card = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(279);
+var card_header = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(7);
@@ -498,16 +498,16 @@ var gesture_controller = __webpack_require__(37);
 var dom_controller = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(226);
+var note = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
 var item_divider = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ngfactory.js
-var question_ngfactory = __webpack_require__(1961);
+var question_ngfactory = __webpack_require__(1962);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ts
-var question = __webpack_require__(1380);
+var question = __webpack_require__(1381);
 
 // EXTERNAL MODULE: ./src/core/question/providers/delegate.ts
 var delegate = __webpack_require__(68);
@@ -770,7 +770,7 @@ var AddonModQuizReviewPageModuleNgFactory = core["_28" /* ɵcmf */](review_modul
 
 /***/ }),
 
-/***/ 1961:
+/***/ 1962:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -808,7 +808,7 @@ var AddonModQuizReviewPageModuleNgFactory = core["_28" /* ɵcmf */](review_modul
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_utils_iframe__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__question__ = __webpack_require__(1380);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__question__ = __webpack_require__(1381);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_delegate__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_behaviour_delegate__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__providers_helper__ = __webpack_require__(127);

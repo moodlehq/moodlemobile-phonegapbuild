@@ -1,6 +1,6 @@
 webpackJsonp([51],{
 
-/***/ 1917:
+/***/ 1918:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -158,7 +158,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1356);
 var recaptchamodal_ngfactory = __webpack_require__(1357);
 
 // EXTERNAL MODULE: ./src/core/grades/components/course/course.ngfactory.js
-var course_ngfactory = __webpack_require__(1382);
+var course_ngfactory = __webpack_require__(1383);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);
@@ -206,7 +206,7 @@ var toolbar = __webpack_require__(247);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
-var split_view_ngfactory = __webpack_require__(438);
+var split_view_ngfactory = __webpack_require__(436);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(33);

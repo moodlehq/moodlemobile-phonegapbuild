@@ -1,6 +1,6 @@
 webpackJsonp([31],{
 
-/***/ 1942:
+/***/ 1943:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/user/components/components.module.ts
-var components_module = __webpack_require__(443);
+var components_module = __webpack_require__(444);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(28);
@@ -147,7 +147,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1356);
 var recaptchamodal_ngfactory = __webpack_require__(1357);
 
 // EXTERNAL MODULE: ./src/core/user/components/participants/participants.ngfactory.js
-var participants_ngfactory = __webpack_require__(1383);
+var participants_ngfactory = __webpack_require__(1384);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);

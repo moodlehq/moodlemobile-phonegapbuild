@@ -1,6 +1,6 @@
 webpackJsonp([98],{
 
-/***/ 1857:
+/***/ 1858:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/components.module.ts + 2 modules
-var components_module = __webpack_require__(437);
+var components_module = __webpack_require__(438);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ts
 var index = __webpack_require__(477);
@@ -413,7 +413,7 @@ var components_components_module = __webpack_require__(27);
 var course_components_components_module = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(436);
+var compile_html_module = __webpack_require__(437);
 
 // EXTERNAL MODULE: ./src/core/comments/components/components.module.ts
 var comments_components_components_module = __webpack_require__(439);

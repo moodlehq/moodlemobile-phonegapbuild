@@ -1,6 +1,6 @@
 webpackJsonp([52],{
 
-/***/ 1916:
+/***/ 1917:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -347,7 +347,7 @@ var toolbar_title = __webpack_require__(335);
 var toolbar = __webpack_require__(247);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
-var split_view_ngfactory = __webpack_require__(438);
+var split_view_ngfactory = __webpack_require__(436);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(66);

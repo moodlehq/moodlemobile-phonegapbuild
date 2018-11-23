@@ -1,6 +1,6 @@
 webpackJsonp([67],{
 
-/***/ 1895:
+/***/ 1896:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,7 +103,7 @@ var phase_AddonModWorkshopPhaseInfoPage = /** @class */ (function () {
 
 //# sourceMappingURL=phase.js.map
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(436);
+var compile_html_module = __webpack_require__(437);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/phase/phase.module.ts
 // (C) Copyright 2015 Martin Dougiamas

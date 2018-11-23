@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 1882:
+/***/ 1883:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/core/question/components/components.module.ts
-var components_components_module = __webpack_require__(1379);
+var components_components_module = __webpack_require__(1380);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(12);
@@ -949,7 +949,7 @@ var translate_pipe = __webpack_require__(24);
 var icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1952);
+var toolbar_ngfactory = __webpack_require__(1953);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(247);
@@ -964,7 +964,7 @@ var toolbar_title = __webpack_require__(335);
 var navbar = __webpack_require__(200);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ngfactory.js
-var timer_ngfactory = __webpack_require__(1960);
+var timer_ngfactory = __webpack_require__(1961);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ts
 var timer = __webpack_require__(1370);
@@ -976,7 +976,7 @@ var toolbar_item = __webpack_require__(435);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(226);
+var note = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
 var card = __webpack_require__(86);
@@ -997,10 +997,10 @@ var item_reorder = __webpack_require__(26);
 var item_divider = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ngfactory.js
-var question_ngfactory = __webpack_require__(1961);
+var question_ngfactory = __webpack_require__(1962);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ts
-var question = __webpack_require__(1380);
+var question = __webpack_require__(1381);
 
 // EXTERNAL MODULE: ./src/core/question/providers/delegate.ts
 var delegate = __webpack_require__(68);
@@ -1030,7 +1030,7 @@ var item_content = __webpack_require__(31);
 var directives_link = __webpack_require__(188);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(279);
+var card_header = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);
@@ -1309,7 +1309,7 @@ var AddonModQuizPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_modul
 
 /***/ }),
 
-/***/ 1952:
+/***/ 1953:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1342,7 +1342,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 
 /***/ }),
 
-/***/ 1960:
+/***/ 1961:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1353,7 +1353,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core_src_translate_pipe__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_seconds_to_hms__ = __webpack_require__(1384);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_seconds_to_hms__ = __webpack_require__(1385);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(29);
@@ -1402,7 +1402,7 @@ var CoreTimerComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_
 
 /***/ }),
 
-/***/ 1961:
+/***/ 1962:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1440,7 +1440,7 @@ var CoreTimerComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_utils_iframe__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__question__ = __webpack_require__(1380);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__question__ = __webpack_require__(1381);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_delegate__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_behaviour_delegate__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__providers_helper__ = __webpack_require__(127);

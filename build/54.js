@@ -1,6 +1,6 @@
 webpackJsonp([54],{
 
-/***/ 1914:
+/***/ 1915:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -501,7 +501,7 @@ var icon = __webpack_require__(45);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./src/pipes/seconds-to-hms.ts
-var seconds_to_hms = __webpack_require__(1384);
+var seconds_to_hms = __webpack_require__(1385);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);

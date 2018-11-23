@@ -1,6 +1,6 @@
 webpackJsonp([19],{
 
-/***/ 1899:
+/***/ 1900:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -462,7 +462,7 @@ var item_content = __webpack_require__(31);
 var label = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1947);
+var toggle_ngfactory = __webpack_require__(1948);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(663);
@@ -507,7 +507,7 @@ var spinner_ngfactory = __webpack_require__(113);
 var spinner = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(226);
+var note = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(100);
@@ -820,7 +820,7 @@ var AddonNotificationsSettingsPageModuleNgFactory = core["_28" /* ɵcmf */](sett
 
 /***/ }),
 
-/***/ 1947:
+/***/ 1948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

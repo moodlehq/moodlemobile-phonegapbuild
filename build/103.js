@@ -1,6 +1,6 @@
 webpackJsonp([103],{
 
-/***/ 1852:
+/***/ 1853:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -279,7 +279,7 @@ var refresher_content = __webpack_require__(157);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/providers/chat.ts
-var chat = __webpack_require__(340);
+var chat = __webpack_require__(341);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(46);

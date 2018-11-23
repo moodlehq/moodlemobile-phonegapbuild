@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 1896:
+/***/ 1897:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,10 +22,10 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/components.module.ts
-var components_components_module = __webpack_require__(444);
+var components_components_module = __webpack_require__(445);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/pages/submission/submission.ts
-var submission = __webpack_require__(1963);
+var submission = __webpack_require__(1964);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/submission/submission.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -115,7 +115,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1357);
 var unsupported_module_ngfactory = __webpack_require__(1358);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1381);
+var index_ngfactory = __webpack_require__(1382);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(44);
@@ -238,7 +238,7 @@ var events = __webpack_require__(12);
 var badge = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(226);
+var note = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);
@@ -316,7 +316,7 @@ var AddonModWorkshopAssessmentComponentNgFactory = core["_27" /* ɵccf */]("addo
 var label = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1947);
+var toggle_ngfactory = __webpack_require__(1948);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(663);
@@ -349,7 +349,7 @@ var rich_text_editor_ngfactory = __webpack_require__(275);
 var rich_text_editor = __webpack_require__(224);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ngfactory.js
-var assessment_strategy_ngfactory = __webpack_require__(1962);
+var assessment_strategy_ngfactory = __webpack_require__(1963);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ts
 var assessment_strategy = __webpack_require__(1366);
@@ -647,7 +647,7 @@ var AddonModWorkshopSubmissionPageModuleNgFactory = core["_28" /* ɵcmf */](subm
 
 /***/ }),
 
-/***/ 1947:
+/***/ 1948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -699,7 +699,7 @@ var ToggleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf
 
 /***/ }),
 
-/***/ 1962:
+/***/ 1963:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -737,7 +737,7 @@ var ToggleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_ionic_angular_platform_platform__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments_ngfactory__ = __webpack_require__(445);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments_ngfactory__ = __webpack_require__(446);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_attachments_attachments__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_app__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__core_fileuploader_providers_fileuploader__ = __webpack_require__(66);
@@ -879,7 +879,7 @@ var AddonModWorkshopAssessmentStrategyComponentNgFactory = __WEBPACK_IMPORTED_MO
 
 /***/ }),
 
-/***/ 1963:
+/***/ 1964:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1376,11 +1376,11 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=submission.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1966)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1967)(module)))
 
 /***/ }),
 
-/***/ 1966:
+/***/ 1967:
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {

@@ -1,6 +1,6 @@
 webpackJsonp([102],{
 
-/***/ 1853:
+/***/ 1854:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34,7 +34,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/providers/chat.ts
-var chat = __webpack_require__(340);
+var chat = __webpack_require__(341);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
 var network = __webpack_require__(189);

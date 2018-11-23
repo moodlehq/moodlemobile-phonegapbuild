@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 1867:
+/***/ 1868:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -718,7 +718,7 @@ var deep_linker = __webpack_require__(51);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1947);
+var toggle_ngfactory = __webpack_require__(1948);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(663);
@@ -736,7 +736,7 @@ var gesture_controller = __webpack_require__(37);
 var dom_controller = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(445);
+var attachments_ngfactory = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(278);
@@ -1030,7 +1030,7 @@ var AddonModForumNewDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](new_
 
 /***/ }),
 
-/***/ 1947:
+/***/ 1948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

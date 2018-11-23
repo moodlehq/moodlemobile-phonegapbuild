@@ -1,6 +1,6 @@
 webpackJsonp([20],{
 
-/***/ 1892:
+/***/ 1893:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/components.module.ts
-var components_components_module = __webpack_require__(444);
+var components_components_module = __webpack_require__(445);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);
@@ -491,7 +491,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1357);
 var unsupported_module_ngfactory = __webpack_require__(1358);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1381);
+var index_ngfactory = __webpack_require__(1382);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(221);
@@ -518,7 +518,7 @@ var badge = __webpack_require__(146);
 var config = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ngfactory.js
-var assessment_strategy_ngfactory = __webpack_require__(1962);
+var assessment_strategy_ngfactory = __webpack_require__(1963);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ts
 var assessment_strategy = __webpack_require__(1366);
@@ -886,7 +886,7 @@ var AddonModWorkshopAssessmentPageModuleNgFactory = core["_28" /* ɵcmf */](asse
 
 /***/ }),
 
-/***/ 1962:
+/***/ 1963:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -924,7 +924,7 @@ var AddonModWorkshopAssessmentPageModuleNgFactory = core["_28" /* ɵcmf */](asse
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_ionic_angular_platform_platform__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments_ngfactory__ = __webpack_require__(445);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments_ngfactory__ = __webpack_require__(446);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_attachments_attachments__ = __webpack_require__(278);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_app__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__core_fileuploader_providers_fileuploader__ = __webpack_require__(66);
