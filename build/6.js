@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 1883:
+/***/ 1881:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -390,11 +390,14 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
         var _this = this;
         // Confirm that the user really wants to do it.
         this.domUtils.showConfirm(this.translate.instant('core.areyousure')).then(function () {
-            var modal = _this.domUtils.showModalLoading('core.sending', true), answers = _this.getAnswers();
-            // Add the clicked button data.
-            answers[button.name] = button.value;
-            // Behaviour checks are always in online.
-            return _this.quizProvider.processAttempt(_this.quiz, _this.attempt, answers, _this.preflightData).then(function () {
+            var modal = _this.domUtils.showModalLoading('core.sending', true);
+            // Get the answers.
+            return _this.prepareAnswers().then(function (answers) {
+                // Add the clicked button data.
+                answers[button.name] = button.value;
+                // Behaviour checks are always in online.
+                return _this.quizProvider.processAttempt(_this.quiz, _this.attempt, answers, _this.preflightData);
+            }).then(function () {
                 _this.reloadNavigaton = true; // Data sent to server, navigation should be reloaded.
                 // Reload the current page.
                 var scrollElement = _this.content.getScrollElement(), scrollTop = scrollElement.scrollTop || 0, scrollLeft = scrollElement.scrollLeft || 0;
