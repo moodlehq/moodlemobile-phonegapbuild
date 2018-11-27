@@ -20,6 +20,8 @@
     "addon.block_myoverview.pluginname": "Vista general de curso",
     "addon.block_recentlyaccessedcourses.nocourses": "No hay cursos recientes",
     "addon.block_recentlyaccessedcourses.pluginname": "Cursos accedidos recientemente",
+    "addon.block_recentlyaccesseditems.noitems": "Sin elementos recientes",
+    "addon.block_recentlyaccesseditems.pluginname": "Elementos accedidos recientemente",
     "addon.block_sitemainmenu.pluginname": "Menú principal",
     "addon.block_timeline.duedate": "Fecha de vencimiento",
     "addon.block_timeline.next30days": "Próximos 30 días",

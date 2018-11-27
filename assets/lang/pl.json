@@ -122,7 +122,7 @@
     "addon.messages.messagepreferences": "Preferencje wiadomości",
     "addon.messages.messages": "Wiadomości",
     "addon.messages.newmessage": "Nowa wiadomość",
-    "addon.messages.nofavourites": "Brak ulubionych",
+    "addon.messages.nofavourites": "Brak wiadomości oznaczonych gwiazdką",
     "addon.messages.nogroupmessages": "Brak wiadomości grupowych",
     "addon.messages.nomessages": "Brak oczekujących wiadomości",
     "addon.messages.removecontact": "Usuń kontakt",
