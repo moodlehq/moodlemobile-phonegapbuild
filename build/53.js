@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 1916:
+/***/ 1917:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -215,7 +215,7 @@ var nav_params = __webpack_require__(60);
 var helper = __webpack_require__(172);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
+var providers_app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(33);

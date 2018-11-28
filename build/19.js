@@ -1,6 +1,6 @@
 webpackJsonp([19],{
 
-/***/ 1899:
+/***/ 1901:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var helper = __webpack_require__(678);
 
 // EXTERNAL MODULE: ./src/addon/messageoutput/providers/delegate.ts
-var delegate = __webpack_require__(355);
+var delegate = __webpack_require__(356);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
 var local_notifications = __webpack_require__(142);
@@ -37,7 +37,7 @@ var local_notifications = __webpack_require__(142);
 var config = __webpack_require__(176);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(9);
+var app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
 var constants = __webpack_require__(38);
@@ -462,7 +462,7 @@ var item_content = __webpack_require__(31);
 var label = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1948);
+var toggle_ngfactory = __webpack_require__(1949);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(663);
@@ -820,7 +820,7 @@ var AddonNotificationsSettingsPageModuleNgFactory = core["_28" /* ɵcmf */](sett
 
 /***/ }),
 
-/***/ 1948:
+/***/ 1949:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

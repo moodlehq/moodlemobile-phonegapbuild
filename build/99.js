@@ -1,6 +1,6 @@
 webpackJsonp([99],{
 
-/***/ 1857:
+/***/ 1858:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -492,7 +492,7 @@ var deep_linker = __webpack_require__(51);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ts
-var comments = __webpack_require__(360);
+var comments = __webpack_require__(361);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);
@@ -549,7 +549,7 @@ var toolbar = __webpack_require__(247);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
 var url = __webpack_require__(25);
@@ -561,7 +561,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
+var providers_app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

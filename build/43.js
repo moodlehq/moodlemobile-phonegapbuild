@@ -1,6 +1,6 @@
 webpackJsonp([43],{
 
-/***/ 1927:
+/***/ 1928:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,7 +25,7 @@ var mimetype = __webpack_require__(64);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var helper = __webpack_require__(134);
+var helper = __webpack_require__(135);
 
 // CONCATENATED MODULE: ./src/core/login/pages/site-policy/site-policy.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -255,7 +255,7 @@ var card = __webpack_require__(86);
 var config = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ngfactory.js
-var iframe_ngfactory = __webpack_require__(346);
+var iframe_ngfactory = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ts
 var iframe = __webpack_require__(255);

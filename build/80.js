@@ -1,6 +1,6 @@
 webpackJsonp([80],{
 
-/***/ 1878:
+/***/ 1881:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var quiz = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
-var helper = __webpack_require__(277);
+var helper = __webpack_require__(278);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/attempt/attempt.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -286,7 +286,7 @@ var format_text = __webpack_require__(39);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);
@@ -307,7 +307,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(9);
+var app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);

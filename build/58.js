@@ -1,6 +1,6 @@
 webpackJsonp([58],{
 
-/***/ 1907:
+/***/ 1908:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(9);
 
 // CONCATENATED MODULE: ./src/core/course/pages/unsupported-module/unsupported-module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -243,7 +243,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
+var providers_app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);
@@ -282,7 +282,7 @@ var dom_controller = __webpack_require__(30);
 var keyboard = __webpack_require__(108);
 
 // EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ts
-var unsupported_module = __webpack_require__(357);
+var unsupported_module = __webpack_require__(358);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);

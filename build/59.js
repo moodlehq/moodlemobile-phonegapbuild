@@ -1,6 +1,6 @@
 webpackJsonp([59],{
 
-/***/ 1906:
+/***/ 1907:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -217,7 +217,7 @@ var button_button = __webpack_require__(41);
 var col = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(135);
+var icon_ngfactory = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(120);
@@ -265,10 +265,10 @@ var dynamic_component_ngfactory = __webpack_require__(1359);
 var dynamic_component = __webpack_require__(187);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ngfactory.js
-var infinite_loading_ngfactory = __webpack_require__(442);
+var infinite_loading_ngfactory = __webpack_require__(440);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(279);
+var infinite_loading = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(39);
@@ -277,7 +277,7 @@ var format_text = __webpack_require__(39);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
 var url = __webpack_require__(25);
@@ -286,7 +286,7 @@ var url = __webpack_require__(25);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
+var providers_app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);
@@ -475,7 +475,7 @@ var CoreCourseFormatComponentNgFactory = core["_27" /* ɵccf */]("core-course-fo
 
 //# sourceMappingURL=format.ngfactory.js.map
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(441);
+var tab_ngfactory = __webpack_require__(442);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ts
 var tabs = __webpack_require__(148);
@@ -496,7 +496,7 @@ var toolbar_title_ngfactory = __webpack_require__(1354);
 var toolbar_title = __webpack_require__(335);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(440);
+var tabs_ngfactory = __webpack_require__(441);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);
@@ -511,7 +511,7 @@ var options_delegate = __webpack_require__(111);
 var courses = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/core/course/providers/sync.ts
-var sync = __webpack_require__(358);
+var sync = __webpack_require__(359);
 
 // CONCATENATED MODULE: ./src/core/course/pages/section/section.ngfactory.js
 /**

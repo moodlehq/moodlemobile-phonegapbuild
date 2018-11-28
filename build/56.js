@@ -1,6 +1,6 @@
 webpackJsonp([56],{
 
-/***/ 1912:
+/***/ 1913:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -402,7 +402,7 @@ var searchbar_ngfactory = __webpack_require__(1412);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.js
-var searchbar = __webpack_require__(350);
+var searchbar = __webpack_require__(351);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -411,7 +411,7 @@ var platform = __webpack_require__(14);
 var col = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-progress/course-progress.ngfactory.js
-var course_progress_ngfactory = __webpack_require__(366);
+var course_progress_ngfactory = __webpack_require__(367);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-progress/course-progress.ts
 var course_progress = __webpack_require__(261);

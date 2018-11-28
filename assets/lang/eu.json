@@ -129,6 +129,8 @@
     "addon.messages.errorwhileretrievingcontacts": "Errore bat gertatu da kontaktuak zerbitzaritik jasotzean.",
     "addon.messages.errorwhileretrievingdiscussions": "Errore bat gertatu da elkarrizketak zerbitzaritik jasotzean.",
     "addon.messages.errorwhileretrievingmessages": "Errore bat gertatu da mezuak zerbitzaritik jasotzean.",
+    "addon.messages.groupinfo": "Taldearen informazioa",
+    "addon.messages.info": "Informazioa",
     "addon.messages.message": "Mezua",
     "addon.messages.messagenotsent": "Mezua ez da bidali. Mesedez, saiatu beranduago.",
     "addon.messages.messagepreferences": "Mezuen hobespenak",

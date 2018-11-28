@@ -1,6 +1,6 @@
 webpackJsonp([75],{
 
-/***/ 1886:
+/***/ 1889:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var time = __webpack_require__(46);
 var providers_scorm = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/helper.ts
-var helper = __webpack_require__(348);
+var helper = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm-sync.ts
 var scorm_sync = __webpack_require__(287);
@@ -1370,7 +1370,7 @@ var spinner_ngfactory = __webpack_require__(113);
 var spinner = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ngfactory.js
-var iframe_ngfactory = __webpack_require__(346);
+var iframe_ngfactory = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ts
 var iframe = __webpack_require__(255);
@@ -1427,7 +1427,7 @@ var toolbar = __webpack_require__(247);
 var format_text = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -1439,7 +1439,7 @@ var url = __webpack_require__(25);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
+var providers_app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(18);
@@ -1475,7 +1475,7 @@ var loading = __webpack_require__(47);
 var navigation_bar_ngfactory = __webpack_require__(708);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ts
-var navigation_bar = __webpack_require__(356);
+var navigation_bar = __webpack_require__(357);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

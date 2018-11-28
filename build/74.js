@@ -1,6 +1,6 @@
 webpackJsonp([74],{
 
-/***/ 1885:
+/***/ 1888:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -180,10 +180,10 @@ var recaptchamodal_ngfactory = __webpack_require__(1357);
 var unsupported_module_ngfactory = __webpack_require__(1358);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1407);
+var index_ngfactory = __webpack_require__(1408);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/toc-popover/toc-popover.ngfactory.js
-var toc_popover_ngfactory = __webpack_require__(1429);
+var toc_popover_ngfactory = __webpack_require__(1430);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);
@@ -237,7 +237,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -252,7 +252,7 @@ var logger = __webpack_require__(5);
 var filepool = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
+var providers_app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var helper = __webpack_require__(18);
@@ -297,7 +297,7 @@ var translate_pipe = __webpack_require__(24);
 var scorm = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/helper.ts
-var providers_helper = __webpack_require__(348);
+var providers_helper = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm-offline.ts
 var scorm_offline = __webpack_require__(237);

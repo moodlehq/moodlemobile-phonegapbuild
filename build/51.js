@@ -1,6 +1,6 @@
 webpackJsonp([51],{
 
-/***/ 1918:
+/***/ 1919:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -230,7 +230,7 @@ var nav_params = __webpack_require__(60);
 var helper = __webpack_require__(172);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
+var providers_app = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.ngfactory.js
 /**

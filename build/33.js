@@ -1,6 +1,6 @@
 webpackJsonp([33],{
 
-/***/ 1940:
+/***/ 1941:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/core/siteplugins/components/module-index/module-index.ts
-var module_index = __webpack_require__(354);
+var module_index = __webpack_require__(355);
 
 // CONCATENATED MODULE: ./src/core/siteplugins/pages/module-index/module-index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -281,7 +281,7 @@ var helper = __webpack_require__(40);
 var module_prefetch_delegate = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

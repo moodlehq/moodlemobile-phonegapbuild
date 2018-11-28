@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 1868:
+/***/ 1869:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var sync = __webpack_require__(83);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils_utils = __webpack_require__(2);
@@ -718,7 +718,7 @@ var deep_linker = __webpack_require__(51);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.ngfactory.js
-var toggle_ngfactory = __webpack_require__(1948);
+var toggle_ngfactory = __webpack_require__(1949);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
 var toggle = __webpack_require__(663);
@@ -739,10 +739,10 @@ var dom_controller = __webpack_require__(30);
 var attachments_ngfactory = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
-var attachments = __webpack_require__(278);
+var attachments = __webpack_require__(279);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
+var providers_app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
 var providers_helper = __webpack_require__(133);
@@ -1030,7 +1030,7 @@ var AddonModForumNewDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](new_
 
 /***/ }),
 
-/***/ 1948:
+/***/ 1949:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
