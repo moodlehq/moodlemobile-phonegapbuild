@@ -31,7 +31,7 @@ var dom = __webpack_require__(4);
 var config = __webpack_require__(176);
 
 // EXTERNAL MODULE: ./src/core/settings/providers/helper.ts
-var helper = __webpack_require__(678);
+var helper = __webpack_require__(679);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/synchronization/synchronization.ts
 // (C) Copyright 2015 Martin Dougiamas

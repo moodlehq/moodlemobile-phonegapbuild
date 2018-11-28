@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var providers_user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/core/user/providers/helper.ts
-var helper = __webpack_require__(675);
+var helper = __webpack_require__(676);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);

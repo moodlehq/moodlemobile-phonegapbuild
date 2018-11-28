@@ -67,7 +67,7 @@ var course_CoreGradesCoursePage = /** @class */ (function () {
 
 //# sourceMappingURL=course.js.map
 // EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_module = __webpack_require__(674);
+var components_module = __webpack_require__(675);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/course/course.module.ts
 // (C) Copyright 2015 Martin Dougiamas

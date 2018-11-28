@@ -21,6 +21,12 @@ var components_module = __webpack_require__(27);
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
 
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./src/components/ion-tabs/ion-tabs.ts
+var ion_tabs = __webpack_require__(673);
+
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/mainmenu.ts
 var mainmenu = __webpack_require__(682);
 
@@ -55,20 +61,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 /**
  * Page that displays the main menu of the app.
  */
 var menu_CoreMainMenuPage = /** @class */ (function () {
-    function CoreMainMenuPage(menuDelegate, sitesProvider, navParams, navCtrl) {
+    function CoreMainMenuPage(menuDelegate, sitesProvider, navParams, navCtrl, eventsProvider) {
         this.menuDelegate = menuDelegate;
         this.sitesProvider = sitesProvider;
         this.navCtrl = navCtrl;
+        this.eventsProvider = eventsProvider;
         this.tabs = [];
         this.loaded = false;
         this.showTabs = false;
-        this.redirectPageLoaded = false;
-        this.redirectPage = navParams.get('redirectPage');
-        this.redirectParams = navParams.get('redirectParams');
     }
     /**
      * View loaded.
@@ -80,6 +86,25 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
             return;
         }
         this.showTabs = true;
+        this.redirectObs = this.eventsProvider.on(events["a" /* CoreEventsProvider */].LOAD_PAGE_MAIN_MENU, function (data) {
+            // Check if the redirect page is the root page of any of the tabs.
+            var i = _this.tabs.findIndex(function (tab, i) {
+                return tab.page == data.redirectPage;
+            });
+            if (i >= 0) {
+                // Tab found. Set the params.
+                _this.tabs[i].pageParams = Object.assign({}, data.redirectParams);
+            }
+            else {
+                // Tab not found, use a phantom tab.
+                _this.redirectPage = data.redirectPage;
+                _this.redirectParams = data.redirectParams;
+            }
+            setTimeout(function () {
+                // Let the tab load the params before navigating.
+                _this.mainTabs.selectTabRootByIndex(i + 1);
+            });
+        });
         this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
             // Remove the handlers that should only appear in the More menu.
             handlers = handlers.filter(function (handler) {
@@ -104,31 +129,6 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
             _this.tabs.sort(function (a, b) {
                 return b.priority - a.priority;
             });
-            if (typeof _this.initialTab == 'undefined' && !_this.loaded) {
-                _this.initialTab = 0;
-                // Calculate the tab to load.
-                if (_this.redirectPage) {
-                    // Check if the redirect page is the root page of any of the tabs.
-                    var i = _this.tabs.findIndex(function (tab, i) {
-                        return tab.page == _this.redirectPage;
-                    });
-                    if (i >= 0) {
-                        // Tab found. Set the params and unset the redirect page.
-                        _this.initialTab = i + 1;
-                        _this.tabs[i].pageParams = Object.assign(_this.tabs[i].pageParams || {}, _this.redirectParams);
-                        _this.redirectPage = null;
-                        _this.redirectParams = null;
-                    }
-                }
-                else {
-                    var i = handlers.findIndex(function (handler, i) {
-                        return handler.name == 'CoreDashboard';
-                    });
-                    if (i >= 0) {
-                        _this.initialTab = i;
-                    }
-                }
-            }
             _this.loaded = _this.menuDelegate.areHandlersLoaded();
         });
     };
@@ -137,14 +137,19 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
      */
     CoreMainMenuPage.prototype.ngOnDestroy = function () {
         this.subscription && this.subscription.unsubscribe();
+        this.redirectObs && this.redirectObs.off();
     };
+    __decorate([
+        Object(core["_9" /* ViewChild */])('mainTabs'),
+        __metadata("design:type", ion_tabs["a" /* CoreIonTabsComponent */])
+    ], CoreMainMenuPage.prototype, "mainTabs", void 0);
     CoreMainMenuPage = __decorate([
         Object(core["m" /* Component */])({
             selector: 'page-core-mainmenu',
             templateUrl: 'menu.html',
         }),
         __metadata("design:paramtypes", [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */], ionic_angular["t" /* NavParams */],
-            ionic_angular["s" /* NavController */]])
+            ionic_angular["s" /* NavController */], events["a" /* CoreEventsProvider */]])
     ], CoreMainMenuPage);
     return CoreMainMenuPage;
 }());
@@ -232,9 +237,6 @@ var recaptchamodal_ngfactory = __webpack_require__(1357);
 
 // EXTERNAL MODULE: ./src/components/ion-tabs/ion-tab.ts
 var ion_tab = __webpack_require__(1392);
-
-// EXTERNAL MODULE: ./src/components/ion-tabs/ion-tabs.ts
-var ion_tabs = __webpack_require__(680);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(32);
@@ -431,12 +433,13 @@ var nav_params = __webpack_require__(60);
 
 
 
+
 var styles_CoreMainMenuPage = [];
 var RenderType_CoreMainMenuPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreMainMenuPage, data: {} });
 
 function View_CoreMainMenuPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-ion-tab", [["role", "tabpanel"]], [[8, "className", 0], [1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](1, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], { root: [0, "root"], rootParams: [1, "rootParams"], tabTitle: [2, "tabTitle"], tabIcon: [3, "tabIcon"], tabBadge: [4, "tabBadge"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_3 = _v.context.$implicit.page; var currVal_4 = _v.context.$implicit.pageParams; var currVal_5 = core["_56" /* ɵunv */](_v, 1, 2, core["_44" /* ɵnov */](_v, 2).transform(_v.context.$implicit.title)); var currVal_6 = _v.context.$implicit.icon; var currVal_7 = _v.context.$implicit.badge; _ck(_v, 1, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); }, function (_ck, _v) { var currVal_0 = core["_34" /* ɵinlineInterpolate */](1, "", _v.context.$implicit.class, ""); var currVal_1 = core["_44" /* ɵnov */](_v, 1)._tabId; var currVal_2 = core["_44" /* ɵnov */](_v, 1)._btnId; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2); }); }
-function View_CoreMainMenuPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 13, "core-ion-tabs", [["tabsLayout", "title-hide"], ["tabsPlacement", "bottom"]], [[8, "hidden", 0]], null, null, View_CoreIonTabsComponent_0, RenderType_CoreIonTabsComponent)), core["_50" /* ɵprd */](6144, null, split_pane["a" /* RootNode */], null, [ion_tabs["a" /* CoreIonTabsComponent */]]), core["_30" /* ɵdid */](2, 4374528, [["mainTabs", 4]], 0, ion_tabs["a" /* CoreIonTabsComponent */], [utils["a" /* CoreUtilsProvider */], providers_app["a" /* CoreAppProvider */], [2, nav_controller["a" /* NavController */]], [2, view_controller["a" /* ViewController */]], app["a" /* App */], config["a" /* Config */], core["t" /* ElementRef */], platform["a" /* Platform */], core["V" /* Renderer */], deep_linker["a" /* DeepLinker */], keyboard["a" /* Keyboard */]], { selectedIndex: [0, "selectedIndex"], tabsLayout: [1, "tabsLayout"], tabsPlacement: [2, "tabsPlacement"], loaded: [3, "loaded"], selectedDisabled: [4, "selectedDisabled"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, 0, 1, "core-ion-tab", [["role", "tabpanel"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](5, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], { root: [0, "root"], rootParams: [1, "rootParams"], enabled: [2, "enabled"], show: [3, "show"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreMainMenuPage_1)), core["_30" /* ɵdid */](8, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 2, "core-ion-tab", [["role", "tabpanel"], ["root", "CoreMainMenuMorePage"], ["tabIcon", "more"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](11, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], { root: [0, "root"], tabTitle: [1, "tabTitle"], tabIcon: [2, "tabIcon"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.initialTab; var currVal_2 = "title-hide"; var currVal_3 = "bottom"; var currVal_4 = _co.loaded; var currVal_5 = !!_co.redirectPage; _ck(_v, 2, 0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5); var currVal_8 = _co.redirectPage; var currVal_9 = _co.redirectParams; var currVal_10 = false; var currVal_11 = false; _ck(_v, 5, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = _co.tabs; _ck(_v, 8, 0, currVal_12); var currVal_15 = "CoreMainMenuMorePage"; var currVal_16 = core["_56" /* ɵunv */](_v, 11, 1, core["_44" /* ɵnov */](_v, 12).transform("core.more")); var currVal_17 = "more"; _ck(_v, 11, 0, currVal_15, currVal_16, currVal_17); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.showTabs; _ck(_v, 0, 0, currVal_0); var currVal_6 = core["_44" /* ɵnov */](_v, 5)._tabId; var currVal_7 = core["_44" /* ɵnov */](_v, 5)._btnId; _ck(_v, 4, 0, currVal_6, currVal_7); var currVal_13 = core["_44" /* ɵnov */](_v, 11)._tabId; var currVal_14 = core["_44" /* ɵnov */](_v, 11)._btnId; _ck(_v, 10, 0, currVal_13, currVal_14); }); }
-function View_CoreMainMenuPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-mainmenu", [], null, null, null, View_CoreMainMenuPage_0, RenderType_CoreMainMenuPage)), core["_30" /* ɵdid */](1, 180224, null, 0, menu_CoreMainMenuPage, [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */], nav_params["a" /* NavParams */], nav_controller["a" /* NavController */]], null, null)], null, null); }
+function View_CoreMainMenuPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { mainTabs: 0 }), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 13, "core-ion-tabs", [["tabsLayout", "title-hide"], ["tabsPlacement", "bottom"]], [[8, "hidden", 0]], null, null, View_CoreIonTabsComponent_0, RenderType_CoreIonTabsComponent)), core["_50" /* ɵprd */](6144, null, split_pane["a" /* RootNode */], null, [ion_tabs["a" /* CoreIonTabsComponent */]]), core["_30" /* ɵdid */](3, 4374528, [[1, 4], ["mainTabs", 4]], 0, ion_tabs["a" /* CoreIonTabsComponent */], [utils["a" /* CoreUtilsProvider */], providers_app["a" /* CoreAppProvider */], [2, nav_controller["a" /* NavController */]], [2, view_controller["a" /* ViewController */]], app["a" /* App */], config["a" /* Config */], core["t" /* ElementRef */], platform["a" /* Platform */], core["V" /* Renderer */], deep_linker["a" /* DeepLinker */], keyboard["a" /* Keyboard */]], { tabsLayout: [0, "tabsLayout"], tabsPlacement: [1, "tabsPlacement"], loaded: [2, "loaded"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, 0, 1, "core-ion-tab", [["role", "tabpanel"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](6, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], { root: [0, "root"], rootParams: [1, "rootParams"], enabled: [2, "enabled"], show: [3, "show"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreMainMenuPage_1)), core["_30" /* ɵdid */](9, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 0, 2, "core-ion-tab", [["role", "tabpanel"], ["root", "CoreMainMenuMorePage"], ["tabIcon", "more"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](12, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], { root: [0, "root"], tabTitle: [1, "tabTitle"], tabIcon: [2, "tabIcon"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = "title-hide"; var currVal_2 = "bottom"; var currVal_3 = _co.loaded; _ck(_v, 3, 0, currVal_1, currVal_2, currVal_3); var currVal_6 = _co.redirectPage; var currVal_7 = _co.redirectParams; var currVal_8 = false; var currVal_9 = false; _ck(_v, 6, 0, currVal_6, currVal_7, currVal_8, currVal_9); var currVal_10 = _co.tabs; _ck(_v, 9, 0, currVal_10); var currVal_13 = "CoreMainMenuMorePage"; var currVal_14 = core["_56" /* ɵunv */](_v, 12, 1, core["_44" /* ɵnov */](_v, 13).transform("core.more")); var currVal_15 = "more"; _ck(_v, 12, 0, currVal_13, currVal_14, currVal_15); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.showTabs; _ck(_v, 1, 0, currVal_0); var currVal_4 = core["_44" /* ɵnov */](_v, 6)._tabId; var currVal_5 = core["_44" /* ɵnov */](_v, 6)._btnId; _ck(_v, 5, 0, currVal_4, currVal_5); var currVal_11 = core["_44" /* ɵnov */](_v, 12)._tabId; var currVal_12 = core["_44" /* ɵnov */](_v, 12)._btnId; _ck(_v, 11, 0, currVal_11, currVal_12); }); }
+function View_CoreMainMenuPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-mainmenu", [], null, null, null, View_CoreMainMenuPage_0, RenderType_CoreMainMenuPage)), core["_30" /* ɵdid */](1, 180224, null, 0, menu_CoreMainMenuPage, [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */], nav_params["a" /* NavParams */], nav_controller["a" /* NavController */], events["a" /* CoreEventsProvider */]], null, null)], null, null); }
 var CoreMainMenuPageNgFactory = core["_27" /* ɵccf */]("page-core-mainmenu", menu_CoreMainMenuPage, View_CoreMainMenuPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=menu.ngfactory.js.map

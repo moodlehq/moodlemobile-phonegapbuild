@@ -71,7 +71,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_components_module = __webpack_require__(674);
+var components_components_module = __webpack_require__(675);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ts
 // (C) Copyright 2015 Martin Dougiamas
