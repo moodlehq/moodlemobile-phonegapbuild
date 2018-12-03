@@ -172,6 +172,7 @@
     "addon.messages.messages": "Berichten",
     "addon.messages.newmessage": "Nieuw bericht",
     "addon.messages.newmessages": "Nieuwe berichten",
+    "addon.messages.nofavourites": "Geen als favoriet gemarkeerde berichten",
     "addon.messages.nogroupmessages": "Geen groepsberichten",
     "addon.messages.nomessages": "Geen berichten",
     "addon.messages.nousersfound": "Geen gebruikers gevonden",

@@ -37,7 +37,7 @@
     "addon.block_myoverview.nocourses": "コースなし",
     "addon.block_myoverview.past": "過去",
     "addon.block_myoverview.pluginname": "コース概要",
-    "addon.block_myoverview.title": "タイトル",
+    "addon.block_myoverview.title": "コース名",
     "addon.block_recentlyaccessedcourses.nocourses": "最近のコースなし",
     "addon.block_recentlyaccessedcourses.pluginname": "最近アクセスされたコース",
     "addon.block_recentlyaccesseditems.noitems": "最近のアイテムなし",

@@ -1205,7 +1205,7 @@
     "core.dfmediumdate": "LLL",
     "core.dftimedate": "h[:]mm A",
     "core.digitalminor": "Digitalki adin txikikoa",
-    "core.digitalminor_desc": "Gune honetan kontu bat sortzeko, mesedez, eska iezaiozu zeure guraso/tutore bati hurrengo pertsonarekin harremanetan jartzeko.",
+    "core.digitalminor_desc": "Eska iezaiozu zure guraso/tutore bati hurrengo pertsonarekin harremanetan jartzeko:",
     "core.discard": "Baztertu",
     "core.dismiss": "Baztertu",
     "core.done": "Eginda",
