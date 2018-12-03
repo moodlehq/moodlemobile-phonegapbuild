@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/addon/pushnotifications/providers/pushnotifications.ts
-var pushnotifications = __webpack_require__(344);
+var pushnotifications = __webpack_require__(343);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
 var helper = __webpack_require__(135);

@@ -43,7 +43,7 @@ var index = __webpack_require__(1363);
 var courses = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/dashboard.ts
-var dashboard = __webpack_require__(455);
+var dashboard = __webpack_require__(457);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/dashboard/dashboard.ts
 // (C) Copyright 2015 Martin Dougiamas
