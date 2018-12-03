@@ -1370,7 +1370,7 @@ var spinner_ngfactory = __webpack_require__(113);
 var spinner = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ngfactory.js
-var iframe_ngfactory = __webpack_require__(347);
+var iframe_ngfactory = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ts
 var iframe = __webpack_require__(255);

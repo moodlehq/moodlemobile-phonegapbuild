@@ -1,6 +1,6 @@
 webpackJsonp([22],{
 
-/***/ 1877:
+/***/ 1876:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -801,7 +801,7 @@ var dom_controller = __webpack_require__(30);
 var rich_text_editor_ngfactory = __webpack_require__(275);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
-var rich_text_editor = __webpack_require__(224);
+var rich_text_editor = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(7);

@@ -1,6 +1,6 @@
 webpackJsonp([79],{
 
-/***/ 1882:
+/***/ 1881:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(28);
 var components_module = __webpack_require__(699);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/index/index.ts
-var index = __webpack_require__(470);
+var index = __webpack_require__(469);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

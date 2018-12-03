@@ -557,7 +557,7 @@ var translate_pipe = __webpack_require__(24);
 var rich_text_editor_ngfactory = __webpack_require__(275);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
-var rich_text_editor = __webpack_require__(224);
+var rich_text_editor = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
 var url = __webpack_require__(25);

@@ -1,6 +1,6 @@
 webpackJsonp([23],{
 
-/***/ 1870:
+/***/ 1869:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,7 +46,7 @@ var glossary = __webpack_require__(191);
 var offline = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/helper.ts
-var helper = __webpack_require__(464);
+var helper = __webpack_require__(463);
 
 // CONCATENATED MODULE: ./src/addon/mod/glossary/pages/edit/edit.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -532,10 +532,10 @@ var input = __webpack_require__(78);
 var rich_text_editor_ngfactory = __webpack_require__(275);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
-var rich_text_editor = __webpack_require__(224);
+var rich_text_editor = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./src/directives/auto-rows.ts
-var auto_rows = __webpack_require__(346);
+var auto_rows = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
 var attachments_ngfactory = __webpack_require__(446);

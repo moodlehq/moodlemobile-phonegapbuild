@@ -1,6 +1,6 @@
 webpackJsonp([80],{
 
-/***/ 1881:
+/***/ 1880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -355,7 +355,7 @@ var button_ngfactory = __webpack_require__(44);
 var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(222);
+var nav_push = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(45);

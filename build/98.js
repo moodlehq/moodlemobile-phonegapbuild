@@ -1,6 +1,6 @@
 webpackJsonp([98],{
 
-/***/ 1859:
+/***/ 1858:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(28);
 var components_module = __webpack_require__(438);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ts
-var index = __webpack_require__(477);
+var index = __webpack_require__(476);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -289,7 +289,7 @@ var data = __webpack_require__(95);
 var providers_helper = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/offline.ts
-var offline = __webpack_require__(207);
+var offline = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/sync.ts
 var sync = __webpack_require__(291);

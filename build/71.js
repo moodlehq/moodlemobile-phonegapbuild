@@ -46,7 +46,7 @@ var course = __webpack_require__(15);
 var helper = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki.ts
-var wiki = __webpack_require__(208);
+var wiki = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki-offline.ts
 var wiki_offline = __webpack_require__(257);
@@ -747,7 +747,7 @@ var common = __webpack_require__(7);
 var rich_text_editor_ngfactory = __webpack_require__(275);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
-var rich_text_editor = __webpack_require__(224);
+var rich_text_editor = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

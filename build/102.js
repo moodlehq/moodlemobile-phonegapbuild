@@ -1,6 +1,6 @@
 webpackJsonp([102],{
 
-/***/ 1855:
+/***/ 1854:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34,7 +34,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/providers/chat.ts
-var chat = __webpack_require__(341);
+var chat = __webpack_require__(342);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
 var network = __webpack_require__(189);
@@ -264,7 +264,7 @@ var item_reorder = __webpack_require__(26);
 var item_content = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(221);
+var user_avatar_ngfactory = __webpack_require__(222);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
 var user_avatar = __webpack_require__(186);

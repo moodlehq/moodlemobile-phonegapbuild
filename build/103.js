@@ -1,6 +1,6 @@
 webpackJsonp([103],{
 
-/***/ 1854:
+/***/ 1853:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(28);
 var components_module = __webpack_require__(690);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/components/index/index.ts
-var index = __webpack_require__(455);
+var index = __webpack_require__(453);
 
 // CONCATENATED MODULE: ./src/addon/mod/chat/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -279,7 +279,7 @@ var refresher_content = __webpack_require__(157);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/providers/chat.ts
-var chat = __webpack_require__(341);
+var chat = __webpack_require__(342);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(46);

@@ -1,6 +1,6 @@
 webpackJsonp([83],{
 
-/***/ 1878:
+/***/ 1877:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -472,7 +472,7 @@ var dom_controller = __webpack_require__(30);
 var user_link = __webpack_require__(672);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(221);
+var user_avatar_ngfactory = __webpack_require__(222);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
 var user_avatar = __webpack_require__(186);
@@ -490,7 +490,7 @@ var progress_bar = __webpack_require__(281);
 var platform_browser = __webpack_require__(73);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(223);
+var format_date = __webpack_require__(224);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);

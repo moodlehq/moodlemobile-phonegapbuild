@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 1869:
+/***/ 1868:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52,13 +52,13 @@ var fileuploader = __webpack_require__(66);
 var split_view = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
-var rich_text_editor = __webpack_require__(224);
+var rich_text_editor = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
 var forum = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
-var offline = __webpack_require__(206);
+var offline = __webpack_require__(207);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
 var helper = __webpack_require__(251);

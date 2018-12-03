@@ -34,10 +34,10 @@ var dom = __webpack_require__(4);
 var split_view = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(226);
+var competency = __webpack_require__(205);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/helper.ts
-var helper = __webpack_require__(348);
+var helper = __webpack_require__(336);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/plan/plan.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -72,14 +72,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
-
 /**
  * Page that displays a learning plan.
  */
 var plan_AddonCompetencyPlanPage = /** @class */ (function () {
-    function AddonCompetencyPlanPage(navCtrl, navParams, translate, appProvider, domUtils, svComponent, competencyProvider, competencyHelperProvider) {
+    function AddonCompetencyPlanPage(navCtrl, navParams, appProvider, domUtils, svComponent, competencyProvider, competencyHelperProvider) {
         this.navCtrl = navCtrl;
-        this.translate = translate;
         this.appProvider = appProvider;
         this.domUtils = domUtils;
         this.svComponent = svComponent;
@@ -105,10 +103,13 @@ var plan_AddonCompetencyPlanPage = /** @class */ (function () {
     AddonCompetencyPlanPage.prototype.fetchLearningPlan = function () {
         var _this = this;
         return this.competencyProvider.getLearningPlan(this.planId).then(function (plan) {
-            plan.plan.statusname = _this.getStatusName(plan.plan.status);
+            plan.plan.statusname = _this.competencyHelperProvider.getPlanStatusName(plan.plan.status);
             // Get the user profile image.
             _this.competencyHelperProvider.getProfile(plan.plan.userid).then(function (user) {
                 _this.user = user;
+            });
+            plan.competencies.forEach(function (competency) {
+                competency.usercompetency = competency.usercompetencyplan || competency.usercompetency;
             });
             _this.plan = plan;
         }).catch(function (message) {
@@ -130,36 +131,6 @@ var plan_AddonCompetencyPlanPage = /** @class */ (function () {
         }
     };
     /**
-     * Convenience function to get the status name translated.
-     *
-     * @param {number} status
-     * @return {string}
-     */
-    AddonCompetencyPlanPage.prototype.getStatusName = function (status) {
-        var statusTranslateName;
-        switch (status) {
-            case competency["a" /* AddonCompetencyProvider */].STATUS_DRAFT:
-                statusTranslateName = 'draft';
-                break;
-            case competency["a" /* AddonCompetencyProvider */].REVIEW_STATUS_IN_REVIEW:
-                statusTranslateName = 'inreview';
-                break;
-            case competency["a" /* AddonCompetencyProvider */].REVIEW_STATUS_WAITING_FOR_REVIEW:
-                statusTranslateName = 'waitingforreview';
-                break;
-            case competency["a" /* AddonCompetencyProvider */].STATUS_ACTIVE:
-                statusTranslateName = 'active';
-                break;
-            case competency["a" /* AddonCompetencyProvider */].STATUS_COMPLETE:
-                statusTranslateName = 'complete';
-                break;
-            default:
-                // We can use the current status name.
-                return String(status);
-        }
-        return this.translate.instant('addon.competency.planstatus' + statusTranslateName);
-    };
-    /**
      * Refreshes the learning plan.
      *
      * @param {any} refresher Refresher.
@@ -177,11 +148,10 @@ var plan_AddonCompetencyPlanPage = /** @class */ (function () {
             selector: 'page-addon-competency-plan',
             templateUrl: 'plan.html',
         }),
-        __param(5, Object(core["N" /* Optional */])()),
-        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], _ngx_translate_core["c" /* TranslateService */],
-            app["a" /* CoreAppProvider */], dom["a" /* CoreDomUtilsProvider */],
-            split_view["a" /* CoreSplitViewComponent */], competency["a" /* AddonCompetencyProvider */],
-            helper["a" /* AddonCompetencyHelperProvider */]])
+        __param(4, Object(core["N" /* Optional */])()),
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], app["a" /* CoreAppProvider */],
+            dom["a" /* CoreDomUtilsProvider */], split_view["a" /* CoreSplitViewComponent */],
+            competency["a" /* AddonCompetencyProvider */], helper["a" /* AddonCompetencyHelperProvider */]])
     ], AddonCompetencyPlanPage);
     return AddonCompetencyPlanPage;
 }());
@@ -305,7 +275,7 @@ var item_reorder = __webpack_require__(26);
 var item_content = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(221);
+var user_avatar_ngfactory = __webpack_require__(222);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
 var user_avatar = __webpack_require__(186);
@@ -511,7 +481,7 @@ function View_AddonCompetencyPlanPage_0(_l) { return core["_57" /* ɵvid */](0, 
         var pd_0 = (_co.refreshLearningPlan($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), core["_30" /* ɵdid */](17, 212992, null, 0, refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](20, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](24, 0, null, 1, 11, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](25, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonCompetencyPlanPage_2)), core["_30" /* ɵdid */](28, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonCompetencyPlanPage_3)), core["_30" /* ɵdid */](31, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonCompetencyPlanPage_6)), core["_30" /* ɵdid */](34, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 6, 0); var currVal_2 = _co.plan; _ck(_v, 9, 0, currVal_2); var currVal_7 = _co.planLoaded; _ck(_v, 17, 0, currVal_7); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 20, 0, core["_44" /* ɵnov */](_v, 21).transform("core.pulltorefresh")), ""); _ck(_v, 20, 0, currVal_9); var currVal_10 = _co.planLoaded; _ck(_v, 25, 0, currVal_10); var currVal_11 = _co.user; _ck(_v, 28, 0, currVal_11); var currVal_12 = _co.plan; _ck(_v, 31, 0, currVal_12); var currVal_13 = _co.plan; _ck(_v, 34, 0, currVal_13); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = core["_44" /* ɵnov */](_v, 14).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 14)._hasRefresher; _ck(_v, 13, 0, currVal_3, currVal_4); var currVal_5 = (core["_44" /* ɵnov */](_v, 17).state !== "inactive"); var currVal_6 = core["_44" /* ɵnov */](_v, 17)._top; _ck(_v, 16, 0, currVal_5, currVal_6); var currVal_8 = core["_44" /* ɵnov */](_v, 20).r.state; _ck(_v, 19, 0, currVal_8); }); }
-function View_AddonCompetencyPlanPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-competency-plan", [], null, null, null, View_AddonCompetencyPlanPage_0, RenderType_AddonCompetencyPlanPage)), core["_30" /* ɵdid */](1, 49152, null, 0, plan_AddonCompetencyPlanPage, [nav_controller["a" /* NavController */], nav_params["a" /* NavParams */], translate_service["a" /* TranslateService */], app["a" /* CoreAppProvider */], dom["a" /* CoreDomUtilsProvider */], [2, split_view["a" /* CoreSplitViewComponent */]], competency["a" /* AddonCompetencyProvider */], helper["a" /* AddonCompetencyHelperProvider */]], null, null)], null, null); }
+function View_AddonCompetencyPlanPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-competency-plan", [], null, null, null, View_AddonCompetencyPlanPage_0, RenderType_AddonCompetencyPlanPage)), core["_30" /* ɵdid */](1, 49152, null, 0, plan_AddonCompetencyPlanPage, [nav_controller["a" /* NavController */], nav_params["a" /* NavParams */], app["a" /* CoreAppProvider */], dom["a" /* CoreDomUtilsProvider */], [2, split_view["a" /* CoreSplitViewComponent */]], competency["a" /* AddonCompetencyProvider */], helper["a" /* AddonCompetencyHelperProvider */]], null, null)], null, null); }
 var AddonCompetencyPlanPageNgFactory = core["_27" /* ɵccf */]("page-addon-competency-plan", plan_AddonCompetencyPlanPage, View_AddonCompetencyPlanPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=plan.ngfactory.js.map

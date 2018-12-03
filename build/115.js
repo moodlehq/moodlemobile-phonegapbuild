@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var split_view = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(226);
+var competency = __webpack_require__(205);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/competencies/competencies.ts
 // (C) Copyright 2015 Martin Dougiamas

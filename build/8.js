@@ -535,7 +535,7 @@ var common = __webpack_require__(7);
 var item_divider = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(222);
+var nav_push = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push-anchor.js
 var nav_push_anchor = __webpack_require__(250);
@@ -726,7 +726,7 @@ var course = __webpack_require__(15);
 var module_delegate = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/core/sitehome/providers/sitehome.ts
-var sitehome = __webpack_require__(205);
+var sitehome = __webpack_require__(206);
 
 // CONCATENATED MODULE: ./src/core/sitehome/components/news/news.ngfactory.js
 /**

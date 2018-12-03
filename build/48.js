@@ -295,7 +295,7 @@ var radio_button = __webpack_require__(137);
 var input_ngfactory = __webpack_require__(93);
 
 // EXTERNAL MODULE: ./src/directives/auto-focus.ts
-var auto_focus = __webpack_require__(337);
+var auto_focus = __webpack_require__(338);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

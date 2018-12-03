@@ -205,10 +205,10 @@ var providers_app = __webpack_require__(10);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(226);
+var competency = __webpack_require__(205);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/helper.ts
-var helper = __webpack_require__(348);
+var helper = __webpack_require__(336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

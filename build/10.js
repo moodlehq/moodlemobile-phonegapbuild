@@ -34,7 +34,7 @@ var delegate = __webpack_require__(162);
 var block = __webpack_require__(669);
 
 // EXTERNAL MODULE: ./src/core/sitehome/providers/sitehome.ts
-var sitehome = __webpack_require__(205);
+var sitehome = __webpack_require__(206);
 
 // EXTERNAL MODULE: ./src/core/sitehome/components/index/index.ts
 var index = __webpack_require__(1363);
@@ -43,7 +43,7 @@ var index = __webpack_require__(1363);
 var courses = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/dashboard.ts
-var dashboard = __webpack_require__(457);
+var dashboard = __webpack_require__(455);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/dashboard/dashboard.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -814,7 +814,7 @@ var common = __webpack_require__(7);
 var item_divider = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(222);
+var nav_push = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push-anchor.js
 var nav_push_anchor = __webpack_require__(250);
@@ -1005,7 +1005,7 @@ var course = __webpack_require__(15);
 var module_delegate = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/core/sitehome/providers/sitehome.ts
-var sitehome = __webpack_require__(205);
+var sitehome = __webpack_require__(206);
 
 // CONCATENATED MODULE: ./src/core/sitehome/components/news/news.ngfactory.js
 /**

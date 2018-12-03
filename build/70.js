@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(28);
 var components_module = __webpack_require__(704);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/index/index.ts
-var index = __webpack_require__(475);
+var index = __webpack_require__(474);
 
 // CONCATENATED MODULE: ./src/addon/mod/wiki/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -308,7 +308,7 @@ var refresher_content = __webpack_require__(157);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki.ts
-var wiki = __webpack_require__(208);
+var wiki = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki-offline.ts
 var wiki_offline = __webpack_require__(257);

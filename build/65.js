@@ -527,7 +527,7 @@ var item_reorder = __webpack_require__(26);
 var item_content = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(221);
+var user_avatar_ngfactory = __webpack_require__(222);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
 var user_avatar = __webpack_require__(186);
@@ -616,7 +616,7 @@ var empty_box_ngfactory = __webpack_require__(119);
 var empty_box = __webpack_require__(110);
 
 // EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
-var date_day_or_time = __webpack_require__(339);
+var date_day_or_time = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./src/pipes/create-links.ts
 var create_links = __webpack_require__(1424);
