@@ -593,7 +593,7 @@ var loading = __webpack_require__(47);
 var toolbar_footer = __webpack_require__(681);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.ngfactory.js
-var toolbar_ngfactory = __webpack_require__(1954);
+var toolbar_ngfactory = __webpack_require__(1957);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);
@@ -768,7 +768,7 @@ var AddonModChatChatPageModuleNgFactory = core["_28" /* ɵcmf */](chat_module_Ad
 
 /***/ }),
 
-/***/ 1954:
+/***/ 1957:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
