@@ -116,6 +116,7 @@
     "addon.messages.contactlistempty": "Листа контаката је празна",
     "addon.messages.contactname": "Име особе",
     "addon.messages.contacts": "Контакти",
+    "addon.messages.deleteallconfirm": "Да ли сте сигурни да желите да у потпуности обришете ову преписку?",
     "addon.messages.errordeletemessage": "Грешка приликом брисања поруке.",
     "addon.messages.errorwhileretrievingcontacts": "Грешка приликом преузимања контаката са сервера.",
     "addon.messages.errorwhileretrievingdiscussions": "Грешка приликом преузимања дискусија са сервера.",

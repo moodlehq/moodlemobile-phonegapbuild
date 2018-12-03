@@ -116,6 +116,7 @@
     "addon.messages.contactlistempty": "Список контактов пуст",
     "addon.messages.contactname": "Имя контакта",
     "addon.messages.contacts": "Собеседники",
+    "addon.messages.deleteallconfirm": "Вы уверены, что хотите удалить всю беседу?",
     "addon.messages.errordeletemessage": "Ошибка при удалении сообщения.",
     "addon.messages.errorwhileretrievingcontacts": "Ошибка при извлечении контактов с сервера.",
     "addon.messages.errorwhileretrievingdiscussions": "Ошибка при получении обсуждений с сервера.",

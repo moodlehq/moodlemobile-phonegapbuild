@@ -122,6 +122,7 @@
     "addon.messages.contactlistempty": "L'elenco dei contatti è vuoto",
     "addon.messages.contactname": "Nome del contatto",
     "addon.messages.contacts": "Contatti",
+    "addon.messages.deleteallconfirm": "Sei sicuro di eliminare l'intera conversazione?",
     "addon.messages.errordeletemessage": "Si è verificato un errore durante l'eliminazione del messaggio.",
     "addon.messages.errorwhileretrievingcontacts": "Si è verificato un errore durante la ricezione dei contatti dal server.",
     "addon.messages.errorwhileretrievingdiscussions": "Si è verificato un errore durante la ricezione delle discussioni dal server.",

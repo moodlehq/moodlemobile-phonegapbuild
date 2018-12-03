@@ -110,6 +110,7 @@
     "addon.messages.contactlistempty": "Η λίστα επαφών είναι κενή",
     "addon.messages.contactname": "Όνομα επαφής",
     "addon.messages.contacts": "Επαφές",
+    "addon.messages.deleteallconfirm": "Είστε βέβαιοι ότι θέλετε να διαγράψετε όλη αυτή τη συνομιλία;",
     "addon.messages.errordeletemessage": "Σφάλμα κατά τη διαγραφή του μηνύματος.",
     "addon.messages.errorwhileretrievingcontacts": "Σφάλμα κατά την ανάκτηση των επαφών από το διακομιστή.",
     "addon.messages.errorwhileretrievingdiscussions": "Σφάλμα κατά την ανάκτηση των συζητήσεων από το διακομιστή.",

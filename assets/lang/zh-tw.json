@@ -115,6 +115,7 @@
     "addon.messages.contactlistempty": "聯絡人清單沒有資料",
     "addon.messages.contactname": "聯絡人名稱",
     "addon.messages.contacts": "通訊錄",
+    "addon.messages.deleteallconfirm": "你確定要刪除這整個對話？",
     "addon.messages.errordeletemessage": "刪除訊息時發生錯誤.",
     "addon.messages.errorwhileretrievingcontacts": "從伺服器存取聯絡人時出錯",
     "addon.messages.errorwhileretrievingdiscussions": "從伺服器存取討論區時出錯",

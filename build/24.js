@@ -745,7 +745,7 @@ var attachments = __webpack_require__(279);
 var providers_app = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var providers_helper = __webpack_require__(133);
+var providers_helper = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
 var col = __webpack_require__(99);

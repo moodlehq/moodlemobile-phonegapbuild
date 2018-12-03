@@ -116,6 +116,7 @@
     "addon.messages.contactlistempty": "A lista de contatos está vaiza",
     "addon.messages.contactname": "Nome do contato",
     "addon.messages.contacts": "Contatos",
+    "addon.messages.deleteallconfirm": "Você tem certeza que deseja excluir toda essa conversa?",
     "addon.messages.errordeletemessage": "Erro enquanto excluía a mensagem.",
     "addon.messages.errorwhileretrievingcontacts": "Erro ao recuperar contatos a partir do servidor.",
     "addon.messages.errorwhileretrievingdiscussions": "Erro ao recuperar discussão do servidor.",

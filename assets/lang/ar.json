@@ -45,6 +45,7 @@
     "addon.messages.contactblocked": "تم حظر جهة الاتصال",
     "addon.messages.contactlistempty": "قائمة الاتصال فارغة",
     "addon.messages.contacts": "جهات اتصال",
+    "addon.messages.deleteallconfirm": "هل أنت متأكد من رغبتك بحذف كامل الحوار؟",
     "addon.messages.errordeletemessage": "خطأ عند حذف الرسالة",
     "addon.messages.message": "رسالة",
     "addon.messages.messagenotsent": "لم يتم إرسال الرسالة، يرجي المحاولة لاحقا",

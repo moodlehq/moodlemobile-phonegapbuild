@@ -120,6 +120,7 @@
     "addon.messages.contactlistempty": "Kontaktlisten er tom",
     "addon.messages.contactname": "Navn",
     "addon.messages.contacts": "Kontakter",
+    "addon.messages.deleteallconfirm": "Er du sikker på at du vil slette hele denne samtale? Det vil ikke slette den for andre deltagere i konversationen.",
     "addon.messages.errordeletemessage": "Fejl under sletning af filen",
     "addon.messages.errorwhileretrievingcontacts": "Fejl ved hentning af kontakter fra serveren",
     "addon.messages.errorwhileretrievingdiscussions": "Fejl ved hentning af diskussioner fra serveren",

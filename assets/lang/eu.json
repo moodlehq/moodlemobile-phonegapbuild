@@ -123,6 +123,7 @@
     "addon.messages.contactlistempty": "Kontaktu zerrenda hutsik dago",
     "addon.messages.contactname": "Kontaktuaren izena",
     "addon.messages.contacts": "Kontaktuak",
+    "addon.messages.deleteallconfirm": "Ziur zaude elkarrizketa oso hau ezabatu nahi duzula? Honek ez die elkarrizketa beste partaideei ezabatuko.",
     "addon.messages.deletemessage": "Ezabatu mezua",
     "addon.messages.deletemessageconfirmation": "Ziur mezu hau ezabatu nahi duzula? Mezua zure mezuen historiatik baino ez da ezabatuko eta bidali edo jaso zuten beste erabiltzaileek oraindik ikusgai izango dute.",
     "addon.messages.errordeletemessage": "Errorea mezua ezabatzean.",

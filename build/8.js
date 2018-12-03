@@ -544,7 +544,7 @@ var nav_push_anchor = __webpack_require__(250);
 var deep_linker = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(134);
+var icon_ngfactory = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(120);

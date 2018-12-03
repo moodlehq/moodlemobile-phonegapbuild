@@ -113,6 +113,7 @@
     "addon.messages.contactlistempty": "kontaktlista är tom",
     "addon.messages.contactname": "Kontakt namn",
     "addon.messages.contacts": "Kontakter",
+    "addon.messages.deleteallconfirm": "Vill du verkligen radera hela denna konversation?",
     "addon.messages.errordeletemessage": "Fel vid borttagning av meddelandet",
     "addon.messages.errorwhileretrievingcontacts": "Fel vid hämtning av kontakter från servern.",
     "addon.messages.errorwhileretrievingdiscussions": "Fel vid hämtning  av diskussionerna från servern.",

@@ -323,7 +323,7 @@ var common = __webpack_require__(7);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(134);
+var icon_ngfactory = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(120);

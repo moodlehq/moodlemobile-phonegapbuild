@@ -111,6 +111,7 @@
     "addon.messages.contactlistempty": "Yhteystietolistasi on tyhjä",
     "addon.messages.contactname": "Yhteystiedon nimi",
     "addon.messages.contacts": "Kontaktit",
+    "addon.messages.deleteallconfirm": "Oletko varma, että haluat poistaa tämän koko keskustelun?",
     "addon.messages.errordeletemessage": "Viestiä poistettaessa tapahtui virhe.",
     "addon.messages.errorwhileretrievingcontacts": "Virhe ladattaessa yhteystietoja palvelimelta.",
     "addon.messages.errorwhileretrievingdiscussions": "Virhe ladattaessa keskusteluja palvelimelta.",

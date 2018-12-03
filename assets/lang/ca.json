@@ -114,6 +114,7 @@
     "addon.messages.contactlistempty": "La llista de contactes és buida",
     "addon.messages.contactname": "Nom del contacte",
     "addon.messages.contacts": "Contactes",
+    "addon.messages.deleteallconfirm": "Confirmeu que voleu suprimir aquesta conversa per complet?",
     "addon.messages.deletemessage": "Elimina el missatge",
     "addon.messages.deletemessageconfirmation": "Segur que voleu eliminar aquest missatge? Només s'eliminarà de la vostra història de missatges però encara serà visible per l'usuari que va eliminar o rebre el missatge.",
     "addon.messages.errordeletemessage": "S'ha produït un error mentre s'esborrava el missatge.",

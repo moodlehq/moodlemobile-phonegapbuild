@@ -116,6 +116,7 @@
     "addon.messages.contactlistempty": "Lista kontakata je prazna",
     "addon.messages.contactname": "Ime osobe",
     "addon.messages.contacts": "Kontakti",
+    "addon.messages.deleteallconfirm": "Da li ste sigurni da želite da u potpunosti obrišete ovu prepisku?",
     "addon.messages.errordeletemessage": "Greška prilikom brisanja poruke.",
     "addon.messages.errorwhileretrievingcontacts": "Greška prilikom preuzimanja kontakata sa servera.",
     "addon.messages.errorwhileretrievingdiscussions": "Greška prilikom preuzimanja diskusija sa servera.",

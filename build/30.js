@@ -37,7 +37,7 @@ var sites = __webpack_require__(1);
 var mimetype = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var providers_helper = __webpack_require__(133);
+var providers_helper = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user-delegate.ts
 var user_delegate = __webpack_require__(101);
@@ -408,7 +408,7 @@ var col = __webpack_require__(99);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(134);
+var icon_ngfactory = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon_icon = __webpack_require__(120);

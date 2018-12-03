@@ -17,6 +17,7 @@
     "addon.messageoutput_airnotifier.processorsettingsdesc": "Geräte konfigurieren",
     "addon.messages.contactlistempty": "Die Kontaktliste ist leer.",
     "addon.messages.contactname": "Name",
+    "addon.messages.deleteallconfirm": "Möchtest du die Kommunikation wirklich löschen?",
     "addon.messages.errordeletemessage": "Fehler beim Löschen der Mitteilung",
     "addon.messages.errorwhileretrievingcontacts": "Fehler beim Abrufen der Kontakte vom Server",
     "addon.messages.errorwhileretrievingdiscussions": "Fehler beim Abrufen der Themen vom Server",

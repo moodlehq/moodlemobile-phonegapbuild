@@ -112,6 +112,7 @@
     "addon.messages.contactlistempty": "Kontaktų sąrašas tuščias",
     "addon.messages.contactname": "Kontaktas",
     "addon.messages.contacts": "Kontaktai",
+    "addon.messages.deleteallconfirm": "Ar tikrai norite ištrinti visą pokalbį?",
     "addon.messages.errordeletemessage": "Klaida trinant žinutes.",
     "addon.messages.errorwhileretrievingcontacts": "Klaida nuskaitant kontaktus iš serverio.",
     "addon.messages.errorwhileretrievingdiscussions": "Klaida nuskaitant diskusijas iš serverio.",

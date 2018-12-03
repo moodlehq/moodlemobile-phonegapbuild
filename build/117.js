@@ -519,7 +519,7 @@ var empty_box_ngfactory = __webpack_require__(119);
 var empty_box = __webpack_require__(110);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(134);
+var icon_ngfactory = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon_icon = __webpack_require__(120);

@@ -544,7 +544,7 @@ var attachments_ngfactory = __webpack_require__(446);
 var attachments = __webpack_require__(279);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var fileuploader_providers_helper = __webpack_require__(133);
+var fileuploader_providers_helper = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

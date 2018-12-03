@@ -113,6 +113,7 @@
     "addon.messages.contactlistempty": "您的联系人名单是空的",
     "addon.messages.contactname": "联系人姓名",
     "addon.messages.contacts": "联系人",
+    "addon.messages.deleteallconfirm": "您确定需要删除所有对话内容吗？",
     "addon.messages.errordeletemessage": "删除消息时出错。",
     "addon.messages.errorwhileretrievingcontacts": "从服务器检索联系人时出错。",
     "addon.messages.errorwhileretrievingdiscussions": "从服务器检索讨论区时出错。",

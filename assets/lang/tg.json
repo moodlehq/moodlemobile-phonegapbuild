@@ -66,6 +66,7 @@
     "addon.messages.blocknoncontacts": "Мактубчаҳо аз касоне ки дар рӯйхати ҳамсӯҳбатони ман нестанд, қабул карда нашаванд",
     "addon.messages.contactblocked": "Ҳамсӯҳбат масдуд карда шудааст",
     "addon.messages.contacts": "Ҳамсӯҳбатон",
+    "addon.messages.deleteallconfirm": "Оё шумо ин гуфтугузорро пурра тоза кардан мехоҳед?",
     "addon.messages.message": "Мактубча",
     "addon.messages.messagepreferences": "Хусусиятҳои паём",
     "addon.messages.messages": "Мактубчаҳо",

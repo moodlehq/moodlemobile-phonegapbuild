@@ -632,7 +632,7 @@ var icon = __webpack_require__(45);
 var note = __webpack_require__(225);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(134);
+var icon_ngfactory = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon_icon = __webpack_require__(120);
@@ -689,7 +689,7 @@ var attachments_ngfactory = __webpack_require__(446);
 var attachments = __webpack_require__(279);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var fileuploader_providers_helper = __webpack_require__(133);
+var fileuploader_providers_helper = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(100);

@@ -117,6 +117,7 @@
     "addon.messages.contactlistempty": "Lista de contactos vacía",
     "addon.messages.contactname": "Nombre del contacto",
     "addon.messages.contacts": "Contactos",
+    "addon.messages.deleteallconfirm": "¿Está seguro de que desea eliminar toda la conversación?",
     "addon.messages.deletemessage": "Eliminar mensaje",
     "addon.messages.deletemessageconfirmation": "¿Está seguro que quiere eliminar este mensaje? Será eliminado solamente de su historial de mensaje y todavía será visible por el usuario que envió o recibió el mensaje.",
     "addon.messages.errordeletemessage": "Error borrando el mensaje.",

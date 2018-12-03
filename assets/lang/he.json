@@ -104,6 +104,7 @@
     "addon.messages.contactlistempty": "רשימת אנשי הקשר ריקה",
     "addon.messages.contactname": "שם איש קשר",
     "addon.messages.contacts": "אנשי קשר",
+    "addon.messages.deleteallconfirm": "האם למחוק את כל השיחה?",
     "addon.messages.errorwhileretrievingcontacts": "שגיאה בזמן טעינת אנשי קשר מהשרת.",
     "addon.messages.errorwhileretrievingdiscussions": "שגיאה בזמן טעינת הדיונים מהשרת.",
     "addon.messages.errorwhileretrievingmessages": "שגיאה בזמן טעינת המסרים מהשרת.",

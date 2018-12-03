@@ -1,6 +1,6 @@
 webpackJsonp([106],{
 
-/***/ 1843:
+/***/ 1844:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -144,19 +144,19 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
                 }
             }
         }, this.siteId);
-        // Update discussions when a message is read.
+        // Update conversations when a message is read.
         this.readChangedObserver = eventsProvider.on(providers_messages["a" /* AddonMessagesProvider */].READ_CHANGED_EVENT, function (data) {
             if (data.conversationId) {
                 var conversation = _this.findConversation(data.conversationId);
                 if (typeof conversation != 'undefined') {
-                    // A discussion has been read reset counter.
+                    // A conversation has been read reset counter.
                     conversation.unreadcount = 0;
-                    // Discussions changed, invalidate them.
+                    // Conversations changed, invalidate them.
                     _this.messagesProvider.invalidateConversations();
                 }
             }
         }, this.siteId);
-        // Update discussions when cron read is executed.
+        // Update conversations when cron read is executed.
         this.cronObserver = eventsProvider.on(providers_messages["a" /* AddonMessagesProvider */].READ_CRON_EVENT, function (data) {
             _this.refreshData();
         }, this.siteId);
@@ -176,6 +176,10 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
                 _this.loaded = true;
             });
         });
+        // Update conversations if we receive an event to do so.
+        this.updateConversationListObserver = eventsProvider.on(providers_messages["a" /* AddonMessagesProvider */].UPDATE_CONVERSATION_LIST_EVENT, function () {
+            _this.refreshData();
+        }, this.siteId);
         // If a message push notification is received, refresh the view.
         this.pushObserver = pushNotificationsDelegate.on('receive').subscribe(function (notification) {
             // New message received. If it's from current site, refresh the data.
@@ -549,6 +553,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
         this.readChangedObserver && this.readChangedObserver.off();
         this.cronObserver && this.cronObserver.off();
         this.openConversationObserver && this.openConversationObserver.off();
+        this.updateConversationListObserver && this.updateConversationListObserver.off();
     };
     __decorate([
         Object(core["_9" /* ViewChild */])(split_view["a" /* CoreSplitViewComponent */]),
@@ -679,7 +684,7 @@ var translate_service = __webpack_require__(17);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(134);
+var icon_ngfactory = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(120);

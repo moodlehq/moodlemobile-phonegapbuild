@@ -104,6 +104,7 @@
     "addon.messages.blocknoncontacts": "Tanımadığım kullanıcıları engelle",
     "addon.messages.contactblocked": "İletişim engellendi",
     "addon.messages.contacts": "Kişiler",
+    "addon.messages.deleteallconfirm": "Tüm bu sohbeti silmek istediğinizden emin misiniz?",
     "addon.messages.message": "Mesaj",
     "addon.messages.messagenotsent": "İleti gönderilemedi. Lütfen daha sonra tekrar deneyin.",
     "addon.messages.messagepreferences": "İleti tercihleri",
