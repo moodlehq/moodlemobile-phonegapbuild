@@ -66,9 +66,13 @@ var add_AddonNotesAddPage = /** @class */ (function () {
     }
     /**
      * Send the note or store it offline.
+     *
+     * @param {Event} e Event.
      */
-    AddonNotesAddPage.prototype.addNote = function () {
+    AddonNotesAddPage.prototype.addNote = function (e) {
         var _this = this;
+        e.preventDefault();
+        e.stopPropagation();
         this.appProvider.closeKeyboard();
         var loadingModal = this.domUtils.showModalLoading('core.sending', true);
         // Freeze the add note button.
@@ -353,7 +357,7 @@ function View_AddonNotesAddPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()
         var pd_1 = (core["_44" /* ɵnov */](_v, 32).onReset() !== false);
         ad = (pd_1 && ad);
     } if (("ngSubmit" === en)) {
-        var pd_2 = (_co.addNote() !== false);
+        var pd_2 = (_co.addNote($event) !== false);
         ad = (pd_2 && ad);
     } return ad; }, null, null)), core["_30" /* ɵdid */](31, 16384, null, 0, esm5_forms["w" /* ɵbf */], [], null, null), core["_30" /* ɵdid */](32, 4210688, null, 0, esm5_forms["p" /* NgForm */], [[8, null], [8, null]], null, { ngSubmit: "ngSubmit" }), core["_50" /* ɵprd */](2048, null, esm5_forms["b" /* ControlContainer */], null, [esm5_forms["p" /* NgForm */]]), core["_30" /* ɵdid */](34, 16384, null, 0, esm5_forms["o" /* NgControlStatusGroup */], [esm5_forms["b" /* ControlContainer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](36, 0, null, null, 35, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](37, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 2, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 4, { _icons: 1 }), core["_30" /* ɵdid */](41, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](43, 0, null, 1, 3, "ion-label", [], null, null, null, null, null)), core["_30" /* ɵdid */](44, 16384, [[2, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, null], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](45, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](48, 0, null, 3, 22, "ion-select", [["interface", "popover"], ["name", "publishState"]], [[2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (core["_44" /* ɵnov */](_v, 49)._click($event) !== false);
