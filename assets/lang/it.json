@@ -1085,7 +1085,7 @@
     "core.confirmdeletefile": "Sei sicuro di voler eliminare questo file?",
     "core.confirmloss": "Sei sicuro? Le modifiche andranno perdute.",
     "core.confirmopeninbrowser": "Desideri aprirlo nel browser?",
-    "core.considereddigitalminor": "Sei un minore digitale.",
+    "core.considereddigitalminor": "Sei troppo giovane per creare un account su questo sito.",
     "core.content": "Contenuto",
     "core.contentlinks.chooseaccount": "Seleziona account",
     "core.continue": "Continua",
