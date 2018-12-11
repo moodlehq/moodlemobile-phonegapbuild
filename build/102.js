@@ -22,7 +22,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(107);
+var pipes_module = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(10);
@@ -351,7 +351,7 @@ var content_ngfactory = __webpack_require__(184);
 var dom_controller = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(108);
+var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);

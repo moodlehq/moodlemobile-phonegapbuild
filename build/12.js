@@ -1033,7 +1033,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(107);
+var pipes_module = __webpack_require__(105);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/discussion/discussion.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -1120,7 +1120,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1356);
 var recaptchamodal_ngfactory = __webpack_require__(1357);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(133);
+var icon_ngfactory = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(120);
@@ -1210,7 +1210,7 @@ var iframe = __webpack_require__(36);
 var empty_box_ngfactory = __webpack_require__(119);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(110);
+var empty_box = __webpack_require__(108);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-footer.js
 var toolbar_footer = __webpack_require__(681);
@@ -1258,7 +1258,7 @@ var toolbar_title = __webpack_require__(335);
 var toolbar_item = __webpack_require__(435);
 
 // EXTERNAL MODULE: ./src/components/navbar-buttons/navbar-buttons.ngfactory.js
-var navbar_buttons_ngfactory = __webpack_require__(84);
+var navbar_buttons_ngfactory = __webpack_require__(85);
 
 // EXTERNAL MODULE: ./src/components/navbar-buttons/navbar-buttons.ts
 var navbar_buttons = __webpack_require__(77);
@@ -1288,7 +1288,7 @@ var content_ngfactory = __webpack_require__(184);
 var dom_controller = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(108);
+var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);

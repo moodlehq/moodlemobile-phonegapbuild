@@ -206,7 +206,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(107);
+var pipes_module = __webpack_require__(105);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/space-usage/space-usage.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -395,7 +395,7 @@ var content_ngfactory = __webpack_require__(184);
 var dom_controller = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(108);
+var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
 var refresher = __webpack_require__(145);
@@ -419,7 +419,7 @@ var loading = __webpack_require__(47);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
-var item_divider = __webpack_require__(109);
+var item_divider = __webpack_require__(107);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/space-usage/space-usage.ngfactory.js
 /**

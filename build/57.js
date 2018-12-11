@@ -34,7 +34,7 @@ var utils_text = __webpack_require__(9);
 var courses = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/core/course/providers/options-delegate.ts
-var options_delegate = __webpack_require__(111);
+var options_delegate = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);
@@ -481,7 +481,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(107);
+var pipes_module = __webpack_require__(105);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/course-preview/course-preview.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -643,7 +643,7 @@ var user_avatar = __webpack_require__(186);
 var avatar = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
-var item_divider = __webpack_require__(109);
+var item_divider = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
 var file_ngfactory = __webpack_require__(203);
@@ -652,7 +652,7 @@ var file_ngfactory = __webpack_require__(203);
 var file = __webpack_require__(171);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
-var file_helper = __webpack_require__(132);
+var file_helper = __webpack_require__(131);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
 var mimetype = __webpack_require__(64);
@@ -664,7 +664,7 @@ var button_ngfactory = __webpack_require__(44);
 var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(133);
+var icon_ngfactory = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(120);
@@ -724,7 +724,7 @@ var toolbar = __webpack_require__(247);
 var content_ngfactory = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(108);
+var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
 var refresher = __webpack_require__(145);

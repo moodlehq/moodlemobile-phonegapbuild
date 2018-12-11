@@ -22,13 +22,13 @@ var directives_module = __webpack_require__(28);
 var components_module = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
-var pipes_module = __webpack_require__(107);
+var pipes_module = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/components/components.module.ts
 var components_components_module = __webpack_require__(665);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/feedback.ts
-var feedback = __webpack_require__(136);
+var feedback = __webpack_require__(135);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/helper.ts
 var helper = __webpack_require__(276);
@@ -375,7 +375,7 @@ var item_content = __webpack_require__(31);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(112);
+var select_ngfactory = __webpack_require__(110);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(92);
@@ -453,7 +453,7 @@ var spinner_ngfactory = __webpack_require__(113);
 var spinner = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
-var item_divider = __webpack_require__(109);
+var item_divider = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
 var format_date = __webpack_require__(224);
@@ -495,7 +495,7 @@ var content_ngfactory = __webpack_require__(184);
 var dom_controller = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(108);
+var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
 var refresher = __webpack_require__(145);

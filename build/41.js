@@ -31,7 +31,7 @@ var utils_text = __webpack_require__(9);
 var pushnotifications = __webpack_require__(343);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var helper = __webpack_require__(135);
+var helper = __webpack_require__(134);
 
 // CONCATENATED MODULE: ./src/core/login/pages/sites/sites.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -367,7 +367,7 @@ var content_ngfactory = __webpack_require__(184);
 var dom_controller = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(108);
+var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(76);
