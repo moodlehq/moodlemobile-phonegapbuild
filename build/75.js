@@ -859,7 +859,7 @@ var data_model_12_AddonModScormDataModel12 = /** @class */ (function () {
 
 //# sourceMappingURL=data-model-12.js.map
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/toc-popover/toc-popover.ts
-var toc_popover = __webpack_require__(710);
+var toc_popover = __webpack_require__(709);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -1409,7 +1409,7 @@ var app = __webpack_require__(32);
 var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(662);
+var back_button = __webpack_require__(661);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -1472,7 +1472,7 @@ var loading_ngfactory = __webpack_require__(48);
 var loading = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ngfactory.js
-var navigation_bar_ngfactory = __webpack_require__(708);
+var navigation_bar_ngfactory = __webpack_require__(707);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ts
 var navigation_bar = __webpack_require__(357);
@@ -1581,7 +1581,7 @@ var missing_translation_handler = __webpack_require__(333);
 var translate_store = __webpack_require__(433);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(661);
+var ionic_angular_module = __webpack_require__(660);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 1 modules
 var pipes_module = __webpack_require__(105);
