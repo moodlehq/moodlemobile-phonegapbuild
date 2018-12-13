@@ -875,6 +875,7 @@
     "core.question.questionmessage": "प्रश्न {{$a}}: {{$b}}",
     "core.redirectingtosite": "आपल्याला साइटवर पुनर्निर्देशित केले जाईल.",
     "core.refresh": "रिफ्रेश",
+    "core.remove": "काढून टाका.",
     "core.required": "गरजेचे आहे.",
     "core.requireduserdatamissing": "या वापरकर्त्याकडे काही आवश्यक प्रोफाइल डेटा नसतो. कृपया आपल्या मूडलमध्ये हा डेटा भरा आणि पुन्हा प्रयत्न करा. <br> {{$ a}}",
     "core.resources": "साधने",
