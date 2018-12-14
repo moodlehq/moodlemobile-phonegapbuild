@@ -113,7 +113,7 @@ var contacts_AddonMessagesContactsPage = /** @class */ (function () {
     AddonMessagesContactsPage.prototype.selectUser = function (tab, userId, onInit) {
         if (onInit === void 0) { onInit = false; }
         userId = userId || this.selectedUserId[tab];
-        if (!userId || userId == this.conversationUserId) {
+        if (!userId || userId == this.conversationUserId && this.splitviewCtrl.isOn()) {
             // No user conversation to open or it is already opened.
             return;
         }
@@ -873,6 +873,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.messagesProvider = messagesProvider;
         this.domUtils = domUtils;
         this.appProvider = appProvider;
+        this.utils = utils;
         this.loaded = false;
         this.search = {
             enabled: false,
@@ -912,14 +913,11 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
                 if (typeof discussion != 'undefined') {
                     // A discussion has been read reset counter.
                     discussion.unread = false;
-                    // Discussions changed, invalidate them.
-                    _this.messagesProvider.invalidateDiscussionsCache();
+                    // Conversations changed, invalidate them and refresh unread counts.
+                    _this.messagesProvider.invalidateConversations();
+                    _this.messagesProvider.refreshUnreadConversationCounts();
                 }
             }
-        }, this.siteId);
-        // Update discussions when cron read is executed.
-        this.cronObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].READ_CRON_EVENT, function (data) {
-            _this.refreshData();
         }, this.siteId);
         // Refresh the view when the app is resumed.
         this.appResumeSubscription = platform.resume.subscribe(function () {
@@ -934,7 +932,8 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.pushObserver = pushNotificationsDelegate.on('receive').subscribe(function (notification) {
             // New message received. If it's from current site, refresh the data.
             if (utils.isFalseOrZero(notification.notif) && notification.site == _this.siteId) {
-                _this.refreshData();
+                // Don't refresh unread counts, it's refreshed from the main menu handler in this case.
+                _this.refreshData(null, false);
             }
         });
     }
@@ -958,15 +957,20 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
      * Refresh the data.
      *
      * @param {any} [refresher] Refresher.
+     * @param {boolean} [refreshUnreadCounts=true] Whteher to refresh unread counts.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonMessagesDiscussionsComponent.prototype.refreshData = function (refresher) {
+    AddonMessagesDiscussionsComponent.prototype.refreshData = function (refresher, refreshUnreadCounts) {
         var _this = this;
-        return this.messagesProvider.invalidateDiscussionsCache().then(function () {
+        if (refreshUnreadCounts === void 0) { refreshUnreadCounts = true; }
+        var promises = [];
+        promises.push(this.messagesProvider.invalidateDiscussionsCache());
+        if (refreshUnreadCounts) {
+            promises.push(this.messagesProvider.invalidateUnreadConversationCounts());
+        }
+        return this.utils.allPromises(promises).finally(function () {
             return _this.fetchData().finally(function () {
                 if (refresher) {
-                    // Actions to take if refresh comes from the user.
-                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].READ_CHANGED_EVENT, undefined, _this.siteId);
                     refresher.complete();
                 }
             });
@@ -981,7 +985,8 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         var _this = this;
         this.loadingMessage = this.loadingMessages;
         this.search.enabled = this.messagesProvider.isSearchMessagesEnabled();
-        return this.messagesProvider.getDiscussions().then(function (discussions) {
+        var promises = [];
+        promises.push(this.messagesProvider.getDiscussions().then(function (discussions) {
             // Convert to an array for sorting.
             var discussionsSorted = [];
             for (var userId in discussions) {
@@ -991,7 +996,9 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
             _this.discussions = discussionsSorted.sort(function (a, b) {
                 return b.message.timecreated - a.message.timecreated;
             });
-        }).catch(function (error) {
+        }));
+        promises.push(this.messagesProvider.getUnreadConversationCounts());
+        return Promise.all(promises).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingdiscussions', true);
         }).finally(function () {
             _this.loaded = true;
@@ -1141,6 +1148,9 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
                 if (index >= 0) {
                     _this.contacts.splice(index, 1);
                 }
+            }
+            else if (data.contactRequestConfirmed) {
+                _this.refreshData();
             }
         }, sitesProvider.getCurrentSiteId());
     }

@@ -561,6 +561,18 @@ var toolbar = __webpack_require__(247);
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
 var toolbar_item = __webpack_require__(435);
 
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
+var context_menu_ngfactory = __webpack_require__(87);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
+var context_menu = __webpack_require__(72);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
+var popover_controller = __webpack_require__(62);
+
+// EXTERNAL MODULE: ./src/components/tabs/tab.ts
+var tab = __webpack_require__(71);
+
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
 var split_view_ngfactory = __webpack_require__(436);
 
@@ -572,9 +584,6 @@ var tabs_ngfactory = __webpack_require__(440);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
 var tab_ngfactory = __webpack_require__(441);
-
-// EXTERNAL MODULE: ./src/components/tabs/tab.ts
-var tab = __webpack_require__(71);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/index/index.ngfactory.js
 /**
@@ -623,12 +632,15 @@ var tab = __webpack_require__(71);
 
 
 
+
+
+
 var styles_AddonMessagesIndexPage = [];
 var RenderType_AddonMessagesIndexPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonMessagesIndexPage, data: {} });
 
 function View_AddonMessagesIndexPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "addon-messages-discussions", [], null, null, null, View_AddonMessagesDiscussionsComponent_0, RenderType_AddonMessagesDiscussionsComponent)), core["_30" /* ɵdid */](2, 245760, null, 0, discussions["a" /* AddonMessagesDiscussionsComponent */], [events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], translate_service["a" /* TranslateService */], messages["a" /* AddonMessagesProvider */], dom["a" /* CoreDomUtilsProvider */], nav_params["a" /* NavParams */], app["a" /* CoreAppProvider */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], delegate["a" /* AddonPushNotificationsDelegate */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], function (_ck, _v) { _ck(_v, 2, 0); }, null); }
 function View_AddonMessagesIndexPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "addon-messages-contacts", [], null, null, null, View_AddonMessagesContactsComponent_0, RenderType_AddonMessagesContactsComponent)), core["_30" /* ɵdid */](2, 114688, null, 0, contacts["a" /* AddonMessagesContactsComponent */], [sites["a" /* CoreSitesProvider */], translate_service["a" /* TranslateService */], app["a" /* CoreAppProvider */], messages["a" /* AddonMessagesProvider */], dom["a" /* CoreDomUtilsProvider */], nav_params["a" /* NavParams */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], function (_ck, _v) { _ck(_v, 2, 0); }, null); }
-function View_AddonMessagesIndexPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { splitviewCtrl: 0 }), core["_52" /* ɵqud */](402653184, 2, { tabsComponent: 0 }), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 16, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](3, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 12, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](6, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](7, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](9, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](10, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](11, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](14, 0, null, 2, 2, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](15, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](20, 0, null, null, 28, "core-split-view", [], null, null, null, split_view_ngfactory["b" /* View_CoreSplitViewComponent_0 */], split_view_ngfactory["a" /* RenderType_CoreSplitViewComponent */])), core["_30" /* ɵdid */](21, 245760, [[1, 4]], 0, split_view["a" /* CoreSplitViewComponent */], [[2, nav_controller["a" /* NavController */]], core["t" /* ElementRef */], fileuploader["a" /* CoreFileUploaderProvider */], platform["a" /* Platform */], translate_service["a" /* TranslateService */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](23, 0, null, 0, 24, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](24, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n        "])), (_l()(), core["_31" /* ɵeld */](26, 0, null, 1, 20, "core-tabs", [], null, null, null, tabs_ngfactory["b" /* View_CoreTabsComponent_0 */], tabs_ngfactory["a" /* RenderType_CoreTabsComponent */])), core["_30" /* ɵdid */](27, 4964352, [[2, 4]], 0, tabs["a" /* CoreTabsComponent */], [core["t" /* ElementRef */], content["a" /* Content */], dom["a" /* CoreDomUtilsProvider */], app["a" /* CoreAppProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](29, 0, null, 0, 7, "core-tab", [["icon", "chatbubbles"]], null, null, null, tab_ngfactory["b" /* View_CoreTabComponent_0 */], tab_ngfactory["a" /* RenderType_CoreTabComponent */])), core["_30" /* ɵdid */](30, 245760, null, 2, tab["a" /* CoreTabComponent */], [tabs["a" /* CoreTabsComponent */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */]], { title: [0, "title"], icon: [1, "icon"] }, null), core["_52" /* ɵqud */](335544320, 4, { template: 0 }), core["_52" /* ɵqud */](335544320, 5, { scroll: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](0, [[4, 2]], null, 0, null, View_AddonMessagesIndexPage_1)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](38, 0, null, 0, 7, "core-tab", [["icon", "person"]], null, null, null, tab_ngfactory["b" /* View_CoreTabComponent_0 */], tab_ngfactory["a" /* RenderType_CoreTabComponent */])), core["_30" /* ɵdid */](39, 245760, null, 2, tab["a" /* CoreTabComponent */], [tabs["a" /* CoreTabsComponent */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */]], { title: [0, "title"], icon: [1, "icon"] }, null), core["_52" /* ɵqud */](335544320, 6, { template: 0 }), core["_52" /* ɵqud */](335544320, 7, { scroll: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](0, [[6, 2]], null, 0, null, View_AddonMessagesIndexPage_2)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"]))], function (_ck, _v) { _ck(_v, 7, 0); _ck(_v, 21, 0); _ck(_v, 27, 0); var currVal_5 = core["_56" /* ɵunv */](_v, 30, 0, core["_44" /* ɵnov */](_v, 33).transform("addon.messages.messages")); var currVal_6 = "chatbubbles"; _ck(_v, 30, 0, currVal_5, currVal_6); var currVal_7 = core["_56" /* ɵunv */](_v, 39, 0, core["_44" /* ɵnov */](_v, 42).transform("addon.messages.contacts")); var currVal_8 = "person"; _ck(_v, 39, 0, currVal_7, currVal_8); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 6)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 6)._sbPadding; _ck(_v, 5, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 11, 0, core["_44" /* ɵnov */](_v, 12).transform("addon.messages.messages")); _ck(_v, 11, 0, currVal_2); var currVal_3 = core["_44" /* ɵnov */](_v, 24).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 24)._hasRefresher; _ck(_v, 23, 0, currVal_3, currVal_4); }); }
+function View_AddonMessagesIndexPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { splitviewCtrl: 0 }), core["_52" /* ɵqud */](402653184, 2, { tabsComponent: 0 }), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 21, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](3, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 17, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](6, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](7, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](9, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](10, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](11, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](14, 0, null, 2, 7, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](15, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, null, 1, "core-context-menu", [], null, null, null, context_menu_ngfactory["b" /* View_CoreContextMenuComponent_0 */], context_menu_ngfactory["a" /* RenderType_CoreContextMenuComponent */])), core["_30" /* ɵdid */](20, 245760, null, 0, context_menu["a" /* CoreContextMenuComponent */], [translate_service["a" /* TranslateService */], popover_controller["a" /* PopoverController */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */], [2, tab["a" /* CoreTabComponent */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](25, 0, null, null, 28, "core-split-view", [], null, null, null, split_view_ngfactory["b" /* View_CoreSplitViewComponent_0 */], split_view_ngfactory["a" /* RenderType_CoreSplitViewComponent */])), core["_30" /* ɵdid */](26, 245760, [[1, 4]], 0, split_view["a" /* CoreSplitViewComponent */], [[2, nav_controller["a" /* NavController */]], core["t" /* ElementRef */], fileuploader["a" /* CoreFileUploaderProvider */], platform["a" /* Platform */], translate_service["a" /* TranslateService */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](28, 0, null, 0, 24, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](29, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n        "])), (_l()(), core["_31" /* ɵeld */](31, 0, null, 1, 20, "core-tabs", [], null, null, null, tabs_ngfactory["b" /* View_CoreTabsComponent_0 */], tabs_ngfactory["a" /* RenderType_CoreTabsComponent */])), core["_30" /* ɵdid */](32, 4964352, [[2, 4]], 0, tabs["a" /* CoreTabsComponent */], [core["t" /* ElementRef */], content["a" /* Content */], dom["a" /* CoreDomUtilsProvider */], app["a" /* CoreAppProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](34, 0, null, 0, 7, "core-tab", [["icon", "chatbubbles"]], null, null, null, tab_ngfactory["b" /* View_CoreTabComponent_0 */], tab_ngfactory["a" /* RenderType_CoreTabComponent */])), core["_30" /* ɵdid */](35, 245760, null, 2, tab["a" /* CoreTabComponent */], [tabs["a" /* CoreTabsComponent */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */]], { title: [0, "title"], icon: [1, "icon"] }, null), core["_52" /* ɵqud */](335544320, 4, { template: 0 }), core["_52" /* ɵqud */](335544320, 5, { scroll: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](0, [[4, 2]], null, 0, null, View_AddonMessagesIndexPage_1)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](43, 0, null, 0, 7, "core-tab", [["icon", "person"]], null, null, null, tab_ngfactory["b" /* View_CoreTabComponent_0 */], tab_ngfactory["a" /* RenderType_CoreTabComponent */])), core["_30" /* ɵdid */](44, 245760, null, 2, tab["a" /* CoreTabComponent */], [tabs["a" /* CoreTabsComponent */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */]], { title: [0, "title"], icon: [1, "icon"] }, null), core["_52" /* ɵqud */](335544320, 6, { template: 0 }), core["_52" /* ɵqud */](335544320, 7, { scroll: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](0, [[6, 2]], null, 0, null, View_AddonMessagesIndexPage_2)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"]))], function (_ck, _v) { _ck(_v, 7, 0); _ck(_v, 20, 0); _ck(_v, 26, 0); _ck(_v, 32, 0); var currVal_5 = core["_56" /* ɵunv */](_v, 35, 0, core["_44" /* ɵnov */](_v, 38).transform("addon.messages.messages")); var currVal_6 = "chatbubbles"; _ck(_v, 35, 0, currVal_5, currVal_6); var currVal_7 = core["_56" /* ɵunv */](_v, 44, 0, core["_44" /* ɵnov */](_v, 47).transform("addon.messages.contacts")); var currVal_8 = "person"; _ck(_v, 44, 0, currVal_7, currVal_8); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 6)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 6)._sbPadding; _ck(_v, 5, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 11, 0, core["_44" /* ɵnov */](_v, 12).transform("addon.messages.messages")); _ck(_v, 11, 0, currVal_2); var currVal_3 = core["_44" /* ɵnov */](_v, 29).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 29)._hasRefresher; _ck(_v, 28, 0, currVal_3, currVal_4); }); }
 function View_AddonMessagesIndexPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-messages-index", [], null, null, null, View_AddonMessagesIndexPage_0, RenderType_AddonMessagesIndexPage)), core["_30" /* ɵdid */](1, 180224, null, 0, index_AddonMessagesIndexPage, [events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */]], null, null)], null, null); }
 var AddonMessagesIndexPageNgFactory = core["_27" /* ɵccf */]("page-addon-messages-index", index_AddonMessagesIndexPage, View_AddonMessagesIndexPage_Host_0, {}, {}, []);
 
@@ -843,6 +855,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.messagesProvider = messagesProvider;
         this.domUtils = domUtils;
         this.appProvider = appProvider;
+        this.utils = utils;
         this.loaded = false;
         this.search = {
             enabled: false,
@@ -882,14 +895,11 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
                 if (typeof discussion != 'undefined') {
                     // A discussion has been read reset counter.
                     discussion.unread = false;
-                    // Discussions changed, invalidate them.
-                    _this.messagesProvider.invalidateDiscussionsCache();
+                    // Conversations changed, invalidate them and refresh unread counts.
+                    _this.messagesProvider.invalidateConversations();
+                    _this.messagesProvider.refreshUnreadConversationCounts();
                 }
             }
-        }, this.siteId);
-        // Update discussions when cron read is executed.
-        this.cronObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].READ_CRON_EVENT, function (data) {
-            _this.refreshData();
         }, this.siteId);
         // Refresh the view when the app is resumed.
         this.appResumeSubscription = platform.resume.subscribe(function () {
@@ -904,7 +914,8 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.pushObserver = pushNotificationsDelegate.on('receive').subscribe(function (notification) {
             // New message received. If it's from current site, refresh the data.
             if (utils.isFalseOrZero(notification.notif) && notification.site == _this.siteId) {
-                _this.refreshData();
+                // Don't refresh unread counts, it's refreshed from the main menu handler in this case.
+                _this.refreshData(null, false);
             }
         });
     }
@@ -928,15 +939,20 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
      * Refresh the data.
      *
      * @param {any} [refresher] Refresher.
+     * @param {boolean} [refreshUnreadCounts=true] Whteher to refresh unread counts.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonMessagesDiscussionsComponent.prototype.refreshData = function (refresher) {
+    AddonMessagesDiscussionsComponent.prototype.refreshData = function (refresher, refreshUnreadCounts) {
         var _this = this;
-        return this.messagesProvider.invalidateDiscussionsCache().then(function () {
+        if (refreshUnreadCounts === void 0) { refreshUnreadCounts = true; }
+        var promises = [];
+        promises.push(this.messagesProvider.invalidateDiscussionsCache());
+        if (refreshUnreadCounts) {
+            promises.push(this.messagesProvider.invalidateUnreadConversationCounts());
+        }
+        return this.utils.allPromises(promises).finally(function () {
             return _this.fetchData().finally(function () {
                 if (refresher) {
-                    // Actions to take if refresh comes from the user.
-                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].READ_CHANGED_EVENT, undefined, _this.siteId);
                     refresher.complete();
                 }
             });
@@ -951,7 +967,8 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         var _this = this;
         this.loadingMessage = this.loadingMessages;
         this.search.enabled = this.messagesProvider.isSearchMessagesEnabled();
-        return this.messagesProvider.getDiscussions().then(function (discussions) {
+        var promises = [];
+        promises.push(this.messagesProvider.getDiscussions().then(function (discussions) {
             // Convert to an array for sorting.
             var discussionsSorted = [];
             for (var userId in discussions) {
@@ -961,7 +978,9 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
             _this.discussions = discussionsSorted.sort(function (a, b) {
                 return b.message.timecreated - a.message.timecreated;
             });
-        }).catch(function (error) {
+        }));
+        promises.push(this.messagesProvider.getUnreadConversationCounts());
+        return Promise.all(promises).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingdiscussions', true);
         }).finally(function () {
             _this.loaded = true;
@@ -1111,6 +1130,9 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
                 if (index >= 0) {
                     _this.contacts.splice(index, 1);
                 }
+            }
+            else if (data.contactRequestConfirmed) {
+                _this.refreshData();
             }
         }, sitesProvider.getCurrentSiteId());
     }

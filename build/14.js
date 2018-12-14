@@ -250,22 +250,24 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
             if (_this.groupMessagingEnabled) {
                 // Get the conversation ID if it exists and we don't have it yet.
                 return _this.getConversation(_this.conversationId, _this.userId).then(function (exists) {
+                    var promises = [];
                     if (exists) {
                         // Fetch the messages for the first time.
-                        return _this.fetchMessages();
+                        promises.push(_this.fetchMessages());
                     }
-                }).then(function () {
-                    var promise;
                     if (_this.userId) {
-                        promise = _this.messagesProvider.getMemberInfo(_this.userId);
+                        promises.push(_this.messagesProvider.getMemberInfo(_this.userId).then(function (member) {
+                            _this.otherMember = member;
+                            if (!exists && member) {
+                                _this.conversationImage = member.profileimageurl;
+                                _this.title = member.fullname;
+                            }
+                        }));
                     }
                     else {
-                        // Group conversation.
-                        promise = Promise.resolve(null);
+                        _this.otherMember = null;
                     }
-                    return promise.then(function (member) {
-                        _this.otherMember = member;
-                    });
+                    return Promise.all(promises);
                 });
             }
             else {

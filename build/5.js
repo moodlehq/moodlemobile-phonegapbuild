@@ -101,7 +101,7 @@ var search_AddonMessagesSearchPage = /** @class */ (function () {
             loadingMore: false,
             loadMoreError: false
         };
-        this.selectedUserId = null;
+        this.selectedResult = null;
         // Update block status of a user.
         this.memberInfoObserver = eventsProvider.on(messages["a" /* AddonMessagesProvider */].MEMBER_INFO_CHANGED_EVENT, function (data) {
             if (!data.userBlocked && !data.userUnblocked) {
@@ -209,13 +209,13 @@ var search_AddonMessagesSearchPage = /** @class */ (function () {
             }
             if (!loadMore) {
                 if (_this.contacts.results.length > 0) {
-                    _this.openDiscussion(_this.contacts.results[0].id, true);
+                    _this.openConversation(_this.contacts.results[0], true);
                 }
                 else if (_this.nonContacts.results.length > 0) {
-                    _this.openDiscussion(_this.nonContacts.results[0].id, true);
+                    _this.openConversation(_this.nonContacts.results[0], true);
                 }
                 else if (_this.messages.results.length > 0) {
-                    _this.openDiscussion(_this.messages.results[0].userid, true);
+                    _this.openConversation(_this.messages.results[0], true);
                 }
             }
             var _a, _b, _c;
@@ -240,16 +240,23 @@ var search_AddonMessagesSearchPage = /** @class */ (function () {
         });
     };
     /**
-     * Open a discussion in the split view.
+     * Open a conversation in the split view.
      *
-     * @param {number} userId User id.
+     * @param {any} result User or message.
      * @param {boolean} [onInit=false] Whether the tser was selected on initial load.
      */
-    AddonMessagesSearchPage.prototype.openDiscussion = function (userId, onInit) {
+    AddonMessagesSearchPage.prototype.openConversation = function (result, onInit) {
         if (onInit === void 0) { onInit = false; }
         if (!onInit || this.splitviewCtrl.isOn()) {
-            this.selectedUserId = userId;
-            this.splitviewCtrl.push('AddonMessagesDiscussionPage', { userId: userId });
+            this.selectedResult = result;
+            var params = {};
+            if (result.conversationid) {
+                params.conversationId = result.conversationid;
+            }
+            else {
+                params.userId = result.id;
+            }
+            this.splitviewCtrl.push('AddonMessagesDiscussionPage', params);
         }
     };
     /**
@@ -638,9 +645,9 @@ function View_AddonMessagesSearchPage_8(_l) { return core["_57" /* ɵvid */](0, 
 function View_AddonMessagesSearchPage_9(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 3, "ion-note", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, note["a" /* Note */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](2, null, ["\n            ", "\n        "])), core["_49" /* ɵppd */](3, 1)], null, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 2, 0, _ck(_v, 3, 0, core["_44" /* ɵnov */](_v.parent.parent.parent, 0), _v.parent.context.$implicit.lastmessagedate)); _ck(_v, 2, 0, currVal_0); }); }
 function View_AddonMessagesSearchPage_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-format-text", [["clean", "true"], ["singleLine", "true"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"], clean: [1, "clean"], singleLine: [2, "singleLine"] }, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.lastmessage; var currVal_1 = "true"; var currVal_2 = "true"; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
 function View_AddonMessagesSearchPage_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 25, "a", [["class", "addon-message-discussion item item-block"], ["ion-item", ""], ["text-wrap", ""]], [[8, "title", 0], [2, "core-split-item-selected", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.openDiscussion(_v.context.$implicit.id) !== false);
+        var pd_0 = (_co.openConversation(_v.context.$implicit) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 9, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 10, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 11, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 0, 2, "ion-avatar", [["core-user-avatar", ""], ["item-start", ""]], null, null, null, user_avatar_ngfactory["b" /* View_CoreUserAvatarComponent_0 */], user_avatar_ngfactory["a" /* RenderType_CoreUserAvatarComponent */])), core["_30" /* ɵdid */](8, 638976, null, 0, user_avatar["a" /* CoreUserAvatarComponent */], [nav_controller["a" /* NavController */], sites["a" /* CoreSitesProvider */], utils["a" /* CoreUtilsProvider */]], { user: [0, "user"], linkProfile: [1, "linkProfile"], checkOnline: [2, "checkOnline"] }, null), core["_30" /* ɵdid */](9, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 2, 7, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](14, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonMessagesSearchPage_8)), core["_30" /* ɵdid */](17, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 2, 1, null, View_AddonMessagesSearchPage_9)), core["_30" /* ɵdid */](21, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 2, 1, null, View_AddonMessagesSearchPage_10)), core["_30" /* ɵdid */](24, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "]))], function (_ck, _v) { var currVal_2 = _v.context.$implicit; var currVal_3 = false; var currVal_4 = true; _ck(_v, 8, 0, currVal_2, currVal_3, currVal_4); var currVal_5 = _v.context.$implicit.fullname; _ck(_v, 14, 0, currVal_5); var currVal_6 = _v.context.$implicit.isblocked; _ck(_v, 17, 0, currVal_6); var currVal_7 = (_v.context.$implicit.lastmessagedate > 0); _ck(_v, 21, 0, currVal_7); var currVal_8 = _v.context.$implicit.lastmessage; _ck(_v, 24, 0, currVal_8); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.fullname; var currVal_1 = (_v.context.$implicit.id == _co.selectedUserId); _ck(_v, 0, 0, currVal_0, currVal_1); }); }
+    } return ad; }, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 9, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 10, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 11, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 0, 2, "ion-avatar", [["core-user-avatar", ""], ["item-start", ""]], null, null, null, user_avatar_ngfactory["b" /* View_CoreUserAvatarComponent_0 */], user_avatar_ngfactory["a" /* RenderType_CoreUserAvatarComponent */])), core["_30" /* ɵdid */](8, 638976, null, 0, user_avatar["a" /* CoreUserAvatarComponent */], [nav_controller["a" /* NavController */], sites["a" /* CoreSitesProvider */], utils["a" /* CoreUtilsProvider */]], { user: [0, "user"], linkProfile: [1, "linkProfile"], checkOnline: [2, "checkOnline"] }, null), core["_30" /* ɵdid */](9, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 2, 7, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](14, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonMessagesSearchPage_8)), core["_30" /* ɵdid */](17, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 2, 1, null, View_AddonMessagesSearchPage_9)), core["_30" /* ɵdid */](21, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 2, 1, null, View_AddonMessagesSearchPage_10)), core["_30" /* ɵdid */](24, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n    "]))], function (_ck, _v) { var currVal_2 = _v.context.$implicit; var currVal_3 = false; var currVal_4 = true; _ck(_v, 8, 0, currVal_2, currVal_3, currVal_4); var currVal_5 = _v.context.$implicit.fullname; _ck(_v, 14, 0, currVal_5); var currVal_6 = _v.context.$implicit.isblocked; _ck(_v, 17, 0, currVal_6); var currVal_7 = (_v.context.$implicit.lastmessagedate > 0); _ck(_v, 21, 0, currVal_7); var currVal_8 = _v.context.$implicit.lastmessage; _ck(_v, 24, 0, currVal_8); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.fullname; var currVal_1 = (_v.context.$implicit == _co.selectedResult); _ck(_v, 0, 0, currVal_0, currVal_1); }); }
 function View_AddonMessagesSearchPage_12(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "div", [["padding-horizontal", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 3, "button", [["block", ""], ["color", "light"], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.search(_co.query, _v.parent.parent.context.item.type) !== false);
         ad = (pd_0 && ad);
@@ -866,6 +873,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.messagesProvider = messagesProvider;
         this.domUtils = domUtils;
         this.appProvider = appProvider;
+        this.utils = utils;
         this.loaded = false;
         this.search = {
             enabled: false,
@@ -905,14 +913,11 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
                 if (typeof discussion != 'undefined') {
                     // A discussion has been read reset counter.
                     discussion.unread = false;
-                    // Discussions changed, invalidate them.
-                    _this.messagesProvider.invalidateDiscussionsCache();
+                    // Conversations changed, invalidate them and refresh unread counts.
+                    _this.messagesProvider.invalidateConversations();
+                    _this.messagesProvider.refreshUnreadConversationCounts();
                 }
             }
-        }, this.siteId);
-        // Update discussions when cron read is executed.
-        this.cronObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].READ_CRON_EVENT, function (data) {
-            _this.refreshData();
         }, this.siteId);
         // Refresh the view when the app is resumed.
         this.appResumeSubscription = platform.resume.subscribe(function () {
@@ -927,7 +932,8 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.pushObserver = pushNotificationsDelegate.on('receive').subscribe(function (notification) {
             // New message received. If it's from current site, refresh the data.
             if (utils.isFalseOrZero(notification.notif) && notification.site == _this.siteId) {
-                _this.refreshData();
+                // Don't refresh unread counts, it's refreshed from the main menu handler in this case.
+                _this.refreshData(null, false);
             }
         });
     }
@@ -951,15 +957,20 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
      * Refresh the data.
      *
      * @param {any} [refresher] Refresher.
+     * @param {boolean} [refreshUnreadCounts=true] Whteher to refresh unread counts.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonMessagesDiscussionsComponent.prototype.refreshData = function (refresher) {
+    AddonMessagesDiscussionsComponent.prototype.refreshData = function (refresher, refreshUnreadCounts) {
         var _this = this;
-        return this.messagesProvider.invalidateDiscussionsCache().then(function () {
+        if (refreshUnreadCounts === void 0) { refreshUnreadCounts = true; }
+        var promises = [];
+        promises.push(this.messagesProvider.invalidateDiscussionsCache());
+        if (refreshUnreadCounts) {
+            promises.push(this.messagesProvider.invalidateUnreadConversationCounts());
+        }
+        return this.utils.allPromises(promises).finally(function () {
             return _this.fetchData().finally(function () {
                 if (refresher) {
-                    // Actions to take if refresh comes from the user.
-                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].READ_CHANGED_EVENT, undefined, _this.siteId);
                     refresher.complete();
                 }
             });
@@ -974,7 +985,8 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         var _this = this;
         this.loadingMessage = this.loadingMessages;
         this.search.enabled = this.messagesProvider.isSearchMessagesEnabled();
-        return this.messagesProvider.getDiscussions().then(function (discussions) {
+        var promises = [];
+        promises.push(this.messagesProvider.getDiscussions().then(function (discussions) {
             // Convert to an array for sorting.
             var discussionsSorted = [];
             for (var userId in discussions) {
@@ -984,7 +996,9 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
             _this.discussions = discussionsSorted.sort(function (a, b) {
                 return b.message.timecreated - a.message.timecreated;
             });
-        }).catch(function (error) {
+        }));
+        promises.push(this.messagesProvider.getUnreadConversationCounts());
+        return Promise.all(promises).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingdiscussions', true);
         }).finally(function () {
             _this.loaded = true;
@@ -1134,6 +1148,9 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
                 if (index >= 0) {
                     _this.contacts.splice(index, 1);
                 }
+            }
+            else if (data.contactRequestConfirmed) {
+                _this.refreshData();
             }
         }, sitesProvider.getCurrentSiteId());
     }
