@@ -176,7 +176,7 @@ var utils_iframe = __webpack_require__(37);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(73);
+var platform_browser = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);

@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 1881:
+/***/ 1880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37,7 +37,7 @@ var providers_logger = __webpack_require__(5);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/sync.ts
-var sync = __webpack_require__(83);
+var sync = __webpack_require__(85);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -853,7 +853,7 @@ var deep_linker = __webpack_require__(51);
 var item_divider = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
-var card = __webpack_require__(84);
+var card = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
 var progress_bar_ngfactory = __webpack_require__(447);
@@ -862,10 +862,10 @@ var progress_bar_ngfactory = __webpack_require__(447);
 var progress_bar = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(73);
+var platform_browser = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(76);
+var list = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(38);

@@ -413,7 +413,7 @@ var radio_button = __webpack_require__(136);
 var radio_group = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(76);
+var list = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
 var item_divider = __webpack_require__(107);
@@ -440,7 +440,7 @@ var row = __webpack_require__(112);
 var list_header = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
-var card = __webpack_require__(84);
+var card = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);

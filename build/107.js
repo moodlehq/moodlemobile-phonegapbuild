@@ -31,7 +31,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/assign.ts
-var providers_assign = __webpack_require__(69);
+var providers_assign = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/assign-offline.ts
 var assign_offline = __webpack_require__(121);
@@ -531,7 +531,7 @@ var loading_ngfactory = __webpack_require__(48);
 var loading = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(76);
+var list = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

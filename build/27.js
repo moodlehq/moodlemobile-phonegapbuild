@@ -1,6 +1,6 @@
 webpackJsonp([27],{
 
-/***/ 1866:
+/***/ 1865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -506,10 +506,10 @@ var item_reorder = __webpack_require__(27);
 var item_divider = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./src/components/mark-required/mark-required.ngfactory.js
-var mark_required_ngfactory = __webpack_require__(80);
+var mark_required_ngfactory = __webpack_require__(82);
 
 // EXTERNAL MODULE: ./src/components/mark-required/mark-required.ts
-var mark_required = __webpack_require__(74);
+var mark_required = __webpack_require__(75);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
 var utils_text = __webpack_require__(9);
@@ -575,7 +575,7 @@ var radio_button = __webpack_require__(136);
 var radio_group = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(76);
+var list = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(38);

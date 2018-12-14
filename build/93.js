@@ -611,19 +611,19 @@ var content = __webpack_require__(23);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ngfactory.js
-var context_menu_item_ngfactory = __webpack_require__(86);
+var context_menu_item_ngfactory = __webpack_require__(80);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ts
-var context_menu_item = __webpack_require__(77);
+var context_menu_item = __webpack_require__(73);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
-var context_menu = __webpack_require__(71);
+var context_menu = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
-var card = __webpack_require__(84);
+var card = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(46);
@@ -701,7 +701,7 @@ var row = __webpack_require__(112);
 var col = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(76);
+var list = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(38);
@@ -755,7 +755,7 @@ var card_content = __webpack_require__(449);
 var post = __webpack_require__(1399);
 
 // EXTERNAL MODULE: ./src/providers/sync.ts
-var src_providers_sync = __webpack_require__(83);
+var src_providers_sync = __webpack_require__(85);
 
 // CONCATENATED MODULE: ./src/addon/mod/forum/components/post/post.ngfactory.js
 /**
@@ -898,16 +898,16 @@ var toolbar_item = __webpack_require__(435);
 var navbar_buttons_ngfactory = __webpack_require__(88);
 
 // EXTERNAL MODULE: ./src/components/navbar-buttons/navbar-buttons.ts
-var navbar_buttons = __webpack_require__(79);
+var navbar_buttons = __webpack_require__(81);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
-var context_menu_ngfactory = __webpack_require__(85);
+var context_menu_ngfactory = __webpack_require__(79);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
 var popover_controller = __webpack_require__(62);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
-var tab = __webpack_require__(70);
+var tab = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(184);

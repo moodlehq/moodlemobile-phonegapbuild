@@ -199,7 +199,7 @@ var progress_bar_ngfactory = __webpack_require__(447);
 var progress_bar = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(73);
+var platform_browser = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
 var badge = __webpack_require__(146);
