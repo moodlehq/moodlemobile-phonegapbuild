@@ -1207,7 +1207,7 @@
     "core.course.contents": "Conteúdos",
     "core.course.couldnotloadsectioncontent": "Não foi possível carregar o conteúdo da secção. Por favor tente novamente mais tarde.",
     "core.course.couldnotloadsections": "Não foi possível carregar as secções. Por favor tente novamente mais tarde.",
-    "core.course.coursesummary": "Resumo",
+    "core.course.coursesummary": "Descrição da disciplina",
     "core.course.downloadcourse": "Descarregar disciplina",
     "core.course.errordownloadingcourse": "Erro ao descarregar a disciplina",
     "core.course.errordownloadingsection": "Erro ao descarregar a secção.",
