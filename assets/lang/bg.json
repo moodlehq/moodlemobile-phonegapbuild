@@ -76,7 +76,7 @@
     "addon.mod_assign.addattempt": "Позволяване на друг опит",
     "addon.mod_assign.addnewattempt": "Позволяване на нов опит",
     "addon.mod_assign.addnewattemptfromprevious": "Добавяне на нов опит, основан на предишно предаване",
-    "addon.mod_assign.addsubmission": "Добавяне на задание",
+    "addon.mod_assign.addsubmission": "Добавяне на изпълнение",
     "addon.mod_assign.allowsubmissionsanddescriptionfromdatesummary": "Данните за заданието и формулярът за предаване ще бъдат достъпни от <strong>{{$a}}</strong>",
     "addon.mod_assign.allowsubmissionsfromdate": "Позволено предаване от",
     "addon.mod_assign.allowsubmissionsfromdatesummary": "По това задание се приемат работи от <strong>{{$a}}</strong>",
