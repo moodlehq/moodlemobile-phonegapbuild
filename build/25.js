@@ -40,7 +40,7 @@ var utils_text = __webpack_require__(9);
 var fileuploader = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/glossary.ts
-var glossary = __webpack_require__(191);
+var glossary = __webpack_require__(192);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/offline.ts
 var offline = __webpack_require__(230);
@@ -508,7 +508,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(184);
+var content_ngfactory = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(106);

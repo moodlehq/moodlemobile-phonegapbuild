@@ -283,7 +283,7 @@ var item_reorder = __webpack_require__(27);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(185);
+var avatar = __webpack_require__(186);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(228);
@@ -361,7 +361,7 @@ var toolbar_item = __webpack_require__(435);
 var nav_push = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(184);
+var content_ngfactory = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(31);
@@ -385,7 +385,7 @@ var fab_container = __webpack_require__(232);
 var fab_ngfactory = __webpack_require__(354);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.js
-var fab = __webpack_require__(195);
+var fab = __webpack_require__(196);
 
 // CONCATENATED MODULE: ./src/core/login/pages/sites/sites.ngfactory.js
 /**
