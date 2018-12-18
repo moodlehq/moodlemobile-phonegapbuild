@@ -127,7 +127,7 @@
     "addon.messages.messagepreferences": "簡訊偏好",
     "addon.messages.messages": "簡訊",
     "addon.messages.newmessage": "新簡訊",
-    "addon.messages.nomessages": "沒有待處理的簡訊",
+    "addon.messages.nomessagesfound": "沒有找到簡訊",
     "addon.messages.noncontacts": "沒有聯絡人",
     "addon.messages.nousersfound": "沒有使用者",
     "addon.messages.removecontact": "刪除聯絡人",

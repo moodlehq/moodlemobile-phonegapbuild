@@ -93,7 +93,7 @@
     "addon.messages.messagepreferences": "ការកំណត់ផ្ទាល់ខ្លួនសម្រាប់សារ",
     "addon.messages.messages": "សារ",
     "addon.messages.newmessage": "សារថ្មី",
-    "addon.messages.nomessages": "មិនមានសារកំពុងរង់ចាំឡើយ",
+    "addon.messages.nomessagesfound": "រកមិនឃើញសារ",
     "addon.messages.noncontacts": "មិននៅក្នុងបញ្ជីទំនាក់ទំនង",
     "addon.messages.removecontact": "យកទំនាក់ទំនងចេញ",
     "addon.messages.removefromyourcontacts": "ដកចេញពីបញ្ជីទំនាក់ទំនងរបស់អ្នក",

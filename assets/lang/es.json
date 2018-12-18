@@ -138,7 +138,7 @@
     "addon.messages.messages": "Mensajes",
     "addon.messages.newmessage": "Nuevo mensaje",
     "addon.messages.newmessages": "Nuevos mensajes",
-    "addon.messages.nomessages": "No hay mensajes",
+    "addon.messages.nomessagesfound": "No se encontraron mensajes",
     "addon.messages.noncontacts": "No contactos",
     "addon.messages.nousersfound": "No se encuentran usuarios",
     "addon.messages.removecontact": "Eliminar contacto",

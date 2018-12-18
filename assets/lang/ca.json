@@ -129,7 +129,7 @@
     "addon.messages.messages": "Missatges",
     "addon.messages.newmessage": "Missatge nou",
     "addon.messages.newmessages": "Nous missatges",
-    "addon.messages.nomessages": "No teniu missatges pendents",
+    "addon.messages.nomessagesfound": "No s'han trobat missatges",
     "addon.messages.nousersfound": "No s'han trobat usuaris",
     "addon.messages.removecontact": "Suprimeix contacte",
     "addon.messages.removecontactconfirm": "El contacte s'eliminarà de la vostra llista de contactes.",

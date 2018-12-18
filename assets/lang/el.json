@@ -123,7 +123,7 @@
     "addon.messages.messages": "Μηνύματα",
     "addon.messages.newmessage": "Νέο μήνυμα",
     "addon.messages.newmessages": "Νέα μηνύματα",
-    "addon.messages.nomessages": "Δεν υπάρχουν μηνύματα",
+    "addon.messages.nomessagesfound": "Δε βρέθηκαν μηνύματα",
     "addon.messages.noncontacts": "Μη επαφές",
     "addon.messages.nousersfound": "Δεν βρέθηκαν χρήστες",
     "addon.messages.removecontact": "Αφαίρεση επαφής",
