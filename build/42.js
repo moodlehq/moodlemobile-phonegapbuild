@@ -87,23 +87,14 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
         }
         this.showTabs = true;
         this.redirectObs = this.eventsProvider.on(events["a" /* CoreEventsProvider */].LOAD_PAGE_MAIN_MENU, function (data) {
-            // Check if the redirect page is the root page of any of the tabs.
-            var i = _this.tabs.findIndex(function (tab, i) {
-                return tab.page == data.redirectPage;
-            });
-            if (i >= 0) {
-                // Tab found. Set the params.
-                _this.tabs[i].pageParams = Object.assign({}, data.redirectParams);
+            if (!_this.loaded) {
+                // View isn't ready yet, wait for it to be ready.
+                _this.pendingRedirect = data;
             }
             else {
-                // Tab not found, use a phantom tab.
-                _this.redirectPage = data.redirectPage;
-                _this.redirectParams = data.redirectParams;
+                delete _this.pendingRedirect;
+                _this.handleRedirect(data);
             }
-            setTimeout(function () {
-                // Let the tab load the params before navigating.
-                _this.mainTabs.selectTabRootByIndex(i + 1);
-            });
         });
         this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
             // Remove the handlers that should only appear in the More menu.
@@ -130,6 +121,40 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
                 return b.priority - a.priority;
             });
             _this.loaded = _this.menuDelegate.areHandlersLoaded();
+            if (_this.loaded && _this.pendingRedirect) {
+                // Wait for tabs to be initialized and then handle the redirect.
+                setTimeout(function () {
+                    if (_this.pendingRedirect) {
+                        _this.handleRedirect(_this.pendingRedirect);
+                        delete _this.pendingRedirect;
+                    }
+                });
+            }
+        });
+    };
+    /**
+     * Handle a redirect.
+     *
+     * @param {any} data Data received.
+     */
+    CoreMainMenuPage.prototype.handleRedirect = function (data) {
+        var _this = this;
+        // Check if the redirect page is the root page of any of the tabs.
+        var i = this.tabs.findIndex(function (tab, i) {
+            return tab.page == data.redirectPage;
+        });
+        if (i >= 0) {
+            // Tab found. Set the params.
+            this.tabs[i].pageParams = Object.assign({}, data.redirectParams);
+        }
+        else {
+            // Tab not found, use a phantom tab.
+            this.redirectPage = data.redirectPage;
+            this.redirectParams = data.redirectParams;
+        }
+        setTimeout(function () {
+            // Let the tab load the params before navigating.
+            _this.mainTabs.selectTabRootByIndex(i + 1);
         });
     };
     /**
