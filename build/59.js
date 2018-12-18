@@ -691,7 +691,7 @@ var dom_controller = __webpack_require__(31);
 var directives_link = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(224);
+var format_date = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(24);

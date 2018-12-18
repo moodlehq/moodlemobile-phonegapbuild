@@ -456,7 +456,7 @@ var spinner = __webpack_require__(94);
 var item_divider = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(224);
+var format_date = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(24);

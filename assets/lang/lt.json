@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Pasiekimo galiojimas",
     "addon.badges.issuerdetails": "Suteikėjo detalesnė informacija",
     "addon.badges.issuername": "Suteikėjo vardas",
+    "addon.badges.issuerurl": "Suteikėjo URL",
     "addon.badges.nobadges": "Nėra sukurtų pasiekimų.",
     "addon.badges.recipientdetails": "Informacija apie gavėją",
     "addon.badges.warnexpired": "(Šis pasiekimas baigė galioti!)",

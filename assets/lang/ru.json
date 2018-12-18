@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Срок действия значка",
     "addon.badges.issuerdetails": "Сведения об эмитенте",
     "addon.badges.issuername": "Наименование эмитента",
+    "addon.badges.issuerurl": "URL-адрес эмитента",
     "addon.badges.nobadges": "Нет доступных значков.",
     "addon.badges.recipientdetails": "Сведения о получателе",
     "addon.badges.warnexpired": "(Срок действия этого значка истек!)",

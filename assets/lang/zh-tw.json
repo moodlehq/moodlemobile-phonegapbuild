@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "獎章到期",
     "addon.badges.issuerdetails": "頒授者細節",
     "addon.badges.issuername": "頒授者的姓名",
+    "addon.badges.issuerurl": "頒授者的網址",
     "addon.badges.nobadges": "這裡沒有可用的獎章",
     "addon.badges.recipientdetails": "收件者細節",
     "addon.badges.warnexpired": "(這一獎章已經過期失效！)",

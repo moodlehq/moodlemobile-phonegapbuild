@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Bedž ističe",
     "addon.badges.issuerdetails": "Podaci o izdavaču",
     "addon.badges.issuername": "Ime/naziv izdavača bedža",
+    "addon.badges.issuerurl": "URL adresa izdavača",
     "addon.badges.nobadges": "Nema dostupnih bedževa",
     "addon.badges.recipientdetails": "Detalji o primaocu",
     "addon.badges.warnexpired": "(Ovaj bedž je istekao!)",

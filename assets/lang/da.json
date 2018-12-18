@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Badge-udløb",
     "addon.badges.issuerdetails": "Udstederdata",
     "addon.badges.issuername": "Udsteders navn",
+    "addon.badges.issuerurl": "Udsteders URL",
     "addon.badges.nobadges": "Der er ingen tilgængelige badges.",
     "addon.badges.recipientdetails": "Modtagerdata",
     "addon.badges.warnexpired": "(Badgen er udgået!)",

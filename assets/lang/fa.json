@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "انقضای مدال",
     "addon.badges.issuerdetails": "مشخصات صادرکننده",
     "addon.badges.issuername": "نام صادرکننده",
+    "addon.badges.issuerurl": "آدرس صادرکننده",
     "addon.badges.nobadges": "مدالی موجود نیست.",
     "addon.badges.recipientdetails": "مشخصات دریافت‌کننده",
     "addon.badges.warnexpired": "(این مدال منقضی شده است!)",

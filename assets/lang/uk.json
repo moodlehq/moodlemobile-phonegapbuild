@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Відзнака не актуальна",
     "addon.badges.issuerdetails": "Деталі присудження",
     "addon.badges.issuername": "Ім’я видавця",
+    "addon.badges.issuerurl": "URL видавця",
     "addon.badges.nobadges": "Немає доступних відзнак.",
     "addon.badges.recipientdetails": "Деталі отримувача",
     "addon.badges.warnexpired": "(Ця відзнака не актуальна!)",

@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Rozet sona erme",
     "addon.badges.issuerdetails": "çıkaran ayrıntıları",
     "addon.badges.issuername": "Çıkaranın adı",
+    "addon.badges.issuerurl": "Çıkaran URL",
     "addon.badges.nobadges": "Uygun nişan bulunmuyor.",
     "addon.badges.recipientdetails": "Alıcı bilgileri",
     "addon.badges.warnexpired": "(Bu nişan zaman aşımına uğramış!)",

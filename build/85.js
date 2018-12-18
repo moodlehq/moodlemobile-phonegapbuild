@@ -490,7 +490,7 @@ var progress_bar = __webpack_require__(281);
 var platform_browser = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(224);
+var format_date = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);

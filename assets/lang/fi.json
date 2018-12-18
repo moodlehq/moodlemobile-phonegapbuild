@@ -7,6 +7,7 @@
     "addon.badges.issuancedetails": "Osaamismerkin vanhentuminen",
     "addon.badges.issuerdetails": "Osaamismerkin myöntäjän tiedot",
     "addon.badges.issuername": "Osaamismerkin myöntäjän nimi",
+    "addon.badges.issuerurl": "Myöntäjän URL-osoite",
     "addon.badges.nobadges": "Yhtään osaamismerkkiä ei ole tarjolla",
     "addon.badges.recipientdetails": "Vastaanottajan tiedot",
     "addon.badges.warnexpired": "(Tämä osaamismerkki on vanhentunut)",

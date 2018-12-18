@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "מועד תפוגת ההישג",
     "addon.badges.issuerdetails": "פרטי הגורם אשר העניק את ההישג",
     "addon.badges.issuername": "שם מעניק ההישג",
+    "addon.badges.issuerurl": "קישור מעניק ההישג",
     "addon.badges.nobadges": "אין הישגים זמינים.",
     "addon.badges.recipientdetails": "פרטי המכותב",
     "addon.badges.warnexpired": "(תוקפו של הישג זה פג!)",

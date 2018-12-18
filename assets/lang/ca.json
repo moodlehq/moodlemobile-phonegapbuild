@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Expiració de la insígnia",
     "addon.badges.issuerdetails": "Detalls de l'atorgador",
     "addon.badges.issuername": "Nom de l'atorgador",
+    "addon.badges.issuerurl": "URL de l'atorgador",
     "addon.badges.nobadges": "No hi ha insígnies disponibles.",
     "addon.badges.recipientdetails": "Detalls del receptor",
     "addon.badges.warnexpired": "(Aquesta insígnia ha expirat!)",

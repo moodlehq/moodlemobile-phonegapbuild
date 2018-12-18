@@ -291,7 +291,7 @@ var split_view = __webpack_require__(34);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(224);
+var format_date = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);

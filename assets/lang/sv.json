@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Förfallande av märke",
     "addon.badges.issuerdetails": "Utfärdarens detaljer",
     "addon.badges.issuername": "Utfärdarens namn",
+    "addon.badges.issuerurl": "Utfärdarens URL",
     "addon.badges.nobadges": "Det finns inga märken tillgängliga.",
     "addon.badges.warnexpired": "(Det här märket har förfallit!)",
     "addon.block_activitymodules.pluginname": "Aktiviteter",

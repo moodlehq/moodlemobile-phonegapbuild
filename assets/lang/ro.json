@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Expirare ecuson",
     "addon.badges.issuerdetails": "Detalii emitent",
     "addon.badges.issuername": "Nume emitent",
+    "addon.badges.issuerurl": "URL emitent",
     "addon.badges.nobadges": "Nu există ecusoane disponibile",
     "addon.badges.recipientdetails": "Detalii recipient",
     "addon.badges.warnexpired": "(Acest ecuson a expirat!)",

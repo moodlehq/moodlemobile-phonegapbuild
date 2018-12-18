@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Caducidad de la insignia",
     "addon.badges.issuerdetails": "Detalles del emisor",
     "addon.badges.issuername": "Nombre del emisor",
+    "addon.badges.issuerurl": "URL del emisor",
     "addon.badges.nobadges": "No hay insignias disponibles",
     "addon.badges.recipientdetails": "Detalles del destinatario",
     "addon.badges.warnexpired": "(¡Esta insignia ha expirado!)",

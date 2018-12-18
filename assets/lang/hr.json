@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Istek značke",
     "addon.badges.issuerdetails": "Detalji o izdavaču",
     "addon.badges.issuername": "Ime izdavača",
+    "addon.badges.issuerurl": "URL izdavača",
     "addon.badges.nobadges": "Nema dostupnih značaka.",
     "addon.badges.recipientdetails": "Podaci o dobitniku",
     "addon.badges.warnexpired": "(Ova značka je istekla!)",

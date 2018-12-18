@@ -10,6 +10,7 @@
     "addon.badges.issuerdetails": "Dettagli di chi rilascia il badge",
     "addon.badges.issueremail": "Email",
     "addon.badges.issuername": "Nome di chi rilascia il badge",
+    "addon.badges.issuerurl": "URL di di chi rilascia il basge",
     "addon.badges.language": "Lingua",
     "addon.badges.nobadges": "Non sono presenti badge.",
     "addon.badges.recipientdetails": "Dettagli destinatario",

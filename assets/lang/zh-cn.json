@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "有效期",
     "addon.badges.issuerdetails": "授勋机构详情",
     "addon.badges.issuername": "授勋机构名称",
+    "addon.badges.issuerurl": "授勋机构 URL",
     "addon.badges.nobadges": "没有可用的勋章",
     "addon.badges.recipientdetails": "获得者详情",
     "addon.badges.warnexpired": "（此勋章已过期！）",

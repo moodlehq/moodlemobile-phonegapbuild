@@ -8,6 +8,7 @@
     "addon.badges.issuancedetails": "Expiração do emblema",
     "addon.badges.issuerdetails": "Detalhes do emissor",
     "addon.badges.issuername": "Nome do emissor",
+    "addon.badges.issuerurl": "URL do emissor",
     "addon.badges.nobadges": "Não há emblemas disponíveis.",
     "addon.badges.recipientdetails": "Detalhes do usuário a receber o emblema",
     "addon.badges.warnexpired": "(Este emblema expirou!)",
