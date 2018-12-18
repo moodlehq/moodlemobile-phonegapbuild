@@ -142,8 +142,8 @@ var sites_CoreLoginSitesPage = /** @class */ (function () {
     CoreLoginSitesPage.prototype.login = function (siteId) {
         var _this = this;
         var modal = this.domUtils.showModalLoading();
-        this.sitesProvider.loadSite(siteId).then(function () {
-            if (!_this.loginHelper.isSiteLoggedOut()) {
+        this.sitesProvider.loadSite(siteId).then(function (loggedIn) {
+            if (loggedIn) {
                 return _this.loginHelper.goToSiteInitialPage();
             }
         }).catch(function (error) {

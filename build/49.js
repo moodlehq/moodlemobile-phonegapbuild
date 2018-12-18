@@ -89,8 +89,9 @@ var init_CoreLoginInitPage = /** @class */ (function () {
                 if (Date.now() - redirectData.timemodified < 20000) {
                     if (redirectData.siteId != constants["a" /* CoreConstants */].NO_SITE_ID) {
                         // The redirect is pointing to a site, load it.
-                        return _this.sitesProvider.loadSite(redirectData.siteId).then(function () {
-                            if (!_this.loginHelper.isSiteLoggedOut(redirectData.page, redirectData.params)) {
+                        return _this.sitesProvider.loadSite(redirectData.siteId, redirectData.page, redirectData.params)
+                            .then(function (loggedIn) {
+                            if (loggedIn) {
                                 return _this.navCtrl.setRoot(redirectData.page, redirectData.params, { animate: false });
                             }
                         }).catch(function () {
