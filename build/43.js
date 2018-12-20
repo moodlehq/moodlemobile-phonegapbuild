@@ -286,7 +286,7 @@ var item_content = __webpack_require__(32);
 var avatar = __webpack_require__(186);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(228);
+var external_content = __webpack_require__(227);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

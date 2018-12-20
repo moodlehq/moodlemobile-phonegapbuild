@@ -284,7 +284,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1358);
 var avatar = __webpack_require__(186);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(228);
+var external_content = __webpack_require__(227);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);

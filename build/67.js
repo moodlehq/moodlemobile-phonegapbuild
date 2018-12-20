@@ -158,7 +158,7 @@ var utils = __webpack_require__(2);
 var providers_notifications = __webpack_require__(284);
 
 // EXTERNAL MODULE: ./src/addon/pushnotifications/providers/delegate.ts
-var providers_delegate = __webpack_require__(227);
+var providers_delegate = __webpack_require__(228);
 
 // CONCATENATED MODULE: ./src/addon/notifications/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas

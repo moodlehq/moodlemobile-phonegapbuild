@@ -360,7 +360,7 @@ var discussions = __webpack_require__(1954);
 var nav_params = __webpack_require__(60);
 
 // EXTERNAL MODULE: ./src/addon/pushnotifications/providers/delegate.ts
-var delegate = __webpack_require__(227);
+var delegate = __webpack_require__(228);
 
 // CONCATENATED MODULE: ./src/addon/messages/components/discussions/discussions.ngfactory.js
 /**
@@ -816,7 +816,7 @@ var AddonMessagesComponentsModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_utils__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_app__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__addon_pushnotifications_providers_delegate__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__addon_pushnotifications_providers_delegate__ = __webpack_require__(228);
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
