@@ -216,7 +216,7 @@ var events = __webpack_require__(12);
 var toolbar_title_ngfactory = __webpack_require__(1355);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(335);
+var toolbar_title = __webpack_require__(336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(246);
@@ -282,7 +282,7 @@ var dom_controller = __webpack_require__(31);
 var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ts
-var unsupported_module = __webpack_require__(358);
+var unsupported_module = __webpack_require__(359);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);
@@ -363,16 +363,16 @@ var CoreCourseUnsupportedModulePageNgFactory = core["_27" /* ɵccf */]("page-cor
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(331);
+var translate_loader = __webpack_require__(332);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(332);
+var translate_compiler = __webpack_require__(333);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(334);
+var translate_parser = __webpack_require__(335);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(333);
+var missing_translation_handler = __webpack_require__(334);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(433);

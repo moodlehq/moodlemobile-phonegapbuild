@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/addon/pushnotifications/providers/pushnotifications.ts
-var pushnotifications = __webpack_require__(343);
+var pushnotifications = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
 var helper = __webpack_require__(134);
@@ -349,7 +349,7 @@ var back_button = __webpack_require__(662);
 var toolbar_title_ngfactory = __webpack_require__(1355);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(335);
+var toolbar_title = __webpack_require__(336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(246);
@@ -376,13 +376,13 @@ var list = __webpack_require__(77);
 var gesture_controller = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.ngfactory.js
-var fab_container_ngfactory = __webpack_require__(353);
+var fab_container_ngfactory = __webpack_require__(354);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
 var fab_container = __webpack_require__(231);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
-var fab_ngfactory = __webpack_require__(354);
+var fab_ngfactory = __webpack_require__(355);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.js
 var fab = __webpack_require__(196);
@@ -480,16 +480,16 @@ var CoreLoginSitesPageNgFactory = core["_27" /* ɵccf */]("page-core-login-sites
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(331);
+var translate_loader = __webpack_require__(332);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(332);
+var translate_compiler = __webpack_require__(333);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(334);
+var translate_parser = __webpack_require__(335);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(333);
+var missing_translation_handler = __webpack_require__(334);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(433);

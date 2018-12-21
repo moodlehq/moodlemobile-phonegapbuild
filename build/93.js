@@ -566,7 +566,7 @@ var index_ngfactory = __webpack_require__(1388);
 var toolbar_title_ngfactory = __webpack_require__(1355);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(335);
+var toolbar_title = __webpack_require__(336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -653,7 +653,7 @@ var file_helper = __webpack_require__(132);
 var mimetype = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/components/local-file/local-file.ngfactory.js
-var local_file_ngfactory = __webpack_require__(345);
+var local_file_ngfactory = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./src/components/local-file/local-file.ts
 var local_file = __webpack_require__(254);
@@ -734,7 +734,7 @@ var rich_text_editor = __webpack_require__(225);
 var grid = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
-var date_day_or_time = __webpack_require__(339);
+var date_day_or_time = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
 var card_header = __webpack_require__(280);
@@ -1058,16 +1058,16 @@ var AddonModForumDiscussionPageNgFactory = core["_27" /* ɵccf */]("page-addon-m
 
 //# sourceMappingURL=discussion.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(331);
+var translate_loader = __webpack_require__(332);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(332);
+var translate_compiler = __webpack_require__(333);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(334);
+var translate_parser = __webpack_require__(335);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(333);
+var missing_translation_handler = __webpack_require__(334);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(433);

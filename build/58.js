@@ -402,7 +402,7 @@ var searchbar_ngfactory = __webpack_require__(1413);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.js
-var searchbar = __webpack_require__(351);
+var searchbar = __webpack_require__(352);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -411,7 +411,7 @@ var platform = __webpack_require__(14);
 var col = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-progress/course-progress.ngfactory.js
-var course_progress_ngfactory = __webpack_require__(367);
+var course_progress_ngfactory = __webpack_require__(368);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-progress/course-progress.ts
 var course_progress = __webpack_require__(261);
@@ -462,7 +462,7 @@ var back_button = __webpack_require__(662);
 var toolbar_title_ngfactory = __webpack_require__(1355);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(335);
+var toolbar_title = __webpack_require__(336);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(246);
@@ -624,16 +624,16 @@ var CoreCoursesMyCoursesPageNgFactory = core["_27" /* ɵccf */]("page-core-cours
 
 //# sourceMappingURL=my-courses.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(331);
+var translate_loader = __webpack_require__(332);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(332);
+var translate_compiler = __webpack_require__(333);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(334);
+var translate_parser = __webpack_require__(335);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(333);
+var missing_translation_handler = __webpack_require__(334);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(433);
