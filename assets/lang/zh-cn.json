@@ -1026,6 +1026,7 @@
     "core.accounts": "帐户",
     "core.add": "添加",
     "core.agelocationverification": "年龄和地区认证",
+    "core.ago": "{{$a}} 之前",
     "core.all": "所有",
     "core.allparticipants": "所有成员",
     "core.android": "安卓",

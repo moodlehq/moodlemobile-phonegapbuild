@@ -1078,6 +1078,7 @@
     "core.accounts": "Contas",
     "core.add": "Adicionar",
     "core.agelocationverification": "Verificação de idade e localização",
+    "core.ago": "{{$a}} atrás",
     "core.all": "Todos",
     "core.allparticipants": "Todos os participantes",
     "core.android": "Android",

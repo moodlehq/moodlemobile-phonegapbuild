@@ -551,6 +551,7 @@
     "core.accounts": "Akun",
     "core.add": "Tambah",
     "core.agelocationverification": "Verifikasi usia dan lokasi",
+    "core.ago": "{{$a}} yang lalu",
     "core.all": "Semua",
     "core.allparticipants": "Semua peserta",
     "core.android": "Android",

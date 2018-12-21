@@ -1043,6 +1043,7 @@
     "core.accounts": "帳戶",
     "core.add": "新增",
     "core.agelocationverification": "驗證年齡與所在位置",
+    "core.ago": "{{$a}}之前",
     "core.all": "所有",
     "core.allparticipants": "所有參與者",
     "core.android": "安卓",

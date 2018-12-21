@@ -1152,6 +1152,7 @@
     "core.accounts": "Gebruikers",
     "core.add": "Voeg toe",
     "core.agelocationverification": "Leeftijd- en locatieverificatie",
+    "core.ago": "{{$a}} geleden",
     "core.all": "Alle",
     "core.allparticipants": "Alle deelnemers",
     "core.android": "Android",

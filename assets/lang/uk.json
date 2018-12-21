@@ -1003,6 +1003,7 @@
     "core.accounts": "Облікові записи",
     "core.add": "Додати",
     "core.agelocationverification": "Перевірка віку та місцезнаходження",
+    "core.ago": "{{$a}} тому",
     "core.all": "Вибрати все",
     "core.allparticipants": "Усі учасники",
     "core.android": "Android",

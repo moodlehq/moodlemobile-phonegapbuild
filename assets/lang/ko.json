@@ -923,6 +923,7 @@
     "assets.mimetypes.text/rtf": "RTF 문서",
     "core.accounts": "계정",
     "core.add": "추가",
+    "core.ago": "{{$a}} 이전",
     "core.all": "모두",
     "core.allparticipants": "모든 참가자",
     "core.android": "안드로이드",

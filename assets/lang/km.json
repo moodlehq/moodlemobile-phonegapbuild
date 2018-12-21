@@ -876,6 +876,7 @@
     "assets.mimetypes.video": "ឯកសារវីដេអូ ({{$a.EXT}})",
     "core.accounts": "គណនី",
     "core.add": "បន្ថែម",
+    "core.ago": "{{$a}} កន្លងទៅ",
     "core.all": "ទាំងអស់",
     "core.allparticipants": "អ្នកចូលរួមទាំងអស់",
     "core.answer": "ចម្លើយ",

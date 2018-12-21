@@ -873,6 +873,7 @@
     "assets.mimetypes.video": "فایل ویدیویی ({{$a.EXT}})",
     "core.accounts": "حساب‌های کاربری",
     "core.add": "اضافه کردن",
+    "core.ago": "{{$a}} قبل",
     "core.all": "همه",
     "core.allparticipants": "همهٔ اعضاء",
     "core.answer": "پاسخ",

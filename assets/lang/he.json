@@ -923,6 +923,7 @@
     "core.accounts": "חשבונות",
     "core.add": "הוספה",
     "core.agelocationverification": "אימות גיל ומיקום",
+    "core.ago": "לפני {{$a}}",
     "core.all": "הכל",
     "core.allparticipants": "כל המשתתפים",
     "core.android": "אנדרואיד",

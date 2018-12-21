@@ -1067,6 +1067,7 @@
     "core.accounts": "Comptes",
     "core.add": "Afegeix",
     "core.agelocationverification": "Verificació de l'edat i procedència",
+    "core.ago": "Fa {{$a}}",
     "core.all": "Tots",
     "core.allparticipants": "Tots els participants",
     "core.android": "Android",

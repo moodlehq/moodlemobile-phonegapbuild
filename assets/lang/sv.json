@@ -931,6 +931,7 @@
     "assets.mimetypes.text/rtf": "RTF-dokument",
     "core.accounts": "Konton",
     "core.add": "Lägg till",
+    "core.ago": "För {{$a}} sedan",
     "core.all": "Alla",
     "core.allparticipants": "Alla deltagare",
     "core.android": "Android",

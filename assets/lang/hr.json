@@ -831,6 +831,7 @@
     "core.accounts": "Korisnički računi",
     "core.add": "Dodajte",
     "core.agelocationverification": "Provjera dobi i lokacije",
+    "core.ago": "prije {{$a}}",
     "core.all": "Sve",
     "core.allparticipants": "Svi sudionici",
     "core.android": "Android",

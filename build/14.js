@@ -264,7 +264,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
                                 _this.conversationImage = member.profileimageurl;
                                 _this.title = member.fullname;
                             }
-                            _this.blockIcon = _this.otherMember && _this.otherMember.isblocked ? 'close-circle' : 'checkmark-circle';
+                            _this.blockIcon = _this.otherMember && _this.otherMember.isblocked ? 'checkmark-circle' : 'close-circle';
                             _this.addRemoveIcon = _this.otherMember && _this.otherMember.iscontact ? 'remove' : 'add';
                         }));
                     }

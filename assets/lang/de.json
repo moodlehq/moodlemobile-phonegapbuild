@@ -1156,6 +1156,7 @@
     "core.accounts": "Nutzerkonten",
     "core.add": "Hinzufügen",
     "core.agelocationverification": "Überprüfung von Alter und Aufenthaltsort",
+    "core.ago": "{{$a}} alt",
     "core.all": "Alle",
     "core.allparticipants": "Alle Teilnehmer/innen",
     "core.android": "Android",

@@ -743,6 +743,7 @@
     "core.accounts": "Потребителски регистрации",
     "core.add": "Добавяне",
     "core.agelocationverification": "Установяване на възраст и страна",
+    "core.ago": "Преди {{$a}} ",
     "core.all": "Всички",
     "core.allparticipants": "Всички участници",
     "core.answer": "Отговор",

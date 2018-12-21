@@ -1073,6 +1073,7 @@
     "core.accounts": "Налози",
     "core.add": "Додај",
     "core.agelocationverification": "Провера старости и места",
+    "core.ago": "{{$a}} пре",
     "core.all": "Све",
     "core.allparticipants": "Сви учесници",
     "core.android": "Андроид",

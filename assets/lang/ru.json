@@ -1072,6 +1072,7 @@
     "core.accounts": "Учетные записи",
     "core.add": "Добавить",
     "core.agelocationverification": "Проверка возраста и местонахождения",
+    "core.ago": "{{$a}} назад",
     "core.all": "Все",
     "core.allparticipants": "Все участники",
     "core.android": "Android",

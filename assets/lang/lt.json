@@ -1045,6 +1045,7 @@
     "core.accounts": "Paskyros",
     "core.add": "Įtraukti",
     "core.agelocationverification": "Amžiaus ir vietovės patvirtinimas",
+    "core.ago": "Prieš {{$a}}",
     "core.all": "Viskas",
     "core.allparticipants": "Visi dalyviai",
     "core.android": "Android",

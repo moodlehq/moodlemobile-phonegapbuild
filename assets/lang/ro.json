@@ -830,6 +830,7 @@
     "core.accounts": "Conturi",
     "core.add": "Adaugă",
     "core.agelocationverification": "Verificarea vârstei și a locației",
+    "core.ago": "în urmă cu {{$a}}",
     "core.all": "Toate",
     "core.allparticipants": "Toţi participanţii",
     "core.android": "Adroid",

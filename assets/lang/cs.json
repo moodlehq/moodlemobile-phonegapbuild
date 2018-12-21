@@ -1152,6 +1152,7 @@
     "core.accounts": "Účty",
     "core.add": "Přidat",
     "core.agelocationverification": "Ověření věku a polohy",
+    "core.ago": "před: {{$a}}",
     "core.all": "Vše",
     "core.allparticipants": "Všichni účastníci",
     "core.android": "Android",

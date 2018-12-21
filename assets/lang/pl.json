@@ -955,6 +955,7 @@
     "core.accounts": "Konta",
     "core.add": "Dodaj",
     "core.agelocationverification": "Weryfikacja wieku i lokalizacji",
+    "core.ago": "{{$a}} temu",
     "core.all": "Wszystkie",
     "core.allparticipants": "Wszyscy uczestnicy",
     "core.answer": "Odpowiedz",

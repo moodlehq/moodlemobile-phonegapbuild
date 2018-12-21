@@ -665,6 +665,7 @@
     "core.accounts": "حسابات",
     "core.add": "أضف",
     "core.agelocationverification": "التحقق من العمر والمكان",
+    "core.ago": "{{$a}} مضى",
     "core.all": "الكل",
     "core.allparticipants": "كل المشاركين",
     "core.answer": "إجابة",

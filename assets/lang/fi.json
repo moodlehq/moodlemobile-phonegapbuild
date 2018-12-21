@@ -1014,6 +1014,7 @@
     "core.accounts": "Käyttäjätilit",
     "core.add": "Lisää",
     "core.agelocationverification": "Iän ja sijainnin vahvistus",
+    "core.ago": "{{$a}} sitten",
     "core.all": "Kaikki",
     "core.allparticipants": "Kaikki osallistujat",
     "core.answer": "Vastaus",

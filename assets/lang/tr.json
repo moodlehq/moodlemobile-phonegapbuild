@@ -908,6 +908,7 @@
     "assets.mimetypes.video": "Video dosyası ({{$a.EXT}})",
     "core.accounts": "Hesaplar",
     "core.add": "Ekle",
+    "core.ago": "{{$a}} önce",
     "core.all": "Tümü",
     "core.allparticipants": "Bütün katılımcılar",
     "core.android": "Android",

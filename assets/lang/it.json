@@ -1052,6 +1052,7 @@
     "core.accounts": "Profili",
     "core.add": "Aggiungi",
     "core.agelocationverification": "Verifica dell'età e della della nazione",
+    "core.ago": "{{$a}} fa",
     "core.all": "Tutti",
     "core.allparticipants": "Tutti i partecipanti",
     "core.android": "Android",

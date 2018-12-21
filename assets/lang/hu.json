@@ -1006,6 +1006,7 @@
     "core.accounts": "Fiókok",
     "core.add": "Hozzáadás",
     "core.agelocationverification": "Életkor és hely ellenőrzése",
+    "core.ago": "{{$a}} óta",
     "core.all": "Mind",
     "core.allparticipants": "Összes résztvevő",
     "core.answer": "Válasz",

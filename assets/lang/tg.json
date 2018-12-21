@@ -758,6 +758,7 @@
     "core.accounts": "Сабтҳои баҳисобгирӣ",
     "core.add": "Илова карда шавад",
     "core.agelocationverification": "Тафтиши сол ва мавқеъ",
+    "core.ago": "{{$a}} ба ақиб",
     "core.all": "Ҳама",
     "core.allparticipants": "Ҳамаи иштирокчиён",
     "core.answer": "Ҷавоб",

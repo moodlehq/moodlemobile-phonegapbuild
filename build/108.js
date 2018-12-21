@@ -273,7 +273,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
                     var conversation = _this.findConversation(_this.conversationId);
                     if (conversation) {
                         var option = _this.getConversationOption(conversation);
-                        option.expanded = true;
+                        _this.expandOption(option);
                         return;
                     }
                 }
@@ -331,17 +331,16 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
      */
     AddonMessagesGroupConversationsPage.prototype.findConversation = function (conversationId, userId) {
         if (conversationId) {
-            var conversations = (this.favourites.conversations || []).concat(this.group.conversations || [])
+            var conversations_1 = (this.favourites.conversations || []).concat(this.group.conversations || [])
                 .concat(this.individual.conversations || []);
-            return conversations.find(function (conv) {
+            return conversations_1.find(function (conv) {
                 return conv.id == conversationId;
             });
         }
-        else if (this.individual.conversations) {
-            return this.individual.conversations.find(function (conv) {
-                return conv.userid == userId;
-            });
-        }
+        var conversations = (this.favourites.conversations || []).concat(this.individual.conversations || []);
+        return conversations.find(function (conv) {
+            return conv.userid == userId;
+        });
     };
     /**
      * Navigate to contacts view.

@@ -1073,6 +1073,7 @@
     "core.accounts": "Nalozi",
     "core.add": "Dodaj",
     "core.agelocationverification": "Provera starosti i mesta",
+    "core.ago": "{{$a}} pre",
     "core.all": "Sve",
     "core.allparticipants": "Svi učesnici",
     "core.android": "Android",

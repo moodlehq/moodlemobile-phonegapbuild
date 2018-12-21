@@ -1144,6 +1144,7 @@
     "core.accounts": "アカウント",
     "core.add": "追加",
     "core.agelocationverification": "年齢および場所の確認",
+    "core.ago": "{{$a}} 前",
     "core.all": "すべて",
     "core.allparticipants": "すべての参加者",
     "core.android": "Android",
