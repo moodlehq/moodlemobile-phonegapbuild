@@ -37,7 +37,7 @@ var local_notifications = __webpack_require__(141);
 var config = __webpack_require__(176);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(10);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
 var constants = __webpack_require__(39);

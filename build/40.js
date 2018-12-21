@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var _ionic_native_device = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(10);
+var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var file = __webpack_require__(49);
