@@ -391,7 +391,7 @@ var nav_push_anchor = __webpack_require__(250);
 var file_ngfactory = __webpack_require__(203);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(172);
+var file = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

@@ -1312,7 +1312,7 @@
     "core.login.siteurl": "URL del sito",
     "core.login.siteurlrequired": "L'URL del sito è obbligatoria. Esempio:<i>http://www.yourmoodlesite.abc or https://www.yourmoodlesite.efg</i>",
     "core.login.startsignup": "Crea un account",
-    "core.login.supplyinfo": "Ulteriori dettagli",
+    "core.login.supplyinfo": "Ulteriori informazioni",
     "core.login.username": "Username",
     "core.login.usernameoremail": "Inserisci username o indirizzo email",
     "core.login.usernamerequired": "Username obbligatorio",

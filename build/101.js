@@ -501,7 +501,7 @@ var nav_params = __webpack_require__(60);
 var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var providers_comments = __webpack_require__(166);
+var providers_comments = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
 var col = __webpack_require__(111);
@@ -606,7 +606,7 @@ var loading = __webpack_require__(47);
 var compile_html_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
-var compile_html = __webpack_require__(167);
+var compile_html = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
 var compile = __webpack_require__(138);

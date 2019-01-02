@@ -329,7 +329,7 @@ var common = __webpack_require__(7);
 var file_ngfactory = __webpack_require__(203);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(172);
+var file = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
 var file_helper = __webpack_require__(132);
