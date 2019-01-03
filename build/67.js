@@ -503,7 +503,7 @@ var translate_pipe = __webpack_require__(24);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(113);
+var spinner_ngfactory = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(94);
@@ -569,13 +569,13 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
-var col = __webpack_require__(111);
+var col = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon_icon = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
-var row = __webpack_require__(112);
+var row = __webpack_require__(113);
 
 // CONCATENATED MODULE: ./src/addon/notifications/components/actions/actions.ngfactory.js
 /**

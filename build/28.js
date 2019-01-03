@@ -262,7 +262,7 @@ var translate_pipe = __webpack_require__(24);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(113);
+var spinner_ngfactory = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(94);

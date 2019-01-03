@@ -408,7 +408,7 @@ var searchbar = __webpack_require__(352);
 var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
-var col = __webpack_require__(111);
+var col = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-progress/course-progress.ngfactory.js
 var course_progress_ngfactory = __webpack_require__(368);
@@ -522,7 +522,7 @@ var utils = __webpack_require__(2);
 var grid = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
-var row = __webpack_require__(112);
+var row = __webpack_require__(113);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/my-courses/my-courses.ngfactory.js
 /**

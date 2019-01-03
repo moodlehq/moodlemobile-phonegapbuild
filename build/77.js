@@ -1364,7 +1364,7 @@ var config = __webpack_require__(6);
 var icon = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(113);
+var spinner_ngfactory = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(94);

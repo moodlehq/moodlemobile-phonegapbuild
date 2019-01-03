@@ -695,10 +695,10 @@ var attachments = __webpack_require__(279);
 var fileuploader_providers_helper = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
-var row = __webpack_require__(112);
+var row = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
-var col = __webpack_require__(111);
+var col = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(77);

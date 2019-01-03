@@ -223,7 +223,7 @@ var utils_text = __webpack_require__(10);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(113);
+var spinner_ngfactory = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(94);

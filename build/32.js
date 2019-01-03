@@ -1,6 +1,6 @@
 webpackJsonp([32],{
 
-/***/ 1947:
+/***/ 1948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -402,7 +402,7 @@ var iframe = __webpack_require__(37);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
-var col = __webpack_require__(111);
+var col = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(7);
@@ -414,10 +414,10 @@ var icon_ngfactory = __webpack_require__(131);
 var icon_icon = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
-var row = __webpack_require__(112);
+var row = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(113);
+var spinner_ngfactory = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(94);

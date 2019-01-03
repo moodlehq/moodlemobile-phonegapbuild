@@ -564,7 +564,7 @@
     "addon.mod_quiz.warningdatadiscarded": "ចម្លើយក្រៅបណ្តាញមួយចំនួនត្រូវបានបោះបង់ដោយសារតែសំណួរត្រូវបានកែប្រែលើបណ្តាញ",
     "addon.mod_quiz.warningdatadiscardedfromfinished": "ការឆ្លើយមិនទាន់បញ្ចប់ដោយសារតែចម្លើយក្រៅបណ្ដាញមួយចំនួនត្រូវបានបោះបង់។ សូមពិនិត្យឡើងវិញនូវចម្លើយរបស់អ្នកហើយស្នើសុំឡើងវិញ",
     "addon.mod_quiz.yourfinalgradeis": "ពិន្ទុចុងក្រោយរបស់អ្នកសម្រាប់កម្រងសំណួរនេះគឺ {{$a}} ។",
-    "addon.mod_resource.errorwhileloadingthecontent": "មានកំហុសអំឡុងពេលទាញយកអត្ថបទ",
+    "addon.mod_resource.errorwhileloadingthecontent": "មានកំហុសនៅអំឡុងពេលទាញយកអត្ថបទ",
     "addon.mod_resource.modifieddate": "បានកែប្រែ {{$a}}",
     "addon.mod_resource.modulenameplural": "ធនធាន",
     "addon.mod_resource.openthefile": "បើកឯកសារ",

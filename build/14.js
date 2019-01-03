@@ -258,7 +258,12 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
                         promises.push(_this.fetchMessages());
                     }
                     if (_this.userId) {
-                        promises.push(_this.messagesProvider.getMemberInfo(_this.userId).then(function (member) {
+                        // Get the member info. Invalidate first to make sure we get the latest status.
+                        promises.push(_this.messagesProvider.invalidateMemberInfo(_this.userId).catch(function () {
+                            // Shouldn't happen.
+                        }).then(function () {
+                            return _this.messagesProvider.getMemberInfo(_this.userId);
+                        }).then(function (member) {
                             _this.otherMember = member;
                             if (!exists && member) {
                                 _this.conversationImage = member.profileimageurl;
@@ -643,7 +648,9 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
                 conversationId: this.conversationId,
                 userId: this.userId,
                 message: this.lastMessage.text,
-                timecreated: this.lastMessage.timecreated
+                timecreated: this.lastMessage.timecreated,
+                isfavourite: this.conversation && this.conversation.isfavourite,
+                type: this.conversation && this.conversation.type
             }, this.siteId);
             // Update navBar links and buttons.
             var newCanDelete = (last && last.id && this.messages.length == 1) || this.messages.length > 1;

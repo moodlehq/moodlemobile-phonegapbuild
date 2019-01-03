@@ -835,10 +835,10 @@ var option_option = __webpack_require__(91);
 var grid = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
-var row = __webpack_require__(112);
+var row = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
-var col = __webpack_require__(111);
+var col = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
 var select_ngfactory = __webpack_require__(110);

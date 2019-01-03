@@ -479,7 +479,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(113);
+var spinner_ngfactory = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(94);
@@ -1184,7 +1184,19 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
         if (refresh === void 0) { refresh = false; }
         this.loadMoreError = false;
         var limitFrom = refresh ? 0 : this.contacts.length;
-        return this.messagesProvider.getUserContacts(limitFrom).then(function (result) {
+        var promise;
+        if (limitFrom === 0) {
+            // Always try to get latest data from server.
+            promise = this.messagesProvider.invalidateUserContacts().catch(function () {
+                // Shouldn't happen.
+            });
+        }
+        else {
+            promise = Promise.resolve();
+        }
+        return promise.then(function () {
+            return _this.messagesProvider.getUserContacts(limitFrom);
+        }).then(function (result) {
             _this.contacts = refresh ? result.contacts : _this.contacts.concat(result.contacts);
             _this.canLoadMore = result.canLoadMore;
         }).catch(function (error) {
@@ -1199,10 +1211,8 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
      * @return {Promise<any>} Promise resolved when done.
      */
     AddonMessagesConfirmedContactsComponent.prototype.refreshData = function (refresher) {
-        var _this = this;
-        return this.messagesProvider.invalidateUserContacts().then(function () {
-            return _this.fetchData(true);
-        }).finally(function () {
+        // No need to invalidate contacts, we always try to get the latest.
+        return this.fetchData(true).finally(function () {
             refresher && refresher.complete();
         });
     };
@@ -1345,7 +1355,19 @@ var AddonMessagesContactRequestsComponent = /** @class */ (function () {
         if (refresh === void 0) { refresh = false; }
         this.loadMoreError = false;
         var limitFrom = refresh ? 0 : this.requests.length;
-        return this.messagesProvider.getContactRequests(limitFrom).then(function (result) {
+        var promise;
+        if (limitFrom === 0) {
+            // Always try to get latest data from server.
+            promise = this.messagesProvider.invalidateContactRequestsCache().catch(function () {
+                // Shouldn't happen.
+            });
+        }
+        else {
+            promise = Promise.resolve();
+        }
+        return promise.then(function () {
+            return _this.messagesProvider.getContactRequests(limitFrom);
+        }).then(function (result) {
             _this.requests = refresh ? result.requests : _this.requests.concat(result.requests);
             _this.canLoadMore = result.canLoadMore;
         }).catch(function (error) {
@@ -1360,12 +1382,10 @@ var AddonMessagesContactRequestsComponent = /** @class */ (function () {
      * @return {Promise<any>} Promise resolved when done.
      */
     AddonMessagesContactRequestsComponent.prototype.refreshData = function (refresher) {
-        var _this = this;
         // Refresh the number of contacts requests to update badges.
         this.messagesProvider.refreshContactRequestsCount();
-        return this.messagesProvider.invalidateContactRequestsCache().then(function () {
-            return _this.fetchData(true);
-        }).finally(function () {
+        // No need to invalidate contact requests, we always try to get the latest.
+        return this.fetchData(true).finally(function () {
             refresher && refresher.complete();
         });
     };
@@ -1468,6 +1488,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var AddonMessagesContactsComponent = /** @class */ (function () {
     function AddonMessagesContactsComponent(sitesProvider, translate, appProvider, messagesProvider, domUtils, navParams, eventsProvider) {
+        var _this = this;
         this.appProvider = appProvider;
         this.messagesProvider = messagesProvider;
         this.domUtils = domUtils;
@@ -1488,6 +1509,12 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
         this.loadingMessages = translate.instant('core.loading');
         this.loadingMessage = this.loadingMessages;
         this.discussionUserId = navParams.get('discussionUserId') || false;
+        // Refresh the list when a contact request is confirmed.
+        this.memberInfoObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_4__providers_messages__["a" /* AddonMessagesProvider */].MEMBER_INFO_CHANGED_EVENT, function (data) {
+            if (data.contactRequestConfirmed) {
+                _this.refreshData();
+            }
+        }, sitesProvider.getCurrentSiteId());
     }
     /**
      * Component loaded.
@@ -1632,6 +1659,12 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
             onlyWithSplitView: onlyWithSplitView
         };
         this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_4__providers_messages__["a" /* AddonMessagesProvider */].SPLIT_VIEW_LOAD_EVENT, params, this.siteId);
+    };
+    /**
+     * Component destroyed.
+     */
+    AddonMessagesContactsComponent.prototype.ngOnDestroy = function () {
+        this.memberInfoObserver && this.memberInfoObserver.off();
     };
     AddonMessagesContactsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({

@@ -355,7 +355,7 @@ var TabButtonNgFactory = core["_27" /* ɵccf */](".tab-button", tab_button["a" /
 
 //# sourceMappingURL=tab-button.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(113);
+var spinner_ngfactory = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(94);

@@ -519,10 +519,10 @@ var behaviour_delegate = __webpack_require__(115);
 var providers_question = __webpack_require__(116);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
-var row = __webpack_require__(112);
+var row = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
-var col = __webpack_require__(111);
+var col = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
 var format_date = __webpack_require__(248);
