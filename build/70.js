@@ -295,7 +295,7 @@ var modal_controller = __webpack_require__(204);
 var providers_helper = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/sync.ts
-var sync = __webpack_require__(289);
+var sync = __webpack_require__(290);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

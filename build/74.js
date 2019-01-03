@@ -279,13 +279,13 @@ var refresher_content = __webpack_require__(157);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/addon/mod/url/providers/url.ts
-var providers_url = __webpack_require__(301);
+var providers_url = __webpack_require__(302);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/addon/mod/url/providers/helper.ts
-var providers_helper = __webpack_require__(302);
+var providers_helper = __webpack_require__(303);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
 var mimetype = __webpack_require__(64);

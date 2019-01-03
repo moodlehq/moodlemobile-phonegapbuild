@@ -344,7 +344,7 @@ var common = __webpack_require__(7);
 var progress_bar_ngfactory = __webpack_require__(447);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(281);
+var progress_bar = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(74);
@@ -353,7 +353,7 @@ var platform_browser = __webpack_require__(74);
 var badge = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(280);
+var card_header = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./src/pipes/to-locale-string.ts
 var to_locale_string = __webpack_require__(667);

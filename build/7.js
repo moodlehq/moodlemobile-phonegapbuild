@@ -376,7 +376,7 @@ var list = __webpack_require__(77);
 var infinite_loading_ngfactory = __webpack_require__(439);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(275);
+var infinite_loading = __webpack_require__(276);
 
 // EXTERNAL MODULE: ./src/addon/messages/components/confirmed-contacts/confirmed-contacts.ts
 var confirmed_contacts = __webpack_require__(1955);

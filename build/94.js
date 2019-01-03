@@ -280,7 +280,7 @@ var refresher_content = __webpack_require__(157);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/addon/mod/folder/providers/folder.ts
-var folder = __webpack_require__(292);
+var folder = __webpack_require__(293);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(15);

@@ -52,7 +52,7 @@ var quiz = __webpack_require__(150);
 var quiz_sync = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
-var providers_helper = __webpack_require__(278);
+var providers_helper = __webpack_require__(279);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/connection-error/connection-error.ts
 var connection_error = __webpack_require__(709);
@@ -1033,7 +1033,7 @@ var item_content = __webpack_require__(32);
 var directives_link = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(280);
+var card_header = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(434);

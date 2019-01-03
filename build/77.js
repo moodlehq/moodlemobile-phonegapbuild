@@ -43,7 +43,7 @@ var providers_scorm = __webpack_require__(193);
 var helper = __webpack_require__(350);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm-sync.ts
-var scorm_sync = __webpack_require__(287);
+var scorm_sync = __webpack_require__(288);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/classes/data-model-12.ts
 // (C) Copyright 2015 Martin Dougiamas

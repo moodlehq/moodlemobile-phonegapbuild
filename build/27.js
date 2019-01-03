@@ -31,10 +31,10 @@ var _ionic_native_network = __webpack_require__(190);
 var feedback = __webpack_require__(135);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/helper.ts
-var helper = __webpack_require__(277);
+var helper = __webpack_require__(278);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/sync.ts
-var sync = __webpack_require__(285);
+var sync = __webpack_require__(286);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);

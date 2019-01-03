@@ -689,7 +689,7 @@ var button_button = __webpack_require__(42);
 var attachments_ngfactory = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
-var attachments = __webpack_require__(279);
+var attachments = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
 var fileuploader_providers_helper = __webpack_require__(133);
@@ -725,7 +725,7 @@ var input = __webpack_require__(78);
 var app_app = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
-var rich_text_editor_ngfactory = __webpack_require__(276);
+var rich_text_editor_ngfactory = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
 var rich_text_editor = __webpack_require__(225);
@@ -737,7 +737,7 @@ var grid = __webpack_require__(142);
 var date_day_or_time = __webpack_require__(340);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(280);
+var card_header = __webpack_require__(281);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(222);

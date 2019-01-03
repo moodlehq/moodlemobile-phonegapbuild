@@ -739,7 +739,7 @@ var dom_controller = __webpack_require__(31);
 var attachments_ngfactory = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
-var attachments = __webpack_require__(279);
+var attachments = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(9);
@@ -769,7 +769,7 @@ var input = __webpack_require__(78);
 var content = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
-var rich_text_editor_ngfactory = __webpack_require__(276);
+var rich_text_editor_ngfactory = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
 var url = __webpack_require__(25);

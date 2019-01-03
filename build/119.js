@@ -663,7 +663,7 @@ var loading = __webpack_require__(47);
 var infinite_loading_ngfactory = __webpack_require__(439);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(275);
+var infinite_loading = __webpack_require__(276);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

@@ -303,10 +303,10 @@ var providers_helper = __webpack_require__(350);
 var scorm_offline = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm-sync.ts
-var scorm_sync = __webpack_require__(287);
+var scorm_sync = __webpack_require__(288);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/prefetch-handler.ts
-var prefetch_handler = __webpack_require__(298);
+var prefetch_handler = __webpack_require__(299);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-prefetch-delegate.ts
 var module_prefetch_delegate = __webpack_require__(52);

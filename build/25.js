@@ -529,7 +529,7 @@ var input_ngfactory = __webpack_require__(93);
 var input = __webpack_require__(78);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
-var rich_text_editor_ngfactory = __webpack_require__(276);
+var rich_text_editor_ngfactory = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
 var rich_text_editor = __webpack_require__(225);
@@ -541,7 +541,7 @@ var auto_rows = __webpack_require__(348);
 var attachments_ngfactory = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
-var attachments = __webpack_require__(279);
+var attachments = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
 var fileuploader_providers_helper = __webpack_require__(133);

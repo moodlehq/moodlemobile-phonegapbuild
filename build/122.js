@@ -40,7 +40,7 @@ var user = __webpack_require__(44);
 var courses = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/addon/badges/providers/badges.ts
-var badges = __webpack_require__(283);
+var badges = __webpack_require__(284);
 
 // CONCATENATED MODULE: ./src/addon/badges/pages/issued-badge/issued-badge.ts
 // (C) Copyright 2015 Martin Dougiamas

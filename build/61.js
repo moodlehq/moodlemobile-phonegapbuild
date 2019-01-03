@@ -247,7 +247,7 @@ var item_content = __webpack_require__(32);
 var progress_bar_ngfactory = __webpack_require__(447);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(281);
+var progress_bar = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(74);
@@ -268,7 +268,7 @@ var dynamic_component = __webpack_require__(188);
 var infinite_loading_ngfactory = __webpack_require__(439);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(275);
+var infinite_loading = __webpack_require__(276);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(40);

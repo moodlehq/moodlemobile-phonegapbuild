@@ -279,7 +279,7 @@ var refresher_content = __webpack_require__(157);
 var translate_pipe = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/addon/mod/lti/providers/lti.ts
-var lti = __webpack_require__(295);
+var lti = __webpack_require__(296);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

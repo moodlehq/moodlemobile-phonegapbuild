@@ -267,7 +267,7 @@ var glossary = __webpack_require__(192);
 var offline = __webpack_require__(229);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/sync.ts
-var sync = __webpack_require__(293);
+var sync = __webpack_require__(294);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

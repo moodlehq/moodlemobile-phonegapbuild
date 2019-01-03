@@ -285,7 +285,7 @@ var page = __webpack_require__(210);
 var course = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/addon/mod/page/providers/helper.ts
-var providers_helper = __webpack_require__(296);
+var providers_helper = __webpack_require__(297);
 
 // EXTERNAL MODULE: ./src/addon/mod/page/providers/prefetch-handler.ts
 var prefetch_handler = __webpack_require__(366);

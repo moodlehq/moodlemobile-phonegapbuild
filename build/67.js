@@ -155,7 +155,7 @@ var sites = __webpack_require__(1);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/addon/notifications/providers/notifications.ts
-var providers_notifications = __webpack_require__(284);
+var providers_notifications = __webpack_require__(285);
 
 // EXTERNAL MODULE: ./src/addon/pushnotifications/providers/delegate.ts
 var providers_delegate = __webpack_require__(227);
@@ -682,7 +682,7 @@ var loading = __webpack_require__(47);
 var infinite_loading_ngfactory = __webpack_require__(439);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(275);
+var infinite_loading = __webpack_require__(276);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

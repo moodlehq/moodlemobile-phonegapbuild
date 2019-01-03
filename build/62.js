@@ -196,7 +196,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1358);
 var progress_bar_ngfactory = __webpack_require__(447);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(281);
+var progress_bar = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(74);

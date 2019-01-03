@@ -52,7 +52,7 @@ var wiki = __webpack_require__(209);
 var wiki_offline = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki-sync.ts
-var wiki_sync = __webpack_require__(288);
+var wiki_sync = __webpack_require__(289);
 
 // CONCATENATED MODULE: ./src/addon/mod/wiki/pages/edit/edit.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -744,7 +744,7 @@ var loading = __webpack_require__(47);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
-var rich_text_editor_ngfactory = __webpack_require__(276);
+var rich_text_editor_ngfactory = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
 var rich_text_editor = __webpack_require__(225);

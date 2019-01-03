@@ -314,7 +314,7 @@ var wiki = __webpack_require__(209);
 var wiki_offline = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki-sync.ts
-var wiki_sync = __webpack_require__(288);
+var wiki_sync = __webpack_require__(289);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(67);

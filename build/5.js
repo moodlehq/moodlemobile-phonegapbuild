@@ -401,7 +401,7 @@ var common = __webpack_require__(7);
 var infinite_loading_ngfactory = __webpack_require__(439);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(275);
+var infinite_loading = __webpack_require__(276);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);

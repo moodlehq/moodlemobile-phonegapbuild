@@ -58,7 +58,7 @@ var helper = __webpack_require__(253);
 var offline = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/sync.ts
-var sync = __webpack_require__(291);
+var sync = __webpack_require__(292);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
 var fields_delegate = __webpack_require__(114);

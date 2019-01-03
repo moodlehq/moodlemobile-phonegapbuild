@@ -58,7 +58,7 @@ var lesson = __webpack_require__(143);
 var lesson_offline = __webpack_require__(256);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson-sync.ts
-var lesson_sync = __webpack_require__(286);
+var lesson_sync = __webpack_require__(287);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/helper.ts
 var helper = __webpack_require__(678);
@@ -802,7 +802,7 @@ var app_app = __webpack_require__(33);
 var dom_controller = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
-var rich_text_editor_ngfactory = __webpack_require__(276);
+var rich_text_editor_ngfactory = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
 var rich_text_editor = __webpack_require__(225);
@@ -859,7 +859,7 @@ var card = __webpack_require__(86);
 var progress_bar_ngfactory = __webpack_require__(447);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(281);
+var progress_bar = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(74);

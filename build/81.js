@@ -297,7 +297,7 @@ var translate_pipe = __webpack_require__(24);
 var quiz = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
-var providers_helper = __webpack_require__(278);
+var providers_helper = __webpack_require__(279);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz-offline.ts
 var quiz_offline = __webpack_require__(235);
@@ -309,7 +309,7 @@ var quiz_sync = __webpack_require__(230);
 var behaviour_delegate = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/prefetch-handler.ts
-var prefetch_handler = __webpack_require__(297);
+var prefetch_handler = __webpack_require__(298);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

@@ -302,10 +302,10 @@ var groups = __webpack_require__(67);
 var lesson_offline = __webpack_require__(256);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson-sync.ts
-var lesson_sync = __webpack_require__(286);
+var lesson_sync = __webpack_require__(287);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/prefetch-handler.ts
-var prefetch_handler = __webpack_require__(294);
+var prefetch_handler = __webpack_require__(295);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(27);

@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var quiz = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
-var helper = __webpack_require__(278);
+var helper = __webpack_require__(279);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/attempt/attempt.ts
 // (C) Copyright 2015 Martin Dougiamas
