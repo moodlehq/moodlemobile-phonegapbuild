@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 1934:
+/***/ 1940:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,6 +75,14 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
         this.tabs = [];
         this.loaded = false;
         this.showTabs = false;
+        // Check if the menu was loaded with a redirect.
+        var redirectPage = navParams.get('redirectPage');
+        if (redirectPage) {
+            this.pendingRedirect = {
+                redirectPage: redirectPage,
+                redirectParams: navParams.get('redirectParams')
+            };
+        }
     }
     /**
      * View loaded.
