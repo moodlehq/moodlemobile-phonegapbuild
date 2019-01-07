@@ -58,7 +58,7 @@ var providers_helper = __webpack_require__(279);
 var connection_error = __webpack_require__(710);
 
 // EXTERNAL MODULE: ./node_modules/rxjs/Rx.js
-var Rx = __webpack_require__(169);
+var Rx = __webpack_require__(155);
 var Rx_default = /*#__PURE__*/__webpack_require__.n(Rx);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/classes/auto-save.ts

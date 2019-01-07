@@ -267,9 +267,10 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
             _this.showRetake = !_this.currentPage && _this.retake > 0; // Only show it in first page if it isn't the first retake.
             if (info.preventaccessreasons && info.preventaccessreasons.length) {
                 // If it's a password protected lesson and we have the password, allow playing it.
-                if (!_this.password || info.preventaccessreasons.length > 1 || !_this.lessonProvider.isPasswordProtected(info)) {
+                var preventReason = _this.lessonProvider.getPreventAccessReason(info, !!_this.password);
+                if (preventReason) {
                     // Lesson cannot be played, show message and go back.
-                    return Promise.reject(info.preventaccessreasons[0].message);
+                    return Promise.reject(preventReason.message);
                 }
             }
             if (_this.review && _this.navParams.get('retake') != info.attemptscount - 1) {
@@ -814,7 +815,7 @@ var common = __webpack_require__(7);
 var label = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.ngfactory.js
-var radio_button_ngfactory = __webpack_require__(166);
+var radio_button_ngfactory = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
 var radio_button = __webpack_require__(136);

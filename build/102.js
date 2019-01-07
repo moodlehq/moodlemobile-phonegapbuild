@@ -303,7 +303,6 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
             });
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'Cannot edit entry', true);
-            return Promise.reject(null);
         });
     };
     /**
@@ -626,7 +625,7 @@ var loading = __webpack_require__(47);
 var compile_html_ngfactory = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
-var compile_html = __webpack_require__(168);
+var compile_html = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
 var compile = __webpack_require__(138);
