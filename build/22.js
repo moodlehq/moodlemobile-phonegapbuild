@@ -52,7 +52,7 @@ var user = __webpack_require__(44);
 var helper = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/workshop.ts
-var workshop = __webpack_require__(149);
+var workshop = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
 var providers_helper = __webpack_require__(174);
@@ -530,7 +530,7 @@ var assessment_strategy_ngfactory = __webpack_require__(1970);
 var assessment_strategy = __webpack_require__(1368);
 
 // EXTERNAL MODULE: ./src/providers/file-session.ts
-var file_session = __webpack_require__(152);
+var file_session = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(66);
@@ -668,7 +668,7 @@ var refresher = __webpack_require__(145);
 var refresher_content_ngfactory = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(158);
+var refresher_content = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);
@@ -951,9 +951,9 @@ var AddonModWorkshopAssessmentPageModuleNgFactory = core["_28" /* ɵcmf */](asse
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_loading_loading_ngfactory__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_loading_loading__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__assessment_strategy__ = __webpack_require__(1368);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__providers_file_session__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__providers_file_session__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__providers_sync__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__providers_workshop__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__providers_workshop__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__providers_helper__ = __webpack_require__(174);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__providers_offline__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__providers_assessment_strategy_delegate__ = __webpack_require__(194);

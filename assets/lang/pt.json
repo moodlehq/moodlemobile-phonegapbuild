@@ -1442,7 +1442,7 @@
     "core.login.policyagree": "Deverá aceitar este regulamento para poder proceder a utilizar este site. Aceita o regulamento?",
     "core.login.policyagreement": "Política do site",
     "core.login.policyagreementclick": "Link para a política do site",
-    "core.login.potentialidps": "Autenticar-se usando a sua conta em:",
+    "core.login.potentialidps": "Autenticar-se usando a sua conta:",
     "core.login.problemconnectingerror": "Existem alguns problemas na ligação a",
     "core.login.problemconnectingerrorcontinue": "Verifique se introduziu correctamente o endereço e tente novamente.",
     "core.login.profileinvaliddata": "Valor inválido",

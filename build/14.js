@@ -22,7 +22,7 @@ var events = __webpack_require__(12);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages.ts
-var messages = __webpack_require__(159);
+var messages = __webpack_require__(147);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages-offline.ts
 var messages_offline = __webpack_require__(346);

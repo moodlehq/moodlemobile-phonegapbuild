@@ -285,6 +285,9 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
         }).then(function () {
             var posts = offlineReplies.concat(onlinePosts);
             _this.discussion = _this.forumProvider.extractStartingPost(posts);
+            if (!_this.discussion) {
+                return Promise.reject('Invalid forum discussion');
+            }
             // If sort type is nested, normal sorting is disabled and nested posts will be displayed.
             if (_this.sort == 'nested') {
                 // Sort first by creation date to make format tree work.
@@ -922,7 +925,7 @@ var refresher = __webpack_require__(145);
 var refresher_content_ngfactory = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(158);
+var refresher_content = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);

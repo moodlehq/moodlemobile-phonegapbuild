@@ -25,10 +25,10 @@ var app = __webpack_require__(9);
 var file = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
-var init = __webpack_require__(153);
+var init = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/providers/lang.ts
-var lang = __webpack_require__(147);
+var lang = __webpack_require__(148);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
 var local_notifications = __webpack_require__(141);

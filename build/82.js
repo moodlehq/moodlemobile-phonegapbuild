@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(29);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz.ts
-var quiz = __webpack_require__(150);
+var quiz = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
 var helper = __webpack_require__(279);
@@ -412,7 +412,7 @@ var refresher = __webpack_require__(145);
 var refresher_content_ngfactory = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(158);
+var refresher_content = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);

@@ -34,7 +34,7 @@ var sites = __webpack_require__(1);
 var sync = __webpack_require__(85);
 
 // EXTERNAL MODULE: ./src/providers/file-session.ts
-var file_session = __webpack_require__(152);
+var file_session = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -46,7 +46,7 @@ var utils_text = __webpack_require__(10);
 var fileuploader = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/workshop.ts
-var workshop = __webpack_require__(149);
+var workshop = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
 var helper = __webpack_require__(174);
@@ -650,7 +650,7 @@ var gesture_controller = __webpack_require__(38);
 var refresher_content_ngfactory = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(158);
+var refresher_content = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(48);
