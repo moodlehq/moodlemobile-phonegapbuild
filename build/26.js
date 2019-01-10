@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 1873:
+/***/ 1872:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52,7 +52,7 @@ var fileuploader = __webpack_require__(66);
 var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
-var rich_text_editor = __webpack_require__(225);
+var rich_text_editor = __webpack_require__(226);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
 var forum = __webpack_require__(166);
@@ -697,7 +697,7 @@ var item_content = __webpack_require__(32);
 var label = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(18);
@@ -772,7 +772,7 @@ var content = __webpack_require__(23);
 var rich_text_editor_ngfactory = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(25);
+var url = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(16);

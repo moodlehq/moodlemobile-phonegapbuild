@@ -1,6 +1,6 @@
 webpackJsonp([33],{
 
-/***/ 1947:
+/***/ 1948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -192,7 +192,7 @@ var toolbar_title = __webpack_require__(337);
 var toolbar = __webpack_require__(246);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/core/user/components/participants/participants.ts
 var participants = __webpack_require__(482);

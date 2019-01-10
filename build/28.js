@@ -256,7 +256,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1358);
 var recaptchamodal_ngfactory = __webpack_require__(1359);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(18);
