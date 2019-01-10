@@ -1663,7 +1663,7 @@
     "core.strftimedatetimeshort": "%d/%m/%Y %H:%M",
     "core.strftimedaydate": "%A, %d de %B de %Y",
     "core.strftimedaydatetime": "%A, %d %B %Y, %H:%M",
-    "core.strftimedayshort": "%A %B %d",
+    "core.strftimedayshort": "%A, %d de %B",
     "core.strftimedaytime": "%a, %H:%M",
     "core.strftimemonthyear": "%B %Y",
     "core.strftimerecent": "%d %b, %H:%M",

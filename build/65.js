@@ -237,7 +237,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1358);
 var recaptchamodal_ngfactory = __webpack_require__(1359);
 
 // EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ngfactory.js
-var comments_ngfactory = __webpack_require__(671);
+var comments_ngfactory = __webpack_require__(670);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
 var empty_box_ngfactory = __webpack_require__(119);

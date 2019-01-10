@@ -397,7 +397,7 @@ var directives_link = __webpack_require__(189);
 var badge = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./src/pipes/to-locale-string.ts
-var to_locale_string = __webpack_require__(668);
+var to_locale_string = __webpack_require__(673);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(435);

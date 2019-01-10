@@ -437,7 +437,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1359);
 var unsupported_module_ngfactory = __webpack_require__(1360);
 
 // EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ngfactory.js
-var comments_ngfactory = __webpack_require__(671);
+var comments_ngfactory = __webpack_require__(670);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ngfactory.js
 var index_ngfactory = __webpack_require__(1369);
