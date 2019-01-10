@@ -1,6 +1,6 @@
 webpackJsonp([92],{
 
-/***/ 1871:
+/***/ 1872:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -264,13 +264,13 @@ var user = __webpack_require__(44);
 var forum = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
-var providers_helper = __webpack_require__(251);
+var providers_helper = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
 var offline = __webpack_require__(207);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
-var sync = __webpack_require__(252);
+var sync = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-prefetch-delegate.ts
 var module_prefetch_delegate = __webpack_require__(52);

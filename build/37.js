@@ -64,6 +64,7 @@ var choose_site_CoreSharedFilesChooseSitePage = /** @class */ (function () {
         this.domUtils = domUtils;
         this.fileProvider = fileProvider;
         this.filePath = navParams.get('filePath');
+        this.isInbox = navParams.get('isInbox');
     }
     /**
      * Component being initialized.
@@ -78,7 +79,7 @@ var choose_site_CoreSharedFilesChooseSitePage = /** @class */ (function () {
         var fileAndDir = this.fileProvider.getFileAndDirectoryFromPath(this.filePath);
         this.fileName = fileAndDir.name;
         // Get the file.
-        this.fileProvider.getFile(this.filePath).then(function (fe) {
+        this.fileProvider.getExternalFile(this.filePath).then(function (fe) {
             _this.fileEntry = fe;
             _this.fileName = _this.fileEntry.name;
         }).catch(function () {
@@ -100,7 +101,7 @@ var choose_site_CoreSharedFilesChooseSitePage = /** @class */ (function () {
     CoreSharedFilesChooseSitePage.prototype.storeInSite = function (siteId) {
         var _this = this;
         this.loaded = false;
-        this.sharedFilesHelper.storeSharedFileInSite(this.fileEntry, siteId).then(function () {
+        this.sharedFilesHelper.storeSharedFileInSite(this.fileEntry, siteId, this.isInbox).then(function () {
             _this.navCtrl.pop();
         }).finally(function () {
             _this.loaded = true;

@@ -52,7 +52,7 @@ var course = __webpack_require__(15);
 var data = __webpack_require__(95);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
-var helper = __webpack_require__(253);
+var helper = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/offline.ts
 var offline = __webpack_require__(208);
@@ -216,7 +216,8 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
         }).then(function (entryData) {
             _this.entry = entryData;
             var actions = _this.dataHelper.getActions(_this.data, _this.access, _this.entry);
-            _this.entryRendered = _this.dataHelper.displayShowFields(_this.data.singletemplate, fieldsArray, _this.entry, 'show', actions);
+            var templte = _this.data.singletemplate || _this.dataHelper.getDefaultTemplate('single', fieldsArray);
+            _this.entryRendered = _this.dataHelper.displayShowFields(templte, fieldsArray, _this.entry, 'show', actions);
             _this.showComments = actions.comments;
             var entries = {};
             entries[_this.entryId] = _this.entry;

@@ -571,7 +571,7 @@
     "addon.mod_lesson.question": "Galdera",
     "addon.mod_lesson.rawgrade": "Puntuazio gordina",
     "addon.mod_lesson.reports": "Txostenak",
-    "addon.mod_lesson.response": "Ebazpena",
+    "addon.mod_lesson.response": "Erantzuna",
     "addon.mod_lesson.retakefinishedinsync": "Lineaz kanpoko saiakera bat sinkronizatu da. Berrikusi nahi duzu?",
     "addon.mod_lesson.retakelabelfull": "{{retake}}: {{grade}} {{timestart}} ({{duration}})",
     "addon.mod_lesson.retakelabelshort": "{{retake}}: {{grade}} {{timestart}}",

@@ -58,7 +58,7 @@ var course = __webpack_require__(15);
 var data = __webpack_require__(95);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
-var helper = __webpack_require__(253);
+var helper = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/offline.ts
 var offline = __webpack_require__(208);
@@ -322,9 +322,6 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
      * @return {string}  Generated HTML.
      */
     AddonModDataEditPage.prototype.displayEditFields = function () {
-        if (!this.data.addtemplate) {
-            return '';
-        }
         this.jsData = {
             fields: this.fields,
             contents: this.utils.clone(this.entry.contents),
@@ -332,7 +329,7 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
             data: this.data,
             errors: this.errors
         };
-        var replace, render, template = this.data.addtemplate;
+        var replace, render, template = this.data.addtemplate || this.dataHelper.getDefaultTemplate('add', this.fieldsArray);
         // Replace the fields found on template.
         this.fieldsArray.forEach(function (field) {
             replace = '[[' + field.name + ']]';

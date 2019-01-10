@@ -36,6 +36,9 @@ var utils_text = __webpack_require__(10);
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
 var fields_delegate = __webpack_require__(114);
 
+// EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
+var helper = __webpack_require__(251);
+
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/search/search.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
@@ -67,17 +70,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Page that displays the search modal.
  */
 var search_AddonModDataSearchPage = /** @class */ (function () {
-    function AddonModDataSearchPage(params, viewCtrl, fb, utils, domUtils, fieldsDelegate, textUtils) {
+    function AddonModDataSearchPage(params, viewCtrl, fb, utils, domUtils, fieldsDelegate, textUtils, dataHelper) {
         var _this = this;
         this.viewCtrl = viewCtrl;
         this.utils = utils;
         this.domUtils = domUtils;
         this.fieldsDelegate = fieldsDelegate;
         this.textUtils = textUtils;
+        this.dataHelper = dataHelper;
         this.extraImports = [components_module["a" /* AddonModDataComponentsModule */]];
         this.search = params.get('search');
         this.fields = params.get('fields');
@@ -117,15 +122,12 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
      * @return {string}         Generated HTML.
      */
     AddonModDataSearchPage.prototype.renderAdvancedSearchFields = function () {
-        if (!this.data.asearchtemplate) {
-            return '';
-        }
         this.jsData = {
             fields: this.fields,
             form: this.searchForm,
             search: this.search.advanced
         };
-        var template = this.data.asearchtemplate, replace, render;
+        var template = this.data.asearchtemplate || this.dataHelper.getDefaultTemplate('asearch', this.fieldsArray), replace, render;
         // Replace the fields found on template.
         this.fieldsArray.forEach(function (field) {
             replace = '[[' + field.name + ']]';
@@ -196,9 +198,11 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
     };
     /**
      * Toggles between advanced to normal search.
+     *
+     * @param {boolean} advanced True for advanced, false for basic.
      */
-    AddonModDataSearchPage.prototype.toggleAdvanced = function () {
-        this.search.searchingAdvanced = !this.search.searchingAdvanced;
+    AddonModDataSearchPage.prototype.changeAdvanced = function (advanced) {
+        this.search.searchingAdvanced = advanced;
     };
     /**
      * Done editing.
@@ -228,7 +232,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */],
             dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */],
-            utils_text["a" /* CoreTextUtilsProvider */]])
+            utils_text["a" /* CoreTextUtilsProvider */], helper["a" /* AddonModDataHelperProvider */]])
     ], AddonModDataSearchPage);
     return AddonModDataSearchPage;
 }());
@@ -524,6 +528,7 @@ var nav_params = __webpack_require__(60);
 
 
 
+
 var styles_AddonModDataSearchPage = [];
 var RenderType_AddonModDataSearchPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModDataSearchPage, data: {} });
 
@@ -534,10 +539,10 @@ function View_AddonModDataSearchPage_0(_l) { return core["_57" /* ɵvid */](0, [
         var pd_0 = (_co.closeModal() !== false);
         ad = (pd_0 && ad);
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](17, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 0, 1, "ion-icon", [["name", "close"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](21, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](27, 0, null, null, 150, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](28, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](30, 0, null, 1, 9, "div", [["class", "fixed-content core-tabs-bar"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](32, 0, null, null, 2, "a", [["class", "tab-slide"]], [[1, "aria-selected", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.toggleAdvanced() !== false);
+        var pd_0 = (_co.changeAdvanced(false) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), (_l()(), core["_55" /* ɵted */](33, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](36, 0, null, null, 2, "a", [["class", "tab-slide"]], [[1, "aria-selected", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.toggleAdvanced() !== false);
+        var pd_0 = (_co.changeAdvanced(true) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), (_l()(), core["_55" /* ɵted */](37, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](41, 0, null, 1, 135, "form", [["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngSubmit"], [null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("submit" === en)) {
         var pd_0 = (core["_44" /* ɵnov */](_v, 43).onSubmit($event) !== false);
@@ -567,7 +572,7 @@ function View_AddonModDataSearchPage_0(_l) { return core["_57" /* ɵvid */](0, [
         var pd_0 = (core["_44" /* ɵnov */](_v, 155)._click($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, radio_button_ngfactory["b" /* View_RadioButton_0 */], radio_button_ngfactory["a" /* RenderType_RadioButton */])), core["_30" /* ɵdid */](155, 245760, null, 0, radio_button["a" /* RadioButton */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], [2, radio_group["a" /* RadioGroup */]]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](159, 0, null, null, 4, "div", [["class", "addon-data-advanced-search"], ["padding", ""]], [[8, "hidden", 0]], null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](161, 0, null, null, 1, "core-compile-html", [], null, null, null, compile_html_ngfactory["b" /* View_CoreCompileHtmlComponent_0 */], compile_html_ngfactory["a" /* RenderType_CoreCompileHtmlComponent */])), core["_30" /* ɵdid */](162, 966656, null, 0, compile_html["a" /* CoreCompileHtmlComponent */], [compile["a" /* CoreCompileProvider */], core["j" /* ChangeDetectorRef */], core["t" /* ElementRef */], [2, nav_controller["a" /* NavController */]], core["F" /* KeyValueDiffers */], dom["a" /* CoreDomUtilsProvider */], utils_utils["a" /* CoreUtilsProvider */]], { text: [0, "text"], jsData: [1, "jsData"], extraImports: [2, "extraImports"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](166, 0, null, null, 9, "div", [["padding", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](168, 0, null, null, 6, "button", [["block", ""], ["icon-start", ""], ["ion-button", ""], ["type", "submit"]], null, null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](169, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](171, 0, null, 0, 1, "ion-icon", [["name", "search"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](172, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](173, 0, ["\n                ", "\n            "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_5 = "close"; _ck(_v, 21, 0, currVal_5); var currVal_19 = _co.searchForm; _ck(_v, 43, 0, currVal_19); var currVal_28 = "text"; var currVal_29 = _co.search.text; _ck(_v, 58, 0, currVal_28, currVal_29); var currVal_30 = "text"; var currVal_31 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 61, 1, core["_44" /* ɵnov */](_v, 62).transform("addon.mod_data.search")), ""); _ck(_v, 61, 0, currVal_30, currVal_31); var currVal_41 = "action-sheet"; _ck(_v, 78, 0, currVal_41); var currVal_42 = "sortBy"; _ck(_v, 81, 0, currVal_42); var currVal_43 = _co.fieldsArray.length; _ck(_v, 86, 0, currVal_43); var currVal_45 = "0"; _ck(_v, 92, 0, currVal_45); var currVal_47 = "-4"; _ck(_v, 97, 0, currVal_47); var currVal_49 = "-1"; _ck(_v, 102, 0, currVal_49); var currVal_51 = "-2"; _ck(_v, 107, 0, currVal_51); var currVal_53 = _co.data.approval; _ck(_v, 112, 0, currVal_53); var currVal_61 = "sortDirection"; var currVal_62 = _co.search.sortDirection; _ck(_v, 121, 0, currVal_61, currVal_62); var currVal_65 = "ASC"; _ck(_v, 139, 0, currVal_65); var currVal_68 = "DESC"; _ck(_v, 155, 0, currVal_68); var currVal_70 = _co.advancedSearch; var currVal_71 = _co.jsData; var currVal_72 = _co.extraImports; _ck(_v, 162, 0, currVal_70, currVal_71, currVal_72); var currVal_73 = ""; _ck(_v, 169, 0, currVal_73); var currVal_75 = "search"; _ck(_v, 172, 0, currVal_75); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("addon.mod_data.search")); _ck(_v, 9, 0, currVal_2); var currVal_3 = core["_56" /* ɵunv */](_v, 16, 0, core["_44" /* ɵnov */](_v, 18).transform("core.close")); _ck(_v, 16, 0, currVal_3); var currVal_4 = core["_44" /* ɵnov */](_v, 21)._hidden; _ck(_v, 20, 0, currVal_4); var currVal_6 = core["_44" /* ɵnov */](_v, 28).statusbarPadding; var currVal_7 = core["_44" /* ɵnov */](_v, 28)._hasRefresher; _ck(_v, 27, 0, currVal_6, currVal_7); var currVal_8 = !_co.search.searchingAdvanced; _ck(_v, 32, 0, currVal_8); var currVal_9 = core["_56" /* ɵunv */](_v, 33, 0, core["_44" /* ɵnov */](_v, 34).transform("addon.mod_data.search")); _ck(_v, 33, 0, currVal_9); var currVal_10 = _co.search.searchingAdvanced; _ck(_v, 36, 0, currVal_10); var currVal_11 = core["_56" /* ɵunv */](_v, 37, 0, core["_44" /* ɵnov */](_v, 38).transform("addon.mod_data.advancedsearch")); _ck(_v, 37, 0, currVal_11); var currVal_12 = core["_44" /* ɵnov */](_v, 45).ngClassUntouched; var currVal_13 = core["_44" /* ɵnov */](_v, 45).ngClassTouched; var currVal_14 = core["_44" /* ɵnov */](_v, 45).ngClassPristine; var currVal_15 = core["_44" /* ɵnov */](_v, 45).ngClassDirty; var currVal_16 = core["_44" /* ɵnov */](_v, 45).ngClassValid; var currVal_17 = core["_44" /* ɵnov */](_v, 45).ngClassInvalid; var currVal_18 = core["_44" /* ɵnov */](_v, 45).ngClassPending; _ck(_v, 41, 0, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18); var currVal_20 = _co.search.searchingAdvanced; _ck(_v, 50, 0, currVal_20); var currVal_21 = core["_44" /* ɵnov */](_v, 60).ngClassUntouched; var currVal_22 = core["_44" /* ɵnov */](_v, 60).ngClassTouched; var currVal_23 = core["_44" /* ɵnov */](_v, 60).ngClassPristine; var currVal_24 = core["_44" /* ɵnov */](_v, 60).ngClassDirty; var currVal_25 = core["_44" /* ɵnov */](_v, 60).ngClassValid; var currVal_26 = core["_44" /* ɵnov */](_v, 60).ngClassInvalid; var currVal_27 = core["_44" /* ɵnov */](_v, 60).ngClassPending; _ck(_v, 57, 0, currVal_21, currVal_22, currVal_23, currVal_24, currVal_25, currVal_26, currVal_27); var currVal_32 = core["_56" /* ɵunv */](_v, 74, 0, core["_44" /* ɵnov */](_v, 75).transform("core.sortby")); _ck(_v, 74, 0, currVal_32); var currVal_33 = core["_44" /* ɵnov */](_v, 78)._disabled; var currVal_34 = core["_44" /* ɵnov */](_v, 83).ngClassUntouched; var currVal_35 = core["_44" /* ɵnov */](_v, 83).ngClassTouched; var currVal_36 = core["_44" /* ɵnov */](_v, 83).ngClassPristine; var currVal_37 = core["_44" /* ɵnov */](_v, 83).ngClassDirty; var currVal_38 = core["_44" /* ɵnov */](_v, 83).ngClassValid; var currVal_39 = core["_44" /* ɵnov */](_v, 83).ngClassInvalid; var currVal_40 = core["_44" /* ɵnov */](_v, 83).ngClassPending; _ck(_v, 77, 0, currVal_33, currVal_34, currVal_35, currVal_36, currVal_37, currVal_38, currVal_39, currVal_40); var currVal_44 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 88, 0, core["_44" /* ɵnov */](_v, 89).transform("addon.mod_data.other")), ""); _ck(_v, 88, 0, currVal_44); var currVal_46 = core["_56" /* ɵunv */](_v, 93, 0, core["_44" /* ɵnov */](_v, 94).transform("addon.mod_data.timeadded")); _ck(_v, 93, 0, currVal_46); var currVal_48 = core["_56" /* ɵunv */](_v, 98, 0, core["_44" /* ɵnov */](_v, 99).transform("addon.mod_data.timemodified")); _ck(_v, 98, 0, currVal_48); var currVal_50 = core["_56" /* ɵunv */](_v, 103, 0, core["_44" /* ɵnov */](_v, 104).transform("addon.mod_data.authorfirstname")); _ck(_v, 103, 0, currVal_50); var currVal_52 = core["_56" /* ɵunv */](_v, 108, 0, core["_44" /* ɵnov */](_v, 109).transform("addon.mod_data.authorlastname")); _ck(_v, 108, 0, currVal_52); var currVal_54 = core["_44" /* ɵnov */](_v, 123).ngClassUntouched; var currVal_55 = core["_44" /* ɵnov */](_v, 123).ngClassTouched; var currVal_56 = core["_44" /* ɵnov */](_v, 123).ngClassPristine; var currVal_57 = core["_44" /* ɵnov */](_v, 123).ngClassDirty; var currVal_58 = core["_44" /* ɵnov */](_v, 123).ngClassValid; var currVal_59 = core["_44" /* ɵnov */](_v, 123).ngClassInvalid; var currVal_60 = core["_44" /* ɵnov */](_v, 123).ngClassPending; _ck(_v, 117, 0, currVal_54, currVal_55, currVal_56, currVal_57, currVal_58, currVal_59, currVal_60); var currVal_63 = core["_56" /* ɵunv */](_v, 135, 0, core["_44" /* ɵnov */](_v, 136).transform("addon.mod_data.ascending")); _ck(_v, 135, 0, currVal_63); var currVal_64 = core["_44" /* ɵnov */](_v, 139)._disabled; _ck(_v, 138, 0, currVal_64); var currVal_66 = core["_56" /* ɵunv */](_v, 151, 0, core["_44" /* ɵnov */](_v, 152).transform("addon.mod_data.descending")); _ck(_v, 151, 0, currVal_66); var currVal_67 = core["_44" /* ɵnov */](_v, 155)._disabled; _ck(_v, 154, 0, currVal_67); var currVal_69 = (!_co.advancedSearch || !_co.search.searchingAdvanced); _ck(_v, 159, 0, currVal_69); var currVal_74 = core["_44" /* ɵnov */](_v, 172)._hidden; _ck(_v, 171, 0, currVal_74); var currVal_76 = core["_56" /* ɵunv */](_v, 173, 0, core["_44" /* ɵnov */](_v, 174).transform("addon.mod_data.search")); _ck(_v, 173, 0, currVal_76); }); }
-function View_AddonModDataSearchPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-data-search", [], null, null, null, View_AddonModDataSearchPage_0, RenderType_AddonModDataSearchPage)), core["_30" /* ɵdid */](1, 49152, null, 0, search_AddonModDataSearchPage, [nav_params["a" /* NavParams */], view_controller["a" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */], utils_text["a" /* CoreTextUtilsProvider */]], null, null)], null, null); }
+function View_AddonModDataSearchPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-data-search", [], null, null, null, View_AddonModDataSearchPage_0, RenderType_AddonModDataSearchPage)), core["_30" /* ɵdid */](1, 49152, null, 0, search_AddonModDataSearchPage, [nav_params["a" /* NavParams */], view_controller["a" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */], utils_text["a" /* CoreTextUtilsProvider */], helper["a" /* AddonModDataHelperProvider */]], null, null)], null, null); }
 var AddonModDataSearchPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-data-search", search_AddonModDataSearchPage, View_AddonModDataSearchPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=search.ngfactory.js.map

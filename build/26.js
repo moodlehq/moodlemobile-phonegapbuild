@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 1872:
+/***/ 1873:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61,10 +61,10 @@ var forum = __webpack_require__(166);
 var offline = __webpack_require__(207);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
-var helper = __webpack_require__(251);
+var helper = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
-var providers_sync = __webpack_require__(252);
+var providers_sync = __webpack_require__(253);
 
 // CONCATENATED MODULE: ./src/addon/mod/forum/pages/new-discussion/new-discussion.ts
 // (C) Copyright 2015 Martin Dougiamas
