@@ -1,90 +1,72 @@
 webpackJsonp([102],{
 
-/***/ 1772:
+/***/ 1860:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonMessagesDiscussionPageModule", function() { return AddonMessagesDiscussionPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__discussion__ = __webpack_require__(1893);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(67);
-// (C) Copyright 2015 Martin Dougiamas
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
 
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(8);
 
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(3);
 
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
+var directives_module = __webpack_require__(29);
 
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(28);
 
+// EXTERNAL MODULE: ./src/core/comments/components/components.module.ts
+var components_components_module = __webpack_require__(443);
 
-var AddonMessagesDiscussionPageModule = /** @class */ (function () {
-    function AddonMessagesDiscussionPageModule() {
-    }
-    AddonMessagesDiscussionPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__discussion__["a" /* AddonMessagesDiscussionPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__discussion__["a" /* AddonMessagesDiscussionPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
-        })
-    ], AddonMessagesDiscussionPageModule);
-    return AddonMessagesDiscussionPageModule;
-}());
+// EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
+var compile_html_module = __webpack_require__(438);
 
-//# sourceMappingURL=discussion.module.js.map
+// EXTERNAL MODULE: ./src/addon/mod/data/components/components.module.ts + 2 modules
+var data_components_components_module = __webpack_require__(439);
 
-/***/ }),
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(22);
 
-/***/ 1893:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils_utils = __webpack_require__(2);
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonMessagesDiscussionPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_messages__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sync__ = __webpack_require__(391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__core_user_providers_user__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_dom__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_utils_utils__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_logger__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_app__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__classes_animations__ = __webpack_require__(930);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ts_md5_dist_md5__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ts_md5_dist_md5___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_ts_md5_dist_md5__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_moment__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_moment__);
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./src/providers/groups.ts
+var groups = __webpack_require__(67);
+
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
+var fileuploader = __webpack_require__(66);
+
+// EXTERNAL MODULE: ./src/core/course/providers/course.ts
+var course = __webpack_require__(15);
+
+// EXTERNAL MODULE: ./src/addon/mod/data/providers/data.ts
+var data = __webpack_require__(95);
+
+// EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
+var helper = __webpack_require__(251);
+
+// EXTERNAL MODULE: ./src/addon/mod/data/providers/offline.ts
+var offline = __webpack_require__(208);
+
+// EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
+var fields_delegate = __webpack_require__(114);
+
+// CONCATENATED MODULE: ./src/addon/mod/data/pages/edit/edit.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -122,627 +104,711 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
- * Page that displays a message discussion page.
+ * Page that displays the view edit page.
  */
-var AddonMessagesDiscussionPage = /** @class */ (function () {
-    function AddonMessagesDiscussionPage(eventsProvider, sitesProvider, navParams, userProvider, navCtrl, messagesSync, domUtils, messagesProvider, logger, utils, appProvider, translate) {
-        var _this = this;
-        this.eventsProvider = eventsProvider;
-        this.userProvider = userProvider;
-        this.navCtrl = navCtrl;
-        this.messagesSync = messagesSync;
-        this.domUtils = domUtils;
-        this.messagesProvider = messagesProvider;
+var edit_AddonModDataEditPage = /** @class */ (function () {
+    function AddonModDataEditPage(params, utils, groupsProvider, domUtils, fieldsDelegate, courseProvider, dataProvider, dataOffline, dataHelper, sitesProvider, navCtrl, translate, eventsProvider, fileUploaderProvider) {
         this.utils = utils;
-        this.appProvider = appProvider;
+        this.groupsProvider = groupsProvider;
+        this.domUtils = domUtils;
+        this.fieldsDelegate = fieldsDelegate;
+        this.courseProvider = courseProvider;
+        this.dataProvider = dataProvider;
+        this.dataOffline = dataOffline;
+        this.dataHelper = dataHelper;
+        this.navCtrl = navCtrl;
         this.translate = translate;
-        this.unreadMessageFrom = 0;
-        this.messagesBeingSent = 0;
-        this.pagesLoaded = 1;
-        this.lastMessage = { text: '', timecreated: 0 };
-        this.keepMessageMap = {};
-        this.oldContentHeight = 0;
+        this.eventsProvider = eventsProvider;
+        this.fileUploaderProvider = fileUploaderProvider;
+        this.offlineActions = [];
+        this.fields = {};
+        this.fieldsArray = [];
+        this.forceLeave = false; // To allow leaving the page without checking for changes.
+        this.title = '';
+        this.component = data["a" /* AddonModDataProvider */].COMPONENT;
         this.loaded = false;
-        this.showKeyboard = false;
-        this.canLoadMore = false;
-        this.messages = [];
-        this.showDelete = false;
-        this.canDelete = false;
-        this.scrollBottom = true;
-        this.viewDestroyed = false;
+        this.selectedGroup = 0;
+        this.cssClass = '';
+        this.cssTemplate = '';
+        this.editFormRender = '';
+        this.extraImports = [data_components_components_module["a" /* AddonModDataComponentsModule */]];
+        this.errors = {};
+        this.module = params.get('module') || {};
+        this.entryId = params.get('entryId') || null;
+        this.courseId = params.get('courseId');
+        this.selectedGroup = params.get('group') || 0;
         this.siteId = sitesProvider.getCurrentSiteId();
-        this.currentUserId = sitesProvider.getCurrentSiteUserId();
-        this.logger = logger.getInstance('AddonMessagesDiscussionPage');
-        this.userId = navParams.get('userId');
-        this.showKeyboard = navParams.get('showKeyboard');
-        // Refresh data if this discussion is synchronized automatically.
-        this.syncObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_6__providers_sync__["a" /* AddonMessagesSyncProvider */].AUTO_SYNCED, function (data) {
-            if (data.userId == _this.userId) {
-                // Fetch messages.
-                _this.fetchData();
-                // Show first warning if any.
-                if (data.warnings && data.warnings[0]) {
-                    _this.domUtils.showErrorModal(data.warnings[0]);
-                }
-            }
-        }, this.siteId);
+        this.title = this.module.name;
+        this.editForm = new esm5_forms["g" /* FormGroup */]({});
     }
     /**
-     * Adds a new message to the message list.
+     * View loaded.
+     */
+    AddonModDataEditPage.prototype.ionViewDidLoad = function () {
+        this.fetchEntryData();
+    };
+    /**
+     * Check if we can leave the page or not and ask to confirm the lost of data.
      *
-     * @param {any} message Message to be added.
-     * @param {boolean} [keep=true] If set the keep flag or not.
+     * @return {boolean | Promise<void>} Resolved if we can leave it, rejected if not.
      */
-    AddonMessagesDiscussionPage.prototype.addMessage = function (message, keep) {
-        if (keep === void 0) { keep = true; }
-        // Use smallmessage instead of message ID because ID changes when a message is read.
-        message.hash = __WEBPACK_IMPORTED_MODULE_13_ts_md5_dist_md5__["Md5"].hashAsciiStr(message.smallmessage) + '#' + message.timecreated + '#' + message.useridfrom;
-        if (typeof this.keepMessageMap[message.hash] === 'undefined') {
-            // Message not added to the list. Add it now.
-            this.messages.push(message);
-        }
-        // Message needs to be kept in the list.
-        this.keepMessageMap[message.hash] = keep;
-    };
-    /**
-     * Remove a message if it shouldn't be in the list anymore.
-     *
-     * @param {string} hash Hash of the message to be removed.
-     */
-    AddonMessagesDiscussionPage.prototype.removeMessage = function (hash) {
-        if (this.keepMessageMap[hash]) {
-            // Selected to keep it, clear the flag.
-            this.keepMessageMap[hash] = false;
-            return;
-        }
-        delete this.keepMessageMap[hash];
-        var position = this.messages.findIndex(function (message) {
-            return message.hash == hash;
-        });
-        if (position > 0) {
-            this.messages.splice(position, 1);
-        }
-    };
-    /**
-     * Runs when the page has loaded. This event only happens once per page being created.
-     * If a page leaves but is cached, then this event will not fire again on a subsequent viewing.
-     * Setup code for the page.
-     */
-    AddonMessagesDiscussionPage.prototype.ionViewDidLoad = function () {
+    AddonModDataEditPage.prototype.ionViewCanLeave = function () {
         var _this = this;
-        // Disable the profile button if we're already coming from a profile.
-        var backViewPage = this.navCtrl.getPrevious() && this.navCtrl.getPrevious().component.name;
-        this.showProfileLink = !backViewPage || backViewPage !== 'CoreUserProfilePage';
-        // Get the user profile to retrieve the user fullname and image.
-        this.userProvider.getProfile(this.userId, undefined, true).then(function (user) {
-            if (!_this.title) {
-                _this.title = user.fullname;
-            }
-            _this.profileLink = user.profileimageurl;
-        });
-        // Synchronize messages if needed.
-        this.messagesSync.syncDiscussion(this.userId).catch(function () {
-            // Ignore errors.
-        }).then(function (warnings) {
-            if (warnings && warnings[0]) {
-                _this.domUtils.showErrorModal(warnings[0]);
-            }
-            // Fetch the messages for the first time.
-            return _this.fetchData().then(function () {
-                if (!_this.title && _this.messages.length) {
-                    // Didn't receive the fullname via argument. Try to get it from messages.
-                    // It's possible that name cannot be resolved when no messages were yet exchanged.
-                    if (_this.messages[0].useridto != _this.currentUserId) {
-                        _this.title = _this.messages[0].usertofullname || '';
-                    }
-                    else {
-                        _this.title = _this.messages[0].userfromfullname || '';
-                    }
-                }
-            }).catch(function (error) {
-                _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingmessages', true);
-            }).finally(function () {
-                _this.checkCanDelete();
-                _this.resizeContent();
-                _this.loaded = true;
-            });
-        });
-        // Recalculate footer position when keyboard is shown or hidden.
-        this.keyboardObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */].KEYBOARD_CHANGE, function (kbHeight) {
-            _this.content.resize();
-        });
-    };
-    /**
-     * Runs when the page has fully entered and is now the active page.
-     * This event will fire, whether it was the first load or a cached page.
-     */
-    AddonMessagesDiscussionPage.prototype.ionViewDidEnter = function () {
-        this.setPolling();
-    };
-    /**
-     * Runs when the page is about to leave and no longer be the active page.
-     */
-    AddonMessagesDiscussionPage.prototype.ionViewWillLeave = function () {
-        this.unsetPolling();
-    };
-    /**
-     * Convenience function to fetch messages.
-     * @return {Promise<any>} Resolved when done.
-     */
-    AddonMessagesDiscussionPage.prototype.fetchData = function () {
-        var _this = this;
-        this.logger.debug("Polling new messages for discussion with user '" + this.userId + "'");
-        if (this.messagesBeingSent > 0) {
-            // We do not poll while a message is being sent or we could confuse the user.
-            // Otherwise, his message would disappear from the list, and he'd have to wait for the interval to check for messages.
-            return Promise.reject(null);
+        if (this.forceLeave) {
+            return true;
         }
-        else if (this.fetching) {
-            // Already fetching.
-            return Promise.reject(null);
-        }
-        this.fetching = true;
-        // Wait for synchronization process to finish.
-        return this.messagesSync.waitForSync(this.userId).then(function () {
-            // Fetch messages. Invalidate the cache before fetching.
-            return _this.messagesProvider.invalidateDiscussionCache(_this.userId).catch(function () {
-                // Ignore errors.
-            });
-        }).then(function () {
-            return _this.getDiscussion(_this.pagesLoaded);
-        }).then(function (messages) {
-            if (_this.viewDestroyed) {
+        var inputData = this.editForm.value;
+        return this.dataHelper.hasEditDataChanged(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (changed) {
+            if (!changed) {
                 return Promise.resolve();
             }
-            // Check if we are at the bottom to scroll it after render.
-            _this.scrollBottom = _this.domUtils.getScrollHeight(_this.content) - _this.domUtils.getScrollTop(_this.content) ===
-                _this.domUtils.getContentHeight(_this.content);
-            if (_this.messagesBeingSent > 0) {
-                // Ignore polling due to a race condition.
-                return Promise.reject(null);
-            }
-            // Add new messages to the list and mark the messages that should still be displayed.
-            messages.forEach(function (message) {
-                _this.addMessage(message);
+            // Show confirmation if some data has been modified.
+            return _this.domUtils.showConfirm(_this.translate.instant('core.confirmcanceledit'));
+        }).then(function () {
+            // Delete the local files from the tmp folder.
+            return _this.dataHelper.getEditTmpFiles(inputData, _this.fieldsArray, _this.data.id, _this.entry.contents).then(function (files) {
+                _this.fileUploaderProvider.clearTmpFiles(files);
             });
-            // Remove messages that shouldn't be in the list anymore.
-            for (var hash in _this.keepMessageMap) {
-                _this.removeMessage(hash);
-            }
-            // Sort the messages.
-            _this.messagesProvider.sortMessages(_this.messages);
-            // Notify that there can be a new message.
-            _this.notifyNewMessage();
-            // Mark retrieved messages as read if they are not.
-            _this.markMessagesAsRead();
-        }).finally(function () {
-            _this.fetching = false;
         });
     };
     /**
-     * Get a discussion. Can load several "pages".
+     * Fetch the entry data.
      *
-     * @param  {number}  pagesToLoad          Number of pages to load.
-     * @param  {number}  [lfReceivedUnread=0] Number of unread received messages already fetched, so fetch will be done from this.
-     * @param  {number}  [lfReceivedRead=0]   Number of read received messages already fetched, so fetch will be done from this.
-     * @param  {number}  [lfSentUnread=0]     Number of unread sent messages already fetched, so fetch will be done from this.
-     * @param  {number}  [lfSentRead=0]       Number of read sent messages already fetched, so fetch will be done from this.
-     * @return {Promise<any>}  Resolved when done.
+     * @return {Promise<any>}         Resolved when done.
      */
-    AddonMessagesDiscussionPage.prototype.getDiscussion = function (pagesToLoad, lfReceivedUnread, lfReceivedRead, lfSentUnread, lfSentRead) {
+    AddonModDataEditPage.prototype.fetchEntryData = function () {
         var _this = this;
-        if (lfReceivedUnread === void 0) { lfReceivedUnread = 0; }
-        if (lfReceivedRead === void 0) { lfReceivedRead = 0; }
-        if (lfSentUnread === void 0) { lfSentUnread = 0; }
-        if (lfSentRead === void 0) { lfSentRead = 0; }
-        // Only get offline messages if we're loading the first "page".
-        var excludePending = lfReceivedUnread > 0 || lfReceivedRead > 0 || lfSentUnread > 0 || lfSentRead > 0;
-        // Get next messages.
-        return this.messagesProvider.getDiscussion(this.userId, excludePending, lfReceivedUnread, lfReceivedRead, lfSentUnread, lfSentRead).then(function (result) {
-            pagesToLoad--;
-            if (pagesToLoad > 0 && result.canLoadMore) {
-                // More pages to load. Calculate new limit froms.
-                result.messages.forEach(function (message) {
-                    if (!message.pending) {
-                        if (message.useridfrom == _this.userId) {
-                            if (message.read) {
-                                lfReceivedRead++;
-                            }
-                            else {
-                                lfReceivedUnread++;
-                            }
-                        }
-                        else {
-                            if (message.read) {
-                                lfSentRead++;
-                            }
-                            else {
-                                lfSentUnread++;
-                            }
+        return this.dataProvider.getDatabase(this.courseId, this.module.id).then(function (data) {
+            _this.title = data.name || _this.title;
+            _this.data = data;
+            _this.cssClass = 'addon-data-entries-' + data.id;
+            return _this.dataProvider.getDatabaseAccessInformation(data.id);
+        }).then(function (accessData) {
+            _this.cssTemplate = _this.dataHelper.prefixCSS(_this.data.csstemplate, '.' + _this.cssClass);
+            if (_this.entryId) {
+                return _this.groupsProvider.getActivityGroupInfo(_this.data.coursemodule, accessData.canmanageentries)
+                    .then(function (groupInfo) {
+                    _this.groupInfo = groupInfo;
+                    // Check selected group is accessible.
+                    if (groupInfo && groupInfo.groups && groupInfo.groups.length > 0) {
+                        if (!groupInfo.groups.some(function (group) { return _this.selectedGroup == group.id; })) {
+                            _this.selectedGroup = groupInfo.groups[0].id;
                         }
                     }
                 });
-                // Get next messages.
-                return _this.getDiscussion(pagesToLoad, lfReceivedUnread, lfReceivedRead, lfSentUnread, lfSentRead)
-                    .then(function (nextMessages) {
-                    return result.messages.concat(nextMessages);
-                });
+            }
+        }).then(function () {
+            return _this.dataOffline.getEntryActions(_this.data.id, _this.entryId);
+        }).then(function (actions) {
+            _this.offlineActions = actions;
+            return _this.dataProvider.getFields(_this.data.id);
+        }).then(function (fieldsData) {
+            _this.fieldsArray = fieldsData;
+            _this.fields = _this.utils.arrayToObject(fieldsData, 'id');
+            return _this.dataHelper.getEntry(_this.data, _this.entryId, _this.offlineActions);
+        }).then(function (entry) {
+            if (entry) {
+                entry = entry.entry;
+                // Index contents by fieldid.
+                entry.contents = _this.utils.arrayToObject(entry.contents, 'fieldid');
             }
             else {
-                // No more messages to load, return them.
-                _this.canLoadMore = result.canLoadMore;
-                return result.messages;
+                entry = {
+                    contents: {}
+                };
             }
+            return _this.dataHelper.applyOfflineActions(entry, _this.offlineActions, _this.fieldsArray);
+        }).then(function (entryData) {
+            _this.entry = entryData;
+            _this.editFormRender = _this.displayEditFields();
+        }).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+        }).finally(function () {
+            _this.loaded = true;
         });
     };
     /**
-     * Mark messages as read.
+     * Saves data.
+     *
+     * @param {Event} e Event.
+     * @return {Promise<any>} Resolved when done.
      */
-    AddonMessagesDiscussionPage.prototype.markMessagesAsRead = function () {
+    AddonModDataEditPage.prototype.save = function (e) {
         var _this = this;
-        var readChanged = false;
-        var promises = [];
-        if (this.messagesProvider.isMarkAllMessagesReadEnabled()) {
-            var messageUnreadFound = false;
-            // Mark all messages at a time if one messages is unread.
-            for (var x in this.messages) {
-                var message = this.messages[x];
-                // If an unread message is found, mark all messages as read.
-                if (message.useridfrom != this.currentUserId && message.read == 0) {
-                    messageUnreadFound = true;
-                    break;
+        e.preventDefault();
+        e.stopPropagation();
+        var inputData = this.editForm.value;
+        return this.dataHelper.hasEditDataChanged(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (changed) {
+            if (!changed) {
+                if (_this.entryId) {
+                    return _this.returnToEntryList();
                 }
+                // New entry, no changes means no field filled, warn the user.
+                return Promise.reject('addon.mod_data.emptyaddform');
             }
-            if (messageUnreadFound) {
-                this.setUnreadLabelPosition();
-                promises.push(this.messagesProvider.markAllMessagesRead(this.userId).then(function () {
-                    readChanged = true;
-                    // Mark all messages as read.
-                    _this.messages.forEach(function (message) {
-                        message.read = 1;
+            var modal = _this.domUtils.showModalLoading('core.sending', true);
+            // Create an ID to assign files.
+            var entryTemp = _this.entryId ? _this.entryId : -(new Date().getTime());
+            return _this.dataHelper.getEditDataFromForm(inputData, _this.fieldsArray, _this.data.id, entryTemp, _this.entry.contents, _this.offline).catch(function (e) {
+                if (!_this.offline) {
+                    // Cannot submit in online, prepare for offline usage.
+                    _this.offline = true;
+                    return _this.dataHelper.getEditDataFromForm(inputData, _this.fieldsArray, _this.data.id, entryTemp, _this.entry.contents, _this.offline);
+                }
+                return Promise.reject(e);
+            }).then(function (editData) {
+                if (editData.length > 0) {
+                    if (_this.entryId) {
+                        return _this.dataProvider.editEntry(_this.data.id, _this.entryId, _this.courseId, editData, _this.fields, undefined, _this.offline);
+                    }
+                    return _this.dataProvider.addEntry(_this.data.id, entryTemp, _this.courseId, editData, _this.selectedGroup, _this.fields, undefined, _this.offline);
+                }
+                return false;
+            }).then(function (result) {
+                if (!result) {
+                    // No field filled, warn the user.
+                    return Promise.reject('addon.mod_data.emptyaddform');
+                }
+                // This is done if entry is updated when editing or creating if not.
+                if ((_this.entryId && result.updated) || (!_this.entryId && result.newentryid)) {
+                    var promises = [];
+                    _this.entryId = _this.entryId || result.newentryid;
+                    promises.push(_this.dataProvider.invalidateEntryData(_this.data.id, _this.entryId, _this.siteId));
+                    promises.push(_this.dataProvider.invalidateEntriesData(_this.data.id, _this.siteId));
+                    return Promise.all(promises).then(function () {
+                        _this.eventsProvider.trigger(data["a" /* AddonModDataProvider */].ENTRY_CHANGED, { dataId: _this.data.id, entryId: _this.entryId }, _this.siteId);
+                    }).finally(function () {
+                        return _this.returnToEntryList();
                     });
-                }));
-            }
-        }
-        else {
-            this.setUnreadLabelPosition();
-            // Mark each message as read one by one.
-            this.messages.forEach(function (message) {
-                // If the message is unread, call this.messagesProvider.markMessageRead.
-                if (message.useridfrom != _this.currentUserId && message.read == 0) {
-                    promises.push(_this.messagesProvider.markMessageRead(message.id).then(function () {
-                        readChanged = true;
-                        message.read = 1;
-                    }));
                 }
-            });
-        }
-        Promise.all(promises).finally(function () {
-            if (readChanged) {
-                _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].READ_CHANGED_EVENT, {
-                    userId: _this.userId
-                }, _this.siteId);
-            }
-        });
-    };
-    /**
-     * Notify the last message found so discussions list controller can tell if last message should be updated.
-     */
-    AddonMessagesDiscussionPage.prototype.notifyNewMessage = function () {
-        var last = this.messages[this.messages.length - 1];
-        var trigger = false;
-        if (!last) {
-            this.lastMessage = { text: '', timecreated: 0 };
-            trigger = true;
-        }
-        else if (last.text !== this.lastMessage.text || last.timecreated !== this.lastMessage.timecreated) {
-            this.lastMessage = { text: last.text, timecreated: last.timecreated };
-            trigger = true;
-        }
-        if (trigger) {
-            // Update discussions last message.
-            this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].NEW_MESSAGE_EVENT, {
-                userId: this.userId,
-                message: this.lastMessage.text,
-                timecreated: this.lastMessage.timecreated
-            }, this.siteId);
-            // Update navBar links and buttons.
-            var newCanDelete = (last && last.id && this.messages.length == 1) || this.messages.length > 1;
-            if (this.canDelete != newCanDelete) {
-                this.checkCanDelete();
-            }
-        }
-    };
-    /**
-     * Set the place where the unread label position has to be.
-     */
-    AddonMessagesDiscussionPage.prototype.setUnreadLabelPosition = function () {
-        if (this.unreadMessageFrom != 0) {
-            return;
-        }
-        var previousMessageRead = false;
-        for (var x in this.messages) {
-            var message = this.messages[x];
-            if (message.useridfrom != this.currentUserId) {
-                // Place unread from message label only once.
-                message.unreadFrom = message.read == 0 && previousMessageRead;
-                if (message.unreadFrom) {
-                    // Save where the label is placed.
-                    this.unreadMessageFrom = parseInt(message.id, 10);
-                    break;
+                else {
+                    _this.errors = {};
+                    if (result.fieldnotifications) {
+                        result.fieldnotifications.forEach(function (fieldNotif) {
+                            var field = _this.fieldsArray.find(function (field) { return field.name == fieldNotif.fieldname; });
+                            if (field) {
+                                _this.errors[field.id] = fieldNotif.notification;
+                            }
+                        });
+                    }
+                    _this.jsData['errors'] = _this.errors;
+                    setTimeout(function () {
+                        _this.scrollToFirstError();
+                    });
                 }
-                previousMessageRead = message.read != 0;
-            }
-        }
-        // Do not update the message unread from label on next refresh.
-        if (this.unreadMessageFrom == 0) {
-            // Using negative to indicate the label is not placed but should not be placed.
-            this.unreadMessageFrom = -1;
-        }
-    };
-    /**
-     * Check if there's any message in the list that can be deleted.
-     */
-    AddonMessagesDiscussionPage.prototype.checkCanDelete = function () {
-        // All messages being sent should be at the end of the list.
-        var first = this.messages[0];
-        this.canDelete = first && !first.sending;
-    };
-    /**
-     * Hide unread label when sending messages.
-     */
-    AddonMessagesDiscussionPage.prototype.hideUnreadLabel = function () {
-        if (this.unreadMessageFrom > 0) {
-            for (var x in this.messages) {
-                var message = this.messages[x];
-                if (message.id == this.unreadMessageFrom) {
-                    message.unreadFrom = false;
-                    break;
-                }
-            }
-            // Label hidden.
-            this.unreadMessageFrom = -1;
-        }
-    };
-    /**
-     * Wait until fetching is false.
-     * @return {Promise<void>} Resolved when done.
-     */
-    AddonMessagesDiscussionPage.prototype.waitForFetch = function () {
-        var _this = this;
-        if (!this.fetching) {
-            return Promise.resolve();
-        }
-        var deferred = this.utils.promiseDefer();
-        setTimeout(function () {
-            return _this.waitForFetch().finally(function () {
-                deferred.resolve();
-            });
-        }, 400);
-        return deferred.promise;
-    };
-    /**
-     * Set a polling to get new messages every certain time.
-     */
-    AddonMessagesDiscussionPage.prototype.setPolling = function () {
-        var _this = this;
-        if (!this.polling) {
-            // Start polling.
-            this.polling = setInterval(function () {
-                _this.fetchData().catch(function () {
-                    // Ignore errors.
-                });
-            }, __WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].POLL_INTERVAL);
-        }
-    };
-    /**
-     * Unset polling.
-     */
-    AddonMessagesDiscussionPage.prototype.unsetPolling = function () {
-        if (this.polling) {
-            this.logger.debug("Cancelling polling for conversation with user '" + this.userId + "'");
-            clearInterval(this.polling);
-            this.polling = undefined;
-        }
-    };
-    /**
-     * Copy message to clipboard
-     *
-     * @param {string} text Message text to be copied.
-     */
-    AddonMessagesDiscussionPage.prototype.copyMessage = function (text) {
-        this.utils.copyToClipboard(text);
-    };
-    /**
-     * Function to delete a message.
-     *
-     * @param {any} message  Message object to delete.
-     * @param {number} index Index where the mesasge is to delete it from the view.
-     */
-    AddonMessagesDiscussionPage.prototype.deleteMessage = function (message, index) {
-        var _this = this;
-        var langKey = message.pending ? 'core.areyousure' : 'addon.messages.deletemessageconfirmation';
-        this.domUtils.showConfirm(this.translate.instant(langKey)).then(function () {
-            var modal = _this.domUtils.showModalLoading('core.deleting', true);
-            return _this.messagesProvider.deleteMessage(message).then(function () {
-                // Remove message from the list without having to wait for re-fetch.
-                _this.messages.splice(index, 1);
-                _this.removeMessage(message.hash);
-                _this.notifyNewMessage();
-                _this.fetchData(); // Re-fetch messages to update cached data.
             }).finally(function () {
                 modal.dismiss();
             });
         }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'addon.messages.errordeletemessage', true);
+            _this.domUtils.showErrorModalDefault(error, 'Cannot edit entry', true);
         });
     };
     /**
-     * Function to load previous messages.
+     * Set group to see the database.
      *
-     * @param {any} [infiniteScroll] Infinite scroll object.
-     * @return {Promise<any>} Resolved when done.
+     * @param  {number}       groupId Group identifier to set.
+     * @return {Promise<any>}         Resolved when done.
      */
-    AddonMessagesDiscussionPage.prototype.loadPrevious = function (infiniteScroll) {
-        var _this = this;
-        // If there is an ongoing fetch, wait for it to finish.
-        return this.waitForFetch().finally(function () {
-            _this.pagesLoaded++;
-            _this.fetchData().catch(function (error) {
-                _this.pagesLoaded--;
-                _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingmessages', true);
-            }).finally(function () {
-                infiniteScroll.complete();
-            });
-        });
+    AddonModDataEditPage.prototype.setGroup = function (groupId) {
+        this.selectedGroup = groupId;
+        this.loaded = false;
+        return this.fetchEntryData();
     };
     /**
-     * Content or scroll has been resized. For content, only call it if it's been added on top.
+     * Displays Edit Search Fields.
+     *
+     * @return {string}  Generated HTML.
      */
-    AddonMessagesDiscussionPage.prototype.resizeContent = function () {
-        var _this = this;
-        var top = this.content.getContentDimensions().scrollTop;
-        this.content.resize();
-        // Wait for new content height to be calculated.
-        setTimeout(function () {
-            // Visible content size changed, maintain the bottom position.
-            if (!_this.viewDestroyed && _this.content && _this.domUtils.getContentHeight(_this.content) != _this.oldContentHeight) {
-                if (!top) {
-                    top = _this.content.getContentDimensions().scrollTop;
-                }
-                top += _this.oldContentHeight - _this.domUtils.getContentHeight(_this.content);
-                _this.oldContentHeight = _this.domUtils.getContentHeight(_this.content);
-                _this.domUtils.scrollTo(_this.content, 0, top, 0);
-            }
-        });
-    };
-    /**
-     * Scroll bottom when render has finished.
-     */
-    AddonMessagesDiscussionPage.prototype.scrollToBottom = function () {
-        var _this = this;
-        // Check if scroll is at bottom. If so, scroll bottom after rendering since there might be something new.
-        if (this.scrollBottom) {
-            // Need a timeout to leave time to the view to be rendered.
-            setTimeout(function () {
-                if (!_this.viewDestroyed) {
-                    _this.domUtils.scrollToBottom(_this.content, 0);
-                }
-            });
-            this.scrollBottom = false;
-        }
-    };
-    /**
-     * Sends a message to the server.
-     * @param {string} text Message text.
-     */
-    AddonMessagesDiscussionPage.prototype.sendMessage = function (text) {
-        var _this = this;
-        var message;
-        this.hideUnreadLabel();
-        this.showDelete = false;
-        this.scrollBottom = true;
-        message = {
-            pending: true,
-            sending: true,
-            useridfrom: this.currentUserId,
-            smallmessage: text,
-            text: text,
-            timecreated: new Date().getTime()
+    AddonModDataEditPage.prototype.displayEditFields = function () {
+        this.jsData = {
+            fields: this.fields,
+            contents: this.utils.clone(this.entry.contents),
+            form: this.editForm,
+            data: this.data,
+            errors: this.errors
         };
-        this.addMessage(message, false);
-        this.messagesBeingSent++;
-        // If there is an ongoing fetch, wait for it to finish.
-        // Otherwise, if a message is sent while fetching it could disappear until the next fetch.
-        this.waitForFetch().finally(function () {
-            _this.messagesProvider.sendMessage(_this.userId, text).then(function (data) {
-                var promise;
-                _this.messagesBeingSent--;
-                if (data.sent) {
-                    // Message was sent, fetch messages right now.
-                    promise = _this.fetchData();
-                }
-                else {
-                    promise = Promise.reject(null);
-                }
-                promise.catch(function () {
-                    // Fetch failed or is offline message, mark the message as sent.
-                    // If fetch is successful there's no need to mark it because the fetch will already show the message received.
-                    message.sending = false;
-                    if (data.sent) {
-                        // Message sent to server, not pending anymore.
-                        message.pending = false;
-                    }
-                    else if (data.message) {
-                        message.timecreated = data.message.timecreated;
-                    }
-                    _this.notifyNewMessage();
-                });
-            }).catch(function (error) {
-                _this.messagesBeingSent--;
-                // Only close the keyboard if an error happens.
-                // We want the user to be able to send multiple messages without the keyboard being closed.
-                _this.appProvider.closeKeyboard();
-                _this.domUtils.showErrorModalDefault(error, 'addon.messages.messagenotsent', true);
-                _this.removeMessage(message.hash);
-            });
+        var replace, render, template = this.data.addtemplate || this.dataHelper.getDefaultTemplate('add', this.fieldsArray);
+        // Replace the fields found on template.
+        this.fieldsArray.forEach(function (field) {
+            replace = '[[' + field.name + ']]';
+            replace = replace.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+            replace = new RegExp(replace, 'gi');
+            // Replace field by a generic directive.
+            render = '<addon-mod-data-field-plugin mode="edit" [field]="fields[' + field.id + ']"\
+                [value]="contents[' + field.id + ']" [form]="form" [database]="data" [error]="errors[' + field.id + ']">\
+                </addon-mod-data-field-plugin>';
+            template = template.replace(replace, render);
+            // Replace the field id tag.
+            replace = '[[' + field.name + '#id]]';
+            replace = replace.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&');
+            replace = new RegExp(replace, 'gi');
+            template = template.replace(replace, 'field_' + field.id);
+        });
+        return template;
+    };
+    /**
+     * Return to the entry list (previous page) discarding temp data.
+     *
+     * @return {Promise<any>}  Resolved when done.
+     */
+    AddonModDataEditPage.prototype.returnToEntryList = function () {
+        var _this = this;
+        var inputData = this.editForm.value;
+        return this.dataHelper.getEditTmpFiles(inputData, this.fieldsArray, this.data.id, this.entry.contents).then(function (files) {
+            _this.fileUploaderProvider.clearTmpFiles(files);
+        }).finally(function () {
+            // Go back to entry list.
+            _this.forceLeave = true;
+            _this.navCtrl.pop();
         });
     };
     /**
-     * Check date should be shown on message list for the current message.
-     * If date has changed from previous to current message it should be shown.
-     *
-     * @param {any} message       Current message where to show the date.
-     * @param {any} [prevMessage] Previous message where to compare the date with.
-     * @return {boolean}  If date has changed and should be shown.
+     * Scroll to first error or to the top if not found.
      */
-    AddonMessagesDiscussionPage.prototype.showDate = function (message, prevMessage) {
-        if (!prevMessage) {
-            // First message, show it.
-            return true;
+    AddonModDataEditPage.prototype.scrollToFirstError = function () {
+        if (!this.domUtils.scrollToElementBySelector(this.content, '.addon-data-error')) {
+            this.domUtils.scrollToTop(this.content);
         }
-        else if (message.pending) {
-            // If pending, it has no date, not show.
-            return false;
-        }
-        // Check if day has changed.
-        return !__WEBPACK_IMPORTED_MODULE_14_moment__(message.timecreated).isSame(prevMessage.timecreated, 'day');
-    };
-    /**
-     * Toggles delete state.
-     */
-    AddonMessagesDiscussionPage.prototype.toggleDelete = function () {
-        this.showDelete = !this.showDelete;
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonMessagesDiscussionPage.prototype.ngOnDestroy = function () {
-        // Unset again, just in case.
-        this.unsetPolling();
-        this.syncObserver && this.syncObserver.off();
-        this.keyboardObserver && this.keyboardObserver.off();
-        this.viewDestroyed = true;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
-    ], AddonMessagesDiscussionPage.prototype, "content", void 0);
-    AddonMessagesDiscussionPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-messages-discussion',template:/*ion-inline-start:"/home/travis/build/crazyserver/moodlemobile2/src/addon/messages/pages/discussion/discussion.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n        <ion-buttons end></ion-buttons>\n    </ion-navbar>\n    <core-navbar-buttons end>\n        <button ion-button icon-only clear="true" (click)="toggleDelete()" [hidden]="!canDelete">\n            <ion-icon name="trash"></ion-icon>\n        </button>\n        <a [hidden]="!showProfileLink" core-user-link [userId]="userId" [attr.aria-label]=" \'core.user.viewprofile\' | translate">\n            <img class="button core-bar-button-image" [src]="profileLink" core-external-content onError="this.src=\'assets/img/user-avatar.png\'">\n        </a>\n    </core-navbar-buttons>\n</ion-header>\n<ion-content class="has-footer">\n    <core-loading [hideUntil]="loaded">\n        <!-- Load previous messages. -->\n        <ion-infinite-scroll [enabled]="canLoadMore" (ionInfinite)="loadPrevious($event)" position="top">\n           <ion-infinite-scroll-content></ion-infinite-scroll-content>\n        </ion-infinite-scroll>\n        <ion-list class="addon-messages-discussion-container" [attr.aria-live]="polite">\n            <ng-container *ngFor="let message of messages; index as index; last as last">\n                <ion-chip *ngIf="showDate(message, messages[index - 1])" class="addon-messages-date" color="light">\n                    <ion-label>{{ message.timecreated | coreFormatDate: "LL" }}</ion-label>\n                </ion-chip>\n\n                <ion-chip class="addon-messages-unreadfrom" *ngIf="message.unreadFrom" color="light">\n                    <ion-label>{{ \'addon.messages.newmessages\' | translate:{$a: title} }}</ion-label>\n                    <ion-icon name="arrow-round-down"></ion-icon>\n                </ion-chip>\n\n                <ion-item text-wrap (longPress)="copyMessage(message.smallmessage)" class="addon-message" [class.addon-message-mine]="message.useridfrom == currentUserId" [@coreSlideInOut]="message.useridfrom == currentUserId ? \'\' : \'fromLeft\'">\n                    <!-- Some messages have <p> and some others don\'t. Add a <p> so they all have same styles. -->\n                    <p class="addon-message-text">\n                        <core-format-text (afterRender)="last && scrollToBottom()" [text]="message.text"></core-format-text>\n                    </p>\n                    <ion-note *ngIf="!message.pending">\n                        {{ message.timecreated | coreFormatDate: "dftimedate" }}\n                    </ion-note>\n                    <ion-note *ngIf="message.pending"><ion-icon name="time"></ion-icon></ion-note>\n\n                    <button ion-button icon-only clear="true" *ngIf="!message.sending && showDelete" (click)="deleteMessage(message, index)" class="addon-messages-delete-button" [@coreSlideInOut]="\'fromRight\'" [attr.aria-label]=" \'addon.messages.deletemessage\' | translate">\n                        <ion-icon name="trash" color="danger"></ion-icon>\n                    </button>\n                </ion-item>\n            </ng-container>\n        </ion-list>\n        <core-empty-box *ngIf="!messages || messages.length <= 0" icon="chatbubbles" [message]="\'addon.messages.nomessages\' | translate"></core-empty-box>\n    </core-loading>\n</ion-content>\n<ion-footer color="light" class="footer-adjustable">\n    <ion-toolbar color="light" position="bottom">\n        <core-send-message-form (onSubmit)="sendMessage($event)" [showKeyboard]="showKeyboard" [placeholder]="\'addon.messages.newmessage\' | translate" (onResize)="resizeContent()"></core-send-message-form>\n    </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/home/travis/build/crazyserver/moodlemobile2/src/addon/messages/pages/discussion/discussion.html"*/,
-            animations: [__WEBPACK_IMPORTED_MODULE_12__classes_animations__["b" /* coreSlideInOut */]]
+        Object(core["_9" /* ViewChild */])(ionic_angular["f" /* Content */]),
+        __metadata("design:type", ionic_angular["f" /* Content */])
+    ], AddonModDataEditPage.prototype, "content", void 0);
+    AddonModDataEditPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-addon-mod-data-edit',
+            templateUrl: 'edit.html',
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_7__core_user_providers_user__["a" /* CoreUserProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__providers_sync__["a" /* AddonMessagesSyncProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */], __WEBPACK_IMPORTED_MODULE_10__providers_logger__["a" /* CoreLoggerProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
-    ], AddonMessagesDiscussionPage);
-    return AddonMessagesDiscussionPage;
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], utils_utils["a" /* CoreUtilsProvider */], groups["a" /* CoreGroupsProvider */],
+            dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */],
+            course["a" /* CoreCourseProvider */], data["a" /* AddonModDataProvider */],
+            offline["a" /* AddonModDataOfflineProvider */], helper["a" /* AddonModDataHelperProvider */],
+            sites["a" /* CoreSitesProvider */], ionic_angular["s" /* NavController */], _ngx_translate_core["c" /* TranslateService */],
+            events["a" /* CoreEventsProvider */], fileuploader["a" /* CoreFileUploaderProvider */]])
+    ], AddonModDataEditPage);
+    return AddonModDataEditPage;
 }());
 
-//# sourceMappingURL=discussion.js.map
+//# sourceMappingURL=edit.js.map
+// CONCATENATED MODULE: ./src/addon/mod/data/pages/edit/edit.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var edit_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+var edit_module_AddonModDataEditPageModule = /** @class */ (function () {
+    function AddonModDataEditPageModule() {
+    }
+    AddonModDataEditPageModule = edit_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                edit_AddonModDataEditPage,
+            ],
+            imports: [
+                directives_module["a" /* CoreDirectivesModule */],
+                components_module["a" /* CoreComponentsModule */],
+                data_components_components_module["a" /* AddonModDataComponentsModule */],
+                compile_html_module["a" /* CoreCompileHtmlComponentModule */],
+                components_components_module["a" /* CoreCommentsComponentsModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(edit_AddonModDataEditPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], AddonModDataEditPageModule);
+    return AddonModDataEditPageModule;
+}());
+
+//# sourceMappingURL=edit.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1345);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1346);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1347);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1348);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1349);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1350);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1351);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1352);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1353);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1356);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1357);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1358);
+
+// EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ngfactory.js
+var unsupported_module_ngfactory = __webpack_require__(1359);
+
+// EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ngfactory.js
+var comments_ngfactory = __webpack_require__(670);
+
+// EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ngfactory.js
+var index_ngfactory = __webpack_require__(1368);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
+var label = __webpack_require__(61);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(26);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/option/option.js
+var option_option = __webpack_require__(91);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
+var select_ngfactory = __webpack_require__(110);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
+var select_select = __webpack_require__(92);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
+var deep_linker = __webpack_require__(51);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(435);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(36);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1354);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(200);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./src/directives/back-button.ts
+var back_button = __webpack_require__(663);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1355);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(337);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(247);
+
+// EXTERNAL MODULE: ./src/directives/format-text.ts
+var format_text = __webpack_require__(41);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./src/providers/utils/url.ts
+var url = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./src/providers/logger.ts
+var logger = __webpack_require__(5);
+
+// EXTERNAL MODULE: ./src/providers/filepool.ts
+var filepool = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./src/providers/app.ts
+var providers_app = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
+var providers_helper = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
+var split_view = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./src/providers/utils/iframe.ts
+var iframe = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(436);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(45);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(42);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(106);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(48);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ngfactory.js
+var compile_html_ngfactory = __webpack_require__(195);
+
+// EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
+var compile_html = __webpack_require__(168);
+
+// EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
+var compile = __webpack_require__(137);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(60);
+
+// CONCATENATED MODULE: ./src/addon/mod/data/pages/edit/edit.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonModDataEditPage = ["{{ cssTemplate }}"];
+var RenderType_AddonModDataEditPage = core["_29" /* ɵcrt */]({ encapsulation: 0, styles: styles_AddonModDataEditPage, data: {} });
+
+function View_AddonModDataEditPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 3, "ion-label", [["id", "addon-data-groupslabel"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[3, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, null], [8, null], [8, null]], { id: [0, "id"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = "addon-data-groupslabel"; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 2, 0, core["_44" /* ɵnov */](_v, 3).transform("core.groupsseparate")); _ck(_v, 2, 0, currVal_1); }); }
+function View_AddonModDataEditPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 3, "ion-label", [["id", "addon-data-groupslabel"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[3, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, null], [8, null], [8, null]], { id: [0, "id"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = "addon-data-groupslabel"; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 2, 0, core["_44" /* ɵnov */](_v, 3).transform("core.groupsvisible")); _ck(_v, 2, 0, currVal_1); }); }
+function View_AddonModDataEditPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-option", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[6, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit.id; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = _v.context.$implicit.name; _ck(_v, 2, 0, currVal_1); }); }
+function View_AddonModDataEditPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 24, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](603979776, 3, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 4, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 5, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, 1, 1, null, View_AddonModDataEditPage_2)), core["_30" /* ɵdid */](8, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, 1, 1, null, View_AddonModDataEditPage_3)), core["_30" /* ɵdid */](11, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 3, 10, "ion-select", [["aria-labelledby", "addon-data-groupslabel"], ["interface", "action-sheet"]], [[2, "select-disabled", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngModelChange"], [null, "ionChange"], [null, "click"], [null, "keyup.space"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 14)._click($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("keyup.space" === en)) {
+        var pd_1 = (core["_44" /* ɵnov */](_v, 14)._keyup() !== false);
+        ad = (pd_1 && ad);
+    } if (("ngModelChange" === en)) {
+        var pd_2 = ((_co.selectedGroup = $event) !== false);
+        ad = (pd_2 && ad);
+    } if (("ionChange" === en)) {
+        var pd_3 = (_co.setGroup(_co.selectedGroup) !== false);
+        ad = (pd_3 && ad);
+    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](14, 1228800, null, 1, select_select["a" /* Select */], [app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], { interface: [0, "interface"] }, { ionChange: "ionChange" }), core["_52" /* ɵqud */](603979776, 6, { options: 1 }), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](17, 671744, null, 0, esm5_forms["q" /* NgModel */], [[8, null], [8, null], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { model: [0, "model"] }, { update: "ngModelChange" }), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["q" /* NgModel */]]), core["_30" /* ɵdid */](19, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModDataEditPage_4)), core["_30" /* ɵdid */](22, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.groupInfo.separateGroups; _ck(_v, 8, 0, currVal_0); var currVal_1 = _co.groupInfo.visibleGroups; _ck(_v, 11, 0, currVal_1); var currVal_10 = "action-sheet"; _ck(_v, 14, 0, currVal_10); var currVal_11 = _co.selectedGroup; _ck(_v, 17, 0, currVal_11); var currVal_12 = _co.groupInfo.groups; _ck(_v, 22, 0, currVal_12); }, function (_ck, _v) { var currVal_2 = core["_44" /* ɵnov */](_v, 14)._disabled; var currVal_3 = core["_44" /* ɵnov */](_v, 19).ngClassUntouched; var currVal_4 = core["_44" /* ɵnov */](_v, 19).ngClassTouched; var currVal_5 = core["_44" /* ɵnov */](_v, 19).ngClassPristine; var currVal_6 = core["_44" /* ɵnov */](_v, 19).ngClassDirty; var currVal_7 = core["_44" /* ɵnov */](_v, 19).ngClassValid; var currVal_8 = core["_44" /* ɵnov */](_v, 19).ngClassInvalid; var currVal_9 = core["_44" /* ɵnov */](_v, 19).ngClassPending; _ck(_v, 13, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9); }); }
+function View_AddonModDataEditPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { content: 0 }), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 23, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, null, 19, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](5, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](6, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](8, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](9, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](11, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], providers_app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 2, 9, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](14, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](17, 0, null, null, 4, "button", [["clear", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.save($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](18, 1097728, [[2, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { clear: [0, "clear"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](20, 0, ["\n                ", "\n            "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](26, 0, null, null, 23, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](27, 4374528, [[1, 4]], 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](29, 0, null, 1, 19, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](30, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils_utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModDataEditPage_1)), core["_30" /* ɵdid */](33, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_31" /* ɵeld */](35, 0, null, 0, 12, "div", [], [[8, "className", 0]], null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_31" /* ɵeld */](38, 0, null, null, 8, "form", [["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngSubmit"], [null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("submit" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 40).onSubmit($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("reset" === en)) {
+        var pd_1 = (core["_44" /* ɵnov */](_v, 40).onReset() !== false);
+        ad = (pd_1 && ad);
+    } if (("ngSubmit" === en)) {
+        var pd_2 = (_co.save($event) !== false);
+        ad = (pd_2 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](39, 16384, null, 0, esm5_forms["w" /* ɵbf */], [], null, null), core["_30" /* ɵdid */](40, 540672, null, 0, esm5_forms["h" /* FormGroupDirective */], [[8, null], [8, null]], { form: [0, "form"] }, { ngSubmit: "ngSubmit" }), core["_50" /* ɵprd */](2048, null, esm5_forms["b" /* ControlContainer */], null, [esm5_forms["h" /* FormGroupDirective */]]), core["_30" /* ɵdid */](42, 16384, null, 0, esm5_forms["o" /* NgControlStatusGroup */], [esm5_forms["b" /* ControlContainer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](44, 0, null, null, 1, "core-compile-html", [], null, null, null, compile_html_ngfactory["b" /* View_CoreCompileHtmlComponent_0 */], compile_html_ngfactory["a" /* RenderType_CoreCompileHtmlComponent */])), core["_30" /* ɵdid */](45, 966656, null, 0, compile_html["a" /* CoreCompileHtmlComponent */], [compile["a" /* CoreCompileProvider */], core["j" /* ChangeDetectorRef */], core["t" /* ElementRef */], [2, nav_controller["a" /* NavController */]], core["F" /* KeyValueDiffers */], dom["a" /* CoreDomUtilsProvider */], utils_utils["a" /* CoreUtilsProvider */]], { text: [0, "text"], jsData: [1, "jsData"], extraImports: [2, "extraImports"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 6, 0); var currVal_2 = _co.title; _ck(_v, 11, 0, currVal_2); var currVal_4 = ""; _ck(_v, 18, 0, currVal_4); var currVal_8 = _co.loaded; _ck(_v, 30, 0, currVal_8); var currVal_9 = (_co.groupInfo && (_co.groupInfo.separateGroups || _co.groupInfo.visibleGroups)); _ck(_v, 33, 0, currVal_9); var currVal_18 = _co.editForm; _ck(_v, 40, 0, currVal_18); var currVal_19 = _co.editFormRender; var currVal_20 = _co.jsData; var currVal_21 = _co.extraImports; _ck(_v, 45, 0, currVal_19, currVal_20, currVal_21); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = core["_56" /* ɵunv */](_v, 17, 0, core["_44" /* ɵnov */](_v, 19).transform("core.save")); _ck(_v, 17, 0, currVal_3); var currVal_5 = core["_56" /* ɵunv */](_v, 20, 0, core["_44" /* ɵnov */](_v, 21).transform("core.save")); _ck(_v, 20, 0, currVal_5); var currVal_6 = core["_44" /* ɵnov */](_v, 27).statusbarPadding; var currVal_7 = core["_44" /* ɵnov */](_v, 27)._hasRefresher; _ck(_v, 26, 0, currVal_6, currVal_7); var currVal_10 = core["_34" /* ɵinlineInterpolate */](1, "addon-data-contents ", _co.cssClass, ""); _ck(_v, 35, 0, currVal_10); var currVal_11 = core["_44" /* ɵnov */](_v, 42).ngClassUntouched; var currVal_12 = core["_44" /* ɵnov */](_v, 42).ngClassTouched; var currVal_13 = core["_44" /* ɵnov */](_v, 42).ngClassPristine; var currVal_14 = core["_44" /* ɵnov */](_v, 42).ngClassDirty; var currVal_15 = core["_44" /* ɵnov */](_v, 42).ngClassValid; var currVal_16 = core["_44" /* ɵnov */](_v, 42).ngClassInvalid; var currVal_17 = core["_44" /* ɵnov */](_v, 42).ngClassPending; _ck(_v, 38, 0, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17); }); }
+function View_AddonModDataEditPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-data-edit", [], null, null, null, View_AddonModDataEditPage_0, RenderType_AddonModDataEditPage)), core["_30" /* ɵdid */](1, 49152, null, 0, edit_AddonModDataEditPage, [nav_params["a" /* NavParams */], utils_utils["a" /* CoreUtilsProvider */], groups["a" /* CoreGroupsProvider */], dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */], course["a" /* CoreCourseProvider */], data["a" /* AddonModDataProvider */], offline["a" /* AddonModDataOfflineProvider */], helper["a" /* AddonModDataHelperProvider */], sites["a" /* CoreSitesProvider */], nav_controller["a" /* NavController */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */], fileuploader["a" /* CoreFileUploaderProvider */]], null, null)], null, null); }
+var AddonModDataEditPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-data-edit", edit_AddonModDataEditPage, View_AddonModDataEditPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=edit.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(333);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(334);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(336);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(335);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(434);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(662);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
+var pipes_module = __webpack_require__(105);
+
+// EXTERNAL MODULE: ./src/core/course/components/components.module.ts
+var course_components_components_module = __webpack_require__(65);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(248);
+
+// CONCATENATED MODULE: ./src/addon/mod/data/pages/edit/edit.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModDataEditPageModuleNgFactory", function() { return AddonModDataEditPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AddonModDataEditPageModuleNgFactory = core["_28" /* ɵcmf */](edit_module_AddonModDataEditPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], unsupported_module_ngfactory["a" /* CoreCourseUnsupportedModuleComponentNgFactory */], comments_ngfactory["a" /* CoreCommentsCommentsComponentNgFactory */], index_ngfactory["a" /* AddonModDataIndexComponentNgFactory */], AddonModDataEditPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, course_components_components_module["a" /* CoreCourseComponentsModule */], course_components_components_module["a" /* CoreCourseComponentsModule */], []), core["_41" /* ɵmpd */](512, compile_html_module["a" /* CoreCompileHtmlComponentModule */], compile_html_module["a" /* CoreCompileHtmlComponentModule */], []), core["_41" /* ɵmpd */](512, components_components_module["a" /* CoreCommentsComponentsModule */], components_components_module["a" /* CoreCommentsComponentsModule */], []), core["_41" /* ɵmpd */](512, data_components_components_module["a" /* AddonModDataComponentsModule */], data_components_components_module["a" /* AddonModDataComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, edit_module_AddonModDataEditPageModule, edit_module_AddonModDataEditPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], edit_AddonModDataEditPage, [])]); });
+
+//# sourceMappingURL=edit.module.ngfactory.js.map
 
 /***/ })
 

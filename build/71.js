@@ -1,87 +1,60 @@
 webpackJsonp([71],{
 
-/***/ 1805:
+/***/ 1898:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModLessonPlayerPageModule", function() { return AddonModLessonPlayerPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__player__ = __webpack_require__(1926);
-// (C) Copyright 2015 Martin Dougiamas
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
 
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(8);
 
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(3);
 
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(28);
 
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
+var directives_module = __webpack_require__(29);
 
-var AddonModLessonPlayerPageModule = /** @class */ (function () {
-    function AddonModLessonPlayerPageModule() {
-    }
-    AddonModLessonPlayerPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__player__["a" /* AddonModLessonPlayerPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__player__["a" /* AddonModLessonPlayerPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
-        })
-    ], AddonModLessonPlayerPageModule);
-    return AddonModLessonPlayerPageModule;
-}());
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(22);
 
-//# sourceMappingURL=player.module.js.map
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(12);
 
-/***/ }),
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
 
-/***/ 1926:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+// EXTERNAL MODULE: ./src/providers/sync.ts
+var sync = __webpack_require__(85);
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModLessonPlayerPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_app__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_events__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_logger__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_sync__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_utils_dom__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_utils_time__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_utils_url__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_utils_utils__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_lesson__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_lesson_offline__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_lesson_sync__ = __webpack_require__(254);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_helper__ = __webpack_require__(927);
+// EXTERNAL MODULE: ./src/providers/file-session.ts
+var file_session = __webpack_require__(152);
+
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./src/providers/utils/text.ts
+var utils_text = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
+var fileuploader = __webpack_require__(66);
+
+// EXTERNAL MODULE: ./src/addon/mod/workshop/providers/workshop.ts
+var workshop = __webpack_require__(149);
+
+// EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
+var helper = __webpack_require__(173);
+
+// EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
+var offline = __webpack_require__(162);
+
+// CONCATENATED MODULE: ./src/addon/mod/workshop/pages/edit-submission/edit-submission.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -118,542 +91,732 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
 /**
- * Page that allows attempting and reviewing a lesson.
+ * Page that displays the workshop edit submission.
  */
-var AddonModLessonPlayerPage = /** @class */ (function () {
-    function AddonModLessonPlayerPage(navParams, logger, translate, eventsProvider, sitesProvider, syncProvider, domUtils, popoverCtrl, timeUtils, lessonProvider, lessonHelper, lessonSync, lessonOfflineProvider, cdr, modalCtrl, navCtrl, appProvider, utils, urlUtils, fb) {
-        this.navParams = navParams;
+var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function () {
+    function AddonModWorkshopEditSubmissionPage(navParams, sitesProvider, fileUploaderProvider, workshopProvider, workshopOffline, workshopHelper, navCtrl, fileSessionprovider, syncProvider, textUtils, domUtils, fb, translate, eventsProvider) {
+        this.fileUploaderProvider = fileUploaderProvider;
+        this.workshopProvider = workshopProvider;
+        this.workshopOffline = workshopOffline;
+        this.workshopHelper = workshopHelper;
+        this.navCtrl = navCtrl;
+        this.fileSessionprovider = fileSessionprovider;
+        this.syncProvider = syncProvider;
+        this.textUtils = textUtils;
+        this.domUtils = domUtils;
+        this.fb = fb;
         this.translate = translate;
         this.eventsProvider = eventsProvider;
-        this.sitesProvider = sitesProvider;
-        this.syncProvider = syncProvider;
-        this.domUtils = domUtils;
-        this.timeUtils = timeUtils;
-        this.lessonProvider = lessonProvider;
-        this.lessonHelper = lessonHelper;
-        this.lessonSync = lessonSync;
-        this.lessonOfflineProvider = lessonOfflineProvider;
-        this.cdr = cdr;
-        this.navCtrl = navCtrl;
-        this.appProvider = appProvider;
-        this.utils = utils;
-        this.urlUtils = urlUtils;
-        this.fb = fb;
-        this.component = __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].COMPONENT;
-        this.LESSON_EOL = __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL;
-        this.forceLeave = false; // If true, don't perform any check when leaving the view.
-        this.lessonId = navParams.get('lessonId');
+        this.submission = {
+            id: 0,
+            title: '',
+            content: '',
+            attachmentfiles: [],
+        };
+        this.loaded = false;
+        this.component = workshop["a" /* AddonModWorkshopProvider */].COMPONENT;
+        this.originalData = {};
+        this.hasOffline = false;
+        this.editing = false;
+        this.forceLeave = false;
+        this.isDestroyed = false;
+        this.textAvailable = false;
+        this.textRequired = false;
+        this.fileAvailable = false;
+        this.fileRequired = false;
+        this.module = navParams.get('module');
         this.courseId = navParams.get('courseId');
-        this.password = navParams.get('password');
-        this.review = !!navParams.get('review');
-        this.currentPage = navParams.get('pageId');
-        // Block the lesson so it cannot be synced.
-        this.syncProvider.blockOperation(this.component, this.lessonId);
-        // Create the navigation modal.
-        this.menuModal = modalCtrl.create('AddonModLessonMenuModalPage', {
-            page: this
-        });
+        this.access = navParams.get('access');
+        this.submissionId = navParams.get('submissionId');
+        this.workshopId = this.module.instance;
+        this.componentId = this.module.id;
+        this.userId = sitesProvider.getCurrentSiteUserId();
+        this.siteId = sitesProvider.getCurrentSiteId();
+        this.editForm = new esm5_forms["g" /* FormGroup */]({});
+        this.editForm.addControl('title', this.fb.control('', esm5_forms["u" /* Validators */].required));
+        this.editForm.addControl('content', this.fb.control(''));
     }
     /**
      * Component being initialized.
      */
-    AddonModLessonPlayerPage.prototype.ngOnInit = function () {
-        var _this = this;
-        // Fetch the Lesson data.
-        this.fetchLessonData().then(function (success) {
-            if (success) {
-                // Review data loaded or new retake started, remove any retake being finished in sync.
-                _this.lessonSync.deleteRetakeFinishedInSync(_this.lessonId);
-            }
-        }).finally(function () {
-            _this.loaded = true;
-        });
-    };
-    /**
-     * Component being destroyed.
-     */
-    AddonModLessonPlayerPage.prototype.ngOnDestroy = function () {
-        // Unblock the lesson so it can be synced.
-        this.syncProvider.unblockOperation(this.component, this.lessonId);
+    AddonModWorkshopEditSubmissionPage.prototype.ngOnInit = function () {
+        if (!this.isDestroyed) {
+            // Block the workshop.
+            this.syncProvider.blockOperation(this.component, this.workshopId);
+        }
+        this.fetchSubmissionData();
     };
     /**
      * Check if we can leave the page or not.
      *
      * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
      */
-    AddonModLessonPlayerPage.prototype.ionViewCanLeave = function () {
+    AddonModWorkshopEditSubmissionPage.prototype.ionViewCanLeave = function () {
+        var _this = this;
         if (this.forceLeave) {
             return true;
         }
-        if (this.question && !this.eolData && !this.processData && this.originalData) {
-            // Question shown. Check if there is any change.
-            if (!this.utils.basicLeftCompare(this.questionForm.getRawValue(), this.originalData, 3)) {
-                return this.domUtils.showConfirm(this.translate.instant('core.confirmcanceledit'));
-            }
-        }
-        return Promise.resolve();
-    };
-    /**
-     * A button was clicked.
-     *
-     * @param {any} data Button data.
-     */
-    AddonModLessonPlayerPage.prototype.buttonClicked = function (data) {
-        this.processPage(data);
-    };
-    /**
-     * Call a function and go offline if allowed and the call fails.
-     *
-     * @param {Function} func Function to call.
-     * @param {any[]} args Arguments to pass to the function.
-     * @param {number} offlineParamPos Position of the offline parameter in the args.
-     * @param {number} [jumpsParamPos] Position of the jumps parameter in the args.
-     * @return {Promise<any>} Promise resolved in success, rejected otherwise.
-     */
-    AddonModLessonPlayerPage.prototype.callFunction = function (func, args, offlineParamPos, jumpsParamPos) {
-        var _this = this;
-        return func.apply(func, args).catch(function (error) {
-            if (!_this.offline && !_this.review && _this.lessonProvider.isLessonOffline(_this.lesson) &&
-                !_this.utils.isWebServiceError(error)) {
-                // If it fails, go offline.
-                _this.offline = true;
-                // Get the possible jumps now.
-                return _this.lessonProvider.getPagesPossibleJumps(_this.lesson.id, true).then(function (jumpList) {
-                    _this.jumps = jumpList;
-                    // Call the function again with offline set to true and the new jumps.
-                    args[offlineParamPos] = true;
-                    if (typeof jumpsParamPos != 'undefined') {
-                        args[jumpsParamPos] = _this.jumps;
-                    }
-                    return func.apply(func, args);
-                });
-            }
-            return Promise.reject(error);
-        });
-    };
-    /**
-     * Change the page from menu or when continuing from a feedback page.
-     *
-     * @param {number} pageId Page to load.
-     * @param {boolean} [ignoreCurrent] If true, allow loading current page.
-     */
-    AddonModLessonPlayerPage.prototype.changePage = function (pageId, ignoreCurrent) {
-        var _this = this;
-        if (!ignoreCurrent && !this.eolData && this.currentPage == pageId) {
-            // Page already loaded, stop.
-            return;
-        }
-        this.loaded = true;
-        this.messages = [];
-        this.loadPage(pageId).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error loading page');
-        }).finally(function () {
-            _this.loaded = true;
-        });
-    };
-    /**
-     * Get the lesson data and load the page.
-     *
-     * @return {Promise<boolean>} Promise resolved with true if success, resolved with false otherwise.
-     */
-    AddonModLessonPlayerPage.prototype.fetchLessonData = function () {
-        var _this = this;
-        // Wait for any ongoing sync to finish. We won't sync a lesson while it's being played.
-        return this.lessonSync.waitForSync(this.lessonId).then(function () {
-            return _this.lessonProvider.getLessonById(_this.courseId, _this.lessonId);
-        }).then(function (lessonData) {
-            _this.lesson = lessonData;
-            _this.title = _this.lesson.name; // Temporary title.
-            // If lesson has offline data already, use offline mode.
-            return _this.lessonOfflineProvider.hasOfflineData(_this.lessonId);
-        }).then(function (offlineMode) {
-            _this.offline = offlineMode;
-            if (!offlineMode && !_this.appProvider.isOnline() && _this.lessonProvider.isLessonOffline(_this.lesson) && !_this.review) {
-                // Lesson doesn't have offline data, but it allows offline and the device is offline. Use offline mode.
-                _this.offline = true;
-            }
-            return _this.callFunction(_this.lessonProvider.getAccessInformation.bind(_this.lessonProvider), [_this.lesson.id, _this.offline, true], 1);
-        }).then(function (info) {
-            var promises = [];
-            _this.accessInfo = info;
-            _this.canManage = info.canmanage;
-            _this.retake = info.attemptscount;
-            _this.showRetake = !_this.currentPage && _this.retake > 0; // Only show it in first page if it isn't the first retake.
-            if (info.preventaccessreasons && info.preventaccessreasons.length) {
-                // If it's a password protected lesson and we have the password, allow playing it.
-                if (!_this.password || info.preventaccessreasons.length > 1 || !_this.lessonProvider.isPasswordProtected(info)) {
-                    // Lesson cannot be played, show message and go back.
-                    return Promise.reject(info.preventaccessreasons[0].message);
-                }
-            }
-            if (_this.review && _this.navParams.get('retake') != info.attemptscount - 1) {
-                // Reviewing a retake that isn't the last one. Error.
-                return Promise.reject(_this.translate.instant('addon.mod_lesson.errorreviewretakenotlast'));
-            }
-            if (_this.password) {
-                // Lesson uses password, get the whole lesson object.
-                promises.push(_this.callFunction(_this.lessonProvider.getLessonWithPassword.bind(_this.lessonProvider), [_this.lesson.id, _this.password, true, _this.offline, true], 3).then(function (lesson) {
-                    _this.lesson = lesson;
-                }));
-            }
-            if (_this.offline) {
-                // Offline mode, get the list of possible jumps to allow navigation.
-                promises.push(_this.lessonProvider.getPagesPossibleJumps(_this.lesson.id, true).then(function (jumpList) {
-                    _this.jumps = jumpList;
-                }));
-            }
-            return Promise.all(promises);
-        }).then(function () {
-            _this.mediaFile = _this.lesson.mediafiles && _this.lesson.mediafiles[0];
-            _this.lessonWidth = _this.lesson.slideshow ? _this.domUtils.formatPixelsSize(_this.lesson.mediawidth) : '';
-            _this.lessonHeight = _this.lesson.slideshow ? _this.domUtils.formatPixelsSize(_this.lesson.mediaheight) : '';
-            return _this.launchRetake(_this.currentPage);
-        }).then(function () {
-            return true;
-        }).catch(function (error) {
-            // An error occurred.
-            var promise;
-            if (_this.review && _this.navParams.get('retake') && _this.utils.isWebServiceError(error)) {
-                // The user cannot review the retake. Unmark the retake as being finished in sync.
-                promise = _this.lessonSync.deleteRetakeFinishedInSync(_this.lessonId);
-            }
-            else {
-                promise = Promise.resolve();
-            }
-            return promise.then(function () {
-                _this.domUtils.showErrorModalDefault(error, 'core.course.errorgetmodule', true);
-                _this.forceLeave = true;
-                _this.navCtrl.pop();
-                return false;
-            });
-        });
-    };
-    /**
-     * Finish the retake.
-     *
-     * @param {boolean} [outOfTime] Whether the retake is finished because the user ran out of time.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModLessonPlayerPage.prototype.finishRetake = function (outOfTime) {
-        var _this = this;
         var promise;
-        this.messages = [];
-        if (this.offline && this.appProvider.isOnline()) {
-            // Offline mode but the app is online. Try to sync the data.
-            promise = this.lessonSync.syncLesson(this.lesson.id, true, true).then(function (result) {
-                if (result.warnings && result.warnings.length) {
-                    var error_1 = result.warnings[0];
-                    // Some data was deleted. Check if the retake has changed.
-                    return _this.lessonProvider.getAccessInformation(_this.lesson.id).then(function (info) {
-                        if (info.attemptscount != _this.accessInfo.attemptscount) {
-                            // The retake has changed. Leave the view and show the error.
-                            _this.forceLeave = true;
-                            _this.navCtrl.pop();
-                            return Promise.reject(error_1);
-                        }
-                        // Retake hasn't changed, show the warning and finish the retake in offline.
-                        _this.offline = false;
-                        _this.domUtils.showErrorModal(error_1);
-                    });
-                }
-                _this.offline = false;
-            }, function () {
-                // Ignore errors.
-            });
-        }
-        else {
+        // Check if data has changed.
+        if (!this.hasDataChanged()) {
             promise = Promise.resolve();
         }
+        else {
+            // Show confirmation if some data has been modified.
+            promise = this.domUtils.showConfirm(this.translate.instant('core.confirmcanceledit'));
+        }
         return promise.then(function () {
-            // Now finish the retake.
-            var args = [_this.lesson, _this.courseId, _this.password, outOfTime, _this.review, _this.offline, _this.accessInfo];
-            return _this.callFunction(_this.lessonProvider.finishRetake.bind(_this.lessonProvider), args, 5);
-        }).then(function (data) {
-            _this.title = _this.lesson.name;
-            _this.eolData = data.data;
-            _this.messages = _this.messages.concat(data.messages);
-            _this.processData = undefined;
-            // Format activity link if present.
-            if (_this.eolData && _this.eolData.activitylink) {
-                _this.eolData.activitylink.value = _this.lessonHelper.formatActivityLink(_this.eolData.activitylink.value);
-            }
-            // Format review lesson if present.
-            if (_this.eolData && _this.eolData.reviewlesson) {
-                var params = _this.urlUtils.extractUrlParams(_this.eolData.reviewlesson.value);
-                if (!params || !params.pageid) {
-                    // No pageid in the URL, the user cannot review (probably didn't answer any question).
-                    delete _this.eolData.reviewlesson;
-                }
-                else {
-                    _this.eolData.reviewlesson.pageid = params.pageid;
-                }
+            if (_this.submission.attachmentfiles) {
+                // Delete the local files from the tmp folder.
+                _this.fileUploaderProvider.clearTmpFiles(_this.submission.attachmentfiles);
             }
         });
     };
     /**
-     * Jump to a certain page after performing an action.
+     * Fetch the submission data.
      *
-     * @param {number} pageId The page to load.
-     * @return {Promise<any>} Promise resolved when done.
+     * @return {Promise<void>} Resolved when done.
      */
-    AddonModLessonPlayerPage.prototype.jumpToPage = function (pageId) {
-        if (pageId === 0) {
-            // Not a valid page, return to entry view.
-            // This happens, for example, when the user clicks to go to previous page and there is no previous page.
-            this.forceLeave = true;
-            this.navCtrl.pop();
-            return Promise.resolve();
-        }
-        else if (pageId == __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL) {
-            // End of lesson reached.
-            return this.finishRetake();
-        }
-        // Load new page.
-        this.messages = [];
-        return this.loadPage(pageId);
-    };
-    /**
-     * Start or continue a retake.
-     *
-     * @param {number} pageId The page to load.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModLessonPlayerPage.prototype.launchRetake = function (pageId) {
+    AddonModWorkshopEditSubmissionPage.prototype.fetchSubmissionData = function () {
         var _this = this;
-        var promise;
-        if (this.review) {
-            // Review mode, no need to launch the retake.
-            promise = Promise.resolve({});
-        }
-        else if (!this.offline) {
-            // Not in offline mode, launch the retake.
-            promise = this.lessonProvider.launchRetake(this.lesson.id, this.password, pageId);
-        }
-        else {
-            // Check if there is a finished offline retake.
-            promise = this.lessonOfflineProvider.hasFinishedRetake(this.lesson.id).then(function (finished) {
-                if (finished) {
-                    // Always show EOL page.
-                    pageId = __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL;
-                }
-                return {};
-            });
-        }
-        return promise.then(function (data) {
-            _this.currentPage = pageId || _this.accessInfo.firstpageid;
-            _this.messages = data.messages || [];
-            if (_this.lesson.timelimit && !_this.accessInfo.canmanage) {
-                // Get the last lesson timer.
-                return _this.lessonProvider.getTimers(_this.lesson.id, false, true).then(function (timers) {
-                    _this.endTime = timers[timers.length - 1].starttime + _this.lesson.timelimit;
+        return this.workshopProvider.getWorkshop(this.courseId, this.module.id).then(function (workshopData) {
+            _this.workshop = workshopData;
+            _this.textAvailable = (_this.workshop.submissiontypetext != workshop["a" /* AddonModWorkshopProvider */].SUBMISSION_TYPE_DISABLED);
+            _this.textRequired = (_this.workshop.submissiontypetext == workshop["a" /* AddonModWorkshopProvider */].SUBMISSION_TYPE_REQUIRED);
+            _this.fileAvailable = (_this.workshop.submissiontypefile != workshop["a" /* AddonModWorkshopProvider */].SUBMISSION_TYPE_DISABLED);
+            _this.fileRequired = (_this.workshop.submissiontypefile == workshop["a" /* AddonModWorkshopProvider */].SUBMISSION_TYPE_REQUIRED);
+            _this.editForm.controls.content.setValidators(_this.textRequired ? esm5_forms["u" /* Validators */].required : null);
+            if (_this.submissionId > 0) {
+                _this.editing = true;
+                return _this.workshopHelper.getSubmissionById(_this.workshopId, _this.submissionId).then(function (submissionData) {
+                    _this.submission = submissionData;
+                    var canEdit = (_this.userId == submissionData.authorid && _this.access.cansubmit &&
+                        _this.access.modifyingsubmissionallowed);
+                    if (!canEdit) {
+                        // Should not happen, but go back if does.
+                        _this.forceLeavePage();
+                        return;
+                    }
                 });
             }
+            else if (!_this.access.cansubmit || !_this.access.creatingsubmissionallowed) {
+                // Should not happen, but go back if does.
+                _this.forceLeavePage();
+                return;
+            }
         }).then(function () {
-            return _this.loadPage(_this.currentPage);
-        });
-    };
-    /**
-     * Load the lesson menu.
-     *
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModLessonPlayerPage.prototype.loadMenu = function () {
-        var _this = this;
-        if (this.loadingMenu) {
-            // Already loading.
-            return;
-        }
-        this.loadingMenu = true;
-        var args = [this.lessonId, this.password, this.offline, true];
-        return this.callFunction(this.lessonProvider.getPages.bind(this.lessonProvider), args, 2).then(function (pages) {
-            _this.lessonPages = pages.map(function (entry) {
-                return entry.page;
+            return _this.workshopOffline.getSubmissions(_this.workshopId).then(function (submissionsActions) {
+                if (submissionsActions && submissionsActions.length) {
+                    _this.hasOffline = true;
+                    var actions = _this.workshopHelper.filterSubmissionActions(submissionsActions, _this.editing ?
+                        _this.submission.id : 0);
+                    return _this.workshopHelper.applyOfflineData(_this.submission, actions);
+                }
+                else {
+                    _this.hasOffline = false;
+                }
+            }).finally(function () {
+                _this.originalData.title = _this.submission.title;
+                _this.originalData.content = _this.submission.content;
+                _this.originalData.attachmentfiles = [];
+                _this.submission.attachmentfiles.forEach(function (file) {
+                    var filename;
+                    if (file.filename) {
+                        filename = file.filename;
+                    }
+                    else {
+                        // We don't have filename, extract it from the path.
+                        filename = file.filepath[0] == '/' ? file.filepath.substr(1) : file.filepath;
+                    }
+                    _this.originalData.attachmentfiles.push({
+                        filename: filename,
+                        fileurl: file.fileurl
+                    });
+                });
             });
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error loading menu.');
-        }).finally(function () {
-            _this.loadingMenu = false;
+        }).then(function () {
+            _this.editForm.controls['title'].setValue(_this.submission.title);
+            _this.editForm.controls['content'].setValue(_this.submission.content);
+            var submissionId = _this.submission.id || 'newsub';
+            _this.fileSessionprovider.setFiles(_this.component, _this.workshopId + '_' + submissionId, _this.submission.attachmentfiles || []);
+            _this.loaded = true;
+        }).catch(function (message) {
+            _this.loaded = false;
+            _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
+            _this.forceLeavePage();
         });
     };
     /**
-     * Load a certain page.
-     *
-     * @param {number} pageId The page to load.
-     * @return {Promise<any>} Promise resolved when done.
+     * Force leaving the page, without checking for changes.
      */
-    AddonModLessonPlayerPage.prototype.loadPage = function (pageId) {
-        var _this = this;
-        if (pageId == __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL) {
-            // End of lesson reached.
-            return this.finishRetake();
+    AddonModWorkshopEditSubmissionPage.prototype.forceLeavePage = function () {
+        this.forceLeave = true;
+        this.navCtrl.pop();
+    };
+    /**
+     * Get the form input data.
+     *
+     * @return {any} Object with all the info.
+     */
+    AddonModWorkshopEditSubmissionPage.prototype.getInputData = function () {
+        var submissionId = this.submission.id || 'newsub';
+        var values = {
+            title: this.editForm.value.title,
+            content: null,
+            attachmentfiles: []
+        };
+        if (this.textAvailable) {
+            values.content = this.editForm.value.content || '';
         }
-        var args = [this.lesson, pageId, this.password, this.review, true, this.offline, true, this.accessInfo, this.jumps];
-        return this.callFunction(this.lessonProvider.getPageData.bind(this.lessonProvider), args, 5, 8).then(function (data) {
-            if (data.newpageid == __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */].LESSON_EOL) {
-                // End of lesson reached.
-                return _this.finishRetake();
-            }
-            _this.pageData = data;
-            _this.title = data.page.title;
-            _this.pageContent = _this.lessonHelper.getPageContentsFromPageData(data);
-            _this.loaded = true;
-            _this.currentPage = pageId;
-            _this.messages = _this.messages.concat(data.messages);
-            // Page loaded, hide EOL and feedback data if shown.
-            _this.eolData = _this.processData = undefined;
-            if (_this.lessonProvider.isQuestionPage(data.page.type)) {
-                // Create an empty FormGroup without controls, they will be added in getQuestionFromPageData.
-                _this.questionForm = _this.fb.group({});
-                _this.pageButtons = [];
-                _this.question = _this.lessonHelper.getQuestionFromPageData(_this.questionForm, data);
-                _this.originalData = _this.questionForm.getRawValue(); // Use getRawValue to include disabled values.
-            }
-            else {
-                _this.pageButtons = _this.lessonHelper.getPageButtonsFromHtml(data.pagecontent);
-                _this.question = undefined;
-                _this.originalData = undefined;
-            }
-            if (data.displaymenu && !_this.displayMenu) {
-                // Load the menu.
-                _this.loadMenu();
-            }
-            _this.displayMenu = !!data.displaymenu;
-            if (!_this.firstPageLoaded) {
-                _this.firstPageLoaded = true;
-            }
-            else {
-                _this.showRetake = false;
-            }
-        });
+        if (this.fileAvailable) {
+            values.attachmentfiles = this.fileSessionprovider.getFiles(this.component, this.workshopId + '_' + submissionId) || [];
+        }
+        return values;
     };
     /**
-     * Process a page, sending some data.
+     * Check if data has changed.
      *
-     * @param {any} data The data to send.
-     * @return {Promise<any>} Promise resolved when done.
+     * @return {boolean} True if changed or false if not.
      */
-    AddonModLessonPlayerPage.prototype.processPage = function (data) {
-        var _this = this;
-        this.loaded = false;
-        var args = [this.lesson, this.courseId, this.pageData, data, this.password, this.review, this.offline, this.accessInfo,
-            this.jumps];
-        return this.callFunction(this.lessonProvider.processPage.bind(this.lessonProvider), args, 6, 8).then(function (result) {
-            if (!_this.offline && !_this.review && _this.lessonProvider.isLessonOffline(_this.lesson)) {
-                // Lesson allows offline and the user changed some data in server. Update cached data.
-                var retake = _this.accessInfo.attemptscount;
-                if (_this.lessonProvider.isQuestionPage(_this.pageData.page.type)) {
-                    _this.lessonProvider.getQuestionsAttemptsOnline(_this.lessonId, retake, false, undefined, false, true);
-                }
-                else {
-                    _this.lessonProvider.getContentPagesViewedOnline(_this.lessonId, retake, false, true);
-                }
-            }
-            if (result.nodefaultresponse || result.inmediatejump) {
-                // Don't display feedback or force a redirect to a new page. Load the new page.
-                return _this.jumpToPage(result.newpageid);
-            }
-            else {
-                // Not inmediate jump, show the feedback.
-                result.feedback = _this.lessonHelper.removeQuestionFromFeedback(result.feedback);
-                _this.messages = result.messages;
-                _this.processData = result;
-                _this.processData.buttons = [];
-                if (_this.lesson.review && !result.correctanswer && !result.noanswer && !result.isessayquestion &&
-                    !result.maxattemptsreached && !result.reviewmode) {
-                    // User can try again, show button to do so.
-                    _this.processData.buttons.push({
-                        label: 'addon.mod_lesson.reviewquestionback',
-                        pageId: _this.currentPage
-                    });
-                }
-                // Button to continue.
-                if (_this.lesson.review && !result.correctanswer && !result.noanswer && !result.isessayquestion &&
-                    !result.maxattemptsreached) {
-                    _this.processData.buttons.push({
-                        label: 'addon.mod_lesson.reviewquestioncontinue',
-                        pageId: result.newpageid
-                    });
-                }
-                else {
-                    _this.processData.buttons.push({
-                        label: 'addon.mod_lesson.continue',
-                        pageId: result.newpageid
-                    });
-                }
-            }
-        }).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error processing page');
-        }).finally(function () {
-            _this.loaded = true;
-        });
+    AddonModWorkshopEditSubmissionPage.prototype.hasDataChanged = function () {
+        if (!this.loaded) {
+            return false;
+        }
+        var inputData = this.getInputData();
+        if (!this.originalData || typeof this.originalData.title == 'undefined') {
+            // There is no original data, assume it hasn't changed.
+            return false;
+        }
+        if (this.originalData.title != inputData.title || this.textAvailable && this.originalData.content != inputData.content) {
+            return true;
+        }
+        if (this.fileAvailable) {
+            return this.fileUploaderProvider.areFileListDifferent(inputData.attachmentfiles, this.originalData.attachmentfiles);
+        }
+        return false;
     };
     /**
-     * Review the lesson.
+     * Pull to refresh.
      *
-     * @param {number} pageId Page to load.
+     * @param {any} refresher Refresher.
      */
-    AddonModLessonPlayerPage.prototype.reviewLesson = function (pageId) {
+    AddonModWorkshopEditSubmissionPage.prototype.refreshSubmission = function (refresher) {
         var _this = this;
-        this.loaded = false;
-        this.review = true;
-        this.offline = false; // Don't allow offline mode in review.
-        this.loadPage(pageId).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error loading page');
+        if (this.loaded) {
+            var promises = [];
+            promises.push(this.workshopProvider.invalidateSubmissionData(this.workshopId, this.submission.id));
+            promises.push(this.workshopProvider.invalidateSubmissionsData(this.workshopId));
+            Promise.all(promises).finally(function () {
+                return _this.fetchSubmissionData();
+            }).finally(function () {
+                refresher.complete();
+            });
+        }
+    };
+    /**
+     * Save the submission.
+     */
+    AddonModWorkshopEditSubmissionPage.prototype.save = function () {
+        var _this = this;
+        // Check if data has changed.
+        if (this.hasDataChanged()) {
+            this.saveSubmission().then(function () {
+                // Go back to entry list.
+                _this.forceLeavePage();
+            }).catch(function () {
+                // Nothing to do.
+            });
+        }
+        else {
+            // Nothing to save, just go back.
+            this.forceLeavePage();
+        }
+    };
+    /**
+     * Send submission and save.
+     *
+     * @return {Promise<any>} Resolved when done.
+     */
+    AddonModWorkshopEditSubmissionPage.prototype.saveSubmission = function () {
+        var _this = this;
+        var inputData = this.getInputData();
+        if (!inputData.title) {
+            this.domUtils.showAlertTranslated('core.notice', 'addon.mod_workshop.submissionrequiredtitle');
+            return Promise.reject(null);
+        }
+        var noText = this.textUtils.htmlIsBlank(inputData.content);
+        var noFiles = !inputData.attachmentfiles.length;
+        if (this.textRequired && noText || this.fileRequired && noFiles || noText && noFiles) {
+            this.domUtils.showAlertTranslated('core.notice', 'addon.mod_workshop.submissionrequiredcontent');
+            return Promise.reject(null);
+        }
+        var allowOffline = true, saveOffline = false;
+        var modal = this.domUtils.showModalLoading('core.sending', true), submissionId = this.submission.id;
+        // Add some HTML to the message if needed.
+        if (this.textAvailable) {
+            inputData.content = this.textUtils.formatHtmlLines(inputData.content);
+        }
+        // Upload attachments first if any.
+        allowOffline = !inputData.attachmentfiles.length;
+        return this.workshopHelper.uploadOrStoreSubmissionFiles(this.workshopId, this.submission.id, inputData.attachmentfiles, this.editing, saveOffline).catch(function () {
+            // Cannot upload them in online, save them in offline.
+            saveOffline = true;
+            allowOffline = true;
+            return _this.workshopHelper.uploadOrStoreSubmissionFiles(_this.workshopId, _this.submission.id, inputData.attachmentfiles, _this.editing, saveOffline);
+        }).then(function (attachmentsId) {
+            if (!saveOffline && !_this.fileAvailable) {
+                attachmentsId = null;
+            }
+            if (_this.editing) {
+                if (saveOffline) {
+                    // Save submission in offline.
+                    return _this.workshopOffline.saveSubmission(_this.workshopId, _this.courseId, inputData.title, inputData.content, attachmentsId, submissionId, 'update').then(function () {
+                        // Don't return anything.
+                    });
+                }
+                // Try to send it to server.
+                // Don't allow offline if there are attachments since they were uploaded fine.
+                return _this.workshopProvider.updateSubmission(_this.workshopId, submissionId, _this.courseId, inputData.title, inputData.content, attachmentsId, undefined, allowOffline);
+            }
+            if (saveOffline) {
+                // Save submission in offline.
+                return _this.workshopOffline.saveSubmission(_this.workshopId, _this.courseId, inputData.title, inputData.content, attachmentsId, submissionId, 'add').then(function () {
+                    // Don't return anything.
+                });
+            }
+            // Try to send it to server.
+            // Don't allow offline if there are attachments since they were uploaded fine.
+            return _this.workshopProvider.addSubmission(_this.workshopId, _this.courseId, inputData.title, inputData.content, attachmentsId, undefined, submissionId, allowOffline);
+        }).then(function (newSubmissionId) {
+            var data = {
+                workshopId: _this.workshopId,
+                cmId: _this.module.cmid
+            };
+            if (newSubmissionId && submissionId) {
+                // Data sent to server, delete stored files (if any).
+                _this.workshopOffline.deleteSubmissionAction(_this.workshopId, submissionId, _this.editing ? 'update' : 'add');
+                _this.workshopHelper.deleteSubmissionStoredFiles(_this.workshopId, submissionId, _this.editing);
+                data['submissionId'] = newSubmissionId;
+            }
+            var promise = newSubmissionId ? _this.workshopProvider.invalidateSubmissionData(_this.workshopId, newSubmissionId) :
+                Promise.resolve();
+            return promise.finally(function () {
+                _this.eventsProvider.trigger(workshop["a" /* AddonModWorkshopProvider */].SUBMISSION_CHANGED, data, _this.siteId);
+                // Delete the local files from the tmp folder.
+                _this.fileUploaderProvider.clearTmpFiles(inputData.attachmentfiles);
+            });
+        }).catch(function (message) {
+            _this.domUtils.showErrorModalDefault(message, 'Cannot save submission');
         }).finally(function () {
-            _this.loaded = true;
+            modal.dismiss();
         });
     };
     /**
-     * Submit a question.
+     * Component being destroyed.
      */
-    AddonModLessonPlayerPage.prototype.submitQuestion = function () {
-        var _this = this;
-        this.loaded = false;
-        // Use getRawValue to include disabled values.
-        var data = this.lessonHelper.prepareQuestionData(this.question, this.questionForm.getRawValue());
-        this.processPage(data).finally(function () {
-            _this.loaded = true;
-        });
+    AddonModWorkshopEditSubmissionPage.prototype.ngOnDestroy = function () {
+        this.isDestroyed = true;
+        this.syncProvider.unblockOperation(this.component, this.workshopId);
     };
-    /**
-     * Time up.
-     */
-    AddonModLessonPlayerPage.prototype.timeUp = function () {
-        var _this = this;
-        // Time up called, hide the timer.
-        this.endTime = undefined;
-        this.loaded = false;
-        this.finishRetake(true).catch(function (error) {
-            _this.domUtils.showErrorModalDefault(error, 'Error finishing attempt');
-        }).finally(function () {
-            _this.loaded = true;
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* Content */])
-    ], AddonModLessonPlayerPage.prototype, "content", void 0);
-    AddonModLessonPlayerPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-lesson-player',template:/*ion-inline-start:"/home/travis/build/crazyserver/moodlemobile2/src/addon/mod/lesson/pages/player/player.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title"></core-format-text></ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="displayMenu || mediaFile" ion-button icon-only [attr.aria-label]="\'addon.mod_lesson.lessonmenu\' | translate" (click)="menuModal.present()">\n                <ion-icon name="bookmark"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <core-loading [hideUntil]="loaded">\n        <!-- Info messages. Only show the first one. -->\n        <div class="core-info-card" icon-start *ngIf="lesson && messages && messages.length">\n            <ion-icon name="information-circle"></ion-icon>\n            <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="messages[0].message"></core-format-text>\n        </div>\n\n        <div *ngIf="lesson" [ngClass]=\'{"addon-mod_lesson-slideshow": lesson.slideshow}\' [ngStyle]="{\'width\': lessonWidth, \'height\': lessonHeight}">\n\n            <core-timer *ngIf="endTime" [endTime]="endTime" (finished)="timeUp()" [timerText]="\'addon.mod_lesson.timeremaining\' | translate"></core-timer>\n\n            <!-- Retake and ongoing score. -->\n            <ion-item text-wrap *ngIf="showRetake && !eolData && !processData">\n                <p>{{ \'addon.mod_lesson.attempt\' | translate:{$a: retake} }}</p>\n            </ion-item>\n            <ion-item text-wrap *ngIf="pageData && pageData.ongoingscore && !eolData && !processData" class="addon-mod_lesson-ongoingscore">\n                <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="pageData.ongoingscore"></core-format-text>\n            </ion-item>\n\n            <!-- Page content. -->\n            <ion-card *ngIf="!eolData && !processData">\n                <!-- Content page. -->\n                <ion-item text-wrap *ngIf="!question">\n                    <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="pageContent"></core-format-text>\n                </ion-item>\n\n                <!-- Question page. -->\n                <!-- We need to set ngIf loaded to make formGroup directive restart every time a page changes, see MOBILE-2540. -->\n                <form *ngIf="question && loaded" ion-list [formGroup]="questionForm">\n                    <ion-item-divider text-wrap color="light">\n                        <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="pageContent"></core-format-text>\n                    </ion-item-divider>\n\n                    <input *ngFor="let input of question.hiddenInputs" type="hidden" [name]="input.name" [value]="input.value" />\n\n                    <!-- Render a different input depending on the type of the question. -->\n                    <ng-container [ngSwitch]="question.template">\n\n                        <!-- Short answer. -->\n                        <ng-container *ngSwitchCase="\'shortanswer\'">\n                            <ion-input padding-left [type]="question.input.type" placeholder="{{ \'addon.mod_lesson.youranswer\' | translate }}" [id]="question.input.id" [formControlName]="question.input.name" autocorrect="off" [maxlength]="question.input.maxlength">\n                            </ion-input>\n                        </ng-container>\n\n                        <!-- Essay. -->\n                        <ng-container *ngSwitchCase="\'essay\'">\n                            <ion-item *ngIf="question.textarea">\n                                <core-rich-text-editor item-content placeholder="{{ \'addon.mod_lesson.youranswer\' | translate }}" [control]="question.control" [component]="component" [componentId]="lesson.coursemodule"></core-rich-text-editor>\n                            </ion-item>\n                            <ion-item text-wrap *ngIf="!question.textarea && question.useranswer">\n                                <p class="item-heading">{{ \'addon.mod_lesson.youranswer\' | translate }}</p>\n                                <p><core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="question.useranswer"></core-format-text></p>\n                            </ion-item>\n                        </ng-container>\n\n                        <!-- Multichoice. -->\n                        <ng-container *ngSwitchCase="\'multichoice\'">\n                            <!-- Single choice. -->\n                            <div *ngIf="!question.multi" radio-group [formControlName]="question.controlName">\n                                <ion-item text-wrap *ngFor="let option of question.options">\n                                    <ion-label>\n                                        <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="option.text"></core-format-text>\n                                    </ion-label>\n                                    <ion-radio [id]="option.id" [value]="option.value" [disabled]="option.disabled"></ion-radio>\n                                </ion-item>\n                            </div>\n\n                            <!-- Multiple choice. -->\n                            <ng-container *ngIf="question.multi">\n                                <ion-item text-wrap *ngFor="let option of question.options">\n                                    <ion-label>\n                                        <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="option.text"></core-format-text>\n                                    </ion-label>\n                                    <ion-checkbox [id]="option.id" [formControlName]="option.name" item-end></ion-checkbox>\n                                </ion-item>\n                            </ng-container>\n                        </ng-container>\n\n                        <!-- Matching. -->\n                        <ng-container *ngSwitchCase="\'matching\'">\n                            <ion-item text-wrap *ngFor="let row of question.rows">\n                                <ion-grid item-content>\n                                    <ion-row>\n                                        <ion-col>\n                                            <p><core-format-text id="addon-mod_lesson-matching-{{row.id}}" [component]="component" [componentId]="lesson.coursemodule" [text]="row.text"></core-format-text></p>\n                                        </ion-col>\n                                        <ion-col>\n                                            <ion-select [id]="row.id" [formControlName]="row.name" [attr.aria-labelledby]="\'addon-mod_lesson-matching-\' + row.id" interface="popover">\n                                                <ion-option *ngFor="let option of row.options" [value]="option.value">{{option.label}}</ion-option>\n                                            </ion-select>\n                                        </ion-col>\n                                    </ion-row>\n                                </ion-grid>\n                            </ion-item>\n                        </ng-container>\n                    </ng-container>\n\n                    <ion-item>\n                        <button ion-button block (click)="submitQuestion()" class="button-no-uppercase">{{ question.submitLabel }}</button>\n                    </ion-item>\n                </form>\n            </ion-card>\n\n            <!-- Page buttons and progress. -->\n            <ion-list *ngIf="!eolData && !processData">\n                <ion-grid text-wrap *ngIf="pageButtons && pageButtons.length" class="addon-mod_lesson-pagebuttons">\n                    <ion-row align-items-center>\n                        <ion-col *ngFor="let button of pageButtons" col-12 col-md-6 col-lg-3 col-xl>\n                            <a ion-button block outline text-wrap [id]="button.id" (click)="buttonClicked(button.data)" class="button-no-uppercase">{{ button.content }}</a>\n                        </ion-col>\n                    </ion-row>\n                </ion-grid>\n                <ion-item text-wrap *ngIf="lesson && lesson.progressbar && !canManage && pageData">\n                    <p>{{ \'addon.mod_lesson.progresscompleted\' | translate:{$a: pageData.progress} }}</p>\n                    <core-progress-bar [progress]="pageData.progress"></core-progress-bar>\n                </ion-item>\n                <div class="core-info-card" icon-start *ngIf="lesson && lesson.progressbar && canManage">\n                    <ion-icon name="information-circle"></ion-icon>\n                    {{ \'addon.mod_lesson.progressbarteacherwarning2\' | translate }}\n                </div>\n            </ion-list>\n\n            <!-- End of lesson reached. -->\n            <ion-card *ngIf="eolData && !processData">\n                <div class="core-warning-card" icon-start *ngIf="eolData.offline && eolData.offline.value">\n                    <ion-icon name="warning"></ion-icon>\n                    {{ \'addon.mod_lesson.finishretakeoffline\' | translate }}\n                </div>\n\n                <h3 padding *ngIf="eolData.gradelesson">{{ \'addon.mod_lesson.congratulations\' | translate }}</h3>\n                <ion-item text-wrap *ngIf="eolData.notenoughtimespent">\n                    <core-format-text [text]="eolData.notenoughtimespent.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.numberofpagesviewed">\n                    <core-format-text [text]="eolData.numberofpagesviewed.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.youshouldview">\n                    <core-format-text [text]="eolData.youshouldview.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.numberofcorrectanswers">\n                    <core-format-text [text]="eolData.numberofcorrectanswers.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.displayscorewithessays">\n                    <core-format-text [text]="eolData.displayscorewithessays.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="!eolData.displayscorewithessays && eolData.displayscorewithoutessays">\n                    <core-format-text [text]="eolData.displayscorewithoutessays.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.yourcurrentgradeisoutof">\n                    <core-format-text [text]="eolData.yourcurrentgradeisoutof.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.eolstudentoutoftimenoanswers">\n                    <core-format-text [text]="eolData.eolstudentoutoftimenoanswers.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.welldone">\n                    <core-format-text [text]="eolData.welldone.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="lesson.progressbar && eolData.progresscompleted">\n                    <p>{{ \'addon.mod_lesson.progresscompleted\' | translate:{$a: eolData.progresscompleted.value} }}</p>\n                    <core-progress-bar [progress]="eolData.progresscompleted.value"></core-progress-bar>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.displayofgrade">\n                    <core-format-text [text]="eolData.displayofgrade.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.reviewlesson">\n                    <a ion-button block (click)="reviewLesson(eolData.reviewlesson.pageid)" class="button-no-uppercase">\n                        <core-format-text [text]="\'addon.mod_lesson.reviewlesson\' | translate"></core-format-text>\n                    </a>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.modattemptsnoteacher">\n                    <core-format-text [text]="eolData.modattemptsnoteacher.message"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="eolData.activitylink && eolData.activitylink.value">\n                    <ng-container *ngIf="eolData.activitylink.value.formatted">\n                        <!-- Activity link was successfully formatted, render the button. -->\n                        <a ion-button block color="light" [href]="eolData.activitylink.value.href" core-link [capture]="true" class="button-no-uppercase">\n                            <core-format-text [text]="eolData.activitylink.value.label"></core-format-text>\n                        </a>\n                    </ng-container>\n                    <ng-container *ngIf="!eolData.activitylink.value.formatted">\n                        <!-- Activity link wasn\'t formatted, render the original link. -->\n                        <core-format-text [text]="eolData.activitylink.value.label"></core-format-text>\n                    </ng-container>\n                </ion-item>\n            </ion-card>\n\n            <!-- Feedback returned when processing an action. -->\n            <ion-list *ngIf="processData">\n                <ion-item text-wrap *ngIf="processData.ongoingscore && !processData.reviewmode" >\n                    <core-format-text class="addon-mod_lesson-ongoingscore" [text]="processData.ongoingscore"></core-format-text>\n                </ion-item>\n                <ion-item text-wrap *ngIf="!processData.reviewmode || review">\n                    <p *ngIf="!processData.reviewmode">\n                        <core-format-text [component]="component" [componentId]="lesson.coursemodule" [text]="processData.feedback"></core-format-text>\n                    </p>\n                    <div *ngIf="review">\n                        <p>{{ \'addon.mod_lesson.gotoendoflesson\' | translate }}</p>\n                        <p>{{ \'addon.mod_lesson.or\' | translate }}</p>\n                        <p>{{ \'addon.mod_lesson.continuetonextpage\' | translate }}</p>\n                    </div>\n                </ion-item>\n                <ion-item text-wrap *ngIf="review || (processData.buttons && processData.buttons.length)">\n                    <a ion-button block color="light" *ngIf="review" (click)="changePage(LESSON_EOL)">{{ \'addon.mod_lesson.finish\' | translate }}</a>\n                    <a ion-button block color="light" *ngFor="let button of processData.buttons" (click)="changePage(button.pageId, true)">{{ button.label | translate }}</a>\n                </ion-item>\n            </ion-list>\n        </div>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/home/travis/build/crazyserver/moodlemobile2/src/addon/mod/lesson/pages/player/player.html"*/,
+    AddonModWorkshopEditSubmissionPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-addon-mod-workshop-edit-submission',
+            templateUrl: 'edit-submission.html',
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* NavParams */], __WEBPACK_IMPORTED_MODULE_6__providers_logger__["a" /* CoreLoggerProvider */], __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_events__["a" /* CoreEventsProvider */], __WEBPACK_IMPORTED_MODULE_7__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_sync__["a" /* CoreSyncProvider */], __WEBPACK_IMPORTED_MODULE_9__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["v" /* PopoverController */],
-            __WEBPACK_IMPORTED_MODULE_10__providers_utils_time__["a" /* CoreTimeUtilsProvider */], __WEBPACK_IMPORTED_MODULE_13__providers_lesson__["a" /* AddonModLessonProvider */],
-            __WEBPACK_IMPORTED_MODULE_16__providers_helper__["a" /* AddonModLessonHelperProvider */], __WEBPACK_IMPORTED_MODULE_15__providers_lesson_sync__["a" /* AddonModLessonSyncProvider */],
-            __WEBPACK_IMPORTED_MODULE_14__providers_lesson_offline__["a" /* AddonModLessonOfflineProvider */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["r" /* NavController */], __WEBPACK_IMPORTED_MODULE_4__providers_app__["a" /* CoreAppProvider */],
-            __WEBPACK_IMPORTED_MODULE_12__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_utils_url__["a" /* CoreUrlUtilsProvider */], __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormBuilder */]])
-    ], AddonModLessonPlayerPage);
-    return AddonModLessonPlayerPage;
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */], fileuploader["a" /* CoreFileUploaderProvider */],
+            workshop["a" /* AddonModWorkshopProvider */], offline["a" /* AddonModWorkshopOfflineProvider */],
+            helper["a" /* AddonModWorkshopHelperProvider */], ionic_angular["s" /* NavController */],
+            file_session["a" /* CoreFileSessionProvider */], sync["a" /* CoreSyncProvider */],
+            utils_text["a" /* CoreTextUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], esm5_forms["d" /* FormBuilder */],
+            _ngx_translate_core["c" /* TranslateService */], events["a" /* CoreEventsProvider */]])
+    ], AddonModWorkshopEditSubmissionPage);
+    return AddonModWorkshopEditSubmissionPage;
 }());
 
-//# sourceMappingURL=player.js.map
+//# sourceMappingURL=edit-submission.js.map
+// CONCATENATED MODULE: ./src/addon/mod/workshop/pages/edit-submission/edit-submission.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var edit_submission_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var edit_submission_module_AddonModWorkshopEditSubmissionPageModule = /** @class */ (function () {
+    function AddonModWorkshopEditSubmissionPageModule() {
+    }
+    AddonModWorkshopEditSubmissionPageModule = edit_submission_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                edit_submission_AddonModWorkshopEditSubmissionPage,
+            ],
+            imports: [
+                directives_module["a" /* CoreDirectivesModule */],
+                components_module["a" /* CoreComponentsModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(edit_submission_AddonModWorkshopEditSubmissionPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], AddonModWorkshopEditSubmissionPageModule);
+    return AddonModWorkshopEditSubmissionPageModule;
+}());
+
+//# sourceMappingURL=edit-submission.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1345);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1346);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1347);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1348);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1349);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1350);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1351);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1352);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1353);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1356);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1357);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1358);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./src/components/mark-required/mark-required.ngfactory.js
+var mark_required_ngfactory = __webpack_require__(82);
+
+// EXTERNAL MODULE: ./src/components/mark-required/mark-required.ts
+var mark_required = __webpack_require__(75);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
+var label = __webpack_require__(61);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(26);
+
+// EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
+var rich_text_editor_ngfactory = __webpack_require__(277);
+
+// EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
+var rich_text_editor = __webpack_require__(227);
+
+// EXTERNAL MODULE: ./src/providers/utils/url.ts
+var url = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./src/providers/filepool.ts
+var filepool = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
+var attachments_ngfactory = __webpack_require__(447);
+
+// EXTERNAL MODULE: ./src/components/attachments/attachments.ts
+var attachments = __webpack_require__(280);
+
+// EXTERNAL MODULE: ./src/providers/app.ts
+var app = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
+var providers_helper = __webpack_require__(132);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.ngfactory.js
+var input_ngfactory = __webpack_require__(93);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
+var input = __webpack_require__(78);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app_app = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(435);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(36);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1354);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(200);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./src/directives/back-button.ts
+var back_button = __webpack_require__(663);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1355);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(337);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(247);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(436);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(45);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(42);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(106);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
+var refresher = __webpack_require__(144);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
+var refresher_content_ngfactory = __webpack_require__(201);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
+var refresher_content = __webpack_require__(158);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(48);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(60);
+
+// CONCATENATED MODULE: ./src/addon/mod/workshop/pages/edit-submission/edit-submission.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonModWorkshopEditSubmissionPage = [];
+var RenderType_AddonModWorkshopEditSubmissionPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModWorkshopEditSubmissionPage, data: {} });
+
+function View_AddonModWorkshopEditSubmissionPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 19, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 5, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 6, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 7, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 4, "ion-label", [["stacked", ""]], null, null, null, mark_required_ngfactory["b" /* View_CoreMarkRequiredComponent_0 */], mark_required_ngfactory["a" /* RenderType_CoreMarkRequiredComponent */])), core["_30" /* ɵdid */](8, 4308992, null, 0, mark_required["a" /* CoreMarkRequiredComponent */], [core["t" /* ElementRef */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), core["_30" /* ɵdid */](9, 16384, [[5, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](10, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 3, 5, "core-rich-text-editor", [["formControlName", "content"], ["item-content", ""], ["name", "content"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, rich_text_editor_ngfactory["b" /* View_CoreRichTextEditorComponent_0 */], rich_text_editor_ngfactory["a" /* RenderType_CoreRichTextEditorComponent */])), core["_30" /* ɵdid */](14, 1228800, null, 0, rich_text_editor["a" /* CoreRichTextEditorComponent */], [dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], sites["a" /* CoreSitesProvider */], filepool["a" /* CoreFilepoolProvider */], [2, content["a" /* Content */]], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils["a" /* CoreUtilsProvider */], platform["a" /* Platform */]], { placeholder: [0, "placeholder"], control: [1, "control"], name: [2, "name"], component: [3, "component"], componentId: [4, "componentId"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), core["_30" /* ɵdid */](16, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [8, null]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](18, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.textRequired; _ck(_v, 8, 0, currVal_0); var currVal_9 = core["_56" /* ɵunv */](_v, 14, 0, core["_44" /* ɵnov */](_v, 15).transform("addon.mod_workshop.submissioncontent")); var currVal_10 = _co.editForm.controls["content"]; var currVal_11 = "content"; var currVal_12 = _co.component; var currVal_13 = _co.componentId; _ck(_v, 14, 0, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13); var currVal_14 = "content"; _ck(_v, 16, 0, currVal_14); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 11).transform("addon.mod_workshop.submissioncontent")); _ck(_v, 10, 0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 18).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 18).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 18).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 18).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 18).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 18).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 18).ngClassPending; _ck(_v, 13, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); }); }
+function View_AddonModWorkshopEditSubmissionPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-attachments", [["allowOffline", "true"]], null, null, null, attachments_ngfactory["b" /* View_CoreAttachmentsComponent_0 */], attachments_ngfactory["a" /* RenderType_CoreAttachmentsComponent */])), core["_30" /* ɵdid */](1, 114688, null, 0, attachments["a" /* CoreAttachmentsComponent */], [app["a" /* CoreAppProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], fileuploader["a" /* CoreFileUploaderProvider */], translate_service["a" /* TranslateService */], providers_helper["a" /* CoreFileUploaderHelperProvider */]], { files: [0, "files"], maxSize: [1, "maxSize"], maxSubmissions: [2, "maxSubmissions"], component: [3, "component"], componentId: [4, "componentId"], allowOffline: [5, "allowOffline"], acceptedTypes: [6, "acceptedTypes"], required: [7, "required"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.submission.attachmentfiles; var currVal_1 = _co.workshop.maxbytes; var currVal_2 = _co.workshop.nattachments; var currVal_3 = _co.component; var currVal_4 = _co.workshop.cmid; var currVal_5 = "true"; var currVal_6 = _co.workshop.submissionfiletypes; var currVal_7 = _co.fileRequired; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); }, null); }
+function View_AddonModWorkshopEditSubmissionPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 32, "form", [["ion-list", ""], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 2).onSubmit($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("reset" === en)) {
+        var pd_1 = (core["_44" /* ɵnov */](_v, 2).onReset() !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, esm5_forms["w" /* ɵbf */], [], null, null), core["_30" /* ɵdid */](2, 540672, null, 0, esm5_forms["h" /* FormGroupDirective */], [[8, null], [8, null]], { form: [0, "form"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["b" /* ControlContainer */], null, [esm5_forms["h" /* FormGroupDirective */]]), core["_30" /* ɵdid */](4, 16384, null, 0, esm5_forms["o" /* NgControlStatusGroup */], [esm5_forms["b" /* ControlContainer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, null, 19, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](7, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 2, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 4, { _icons: 1 }), core["_30" /* ɵdid */](11, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 1, 4, "ion-label", [["core-mark-required", "true"], ["stacked", ""]], null, null, null, mark_required_ngfactory["b" /* View_CoreMarkRequiredComponent_0 */], mark_required_ngfactory["a" /* RenderType_CoreMarkRequiredComponent */])), core["_30" /* ɵdid */](14, 4308992, null, 0, mark_required["a" /* CoreMarkRequiredComponent */], [core["t" /* ElementRef */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), core["_30" /* ɵdid */](15, 16384, [[2, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](16, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, 3, 5, "ion-input", [["formControlName", "title"], ["name", "title"], ["type", "text"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, input_ngfactory["b" /* View_TextInput_0 */], input_ngfactory["a" /* RenderType_TextInput */])), core["_30" /* ɵdid */](20, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [8, null]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](22, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](23, 5423104, null, 0, input["a" /* TextInput */], [config["a" /* Config */], platform["a" /* Platform */], util_form["a" /* Form */], app_app["a" /* App */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, content["a" /* Content */]], [2, item["a" /* Item */]], [2, esm5_forms["m" /* NgControl */]], dom_controller["a" /* DomController */]], { type: [0, "type"], placeholder: [1, "placeholder"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModWorkshopEditSubmissionPage_2)), core["_30" /* ɵdid */](28, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModWorkshopEditSubmissionPage_3)), core["_30" /* ɵdid */](31, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.editForm; _ck(_v, 2, 0, currVal_7); var currVal_8 = "true"; _ck(_v, 14, 0, currVal_8); var currVal_17 = "title"; _ck(_v, 20, 0, currVal_17); var currVal_18 = "text"; var currVal_19 = core["_56" /* ɵunv */](_v, 23, 1, core["_44" /* ɵnov */](_v, 24).transform("addon.mod_workshop.submissiontitle")); _ck(_v, 23, 0, currVal_18, currVal_19); var currVal_20 = _co.textAvailable; _ck(_v, 28, 0, currVal_20); var currVal_21 = _co.fileAvailable; _ck(_v, 31, 0, currVal_21); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4).ngClassUntouched; var currVal_1 = core["_44" /* ɵnov */](_v, 4).ngClassTouched; var currVal_2 = core["_44" /* ɵnov */](_v, 4).ngClassPristine; var currVal_3 = core["_44" /* ɵnov */](_v, 4).ngClassDirty; var currVal_4 = core["_44" /* ɵnov */](_v, 4).ngClassValid; var currVal_5 = core["_44" /* ɵnov */](_v, 4).ngClassInvalid; var currVal_6 = core["_44" /* ɵnov */](_v, 4).ngClassPending; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_9 = core["_56" /* ɵunv */](_v, 16, 0, core["_44" /* ɵnov */](_v, 17).transform("addon.mod_workshop.submissiontitle")); _ck(_v, 16, 0, currVal_9); var currVal_10 = core["_44" /* ɵnov */](_v, 22).ngClassUntouched; var currVal_11 = core["_44" /* ɵnov */](_v, 22).ngClassTouched; var currVal_12 = core["_44" /* ɵnov */](_v, 22).ngClassPristine; var currVal_13 = core["_44" /* ɵnov */](_v, 22).ngClassDirty; var currVal_14 = core["_44" /* ɵnov */](_v, 22).ngClassValid; var currVal_15 = core["_44" /* ɵnov */](_v, 22).ngClassInvalid; var currVal_16 = core["_44" /* ɵnov */](_v, 22).ngClassPending; _ck(_v, 19, 0, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16); }); }
+function View_AddonModWorkshopEditSubmissionPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 23, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 19, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](9, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 2, 9, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](13, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, null, 4, "button", [["clear", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.save() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](17, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { clear: [0, "clear"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](19, 0, ["\n                ", "\n            "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](25, 0, null, null, 17, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](26, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](28, 0, null, 2, 6, "ion-refresher", [], [[2, "refresher-active", null], [4, "top", null]], [[null, "ionRefresh"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("ionRefresh" === en)) {
+        var pd_0 = (_co.refreshSubmission($event) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](29, 212992, null, 0, refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](31, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](32, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](36, 0, null, 1, 5, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](37, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModWorkshopEditSubmissionPage_1)), core["_30" /* ɵdid */](40, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_4 = ""; _ck(_v, 17, 0, currVal_4); var currVal_10 = _co.loaded; _ck(_v, 29, 0, currVal_10); var currVal_12 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 32, 0, core["_44" /* ɵnov */](_v, 33).transform("core.pulltorefresh")), ""); _ck(_v, 32, 0, currVal_12); var currVal_13 = _co.loaded; _ck(_v, 37, 0, currVal_13); var currVal_14 = _co.workshop; _ck(_v, 40, 0, currVal_14); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("addon.mod_workshop.editsubmission")); _ck(_v, 9, 0, currVal_2); var currVal_3 = core["_56" /* ɵunv */](_v, 16, 0, core["_44" /* ɵnov */](_v, 18).transform("core.save")); _ck(_v, 16, 0, currVal_3); var currVal_5 = core["_56" /* ɵunv */](_v, 19, 0, core["_44" /* ɵnov */](_v, 20).transform("core.save")); _ck(_v, 19, 0, currVal_5); var currVal_6 = core["_44" /* ɵnov */](_v, 26).statusbarPadding; var currVal_7 = core["_44" /* ɵnov */](_v, 26)._hasRefresher; _ck(_v, 25, 0, currVal_6, currVal_7); var currVal_8 = (core["_44" /* ɵnov */](_v, 29).state !== "inactive"); var currVal_9 = core["_44" /* ɵnov */](_v, 29)._top; _ck(_v, 28, 0, currVal_8, currVal_9); var currVal_11 = core["_44" /* ɵnov */](_v, 32).r.state; _ck(_v, 31, 0, currVal_11); }); }
+function View_AddonModWorkshopEditSubmissionPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-workshop-edit-submission", [], null, null, null, View_AddonModWorkshopEditSubmissionPage_0, RenderType_AddonModWorkshopEditSubmissionPage)), core["_30" /* ɵdid */](1, 245760, null, 0, edit_submission_AddonModWorkshopEditSubmissionPage, [nav_params["a" /* NavParams */], sites["a" /* CoreSitesProvider */], fileuploader["a" /* CoreFileUploaderProvider */], workshop["a" /* AddonModWorkshopProvider */], offline["a" /* AddonModWorkshopOfflineProvider */], helper["a" /* AddonModWorkshopHelperProvider */], nav_controller["a" /* NavController */], file_session["a" /* CoreFileSessionProvider */], sync["a" /* CoreSyncProvider */], utils_text["a" /* CoreTextUtilsProvider */], dom["a" /* CoreDomUtilsProvider */], esm5_forms["d" /* FormBuilder */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var AddonModWorkshopEditSubmissionPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-workshop-edit-submission", edit_submission_AddonModWorkshopEditSubmissionPage, View_AddonModWorkshopEditSubmissionPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=edit-submission.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(333);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(334);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(336);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(335);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(434);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(662);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
+var pipes_module = __webpack_require__(105);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(248);
+
+// CONCATENATED MODULE: ./src/addon/mod/workshop/pages/edit-submission/edit-submission.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModWorkshopEditSubmissionPageModuleNgFactory", function() { return AddonModWorkshopEditSubmissionPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AddonModWorkshopEditSubmissionPageModuleNgFactory = core["_28" /* ɵcmf */](edit_submission_module_AddonModWorkshopEditSubmissionPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], AddonModWorkshopEditSubmissionPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, edit_submission_module_AddonModWorkshopEditSubmissionPageModule, edit_submission_module_AddonModWorkshopEditSubmissionPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], edit_submission_AddonModWorkshopEditSubmissionPage, [])]); });
+
+//# sourceMappingURL=edit-submission.module.ngfactory.js.map
 
 /***/ })
 
