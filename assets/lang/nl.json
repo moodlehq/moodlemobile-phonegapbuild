@@ -391,6 +391,7 @@
     "addon.mod_data.errormustsupplyvalue": "Je moet hier een waarde geven.",
     "addon.mod_data.expired": "Deze activiteit is gesloten op {{$a}} en is niet langer beschikbaar",
     "addon.mod_data.fields": "Velden",
+    "addon.mod_data.foundrecords": "Gevonden records: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Reset filters</a>)",
     "addon.mod_data.latlongboth": "Zowel de breedtegraad als de lengtegraad zijn vereist.",
     "addon.mod_data.menuchoose": "Kies...",
     "addon.mod_data.modulenameplural": "Databanken",

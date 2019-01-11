@@ -376,6 +376,7 @@
     "addon.mod_data.errormustsupplyvalue": "Você precisa fornecer um valor aqui.",
     "addon.mod_data.expired": "Sinto muito, mas esta atividade foi fechada em {{$a}} e não está mais disponível",
     "addon.mod_data.fields": "Campos",
+    "addon.mod_data.foundrecords": "Encontrados: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Reconfigurar filtros</a>)",
     "addon.mod_data.latlongboth": "Tanto a Latitude quanto a Longitude devem ser preenchidas.",
     "addon.mod_data.menuchoose": "Selecionar...",
     "addon.mod_data.modulenameplural": "Bases de dados",

@@ -301,6 +301,7 @@
     "addon.mod_data.errormustsupplyvalue": "这儿你必须提供一个值。",
     "addon.mod_data.expired": "对不起，这项活动截止于{{$a}}，不再有效",
     "addon.mod_data.fields": "字段",
+    "addon.mod_data.foundrecords": "找到记录：{{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">重设过滤器</a>)",
     "addon.mod_data.menuchoose": "选择...",
     "addon.mod_data.modulenameplural": "数据库",
     "addon.mod_data.more": "更多",

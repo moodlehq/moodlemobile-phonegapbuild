@@ -289,6 +289,7 @@
     "addon.mod_data.errormustsupplyvalue": "Ви повинні тут вказати значення.",
     "addon.mod_data.expired": "На жаль, ця діяльність закрита на {{$a}} і більше не доступна",
     "addon.mod_data.fields": "Поля",
+    "addon.mod_data.foundrecords": "Знайдено записи: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Перевстановити фільтр</a>)",
     "addon.mod_data.latlongboth": "Широта і довгота є обов’язковими.",
     "addon.mod_data.menuchoose": "Вибрати...",
     "addon.mod_data.modulenameplural": "Бази даних",

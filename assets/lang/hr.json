@@ -202,6 +202,7 @@
     "addon.mod_data.entrieslefttoaddtoview": "Morate dodati barem {{$a.entriesleft}} zapisa kako bi mogli pregledavati zapise drugih sudionika.",
     "addon.mod_data.expired": "Nažalost, ova aktivnost je zatvorena {{$a}} i nije više dostupna",
     "addon.mod_data.fields": "Polja",
+    "addon.mod_data.foundrecords": "Pronađeni zapisi: {{$a.num}}/{{$a.max}}(<a href=\"{{$a.reseturl}}\">Vrati stare postavke filtra</a>)",
     "addon.mod_data.menuchoose": "Odaberite...",
     "addon.mod_data.modulenameplural": "Baze podataka",
     "addon.mod_data.more": "Više",

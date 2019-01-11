@@ -312,6 +312,7 @@
     "addon.mod_data.errormustsupplyvalue": "Морате овде задати вредност.",
     "addon.mod_data.expired": "Нажалост, ова активност је затворена {$}} и више није доступна",
     "addon.mod_data.fields": "Поља",
+    "addon.mod_data.foundrecords": "Пронађени записи: {{$a.num}}/{{$a.max}}(<a href=\"{{$a.reseturl}}\">Врати стара подешавања филтера</a>)",
     "addon.mod_data.latlongboth": "Поља за географску ширина и дужина су обавезна.",
     "addon.mod_data.menuchoose": "Изаберите...",
     "addon.mod_data.modulenameplural": "Базе података",

@@ -371,6 +371,7 @@
     "addon.mod_data.errormustsupplyvalue": "Du må skrive inn noe her",
     "addon.mod_data.expired": "Beklager, denne aktiviteten ble stengt {{$a}} og er ikke lenger tilgjengelig",
     "addon.mod_data.fields": "Felter",
+    "addon.mod_data.foundrecords": "Funnet poster: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Nullstill filter</a>)",
     "addon.mod_data.latlongboth": "Både lengdegrad og breddegrad må oppgis",
     "addon.mod_data.menuchoose": "Velg...",
     "addon.mod_data.modulenameplural": "Databaser",

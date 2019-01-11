@@ -340,6 +340,7 @@
     "addon.mod_data.errormustsupplyvalue": "អ្នកត្រូវតែផ្ដល់ព័ត៌មាននៅទីនេះ ។",
     "addon.mod_data.expired": "សូមអភ័យទោស! សកម្មភាពនេះបានបិទនៅ {{$a}} ហើយមិនមានទៀតទេ។",
     "addon.mod_data.fields": "វាល",
+    "addon.mod_data.foundrecords": "រកឃើញកំណត់ត្រា ៖ {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">កំណត់តម្រងឡើងវិញ</a>)",
     "addon.mod_data.latlongboth": "ទាមទារទាំងរយៈទទឹង និងរយៈបណ្ដោយ។",
     "addon.mod_data.menuchoose": "ជ្រើស...",
     "addon.mod_data.modulenameplural": "មូលដ្ឋានទិន្នន័យ",

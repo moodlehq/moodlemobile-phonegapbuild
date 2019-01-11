@@ -316,6 +316,7 @@
     "addon.mod_data.errormustsupplyvalue": "Privalote pateikti reikšmę čia.",
     "addon.mod_data.expired": "Apgailestaujame, ši veikla uždaryta {{$a}} ir nebegalima",
     "addon.mod_data.fields": "Laukai",
+    "addon.mod_data.foundrecords": "Rasta įrašų: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Nustatyti filtrus iš naujo</a>)",
     "addon.mod_data.latlongboth": "Abu, platuma ir ilguma, yra privalomi.",
     "addon.mod_data.menuchoose": "Pasirinkite...",
     "addon.mod_data.modulenameplural": "Duomenų bazės",

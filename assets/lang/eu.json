@@ -391,6 +391,7 @@
     "addon.mod_data.errormustsupplyvalue": "Hemen balio bat eman behar duzu.",
     "addon.mod_data.expired": "Sentitzen dugu, jarduera hau {{$a}} datan itxi zen eta dagoeneko ez dago eskuragarri",
     "addon.mod_data.fields": "Eremuak",
+    "addon.mod_data.foundrecords": "Erregistroak: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Garbitu iragazkiak</a>)",
     "addon.mod_data.latlongboth": "Latitudea eta longitudea beharrekoak dira.",
     "addon.mod_data.menuchoose": "Aukeratu...",
     "addon.mod_data.modulenameplural": "Datu-baseak",

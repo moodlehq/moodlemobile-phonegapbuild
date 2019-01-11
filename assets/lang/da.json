@@ -356,6 +356,7 @@
     "addon.mod_data.errormustsupplyvalue": "Du skal indsætte en værdi her.",
     "addon.mod_data.expired": "Beklager, denne aktivitet lukkede {{$a}} og er ikke længere tilgængelig",
     "addon.mod_data.fields": "Felter",
+    "addon.mod_data.foundrecords": "Din søgning matcher {{$a.num}}/{{$a.max}} poster(<a href=\"{{$a.reseturl}}\">Nulstil filter</a>)",
     "addon.mod_data.latlongboth": "Skriv både bredde- og længdegrad",
     "addon.mod_data.menuchoose": "Vælg...",
     "addon.mod_data.modulenameplural": "Databaser",

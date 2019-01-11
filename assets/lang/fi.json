@@ -302,6 +302,7 @@
     "addon.mod_data.errordeleting": "Virhe poistettaessa merkintää.",
     "addon.mod_data.expired": "Tämä aktiviteetti on jo suljettu ({{$a}}).",
     "addon.mod_data.fields": "Kentät",
+    "addon.mod_data.foundrecords": "Hakusanoja löytyi: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Poista suodattimet</a>)",
     "addon.mod_data.menuchoose": "Valitse...",
     "addon.mod_data.modulenameplural": "Tietokannat",
     "addon.mod_data.more": "Lisää...",

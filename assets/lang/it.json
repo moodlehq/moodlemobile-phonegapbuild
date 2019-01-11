@@ -345,6 +345,7 @@
     "addon.mod_data.errormustsupplyvalue": "Devi inserire un valore.",
     "addon.mod_data.expired": "Spiacente, l'attività non è più disponibile poiché è stata chiusa il {{$a}} ",
     "addon.mod_data.fields": "Campi",
+    "addon.mod_data.foundrecords": "Record trovati: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Reset filtri</a>)",
     "addon.mod_data.latlongboth": "Devi compilare sia la latitudine sia la longitudine.",
     "addon.mod_data.menuchoose": "Scegli...",
     "addon.mod_data.modulenameplural": "Database",

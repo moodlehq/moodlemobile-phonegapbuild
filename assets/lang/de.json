@@ -391,6 +391,7 @@
     "addon.mod_data.errormustsupplyvalue": "Sie müssen hier einen Wert eintragen.",
     "addon.mod_data.expired": "Die Aktivität wurde am {{$a}} abgeschlossen und ist nicht weiter verfügbar.",
     "addon.mod_data.fields": "Felder",
+    "addon.mod_data.foundrecords": "Einträge gefunden: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Filter zurücksetzen</a>)",
     "addon.mod_data.latlongboth": "Längen- und Breitengrad müssen eingetragen werden.",
     "addon.mod_data.menuchoose": "Auswählen ...",
     "addon.mod_data.modulenameplural": "Datenbanken",

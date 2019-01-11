@@ -207,6 +207,7 @@
     "addon.mod_data.entrieslefttoaddtoview": "Трябва да добавите още {{$a.entrieslefttoview}} записи преди да можете да видите записите на другите участници.",
     "addon.mod_data.expired": "За съжаление тази дейност е затворена в {{$a}} и вече не е достъпна",
     "addon.mod_data.fields": "Полета",
+    "addon.mod_data.foundrecords": "Намерени записи: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Анулиране на филтрите</a>)",
     "addon.mod_data.menuchoose": "Изберете...",
     "addon.mod_data.modulenameplural": "Бази данни",
     "addon.mod_data.more": "Още",

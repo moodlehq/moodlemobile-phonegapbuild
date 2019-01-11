@@ -270,6 +270,7 @@
     "addon.mod_data.errormustsupplyvalue": "יש להזין ערך בשדה זה.",
     "addon.mod_data.expired": "מצטערים, פעילות זו נסגרה ב {{$a}}  ואיננה זמינה יותר.",
     "addon.mod_data.fields": "שדות",
+    "addon.mod_data.foundrecords": "נמצאו פריטים: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">איפוס מסננים</a>)",
     "addon.mod_data.latlongboth": "נדרשים נתוני קו־רוחב וגם קו־אורך",
     "addon.mod_data.menuchoose": "יש לבחור...",
     "addon.mod_data.modulenameplural": "בסיסי־נתונים",

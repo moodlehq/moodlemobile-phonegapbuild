@@ -384,6 +384,7 @@
     "addon.mod_data.errormustsupplyvalue": "あなたはここで値を提供する必要があります。",
     "addon.mod_data.expired": "申し訳ございません、この活動は {{$a}} に終了して利用することはできません。",
     "addon.mod_data.fields": "フィールド",
+    "addon.mod_data.foundrecords": "{{$a.num}}/{{$a.max}} 件のレコードが見つかりました (<a href=\"{{$a.reseturl}}\">フィルタをリセットする</a>)",
     "addon.mod_data.latlongboth": "緯度および経度の両方とも必須です。",
     "addon.mod_data.menuchoose": "選択 ...",
     "addon.mod_data.modulenameplural": "データベース",

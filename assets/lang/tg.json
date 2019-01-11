@@ -183,6 +183,7 @@
     "addon.mod_data.emptyaddform": "Шумо ҳеҷ як майдонро пур накардед",
     "addon.mod_data.entrieslefttoadd": "Шумо бояд боз {{$a.entriesleft}}илова кунед, то имкон дошта бошед, ки сабтҳои иштирокчиёни дигарро бинед",
     "addon.mod_data.fields": "Майдонҳо",
+    "addon.mod_data.foundrecords": "Сабтҳо ёфт шуданд: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Филтрҳо ба ҳолати пештара баргардонда шаванд</a>)",
     "addon.mod_data.menuchoose": "Интихоб карда шавад...",
     "addon.mod_data.modulenameplural": "Базаҳои маълумотҳо",
     "addon.mod_data.more": "Дида баромадани сабт",

@@ -378,6 +378,7 @@
     "addon.mod_data.errormustsupplyvalue": "Πρέπει να εισάγετε μια τιμή εδώ.",
     "addon.mod_data.expired": "Δυστυχώς, η δραστηριότητα αυτή έκλεισε στις {{$a}} και δεν είναι πλέον διαθέσιμη",
     "addon.mod_data.fields": "Πεδία",
+    "addon.mod_data.foundrecords": "Βρέθηκαν οι εγγραφές: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Επαρχικοποίηση φίλτρων</a>)",
     "addon.mod_data.latlongboth": "Απαιτούνται και γεωγραφικό πλάτος και γεωγραφικό μήκος.",
     "addon.mod_data.menuchoose": "Επιλέξτε....",
     "addon.mod_data.modulenameplural": "Βάσεις δεδομένων",

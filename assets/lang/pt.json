@@ -391,6 +391,7 @@
     "addon.mod_data.errormustsupplyvalue": "Indique aqui um valor.",
     "addon.mod_data.expired": "A atividade terminou em <b>{{$a}}</b> e não se encontra disponível",
     "addon.mod_data.fields": "Campos",
+    "addon.mod_data.foundrecords": "Registos encontrados: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Nova pesquisa</a>)",
     "addon.mod_data.latlongboth": "É necessário a latitude e a longitude.",
     "addon.mod_data.menuchoose": "Selecione...",
     "addon.mod_data.modulenameplural": "Bases de dados",

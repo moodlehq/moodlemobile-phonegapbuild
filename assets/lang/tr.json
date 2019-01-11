@@ -264,6 +264,7 @@
     "addon.mod_data.errormustsupplyvalue": "Burada bir değer vermelisiniz.",
     "addon.mod_data.expired": "Maalesef, bu etkinlik {{$a}} tarihinde kapandı ve artık mevcut değil",
     "addon.mod_data.fields": "Alanlar",
+    "addon.mod_data.foundrecords": "Bulunan kayıtlar: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Filtreleri temizle</a>)",
     "addon.mod_data.latlongboth": "Enlem ve boylam gereklidir.",
     "addon.mod_data.menuchoose": "Seç...",
     "addon.mod_data.modulenameplural": "Veritabanları",

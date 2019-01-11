@@ -226,6 +226,7 @@
     "addon.mod_data.errordeleting": "항목을 삭제하는 중 오류가 발생했습니다.",
     "addon.mod_data.expired": "죄송합니다만, 이 활동은 {{$a}}에 종료되었으므로 더 이상 이용할 수 없습니다.",
     "addon.mod_data.fields": "항목들",
+    "addon.mod_data.foundrecords": "기록 발견 : {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">필터 초기화</a>)",
     "addon.mod_data.menuchoose": "선택...",
     "addon.mod_data.modulenameplural": "데이터베이스",
     "addon.mod_data.more": "더 이상",

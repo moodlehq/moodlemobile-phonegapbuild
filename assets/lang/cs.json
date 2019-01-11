@@ -391,6 +391,7 @@
     "addon.mod_data.errormustsupplyvalue": "Musí obsahovat nějakou hodnotu.",
     "addon.mod_data.expired": "Tato činnost byla ukončena {{$a}} a není již nadále dostupná.",
     "addon.mod_data.fields": "Pole",
+    "addon.mod_data.foundrecords": "Počet nalezených záznamů: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">resetovat filtry</a>)",
     "addon.mod_data.latlongboth": "Je požadována zeměpisná šířka i délka.",
     "addon.mod_data.menuchoose": "Vybrat...",
     "addon.mod_data.modulenameplural": "Databáze",

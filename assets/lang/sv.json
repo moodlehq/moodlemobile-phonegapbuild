@@ -283,6 +283,7 @@
     "addon.mod_data.entrieslefttoaddtoview": "Du måste lägga till {{$a.entrieslefttoview}} fler bidrag innan Du kan få se de andra deltagarnas bidrag.",
     "addon.mod_data.expired": "Den här aktiviteten stängdes tyvärr den {{$a}} och är inte längre tillgänglig.",
     "addon.mod_data.fields": "Fält",
+    "addon.mod_data.foundrecords": "Funna poster: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Filter för återställning</a>)",
     "addon.mod_data.menuchoose": "Välj...",
     "addon.mod_data.modulenameplural": "Databaser",
     "addon.mod_data.more": "Fler",

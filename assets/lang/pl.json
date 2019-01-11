@@ -309,6 +309,7 @@
     "addon.mod_data.errormustsupplyvalue": "Musisz podać wartość tutaj.",
     "addon.mod_data.expired": "Niestety, ta aktywność została zamknięta {{$a}} i nie jest już dłużej dostępna",
     "addon.mod_data.fields": "Pola",
+    "addon.mod_data.foundrecords": "Znaleziono rekordy: {{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Reset filtrów</a>)",
     "addon.mod_data.latlongboth": "Wymagana jest zarówno szerokość i długość geograficzna.",
     "addon.mod_data.menuchoose": "Wybierz...",
     "addon.mod_data.modulenameplural": "Bazy danych",

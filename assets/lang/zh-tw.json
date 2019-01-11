@@ -309,6 +309,7 @@
     "addon.mod_data.errormustsupplyvalue": "這裡你必須提供一個數值。",
     "addon.mod_data.expired": "抱歉，這活動已經在 {{$a}}關閉，已經無法使用。",
     "addon.mod_data.fields": "欄位",
+    "addon.mod_data.foundrecords": "找到記錄資料： <b>{{$a.num}}</b>/<b>{{$a.max}}</b> (<a href=\"<b>{{$a.reseturl}}</b>\">重設篩選器</a>)",
     "addon.mod_data.latlongboth": "緯度和經度兩者都要填寫",
     "addon.mod_data.menuchoose": "選擇...",
     "addon.mod_data.modulenameplural": "資料庫",

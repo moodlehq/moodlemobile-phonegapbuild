@@ -387,6 +387,7 @@
     "addon.mod_data.errormustsupplyvalue": "Cal que poseu un valor aquí.",
     "addon.mod_data.expired": "Aquesta activitat es va tancar el dia {{$a}} i ja no està disponible",
     "addon.mod_data.fields": "Camps",
+    "addon.mod_data.foundrecords": "S'han trobat els registres:{{$a.num}}/{{$a.max}} (<a href=\"{{$a.reseturl}}\">Reinicialitza filtres</a>)",
     "addon.mod_data.latlongboth": "Cal posar tant la latitud com la longitud.",
     "addon.mod_data.menuchoose": "Trieu...",
     "addon.mod_data.modulenameplural": "Bases de dades",
