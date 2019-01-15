@@ -1524,7 +1524,7 @@
     "core.none": "Aucun",
     "core.nopasswordchangeforced": "Vous ne pouvez pas continuer sans changer votre mot de passe.",
     "core.nopermissionerror": "Vous n'avez pas l'autorisation de faire cela",
-    "core.nopermissions": "Désolé, vous n'avez actuellement pas les droits d'accès requis pour effectuer ceci ({{$a}})",
+    "core.nopermissions": "Désolé, vous n'avez actuellement pas les permissions pour effectuer ceci ({{$a}})",
     "core.noresults": "Aucun résultat",
     "core.notapplicable": "n/a",
     "core.notice": "Remarque",

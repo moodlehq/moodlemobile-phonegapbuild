@@ -1524,7 +1524,7 @@
     "core.none": "Žádný",
     "core.nopasswordchangeforced": "Nelze pokračovat beze změny hesla.",
     "core.nopermissionerror": "Je nám líto, ale momentálně k tomu nemáte oprávnění",
-    "core.nopermissions": "Je mi líto, ale momentálně nemáte oprávnění vykonat tuto operaci ({{$a}})",
+    "core.nopermissions": "Je mi líto, ale momentálně nemáte oprávnění vykonat tuto operaci ({{$a}}).",
     "core.noresults": "Bez výsledků",
     "core.notapplicable": "n/a",
     "core.notice": "Poznámka",
