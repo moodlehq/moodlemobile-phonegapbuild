@@ -1,6 +1,6 @@
 webpackJsonp([14],{
 
-/***/ 1845:
+/***/ 1854:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var messages = __webpack_require__(146);
 var messages_offline = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/sync.ts
-var sync = __webpack_require__(453);
+var sync = __webpack_require__(454);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
 var user = __webpack_require__(44);
