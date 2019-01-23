@@ -3,9 +3,9 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.moodle.moodlemobile"
-        versionCode = "36000"
-        android-versionCode="36000"
-        version   = "3.6.0">
+        versionCode = "36100"
+        android-versionCode="36100"
+        version   = "3.6.1">
     <name>Moodle</name>
 
     <description>
@@ -17,7 +17,7 @@
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
-        <string>3.6.0</string>
+        <string>3.6.1</string>
     </edit-config>
 
     <gap:platform name="ios" />
