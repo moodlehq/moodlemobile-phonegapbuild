@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 1946:
+/***/ 1947:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__image__ = __webpack_require__(2078);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__image__ = __webpack_require__(2079);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
 // (C) Copyright 2015 Martin Dougiamas
 //
@@ -57,7 +57,7 @@ var CoreViewerImagePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2078:
+/***/ 2079:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
