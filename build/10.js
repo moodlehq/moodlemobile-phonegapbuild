@@ -1,6 +1,6 @@
 webpackJsonp([10],{
 
-/***/ 1943:
+/***/ 1942:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60,9 +60,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var index_CoreSiteHomeIndexPage = /** @class */ (function () {
     function CoreSiteHomeIndexPage(navParams, navCtrl, courseHelper, sitesProvider) {
-        var module = navParams.get('module');
+        var module = navParams.get('module'), modParams = navParams.get('modParams');
         if (module) {
-            courseHelper.openModule(navCtrl, module, sitesProvider.getCurrentSite().getSiteHomeId());
+            courseHelper.openModule(navCtrl, module, sitesProvider.getCurrentSite().getSiteHomeId(), undefined, modParams);
         }
     }
     __decorate([

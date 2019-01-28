@@ -1,6 +1,6 @@
 webpackJsonp([36],{
 
-/***/ 1942:
+/***/ 1941:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var sites = __webpack_require__(1);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/sharedfiles/providers/sharedfiles.ts
-var sharedfiles = __webpack_require__(460);
+var sharedfiles = __webpack_require__(459);
 
 // CONCATENATED MODULE: ./src/core/sharedfiles/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas

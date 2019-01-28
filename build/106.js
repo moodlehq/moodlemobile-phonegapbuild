@@ -1,6 +1,6 @@
 webpackJsonp([106],{
 
-/***/ 1855:
+/***/ 1854:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(29);
 var components_module = __webpack_require__(689);
 
 // EXTERNAL MODULE: ./src/addon/mod/book/components/index/index.ts
-var index = __webpack_require__(455);
+var index = __webpack_require__(454);
 
 // CONCATENATED MODULE: ./src/addon/mod/book/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -57,6 +57,7 @@ var index_AddonModBookIndexPage = /** @class */ (function () {
     function AddonModBookIndexPage(navParams) {
         this.module = navParams.get('module') || {};
         this.courseId = navParams.get('courseId');
+        this.chapterId = navParams.get('chapterId');
         this.title = this.module.name;
     }
     /**
@@ -357,7 +358,7 @@ function View_AddonModBookIndexPage_0(_l) { return core["_57" /* ɵvid */](0, [c
     } return ad; }, null, null)), core["_30" /* ɵdid */](25, 212992, null, 0, refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](27, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](28, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n\n    "])), (_l()(), core["_31" /* ɵeld */](32, 0, null, 1, 1, "addon-mod-book-index", [], null, [[null, "dataRetrieved"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("dataRetrieved" === en)) {
         var pd_0 = (_co.updateData($event) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, index_ngfactory["c" /* View_AddonModBookIndexComponent_0 */], index_ngfactory["b" /* RenderType_AddonModBookIndexComponent */])), core["_30" /* ɵdid */](33, 245760, [[1, 4]], 0, index["a" /* AddonModBookIndexComponent */], [core["C" /* Injector */], book["a" /* AddonModBookProvider */], course["a" /* CoreCourseProvider */], providers_app["a" /* CoreAppProvider */], prefetch_handler["a" /* AddonModBookPrefetchHandler */], popover_controller["a" /* PopoverController */], [2, content["a" /* Content */]]], { module: [0, "module"], courseId: [1, "courseId"] }, { dataRetrieved: "dataRetrieved" }), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 6, 0); var currVal_2 = _co.title; _ck(_v, 11, 0, currVal_2); var currVal_7 = _co.bookComponent.loaded; _ck(_v, 25, 0, currVal_7); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 28, 0, core["_44" /* ɵnov */](_v, 29).transform("core.pulltorefresh")), ""); _ck(_v, 28, 0, currVal_9); var currVal_10 = _co.module; var currVal_11 = _co.courseId; _ck(_v, 33, 0, currVal_10, currVal_11); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = core["_44" /* ɵnov */](_v, 22).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 22)._hasRefresher; _ck(_v, 21, 0, currVal_3, currVal_4); var currVal_5 = (core["_44" /* ɵnov */](_v, 25).state !== "inactive"); var currVal_6 = core["_44" /* ɵnov */](_v, 25)._top; _ck(_v, 24, 0, currVal_5, currVal_6); var currVal_8 = core["_44" /* ɵnov */](_v, 28).r.state; _ck(_v, 27, 0, currVal_8); }); }
+    } return ad; }, index_ngfactory["c" /* View_AddonModBookIndexComponent_0 */], index_ngfactory["b" /* RenderType_AddonModBookIndexComponent */])), core["_30" /* ɵdid */](33, 245760, [[1, 4]], 0, index["a" /* AddonModBookIndexComponent */], [core["C" /* Injector */], book["a" /* AddonModBookProvider */], course["a" /* CoreCourseProvider */], providers_app["a" /* CoreAppProvider */], prefetch_handler["a" /* AddonModBookPrefetchHandler */], popover_controller["a" /* PopoverController */], [2, content["a" /* Content */]]], { module: [0, "module"], courseId: [1, "courseId"], initialChapterId: [2, "initialChapterId"] }, { dataRetrieved: "dataRetrieved" }), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 6, 0); var currVal_2 = _co.title; _ck(_v, 11, 0, currVal_2); var currVal_7 = _co.bookComponent.loaded; _ck(_v, 25, 0, currVal_7); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 28, 0, core["_44" /* ɵnov */](_v, 29).transform("core.pulltorefresh")), ""); _ck(_v, 28, 0, currVal_9); var currVal_10 = _co.module; var currVal_11 = _co.courseId; var currVal_12 = _co.chapterId; _ck(_v, 33, 0, currVal_10, currVal_11, currVal_12); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = core["_44" /* ɵnov */](_v, 22).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 22)._hasRefresher; _ck(_v, 21, 0, currVal_3, currVal_4); var currVal_5 = (core["_44" /* ɵnov */](_v, 25).state !== "inactive"); var currVal_6 = core["_44" /* ɵnov */](_v, 25)._top; _ck(_v, 24, 0, currVal_5, currVal_6); var currVal_8 = core["_44" /* ɵnov */](_v, 28).r.state; _ck(_v, 27, 0, currVal_8); }); }
 function View_AddonModBookIndexPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-book-index", [], null, null, null, View_AddonModBookIndexPage_0, RenderType_AddonModBookIndexPage)), core["_30" /* ɵdid */](1, 49152, null, 0, index_AddonModBookIndexPage, [nav_params["a" /* NavParams */]], null, null)], null, null); }
 var AddonModBookIndexPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-book-index", index_AddonModBookIndexPage, View_AddonModBookIndexPage_Host_0, {}, {}, []);
 

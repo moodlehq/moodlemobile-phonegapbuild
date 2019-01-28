@@ -1,6 +1,6 @@
 webpackJsonp([11],{
 
-/***/ 1915:
+/***/ 1914:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43,7 +43,7 @@ var index = __webpack_require__(1364);
 var courses = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/dashboard.ts
-var dashboard = __webpack_require__(458);
+var dashboard = __webpack_require__(457);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/dashboard/dashboard.ts
 // (C) Copyright 2015 Martin Dougiamas
