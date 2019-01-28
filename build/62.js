@@ -202,7 +202,7 @@ var progress_bar = __webpack_require__(282);
 var platform_browser = __webpack_require__(74);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(146);
+var badge = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);

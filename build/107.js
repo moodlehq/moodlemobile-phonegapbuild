@@ -399,7 +399,7 @@ var translate_service = __webpack_require__(18);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(146);
+var badge = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -513,7 +513,7 @@ var dom_controller = __webpack_require__(31);
 var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(145);
+var refresher = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(38);

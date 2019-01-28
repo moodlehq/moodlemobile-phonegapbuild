@@ -919,7 +919,7 @@ var content_ngfactory = __webpack_require__(185);
 var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(145);
+var refresher = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(201);

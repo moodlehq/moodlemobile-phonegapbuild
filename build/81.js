@@ -279,7 +279,7 @@ var dom_controller = __webpack_require__(31);
 var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(145);
+var refresher = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(38);
@@ -294,7 +294,7 @@ var refresher_content = __webpack_require__(158);
 var translate_pipe = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz.ts
-var quiz = __webpack_require__(151);
+var quiz = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
 var providers_helper = __webpack_require__(279);
