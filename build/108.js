@@ -22,7 +22,7 @@ var events = __webpack_require__(12);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages.ts
-var providers_messages = __webpack_require__(146);
+var providers_messages = __webpack_require__(147);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages-offline.ts
 var messages_offline = __webpack_require__(346);
@@ -798,7 +798,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1357);
 var recaptchamodal_ngfactory = __webpack_require__(1358);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(145);
+var badge = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -960,7 +960,7 @@ var dom_controller = __webpack_require__(31);
 var keyboard = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(144);
+var refresher = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(38);
