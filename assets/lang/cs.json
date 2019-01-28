@@ -164,7 +164,7 @@
     "addon.messages.contactname": "Jméno kontaktu",
     "addon.messages.contactrequestsent": "Požadavek na kontakt byl odeslán",
     "addon.messages.contacts": "Kontakty",
-    "addon.messages.decline": "Sestupně",
+    "addon.messages.decline": "Odmítnout",
     "addon.messages.deleteallconfirm": "Opravdu chcete vymazat celou tuto konverzaci? Ostatním účastníkům konverzace nebude smazána.",
     "addon.messages.deleteconversation": "Odstranit konverzaci",
     "addon.messages.deletemessage": "Odstranit zprávu",

@@ -46,7 +46,7 @@ var time = __webpack_require__(24);
 var helper = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz.ts
-var quiz = __webpack_require__(150);
+var quiz = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz-sync.ts
 var quiz_sync = __webpack_require__(231);
@@ -58,7 +58,7 @@ var providers_helper = __webpack_require__(279);
 var connection_error = __webpack_require__(709);
 
 // EXTERNAL MODULE: ./node_modules/rxjs/Rx.js
-var Rx = __webpack_require__(155);
+var Rx = __webpack_require__(143);
 var Rx_default = /*#__PURE__*/__webpack_require__.n(Rx);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/classes/auto-save.ts

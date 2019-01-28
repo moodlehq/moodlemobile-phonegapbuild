@@ -187,7 +187,7 @@
     "addon.messages.newmessages": "Nieuwe berichten",
     "addon.messages.nocontactrequests": "Geen contactverzoeken",
     "addon.messages.nocontactsgetstarted": "Geen contacten",
-    "addon.messages.nofavourites": "Geen als favoriet gemarkeerde berichten",
+    "addon.messages.nofavourites": "Geen berichten gemarkeerd met een ster",
     "addon.messages.nogroupconversations": "Geen groepsberichten",
     "addon.messages.noindividualconversations": "Geen privé-berichten",
     "addon.messages.nomessagesfound": "Geen berichten gevonden",
