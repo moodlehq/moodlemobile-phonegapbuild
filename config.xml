@@ -145,7 +145,7 @@
     <gap:plugin name="cordova-plugin-globalization" source="npm" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="cordova-plugin-ionic-keyboard" source="npm" />
-    <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
+    <gap:plugin name="cordova-plugin-local-notification" source="npm" />
     <gap:plugin name="cordova-plugin-media-capture" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
     <gap:plugin name="cordova-plugin-screen-orientation" source="npm" />
