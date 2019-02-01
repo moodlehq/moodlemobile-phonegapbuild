@@ -6,7 +6,7 @@
         versionCode = "36000"
         android-versionCode="36000"
         version   = "3.6.0">
-    <name>Moodle</name>
+    <name>CPAG</name>
 
     <description>
         Moodle official app
