@@ -1,6 +1,6 @@
 webpackJsonp([121],{
 
-/***/ 1832:
+/***/ 1921:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var pipes_module = __webpack_require__(106);
 var calendar = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/helper.ts
-var helper = __webpack_require__(674);
+var helper = __webpack_require__(676);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
 var courses = __webpack_require__(50);

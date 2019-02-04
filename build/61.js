@@ -1,6 +1,6 @@
 webpackJsonp([61],{
 
-/***/ 1912:
+/***/ 1948:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -334,7 +334,7 @@ var spinner_ngfactory = __webpack_require__(113);
 var spinner = __webpack_require__(95);
 
 // EXTERNAL MODULE: ./src/core/course/components/format/format.ts
-var format = __webpack_require__(454);
+var format = __webpack_require__(453);
 
 // EXTERNAL MODULE: ./src/core/course/providers/format-delegate.ts
 var format_delegate = __webpack_require__(176);

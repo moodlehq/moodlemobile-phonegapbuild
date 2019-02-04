@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 1924:
+/***/ 1894:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71,7 +71,7 @@ var components_module = __webpack_require__(23);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_components_module = __webpack_require__(675);
+var components_components_module = __webpack_require__(674);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ts
 // (C) Copyright 2015 Martin Dougiamas
