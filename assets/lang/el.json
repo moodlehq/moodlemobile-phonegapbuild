@@ -739,7 +739,7 @@
     "addon.mod_url.pointingtourl": "Το url αυτού του πόρου δείχνει στο",
     "addon.mod_wiki.cannoteditpage": "Δεν μπορείτε να επεξεργαστείτε αυτήν τη σελίδα.",
     "addon.mod_wiki.createpage": "Δημιουργία σελίδας",
-    "addon.mod_wiki.editingpage": "Επεξεργασία αυτής της σελίδας '{{$a}}\\",
+    "addon.mod_wiki.editingpage": "Επεξεργασία αυτής της σελίδας '{{$a}}'",
     "addon.mod_wiki.errorloadingpage": "Παρουσιάστηκε σφάλμα κατά τη φόρτωση της σελίδας.",
     "addon.mod_wiki.errornowikiavailable": "Αυτό το wiki δεν έχει ακόμα περιεχόμενο.",
     "addon.mod_wiki.gowikihome": "Go Wiki home",

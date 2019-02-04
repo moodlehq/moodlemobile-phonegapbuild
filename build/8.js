@@ -1079,7 +1079,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
             _this.canAddFeedback = !_this.assessmentId && _this.workshop.phase > __WEBPACK_IMPORTED_MODULE_13__providers_workshop__["a" /* AddonModWorkshopProvider */].PHASE_ASSESSMENT &&
                 _this.workshop.phase < __WEBPACK_IMPORTED_MODULE_13__providers_workshop__["a" /* AddonModWorkshopProvider */].PHASE_CLOSED && _this.access.canoverridegrades;
             _this.ownAssessment = false;
-            if (_this.access.canviewallassessments) {
+            if (_this.access.canviewallassessments || _this.currentUserId == _this.userId) {
                 // Get new data, different that came from stateParams.
                 promises.push(_this.workshopProvider.getSubmissionAssessments(_this.workshopId, _this.submissionId)
                     .then(function (subAssessments) {
@@ -1156,7 +1156,8 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
                     });
                 }));
             }
-            else if (_this.workshop.phase == __WEBPACK_IMPORTED_MODULE_13__providers_workshop__["a" /* AddonModWorkshopProvider */].PHASE_CLOSED && submissionData.gradeoverby) {
+            else if (_this.workshop.phase == __WEBPACK_IMPORTED_MODULE_13__providers_workshop__["a" /* AddonModWorkshopProvider */].PHASE_CLOSED && submissionData.gradeoverby &&
+                _this.evaluate && _this.evaluate.text) {
                 promises.push(_this.userProvider.getProfile(submissionData.gradeoverby, _this.courseId, true).then(function (profile) {
                     _this.evaluateByProfile = profile;
                 }));
