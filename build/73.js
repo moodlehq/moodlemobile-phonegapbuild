@@ -1,6 +1,6 @@
 webpackJsonp([73],{
 
-/***/ 1897:
+/***/ 1896:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -194,7 +194,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1358);
 var unsupported_module_ngfactory = __webpack_require__(1359);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1412);
+var index_ngfactory = __webpack_require__(1411);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/subwiki-picker/subwiki-picker.ngfactory.js
 var subwiki_picker_ngfactory = __webpack_require__(1433);
@@ -257,7 +257,7 @@ var utils_text = __webpack_require__(10);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(25);
+var url = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -272,7 +272,7 @@ var providers_app = __webpack_require__(9);
 var helper = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(23);
+var content = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(34);
@@ -290,7 +290,7 @@ var content_ngfactory = __webpack_require__(186);
 var dom_controller = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(106);
+var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
 var refresher = __webpack_require__(145);
@@ -305,7 +305,7 @@ var refresher_content_ngfactory = __webpack_require__(202);
 var refresher_content = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(26);
+var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/providers/wiki.ts
 var wiki = __webpack_require__(209);
@@ -421,10 +421,10 @@ var translate_store = __webpack_require__(434);
 var ionic_angular_module = __webpack_require__(662);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(105);
+var pipes_module = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
-var components_components_module = __webpack_require__(28);
+var components_components_module = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
 var course_components_components_module = __webpack_require__(65);
