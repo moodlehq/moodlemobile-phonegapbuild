@@ -25,7 +25,7 @@ var components_module = __webpack_require__(23);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var components_components_module = __webpack_require__(65);
+var components_components_module = __webpack_require__(66);
 
 // CONCATENATED MODULE: ./src/core/course/pages/section/section.module.ts
 // (C) Copyright 2015 Martin Dougiamas

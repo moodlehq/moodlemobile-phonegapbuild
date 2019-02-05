@@ -410,7 +410,7 @@ var pipes_module = __webpack_require__(106);
 var components_components_module = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(65);
+var course_components_components_module = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
 var compile_html_module = __webpack_require__(439);

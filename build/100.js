@@ -601,7 +601,7 @@ var pipes_module = __webpack_require__(106);
 var components_components_module = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(65);
+var course_components_components_module = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./src/core/comments/components/components.module.ts
 var comments_components_components_module = __webpack_require__(443);

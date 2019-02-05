@@ -587,7 +587,7 @@ var tab = __webpack_require__(68);
 var split_view_ngfactory = __webpack_require__(437);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(66);
+var fileuploader = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
 var tabs_ngfactory = __webpack_require__(441);

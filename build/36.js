@@ -336,7 +336,7 @@ var local_file_ngfactory = __webpack_require__(349);
 var local_file = __webpack_require__(254);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
-var mimetype = __webpack_require__(64);
+var mimetype = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
