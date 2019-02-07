@@ -1246,11 +1246,14 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
      * Component being destroyed.
      */
     AddonModScormPlayerPage.prototype.ngOnDestroy = function () {
+        var _this = this;
         // Stop listening for events.
         this.tocObserver && this.tocObserver.off();
         this.launchNextObserver && this.launchNextObserver.off();
         this.launchPrevObserver && this.launchPrevObserver.off();
-        this.goOfflineObserver && this.goOfflineObserver.off();
+        setTimeout(function () {
+            _this.goOfflineObserver && _this.goOfflineObserver.off();
+        }, 500);
         // Unblock the SCORM so it can be synced.
         this.syncProvider.unblockOperation(providers_scorm["a" /* AddonModScormProvider */].COMPONENT, this.scorm.id, 'player');
     };
