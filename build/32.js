@@ -145,6 +145,13 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
     CoreUserProfilePage.prototype.fetchUser = function () {
         var _this = this;
         return this.userProvider.getProfile(this.userId, this.courseId).then(function (user) {
+            if (_this.userId == _this.site.getUserId() && user.profileimageurl != _this.site.getInfo().userpictureurl) {
+                // The current user image received is different than the one stored in site info. Assume the image was updated.
+                _this.eventsProvider.trigger(providers_user["a" /* CoreUserProvider */].PROFILE_PICTURE_UPDATED, {
+                    userId: _this.userId,
+                    picture: user.profileimageurl
+                }, _this.site.getId());
+            }
             user.address = _this.userHelper.formatAddress('', user.city, user.country);
             user.roles = _this.userHelper.formatRoleList(user.roles);
             _this.user = user;
