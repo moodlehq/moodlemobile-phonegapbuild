@@ -168,7 +168,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1358);
 var file_ngfactory = __webpack_require__(204);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(172);
+var file = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);

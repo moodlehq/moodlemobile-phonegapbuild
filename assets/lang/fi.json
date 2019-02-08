@@ -508,6 +508,7 @@
     "addon.mod_lti.modulenameplural": "Ulkoiset työkalut",
     "addon.mod_page.errorwhileloadingthepage": "Sivun sisältöä ladattaessa tapahtui virhe.",
     "addon.mod_page.modulenameplural": "Sivut",
+    "addon.mod_quiz.answercolon": "Vastaus:",
     "addon.mod_quiz.attemptfirst": "Ensimmäinen suorituskerta",
     "addon.mod_quiz.attemptlast": "Viimeisin suorituskerta",
     "addon.mod_quiz.attemptnumber": "Suorituskerta",

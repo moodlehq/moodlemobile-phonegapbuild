@@ -49,10 +49,10 @@ var fileuploader = __webpack_require__(64);
 var workshop = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
-var helper = __webpack_require__(173);
+var helper = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
-var offline = __webpack_require__(162);
+var offline = __webpack_require__(163);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/edit-submission/edit-submission.ts
 // (C) Copyright 2015 Martin Dougiamas

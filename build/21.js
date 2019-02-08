@@ -815,7 +815,7 @@ var common = __webpack_require__(7);
 var label = __webpack_require__(61);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.ngfactory.js
-var radio_button_ngfactory = __webpack_require__(166);
+var radio_button_ngfactory = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
 var radio_button = __webpack_require__(135);
@@ -827,7 +827,7 @@ var radio_group = __webpack_require__(127);
 var checkbox_ngfactory = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
-var checkbox_checkbox = __webpack_require__(174);
+var checkbox_checkbox = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/option/option.js
 var option_option = __webpack_require__(91);

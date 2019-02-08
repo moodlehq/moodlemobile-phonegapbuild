@@ -34,7 +34,7 @@ var delegate = __webpack_require__(358);
 var local_notifications = __webpack_require__(140);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(175);
+var config = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);

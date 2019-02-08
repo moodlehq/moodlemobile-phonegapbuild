@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 1907:
+/***/ 1908:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var app = __webpack_require__(9);
 var constants = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(175);
+var config = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var file = __webpack_require__(49);

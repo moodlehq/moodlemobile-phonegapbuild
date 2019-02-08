@@ -155,6 +155,7 @@
     "addon.messages.type_strangers": "دیگران",
     "addon.messages.unabletomessage": "شما نمی‌توانید به این کاربر پیام بفرستید",
     "addon.messages.unblockuserconfirm": "آیا مطمئن هستید که می‌خواهید {{$a}} را مسدود بودن خارج کنید؟",
+    "addon.messages.useentertosend": "استفاده از کلید Enter برای ارسال",
     "addon.messages.userwouldliketocontactyou": "{{$a}} تمایل دارد که شما را به لیست مخاطبینش اضافه کند",
     "addon.messages.warningmessagenotsent": "امکان ارسال پیغام به کاربر {{user}} وجود ندارد. {{error}}",
     "addon.messages.you": "شما:",

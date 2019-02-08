@@ -376,6 +376,7 @@
     "addon.mod_lesson.youranswer": "Вашият отговор",
     "addon.mod_lesson.youshouldview": "Трябва да прегледате поне {{$a}}",
     "addon.mod_page.modulenameplural": "Страници",
+    "addon.mod_quiz.answercolon": "Отговор:",
     "addon.mod_quiz.attemptfirst": "Първи опит",
     "addon.mod_quiz.attemptlast": "Последен опит",
     "addon.mod_quiz.attemptnumber": "Опит",

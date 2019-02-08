@@ -602,6 +602,7 @@
     "addon.mod_lti.modulenameplural": "Eines externes",
     "addon.mod_page.errorwhileloadingthepage": "S'ha produït un error carregant el contingut de la pàgina.",
     "addon.mod_page.modulenameplural": "Pàgines",
+    "addon.mod_quiz.answercolon": "Resposta:",
     "addon.mod_quiz.attemptfirst": "Primer intent",
     "addon.mod_quiz.attemptlast": "Darrer intent",
     "addon.mod_quiz.attemptnumber": "Intent",

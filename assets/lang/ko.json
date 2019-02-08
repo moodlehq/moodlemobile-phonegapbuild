@@ -429,6 +429,7 @@
     "addon.mod_lti.modulenameplural": "기본 LTI",
     "addon.mod_page.errorwhileloadingthepage": "페이지 내용을 로드하는 중 오류가 발생했습니다.",
     "addon.mod_page.modulenameplural": "웹페이지",
+    "addon.mod_quiz.answercolon": "답:",
     "addon.mod_quiz.attemptfirst": "첫번째 시도",
     "addon.mod_quiz.attemptlast": "마지막 시도",
     "addon.mod_quiz.attemptnumber": "시도",

@@ -410,6 +410,7 @@
     "addon.mod_lti.launchactivity": "Lansați activitatea",
     "addon.mod_page.errorwhileloadingthepage": "A apărut o eroare la încărcarea paginii.",
     "addon.mod_page.modulenameplural": "Pagini",
+    "addon.mod_quiz.answercolon": "Răspuns:",
     "addon.mod_quiz.attemptfirst": "Prima încercare",
     "addon.mod_quiz.attemptlast": "Ultima încercare",
     "addon.mod_quiz.attemptnumber": "Încercare",

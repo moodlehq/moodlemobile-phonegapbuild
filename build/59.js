@@ -649,7 +649,7 @@ var item_divider = __webpack_require__(108);
 var file_ngfactory = __webpack_require__(204);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(172);
+var file = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
 var file_helper = __webpack_require__(131);

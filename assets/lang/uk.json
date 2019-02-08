@@ -498,6 +498,7 @@
     "addon.mod_lti.modulenameplural": "Зовнішні засоби",
     "addon.mod_page.errorwhileloadingthepage": "Помилка при завантаженні вмісту сторінки.",
     "addon.mod_page.modulenameplural": "Сторінки",
+    "addon.mod_quiz.answercolon": "Відповідь:",
     "addon.mod_quiz.attemptfirst": "Перша спроба",
     "addon.mod_quiz.attemptlast": "Остання спроба",
     "addon.mod_quiz.attemptnumber": "Спроба",

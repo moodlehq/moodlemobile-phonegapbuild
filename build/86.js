@@ -451,7 +451,7 @@ var events = __webpack_require__(12);
 var checkbox_ngfactory = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
-var checkbox_checkbox = __webpack_require__(174);
+var checkbox_checkbox = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
 var card = __webpack_require__(86);

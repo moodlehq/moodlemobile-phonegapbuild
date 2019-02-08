@@ -497,7 +497,7 @@ var esm5_forms = __webpack_require__(22);
 var compile_html_ngfactory = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
-var compile_html = __webpack_require__(168);
+var compile_html = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
 var compile = __webpack_require__(137);
@@ -512,7 +512,7 @@ var comments = __webpack_require__(363);
 var nav_params = __webpack_require__(60);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var providers_comments = __webpack_require__(167);
+var providers_comments = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
 var col = __webpack_require__(114);

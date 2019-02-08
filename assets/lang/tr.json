@@ -443,6 +443,7 @@
     "addon.mod_lesson.yourcurrentgradeisoutof": "Şu anki notunuz {{$a.total}} üzerinden {{$a.grade}} dir.",
     "addon.mod_lesson.youshouldview": "En az cevaplamanız gereken: {{$a}}",
     "addon.mod_page.modulenameplural": "Sayfalar",
+    "addon.mod_quiz.answercolon": "Yanıt:",
     "addon.mod_quiz.attemptfirst": "İlk uygulama",
     "addon.mod_quiz.attemptlast": "Son uygulama",
     "addon.mod_quiz.attemptnumber": "Uygulama",

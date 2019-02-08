@@ -508,6 +508,7 @@
     "addon.mod_lti.modulenameplural": "外部工具",
     "addon.mod_page.errorwhileloadingthepage": "載入頁面內容時出錯",
     "addon.mod_page.modulenameplural": "頁面",
+    "addon.mod_quiz.answercolon": "答案：",
     "addon.mod_quiz.attemptfirst": "第一次作答",
     "addon.mod_quiz.attemptlast": "最後一次作答",
     "addon.mod_quiz.attemptnumber": "作答數",

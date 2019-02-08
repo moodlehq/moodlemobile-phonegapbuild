@@ -301,7 +301,7 @@ var time = __webpack_require__(25);
 var groups = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(167);
+var comments = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
 var modal_controller = __webpack_require__(191);

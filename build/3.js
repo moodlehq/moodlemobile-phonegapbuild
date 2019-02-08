@@ -524,7 +524,7 @@ var iframe = __webpack_require__(37);
 var checkbox_ngfactory = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
-var checkbox_checkbox = __webpack_require__(174);
+var checkbox_checkbox = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);
@@ -536,7 +536,7 @@ var submission_plugin_ngfactory = __webpack_require__(1962);
 var submission_plugin = __webpack_require__(667);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/submission-delegate.ts
-var submission_delegate = __webpack_require__(163);
+var submission_delegate = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(7);
@@ -874,7 +874,7 @@ var ToggleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_utils_iframe__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_file_file_ngfactory__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_file_file__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_file_file__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_file_helper__ = __webpack_require__(131);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_utils_mimetype__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__angular_common__ = __webpack_require__(7);
@@ -1062,7 +1062,7 @@ var AddonModAssignIndexComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ngx_translate_core_src_translate_service__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__submission_plugin_submission_plugin_ngfactory__ = __webpack_require__(1962);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__submission_plugin_submission_plugin__ = __webpack_require__(667);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_submission_delegate__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_submission_delegate__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_assign__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_helper__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__directives_format_text__ = __webpack_require__(41);
@@ -1080,7 +1080,7 @@ var AddonModAssignIndexComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_ionic_angular_components_button_button__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36_ionic_angular_components_label_label__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__node_modules_ionic_angular_components_checkbox_checkbox_ngfactory__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_ionic_angular_components_checkbox_checkbox__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_ionic_angular_components_checkbox_checkbox__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__angular_forms__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40_ionic_angular_components_icon_icon__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__node_modules_ionic_angular_components_input_input_ngfactory__ = __webpack_require__(94);
@@ -1093,7 +1093,7 @@ var AddonModAssignIndexComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48_ionic_angular_navigation_deep_linker__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__feedback_plugin_feedback_plugin_ngfactory__ = __webpack_require__(1963);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__feedback_plugin_feedback_plugin__ = __webpack_require__(1361);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__providers_feedback_delegate__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__providers_feedback_delegate__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__node_modules_ionic_angular_components_toggle_toggle_ngfactory__ = __webpack_require__(1954);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53_ionic_angular_components_toggle_toggle__ = __webpack_require__(664);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54_ionic_angular_tap_click_haptic__ = __webpack_require__(203);
@@ -1386,7 +1386,7 @@ var AddonModAssignSubmissionComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__an
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_utils_iframe__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_file_file_ngfactory__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_file_file__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_file_file__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_file_helper__ = __webpack_require__(131);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_utils_mimetype__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(30);
@@ -1400,7 +1400,7 @@ var AddonModAssignSubmissionComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__an
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_loading_loading_ngfactory__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_loading_loading__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__submission_plugin__ = __webpack_require__(667);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_submission_delegate__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_submission_delegate__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__providers_assign__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__providers_helper__ = __webpack_require__(159);
 /**
@@ -1493,7 +1493,7 @@ var AddonModAssignSubmissionPluginComponentNgFactory = __WEBPACK_IMPORTED_MODULE
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_utils_iframe__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_events__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_file_file_ngfactory__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_file_file__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_file_file__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__providers_file_helper__ = __webpack_require__(131);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__providers_utils_mimetype__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(30);
@@ -1507,7 +1507,7 @@ var AddonModAssignSubmissionPluginComponentNgFactory = __WEBPACK_IMPORTED_MODULE
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_loading_loading_ngfactory__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_loading_loading__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__feedback_plugin__ = __webpack_require__(1361);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_feedback_delegate__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_feedback_delegate__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__providers_assign__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__providers_helper__ = __webpack_require__(159);
 /**

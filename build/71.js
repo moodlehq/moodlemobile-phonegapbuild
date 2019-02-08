@@ -283,7 +283,7 @@ var translate_pipe = __webpack_require__(27);
 var workshop = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
-var offline = __webpack_require__(162);
+var offline = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(67);
@@ -292,7 +292,7 @@ var groups = __webpack_require__(67);
 var modal_controller = __webpack_require__(191);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
-var providers_helper = __webpack_require__(173);
+var providers_helper = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/sync.ts
 var sync = __webpack_require__(291);

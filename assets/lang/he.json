@@ -467,6 +467,7 @@
     "addon.mod_lti.modulenameplural": "כלים/תכנים חיצוניים (LTI)",
     "addon.mod_page.errorwhileloadingthepage": "שגיאה בזמן טעינת תוכן הדף.",
     "addon.mod_page.modulenameplural": "דפים",
+    "addon.mod_quiz.answercolon": "תשובה:",
     "addon.mod_quiz.attemptfirst": "ניסיון מענה ראשון",
     "addon.mod_quiz.attemptlast": "נסיון מענה אחרון",
     "addon.mod_quiz.attemptnumber": "נסיון מענה",
