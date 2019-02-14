@@ -543,6 +543,7 @@
     "addon.mod_workshop_assessment_accumulative.dimensiongradefor": "Notă pentru {{$a}}",
     "addon.mod_workshop_assessment_accumulative.dimensionnumber": "Aspect {{$a}}",
     "addon.mod_workshop_assessment_accumulative.mustchoosegrade": "Trebuie să selectați o notă pentru acest aspect",
+    "addon.mod_workshop_assessment_comments.dimensioncommentfor": "Comentariu pentru {{$a}}",
     "addon.mod_workshop_assessment_comments.dimensionnumber": "Aspect {{$a}}",
     "addon.mod_workshop_assessment_numerrors.dimensioncommentfor": "Comentariu pentru {{$a}}",
     "addon.mod_workshop_assessment_numerrors.dimensiongradefor": "Notă pentru {{$a}}",

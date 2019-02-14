@@ -1493,7 +1493,7 @@
     "core.nograde": "Нема оцене",
     "core.none": "Ниједан",
     "core.nopasswordchangeforced": "Не можете наставити без промене своје лозинке.",
-    "core.nopermissions": "Жао нам је, али тренутно немате дозволу да то радите ({{$a}}).",
+    "core.nopermissions": "Жао нам је, али тренутно немате овлашћења да то радите ({{$a}}).",
     "core.noresults": "Нема резултата",
     "core.notapplicable": "n/a",
     "core.notice": "Напомена",
