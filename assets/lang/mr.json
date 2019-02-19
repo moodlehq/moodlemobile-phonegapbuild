@@ -1,6 +1,11 @@
 {
     "addon.block_activitymodules.pluginname": "सर्व एक्टिव्हीटी",
     "addon.block_sitemainmenu.pluginname": "मुख्य मेनू",
+    "addon.blog.blog": "ब्लॉग",
+    "addon.blog.noentriesyet": "येथील प्रवेशिका दृश्य नाहीत.",
+    "addon.blog.publishtonoone": "आपला(ड्राफ्ट)",
+    "addon.blog.publishtosite": "या साईटवरील कोणीही",
+    "addon.blog.publishtoworld": "या जगातील कोणीही",
     "addon.calendar.calendar": "दिनदर्शिका",
     "addon.calendar.calendarevents": "दिनदर्शिका कार्यक्रम",
     "addon.calendar.defaultnotificationtime": "सूचना वेळ",

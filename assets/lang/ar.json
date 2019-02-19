@@ -1,6 +1,13 @@
 {
     "addon.block_activitymodules.pluginname": "أنشطة",
     "addon.block_sitemainmenu.pluginname": "القائمة الرئيسية",
+    "addon.blog.blog": "بلوق",
+    "addon.blog.blogentries": "التدوينات",
+    "addon.blog.linktooriginalentry": "رابط للتدوينة الأصلية",
+    "addon.blog.noentriesyet": "لا يوجد مدلات مرئية هناء",
+    "addon.blog.publishtonoone": "أنت (مسودة)",
+    "addon.blog.publishtosite": "أي أحد في هذا الموقع",
+    "addon.blog.publishtoworld": "أي أحد في العالم",
     "addon.calendar.calendar": "تقويم",
     "addon.calendar.calendarevents": "أحداث التقويم",
     "addon.calendar.errorloadevent": "خطأ في تحميل الحدث",
