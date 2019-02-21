@@ -1042,7 +1042,7 @@
     "core.fileuploader.file": "קובץ",
     "core.fileuploader.filesofthesetypes": "סוגי הקבצים אפשריים:",
     "core.fileuploader.fileuploaded": "הקובץ הועלה בהצלחה.",
-    "core.fileuploader.invalidfiletype": "{{$a}} סוגי קבצים אשר אינם יכולים להתקבל",
+    "core.fileuploader.invalidfiletype": "בפעילות זו, לא ניתן להעלות או להגיש קבצים מסוג: {{$a}}",
     "core.fileuploader.more": "עוד",
     "core.fileuploader.photoalbums": "אלבומי תמונות",
     "core.fileuploader.readingfile": "קורא קובץ",

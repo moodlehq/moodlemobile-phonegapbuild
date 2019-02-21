@@ -145,17 +145,12 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
     CoreUserProfilePage.prototype.fetchUser = function () {
         var _this = this;
         return this.userProvider.getProfile(this.userId, this.courseId).then(function (user) {
-            if (_this.userId == _this.site.getUserId() && user.profileimageurl != _this.site.getInfo().userpictureurl) {
-                // The current user image received is different than the one stored in site info. Assume the image was updated.
-                _this.eventsProvider.trigger(providers_user["a" /* CoreUserProvider */].PROFILE_PICTURE_UPDATED, {
-                    userId: _this.userId,
-                    picture: user.profileimageurl
-                }, _this.site.getId());
-            }
             user.address = _this.userHelper.formatAddress('', user.city, user.country);
             user.roles = _this.userHelper.formatRoleList(user.roles);
             _this.user = user;
             _this.title = user.fullname;
+            // If there's already a subscription, unsubscribe because we'll get a new one.
+            _this.subscription && _this.subscription.unsubscribe();
             _this.subscription = _this.userDelegate.getProfileHandlersFor(user, _this.courseId).subscribe(function (handlers) {
                 _this.actionHandlers = [];
                 _this.newPageHandlers = [];
@@ -176,6 +171,29 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
                 });
                 _this.isLoadingHandlers = !_this.userDelegate.areHandlersLoaded(user.id);
             });
+            if (_this.userId == _this.site.getUserId() && user.profileimageurl != _this.site.getInfo().userpictureurl) {
+                // The current user image received is different than the one stored in site info. Assume the image was updated.
+                // Update the site info to get the right avatar in there.
+                return _this.sitesProvider.updateSiteInfo(_this.site.getId()).then(function () {
+                    if (user.profileimageurl != _this.site.getInfo().userpictureurl) {
+                        // The image is still different, this means that the good one is the one in site info.
+                        return _this.refreshUser();
+                    }
+                    else {
+                        // Now they're the same, send event to use the right avatar in the rest of the app.
+                        _this.eventsProvider.trigger(providers_user["a" /* CoreUserProvider */].PROFILE_PICTURE_UPDATED, {
+                            userId: _this.userId,
+                            picture: user.profileimageurl
+                        }, _this.site.getId());
+                    }
+                }, function () {
+                    // Cannot update site info. Assume the profile image is the right one.
+                    _this.eventsProvider.trigger(providers_user["a" /* CoreUserProvider */].PROFILE_PICTURE_UPDATED, {
+                        userId: _this.userId,
+                        picture: user.profileimageurl
+                    }, _this.site.getId());
+                });
+            }
         }).catch(function (error) {
             // Error is null for deleted users, do not show the modal.
             if (error) {
