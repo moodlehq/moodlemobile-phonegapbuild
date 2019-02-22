@@ -19,6 +19,7 @@
     "addon.block_myoverview.nocourses": "Ders yok",
     "addon.block_myoverview.past": "Geçmiş",
     "addon.block_myoverview.pluginname": "Derslere genel bakış",
+    "addon.block_recentlyaccessedcourses.pluginname": "Erişilen son dersler",
     "addon.block_sitemainmenu.pluginname": "Ana menü",
     "addon.blog.blog": "Blog",
     "addon.blog.blogentries": "Blog girdileri",
