@@ -387,6 +387,7 @@
     "core.nopermissionerror": "Du hast aktuell keine Rechte, um dies zu tun.",
     "core.nopermissions": "Entschuldigung, aber du besitzt derzeit keine Rechte, dies zu tun ({{$a}}).",
     "core.notapplicable": "n/a",
+    "core.notingroup": "Diese Aktivität ist nur für Gruppenmitglieder zugänglich. Du bist kein Gruppenmitglied.",
     "core.notsent": "Nicht gesendet",
     "core.openfullimage": "Tippe, um das Bild in voller Größe anzuzeigen",
     "core.openinbrowser": "Im Browser öffnen",

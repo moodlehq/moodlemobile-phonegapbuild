@@ -73,6 +73,7 @@
     "addon.mod_chat.errorwhilegettingchatusers": "ಮಾತುಕತೆಯ ಬಳಕೆದಾರರನ್ನು ಪಡೆಯುವಲ್ಲಿ ತಪ್ಪಿದೆ",
     "addon.mod_chat.errorwhileretrievingmessages": "ಪರಿಚಾರಕದಿಂದ ಸಂದೇಶಗಳನ್ನು ಪಡೆಯುವಲ್ಲಿ ತಪ್ಪಿದೆ",
     "addon.mod_chat.errorwhilesendingmessage": "ಸಂದೇಶವನ್ನು ಕಳಿಸುವಲ್ಲಿ ತಪ್ಪಿದೆ",
+    "addon.mod_chat.messages": "ಸಂದೇಶಗಳು",
     "addon.mod_chat.mustbeonlinetosendmessages": "ನೀವು ಸಂದೇಶಗಳನ್ನು ಕಳಿಸಲು ಆನ್‌ಲೈನ್‌ ಅಲ್ಲಿರಬೇಕು",
     "addon.mod_chat.nomessages": "ಯಾವುದೇ ಸಂದೇಶಗಳಿಲ್ಲ",
     "addon.mod_choice.errorgetchoice": "ಆಯ್ಕೆಯ ದತ್ತಾಂಶವನ್ನು ಪಡೆಯುವಲ್ಲಿ ತಪ್ಪಿದೆ",
