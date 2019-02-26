@@ -36,6 +36,9 @@ var dom = __webpack_require__(4);
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(23);
 
+// EXTERNAL MODULE: ./src/components/ion-tabs/ion-tabs.ts
+var ion_tabs = __webpack_require__(672);
+
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm.ts
 var providers_scorm = __webpack_require__(199);
 
@@ -896,11 +899,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Page that allows playing a SCORM.
  */
 var player_AddonModScormPlayerPage = /** @class */ (function () {
-    function AddonModScormPlayerPage(navParams, popoverCtrl, eventsProvider, sitesProvider, syncProvider, domUtils, timeUtils, scormProvider, scormHelper, scormSyncProvider) {
+    function AddonModScormPlayerPage(navParams, popoverCtrl, eventsProvider, sitesProvider, syncProvider, domUtils, timeUtils, scormProvider, scormHelper, scormSyncProvider, tabs) {
         this.popoverCtrl = popoverCtrl;
         this.eventsProvider = eventsProvider;
         this.sitesProvider = sitesProvider;
@@ -910,6 +914,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
         this.scormProvider = scormProvider;
         this.scormHelper = scormHelper;
         this.scormSyncProvider = scormSyncProvider;
+        this.tabs = tabs;
         this.loadingToc = true; // Whether the TOC is being loaded.
         this.offline = false; // Whether it's offline mode.
         this.scorm = navParams.get('scorm') || {};
@@ -930,6 +935,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
         var _this = this;
         this.showToc = this.scormProvider.displayTocInPlayer(this.scorm);
         if (this.scorm.popup) {
+            this.tabs.changeVisibility(false);
             // If we receive a value <= 100 we need to assume it's a percentage.
             if (this.scorm.width <= 100) {
                 this.scorm.width = this.scorm.width + '%';
@@ -1256,6 +1262,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
         }, 500);
         // Unblock the SCORM so it can be synced.
         this.syncProvider.unblockOperation(providers_scorm["a" /* AddonModScormProvider */].COMPONENT, this.scorm.id, 'player');
+        this.tabs.changeVisibility(true);
     };
     AddonModScormPlayerPage = __decorate([
         Object(core["m" /* Component */])({
@@ -1266,7 +1273,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
             sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */],
             dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */],
             providers_scorm["a" /* AddonModScormProvider */], helper["a" /* AddonModScormHelperProvider */],
-            scorm_sync["a" /* AddonModScormSyncProvider */]])
+            scorm_sync["a" /* AddonModScormSyncProvider */], ion_tabs["a" /* CoreIonTabsComponent */]])
     ], AddonModScormPlayerPage);
     return AddonModScormPlayerPage;
 }());
@@ -1547,6 +1554,7 @@ var popover_controller = __webpack_require__(65);
 
 
 
+
 var styles_AddonModScormPlayerPage = [];
 var RenderType_AddonModScormPlayerPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModScormPlayerPage, data: {} });
 
@@ -1561,7 +1569,7 @@ function View_AddonModScormPlayerPage_0(_l) { return core["_57" /* ɵvid */](0, 
         var pd_0 = (_co.loadSco($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, navigation_bar_ngfactory["b" /* View_CoreNavigationBarComponent_0 */], navigation_bar_ngfactory["a" /* RenderType_CoreNavigationBarComponent */])), core["_30" /* ɵdid */](32, 49152, null, 0, navigation_bar["a" /* CoreNavigationBarComponent */], [utils_text["a" /* CoreTextUtilsProvider */]], { previous: [0, "previous"], next: [1, "next"] }, { action: "action" }), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModScormPlayerPage_3)), core["_30" /* ɵdid */](35, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModScormPlayerPage_4)), core["_30" /* ɵdid */](38, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_2 = _co.title; _ck(_v, 10, 0, currVal_2); var currVal_3 = (((_co.showToc && !_co.loadingToc) && _co.toc) && _co.toc.length); _ck(_v, 17, 0, currVal_3); var currVal_4 = (_co.showToc && _co.loadingToc); _ck(_v, 20, 0, currVal_4); var currVal_7 = _co.loaded; _ck(_v, 29, 0, currVal_7); var currVal_8 = _co.previousSco; var currVal_9 = _co.nextSco; _ck(_v, 32, 0, currVal_8, currVal_9); var currVal_10 = (_co.loaded && _co.src); _ck(_v, 35, 0, currVal_10); var currVal_11 = (!_co.src && _co.errorMessage); _ck(_v, 38, 0, currVal_11); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_5 = core["_44" /* ɵnov */](_v, 26).statusbarPadding; var currVal_6 = core["_44" /* ɵnov */](_v, 26)._hasRefresher; _ck(_v, 25, 0, currVal_5, currVal_6); }); }
-function View_AddonModScormPlayerPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-scorm-player", [], null, null, null, View_AddonModScormPlayerPage_0, RenderType_AddonModScormPlayerPage)), core["_30" /* ɵdid */](1, 245760, null, 0, player_AddonModScormPlayerPage, [nav_params["a" /* NavParams */], popover_controller["a" /* PopoverController */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */], providers_scorm["a" /* AddonModScormProvider */], helper["a" /* AddonModScormHelperProvider */], scorm_sync["a" /* AddonModScormSyncProvider */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_AddonModScormPlayerPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-scorm-player", [], null, null, null, View_AddonModScormPlayerPage_0, RenderType_AddonModScormPlayerPage)), core["_30" /* ɵdid */](1, 245760, null, 0, player_AddonModScormPlayerPage, [nav_params["a" /* NavParams */], popover_controller["a" /* PopoverController */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], time["a" /* CoreTimeUtilsProvider */], providers_scorm["a" /* AddonModScormProvider */], helper["a" /* AddonModScormHelperProvider */], scorm_sync["a" /* AddonModScormSyncProvider */], ion_tabs["a" /* CoreIonTabsComponent */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var AddonModScormPlayerPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-scorm-player", player_AddonModScormPlayerPage, View_AddonModScormPlayerPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=player.ngfactory.js.map

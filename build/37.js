@@ -377,7 +377,7 @@ var list = __webpack_require__(78);
 var gesture_controller = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./src/directives/user-link.ts
-var user_link = __webpack_require__(676);
+var user_link = __webpack_require__(677);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(207);

@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(29);
 var pipes_module = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/components/components.module.ts
-var components_components_module = __webpack_require__(673);
+var components_components_module = __webpack_require__(674);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
