@@ -315,7 +315,7 @@ var note = __webpack_require__(207);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(115);
+var empty_box_ngfactory = __webpack_require__(116);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(104);

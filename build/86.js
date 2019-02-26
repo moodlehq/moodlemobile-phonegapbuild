@@ -311,7 +311,7 @@ var prefetch_handler = __webpack_require__(304);
 var time = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(42);
+var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

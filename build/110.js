@@ -40,7 +40,7 @@ var delegate = __webpack_require__(231);
 var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var providers_user = __webpack_require__(42);
+var providers_user = __webpack_require__(43);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/group-conversations/group-conversations.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -927,7 +927,7 @@ var toolbar_item = __webpack_require__(443);
 var button_ngfactory = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(43);
+var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon_icon = __webpack_require__(46);

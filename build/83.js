@@ -37,7 +37,7 @@ var utils_text = __webpack_require__(10);
 var time = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(42);
+var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson.ts
 var lesson = __webpack_require__(144);
@@ -376,7 +376,7 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(116);
+var select_ngfactory = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(94);
@@ -403,7 +403,7 @@ var col = __webpack_require__(113);
 var button_ngfactory = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(43);
+var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
 var badge = __webpack_require__(148);

@@ -220,7 +220,7 @@ var notes = __webpack_require__(235);
 var notes_sync = __webpack_require__(313);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(42);
+var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);

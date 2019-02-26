@@ -31,7 +31,7 @@ var components_components_module = __webpack_require__(673);
 var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(42);
+var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(68);
@@ -341,7 +341,7 @@ var item_content = __webpack_require__(32);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(116);
+var select_ngfactory = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(94);
@@ -359,7 +359,7 @@ var esm5_forms = __webpack_require__(22);
 var button_ngfactory = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(43);
+var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
 var card = __webpack_require__(79);
@@ -368,7 +368,7 @@ var card = __webpack_require__(79);
 var card_content = __webpack_require__(356);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(115);
+var empty_box_ngfactory = __webpack_require__(116);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(104);

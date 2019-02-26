@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var notifications = __webpack_require__(290);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(42);
+var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -486,7 +486,7 @@ var esm5_forms = __webpack_require__(22);
 var option_option = __webpack_require__(93);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(116);
+var select_ngfactory = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(94);

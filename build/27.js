@@ -198,7 +198,7 @@ var translate_pipe = __webpack_require__(27);
 var participants = __webpack_require__(488);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(42);
+var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);

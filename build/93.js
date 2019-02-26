@@ -686,7 +686,7 @@ var item_content = __webpack_require__(32);
 var button_ngfactory = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(43);
+var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
 var attachments_ngfactory = __webpack_require__(453);

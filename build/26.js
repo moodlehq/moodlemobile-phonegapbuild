@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var providers_user = __webpack_require__(42);
+var providers_user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/core/user/providers/helper.ts
 var helper = __webpack_require__(679);
@@ -469,7 +469,7 @@ var item_content = __webpack_require__(32);
 var button_ngfactory = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(43);
+var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(78);
@@ -490,7 +490,7 @@ var user_avatar = __webpack_require__(178);
 var avatar = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(115);
+var empty_box_ngfactory = __webpack_require__(116);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(104);

@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var messages = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(42);
+var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
