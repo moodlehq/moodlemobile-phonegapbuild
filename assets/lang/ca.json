@@ -1289,6 +1289,7 @@
     "core.defaultvalue": "Per defecte ({{$a}})",
     "core.delete": "Suprimeix",
     "core.deletedoffline": "Eliminat fora de línia",
+    "core.deleteduser": "Usuari eliminat",
     "core.deleting": "S'està eliminant",
     "core.description": "Descripció",
     "core.dfdaymonthyear": "DD-MM-YYYY",
