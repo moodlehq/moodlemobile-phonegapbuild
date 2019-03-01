@@ -326,7 +326,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
         // Create the navigation modal.
         this.navigationModal = modalCtrl.create('AddonModQuizNavigationModalPage', {
             page: this
-        });
+        }, { cssClass: 'core-modal-lateral' });
     }
     /**
      * Component being initialized.
