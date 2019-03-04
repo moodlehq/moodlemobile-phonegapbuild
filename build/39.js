@@ -1,6 +1,6 @@
 webpackJsonp([39],{
 
-/***/ 1923:
+/***/ 1931:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15,25 +15,25 @@ var ionic_angular = __webpack_require__(8);
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
 var _ngx_translate_core = __webpack_require__(3);
 
-// EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(5);
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
 
-// EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(12);
 
-// EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+// EXTERNAL MODULE: ./src/components/ion-tabs/ion-tabs.ts
+var ion_tabs = __webpack_require__(681);
 
-// EXTERNAL MODULE: ./src/addon/pushnotifications/providers/pushnotifications.ts
-var pushnotifications = __webpack_require__(354);
+// EXTERNAL MODULE: ./src/core/mainmenu/providers/mainmenu.ts
+var mainmenu = __webpack_require__(695);
 
-// EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var helper = __webpack_require__(128);
+// EXTERNAL MODULE: ./src/core/mainmenu/providers/delegate.ts
+var delegate = __webpack_require__(171);
 
-// CONCATENATED MODULE: ./src/core/login/pages/sites/sites.ts
+// CONCATENATED MODULE: ./src/core/mainmenu/pages/menu/menu.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -63,119 +63,135 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 /**
- * Page that displays the list of stored sites.
+ * Page that displays the main menu of the app.
  */
-var sites_CoreLoginSitesPage = /** @class */ (function () {
-    function CoreLoginSitesPage(domUtils, textUtils, sitesProvider, loginHelper, logger, translate, pushNotificationsProvider) {
-        this.domUtils = domUtils;
-        this.textUtils = textUtils;
+var menu_CoreMainMenuPage = /** @class */ (function () {
+    function CoreMainMenuPage(menuDelegate, sitesProvider, navParams, navCtrl, eventsProvider, cdr) {
+        this.menuDelegate = menuDelegate;
         this.sitesProvider = sitesProvider;
-        this.loginHelper = loginHelper;
-        this.translate = translate;
-        this.pushNotificationsProvider = pushNotificationsProvider;
-        this.logger = logger.getInstance('CoreLoginSitesPage');
+        this.navCtrl = navCtrl;
+        this.eventsProvider = eventsProvider;
+        this.cdr = cdr;
+        this.tabs = [];
+        this.loaded = false;
+        this.showTabs = false;
+        // Check if the menu was loaded with a redirect.
+        var redirectPage = navParams.get('redirectPage');
+        if (redirectPage) {
+            this.pendingRedirect = {
+                redirectPage: redirectPage,
+                redirectParams: navParams.get('redirectParams')
+            };
+        }
     }
     /**
      * View loaded.
      */
-    CoreLoginSitesPage.prototype.ionViewDidLoad = function () {
+    CoreMainMenuPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.sitesProvider.getSortedSites().then(function (sites) {
-            // Remove protocol from the url to show more url text.
-            _this.sites = sites.map(function (site) {
-                site.siteUrl = site.siteUrl.replace(/^https?:\/\//, '');
-                site.badge = 0;
-                _this.pushNotificationsProvider.getSiteCounter(site.id).then(function (counter) {
-                    site.badge = counter;
-                });
-                return site;
-            });
-            _this.showDelete = false;
-        }).catch(function () {
-            // Shouldn't happen.
-        });
-    };
-    /**
-     * Go to the page to add a site.
-     */
-    CoreLoginSitesPage.prototype.add = function () {
-        this.loginHelper.goToAddSite(false, true);
-    };
-    /**
-     * Delete a site.
-     *
-     * @param {Event} e Click event.
-     * @param {number} index Position of the site.
-     */
-    CoreLoginSitesPage.prototype.deleteSite = function (e, index) {
-        var _this = this;
-        e.stopPropagation();
-        var site = this.sites[index], siteName = site.siteName;
-        this.textUtils.formatText(siteName).then(function (siteName) {
-            _this.domUtils.showConfirm(_this.translate.instant('core.login.confirmdeletesite', { sitename: siteName })).then(function () {
-                _this.sitesProvider.deleteSite(site.id).then(function () {
-                    _this.sites.splice(index, 1);
-                    _this.showDelete = false;
-                    // If there are no sites left, go to add site.
-                    _this.sitesProvider.hasSites().then(function (hasSites) {
-                        if (!hasSites) {
-                            _this.loginHelper.goToAddSite(true, true);
-                        }
-                    });
-                }).catch(function (error) {
-                    _this.logger.error('Error deleting site ' + site.id, error);
-                    _this.domUtils.showErrorModalDefault(error, 'Delete site failed.');
-                    _this.domUtils.showErrorModal('core.login.errordeletesite', true);
-                });
-            }).catch(function () {
-                // User cancelled, nothing to do.
-            });
-        });
-    };
-    /**
-     * Login in a site.
-     *
-     * @param {string} siteId The site ID.
-     */
-    CoreLoginSitesPage.prototype.login = function (siteId) {
-        var _this = this;
-        var modal = this.domUtils.showModalLoading();
-        this.sitesProvider.loadSite(siteId).then(function (loggedIn) {
-            if (loggedIn) {
-                return _this.loginHelper.goToSiteInitialPage();
+        if (!this.sitesProvider.isLoggedIn()) {
+            this.navCtrl.setRoot('CoreLoginInitPage');
+            return;
+        }
+        this.showTabs = true;
+        this.redirectObs = this.eventsProvider.on(events["a" /* CoreEventsProvider */].LOAD_PAGE_MAIN_MENU, function (data) {
+            if (!_this.loaded) {
+                // View isn't ready yet, wait for it to be ready.
+                _this.pendingRedirect = data;
             }
-        }).catch(function (error) {
-            _this.logger.error('Error loading site ' + siteId, error);
-            _this.domUtils.showErrorModalDefault(error, 'Error loading site.');
-        }).finally(function () {
-            modal.dismiss();
+            else {
+                delete _this.pendingRedirect;
+                _this.handleRedirect(data);
+            }
+        });
+        this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
+            // Remove the handlers that should only appear in the More menu.
+            handlers = handlers.filter(function (handler) {
+                return !handler.onlyInMore;
+            });
+            handlers = handlers.slice(0, mainmenu["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS); // Get main handlers.
+            // Re-build the list of tabs. If a handler is already in the list, use existing object to prevent re-creating the tab.
+            var newTabs = [];
+            var _loop_1 = function (i) {
+                var handler = handlers[i];
+                // Check if the handler is already in the tabs list. If so, use it.
+                var tab = _this.tabs.find(function (tab) {
+                    return tab.title == handler.title && tab.icon == handler.icon;
+                });
+                newTabs.push(tab || handler);
+            };
+            for (var i = 0; i < handlers.length; i++) {
+                _loop_1(i);
+            }
+            _this.tabs = newTabs;
+            // Sort them by priority so new handlers are in the right position.
+            _this.tabs.sort(function (a, b) {
+                return b.priority - a.priority;
+            });
+            _this.loaded = _this.menuDelegate.areHandlersLoaded();
+            if (_this.loaded && _this.pendingRedirect) {
+                // Wait for tabs to be initialized and then handle the redirect.
+                setTimeout(function () {
+                    if (_this.pendingRedirect) {
+                        _this.handleRedirect(_this.pendingRedirect);
+                        delete _this.pendingRedirect;
+                    }
+                });
+            }
         });
     };
     /**
-     * Toggle delete.
+     * Handle a redirect.
+     *
+     * @param {any} data Data received.
      */
-    CoreLoginSitesPage.prototype.toggleDelete = function () {
-        this.showDelete = !this.showDelete;
+    CoreMainMenuPage.prototype.handleRedirect = function (data) {
+        var _this = this;
+        // Check if the redirect page is the root page of any of the tabs.
+        var i = this.tabs.findIndex(function (tab, i) {
+            return tab.page == data.redirectPage;
+        });
+        if (i >= 0) {
+            // Tab found. Set the params.
+            this.tabs[i].pageParams = Object.assign({}, data.redirectParams);
+        }
+        else {
+            // Tab not found, use a phantom tab.
+            this.redirectPage = data.redirectPage;
+            this.redirectParams = data.redirectParams;
+        }
+        // Force change detection, otherwise sometimes the tab was selected before the params were applied.
+        this.cdr.detectChanges();
+        setTimeout(function () {
+            // Let the tab load the params before navigating.
+            _this.mainTabs.selectTabRootByIndex(i + 1);
+        });
     };
-    CoreLoginSitesPage = __decorate([
+    /**
+     * Page destroyed.
+     */
+    CoreMainMenuPage.prototype.ngOnDestroy = function () {
+        this.subscription && this.subscription.unsubscribe();
+        this.redirectObs && this.redirectObs.off();
+    };
+    __decorate([
+        Object(core["_9" /* ViewChild */])('mainTabs'),
+        __metadata("design:type", ion_tabs["a" /* CoreIonTabsComponent */])
+    ], CoreMainMenuPage.prototype, "mainTabs", void 0);
+    CoreMainMenuPage = __decorate([
         Object(core["m" /* Component */])({
-            selector: 'page-core-login-sites',
-            templateUrl: 'sites.html',
+            selector: 'page-core-mainmenu',
+            templateUrl: 'menu.html',
         }),
-        __metadata("design:paramtypes", [dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */],
-            sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], logger["a" /* CoreLoggerProvider */],
-            _ngx_translate_core["c" /* TranslateService */], pushnotifications["a" /* AddonPushNotificationsProvider */]])
-    ], CoreLoginSitesPage);
-    return CoreLoginSitesPage;
+        __metadata("design:paramtypes", [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */], ionic_angular["t" /* NavParams */],
+            ionic_angular["s" /* NavController */], events["a" /* CoreEventsProvider */], core["j" /* ChangeDetectorRef */]])
+    ], CoreMainMenuPage);
+    return CoreMainMenuPage;
 }());
 
-//# sourceMappingURL=sites.js.map
-// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(29);
-
-// CONCATENATED MODULE: ./src/core/login/pages/sites/sites.module.ts
+//# sourceMappingURL=menu.js.map
+// CONCATENATED MODULE: ./src/core/mainmenu/pages/menu/menu.module.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -189,7 +205,7 @@ var directives_module = __webpack_require__(29);
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-var sites_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+var menu_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -200,61 +216,110 @@ var sites_module___decorate = (this && this.__decorate) || function (decorators,
 
 
 
-var sites_module_CoreLoginSitesPageModule = /** @class */ (function () {
-    function CoreLoginSitesPageModule() {
+var menu_module_CoreMainMenuPageModule = /** @class */ (function () {
+    function CoreMainMenuPageModule() {
     }
-    CoreLoginSitesPageModule = sites_module___decorate([
+    CoreMainMenuPageModule = menu_module___decorate([
         Object(core["I" /* NgModule */])({
             declarations: [
-                sites_CoreLoginSitesPage,
+                menu_CoreMainMenuPage,
             ],
             imports: [
-                directives_module["a" /* CoreDirectivesModule */],
-                ionic_angular["l" /* IonicPageModule */].forChild(sites_CoreLoginSitesPage),
+                components_module["a" /* CoreComponentsModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(menu_CoreMainMenuPage),
                 _ngx_translate_core["b" /* TranslateModule */].forChild()
             ],
         })
-    ], CoreLoginSitesPageModule);
-    return CoreLoginSitesPageModule;
+    ], CoreMainMenuPageModule);
+    return CoreMainMenuPageModule;
 }());
 
-//# sourceMappingURL=sites.module.js.map
+//# sourceMappingURL=menu.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1360);
+var action_sheet_component_ngfactory = __webpack_require__(1365);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1361);
+var alert_component_ngfactory = __webpack_require__(1366);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1362);
+var app_root_ngfactory = __webpack_require__(1367);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1363);
+var loading_component_ngfactory = __webpack_require__(1368);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1364);
+var modal_component_ngfactory = __webpack_require__(1369);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1365);
+var picker_component_ngfactory = __webpack_require__(1370);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1366);
+var popover_component_ngfactory = __webpack_require__(1371);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1367);
+var select_popover_component_ngfactory = __webpack_require__(1372);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1368);
+var toast_component_ngfactory = __webpack_require__(1373);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(45);
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1376);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(42);
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1377);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1378);
+
+// EXTERNAL MODULE: ./src/components/ion-tabs/ion-tab.ts
+var ion_tab = __webpack_require__(1415);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
 
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(38);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/transitions/transition-controller.js
+var transition_controller = __webpack_require__(184);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
+var deep_linker = __webpack_require__(52);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(31);
+
+// CONCATENATED MODULE: ./src/components/ion-tabs/ion-tab.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+var styles_CoreIonTabComponent = [];
+var RenderType_CoreIonTabComponent = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreIonTabComponent, data: {} });
+
+function View_CoreIonTabComponent_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { _vp: 0 }), (_l()(), core["_31" /* ɵeld */](1, 16777216, [[1, 3], ["viewport", 1]], null, 0, "div", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 0, "div", [["class", "nav-decor"]], null, null, null, null, null))], null, null); }
+function View_CoreIonTabComponent_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-ion-tab", [["role", "tabpanel"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](1, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1)._tabId; var currVal_1 = core["_44" /* ɵnov */](_v, 1)._btnId; _ck(_v, 0, 0, currVal_0, currVal_1); }); }
+var CoreIonTabComponentNgFactory = core["_27" /* ɵccf */]("core-ion-tab", ion_tab["a" /* CoreIonTabComponent */], View_CoreIonTabComponent_Host_0, { color: "color", mode: "mode", swipeBackEnabled: "swipeBackEnabled", root: "root", rootParams: "rootParams", tabUrlPath: "tabUrlPath", tabTitle: "tabTitle", tabIcon: "tabIcon", tabBadge: "tabBadge", tabBadgeStyle: "tabBadgeStyle", enabled: "enabled", show: "show", tabsHideOnSubPages: "tabsHideOnSubPages" }, { ionSelect: "ionSelect" }, []);
+
+//# sourceMappingURL=ion-tab.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(27);
 
@@ -267,130 +332,112 @@ var icon = __webpack_require__(46);
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
 var badge = __webpack_require__(147);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
-var item_ngfactory = __webpack_require__(30);
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(7);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
-var item = __webpack_require__(20);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab-button.js
+var tab_button = __webpack_require__(698);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
-var util_form = __webpack_require__(19);
+// CONCATENATED MODULE: ./node_modules/ionic-angular/components/tabs/tab-button.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
-var item_reorder = __webpack_require__(28);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
-var item_content = __webpack_require__(32);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(177);
 
-// EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(229);
 
-// EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(16);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(14);
+var styles_TabButton = [];
+var RenderType_TabButton = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_TabButton, data: {} });
 
-// EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(26);
+function View_TabButton_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "ion-icon", [["class", "tab-button-icon"], ["role", "img"]], [[1, "aria-hidden", 0], [2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](1, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"], isActive: [1, "isActive"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_2 = _co.tab.tabIcon; var currVal_3 = _co.tab.isSelected; _ck(_v, 1, 0, currVal_2, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.hasTitle ? "true" : null); var currVal_1 = core["_44" /* ɵnov */](_v, 1)._hidden; _ck(_v, 0, 0, currVal_0, currVal_1); }); }
+function View_TabButton_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "span", [["class", "tab-button-text"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.tab.tabTitle; _ck(_v, 1, 0, currVal_0); }); }
+function View_TabButton_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-badge", [["class", "tab-badge"]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, badge["a" /* Badge */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.tab.tabBadgeStyle; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.tab.tabBadge; _ck(_v, 2, 0, currVal_1); }); }
+function View_TabButton_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_TabButton_1)), core["_30" /* ɵdid */](1, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_TabButton_2)), core["_30" /* ɵdid */](3, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_TabButton_3)), core["_30" /* ɵdid */](5, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_31" /* ɵeld */](6, 0, null, null, 0, "div", [["class", "button-effect"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.tab.tabIcon; _ck(_v, 1, 0, currVal_0); var currVal_1 = _co.tab.tabTitle; _ck(_v, 3, 0, currVal_1); var currVal_2 = _co.tab.tabBadge; _ck(_v, 5, 0, currVal_2); }, null); }
+function View_TabButton_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "div", [["class", "tab-button"]], [[1, "id", 0], [1, "aria-controls", 0], [1, "aria-selected", 0], [2, "has-title", null], [2, "has-icon", null], [2, "has-title-only", null], [2, "icon-only", null], [2, "has-badge", null], [2, "disable-hover", null], [2, "tab-disabled", null], [2, "tab-hidden", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 1).onClick() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, View_TabButton_0, RenderType_TabButton)), core["_30" /* ɵdid */](1, 114688, null, 0, tab_button["a" /* TabButton */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1).tab._btnId; var currVal_1 = core["_44" /* ɵnov */](_v, 1).tab._tabId; var currVal_2 = core["_44" /* ɵnov */](_v, 1).tab.isSelected; var currVal_3 = core["_44" /* ɵnov */](_v, 1).hasTitle; var currVal_4 = core["_44" /* ɵnov */](_v, 1).hasIcon; var currVal_5 = core["_44" /* ɵnov */](_v, 1).hasTitleOnly; var currVal_6 = core["_44" /* ɵnov */](_v, 1).hasIconOnly; var currVal_7 = core["_44" /* ɵnov */](_v, 1).hasBadge; var currVal_8 = core["_44" /* ɵnov */](_v, 1).disHover; var currVal_9 = !core["_44" /* ɵnov */](_v, 1).tab.enabled; var currVal_10 = !core["_44" /* ɵnov */](_v, 1).tab.show; _ck(_v, 0, 1, [currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10]); }); }
+var TabButtonNgFactory = core["_27" /* ɵccf */](".tab-button", tab_button["a" /* TabButton */], View_TabButton_Host_0, { color: "color", mode: "mode", tab: "tab" }, { ionSelect: "ionSelect" }, []);
 
-// EXTERNAL MODULE: ./src/providers/app.ts
-var app = __webpack_require__(9);
+//# sourceMappingURL=tab-button.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
+var spinner_ngfactory = __webpack_require__(117);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
+var spinner = __webpack_require__(97);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab-highlight.js
+var tab_highlight = __webpack_require__(489);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
+var split_pane = __webpack_require__(202);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
 
-// EXTERNAL MODULE: ./src/directives/format-text.ts
-var format_text = __webpack_require__(41);
-
-// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
-var providers_helper = __webpack_require__(17);
+// EXTERNAL MODULE: ./src/providers/app.ts
+var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
-
-// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(34);
-
-// EXTERNAL MODULE: ./src/providers/utils/iframe.ts
-var iframe = __webpack_require__(37);
-
-// EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(12);
-
-// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
-var common = __webpack_require__(7);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(444);
-
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(36);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1369);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(206);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app_app = __webpack_require__(33);
-
-// EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(674);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1370);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(345);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(250);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(445);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(228);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(103);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(78);
+// CONCATENATED MODULE: ./src/components/ion-tabs/ion-tabs.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(38);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.ngfactory.js
-var fab_container_ngfactory = __webpack_require__(296);
 
-// EXTERNAL MODULE: ./src/directives/fab.ts
-var fab = __webpack_require__(263);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
-var fab_container = __webpack_require__(214);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
-var fab_ngfactory = __webpack_require__(297);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.js
-var fab_fab = __webpack_require__(185);
 
-// CONCATENATED MODULE: ./src/core/login/pages/sites/sites.ngfactory.js
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_CoreIonTabsComponent = [];
+var RenderType_CoreIonTabsComponent = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreIonTabsComponent, data: {} });
+
+function View_CoreIonTabsComponent_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "a", [["class", "tab-button"], ["href", "#"], ["role", "tab"]], [[8, "hidden", 0], [1, "id", 0], [1, "aria-controls", 0], [1, "aria-selected", 0], [2, "has-title", null], [2, "has-icon", null], [2, "has-title-only", null], [2, "icon-only", null], [2, "has-badge", null], [2, "disable-hover", null], [2, "tab-disabled", null], [2, "tab-hidden", null]], [[null, "ionSelect"], [null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 1).onClick() !== false);
+        ad = (pd_0 && ad);
+    } if (("ionSelect" === en)) {
+        var pd_1 = (_co.select(_v.context.$implicit) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, View_TabButton_0, RenderType_TabButton)), core["_30" /* ɵdid */](1, 114688, null, 0, tab_button["a" /* TabButton */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { tab: [0, "tab"] }, { ionSelect: "ionSelect" })], function (_ck, _v) { var currVal_12 = _v.context.$implicit; _ck(_v, 1, 0, currVal_12); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co._loaded === false); var currVal_1 = core["_44" /* ɵnov */](_v, 1).tab._btnId; var currVal_2 = core["_44" /* ɵnov */](_v, 1).tab._tabId; var currVal_3 = core["_44" /* ɵnov */](_v, 1).tab.isSelected; var currVal_4 = core["_44" /* ɵnov */](_v, 1).hasTitle; var currVal_5 = core["_44" /* ɵnov */](_v, 1).hasIcon; var currVal_6 = core["_44" /* ɵnov */](_v, 1).hasTitleOnly; var currVal_7 = core["_44" /* ɵnov */](_v, 1).hasIconOnly; var currVal_8 = core["_44" /* ɵnov */](_v, 1).hasBadge; var currVal_9 = core["_44" /* ɵnov */](_v, 1).disHover; var currVal_10 = !core["_44" /* ɵnov */](_v, 1).tab.enabled; var currVal_11 = !core["_44" /* ɵnov */](_v, 1).tab.show; _ck(_v, 0, 1, [currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11]); }); }
+function View_CoreIonTabsComponent_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, "div", [["class", "core-ion-tabs-loading"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 4, "span", [["class", "core-ion-tabs-loading-spinner"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, null, 1, "ion-spinner", [], [[2, "spinner-paused", null]], null, null, spinner_ngfactory["b" /* View_Spinner_0 */], spinner_ngfactory["a" /* RenderType_Spinner */])), core["_30" /* ɵdid */](5, 114688, null, 0, spinner["a" /* Spinner */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "]))], function (_ck, _v) { _ck(_v, 5, 0); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 5)._paused; _ck(_v, 4, 0, currVal_0); }); }
+function View_CoreIonTabsComponent_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { _highlight: 0 }), core["_52" /* ɵqud */](402653184, 2, { _tabbar: 0 }), core["_52" /* ɵqud */](402653184, 3, { portal: 0 }), core["_52" /* ɵqud */](402653184, 4, { originalTabsRef: 0 }), (_l()(), core["_31" /* ɵeld */](4, 0, [[2, 0], ["tabbar", 1]], null, 10, "div", [["class", "tabbar"], ["role", "tablist"]], [[8, "hidden", 0]], null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreIonTabsComponent_1)), core["_30" /* ɵdid */](7, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](9, 0, null, null, 1, "div", [["class", "tab-highlight"]], null, null, null, null, null)), core["_30" /* ɵdid */](10, 16384, [[1, 4]], 0, tab_highlight["a" /* TabHighlight */], [core["t" /* ElementRef */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreIonTabsComponent_2)), core["_30" /* ɵdid */](13, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](16, 0, [[4, 0], ["originalTabs", 1]], null, 3, "div", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), core["_43" /* ɵncd */](null, 0), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](21, 16777216, [[3, 3], ["portal", 1]], null, 0, "div", [["tab-portal", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co._tabs; _ck(_v, 7, 0, currVal_1); var currVal_2 = (_co._loaded === false); _ck(_v, 13, 0, currVal_2); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.hidden; _ck(_v, 4, 0, currVal_0); }); }
+function View_CoreIonTabsComponent_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-ion-tabs", [], null, null, null, View_CoreIonTabsComponent_0, RenderType_CoreIonTabsComponent)), core["_50" /* ɵprd */](6144, null, split_pane["a" /* RootNode */], null, [ion_tabs["a" /* CoreIonTabsComponent */]]), core["_30" /* ɵdid */](2, 4374528, null, 0, ion_tabs["a" /* CoreIonTabsComponent */], [utils["a" /* CoreUtilsProvider */], providers_app["a" /* CoreAppProvider */], [2, nav_controller["a" /* NavController */]], [2, view_controller["a" /* ViewController */]], app["a" /* App */], config["a" /* Config */], core["t" /* ElementRef */], platform["a" /* Platform */], core["V" /* Renderer */], deep_linker["a" /* DeepLinker */], keyboard["a" /* Keyboard */]], null, null)], null, null); }
+var CoreIonTabsComponentNgFactory = core["_27" /* ɵccf */]("core-ion-tabs", ion_tabs["a" /* CoreIonTabsComponent */], View_CoreIonTabsComponent_Host_0, { color: "color", mode: "mode", name: "name", selectedIndex: "selectedIndex", tabsLayout: "tabsLayout", tabsPlacement: "tabsPlacement", tabsHighlight: "tabsHighlight", loaded: "loaded", selectedDisabled: "selectedDisabled" }, { ionChange: "ionChange" }, ["*"]);
+
+//# sourceMappingURL=ion-tabs.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(60);
+
+// CONCATENATED MODULE: ./src/core/mainmenu/pages/menu/menu.ngfactory.js
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -423,89 +470,47 @@ var fab_fab = __webpack_require__(185);
 
 
 
+var styles_CoreMainMenuPage = [];
+var RenderType_CoreMainMenuPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreMainMenuPage, data: {} });
 
+function View_CoreMainMenuPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-ion-tab", [["role", "tabpanel"]], [[8, "className", 0], [1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](1, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], { root: [0, "root"], rootParams: [1, "rootParams"], tabTitle: [2, "tabTitle"], tabIcon: [3, "tabIcon"], tabBadge: [4, "tabBadge"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_3 = _v.context.$implicit.page; var currVal_4 = _v.context.$implicit.pageParams; var currVal_5 = core["_56" /* ɵunv */](_v, 1, 2, core["_44" /* ɵnov */](_v, 2).transform(_v.context.$implicit.title)); var currVal_6 = _v.context.$implicit.icon; var currVal_7 = _v.context.$implicit.badge; _ck(_v, 1, 0, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7); }, function (_ck, _v) { var currVal_0 = core["_34" /* ɵinlineInterpolate */](1, "", _v.context.$implicit.class, ""); var currVal_1 = core["_44" /* ɵnov */](_v, 1)._tabId; var currVal_2 = core["_44" /* ɵnov */](_v, 1)._btnId; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2); }); }
+function View_CoreMainMenuPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { mainTabs: 0 }), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 13, "core-ion-tabs", [["tabsLayout", "title-hide"], ["tabsPlacement", "bottom"]], [[8, "hidden", 0]], null, null, View_CoreIonTabsComponent_0, RenderType_CoreIonTabsComponent)), core["_50" /* ɵprd */](6144, null, split_pane["a" /* RootNode */], null, [ion_tabs["a" /* CoreIonTabsComponent */]]), core["_30" /* ɵdid */](3, 4374528, [[1, 4], ["mainTabs", 4]], 0, ion_tabs["a" /* CoreIonTabsComponent */], [utils["a" /* CoreUtilsProvider */], providers_app["a" /* CoreAppProvider */], [2, nav_controller["a" /* NavController */]], [2, view_controller["a" /* ViewController */]], app["a" /* App */], config["a" /* Config */], core["t" /* ElementRef */], platform["a" /* Platform */], core["V" /* Renderer */], deep_linker["a" /* DeepLinker */], keyboard["a" /* Keyboard */]], { tabsLayout: [0, "tabsLayout"], tabsPlacement: [1, "tabsPlacement"], loaded: [2, "loaded"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, 0, 1, "core-ion-tab", [["role", "tabpanel"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](6, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], { root: [0, "root"], rootParams: [1, "rootParams"], enabled: [2, "enabled"], show: [3, "show"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreMainMenuPage_1)), core["_30" /* ɵdid */](9, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 0, 2, "core-ion-tab", [["role", "tabpanel"], ["root", "CoreMainMenuMorePage"], ["tabIcon", "more"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_CoreIonTabComponent_0, RenderType_CoreIonTabComponent)), core["_30" /* ɵdid */](12, 245760, null, 0, ion_tab["a" /* CoreIonTabComponent */], [ion_tabs["a" /* CoreIonTabsComponent */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["t" /* ElementRef */], core["M" /* NgZone */], core["V" /* Renderer */], core["o" /* ComponentFactoryResolver */], core["j" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["u" /* ErrorHandler */]], { root: [0, "root"], tabTitle: [1, "tabTitle"], tabIcon: [2, "tabIcon"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = "title-hide"; var currVal_2 = "bottom"; var currVal_3 = _co.loaded; _ck(_v, 3, 0, currVal_1, currVal_2, currVal_3); var currVal_6 = _co.redirectPage; var currVal_7 = _co.redirectParams; var currVal_8 = false; var currVal_9 = false; _ck(_v, 6, 0, currVal_6, currVal_7, currVal_8, currVal_9); var currVal_10 = _co.tabs; _ck(_v, 9, 0, currVal_10); var currVal_13 = "CoreMainMenuMorePage"; var currVal_14 = core["_56" /* ɵunv */](_v, 12, 1, core["_44" /* ɵnov */](_v, 13).transform("core.more")); var currVal_15 = "more"; _ck(_v, 12, 0, currVal_13, currVal_14, currVal_15); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.showTabs; _ck(_v, 1, 0, currVal_0); var currVal_4 = core["_44" /* ɵnov */](_v, 6)._tabId; var currVal_5 = core["_44" /* ɵnov */](_v, 6)._btnId; _ck(_v, 5, 0, currVal_4, currVal_5); var currVal_11 = core["_44" /* ɵnov */](_v, 12)._tabId; var currVal_12 = core["_44" /* ɵnov */](_v, 12)._btnId; _ck(_v, 11, 0, currVal_11, currVal_12); }); }
+function View_CoreMainMenuPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-mainmenu", [], null, null, null, View_CoreMainMenuPage_0, RenderType_CoreMainMenuPage)), core["_30" /* ɵdid */](1, 180224, null, 0, menu_CoreMainMenuPage, [delegate["a" /* CoreMainMenuDelegate */], sites["a" /* CoreSitesProvider */], nav_params["a" /* NavParams */], nav_controller["a" /* NavController */], events["a" /* CoreEventsProvider */], core["j" /* ChangeDetectorRef */]], null, null)], null, null); }
+var CoreMainMenuPageNgFactory = core["_27" /* ɵccf */]("page-core-mainmenu", menu_CoreMainMenuPage, View_CoreMainMenuPage_Host_0, {}, {}, []);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var styles_CoreLoginSitesPage = [];
-var RenderType_CoreLoginSitesPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreLoginSitesPage, data: {} });
-
-function View_CoreLoginSitesPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "button", [["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.toggleDelete() !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, 0, 1, "ion-icon", [["ios", "md-create"], ["name", "create"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](5, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"], ios: [1, "ios"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var currVal_2 = "create"; var currVal_3 = "md-create"; _ck(_v, 5, 0, currVal_2, currVal_3); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 0, 0, core["_44" /* ɵnov */](_v, 2).transform("core.delete")); _ck(_v, 0, 0, currVal_0); var currVal_1 = core["_44" /* ɵnov */](_v, 5)._hidden; _ck(_v, 4, 0, currVal_1); }); }
-function View_CoreLoginSitesPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-badge", [["item-end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, badge["a" /* Badge */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], null, function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.badge; _ck(_v, 2, 0, currVal_0); }); }
-function View_CoreLoginSitesPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "button", [["clear", ""], ["color", "danger"], ["icon-only", ""], ["ion-button", ""], ["item-end", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.deleteSite($event, _v.parent.context.index) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, [[3, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], clear: [1, "clear"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, 0, 1, "ion-icon", [["name", "trash"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](5, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var currVal_1 = "danger"; var currVal_2 = ""; _ck(_v, 1, 0, currVal_1, currVal_2); var currVal_4 = "trash"; _ck(_v, 5, 0, currVal_4); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 0, 0, core["_44" /* ɵnov */](_v, 2).transform("core.delete")); _ck(_v, 0, 0, currVal_0); var currVal_3 = core["_44" /* ɵnov */](_v, 5)._hidden; _ck(_v, 4, 0, currVal_3); }); }
-function View_CoreLoginSitesPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 31, "a", [["class", "item item-block"], ["detail-none", ""], ["ion-item", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.login(_v.context.$implicit.id) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 2, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 4, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 0, 7, "ion-avatar", [["item-start", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](8, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, null, 3, "img", [["core-external-content", ""], ["onError", "this.src='assets/img/user-avatar.png'"], ["role", "presentation"]], [[8, "alt", 0]], null, null, null, null)), core["_30" /* ɵdid */](11, 4734976, null, 0, external_content["a" /* CoreExternalContentDirective */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], platform["a" /* Platform */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], app["a" /* CoreAppProvider */], utils["a" /* CoreUtilsProvider */]], { siteId: [0, "siteId"], src: [1, "src"] }, null), core["_48" /* ɵpod */](12, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, 2, 1, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](17, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](20, 0, null, null, 1, "core-format-text", [["clean", "true"]], null, null, null, null, null)), core["_30" /* ɵdid */](21, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"], siteId: [1, "siteId"], clean: [2, "clean"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](23, 0, null, 2, 1, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](24, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, 4, 1, null, View_CoreLoginSitesPage_3)), core["_30" /* ɵdid */](27, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, 4, 1, null, View_CoreLoginSitesPage_4)), core["_30" /* ɵdid */](30, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_1 = _v.context.$implicit.id; var currVal_2 = _v.context.$implicit.avatar; _ck(_v, 11, 0, currVal_1, currVal_2); var currVal_4 = _v.context.$implicit.siteName; var currVal_5 = _v.context.$implicit.id; var currVal_6 = "true"; _ck(_v, 21, 0, currVal_4, currVal_5, currVal_6); var currVal_8 = (!_co.showDelete && _v.context.$implicit.badge); _ck(_v, 27, 0, currVal_8); var currVal_9 = _co.showDelete; _ck(_v, 30, 0, currVal_9); }, function (_ck, _v) { var currVal_0 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 13).transform("core.pictureof", _ck(_v, 12, 0, _v.context.$implicit.fullname))), ""); _ck(_v, 10, 0, currVal_0); var currVal_3 = _v.context.$implicit.fullName; _ck(_v, 17, 0, currVal_3); var currVal_7 = _v.context.$implicit.siteUrl; _ck(_v, 24, 0, currVal_7); }); }
-function View_CoreLoginSitesPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 29, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 25, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](9, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n\n        "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 2, 15, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](13, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, null, 7, "button", [["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (core["_44" /* ɵnov */](_v, 18).onClick() !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](17, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](18, 16384, null, 0, nav_push["a" /* NavPush */], [[2, nav_controller["a" /* NavController */]]], { navPush: [0, "navPush"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](21, 0, null, 0, 1, "ion-icon", [["name", "cog"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](22, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginSitesPage_1)), core["_30" /* ɵdid */](26, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](31, 0, null, null, 24, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](32, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](34, 0, null, 1, 5, "ion-list", [], null, null, null, null, null)), core["_30" /* ɵdid */](35, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginSitesPage_2)), core["_30" /* ɵdid */](38, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](41, 0, null, 0, 13, "ion-fab", [["bottom", ""], ["core-fab", ""], ["end", ""]], null, null, null, fab_container_ngfactory["b" /* View_FabContainer_0 */], fab_container_ngfactory["a" /* RenderType_FabContainer */])), core["_30" /* ɵdid */](42, 212992, null, 0, fab["a" /* CoreFabDirective */], [core["t" /* ElementRef */], content["a" /* Content */]], null, null), core["_30" /* ɵdid */](43, 1228800, null, 2, fab_container["a" /* FabContainer */], [platform["a" /* Platform */]], null, null), core["_52" /* ɵqud */](335544320, 5, { _mainButton: 0 }), core["_52" /* ɵqud */](603979776, 6, { _fabLists: 1 }), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](47, 0, null, 0, 6, "button", [["ion-fab", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (_co.add() !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, fab_ngfactory["b" /* View_FabButton_0 */], fab_ngfactory["a" /* RenderType_FabButton */])), core["_30" /* ɵdid */](48, 49152, [[5, 4]], 0, fab_fab["a" /* FabButton */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](51, 0, null, 0, 1, "ion-icon", [["name", "add"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](52, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_4 = "CoreSettingsListPage"; _ck(_v, 18, 0, currVal_4); var currVal_6 = "cog"; _ck(_v, 22, 0, currVal_6); var currVal_7 = (_co.sites && (_co.sites.length > 0)); _ck(_v, 26, 0, currVal_7); var currVal_10 = _co.sites; _ck(_v, 38, 0, currVal_10); _ck(_v, 42, 0); var currVal_13 = "add"; _ck(_v, 52, 0, currVal_13); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("core.settings.sites")); _ck(_v, 9, 0, currVal_2); var currVal_3 = core["_56" /* ɵunv */](_v, 16, 0, core["_44" /* ɵnov */](_v, 19).transform("core.mainmenu.appsettings")); _ck(_v, 16, 0, currVal_3); var currVal_5 = core["_44" /* ɵnov */](_v, 22)._hidden; _ck(_v, 21, 0, currVal_5); var currVal_8 = core["_44" /* ɵnov */](_v, 32).statusbarPadding; var currVal_9 = core["_44" /* ɵnov */](_v, 32)._hasRefresher; _ck(_v, 31, 0, currVal_8, currVal_9); var currVal_11 = core["_56" /* ɵunv */](_v, 47, 0, core["_44" /* ɵnov */](_v, 49).transform("core.add")); _ck(_v, 47, 0, currVal_11); var currVal_12 = core["_44" /* ɵnov */](_v, 52)._hidden; _ck(_v, 51, 0, currVal_12); }); }
-function View_CoreLoginSitesPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-login-sites", [], null, null, null, View_CoreLoginSitesPage_0, RenderType_CoreLoginSitesPage)), core["_30" /* ɵdid */](1, 49152, null, 0, sites_CoreLoginSitesPage, [dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */], pushnotifications["a" /* AddonPushNotificationsProvider */]], null, null)], null, null); }
-var CoreLoginSitesPageNgFactory = core["_27" /* ɵccf */]("page-core-login-sites", sites_CoreLoginSitesPage, View_CoreLoginSitesPage_Host_0, {}, {}, []);
-
-//# sourceMappingURL=sites.ngfactory.js.map
+//# sourceMappingURL=menu.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(341);
+var translate_loader = __webpack_require__(343);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(342);
+var translate_compiler = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(344);
+var translate_parser = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(343);
+var missing_translation_handler = __webpack_require__(345);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(443);
+var translate_store = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(673);
+var ionic_angular_module = __webpack_require__(676);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
+var directives_module = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
+var pipes_module = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(251);
+var module_loader = __webpack_require__(253);
 
-// CONCATENATED MODULE: ./src/core/login/pages/sites/sites.module.ngfactory.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitesPageModuleNgFactory", function() { return CoreLoginSitesPageModuleNgFactory; });
+// CONCATENATED MODULE: ./src/core/mainmenu/pages/menu/menu.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreMainMenuPageModuleNgFactory", function() { return CoreMainMenuPageModuleNgFactory; });
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -537,9 +542,14 @@ var module_loader = __webpack_require__(251);
 
 
 
-var CoreLoginSitesPageModuleNgFactory = core["_28" /* ɵcmf */](sites_module_CoreLoginSitesPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], CoreLoginSitesPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, sites_module_CoreLoginSitesPageModule, sites_module_CoreLoginSitesPageModule, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], sites_CoreLoginSitesPage, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, [])]); });
 
-//# sourceMappingURL=sites.module.ngfactory.js.map
+
+
+
+
+var CoreMainMenuPageModuleNgFactory = core["_28" /* ɵcmf */](menu_module_CoreMainMenuPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], CoreMainMenuPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, menu_module_CoreMainMenuPageModule, menu_module_CoreMainMenuPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], menu_CoreMainMenuPage, [])]); });
+
+//# sourceMappingURL=menu.module.ngfactory.js.map
 
 /***/ })
 
