@@ -126,7 +126,7 @@
     "addon.competency.usercompetencystatus_waitingforreview": "レビュー待ち",
     "addon.competency.userplans": "学習プラン",
     "addon.competency.xcompetenciesproficientoutofy": "{{$a.x}} / {{$a.y}} のコンピテンシーで熟達しています。",
-    "addon.competency.xcompetenciesproficientoutofyincourse": "あなたはこのコースに関して {{$a.x}} / {{$a.y}} のコンピテンシーで熟達しています。",
+    "addon.competency.xcompetenciesproficientoutofyincourse": "あなたはこのコースの {{$a.x}} / {{$a.y}} のコンピテンシーで熟達しています。",
     "addon.coursecompletion.complete": "完了",
     "addon.coursecompletion.completecourse": "コースを完了する",
     "addon.coursecompletion.completed": "完了",
