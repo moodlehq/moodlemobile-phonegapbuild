@@ -185,7 +185,7 @@ var view_controller = __webpack_require__(36);
 var navbar_ngfactory = __webpack_require__(1374);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(206);
+var navbar = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(33);
@@ -209,7 +209,7 @@ var events = __webpack_require__(12);
 var toolbar_title_ngfactory = __webpack_require__(1375);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(347);
+var toolbar_title = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(252);
@@ -290,10 +290,10 @@ var offline = __webpack_require__(269);
 var groups = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/sync.ts
-var sync = __webpack_require__(293);
+var sync = __webpack_require__(294);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/helper.ts
-var providers_helper = __webpack_require__(284);
+var providers_helper = __webpack_require__(285);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(23);
@@ -376,16 +376,16 @@ var common = __webpack_require__(7);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(343);
+var translate_loader = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(344);
+var translate_compiler = __webpack_require__(345);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(346);
+var translate_parser = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(345);
+var missing_translation_handler = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(446);

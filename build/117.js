@@ -34,10 +34,10 @@ var dom = __webpack_require__(4);
 var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(209);
+var competency = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/helper.ts
-var helper = __webpack_require__(351);
+var helper = __webpack_require__(352);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/plan/plan.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -245,7 +245,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1378);
 var toolbar_title_ngfactory = __webpack_require__(1375);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(347);
+var toolbar_title = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -254,7 +254,7 @@ var config = __webpack_require__(6);
 var toolbar = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(206);
+var navbar = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
 var card = __webpack_require__(80);
@@ -275,7 +275,7 @@ var item_reorder = __webpack_require__(28);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(207);
+var user_avatar_ngfactory = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
 var user_avatar = __webpack_require__(178);
@@ -344,7 +344,7 @@ var common = __webpack_require__(7);
 var progress_bar_ngfactory = __webpack_require__(459);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(289);
+var progress_bar = __webpack_require__(290);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(75);
@@ -353,10 +353,10 @@ var platform_browser = __webpack_require__(75);
 var badge = __webpack_require__(147);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
-var card_header = __webpack_require__(288);
+var card_header = __webpack_require__(289);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(227);
+var format_date = __webpack_require__(229);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(23);
@@ -493,16 +493,16 @@ var AddonCompetencyPlanPageNgFactory = core["_27" /* ɵccf */]("page-addon-compe
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(343);
+var translate_loader = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(344);
+var translate_compiler = __webpack_require__(345);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(346);
+var translate_parser = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(345);
+var missing_translation_handler = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(446);

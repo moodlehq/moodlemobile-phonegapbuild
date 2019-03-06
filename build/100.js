@@ -359,7 +359,7 @@ var view_controller = __webpack_require__(36);
 var navbar_ngfactory = __webpack_require__(1374);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(206);
+var navbar = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(33);
@@ -380,7 +380,7 @@ var events = __webpack_require__(12);
 var toolbar_title_ngfactory = __webpack_require__(1375);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(347);
+var toolbar_title = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(252);
@@ -458,7 +458,7 @@ var radio_button_ngfactory = __webpack_require__(170);
 var radio_button = __webpack_require__(136);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ngfactory.js
-var compile_html_ngfactory = __webpack_require__(201);
+var compile_html_ngfactory = __webpack_require__(203);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
 var compile_html = __webpack_require__(172);
@@ -577,16 +577,16 @@ var AddonModDataSearchPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-da
 
 //# sourceMappingURL=search.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(343);
+var translate_loader = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(344);
+var translate_compiler = __webpack_require__(345);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(346);
+var translate_parser = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(345);
+var missing_translation_handler = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(446);
@@ -604,7 +604,7 @@ var components_components_module = __webpack_require__(24);
 var course_components_components_module = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/core/comments/components/components.module.ts
-var comments_components_components_module = __webpack_require__(350);
+var comments_components_components_module = __webpack_require__(351);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(253);

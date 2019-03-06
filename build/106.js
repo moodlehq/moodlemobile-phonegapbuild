@@ -365,7 +365,7 @@ var button_button = __webpack_require__(43);
 var card = __webpack_require__(80);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-content.js
-var card_content = __webpack_require__(359);
+var card_content = __webpack_require__(360);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
 var empty_box_ngfactory = __webpack_require__(116);
@@ -374,7 +374,7 @@ var empty_box_ngfactory = __webpack_require__(116);
 var empty_box = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(227);
+var format_date = __webpack_require__(229);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -383,7 +383,7 @@ var logger = __webpack_require__(5);
 var time = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/pipes/duration.ts
-var duration = __webpack_require__(1412);
+var duration = __webpack_require__(1414);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(447);
@@ -395,7 +395,7 @@ var view_controller = __webpack_require__(36);
 var navbar_ngfactory = __webpack_require__(1374);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(206);
+var navbar = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -413,7 +413,7 @@ var events = __webpack_require__(12);
 var toolbar_title_ngfactory = __webpack_require__(1375);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(347);
+var toolbar_title = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(252);
@@ -458,7 +458,7 @@ var loading = __webpack_require__(48);
 var toggle_ngfactory = __webpack_require__(1381);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toggle/toggle.js + 1 modules
-var toggle = __webpack_require__(348);
+var toggle = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/tap-click/haptic.js
 var haptic = __webpack_require__(180);
@@ -583,16 +583,16 @@ var AddonModChatSessionsPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-
 
 //# sourceMappingURL=sessions.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(343);
+var translate_loader = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(344);
+var translate_compiler = __webpack_require__(345);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(346);
+var translate_parser = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(345);
+var missing_translation_handler = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(446);

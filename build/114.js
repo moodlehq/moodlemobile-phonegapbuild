@@ -37,10 +37,10 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/files.ts
-var files = __webpack_require__(366);
+var files = __webpack_require__(367);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/helper.ts
-var helper = __webpack_require__(702);
+var helper = __webpack_require__(703);
 
 // CONCATENATED MODULE: ./src/addon/files/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -379,7 +379,7 @@ var item_reorder = __webpack_require__(28);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(228);
+var nav_push = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -388,7 +388,7 @@ var nav_controller = __webpack_require__(21);
 var nav_push_anchor = __webpack_require__(256);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(193);
+var file_ngfactory = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(162);
@@ -433,7 +433,7 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.ngfactory.js
-var fab_container_ngfactory = __webpack_require__(298);
+var fab_container_ngfactory = __webpack_require__(299);
 
 // EXTERNAL MODULE: ./src/directives/fab.ts
 var fab = __webpack_require__(265);
@@ -442,10 +442,10 @@ var fab = __webpack_require__(265);
 var content = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
-var fab_container = __webpack_require__(214);
+var fab_container = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
-var fab_ngfactory = __webpack_require__(299);
+var fab_ngfactory = __webpack_require__(300);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.js
 var fab_fab = __webpack_require__(185);
@@ -463,7 +463,7 @@ var view_controller = __webpack_require__(36);
 var navbar_ngfactory = __webpack_require__(1374);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(206);
+var navbar = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(677);
@@ -472,7 +472,7 @@ var back_button = __webpack_require__(677);
 var toolbar_title_ngfactory = __webpack_require__(1375);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(347);
+var toolbar_title = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(252);
@@ -627,16 +627,16 @@ var AddonFilesListPageNgFactory = core["_27" /* ɵccf */]("page-addon-files-list
 
 //# sourceMappingURL=list.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(343);
+var translate_loader = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(344);
+var translate_compiler = __webpack_require__(345);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(346);
+var translate_parser = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(345);
+var missing_translation_handler = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(446);

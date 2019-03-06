@@ -182,7 +182,7 @@ var view_controller = __webpack_require__(36);
 var navbar_ngfactory = __webpack_require__(1374);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(206);
+var navbar = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(33);
@@ -206,7 +206,7 @@ var events = __webpack_require__(12);
 var toolbar_title_ngfactory = __webpack_require__(1375);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(347);
+var toolbar_title = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(252);
@@ -239,7 +239,7 @@ var refresher_content_ngfactory = __webpack_require__(192);
 var refresher_content = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./src/core/sitehome/components/index/index.ngfactory.js + 5 modules
-var index_ngfactory = __webpack_require__(1994);
+var index_ngfactory = __webpack_require__(1996);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -315,16 +315,16 @@ var common = __webpack_require__(7);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(343);
+var translate_loader = __webpack_require__(344);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(344);
+var translate_compiler = __webpack_require__(345);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(346);
+var translate_parser = __webpack_require__(347);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(345);
+var missing_translation_handler = __webpack_require__(346);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(446);
@@ -342,7 +342,7 @@ var components_components_module = __webpack_require__(24);
 var course_components_components_module = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/core/block/components/components.module.ts
-var block_components_components_module = __webpack_require__(696);
+var block_components_components_module = __webpack_require__(697);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(253);
@@ -405,7 +405,7 @@ var CoreSiteHomeIndexPageModuleNgFactory = core["_28" /* ɵcmf */](index_module_
 /* unused harmony export CoreBlockComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(1380);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(4);
@@ -439,7 +439,7 @@ var CoreBlockComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_
 
 /***/ }),
 
-/***/ 1994:
+/***/ 1996:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -538,7 +538,7 @@ var common = __webpack_require__(7);
 var item_divider = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(228);
+var nav_push = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push-anchor.js
 var nav_push_anchor = __webpack_require__(256);
@@ -726,7 +726,7 @@ var news = __webpack_require__(1402);
 var module_delegate = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./src/core/sitehome/providers/sitehome.ts
-var sitehome = __webpack_require__(210);
+var sitehome = __webpack_require__(212);
 
 // CONCATENATED MODULE: ./src/core/sitehome/components/news/news.ngfactory.js
 /**
