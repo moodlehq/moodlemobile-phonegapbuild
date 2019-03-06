@@ -43,7 +43,7 @@ var dom = __webpack_require__(4);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/providers/chat.ts
-var chat = __webpack_require__(257);
+var chat = __webpack_require__(258);
 
 // CONCATENATED MODULE: ./src/addon/mod/chat/pages/sessions/sessions.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -305,7 +305,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1378);
 var unsupported_module_ngfactory = __webpack_require__(1379);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1395);
+var index_ngfactory = __webpack_require__(1397);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
 var label = __webpack_require__(61);
@@ -374,7 +374,7 @@ var empty_box_ngfactory = __webpack_require__(116);
 var empty_box = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(229);
+var format_date = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -416,7 +416,7 @@ var toolbar_title_ngfactory = __webpack_require__(1375);
 var toolbar_title = __webpack_require__(348);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(252);
+var toolbar = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
 var split_view_ngfactory = __webpack_require__(449);
@@ -425,7 +425,7 @@ var split_view_ngfactory = __webpack_require__(449);
 var fileuploader = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(25);
@@ -443,7 +443,7 @@ var refresher = __webpack_require__(140);
 var gesture_controller = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(192);
+var refresher_content_ngfactory = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(146);
@@ -461,7 +461,7 @@ var toggle_ngfactory = __webpack_require__(1381);
 var toggle = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/tap-click/haptic.js
-var haptic = __webpack_require__(180);
+var haptic = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(60);
@@ -604,7 +604,7 @@ var ionic_angular_module = __webpack_require__(676);
 var course_components_components_module = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(253);
+var module_loader = __webpack_require__(254);
 
 // CONCATENATED MODULE: ./src/addon/mod/chat/pages/sessions/sessions.module.ngfactory.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModChatSessionsPageModuleNgFactory", function() { return AddonModChatSessionsPageModuleNgFactory; });
