@@ -946,6 +946,7 @@
     "core.decsep": ",",
     "core.defaultvalue": "({{$a}}) implicit",
     "core.delete": "Şterge",
+    "core.deleteduser": "Utilizator eliminat",
     "core.deleting": "Se șterge",
     "core.description": "Descriere",
     "core.dfdayweekmonth": "zzz, Z LLL",
