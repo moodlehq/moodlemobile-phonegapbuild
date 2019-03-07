@@ -504,6 +504,7 @@
     "addon.mod_quiz.confirmclose": "Spremni ste završiti test. Kada završite test, više nećete biti u mogućnosti promijeniti svoje odgovore.",
     "addon.mod_quiz.confirmstart": "Ovaj test ima vremensko ograničenje od {{$a}}. Vremensko odbrojavanje će započeti u trenutku kada krenete s rješavanjem testa. Vaš pokušaj rješavanja morate predati prije nego to vrijeme istekne. Želite li sigurno sada započeti s rješavanjem?",
     "addon.mod_quiz.confirmstartheader": "Vremenski ograničeni test",
+    "addon.mod_quiz.connectionerror": "Povezanost s mrežom je prekinuta. (Automatsko spremanje nije uspjelo).\nNapravite bilješke svih odgovora koji su uneseni na ovu stranicu u posljednjih nekoliko minuta te se pokušajte ponovno povezati.\nKada je veza ponovno uspostavljena, vaši odgovori će biti spremljeni i ova poruka će nestati.",
     "addon.mod_quiz.continueattemptquiz": "Nastavite na osnovu svog zadnjeg pokušaja",
     "addon.mod_quiz.continuepreview": "Nastavite posljednji pregled.",
     "addon.mod_quiz.feedback": "Povratna informacija (Feedback)",
