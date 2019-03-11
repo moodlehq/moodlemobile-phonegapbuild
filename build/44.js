@@ -1,6 +1,6 @@
 webpackJsonp([44],{
 
-/***/ 1927:
+/***/ 1928:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -345,7 +345,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.ngfactory.js
-var searchbar_ngfactory = __webpack_require__(1436);
+var searchbar_ngfactory = __webpack_require__(1437);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.js
 var searchbar = __webpack_require__(366);
