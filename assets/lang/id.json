@@ -73,6 +73,7 @@
     "addon.mod_assign_submission_file.pluginname": "Pengiriman berkas",
     "addon.mod_assign_submission_onlinetext.pluginname": "Pengiriman teks daring",
     "addon.mod_book.modulenameplural": "Buku-buku",
+    "addon.mod_book.toc": "Daftar Isi",
     "addon.mod_chat.beep": "Beep",
     "addon.mod_chat.chatreport": "Sesi obrolan",
     "addon.mod_chat.currentusers": "Pengguna saat ini",

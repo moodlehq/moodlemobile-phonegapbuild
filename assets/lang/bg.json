@@ -178,6 +178,7 @@
     "addon.mod_assign_submission_file.pluginname": "Качване на файлове",
     "addon.mod_book.errorchapter": "Грешка при четене на глава от книга.",
     "addon.mod_book.modulenameplural": "Книги",
+    "addon.mod_book.toc": "Съдържание",
     "addon.mod_chat.beep": "Биип",
     "addon.mod_chat.chatreport": "Чат сесии",
     "addon.mod_chat.currentusers": "Текущи потребители",
