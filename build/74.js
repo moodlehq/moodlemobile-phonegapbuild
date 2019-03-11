@@ -1,6 +1,6 @@
 webpackJsonp([74],{
 
-/***/ 1902:
+/***/ 1901:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -194,7 +194,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1377);
 var unsupported_module_ngfactory = __webpack_require__(1378);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1435);
+var index_ngfactory = __webpack_require__(1434);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/subwiki-picker/subwiki-picker.ngfactory.js
 var subwiki_picker_ngfactory = __webpack_require__(1456);

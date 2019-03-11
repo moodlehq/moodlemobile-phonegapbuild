@@ -172,7 +172,7 @@ var unsupported_module_ngfactory = __webpack_require__(1378);
 var comments_ngfactory = __webpack_require__(453);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1390);
+var index_ngfactory = __webpack_require__(1391);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(446);
