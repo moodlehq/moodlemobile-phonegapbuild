@@ -99,7 +99,7 @@ var review_AddonModQuizReviewPage = /** @class */ (function () {
         this.navigationModal = modalCtrl.create('AddonModQuizNavigationModalPage', {
             isReview: true,
             page: this
-        });
+        }, { cssClass: 'core-modal-lateral' });
     }
     /**
      * Component being initialized.

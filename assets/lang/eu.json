@@ -1278,7 +1278,7 @@
     "core.courses.searchcourses": "Bilatu Ikastaroak",
     "core.courses.searchcoursesadvice": "Bilatu ikastaroak botoia erabil dezakezu ikastaroak topatu eta bisitari gisa sartu edo bertan matrikulatzeko ikastaroak baimentzen badu.",
     "core.courses.selfenrolment": "Matrikulazio automatikoa",
-    "core.courses.sendpaymentbutton": "Paypal bidezko ordainketa bidali",
+    "core.courses.sendpaymentbutton": "Bidali ordainketa Paypal bidez",
     "core.courses.show": "Erakutsi ikastaro hau",
     "core.courses.totalcoursesearchresults": "Ikastaroak guztira: {{$a}}",
     "core.currentdevice": "Oraingo gailua",

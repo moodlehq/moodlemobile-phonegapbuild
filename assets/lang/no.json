@@ -344,7 +344,7 @@
     "addon.mod_chat.viewreport": "Vis tidligere praterunder",
     "addon.mod_choice.cannotsubmit": "Beklager, det var et problem med å sende valget ditt. Vennligst prøv på nytt.",
     "addon.mod_choice.choiceoptions": "Valginnstillinger",
-    "addon.mod_choice.expired": "Beklager, denne aktiviteten ble stengt {{$a}} og er ikke tilgjengelig lenger.",
+    "addon.mod_choice.expired": "Beklager, denne aktiviteten ble stengt {{$a}}.",
     "addon.mod_choice.full": "(full)",
     "addon.mod_choice.modulenameplural": "Galluper",
     "addon.mod_choice.noresultsviewable": "Resultatene er ikke synlige akkurat nå.",
