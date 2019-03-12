@@ -1230,6 +1230,7 @@
     "core.maxsizeandattachments": "파일의 최대 크기: {{$a.size}}, 최대 첨부 파일 갯수: {{$a.attachments}}",
     "core.min": "분",
     "core.mins": "분",
+    "core.misc": "기타",
     "core.mod_assign": "과제",
     "core.mod_assignment": "과제 (2.2)",
     "core.mod_book": "책",

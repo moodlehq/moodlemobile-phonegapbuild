@@ -1400,6 +1400,7 @@
     "core.maxsizeandattachments": "ទំហំអតិបរមាសម្រាប់ឯកសារថ្មីៈ {{$a.size}} ឯកសារភ្ជាប់អតិបរមា: {{$a.attachments}}",
     "core.min": "នាទី",
     "core.mins": "នាទី",
+    "core.misc": "ផ្សេងៗ",
     "core.mod_assign": "កិច្ចការ",
     "core.mod_assignment": "កិច្ចការ (2.2)",
     "core.mod_book": "សៀវភៅ",

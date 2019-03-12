@@ -1499,6 +1499,7 @@
     "core.maxsizeandattachments": "Taille maximale des nouveaux fichiers : {{$a.size}}. Nombre maximal d'annexes : {{$a.attachments}}",
     "core.min": "min",
     "core.mins": "min",
+    "core.misc": "Divers",
     "core.mod_assign": "Devoir",
     "core.mod_assignment": "Devoir 2.2 (désactivé)",
     "core.mod_book": "Livre",

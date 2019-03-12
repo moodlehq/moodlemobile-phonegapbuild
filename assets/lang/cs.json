@@ -1499,6 +1499,7 @@
     "core.maxsizeandattachments": "Maximální velikost nových souborů: {{$a.size}}, maximální přílohy: {{$a.attachments}}",
     "core.min": "min.",
     "core.mins": "min.",
+    "core.misc": "Různé",
     "core.mod_assign": "Úkol",
     "core.mod_assignment": "Úkol 2.2 (Zakázáno)",
     "core.mod_book": "Kniha",

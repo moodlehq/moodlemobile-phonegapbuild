@@ -1499,6 +1499,7 @@
     "core.maxsizeandattachments": "Maximale grootte voor nieuwe bestanden: {{$a.size}}, maximum aantal bijlagen: {{$a.attachments}}",
     "core.min": "minuut",
     "core.mins": "minuten",
+    "core.misc": "Andere",
     "core.mod_assign": "Opdracht",
     "core.mod_assignment": "Opdracht 2.2 (uitgeschakeld)",
     "core.mod_book": "Boek",

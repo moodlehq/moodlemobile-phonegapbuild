@@ -1496,6 +1496,7 @@
     "core.maxsizeandattachments": "Maksimalna veličina za nove datoteke: {{$a.size}}, maksimalan broj priloga: {{$a.attachments}}",
     "core.min": "min",
     "core.mins": "min",
+    "core.misc": "Razno",
     "core.mod_assign": "Zadatak",
     "core.mod_assignment": "Zadatak 2.2 (onemogućen)",
     "core.mod_book": "Knjiga",

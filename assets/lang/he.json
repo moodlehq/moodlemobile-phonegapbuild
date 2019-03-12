@@ -1158,6 +1158,7 @@
     "core.maxsizeandattachments": "נפח קבצים מירבי: {{$a.size}}, מספר קבצים מצורפים מירבי: {{$a.attachments}}",
     "core.min": "דקה",
     "core.mins": "דקות",
+    "core.misc": "שונות",
     "core.mod_assign": "מטלה",
     "core.mod_assignment": "מטלה 2.2 (איננה-זמינה)",
     "core.mod_book": "ספר",

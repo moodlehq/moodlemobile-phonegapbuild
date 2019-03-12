@@ -1111,6 +1111,7 @@
     "core.maxsizeandattachments": "Yeni dosyalar için en büyük boyut: {{$a.size}}, en fazla ek: {{$a.attachments}}",
     "core.min": "dk",
     "core.mins": "dk",
+    "core.misc": "Çeşitli",
     "core.mod_assign": "Ödev",
     "core.mod_assignment": "Ödev (2.2)",
     "core.mod_book": "Kitap",

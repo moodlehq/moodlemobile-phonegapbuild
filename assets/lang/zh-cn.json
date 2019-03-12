@@ -1358,6 +1358,7 @@
     "core.maxsizeandattachments": "新文件的最大尺寸： {{$a.size}} ，最多附件：{{$a.attachments}}",
     "core.min": "分钟",
     "core.mins": "分钟",
+    "core.misc": "杂项",
     "core.mod_assign": "作业",
     "core.mod_assignment": "作业2.2（已禁用）",
     "core.mod_book": "图书",

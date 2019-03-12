@@ -1448,6 +1448,7 @@
     "core.maxsizeandattachments": "Максимальный размер новых файлов: {{$a.size}}, максимальное количество прикрепленных файлов: {{$a.attachments}}",
     "core.min": "мин.",
     "core.mins": "мин.",
+    "core.misc": "Разное",
     "core.mod_assign": "Задание",
     "core.mod_assignment": "Задание 2.2 (Отключено)",
     "core.mod_book": "Книга",

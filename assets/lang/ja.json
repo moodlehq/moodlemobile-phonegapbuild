@@ -1393,6 +1393,7 @@
     "core.maxsizeandattachments": "新しいファイルの最大サイズ: {{$a.size}} / 最大添付: {{$a.attachments}}",
     "core.min": "分",
     "core.mins": "分",
+    "core.misc": "その他",
     "core.mod_assign": "課題",
     "core.mod_assignment": "課題2.2 (無効)",
     "core.mod_book": "ブック",

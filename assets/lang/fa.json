@@ -1142,6 +1142,7 @@
     "core.maxsizeandattachments": "حداکثر اندازه برای فایل‌های جدید: {{$a.size}}، حداکثر تعداد فایل‌های پیوست: {{$a.attachments}}",
     "core.min": "دقیقه",
     "core.mins": "دقیقه",
+    "core.misc": "متفرقه",
     "core.mod_assign": "تکلیف",
     "core.mod_assignment": "تکلیف ۲٫۲ (غیرفعال)",
     "core.mod_book": "کتاب",

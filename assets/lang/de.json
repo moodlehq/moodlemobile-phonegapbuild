@@ -1499,6 +1499,7 @@
     "core.maxsizeandattachments": "Maximale Größe für neue Dateien: {{$a.size}}, Maximale Anzahl von Anhängen: {{$a.attachments}}",
     "core.min": "Minute",
     "core.mins": "Minuten",
+    "core.misc": "Verschiedenes",
     "core.mod_assign": "Aufgabe",
     "core.mod_assignment": "Aufgabe 2.2 (deaktiviert)",
     "core.mod_book": "Buch",

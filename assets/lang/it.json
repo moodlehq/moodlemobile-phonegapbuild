@@ -1376,6 +1376,7 @@
     "core.maxsizeandattachments": "Dimensione massima per i file nuovi: {{$a.size}}, numero massimo di allegati: {{$a.attachments}}",
     "core.min": "min.",
     "core.mins": "min.",
+    "core.misc": "Generale",
     "core.mod_assign": "Compito",
     "core.mod_assignment": "Compito 2.2 (Disabilitato)",
     "core.mod_book": "Libro",

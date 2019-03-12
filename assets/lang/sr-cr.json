@@ -1496,6 +1496,7 @@
     "core.maxsizeandattachments": "Максимална величина за нове датотеке: {{$a.size}}, максималан број прилога: {{$a.attachments}}",
     "core.min": "min",
     "core.mins": "min",
+    "core.misc": "Разно",
     "core.mod_assign": "Задатак",
     "core.mod_assignment": "Задатак 2.2 (oнемогућен)",
     "core.mod_book": "Књига",

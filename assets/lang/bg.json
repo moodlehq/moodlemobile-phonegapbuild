@@ -960,6 +960,7 @@
     "core.maxsizeandattachments": "Максимален размер за нови файлове: {{$a.size}}, максимален брой файлове: {{$a.attachments}}",
     "core.min": "мин",
     "core.mins": "мин.",
+    "core.misc": "Разни",
     "core.mod_assign": "Задание",
     "core.mod_assignment": "Задание (2.2)",
     "core.mod_book": "Книга",

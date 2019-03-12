@@ -1198,6 +1198,7 @@
     "core.maxsizeandattachments": "Új állományok maximális mérete: {{$a.size}}, maximális csatolt állomány: {{$a.attachments}}",
     "core.min": "p",
     "core.mins": "perc",
+    "core.misc": "Egyéb",
     "core.mod_assign": "Feladat",
     "core.mod_assignment": "2.2  (kiiktatott) feladat",
     "core.mod_book": "Könyv",

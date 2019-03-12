@@ -1348,6 +1348,7 @@
     "core.maxsizeandattachments": "新檔案的最大容量： {{$a.size}} ，最多附件：{{$a.attachments}}",
     "core.min": "分鐘",
     "core.mins": "分鐘",
+    "core.misc": "雜項",
     "core.mod_assign": "作業",
     "core.mod_assignment": "作業2.2(已關閉)",
     "core.mod_book": "電子書",

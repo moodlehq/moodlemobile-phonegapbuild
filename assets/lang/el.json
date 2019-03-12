@@ -1463,6 +1463,7 @@
     "core.maxsizeandattachments": "Μέγιστο μέγεθος για νέα αρχεία: {{$a.size}}, μέγιστος αριθμός συνημμένων: {{$a.attachments}}",
     "core.min": "λεπτό",
     "core.mins": "λεπτά",
+    "core.misc": "Διάφορα",
     "core.mod_assign": "Εργασία",
     "core.mod_assignment": "Ανάθεση (εργασίας) 2.2 (Απενεργοποιημένο)",
     "core.mod_book": "Βιβλίο",

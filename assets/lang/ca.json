@@ -1498,6 +1498,7 @@
     "core.maxsizeandattachments": "Mida màxima dels fitxers nous: {{$a.size}}, màxim d'adjuncions: {{$a.attachments}}",
     "core.min": "minut",
     "core.mins": "minuts",
+    "core.misc": "Miscel·lània",
     "core.mod_assign": "Tasca",
     "core.mod_assignment": "Tasca (2.2) (inhabilitat)",
     "core.mod_book": "Llibre",

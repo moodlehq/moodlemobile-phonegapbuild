@@ -1499,6 +1499,7 @@
     "core.maxsizeandattachments": "Tamanho máximo para novos ficheiros: {{$a.size}}, número máximo de anexos: {{$a.attachments}}",
     "core.min": "minuto",
     "core.mins": "minutos",
+    "core.misc": "Outros",
     "core.mod_assign": "Trabalho",
     "core.mod_assignment": "Trabalho 2.2 (Desativado)",
     "core.mod_book": "Livro",

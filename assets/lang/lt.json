@@ -1374,6 +1374,7 @@
     "core.maxsizeandattachments": "Maksimalus naujo failo dydis: {{$a.size}}, maksimalus priedų skaičius: {{$a.attachments}}",
     "core.min": "min.",
     "core.mins": "min.",
+    "core.misc": "Kita",
     "core.mod_assign": "Užduotis",
     "core.mod_assignment": "Užduotis (2.2) (Išjungta)",
     "core.mod_book": "Knyga",

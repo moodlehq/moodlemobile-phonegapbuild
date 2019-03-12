@@ -1254,6 +1254,7 @@
     "core.maxsizeandattachments": "Maks størrelse for nye filer: {{$a.size}}, maks antall vedlegg: {{$a.attachments}}",
     "core.min": "min",
     "core.mins": "min",
+    "core.misc": "Forskjellig",
     "core.mod_assign": "Innlevering",
     "core.mod_assignment": "Innlevering 2.2 (Deaktivert)",
     "core.mod_book": "Bok",

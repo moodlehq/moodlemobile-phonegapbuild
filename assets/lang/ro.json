@@ -1103,6 +1103,7 @@
     "core.maxsizeandattachments": "Dimensiunea maximă pentru fișierele noi: {{$a.size}}, atașamente maxime: {{$a.attachments}}",
     "core.min": "min",
     "core.mins": "min",
+    "core.misc": "Diverse",
     "core.mod_assign": "Lucrare",
     "core.mod_assignment": "Temă (2.2)",
     "core.mod_book": "Carte",

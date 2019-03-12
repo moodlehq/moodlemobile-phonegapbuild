@@ -929,6 +929,7 @@
     "core.maxsizeandattachments": "Андозаи максималии файлҳои нав: {{$a.size}}, миқдори максималии файлҳои вобастакардашуда: {{$a.attachments}}",
     "core.min": "Дақ.",
     "core.mins": "Дақ.",
+    "core.misc": "Ҳар чиз",
     "core.mod_assign": "Супориш",
     "core.mod_assignment": "Супориши (2.2)",
     "core.mod_book": "Китоб",

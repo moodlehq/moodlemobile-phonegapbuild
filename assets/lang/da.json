@@ -1422,6 +1422,7 @@
     "core.maxsizeandattachments": "Maksimal størrelse på nye filer: {{$a.size}}, højeste antal bilag: {{$a.attachments}}",
     "core.min": "min.",
     "core.mins": "min.",
+    "core.misc": "Diverse",
     "core.mod_assign": "Opgave",
     "core.mod_assignment": "Opgaver (2.2) (Deaktiveret)",
     "core.mod_book": "Bog",

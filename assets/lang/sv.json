@@ -1224,6 +1224,7 @@
     "core.maxsizeandattachments": "Maximal storlek för nya filer: {{$a.size}}, max bilagor: {{$a.attachments}}",
     "core.min": "minut",
     "core.mins": "minuter",
+    "core.misc": "Övrigt",
     "core.mod_assign": "Inlämningsuppgift",
     "core.mod_assignment": "Uppgift (2.2)",
     "core.mod_book": "Bok",

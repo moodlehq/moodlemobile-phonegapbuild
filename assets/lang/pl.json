@@ -1146,6 +1146,7 @@
     "core.maxsizeandattachments": "Maksymalny rozmiar dla nowych plików: {{$a.size}}, maksimum załączników: {{$a.attachments}}",
     "core.min": "min",
     "core.mins": "min.",
+    "core.misc": "Różne (Miscellaneous)",
     "core.mod_assign": "Zadanie",
     "core.mod_assignment": "Zadanie 2.2 (wyłączone)",
     "core.mod_book": "Książka",

@@ -1499,6 +1499,7 @@
     "core.maxsizeandattachments": "Tamaño máximo para archivos nuevos: {{$a.size}}, anexos máximos: {{$a.attachments}}",
     "core.min": "minutos",
     "core.mins": "minutos",
+    "core.misc": "Misceláneos",
     "core.mod_assign": "Tarea",
     "core.mod_assignment": "Tarea 2.2 (deshabilitada)",
     "core.mod_book": "Libro",

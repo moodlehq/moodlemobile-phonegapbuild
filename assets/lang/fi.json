@@ -1310,6 +1310,7 @@
     "core.maxsizeandattachments": "Uusien tiedostojen kokoraja: {{$a.size}} ja liitetiedostojen maksimimäärä: {{$a.attachments}}",
     "core.min": "min",
     "core.mins": "min",
+    "core.misc": "Muut",
     "core.mod_assign": "Tehtävä",
     "core.mod_assignment": "Tehtävä (2.2) (ei käytössä)",
     "core.mod_book": "Kirja",

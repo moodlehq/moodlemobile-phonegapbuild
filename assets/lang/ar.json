@@ -848,6 +848,7 @@
     "core.maxsizeandattachments": "الحجم الأقصى للملفات الجديدة: {{$a.size}}, أقصى عدد للمرفقات: {{$a.attachments}}",
     "core.min": "الحد الأدنى",
     "core.mins": "دقائق",
+    "core.misc": "متنوعات",
     "core.mod_assignment": "وظائف (2.2)",
     "core.mod_book": "كتاب",
     "core.mod_chat": "محادثة",
