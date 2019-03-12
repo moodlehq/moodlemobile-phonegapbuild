@@ -222,7 +222,7 @@
     "addon.mod_assign.graded": "Valutata",
     "addon.mod_assign.gradedby": "Valutatore",
     "addon.mod_assign.gradedon": "Data di valutazione",
-    "addon.mod_assign.gradelocked": "Questa valutazione è bloccata oppure modificata nel registro del valutatore.",
+    "addon.mod_assign.gradelocked": "Questa valutazione è bloccata oppure modificata nel registro valutatore.",
     "addon.mod_assign.gradenotsynced": "Valutazione non sincronizzata",
     "addon.mod_assign.gradeoutof": "Punteggio (su {{$a}})",
     "addon.mod_assign.gradingstatus": "Stato valutazione",
