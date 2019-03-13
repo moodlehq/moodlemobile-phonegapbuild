@@ -163,7 +163,7 @@
     <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
     <gap:plugin name="phonegap-plugin-push" source="git" version="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle-v2">
         <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+" />
-        <variable name="FCM_VERSION" value="11.6.2" />
+        <variable name="FCM_VERSION" value="17.0.+" />
     </gap:plugin>
 
     <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='Moodle']" mode="merge">
