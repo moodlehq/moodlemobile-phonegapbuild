@@ -1,6 +1,6 @@
 webpackJsonp([112],{
 
-/***/ 1955:
+/***/ 1954:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var providers_assign = __webpack_require__(72);
 var assign_offline = __webpack_require__(123);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/helper.ts
-var helper = __webpack_require__(161);
+var helper = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(34);

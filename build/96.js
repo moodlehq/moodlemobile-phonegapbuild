@@ -261,7 +261,7 @@ var groups = __webpack_require__(68);
 var user = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(171);
+var forum = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
 var providers_helper = __webpack_require__(261);
@@ -279,7 +279,7 @@ var module_prefetch_delegate = __webpack_require__(47);
 var prefetch_handler = __webpack_require__(376);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
-var providers_offline = __webpack_require__(165);
+var providers_offline = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(63);

@@ -270,7 +270,7 @@ var offline = __webpack_require__(237);
 var sync = __webpack_require__(308);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
-var providers_offline = __webpack_require__(165);
+var providers_offline = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(63);

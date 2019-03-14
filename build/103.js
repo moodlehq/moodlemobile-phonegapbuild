@@ -301,13 +301,13 @@ var time = __webpack_require__(23);
 var groups = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(156);
+var comments = __webpack_require__(157);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
 var modal_controller = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
-var providers_offline = __webpack_require__(165);
+var providers_offline = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(63);

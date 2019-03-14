@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/rating.ts
-var rating = __webpack_require__(169);
+var rating = __webpack_require__(170);
 
 // CONCATENATED MODULE: ./src/core/rating/pages/ratings/ratings.ts
 // (C) Copyright 2015 Martin Dougiamas

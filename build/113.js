@@ -113,7 +113,9 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
         this.loadingString = translate.instant('core.loading');
         this.siteId = sitesProvider.getCurrentSiteId();
         this.currentUserId = sitesProvider.getCurrentSiteUserId();
+        // Conversation to load.
         this.conversationId = navParams.get('conversationId') || false;
+        this.discussionUserId = !this.conversationId && (navParams.get('discussionUserId') || false);
         // Update conversations when new message is received.
         this.newMessagesObserver = eventsProvider.on(providers_messages["a" /* AddonMessagesProvider */].NEW_MESSAGE_EVENT, function (data) {
             // Check if the new message belongs to the option that is currently expanded.
@@ -218,9 +220,9 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
      */
     AddonMessagesGroupConversationsPage.prototype.ngOnInit = function () {
         var _this = this;
-        if (this.conversationId) {
+        if (this.conversationId || this.discussionUserId) {
             // There is a discussion to load, open the discussion in a new state.
-            this.gotoConversation(this.conversationId);
+            this.gotoConversation(this.conversationId, this.discussionUserId);
         }
         this.fetchData().then(function () {
             if (!_this.conversationId && _this.splitviewCtrl.isOn()) {

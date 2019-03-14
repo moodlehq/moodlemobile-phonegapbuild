@@ -55,7 +55,7 @@ var split_view = __webpack_require__(34);
 var rich_text_editor = __webpack_require__(234);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(171);
+var forum = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
 var offline = __webpack_require__(212);

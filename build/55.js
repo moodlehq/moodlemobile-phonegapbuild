@@ -203,7 +203,7 @@ var translate_pipe = __webpack_require__(27);
 var course = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
-var grades = __webpack_require__(153);
+var grades = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -212,7 +212,7 @@ var dom = __webpack_require__(4);
 var nav_params = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(163);
+var helper = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(9);

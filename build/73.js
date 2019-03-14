@@ -34,7 +34,7 @@ var sites = __webpack_require__(1);
 var sync = __webpack_require__(78);
 
 // EXTERNAL MODULE: ./src/providers/file-session.ts
-var file_session = __webpack_require__(154);
+var file_session = __webpack_require__(155);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -52,7 +52,7 @@ var workshop = __webpack_require__(151);
 var helper = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
-var offline = __webpack_require__(167);
+var offline = __webpack_require__(168);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/edit-submission/edit-submission.ts
 // (C) Copyright 2015 Martin Dougiamas

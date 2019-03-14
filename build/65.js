@@ -25,7 +25,7 @@ var dom = __webpack_require__(4);
 var user = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(156);
+var comments = __webpack_require__(157);
 
 // CONCATENATED MODULE: ./src/core/comments/pages/viewer/viewer.ts
 // (C) Copyright 2015 Martin Dougiamas
