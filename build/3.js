@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 1866:
+/***/ 1865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -892,7 +892,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.siteId = sitesProvider.getCurrentSiteId();
         // Update discussions when new message is received.
         this.newMessagesObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].NEW_MESSAGE_EVENT, function (data) {
-            if (data.userId) {
+            if (data.userId && _this.discussions) {
                 var discussion = _this.discussions.find(function (disc) {
                     return disc.message.user == data.userId;
                 });
@@ -911,7 +911,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         }, this.siteId);
         // Update discussions when a message is read.
         this.readChangedObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_5__providers_messages__["a" /* AddonMessagesProvider */].READ_CHANGED_EVENT, function (data) {
-            if (data.userId) {
+            if (data.userId && _this.discussions) {
                 var discussion = _this.discussions.find(function (disc) {
                     return disc.message.user == data.userId;
                 });

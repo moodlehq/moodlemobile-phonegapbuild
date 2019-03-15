@@ -225,7 +225,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
             this.gotoConversation(this.conversationId, this.discussionUserId);
         }
         this.fetchData().then(function () {
-            if (!_this.conversationId && _this.splitviewCtrl.isOn()) {
+            if (!_this.conversationId && !_this.discussionUserId && _this.splitviewCtrl.isOn()) {
                 // Load the first conversation.
                 var conversation = void 0;
                 var expandedOption = _this.getExpandedOption();
@@ -255,7 +255,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
         return Promise.all(promises).then(function () {
             if (typeof _this.favourites.expanded == 'undefined') {
                 // The expanded status hasn't been initialized. Do it now.
-                if (_this.conversationId) {
+                if (_this.conversationId || _this.discussionUserId) {
                     // A certain conversation should be opened.
                     // We don't know which option it belongs to, so we need to fetch the data for all of them.
                     var promises_1 = [];
@@ -264,7 +264,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
                     promises_1.push(_this.fetchDataForOption(_this.individual, false, refreshUnreadCounts));
                     return Promise.all(promises_1).then(function () {
                         // All conversations have been loaded, find the one we need to load and expand its option.
-                        var conversation = _this.findConversation(_this.conversationId);
+                        var conversation = _this.findConversation(_this.conversationId, _this.discussionUserId);
                         if (conversation) {
                             var option = _this.getConversationOption(conversation);
                             return _this.expandOption(option, refreshUnreadCounts);

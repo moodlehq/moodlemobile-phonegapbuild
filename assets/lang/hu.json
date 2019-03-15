@@ -194,7 +194,7 @@
     "addon.messages.userwouldliketocontactyou": "{{$a}} szeretne kapcsolatba lépni Önnel",
     "addon.messages.wouldliketocontactyou": "Szeretnék kapcsolatba lépni Önnel",
     "addon.messages.you": "Ön:",
-    "addon.messages.youhaveblockeduser": "Kirábban kizárta ezt a felhasználót",
+    "addon.messages.youhaveblockeduser": "Kizárta ezt a felhasználót",
     "addon.messages.yourcontactrequestpending": "Kapcsolatkérése {{$a}} esetén függőben",
     "addon.mod_assign.addattempt": "Újabb próbálkozás engedélyezése",
     "addon.mod_assign.addnewattempt": "Új próbálkozás hozzáadása",
