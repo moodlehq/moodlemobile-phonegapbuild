@@ -124,7 +124,7 @@
     "addon.competency.usercompetencystatus_idle": "Abwarten",
     "addon.competency.usercompetencystatus_inreview": "Überprüfung läuft",
     "addon.competency.usercompetencystatus_waitingforreview": "Überprüfung abwarten",
-    "addon.competency.userplans": "Lernpläne",
+    "addon.competency.userplans": "Nutzerlernpläne",
     "addon.competency.xcompetenciesproficientoutofy": "{{$a.x}} von {{$a.y}} Kompetenzen sind eingeübt",
     "addon.competency.xcompetenciesproficientoutofyincourse": "Sie sind in {{$a.x}} von {{$a.y}} Kompetenzen geübt.",
     "addon.coursecompletion.complete": "Abschließen",

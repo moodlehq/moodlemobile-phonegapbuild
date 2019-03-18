@@ -1540,7 +1540,7 @@
     "core.none": "Ninguno(a)",
     "core.nopasswordchangeforced": "Usted no puede proceder sin cambiar su contraseña.",
     "core.nopermissionerror": "Lo sentimos, pero Usted actualmente no tiene permisos para hacer eso",
-    "core.nopermissions": "Lo sentimos, pero Usted actualmente no tiene permisos para hacer eso ({{$a}})",
+    "core.nopermissions": "Lo sentimos, pero por el momento no tiene permiso para hacer eso ({{$a}}).",
     "core.noresults": "No hay resultados",
     "core.notapplicable": "no disp.",
     "core.notice": "Aviso",
