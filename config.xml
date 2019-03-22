@@ -145,7 +145,7 @@
     </gap:plugin>
     <gap:plugin name="cordova-plugin-device" source="npm" spec="2.0.2" />
     <gap:plugin name="cordova-plugin-file" source="npm" spec="6.0.1" />
-    <gap:plugin name="cordova-plugin-file-opener2" source="npm" spec="2.2.0" />
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm" spec="2.0.19" />
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" spec="1.7.1" />
     <gap:plugin name="cordova-plugin-globalization" source="npm" spec="1.11.0" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0" />
