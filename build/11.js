@@ -376,7 +376,7 @@ var course_options_menu_ngfactory = __webpack_require__(1393);
 var unsupported_module_ngfactory = __webpack_require__(1379);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(45);
+var button_ngfactory = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
 var button_button = __webpack_require__(43);
@@ -391,7 +391,7 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon = __webpack_require__(46);
+var icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ngfactory.js
 var context_menu_item_ngfactory = __webpack_require__(82);
@@ -924,7 +924,7 @@ var CoreSiteHomeAllCourseListComponentNgFactory = core["_27" /* ɵccf */]("core-
 
 //# sourceMappingURL=all-course-list.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon_icon = __webpack_require__(46);
+var icon_icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./src/core/sitehome/components/categories/categories.ts
 var categories = __webpack_require__(1402);

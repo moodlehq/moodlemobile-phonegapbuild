@@ -113,6 +113,7 @@
     "addon.coursecompletion.criteriarequiredany": "E' richiesto il soddisfacimento di almeno uno dei criteri elencati",
     "addon.coursecompletion.inprogress": "In corso",
     "addon.coursecompletion.manualselfcompletion": "Conferma personale di completamento",
+    "addon.coursecompletion.nottracked": "In questo corso il tuo stato di completamento non è tracciato.",
     "addon.coursecompletion.notyetstarted": "Non ancora iniziato",
     "addon.coursecompletion.pending": "In attesa",
     "addon.coursecompletion.required": "Obbligatorio",

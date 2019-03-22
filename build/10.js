@@ -599,7 +599,7 @@ var CoreSiteHomeAllCourseListComponentNgFactory = core["_27" /* ɵccf */]("core-
 
 //# sourceMappingURL=all-course-list.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon_icon = __webpack_require__(46);
+var icon_icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./src/core/sitehome/components/categories/categories.ts
 var categories = __webpack_require__(1402);

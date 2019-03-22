@@ -118,6 +118,7 @@
     "addon.coursecompletion.criteriarequiredany": "Bet kuris žemiau pateiktas kriterijus yra būtinas",
     "addon.coursecompletion.inprogress": "Nebaigta",
     "addon.coursecompletion.manualselfcompletion": "Savas užbaigimas neautomatiniu būdu",
+    "addon.coursecompletion.nottracked": "Šiuo metu kurse užbaigimas netaikomas",
     "addon.coursecompletion.notyetstarted": "Dar nepradėta",
     "addon.coursecompletion.pending": "Laukiama",
     "addon.coursecompletion.required": "Būtina",

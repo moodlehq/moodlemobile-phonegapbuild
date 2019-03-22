@@ -485,7 +485,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1377);
 var recaptchamodal_ngfactory = __webpack_require__(1378);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(45);
+var button_ngfactory = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
 var button_button = __webpack_require__(43);
@@ -575,7 +575,7 @@ var iframe = __webpack_require__(36);
 var col = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon_icon = __webpack_require__(46);
+var icon_icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(114);

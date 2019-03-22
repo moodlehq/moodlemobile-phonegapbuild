@@ -107,6 +107,7 @@
     "addon.coursecompletion.criteriarequiredany": "حداقل یکی از ضوابط زیر برآورده شود",
     "addon.coursecompletion.inprogress": "در جریان",
     "addon.coursecompletion.manualselfcompletion": "علامت زدن به عنوان کامل توسط خود افراد",
+    "addon.coursecompletion.nottracked": "تکمیل شما در این درس رصد نمی‌شود",
     "addon.coursecompletion.notyetstarted": "هنوز شروع نشده است",
     "addon.coursecompletion.pending": "در حال بررسی",
     "addon.coursecompletion.required": "لازم است",

@@ -118,6 +118,7 @@
     "addon.coursecompletion.criteriarequiredany": "必须满足下列任一条件",
     "addon.coursecompletion.inprogress": "处理中",
     "addon.coursecompletion.manualselfcompletion": "手动自设完成",
+    "addon.coursecompletion.nottracked": "在此课程中当前没有关于您的进度跟踪信息",
     "addon.coursecompletion.notyetstarted": "还未开始",
     "addon.coursecompletion.pending": "等待中",
     "addon.coursecompletion.required": "必需的",

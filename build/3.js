@@ -563,13 +563,13 @@ var toolbar = __webpack_require__(253);
 var toolbar_item = __webpack_require__(448);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(45);
+var button_ngfactory = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
 var button_button = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon_icon = __webpack_require__(46);
+var icon_icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
 var context_menu_ngfactory = __webpack_require__(81);

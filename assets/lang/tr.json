@@ -99,6 +99,7 @@
     "addon.coursecompletion.criteriarequiredany": "Aşağıdaki herhangi bir kriter gereklidir",
     "addon.coursecompletion.inprogress": "Devam ediyor",
     "addon.coursecompletion.manualselfcompletion": "Kendi kendine elle tamamlama",
+    "addon.coursecompletion.nottracked": "Bu kursta henüz tamamlamış olarak kaydedilmediniz",
     "addon.coursecompletion.notyetstarted": "Henüz başlamadı",
     "addon.coursecompletion.pending": "Bekliyor",
     "addon.coursecompletion.required": "Gerekli",

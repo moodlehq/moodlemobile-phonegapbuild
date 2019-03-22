@@ -208,7 +208,7 @@ var events = __webpack_require__(12);
 var row = __webpack_require__(114);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(45);
+var button_ngfactory = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
 var button_button = __webpack_require__(43);
@@ -223,7 +223,7 @@ var icon_ngfactory = __webpack_require__(112);
 var icon = __webpack_require__(95);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon_icon = __webpack_require__(46);
+var icon_icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(233);

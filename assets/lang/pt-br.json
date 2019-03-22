@@ -137,6 +137,7 @@
     "addon.coursecompletion.criteriarequiredany": "Qualquer um dos critérios abaixo são necessários",
     "addon.coursecompletion.inprogress": "Em andamento",
     "addon.coursecompletion.manualselfcompletion": "Conclusão manual por si mesmo",
+    "addon.coursecompletion.nottracked": "Você não está sendo monitorado pelo sistema de conclusão neste curso",
     "addon.coursecompletion.notyetstarted": "Não iniciado ainda",
     "addon.coursecompletion.pending": "Pendentes",
     "addon.coursecompletion.required": "Necessários",

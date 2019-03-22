@@ -88,6 +88,7 @@
     "addon.coursecompletion.criteriarequiredany": "Oricare dintre criteriile de mai jos sunt necesare",
     "addon.coursecompletion.inprogress": "În curs",
     "addon.coursecompletion.manualselfcompletion": "Auto-finalizare manuală",
+    "addon.coursecompletion.nottracked": "Statusul activității dumneavoastră nu este urmărit în acest curs",
     "addon.coursecompletion.notyetstarted": "Nu a fost încă început",
     "addon.coursecompletion.pending": "În așteptare",
     "addon.coursecompletion.required": "Obligatoriu",

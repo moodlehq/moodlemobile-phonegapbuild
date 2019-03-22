@@ -140,6 +140,7 @@
     "addon.coursecompletion.criteriarequiredany": "Било који од доле наведених критеријума је неопходан",
     "addon.coursecompletion.inprogress": "У току",
     "addon.coursecompletion.manualselfcompletion": "Ручни самостални завршетак",
+    "addon.coursecompletion.nottracked": "Тренутно се не прати ваша активност ка завршетку курса",
     "addon.coursecompletion.notyetstarted": "Није још почео",
     "addon.coursecompletion.pending": "На чекању",
     "addon.coursecompletion.required": "Обавезно",

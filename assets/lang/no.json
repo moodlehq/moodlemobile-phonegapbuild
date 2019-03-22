@@ -140,6 +140,7 @@
     "addon.coursecompletion.criteriarequiredany": "Ethvert kriterium under er obligatorisk",
     "addon.coursecompletion.inprogress": "Pågår",
     "addon.coursecompletion.manualselfcompletion": "Manuell egenregistrering av fullføring",
+    "addon.coursecompletion.nottracked": "For øyeblikket blir ikke din progresjon registrert av fullførtsporingen i dette kurset",
     "addon.coursecompletion.notyetstarted": "Ikke startet ennå",
     "addon.coursecompletion.pending": "Behandles",
     "addon.coursecompletion.required": "Obligatorisk",

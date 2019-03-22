@@ -118,6 +118,7 @@
     "addon.coursecompletion.criteriarequiredany": "Требуется соответствие любому из указанных ниже критериев",
     "addon.coursecompletion.inprogress": "В процессе",
     "addon.coursecompletion.manualselfcompletion": "Пользователь может сам поставить отметку о выполнении",
+    "addon.coursecompletion.nottracked": "Вы в настоящее время не отслеживаете завершение в этом курсе",
     "addon.coursecompletion.notyetstarted": "Еще не началось",
     "addon.coursecompletion.pending": "Ожидается",
     "addon.coursecompletion.required": "Необходимо заполнить",

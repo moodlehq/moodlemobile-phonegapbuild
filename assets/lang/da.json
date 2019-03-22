@@ -120,6 +120,7 @@
     "addon.coursecompletion.criteriarequiredany": "Et af kriterierne herunder er påkrævet",
     "addon.coursecompletion.inprogress": "Igangværende",
     "addon.coursecompletion.manualselfcompletion": "Manuel selvregistrering af gennemførelse",
+    "addon.coursecompletion.nottracked": "For øjeblikket registreres din progression ikke på dette kursus",
     "addon.coursecompletion.notyetstarted": "Ikke begyndt endnu",
     "addon.coursecompletion.pending": "Behandles",
     "addon.coursecompletion.required": "Påkrævet",

@@ -140,6 +140,7 @@
     "addon.coursecompletion.criteriarequiredany": "Bilo koji od dole navedenih kriterijuma je neophodan",
     "addon.coursecompletion.inprogress": "U toku",
     "addon.coursecompletion.manualselfcompletion": "Ručni samostalni završetak",
+    "addon.coursecompletion.nottracked": "Trenutno se ne prati vaša aktivnost ka završetku kursa",
     "addon.coursecompletion.notyetstarted": "Nije još počeo",
     "addon.coursecompletion.pending": "Na čekanju",
     "addon.coursecompletion.required": "Obavezno",

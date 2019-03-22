@@ -116,6 +116,7 @@
     "addon.coursecompletion.criteriarequiredany": "Alla kriterier nedan är obligatoriska",
     "addon.coursecompletion.inprogress": "Pågår",
     "addon.coursecompletion.manualselfcompletion": "Studenten markerar själv som fullföljd",
+    "addon.coursecompletion.nottracked": "Du spåras inte för genomförande i denna kurs vid detta tillfälle",
     "addon.coursecompletion.notyetstarted": "Har ännu inte påbörjats",
     "addon.coursecompletion.pending": "Avvaktar",
     "addon.coursecompletion.required": "Obligatorisk",

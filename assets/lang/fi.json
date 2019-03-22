@@ -99,6 +99,7 @@
     "addon.coursecompletion.criteriarequiredany": "Jokin alla olevista kriteereistä vaaditaan",
     "addon.coursecompletion.inprogress": "Kesken",
     "addon.coursecompletion.manualselfcompletion": "Opiskelijan itse hyväksymät suoritukset",
+    "addon.coursecompletion.nottracked": "Suorituksiasi tällä kurssilla ei seurata.",
     "addon.coursecompletion.notyetstarted": "Ei vielä aloitettu",
     "addon.coursecompletion.pending": "Odottaa",
     "addon.coursecompletion.required": "Vaadittu",

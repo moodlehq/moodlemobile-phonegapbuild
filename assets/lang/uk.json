@@ -98,6 +98,7 @@
     "addon.coursecompletion.criteriarequiredany": "Потрібна відповідність будь-якому критерію",
     "addon.coursecompletion.inprogress": "В процесі",
     "addon.coursecompletion.manualselfcompletion": "Самореєстрація завершення",
+    "addon.coursecompletion.nottracked": "Наразі відслідковування завершення не проводиться на вашому курсі",
     "addon.coursecompletion.notyetstarted": "Ще не почато",
     "addon.coursecompletion.pending": "Очікується",
     "addon.coursecompletion.required": "Необхідні",

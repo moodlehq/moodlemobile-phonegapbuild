@@ -95,6 +95,7 @@
     "addon.coursecompletion.criteriarequiredany": "ទាមទារលក្ខណៈវិនិច្ឆ័យណាមួយខាងក្រោម",
     "addon.coursecompletion.inprogress": "កំពុងដំណើរការ",
     "addon.coursecompletion.manualselfcompletion": "ការបញ្ចប់ដោយផ្ទាល់ (ដោយខ្លួនឯង)",
+    "addon.coursecompletion.nottracked": "នៅពេលនេះអ្នកមិនត្រូវបានតាមដានពីការបញ្ចប់កិច្ចការក្នុងវគ្គសិក្សានេះទេ",
     "addon.coursecompletion.notyetstarted": "មិនទាន់ចាប់ផ្តើម",
     "addon.coursecompletion.pending": "កំពុងរង់ចាំ",
     "addon.coursecompletion.required": "ទាមទារ",

@@ -140,6 +140,7 @@
     "addon.coursecompletion.criteriarequiredany": "Cal que es compleixi algun dels criteris que es mostren a continuació",
     "addon.coursecompletion.inprogress": "En curs",
     "addon.coursecompletion.manualselfcompletion": "Auto-compleció manual",
+    "addon.coursecompletion.nottracked": "A hores d'ara no s'està realitzant el seguiment de la vostra compleció en aquest curs.",
     "addon.coursecompletion.notyetstarted": "No s'ha començat encara",
     "addon.coursecompletion.pending": "Pendents",
     "addon.coursecompletion.required": "Necessari",

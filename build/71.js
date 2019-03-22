@@ -1,6 +1,6 @@
 webpackJsonp([71],{
 
-/***/ 1905:
+/***/ 1906:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -212,7 +212,7 @@ var item_reorder = __webpack_require__(28);
 var item_content = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon = __webpack_require__(46);
+var icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(41);
@@ -296,7 +296,7 @@ var toolbar = __webpack_require__(253);
 var toolbar_item = __webpack_require__(448);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(45);
+var button_ngfactory = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
 var button_button = __webpack_require__(43);

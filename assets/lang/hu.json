@@ -131,6 +131,7 @@
     "addon.coursecompletion.criteriarequiredany": "Bármely alábbi követelmény teljesítendő",
     "addon.coursecompletion.inprogress": "Folyamatban",
     "addon.coursecompletion.manualselfcompletion": "Saját teljesítés kézzel",
+    "addon.coursecompletion.nottracked": "A kurzusban a teljesítését jelenleg nem követjük nyomon",
     "addon.coursecompletion.notyetstarted": "Még nem kezdődött el",
     "addon.coursecompletion.pending": "Függőben",
     "addon.coursecompletion.required": "Kitöltendő",
