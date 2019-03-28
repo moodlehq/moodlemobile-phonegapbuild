@@ -1313,6 +1313,7 @@
     "core.remove": "삭제",
     "core.required": "필수사항",
     "core.requireduserdatamissing": "이 사용자에게는 필요한 프로필 데이터가 없습니다. 사이트에 데이터를 입력하고 다시 시도하십시오. <br> {{$a}}",
+    "core.resourcedisplayopen": "열기",
     "core.resources": "참고자료",
     "core.restore": "복구",
     "core.retry": "다시 시도",

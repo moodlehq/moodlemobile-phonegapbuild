@@ -289,6 +289,7 @@
     "addon.mod_assign_submission_comments.pluginname": "មតិសម្រាប់កិច្ចការ",
     "addon.mod_assign_submission_file.pluginname": "ប្រគល់ឯកសារ",
     "addon.mod_assign_submission_onlinetext.pluginname": "ការប្រគល់កិច្ចការដោយការសរសេរអត្ថបទ",
+    "addon.mod_assign_submission_onlinetext.wordlimitexceeded": "ចំនួនពាក្យកំណត់សម្រាប់កិច្ចការនេះគឺ {{$a.limit}} ពាក្យ។ អ្នកកំពុងព្យាយាមប្រគល់កិច្ចការដែលមានចំនួនពាក្យ {{$a.count}} ពាក្យ។ សូមពិនិត្យកិច្ចការអ្នកឡើងវិញ រួចសូមព្យាយាមម្តងទៀត។",
     "addon.mod_book.errorchapter": "មានកំហុសក្នុងការអានជំពូកក្នុងសៀវភៅ។",
     "addon.mod_book.modulenameplural": "សៀវភៅ",
     "addon.mod_book.toc": "តារាងមាតិកា",

@@ -1,6 +1,6 @@
 webpackJsonp([14],{
 
-/***/ 1971:
+/***/ 1970:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -388,7 +388,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     AddonModForumDiscussionPage.prototype.syncDiscussion = function (showErrors) {
         var _this = this;
         var promises = [];
-        promises.push(this.forumSync.syncDiscussionReplies(this.forumId, this.discussionId).then(function (result) {
+        promises.push(this.forumSync.syncDiscussionReplies(this.discussionId).then(function (result) {
             if (result.warnings && result.warnings.length) {
                 _this.domUtils.showErrorModal(result.warnings[0]);
             }
