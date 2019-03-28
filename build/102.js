@@ -149,6 +149,9 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
         render = '<span [formGroup]="form"><ion-input type="text" name="lastname" \
         [placeholder]="\'addon.mod_data.authorlastname\' | translate" formControlName="lastname"></ion-input></span>';
         template = template.replace(replace, render);
+        // Tags are unsupported right now.
+        replace = new RegExp('##tags##', 'gi');
+        template = template.replace(replace, '');
         return template;
     };
     /**
