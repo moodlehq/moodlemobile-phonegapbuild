@@ -267,7 +267,7 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
             _this.showRetake = !_this.currentPage && _this.retake > 0; // Only show it in first page if it isn't the first retake.
             if (info.preventaccessreasons && info.preventaccessreasons.length) {
                 // If it's a password protected lesson and we have the password, allow playing it.
-                var preventReason = _this.lessonProvider.getPreventAccessReason(info, !!_this.password);
+                var preventReason = _this.lessonProvider.getPreventAccessReason(info, !!_this.password, _this.review);
                 if (preventReason) {
                     // Lesson cannot be played, show message and go back.
                     return Promise.reject(preventReason.message);

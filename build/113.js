@@ -154,8 +154,8 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
                     // A conversation has been read reset counter.
                     conversation.unreadcount = 0;
                     // Conversations changed, invalidate them and refresh unread counts.
-                    _this.messagesProvider.invalidateConversations();
-                    _this.messagesProvider.refreshUnreadConversationCounts();
+                    _this.messagesProvider.invalidateConversations(_this.siteId);
+                    _this.messagesProvider.refreshUnreadConversationCounts(_this.siteId);
                 }
             }
         }, this.siteId);
@@ -251,7 +251,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
         // Load the amount of conversations and contact requests.
         var promises = [];
         promises.push(this.fetchConversationCounts());
-        promises.push(this.messagesProvider.getContactRequestsCount()); // View updated by the event observer.
+        promises.push(this.messagesProvider.getContactRequestsCount(this.siteId)); // View updated by the event observer.
         return Promise.all(promises).then(function () {
             if (typeof _this.favourites.expanded == 'undefined') {
                 // The expanded status hasn't been initialized. Do it now.
@@ -314,7 +314,8 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
             var promises = [];
             promises.push(this.fetchConversationCounts());
             if (refreshUnreadCounts) {
-                promises.push(this.messagesProvider.refreshUnreadConversationCounts()); // View updated by the event observer.
+                // View updated by event observer.
+                promises.push(this.messagesProvider.refreshUnreadConversationCounts(this.siteId));
             }
             return Promise.all(promises);
         }
@@ -334,10 +335,10 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
         var limitFrom = loadingMore ? option.conversations.length : 0, promises = [];
         var data, offlineMessages;
         // Get the conversations and, if needed, the offline messages. Always try to get the latest data.
-        promises.push(this.messagesProvider.invalidateConversations().catch(function () {
+        promises.push(this.messagesProvider.invalidateConversations(this.siteId).catch(function () {
             // Shouldn't happen.
         }).then(function () {
-            return _this.messagesProvider.getConversations(option.type, option.favourites, limitFrom);
+            return _this.messagesProvider.getConversations(option.type, option.favourites, limitFrom, _this.siteId);
         }).then(function (result) {
             data = result;
         }));
@@ -347,7 +348,8 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
             }));
             promises.push(this.fetchConversationCounts());
             if (refreshUnreadCounts) {
-                promises.push(this.messagesProvider.refreshUnreadConversationCounts()); // View updated by the event observer.
+                // View updated by the event observer.
+                promises.push(this.messagesProvider.refreshUnreadConversationCounts(this.siteId));
             }
         }
         return Promise.all(promises).then(function () {
@@ -375,10 +377,10 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
     AddonMessagesGroupConversationsPage.prototype.fetchConversationCounts = function () {
         var _this = this;
         // Always try to get the latest data.
-        return this.messagesProvider.invalidateConversationCounts().catch(function () {
+        return this.messagesProvider.invalidateConversationCounts(this.siteId).catch(function () {
             // Shouldn't happen.
         }).then(function () {
-            return _this.messagesProvider.getConversationCounts();
+            return _this.messagesProvider.getConversationCounts(_this.siteId);
         }).then(function (counts) {
             _this.favourites.count = counts.favourites;
             _this.individual.count = counts.individual;
@@ -581,7 +583,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
         if (refreshUnreadCounts === void 0) { refreshUnreadCounts = true; }
         // Don't invalidate conversations and so, they always try to get latest data.
         var promises = [
-            this.messagesProvider.invalidateContactRequestsCountCache()
+            this.messagesProvider.invalidateContactRequestsCountCache(this.siteId)
         ];
         return this.utils.allPromises(promises).finally(function () {
             return _this.fetchData(refreshUnreadCounts).finally(function () {
