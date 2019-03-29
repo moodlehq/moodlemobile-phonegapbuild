@@ -1,6 +1,6 @@
 webpackJsonp([48],{
 
-/***/ 1925:
+/***/ 1926:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -150,13 +150,8 @@ var reconnect_CoreLoginReconnectPage = /** @class */ (function () {
                 return _this.sitesProvider.updateSiteInfoByUrl(_this.infoSiteUrl, username).then(function () {
                     // Reset fields so the data is not in the view anymore.
                     _this.credForm.controls['password'].reset();
-                    if (_this.pageName) {
-                        // Page defined, go to that page instead of site initial page.
-                        return _this.navCtrl.setRoot(_this.pageName, _this.pageParams);
-                    }
-                    else {
-                        return _this.loginHelper.goToSiteInitialPage();
-                    }
+                    // Go to the site initial page.
+                    return _this.loginHelper.goToSiteInitialPage(_this.navCtrl, _this.pageName, _this.pageParams);
                 }).catch(function (error) {
                     // Error, go back to login page.
                     _this.domUtils.showErrorModalDefault(error, 'core.login.errorupdatesite', true);

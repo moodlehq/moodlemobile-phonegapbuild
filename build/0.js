@@ -941,8 +941,8 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
                     // A discussion has been read reset counter.
                     discussion.unread = false;
                     // Conversations changed, invalidate them and refresh unread counts.
-                    _this.messagesProvider.invalidateConversations();
-                    _this.messagesProvider.refreshUnreadConversationCounts();
+                    _this.messagesProvider.invalidateConversations(_this.siteId);
+                    _this.messagesProvider.refreshUnreadConversationCounts(_this.siteId);
                 }
             }
         }, this.siteId);
@@ -991,9 +991,9 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         var _this = this;
         if (refreshUnreadCounts === void 0) { refreshUnreadCounts = true; }
         var promises = [];
-        promises.push(this.messagesProvider.invalidateDiscussionsCache());
+        promises.push(this.messagesProvider.invalidateDiscussionsCache(this.siteId));
         if (refreshUnreadCounts) {
-            promises.push(this.messagesProvider.invalidateUnreadConversationCounts());
+            promises.push(this.messagesProvider.invalidateUnreadConversationCounts(this.siteId));
         }
         return this.utils.allPromises(promises).finally(function () {
             return _this.fetchData().finally(function () {
@@ -1013,7 +1013,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.loadingMessage = this.loadingMessages;
         this.search.enabled = this.messagesProvider.isSearchMessagesEnabled();
         var promises = [];
-        promises.push(this.messagesProvider.getDiscussions().then(function (discussions) {
+        promises.push(this.messagesProvider.getDiscussions(this.siteId).then(function (discussions) {
             // Convert to an array for sorting.
             var discussionsSorted = [];
             for (var userId in discussions) {
@@ -1024,7 +1024,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
                 return b.message.timecreated - a.message.timecreated;
             });
         }));
-        promises.push(this.messagesProvider.getUnreadConversationCounts());
+        promises.push(this.messagesProvider.getUnreadConversationCounts(this.siteId));
         return Promise.all(promises).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingdiscussions', true);
         }).finally(function () {
@@ -1054,7 +1054,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
         this.appProvider.closeKeyboard();
         this.loaded = false;
         this.loadingMessage = this.search.loading;
-        return this.messagesProvider.searchMessages(query).then(function (searchResults) {
+        return this.messagesProvider.searchMessages(query, undefined, undefined, undefined, this.siteId).then(function (searchResults) {
             _this.search.showResults = true;
             _this.search.results = searchResults.messages;
         }).catch(function (error) {

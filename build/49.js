@@ -1,6 +1,6 @@
 webpackJsonp([49],{
 
-/***/ 1924:
+/***/ 1925:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92,7 +92,7 @@ var init_CoreLoginInitPage = /** @class */ (function () {
                         return _this.sitesProvider.loadSite(redirectData.siteId, redirectData.page, redirectData.params)
                             .then(function (loggedIn) {
                             if (loggedIn) {
-                                return _this.navCtrl.setRoot(redirectData.page, redirectData.params, { animate: false });
+                                return _this.loginHelper.goToSiteInitialPage(_this.navCtrl, redirectData.page, redirectData.params, { animate: false });
                             }
                         }).catch(function () {
                             // Site doesn't exist.
