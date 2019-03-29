@@ -1,6 +1,6 @@
 webpackJsonp([80],{
 
-/***/ 1900:
+/***/ 1899:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -180,7 +180,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1378);
 var unsupported_module_ngfactory = __webpack_require__(1379);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1434);
+var index_ngfactory = __webpack_require__(1433);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(447);
