@@ -1,6 +1,6 @@
 webpackJsonp([117],{
 
-/***/ 1862:
+/***/ 1863:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/addon/coursecompletion/components/components.module.ts
-var components_module = __webpack_require__(700);
+var components_module = __webpack_require__(701);
 
 // CONCATENATED MODULE: ./src/addon/coursecompletion/pages/report/report.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -148,7 +148,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1377);
 var recaptchamodal_ngfactory = __webpack_require__(1378);
 
 // EXTERNAL MODULE: ./src/addon/coursecompletion/components/report/report.ngfactory.js
-var report_ngfactory = __webpack_require__(1419);
+var report_ngfactory = __webpack_require__(1420);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(447);
@@ -196,7 +196,7 @@ var toolbar = __webpack_require__(253);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/addon/coursecompletion/components/report/report.ts
-var report = __webpack_require__(492);
+var report = __webpack_require__(493);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);

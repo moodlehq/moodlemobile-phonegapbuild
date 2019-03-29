@@ -1,6 +1,6 @@
 webpackJsonp([120],{
 
-/***/ 1864:
+/***/ 1862:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/addon/competency/components/components.module.ts
-var components_module = __webpack_require__(702);
+var components_module = __webpack_require__(700);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/coursecompetencies/coursecompetencies.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -148,7 +148,7 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1377);
 var recaptchamodal_ngfactory = __webpack_require__(1378);
 
 // EXTERNAL MODULE: ./src/addon/competency/components/course/course.ngfactory.js
-var course_ngfactory = __webpack_require__(1420);
+var course_ngfactory = __webpack_require__(1419);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(447);
@@ -196,7 +196,7 @@ var toolbar = __webpack_require__(253);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/addon/competency/components/course/course.ts
-var course = __webpack_require__(493);
+var course = __webpack_require__(492);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(9);
