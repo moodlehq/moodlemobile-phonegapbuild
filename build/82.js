@@ -1,88 +1,33 @@
 webpackJsonp([82],{
 
-/***/ 1869:
+/***/ 1898:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModForumNewDiscussionPageModule", function() { return AddonModForumNewDiscussionPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__new_discussion__ = __webpack_require__(1997);
-// (C) Copyright 2015 Martin Dougiamas
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
 
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(8);
 
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(3);
 
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(22);
 
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
 
-var AddonModForumNewDiscussionPageModule = /** @class */ (function () {
-    function AddonModForumNewDiscussionPageModule() {
-    }
-    AddonModForumNewDiscussionPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__new_discussion__["a" /* AddonModForumNewDiscussionPage */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_5__new_discussion__["a" /* AddonModForumNewDiscussionPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
-        })
-    ], AddonModForumNewDiscussionPageModule);
-    return AddonModForumNewDiscussionPageModule;
-}());
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(4);
 
-//# sourceMappingURL=new-discussion.module.js.map
+// EXTERNAL MODULE: ./src/addon/mod/quiz/providers/access-rules-delegate.ts
+var access_rules_delegate = __webpack_require__(131);
 
-/***/ }),
-
-/***/ 1997:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModForumNewDiscussionPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_events__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_groups__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_sync__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_dom__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_utils_text__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_utils_utils__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__core_fileuploader_providers_fileuploader__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_split_view_split_view__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_rich_text_editor_rich_text_editor_ts__ = __webpack_require__(951);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_forum__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_offline__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_helper__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_sync__ = __webpack_require__(203);
+// CONCATENATED MODULE: ./src/addon/mod/quiz/pages/preflight-modal/preflight-modal.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -105,20 +50,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __param = (this && this.__param) || function (paramIndex, decorator) {
-    return function (target, key) { decorator(target, key, paramIndex); }
-};
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -127,484 +58,432 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 /**
- * Page that displays the new discussion form.
+ * Modal that renders the access rules for a quiz.
  */
-var AddonModForumNewDiscussionPage = /** @class */ (function () {
-    function AddonModForumNewDiscussionPage(navParams, navCtrl, translate, domUtils, eventsProvider, groupsProvider, sitesProvider, syncProvider, uploaderProvider, textUtils, utils, forumProvider, forumOffline, forumSync, forumHelper, svComponent) {
-        this.navCtrl = navCtrl;
-        this.translate = translate;
+var preflight_modal_AddonModQuizPreflightModalPage = /** @class */ (function () {
+    function AddonModQuizPreflightModalPage(params, fb, translate, sitesProvider, viewCtrl, accessRuleDelegate, injector, domUtils) {
+        this.viewCtrl = viewCtrl;
+        this.accessRuleDelegate = accessRuleDelegate;
+        this.injector = injector;
         this.domUtils = domUtils;
-        this.eventsProvider = eventsProvider;
-        this.groupsProvider = groupsProvider;
-        this.sitesProvider = sitesProvider;
-        this.syncProvider = syncProvider;
-        this.uploaderProvider = uploaderProvider;
-        this.textUtils = textUtils;
-        this.utils = utils;
-        this.forumProvider = forumProvider;
-        this.forumOffline = forumOffline;
-        this.forumSync = forumSync;
-        this.forumHelper = forumHelper;
-        this.svComponent = svComponent;
-        this.component = __WEBPACK_IMPORTED_MODULE_14__providers_forum__["a" /* AddonModForumProvider */].COMPONENT;
-        this.messageControl = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormControl */]();
-        this.groupsLoaded = false;
-        this.showGroups = false;
-        this.hasOffline = false;
-        this.canCreateAttachments = true; // Assume we can by default.
-        this.canPin = false;
-        this.showForm = false;
-        this.groups = [];
-        this.newDiscussion = {
-            subject: '',
-            message: null,
-            groupId: 0,
-            subscribe: true,
-            pin: false,
-            files: []
-        };
-        this.isDestroyed = false;
-        this.courseId = navParams.get('courseId');
-        this.cmId = navParams.get('cmId');
-        this.forumId = navParams.get('forumId');
-        this.timeCreated = navParams.get('timeCreated');
+        this.accessRulesData = []; // Components and data for each access rule.
+        this.title = params.get('title') || translate.instant('addon.mod_quiz.startattempt');
+        this.quiz = params.get('quiz');
+        this.attempt = params.get('attempt');
+        this.prefetch = params.get('prefetch');
+        this.siteId = params.get('siteId') || sitesProvider.getCurrentSiteId();
+        this.rules = params.get('rules') || [];
+        // Create an empty form group. The controls will be added by the access rules components.
+        this.preflightForm = fb.group({});
     }
     /**
      * Component being initialized.
      */
-    AddonModForumNewDiscussionPage.prototype.ngOnInit = function () {
+    AddonModQuizPreflightModalPage.prototype.ngOnInit = function () {
         var _this = this;
-        this.fetchDiscussionData().finally(function () {
-            _this.groupsLoaded = true;
-        });
-    };
-    /**
-     * User entered the page that contains the component.
-     */
-    AddonModForumNewDiscussionPage.prototype.ionViewDidEnter = function () {
-        var _this = this;
-        // Refresh data if this discussion is synchronized automatically.
-        this.syncObserver = this.eventsProvider.on(__WEBPACK_IMPORTED_MODULE_17__providers_sync__["a" /* AddonModForumSyncProvider */].AUTO_SYNCED, function (data) {
-            if (data.forumId == _this.forumId && data.userId == _this.sitesProvider.getCurrentSiteUserId()) {
-                _this.domUtils.showAlertTranslated('core.notice', 'core.contenteditingsynced');
-                _this.returnToDiscussions();
-            }
-        }, this.sitesProvider.getCurrentSiteId());
-        // Trigger view event, to highlight the current opened discussion in the split view.
-        this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_14__providers_forum__["a" /* AddonModForumProvider */].VIEW_DISCUSSION_EVENT, {
-            forumId: this.forumId,
-            discussion: -this.timeCreated
-        }, this.sitesProvider.getCurrentSiteId());
-    };
-    /**
-     * Fetch if forum uses groups and the groups it uses.
-     *
-     * @param  {boolean} [refresh] Whether we're refreshing data.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModForumNewDiscussionPage.prototype.fetchDiscussionData = function (refresh) {
-        var _this = this;
-        return this.groupsProvider.getActivityGroupMode(this.cmId).then(function (mode) {
-            var promises = [];
-            if (mode === __WEBPACK_IMPORTED_MODULE_5__providers_groups__["a" /* CoreGroupsProvider */].SEPARATEGROUPS || mode === __WEBPACK_IMPORTED_MODULE_5__providers_groups__["a" /* CoreGroupsProvider */].VISIBLEGROUPS) {
-                promises.push(_this.groupsProvider.getActivityAllowedGroups(_this.cmId).then(function (forumGroups) {
-                    var promise;
-                    if (mode === __WEBPACK_IMPORTED_MODULE_5__providers_groups__["a" /* CoreGroupsProvider */].VISIBLEGROUPS) {
-                        // We need to check which of the returned groups the user can post to.
-                        promise = _this.validateVisibleGroups(forumGroups);
-                    }
-                    else {
-                        // WS already filters groups, no need to do it ourselves. Add "All participants" if needed.
-                        promise = _this.addAllParticipantsOption(forumGroups, true);
-                    }
-                    return promise.then(function (forumGroups) {
-                        if (forumGroups.length > 0) {
-                            _this.groups = forumGroups;
-                            // Do not override group id.
-                            _this.newDiscussion.groupId = _this.newDiscussion.groupId || forumGroups[0].id;
-                            _this.showGroups = true;
-                        }
-                        else {
-                            var message = mode === __WEBPACK_IMPORTED_MODULE_5__providers_groups__["a" /* CoreGroupsProvider */].SEPARATEGROUPS ?
-                                'addon.mod_forum.cannotadddiscussionall' : 'addon.mod_forum.cannotadddiscussion';
-                            return Promise.reject(_this.translate.instant(message));
-                        }
-                    });
-                }));
-            }
-            else {
-                _this.showGroups = false;
-                // Use the canAddDiscussion WS to check if the user can add attachments and pin discussions.
-                promises.push(_this.forumProvider.canAddDiscussionToAll(_this.forumId).then(function (response) {
-                    _this.canPin = !!response.canpindiscussions;
-                    _this.canCreateAttachments = !!response.cancreateattachment;
-                }).catch(function () {
-                    // Ignore errors, use default values.
-                }));
-            }
-            // Get forum.
-            promises.push(_this.forumProvider.getForum(_this.courseId, _this.cmId).then(function (forum) {
-                _this.forum = forum;
-            }));
-            // If editing a discussion, get offline data.
-            if (_this.timeCreated && !refresh) {
-                _this.syncId = _this.forumSync.getForumSyncId(_this.forumId);
-                promises.push(_this.forumSync.waitForSync(_this.syncId).then(function () {
-                    // Do not block if the scope is already destroyed.
-                    if (!_this.isDestroyed) {
-                        _this.syncProvider.blockOperation(__WEBPACK_IMPORTED_MODULE_14__providers_forum__["a" /* AddonModForumProvider */].COMPONENT, _this.syncId);
-                    }
-                    return _this.forumOffline.getNewDiscussion(_this.forumId, _this.timeCreated).then(function (discussion) {
-                        _this.hasOffline = true;
-                        discussion.options = discussion.options || {};
-                        _this.newDiscussion.groupId = discussion.groupid ? discussion.groupid : _this.newDiscussion.groupId;
-                        _this.newDiscussion.subject = discussion.subject;
-                        _this.newDiscussion.message = discussion.message;
-                        _this.newDiscussion.subscribe = discussion.options.discussionsubscribe;
-                        _this.newDiscussion.pin = discussion.options.discussionpinned;
-                        _this.messageControl.setValue(discussion.message);
-                        // Treat offline attachments if any.
-                        if (discussion.options.attachmentsid && discussion.options.attachmentsid.offline) {
-                            return _this.forumHelper.getNewDiscussionStoredFiles(_this.forumId, _this.timeCreated).then(function (files) {
-                                _this.newDiscussion.files = files;
+        var promises = [];
+        this.rules.forEach(function (rule) {
+            // Check if preflight is required for rule and, if so, get the component to render it.
+            promises.push(_this.accessRuleDelegate.isPreflightCheckRequiredForRule(rule, _this.quiz, _this.attempt, _this.prefetch, _this.siteId).then(function (required) {
+                if (required) {
+                    return _this.accessRuleDelegate.getPreflightComponent(rule, _this.injector).then(function (component) {
+                        if (component) {
+                            _this.accessRulesData.push({
+                                component: component,
+                                data: {
+                                    rule: rule,
+                                    quiz: _this.quiz,
+                                    attempt: _this.attempt,
+                                    prefetch: _this.prefetch,
+                                    form: _this.preflightForm,
+                                    siteId: _this.siteId
+                                }
                             });
                         }
                     });
-                }));
-            }
-            return Promise.all(promises);
-        }).then(function () {
-            if (!_this.originalData) {
-                // Initialize original data.
-                _this.originalData = {
-                    subject: _this.newDiscussion.subject,
-                    message: _this.newDiscussion.message,
-                    files: _this.newDiscussion.files.slice(),
-                };
-            }
-            _this.showForm = true;
-        }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'addon.mod_forum.errorgetgroups', true);
-            _this.showForm = false;
-        });
-    };
-    /**
-     * Validate which of the groups returned by getActivityAllowedGroups in visible groups should be shown to post to.
-     *
-     * @param  {any[]} forumGroups Forum groups.
-     * @return {Promise<any>} Promise resolved when done.
-     */
-    AddonModForumNewDiscussionPage.prototype.validateVisibleGroups = function (forumGroups) {
-        var _this = this;
-        // We first check if the user can post to all the groups.
-        return this.forumProvider.canAddDiscussionToAll(this.forumId).catch(function () {
-            // The call failed, let's assume he can't.
-            return {
-                status: false,
-                canpindiscussions: false,
-                cancreateattachment: true
-            };
-        }).then(function (response) {
-            _this.canPin = !!response.canpindiscussions;
-            _this.canCreateAttachments = !!response.cancreateattachment;
-            if (response.status) {
-                // The user can post to all groups, add the "All participants" option and return them all.
-                return _this.addAllParticipantsOption(forumGroups, false);
-            }
-            else {
-                // The user can't post to all groups, let's check which groups he can post to.
-                var promises_1 = [];
-                var filtered_1 = [];
-                forumGroups.forEach(function (group) {
-                    promises_1.push(_this.forumProvider.canAddDiscussion(_this.forumId, group.id).catch(function () {
-                        /* The call failed, let's return true so the group is shown. If the user can't post to
-                           it an error will be shown when he tries to add the discussion. */
-                        return {
-                            status: true
-                        };
-                    }).then(function (response) {
-                        if (response.status) {
-                            filtered_1.push(group);
-                        }
-                    }));
-                });
-                return Promise.all(promises_1).then(function () {
-                    return filtered_1;
-                });
-            }
-        });
-    };
-    /**
-     * Filter forum groups, returning only those that are inside user groups.
-     *
-     * @param  {any[]} forumGroups Forum groups.
-     * @param  {any[]} userGroups User groups.
-     * @return {any[]} Filtered groups.
-     */
-    AddonModForumNewDiscussionPage.prototype.filterGroups = function (forumGroups, userGroups) {
-        var filtered = [];
-        var userGroupsIds = userGroups.map(function (g) { return g.id; });
-        forumGroups.forEach(function (fg) {
-            if (userGroupsIds.indexOf(fg.id) > -1) {
-                filtered.push(fg);
-            }
-        });
-        return filtered;
-    };
-    /**
-     * Add the "All participants" option to a list of groups if the user can add a discussion to all participants.
-     *
-     * @param  {any[]}   groups Groups.
-     * @param  {boolean} check  True to check if the user can add a discussion to all participants.
-     * @return {Promise<any[]>} Promise resolved with the list of groups.
-     */
-    AddonModForumNewDiscussionPage.prototype.addAllParticipantsOption = function (groups, check) {
-        var _this = this;
-        if (!this.forumProvider.isAllParticipantsFixed()) {
-            // All participants has a bug, don't add it.
-            return Promise.resolve(groups);
-        }
-        var promise;
-        if (check) {
-            // We need to check if the user can add a discussion to all participants.
-            promise = this.forumProvider.canAddDiscussionToAll(this.forumId).then(function (response) {
-                _this.canPin = !!response.canpindiscussions;
-                _this.canCreateAttachments = !!response.cancreateattachment;
-                return response.status;
-            }).catch(function () {
-                // The call failed, let's assume he can't.
-                return false;
-            });
-        }
-        else {
-            // No need to check, assume the user can.
-            promise = Promise.resolve(true);
-        }
-        return promise.then(function (canAdd) {
-            if (canAdd) {
-                groups.unshift({
-                    courseid: _this.courseId,
-                    id: -1,
-                    name: _this.translate.instant('core.allparticipants')
-                });
-            }
-            return groups;
-        });
-    };
-    /**
-     * Pull to refresh.
-     *
-     * @param {any} refresher Refresher.
-     */
-    AddonModForumNewDiscussionPage.prototype.refreshGroups = function (refresher) {
-        var _this = this;
-        var promises = [
-            this.groupsProvider.invalidateActivityGroupMode(this.cmId),
-            this.groupsProvider.invalidateActivityAllowedGroups(this.cmId),
-            this.forumProvider.invalidateCanAddDiscussion(this.forumId),
-        ];
-        Promise.all(promises).finally(function () {
-            _this.fetchDiscussionData(true).finally(function () {
-                refresher.complete();
-            });
-        });
-    };
-    /**
-     * Convenience function to update or return to discussions depending on device.
-     *
-     * @param {number} [discussionId] Id of the new discussion.
-     * @param {number} [discTimecreated] The time created of the discussion (if offline).
-     */
-    AddonModForumNewDiscussionPage.prototype.returnToDiscussions = function (discussionId, discTimecreated) {
-        var data = {
-            forumId: this.forumId,
-            cmId: this.cmId,
-            discussionId: discussionId,
-            discTimecreated: discTimecreated
-        };
-        this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_14__providers_forum__["a" /* AddonModForumProvider */].NEW_DISCUSSION_EVENT, data, this.sitesProvider.getCurrentSiteId());
-        // Delete the local files from the tmp folder.
-        this.uploaderProvider.clearTmpFiles(this.newDiscussion.files);
-        if (this.svComponent && this.svComponent.isOn()) {
-            // Empty form.
-            this.hasOffline = false;
-            this.newDiscussion.subject = '';
-            this.newDiscussion.message = null;
-            this.newDiscussion.files = [];
-            this.messageEditor.clearText();
-            this.originalData = this.utils.clone(this.newDiscussion);
-            // Trigger view event, to highlight the current opened discussion in the split view.
-            this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_14__providers_forum__["a" /* AddonModForumProvider */].VIEW_DISCUSSION_EVENT, {
-                forumId: this.forumId,
-                discussion: 0
-            }, this.sitesProvider.getCurrentSiteId());
-        }
-        else {
-            this.originalData = null; // Avoid asking for confirmation.
-            this.navCtrl.pop();
-        }
-    };
-    /**
-     * Message changed.
-     *
-     * @param {string} text The new text.
-     */
-    AddonModForumNewDiscussionPage.prototype.onMessageChange = function (text) {
-        this.newDiscussion.message = text;
-    };
-    /**
-     * Add a new discussion.
-     */
-    AddonModForumNewDiscussionPage.prototype.add = function () {
-        var _this = this;
-        var forumName = this.forum.name;
-        var subject = this.newDiscussion.subject;
-        var message = this.newDiscussion.message;
-        var pin = this.newDiscussion.pin;
-        var groupId = this.newDiscussion.groupId;
-        var attachments = this.newDiscussion.files;
-        var discTimecreated = this.timeCreated || Date.now();
-        var options = {
-            discussionsubscribe: !!this.newDiscussion.subscribe
-        };
-        var saveOffline = false;
-        if (!subject) {
-            this.domUtils.showErrorModal('addon.mod_forum.erroremptysubject', true);
-            return;
-        }
-        if (!message) {
-            this.domUtils.showErrorModal('addon.mod_forum.erroremptymessage', true);
-            return;
-        }
-        var modal = this.domUtils.showModalLoading('core.sending', true);
-        var promise;
-        // Add some HTML to the message if needed.
-        message = this.textUtils.formatHtmlLines(message);
-        // Upload attachments first if any.
-        if (attachments.length) {
-            promise = this.forumHelper.uploadOrStoreNewDiscussionFiles(this.forumId, discTimecreated, attachments, false)
-                .catch(function () {
-                // Cannot upload them in online, save them in offline.
-                saveOffline = true;
-                return _this.forumHelper.uploadOrStoreNewDiscussionFiles(_this.forumId, discTimecreated, attachments, true);
-            });
-        }
-        else {
-            promise = Promise.resolve();
-        }
-        promise.then(function (attach) {
-            if (attach) {
-                options.attachmentsid = attach;
-            }
-            if (pin) {
-                options.discussionpinned = true;
-            }
-            if (saveOffline) {
-                // Save discussion in offline.
-                return _this.forumOffline.addNewDiscussion(_this.forumId, forumName, _this.courseId, subject, message, options, groupId, discTimecreated).then(function () {
-                    // Don't return anything.
-                });
-            }
-            else {
-                // Try to send it to server.
-                // Don't allow offline if there are attachments since they were uploaded fine.
-                return _this.forumProvider.addNewDiscussion(_this.forumId, forumName, _this.courseId, subject, message, options, groupId, undefined, discTimecreated, !attachments.length);
-            }
-        }).then(function (discussionId) {
-            if (discussionId) {
-                // Data sent to server, delete stored files (if any).
-                _this.forumHelper.deleteNewDiscussionStoredFiles(_this.forumId, discTimecreated);
-            }
-            _this.returnToDiscussions(discussionId, discTimecreated);
-        }).catch(function (message) {
-            _this.domUtils.showErrorModalDefault(message, 'addon.mod_forum.cannotcreatediscussion', true);
-        }).finally(function () {
-            modal.dismiss();
-        });
-    };
-    /**
-     * Discard an offline saved discussion.
-     */
-    AddonModForumNewDiscussionPage.prototype.discard = function () {
-        var _this = this;
-        this.domUtils.showConfirm(this.translate.instant('core.areyousure')).then(function () {
-            var promises = [];
-            promises.push(_this.forumOffline.deleteNewDiscussion(_this.forumId, _this.timeCreated));
-            promises.push(_this.forumHelper.deleteNewDiscussionStoredFiles(_this.forumId, _this.timeCreated).catch(function () {
-                // Ignore errors, maybe there are no files.
+                }
             }));
-            return Promise.all(promises).then(function () {
-                _this.returnToDiscussions();
-            });
-        }).catch(function () {
-            // Cancelled.
+        });
+        Promise.all(promises).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'Error loading rules');
+        }).finally(function () {
+            _this.loaded = true;
         });
     };
     /**
-     * Check if we can leave the page or not.
+     * Check that the data is valid and send it back.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @param {Event} e Event.
      */
-    AddonModForumNewDiscussionPage.prototype.ionViewCanLeave = function () {
-        var _this = this;
-        var promise;
-        if (this.forumHelper.hasPostDataChanged(this.newDiscussion, this.originalData)) {
-            // Show confirmation if some data has been modified.
-            promise = this.domUtils.showConfirm(this.translate.instant('core.confirmcanceledit'));
+    AddonModQuizPreflightModalPage.prototype.sendData = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (!this.preflightForm.valid) {
+            // Form not valid. Scroll to the first element with errors.
+            if (!this.domUtils.scrollToInputError(this.content)) {
+                // Input not found, show an error modal.
+                this.domUtils.showErrorModal('core.errorinvalidform', true);
+            }
         }
         else {
-            promise = Promise.resolve();
+            this.viewCtrl.dismiss(this.preflightForm.value);
         }
-        return promise.then(function () {
-            // Delete the local files from the tmp folder.
-            _this.uploaderProvider.clearTmpFiles(_this.newDiscussion.files);
-        });
     };
     /**
-     * Runs when the page is about to leave and no longer be the active page.
+     * Close modal.
      */
-    AddonModForumNewDiscussionPage.prototype.ionViewWillLeave = function () {
-        this.syncObserver && this.syncObserver.off();
-    };
-    /**
-     * Page destroyed.
-     */
-    AddonModForumNewDiscussionPage.prototype.ngOnDestroy = function () {
-        if (this.syncId) {
-            this.syncProvider.unblockOperation(__WEBPACK_IMPORTED_MODULE_14__providers_forum__["a" /* AddonModForumProvider */].COMPONENT, this.syncId);
-        }
-        this.isDestroyed = true;
+    AddonModQuizPreflightModalPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_13__components_rich_text_editor_rich_text_editor_ts__["a" /* CoreRichTextEditorComponent */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_13__components_rich_text_editor_rich_text_editor_ts__["a" /* CoreRichTextEditorComponent */])
-    ], AddonModForumNewDiscussionPage.prototype, "messageEditor", void 0);
-    AddonModForumNewDiscussionPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addon-mod-forum-new-discussion',template:/*ion-inline-start:"/home/travis/build/moodlehq/moodlemobile2/src/addon/mod/forum/pages/new-discussion/new-discussion.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_forum.addanewdiscussion\' | translate }}</ion-title>\n        <ion-buttons end>\n            <!-- The context menu will be added in here. -->\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="groupsLoaded" (ionRefresh)="refreshGroups($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-loading [hideUntil]="groupsLoaded">\n        <ion-list *ngIf="showForm">\n            <ion-item>\n                <ion-label stacked>{{ \'addon.mod_forum.subject\' | translate }}</ion-label>\n                <ion-input type="text" [placeholder]="\'addon.mod_forum.subject\' | translate" [(ngModel)]="newDiscussion.subject"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label stacked>{{ \'addon.mod_forum.message\' | translate }}</ion-label>\n                <core-rich-text-editor item-content [control]="messageControl" (contentChanged)="onMessageChange($event)" [placeholder]="\'addon.mod_forum.message\' | translate" name="addon_mod_forum_new_discussion" [component]="component" [componentId]="forum.cmid"></core-rich-text-editor>\n            </ion-item>\n            <ion-item *ngIf="showGroups">\n                <ion-label id="addon-mod-forum-groupslabel">{{ \'addon.mod_forum.group\' | translate }}</ion-label>\n                <ion-select [(ngModel)]="newDiscussion.groupId" aria-labelledby="addon-mod-forum-groupslabel" interface="action-sheet">\n                    <ion-option *ngFor="let group of groups" [value]="group.id">{{ group.name }}</ion-option>\n                </ion-select>\n            </ion-item>\n            <ion-item>\n                <ion-label>{{ \'addon.mod_forum.discussionsubscription\' | translate }}</ion-label>\n                <ion-toggle [(ngModel)]="newDiscussion.subscribe"></ion-toggle>\n            </ion-item>\n            <ion-item *ngIf="canPin">\n                <ion-label>{{ \'addon.mod_forum.discussionpinned\' | translate }}</ion-label>\n                <ion-toggle [(ngModel)]="newDiscussion.pin"></ion-toggle>\n            </ion-item>\n            <core-attachments *ngIf="canCreateAttachments && forum && forum.maxattachments > 0" [files]="newDiscussion.files" [maxSize]="forum.maxbytes" [maxSubmissions]="forum.maxattachments" [component]="component" [componentId]="forum.cmid" [allowOffline]="true"></core-attachments>\n            <ion-item>\n                <ion-row>\n                    <ion-col>\n                        <button ion-button block (click)="add()" [disabled]="newDiscussion.subject == \'\' || newDiscussion.message == null">{{ \'addon.mod_forum.posttoforum\' | translate }}</button>\n                    </ion-col>\n                    <ion-col *ngIf="hasOffline">\n                        <button ion-button block color="light" (click)="discard()">{{ \'core.discard\' | translate }}</button>\n                    </ion-col>\n                </ion-row>\n            </ion-item>\n        </ion-list>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/home/travis/build/moodlehq/moodlemobile2/src/addon/mod/forum/pages/new-discussion/new-discussion.html"*/,
+        Object(core["_9" /* ViewChild */])(ionic_angular["f" /* Content */]),
+        __metadata("design:type", ionic_angular["f" /* Content */])
+    ], AddonModQuizPreflightModalPage.prototype, "content", void 0);
+    AddonModQuizPreflightModalPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-addon-mod-quiz-preflight-modal',
+            templateUrl: 'preflight-modal.html',
         }),
-        __param(15, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["t" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_groups__["a" /* CoreGroupsProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_sync__["a" /* CoreSyncProvider */],
-            __WEBPACK_IMPORTED_MODULE_11__core_fileuploader_providers_fileuploader__["a" /* CoreFileUploaderProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__providers_utils_text__["a" /* CoreTextUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_10__providers_utils_utils__["a" /* CoreUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_14__providers_forum__["a" /* AddonModForumProvider */],
-            __WEBPACK_IMPORTED_MODULE_15__providers_offline__["a" /* AddonModForumOfflineProvider */],
-            __WEBPACK_IMPORTED_MODULE_17__providers_sync__["a" /* AddonModForumSyncProvider */],
-            __WEBPACK_IMPORTED_MODULE_16__providers_helper__["a" /* AddonModForumHelperProvider */],
-            __WEBPACK_IMPORTED_MODULE_12__components_split_view_split_view__["a" /* CoreSplitViewComponent */]])
-    ], AddonModForumNewDiscussionPage);
-    return AddonModForumNewDiscussionPage;
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */], sites["a" /* CoreSitesProvider */],
+            ionic_angular["E" /* ViewController */], access_rules_delegate["a" /* AddonModQuizAccessRuleDelegate */],
+            core["C" /* Injector */], dom["a" /* CoreDomUtilsProvider */]])
+    ], AddonModQuizPreflightModalPage);
+    return AddonModQuizPreflightModalPage;
 }());
 
-//# sourceMappingURL=new-discussion.js.map
+//# sourceMappingURL=preflight-modal.js.map
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
+var directives_module = __webpack_require__(29);
+
+// CONCATENATED MODULE: ./src/addon/mod/quiz/pages/preflight-modal/preflight-modal.module.ts
+// (C) Copyright 2015 Martin Dougiamas
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var preflight_modal_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var preflight_modal_module_AddonModQuizPreflightModalModule = /** @class */ (function () {
+    function AddonModQuizPreflightModalModule() {
+    }
+    AddonModQuizPreflightModalModule = preflight_modal_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                preflight_modal_AddonModQuizPreflightModalPage
+            ],
+            imports: [
+                components_module["a" /* CoreComponentsModule */],
+                directives_module["a" /* CoreDirectivesModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(preflight_modal_AddonModQuizPreflightModalPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ]
+        })
+    ], AddonModQuizPreflightModalModule);
+    return AddonModQuizPreflightModalModule;
+}());
+
+//# sourceMappingURL=preflight-modal.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1365);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1366);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1367);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1368);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1369);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1370);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1371);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1372);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1373);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1376);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1377);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1378);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
+var item_divider = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./src/components/dynamic-component/dynamic-component.ngfactory.js
+var dynamic_component_ngfactory = __webpack_require__(1380);
+
+// EXTERNAL MODULE: ./src/components/dynamic-component/dynamic-component.ts
+var dynamic_component = __webpack_require__(197);
+
+// EXTERNAL MODULE: ./src/providers/logger.ts
+var logger = __webpack_require__(5);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(447);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(37);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(1374);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(207);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(32);
+
+// EXTERNAL MODULE: ./src/directives/back-button.ts
+var back_button = __webpack_require__(676);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(14);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(1375);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(350);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(253);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(27);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(448);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(46);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(43);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(45);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(178);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(104);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
+var loading_ngfactory = __webpack_require__(49);
+
+// EXTERNAL MODULE: ./src/components/loading/loading.ts
+var loading = __webpack_require__(48);
+
+// EXTERNAL MODULE: ./src/providers/utils/utils.ts
+var utils = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(63);
+
+// CONCATENATED MODULE: ./src/addon/mod/quiz/pages/preflight-modal/preflight-modal.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_AddonModQuizPreflightModalPage = [];
+var RenderType_AddonModQuizPreflightModalPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModQuizPreflightModalPage, data: {} });
+
+function View_AddonModQuizPreflightModalPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-item-divider", [["class", "item item-divider"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 3, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 4, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 5, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_divider["a" /* ItemDivider */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null)], null, null); }
+function View_AddonModQuizPreflightModalPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 11, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 5, "core-dynamic-component", [], null, null, null, dynamic_component_ngfactory["b" /* View_CoreDynamicComponent_0 */], dynamic_component_ngfactory["a" /* RenderType_CoreDynamicComponent */])), core["_30" /* ɵdid */](3, 901120, null, 0, dynamic_component["a" /* CoreDynamicComponent */], [logger["a" /* CoreLoggerProvider */], core["o" /* ComponentFactoryResolver */], core["F" /* KeyValueDiffers */], [2, nav_controller["a" /* NavController */]], core["j" /* ChangeDetectorRef */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */]], { component: [0, "component"], data: [1, "data"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, 0, 1, "p", [["padding", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["Couldn't find the directive to render this access rule."])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModQuizPreflightModalPage_2)), core["_30" /* ɵdid */](10, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit.component; var currVal_1 = _v.context.$implicit.data; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = !_v.context.last; _ck(_v, 10, 0, currVal_2); }, null); }
+function View_AddonModQuizPreflightModalPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_52" /* ɵqud */](402653184, 1, { content: 0 }), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 25, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, null, 21, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](5, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](6, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](8, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](9, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](10, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 2, 11, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](14, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](17, 0, null, null, 6, "button", [["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.closeModal() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](18, 1097728, [[2, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](21, 0, null, 0, 1, "ion-icon", [["name", "close"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](22, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](28, 0, null, null, 22, "ion-content", [["class", "addon-mod_quiz-preflight-modal"], ["padding", ""]], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](29, 4374528, [[1, 4]], 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](31, 0, null, 1, 18, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](32, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](34, 0, null, 0, 14, "form", [["ion-list", ""], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngSubmit"], [null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("submit" === en)) {
+        var pd_0 = (core["_44" /* ɵnov */](_v, 36).onSubmit($event) !== false);
+        ad = (pd_0 && ad);
+    } if (("reset" === en)) {
+        var pd_1 = (core["_44" /* ɵnov */](_v, 36).onReset() !== false);
+        ad = (pd_1 && ad);
+    } if (("ngSubmit" === en)) {
+        var pd_2 = (_co.sendData($event) !== false);
+        ad = (pd_2 && ad);
+    } return ad; }, null, null)), core["_30" /* ɵdid */](35, 16384, null, 0, esm5_forms["w" /* ɵbf */], [], null, null), core["_30" /* ɵdid */](36, 540672, null, 0, esm5_forms["h" /* FormGroupDirective */], [[8, null], [8, null]], { form: [0, "form"] }, { ngSubmit: "ngSubmit" }), core["_50" /* ɵprd */](2048, null, esm5_forms["b" /* ControlContainer */], null, [esm5_forms["h" /* FormGroupDirective */]]), core["_30" /* ɵdid */](38, 16384, null, 0, esm5_forms["o" /* NgControlStatusGroup */], [esm5_forms["b" /* ControlContainer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModQuizPreflightModalPage_1)), core["_30" /* ɵdid */](42, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_31" /* ɵeld */](44, 0, null, null, 3, "button", [["block", ""], ["ion-button", ""], ["type", "submit"]], null, null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](45, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](46, 0, ["\n                ", "\n            "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 6, 0); var currVal_5 = "close"; _ck(_v, 22, 0, currVal_5); var currVal_8 = _co.loaded; _ck(_v, 32, 0, currVal_8); var currVal_16 = _co.preflightForm; _ck(_v, 36, 0, currVal_16); var currVal_17 = _co.accessRulesData; _ck(_v, 42, 0, currVal_17); var currVal_18 = ""; _ck(_v, 45, 0, currVal_18); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 11).transform(_co.title)); _ck(_v, 10, 0, currVal_2); var currVal_3 = core["_56" /* ɵunv */](_v, 17, 0, core["_44" /* ɵnov */](_v, 19).transform("core.close")); _ck(_v, 17, 0, currVal_3); var currVal_4 = core["_44" /* ɵnov */](_v, 22)._hidden; _ck(_v, 21, 0, currVal_4); var currVal_6 = core["_44" /* ɵnov */](_v, 29).statusbarPadding; var currVal_7 = core["_44" /* ɵnov */](_v, 29)._hasRefresher; _ck(_v, 28, 0, currVal_6, currVal_7); var currVal_9 = core["_44" /* ɵnov */](_v, 38).ngClassUntouched; var currVal_10 = core["_44" /* ɵnov */](_v, 38).ngClassTouched; var currVal_11 = core["_44" /* ɵnov */](_v, 38).ngClassPristine; var currVal_12 = core["_44" /* ɵnov */](_v, 38).ngClassDirty; var currVal_13 = core["_44" /* ɵnov */](_v, 38).ngClassValid; var currVal_14 = core["_44" /* ɵnov */](_v, 38).ngClassInvalid; var currVal_15 = core["_44" /* ɵnov */](_v, 38).ngClassPending; _ck(_v, 34, 0, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_19 = core["_56" /* ɵunv */](_v, 46, 0, core["_44" /* ɵnov */](_v, 47).transform(_co.title)); _ck(_v, 46, 0, currVal_19); }); }
+function View_AddonModQuizPreflightModalPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-quiz-preflight-modal", [], null, null, null, View_AddonModQuizPreflightModalPage_0, RenderType_AddonModQuizPreflightModalPage)), core["_30" /* ɵdid */](1, 114688, null, 0, preflight_modal_AddonModQuizPreflightModalPage, [nav_params["a" /* NavParams */], esm5_forms["d" /* FormBuilder */], translate_service["a" /* TranslateService */], sites["a" /* CoreSitesProvider */], view_controller["a" /* ViewController */], access_rules_delegate["a" /* AddonModQuizAccessRuleDelegate */], core["C" /* Injector */], dom["a" /* CoreDomUtilsProvider */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var AddonModQuizPreflightModalPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-quiz-preflight-modal", preflight_modal_AddonModQuizPreflightModalPage, View_AddonModQuizPreflightModalPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=preflight-modal.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(346);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(347);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(349);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(348);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(446);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(675);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
+var pipes_module = __webpack_require__(103);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(254);
+
+// CONCATENATED MODULE: ./src/addon/mod/quiz/pages/preflight-modal/preflight-modal.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModQuizPreflightModalModuleNgFactory", function() { return AddonModQuizPreflightModalModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AddonModQuizPreflightModalModuleNgFactory = core["_28" /* ɵcmf */](preflight_modal_module_AddonModQuizPreflightModalModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], AddonModQuizPreflightModalPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, preflight_modal_module_AddonModQuizPreflightModalModule, preflight_modal_module_AddonModQuizPreflightModalModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], preflight_modal_AddonModQuizPreflightModalPage, [])]); });
+
+//# sourceMappingURL=preflight-modal.module.ngfactory.js.map
 
 /***/ })
 
