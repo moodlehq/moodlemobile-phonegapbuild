@@ -3,9 +3,9 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.moodle.moodlemobile"
-        versionCode = "36000"
-        android-versionCode="36000"
-        version   = "3.6.0">
+        versionCode = "36100"
+        android-versionCode="36100"
+        version   = "3.6.1">
     <name>Moodle</name>
 
     <description>
@@ -17,7 +17,7 @@
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
-        <string>3.6.0</string>
+        <string>3.6.1</string>
     </edit-config>
 
     <gap:platform name="ios" />
@@ -72,6 +72,7 @@
     <gap:splash src="splash.png" />
 
     <platform name="android">
+        <resource-file src="google-services.json" target="app/google-services.json" />
         <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
         <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
         <icon src="resources/android/icon/drawable-hdpi-icon.png" density="hdpi"/>
@@ -90,9 +91,14 @@
         <splash src="resources/android/splash/drawable-port-xhdpi-screen.png" density="port-xhdpi"/>
         <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
         <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
+        <resource-file src="resources/android/icon/drawable-ldpi-smallicon.png" target="app/src/main/res/mipmap-ldpi/smallicon.png" />
+        <resource-file src="resources/android/icon/drawable-mdpi-smallicon.png" target="app/src/main/res/mipmap-mdpi/smallicon.png" />
+        <resource-file src="resources/android/icon/drawable-hdpi-smallicon.png" target="app/src/main/res/mipmap-hdpi/smallicon.png" />
+        <resource-file src="resources/android/icon/drawable-xhdpi-smallicon.png" target="app/src/main/res/mipmap-xhdpi/smallicon.png" />
     </platform>
 
     <platform name="ios">
+        <resource-file src="GoogleService-Info.plist" />
         <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
         <icon src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
         <icon src="resources/ios/icon/icon-40.png" width="40" height="40"/>
@@ -127,12 +133,11 @@
         <splash src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" height="2732"/>
     </platform>
 
-    <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" spec="1.1.1" />
+    <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" spec="1.1.5" />
     <gap:plugin name="cordova-android-support-gradle-release" source="npm" spec="2.0.1">
         <param name="ANDROID_SUPPORT_VERSION" value="27.1.0" />
     </gap:plugin>
     <gap:plugin name="cordova-clipboard" source="npm" spec="1.2.1" />
-    <gap:plugin name="cordova-plugin-app-event" source="npm" spec="1.2.1" />
     <gap:plugin name="cordova-plugin-badge" source="npm" spec="0.8.8" />
     <gap:plugin name="cordova-plugin-camera" source="npm" spec="4.0.3" />
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm" spec="4.3.0">
@@ -145,7 +150,7 @@
     <gap:plugin name="cordova-plugin-globalization" source="npm" spec="1.11.0" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0" />
     <gap:plugin name="cordova-plugin-ionic-keyboard" source="npm" spec="2.1.3" />
-    <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" spec="1.0.13" />
+    <gap:plugin name="cordova-plugin-local-notification" source="npm" spec="0.9.0-beta.3" />
     <gap:plugin name="cordova-plugin-media-capture" source="npm" spec="3.0.2" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" spec="2.0.1" />
     <gap:plugin name="cordova-plugin-screen-orientation" source="npm" spec="3.0.1" />
@@ -155,8 +160,9 @@
     <gap:plugin name="cordova-plugin-zip" source="npm" spec="3.1.0" />
     <gap:plugin name="cordova-sqlite-storage" source="git" version="https://github.com/moodlemobile/Cordova-sqlite-storage.git#moodle-phonegapbuild" />
     <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" spec="1.0.1" />
-    <gap:plugin name="phonegap-plugin-push" source="git" version="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle">
-        <param name="SENDER_ID" value="694767596569" />
+    <gap:plugin name="phonegap-plugin-push" source="git" version="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle-v2">
+        <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+" />
+        <variable name="FCM_VERSION" value="17.0.+" />
     </gap:plugin>
 
     <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='Moodle']" mode="merge">
@@ -174,6 +180,10 @@
     </edit-config>
     <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
         <string>We need photo library access to get pictures from there so you can attach them as part of your submissions.</string>
+    </edit-config>
+
+    <edit-config target="UISupportsDocumentBrowser" file="*-Info.plist" mode="merge">
+        <true/>
     </edit-config>
 
     <config-file target="*-Info.plist" parent="CFBundleDocumentTypes">
