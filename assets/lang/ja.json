@@ -1,5 +1,5 @@
 {
-    "addon.badges.alignment": "コンピテンシー",
+    "addon.badges.alignment": "調整",
     "addon.badges.badgedetails": "バッジ詳細",
     "addon.badges.badges": "バッジ",
     "addon.badges.bendorsement": "承認",
@@ -19,7 +19,7 @@
     "addon.badges.issuername": "発行者名",
     "addon.badges.issuerurl": "発行者URL",
     "addon.badges.language": "言語",
-    "addon.badges.noalignment": "このバッジには指定されたコンピテンシーはありません。",
+    "addon.badges.noalignment": "このバッジには指定された外部スキルまたは標準はありません。",
     "addon.badges.nobadges": "利用できるバッジはありません。",
     "addon.badges.norelated": "このバッジには関連バッジはありません。",
     "addon.badges.recipientdetails": "取得者詳細",

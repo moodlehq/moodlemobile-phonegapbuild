@@ -1,5 +1,5 @@
 {
-    "addon.badges.alignment": "Konpetentzia",
+    "addon.badges.alignment": "Lerrokatzea",
     "addon.badges.badgedetails": "Dominaren xehetasunak",
     "addon.badges.badges": "Dominak",
     "addon.badges.bendorsement": "Onarpena",
@@ -19,7 +19,7 @@
     "addon.badges.issuername": "Emailearen izena",
     "addon.badges.issuerurl": "Emailearen URLa",
     "addon.badges.language": "Hizkuntza",
-    "addon.badges.noalignment": "Dominak ez du konpetentziarik ezarrita.",
+    "addon.badges.noalignment": "Dominak ez du kanpoko trebetasun edo estandarrik ezarrita.",
     "addon.badges.nobadges": "Ez dago dominarik eskura.",
     "addon.badges.norelated": "Dominak ez du erlazionatutako beste dominarik.",
     "addon.badges.recipientdetails": "Jasotzailearen zehaztasunak",
