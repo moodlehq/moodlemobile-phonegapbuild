@@ -2,18 +2,18 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "36100"
-        android-versionCode="36100"
-        version   = "3.6.1">
-    <name>Moodle</name>
+        id        = "com.moodle.moodlemobile1"
+        versionCode = "361001"
+        android-versionCode="361001"
+        version   = "361">
+    <name>StatsSA_LMS</name>
 
     <description>
-        Moodle official app
+        StatsSA Learning Management System
     </description>
 
     <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team
+        StatsSA_LMS Mobile team
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
@@ -165,7 +165,7 @@
         <variable name="FCM_VERSION" value="17.0.+" />
     </gap:plugin>
 
-    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='Moodle']" mode="merge">
+    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='StatsSA_LMS']" mode="merge">
         <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true"></activity>
     </edit-config>
 

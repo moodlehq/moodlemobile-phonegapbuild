@@ -1,9 +1,9 @@
 {
-    "app_id": "com.moodle.moodlemobile",
-    "appname": "Moodle Mobile",
+    "app_id": "com.moodle.moodlemobile1",
+    "appname": "StatsSA_LMS",
     "desktopappname": "Moodle Desktop",
     "versioncode": 3610,
-    "versionname": "3.6.1",
+    "versionname": "361",
     "cache_expiration_time": 300000,
     "default_lang": "en",
     "languages": {
@@ -66,7 +66,7 @@
         }
     },
     "customurlscheme": "moodlemobile",
-    "siteurl": "",
+    "siteurl": "http://192.168.5.12",
     "multisitesdisplay": "",
     "skipssoconfirmation": false,
     "forcedefaultlanguage": false,
