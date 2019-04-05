@@ -53,8 +53,7 @@
     },
     "wsservice": "moodle_mobile_app",
     "wsextservice": "local_mobile",
-    
-    
+        
     "customurlscheme": "moodlemobile",
     "siteurl": "http://192.168.5.12",
     "multisitesdisplay": "",
