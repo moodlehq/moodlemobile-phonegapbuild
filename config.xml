@@ -60,7 +60,11 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashScreenDelay" value="15000" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
+<<<<<<< HEAD
 
+=======
+<preference name="AutoHideSplashScreen" value="false" />
+>>>>>>> f9561803a9059a018bc211644e045c1e70330bb2
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
     </feature>
@@ -133,9 +137,30 @@
         <splash src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" height="2732"/>
     </platform>
 
+<<<<<<< HEAD
     <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" spec="1.1.5" />
     <gap:plugin name="cordova-android-support-gradle-release" source="npm" spec="2.0.1">
         <param name="ANDROID_SUPPORT_VERSION" value="27.1.0" />
+=======
+    <gap:plugin name="cordova-plugin-camera" source="npm" />
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" />
+    <gap:plugin name="cordova-plugin-device" source="npm" />
+    <gap:plugin name="cordova-plugin-file" source="npm" />
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
+    <gap:plugin name="cordova-plugin-globalization" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="cordova-plugin-network-information" source="npm" />
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
+    <gap:plugin name="cordova-clipboard" source="npm" />
+
+<gap:plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+
+    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" />
+    <gap:plugin name="phonegap-plugin-push" source="git" version="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle">
+        <param name="SENDER_ID" value="694767596569" />
+>>>>>>> f9561803a9059a018bc211644e045c1e70330bb2
     </gap:plugin>
     <gap:plugin name="cordova-clipboard" source="npm" spec="1.2.1" />
     <gap:plugin name="cordova-plugin-badge" source="npm" spec="0.8.8" />
