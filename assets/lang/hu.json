@@ -1,5 +1,5 @@
 {
-    "addon.badges.alignment": "Készség",
+    "addon.badges.alignment": "Igazítás",
     "addon.badges.badgedetails": "Részletek",
     "addon.badges.badges": "Kitűzők",
     "addon.badges.bendorsement": "Jóváhagyás",
@@ -19,7 +19,7 @@
     "addon.badges.issuername": "Az adományozó neve",
     "addon.badges.issuerurl": "Az adományozó webcíme",
     "addon.badges.language": "Nyelv",
-    "addon.badges.noalignment": "A kitűzőhöz nincs megadva készség.",
+    "addon.badges.noalignment": "A kitűzőhöz nincs megadva külső jártasság vagy szabvány.",
     "addon.badges.nobadges": "Nincs elérhető kitűző.",
     "addon.badges.norelated": "A kitűzőhöz nincsenek kapcsolódó kitűzők.",
     "addon.badges.recipientdetails": "A megjutalmazott adatai",

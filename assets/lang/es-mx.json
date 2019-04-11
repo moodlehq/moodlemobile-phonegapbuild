@@ -1,5 +1,5 @@
 {
-    "addon.badges.alignment": "Competencia",
+    "addon.badges.alignment": "Aleneación",
     "addon.badges.badgedetails": "Detalles de insignia",
     "addon.badges.badges": "Insignias",
     "addon.badges.bendorsement": "Aprobación (idoneidad)",
@@ -19,7 +19,7 @@
     "addon.badges.issuername": "Nombre del emisor",
     "addon.badges.issuerurl": "URL del emisor",
     "addon.badges.language": "Idioma",
-    "addon.badges.noalignment": "La insignia no tiene ninguna competencia especificada.",
+    "addon.badges.noalignment": "La insignia no tiene ninguna habilidad externa o estándar especificado.",
     "addon.badges.nobadges": "No hay insignias disponibles.",
     "addon.badges.norelated": "La insignia no tiene ninguna insignia relacionada.",
     "addon.badges.recipientdetails": "Detalles de receptores",

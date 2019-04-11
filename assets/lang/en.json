@@ -1,5 +1,5 @@
 {
-    "addon.badges.alignment": "Competency",
+    "addon.badges.alignment": "Alignment",
     "addon.badges.badgedetails": "Badge details",
     "addon.badges.badges": "Badges",
     "addon.badges.bendorsement": "Endorsement",
@@ -19,7 +19,7 @@
     "addon.badges.issuername": "Issuer name",
     "addon.badges.issuerurl": "Issuer URL",
     "addon.badges.language": "Language",
-    "addon.badges.noalignment": "This badge does not have any competencies specified.",
+    "addon.badges.noalignment": "This badge does not have any external skills or standards specified.",
     "addon.badges.nobadges": "There are no badges available.",
     "addon.badges.norelated": "This badge does not have any related badges.",
     "addon.badges.recipientdetails": "Recipient details",

@@ -19,7 +19,7 @@
     "addon.badges.issuername": "Jméno vydavatele",
     "addon.badges.issuerurl": "URL schvalovatele",
     "addon.badges.language": "Jazyk",
-    "addon.badges.noalignment": "Tento odznak nemá žádné uvedené kompetence.",
+    "addon.badges.noalignment": "Tento odznak nemá uvedeny žádné externí dovednosti nebo normy.",
     "addon.badges.nobadges": "Žádné odznaky nejsou k dispozici.",
     "addon.badges.norelated": "Tento odznak nemá žádné související odznaky.",
     "addon.badges.recipientdetails": "Podrobnosti o příjemci",
