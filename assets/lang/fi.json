@@ -1260,7 +1260,7 @@
     "core.grades.grade": "Arvosana",
     "core.grades.gradeitem": "Arviointikohde",
     "core.grades.grades": "Arvioinnit",
-    "core.grades.lettergrade": "Kirjainarvosana",
+    "core.grades.lettergrade": "Arviointiasteikkoon skaalattu arvosana",
     "core.grades.nogradesreturned": "Ei tuotu arvosanoja",
     "core.grades.nooutcome": "Ei tavoitetta",
     "core.grades.percentage": "Prosenttia",

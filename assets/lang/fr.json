@@ -229,7 +229,7 @@
     "addon.messages.wouldliketocontactyou": "Aimerait vous contacter",
     "addon.messages.you": "Vous :",
     "addon.messages.youhaveblockeduser": "Vous avez bloqué cet utilisateur.",
-    "addon.messages.yourcontactrequestpending": "Votre demande de contact avec {{$a}} est en suspend",
+    "addon.messages.yourcontactrequestpending": "Votre demande de contact avec {{$a}} est en suspens",
     "addon.mod_assign.acceptsubmissionstatement": "Veuillez accepter les conditions d'envoi.",
     "addon.mod_assign.addattempt": "Autoriser une autre tentative",
     "addon.mod_assign.addnewattempt": "Ajouter une tentative",
