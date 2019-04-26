@@ -85,6 +85,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function () {
     function AddonModAssignSubmissionListPage(navParams, sitesProvider, eventsProvider, domUtils, translate, assignProvider, assignOfflineProvider, assignHelper, groupsProvider) {
         var _this = this;
+        this.sitesProvider = sitesProvider;
         this.domUtils = domUtils;
         this.translate = translate;
         this.assignProvider = assignProvider;
@@ -172,26 +173,22 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
      */
     AddonModAssignSubmissionListPage.prototype.setGroup = function (groupId) {
         var _this = this;
-        var participants, grades;
         this.groupId = groupId;
         this.haveAllParticipants = true;
-        // Get the participants.
-        return this.assignHelper.getParticipants(this.assign, this.groupId).then(function (parts) {
-            _this.haveAllParticipants = true;
-            participants = parts;
-        }).catch(function () {
-            _this.haveAllParticipants = false;
-        }).then(function () {
-            if (!_this.assign.markingworkflow) {
-                // Get assignment grades only if workflow is not enabled to check grading date.
-                return _this.assignProvider.getAssignmentGrades(_this.assign.id).then(function (assignmentGrades) {
-                    grades = assignmentGrades;
-                });
-            }
-        }).then(function () {
-            // We want to show the user data on each submission.
-            return _this.assignProvider.getSubmissionsUserData(_this.submissionsData.submissions, _this.courseId, _this.assign.id, _this.assign.blindmarking && !_this.assign.revealidentities, participants);
-        }).then(function (submissions) {
+        if (!this.sitesProvider.getCurrentSite().wsAvailable('mod_assign_list_participants')) {
+            // Submissions are not displayed in Moodle 3.1 without the local plugin, see MOBILE-2968.
+            this.haveAllParticipants = false;
+            this.submissions = [];
+            return Promise.resolve();
+        }
+        // Fetch submissions and grades.
+        var promises = [
+            this.assignHelper.getSubmissionsUserData(this.assign, this.submissionsData.submissions, this.groupId),
+            // Get assignment grades only if workflow is not enabled to check grading date.
+            !this.assign.markingworkflow ? this.assignProvider.getAssignmentGrades(this.assign.id) : Promise.resolve(null),
+        ];
+        return Promise.all(promises).then(function (_a) {
+            var submissions = _a[0], grades = _a[1];
             // Filter the submissions to get only the ones with the right status and add some extra data.
             var getNeedGrading = _this.selectedStatus == providers_assign["a" /* AddonModAssignProvider */].NEED_GRADING, searchStatus = getNeedGrading ? providers_assign["a" /* AddonModAssignProvider */].SUBMISSION_STATUS_SUBMITTED : _this.selectedStatus, promises = [], showSubmissions = [];
             submissions.forEach(function (submission) {
