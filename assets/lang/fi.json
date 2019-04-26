@@ -1226,6 +1226,7 @@
     "core.favourites": "Suosikit",
     "core.filename": "Tiedostonimi",
     "core.filenameexist": "Tiedoston nimi on jo käytössä: {{$a}}",
+    "core.filenotfound": "Valitettavasti tiedostoa ei löydy",
     "core.fileuploader.addfiletext": "Lisää tiedosto",
     "core.fileuploader.audio": "Ääni",
     "core.fileuploader.camera": "Kamera",

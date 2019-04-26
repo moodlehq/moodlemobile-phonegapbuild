@@ -1102,6 +1102,7 @@
     "core.favourites": "Označeno zvjezdicom",
     "core.filename": "Naziv datoteke",
     "core.filenameexist": "Naziv datoteke već postoji: {{$a}}",
+    "core.filenotfound": "Nažalost, datoteka nije pronađena.",
     "core.fileuploader.addfiletext": "Dodaj datoteku",
     "core.fileuploader.audio": "Zvuk",
     "core.fileuploader.camera": "Kamera",

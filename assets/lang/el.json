@@ -1308,6 +1308,7 @@
     "core.favourites": "Με αστερίσκο",
     "core.filename": "Όνομα αρχείου",
     "core.filenameexist": "Το όνομα του αρχείου υπάρχει ήδη: {{$a}}",
+    "core.filenotfound": "Δυστυχώς, το αρχείο δεν βρέθηκε!",
     "core.fileuploader.addfiletext": "Προσθήκη αρχείου",
     "core.fileuploader.audio": "Audio",
     "core.fileuploader.camera": "Κάμερα",

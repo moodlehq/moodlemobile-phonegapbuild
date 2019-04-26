@@ -993,6 +993,7 @@
     "core.error": "Hata",
     "core.errordownloading": "Dosya indirmede  hata",
     "core.filename": "Dosya adı",
+    "core.filenotfound": "Dosya yok, üzgünüz.",
     "core.fileuploader.addfiletext": "Dosya ekle",
     "core.fileuploader.audio": "Ses",
     "core.fileuploader.camera": "Kamera",

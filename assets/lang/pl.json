@@ -1060,6 +1060,7 @@
     "core.errordownloading": "Błąd pobierania pliku",
     "core.favourites": "Oznaczone gwiazdką",
     "core.filename": "Nazwa pliku",
+    "core.filenotfound": "Nie znaleziono pliku, przepraszamy.",
     "core.fileuploader.addfiletext": "Dodaj plik",
     "core.fileuploader.audio": "Dźwięk",
     "core.fileuploader.camera": "Aparat",

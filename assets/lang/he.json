@@ -1035,6 +1035,7 @@
     "core.errordownloadingsomefiles": "שגיאה בהורדת קבצי המודול. יתכן וחלק מהקבצים חסרים.",
     "core.favourites": "מועדף",
     "core.filename": "שם הקובץ",
+    "core.filenotfound": "לצערנו הקובץ לא נמצא.",
     "core.fileuploader.addfiletext": "הוספת קובץ",
     "core.fileuploader.audio": "קול",
     "core.fileuploader.camera": "מצלמה",

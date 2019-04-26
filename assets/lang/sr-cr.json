@@ -1329,6 +1329,7 @@
     "core.favourites": "Означено",
     "core.filename": "Назив датотеке",
     "core.filenameexist": "Назив датотеке већ постоји: {{$a}}",
+    "core.filenotfound": "Нажалост, датотека није пронађена",
     "core.fileuploader.addfiletext": "Додај датотеку",
     "core.fileuploader.audio": "Аудио",
     "core.fileuploader.camera": "Камера",

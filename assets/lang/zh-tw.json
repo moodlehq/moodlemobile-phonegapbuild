@@ -1209,6 +1209,7 @@
     "core.errorsyncblocked": "由於程序正在進行, 此{{$ a}}目前無法同步.  請稍後再試. 如果問題仍然存在, 請嘗試重新啟動應用程式.",
     "core.filename": "檔案名稱",
     "core.filenameexist": "檔案名已存在: {{$ a}}",
+    "core.filenotfound": "找不到檔案，抱歉。",
     "core.fileuploader.addfiletext": "添加檔案",
     "core.fileuploader.audio": "聲音",
     "core.fileuploader.camera": "相機",

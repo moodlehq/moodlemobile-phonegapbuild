@@ -1331,6 +1331,7 @@
     "core.favourites": "Destacats",
     "core.filename": "Nom de fitxer",
     "core.filenameexist": "Ja existeix un fitxer amb el nom: {{$a}}",
+    "core.filenotfound": "No s'ha trobat el fitxer",
     "core.fileuploader.addfiletext": "Afegeix un fitxer",
     "core.fileuploader.audio": "Àudio",
     "core.fileuploader.camera": "Càmera",

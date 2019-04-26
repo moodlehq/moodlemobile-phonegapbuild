@@ -1312,6 +1312,7 @@
     "core.favourites": "Foretrukne",
     "core.filename": "Filnavn",
     "core.filenameexist": "Filnavnet eksisterer allerede: {{$a}}",
+    "core.filenotfound": "Fandt ikke filen, beklager.",
     "core.fileuploader.addfiletext": "Tilføj fil",
     "core.fileuploader.audio": "Audio",
     "core.fileuploader.camera": "Kamera",

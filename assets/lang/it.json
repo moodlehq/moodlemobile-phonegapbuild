@@ -1244,6 +1244,7 @@
     "core.explanationdigitalminor": "L’informazione è necessaria per stabilire se la tua età è maggiore dell’età del consenso digitale, ossia l’età in cui un individuo può accettare termini e condizioni e acconsentire legalmente alla memorizzazione ed elaborazione dei propri dati.",
     "core.filename": "Nome del file",
     "core.filenameexist": "Un file con lo stesso non è già presente: {{$a}}",
+    "core.filenotfound": "Spiacente, il file non è stato trovato",
     "core.fileuploader.addfiletext": "Aggiungi file",
     "core.fileuploader.audio": "Audio",
     "core.fileuploader.camera": "Camera",

@@ -1075,6 +1075,7 @@
     "core.errorsyncblocked": "이 {{$a}}은(는) 진행 중인 프로세스로 인해 지금 동기화 할 수 없습니다. 나중에 다시 시도 해주십시오. 문제가 지속되면 앱을 다시 시작하십시오.",
     "core.filename": "파일명",
     "core.filenameexist": "파일 이름이 이미 존재합니다: {{$a}}",
+    "core.filenotfound": "파일 없음",
     "core.fileuploader.addfiletext": "파일 추가",
     "core.fileuploader.audio": "오디오",
     "core.fileuploader.camera": "카메라",

@@ -1342,6 +1342,7 @@
     "core.favourites": "Met ster",
     "core.filename": "Bestandsnaam",
     "core.filenameexist": "Bestandsnaam bestaat al: {{$a}}",
+    "core.filenotfound": "Bestand niet gevonden.",
     "core.fileuploader.addfiletext": "Bestand toevoegen",
     "core.fileuploader.audio": "Audio",
     "core.fileuploader.camera": "Camera",

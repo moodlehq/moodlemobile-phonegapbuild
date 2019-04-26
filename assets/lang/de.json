@@ -1342,6 +1342,7 @@
     "core.favourites": "Als Favorit markiert",
     "core.filename": "Dateiname",
     "core.filenameexist": "Der Dateiname existiert bereits: {{$a}}",
+    "core.filenotfound": "Datei nicht gefunden",
     "core.fileuploader.addfiletext": "Datei hinzufügen",
     "core.fileuploader.audio": "Audio",
     "core.fileuploader.camera": "Kamera",

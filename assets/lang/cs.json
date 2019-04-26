@@ -1342,6 +1342,7 @@
     "core.favourites": "Označeno hvězdičkou",
     "core.filename": "Název souboru",
     "core.filenameexist": "Jméno souboru již existuje: {{$a}}",
+    "core.filenotfound": "Litujeme, soubor nebyl nalezen",
     "core.fileuploader.addfiletext": "Přidat soubor",
     "core.fileuploader.audio": "Audio",
     "core.fileuploader.camera": "Fotoaparát",

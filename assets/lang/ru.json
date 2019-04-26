@@ -1290,6 +1290,7 @@
     "core.favourites": "Помеченные",
     "core.filename": "Имя файла",
     "core.filenameexist": "Имя файла уже существует: {{$a}}",
+    "core.filenotfound": "Извините, файл не найден.",
     "core.fileuploader.addfiletext": "Добавить файл",
     "core.fileuploader.audio": "Аудио",
     "core.fileuploader.camera": "Камера",

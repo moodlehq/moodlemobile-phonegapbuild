@@ -1342,6 +1342,7 @@
     "core.favourites": "Nabarmenduta",
     "core.filename": "Fitxategiaren izena",
     "core.filenameexist": "Fitxategi-izena dagoeneko existitzen da: {{$a}}",
+    "core.filenotfound": "Ez da fitxategia aurkitu, sentitzen dugu.",
     "core.fileuploader.addfiletext": "Gehitu fitxategia",
     "core.fileuploader.audio": "Audioa",
     "core.fileuploader.camera": "Kamera",

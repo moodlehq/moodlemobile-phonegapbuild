@@ -1281,6 +1281,7 @@
     "core.favourites": "星付き",
     "core.filename": "ファイル名",
     "core.filenameexist": "ファイル名がすでに存在しています：{{$a}}",
+    "core.filenotfound": "申し訳ございません、ファイルが見つかりませんでした。",
     "core.fileuploader.addfiletext": "ファイルを追加する",
     "core.fileuploader.confirmuploadfile": "{$a}をアップロードしようとしています。続けますか？",
     "core.fileuploader.errorcapturingaudio": "音声キャプチャーのエラー",

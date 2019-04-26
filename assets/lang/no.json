@@ -1175,6 +1175,7 @@
     "core.explanationdigitalminor": "Denne informasjonen er påkrevd for å bestemme om din aldere er over lavalderen for samtykke. Dette er alderen for når en person kan samtykke til vilkår og betingelser og at dataene deres på lovlig vis blir lagret og behandlet.",
     "core.favourites": "Favoritter",
     "core.filename": "Filnavn",
+    "core.filenotfound": "Beklager, men fant ikke filen.",
     "core.fileuploader.addfiletext": "Legg til fil",
     "core.fileuploader.filesofthesetypes": "Aksepterte filtyper:",
     "core.fileuploader.invalidfiletype": "{{$a}}  filtypen aksepteres ikke",

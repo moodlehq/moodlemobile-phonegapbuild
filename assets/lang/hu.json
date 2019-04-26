@@ -1100,6 +1100,7 @@
     "core.explanationdigitalminor": "Erre az adatra nagykorúsága megállapításához van szükség. A nagykorú jogosult feltételeket vállalni, adatai pedig tárolhatók és feldolgozhatók.",
     "core.favourites": "Megjelölt",
     "core.filename": "Állománynév",
+    "core.filenotfound": "Nincs meg az állomány.",
     "core.fileuploader.addfiletext": "Állomány hozzáadása",
     "core.fileuploader.errorcapturingaudio": "Hiba a hang rögzítése közben.",
     "core.fileuploader.errorcapturingvideo": "Nem sikerült videofelvételt készíteni.",

@@ -1281,6 +1281,7 @@
     "core.favourites": "Destacados",
     "core.filename": "Nombre del archivo",
     "core.filenameexist": "El nombre de archivo ya existe: {{$a}}",
+    "core.filenotfound": "Lo sentimos, el archivo no se ha encontrado.",
     "core.fileuploader.addfiletext": "Añadir fichero",
     "core.fileuploader.audio": "Audio",
     "core.fileuploader.camera": "Cámara",

@@ -1157,6 +1157,7 @@
     "core.errorsyncblocked": "{{$a}} не може бути синхронізований прямо зараз через навантаження на сервер. Будь-ласка спробуйте пізніше. Якщо питання залишається невирішеним, спробуйте перезапустити програму.",
     "core.filename": "Ім’я файлу",
     "core.filenameexist": "Файл вже існує: {{$a}}",
+    "core.filenotfound": "Файл не знайдено.",
     "core.fileuploader.addfiletext": "Додати файл",
     "core.fileuploader.audio": "Аудіо",
     "core.fileuploader.camera": "Камера",
