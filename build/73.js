@@ -581,7 +581,7 @@ var attachments = __webpack_require__(299);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var providers_helper = __webpack_require__(136);
+var providers_helper = __webpack_require__(137);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.ngfactory.js
 var input_ngfactory = __webpack_require__(97);

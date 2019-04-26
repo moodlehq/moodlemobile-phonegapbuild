@@ -40,7 +40,7 @@ var dom = __webpack_require__(4);
 var local_notifications = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(138);
+var configconstants = __webpack_require__(133);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/general/general.ts
 // (C) Copyright 2015 Martin Dougiamas

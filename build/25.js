@@ -1,6 +1,6 @@
 webpackJsonp([25],{
 
-/***/ 1976:
+/***/ 1975:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -575,7 +575,7 @@ var item_content = __webpack_require__(33);
 var radio_button_ngfactory = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
-var radio_button = __webpack_require__(137);
+var radio_button = __webpack_require__(138);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-group.js
 var radio_group = __webpack_require__(132);

@@ -760,7 +760,7 @@ var attachments_ngfactory = __webpack_require__(460);
 var attachments = __webpack_require__(299);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var fileuploader_providers_helper = __webpack_require__(136);
+var fileuploader_providers_helper = __webpack_require__(137);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(115);

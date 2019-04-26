@@ -458,7 +458,7 @@ var radio_group = __webpack_require__(132);
 var radio_button_ngfactory = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
-var radio_button = __webpack_require__(137);
+var radio_button = __webpack_require__(138);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ngfactory.js
 var compile_html_ngfactory = __webpack_require__(204);

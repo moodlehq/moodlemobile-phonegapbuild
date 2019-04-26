@@ -37,7 +37,7 @@ var sites = __webpack_require__(1);
 var mimetype = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var providers_helper = __webpack_require__(136);
+var providers_helper = __webpack_require__(137);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user-delegate.ts
 var user_delegate = __webpack_require__(92);
