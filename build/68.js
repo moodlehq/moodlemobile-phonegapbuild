@@ -1,6 +1,6 @@
 webpackJsonp([68],{
 
-/***/ 1964:
+/***/ 1925:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16,19 +16,22 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
-var components_module = __webpack_require__(24);
+var components_module = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(103);
+var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/delegate.ts
-var delegate = __webpack_require__(62);
+var delegate = __webpack_require__(61);
+
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
 
 // CONCATENATED MODULE: ./src/addon/notifications/components/actions/actions.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -55,12 +58,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Component that displays the actions for a notification.
  */
 var actions_AddonNotificationsActionsComponent = /** @class */ (function () {
-    function AddonNotificationsActionsComponent(contentLinksDelegate) {
+    function AddonNotificationsActionsComponent(contentLinksDelegate, sitesProvider) {
         this.contentLinksDelegate = contentLinksDelegate;
+        this.sitesProvider = sitesProvider;
         this.actions = [];
     }
     /**
@@ -68,9 +73,30 @@ var actions_AddonNotificationsActionsComponent = /** @class */ (function () {
      */
     AddonNotificationsActionsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.contentLinksDelegate.getActionsFor(this.contextUrl, this.courseId).then(function (actions) {
+        if (!this.contextUrl) {
+            // No contexturl, nothing to do.
+            return;
+        }
+        this.contentLinksDelegate.getActionsFor(this.contextUrl, this.courseId, undefined, this.data).then(function (actions) {
+            if (!actions.length) {
+                // URL is not supported. Add an action to open it in browser.
+                actions.push({
+                    message: 'core.view',
+                    icon: 'eye',
+                    action: _this.defaultAction.bind(_this)
+                });
+            }
             _this.actions = actions;
         });
+    };
+    /**
+     * Default action. Open in browser.
+     *
+     * @param {string} siteId Site ID to use.
+     * @param {NavController} [navCtrl] NavController.
+     */
+    AddonNotificationsActionsComponent.prototype.defaultAction = function (siteId, navCtrl) {
+        this.sitesProvider.getCurrentSite().openInBrowserWithAutoLogin(this.contextUrl);
     };
     __decorate([
         Object(core["D" /* Input */])(),
@@ -80,12 +106,16 @@ var actions_AddonNotificationsActionsComponent = /** @class */ (function () {
         Object(core["D" /* Input */])(),
         __metadata("design:type", Number)
     ], AddonNotificationsActionsComponent.prototype, "courseId", void 0);
+    __decorate([
+        Object(core["D" /* Input */])(),
+        __metadata("design:type", Object)
+    ], AddonNotificationsActionsComponent.prototype, "data", void 0);
     AddonNotificationsActionsComponent = __decorate([
         Object(core["m" /* Component */])({
             selector: 'addon-notifications-actions',
             templateUrl: 'addon-notifications-actions.html',
         }),
-        __metadata("design:paramtypes", [delegate["a" /* CoreContentLinksDelegate */]])
+        __metadata("design:paramtypes", [delegate["a" /* CoreContentLinksDelegate */], sites["a" /* CoreSitesProvider */]])
     ], AddonNotificationsActionsComponent);
     return AddonNotificationsActionsComponent;
 }());
@@ -146,19 +176,19 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(12);
-
-// EXTERNAL MODULE: ./src/providers/sites.ts
-var sites = __webpack_require__(1);
+var events = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/addon/notifications/providers/notifications.ts
-var providers_notifications = __webpack_require__(294);
+var providers_notifications = __webpack_require__(239);
 
-// EXTERNAL MODULE: ./src/addon/pushnotifications/providers/delegate.ts
-var providers_delegate = __webpack_require__(235);
+// EXTERNAL MODULE: ./src/addon/notifications/providers/helper.ts
+var helper = __webpack_require__(490);
+
+// EXTERNAL MODULE: ./src/core/pushnotifications/providers/delegate.ts
+var providers_delegate = __webpack_require__(130);
 
 // CONCATENATED MODULE: ./src/addon/notifications/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -192,11 +222,12 @@ var list___metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Page that displays the list of notifications.
  */
 var list_AddonNotificationsListPage = /** @class */ (function () {
-    function AddonNotificationsListPage(navParams, domUtils, eventsProvider, sitesProvider, textUtils, utils, notificationsProvider, pushNotificationsDelegate) {
+    function AddonNotificationsListPage(navParams, domUtils, eventsProvider, sitesProvider, textUtils, utils, notificationsProvider, pushNotificationsDelegate, notificationsHelper) {
         this.domUtils = domUtils;
         this.eventsProvider = eventsProvider;
         this.sitesProvider = sitesProvider;
@@ -204,14 +235,13 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
         this.utils = utils;
         this.notificationsProvider = notificationsProvider;
         this.pushNotificationsDelegate = pushNotificationsDelegate;
+        this.notificationsHelper = notificationsHelper;
         this.notifications = [];
         this.notificationsLoaded = false;
         this.canLoadMore = false;
         this.loadMoreError = false;
         this.canMarkAllNotificationsAsRead = false;
         this.loadingMarkAllNotificationsAsRead = false;
-        this.readCount = 0;
-        this.unreadCount = 0;
     }
     /**
      * View loaded.
@@ -238,50 +268,16 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
     AddonNotificationsListPage.prototype.fetchNotifications = function (refresh) {
         var _this = this;
         this.loadMoreError = false;
-        if (refresh) {
-            this.readCount = 0;
-            this.unreadCount = 0;
-        }
-        var limit = providers_notifications["a" /* AddonNotificationsProvider */].LIST_LIMIT;
-        return this.notificationsProvider.getUnreadNotifications(this.unreadCount, limit).then(function (unread) {
-            var promises = [];
-            unread.forEach(_this.formatText.bind(_this));
-            /* Don't add the unread notifications to this.notifications yet. If there are no unread notifications
-               that causes that the "There are no notifications" message is shown in pull to refresh. */
-            _this.unreadCount += unread.length;
-            if (unread.length < limit) {
-                // Limit not reached. Get read notifications until reach the limit.
-                var readLimit_1 = limit - unread.length;
-                promises.push(_this.notificationsProvider.getReadNotifications(_this.readCount, readLimit_1).then(function (read) {
-                    read.forEach(_this.formatText.bind(_this));
-                    _this.readCount += read.length;
-                    if (refresh) {
-                        _this.notifications = unread.concat(read);
-                    }
-                    else {
-                        _this.notifications = _this.notifications.concat(unread, read);
-                    }
-                    _this.canLoadMore = read.length >= readLimit_1;
-                }).catch(function (error) {
-                    if (unread.length == 0) {
-                        _this.domUtils.showErrorModalDefault(error, 'addon.notifications.errorgetnotifications', true);
-                        _this.loadMoreError = true; // Set to prevent infinite calls with infinite-loading.
-                    }
-                }));
+        return this.notificationsHelper.getNotifications(refresh ? [] : this.notifications).then(function (result) {
+            result.notifications.forEach(_this.formatText.bind(_this));
+            if (refresh) {
+                _this.notifications = result.notifications;
             }
             else {
-                if (refresh) {
-                    _this.notifications = unread;
-                }
-                else {
-                    _this.notifications = _this.notifications.concat(unread);
-                }
-                _this.canLoadMore = true;
+                _this.notifications = _this.notifications.concat(result.notifications);
             }
-            return Promise.all(promises).then(function () {
-                // Mark retrieved notifications as read if they are not.
-                _this.markNotificationsAsRead(unread);
-            });
+            _this.canLoadMore = result.canLoadMore;
+            _this.markNotificationsAsRead(result.notifications);
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.notifications.errorgetnotifications', true);
             _this.loadMoreError = true; // Set to prevent infinite calls with infinite-loading.
@@ -315,6 +311,10 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
         var promise;
         if (notifications.length > 0) {
             var promises = notifications.map(function (notification) {
+                if (notification.read) {
+                    // Already read, don't mark it.
+                    return Promise.resolve();
+                }
                 return _this.notificationsProvider.markNotificationRead(notification.id);
             });
             promise = Promise.all(promises).catch(function () {
@@ -392,7 +392,8 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
         list___metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */],
             sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */],
             utils["a" /* CoreUtilsProvider */], providers_notifications["a" /* AddonNotificationsProvider */],
-            providers_delegate["a" /* AddonPushNotificationsDelegate */]])
+            providers_delegate["a" /* CorePushNotificationsDelegate */],
+            helper["a" /* AddonNotificationsHelperProvider */]])
     ], AddonNotificationsListPage);
     return AddonNotificationsListPage;
 }());
@@ -449,40 +450,40 @@ var list_module_AddonNotificationsListPageModule = /** @class */ (function () {
 
 //# sourceMappingURL=list.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1365);
+var action_sheet_component_ngfactory = __webpack_require__(1381);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1366);
+var alert_component_ngfactory = __webpack_require__(1382);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1367);
+var app_root_ngfactory = __webpack_require__(1383);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1368);
+var loading_component_ngfactory = __webpack_require__(1384);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1369);
+var modal_component_ngfactory = __webpack_require__(1385);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1370);
+var picker_component_ngfactory = __webpack_require__(1386);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1371);
+var popover_component_ngfactory = __webpack_require__(1387);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1372);
+var select_popover_component_ngfactory = __webpack_require__(1388);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1373);
+var toast_component_ngfactory = __webpack_require__(1389);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1376);
+var context_menu_popover_ngfactory = __webpack_require__(1392);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1377);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1393);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1378);
+var recaptchamodal_ngfactory = __webpack_require__(1394);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(46);
@@ -494,10 +495,10 @@ var button_button = __webpack_require__(43);
 var config = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(112);
+var icon_ngfactory = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
-var icon = __webpack_require__(95);
+var icon = __webpack_require__(96);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(27);
@@ -506,10 +507,10 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(117);
+var spinner_ngfactory = __webpack_require__(118);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
-var spinner = __webpack_require__(97);
+var spinner = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
 var card = __webpack_require__(79);
@@ -530,10 +531,10 @@ var item_reorder = __webpack_require__(28);
 var item_content = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(208);
+var user_avatar_ngfactory = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
-var user_avatar = __webpack_require__(180);
+var user_avatar = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -542,43 +543,43 @@ var nav_controller = __webpack_require__(21);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(179);
+var avatar = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(14);
+var platform = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(26);
+var url = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(16);
+var filepool = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
-var helper = __webpack_require__(17);
+var providers_helper = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
-var iframe = __webpack_require__(36);
+var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
-var col = __webpack_require__(113);
+var col = __webpack_require__(114);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon_icon = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
-var row = __webpack_require__(114);
+var row = __webpack_require__(115);
 
 // CONCATENATED MODULE: ./src/addon/notifications/components/actions/actions.ngfactory.js
 /**
@@ -587,6 +588,7 @@ var row = __webpack_require__(114);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
+
 
 
 
@@ -608,72 +610,72 @@ function View_AddonNotificationsActionsComponent_2(_l) { return core["_57" /* ɵ
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](4, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { small: [0, "small"], clear: [1, "clear"], block: [2, "block"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, 0, 1, "ion-icon", [["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](7, 147456, null, 0, icon_icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](8, 0, ["\n            ", "\n        "])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "]))], function (_ck, _v) { var currVal_0 = ""; var currVal_1 = ""; var currVal_2 = ""; _ck(_v, 4, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = core["_34" /* ɵinlineInterpolate */](1, "", _v.context.$implicit.icon, ""); _ck(_v, 7, 0, currVal_4); }, function (_ck, _v) { var currVal_3 = core["_44" /* ɵnov */](_v, 7)._hidden; _ck(_v, 6, 0, currVal_3); var currVal_5 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform(_v.context.$implicit.message)); _ck(_v, 8, 0, currVal_5); }); }
 function View_AddonNotificationsActionsComponent_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-row", [["class", "row"], ["justify-content-around", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonNotificationsActionsComponent_2)), core["_30" /* ɵdid */](4, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.actions; _ck(_v, 4, 0, currVal_0); }, null); }
 function View_AddonNotificationsActionsComponent_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonNotificationsActionsComponent_1)), core["_30" /* ɵdid */](1, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.actions && (_co.actions.length > 0)); _ck(_v, 1, 0, currVal_0); }, null); }
-function View_AddonNotificationsActionsComponent_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "addon-notifications-actions", [], null, null, null, View_AddonNotificationsActionsComponent_0, RenderType_AddonNotificationsActionsComponent)), core["_30" /* ɵdid */](1, 114688, null, 0, actions_AddonNotificationsActionsComponent, [delegate["a" /* CoreContentLinksDelegate */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
-var AddonNotificationsActionsComponentNgFactory = core["_27" /* ɵccf */]("addon-notifications-actions", actions_AddonNotificationsActionsComponent, View_AddonNotificationsActionsComponent_Host_0, { contextUrl: "contextUrl", courseId: "courseId" }, {}, []);
+function View_AddonNotificationsActionsComponent_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "addon-notifications-actions", [], null, null, null, View_AddonNotificationsActionsComponent_0, RenderType_AddonNotificationsActionsComponent)), core["_30" /* ɵdid */](1, 114688, null, 0, actions_AddonNotificationsActionsComponent, [delegate["a" /* CoreContentLinksDelegate */], sites["a" /* CoreSitesProvider */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+var AddonNotificationsActionsComponentNgFactory = core["_27" /* ɵccf */]("addon-notifications-actions", actions_AddonNotificationsActionsComponent, View_AddonNotificationsActionsComponent_Host_0, { contextUrl: "contextUrl", courseId: "courseId", data: "data" }, {}, []);
 
 //# sourceMappingURL=actions.ngfactory.js.map
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(116);
+var empty_box_ngfactory = __webpack_require__(117);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(105);
+var empty_box = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
-var date_day_or_time = __webpack_require__(287);
+var date_day_or_time = __webpack_require__(290);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(23);
+var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/pipes/create-links.ts
-var create_links = __webpack_require__(1451);
+var create_links = __webpack_require__(1467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(447);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
-var view_controller = __webpack_require__(37);
+var view_controller = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1374);
+var navbar_ngfactory = __webpack_require__(1390);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(207);
+var navbar = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(676);
+var back_button = __webpack_require__(677);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1375);
+var toolbar_title_ngfactory = __webpack_require__(1391);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
 var toolbar_title = __webpack_require__(350);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(253);
+var toolbar = __webpack_require__(256);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(178);
+var content_ngfactory = __webpack_require__(180);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(104);
+var keyboard = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(140);
+var refresher = __webpack_require__(141);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(38);
+var gesture_controller = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(195);
+var refresher_content_ngfactory = __webpack_require__(197);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(146);
+var refresher_content = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(49);
@@ -685,7 +687,7 @@ var loading = __webpack_require__(48);
 var infinite_loading_ngfactory = __webpack_require__(352);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
-var infinite_loading = __webpack_require__(255);
+var infinite_loading = __webpack_require__(258);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(63);
@@ -765,6 +767,7 @@ var nav_params = __webpack_require__(63);
 
 
 
+
 var styles_AddonNotificationsListPage = [];
 var RenderType_AddonNotificationsListPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonNotificationsListPage, data: {} });
 
@@ -775,7 +778,7 @@ function View_AddonNotificationsListPage_2(_l) { return core["_57" /* ɵvid */](
 function View_AddonNotificationsListPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "button", [["block", ""], ["color", "light"], ["icon-start", ""], ["ion-button", ""]], null, null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, 0, 1, "ion-spinner", [], [[2, "spinner-paused", null]], null, null, spinner_ngfactory["b" /* View_Spinner_0 */], spinner_ngfactory["a" /* RenderType_Spinner */])), core["_30" /* ɵdid */](4, 114688, null, 0, spinner["a" /* Spinner */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var currVal_0 = "light"; var currVal_1 = ""; _ck(_v, 1, 0, currVal_0, currVal_1); _ck(_v, 4, 0); }, function (_ck, _v) { var currVal_2 = core["_44" /* ɵnov */](_v, 4)._paused; _ck(_v, 3, 0, currVal_2); }); }
 function View_AddonNotificationsListPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 7, "div", [["padding", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonNotificationsListPage_2)), core["_30" /* ɵdid */](3, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonNotificationsListPage_3)), core["_30" /* ɵdid */](6, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = !_co.loadingMarkAllNotificationsAsRead; _ck(_v, 3, 0, currVal_0); var currVal_1 = _co.loadingMarkAllNotificationsAsRead; _ck(_v, 6, 0, currVal_1); }, null); }
 function View_AddonNotificationsListPage_5(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "div", [["item-end", ""]], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "core-icon", [["color", "primary"], ["name", "fa-circle"]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](2, 245760, null, 0, icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */]], { name: [0, "name"], color: [1, "color"] }, null)], function (_ck, _v) { var currVal_0 = "fa-circle"; var currVal_1 = "primary"; _ck(_v, 2, 0, currVal_0, currVal_1); }, null); }
-function View_AddonNotificationsListPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 40, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 20, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](4, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](8, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 2, "ion-avatar", [["core-user-avatar", ""], ["item-start", ""]], null, null, null, user_avatar_ngfactory["b" /* View_CoreUserAvatarComponent_0 */], user_avatar_ngfactory["a" /* RenderType_CoreUserAvatarComponent */])), core["_30" /* ɵdid */](11, 770048, null, 0, user_avatar["a" /* CoreUserAvatarComponent */], [nav_controller["a" /* NavController */], sites["a" /* CoreSitesProvider */], utils["a" /* CoreUtilsProvider */], app["a" /* CoreAppProvider */], events["a" /* CoreEventsProvider */]], { user: [0, "user"], profileUrl: [1, "profileUrl"], fullname: [2, "fullname"], userId: [3, "userId"] }, null), core["_30" /* ɵdid */](12, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](14, 0, null, 2, 1, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](15, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 4, 1, null, View_AddonNotificationsListPage_5)), core["_30" /* ɵdid */](18, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](21, null, ["", ""])), core["_49" /* ɵppd */](22, 1), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](25, 0, null, null, 11, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](26, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](30, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](32, 0, null, 2, 3, "p", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](33, 0, null, null, 2, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](34, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null), core["_49" /* ɵppd */](35, 1), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](38, 0, null, null, 1, "addon-notifications-actions", [], null, null, null, View_AddonNotificationsActionsComponent_0, RenderType_AddonNotificationsActionsComponent)), core["_30" /* ɵdid */](39, 114688, null, 0, actions_AddonNotificationsActionsComponent, [delegate["a" /* CoreContentLinksDelegate */]], { contextUrl: [0, "contextUrl"], courseId: [1, "courseId"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit; var currVal_1 = _v.context.$implicit.profileimageurlfrom; var currVal_2 = _v.context.$implicit.userfromfullname; var currVal_3 = _v.context.$implicit.useridfrom; _ck(_v, 11, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_5 = !_v.context.$implicit.timeread; _ck(_v, 18, 0, currVal_5); var currVal_7 = core["_56" /* ɵunv */](_v, 34, 0, _ck(_v, 35, 0, core["_44" /* ɵnov */](_v.parent, 1), _v.context.$implicit.mobiletext)); _ck(_v, 34, 0, currVal_7); var currVal_8 = _v.context.$implicit.contexturl; var currVal_9 = _v.context.$implicit.courseid; _ck(_v, 39, 0, currVal_8, currVal_9); }, function (_ck, _v) { var currVal_4 = _v.context.$implicit.userfromfullname; _ck(_v, 15, 0, currVal_4); var currVal_6 = core["_56" /* ɵunv */](_v, 21, 0, _ck(_v, 22, 0, core["_44" /* ɵnov */](_v.parent, 0), _v.context.$implicit.timecreated)); _ck(_v, 21, 0, currVal_6); }); }
+function View_AddonNotificationsListPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 40, "ion-card", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, card["a" /* Card */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 20, "ion-item", [["class", "item item-block"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](4, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 1, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 3, { _icons: 1 }), core["_30" /* ɵdid */](8, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 2, "ion-avatar", [["core-user-avatar", ""], ["item-start", ""]], null, null, null, user_avatar_ngfactory["b" /* View_CoreUserAvatarComponent_0 */], user_avatar_ngfactory["a" /* RenderType_CoreUserAvatarComponent */])), core["_30" /* ɵdid */](11, 770048, null, 0, user_avatar["a" /* CoreUserAvatarComponent */], [nav_controller["a" /* NavController */], sites["a" /* CoreSitesProvider */], utils["a" /* CoreUtilsProvider */], app["a" /* CoreAppProvider */], events["a" /* CoreEventsProvider */]], { user: [0, "user"], profileUrl: [1, "profileUrl"], fullname: [2, "fullname"], userId: [3, "userId"] }, null), core["_30" /* ɵdid */](12, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](14, 0, null, 2, 1, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](15, null, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, 4, 1, null, View_AddonNotificationsListPage_5)), core["_30" /* ɵdid */](18, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](21, null, ["", ""])), core["_49" /* ɵppd */](22, 1), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](25, 0, null, null, 11, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](26, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](30, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](32, 0, null, 2, 3, "p", [], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](33, 0, null, null, 2, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](34, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null), core["_49" /* ɵppd */](35, 1), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](38, 0, null, null, 1, "addon-notifications-actions", [], null, null, null, View_AddonNotificationsActionsComponent_0, RenderType_AddonNotificationsActionsComponent)), core["_30" /* ɵdid */](39, 114688, null, 0, actions_AddonNotificationsActionsComponent, [delegate["a" /* CoreContentLinksDelegate */], sites["a" /* CoreSitesProvider */]], { contextUrl: [0, "contextUrl"], courseId: [1, "courseId"], data: [2, "data"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit; var currVal_1 = _v.context.$implicit.profileimageurlfrom; var currVal_2 = _v.context.$implicit.userfromfullname; var currVal_3 = _v.context.$implicit.useridfrom; _ck(_v, 11, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_5 = !_v.context.$implicit.timeread; _ck(_v, 18, 0, currVal_5); var currVal_7 = core["_56" /* ɵunv */](_v, 34, 0, _ck(_v, 35, 0, core["_44" /* ɵnov */](_v.parent, 1), _v.context.$implicit.mobiletext)); _ck(_v, 34, 0, currVal_7); var currVal_8 = _v.context.$implicit.contexturl; var currVal_9 = _v.context.$implicit.courseid; var currVal_10 = _v.context.$implicit.customdata; _ck(_v, 39, 0, currVal_8, currVal_9, currVal_10); }, function (_ck, _v) { var currVal_4 = _v.context.$implicit.userfromfullname; _ck(_v, 15, 0, currVal_4); var currVal_6 = core["_56" /* ɵunv */](_v, 21, 0, _ck(_v, 22, 0, core["_44" /* ɵnov */](_v.parent, 0), _v.context.$implicit.timecreated)); _ck(_v, 21, 0, currVal_6); }); }
 function View_AddonNotificationsListPage_6(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-empty-box", [["icon", "notifications"]], null, null, null, empty_box_ngfactory["b" /* View_CoreEmptyBoxComponent_0 */], empty_box_ngfactory["a" /* RenderType_CoreEmptyBoxComponent */])), core["_30" /* ɵdid */](1, 49152, null, 0, empty_box["a" /* CoreEmptyBoxComponent */], [], { message: [0, "message"], icon: [1, "icon"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, core["_44" /* ɵnov */](_v, 2).transform("addon.notifications.therearentnotificationsyet")); var currVal_1 = "notifications"; _ck(_v, 1, 0, currVal_0, currVal_1); }, null); }
 function View_AddonNotificationsListPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, date_day_or_time["a" /* CoreDateDayOrTimePipe */], [logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */], time["a" /* CoreTimeUtilsProvider */]]), core["_47" /* ɵpid */](0, create_links["a" /* CoreCreateLinksPipe */], []), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 12, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](3, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 8, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](6, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](7, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](9, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](10, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](11, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](16, 0, null, null, 26, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](17, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](19, 0, null, 2, 6, "ion-refresher", [], [[2, "refresher-active", null], [4, "top", null]], [[null, "ionRefresh"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("ionRefresh" === en)) {
         var pd_0 = (_co.refreshNotifications($event) !== false);
@@ -784,7 +787,7 @@ function View_AddonNotificationsListPage_0(_l) { return core["_57" /* ɵvid */](
         var pd_0 = (_co.loadMoreNotifications($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, infinite_loading_ngfactory["b" /* View_CoreInfiniteLoadingComponent_0 */], infinite_loading_ngfactory["a" /* RenderType_CoreInfiniteLoadingComponent */])), core["_30" /* ɵdid */](40, 573440, null, 0, infinite_loading["a" /* CoreInfiniteLoadingComponent */], [[2, content["a" /* Content */]]], { enabled: [0, "enabled"], error: [1, "error"] }, { action: "action" }), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 7, 0); var currVal_7 = _co.notificationsLoaded; _ck(_v, 20, 0, currVal_7); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 23, 0, core["_44" /* ɵnov */](_v, 24).transform("core.pulltorefresh")), ""); _ck(_v, 23, 0, currVal_9); var currVal_10 = _co.notificationsLoaded; _ck(_v, 28, 0, currVal_10); var currVal_11 = _co.canMarkAllNotificationsAsRead; _ck(_v, 31, 0, currVal_11); var currVal_12 = _co.notifications; _ck(_v, 34, 0, currVal_12); var currVal_13 = (!_co.notifications || (_co.notifications.length <= 0)); _ck(_v, 37, 0, currVal_13); var currVal_14 = _co.canLoadMore; var currVal_15 = _co.loadMoreError; _ck(_v, 40, 0, currVal_14, currVal_15); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 6)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 6)._sbPadding; _ck(_v, 5, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 11, 0, core["_44" /* ɵnov */](_v, 12).transform("addon.notifications.notifications")); _ck(_v, 11, 0, currVal_2); var currVal_3 = core["_44" /* ɵnov */](_v, 17).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 17)._hasRefresher; _ck(_v, 16, 0, currVal_3, currVal_4); var currVal_5 = (core["_44" /* ɵnov */](_v, 20).state !== "inactive"); var currVal_6 = core["_44" /* ɵnov */](_v, 20)._top; _ck(_v, 19, 0, currVal_5, currVal_6); var currVal_8 = core["_44" /* ɵnov */](_v, 23).r.state; _ck(_v, 22, 0, currVal_8); }); }
-function View_AddonNotificationsListPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-notifications-list", [], null, null, null, View_AddonNotificationsListPage_0, RenderType_AddonNotificationsListPage)), core["_30" /* ɵdid */](1, 180224, null, 0, list_AddonNotificationsListPage, [nav_params["a" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */], providers_notifications["a" /* AddonNotificationsProvider */], providers_delegate["a" /* AddonPushNotificationsDelegate */]], null, null)], null, null); }
+function View_AddonNotificationsListPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-notifications-list", [], null, null, null, View_AddonNotificationsListPage_0, RenderType_AddonNotificationsListPage)), core["_30" /* ɵdid */](1, 180224, null, 0, list_AddonNotificationsListPage, [nav_params["a" /* NavParams */], dom["a" /* CoreDomUtilsProvider */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */], utils["a" /* CoreUtilsProvider */], providers_notifications["a" /* AddonNotificationsProvider */], providers_delegate["a" /* CorePushNotificationsDelegate */], helper["a" /* AddonNotificationsHelperProvider */]], null, null)], null, null); }
 var AddonNotificationsListPageNgFactory = core["_27" /* ɵccf */]("page-addon-notifications-list", list_AddonNotificationsListPage, View_AddonNotificationsListPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=list.ngfactory.js.map
@@ -807,10 +810,10 @@ var missing_translation_handler = __webpack_require__(348);
 var translate_store = __webpack_require__(446);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(675);
+var ionic_angular_module = __webpack_require__(676);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(254);
+var module_loader = __webpack_require__(257);
 
 // CONCATENATED MODULE: ./src/addon/notifications/pages/list/list.module.ngfactory.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotificationsListPageModuleNgFactory", function() { return AddonNotificationsListPageModuleNgFactory; });

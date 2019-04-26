@@ -234,7 +234,7 @@
     "addon.mod_assign.allowsubmissionsfromdate": "開始日時",
     "addon.mod_assign.allowsubmissionsfromdatesummary": "この課題は <strong>{{$a}}</strong> から提出を受け付けます。",
     "addon.mod_assign.applytoteam": "グループ全体に評定およびフィードバックを提供する",
-    "addon.mod_assign.assignmentisdue": "課題の提出期限が到来しました。",
+    "addon.mod_assign.assignmentisdue": "課題の提出期限が到来しています。",
     "addon.mod_assign.attemptnumber": "提出回数",
     "addon.mod_assign.attemptreopenmethod": "提出再オープン",
     "addon.mod_assign.attemptreopenmethod_manual": "手動",

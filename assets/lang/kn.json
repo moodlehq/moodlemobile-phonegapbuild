@@ -3,6 +3,8 @@
     "addon.block_sitemainmenu.pluginname": "ಮುಖ್ಯ ಪರಿವಿಡಿ",
     "addon.blog.blog": "ಬ್ಲಾಗ್",
     "addon.blog.blogentries": "ಬ್ಲಾಗ್ ನಮೂದುಗಳು",
+    "addon.blog.linktooriginalentry": "ಮೂಲ ಬ್ಲಾಗ್ ನಮೂದುಗೆ ಲಿಂಕ್ ಮಾಡಿ",
+    "addon.blog.noentriesyet": "ಗೋಚರಿಸುವ ನಮೂದುಗಳು ಇಲ್ಲಿಲ್ಲ",
     "addon.calendar.calendar": "ಪಂಚಾಂಗ",
     "addon.calendar.calendarevents": "ಪಂಚಾಂಗದ ಘಟನೆಗಳು",
     "addon.calendar.errorloadevent": "ಘಟನೆಯನ್ನು ತೋರಿಸುವಲ್ಲಿ ದೋಷವಿದೆ",

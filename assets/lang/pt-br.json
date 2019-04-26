@@ -1363,7 +1363,7 @@
     "core.login.createaccount": "Cadastrar este novo usuário",
     "core.login.createuserandpass": "Escolha seu usuário e senha",
     "core.login.credentialsdescription": "Por favor, informe seu nome de usuário e senha para efetuar o login",
-    "core.login.emailconfirmsent": "<p>Uma mensagem foi enviada para o seu endereço <b>{{$a}}</b></p><p>Esta mensagem contém instruções para completar a sua inscrição.</p><p>Se você encontrar dificuldades contate o administrador.</p>",
+    "core.login.emailconfirmsent": "<p>Uma mensagem foi enviada para o seu endereço <b>{{$a}}</b></p><p>Esta mensagem contém instruções para completar o seu cadastro.</p><p>Se você encontrar dificuldades contate o administrador.</p>",
     "core.login.emailconfirmsentsuccess": "E-mail de confirmação enviado com sucesso",
     "core.login.emailnotmatch": "Os e-mail não coincidem",
     "core.login.enterthewordsabove": "Digite as palavras acima",
