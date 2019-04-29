@@ -43,13 +43,13 @@ var dom = __webpack_require__(4);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
-var groups = __webpack_require__(68);
+var groups = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(66);
+var fileuploader = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
 var course = __webpack_require__(14);
@@ -632,7 +632,7 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/edit/edit.ngfactory.js
 /**
@@ -763,7 +763,7 @@ var ionic_angular_module = __webpack_require__(678);
 var pipes_module = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(67);
+var course_components_components_module = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(258);

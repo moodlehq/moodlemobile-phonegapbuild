@@ -750,7 +750,7 @@ var rich_text_editor_ngfactory = __webpack_require__(296);
 var rich_text_editor = __webpack_require__(235);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/wiki/pages/edit/edit.ngfactory.js
 /**

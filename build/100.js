@@ -31,7 +31,7 @@ var feedback = __webpack_require__(131);
 var helper = __webpack_require__(237);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
-var groups = __webpack_require__(68);
+var groups = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -460,7 +460,7 @@ var list = __webpack_require__(87);
 var item_divider = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/feedback/pages/nonrespondents/nonrespondents.ngfactory.js
 /**
@@ -593,7 +593,7 @@ var ionic_angular_module = __webpack_require__(678);
 var pipes_module = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(67);
+var course_components_components_module = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(258);

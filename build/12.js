@@ -657,7 +657,7 @@ var refresher_content_ngfactory = __webpack_require__(197);
 var refresher_content = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.ngfactory.js
 /**

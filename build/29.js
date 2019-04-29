@@ -34,7 +34,7 @@ var events = __webpack_require__(11);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
-var mimetype = __webpack_require__(64);
+var mimetype = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
 var providers_helper = __webpack_require__(137);
@@ -544,7 +544,7 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/user/pages/profile/profile.ngfactory.js
 /**

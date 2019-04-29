@@ -296,7 +296,7 @@ var translate_pipe = __webpack_require__(27);
 var lesson = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
-var groups = __webpack_require__(68);
+var groups = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson-offline.ts
 var lesson_offline = __webpack_require__(270);
@@ -314,7 +314,7 @@ var time = __webpack_require__(24);
 var user = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/index/index.ngfactory.js
 /**
@@ -416,7 +416,7 @@ var pipes_module = __webpack_require__(105);
 var components_components_module = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(67);
+var course_components_components_module = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(258);

@@ -1,6 +1,6 @@
 webpackJsonp([89],{
 
-/***/ 1981:
+/***/ 1980:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -538,7 +538,7 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/user-retake/user-retake.ngfactory.js
 /**

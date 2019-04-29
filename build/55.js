@@ -209,7 +209,7 @@ var grades = __webpack_require__(148);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
 var helper = __webpack_require__(143);

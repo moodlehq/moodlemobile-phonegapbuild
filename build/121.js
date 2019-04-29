@@ -211,7 +211,7 @@ var competency = __webpack_require__(144);
 var helper = __webpack_require__(355);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/coursecompetencies/coursecompetencies.ngfactory.js
 /**

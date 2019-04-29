@@ -254,7 +254,7 @@ var module_prefetch_delegate = __webpack_require__(47);
 var delegate = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/sitehome/pages/index/index.ngfactory.js
 /**
@@ -339,7 +339,7 @@ var pipes_module = __webpack_require__(105);
 var components_components_module = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(67);
+var course_components_components_module = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./src/core/block/components/components.module.ts
 var block_components_components_module = __webpack_require__(699);

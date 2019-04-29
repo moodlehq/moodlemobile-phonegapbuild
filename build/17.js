@@ -1583,7 +1583,7 @@ var context_menu_ngfactory = __webpack_require__(81);
 var context_menu = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
-var popover_controller = __webpack_require__(65);
+var popover_controller = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
 var tab = __webpack_require__(70);
@@ -1619,7 +1619,7 @@ var list = __webpack_require__(87);
 var gesture_controller = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
 var modal_controller = __webpack_require__(183);

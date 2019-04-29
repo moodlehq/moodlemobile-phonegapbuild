@@ -287,7 +287,7 @@ var utils_text = __webpack_require__(10);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/siteplugins/pages/module-index/module-index.ngfactory.js
 /**

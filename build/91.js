@@ -211,7 +211,7 @@ var app = __webpack_require__(9);
 var file_helper = __webpack_require__(129);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
-var mimetype = __webpack_require__(64);
+var mimetype = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(11);
@@ -313,7 +313,7 @@ var list = __webpack_require__(87);
 var gesture_controller = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/menu-modal/menu-modal.ngfactory.js
 /**

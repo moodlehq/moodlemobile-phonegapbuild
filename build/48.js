@@ -423,7 +423,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/login/pages/reconnect/reconnect.ngfactory.js
 /**

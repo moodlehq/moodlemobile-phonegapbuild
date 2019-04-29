@@ -249,7 +249,7 @@ var keyboard = __webpack_require__(106);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/login/pages/site-error/site-error.ngfactory.js
 /**

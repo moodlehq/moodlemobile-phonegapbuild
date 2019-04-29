@@ -410,7 +410,7 @@ var infinite_loading_ngfactory = __webpack_require__(353);
 var infinite_loading = __webpack_require__(259);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/conversation-info/conversation-info.ngfactory.js
 /**

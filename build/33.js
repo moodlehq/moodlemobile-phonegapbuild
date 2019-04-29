@@ -336,7 +336,7 @@ var local_file_ngfactory = __webpack_require__(361);
 var local_file = __webpack_require__(266);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
-var mimetype = __webpack_require__(64);
+var mimetype = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -525,7 +525,7 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/sharedfiles/pages/list/list.ngfactory.js
 /**

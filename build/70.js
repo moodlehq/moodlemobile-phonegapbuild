@@ -223,7 +223,7 @@ var notes_sync = __webpack_require__(318);
 var user = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/notes/pages/list/list.ngfactory.js
 /**

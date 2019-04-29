@@ -28,7 +28,7 @@ var esm5_forms = __webpack_require__(22);
 var events = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
-var groups = __webpack_require__(68);
+var groups = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -46,7 +46,7 @@ var utils_text = __webpack_require__(10);
 var utils_utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(66);
+var fileuploader = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(34);
@@ -832,7 +832,7 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/forum/pages/new-discussion/new-discussion.ngfactory.js
 /**

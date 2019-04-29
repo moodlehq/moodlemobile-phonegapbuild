@@ -403,7 +403,7 @@ var filepool = __webpack_require__(17);
 var file_helper = __webpack_require__(129);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
-var mimetype = __webpack_require__(64);
+var mimetype = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(7);
@@ -511,7 +511,7 @@ var refresher_content_ngfactory = __webpack_require__(197);
 var refresher_content = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/files/pages/list/list.ngfactory.js
 /**

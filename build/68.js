@@ -1,6 +1,6 @@
 webpackJsonp([68],{
 
-/***/ 1984:
+/***/ 1983:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -432,7 +432,7 @@ var translate_service = __webpack_require__(18);
 var context_menu_ngfactory = __webpack_require__(81);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
-var popover_controller = __webpack_require__(65);
+var popover_controller = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
 var tab = __webpack_require__(70);

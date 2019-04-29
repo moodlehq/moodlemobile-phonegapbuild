@@ -529,7 +529,7 @@ var toolbar_item = __webpack_require__(450);
 var context_menu_ngfactory = __webpack_require__(81);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
-var popover_controller = __webpack_require__(65);
+var popover_controller = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
 var tab = __webpack_require__(70);
@@ -665,7 +665,7 @@ var ionic_angular_module = __webpack_require__(678);
 var pipes_module = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(67);
+var course_components_components_module = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(258);

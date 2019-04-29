@@ -208,7 +208,7 @@ var dom = __webpack_require__(4);
 var coursecompletion = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/coursecompletion/pages/report/report.ngfactory.js
 /**
