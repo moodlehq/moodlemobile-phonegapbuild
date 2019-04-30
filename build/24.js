@@ -556,10 +556,15 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
                 // Button to continue.
                 if (_this.lesson.review && !result.correctanswer && !result.noanswer && !result.isessayquestion &&
                     !result.maxattemptsreached) {
-                    _this.processData.buttons.push({
-                        label: 'addon.mod_lesson.reviewquestioncontinue',
-                        pageId: result.newpageid
-                    });
+                    /* If both the "Yes, I'd like to try again" and "No, I just want to go on to the next question" point to the
+                       same page then don't show the "No, I just want to go on to the next question" button. It's confusing. */
+                    if (_this.pageData.page.id != result.newpageid) {
+                        // Button to continue the lesson (the page to go is configured by the teacher).
+                        _this.processData.buttons.push({
+                            label: 'addon.mod_lesson.reviewquestioncontinue',
+                            pageId: result.newpageid
+                        });
+                    }
                 }
                 else {
                     _this.processData.buttons.push({
