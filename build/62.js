@@ -64,7 +64,8 @@ var section_selector_CoreCourseSectionSelectorPage = /** @class */ (function () 
         this.sections = navParams.get('sections');
         this.selected = navParams.get('selected');
         var course = navParams.get('course');
-        if (course && course.enablecompletion && course.courseformatoptions && course.courseformatoptions.coursedisplay == 1) {
+        if (course && course.enablecompletion && course.courseformatoptions && course.courseformatoptions.coursedisplay == 1 &&
+            course.completionusertracked !== false) {
             this.sections.forEach(function (section) {
                 var complete = 0, total = 0;
                 section.modules && section.modules.forEach(function (module) {
