@@ -86,7 +86,7 @@ var synchronization_CoreSettingsSynchronizationPage = /** @class */ (function ()
                 var siteEntry = _this.sites.find(function (siteEntry) { return siteEntry.id == site.id; });
                 if (siteEntry) {
                     siteEntry.siteUrl = siteInfo.siteurl;
-                    siteEntry.siteName = siteInfo.sitename;
+                    siteEntry.siteName = site.getSiteName();
                     siteEntry.fullName = siteInfo.fullname;
                 }
             });

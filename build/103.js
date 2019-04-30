@@ -452,7 +452,7 @@ var select_select = __webpack_require__(95);
 var deep_linker = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-group.js
-var radio_group = __webpack_require__(132);
+var radio_group = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.ngfactory.js
 var radio_button_ngfactory = __webpack_require__(173);

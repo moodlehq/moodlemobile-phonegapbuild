@@ -39,6 +39,9 @@ var esm5_forms = __webpack_require__(22);
 // EXTERNAL MODULE: ./src/core/user/providers/user-profile-field-delegate.ts
 var user_profile_field_delegate = __webpack_require__(202);
 
+// EXTERNAL MODULE: ./src/configconstants.ts
+var configconstants = __webpack_require__(132);
+
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
@@ -62,6 +65,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -201,7 +205,7 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
      */
     CoreLoginEmailSignupPage.prototype.treatSiteConfig = function (siteConfig) {
         if (siteConfig && siteConfig.registerauth == 'email' && !this.loginHelper.isEmailSignupDisabled(siteConfig)) {
-            this.siteName = siteConfig.sitename;
+            this.siteName = configconstants["a" /* CoreConfigConstants */].sitename ? configconstants["a" /* CoreConfigConstants */].sitename : siteConfig.sitename;
             this.authInstructions = siteConfig.authinstructions;
             this.ageDigitalConsentVerification = siteConfig.agedigitalconsentverification;
             this.supportName = siteConfig.supportname;

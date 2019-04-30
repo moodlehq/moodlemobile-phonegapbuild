@@ -156,7 +156,7 @@ var dashboard_CoreCoursesDashboardPage = /** @class */ (function () {
      * Load the site name.
      */
     CoreCoursesDashboardPage.prototype.loadSiteName = function () {
-        this.siteName = this.sitesProvider.getCurrentSite().getInfo().sitename;
+        this.siteName = this.sitesProvider.getCurrentSite().getSiteName();
     };
     /**
      * Convenience function to fetch the dashboard data.

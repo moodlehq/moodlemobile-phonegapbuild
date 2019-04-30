@@ -42,6 +42,9 @@ var providers_helper = __webpack_require__(16);
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);
 
+// EXTERNAL MODULE: ./src/configconstants.ts
+var configconstants = __webpack_require__(132);
+
 // CONCATENATED MODULE: ./src/core/login/pages/credentials/credentials.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
@@ -65,6 +68,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -170,7 +174,7 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
      */
     CoreLoginCredentialsPage.prototype.treatSiteConfig = function () {
         if (this.siteConfig) {
-            this.siteName = this.siteConfig.sitename;
+            this.siteName = configconstants["a" /* CoreConfigConstants */].sitename ? configconstants["a" /* CoreConfigConstants */].sitename : this.siteConfig.sitename;
             this.logoUrl = this.siteConfig.logourl || this.siteConfig.compactlogourl;
             this.authInstructions = this.siteConfig.authinstructions || this.translate.instant('core.login.loginsteps');
             this.canSignup = this.siteConfig.registerauth == 'email' && !this.loginHelper.isEmailSignupDisabled(this.siteConfig);
