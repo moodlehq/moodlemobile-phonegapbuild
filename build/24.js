@@ -28,7 +28,7 @@ var esm5_forms = __webpack_require__(22);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var providers_logger = __webpack_require__(5);
@@ -55,10 +55,10 @@ var utils_utils = __webpack_require__(2);
 var lesson = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson-offline.ts
-var lesson_offline = __webpack_require__(270);
+var lesson_offline = __webpack_require__(269);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson-sync.ts
-var lesson_sync = __webpack_require__(271);
+var lesson_sync = __webpack_require__(270);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/helper.ts
 var helper = __webpack_require__(694);
@@ -749,7 +749,7 @@ var format_text = __webpack_require__(41);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(15);
+var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(17);
@@ -818,7 +818,7 @@ var common = __webpack_require__(7);
 var label = __webpack_require__(60);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.ngfactory.js
-var radio_button_ngfactory = __webpack_require__(174);
+var radio_button_ngfactory = __webpack_require__(173);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
 var radio_button = __webpack_require__(138);
@@ -872,7 +872,7 @@ var list = __webpack_require__(87);
 var gesture_controller = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(184);
+var directives_link = __webpack_require__(183);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(449);
@@ -884,7 +884,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(1392);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(679);
@@ -902,7 +902,7 @@ var toolbar = __webpack_require__(257);
 var toolbar_item = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(180);
+var content_ngfactory = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(106);
@@ -920,7 +920,7 @@ var nav_params = __webpack_require__(68);
 var popover_controller = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(183);
+var modal_controller = __webpack_require__(182);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/player/player.ngfactory.js
 /**

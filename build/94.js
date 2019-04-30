@@ -186,7 +186,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(1392);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(32);
@@ -198,13 +198,13 @@ var nav_controller = __webpack_require__(21);
 var back_button = __webpack_require__(679);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(15);
+var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1393);
@@ -261,7 +261,7 @@ var toolbar_item = __webpack_require__(450);
 var popover_controller = __webpack_require__(64);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/glossary.ts
-var glossary = __webpack_require__(202);
+var glossary = __webpack_require__(203);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/offline.ts
 var offline = __webpack_require__(241);
@@ -270,7 +270,7 @@ var offline = __webpack_require__(241);
 var prefetch_handler = __webpack_require__(378);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
-var providers_offline = __webpack_require__(168);
+var providers_offline = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(68);

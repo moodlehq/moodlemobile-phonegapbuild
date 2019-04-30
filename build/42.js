@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 1953:
+/***/ 1952:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var components_module = __webpack_require__(25);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/components/ion-tabs/ion-tabs.ts
 var ion_tabs = __webpack_require__(683);
@@ -31,7 +31,7 @@ var ion_tabs = __webpack_require__(683);
 var mainmenu = __webpack_require__(698);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/delegate.ts
-var delegate = __webpack_require__(175);
+var delegate = __webpack_require__(174);
 
 // CONCATENATED MODULE: ./src/core/mainmenu/pages/menu/menu.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -281,7 +281,7 @@ var app = __webpack_require__(32);
 var config = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(15);
+var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(39);
@@ -375,7 +375,7 @@ var spinner = __webpack_require__(98);
 var tab_highlight = __webpack_require__(493);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
-var split_pane = __webpack_require__(205);
+var split_pane = __webpack_require__(206);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

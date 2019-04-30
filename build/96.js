@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(29);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(67);
@@ -58,10 +58,10 @@ var rich_text_editor = __webpack_require__(235);
 var forum = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
-var offline = __webpack_require__(213);
+var offline = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
-var helper = __webpack_require__(265);
+var helper = __webpack_require__(264);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
 var providers_sync = __webpack_require__(239);
@@ -724,10 +724,10 @@ var toggle_ngfactory = __webpack_require__(1399);
 var toggle = __webpack_require__(352);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(15);
+var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/tap-click/haptic.js
-var haptic = __webpack_require__(185);
+var haptic = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(39);
@@ -790,7 +790,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(1392);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -811,7 +811,7 @@ var toolbar = __webpack_require__(257);
 var toolbar_item = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(180);
+var content_ngfactory = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(106);

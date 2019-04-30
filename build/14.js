@@ -31,7 +31,7 @@ var _ionic_native_network = __webpack_require__(200);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -49,10 +49,10 @@ var fileuploader = __webpack_require__(65);
 var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/rating.ts
-var rating = __webpack_require__(172);
+var rating = __webpack_require__(171);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
-var offline = __webpack_require__(168);
+var offline = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/sync.ts
 var providers_sync = __webpack_require__(218);
@@ -61,10 +61,10 @@ var providers_sync = __webpack_require__(218);
 var forum = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
-var providers_offline = __webpack_require__(213);
+var providers_offline = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
-var helper = __webpack_require__(265);
+var helper = __webpack_require__(264);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
 var forum_providers_sync = __webpack_require__(239);
@@ -628,7 +628,7 @@ var config = __webpack_require__(6);
 var toolbar = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(41);
@@ -640,7 +640,7 @@ var utils_text = __webpack_require__(10);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(15);
+var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
 var url = __webpack_require__(23);
@@ -682,7 +682,7 @@ var card = __webpack_require__(79);
 var icon = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(211);
+var note = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
 var icon_ngfactory = __webpack_require__(113);
@@ -709,7 +709,7 @@ var mimetype = __webpack_require__(63);
 var local_file_ngfactory = __webpack_require__(361);
 
 // EXTERNAL MODULE: ./src/components/local-file/local-file.ts
-var local_file = __webpack_require__(266);
+var local_file = __webpack_require__(265);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var providers_file = __webpack_require__(51);
@@ -730,7 +730,7 @@ var aggregate_ngfactory = __webpack_require__(2012);
 var aggregate = __webpack_require__(1404);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(183);
+var modal_controller = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -808,13 +808,13 @@ var date_day_or_time = __webpack_require__(297);
 var card_header = __webpack_require__(299);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(210);
+var user_avatar_ngfactory = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(181);
+var avatar = __webpack_require__(180);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
-var user_avatar = __webpack_require__(182);
+var user_avatar = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-content.js
 var card_content = __webpack_require__(359);
@@ -990,7 +990,7 @@ var popover_controller = __webpack_require__(64);
 var tab = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(180);
+var content_ngfactory = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(106);
@@ -1244,8 +1244,8 @@ var AddonModForumDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](discuss
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_common__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__rate__ = __webpack_require__(1405);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_utils_dom__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_rating__ = __webpack_require__(172);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_offline__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_rating__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_offline__ = __webpack_require__(185);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -1317,8 +1317,8 @@ var CoreRatingRateComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core_src_translate_service__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__aggregate__ = __webpack_require__(1404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__ = __webpack_require__(182);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *

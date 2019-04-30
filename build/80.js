@@ -22,7 +22,7 @@ var components_module = __webpack_require__(25);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -46,7 +46,7 @@ var providers_scorm = __webpack_require__(215);
 var helper = __webpack_require__(365);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm-sync.ts
-var scorm_sync = __webpack_require__(272);
+var scorm_sync = __webpack_require__(271);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/classes/data-model-12.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -1390,7 +1390,7 @@ var spinner = __webpack_require__(98);
 var iframe_ngfactory = __webpack_require__(364);
 
 // EXTERNAL MODULE: ./src/components/iframe/iframe.ts
-var iframe = __webpack_require__(268);
+var iframe = __webpack_require__(267);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -1411,7 +1411,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(1392);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(32);
@@ -1423,7 +1423,7 @@ var nav_controller = __webpack_require__(21);
 var back_button = __webpack_require__(679);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(15);
+var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1393);
@@ -1468,7 +1468,7 @@ var toolbar_item = __webpack_require__(450);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(180);
+var content_ngfactory = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(31);
@@ -1492,7 +1492,7 @@ var navigation_bar = __webpack_require__(371);
 var nav_params = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(183);
+var modal_controller = __webpack_require__(182);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.ngfactory.js
 /**

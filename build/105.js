@@ -1,6 +1,6 @@
 webpackJsonp([105],{
 
-/***/ 1976:
+/***/ 1977:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,22 +46,22 @@ var sites = __webpack_require__(1);
 var groups = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./src/core/course/providers/course.ts
-var course = __webpack_require__(14);
+var course = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/data.ts
 var data = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
-var helper = __webpack_require__(263);
+var helper = __webpack_require__(201);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/offline.ts
-var offline = __webpack_require__(214);
+var offline = __webpack_require__(276);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
 var fields_delegate = __webpack_require__(119);
@@ -122,7 +122,6 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
         this.translate = translate;
         this.eventsProvider = eventsProvider;
         this.fileUploaderProvider = fileUploaderProvider;
-        this.offlineActions = [];
         this.fields = {};
         this.fieldsArray = [];
         this.forceLeave = false; // To allow leaving the page without checking for changes.
@@ -198,28 +197,13 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
                 });
             }
         }).then(function () {
-            return _this.dataOffline.getEntryActions(_this.data.id, _this.entryId);
-        }).then(function (actions) {
-            _this.offlineActions = actions;
             return _this.dataProvider.getFields(_this.data.id);
         }).then(function (fieldsData) {
             _this.fieldsArray = fieldsData;
             _this.fields = _this.utils.arrayToObject(fieldsData, 'id');
-            return _this.dataHelper.getEntry(_this.data, _this.entryId, _this.offlineActions);
+            return _this.dataHelper.fetchEntry(_this.data, fieldsData, _this.entryId);
         }).then(function (entry) {
-            if (entry) {
-                entry = entry.entry;
-                // Index contents by fieldid.
-                entry.contents = _this.utils.arrayToObject(entry.contents, 'fieldid');
-            }
-            else {
-                entry = {
-                    contents: {}
-                };
-            }
-            return _this.dataHelper.applyOfflineActions(entry, _this.offlineActions, _this.fieldsArray);
-        }).then(function (entryData) {
-            _this.entry = entryData;
+            _this.entry = entry.entry;
             _this.editFormRender = _this.displayEditFields();
         }).catch(function (message) {
             _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);
@@ -539,10 +523,10 @@ var style_ngfactory = __webpack_require__(1444);
 var style = __webpack_require__(463);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ngfactory.js
-var compile_html_ngfactory = __webpack_require__(204);
+var compile_html_ngfactory = __webpack_require__(205);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
-var compile_html = __webpack_require__(176);
+var compile_html = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
 var compile = __webpack_require__(139);
@@ -560,13 +544,13 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(1392);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(679);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(15);
+var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1393);
@@ -617,7 +601,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(180);
+var content_ngfactory = __webpack_require__(179);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(31);
