@@ -830,7 +830,7 @@ var radio_group = __webpack_require__(132);
 var checkbox_ngfactory = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
-var checkbox_checkbox = __webpack_require__(187);
+var checkbox_checkbox = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/option/option.js
 var option_option = __webpack_require__(94);

@@ -292,7 +292,7 @@ var groups = __webpack_require__(67);
 var modal_controller = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
-var providers_helper = __webpack_require__(186);
+var providers_helper = __webpack_require__(187);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/sync.ts
 var sync = __webpack_require__(274);

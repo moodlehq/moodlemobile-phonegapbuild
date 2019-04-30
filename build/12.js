@@ -594,7 +594,7 @@ var directives_link = __webpack_require__(183);
 var checkbox_ngfactory = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
-var checkbox_checkbox = __webpack_require__(187);
+var checkbox_checkbox = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./src/components/show-password/show-password.ngfactory.js
 var show_password_ngfactory = __webpack_require__(688);

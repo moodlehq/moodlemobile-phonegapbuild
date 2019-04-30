@@ -270,7 +270,7 @@ var offline = __webpack_require__(241);
 var prefetch_handler = __webpack_require__(378);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
-var providers_offline = __webpack_require__(185);
+var providers_offline = __webpack_require__(186);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(68);

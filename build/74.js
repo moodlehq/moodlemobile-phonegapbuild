@@ -49,7 +49,7 @@ var fileuploader = __webpack_require__(65);
 var workshop = __webpack_require__(157);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
-var helper = __webpack_require__(186);
+var helper = __webpack_require__(187);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
 var offline = __webpack_require__(169);

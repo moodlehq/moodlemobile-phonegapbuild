@@ -448,6 +448,7 @@
     "addon.mod_forum.numdiscussions": "{{numdiscussions}} discussioni",
     "addon.mod_forum.numreplies": "{{numreplies}} interventi",
     "addon.mod_forum.posttoforum": "Invia al forum",
+    "addon.mod_forum.privatereply": "Rispondi privatamente",
     "addon.mod_forum.re": "Re:",
     "addon.mod_forum.reply": "Rispondi",
     "addon.mod_forum.subject": "Oggetto",
