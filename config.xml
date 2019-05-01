@@ -186,6 +186,14 @@
         <true/>
     </edit-config>
 
+    <!-- Disable firebase analytics. -->
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true" />
+    </config-file>
+    <config-file target="*-Info.plist" parent="FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED">
+        <string>YES</string>
+    </config-file>
+
     <config-file target="*-Info.plist" parent="CFBundleDocumentTypes">
         <array>
             <dict>
