@@ -258,7 +258,7 @@ var toolbar_item = __webpack_require__(450);
 var groups = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(42);
+var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
 var forum = __webpack_require__(158);

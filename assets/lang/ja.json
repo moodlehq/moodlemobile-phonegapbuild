@@ -620,6 +620,7 @@
     "addon.mod_quiz.attemptquiznow": "問題を受験する",
     "addon.mod_quiz.attemptstate": "状態",
     "addon.mod_quiz.cannotsubmitquizdueto": "このクイズの回答は、以下の理由で提出できませんでした：",
+    "addon.mod_quiz.clearchoice": "私の選択をクリアする",
     "addon.mod_quiz.comment": "コメント",
     "addon.mod_quiz.completedon": "完了日時",
     "addon.mod_quiz.confirmclose": "送信した場合、あなたは今回の受験の解答をこれ以上変更することはできません。",

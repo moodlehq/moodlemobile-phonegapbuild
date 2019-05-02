@@ -628,6 +628,7 @@
     "addon.mod_quiz.attemptquiznow": "Faire le test",
     "addon.mod_quiz.attemptstate": "État",
     "addon.mod_quiz.cannotsubmitquizdueto": "Cette tentative de test ne peut pas être envoyée pour les raisons suivantes :",
+    "addon.mod_quiz.clearchoice": "Effacer mon choix",
     "addon.mod_quiz.comment": "Commentaire",
     "addon.mod_quiz.completedon": "Terminé le",
     "addon.mod_quiz.confirmclose": "Une fois la tentative envoyée, vous n'aurez plus la possibilité de modifier vos réponses pour cette tentative.",

@@ -637,6 +637,7 @@
     "addon.mod_quiz.attemptquiznow": "Pokusit se o zvládnutí testu",
     "addon.mod_quiz.attemptstate": "Stav",
     "addon.mod_quiz.cannotsubmitquizdueto": "Tento pokus testu nemůže být odeslán z následujících důvodů:",
+    "addon.mod_quiz.clearchoice": "Zrušit mou volbu",
     "addon.mod_quiz.comment": "Komentář",
     "addon.mod_quiz.completedon": "Dokončení testu",
     "addon.mod_quiz.confirmclose": "Po uzavření pokusu již nebudete mít možnost upravit své odpovědi.",

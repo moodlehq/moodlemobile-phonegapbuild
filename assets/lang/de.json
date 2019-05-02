@@ -632,6 +632,7 @@
     "addon.mod_quiz.attemptquiznow": "Test jetzt durchführen",
     "addon.mod_quiz.attemptstate": "Status",
     "addon.mod_quiz.cannotsubmitquizdueto": "Der Test kann aus folgenden Gründen nicht abgegeben werden:",
+    "addon.mod_quiz.clearchoice": "Meine Auswahl widerrufen",
     "addon.mod_quiz.comment": "Kommentar",
     "addon.mod_quiz.completedon": "Beendet am",
     "addon.mod_quiz.confirmclose": "Sobald Sie diesen Versuch beenden, können Sie Ihre Antworten nicht mehr bearbeiten.",

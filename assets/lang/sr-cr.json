@@ -625,6 +625,7 @@
     "addon.mod_quiz.attemptquiznow": "Започни тест",
     "addon.mod_quiz.attemptstate": "Статус",
     "addon.mod_quiz.cannotsubmitquizdueto": "Овај покушај решавања теста не може да буде предат због следећих разлога:",
+    "addon.mod_quiz.clearchoice": "Обриши мој одговор",
     "addon.mod_quiz.comment": "Коментар",
     "addon.mod_quiz.completedon": "Завршено дана",
     "addon.mod_quiz.confirmclose": "Када предате тест нећете више бити у могућности да мењате своје одговоре.",

@@ -532,6 +532,7 @@
     "addon.mod_quiz.attemptnumber": "Próbálkozás",
     "addon.mod_quiz.attemptquiznow": "Teszt megoldása most",
     "addon.mod_quiz.attemptstate": "Állapot",
+    "addon.mod_quiz.clearchoice": "Választásom törlése",
     "addon.mod_quiz.comment": "Megjegyzés",
     "addon.mod_quiz.completedon": "Befejezés dátuma",
     "addon.mod_quiz.confirmclose": "A leadás után a próbálkozással kapcsolatos válaszait nem módosíthatja.",
