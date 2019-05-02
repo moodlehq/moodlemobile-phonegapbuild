@@ -492,6 +492,7 @@
     "addon.mod_forum.refreshdiscussions": "ディスカッションをリフレッシュ",
     "addon.mod_forum.refreshposts": "ディスカッション投稿をリフレッシュ",
     "addon.mod_forum.reply": "返信",
+    "addon.mod_forum.replyplaceholder": "あなたの返信を記述する ...",
     "addon.mod_forum.subject": "件名",
     "addon.mod_forum.unread": "未読",
     "addon.mod_forum.unreadpostsnumber": "未読件数 {{$a}}",

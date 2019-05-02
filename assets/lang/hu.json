@@ -431,6 +431,7 @@
     "addon.mod_forum.privatereply": "Magánjellegű válaszadás",
     "addon.mod_forum.re": "Tárgy:",
     "addon.mod_forum.reply": "Válasz",
+    "addon.mod_forum.replyplaceholder": "Írja meg válaszát...",
     "addon.mod_forum.subject": "Téma",
     "addon.mod_forum.unread": "Elolvasatlan",
     "addon.mod_forum.unreadpostsnumber": "{{$a}} elolvasatlan hozzászólás",

@@ -496,6 +496,7 @@
     "addon.mod_forum.refreshdiscussions": "Osveži diskusije",
     "addon.mod_forum.refreshposts": "Osveži postove",
     "addon.mod_forum.reply": "Odgovori",
+    "addon.mod_forum.replyplaceholder": "Napišite odgovor ...",
     "addon.mod_forum.subject": "Tema",
     "addon.mod_forum.unread": "Nepročitano",
     "addon.mod_forum.unreadpostsnumber": "Broj nepročitanih poruka: {{$a}}",

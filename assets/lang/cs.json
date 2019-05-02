@@ -508,6 +508,7 @@
     "addon.mod_forum.refreshdiscussions": "Obnovit diskuse",
     "addon.mod_forum.refreshposts": "Obnovit diskusní příspěvky",
     "addon.mod_forum.reply": "Odpovědět",
+    "addon.mod_forum.replyplaceholder": "Napište svou odpověď ...",
     "addon.mod_forum.subject": "Předmět",
     "addon.mod_forum.unread": "Nepřečteno",
     "addon.mod_forum.unreadpostsnumber": "Nepřečtené příspěvky: {{$a}}",

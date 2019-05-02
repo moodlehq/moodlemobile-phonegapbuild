@@ -492,6 +492,7 @@
     "addon.mod_forum.refreshdiscussions": "Ανανεώστε τις συζητήσεις",
     "addon.mod_forum.refreshposts": "Ανανεώστε τα μηνύματα της συζήτησης",
     "addon.mod_forum.reply": "Απάντηση",
+    "addon.mod_forum.replyplaceholder": "Γράψτε την απάντησή σας ...",
     "addon.mod_forum.subject": "Θέμα",
     "addon.mod_forum.unread": "Μη αναγνωσμένο",
     "addon.mod_forum.unreadpostsnumber": "{{$a}} μη αναγνωσμένες δημοσιεύσεις",
