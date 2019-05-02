@@ -1,6 +1,6 @@
 webpackJsonp([70],{
 
-/***/ 1926:
+/***/ 1927:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63,7 +63,7 @@ var list_AddonNotesListPage = /** @class */ (function () {
 
 //# sourceMappingURL=list.js.map
 // EXTERNAL MODULE: ./src/addon/notes/components/components.module.ts
-var components_module = __webpack_require__(721);
+var components_module = __webpack_require__(722);
 
 // CONCATENATED MODULE: ./src/addon/notes/pages/list/list.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -148,10 +148,10 @@ var course_picker_menu_popover_ngfactory = __webpack_require__(1395);
 var recaptchamodal_ngfactory = __webpack_require__(1396);
 
 // EXTERNAL MODULE: ./src/addon/notes/components/list/list.ngfactory.js
-var list_ngfactory = __webpack_require__(1457);
+var list_ngfactory = __webpack_require__(1459);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(449);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -172,7 +172,7 @@ var app = __webpack_require__(32);
 var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(679);
+var back_button = __webpack_require__(680);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(14);
@@ -181,7 +181,7 @@ var platform = __webpack_require__(14);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(12);
+var events = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1393);
@@ -196,7 +196,7 @@ var toolbar = __webpack_require__(257);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(450);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./src/addon/notes/components/list/list.ts
 var list = __webpack_require__(499);
@@ -211,7 +211,7 @@ var utils_text = __webpack_require__(10);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(182);
+var modal_controller = __webpack_require__(183);
 
 // EXTERNAL MODULE: ./src/addon/notes/providers/notes.ts
 var notes = __webpack_require__(243);
@@ -287,10 +287,10 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(448);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(678);
+var ionic_angular_module = __webpack_require__(679);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(105);
