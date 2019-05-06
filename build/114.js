@@ -262,7 +262,11 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
         // Load the amount of conversations and contact requests.
         var promises = [];
         promises.push(this.fetchConversationCounts());
-        promises.push(this.messagesProvider.getContactRequestsCount(this.siteId)); // View updated by the event observer.
+        // View updated by the events observers.
+        promises.push(this.messagesProvider.getContactRequestsCount(this.siteId));
+        if (refreshUnreadCounts) {
+            promises.push(this.messagesProvider.refreshUnreadConversationCounts(this.siteId));
+        }
         return Promise.all(promises).then(function () {
             if (typeof _this.favourites.expanded == 'undefined') {
                 // The expanded status hasn't been initialized. Do it now.
@@ -270,21 +274,21 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
                     // A certain conversation should be opened.
                     // We don't know which option it belongs to, so we need to fetch the data for all of them.
                     var promises_1 = [];
-                    promises_1.push(_this.fetchDataForOption(_this.favourites, false, refreshUnreadCounts));
-                    promises_1.push(_this.fetchDataForOption(_this.group, false, refreshUnreadCounts));
-                    promises_1.push(_this.fetchDataForOption(_this.individual, false, refreshUnreadCounts));
+                    promises_1.push(_this.fetchDataForOption(_this.favourites, false));
+                    promises_1.push(_this.fetchDataForOption(_this.group, false));
+                    promises_1.push(_this.fetchDataForOption(_this.individual, false));
                     return Promise.all(promises_1).then(function () {
                         // All conversations have been loaded, find the one we need to load and expand its option.
                         var conversation = _this.findConversation(_this.conversationId, _this.discussionUserId);
                         if (conversation) {
                             var option = _this.getConversationOption(conversation);
-                            return _this.expandOption(option, refreshUnreadCounts);
+                            return _this.expandOption(option);
                         }
                         else {
                             // Conversation not found, just open the default option.
                             _this.calculateExpandedStatus();
                             // Now load the data for the expanded option.
-                            return _this.fetchDataForExpandedOption(refreshUnreadCounts);
+                            return _this.fetchDataForExpandedOption();
                         }
                     });
                 }
@@ -292,7 +296,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
                 _this.calculateExpandedStatus();
             }
             // Now load the data for the expanded option.
-            return _this.fetchDataForExpandedOption(refreshUnreadCounts);
+            return _this.fetchDataForExpandedOption();
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingdiscussions', true);
         }).finally(function () {
@@ -303,45 +307,33 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
      * Calculate which option should be expanded initially.
      */
     AddonMessagesGroupConversationsPage.prototype.calculateExpandedStatus = function () {
-        this.favourites.expanded = this.favourites.count != 0;
-        this.group.expanded = this.favourites.count == 0 && this.group.count != 0;
-        this.individual.expanded = this.favourites.count == 0 && this.group.count == 0;
+        this.favourites.expanded = this.favourites.count != 0 && !this.group.unread && !this.individual.unread;
+        this.group.expanded = !this.favourites.expanded && this.group.count != 0 && !this.individual.unread;
+        this.individual.expanded = !this.favourites.expanded && !this.group.expanded;
         this.loadCurrentListElement();
     };
     /**
      * Fetch data for the expanded option.
      *
-     * @param {booleam} [refreshUnreadCounts=true] Whether to refresh unread counts.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonMessagesGroupConversationsPage.prototype.fetchDataForExpandedOption = function (refreshUnreadCounts) {
-        if (refreshUnreadCounts === void 0) { refreshUnreadCounts = true; }
+    AddonMessagesGroupConversationsPage.prototype.fetchDataForExpandedOption = function () {
         var expandedOption = this.getExpandedOption();
         if (expandedOption) {
-            return this.fetchDataForOption(expandedOption, false, refreshUnreadCounts);
+            return this.fetchDataForOption(expandedOption, false);
         }
-        else {
-            // All options are collapsed, update the counts.
-            var promises = [];
-            promises.push(this.fetchConversationCounts());
-            if (refreshUnreadCounts) {
-                // View updated by event observer.
-                promises.push(this.messagesProvider.refreshUnreadConversationCounts(this.siteId));
-            }
-            return Promise.all(promises);
-        }
+        return Promise.resolve();
     };
     /**
      * Fetch data for a certain option.
      *
      * @param {any} option The option to fetch data for.
      * @param {boolean} [loadingMore} Whether we are loading more data or just the first ones.
-     * @param {booleam} [refreshUnreadCounts=true] Whether to refresh unread counts.
+     * @param {booleam} [getCounts] Whether to get counts data.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonMessagesGroupConversationsPage.prototype.fetchDataForOption = function (option, loadingMore, refreshUnreadCounts) {
+    AddonMessagesGroupConversationsPage.prototype.fetchDataForOption = function (option, loadingMore, getCounts) {
         var _this = this;
-        if (refreshUnreadCounts === void 0) { refreshUnreadCounts = true; }
         option.loadMoreError = false;
         var limitFrom = loadingMore ? option.conversations.length : 0, promises = [];
         var data, offlineMessages;
@@ -357,11 +349,10 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
             promises.push(this.messagesOffline.getAllMessages().then(function (data) {
                 offlineMessages = data;
             }));
+        }
+        if (getCounts) {
             promises.push(this.fetchConversationCounts());
-            if (refreshUnreadCounts) {
-                // View updated by the event observer.
-                promises.push(this.messagesProvider.refreshUnreadConversationCounts(this.siteId));
-            }
+            promises.push(this.messagesProvider.refreshUnreadConversationCounts(this.siteId));
         }
         return Promise.all(promises).then(function () {
             if (loadingMore) {
@@ -617,7 +608,8 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
             this.loadCurrentListElement();
         }
         else {
-            this.expandOption(option).catch(function (error) {
+            // Pass getCounts=true to update the counts everytime the user expands an option.
+            this.expandOption(option, true).catch(function (error) {
                 _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingdiscussions', true);
             });
         }
@@ -626,19 +618,18 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
      * Expand a certain option.
      *
      * @param {any} option The option to expand.
-     * @param {booleam} [refreshUnreadCounts=true] Whether to refresh unread counts.
+     * @param {booleam} [getCounts] Whether to get counts data.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonMessagesGroupConversationsPage.prototype.expandOption = function (option, refreshUnreadCounts) {
+    AddonMessagesGroupConversationsPage.prototype.expandOption = function (option, getCounts) {
         var _this = this;
-        if (refreshUnreadCounts === void 0) { refreshUnreadCounts = true; }
         // Collapse all and expand the right one.
         this.favourites.expanded = false;
         this.group.expanded = false;
         this.individual.expanded = false;
         option.expanded = true;
         option.loading = true;
-        return this.fetchDataForOption(option, false, refreshUnreadCounts).then(function () {
+        return this.fetchDataForOption(option, false, getCounts).then(function () {
             _this.loadCurrentListElement();
         }).catch(function (error) {
             option.expanded = false;
@@ -1115,7 +1106,7 @@ function View_AddonMessagesGroupConversationsPage_19(_l) { return core["_57" /* 
 function View_AddonMessagesGroupConversationsPage_22(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 5, "ion-avatar", [["item-start", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, avatar["a" /* Avatar */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 1, "img", [["core-external-content", ""], ["onError", "this.src='assets/img/group-avatar.png'"]], [[8, "alt", 0]], null, null, null, null)), core["_30" /* ɵdid */](4, 4734976, null, 0, external_content["a" /* CoreExternalContentDirective */], [core["t" /* ElementRef */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], platform_platform["a" /* Platform */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], app["a" /* CoreAppProvider */], utils_utils["a" /* CoreUtilsProvider */]], { src: [0, "src"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var currVal_1 = _v.parent.context.$implicit.imageurl; _ck(_v, 4, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.name; _ck(_v, 3, 0, currVal_0); }); }
 function View_AddonMessagesGroupConversationsPage_23(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-avatar", [["core-user-avatar", ""], ["item-start", ""]], null, null, null, user_avatar_ngfactory["b" /* View_CoreUserAvatarComponent_0 */], user_avatar_ngfactory["a" /* RenderType_CoreUserAvatarComponent */])), core["_30" /* ɵdid */](1, 770048, null, 0, user_avatar["a" /* CoreUserAvatarComponent */], [nav_controller["a" /* NavController */], sites["a" /* CoreSitesProvider */], utils_utils["a" /* CoreUtilsProvider */], app["a" /* CoreAppProvider */], events["a" /* CoreEventsProvider */]], { user: [0, "user"], linkProfile: [1, "linkProfile"], checkOnline: [2, "checkOnline"] }, null), core["_30" /* ɵdid */](2, 16384, null, 0, avatar["a" /* Avatar */], [], null, null)], function (_ck, _v) { var currVal_0 = _v.parent.context.$implicit.otherUser; var currVal_1 = false; var currVal_2 = _v.parent.context.$implicit.showonlinestatus; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2); }, null); }
 function View_AddonMessagesGroupConversationsPage_24(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-icon", [["name", "fa-ban"]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](1, 245760, null, 0, icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */], config["a" /* Config */]], { name: [0, "name"], ariaLabel: [1, "ariaLabel"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = "fa-ban"; var currVal_1 = core["_56" /* ɵunv */](_v, 1, 1, core["_44" /* ɵnov */](_v, 2).transform("addon.messages.contactblocked")); _ck(_v, 1, 0, currVal_0, currVal_1); }, null); }
-function View_AddonMessagesGroupConversationsPage_25(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-icon", [["name", "volume-off"]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](1, 245760, null, 0, icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */], config["a" /* Config */]], { name: [0, "name"] }, null)], function (_ck, _v) { var currVal_0 = "volume-off"; _ck(_v, 1, 0, currVal_0); }, null); }
+function View_AddonMessagesGroupConversationsPage_25(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "core-icon", [["name", "volume-off"]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](1, 245760, null, 0, icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */], config["a" /* Config */]], { name: [0, "name"], ariaLabel: [1, "ariaLabel"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]])], function (_ck, _v) { var currVal_0 = "volume-off"; var currVal_1 = core["_56" /* ɵunv */](_v, 1, 1, core["_44" /* ɵnov */](_v, 2).transform("addon.messages.mutedconversation")); _ck(_v, 1, 0, currVal_0, currVal_1); }, null); }
 function View_AddonMessagesGroupConversationsPage_27(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-badge", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, badge["a" /* Badge */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], null, function (_ck, _v) { var currVal_0 = _v.parent.parent.context.$implicit.unreadcount; _ck(_v, 2, 0, currVal_0); }); }
 function View_AddonMessagesGroupConversationsPage_28(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "span", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""])), core["_49" /* ɵppd */](2, 1)], null, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 1, 0, _ck(_v, 2, 0, core["_44" /* ɵnov */](_v.parent.parent.parent.parent, 0), _v.parent.parent.context.$implicit.lastmessagedate)); _ck(_v, 1, 0, currVal_0); }); }
 function View_AddonMessagesGroupConversationsPage_26(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 8, "ion-note", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, note["a" /* Note */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonMessagesGroupConversationsPage_27)), core["_30" /* ɵdid */](4, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonMessagesGroupConversationsPage_28)), core["_30" /* ɵdid */](7, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var currVal_0 = (_v.parent.context.$implicit.unreadcount > 0); _ck(_v, 4, 0, currVal_0); var currVal_1 = (_v.parent.context.$implicit.lastmessagedate > 0); _ck(_v, 7, 0, currVal_1); }, null); }
