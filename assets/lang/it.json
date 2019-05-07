@@ -167,6 +167,8 @@
     "addon.messages.messagenotsent": "Il messaggio non è stato inviato, per favore riprova più tardi.",
     "addon.messages.messagepreferences": "Preferenze messaggi",
     "addon.messages.messages": "Messaggi",
+    "addon.messages.muteconversation": "Silenzia",
+    "addon.messages.mutedconversation": "Conversazione silenziata",
     "addon.messages.newmessage": "Nuovo messaggio",
     "addon.messages.newmessages": "Nuovi messaggi",
     "addon.messages.nocontactrequests": "Nessuna richiesta di contatto",
