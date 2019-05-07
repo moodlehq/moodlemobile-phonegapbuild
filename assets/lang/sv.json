@@ -1099,6 +1099,7 @@
     "core.erroropenfilenoextension": "Fel vid öppning av filen: Filen saknar definition",
     "core.erroropenpopup": "Aktiviteten försöker öppna en popup . Detta stöds inte i den här appen.",
     "core.filename": "Filnamn",
+    "core.filenotfound": "Det gick tyvärr inte att hitta filen.",
     "core.fileuploader.audio": "Audio",
     "core.fileuploader.camera": "Kamera",
     "core.fileuploader.confirmuploadfile": "Du är på väg att ladda upp {{size}}. Är du säker på att du vill fortsätta?",

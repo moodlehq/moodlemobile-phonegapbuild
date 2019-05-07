@@ -1224,6 +1224,7 @@
     "core.favourites": "Pažymėti žvaigždute",
     "core.filename": "Failo pavadinimas",
     "core.filenameexist": "Failas tokiu pavadinimu jau yra: {{$a}}",
+    "core.filenotfound": "Apgailestaujame, failas nerastas.",
     "core.fileuploader.addfiletext": "Pridėti failą",
     "core.fileuploader.audio": "Garsas",
     "core.fileuploader.camera": "Fotoaparatas",

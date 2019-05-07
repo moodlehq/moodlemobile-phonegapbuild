@@ -1205,6 +1205,7 @@
     "core.explanationdigitalminor": "此信息用于确认您是否已达到可进行数字承诺的年龄。此年龄是个人可对条款及条件做出承诺，且个人信息合法存储及处理。",
     "core.filename": "文件名",
     "core.filenameexist": "文件名已经存在:{{$a}}",
+    "core.filenotfound": "抱歉，找不到文件。",
     "core.fileuploader.addfiletext": "添加文件",
     "core.fileuploader.audio": "音频",
     "core.fileuploader.camera": "相机",

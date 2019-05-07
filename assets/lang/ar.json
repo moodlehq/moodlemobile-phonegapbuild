@@ -748,6 +748,7 @@
     "core.errordownloading": "خطأ عن تنزيل الملف",
     "core.explanationdigitalminor": "هذه المعلومات مطلوبة لتحديد ما إذا كان عمرك يتجاوز سن الموافقة الرقمي. و هو العمر الذي يمكن فيه للفرد الموافقة على بنود وشروط تخزين و معالجة بياناته قانونياً.",
     "core.filename": "اسم الملف",
+    "core.filenotfound": "عذراً، لم يتم العثور على الملف",
     "core.fileuploader.audio": "صوتي",
     "core.fileuploader.camera": "الكاميرا",
     "core.fileuploader.errorcapturingaudio": "خطأ في التقاط الصوت",

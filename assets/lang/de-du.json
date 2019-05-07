@@ -440,7 +440,7 @@
     "core.settings.errorsyncsite": "Fehler beim Synchronisieren der Daten. Du musst online sein und es dann noch einmal versuchen.",
     "core.settings.estimatedfreespace": "Verfügbarer Speicherplatz",
     "core.settings.filesystemroot": "Dateisystembasis",
-    "core.settings.localnotifavailable": "Lokale Mitteilungen verfügbar",
+    "core.settings.localnotifavailable": "Lokale Systemnachrichten verfügbar",
     "core.settings.locationhref": "Webview URL",
     "core.settings.navigatorlanguage": "Browsersprache",
     "core.settings.navigatoruseragent": "Browserkennung (userAgent)",

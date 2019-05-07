@@ -1043,6 +1043,7 @@
     "core.error": "خطا",
     "core.errordownloading": "خطا در دانلود فایل",
     "core.favourites": "ستاره‌دار",
+    "core.filenotfound": "متاسفانه فایل پیدا نشد.",
     "core.fileuploader.addfiletext": "اضافه‌کردن فایل",
     "core.fileuploader.confirmuploadfile": "شما در آستانهٔ ارسال {{size}} هستید. آیا مطمئنید که می‌خواهید ادامه دهید؟",
     "core.fileuploader.confirmuploadunknownsize": "ما نتوانستیم حجم ارسال را محاسبه کنیم. آیا مطمئنید که می‌خواهید ادامه دهید؟",
