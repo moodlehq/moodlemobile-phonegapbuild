@@ -281,7 +281,7 @@ var refresher_content = __webpack_require__(154);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/feedback.ts
-var feedback = __webpack_require__(131);
+var feedback = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/offline.ts
 var offline = __webpack_require__(281);

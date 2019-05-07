@@ -43,7 +43,7 @@ var providers_helper = __webpack_require__(16);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(132);
+var configconstants = __webpack_require__(126);
 
 // CONCATENATED MODULE: ./src/core/login/pages/credentials/credentials.ts
 // (C) Copyright 2015 Martin Dougiamas

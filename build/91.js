@@ -208,7 +208,7 @@ var filepool = __webpack_require__(17);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
-var file_helper = __webpack_require__(129);
+var file_helper = __webpack_require__(130);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
 var mimetype = __webpack_require__(63);

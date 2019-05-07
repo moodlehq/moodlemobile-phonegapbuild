@@ -28,7 +28,7 @@ var pipes_module = __webpack_require__(104);
 var components_components_module = __webpack_require__(683);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/feedback.ts
-var feedback = __webpack_require__(131);
+var feedback = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/helper.ts
 var helper = __webpack_require__(237);
