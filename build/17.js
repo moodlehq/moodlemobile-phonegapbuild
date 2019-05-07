@@ -806,10 +806,20 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
      */
     AddonMessagesDiscussionPage.prototype.deleteMessage = function (message, index) {
         var _this = this;
-        var langKey = message.pending ? 'core.areyousure' : 'addon.messages.deletemessageconfirmation';
-        this.domUtils.showConfirm(this.translate.instant(langKey)).then(function () {
+        var canDeleteAll = this.conversation && this.conversation.candeletemessagesforallusers, langKey = message.pending || canDeleteAll ? 'core.areyousure' : 'addon.messages.deletemessageconfirmation', options = {};
+        if (canDeleteAll && !message.pending) {
+            // Show delete for all checkbox.
+            options.inputs = [{
+                    type: 'checkbox',
+                    name: 'deleteforall',
+                    checked: false,
+                    value: true,
+                    label: this.translate.instant('addon.messages.deleteforeveryone')
+                }];
+        }
+        this.domUtils.showConfirm(this.translate.instant(langKey), undefined, undefined, undefined, options).then(function (data) {
             var modal = _this.domUtils.showModalLoading('core.deleting', true);
-            return _this.messagesProvider.deleteMessage(message).then(function () {
+            return _this.messagesProvider.deleteMessage(message, data && data[0]).then(function () {
                 // Remove message from the list without having to wait for re-fetch.
                 _this.messages.splice(index, 1);
                 _this.removeMessage(message.hash);
