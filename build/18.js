@@ -1,6 +1,6 @@
 webpackJsonp([18],{
 
-/***/ 1967:
+/***/ 1968:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -147,7 +147,7 @@ var directives_module = __webpack_require__(29);
 var components_module = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/core/user/components/components.module.ts
-var components_components_module = __webpack_require__(460);
+var components_components_module = __webpack_require__(459);
 
 // CONCATENATED MODULE: ./src/core/user/pages/about/about.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -324,7 +324,7 @@ var empty_box_ngfactory = __webpack_require__(117);
 var empty_box = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -484,7 +484,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

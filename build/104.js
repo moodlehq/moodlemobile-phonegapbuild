@@ -19,10 +19,10 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/components.module.ts + 2 modules
-var components_module = __webpack_require__(454);
+var components_module = __webpack_require__(453);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ts
-var index = __webpack_require__(472);
+var index = __webpack_require__(471);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -169,13 +169,13 @@ var recaptchamodal_ngfactory = __webpack_require__(1398);
 var unsupported_module_ngfactory = __webpack_require__(1399);
 
 // EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ngfactory.js
-var comments_ngfactory = __webpack_require__(458);
+var comments_ngfactory = __webpack_require__(457);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ngfactory.js
 var index_ngfactory = __webpack_require__(1413);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -256,7 +256,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(452);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(180);
@@ -394,7 +394,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);
@@ -409,7 +409,7 @@ var components_components_module = __webpack_require__(25);
 var course_components_components_module = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(455);
+var compile_html_module = __webpack_require__(454);
 
 // EXTERNAL MODULE: ./src/core/comments/components/components.module.ts
 var comments_components_components_module = __webpack_require__(354);

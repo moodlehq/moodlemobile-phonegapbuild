@@ -103,7 +103,7 @@ var phase_AddonModWorkshopPhaseInfoPage = /** @class */ (function () {
 
 //# sourceMappingURL=phase.js.map
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(455);
+var compile_html_module = __webpack_require__(454);
 
 // CONCATENATED MODULE: ./src/addon/mod/workshop/pages/phase/phase.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -266,7 +266,7 @@ var common = __webpack_require__(7);
 var item_divider = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -293,7 +293,7 @@ var toolbar_title = __webpack_require__(351);
 var toolbar = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(452);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(45);
@@ -413,7 +413,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

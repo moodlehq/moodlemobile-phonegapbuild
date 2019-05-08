@@ -666,7 +666,7 @@ var translate_service = __webpack_require__(18);
 var badge = __webpack_require__(155);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -720,7 +720,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(452);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(45);
@@ -848,7 +848,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

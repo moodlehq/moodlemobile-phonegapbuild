@@ -481,7 +481,7 @@ var user_avatar = __webpack_require__(182);
 var avatar = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
-var progress_bar_ngfactory = __webpack_require__(463);
+var progress_bar_ngfactory = __webpack_require__(462);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
 var progress_bar = __webpack_require__(301);
@@ -493,7 +493,7 @@ var platform_browser = __webpack_require__(75);
 var format_date = __webpack_require__(232);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -684,7 +684,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

@@ -268,7 +268,7 @@ var infinite_loading = __webpack_require__(259);
 var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -313,7 +313,7 @@ var keyboard = __webpack_require__(105);
 var search_box_ngfactory = __webpack_require__(1418);
 
 // EXTERNAL MODULE: ./src/components/search-box/search-box.ts
-var search_box = __webpack_require__(464);
+var search_box = __webpack_require__(463);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -397,7 +397,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

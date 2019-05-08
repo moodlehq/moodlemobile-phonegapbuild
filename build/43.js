@@ -372,7 +372,7 @@ var spinner_ngfactory = __webpack_require__(123);
 var spinner = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab-highlight.js
-var tab_highlight = __webpack_require__(494);
+var tab_highlight = __webpack_require__(493);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
 var split_pane = __webpack_require__(206);
@@ -495,7 +495,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

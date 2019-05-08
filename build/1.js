@@ -513,7 +513,7 @@ var date_day_or_time = __webpack_require__(297);
 var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -540,7 +540,7 @@ var toolbar_title = __webpack_require__(351);
 var toolbar = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(452);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
 var context_menu_ngfactory = __webpack_require__(81);
@@ -555,7 +555,7 @@ var popover_controller = __webpack_require__(64);
 var tab = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
-var split_view_ngfactory = __webpack_require__(453);
+var split_view_ngfactory = __webpack_require__(452);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(65);
@@ -570,7 +570,7 @@ var keyboard = __webpack_require__(105);
 var search_box_ngfactory = __webpack_require__(1418);
 
 // EXTERNAL MODULE: ./src/components/search-box/search-box.ts
-var search_box = __webpack_require__(464);
+var search_box = __webpack_require__(463);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -708,7 +708,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

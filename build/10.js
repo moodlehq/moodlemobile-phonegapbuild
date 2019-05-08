@@ -22,7 +22,7 @@ var components_module = __webpack_require__(25);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/components.module.ts
-var components_components_module = __webpack_require__(461);
+var components_components_module = __webpack_require__(460);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/pages/submission/submission.ts
 var submission = __webpack_require__(2026);
@@ -169,7 +169,7 @@ var dom_controller = __webpack_require__(31);
 var submission_ngfactory = __webpack_require__(1478);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/submission/submission.ts
-var submission_submission = __webpack_require__(499);
+var submission_submission = __webpack_require__(498);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
 var offline = __webpack_require__(171);
@@ -371,7 +371,7 @@ var workshop = __webpack_require__(158);
 var assessment_strategy_delegate = __webpack_require__(204);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -395,7 +395,7 @@ var toolbar_title = __webpack_require__(351);
 var toolbar = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(452);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(180);
@@ -586,7 +586,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);
@@ -686,7 +686,7 @@ var AddonModWorkshopSubmissionPageModuleNgFactory = core["_28" /* ɵcmf */](subm
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_ionic_angular_platform_platform__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments_ngfactory__ = __webpack_require__(462);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments_ngfactory__ = __webpack_require__(461);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_attachments_attachments__ = __webpack_require__(300);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_app__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__core_fileuploader_providers_fileuploader__ = __webpack_require__(65);

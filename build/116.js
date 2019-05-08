@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var pushnotifications = __webpack_require__(263);
 
 // EXTERNAL MODULE: ./src/addon/messageoutput/airnotifier/providers/airnotifier.ts
-var airnotifier = __webpack_require__(467);
+var airnotifier = __webpack_require__(466);
 
 // CONCATENATED MODULE: ./src/addon/messageoutput/airnotifier/pages/devices/devices.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -313,7 +313,7 @@ var dom_controller = __webpack_require__(31);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -463,7 +463,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

@@ -519,7 +519,7 @@ var options_delegate = __webpack_require__(91);
 var providers_helper = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
 var navbar_ngfactory = __webpack_require__(1394);
@@ -567,7 +567,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(452);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
 var context_menu_ngfactory = __webpack_require__(81);
@@ -579,10 +579,10 @@ var popover_controller = __webpack_require__(64);
 var tab = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(456);
+var tabs_ngfactory = __webpack_require__(455);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(457);
+var tab_ngfactory = __webpack_require__(456);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/dashboard/dashboard.ngfactory.js
 /**
@@ -716,7 +716,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);
@@ -1005,7 +1005,7 @@ var events = __webpack_require__(11);
 var module_ngfactory = __webpack_require__(1410);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ts
-var module_module = __webpack_require__(459);
+var module_module = __webpack_require__(458);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-prefetch-delegate.ts
 var module_prefetch_delegate = __webpack_require__(47);

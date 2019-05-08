@@ -867,7 +867,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(462);
+var attachments_ngfactory = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(300);
@@ -1098,7 +1098,7 @@ var AddonModForumPostComponentNgFactory = core["_27" /* ɵccf */]("addon-mod-for
 
 //# sourceMappingURL=post.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -1110,7 +1110,7 @@ var navbar_ngfactory = __webpack_require__(1394);
 var back_button = __webpack_require__(681);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(452);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./src/components/navbar-buttons/navbar-buttons.ngfactory.js
 var navbar_buttons_ngfactory = __webpack_require__(90);
@@ -1307,7 +1307,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);

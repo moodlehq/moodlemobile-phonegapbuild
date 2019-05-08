@@ -278,7 +278,7 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -350,7 +350,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(452);
+var toolbar_item = __webpack_require__(451);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(46);
@@ -456,7 +456,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);
@@ -821,7 +821,7 @@ var AddonModAssignIndexComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54_ionic_angular_tap_click_haptic__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55_ionic_angular_gestures_gesture_controller__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__directives_link__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_tabs_tab_ngfactory__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_tabs_tab_ngfactory__ = __webpack_require__(456);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_tabs_tab__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__components_tabs_tabs__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60_ionic_angular_components_badge_badge__ = __webpack_require__(155);
@@ -829,7 +829,7 @@ var AddonModAssignIndexComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__providers_utils_time__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__components_loading_loading_ngfactory__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__components_loading_loading__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__components_tabs_tabs_ngfactory__ = __webpack_require__(456);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__components_tabs_tabs_ngfactory__ = __webpack_require__(455);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__submission__ = __webpack_require__(682);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__providers_sync__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__core_course_providers_course__ = __webpack_require__(15);

@@ -1,6 +1,6 @@
 webpackJsonp([35],{
 
-/***/ 1972:
+/***/ 1963:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/sharedfiles/providers/helper.ts
-var helper = __webpack_require__(475);
+var helper = __webpack_require__(474);
 
 // CONCATENATED MODULE: ./src/core/sharedfiles/pages/choose-site/choose-site.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -275,7 +275,7 @@ var iframe = __webpack_require__(37);
 var events = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(451);
+var toolbar_header = __webpack_require__(450);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -412,7 +412,7 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(450);
+var translate_store = __webpack_require__(449);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(680);
