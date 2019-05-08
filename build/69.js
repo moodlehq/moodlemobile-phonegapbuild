@@ -73,11 +73,25 @@ var actions_AddonNotificationsActionsComponent = /** @class */ (function () {
      */
     AddonNotificationsActionsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        if (!this.contextUrl) {
-            // No contexturl, nothing to do.
+        if (!this.contextUrl && (!this.data || !this.data.appurl)) {
+            // No URL, nothing to do.
             return;
         }
-        this.contentLinksDelegate.getActionsFor(this.contextUrl, this.courseId, undefined, this.data).then(function (actions) {
+        var promise;
+        // Treat appurl first if any.
+        if (this.data && this.data.appurl) {
+            promise = this.contentLinksDelegate.getActionsFor(this.data.appurl, this.courseId, undefined, this.data);
+        }
+        else {
+            promise = Promise.resolve([]);
+        }
+        promise.then(function (actions) {
+            if (!actions.length && _this.contextUrl) {
+                // No appurl or cannot handle it. Try with contextUrl.
+                return _this.contentLinksDelegate.getActionsFor(_this.contextUrl, _this.courseId, undefined, _this.data);
+            }
+            return actions;
+        }).then(function (actions) {
             if (!actions.length) {
                 // URL is not supported. Add an action to open it in browser.
                 actions.push({
@@ -96,7 +110,8 @@ var actions_AddonNotificationsActionsComponent = /** @class */ (function () {
      * @param {NavController} [navCtrl] NavController.
      */
     AddonNotificationsActionsComponent.prototype.defaultAction = function (siteId, navCtrl) {
-        this.sitesProvider.getCurrentSite().openInBrowserWithAutoLogin(this.contextUrl);
+        var url = (this.data && this.data.appurl) || this.contextUrl;
+        this.sitesProvider.getCurrentSite().openInBrowserWithAutoLogin(url);
     };
     __decorate([
         Object(core["D" /* Input */])(),
