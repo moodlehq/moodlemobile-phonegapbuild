@@ -37,7 +37,7 @@
     "addon.block_myoverview.nocourses": "Brak kursów",
     "addon.block_myoverview.past": "Zakończone",
     "addon.block_myoverview.pluginname": "Przegląd kursów",
-    "addon.block_myoverview.title": "Nazwa",
+    "addon.block_myoverview.title": "Nazwa kursu",
     "addon.block_recentlyaccessedcourses.nocourses": "Brak ostatnich kursów",
     "addon.block_recentlyaccessedcourses.pluginname": "Ostatnio przeglądane kursy",
     "addon.block_recentlyaccesseditems.noitems": "Brak ostatnich elementów",
