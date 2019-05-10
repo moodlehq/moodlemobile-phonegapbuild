@@ -177,6 +177,7 @@
     "addon.messages.deleteallconfirm": "本当にこの会話すべてを削除してもよろしいですか? これにより他の会話参加者の会話が削除されるこはありません。",
     "addon.messages.deleteallselfconfirm": "本当にこのプライベートな会話全体を削除してもよろしいですか?",
     "addon.messages.deleteconversation": "会話を削除する",
+    "addon.messages.deleteforeveryone": "私およびすべての人のために削除する",
     "addon.messages.errordeletemessage": "メッセージ消去中にエラーが発生しました。",
     "addon.messages.errorwhileretrievingcontacts": "サーバから連絡先を取得中にエラーが発生しました。",
     "addon.messages.errorwhileretrievingdiscussions": "サーバからディスカッションを受信中にエラーが発生しました。",

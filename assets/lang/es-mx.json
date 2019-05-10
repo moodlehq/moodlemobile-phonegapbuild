@@ -182,6 +182,7 @@
     "addon.messages.deleteallconfirm": "¿Está usted seguro de querer eliminar toda esta conversación? Esto no la eliminará para otros participantes de la conversación",
     "addon.messages.deleteallselfconfirm": "¿Está seguro de querer eliminar toda esta conversación personal?",
     "addon.messages.deleteconversation": "Eliminar conversación",
+    "addon.messages.deleteforeveryone": "Borrar para mí y para todos",
     "addon.messages.deletemessage": "Eliminar mensaje",
     "addon.messages.deletemessageconfirmation": "¿Está seguro de querer eliminar este mensaje? Será eliminado solamente de su historial de mensaje y todavía será visible por el usuario que envió o recibió el mensaje.",
     "addon.messages.errordeletemessage": "Error al eliminar el mensaje",

@@ -177,6 +177,7 @@
     "addon.messages.deleteallconfirm": "Voulez-vous vraiment supprimer l'intégralité de cette conversation ? Cette opération ne la supprimera pas pour les autres participants à la conversation.",
     "addon.messages.deleteallselfconfirm": "Voulez-vous vraiment supprimer l'intégralité de cette conversation personnelle ?",
     "addon.messages.deleteconversation": "Supprimer la conversation",
+    "addon.messages.deleteforeveryone": "Supprimer pour moi et tout le monde",
     "addon.messages.deletemessage": "Supprimer le message",
     "addon.messages.deletemessageconfirmation": "Voulez-vous vraiment supprimer ce message ? Il ne sera supprimé que de votre historique de messagerie et continuera d'être visible par l'utilisateur qui a envoyé ou reçu le message.",
     "addon.messages.errordeletemessage": "Erreur lors de la suppression du message.",

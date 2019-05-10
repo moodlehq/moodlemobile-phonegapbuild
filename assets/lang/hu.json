@@ -162,6 +162,7 @@
     "addon.messages.deleteallconfirm": "Biztosan törli az egész beszélgetést? Ezzel egyéb résztvevők részére nem törli a beszélgetésből.",
     "addon.messages.deleteallselfconfirm": "Biztosan törli a teljes személyes beszélgetést?",
     "addon.messages.deleteconversation": "Beszélgetés törlése",
+    "addon.messages.deleteforeveryone": "Törlés mind a nevemben, mind mások nevében",
     "addon.messages.groupconversations": "Csoport",
     "addon.messages.groupinfo": "Csoportinfó",
     "addon.messages.individualconversations": "Magán",
