@@ -420,6 +420,8 @@
     "addon.mod_feedback.feedbackclose": "Permitir respuestas a",
     "addon.mod_feedback.feedbackopen": "Permitir respuestas de",
     "addon.mod_feedback.mapcourses": "Asignar encuesta a cursos",
+    "addon.mod_feedback.maximal": "máximo",
+    "addon.mod_feedback.minimal": "mínimo",
     "addon.mod_feedback.mode": "Modo",
     "addon.mod_feedback.modulenameplural": "Encuestas",
     "addon.mod_feedback.next_page": "Siguiente página",

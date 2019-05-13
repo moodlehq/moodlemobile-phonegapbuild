@@ -448,6 +448,8 @@
     "addon.mod_feedback.feedbackclose": "Noiz arte baimendu erantzunak",
     "addon.mod_feedback.feedbackopen": "Noiztik baimendu erantzunak",
     "addon.mod_feedback.mapcourses": "Esleitu feedbacka ikastaroetarako",
+    "addon.mod_feedback.maximal": "Gehienezkoa",
+    "addon.mod_feedback.minimal": "Gutxienekoa",
     "addon.mod_feedback.mode": "Modua",
     "addon.mod_feedback.modulenameplural": "Inkesta",
     "addon.mod_feedback.next_page": "Hurrengo orria",

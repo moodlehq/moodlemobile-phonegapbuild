@@ -421,6 +421,8 @@
     "addon.mod_feedback.feedbackclose": "Tillad svar til",
     "addon.mod_feedback.feedbackopen": "Tillad svar fra",
     "addon.mod_feedback.mapcourses": "Tilknyt feedback til kurser",
+    "addon.mod_feedback.maximal": "Maksimum",
+    "addon.mod_feedback.minimal": "Minimum",
     "addon.mod_feedback.mode": "Tilstand",
     "addon.mod_feedback.modulenameplural": "Feedback",
     "addon.mod_feedback.next_page": "Næste side",

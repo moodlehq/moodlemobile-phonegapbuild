@@ -342,6 +342,8 @@
     "addon.mod_feedback.feedbackclose": "Закрити зворотний зв’язок до",
     "addon.mod_feedback.feedbackopen": "Відкрити  зворотний зв’язок до",
     "addon.mod_feedback.mapcourses": "Прив’язка зворотного зв’язку до курсів",
+    "addon.mod_feedback.maximal": "максимально",
+    "addon.mod_feedback.minimal": "мінімально",
     "addon.mod_feedback.mode": "Режим",
     "addon.mod_feedback.modulenameplural": "Зворотний зв’язок",
     "addon.mod_feedback.next_page": "Наступна сторінка",

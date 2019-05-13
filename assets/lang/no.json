@@ -416,6 +416,8 @@
     "addon.mod_feedback.feedbackclose": "Steng undersøkelsen",
     "addon.mod_feedback.feedbackopen": "Åpne undersøkelsen",
     "addon.mod_feedback.mapcourses": "Koble Feedback til kurs",
+    "addon.mod_feedback.maximal": "Maksimalt",
+    "addon.mod_feedback.minimal": "Minimum",
     "addon.mod_feedback.mode": "Modus",
     "addon.mod_feedback.modulenameplural": "Feedback",
     "addon.mod_feedback.next_page": "Neste side",

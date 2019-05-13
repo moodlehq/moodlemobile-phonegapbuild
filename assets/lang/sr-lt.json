@@ -443,6 +443,8 @@
     "addon.mod_feedback.feedbackclose": "Upitnik dostupan do",
     "addon.mod_feedback.feedbackopen": "Upitnik dostupan od",
     "addon.mod_feedback.mapcourses": "Poveži upitnik sa kursevima",
+    "addon.mod_feedback.maximal": "Maksimalno",
+    "addon.mod_feedback.minimal": "Minimalno",
     "addon.mod_feedback.mode": "Vrsta upitnika",
     "addon.mod_feedback.modulenameplural": "Upitnici (Feedback Activities)",
     "addon.mod_feedback.next_page": "Sledeća stranica",

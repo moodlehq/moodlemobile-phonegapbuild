@@ -373,6 +373,7 @@
     "addon.mod_feedback.feedbackclose": "Stäng Egen enkät vid denna tid",
     "addon.mod_feedback.feedbackopen": "Öppna denna Egen enkät vid den här tiden",
     "addon.mod_feedback.mapcourses": "\"Mappa\" Egen enkät till kurser",
+    "addon.mod_feedback.maximal": "maximal",
     "addon.mod_feedback.mode": "Läge",
     "addon.mod_feedback.modulenameplural": "Egen enkät",
     "addon.mod_feedback.next_page": "Nästa sida",

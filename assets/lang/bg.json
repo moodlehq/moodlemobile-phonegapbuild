@@ -256,6 +256,8 @@
     "addon.mod_feedback.feedbackclose": "Позволено е отговаряне до",
     "addon.mod_feedback.feedbackopen": "Позволено е отговаряне от",
     "addon.mod_feedback.mapcourses": "Свързване на анкетата с курсове",
+    "addon.mod_feedback.maximal": "максимум",
+    "addon.mod_feedback.minimal": "минимум",
     "addon.mod_feedback.mode": "Режим",
     "addon.mod_feedback.modulenameplural": "Обратни връзки",
     "addon.mod_feedback.next_page": "Следваща страница",

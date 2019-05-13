@@ -365,6 +365,8 @@
     "addon.mod_feedback.feedbackclose": "結束填答時間",
     "addon.mod_feedback.feedbackopen": "開始填答時間",
     "addon.mod_feedback.mapcourses": "對應回饋單到課程",
+    "addon.mod_feedback.maximal": "最高限制",
+    "addon.mod_feedback.minimal": "最小限制",
     "addon.mod_feedback.mode": "模式",
     "addon.mod_feedback.modulenameplural": "回饋單",
     "addon.mod_feedback.next_page": "下一頁",

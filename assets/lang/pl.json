@@ -363,6 +363,8 @@
     "addon.mod_feedback.feedbackclose": "Zamknij o",
     "addon.mod_feedback.feedbackopen": "Otwórz o",
     "addon.mod_feedback.mapcourses": "Skojarz formularz opinii z kursami",
+    "addon.mod_feedback.maximal": "maksymalny",
+    "addon.mod_feedback.minimal": "minimum",
     "addon.mod_feedback.mode": "Tryb",
     "addon.mod_feedback.modulenameplural": "Opinie zwrotne",
     "addon.mod_feedback.next_page": "Następna strona",

@@ -376,6 +376,8 @@
     "addon.mod_feedback.feedbackclose": "Uždaryti atsiliepimą",
     "addon.mod_feedback.feedbackopen": "Atidaryti atsiliepimą",
     "addon.mod_feedback.mapcourses": "Susieti atsiliepimą su kursais",
+    "addon.mod_feedback.maximal": "Didžiausias",
+    "addon.mod_feedback.minimal": "Mažiausias",
     "addon.mod_feedback.mode": "Režimas",
     "addon.mod_feedback.modulenameplural": "Atsiliepimas",
     "addon.mod_feedback.next_page": "Kitas puslapis",

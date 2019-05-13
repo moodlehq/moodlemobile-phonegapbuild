@@ -405,6 +405,7 @@
     "addon.mod_feedback.feedbackclose": "Sulje palaute",
     "addon.mod_feedback.feedbackopen": "Avaa palaute",
     "addon.mod_feedback.mapcourses": "Yhdistä palaute kursseihin",
+    "addon.mod_feedback.maximal": "maksimaalinen",
     "addon.mod_feedback.mode": "Tila",
     "addon.mod_feedback.modulenameplural": "Palautteet",
     "addon.mod_feedback.next_page": "Seuraava sivu",

@@ -385,6 +385,8 @@
     "addon.mod_feedback.feedbackclose": "Válaszok engedélyezése a címzettnek",
     "addon.mod_feedback.feedbackopen": "Válaszok engedélyezése a feladótól",
     "addon.mod_feedback.mapcourses": "A visszajelzés illesztése kurzusokhoz.",
+    "addon.mod_feedback.maximal": "Maximum",
+    "addon.mod_feedback.minimal": "Minimum",
     "addon.mod_feedback.mode": "Mód",
     "addon.mod_feedback.modulenameplural": "Visszajelzések",
     "addon.mod_feedback.next_page": "Következő oldal",

@@ -443,6 +443,8 @@
     "addon.mod_feedback.feedbackclose": "Упитник доступан до",
     "addon.mod_feedback.feedbackopen": "Упитник доступан од",
     "addon.mod_feedback.mapcourses": "Повежи упитник са курсевима",
+    "addon.mod_feedback.maximal": "Максимално",
+    "addon.mod_feedback.minimal": "Минимално",
     "addon.mod_feedback.mode": "Врста упитника",
     "addon.mod_feedback.modulenameplural": "Упитници (Feedback Activities)",
     "addon.mod_feedback.next_page": "Следећа страница",

@@ -383,6 +383,8 @@
     "addon.mod_feedback.feedbackclose": "អនុញ្ញាតឲ្យឆ្លើយដល់",
     "addon.mod_feedback.feedbackopen": "អនុញ្ញាតឲ្យឆ្លើយដល់",
     "addon.mod_feedback.mapcourses": "ផ្គូផ្គងមូលវិចារណ៍ទៅកាន់វគ្គសិក្សា",
+    "addon.mod_feedback.maximal": "អតិបរមា",
+    "addon.mod_feedback.minimal": "អប្បបរមា",
     "addon.mod_feedback.mode": "ម៉ូត",
     "addon.mod_feedback.modulenameplural": "មូលវិចារណ៍",
     "addon.mod_feedback.next_page": "ទំព័របន្ទាប់",

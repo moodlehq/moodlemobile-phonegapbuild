@@ -410,6 +410,8 @@
     "addon.mod_feedback.feedbackclose": "Разрешить отвечать до",
     "addon.mod_feedback.feedbackopen": "Разрешить отвечать с",
     "addon.mod_feedback.mapcourses": "Сопоставление Обратной связи с курсами",
+    "addon.mod_feedback.maximal": "максимум",
+    "addon.mod_feedback.minimal": "минимум",
     "addon.mod_feedback.mode": "Режим",
     "addon.mod_feedback.modulenameplural": "Обратная связь",
     "addon.mod_feedback.next_page": "Следующая страница",

@@ -283,6 +283,8 @@
     "addon.mod_feedback.completed_feedbacks": "Răspunsuri trimise",
     "addon.mod_feedback.feedback_is_not_open": "Feedback-ul nu este disponibil",
     "addon.mod_feedback.feedbackopen": "Permite răspunsuri de la",
+    "addon.mod_feedback.maximal": "maximum",
+    "addon.mod_feedback.minimal": "minimum",
     "addon.mod_feedback.mode": "Mod",
     "addon.mod_feedback.modulenameplural": "Feedback",
     "addon.mod_feedback.next_page": "Următoarea pagină",

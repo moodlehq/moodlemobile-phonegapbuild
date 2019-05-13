@@ -310,6 +310,8 @@
     "addon.mod_feedback.feedbackclose": "Şuna yazılan cevaplara izin ver:",
     "addon.mod_feedback.feedbackopen": "Şunlardan gelen cevaplara izin ver:",
     "addon.mod_feedback.mapcourses": "Geribildirimi derslere eşleştirin",
+    "addon.mod_feedback.maximal": "azami (en fazla)",
+    "addon.mod_feedback.minimal": "asgari (en az)",
     "addon.mod_feedback.mode": "Mod",
     "addon.mod_feedback.modulenameplural": "Anket (Geribildirim)",
     "addon.mod_feedback.next_page": "Sonraki sayfa",

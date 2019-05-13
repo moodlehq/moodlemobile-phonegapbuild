@@ -445,6 +445,8 @@
     "addon.mod_feedback.feedbackclose": "Permitir respostas até",
     "addon.mod_feedback.feedbackopen": "Permitir respostas a partir de",
     "addon.mod_feedback.mapcourses": "Associar o inquérito a disciplinas",
+    "addon.mod_feedback.maximal": "Máximo",
+    "addon.mod_feedback.minimal": "Mínimo",
     "addon.mod_feedback.mode": "Modo",
     "addon.mod_feedback.modulenameplural": "Inquéritos",
     "addon.mod_feedback.next_page": "Página seguinte",

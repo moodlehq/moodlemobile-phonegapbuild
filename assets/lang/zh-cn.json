@@ -366,6 +366,7 @@
     "addon.mod_feedback.feedbackclose": "关闭此反馈时间",
     "addon.mod_feedback.feedbackopen": "开放此反馈时间",
     "addon.mod_feedback.mapcourses": "将反馈映射到课程",
+    "addon.mod_feedback.maximal": "最大",
     "addon.mod_feedback.mode": "模式",
     "addon.mod_feedback.modulenameplural": "反馈",
     "addon.mod_feedback.next_page": "下一页",

@@ -436,6 +436,8 @@
     "addon.mod_feedback.feedbackclose": "Επιτρέπονται απαντήσεις μέχρι",
     "addon.mod_feedback.feedbackopen": "Επιτρέπονται απαντήσεις από",
     "addon.mod_feedback.mapcourses": "Αντιστοίχηση ανατροφοδότησης σε μαθήματα",
+    "addon.mod_feedback.maximal": "Μέγιστο",
+    "addon.mod_feedback.minimal": "Ελάχιστο",
     "addon.mod_feedback.mode": "Λειτουργία",
     "addon.mod_feedback.modulenameplural": "Ανατροφοδοτήσεις",
     "addon.mod_feedback.next_page": "Επόμενη σελίδα",

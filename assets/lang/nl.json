@@ -446,6 +446,8 @@
     "addon.mod_feedback.feedbackclose": "Antwoorden toestaan tot",
     "addon.mod_feedback.feedbackopen": "Antwoorden toestaan van",
     "addon.mod_feedback.mapcourses": "Koppel feedback aan cursussen",
+    "addon.mod_feedback.maximal": "Maximum",
+    "addon.mod_feedback.minimal": "Minimaal",
     "addon.mod_feedback.mode": "Modus",
     "addon.mod_feedback.modulenameplural": "Feedbackformulieren",
     "addon.mod_feedback.next_page": "Volgende pagina",

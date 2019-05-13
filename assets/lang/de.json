@@ -445,6 +445,8 @@
     "addon.mod_feedback.feedbackclose": "Antworten erlauben bis",
     "addon.mod_feedback.feedbackopen": "Antworten erlauben ab",
     "addon.mod_feedback.mapcourses": "Diesem Feedback Kurse zuordnen",
+    "addon.mod_feedback.maximal": "Maximal",
+    "addon.mod_feedback.minimal": "Minimal",
     "addon.mod_feedback.mode": "Modus",
     "addon.mod_feedback.modulenameplural": "Feedbacks",
     "addon.mod_feedback.next_page": "Nächste Seite",

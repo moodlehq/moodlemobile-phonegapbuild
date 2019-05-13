@@ -435,6 +435,8 @@
     "addon.mod_feedback.feedbackclose": "Permet les respostes a",
     "addon.mod_feedback.feedbackopen": "Permet les respostes de",
     "addon.mod_feedback.mapcourses": "Associa una retroacció a cursos.",
+    "addon.mod_feedback.maximal": "màxim",
+    "addon.mod_feedback.minimal": "mínim",
     "addon.mod_feedback.mode": "Mode",
     "addon.mod_feedback.modulenameplural": "Retroacció",
     "addon.mod_feedback.next_page": "Pàgina següent",

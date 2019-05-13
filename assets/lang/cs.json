@@ -452,6 +452,8 @@
     "addon.mod_feedback.feedbackclose": "Povolit odpovědi",
     "addon.mod_feedback.feedbackopen": "Dostupné od",
     "addon.mod_feedback.mapcourses": "Mapování kurzů",
+    "addon.mod_feedback.maximal": "Maximum",
+    "addon.mod_feedback.minimal": "Minimum",
     "addon.mod_feedback.mode": "Režim",
     "addon.mod_feedback.modulenameplural": "Dotazníky",
     "addon.mod_feedback.next_page": "Další stránka",

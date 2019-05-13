@@ -422,6 +422,8 @@
     "addon.mod_feedback.feedbackclose": "Permitir respostas até",
     "addon.mod_feedback.feedbackopen": "Permitir respostas de",
     "addon.mod_feedback.mapcourses": "Mapear pesquisa para os cursos",
+    "addon.mod_feedback.maximal": "máximo",
+    "addon.mod_feedback.minimal": "mínimo",
     "addon.mod_feedback.mode": "Modo",
     "addon.mod_feedback.modulenameplural": "Pesquisa",
     "addon.mod_feedback.next_page": "Próxima página",
