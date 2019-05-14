@@ -1421,6 +1421,7 @@
     "core.nopermissions": "Atsiprašome, tačiau šiuo metu jūs neturite teisės atlikti šio veiksmo",
     "core.noresults": "Nėra rezultatų",
     "core.notapplicable": "netaikoma",
+    "core.notenrolledprofile": "Profilis nepasiekiamas, nes šis naudotojas neįsiregistravęs į šiuos kursus.",
     "core.notice": "Įspėjimas",
     "core.notingroup": "Atsiprašome, bet turite priklausyti grupei, kad matytumėte šį puslapį.",
     "core.notsent": "Neišsiųsta",

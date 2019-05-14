@@ -1487,6 +1487,7 @@
     "core.nopermissions": "Você não tem permissão para {{$a}}",
     "core.noresults": "Nenhum resultado",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Este perfil não é disponível porque este usuário não está inscrito neste curso.",
     "core.notice": "Notar",
     "core.notingroup": "Desculpe, mas você precisa ser participante de um grupo para ver esta página.",
     "core.notsent": "Não enviado",

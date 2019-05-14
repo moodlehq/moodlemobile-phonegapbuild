@@ -1154,6 +1154,7 @@
     "core.none": "Hiçbiri",
     "core.nopermissions": "Üzgünüz, şu anda bunu yapmaya yetkiniz yok: {{$a}}",
     "core.noresults": "Sonuç yok",
+    "core.notenrolledprofile": "Bu kullanıcı bu derse kayıtlı olmadığı için kullanıcı bilgilerine ulaşılamaz.",
     "core.notice": "Uyarı",
     "core.notingroup": "Üzgünüz, bu etkinliği görebilmeniz için bir grubun üyesi olmanız gerekiyor.",
     "core.now": "şimdi",

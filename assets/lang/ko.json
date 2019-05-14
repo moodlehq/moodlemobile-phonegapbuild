@@ -1274,6 +1274,7 @@
     "core.nopermissions": "죄송합니다만 그 ({{$a}})를 할만한 권한이 없습니다.",
     "core.noresults": "결과 없음",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "이 사용자는 강좌의 구성원이 아니므로 개인정보를 볼 수 없습니다.",
     "core.notice": "알림",
     "core.notingroup": "죄송합니다만, 이곳을 보려면 모둠의 구성원이 되어야 합니다.",
     "core.notsent": "전송되지 않음",

@@ -863,6 +863,7 @@
     "core.nopasswordchangeforced": "आपण आपला पासवर्ड न बदलता पुढे जाऊ शकत नाही.",
     "core.noresults": "निकाल नाही.",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "युजर ह्या कोर्सचा सदस्य नसल्यामुळे त्याचे प्रोफाइल उपलब्ध नाही.",
     "core.notice": "पूर्वसुचना",
     "core.notingroup": "माफ करा, ही क्रिया बघण्यासाठी तुम्ही या ग्रुपचा भाग असणे गरजेचे आहे",
     "core.notsent": "पाठविले नाही",

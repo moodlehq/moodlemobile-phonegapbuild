@@ -1568,6 +1568,7 @@
     "core.nopermissions": "Žao nam je, ali trenutno nemate ovlašćenja da to radite ({{$a}}).",
     "core.noresults": "Nema rezultata",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Ovaj profil nije dostupan jer korisnik nije prijavljen za ovaj kurs.",
     "core.notice": "Napomena",
     "core.notingroup": "Nažalost, morate biti član grupe kako biste videli ovu stranicu.",
     "core.notsent": "Nije poslato",

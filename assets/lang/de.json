@@ -1571,6 +1571,7 @@
     "core.nopermissions": "Sie haben derzeit keine Rechte, dies zu tun ({{$a}}).",
     "core.noresults": "Keine Ergebnisse",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Dieses Profil ist nicht verfügbar, weil die Person bisher den Kurs nicht betreten hat.",
     "core.notice": "Hinweis",
     "core.notingroup": "Die Aktivität ist nur für Gruppenmitglieder zugänglich.",
     "core.notsent": "Nicht gesendet",

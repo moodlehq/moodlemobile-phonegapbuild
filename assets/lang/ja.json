@@ -1461,6 +1461,7 @@
     "core.nopermissions": "申し訳ございません、現在、あなたは 「 {{$a}} 」を実行するためのパーミッションがありません。",
     "core.noresults": "該当データはありません。",
     "core.notapplicable": "なし",
+    "core.notenrolledprofile": "コースに登録されていないため、このユーザのプロファイルを閲覧できません。",
     "core.notice": "警告",
     "core.notingroup": "申し訳ございません、このページを閲覧するためにはあなたはグループに属している必要があります。",
     "core.notsent": "未送信",

@@ -1556,6 +1556,7 @@
     "core.nopermissions": "Sorry, maar je hebt nu niet het recht om dat te doen ({{$a}}).",
     "core.noresults": "Geen resultaten",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Dit profiel kan niet bekeken worden omdat de gebruiker niet aangemeld is in deze cursus.",
     "core.notice": "Opmerking",
     "core.notingroup": "Om deze pagina te kunnen zien moet je lid zijn van een groep.",
     "core.notsent": "Niet verstuurd",

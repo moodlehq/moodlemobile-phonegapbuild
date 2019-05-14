@@ -1218,6 +1218,7 @@
     "core.nopasswordchangeforced": "Nie można kontynuować bez zmiany hasła.",
     "core.nopermissions": "Brak odpowiednich uprawnień do wykonania ({{$a}})",
     "core.noresults": "Brak wyników",
+    "core.notenrolledprofile": "Ten profil jest niedostępny, gdyż ten użytkownik nie jest zapisany do kursu.",
     "core.notice": "Powiadomienie",
     "core.notingroup": "Musisz należeć do grupy, aby przeglądać tą aktywność",
     "core.now": "teraz",

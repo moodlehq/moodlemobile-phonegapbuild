@@ -1569,6 +1569,7 @@
     "core.nopermissions": "Désolé, vous n'avez actuellement pas les permissions pour effectuer ceci ({{$a}})",
     "core.noresults": "Aucun résultat",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Ce profil n'est pas accessible, car cet utilisateur n'est pas inscrit à ce cours.",
     "core.notice": "Remarque",
     "core.notingroup": "Désolé, vous devez faire partie d'un groupe pour voir cette page.",
     "core.notsent": "Pas envoyé",

@@ -1267,6 +1267,7 @@
     "core.nopermissions": "Du har tyvärr f.n. inte tillstånd att göra detta ({{$a}})",
     "core.noresults": "Inga resultat",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Den här profilen är inte tillgänglig eftersom den här användaren inte är registrerad på den här kursen.",
     "core.notice": "Meddelande",
     "core.notingroup": "Du måste tyvärr vara registrerad i en grupp för att ta del av den här aktiviteten.",
     "core.now": "nu",

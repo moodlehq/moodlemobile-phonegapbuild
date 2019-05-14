@@ -1494,6 +1494,7 @@
     "core.nopermissions": "Lo sentimos, pero por el momento no tiene permiso para hacer eso ({{$a}})",
     "core.noresults": "No hay resultados",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Este perfil no está disponible porque el usuario no está matriculado en este curso.",
     "core.notice": "Noticia",
     "core.notingroup": "Lo sentimos, para ver esta actividad necesita ser miembro del grupo.",
     "core.notsent": "No enviado",

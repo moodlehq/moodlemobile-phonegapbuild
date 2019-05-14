@@ -1250,6 +1250,7 @@
     "core.none": "Nijedan",
     "core.nopermissions": "Trenutačno nemate ovlasti da napravite ({{$a}})",
     "core.noresults": "Nema rezultata",
+    "core.notenrolledprofile": "Ovaj profil je nedostupan jer korisnik nije prijavljen na ovaj e-kolegij.",
     "core.notice": "Obavijest",
     "core.notingroup": "Nažalost, morate biti član grupe kako biste vidjeli ovu stranicu.",
     "core.notsent": "Nije poslano",

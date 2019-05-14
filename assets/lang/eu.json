@@ -1561,6 +1561,7 @@
     "core.nopermissions": "Sentitzen dugu, baina oraingoz ez duzu hori egiteko baimenik ({{$a}}).",
     "core.noresults": "Emaitzarik ez",
     "core.notapplicable": "ezin da aplikatu",
+    "core.notenrolledprofile": "Profil hau ez da eskuragarria erabiltzailea ez baitago ikastaro honetan matrikulatuta.",
     "core.notice": "Abisua",
     "core.notingroup": "Sentitzen dugu, baina taldekide izan behar duzu orri hau ikusteko.",
     "core.notsent": "Bidali gabea",

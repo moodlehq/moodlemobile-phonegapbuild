@@ -1147,6 +1147,7 @@
     "core.nopermissions": "Ne pare rău, dar în acest moment nu aveţi permisiunea să realizaţi această operaţiune ({{$a}})",
     "core.noresults": "Niciun rezultat",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Acest profil nu este disponibil deoarece utilizatorul nu s-a înscris încă la acest curs.",
     "core.notice": "Notificare",
     "core.notingroup": "Ne pare rău, dar trebuie să faceţi parte dintr-un grup pentru a putea vizualiza această activitate.",
     "core.now": "acum",

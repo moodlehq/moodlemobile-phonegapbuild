@@ -1403,6 +1403,7 @@
     "core.nopermissions": "很抱歉，您没有相应权限（{{$a}}）",
     "core.noresults": "没有结果",
     "core.notapplicable": "不适用",
+    "core.notenrolledprofile": "此资料无效，因为该用户没有注册此课程。",
     "core.notice": "注意",
     "core.notingroup": "抱歉，您需要加入群组才可浏览此页。",
     "core.notsent": "未发送",

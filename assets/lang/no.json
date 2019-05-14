@@ -1302,6 +1302,7 @@
     "core.none": "Ingen",
     "core.nopermissions": "Beklager, men du har ikke rettighet til å gjøre dette ({{$a}})",
     "core.noresults": "Ingen resultater",
+    "core.notenrolledprofile": "Denne profilen er ikke tilgjengelig siden aktuell bruker ikke er påmeldt i dette kurset.",
     "core.notice": "Merknad",
     "core.notingroup": "Beklager, du må være med i en gruppe for å se denne siden.",
     "core.now": "nå",

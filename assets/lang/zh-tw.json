@@ -1406,6 +1406,7 @@
     "core.nopermissions": "抱歉，但是您目前沒有權限執行({{$a}})",
     "core.noresults": "沒有結果",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "個人資料無法使用，因為這用戶並沒有選修這門課程。",
     "core.notice": "注意",
     "core.notingroup": "抱歉，您必須是群組的成員才能看到這個活動",
     "core.notsent": "沒有傳送",

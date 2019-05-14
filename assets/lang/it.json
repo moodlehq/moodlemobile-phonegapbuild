@@ -1453,6 +1453,7 @@
     "core.nopermissions": "Non sei autorizzato a svolgere questa azione ({{$a}})",
     "core.noresults": "Nessun risultato",
     "core.notapplicable": "n/d",
+    "core.notenrolledprofile": "Questo profilo non è disponibile perché questo utente non è iscritto a questo corso.",
     "core.notice": "Nota",
     "core.notingroup": "Per visualizzare l'attività devi appartenere ad un gruppo .",
     "core.notsent": "Non inviato",

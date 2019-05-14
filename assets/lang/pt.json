@@ -1556,6 +1556,7 @@
     "core.nopermissions": "Atualmente, não tem permissões para realizar a operação ({{$a}})",
     "core.noresults": "Sem resultados",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Este perfil não está ativo porque o utilizador não está inscrito nesta disciplina.",
     "core.notice": "Aviso",
     "core.notingroup": "Lamentamos, mas precisa de estar inscrito num grupo para ver esta página.",
     "core.notsent": "Não enviado",

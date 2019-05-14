@@ -1544,6 +1544,7 @@
     "core.nopermissions": "Actualment no teniu permisos per a fer això ({{$a}})",
     "core.noresults": "Sense resultats",
     "core.notapplicable": "n/d",
+    "core.notenrolledprofile": "El perfil no està disponible perquè aquest usuari no està inscrit en aquest curs.",
     "core.notice": "Avís",
     "core.notingroup": "Heu de ser part d'un grup per veure aquesta pàgina.",
     "core.notsent": "No enviat",

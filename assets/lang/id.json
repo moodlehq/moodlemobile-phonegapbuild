@@ -848,6 +848,7 @@
     "core.nopasswordchangeforced": "Anda tidak dapat memproses tanpa mengganti password.",
     "core.noresults": "Tidak ada hasil",
     "core.notapplicable": "n/a",
+    "core.notenrolledprofile": "Profil ini tidak tersedia karena pengguna belum didaftarkan di kursus ini.",
     "core.notice": "Pemberitahuan",
     "core.notingroup": "Maaf, tapi Anda harus menjadi bagian dari grup untuk melihat aktifitas ini.",
     "core.notsent": "Tidak terkirim",
