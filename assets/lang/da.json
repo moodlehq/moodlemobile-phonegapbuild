@@ -779,7 +779,7 @@
     "addon.mod_workshop.createsubmission": "Begynd udarbejdelse af din aflevering",
     "addon.mod_workshop.deletesubmission": "Slet afleveringen",
     "addon.mod_workshop.editsubmission": "Rediger opgavebesvarelse",
-    "addon.mod_workshop.feedbackauthor": "Tilbagemelding fra forfatteren",
+    "addon.mod_workshop.feedbackauthor": "Feedback til besvarelsen",
     "addon.mod_workshop.feedbackby": "Feedback af {{$a}}",
     "addon.mod_workshop.feedbackreviewer": "Tilbagemelding fra den der vurderer",
     "addon.mod_workshop.givengrades": "Karaktertildelinger",

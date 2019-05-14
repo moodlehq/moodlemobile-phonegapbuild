@@ -61,7 +61,7 @@ var lesson_offline = __webpack_require__(269);
 var lesson_sync = __webpack_require__(270);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/helper.ts
-var helper = __webpack_require__(697);
+var helper = __webpack_require__(698);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/player/player.ts
 // (C) Copyright 2015 Martin Dougiamas

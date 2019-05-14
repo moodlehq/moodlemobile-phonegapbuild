@@ -25,7 +25,7 @@ var sites = __webpack_require__(1);
 var delegate = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/mainmenu.ts
-var mainmenu = __webpack_require__(701);
+var mainmenu = __webpack_require__(694);
 
 // CONCATENATED MODULE: ./src/core/mainmenu/pages/more/more.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -76,26 +76,34 @@ var more_CoreMainMenuMorePage = /** @class */ (function () {
         var _this = this;
         // Load the handlers.
         this.subscription = this.menuDelegate.getHandlers().subscribe(function (handlers) {
-            // Calculate the main handlers to not display them in this view.
-            var mainHandlers = handlers.filter(function (handler) {
-                return !handler.onlyInMore;
-            }).slice(0, mainmenu["a" /* CoreMainMenuProvider */].NUM_MAIN_HANDLERS);
-            // Get only the handlers that don't appear in the main view.
-            _this.handlers = [];
-            handlers.forEach(function (handler) {
-                if (mainHandlers.indexOf(handler) == -1) {
-                    _this.handlers.push(handler);
-                }
-            });
-            _this.handlersLoaded = _this.menuDelegate.areHandlersLoaded();
+            _this.allHandlers = handlers;
+            _this.initHandlers();
         });
+        window.addEventListener('resize', this.initHandlers.bind(this));
     };
     /**
      * Page destroyed.
      */
     CoreMainMenuMorePage.prototype.ngOnDestroy = function () {
+        window.removeEventListener('resize', this.initHandlers.bind(this));
         if (this.subscription) {
             this.subscription.unsubscribe();
+        }
+    };
+    /**
+     * Init handlers on change (size or handlers).
+     */
+    CoreMainMenuMorePage.prototype.initHandlers = function () {
+        if (this.allHandlers) {
+            // Calculate the main handlers not to display them in this view.
+            var mainHandlers_1 = this.allHandlers.filter(function (handler) {
+                return !handler.onlyInMore;
+            }).slice(0, this.mainMenuProvider.getNumItems());
+            // Get only the handlers that don't appear in the main view.
+            this.handlers = this.allHandlers.filter(function (handler) {
+                return mainHandlers_1.indexOf(handler) == -1;
+            });
+            this.handlersLoaded = this.menuDelegate.areHandlersLoaded();
         }
     };
     /**

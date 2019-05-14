@@ -1583,7 +1583,7 @@ var send_message_form = __webpack_require__(1417);
 var providers_config = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-footer.js
-var toolbar_footer = __webpack_require__(700);
+var toolbar_footer = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);

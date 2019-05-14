@@ -28,7 +28,7 @@ var pipes_module = __webpack_require__(104);
 var calendar = __webpack_require__(357);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/helper.ts
-var helper = __webpack_require__(695);
+var helper = __webpack_require__(696);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
 var courses = __webpack_require__(49);

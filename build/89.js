@@ -43,7 +43,7 @@ var user = __webpack_require__(43);
 var lesson = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/helper.ts
-var helper = __webpack_require__(697);
+var helper = __webpack_require__(698);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/user-retake/user-retake.ts
 // (C) Copyright 2015 Martin Dougiamas
