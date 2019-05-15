@@ -1,6 +1,6 @@
 webpackJsonp([109],{
 
-/***/ 1900:
+/***/ 1899:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -230,7 +230,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1401);
 var unsupported_module_ngfactory = __webpack_require__(1402);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1422);
+var index_ngfactory = __webpack_require__(1421);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
 var badge = __webpack_require__(157);
