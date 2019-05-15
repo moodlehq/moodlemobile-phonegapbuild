@@ -43,6 +43,7 @@
     "addon.block_timeline.next3months": "Prossimi 3 mesi",
     "addon.block_timeline.next6months": "Prossimi 6 mesi",
     "addon.block_timeline.next7days": "Prossimi 7 giorni",
+    "addon.block_timeline.noevents": "Non ci sono attività in scadenza",
     "addon.block_timeline.sortbycourses": "Ordina per corsi",
     "addon.block_timeline.sortbydates": "Ordina per date",
     "addon.blog.blog": "Blog",
