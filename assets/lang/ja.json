@@ -1513,6 +1513,7 @@
     "core.resourcedisplayopen": "オープン",
     "core.resources": "リソース",
     "core.restore": "リストア",
+    "core.restricted": "利用制限",
     "core.retry": "再実行",
     "core.save": "保存",
     "core.search": "検索",

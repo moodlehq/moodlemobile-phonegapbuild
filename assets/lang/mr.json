@@ -890,6 +890,7 @@
     "core.requireduserdatamissing": "या वापरकर्त्याकडे काही आवश्यक प्रोफाइल डेटा नसतो. कृपया आपल्या मूडलमध्ये हा डेटा भरा आणि पुन्हा प्रयत्न करा. <br> {{$ a}}",
     "core.resources": "साधने",
     "core.restore": "पुन्हा साठवून ठेवणे",
+    "core.restricted": "मर्यादा आहेत.",
     "core.retry": "पुन्हा प्रयत्न करा",
     "core.search": "शोध",
     "core.searching": "शोधत आहे",
