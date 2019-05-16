@@ -1629,6 +1629,7 @@
     "core.sizemb": "Мбайт",
     "core.sizetb": "Тб",
     "core.sorry": "Извините...",
+    "core.sort": "Отсортировать",
     "core.sortby": "Сортировать по",
     "core.strftimedate": "%d %B %Y",
     "core.strftimedatefullshort": "%d/%m/%y",

@@ -1069,6 +1069,7 @@
     "core.sizekb": "KB",
     "core.sizemb": "MB",
     "core.sizetb": "ТБ",
+    "core.sort": "Подреждане",
     "core.sortby": "Нареждане по",
     "core.strftimedate": "%d %B %Y",
     "core.strftimedateshort": "%d %B",

@@ -970,6 +970,7 @@
     "core.sizegb": "غيغابايت",
     "core.sizekb": "كيلو بايت",
     "core.sizemb": "ميغا بايب",
+    "core.sort": "فرز",
     "core.sortby": "إفرز بـ",
     "core.strftimedate": "%d %B %Y",
     "core.strftimedatefullshort": "%d/%m/%y",

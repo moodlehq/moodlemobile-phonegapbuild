@@ -1042,6 +1042,7 @@
     "core.sizegb": "Гбайт",
     "core.sizekb": "Кбайт",
     "core.sizemb": "Мбайт",
+    "core.sort": "Тартиб кардан",
     "core.sortby": "Ба навъҳо ҷудо карда шавад аз рӯи",
     "core.strftimedate": "%d %B %Y",
     "core.strftimedateshort": "%d %B",

@@ -1372,6 +1372,7 @@
     "core.sizemb": "MB",
     "core.sizetb": "TB",
     "core.sorry": "죄송합니다.",
+    "core.sort": "정렬",
     "core.sortby": "정렬",
     "core.strftimedate": "%Y년 %B %d일",
     "core.strftimedatefullshort": "%y/%m/%d",

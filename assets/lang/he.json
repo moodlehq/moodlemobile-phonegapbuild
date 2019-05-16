@@ -1332,6 +1332,7 @@
     "core.sizegb": "GB",
     "core.sizekb": "KB",
     "core.sizemb": "MB",
+    "core.sort": "מיון",
     "core.sortby": "מיון לפי",
     "core.strftimedate": "%d/%m/%Y",
     "core.strftimedatefullshort": "%d/%m/%y",

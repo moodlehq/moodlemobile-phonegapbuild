@@ -1639,6 +1639,7 @@
     "core.sizemb": "MB",
     "core.sizetb": "TB",
     "core.sorry": "Beklager...",
+    "core.sort": "Sortér",
     "core.sortby": "Sorter efter",
     "core.strftimedate": "%d. %B %Y",
     "core.strftimedatefullshort": "%j/%n-%y",

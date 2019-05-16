@@ -1344,6 +1344,7 @@
     "core.sizekb": "KB",
     "core.sizemb": "MB",
     "core.sizetb": "TB",
+    "core.sort": "Sortiranje",
     "core.sortby": "Sortiraj prema",
     "core.strftimedate": "%d %B %Y",
     "core.strftimedatefullshort": "%d/%m/%y",

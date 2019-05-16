@@ -1549,6 +1549,7 @@
     "core.sizemb": "MB",
     "core.sizetb": "TB",
     "core.sorry": "Atsiprašome...",
+    "core.sort": "Rūšiuoti",
     "core.sortby": "Rūšiuoti pagal",
     "core.strftimedate": "%Y %B %d",
     "core.strftimedatefullshort": "%y/%m/%d",

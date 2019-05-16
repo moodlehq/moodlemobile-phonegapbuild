@@ -1369,6 +1369,7 @@
     "core.sizekb": "Kb",
     "core.sizemb": "Mb",
     "core.sizetb": "Tb",
+    "core.sort": "Sortera",
     "core.sortby": "Sortera enligt",
     "core.strftimedate": "%d %B %Y",
     "core.strftimedatefullshort": "%d/%m/%y",
