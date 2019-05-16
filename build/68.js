@@ -25,7 +25,7 @@ var user = __webpack_require__(42);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/settings/providers/helper.ts
-var helper = __webpack_require__(702);
+var helper = __webpack_require__(703);
 
 // EXTERNAL MODULE: ./src/addon/messageoutput/providers/delegate.ts
 var delegate = __webpack_require__(371);
