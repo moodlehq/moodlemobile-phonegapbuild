@@ -261,6 +261,7 @@
     "addon.mod_quiz.quizpassword": "Password Kuis",
     "addon.mod_quiz.requirepasswordmessage": "Diperlukan kata kunci untuk membuka kuis ini",
     "addon.mod_quiz.review": "Ulasan",
+    "addon.mod_quiz.timeleft": "Waktu tersisa",
     "addon.mod_quiz.timetaken": "Waktu yang digunakan",
     "addon.mod_quiz.warningattemptfinished": "Upaya offline telah dibuang seperti telah selesai di situs atau tidak ditemukan.",
     "addon.mod_quiz.warningdatadiscarded": "Beberapa jawaban offline telah dibuang karena pertanyaan telah dimodifikasi secara online.",

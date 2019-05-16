@@ -93,6 +93,7 @@ var course_storage_AddonStorageManagerCourseStoragePage = /** @class */ (functio
                 section.totalSize = 0;
                 section.modules.forEach(function (module) {
                     module.parentSection = section;
+                    module.totalSize = 0;
                     // Note: This function only gets the size for modules which are downloadable.
                     // For other modules it always returns 0, even if they have downloaded some files.
                     // However there is no 100% reliable way to actually track the files in this case.
@@ -102,9 +103,12 @@ var course_storage_AddonStorageManagerCourseStoragePage = /** @class */ (functio
                     // Most modules which have large files are downloadable, so I think this is sufficient.
                     var promise = _this.prefetchDelegate.getModuleDownloadedSize(module, _this.course.id).
                         then(function (size) {
-                        module.totalSize = size;
-                        section.totalSize += size;
-                        _this.totalSize += size;
+                        // There are some cases where the return from this is not a valid number.
+                        if (!isNaN(size)) {
+                            module.totalSize = Number(size);
+                            section.totalSize += size;
+                            _this.totalSize += size;
+                        }
                     });
                     allPromises.push(promise);
                 });
