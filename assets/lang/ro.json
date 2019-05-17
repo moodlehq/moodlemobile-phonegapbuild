@@ -1272,6 +1272,8 @@
     "core.strftimerecent": "%d %b, %H:%M",
     "core.strftimerecentfull": "%a, %d %b %Y, %H:%M",
     "core.strftimetime": "%H:%M",
+    "core.strftimetime12": "%I:%M %p",
+    "core.strftimetime24": "%H:%M",
     "core.submit": "Trimite",
     "core.success": "Succes",
     "core.tablet": "Tabletă",

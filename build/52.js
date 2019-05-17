@@ -1,6 +1,6 @@
 webpackJsonp([52],{
 
-/***/ 1998:
+/***/ 1999:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31,19 +31,13 @@ var dom = __webpack_require__(4);
 var utils_utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var helper = __webpack_require__(88);
-
-// EXTERNAL MODULE: ./src/core/contentlinks/providers/delegate.ts
-var delegate = __webpack_require__(61);
-
-// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
-var providers_helper = __webpack_require__(16);
+var helper = __webpack_require__(81);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(126);
+var configconstants = __webpack_require__(119);
 
 // CONCATENATED MODULE: ./src/core/login/pages/credentials/credentials.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -79,13 +73,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
 /**
  * Page to enter the user credentials.
  */
 var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
-    function CoreLoginCredentialsPage(navCtrl, navParams, fb, appProvider, sitesProvider, loginHelper, domUtils, translate, utils, eventsProvider, contentLinksDelegate, contentLinksHelper) {
+    function CoreLoginCredentialsPage(navCtrl, navParams, fb, appProvider, sitesProvider, loginHelper, domUtils, translate, utils, eventsProvider) {
         this.navCtrl = navCtrl;
         this.appProvider = appProvider;
         this.sitesProvider = sitesProvider;
@@ -94,8 +86,6 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
         this.translate = translate;
         this.utils = utils;
         this.eventsProvider = eventsProvider;
-        this.contentLinksDelegate = contentLinksDelegate;
-        this.contentLinksHelper = contentLinksHelper;
         this.siteChecked = false;
         this.pageLoaded = false;
         this.isBrowserSSO = false;
@@ -236,22 +226,7 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
                 _this.credForm.controls['username'].reset();
                 _this.credForm.controls['password'].reset();
                 _this.siteId = id;
-                if (_this.urlToOpen) {
-                    // There's a content link to open.
-                    return _this.contentLinksDelegate.getActionsFor(_this.urlToOpen, undefined, username).then(function (actions) {
-                        var action = _this.contentLinksHelper.getFirstValidAction(actions);
-                        if (action && action.sites.length) {
-                            // Action should only have 1 site because we're filtering by username.
-                            action.action(action.sites[0]);
-                        }
-                        else {
-                            return _this.loginHelper.goToSiteInitialPage();
-                        }
-                    });
-                }
-                else {
-                    return _this.loginHelper.goToSiteInitialPage();
-                }
+                return _this.loginHelper.goToSiteInitialPage(undefined, undefined, undefined, undefined, _this.urlToOpen);
             });
         }).catch(function (error) {
             _this.loginHelper.treatUserTokenError(siteUrl, error, username, password);
@@ -308,8 +283,7 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
         __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], ionic_angular["t" /* NavParams */], esm5_forms["d" /* FormBuilder */], app["a" /* CoreAppProvider */],
             sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */],
             dom["a" /* CoreDomUtilsProvider */], _ngx_translate_core["c" /* TranslateService */], utils_utils["a" /* CoreUtilsProvider */],
-            events["a" /* CoreEventsProvider */], delegate["a" /* CoreContentLinksDelegate */],
-            providers_helper["a" /* CoreContentLinksHelperProvider */]])
+            events["a" /* CoreEventsProvider */]])
     ], CoreLoginCredentialsPage);
     return CoreLoginCredentialsPage;
 }());
@@ -368,43 +342,43 @@ var credentials_module_CoreLoginCredentialsPageModule = /** @class */ (function 
 
 //# sourceMappingURL=credentials.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1390);
+var action_sheet_component_ngfactory = __webpack_require__(1391);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1391);
+var alert_component_ngfactory = __webpack_require__(1392);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1392);
+var app_root_ngfactory = __webpack_require__(1393);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1393);
+var loading_component_ngfactory = __webpack_require__(1394);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1394);
+var modal_component_ngfactory = __webpack_require__(1395);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1395);
+var picker_component_ngfactory = __webpack_require__(1396);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1396);
+var popover_component_ngfactory = __webpack_require__(1397);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1397);
+var select_popover_component_ngfactory = __webpack_require__(1398);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1398);
+var toast_component_ngfactory = __webpack_require__(1399);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1401);
+var context_menu_popover_ngfactory = __webpack_require__(1402);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1402);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1403);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1403);
+var recaptchamodal_ngfactory = __webpack_require__(1404);
 
 // EXTERNAL MODULE: ./src/components/bs-tooltip/bs-tooltip.ngfactory.js
-var bs_tooltip_ngfactory = __webpack_require__(1404);
+var bs_tooltip_ngfactory = __webpack_require__(1405);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(45);
@@ -431,7 +405,7 @@ var translate_service = __webpack_require__(18);
 var icon = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
-var format_text = __webpack_require__(43);
+var format_text = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
 var utils_text = __webpack_require__(10);
@@ -440,13 +414,16 @@ var utils_text = __webpack_require__(10);
 var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(24);
+var url = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
+var providers_helper = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(26);
@@ -485,16 +462,16 @@ var app_app = __webpack_require__(33);
 var dom_controller = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/components/show-password/show-password.ngfactory.js
-var show_password_ngfactory = __webpack_require__(694);
+var show_password_ngfactory = __webpack_require__(695);
 
 // EXTERNAL MODULE: ./src/components/show-password/show-password.ts
 var show_password = __webpack_require__(358);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(87);
+var list = __webpack_require__(88);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list-header.js
 var list_header = __webpack_require__(302);
@@ -503,22 +480,22 @@ var list_header = __webpack_require__(302);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(453);
+var toolbar_header = __webpack_require__(454);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1399);
+var navbar_ngfactory = __webpack_require__(1400);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(210);
+var navbar = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(685);
+var back_button = __webpack_require__(686);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1400);
+var toolbar_title_ngfactory = __webpack_require__(1401);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
 var toolbar_title = __webpack_require__(351);
@@ -527,10 +504,10 @@ var toolbar_title = __webpack_require__(351);
 var toolbar = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(454);
+var toolbar_item = __webpack_require__(455);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(181);
+var content_ngfactory = __webpack_require__(180);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(105);
@@ -551,7 +528,6 @@ var nav_params = __webpack_require__(66);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
-
 
 
 
@@ -645,7 +621,7 @@ function View_CoreLoginCredentialsPage_0(_l) { return core["_57" /* ɵvid */](0,
         var pd_0 = (_co.forgottenPassword() !== false);
         ad = (pd_0 && ad);
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](73, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](74, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginCredentialsPage_9)), core["_30" /* ɵdid */](79, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginCredentialsPage_11)), core["_30" /* ɵdid */](82, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_3 = _co.isFixedUrlSet; _ck(_v, 17, 0, currVal_3); var currVal_6 = _co.pageLoaded; _ck(_v, 26, 0, currVal_6); var currVal_7 = _co.logoUrl; _ck(_v, 34, 0, currVal_7); var currVal_8 = !_co.logoUrl; _ck(_v, 37, 0, currVal_8); var currVal_9 = !_co.siteName; _ck(_v, 41, 0, currVal_9); var currVal_10 = _co.siteName; _ck(_v, 45, 0, currVal_10); var currVal_11 = _co.siteName; _ck(_v, 48, 0, currVal_11); var currVal_19 = _co.credForm; _ck(_v, 53, 0, currVal_19); var currVal_20 = (_co.siteChecked && !_co.isBrowserSSO); _ck(_v, 58, 0, currVal_20); var currVal_21 = (_co.siteChecked && !_co.isBrowserSSO); _ck(_v, 61, 0, currVal_21); var currVal_23 = ""; _ck(_v, 64, 0, currVal_23); var currVal_25 = "light"; var currVal_26 = ""; _ck(_v, 73, 0, currVal_25, currVal_26); var currVal_28 = (_co.identityProviders && _co.identityProviders.length); _ck(_v, 79, 0, currVal_28); var currVal_29 = _co.canSignup; _ck(_v, 82, 0, currVal_29); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("core.login.login")); _ck(_v, 9, 0, currVal_2); var currVal_4 = core["_44" /* ɵnov */](_v, 23).statusbarPadding; var currVal_5 = core["_44" /* ɵnov */](_v, 23)._hasRefresher; _ck(_v, 22, 0, currVal_4, currVal_5); var currVal_12 = core["_44" /* ɵnov */](_v, 55).ngClassUntouched; var currVal_13 = core["_44" /* ɵnov */](_v, 55).ngClassTouched; var currVal_14 = core["_44" /* ɵnov */](_v, 55).ngClassPristine; var currVal_15 = core["_44" /* ɵnov */](_v, 55).ngClassDirty; var currVal_16 = core["_44" /* ɵnov */](_v, 55).ngClassValid; var currVal_17 = core["_44" /* ɵnov */](_v, 55).ngClassInvalid; var currVal_18 = core["_44" /* ɵnov */](_v, 55).ngClassPending; _ck(_v, 51, 0, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18); var currVal_22 = ((_co.siteChecked && !_co.isBrowserSSO) && !_co.credForm.valid); _ck(_v, 63, 0, currVal_22); var currVal_24 = core["_56" /* ɵunv */](_v, 65, 0, core["_44" /* ɵnov */](_v, 66).transform("core.login.loginbutton")); _ck(_v, 65, 0, currVal_24); var currVal_27 = core["_56" /* ɵunv */](_v, 74, 0, core["_44" /* ɵnov */](_v, 75).transform("core.login.forgotten")); _ck(_v, 74, 0, currVal_27); }); }
-function View_CoreLoginCredentialsPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-login-credentials", [], null, null, null, View_CoreLoginCredentialsPage_0, RenderType_CoreLoginCredentialsPage)), core["_30" /* ɵdid */](1, 49152, null, 0, credentials_CoreLoginCredentialsPage, [nav_controller["a" /* NavController */], nav_params["a" /* NavParams */], esm5_forms["d" /* FormBuilder */], app["a" /* CoreAppProvider */], sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], dom["a" /* CoreDomUtilsProvider */], translate_service["a" /* TranslateService */], utils_utils["a" /* CoreUtilsProvider */], events["a" /* CoreEventsProvider */], delegate["a" /* CoreContentLinksDelegate */], providers_helper["a" /* CoreContentLinksHelperProvider */]], null, null)], null, null); }
+function View_CoreLoginCredentialsPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-login-credentials", [], null, null, null, View_CoreLoginCredentialsPage_0, RenderType_CoreLoginCredentialsPage)), core["_30" /* ɵdid */](1, 49152, null, 0, credentials_CoreLoginCredentialsPage, [nav_controller["a" /* NavController */], nav_params["a" /* NavParams */], esm5_forms["d" /* FormBuilder */], app["a" /* CoreAppProvider */], sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], dom["a" /* CoreDomUtilsProvider */], translate_service["a" /* TranslateService */], utils_utils["a" /* CoreUtilsProvider */], events["a" /* CoreEventsProvider */]], null, null)], null, null); }
 var CoreLoginCredentialsPageNgFactory = core["_27" /* ɵccf */]("page-core-login-credentials", credentials_CoreLoginCredentialsPage, View_CoreLoginCredentialsPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=credentials.ngfactory.js.map
@@ -662,10 +638,10 @@ var translate_parser = __webpack_require__(350);
 var missing_translation_handler = __webpack_require__(349);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(452);
+var translate_store = __webpack_require__(453);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(684);
+var ionic_angular_module = __webpack_require__(685);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(104);
