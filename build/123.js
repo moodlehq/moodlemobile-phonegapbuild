@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var split_view = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(148);
+var competency = __webpack_require__(149);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/competencysummary/competencysummary.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -79,7 +79,9 @@ var competencysummary_AddonCompetencyCompetencySummaryPage = /** @class */ (func
     AddonCompetencyCompetencySummaryPage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.fetchCompetency().then(function () {
-            _this.competencyProvider.logCompetencyView(_this.competencyId).catch(function () {
+            var name = _this.competency.competency && _this.competency.competency.competency &&
+                _this.competency.competency.competency.shortname;
+            _this.competencyProvider.logCompetencyView(_this.competencyId, name).catch(function () {
                 // Ignore errors.
             });
         }).finally(function () {
@@ -230,10 +232,10 @@ var toolbar_title = __webpack_require__(351);
 var config = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(257);
+var toolbar = __webpack_require__(258);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -320,7 +322,7 @@ var app_app = __webpack_require__(33);
 var back_button = __webpack_require__(686);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(183);
+var content_ngfactory = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(31);
@@ -329,16 +331,16 @@ var dom_controller = __webpack_require__(31);
 var keyboard = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(145);
+var refresher = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(198);
+var refresher_content_ngfactory = __webpack_require__(199);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(159);
+var refresher_content = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -447,7 +449,7 @@ var ionic_angular_module = __webpack_require__(685);
 var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(258);
+var module_loader = __webpack_require__(259);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/competencysummary/competencysummary.module.ngfactory.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonCompetencyCompetencySummaryPageModuleNgFactory", function() { return AddonCompetencyCompetencySummaryPageModuleNgFactory; });

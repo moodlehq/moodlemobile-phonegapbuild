@@ -40,7 +40,7 @@ var time = __webpack_require__(24);
 var ion_tabs = __webpack_require__(690);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm.ts
-var providers_scorm = __webpack_require__(215);
+var providers_scorm = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/helper.ts
 var helper = __webpack_require__(366);
@@ -1182,7 +1182,7 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
             });
         }
         // Trigger SCO launch event.
-        this.scormProvider.logLaunchSco(this.scorm.id, sco.id).catch(function () {
+        this.scormProvider.logLaunchSco(this.scorm.id, sco.id, this.scorm.name).catch(function () {
             // Ignore errors.
         });
     };
@@ -1414,7 +1414,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(1400);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(33);
@@ -1435,7 +1435,7 @@ var toolbar_title_ngfactory = __webpack_require__(1401);
 var toolbar_title = __webpack_require__(351);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(257);
+var toolbar = __webpack_require__(258);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(42);
@@ -1471,7 +1471,7 @@ var toolbar_item = __webpack_require__(455);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(183);
+var content_ngfactory = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(31);
@@ -1495,7 +1495,7 @@ var navigation_bar = __webpack_require__(374);
 var nav_params = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(169);
+var modal_controller = __webpack_require__(170);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.ngfactory.js
 /**
@@ -1602,7 +1602,7 @@ var ionic_angular_module = __webpack_require__(685);
 var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(258);
+var module_loader = __webpack_require__(259);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.module.ngfactory.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModScormPlayerPageModuleNgFactory", function() { return AddonModScormPlayerPageModuleNgFactory; });

@@ -186,7 +186,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(1400);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(33);
@@ -213,7 +213,7 @@ var toolbar_title_ngfactory = __webpack_require__(1401);
 var toolbar_title = __webpack_require__(351);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(257);
+var toolbar = __webpack_require__(258);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(42);
@@ -258,7 +258,7 @@ var iframe = __webpack_require__(37);
 var toolbar_item = __webpack_require__(455);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(169);
+var modal_controller = __webpack_require__(170);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(69);
@@ -267,16 +267,16 @@ var groups = __webpack_require__(69);
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(164);
+var forum = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
 var providers_helper = __webpack_require__(264);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
-var offline = __webpack_require__(214);
+var offline = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
-var sync = __webpack_require__(240);
+var sync = __webpack_require__(241);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-prefetch-delegate.ts
 var module_prefetch_delegate = __webpack_require__(47);
@@ -285,7 +285,7 @@ var module_prefetch_delegate = __webpack_require__(47);
 var prefetch_handler = __webpack_require__(380);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
-var providers_offline = __webpack_require__(189);
+var providers_offline = __webpack_require__(190);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(67);
@@ -388,7 +388,7 @@ var course_components_components_module = __webpack_require__(68);
 var rating_components_components_module = __webpack_require__(694);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(258);
+var module_loader = __webpack_require__(259);
 
 // CONCATENATED MODULE: ./src/addon/mod/forum/pages/index/index.module.ngfactory.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModForumIndexPageModuleNgFactory", function() { return AddonModForumIndexPageModuleNgFactory; });
