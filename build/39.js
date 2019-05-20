@@ -22,7 +22,7 @@ var app = __webpack_require__(9);
 var constants = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(169);
+var config = __webpack_require__(172);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var file = __webpack_require__(51);
@@ -31,7 +31,7 @@ var file = __webpack_require__(51);
 var events = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/lang.ts
-var lang = __webpack_require__(159);
+var lang = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -40,7 +40,7 @@ var dom = __webpack_require__(4);
 var local_notifications = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(119);
+var configconstants = __webpack_require__(120);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/general/general.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -269,7 +269,7 @@ var toggle = __webpack_require__(352);
 var platform = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/tap-click/haptic.js
-var haptic = __webpack_require__(184);
+var haptic = __webpack_require__(187);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(40);
@@ -311,7 +311,7 @@ var toolbar_title = __webpack_require__(351);
 var toolbar = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(180);
+var content_ngfactory = __webpack_require__(183);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(26);
@@ -320,7 +320,7 @@ var content = __webpack_require__(26);
 var keyboard = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(116);
+var select_ngfactory = __webpack_require__(117);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(97);

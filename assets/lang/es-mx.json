@@ -481,7 +481,7 @@
     "addon.mod_forum.addanewdiscussion": "Añadir un nuevo tópico/tema de discusión aquí",
     "addon.mod_forum.addanewquestion": "Añadir una nueva pregunta",
     "addon.mod_forum.addanewtopic": "Añadir un nuevo tópico/tema",
-    "addon.mod_forum.addtofavourites": "Iniciar esta discusión",
+    "addon.mod_forum.addtofavourites": "Marcar con estrella esta discusión",
     "addon.mod_forum.cannotadddiscussion": "Para agregar discusiones a este foro se requiere pertenecer al grupo.",
     "addon.mod_forum.cannotadddiscussionall": "No tiene permiso para añadir un nuevo tópico/tema de discusión para todos los participantes.",
     "addon.mod_forum.cannotcreatediscussion": "No se pudo crear una discusión nueva",

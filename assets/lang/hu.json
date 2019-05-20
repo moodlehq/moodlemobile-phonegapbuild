@@ -442,7 +442,7 @@
     "addon.mod_forum.notlocked": "Zárolás",
     "addon.mod_forum.pindiscussion": "Megbeszélés fölülre helyezése",
     "addon.mod_forum.pinupdated": "Fölülre helyezését frissítettük.",
-    "addon.mod_forum.postisprivatereply": "A hozzászólás magánjellegű volt, nem láthatja mindenki.",
+    "addon.mod_forum.postisprivatereply": "A hozzászólás magánjellegű volt, mások nem láthatják.",
     "addon.mod_forum.posttoforum": "Hozzászólás a fórumhoz",
     "addon.mod_forum.privatereply": "Magánjellegű válaszadás",
     "addon.mod_forum.re": "Tárgy:",

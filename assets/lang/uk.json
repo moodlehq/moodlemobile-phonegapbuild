@@ -1020,6 +1020,8 @@
     "assets.mimetypes.audio": "Аудіо файл ({{$a.EXT}})",
     "assets.mimetypes.default": "{{$a.mimetype}}",
     "assets.mimetypes.document/unknown": "Файл",
+    "assets.mimetypes.group:html_audio": "Аудіофайли, які підтримуються браузерами",
+    "assets.mimetypes.group:html_video": "Відеофайли, які підтримуються браузерами",
     "assets.mimetypes.image": "Зображення ({{$a.MIMETYPE2}})",
     "assets.mimetypes.text/html": "Документ HTML",
     "assets.mimetypes.text/plain": "Текстовий файл",
