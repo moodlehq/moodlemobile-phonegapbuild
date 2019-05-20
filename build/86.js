@@ -137,7 +137,12 @@ var attempt_AddonModQuizAttemptPage = /** @class */ (function () {
         promises.push(this.quizProvider.getQuizAccessInformation(this.quiz.id).then(function (quizAccessInfo) {
             accessInfo = quizAccessInfo;
             if (accessInfo.canreviewmyattempts) {
-                return _this.quizProvider.getAttemptReview(_this.attemptId, -1).catch(function () {
+                // Check if the user can review the attempt.
+                return _this.quizProvider.invalidateAttemptReviewForPage(_this.attemptId, -1).catch(function () {
+                    // Ignore errors.
+                }).then(function () {
+                    return _this.quizProvider.getAttemptReview(_this.attemptId, -1);
+                }).catch(function () {
                     // Error getting the review, assume the user cannot review the attempt.
                     accessInfo.canreviewmyattempts = false;
                 });
