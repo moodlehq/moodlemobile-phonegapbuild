@@ -248,7 +248,7 @@
     "addon.mod_assign.addnewattemptfromprevious": "Añadir un nuevo intento basado en un envío anterior",
     "addon.mod_assign.addsubmission": "Añadir envío",
     "addon.mod_assign.allowsubmissionsanddescriptionfromdatesummary": "Los detalles de la tarea y el formato de entrega estarán disponibles en <strong>{{$a}}</strong>",
-    "addon.mod_assign.allowsubmissionsfromdate": "Permitir envíos desde",
+    "addon.mod_assign.allowsubmissionsfromdate": "Permitir envíos a partir de",
     "addon.mod_assign.allowsubmissionsfromdatesummary": "Esta tarea aceptará entregas de <strong>{{$a}}</strong>",
     "addon.mod_assign.applytoteam": "Aplicar calificaciones y retroalimentación a todo el equipo",
     "addon.mod_assign.assignmentisdue": "La tarea ha vencido",

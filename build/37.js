@@ -30,6 +30,9 @@ var utils_text = __webpack_require__(10);
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
 
+// EXTERNAL MODULE: ./src/core/course/providers/course.ts
+var course = __webpack_require__(15);
+
 // CONCATENATED MODULE: ./src/core/settings/pages/space-usage/space-usage.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
@@ -60,16 +63,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Page that displays the space usage settings.
  */
 var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
-    function CoreSettingsSpaceUsagePage(filePoolProvider, sitesProvider, textUtils, translate, domUtils, appProvider) {
+    function CoreSettingsSpaceUsagePage(filePoolProvider, sitesProvider, textUtils, translate, domUtils, appProvider, courseProvider) {
         this.filePoolProvider = filePoolProvider;
         this.sitesProvider = sitesProvider;
         this.textUtils = textUtils;
         this.translate = translate;
         this.domUtils = domUtils;
+        this.courseProvider = courseProvider;
         this.usageLoaded = false;
         this.sites = [];
         this.currentSiteId = '';
@@ -196,6 +201,7 @@ var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
                     _this.filePoolProvider.clearAllPackagesStatus(site.id);
                     _this.filePoolProvider.clearFilepool(site.id);
                     _this.updateSiteUsage(siteData, 0);
+                    _this.courseProvider.clearAllCoursesStatus(site.id);
                 }).catch(function (error) {
                     if (error && error.code === FileError.NOT_FOUND_ERR) {
                         // Not found, set size 0.
@@ -227,7 +233,8 @@ var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [filepool["a" /* CoreFilepoolProvider */],
             sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */],
-            _ngx_translate_core["c" /* TranslateService */], dom["a" /* CoreDomUtilsProvider */], app["a" /* CoreAppProvider */]])
+            _ngx_translate_core["c" /* TranslateService */], dom["a" /* CoreDomUtilsProvider */], app["a" /* CoreAppProvider */],
+            course["a" /* CoreCourseProvider */]])
     ], CoreSettingsSpaceUsagePage);
     return CoreSettingsSpaceUsagePage;
 }());
@@ -515,6 +522,7 @@ var item_divider = __webpack_require__(113);
 
 
 
+
 var styles_CoreSettingsSpaceUsagePage = [];
 var RenderType_CoreSettingsSpaceUsagePage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreSettingsSpaceUsagePage, data: {} });
 
@@ -526,7 +534,7 @@ function View_CoreSettingsSpaceUsagePage_0(_l) { return core["_57" /* ɵvid */](
         var pd_0 = (_co.refreshData($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), core["_30" /* ɵdid */](19, 212992, null, 0, refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](21, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](22, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](26, 0, null, 1, 29, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](27, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreSettingsSpaceUsagePage_1)), core["_30" /* ɵdid */](30, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_31" /* ɵeld */](32, 0, null, 0, 22, "ion-item-divider", [["class", "item item-divider"]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](33, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 4, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 5, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 6, { _icons: 1 }), core["_30" /* ɵdid */](37, 16384, null, 0, item_divider["a" /* ItemDivider */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](39, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](40, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](43, 0, null, 4, 10, "div", [["item-end", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](45, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](46, null, ["", ""])), core["_49" /* ɵppd */](47, 1), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](49, 0, null, null, 3, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](50, null, ["", ""])), core["_48" /* ɵpod */](51, { $a: 0 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 6, 0); var currVal_7 = _co.usageLoaded; _ck(_v, 19, 0, currVal_7); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 22, 0, core["_44" /* ɵnov */](_v, 23).transform("core.pulltorefresh")), ""); _ck(_v, 22, 0, currVal_9); var currVal_10 = _co.usageLoaded; _ck(_v, 27, 0, currVal_10); var currVal_11 = _co.sites; _ck(_v, 30, 0, currVal_11); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 11).transform("core.settings.spaceusage")); _ck(_v, 10, 0, currVal_2); var currVal_3 = core["_44" /* ɵnov */](_v, 16).statusbarPadding; var currVal_4 = core["_44" /* ɵnov */](_v, 16)._hasRefresher; _ck(_v, 15, 0, currVal_3, currVal_4); var currVal_5 = (core["_44" /* ɵnov */](_v, 19).state !== "inactive"); var currVal_6 = core["_44" /* ɵnov */](_v, 19)._top; _ck(_v, 18, 0, currVal_5, currVal_6); var currVal_8 = core["_44" /* ɵnov */](_v, 22).r.state; _ck(_v, 21, 0, currVal_8); var currVal_12 = core["_56" /* ɵunv */](_v, 40, 0, core["_44" /* ɵnov */](_v, 41).transform("core.settings.total")); _ck(_v, 40, 0, currVal_12); var currVal_13 = core["_56" /* ɵunv */](_v, 46, 0, _ck(_v, 47, 0, core["_44" /* ɵnov */](_v, 0), _co.totalUsage)); _ck(_v, 46, 0, currVal_13); var currVal_14 = core["_56" /* ɵunv */](_v, 50, 0, core["_44" /* ɵnov */](_v, 52).transform("core.settings.entriesincache", _ck(_v, 51, 0, _co.totalEntries))); _ck(_v, 50, 0, currVal_14); }); }
-function View_CoreSettingsSpaceUsagePage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-settings-space-usage", [], null, null, null, View_CoreSettingsSpaceUsagePage_0, RenderType_CoreSettingsSpaceUsagePage)), core["_30" /* ɵdid */](1, 49152, null, 0, space_usage_CoreSettingsSpaceUsagePage, [filepool["a" /* CoreFilepoolProvider */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], dom["a" /* CoreDomUtilsProvider */], app["a" /* CoreAppProvider */]], null, null)], null, null); }
+function View_CoreSettingsSpaceUsagePage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-settings-space-usage", [], null, null, null, View_CoreSettingsSpaceUsagePage_0, RenderType_CoreSettingsSpaceUsagePage)), core["_30" /* ɵdid */](1, 49152, null, 0, space_usage_CoreSettingsSpaceUsagePage, [filepool["a" /* CoreFilepoolProvider */], sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], dom["a" /* CoreDomUtilsProvider */], app["a" /* CoreAppProvider */], course["a" /* CoreCourseProvider */]], null, null)], null, null); }
 var CoreSettingsSpaceUsagePageNgFactory = core["_27" /* ɵccf */]("page-core-settings-space-usage", space_usage_CoreSettingsSpaceUsagePage, View_CoreSettingsSpaceUsagePage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=space-usage.ngfactory.js.map

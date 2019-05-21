@@ -154,6 +154,7 @@
     "addon.messages.contacts": "Собеседники",
     "addon.messages.decline": "Отказаться",
     "addon.messages.deleteallconfirm": "Вы уверены, что хотите удалить всю эту беседу ? Это не удалит её для других участников разговора.",
+    "addon.messages.deleteallselfconfirm": "Вы уверены, что хотите удалить всю эту личную беседу?",
     "addon.messages.deleteconversation": "Удалить беседу",
     "addon.messages.errordeletemessage": "Ошибка при удалении сообщения.",
     "addon.messages.errorwhileretrievingcontacts": "Ошибка при извлечении контактов с сервера.",
