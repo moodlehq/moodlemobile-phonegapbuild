@@ -806,7 +806,8 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
      */
     AddonMessagesDiscussionPage.prototype.deleteMessage = function (message, index) {
         var _this = this;
-        var canDeleteAll = this.conversation && this.conversation.candeletemessagesforallusers, langKey = message.pending || canDeleteAll ? 'core.areyousure' : 'addon.messages.deletemessageconfirmation', options = {};
+        var canDeleteAll = this.conversation && this.conversation.candeletemessagesforallusers, langKey = message.pending || canDeleteAll || this.isSelf ? 'core.areyousure' :
+            'addon.messages.deletemessageconfirmation', options = {};
         if (canDeleteAll && !message.pending) {
             // Show delete for all checkbox.
             options.inputs = [{
