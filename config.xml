@@ -150,7 +150,7 @@
     <gap:plugin name="cordova-plugin-globalization" source="npm" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="cordova-plugin-ionic-keyboard" source="npm" />
-    <gap:plugin name="cordova-plugin-local-notification" source="git" version="https://github.com/moodlemobile/cordova-plugin-local-notifications.git#moodle" />
+    <gap:plugin name="cordova-plugin-local-notification" source="git" version="https://github.com/moodlemobile/cordova-plugin-local-notification.git#moodle" />
     <gap:plugin name="cordova-plugin-media-capture" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
     <gap:plugin name="cordova-plugin-screen-orientation" source="npm" />
