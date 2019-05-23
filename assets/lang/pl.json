@@ -91,6 +91,7 @@
     "addon.competency.learningplans": "Plany nauczania",
     "addon.competency.myplans": "Moje plany uczenia się.",
     "addon.competency.noactivities": "Brak aktywności",
+    "addon.competency.nocompetenciesincourse": "Nie połączono żadnych kompetencji do tego kursu.",
     "addon.competency.noevidence": "Brak dowodów",
     "addon.competency.noplanswerecreated": "Nie utworzono planów uczenia się.",
     "addon.competency.path": "Ścieżka:",
