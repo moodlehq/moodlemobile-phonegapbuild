@@ -288,7 +288,7 @@ var split_view = __webpack_require__(34);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/viewer/pages/text/text.ngfactory.js
 /**

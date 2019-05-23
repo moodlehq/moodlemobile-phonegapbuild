@@ -25,7 +25,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ts
-var tabs = __webpack_require__(163);
+var tabs = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/core/block/providers/delegate.ts
 var delegate = __webpack_require__(134);
@@ -474,7 +474,7 @@ var gesture_controller = __webpack_require__(40);
 var refresher_content_ngfactory = __webpack_require__(199);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(160);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/core/sitehome/components/index/index.ngfactory.js + 5 modules
 var index_ngfactory = __webpack_require__(2029);
@@ -728,7 +728,7 @@ var ionic_angular_module = __webpack_require__(685);
 var pipes_module = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(68);
+var course_components_components_module = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(259);

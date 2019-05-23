@@ -1055,7 +1055,7 @@ var item_divider = __webpack_require__(113);
 var question_ngfactory = __webpack_require__(2033);
 
 // EXTERNAL MODULE: ./src/core/question/providers/delegate.ts
-var delegate = __webpack_require__(66);
+var delegate = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./src/core/question/providers/behaviour-delegate.ts
 var behaviour_delegate = __webpack_require__(108);
@@ -1115,7 +1115,7 @@ var loading_ngfactory = __webpack_require__(50);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
 var popover_controller = __webpack_require__(64);
@@ -1434,7 +1434,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_common__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__question__ = __webpack_require__(1418);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_delegate__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_delegate__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_behaviour_delegate__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__providers_helper__ = __webpack_require__(127);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__providers_question__ = __webpack_require__(121);

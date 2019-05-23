@@ -25,7 +25,7 @@ var components_module = __webpack_require__(25);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var components_components_module = __webpack_require__(68);
+var components_components_module = __webpack_require__(69);
 
 // CONCATENATED MODULE: ./src/core/course/pages/section/section.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -196,7 +196,7 @@ var gesture_controller = __webpack_require__(40);
 var refresher_content_ngfactory = __webpack_require__(199);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(160);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -331,7 +331,7 @@ var providers_helper = __webpack_require__(36);
 var course = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(161);
+var badge = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/components/download-refresh/download-refresh.ngfactory.js
 var download_refresh_ngfactory = __webpack_require__(731);
@@ -485,7 +485,7 @@ var CoreCourseFormatComponentNgFactory = core["_27" /* ɵccf */]("core-course-fo
 var tab_ngfactory = __webpack_require__(460);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ts
-var tabs = __webpack_require__(163);
+var tabs = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(454);
@@ -506,7 +506,7 @@ var toolbar_title = __webpack_require__(351);
 var tabs_ngfactory = __webpack_require__(459);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./src/core/course/providers/options-delegate.ts
 var options_delegate = __webpack_require__(91);

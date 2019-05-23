@@ -78,7 +78,7 @@ var components_module = __webpack_require__(25);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var components_components_module = __webpack_require__(68);
+var components_components_module = __webpack_require__(69);
 
 // CONCATENATED MODULE: ./src/core/course/pages/unsupported-module/unsupported-module.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -294,7 +294,7 @@ var course = __webpack_require__(15);
 var module_delegate = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/course/pages/unsupported-module/unsupported-module.ngfactory.js
 /**

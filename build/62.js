@@ -1,6 +1,6 @@
 webpackJsonp([62],{
 
-/***/ 1944:
+/***/ 1945:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -206,7 +206,7 @@ var progress_bar = __webpack_require__(301);
 var platform_browser = __webpack_require__(75);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(161);
+var badge = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(6);
@@ -344,7 +344,7 @@ var list = __webpack_require__(88);
 var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/course/pages/section-selector/section-selector.ngfactory.js
 /**

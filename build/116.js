@@ -398,7 +398,7 @@ var gesture_controller = __webpack_require__(40);
 var refresher_content_ngfactory = __webpack_require__(199);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(160);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -413,7 +413,7 @@ var infinite_loading_ngfactory = __webpack_require__(353);
 var infinite_loading = __webpack_require__(260);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/conversation-info/conversation-info.ngfactory.js
 /**

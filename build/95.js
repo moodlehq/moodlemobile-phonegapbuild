@@ -37,7 +37,7 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(65);
+var fileuploader = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/glossary.ts
 var glossary = __webpack_require__(204);
@@ -552,7 +552,7 @@ var attachments = __webpack_require__(300);
 var fileuploader_providers_helper = __webpack_require__(138);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/glossary/pages/edit/edit.ngfactory.js
 /**

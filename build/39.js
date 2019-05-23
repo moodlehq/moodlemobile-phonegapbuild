@@ -31,7 +31,7 @@ var file = __webpack_require__(51);
 var events = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/lang.ts
-var lang = __webpack_require__(162);
+var lang = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);

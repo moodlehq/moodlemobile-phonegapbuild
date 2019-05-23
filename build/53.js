@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
-var grades = __webpack_require__(156);
+var grades = __webpack_require__(157);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -341,7 +341,7 @@ var refresher = __webpack_require__(146);
 var refresher_content_ngfactory = __webpack_require__(199);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(160);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -350,7 +350,7 @@ var loading_ngfactory = __webpack_require__(50);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/grade/grade.ngfactory.js
 /**

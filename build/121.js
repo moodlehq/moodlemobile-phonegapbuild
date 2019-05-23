@@ -353,7 +353,7 @@ var progress_bar = __webpack_require__(301);
 var platform_browser = __webpack_require__(75);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(161);
+var badge = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
 var card_header = __webpack_require__(299);
@@ -392,7 +392,7 @@ var refresher = __webpack_require__(146);
 var refresher_content_ngfactory = __webpack_require__(199);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(160);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -401,7 +401,7 @@ var loading_ngfactory = __webpack_require__(50);
 var loading = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/plan/plan.ngfactory.js
 /**

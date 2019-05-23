@@ -31,7 +31,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
-var groups = __webpack_require__(69);
+var groups = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/assign.ts
 var providers_assign = __webpack_require__(70);
@@ -466,7 +466,7 @@ var deep_linker = __webpack_require__(53);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(161);
+var badge = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(211);
@@ -547,7 +547,7 @@ var toolbar_item = __webpack_require__(455);
 var split_view_ngfactory = __webpack_require__(456);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(65);
+var fileuploader = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(184);
@@ -568,7 +568,7 @@ var gesture_controller = __webpack_require__(40);
 var refresher_content_ngfactory = __webpack_require__(199);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(160);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -580,7 +580,7 @@ var loading = __webpack_require__(48);
 var list = __webpack_require__(88);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/assign/pages/submission-list/submission-list.ngfactory.js
 /**

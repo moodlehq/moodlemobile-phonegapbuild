@@ -34,7 +34,7 @@ var split_view = __webpack_require__(34);
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
-var groups = __webpack_require__(69);
+var groups = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -425,7 +425,7 @@ var toolbar = __webpack_require__(258);
 var split_view_ngfactory = __webpack_require__(456);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(65);
+var fileuploader = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(184);
@@ -449,7 +449,7 @@ var gesture_controller = __webpack_require__(40);
 var refresher_content_ngfactory = __webpack_require__(199);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(160);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -467,7 +467,7 @@ var toggle = __webpack_require__(352);
 var haptic = __webpack_require__(188);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/chat/pages/sessions/sessions.ngfactory.js
 /**
@@ -604,7 +604,7 @@ var translate_store = __webpack_require__(453);
 var ionic_angular_module = __webpack_require__(685);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(68);
+var course_components_components_module = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(259);

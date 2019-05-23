@@ -940,6 +940,7 @@
     "core.add": "추가",
     "core.ago": "{{$a}} 이전",
     "core.all": "모두",
+    "core.allgroups": "모든 모둠",
     "core.allparticipants": "모든 참가자",
     "core.android": "안드로이드",
     "core.answer": "대답",

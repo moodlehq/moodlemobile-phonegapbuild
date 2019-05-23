@@ -602,7 +602,7 @@ var utils = __webpack_require__(2);
 var toolbar_footer = __webpack_require__(705);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/core/emulator/pages/capture-media/capture-media.ngfactory.js
 /**

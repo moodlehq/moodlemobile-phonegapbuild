@@ -380,7 +380,7 @@ var list = __webpack_require__(88);
 var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(67);
+var nav_params = __webpack_require__(68);
 
 // CONCATENATED MODULE: ./src/addon/mod/feedback/pages/attempt/attempt.ngfactory.js
 /**
@@ -485,7 +485,7 @@ var translate_store = __webpack_require__(453);
 var ionic_angular_module = __webpack_require__(685);
 
 // EXTERNAL MODULE: ./src/core/course/components/components.module.ts
-var course_components_components_module = __webpack_require__(68);
+var course_components_components_module = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(259);
