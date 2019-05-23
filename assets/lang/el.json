@@ -205,7 +205,7 @@
     "addon.messages.numparticipants": "{{$a}} συμμετέχοντες",
     "addon.messages.removecontact": "Αφαίρεση επαφής",
     "addon.messages.removecontactconfirm": "Είστε βέβαιοι ότι θέλετε να καταργήσετε τον/την {{$a}} από τις επαφές σας;",
-    "addon.messages.removefromfavourites": "Αφαίρεση αστερίσκου από την συνομιλία",
+    "addon.messages.removefromfavourites": "Αφαίρεση αστερίσκου",
     "addon.messages.removefromyourcontacts": "Αφαίρεση από τις επαφές",
     "addon.messages.requests": "Αιτήματα",
     "addon.messages.requirecontacttomessage": "Θα πρέπει να ζητήσετε από τον/την {{$a}} να σας προσθέσει ως επαφή για να μπορέσετε να στείλετε μήνυμα.",
