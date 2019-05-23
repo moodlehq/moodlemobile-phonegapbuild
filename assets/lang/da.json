@@ -694,7 +694,7 @@
     "addon.mod_scorm.completed": "Færdigt",
     "addon.mod_scorm.contents": "Indhold",
     "addon.mod_scorm.dataattemptshown": "Disse data tilhører forsøg nummer {{number}}.",
-    "addon.mod_scorm.enter": "Indtast",
+    "addon.mod_scorm.enter": "Start",
     "addon.mod_scorm.errorcreateofflineattempt": "En fejl opstod ved oprettelse af et nyt offline forsøg. Prøv igen.",
     "addon.mod_scorm.errordownloadscorm": "Fejl ved hentning af SCORM: \"{{name}}\".",
     "addon.mod_scorm.errorgetscorm": "Fejl ved hentning af SCORM-data.",
