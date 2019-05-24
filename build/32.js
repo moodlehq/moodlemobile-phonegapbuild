@@ -1,6 +1,6 @@
 webpackJsonp([32],{
 
-/***/ 1974:
+/***/ 1975:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -86,7 +86,7 @@ var plugin_page_CoreSitePluginsPluginPage = /** @class */ (function () {
 
 //# sourceMappingURL=plugin-page.js.map
 // EXTERNAL MODULE: ./src/core/siteplugins/components/components.module.ts
-var components_module = __webpack_require__(704);
+var components_module = __webpack_require__(705);
 
 // CONCATENATED MODULE: ./src/core/siteplugins/pages/plugin-page/plugin-page.module.ts
 // (C) Copyright 2015 Martin Dougiamas
