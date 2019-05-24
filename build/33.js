@@ -82,7 +82,7 @@ var module_index_CoreSitePluginsModuleIndexPage = /** @class */ (function () {
 
 //# sourceMappingURL=module-index.js.map
 // EXTERNAL MODULE: ./src/core/siteplugins/components/components.module.ts
-var components_module = __webpack_require__(705);
+var components_module = __webpack_require__(704);
 
 // CONCATENATED MODULE: ./src/core/siteplugins/pages/module-index/module-index.module.ts
 // (C) Copyright 2015 Martin Dougiamas
