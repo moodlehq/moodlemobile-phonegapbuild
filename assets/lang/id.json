@@ -214,7 +214,7 @@
     "addon.mod_lesson.reviewquestionback": "Ya, saya ingin mencoba lagi",
     "addon.mod_lesson.reviewquestioncontinue": "Tidak, saya hanya ingin lanjut ke pertanyaan selamjutnya",
     "addon.mod_lesson.secondpluswrong": "Belum tepat. Mau coba lagi?",
-    "addon.mod_lesson.teacherjumpwarning": "Lompatan {{$a.cluster}} atau lompatan {{$a.unseen}} sedang dipakai dalam pelajaran ini. Lompatan Halaman Selanjutnya akana digunakan otomatis. Login sebagai siswa untuk mengetesnya",
+    "addon.mod_lesson.teacherjumpwarning": "Lompatan {{$a.cluster}} atau lompatan {{$a.unseen}} sedang dipakai dalam pelajaran ini. Lompatan Halaman Selanjutnya akan digunakan otomatis. Login sebagai siswa untuk mengetesnya",
     "addon.mod_lesson.teacherongoingwarning": "Nilai yang akan datang hanya ditampilkan untuk siswa. Login sebagai siswa untuk mngetesnya",
     "addon.mod_lesson.teachertimerwarning": "Timer hanya bekerja untuk siswa. Tes timer dengan log in sebagai siswa.",
     "addon.mod_lesson.thatsthecorrectanswer": "Itu adalah jawaban yang benar",
