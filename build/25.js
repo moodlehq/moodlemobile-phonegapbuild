@@ -52,7 +52,7 @@ var url = __webpack_require__(23);
 var utils_utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson.ts
-var lesson = __webpack_require__(159);
+var lesson = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson-offline.ts
 var lesson_offline = __webpack_require__(270);
@@ -844,7 +844,7 @@ var checkbox_checkbox = __webpack_require__(190);
 var option_option = __webpack_require__(97);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(153);
+var grid = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(116);

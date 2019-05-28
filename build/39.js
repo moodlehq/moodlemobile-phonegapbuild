@@ -37,7 +37,7 @@ var lang = __webpack_require__(164);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
-var local_notifications = __webpack_require__(151);
+var local_notifications = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
 var configconstants = __webpack_require__(121);

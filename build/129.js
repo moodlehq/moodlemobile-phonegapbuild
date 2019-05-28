@@ -230,7 +230,7 @@ var user = __webpack_require__(43);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(156);
+var comments = __webpack_require__(155);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(69);

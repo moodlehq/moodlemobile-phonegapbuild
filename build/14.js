@@ -58,7 +58,7 @@ var offline = __webpack_require__(191);
 var providers_sync = __webpack_require__(220);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(157);
+var forum = __webpack_require__(156);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
 var providers_offline = __webpack_require__(216);
@@ -335,8 +335,6 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
                 var direction = _this.sort == 'flat-newest' ? 'DESC' : 'ASC';
                 _this.forumProvider.sortDiscussionPosts(posts, direction);
             }
-            _this.defaultSubject = _this.translate.instant('addon.mod_forum.re') + ' ' + _this.discussion.subject;
-            _this.replyData.subject = _this.defaultSubject;
             // Now try to get the forum.
             return _this.fetchForum().then(function (forum) {
                 // "forum.istracked" is more reliable than "trackPosts".
@@ -372,6 +370,9 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
                 _this.forum = {};
                 _this.accessInfo = {};
             }).then(function () {
+                _this.defaultSubject = _this.translate.instant('addon.mod_forum.re') + ' ' +
+                    (_this.discussion ? _this.discussion.subject : "");
+                _this.replyData.subject = _this.defaultSubject;
                 var startingPost = _this.forumProvider.extractStartingPost(posts);
                 if (startingPost) {
                     // Update discussion data from first post.
@@ -934,7 +935,7 @@ var rich_text_editor = __webpack_require__(238);
 var item_divider = __webpack_require__(114);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(153);
+var grid = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
 var date_day_or_time = __webpack_require__(298);
@@ -1153,7 +1154,7 @@ var refresher = __webpack_require__(147);
 var refresher_content_ngfactory = __webpack_require__(200);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(162);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(51);

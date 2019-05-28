@@ -1,6 +1,6 @@
 webpackJsonp([32],{
 
-/***/ 1975:
+/***/ 1974:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -86,7 +86,7 @@ var plugin_page_CoreSitePluginsPluginPage = /** @class */ (function () {
 
 //# sourceMappingURL=plugin-page.js.map
 // EXTERNAL MODULE: ./src/core/siteplugins/components/components.module.ts
-var components_module = __webpack_require__(705);
+var components_module = __webpack_require__(704);
 
 // CONCATENATED MODULE: ./src/core/siteplugins/pages/plugin-page/plugin-page.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -279,7 +279,7 @@ var gesture_controller = __webpack_require__(40);
 var refresher_content_ngfactory = __webpack_require__(200);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(162);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/core/siteplugins/components/plugin-content/plugin-content.ngfactory.js
 var plugin_content_ngfactory = __webpack_require__(386);

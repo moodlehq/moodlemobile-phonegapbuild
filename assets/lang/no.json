@@ -735,7 +735,7 @@
     "addon.mod_workshop.gradeinfo": "Karakter: {{$a.received}} av {{$a.max}}",
     "addon.mod_workshop.gradeover": "Overstyr innleveringskarakter",
     "addon.mod_workshop.gradesreport": "Workshop karakterrapport",
-    "addon.mod_workshop.gradinggrade": "Endelig karakter",
+    "addon.mod_workshop.gradinggrade": "Karakter for vurdering",
     "addon.mod_workshop.gradinggradecalculated": "Beregnet karakter for vurdering",
     "addon.mod_workshop.gradinggradeof": "Karakter for vurdering (av {{$a}})",
     "addon.mod_workshop.gradinggradeover": "Overstyr karakter for vurdering",

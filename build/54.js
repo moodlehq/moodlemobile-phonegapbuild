@@ -221,7 +221,7 @@ var fileuploader = __webpack_require__(67);
 var course = __webpack_require__(477);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
-var grades = __webpack_require__(158);
+var grades = __webpack_require__(157);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -230,7 +230,7 @@ var dom = __webpack_require__(4);
 var nav_params = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(149);
+var helper = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(9);

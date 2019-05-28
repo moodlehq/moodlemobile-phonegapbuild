@@ -49,7 +49,7 @@ var helper = __webpack_require__(128);
 var question = __webpack_require__(1418);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz.ts
-var quiz = __webpack_require__(155);
+var quiz = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz-sync.ts
 var quiz_sync = __webpack_require__(245);
@@ -1070,7 +1070,7 @@ var esm5_forms = __webpack_require__(22);
 var col = __webpack_require__(117);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(153);
+var grid = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(116);

@@ -1,6 +1,6 @@
 webpackJsonp([89],{
 
-/***/ 1992:
+/***/ 1991:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var time = __webpack_require__(24);
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson.ts
-var lesson = __webpack_require__(159);
+var lesson = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/helper.ts
 var helper = __webpack_require__(703);
@@ -409,7 +409,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(163);
+var badge = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(42);
@@ -532,7 +532,7 @@ var refresher = __webpack_require__(147);
 var refresher_content_ngfactory = __webpack_require__(200);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(162);
+var refresher_content = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(51);

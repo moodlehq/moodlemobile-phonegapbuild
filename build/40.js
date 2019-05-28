@@ -31,7 +31,7 @@ var init = __webpack_require__(142);
 var lang = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
-var local_notifications = __webpack_require__(151);
+var local_notifications = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);

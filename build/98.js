@@ -267,7 +267,7 @@ var groups = __webpack_require__(66);
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(157);
+var forum = __webpack_require__(156);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
 var providers_helper = __webpack_require__(265);
