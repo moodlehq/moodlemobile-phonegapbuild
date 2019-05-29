@@ -371,7 +371,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
                 _this.accessInfo = {};
             }).then(function () {
                 _this.defaultSubject = _this.translate.instant('addon.mod_forum.re') + ' ' +
-                    (_this.discussion ? _this.discussion.subject : "");
+                    (_this.discussion ? _this.discussion.subject : '');
                 _this.replyData.subject = _this.defaultSubject;
                 var startingPost = _this.forumProvider.extractStartingPost(posts);
                 if (startingPost) {
