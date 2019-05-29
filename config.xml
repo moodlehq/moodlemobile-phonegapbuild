@@ -60,6 +60,7 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashScreenDelay" value="15000" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="CustomURLSchemePluginClearsAndroidIntent" value="true" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
