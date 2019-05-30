@@ -86,6 +86,8 @@ var more_CoreMainMenuMorePage = /** @class */ (function () {
      */
     CoreMainMenuMorePage.prototype.ngOnDestroy = function () {
         window.removeEventListener('resize', this.initHandlers.bind(this));
+        this.langObserver && this.langObserver.off();
+        this.updateSiteObserver && this.updateSiteObserver.off();
         if (this.subscription) {
             this.subscription.unsubscribe();
         }

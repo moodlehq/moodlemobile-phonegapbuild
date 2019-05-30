@@ -229,7 +229,7 @@ var icon = __webpack_require__(99);
 var icon_icon = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(237);
+var external_content = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(17);

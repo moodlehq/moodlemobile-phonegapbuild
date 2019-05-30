@@ -387,7 +387,7 @@ var toolbar = __webpack_require__(259);
 var toolbar_item = __webpack_require__(456);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(236);
+var nav_push = __webpack_require__(237);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(46);

@@ -1474,7 +1474,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1404);
 var bs_tooltip_ngfactory = __webpack_require__(1405);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(237);
+var external_content = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(17);

@@ -286,7 +286,7 @@ var item_content = __webpack_require__(32);
 var avatar = __webpack_require__(186);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(237);
+var external_content = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(17);
@@ -358,7 +358,7 @@ var toolbar = __webpack_require__(259);
 var toolbar_item = __webpack_require__(456);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(236);
+var nav_push = __webpack_require__(237);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(185);

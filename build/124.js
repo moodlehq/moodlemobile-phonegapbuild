@@ -395,7 +395,7 @@ var common = __webpack_require__(7);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(237);
+var external_content = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
 var badge = __webpack_require__(162);

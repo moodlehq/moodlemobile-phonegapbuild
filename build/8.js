@@ -1029,7 +1029,7 @@ var common = __webpack_require__(7);
 var item_divider = __webpack_require__(114);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(236);
+var nav_push = __webpack_require__(237);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push-anchor.js
 var nav_push_anchor = __webpack_require__(263);

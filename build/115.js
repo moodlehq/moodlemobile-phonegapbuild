@@ -849,7 +849,7 @@ var spinner = __webpack_require__(108);
 var avatar = __webpack_require__(186);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(237);
+var external_content = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
