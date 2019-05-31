@@ -53,11 +53,11 @@
     },
     "wsservice": "moodle_mobile_app",
     "wsextservice": "local_mobile",
-    "demo_sites":"",
+    "demo_sites":{},
     "customurlscheme": "moodlemobile",
     "siteurl": "http://mtam.co/",
     "multisitesdisplay": "",
-    "skipssoconfirmation": false,
-    "forcedefaultlanguage": false,
+    "skipssoconfirmation": true,
+    "forcedefaultlanguage": true,
     "privacypolicy": "https:\/\/moodle.org\/mod\/page\/view.php?id=8148"
 }
