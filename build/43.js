@@ -193,7 +193,9 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
         }
         if (this.urlToOpen) {
             // There's a content link to open.
-            this.linksDelegate.getActionsFor(this.urlToOpen, undefined).then(function (actions) {
+            var url = this.urlToOpen;
+            delete this.urlToOpen;
+            this.linksDelegate.getActionsFor(url, undefined).then(function (actions) {
                 var action = _this.linksHelper.getFirstValidAction(actions);
                 if (action && action.sites.length) {
                     // Action should only have 1 site because we're filtering by username.
