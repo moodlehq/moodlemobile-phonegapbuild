@@ -2,17 +2,17 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "36100"
-        android-versionCode="36100"
-        version   = "3.6.1">
-    <name>Moodle</name>
+        id        = "co.mtam"
+        versionCode = "100"
+        android-versionCode="100"
+        version   = "1.0.0">
+    <name>MTAM</name>
 
     <description>
-        Moodle official app
+        MTAM EASY LEARNING
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
+    <author href="http://mtam.co" email="mobile@moodle.com">
         Moodle Mobile team
     </author>
 
