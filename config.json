@@ -1,11 +1,11 @@
 {
-    "app_id": "com.moodle.moodlemobile",
-    "appname": "Moodle Mobile",
-    "desktopappname": "Moodle Desktop",
-    "versioncode": 3610,
-    "versionname": "3.6.1",
+    "app_id": "co.mtam",
+    "appname": "MTAM",
+    "desktopappname": "MTAM Desktop",
+    "versioncode": 100,
+    "versionname": "1.0.0",
     "cache_expiration_time": 300000,
-    "default_lang": "en",
+    "default_lang": "fa",
     "languages": {
         "ar": "عربي",
         "bg": "Български",
@@ -66,7 +66,7 @@
         }
     },
     "customurlscheme": "moodlemobile",
-    "siteurl": "",
+    "siteurl": "http://mtam.co/",
     "multisitesdisplay": "",
     "skipssoconfirmation": false,
     "forcedefaultlanguage": false,
