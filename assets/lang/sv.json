@@ -25,6 +25,7 @@
     "addon.block_myoverview.title": "Kursnamn",
     "addon.block_recentlyaccessedcourses.nocourses": "Det finns inga senast besökta kurser",
     "addon.block_recentlyaccessedcourses.pluginname": "Senast besökta kurser",
+    "addon.block_recentlyaccesseditems.pluginname": "Nyligen åtkomna objekt",
     "addon.block_sitemainmenu.pluginname": "Huvudmeny",
     "addon.block_timeline.duedate": "Deadline",
     "addon.block_timeline.next30days": "Kommande 30 dagar",
