@@ -132,6 +132,7 @@ var edit_AddonModGlossaryEditPage = /** @class */ (function () {
         if (entry) {
             this.entry.concept = entry.concept || '';
             this.entry.definition = entry.definition || '';
+            this.entry.timecreated = entry.timecreated || 0;
             this.originalData = {
                 concept: this.entry.concept,
                 definition: this.entry.definition,
