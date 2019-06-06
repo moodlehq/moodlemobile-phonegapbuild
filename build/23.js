@@ -220,7 +220,8 @@ var assessment_AddonModWorkshopAssessmentPage = /** @class */ (function () {
                         }
                         if (accessData.canoverridegrades) {
                             defaultGrade = _this.translate.instant('addon.mod_workshop.notoverridden');
-                            promise = _this.gradesHelper.makeGradesMenu(_this.workshop.gradinggrade, _this.workshopId, defaultGrade, -1).then(function (grades) {
+                            promise = _this.gradesHelper.makeGradesMenu(_this.workshop.gradinggrade, undefined, defaultGrade, -1)
+                                .then(function (grades) {
                                 _this.evaluationGrades = grades;
                             });
                         }

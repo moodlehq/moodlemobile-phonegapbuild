@@ -594,7 +594,7 @@
     "addon.mod_lesson.hightime": "Beste Zeit",
     "addon.mod_lesson.leftduringtimed": "Sie haben die Lektion abgebrochen. Die Bearbeitung der Lektion ist zeitlich begrenzt. <br />Klicken Sie auf Fortsetzen, um die Lektion erneut zu beginnen.",
     "addon.mod_lesson.leftduringtimednoretake": "Sie haben die Lektion abgebrochen. Die Bearbeitung der Lektion ist zeitlich begrenzt. <br />Sie können diese Lektion nicht mehr bearbeiten.",
-    "addon.mod_lesson.lessonmenu": "Seitenmenü",
+    "addon.mod_lesson.lessonmenu": "Inhaltsverzeichnis",
     "addon.mod_lesson.lessonstats": "Statistik",
     "addon.mod_lesson.linkedmedia": "Verlinkte Medien",
     "addon.mod_lesson.loginfail": "Der Login ist gescheitert. Bitte versuchen Sie es noch einmal.",

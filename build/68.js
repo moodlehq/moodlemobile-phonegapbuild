@@ -110,7 +110,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
         this.svComponent = svComponent;
         this.processorHandlers = [];
         this.notifPrefsEnabled = notificationsProvider.isNotificationPreferencesEnabled();
-        this.canChangeSound = localNotificationsProvider.isAvailable() && !appProvider.isDesktop();
+        this.canChangeSound = localNotificationsProvider.canDisableSound();
         if (this.canChangeSound) {
             configProvider.get(constants["a" /* CoreConstants */].SETTINGS_NOTIFICATION_SOUND, true).then(function (enabled) {
                 _this.notificationSound = !!enabled;

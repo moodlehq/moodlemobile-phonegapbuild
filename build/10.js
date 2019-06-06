@@ -1031,7 +1031,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
             _this.canAddFeedback = !_this.assessmentId && _this.workshop.phase > __WEBPACK_IMPORTED_MODULE_13__providers_workshop__["a" /* AddonModWorkshopProvider */].PHASE_ASSESSMENT &&
                 _this.workshop.phase < __WEBPACK_IMPORTED_MODULE_13__providers_workshop__["a" /* AddonModWorkshopProvider */].PHASE_CLOSED && _this.access.canoverridegrades;
             _this.ownAssessment = false;
-            if (_this.access.canviewallassessments || _this.currentUserId == _this.userId) {
+            if (_this.access.canviewallassessments) {
                 // Get new data, different that came from stateParams.
                 promises.push(_this.workshopProvider.getSubmissionAssessments(_this.workshopId, _this.submissionId)
                     .then(function (subAssessments) {
@@ -1078,8 +1078,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
                     _this.syncProvider.blockOperation(_this.component, _this.workshopId);
                 }
                 var defaultGrade_1 = _this.translate.instant('addon.mod_workshop.notoverridden');
-                promises.push(_this.gradesHelper.makeGradesMenu(_this.workshop.grade, _this.workshopId, defaultGrade_1, -1)
-                    .then(function (grades) {
+                promises.push(_this.gradesHelper.makeGradesMenu(_this.workshop.grade, undefined, defaultGrade_1, -1).then(function (grades) {
                     _this.evaluationGrades = grades;
                     _this.evaluate.grade = {
                         label: _this.gradesHelper.getGradeLabelFromValue(grades, _this.submissionInfo.submissiongradeover) ||
