@@ -53,10 +53,10 @@
     },
     "wsservice": "moodle_mobile_app",
     "wsextservice": "local_mobile",
-    "customurlscheme": "moodlemobile",
+    "customurlscheme": "lpmobile",
     "siteurl": "https://exams.learnersplatform.com",
     "multisitesdisplay": "",
     "skipssoconfirmation": false,
     "forcedefaultlanguage": false,
-    "privacypolicy": "https:\/\/moodle.org\/mod\/page\/view.php?id=8148"
+    "privacypolicy": "https:\/\/learnersplatform.com\/mod\/page\/view.php?id=8148"
 }
