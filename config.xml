@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.learnersplatform.mobile"
-        versionCode = "36100"
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap="http://phonegap.com/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/resources/android"
+        id="com.learnersplatform.mobile"
+        versionCode="36100"
         android-versionCode="36100"
-        version   = "3.6.1">
+        version="3.6.1">
     <name>LearnersPlatform</name>
 
     <description>
@@ -20,160 +20,170 @@
         <string>3.6.1</string>
     </edit-config>
 
-    <gap:platform name="ios" />
-    <gap:platform name="android" />
+    <gap:platform name="ios"/>
+    <gap:platform name="android"/>
 
-    <access origin="*" />
-    <access origin="tel:*" launch-external="yes" />
-    <access origin="mailto:*" launch-external="yes" />
-    <access origin="geo:*" launch-external="yes" />
+    <access origin="*"/>
+    <access origin="tel:*" launch-external="yes"/>
+    <access origin="mailto:*" launch-external="yes"/>
+    <access origin="geo:*" launch-external="yes"/>
 
-    <allow-navigation href="cdvfile:*" />
-    <allow-navigation href="content:*" />
-    <allow-navigation href="data:*" />
-    <allow-navigation href="*" />
+    <allow-navigation href="cdvfile:*"/>
+    <allow-navigation href="content:*"/>
+    <allow-navigation href="data:*"/>
+    <allow-navigation href="*"/>
 
-    <allow-intent href="*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+    <allow-intent href="*"/>
+    <allow-intent href="tel:*"/>
+    <allow-intent href="sms:*"/>
+    <allow-intent href="mailto:*"/>
+    <allow-intent href="geo:*"/>
 
-    <preference name="phonegap-version" value="cli-8.1.1" />
+    <preference name="phonegap-version" value="cli-8.1.1"/>
     <preference name="LoadUrlTimeoutValue" value="60000"/>
-    <preference name="orientation"      value="default" />
-    <preference name="target-device"    value="universal" />
-    <preference name="fullscreen"       value="false" />
-    <preference name="stay-in-webview"  value="false" />
-    <preference name="webviewbounce"    value="false" />
-    <preference name="prerendered-icon" value="true" />
-    <preference name="load-url-timeout" value="60000" />
-    <preference name="AppendUserAgent" value="LPMobile" />
-    <preference name="android-minSdkVersion" value="19" />
-    <preference name="android-targetSdkVersion" value="28" />
-    <preference name="android-installLocation" value="auto" />
-    <preference name="UIWebViewBounce" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="BackupWebStorage" value="none" />
-    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
-    <preference name="AllowInlineMediaPlayback" value="true" />
-    <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="SplashScreenDelay" value="15000" />
-    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="orientation" value="default"/>
+    <preference name="target-device" value="universal"/>
+    <preference name="fullscreen" value="false"/>
+    <preference name="stay-in-webview" value="false"/>
+    <preference name="webviewbounce" value="false"/>
+    <preference name="prerendered-icon" value="true"/>
+    <preference name="load-url-timeout" value="60000"/>
+    <preference name="AppendUserAgent" value="LPMobile"/>
+    <preference name="android-minSdkVersion" value="19"/>
+    <preference name="android-targetSdkVersion" value="28"/>
+    <preference name="android-installLocation" value="auto"/>
+    <preference name="UIWebViewBounce" value="false"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="BackupWebStorage" value="none"/>
+    <preference name="KeyboardDisplayRequiresUserAction" value="false"/>
+    <preference name="AllowInlineMediaPlayback" value="true"/>
+    <preference name="SplashMaintainAspectRatio" value="true"/>
+    <preference name="SplashScreenDelay" value="15000"/>
+    <preference name="SplashShowOnlyFirstTime" value="false"/>
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true"/>
     </feature>
 
-    <preference name="AndroidPersistentFileLocation"    value="Compatibility" />
-    <preference name="iosPersistentFileLocation"        value="Compatibility" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility"/>
+    <preference name="iosPersistentFileLocation" value="Compatibility"/>
 
-    <icon src="icon.png" />
-    <gap:splash src="splash.png" />
+    <icon src="icon.png"/>
+    <gap:splash src="splash.png"/>
 
     <platform name="android">
-        <resource-file src="google-services.json" target="app/google-services.json" />
+        <resource-file src="google-services.json" target="app/google-services.json"/>
 
-        <icon src="resources/android/icon/ldpi.png" density="ldpi"/>
-        <icon src="resources/android/icon/mdpi.png" density="mdpi"/>
-        <icon src="resources/android/icon/hdpi.png" density="hdpi"/>
-        <icon src="resources/android/icon/xhdpi.png" density="xhdpi"/>
-        <icon src="resources/android/icon/xxhdpi.png" density="xxhdpi"/>
-        <icon src="resources/android/icon/xxxhdpi.png" density="xxxhdpi"/>
+        <preference name="SplashMaintainAspectRatio" value="true"/>
+        <preference name="SplashShowOnlyFirstTime" value="true"/>
 
-        <splash src="resources/android/splash/splash-land-ldpi.png" density="land-ldpi"/>
-        <splash src="resources/android/splash/splash-land-mdpi.png" density="land-mdpi"/>
-        <splash src="resources/android/splash/splash-land-hdpi.png" density="land-hdpi"/>
-        <splash src="resources/android/splash/splash-land-xhdpi.png" density="land-xhdpi"/>
-        <splash src="resources/android/splash/splash-land-xxhdpi.png" density="land-xxhdpi"/>
-        <splash src="resources/android/splash/splash-land-xxxhdpi.png" density="land-xxxhdpi"/>
-
-        <splash src="resources/android/splash/splash-port-ldpi.png" density="port-ldpi"/>
-        <splash src="resources/android/splash/splash-port-mdpi.png" density="port-mdpi"/>
-        <splash src="resources/android/splash/splash-port-hdpi.png" density="port-hdpi"/>
-        <splash src="resources/android/splash/splash-port-xhdpi.png" density="port-xhdpi"/>
-        <splash src="resources/android/splash/splash-port-xxhdpi.png" density="port-xxhdpi"/>
-        <splash src="resources/android/splash/splash-port-xxxhdpi.png" density="port-xxxhdpi"/>
+        <icon density="ldpi" src="resources/icon/android/ldpi.png"/>
+        <icon density="mdpi" src="resources/icon/android/mdpi.png"/>
+        <icon density="hdpi" src="resources/icon/android/hdpi.png"/>
+        <icon density="xhdpi" src="resources/icon/android/xhdpi.png"/>
+        <icon density="xxhdpi" src="resources/icon/android/xxhdpi.png"/>
+        <icon density="xxxhdpi" src="resources/icon/android/xxxhdpi.png"/>
+        <!--  Portrait  -->
+        <splash density="port-ldpi" src="resources/screen/android/splash-port-ldpi.png"/>
+        <splash density="port-mdpi" src="resources/screen/android/splash-port-mdpi.png"/>
+        <splash density="port-hdpi" src="resources/screen/android/splash-port-hdpi.png"/>
+        <splash density="port-xhdpi" src="resources/screen/android/splash-port-xhdpi.png"/>
+        <splash density="port-xxhdpi" src="resources/screen/android/splash-port-xxhdpi.png"/>
+        <splash density="port-xxxhdpi" src="resources/screen/android/splash-port-xxxhdpi.png"/>
+        <!--  Landscape  -->
+        <splash density="land-ldpi" src="resources/screen/android/splash-land-ldpi.png"/>
+        <splash density="land-mdpi" src="resources/screen/android/splash-land-mdpi.png"/>
+        <splash density="land-hdpi" src="resources/screen/android/splash-land-hdpi.png"/>
+        <splash density="land-xhdpi" src="resources/screen/android/splash-land-xhdpi.png"/>
+        <splash density="land-xxhdpi" src="resources/screen/android/splash-land-xxhdpi.png"/>
+        <splash density="land-xxxhdpi" src="resources/screen/android/splash-land-xxxhdpi.png"/>
     </platform>
 
     <platform name="ios">
-        <resource-file src="GoogleService-Info.plist" />
+        <resource-file src="GoogleService-Info.plist"/>
 
-        <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
-        <icon src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
-
-        <icon src="resources/ios/icon/icon-small-40.png" width="40" height="40"/>
-        <icon src="resources/ios/icon/icon-small-40@2x.png" width="80" height="80"/>
-        <icon src="resources/ios/icon/icon-small-40@3x.png" width="120" height="120"/>
-
-        <icon src="resources/ios/icon/icon-small-50.png" width="50" height="50"/>
-        <icon src="resources/ios/icon/icon-small-50@2x.png" width="100" height="100"/>
-        <icon src="resources/ios/icon/icon-small-50@3x.png" width="150" height="150"/>
-
-        <icon src="resources/ios/icon/icon-60.png" width="60" height="60"/>
-        <icon src="resources/ios/icon/icon-60@2x.png" width="120" height="120"/>
-        <icon src="resources/ios/icon/icon-60@3x.png" width="180" height="180"/>
-
-        <icon src="resources/ios/icon/icon-72.png" width="72" height="72"/>
-        <icon src="resources/ios/icon/icon-72@2x.png" width="144" height="144"/>
-
-        <icon src="resources/ios/icon/icon-76.png" width="76" height="76"/>
-        <icon src="resources/ios/icon/icon-76@2x.png" width="152" height="152"/>
-
-        <icon src="resources/ios/icon/icon-83.5@2x.png" width="167" height="167"/>
-
-        <icon src="resources/ios/icon/icon-small.png" width="29" height="29"/>
-        <icon src="resources/ios/icon/icon-small@2x.png" width="58" height="58"/>
-        <icon src="resources/ios/icon/icon-small@3x.png" width="87" height="87"/>
-
-        <icon src="resources/ios/icon/icon-167.png" width="167" height="167"/>
-
-        <icon src="resources/ios/icon/icon-1024.png" width="1024" height="1024"/>
-
-        <splash src="resources/ios/splash/Default@2x~ipad~anyany.png" width="2732" height="2732"/>
-        <splash src="resources/ios/splash/Default@2x~ipad~comany.png" width="1278" height="2732"/>
-        <splash src="resources/ios/splash/Default@2x~iphone~anyany.png" width="1334" height="1334"/>
-        <splash src="resources/ios/splash/Default@2x~iphone~comany.png" width="750" height="1334"/>
-        <splash src="resources/ios/splash/Default@2x~iphone~comcom.png" width="1334" height="750"/>
-        <splash src="resources/ios/splash/Default@3x~iphone~anyany.png" width="2208" height="2208"/>
-        <splash src="resources/ios/splash/Default@3x~iphone~anycom.png" width="2208" height="1242"/>
-        <splash src="resources/ios/splash/Default@3x~iphone~comany.png" width="1242" height="2208"/>
+        <icon src="resources/icon/ios/icon-1024.png" width="1024" height="1024"/>
+        <icon src="resources/icon/ios/icon-small.png" width="29" height="29"/>
+        <icon src="resources/icon/ios/icon-small@2x.png" width="58" height="58"/>
+        <icon src="resources/icon/ios/icon-small@3x.png" width="87" height="87"/>
+        <icon src="resources/icon/ios/icon-small-40.png" width="40" height="40"/>
+        <icon src="resources/icon/ios/icon-small-40@2x.png" width="80" height="80"/>
+        <icon src="resources/icon/ios/icon-small-40@3x.png" width="120" height="120"/>
+        <icon src="resources/icon/ios/icon-small-50.png" width="50" height="50"/>
+        <icon src="resources/icon/ios/icon-small-50@2x.png" width="100" height="100"/>
+        <icon src="resources/icon/ios/icon.png" width="57" height="57"/>
+        <icon src="resources/icon/ios/icon@2x.png" width="114" height="114"/>
+        <icon src="resources/icon/ios/icon-60.png" width="60" height="60"/>
+        <icon src="resources/icon/ios/icon-60@2x.png" width="120" height="120"/>
+        <icon src="resources/icon/ios/icon-60@3x.png" width="180" height="180"/>
+        <icon src="resources/icon/ios/icon-72.png" width="72" height="72"/>
+        <icon src="resources/icon/ios/icon-72@2x.png" width="144" height="144"/>
+        <icon src="resources/icon/ios/icon-76.png" width="76" height="76"/>
+        <icon src="resources/icon/ios/icon-76@2x.png" width="152" height="152"/>
+        <icon src="resources/icon/ios/icon-167.png" width="167" height="167"/>
+        <icon src="resources/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
+        <!--  Storyboard portrait  -->
+        <splash src="resources/screen/ios/Default@2x~iphone~anyany.png"/>
+        <splash src="resources/screen/ios/Default@2x~iphone~comany.png"/>
+        <splash src="resources/screen/ios/Default@3x~iphone~anyany.png"/>
+        <splash src="resources/screen/ios/Default@3x~iphone~comany.png"/>
+        <splash src="resources/screen/ios/Default@2x~ipad~anyany.png"/>
+        <splash src="resources/screen/ios/Default@2x~ipad~comany.png"/>
+        <!--  Storyboard landscape  -->
+        <splash src="resources/screen/ios/Default@2x~iphone~comcom.png"/>
+        <splash src="resources/screen/ios/Default@3x~iphone~anycom.png"/>
+        <!--  Legacy portrait  -->
+        <splash src="resources/screen/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="resources/screen/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="resources/screen/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="resources/screen/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="resources/screen/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="resources/screen/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="resources/screen/ios/Default-736h.png" width="1242" height="2208"/>
+        <!--  Legacy landscape  -->
+        <splash src="resources/screen/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="resources/screen/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
     </platform>
 
-    <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" spec="1.1.5" />
+    <gap:plugin name="com-darryncampbell-cordova-plugin-intent" source="npm" spec="1.1.5"/>
     <gap:plugin name="cordova-android-support-gradle-release" source="npm" spec="2.0.1">
-        <param name="ANDROID_SUPPORT_VERSION" value="27.1.0" />
+        <param name="ANDROID_SUPPORT_VERSION" value="27.1.0"/>
     </gap:plugin>
-    <gap:plugin name="cordova-clipboard" source="npm" spec="1.2.1" />
-    <gap:plugin name="cordova-plugin-badge" source="npm" spec="0.8.8" />
-    <gap:plugin name="cordova-plugin-camera" source="npm" spec="4.0.3" />
+    <gap:plugin name="cordova-clipboard" source="npm" spec="1.2.1"/>
+    <gap:plugin name="cordova-plugin-badge" source="npm" spec="0.8.8"/>
+    <gap:plugin name="cordova-plugin-camera" source="npm" spec="4.0.3"/>
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm" spec="4.3.0">
-        <param name="URL_SCHEME" value="lpmobile" />
+        <param name="URL_SCHEME" value="lpmobile"/>
     </gap:plugin>
-    <gap:plugin name="cordova-plugin-device" source="npm" spec="2.0.2" />
-    <gap:plugin name="cordova-plugin-file" source="npm" spec="6.0.1" />
-    <gap:plugin name="cordova-plugin-file-opener2" source="npm" spec="2.0.19" />
-    <gap:plugin name="cordova-plugin-file-transfer" source="npm" spec="1.7.1" />
-    <gap:plugin name="cordova-plugin-globalization" source="npm" spec="1.11.0" />
-    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0" />
-    <gap:plugin name="cordova-plugin-ionic-keyboard" source="npm" spec="2.1.3" />
-    <gap:plugin name="cordova-plugin-local-notification" source="npm" spec="0.9.0-beta.3" />
-    <gap:plugin name="cordova-plugin-media-capture" source="npm" spec="3.0.2" />
-    <gap:plugin name="cordova-plugin-network-information" source="npm" spec="2.0.1" />
-    <gap:plugin name="cordova-plugin-screen-orientation" source="npm" spec="3.0.1" />
-    <gap:plugin name="cordova-plugin-splashscreen" source="npm" spec="5.0.2" />
-    <gap:plugin name="cordova-plugin-statusbar" source="npm" spec="2.4.2" />
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.3" />
-    <gap:plugin name="cordova-plugin-zip" source="npm" spec="3.1.0" />
-    <gap:plugin name="cordova-sqlite-storage" source="git" version="https://github.com/moodlemobile/Cordova-sqlite-storage.git#moodle-phonegapbuild" />
-    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" spec="1.0.1" />
-    <gap:plugin name="phonegap-plugin-push" source="git" version="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle-v2">
-        <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+" />
-        <variable name="FCM_VERSION" value="17.0.+" />
+    <gap:plugin name="cordova-plugin-device" source="npm" spec="2.0.2"/>
+    <gap:plugin name="cordova-plugin-file" source="npm" spec="6.0.1"/>
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm" spec="2.0.19"/>
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" spec="1.7.1"/>
+    <gap:plugin name="cordova-plugin-globalization" source="npm" spec="1.11.0"/>
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" spec="3.0.0"/>
+    <gap:plugin name="cordova-plugin-ionic-keyboard" source="npm" spec="2.1.3"/>
+    <gap:plugin name="cordova-plugin-local-notification" source="npm" spec="0.9.0-beta.3"/>
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" spec="3.0.2"/>
+    <gap:plugin name="cordova-plugin-network-information" source="npm" spec="2.0.1"/>
+    <gap:plugin name="cordova-plugin-screen-orientation" source="npm" spec="3.0.1"/>
+    <gap:plugin name="cordova-plugin-splashscreen" source="npm" spec="5.0.2"/>
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" spec="2.4.2"/>
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" spec="1.3.3"/>
+    <gap:plugin name="cordova-plugin-zip" source="npm" spec="3.1.0"/>
+    <gap:plugin name="cordova-sqlite-storage" source="git"
+                version="https://github.com/moodlemobile/Cordova-sqlite-storage.git#moodle-phonegapbuild"/>
+    <gap:plugin name="nl.kingsquare.cordova.background-audio" source="npm" spec="1.0.1"/>
+    <gap:plugin name="phonegap-plugin-push" source="git"
+                version="https://github.com/moodlemobile/phonegap-plugin-push.git#moodle-v2">
+        <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+"/>
+        <variable name="FCM_VERSION" value="17.0.+"/>
     </gap:plugin>
 
-    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='LearnersPlatform']" mode="merge">
-        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true"></activity>
+    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='LearnersPlatform']"
+                 mode="merge">
+        <activity
+                android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize"
+                android:debuggable="true"></activity>
     </edit-config>
 
     <!-- See MOBILE-892 -->
@@ -186,7 +196,9 @@
         <string>We need microphone access to record sounds so you can attach them as part of your submissions.</string>
     </edit-config>
     <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-        <string>We need photo library access to get pictures from there so you can attach them as part of your submissions.</string>
+        <string>We need photo library access to get pictures from there so you can attach them as part of your
+            submissions.
+        </string>
     </edit-config>
 
     <edit-config target="UISupportsDocumentBrowser" file="*-Info.plist" mode="merge">
@@ -202,12 +214,12 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.calendar-event</string>
-                  <string>public.database</string>
-                  <string>public.executable</string>
-                  <string>public.data</string>
-                  <string>public.content </string>
-                  <string>public.item</string>
+                    <string>public.calendar-event</string>
+                    <string>public.database</string>
+                    <string>public.executable</string>
+                    <string>public.data</string>
+                    <string>public.content</string>
+                    <string>public.item</string>
                 </array>
             </dict>
             <dict>
@@ -217,7 +229,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.video</string>
+                    <string>public.video</string>
                 </array>
             </dict>
             <dict>
@@ -227,7 +239,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.image</string>
+                    <string>public.image</string>
                 </array>
             </dict>
             <dict>
@@ -237,7 +249,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.apple.webarchive</string>
+                    <string>com.apple.webarchive</string>
                 </array>
             </dict>
             <dict>
@@ -247,9 +259,9 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.apple.keynote.key</string>
-                  <string>com.apple.iwork.keynote.key</string>
-                  <string>com.apple.iwork.keynote.kth</string>
+                    <string>com.apple.keynote.key</string>
+                    <string>com.apple.iwork.keynote.key</string>
+                    <string>com.apple.iwork.keynote.kth</string>
                 </array>
             </dict>
             <dict>
@@ -259,9 +271,9 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.apple.numbers.numbers</string>
-                  <string>com.apple.iwork.numbers.numbers</string>
-                  <string>com.apple.iwork.numbers.template</string>
+                    <string>com.apple.numbers.numbers</string>
+                    <string>com.apple.iwork.numbers.numbers</string>
+                    <string>com.apple.iwork.numbers.template</string>
                 </array>
             </dict>
             <dict>
@@ -271,9 +283,9 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.apple.page.pages</string>
-                  <string>com.apple.iwork.pages.pages</string>
-                  <string>com.apple.iwork.pages.template</string>
+                    <string>com.apple.page.pages</string>
+                    <string>com.apple.iwork.pages.pages</string>
+                    <string>com.apple.iwork.pages.template</string>
                 </array>
             </dict>
             <dict>
@@ -283,7 +295,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>org.oasis.opendocument.spreadsheet</string>
+                    <string>org.oasis.opendocument.spreadsheet</string>
                 </array>
             </dict>
             <dict>
@@ -293,7 +305,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>org.oasis.opendocument.presentation</string>
+                    <string>org.oasis.opendocument.presentation</string>
                 </array>
             </dict>
             <dict>
@@ -303,7 +315,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>org.oasis.opendocument.text</string>
+                    <string>org.oasis.opendocument.text</string>
                 </array>
             </dict>
             <dict>
@@ -313,7 +325,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.folder</string>
+                    <string>public.folder</string>
                 </array>
             </dict>
             <dict>
@@ -323,13 +335,13 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.audio</string>
-                  <string>public.mp3</string>
-                  <string>public.mpeg-4-audio</string>
-                  <string>com.apple.protected-​mpeg-4-audio</string>
-                  <string>public.aifc-audio</string>
-                  <string>com.apple.coreaudio-​format</string>
-                  <string>public.aiff-audio</string>
+                    <string>public.audio</string>
+                    <string>public.mp3</string>
+                    <string>public.mpeg-4-audio</string>
+                    <string>com.apple.protected-​mpeg-4-audio</string>
+                    <string>public.aifc-audio</string>
+                    <string>com.apple.coreaudio-​format</string>
+                    <string>public.aiff-audio</string>
                 </array>
             </dict>
             <dict>
@@ -339,12 +351,12 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.movie</string>
-                  <string>public.3gpp2</string>
-                  <string>public.3gpp</string>
-                  <string>public.mpeg</string>
-                  <string>com.apple.quicktime-movie</string>
-                  <string>public.mpeg-4</string>
+                    <string>public.movie</string>
+                    <string>public.3gpp2</string>
+                    <string>public.3gpp</string>
+                    <string>public.mpeg</string>
+                    <string>com.apple.quicktime-movie</string>
+                    <string>public.mpeg-4</string>
                 </array>
             </dict>
             <dict>
@@ -354,7 +366,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.compuserve.gif</string>
+                    <string>com.compuserve.gif</string>
                 </array>
             </dict>
             <dict>
@@ -364,7 +376,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.png</string>
+                    <string>public.png</string>
                 </array>
             </dict>
             <dict>
@@ -374,7 +386,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.tiff</string>
+                    <string>public.tiff</string>
                 </array>
             </dict>
             <dict>
@@ -384,7 +396,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.jpeg</string>
+                    <string>public.jpeg</string>
                 </array>
             </dict>
             <dict>
@@ -394,7 +406,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.xml</string>
+                    <string>public.xml</string>
                 </array>
             </dict>
             <dict>
@@ -404,8 +416,8 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.html</string>
-                  <string>public.xhtml</string>
+                    <string>public.html</string>
+                    <string>public.xhtml</string>
                 </array>
             </dict>
             <dict>
@@ -415,9 +427,9 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.rtf</string>
-                  <string>com.apple.rtfd</string>
-                  <string>com.apple.flat-rtfd</string>
+                    <string>public.rtf</string>
+                    <string>com.apple.rtfd</string>
+                    <string>com.apple.flat-rtfd</string>
                 </array>
             </dict>
             <dict>
@@ -427,29 +439,29 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.text</string>
-                  <string>public.plain-text</string>
-                  <string>public.utf8-plain-text</string>
-                  <string>public.utf16-external-plain-​text</string>
-                  <string>public.utf16-plain-text</string>
-                  <string>com.apple.traditional-mac-​plain-text</string>
-                  <string>public.source-code</string>
-                  <string>public.c-source</string>
-                  <string>public.objective-c-source</string>
-                  <string>public.c-plus-plus-source</string>
-                  <string>public.objective-c-plus-​plus-source</string>
-                  <string>public.c-header</string>
-                  <string>public.c-plus-plus-header</string>
-                  <string>com.sun.java-source</string>
-                  <string>public.script</string>
-                  <string>public.shell-script</string>
+                    <string>public.text</string>
+                    <string>public.plain-text</string>
+                    <string>public.utf8-plain-text</string>
+                    <string>public.utf16-external-plain-​text</string>
+                    <string>public.utf16-plain-text</string>
+                    <string>com.apple.traditional-mac-​plain-text</string>
+                    <string>public.source-code</string>
+                    <string>public.c-source</string>
+                    <string>public.objective-c-source</string>
+                    <string>public.c-plus-plus-source</string>
+                    <string>public.objective-c-plus-​plus-source</string>
+                    <string>public.c-header</string>
+                    <string>public.c-plus-plus-header</string>
+                    <string>com.sun.java-source</string>
+                    <string>public.script</string>
+                    <string>public.shell-script</string>
                 </array>
             </dict>
             <dict>
                 <key>CFBundleTypeExtensions</key>
                 <array>
-                  <string>zip</string>
-                  <string>zipx</string>
+                    <string>zip</string>
+                    <string>zipx</string>
                 </array>
                 <key>CFBundleTypeName</key>
                 <string>Zip archive</string>
@@ -457,17 +469,17 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>public.zip-archive</string>
-                  <string>public.archive</string>
-                  <string>com.pkware.zip-archive</string>
-                  <string>com.pkware.zipx-archive</string>
+                    <string>public.zip-archive</string>
+                    <string>public.archive</string>
+                    <string>com.pkware.zip-archive</string>
+                    <string>com.pkware.zipx-archive</string>
                 </array>
             </dict>
             <dict>
                 <key>CFBundleTypeExtensions</key>
                 <array>
-                  <string>rar</string>
-                  <string>RAR</string>
+                    <string>rar</string>
+                    <string>RAR</string>
                 </array>
                 <key>CFBundleTypeName</key>
                 <string>Rar archive</string>
@@ -475,15 +487,15 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.rarlab.rar-archive</string>
-                  <string>public.archive</string>
+                    <string>com.rarlab.rar-archive</string>
+                    <string>public.archive</string>
                 </array>
             </dict>
             <dict>
                 <key>CFBundleTypeExtensions</key>
                 <array>
-                  <string>7z</string>
-                  <string>7Z</string>
+                    <string>7z</string>
+                    <string>7Z</string>
                 </array>
                 <key>CFBundleTypeName</key>
                 <string>7z archive</string>
@@ -491,8 +503,8 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>org.7-zip.7-zip-archive</string>
-                  <string>public.archive</string>
+                    <string>org.7-zip.7-zip-archive</string>
+                    <string>public.archive</string>
                 </array>
             </dict>
             <dict>
@@ -502,7 +514,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.microsoft.waveform-​audio</string>
+                    <string>com.microsoft.waveform-​audio</string>
                 </array>
             </dict>
             <dict>
@@ -512,8 +524,8 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.microsoft.ico</string>
-                  <string>com.apple.icns</string>
+                    <string>com.microsoft.ico</string>
+                    <string>com.apple.icns</string>
                 </array>
             </dict>
             <dict>
@@ -523,7 +535,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.microsoft.bmp</string>
+                    <string>com.microsoft.bmp</string>
                 </array>
             </dict>
             <dict>
@@ -533,8 +545,8 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.microsoft.powerpoint.​ppt</string>
-                  <string>org.openxmlformats.presentationml.presentation</string>
+                    <string>com.microsoft.powerpoint.​ppt</string>
+                    <string>org.openxmlformats.presentationml.presentation</string>
                 </array>
             </dict>
             <dict>
@@ -544,8 +556,8 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>org.openxmlformats.spreadsheetml.sheet</string>
-                  <string>com.microsoft.excel.xls</string>
+                    <string>org.openxmlformats.spreadsheetml.sheet</string>
+                    <string>com.microsoft.excel.xls</string>
                 </array>
             </dict>
             <dict>
@@ -555,9 +567,9 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.microsoft.word.doc</string>
-                  <string>com.microsoft.word.wordml</string>
-                  <string>org.openxmlformats.wordprocessingml.document</string>
+                    <string>com.microsoft.word.doc</string>
+                    <string>com.microsoft.word.wordml</string>
+                    <string>org.openxmlformats.wordprocessingml.document</string>
                 </array>
             </dict>
             <dict>
@@ -567,7 +579,7 @@
                 <string>Alternate</string>
                 <key>LSItemContentTypes</key>
                 <array>
-                  <string>com.adobe.pdf</string>
+                    <string>com.adobe.pdf</string>
                 </array>
             </dict>
         </array>
