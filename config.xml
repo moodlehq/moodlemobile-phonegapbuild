@@ -6,7 +6,7 @@
         versionCode="36100"
         android-versionCode="36100"
         version="3.6.1">
-    <name>LearnersPlatform</name>
+    <name>LP Mobile</name>
 
     <description>
         LearnersPlatform official app
@@ -179,7 +179,7 @@
         <variable name="FCM_VERSION" value="17.0.+"/>
     </gap:plugin>
 
-    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='LearnersPlatform']"
+    <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:name='LP Mobile']"
                  mode="merge">
         <activity
                 android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize"
