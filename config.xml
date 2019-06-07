@@ -3,9 +3,9 @@
         xmlns:gap="http://phonegap.com/ns/1.0"
         xmlns:android="http://schemas.android.com/apk/resources/android"
         id="com.learnersplatform.mobile"
-        versionCode="36100"
-        android-versionCode="36100"
-        version="3.6.1">
+        versionCode="36200"
+        android-versionCode="36200"
+        version="3.6.2">
     <name>LPMobile</name>
 
     <description>
@@ -17,7 +17,7 @@
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
-        <string>3.6.1</string>
+        <string>3.6.2</string>
     </edit-config>
 
     <gap:platform name="ios"/>
