@@ -422,10 +422,13 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
         });
         // Call resize to recalculate the dimensions.
         this.content && this.content.resize();
+        // If we received a new message while using group messaging, force mark messages as read.
+        var last = this.messages[this.messages.length - 1], forceMark = this.groupMessagingEnabled && last && last.useridfrom != this.currentUserId && this.lastMessage.text != ''
+            && (last.text !== this.lastMessage.text || last.timecreated !== this.lastMessage.timecreated);
         // Notify that there can be a new message.
         this.notifyNewMessage();
         // Mark retrieved messages as read if they are not.
-        this.markMessagesAsRead();
+        this.markMessagesAsRead(forceMark);
     };
     /**
      * Get the conversation.
@@ -597,14 +600,17 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Mark messages as read.
      */
-    AddonMessagesDiscussionPage.prototype.markMessagesAsRead = function () {
+    AddonMessagesDiscussionPage.prototype.markMessagesAsRead = function (forceMark) {
         var _this = this;
         var readChanged = false;
         var promises = [];
         if (this.messagesProvider.isMarkAllMessagesReadEnabled()) {
             var messageUnreadFound = false;
             // Mark all messages at a time if there is any unread message.
-            if (this.groupMessagingEnabled) {
+            if (forceMark) {
+                messageUnreadFound = true;
+            }
+            else if (this.groupMessagingEnabled) {
                 messageUnreadFound = this.conversation && this.conversation.unreadcount > 0 && this.conversationId > 0;
             }
             else {
