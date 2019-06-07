@@ -1188,6 +1188,7 @@
     "core.course.couldnotloadsectioncontent": "Negalima užkrauti pasirinkto turinio, prašome pamėginti vėliau.",
     "core.course.couldnotloadsections": "Negalima užkrauti pasirinkto turinio, prašome pamėginti vėliau.",
     "core.course.coursesummary": "Kursų suvestinė",
+    "core.course.downloadcourse": "Atsisiųsti kursą",
     "core.course.errordownloadingsection": "Klaida atsisiunčiant.",
     "core.course.errorgetmodule": "Klaida gaunant kurso duomenis.",
     "core.course.hiddenfromstudents": "Paslėpta nuo besimokančiųjų",
