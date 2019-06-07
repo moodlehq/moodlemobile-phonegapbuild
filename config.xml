@@ -74,9 +74,6 @@
     <platform name="android">
         <resource-file src="google-services.json" target="app/google-services.json"/>
 
-        <preference name="SplashMaintainAspectRatio" value="true"/>
-        <preference name="SplashShowOnlyFirstTime" value="true"/>
-
         <icon density="ldpi" src="resources/icon/android/ldpi.png"/>
         <icon density="mdpi" src="resources/icon/android/mdpi.png"/>
         <icon density="hdpi" src="resources/icon/android/hdpi.png"/>
