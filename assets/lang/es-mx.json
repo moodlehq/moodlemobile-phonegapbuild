@@ -1306,7 +1306,7 @@
     "core.course.warningmanualcompletionmodified": "La finalización manual de una actividad fue modificada en el sitio.",
     "core.course.warningofflinemanualcompletiondeleted": "Una parte de la finalización manual del curso '{{name}}' ha sido eliminada. {{error}}",
     "core.coursedetails": "Detalles del curso",
-    "core.courses.addtofavourites": "Marcar con estrella este curso",
+    "core.courses.addtofavourites": "Destacar (marcar con estrella) este curso",
     "core.courses.allowguests": "Este curso permite la entrada de invitados",
     "core.courses.availablecourses": "Cursos disponibles",
     "core.courses.cannotretrievemorecategories": "No se pueden recuperar categorías más profundas que el nivel {{$a}}.",
