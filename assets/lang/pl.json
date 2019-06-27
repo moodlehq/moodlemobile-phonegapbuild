@@ -1064,6 +1064,7 @@
     "core.decsep": ",",
     "core.defaultvalue": "Domyślne ({{$a}})",
     "core.delete": "Usuń",
+    "core.deleteduser": "Usunięci użytkownicy",
     "core.description": "Opis",
     "core.digitalminor_desc": "Aby utworzyć konto na tej stronie, poproś rodzica/opiekuna o kontakt z następującą osobą.",
     "core.done": "Wykonane",

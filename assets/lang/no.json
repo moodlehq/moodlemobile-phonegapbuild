@@ -1,5 +1,5 @@
 {
-    "addon.badges.alignment": "Kompetanse",
+    "addon.badges.alignment": "Justering",
     "addon.badges.badgedetails": "Utmerkelsesdetaljer",
     "addon.badges.badges": "Utmerkelser",
     "addon.badges.bendorsement": "Anbefaling",
@@ -215,6 +215,7 @@
     "addon.messages.requirecontacttomessage": "Du må sende en kontaktforespørsel til {{$a}} for å kunne sende de en melding.",
     "addon.messages.searchcombined": "Søk etter mennesker og meldinger",
     "addon.messages.selfconversation": "Personlig område",
+    "addon.messages.selfconversationdefaultmessage": "Lagre utkast, lenke, notater osv. her.",
     "addon.messages.sendcontactrequest": "Send kontaktforespørsel",
     "addon.messages.type_blocked": "Blokkert",
     "addon.messages.type_offline": "Offline",
@@ -621,7 +622,7 @@
     "addon.mod_quiz.attemptnumber": "Forsøk",
     "addon.mod_quiz.attemptquiznow": "Ta quizen nå",
     "addon.mod_quiz.attemptstate": "Status",
-    "addon.mod_quiz.clearchoice": "Fjern mitt vlg",
+    "addon.mod_quiz.clearchoice": "Fjern valg",
     "addon.mod_quiz.comment": "Kommentar",
     "addon.mod_quiz.completedon": "Fullført den",
     "addon.mod_quiz.confirmclose": "Etter at du har sendt inn besvarelsen kan du ikke lenger forandre svarene dine for dette forsøket.",

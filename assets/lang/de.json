@@ -265,7 +265,7 @@
     "addon.mod_assign.confirmsubmission": "Wenn Sie nun Ihre Lösung zur Bewertung einreichen, können Sie keine Änderungen mehr vornehmen. Sind Sie sich sicher?",
     "addon.mod_assign.currentattempt": "Dies ist Versuch {{$a}}.",
     "addon.mod_assign.currentattemptof": "Versuch {{$a.attemptnumber}} (mögliche Versuche {{$a.maxattempts}})",
-    "addon.mod_assign.currentgrade": "Aktuelle Bewertung",
+    "addon.mod_assign.currentgrade": "Aktuelle Bewertung in Bewertungen",
     "addon.mod_assign.cutoffdate": "Letzte Abgabemöglichkeit",
     "addon.mod_assign.defaultteam": "Standard-Gruppe",
     "addon.mod_assign.duedate": "Fälligkeitsdatum",

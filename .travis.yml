@@ -28,3 +28,11 @@ script:
   - echo "{\"keystore_password\":\"$ANDROID_KEYSTORE\",\"key_password\":\"$ANDROID_UNLOCK\"}" | pgb unlock android $ANDROID_KEY
   - echo "{\"key_password\":\"$IOS_UNLOCK\"}" | pgb unlock ios $IOS_KEY
   - pgb clone --exit-code --no-progress $APP_ID ios-key=$IOS_KEY android-key=$ANDROID_KEY
+  - if [ "$TRAVIS_BRANCH" != 'master' ] ; then exit 0 ; fi
+  - git clone -q https://$GIT_TOKEN@github.com/$GIT_ORG_PRIVATE/bma-apps-builds.git ../apps
+  - cd ../apps
+  - pgb download $APP_ID android android.apk
+  - pgb download $APP_ID ios ios.ipa
+  - git add .
+  - git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
+  - git push
