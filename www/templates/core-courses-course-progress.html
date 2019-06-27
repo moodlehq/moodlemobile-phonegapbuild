@@ -1,0 +1,41 @@
+<ion-card [attr.course-color]="course.id % 10">
+    <div (click)="openCourse(course)" class="core-course-thumb" [class.core-course-color-img]="course.courseImage">
+        <img *ngIf="course.courseImage" [src]="course.courseImage" core-external-content alt=""/>
+    </div>
+    <ion-item tappable text-wrap detail-none (click)="openCourse(course)" [title]="course.displayname || course.fullname" class="core-course-link" [class.item-disabled]="course.visible == 0" [class.core-course-more-than-title]="(course.progress != null && course.progress >= 0)">
+        <div class="core-course-title" [class.core-course-with-buttons]="courseOptionMenuEnabled || (downloadCourseEnabled && showDownload)">
+            <p *ngIf="course.displayname && course.shortname && course.fullname != course.displayname" class="core-course-shortname"><core-format-text [text]="course.shortname"></core-format-text></p>
+            <h2>
+                <core-icon name="fa-star" *ngIf="course.isfavourite"></core-icon>
+                <core-format-text [text]="course.fullname"></core-format-text>
+            </h2>
+        </div>
+
+        <div class="core-button-spinner" *ngIf="downloadCourseEnabled && !courseOptionMenuEnabled && showDownload">
+            <!-- Download course. -->
+            <button *ngIf="prefetchCourseData.prefetchCourseIcon != 'spinner'" ion-button icon-only clear color="dark" (click)="prefetchCourse($event)" [attr.aria-label]="prefetchCourseData.title | translate">
+                <core-icon *ngIf="!prefetchCourseData.downloadSucceeded" [name]="prefetchCourseData.prefetchCourseIcon"></core-icon>
+                <ion-icon *ngIf="prefetchCourseData.downloadSucceeded" name="cloud-done" color="success" [attr.aria-label]="'core.downloaded' | translate" role="status"></ion-icon>
+            </button>
+            <!-- Download course spinner. -->
+            <ion-spinner *ngIf="prefetchCourseData.prefetchCourseIcon == 'spinner'"></ion-spinner>
+        </div>
+
+        <div class="core-button-spinner" *ngIf="courseOptionMenuEnabled">
+            <!-- Download course spinner. -->
+            <ion-spinner *ngIf="(downloadCourseEnabled && prefetchCourseData.prefetchCourseIcon == 'spinner') || showSpinner"></ion-spinner>
+
+            <!-- Downloaded icon. -->
+             <ion-icon *ngIf="downloadCourseEnabled && prefetchCourseData.downloadSucceeded && !showSpinner" class="core-icon-downloaded" name="cloud-done" color="success" [attr.aria-label]="'core.downloaded' | translate" role="status"></ion-icon>
+
+            <!-- Options menu. -->
+            <button ion-button icon-only clear color="dark" (click)="showCourseOptionsMenu($event)" *ngIf="!showSpinner">
+                <core-icon name="more"></core-icon>
+            </button>
+        </div>
+    </ion-item>
+    <ion-item *ngIf="showAll && course.progress != null && course.progress >= 0 && course.completionusertracked !== false">
+        <core-progress-bar [progress]="course.progress"></core-progress-bar>
+    </ion-item>
+    <ng-content></ng-content>
+</ion-card>
