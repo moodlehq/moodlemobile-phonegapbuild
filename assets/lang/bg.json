@@ -549,6 +549,7 @@
     "addon.mod_workshop_assessment_accumulative.dimensionnumber": "Аспект {{$a}}",
     "addon.notes.addnewnote": "Добавяне на нова бележка",
     "addon.notes.coursenotes": "Бележки за курс",
+    "addon.notes.deleteconfirm": "Изтриване на бележката?",
     "addon.notes.nonotes": "Все още няма бележки от този тип",
     "addon.notes.note": "Бележка",
     "addon.notes.notes": "Бележки",

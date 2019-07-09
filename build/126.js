@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar.ts
-var calendar = __webpack_require__(359);
+var calendar = __webpack_require__(360);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(11);
@@ -144,34 +144,34 @@ var settings_module_AddonCalendarSettingsPageModule = /** @class */ (function ()
 
 //# sourceMappingURL=settings.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1394);
+var action_sheet_component_ngfactory = __webpack_require__(1395);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1395);
+var alert_component_ngfactory = __webpack_require__(1396);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1396);
+var app_root_ngfactory = __webpack_require__(1397);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1397);
+var loading_component_ngfactory = __webpack_require__(1398);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1398);
+var modal_component_ngfactory = __webpack_require__(1399);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1399);
+var picker_component_ngfactory = __webpack_require__(1400);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1400);
+var popover_component_ngfactory = __webpack_require__(1401);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1401);
+var select_popover_component_ngfactory = __webpack_require__(1402);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1402);
+var toast_component_ngfactory = __webpack_require__(1403);
 
 // EXTERNAL MODULE: ./src/pipes/duration.ts
-var duration = __webpack_require__(1447);
+var duration = __webpack_require__(1448);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -189,7 +189,7 @@ var config = __webpack_require__(6);
 var view_controller = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1403);
+var navbar_ngfactory = __webpack_require__(1404);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(211);
@@ -210,10 +210,10 @@ var platform = __webpack_require__(15);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1404);
+var toolbar_title_ngfactory = __webpack_require__(1405);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(353);
+var toolbar_title = __webpack_require__(354);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(260);
@@ -342,16 +342,16 @@ var AddonCalendarSettingsPageNgFactory = core["_27" /* ɵccf */]("page-addon-cal
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(349);
+var translate_loader = __webpack_require__(350);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(350);
+var translate_compiler = __webpack_require__(351);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(352);
+var translate_parser = __webpack_require__(353);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(351);
+var missing_translation_handler = __webpack_require__(352);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(453);

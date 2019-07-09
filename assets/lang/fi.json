@@ -814,6 +814,7 @@
     "addon.mod_workshop_assessment_rubric.mustchooseone": "Valitse yksi näistä",
     "addon.notes.addnewnote": "Lisää uusi huomautus",
     "addon.notes.coursenotes": "Kurssin huomautukset",
+    "addon.notes.deleteconfirm": "Poista tämä huomautus?",
     "addon.notes.nonotes": "Tämän tyyppisiä huomautuksia ei ole",
     "addon.notes.note": "Huomautus",
     "addon.notes.notes": "Huomautukset",

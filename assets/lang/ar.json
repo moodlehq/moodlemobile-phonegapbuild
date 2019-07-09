@@ -412,6 +412,7 @@
     "addon.mod_workshop_assessment_rubric.mustchooseone": "لقد قمت باختيار هذه البنود",
     "addon.notes.addnewnote": "إضافة ملاحظة جديدة",
     "addon.notes.coursenotes": "ملاحظات المقرر الدراسي",
+    "addon.notes.deleteconfirm": "حذف هذه الملاحظة؟",
     "addon.notes.nonotes": "لا يوجد إلى الآن أي ملاحظات من هذا النوع",
     "addon.notes.note": "ملاحظة",
     "addon.notes.notes": "ملاحظات",

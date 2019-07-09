@@ -736,6 +736,7 @@
     "addon.mod_workshop_assessment_numerrors.dimensiongradefor": "Betyg för {{$a}}",
     "addon.notes.addnewnote": "Lägg till en ny anteckning",
     "addon.notes.coursenotes": "Anteckningar för kurs",
+    "addon.notes.deleteconfirm": "Vill Du ta bort den här anteckningen?",
     "addon.notes.nonotes": "Det finns ännu inga anteckningar av den här typen",
     "addon.notes.note": "Anteckning",
     "addon.notes.notes": "Anteckningar",

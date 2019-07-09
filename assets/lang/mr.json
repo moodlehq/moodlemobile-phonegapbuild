@@ -323,6 +323,7 @@
     "addon.mod_wiki.wikipage": "विकी पृष्ठ",
     "addon.notes.addnewnote": "नविन टिप्पणी भरा",
     "addon.notes.coursenotes": "कोर्ससाठीच्या टिप्पणी",
+    "addon.notes.deleteconfirm": "ही टिप्पणी काढुन टाकायची का?",
     "addon.notes.nonotes": "या प्रकारच्या टिप्पणी अजूनपर्यंत दिलेल्या नाहीत",
     "addon.notes.note": "टिप्पणी",
     "addon.notes.notes": "टिप्पण्या",

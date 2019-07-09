@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(8);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/course/pages/section/section.ts
-var section = __webpack_require__(1442);
+var section = __webpack_require__(1443);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_module = __webpack_require__(25);
@@ -76,46 +76,46 @@ var section_module_CoreCourseSectionPageModule = /** @class */ (function () {
 
 //# sourceMappingURL=section.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1394);
+var action_sheet_component_ngfactory = __webpack_require__(1395);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1395);
+var alert_component_ngfactory = __webpack_require__(1396);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1396);
+var app_root_ngfactory = __webpack_require__(1397);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1397);
+var loading_component_ngfactory = __webpack_require__(1398);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1398);
+var modal_component_ngfactory = __webpack_require__(1399);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1399);
+var picker_component_ngfactory = __webpack_require__(1400);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1400);
+var popover_component_ngfactory = __webpack_require__(1401);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1401);
+var select_popover_component_ngfactory = __webpack_require__(1402);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1402);
+var toast_component_ngfactory = __webpack_require__(1403);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1405);
+var context_menu_popover_ngfactory = __webpack_require__(1406);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1406);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1407);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1407);
+var recaptchamodal_ngfactory = __webpack_require__(1408);
 
 // EXTERNAL MODULE: ./src/components/bs-tooltip/bs-tooltip.ngfactory.js
-var bs_tooltip_ngfactory = __webpack_require__(1408);
+var bs_tooltip_ngfactory = __webpack_require__(1409);
 
 // EXTERNAL MODULE: ./src/core/course/components/unsupported-module/unsupported-module.ngfactory.js
-var unsupported_module_ngfactory = __webpack_require__(1409);
+var unsupported_module_ngfactory = __webpack_require__(1410);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ngfactory.js
 var context_menu_item_ngfactory = __webpack_require__(83);
@@ -262,7 +262,7 @@ var item_content = __webpack_require__(32);
 var progress_bar_ngfactory = __webpack_require__(466);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(302);
+var progress_bar = __webpack_require__(303);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(76);
@@ -277,13 +277,13 @@ var empty_box_ngfactory = __webpack_require__(118);
 var empty_box = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/components/dynamic-component/dynamic-component.ngfactory.js
-var dynamic_component_ngfactory = __webpack_require__(1410);
+var dynamic_component_ngfactory = __webpack_require__(1411);
 
 // EXTERNAL MODULE: ./src/components/dynamic-component/dynamic-component.ts
 var dynamic_component = __webpack_require__(202);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ngfactory.js
-var infinite_loading_ngfactory = __webpack_require__(355);
+var infinite_loading_ngfactory = __webpack_require__(356);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
 var infinite_loading = __webpack_require__(262);
@@ -316,7 +316,7 @@ var navbar = __webpack_require__(211);
 var item_divider = __webpack_require__(113);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ngfactory.js + 1 modules
-var module_ngfactory = __webpack_require__(1420);
+var module_ngfactory = __webpack_require__(1421);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ts
 var module_module = __webpack_require__(462);
@@ -334,10 +334,10 @@ var course = __webpack_require__(14);
 var badge = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/components/download-refresh/download-refresh.ngfactory.js
-var download_refresh_ngfactory = __webpack_require__(733);
+var download_refresh_ngfactory = __webpack_require__(734);
 
 // EXTERNAL MODULE: ./src/components/download-refresh/download-refresh.ts
-var download_refresh = __webpack_require__(374);
+var download_refresh = __webpack_require__(375);
 
 // EXTERNAL MODULE: ./src/core/course/components/format/format.ts
 var format = __webpack_require__(473);
@@ -491,16 +491,16 @@ var tabs = __webpack_require__(165);
 var toolbar_header = __webpack_require__(454);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1403);
+var navbar_ngfactory = __webpack_require__(1404);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(688);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1404);
+var toolbar_title_ngfactory = __webpack_require__(1405);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(353);
+var toolbar_title = __webpack_require__(354);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
 var tabs_ngfactory = __webpack_require__(459);
@@ -515,7 +515,7 @@ var options_delegate = __webpack_require__(91);
 var courses = __webpack_require__(49);
 
 // EXTERNAL MODULE: ./src/core/course/providers/sync.ts
-var sync = __webpack_require__(377);
+var sync = __webpack_require__(378);
 
 // CONCATENATED MODULE: ./src/core/course/pages/section/section.ngfactory.js
 /**
@@ -624,16 +624,16 @@ var CoreCourseSectionPageNgFactory = core["_27" /* ɵccf */]("page-core-course-s
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(349);
+var translate_loader = __webpack_require__(350);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(350);
+var translate_compiler = __webpack_require__(351);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(352);
+var translate_parser = __webpack_require__(353);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(351);
+var missing_translation_handler = __webpack_require__(352);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
 var translate_store = __webpack_require__(453);

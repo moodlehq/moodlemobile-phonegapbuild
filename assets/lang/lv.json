@@ -782,6 +782,7 @@
     "addon.mod_workshop_assessment_rubric.mustchooseone": "Jums ir jāizvēlas viens no šiem vienumiem",
     "addon.notes.addnewnote": "Pievienot jaunu piezīmi",
     "addon.notes.coursenotes": "Kursa piezīmes",
+    "addon.notes.deleteconfirm": "Dzēst šo piezīmi?",
     "addon.notes.nonotes": "Pagaidām vēl nav šāda tipa piezīmju",
     "addon.notes.note": "Piezīme",
     "addon.notes.notes": "Piezīmes",
