@@ -705,7 +705,7 @@
     "addon.mod_workshop_assessment_numerrors.dimensioncommentfor": "הערות ל {{$a}}",
     "addon.mod_workshop_assessment_numerrors.dimensiongradefor": "ציון ל {{$a}}",
     "addon.mod_workshop_assessment_numerrors.dimensionnumber": "טענה {{$a}}",
-    "addon.mod_workshop_assessment_rubric.dimensionnumber": "קריטריון {{$a}}",
+    "addon.mod_workshop_assessment_rubric.dimensionnumber": "אמת־מידה {{$a}}",
     "addon.mod_workshop_assessment_rubric.mustchooseone": "עליך לבחור באחד מהפריטים האלו ",
     "addon.notes.addnewnote": "הוספת הערה חדשה",
     "addon.notes.coursenotes": "הערות על הסטודנט הזמינות לכל המורים בקורס ",

@@ -639,7 +639,7 @@
     "addon.mod_lesson.reviewquestioncontinue": "Não, quero avançar para a pergunta seguinte",
     "addon.mod_lesson.secondpluswrong": "Resposta incorreta. Quer voltar a tentar?",
     "addon.mod_lesson.submit": "Submeter",
-    "addon.mod_lesson.teacherjumpwarning": "Nesta lição, há páginas que seguem para {{$a.cluster}} ou para {{$a.unseen}}. Esta sequência será ignorada e a lição seguirá para a página seguinte. Para testar a sequência das páginas, assuma o papel de aluno.",
+    "addon.mod_lesson.teacherjumpwarning": "Nesta lição existem páginas que seguem para {{$a.cluster}} ou para {{$a.unseen}}. Esta sequência será ignorada e a lição seguirá para a página seguinte. Para testar a sequência das páginas, assuma o papel de aluno.",
     "addon.mod_lesson.teacherongoingwarning": "A exibição da pontuação no decorrer da lição só é visível para os alunos. Para ver a pontuação no decorrer da lição entre como aluno.",
     "addon.mod_lesson.teachertimerwarning": "O cronómetro só é visível para os alunos. Para testar esta funcionalidade, entre como aluno.",
     "addon.mod_lesson.thatsthecorrectanswer": "A sua resposta está correta.",
