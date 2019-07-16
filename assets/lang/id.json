@@ -1,5 +1,10 @@
 {
     "addon.block_activitymodules.pluginname": "Aktivitas",
+    "addon.block_calendarmonth.pluginname": "Kalender",
+    "addon.block_calendarupcoming.pluginname": "Acara akan datang",
+    "addon.block_newsitems.pluginname": "Berita terbaru",
+    "addon.block_onlineusers.pluginname": "Pengguna Online",
+    "addon.block_recentactivity.pluginname": "Aktifitas lalu",
     "addon.block_sitemainmenu.pluginname": "Menu utama",
     "addon.calendar.calendar": "Kalender",
     "addon.calendar.calendarevents": "Kalender Acara",
@@ -570,6 +575,7 @@
     "core.answer": "Jawaban",
     "core.areyousure": "Anda yakin?",
     "core.back": "Kembali",
+    "core.block.blocks": "Blok",
     "core.cancel": "Batal",
     "core.cannotconnect": "Tidak dapat terhubung: Verifikasi bahwa Anda telah mengetik dengan benar URL dan situs Anda menggunakan Moodle 2.4 atau yang lebih baru.",
     "core.cannotdownloadfiles": "Pengunduhan file dinonaktifkan di layanan Mobile Anda. Tolong, hubungi administrator situs Anda.",
