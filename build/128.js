@@ -1,6 +1,6 @@
 webpackJsonp([128],{
 
-/***/ 2026:
+/***/ 2027:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,9 +116,8 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
             this.calendarProvider.getDefaultNotificationTime().then(function (defaultTime) {
                 _this.defaultTime = defaultTime * 60;
             });
-            // Calculate format to use. ion-datetime doesn't support escaping characters ([]), so we remove them.
-            this.notificationFormat = this.timeUtils.convertPHPToMoment(this.translate.instant('core.strftimedatetime'))
-                .replace(/[\[\]]/g, '');
+            // Calculate format to use.
+            this.notificationFormat = this.timeUtils.fixFormatForDatetime(this.timeUtils.convertPHPToMoment(this.translate.instant('core.strftimedatetime')));
         }
     }
     /**
