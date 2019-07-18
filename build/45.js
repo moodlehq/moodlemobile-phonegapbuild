@@ -173,10 +173,13 @@ var site_CoreLoginSitePage = /** @class */ (function () {
      * Show an error that aims people to solve the issue.
      *
      * @param {string} url The URL the user was trying to connect to.
-     * @param {string} error Error to display.
+     * @param {any} error Error to display.
      */
     CoreLoginSitePage.prototype.showLoginIssue = function (url, error) {
-        var modal = this.modalCtrl.create('CoreLoginSiteErrorPage', { siteUrl: url, issue: error });
+        var modal = this.modalCtrl.create('CoreLoginSiteErrorPage', {
+            siteUrl: url,
+            issue: this.domUtils.getErrorMessage(error)
+        });
         modal.present();
     };
     CoreLoginSitePage = __decorate([
