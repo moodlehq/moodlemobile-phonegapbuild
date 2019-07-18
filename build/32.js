@@ -70,6 +70,44 @@ var plugin_page_CoreSitePluginsPluginPage = /** @class */ (function () {
             refresher.complete();
         });
     };
+    /**
+     * The page is about to enter and become the active page.
+     */
+    CoreSitePluginsPluginPage.prototype.ionViewWillEnter = function () {
+        this.content.callComponentFunction('ionViewWillEnter');
+    };
+    /**
+     * The page has fully entered and is now the active page. This event will fire, whether it was the first load or a cached page.
+     */
+    CoreSitePluginsPluginPage.prototype.ionViewDidEnter = function () {
+        this.content.callComponentFunction('ionViewDidEnter');
+    };
+    /**
+     * The page is about to leave and no longer be the active page.
+     */
+    CoreSitePluginsPluginPage.prototype.ionViewWillLeave = function () {
+        this.content.callComponentFunction('ionViewWillLeave');
+    };
+    /**
+     * The page has finished leaving and is no longer the active page.
+     */
+    CoreSitePluginsPluginPage.prototype.ionViewDidLeave = function () {
+        this.content.callComponentFunction('ionViewDidLeave');
+    };
+    /**
+     * The page is about to be destroyed and have its elements removed.
+     */
+    CoreSitePluginsPluginPage.prototype.ionViewWillUnload = function () {
+        this.content.callComponentFunction('ionViewWillUnload');
+    };
+    /**
+     * Check if we can leave the page or not.
+     *
+     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     */
+    CoreSitePluginsPluginPage.prototype.ionViewCanLeave = function () {
+        return this.content.callComponentFunction('ionViewCanLeave');
+    };
     __decorate([
         Object(core["_9" /* ViewChild */])(plugin_content["a" /* CoreSitePluginsPluginContentComponent */]),
         __metadata("design:type", plugin_content["a" /* CoreSitePluginsPluginContentComponent */])
