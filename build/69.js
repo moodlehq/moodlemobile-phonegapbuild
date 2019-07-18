@@ -1,6 +1,6 @@
 webpackJsonp([69],{
 
-/***/ 1985:
+/***/ 2040:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -257,20 +257,29 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
         this.loadMoreError = false;
         this.canMarkAllNotificationsAsRead = false;
         this.loadingMarkAllNotificationsAsRead = false;
+        this.pendingRefresh = false;
     }
     /**
      * View loaded.
      */
     AddonNotificationsListPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.fetchNotifications().finally(function () {
-            _this.notificationsLoaded = true;
-        });
-        this.cronObserver = this.eventsProvider.on(providers_notifications["a" /* AddonNotificationsProvider */].READ_CRON_EVENT, function () { return _this.refreshNotifications(); }, this.sitesProvider.getCurrentSiteId());
+        this.fetchNotifications();
+        this.cronObserver = this.eventsProvider.on(providers_notifications["a" /* AddonNotificationsProvider */].READ_CRON_EVENT, function () {
+            if (_this.isCurrentView) {
+                _this.notificationsLoaded = false;
+                _this.refreshNotifications();
+            }
+        }, this.sitesProvider.getCurrentSiteId());
         this.pushObserver = this.pushNotificationsDelegate.on('receive').subscribe(function (notification) {
             // New notification received. If it's from current site, refresh the data.
-            if (_this.utils.isTrueOrOne(notification.notif) && _this.sitesProvider.isCurrentSite(notification.site)) {
+            if (_this.isCurrentView && _this.utils.isTrueOrOne(notification.notif) &&
+                _this.sitesProvider.isCurrentSite(notification.site)) {
+                _this.notificationsLoaded = false;
                 _this.refreshNotifications();
+            }
+            else if (!_this.isCurrentView) {
+                _this.pendingRefresh = true;
             }
         });
     };
@@ -296,6 +305,8 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.notifications.errorgetnotifications', true);
             _this.loadMoreError = true; // Set to prevent infinite calls with infinite-loading.
+        }).finally(function () {
+            _this.notificationsLoaded = true;
         });
     };
     /**
@@ -311,9 +322,7 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
             _this.eventsProvider.trigger(providers_notifications["a" /* AddonNotificationsProvider */].READ_CHANGED_EVENT, null, siteId);
             // All marked as read, refresh the list.
             _this.notificationsLoaded = false;
-            return _this.refreshNotifications().finally(function () {
-                _this.notificationsLoaded = true;
-            });
+            return _this.refreshNotifications();
         });
     };
     /**
@@ -391,6 +400,23 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
     AddonNotificationsListPage.prototype.formatText = function (notification) {
         var text = notification.mobiletext.replace(/-{4,}/ig, '');
         notification.mobiletext = this.textUtils.replaceNewLines(text, '<br>');
+    };
+    /**
+     * User entered the page.
+     */
+    AddonNotificationsListPage.prototype.ionViewDidEnter = function () {
+        this.isCurrentView = true;
+        if (this.pendingRefresh) {
+            this.pendingRefresh = false;
+            this.notificationsLoaded = false;
+            this.refreshNotifications();
+        }
+    };
+    /**
+     * User left the page.
+     */
+    AddonNotificationsListPage.prototype.ionViewDidLeave = function () {
+        this.isCurrentView = false;
     };
     /**
      * Page destroyed.
