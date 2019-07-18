@@ -190,7 +190,7 @@
     "addon.messages.groupconversations": "Gruppe",
     "addon.messages.groupinfo": "Gruppe-info",
     "addon.messages.individualconversations": "Privat",
-    "addon.messages.info": "Info",
+    "addon.messages.info": "Bruger-info",
     "addon.messages.isnotinyourcontacts": "{{$a}} står ikke på din kontaktliste",
     "addon.messages.message": "Besked",
     "addon.messages.messagenotsent": "Beskeden blev ikke sendt, prøv igen senere.",

@@ -925,7 +925,7 @@
     "addon.notes.warningnotenotsent": "Die Anmerkungen konnten nicht zum Kurs {{course}} hinzugefügt werden. {{error}}",
     "addon.notifications.errorgetnotifications": "Fehler beim Empfangen von Systemnachrichten",
     "addon.notifications.markallread": "Alle als gelesen markieren",
-    "addon.notifications.notificationpreferences": "Benachrichtigungseinstellungen",
+    "addon.notifications.notificationpreferences": "Systemnachrichten",
     "addon.notifications.notifications": "Systemnachrichten",
     "addon.notifications.playsound": "Signalton abspielen",
     "addon.notifications.therearentnotificationsyet": "Keine Systemnachrichten",
