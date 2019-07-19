@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/components/components.module.ts
-var components_module = __webpack_require__(700);
+var components_module = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/components/index/index.ts
 var index = __webpack_require__(479);

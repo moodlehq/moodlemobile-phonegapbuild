@@ -385,7 +385,7 @@ var components_components_module = __webpack_require__(26);
 var course_components_components_module = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/core/rating/components/components.module.ts
-var rating_components_components_module = __webpack_require__(701);
+var rating_components_components_module = __webpack_require__(702);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(263);

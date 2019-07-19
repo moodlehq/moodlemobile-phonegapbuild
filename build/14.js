@@ -28,7 +28,7 @@ var components_components_module = __webpack_require__(361);
 var compile_html_module = __webpack_require__(462);
 
 // EXTERNAL MODULE: ./src/core/rating/components/components.module.ts
-var rating_components_components_module = __webpack_require__(701);
+var rating_components_components_module = __webpack_require__(702);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/components.module.ts + 2 modules
 var data_components_components_module = __webpack_require__(461);
