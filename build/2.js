@@ -25,7 +25,7 @@ var sites = __webpack_require__(1);
 var messages = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(34);
+var split_view = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ts
 var tabs = __webpack_require__(167);
@@ -240,10 +240,10 @@ var translate_pipe = __webpack_require__(27);
 var item_ngfactory = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
-var item = __webpack_require__(20);
+var item = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
-var util_form = __webpack_require__(19);
+var util_form = __webpack_require__(20);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(7);
@@ -252,7 +252,7 @@ var config = __webpack_require__(7);
 var item_reorder = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
-var item_content = __webpack_require__(32);
+var item_content = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(216);
@@ -264,7 +264,7 @@ var avatar = __webpack_require__(189);
 var user_avatar = __webpack_require__(190);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(21);
+var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
@@ -306,7 +306,7 @@ var list = __webpack_require__(82);
 var gesture_controller = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(31);
+var dom_controller = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
 var item_divider = __webpack_require__(99);
@@ -333,7 +333,7 @@ var time = __webpack_require__(24);
 var content_ngfactory = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app_app = __webpack_require__(33);
+var app_app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(98);

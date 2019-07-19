@@ -345,7 +345,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1452);
 var ion_tab = __webpack_require__(1494);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app_app = __webpack_require__(33);
+var app_app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(7);
@@ -363,7 +363,7 @@ var transition_controller = __webpack_require__(197);
 var deep_linker = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(31);
+var dom_controller = __webpack_require__(32);
 
 // CONCATENATED MODULE: ./src/components/ion-tabs/ion-tab.ngfactory.js
 /**
@@ -451,7 +451,7 @@ var split_pane = __webpack_require__(210);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(21);
+var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);

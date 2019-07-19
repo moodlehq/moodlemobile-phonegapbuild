@@ -179,10 +179,10 @@ var navbar_ngfactory = __webpack_require__(1447);
 var navbar = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app = __webpack_require__(33);
+var app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(21);
+var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(693);
@@ -212,7 +212,7 @@ var translate_pipe = __webpack_require__(27);
 var split_view_ngfactory = __webpack_require__(460);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(34);
+var split_view = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(68);
