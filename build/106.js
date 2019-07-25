@@ -311,7 +311,7 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
             data: this.data,
             errors: this.errors
         };
-        var replace, render, template = this.data.addtemplate || this.dataHelper.getDefaultTemplate('add', this.fieldsArray);
+        var replace, render, template = this.dataHelper.getTemplate(this.data, 'addtemplate', this.fieldsArray);
         // Replace the fields found on template.
         this.fieldsArray.forEach(function (field) {
             replace = '[[' + field.name + ']]';

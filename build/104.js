@@ -127,7 +127,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
             form: this.searchForm,
             search: this.search.advanced
         };
-        var template = this.data.asearchtemplate || this.dataHelper.getDefaultTemplate('asearch', this.fieldsArray), replace, render;
+        var template = this.dataHelper.getTemplate(this.data, 'asearchtemplate', this.fieldsArray), replace, render;
         // Replace the fields found on template.
         this.fieldsArray.forEach(function (field) {
             replace = '[[' + field.name + ']]';

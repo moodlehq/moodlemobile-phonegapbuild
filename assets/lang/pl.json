@@ -441,7 +441,7 @@
     "addon.mod_forum.unread": "Nieprzeczytane",
     "addon.mod_forum.unreadpostsnumber": "{{$a}} nieprzeczytanych wpisów",
     "addon.mod_glossary.addentry": "Dodaj pojęcie",
-    "addon.mod_glossary.aliases": "Słowo kluczowe",
+    "addon.mod_glossary.aliases": "Słowa kluczowe",
     "addon.mod_glossary.attachment": "Załącznik",
     "addon.mod_glossary.casesensitive": "Ten wpis inaczej traktuje duże i małe litery",
     "addon.mod_glossary.categories": "Kategorie",

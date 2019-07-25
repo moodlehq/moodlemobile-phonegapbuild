@@ -211,7 +211,7 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
             });
         }).then(function () {
             var actions = _this.dataHelper.getActions(_this.data, _this.access, _this.entry);
-            var template = _this.data.singletemplate || _this.dataHelper.getDefaultTemplate('single', _this.fieldsArray);
+            var template = _this.dataHelper.getTemplate(_this.data, 'singletemplate', _this.fieldsArray);
             _this.entryHtml = _this.dataHelper.displayShowFields(template, _this.fieldsArray, _this.entry, _this.offset, 'show', actions);
             _this.showComments = actions.comments;
             var entries = {};
