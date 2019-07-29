@@ -90,6 +90,7 @@
     "addon.calendar.reminders": "Przypomnienie",
     "addon.calendar.typecategory": "Kategoria wydarzenia",
     "addon.calendar.typecourse": "Termin kursu",
+    "addon.calendar.typegradingdue": "Termin oceny zadania",
     "addon.calendar.typegroup": "Termin grupowy",
     "addon.calendar.typesite": "Termin strony",
     "addon.calendar.typeuser": "Termin użytkownika",

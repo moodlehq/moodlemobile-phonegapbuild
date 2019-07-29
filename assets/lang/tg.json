@@ -784,7 +784,7 @@
     "assets.mimetypes.group:web_file": "Веб файлҳо",
     "assets.mimetypes.text/plain": "Файли матнӣ",
     "assets.mimetypes.text/rtf": "Ҳуҷҷати RTF",
-    "core.accounts": "Сабтҳои баҳисобгирӣ",
+    "core.accounts": "Сабтҳои қайдкунӣ",
     "core.add": "Илова карда шавад",
     "core.agelocationverification": "Тафтиши сол ва мавқеъ",
     "core.ago": "{{$a}} ба ақиб",
