@@ -895,7 +895,7 @@ var checkbox_checkbox = __webpack_require__(194);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(471);
+var attachments_ngfactory = __webpack_require__(472);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(305);
@@ -955,7 +955,7 @@ var avatar = __webpack_require__(189);
 var user_avatar = __webpack_require__(190);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-content.js
-var card_content = __webpack_require__(366);
+var card_content = __webpack_require__(367);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/components/post/post.ts
 var post = __webpack_require__(1506);

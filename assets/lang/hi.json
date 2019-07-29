@@ -55,6 +55,7 @@
     "addon.calendar.errorloadevents": "घटनाओं को लोड करने में त्रुटि।",
     "addon.calendar.eventduration": "समय",
     "addon.calendar.eventendtime": "समाप्ति समय",
+    "addon.calendar.eventkind": "ईवेन्ट प्रकार",
     "addon.calendar.eventname": "नाम",
     "addon.calendar.eventstarttime": "आराम्भ समय",
     "addon.calendar.newevent": "नया ईवेन्ट",

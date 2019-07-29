@@ -25,7 +25,7 @@ var sites = __webpack_require__(1);
 var delegate = __webpack_require__(171);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/mainmenu.ts
-var mainmenu = __webpack_require__(473);
+var mainmenu = __webpack_require__(474);
 
 // CONCATENATED MODULE: ./src/core/mainmenu/pages/more/more.ts
 // (C) Copyright 2015 Martin Dougiamas

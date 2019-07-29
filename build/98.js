@@ -1,6 +1,6 @@
 webpackJsonp([98],{
 
-/***/ 2056:
+/***/ 2055:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -757,7 +757,7 @@ var deep_linker = __webpack_require__(54);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(471);
+var attachments_ngfactory = __webpack_require__(472);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(305);

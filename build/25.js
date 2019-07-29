@@ -865,7 +865,7 @@ var deep_linker = __webpack_require__(54);
 var card = __webpack_require__(83);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
-var progress_bar_ngfactory = __webpack_require__(472);
+var progress_bar_ngfactory = __webpack_require__(473);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
 var progress_bar = __webpack_require__(306);

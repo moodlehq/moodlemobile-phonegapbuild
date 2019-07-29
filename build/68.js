@@ -346,7 +346,7 @@ var card = __webpack_require__(83);
 var card_header = __webpack_require__(304);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-content.js
-var card_content = __webpack_require__(366);
+var card_content = __webpack_require__(367);
 
 // EXTERNAL MODULE: ./src/pipes/bytes-to-size.ts
 var bytes_to_size = __webpack_require__(1496);

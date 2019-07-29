@@ -1,6 +1,6 @@
 webpackJsonp([96],{
 
-/***/ 2040:
+/***/ 2039:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -544,7 +544,7 @@ var rich_text_editor = __webpack_require__(239);
 var auto_rows = __webpack_require__(371);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(471);
+var attachments_ngfactory = __webpack_require__(472);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(305);

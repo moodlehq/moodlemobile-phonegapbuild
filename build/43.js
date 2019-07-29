@@ -1,6 +1,6 @@
 webpackJsonp([43],{
 
-/***/ 2052:
+/***/ 2051:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31,7 +31,7 @@ var events = __webpack_require__(10);
 var ion_tabs = __webpack_require__(703);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/mainmenu.ts
-var mainmenu = __webpack_require__(473);
+var mainmenu = __webpack_require__(474);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/delegate.ts
 var delegate = __webpack_require__(171);

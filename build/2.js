@@ -225,7 +225,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1458);
 var search_box_ngfactory = __webpack_require__(1477);
 
 // EXTERNAL MODULE: ./src/components/search-box/search-box.ts
-var search_box = __webpack_require__(474);
+var search_box = __webpack_require__(475);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(18);

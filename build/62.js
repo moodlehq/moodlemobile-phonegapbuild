@@ -197,7 +197,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1457);
 var bs_tooltip_ngfactory = __webpack_require__(1458);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
-var progress_bar_ngfactory = __webpack_require__(472);
+var progress_bar_ngfactory = __webpack_require__(473);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
 var progress_bar = __webpack_require__(306);
