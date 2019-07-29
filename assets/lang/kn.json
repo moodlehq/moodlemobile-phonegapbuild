@@ -451,6 +451,7 @@
     "core.unicodenotsupportedcleanerror": "ಯುನಿಕೋಡ್‌ ಚಿಹ್ನೆಗಳನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸುವಾಗ ಖಾಲಿ ಪಠ್ಯ ದೊರಕಿದೆ.",
     "core.unknown": "ಅಪರಿಚಿತ",
     "core.unzipping": "ಕಟ್ಟಿನಿಂದ ತೆರೆಯಲಾಗುತ್ತಿದೆ",
+    "core.user": "ಬಳಕೆದಾರ",
     "core.user.address": "ವಿಳಾಸ",
     "core.user.city": "ಪಟ್ಟಣ/ನಗರ",
     "core.user.contact": "ಸಂಪರ್ಕ",
