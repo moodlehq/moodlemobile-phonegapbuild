@@ -3,6 +3,7 @@
     "addon.blog.showonlyyourentries": "Nur deine Beiträge anzeigen",
     "addon.calendar.calendarevents": "Kalender",
     "addon.calendar.calendarreminders": "Kalendererinnerungen",
+    "addon.calendar.confirmeventdelete": "Möchtest du wirklich diesen Termin löschen?",
     "addon.calendar.defaultnotificationtime": "Standardmäßige Benachrichtigungszeit",
     "addon.calendar.errorloadevent": "Fehler beim Laden des Kalendereintrags",
     "addon.calendar.errorloadevents": "Fehler beim Laden der Kalendereinträge",

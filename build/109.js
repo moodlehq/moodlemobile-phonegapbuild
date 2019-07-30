@@ -85,7 +85,7 @@ var users_AddonModChatUsersPage = /** @class */ (function () {
         this.sessionId = navParams.get('sessionId');
         this.isOnline = this.appProvider.isOnline();
         this.currentUserId = this.sitesProvider.getCurrentSiteUserId();
-        this.onlineObserver = network.onchange().subscribe(function (online) {
+        this.onlineObserver = network.onchange().subscribe(function () {
             // Execute the callback in the Angular zone, so change detection doesn't stop working.
             zone.run(function () {
                 _this.isOnline = _this.appProvider.isOnline();

@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 2038:
+/***/ 2039:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -143,10 +143,10 @@ var form_AddonModFeedbackFormPage = /** @class */ (function () {
         this.componentId = navParams.get('moduleId') || this.module.id;
         this.currentSite = sitesProvider.getCurrentSite();
         // Refresh online status when changes.
-        this.onlineObserver = network.onchange().subscribe(function (online) {
+        this.onlineObserver = network.onchange().subscribe(function () {
             // Execute the callback in the Angular zone, so change detection doesn't stop working.
             zone.run(function () {
-                _this.offline = !online;
+                _this.offline = !_this.appProvider.isOnline();
             });
         });
     }

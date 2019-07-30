@@ -1,6 +1,6 @@
 webpackJsonp([15],{
 
-/***/ 2035:
+/***/ 2036:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -111,7 +111,7 @@ var chat_AddonModChatChatPage = /** @class */ (function () {
         this.logger = logger.getInstance('AddonModChoiceChoicePage');
         this.currentUserBeep = 'beep ' + sitesProvider.getCurrentSiteUserId();
         this.isOnline = this.appProvider.isOnline();
-        this.onlineObserver = network.onchange().subscribe(function (online) {
+        this.onlineObserver = network.onchange().subscribe(function () {
             // Execute the callback in the Angular zone, so change detection doesn't stop working.
             zone.run(function () {
                 _this.isOnline = _this.appProvider.isOnline();
