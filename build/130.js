@@ -202,7 +202,7 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
      */
     AddonCalendarEventPage.prototype.fetchEvent = function (sync, showErrors) {
         var _this = this;
-        var currentSite = this.sitesProvider.getCurrentSite(), canGetById = this.calendarProvider.isGetEventByIdAvailable();
+        var currentSite = this.sitesProvider.getCurrentSite(), canGetById = this.calendarProvider.isGetEventByIdAvailableInSite();
         var promise, deleted = false;
         this.isOnline = this.appProvider.isOnline();
         if (sync) {
@@ -309,7 +309,7 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
                     _this.groupName = '';
                 }));
             }
-            if (canGetById && event.iscategoryevent) {
+            if (canGetById && event.iscategoryevent && event.category) {
                 _this.categoryPath = event.category.nestedname;
             }
             if (event.location) {
