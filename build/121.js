@@ -22,19 +22,19 @@ var components_module = __webpack_require__(26);
 var directives_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(108);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(31);
+var split_view = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(155);
+var competency = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/helper.ts
-var helper = __webpack_require__(364);
+var helper = __webpack_require__(363);
 
 // CONCATENATED MODULE: ./src/addon/competency/pages/planlist/planlist.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -248,10 +248,10 @@ var recaptchamodal_ngfactory = __webpack_require__(1458);
 var bs_tooltip_ngfactory = __webpack_require__(1459);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(116);
+var empty_box_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(102);
+var empty_box = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(27);
@@ -260,7 +260,7 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
-var item_ngfactory = __webpack_require__(30);
+var item_ngfactory = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
 var item = __webpack_require__(21);
@@ -305,7 +305,7 @@ var logger = __webpack_require__(5);
 var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(460);
+var toolbar_header = __webpack_require__(462);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -323,7 +323,7 @@ var app = __webpack_require__(34);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(698);
+var back_button = __webpack_require__(699);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(11);
@@ -332,13 +332,13 @@ var events = __webpack_require__(11);
 var toolbar_title_ngfactory = __webpack_require__(1455);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(359);
+var toolbar_title = __webpack_require__(358);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(263);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
-var split_view_ngfactory = __webpack_require__(462);
+var split_view_ngfactory = __webpack_require__(464);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(68);
@@ -353,13 +353,13 @@ var content = __webpack_require__(25);
 var keyboard = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(141);
+var refresher = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(188);
+var refresher_content_ngfactory = __webpack_require__(204);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(151);
+var refresher_content = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(49);
@@ -450,22 +450,22 @@ var AddonCompetencyPlanListPageNgFactory = core["_27" /* ɵccf */]("page-addon-c
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(355);
+var translate_loader = __webpack_require__(354);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(356);
+var translate_compiler = __webpack_require__(355);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(358);
+var translate_parser = __webpack_require__(357);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(357);
+var missing_translation_handler = __webpack_require__(356);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(459);
+var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(697);
+var ionic_angular_module = __webpack_require__(698);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);

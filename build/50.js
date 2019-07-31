@@ -13,13 +13,13 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/splash-screen/index.js
-var splash_screen = __webpack_require__(726);
+var splash_screen = __webpack_require__(727);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
-var init = __webpack_require__(146);
+var init = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -296,7 +296,7 @@ var common = __webpack_require__(8);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(697);
+var ionic_angular_module = __webpack_require__(698);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);

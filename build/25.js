@@ -52,16 +52,16 @@ var url = __webpack_require__(23);
 var utils_utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson.ts
-var lesson = __webpack_require__(161);
+var lesson = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson-offline.ts
-var lesson_offline = __webpack_require__(275);
+var lesson_offline = __webpack_require__(276);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/lesson-sync.ts
-var lesson_sync = __webpack_require__(276);
+var lesson_sync = __webpack_require__(277);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/helper.ts
-var helper = __webpack_require__(713);
+var helper = __webpack_require__(714);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/player/player.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -736,7 +736,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1459);
 var button_ngfactory = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(41);
+var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(7);
@@ -751,7 +751,7 @@ var translate_service = __webpack_require__(18);
 var icon = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
-var format_text = __webpack_require__(42);
+var format_text = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
 var utils_text = __webpack_require__(10);
@@ -772,7 +772,7 @@ var nav_controller = __webpack_require__(19);
 var content = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(31);
+var split_view = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(37);
@@ -781,10 +781,10 @@ var iframe = __webpack_require__(37);
 var timer_ngfactory = __webpack_require__(2092);
 
 // EXTERNAL MODULE: ./src/components/timer/timer.ts
-var timer = __webpack_require__(1476);
+var timer = __webpack_require__(1479);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
-var item_ngfactory = __webpack_require__(30);
+var item_ngfactory = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
 var item = __webpack_require__(21);
@@ -802,7 +802,7 @@ var item_content = __webpack_require__(33);
 var item_divider = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.ngfactory.js
-var input_ngfactory = __webpack_require__(104);
+var input_ngfactory = __webpack_require__(103);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
 var input = __webpack_require__(84);
@@ -814,7 +814,7 @@ var app_app = __webpack_require__(34);
 var dom_controller = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ngfactory.js
-var rich_text_editor_ngfactory = __webpack_require__(301);
+var rich_text_editor_ngfactory = __webpack_require__(302);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
 var rich_text_editor = __webpack_require__(240);
@@ -829,7 +829,7 @@ var label = __webpack_require__(63);
 var radio_button_ngfactory = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
-var radio_button = __webpack_require__(145);
+var radio_button = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-group.js
 var radio_group = __webpack_require__(137);
@@ -838,22 +838,22 @@ var radio_group = __webpack_require__(137);
 var checkbox_ngfactory = __webpack_require__(242);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
-var checkbox_checkbox = __webpack_require__(194);
+var checkbox_checkbox = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/option/option.js
 var option_option = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(154);
+var grid = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
-var row = __webpack_require__(118);
+var row = __webpack_require__(117);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
-var col = __webpack_require__(119);
+var col = __webpack_require__(118);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(120);
+var select_ngfactory = __webpack_require__(119);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(101);
@@ -865,10 +865,10 @@ var deep_linker = __webpack_require__(54);
 var card = __webpack_require__(83);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
-var progress_bar_ngfactory = __webpack_require__(473);
+var progress_bar_ngfactory = __webpack_require__(475);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
-var progress_bar = __webpack_require__(308);
+var progress_bar = __webpack_require__(309);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(79);
@@ -880,10 +880,10 @@ var list = __webpack_require__(82);
 var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(192);
+var directives_link = __webpack_require__(191);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(460);
+var toolbar_header = __webpack_require__(462);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -895,19 +895,19 @@ var navbar_ngfactory = __webpack_require__(1454);
 var navbar = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(698);
+var back_button = __webpack_require__(699);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1455);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(359);
+var toolbar_title = __webpack_require__(358);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(263);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(461);
+var toolbar_item = __webpack_require__(463);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(174);
@@ -1122,25 +1122,25 @@ var AddonModLessonPlayerPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-
 
 //# sourceMappingURL=player.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(355);
+var translate_loader = __webpack_require__(354);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(356);
+var translate_compiler = __webpack_require__(355);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(358);
+var translate_parser = __webpack_require__(357);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(357);
+var missing_translation_handler = __webpack_require__(356);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(459);
+var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(697);
+var ionic_angular_module = __webpack_require__(698);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(108);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);
@@ -1201,10 +1201,10 @@ var AddonModLessonPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_mod
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core_src_translate_pipe__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core_src_translate_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_seconds_to_hms__ = __webpack_require__(1491);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pipes_seconds_to_hms__ = __webpack_require__(1494);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_text__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__node_modules_ionic_angular_components_item_item_ngfactory__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_item_item__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ionic_angular_util_form__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ionic_angular_config_config__ = __webpack_require__(7);
@@ -1212,7 +1212,7 @@ var AddonModLessonPlayerPageModuleNgFactory = core["_28" /* ɵcmf */](player_mod
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ionic_angular_components_item_item_content__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_icon_icon__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__timer__ = __webpack_require__(1476);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__timer__ = __webpack_require__(1479);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_utils_time__ = __webpack_require__(24);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
