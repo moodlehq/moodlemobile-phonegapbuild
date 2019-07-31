@@ -96,7 +96,7 @@ var phase_AddonModWorkshopPhaseInfoPage = /** @class */ (function () {
             selector: 'page-addon-mod-workshop-phase-info',
             templateUrl: 'phase.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */], utils["a" /* CoreUtilsProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], utils["a" /* CoreUtilsProvider */]])
     ], AddonModWorkshopPhaseInfoPage);
     return AddonModWorkshopPhaseInfoPage;
 }());

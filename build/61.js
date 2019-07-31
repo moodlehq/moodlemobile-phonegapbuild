@@ -1,6 +1,6 @@
 webpackJsonp([61],{
 
-/***/ 2063:
+/***/ 2062:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -280,7 +280,7 @@ var platform_browser = __webpack_require__(79);
 var list = __webpack_require__(82);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);
@@ -343,7 +343,7 @@ var course = __webpack_require__(13);
 var badge = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/components/download-refresh/download-refresh.ngfactory.js
-var download_refresh_ngfactory = __webpack_require__(744);
+var download_refresh_ngfactory = __webpack_require__(745);
 
 // EXTERNAL MODULE: ./src/components/download-refresh/download-refresh.ts
 var download_refresh = __webpack_require__(383);
@@ -355,7 +355,7 @@ var course_blocks = __webpack_require__(373);
 var block_providers_helper = __webpack_require__(374);
 
 // EXTERNAL MODULE: ./src/core/course/components/format/format.ts
-var format = __webpack_require__(482);
+var format = __webpack_require__(483);
 
 // EXTERNAL MODULE: ./src/core/course/providers/format-delegate.ts
 var format_delegate = __webpack_require__(170);

@@ -727,7 +727,7 @@ var CoreSiteHomeNewsComponentNgFactory = core["_27" /* ɵccf */]("core-sitehome-
 
 //# sourceMappingURL=news.ngfactory.js.map
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);

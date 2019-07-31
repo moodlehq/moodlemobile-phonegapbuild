@@ -64,7 +64,7 @@ var helper = __webpack_require__(208);
 var offline = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
-var fields_delegate = __webpack_require__(121);
+var fields_delegate = __webpack_require__(122);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/edit/edit.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -523,7 +523,7 @@ var item_content = __webpack_require__(33);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(119);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(101);

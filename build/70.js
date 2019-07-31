@@ -200,7 +200,7 @@ var utils = __webpack_require__(2);
 var providers_notifications = __webpack_require__(246);
 
 // EXTERNAL MODULE: ./src/addon/notifications/providers/helper.ts
-var helper = __webpack_require__(507);
+var helper = __webpack_require__(508);
 
 // EXTERNAL MODULE: ./src/core/pushnotifications/providers/delegate.ts
 var providers_delegate = __webpack_require__(135);
@@ -662,7 +662,7 @@ var AddonNotificationsActionsComponentNgFactory = core["_27" /* ɵccf */]("addon
 
 //# sourceMappingURL=actions.ngfactory.js.map
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);

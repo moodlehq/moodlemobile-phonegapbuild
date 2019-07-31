@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 2062:
+/***/ 2061:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -181,7 +181,7 @@ var dom_controller = __webpack_require__(32);
 var submission_ngfactory = __webpack_require__(1541);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/submission/submission.ts
-var submission_submission = __webpack_require__(514);
+var submission_submission = __webpack_require__(515);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
 var offline = __webpack_require__(180);
@@ -345,7 +345,7 @@ var esm5_forms = __webpack_require__(22);
 var option_option = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(119);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(101);
@@ -713,7 +713,7 @@ var AddonModWorkshopSubmissionPageModuleNgFactory = core["_28" /* ɵcmf */](subm
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__core_fileuploader_providers_fileuploader__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__core_fileuploader_providers_helper__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_35_ionic_angular_components_option_option__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__node_modules_ionic_angular_components_select_select_ngfactory__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__node_modules_ionic_angular_components_select_select_ngfactory__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37_ionic_angular_components_select_select__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38_ionic_angular_components_app_app__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_ionic_angular_navigation_deep_linker__ = __webpack_require__(54);

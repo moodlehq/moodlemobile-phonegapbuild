@@ -74,7 +74,7 @@ var navigation_modal_AddonModQuizNavigationModalPage = /** @class */ (function (
             selector: 'page-addon-mod-quiz-navigation-modal',
             templateUrl: 'navigation-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */]])
     ], AddonModQuizNavigationModalPage);
     return AddonModQuizNavigationModalPage;
 }());

@@ -1,6 +1,6 @@
 webpackJsonp([98],{
 
-/***/ 2058:
+/***/ 2057:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -742,7 +742,7 @@ var dom_controller = __webpack_require__(32);
 var option_option = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(119);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(101);

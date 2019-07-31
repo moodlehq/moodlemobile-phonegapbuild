@@ -1,6 +1,6 @@
 webpackJsonp([30],{
 
-/***/ 2052:
+/***/ 2053:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -495,7 +495,7 @@ var user_avatar = __webpack_require__(189);
 var avatar = __webpack_require__(188);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);

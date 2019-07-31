@@ -113,7 +113,7 @@ var ratings_CoreRatingRatingsPage = /** @class */ (function () {
             selector: 'page-core-rating-ratings',
             templateUrl: 'ratings.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */], dom["a" /* CoreDomUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], dom["a" /* CoreDomUtilsProvider */],
             rating["a" /* CoreRatingProvider */]])
     ], CoreRatingRatingsPage);
     return CoreRatingRatingsPage;
@@ -307,7 +307,7 @@ var gesture_controller = __webpack_require__(40);
 var dom_controller = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);

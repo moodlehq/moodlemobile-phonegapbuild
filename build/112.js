@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(29);
 var components_module = __webpack_require__(708);
 
 // EXTERNAL MODULE: ./src/addon/mod/chat/components/index/index.ts
-var index = __webpack_require__(484);
+var index = __webpack_require__(485);
 
 // CONCATENATED MODULE: ./src/addon/mod/chat/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

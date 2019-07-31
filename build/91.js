@@ -66,7 +66,7 @@ var password_modal_AddonModLessonPasswordModalPage = /** @class */ (function () 
             selector: 'page-addon-mod-lesson-password-modal',
             templateUrl: 'password-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */]])
     ], AddonModLessonPasswordModalPage);
     return AddonModLessonPasswordModalPage;
 }());

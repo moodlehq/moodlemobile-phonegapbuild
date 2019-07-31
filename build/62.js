@@ -105,7 +105,7 @@ var section_selector_CoreCourseSectionSelectorPage = /** @class */ (function () 
             selector: 'page-core-course-section-selector',
             templateUrl: 'section-selector.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], helper["a" /* CoreCourseHelperProvider */], ionic_angular["E" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], helper["a" /* CoreCourseHelperProvider */], ionic_angular["F" /* ViewController */]])
     ], CoreCourseSectionSelectorPage);
     return CoreCourseSectionSelectorPage;
 }());

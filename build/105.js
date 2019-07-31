@@ -34,7 +34,7 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
-var fields_delegate = __webpack_require__(121);
+var fields_delegate = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
 var helper = __webpack_require__(208);
@@ -233,7 +233,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
             selector: 'page-addon-mod-data-search',
             templateUrl: 'search.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */],
             dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */],
             utils_text["a" /* CoreTextUtilsProvider */], helper["a" /* AddonModDataHelperProvider */]])
     ], AddonModDataSearchPage);
@@ -455,7 +455,7 @@ var input = __webpack_require__(84);
 var label = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(119);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(101);

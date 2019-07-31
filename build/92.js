@@ -71,7 +71,7 @@ var menu_modal_AddonModLessonMenuModalPage = /** @class */ (function () {
             selector: 'page-addon-mod-lesson-menu-modal',
             templateUrl: 'menu-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */]])
     ], AddonModLessonMenuModalPage);
     return AddonModLessonMenuModalPage;
 }());

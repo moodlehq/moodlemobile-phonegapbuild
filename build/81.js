@@ -1,6 +1,6 @@
 webpackJsonp([81],{
 
-/***/ 2059:
+/***/ 2058:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1491,7 +1491,7 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ngfactory.js
-var navigation_bar_ngfactory = __webpack_require__(745);
+var navigation_bar_ngfactory = __webpack_require__(746);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ts
 var navigation_bar = __webpack_require__(384);

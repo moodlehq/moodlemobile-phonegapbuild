@@ -43,7 +43,7 @@ var providers_comments = __webpack_require__(142);
 var offline = __webpack_require__(376);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/sync.ts
-var providers_sync = __webpack_require__(508);
+var providers_sync = __webpack_require__(509);
 
 // CONCATENATED MODULE: ./src/core/comments/pages/viewer/viewer.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -509,7 +509,7 @@ var translate_service = __webpack_require__(18);
 var icon = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);

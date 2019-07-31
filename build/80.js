@@ -82,7 +82,7 @@ var toc_AddonModScormTocPage = /** @class */ (function () {
             selector: 'page-addon-mod-scorm-toc',
             templateUrl: 'toc.html'
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["E" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */]])
     ], AddonModScormTocPage);
     return AddonModScormTocPage;
 }());

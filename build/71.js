@@ -202,7 +202,7 @@ var translate_pipe = __webpack_require__(27);
 var toolbar_item = __webpack_require__(463);
 
 // EXTERNAL MODULE: ./src/addon/notes/components/list/list.ts
-var list = __webpack_require__(515);
+var list = __webpack_require__(516);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);

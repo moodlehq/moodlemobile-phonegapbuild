@@ -28,7 +28,7 @@ var messages = __webpack_require__(151);
 var messages_offline = __webpack_require__(367);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/sync.ts
-var sync = __webpack_require__(490);
+var sync = __webpack_require__(491);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
 var user = __webpack_require__(43);
@@ -1576,7 +1576,7 @@ var content = __webpack_require__(25);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);

@@ -57,7 +57,7 @@ var site_error_CoreLoginSiteErrorPage = /** @class */ (function () {
             selector: 'page-core-login-site-error',
             templateUrl: 'site-error.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */], ionic_angular["t" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */], ionic_angular["t" /* NavParams */]])
     ], CoreLoginSiteErrorPage);
     return CoreLoginSiteErrorPage;
 }());

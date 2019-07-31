@@ -215,7 +215,7 @@ var translate_pipe = __webpack_require__(27);
 var toolbar_item = __webpack_require__(463);
 
 // EXTERNAL MODULE: ./src/addon/blog/components/entries/entries.ts
-var entries = __webpack_require__(510);
+var entries = __webpack_require__(511);
 
 // EXTERNAL MODULE: ./src/addon/blog/providers/blog.ts
 var blog = __webpack_require__(213);

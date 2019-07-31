@@ -1,6 +1,6 @@
 webpackJsonp([132],{
 
-/***/ 2053:
+/***/ 2054:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -778,7 +778,7 @@ var col = __webpack_require__(118);
 var card = __webpack_require__(83);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);

@@ -28,7 +28,7 @@ var sites = __webpack_require__(1);
 var utils_text = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/core/sharedfiles/providers/sharedfiles.ts
-var sharedfiles = __webpack_require__(488);
+var sharedfiles = __webpack_require__(489);
 
 // CONCATENATED MODULE: ./src/core/sharedfiles/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -206,7 +206,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
             selector: 'page-core-shared-files-list',
             templateUrl: 'list.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */], ionic_angular["t" /* NavParams */], sharedfiles["a" /* CoreSharedFilesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */], ionic_angular["t" /* NavParams */], sharedfiles["a" /* CoreSharedFilesProvider */],
             sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */], _ngx_translate_core["c" /* TranslateService */],
             file["a" /* CoreFileProvider */], events["a" /* CoreEventsProvider */], ionic_angular["s" /* NavController */]])
     ], CoreSharedFilesListPage);
@@ -381,7 +381,7 @@ var gesture_controller = __webpack_require__(40);
 var dom_controller = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(120);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(109);
@@ -459,7 +459,7 @@ var option_option = __webpack_require__(100);
 var label = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(119);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(101);

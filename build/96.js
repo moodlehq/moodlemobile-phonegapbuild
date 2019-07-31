@@ -46,7 +46,7 @@ var glossary = __webpack_require__(209);
 var offline = __webpack_require__(247);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/helper.ts
-var helper = __webpack_require__(494);
+var helper = __webpack_require__(495);
 
 // CONCATENATED MODULE: ./src/addon/mod/glossary/pages/edit/edit.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -412,7 +412,7 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(119);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(101);

@@ -198,7 +198,7 @@ var toolbar = __webpack_require__(263);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/core/user/components/participants/participants.ts
-var participants = __webpack_require__(513);
+var participants = __webpack_require__(514);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
 var user = __webpack_require__(43);

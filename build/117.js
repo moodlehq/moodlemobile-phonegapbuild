@@ -153,7 +153,7 @@ var conversation_info_AddonMessagesConversationInfoPage = /** @class */ (functio
             templateUrl: 'conversation-info.html',
         }),
         __metadata("design:paramtypes", [messages["a" /* AddonMessagesProvider */], dom["a" /* CoreDomUtilsProvider */], ionic_angular["t" /* NavParams */],
-            ionic_angular["E" /* ViewController */]])
+            ionic_angular["F" /* ViewController */]])
     ], AddonMessagesConversationInfoPage);
     return AddonMessagesConversationInfoPage;
 }());

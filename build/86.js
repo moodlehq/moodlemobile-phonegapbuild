@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(29);
 var components_module = __webpack_require__(734);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/index/index.ts
-var index = __webpack_require__(500);
+var index = __webpack_require__(501);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

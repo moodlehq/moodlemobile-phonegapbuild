@@ -1,6 +1,6 @@
 webpackJsonp([43],{
 
-/***/ 2051:
+/***/ 2052:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -442,7 +442,7 @@ var spinner_ngfactory = __webpack_require__(128);
 var spinner = __webpack_require__(110);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab-highlight.js
-var tab_highlight = __webpack_require__(509);
+var tab_highlight = __webpack_require__(510);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
 var split_pane = __webpack_require__(211);

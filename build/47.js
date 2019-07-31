@@ -55,7 +55,7 @@ var site_help_CoreLoginSiteHelpPage = /** @class */ (function () {
             selector: 'page-core-login-site-help',
             templateUrl: 'site-help.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */]])
     ], CoreLoginSiteHelpPage);
     return CoreLoginSiteHelpPage;
 }());

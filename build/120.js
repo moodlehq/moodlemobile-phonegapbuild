@@ -199,7 +199,7 @@ var toolbar = __webpack_require__(263);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/addon/coursecompletion/components/report/report.ts
-var report = __webpack_require__(512);
+var report = __webpack_require__(513);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);

@@ -22,7 +22,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(122);
+var configconstants = __webpack_require__(119);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
 var helper = __webpack_require__(127);
@@ -330,7 +330,7 @@ var option_option = __webpack_require__(100);
 var label = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(119);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(101);

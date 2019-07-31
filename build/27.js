@@ -67,7 +67,7 @@ var text_CoreViewerTextPage = /** @class */ (function () {
             selector: 'page-core-viewer-text',
             templateUrl: 'text.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["E" /* ViewController */], ionic_angular["t" /* NavParams */], utils_text["a" /* CoreTextUtilsProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */], ionic_angular["t" /* NavParams */], utils_text["a" /* CoreTextUtilsProvider */]])
     ], CoreViewerTextPage);
     return CoreViewerTextPage;
 }());
