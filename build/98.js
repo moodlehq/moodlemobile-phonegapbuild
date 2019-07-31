@@ -195,15 +195,15 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
         return this.groupsProvider.getActivityGroupMode(this.cmId).then(function (mode) {
             var promises = [];
             if (mode === providers_groups["a" /* CoreGroupsProvider */].SEPARATEGROUPS || mode === providers_groups["a" /* CoreGroupsProvider */].VISIBLEGROUPS) {
-                promises.push(_this.groupsProvider.getActivityAllowedGroups(_this.cmId).then(function (forumGroups) {
+                promises.push(_this.groupsProvider.getActivityAllowedGroups(_this.cmId).then(function (result) {
                     var promise;
                     if (mode === providers_groups["a" /* CoreGroupsProvider */].VISIBLEGROUPS) {
                         // We need to check which of the returned groups the user can post to.
-                        promise = _this.validateVisibleGroups(forumGroups);
+                        promise = _this.validateVisibleGroups(result.groups);
                     }
                     else {
                         // WS already filters groups, no need to do it ourselves. Add "All participants" if needed.
-                        promise = _this.addAllParticipantsOption(forumGroups, true);
+                        promise = _this.addAllParticipantsOption(result.groups, true);
                     }
                     return promise.then(function (forumGroups) {
                         if (forumGroups.length > 0) {

@@ -140,6 +140,7 @@ var respondents_AddonModFeedbackRespondentsPage = /** @class */ (function () {
         this.anonResponses.attempts = [];
         return this.groupsProvider.getActivityGroupInfo(this.moduleId).then(function (groupInfo) {
             _this.groupInfo = groupInfo;
+            _this.selectedGroup = _this.groupsProvider.validateGroupId(_this.selectedGroup, groupInfo);
             return _this.loadGroupAttempts(_this.selectedGroup);
         }).catch(function (message) {
             _this.domUtils.showErrorModalDefault(message, 'core.course.errorgetmodule', true);

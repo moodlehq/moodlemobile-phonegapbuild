@@ -159,7 +159,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
             // Check if groupmode is enabled to avoid showing wrong numbers.
             return _this.groupsProvider.getActivityGroupInfo(_this.assign.cmid, false).then(function (groupInfo) {
                 _this.groupInfo = groupInfo;
-                return _this.setGroup(_this.groupId || (groupInfo.groups && groupInfo.groups[0] && groupInfo.groups[0].id) || 0);
+                return _this.setGroup(_this.groupsProvider.validateGroupId(_this.groupId, groupInfo));
             });
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'Error getting assigment data.');

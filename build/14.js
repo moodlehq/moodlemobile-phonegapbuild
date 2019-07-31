@@ -199,15 +199,9 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
             });
         }).then(function (accessData) {
             _this.access = accessData;
-            return _this.groupsProvider.getActivityGroupInfo(_this.data.coursemodule, accessData.canmanageentries)
-                .then(function (groupInfo) {
+            return _this.groupsProvider.getActivityGroupInfo(_this.data.coursemodule).then(function (groupInfo) {
                 _this.groupInfo = groupInfo;
-                // Check selected group is accessible.
-                if (groupInfo && groupInfo.groups && groupInfo.groups.length > 0) {
-                    if (!groupInfo.groups.some(function (group) { return _this.selectedGroup == group.id; })) {
-                        _this.selectedGroup = groupInfo.groups[0].id;
-                    }
-                }
+                _this.selectedGroup = _this.groupsProvider.validateGroupId(_this.selectedGroup, groupInfo);
             });
         }).then(function () {
             var actions = _this.dataHelper.getActions(_this.data, _this.access, _this.entry);

@@ -185,15 +185,9 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
             return _this.dataProvider.getDatabaseAccessInformation(data.id);
         }).then(function (accessData) {
             if (_this.entryId) {
-                return _this.groupsProvider.getActivityGroupInfo(_this.data.coursemodule, accessData.canmanageentries)
-                    .then(function (groupInfo) {
+                return _this.groupsProvider.getActivityGroupInfo(_this.data.coursemodule).then(function (groupInfo) {
                     _this.groupInfo = groupInfo;
-                    // Check selected group is accessible.
-                    if (groupInfo && groupInfo.groups && groupInfo.groups.length > 0) {
-                        if (!groupInfo.groups.some(function (group) { return _this.selectedGroup == group.id; })) {
-                            _this.selectedGroup = groupInfo.groups[0].id;
-                        }
-                    }
+                    _this.selectedGroup = _this.groupsProvider.validateGroupId(_this.selectedGroup, groupInfo);
                 });
             }
         }).then(function () {

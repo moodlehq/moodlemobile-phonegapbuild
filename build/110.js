@@ -113,14 +113,7 @@ var sessions_AddonModChatSessionsPage = /** @class */ (function () {
         var modal = showLoading ? this.domUtils.showModalLoading() : null;
         return this.groupsProvider.getActivityGroupInfo(this.cmId, false).then(function (groupInfo) {
             _this.groupInfo = groupInfo;
-            if (groupInfo.groups && groupInfo.groups.length > 0) {
-                if (!groupInfo.groups.find(function (group) { return group.id === _this.groupId; })) {
-                    _this.groupId = groupInfo.groups[0].id;
-                }
-            }
-            else {
-                _this.groupId = 0;
-            }
+            _this.groupId = _this.groupsProvider.validateGroupId(_this.groupId, groupInfo);
             return _this.chatProvider.getSessions(_this.chatId, _this.groupId, _this.showAll);
         }).then(function (sessions) {
             // Fetch user profiles.
