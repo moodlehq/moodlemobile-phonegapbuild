@@ -1437,6 +1437,7 @@
     "core.nopasswordchangeforced": "Ви не можете продовжити без зміни пароля.",
     "core.nopermissions": "Вибачте, але ваші поточні права не дозволяють вам цього робити ({{$a}})",
     "core.noresults": "Без результатів",
+    "core.noselection": "Нічого не вибрано",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Цей профіль недоступний, бо користувач не зареєстрований на цьому курсі.",
     "core.notice": "Помітити",

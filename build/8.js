@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 2071:
+/***/ 2070:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58,7 +58,7 @@ var quiz_sync = __webpack_require__(248);
 var providers_helper = __webpack_require__(244);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/connection-error/connection-error.ts
-var connection_error = __webpack_require__(748);
+var connection_error = __webpack_require__(749);
 
 // EXTERNAL MODULE: ./node_modules/rxjs/Rx.js
 var Rx = __webpack_require__(148);
@@ -1097,7 +1097,7 @@ var navbar_ngfactory = __webpack_require__(1455);
 var app_app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(174);
@@ -1308,7 +1308,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);
@@ -1404,7 +1404,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 /* unused harmony export View_CoreQuestionComponent_Host_0 */
 /* unused harmony export CoreQuestionComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(701);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(702);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(19);

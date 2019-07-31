@@ -40,7 +40,7 @@ var utils_text = __webpack_require__(10);
 var files = __webpack_require__(377);
 
 // EXTERNAL MODULE: ./src/addon/files/providers/helper.ts
-var helper = __webpack_require__(725);
+var helper = __webpack_require__(726);
 
 // CONCATENATED MODULE: ./src/addon/files/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -469,7 +469,7 @@ var navbar_ngfactory = __webpack_require__(1455);
 var navbar = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1456);
@@ -645,7 +645,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

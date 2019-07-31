@@ -1,6 +1,6 @@
 webpackJsonp([81],{
 
-/***/ 2060:
+/***/ 2059:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37,7 +37,7 @@ var dom = __webpack_require__(4);
 var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/components/ion-tabs/ion-tabs.ts
-var ion_tabs = __webpack_require__(707);
+var ion_tabs = __webpack_require__(708);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm.ts
 var providers_scorm = __webpack_require__(223);
@@ -1431,7 +1431,7 @@ var navbar = __webpack_require__(216);
 var app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -1491,7 +1491,7 @@ var loading_ngfactory = __webpack_require__(49);
 var loading = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ngfactory.js
-var navigation_bar_ngfactory = __webpack_require__(747);
+var navigation_bar_ngfactory = __webpack_require__(748);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ts
 var navigation_bar = __webpack_require__(384);
@@ -1601,7 +1601,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

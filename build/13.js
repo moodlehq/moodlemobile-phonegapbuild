@@ -1,6 +1,6 @@
 webpackJsonp([13],{
 
-/***/ 2069:
+/***/ 2068:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/components/components.module.ts
-var components_components_module = __webpack_require__(714);
+var components_components_module = __webpack_require__(715);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
 var _ionic_native_network = __webpack_require__(206);
@@ -1129,7 +1129,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(1455);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
 var toolbar_item = __webpack_require__(463);
@@ -1333,7 +1333,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);
@@ -1345,7 +1345,7 @@ var block_components_components_module = __webpack_require__(265);
 var course_components_components_module = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/core/rating/components/components.module.ts
-var rating_components_components_module = __webpack_require__(710);
+var rating_components_components_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);

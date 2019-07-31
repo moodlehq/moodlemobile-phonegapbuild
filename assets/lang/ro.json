@@ -1226,6 +1226,7 @@
     "core.none": "Niciunul",
     "core.nopermissions": "Ne pare rău, dar în acest moment nu aveţi permisiunea să realizaţi această operaţiune ({{$a}})",
     "core.noresults": "Niciun rezultat",
+    "core.noselection": "Nu există nicio selecție",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Acest profil nu este disponibil deoarece utilizatorul nu s-a înscris încă la acest curs.",
     "core.notice": "Notificare",

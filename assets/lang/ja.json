@@ -1548,6 +1548,7 @@
     "core.nopasswordchangeforced": "パスワードを変更するまで続きを実行できません。",
     "core.nopermissions": "申し訳ございません、現在、あなたは 「 {{$a}} 」を実行するためのパーミッションがありません。",
     "core.noresults": "該当データはありません。",
+    "core.noselection": "選択なし",
     "core.notapplicable": "なし",
     "core.notenrolledprofile": "コースに登録されていないため、このユーザのプロファイルを閲覧できません。",
     "core.notice": "警告",

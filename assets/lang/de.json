@@ -1677,6 +1677,7 @@
     "core.nopermissionerror": "Sie haben aktuell keine Rechte, um dies zu tun.",
     "core.nopermissions": "Sie haben derzeit keine Rechte, dies zu tun ({{$a}}).",
     "core.noresults": "Keine Ergebnisse",
+    "core.noselection": "Keine Auswahl",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Dieses Profil ist nicht verfügbar, weil die Person bisher den Kurs nicht betreten hat.",
     "core.notice": "Hinweis",

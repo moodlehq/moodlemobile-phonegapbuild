@@ -1678,6 +1678,7 @@
     "core.nopermissionerror": "Je nám líto, ale momentálně k tomu nemáte oprávnění",
     "core.nopermissions": "Je mi líto, ale momentálně nemáte oprávnění vykonat tuto operaci ({{$a}}).",
     "core.noresults": "Bez výsledků",
+    "core.noselection": "Žádná volba",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Profil není dostupný, protože úživatel není zapsán v tomto kurzu",
     "core.notice": "Poznámka",

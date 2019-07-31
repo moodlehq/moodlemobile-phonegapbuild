@@ -1606,6 +1606,7 @@
     "core.nopasswordchangeforced": "Du kan ikke fortsætte uden at ændre din adgangskode.",
     "core.nopermissions": "Beklager, men dette ({{$a}}) har du ikke tilladelse til.",
     "core.noresults": "Ingen resultater",
+    "core.noselection": "Intet udvalg",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Denne profil er ikke tilgængelig da brugeren ikke er tilmeldt dette kursus.",
     "core.notice": "Bemærk",

@@ -71,7 +71,7 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_components_module = __webpack_require__(712);
+var components_components_module = __webpack_require__(713);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -185,7 +185,7 @@ var app = __webpack_require__(34);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -300,7 +300,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

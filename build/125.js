@@ -391,7 +391,7 @@ var external_content = __webpack_require__(239);
 var badge = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/directives/user-link.ts
-var user_link = __webpack_require__(705);
+var user_link = __webpack_require__(706);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
 var format_date = __webpack_require__(238);
@@ -412,7 +412,7 @@ var navbar_ngfactory = __webpack_require__(1455);
 var app_app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(174);
@@ -571,7 +571,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);

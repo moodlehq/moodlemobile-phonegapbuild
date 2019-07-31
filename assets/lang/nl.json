@@ -1678,6 +1678,7 @@
     "core.nopermissionerror": "Sorry, maar je hebt nu niet het recht om dit te doen.",
     "core.nopermissions": "Sorry, maar je hebt nu niet het recht om dat te doen ({{$a}}).",
     "core.noresults": "Geen resultaten",
+    "core.noselection": "Geen selectie",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Dit profiel kan niet bekeken worden omdat de gebruiker niet aangemeld is in deze cursus.",
     "core.notice": "Opmerking",

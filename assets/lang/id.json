@@ -908,6 +908,7 @@
     "core.none": "Tidak ada",
     "core.nopasswordchangeforced": "Anda tidak dapat memproses tanpa mengganti password.",
     "core.noresults": "Tidak ada hasil",
+    "core.noselection": "Tidak ada pilihaan",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Profil ini tidak tersedia karena pengguna belum didaftarkan di kursus ini.",
     "core.notice": "Pemberitahuan",

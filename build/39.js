@@ -1,6 +1,6 @@
 webpackJsonp([39],{
 
-/***/ 2021:
+/***/ 2020:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -389,7 +389,7 @@ var app_app = __webpack_require__(34);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1456);
@@ -419,7 +419,7 @@ var select_select = __webpack_require__(101);
 var deep_linker = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/segment/segment.js
-var segment = __webpack_require__(745);
+var segment = __webpack_require__(746);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/general/general.ngfactory.js
 /**
@@ -551,7 +551,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

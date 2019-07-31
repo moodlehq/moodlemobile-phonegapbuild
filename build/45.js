@@ -1,6 +1,6 @@
 webpackJsonp([45],{
 
-/***/ 2016:
+/***/ 2015:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -372,7 +372,7 @@ var navbar_ngfactory = __webpack_require__(1455);
 var navbar = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(11);
@@ -536,7 +536,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);

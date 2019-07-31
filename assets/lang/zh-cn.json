@@ -1525,6 +1525,7 @@
     "core.nopasswordchangeforced": "不更改密码就不能继续。",
     "core.nopermissions": "很抱歉，您没有相应权限（{{$a}}）",
     "core.noresults": "没有结果",
+    "core.noselection": "没有选项",
     "core.notapplicable": "不适用",
     "core.notenrolledprofile": "此资料无效，因为该用户没有注册此课程。",
     "core.notice": "注意",

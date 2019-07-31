@@ -49,7 +49,7 @@ var providers_logger = __webpack_require__(5);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/classes/animations.ts
-var animations = __webpack_require__(719);
+var animations = __webpack_require__(720);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(29);
@@ -1525,7 +1525,7 @@ var translate_pipe = __webpack_require__(26);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/chip/chip.js
-var chip = __webpack_require__(743);
+var chip = __webpack_require__(744);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
 var label = __webpack_require__(63);
@@ -1549,7 +1549,7 @@ var common = __webpack_require__(8);
 var item_ngfactory = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/directives/long-press.ts
-var long_press = __webpack_require__(744);
+var long_press = __webpack_require__(745);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
 var item = __webpack_require__(21);
@@ -1591,7 +1591,7 @@ var send_message_form = __webpack_require__(1479);
 var providers_config = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-footer.js
-var toolbar_footer = __webpack_require__(718);
+var toolbar_footer = __webpack_require__(719);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(38);
@@ -1621,7 +1621,7 @@ var navbar = __webpack_require__(216);
 var app_app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1456);
@@ -1890,7 +1890,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);

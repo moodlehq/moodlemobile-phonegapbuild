@@ -1506,6 +1506,7 @@
     "core.nopasswordchangeforced": "Et voi jatkaa ennen kuin vaihdat salasanasi.",
     "core.nopermissions": "Sinulla ei ole oikeutta tehdä kyseistä operaatiota ({{$a}})",
     "core.noresults": "Ei tuloksia",
+    "core.noselection": "Ei valintaa",
     "core.notenrolledprofile": "Profiilia ei voida näyttää, sillä tämä käyttäjä ei ole kirjautuneena tälle kurssille.",
     "core.notice": "Ilmoitus",
     "core.notingroup": "Sinun pitää olla ryhmän jäsen nähdäksesi tämän sivun.",

@@ -1541,6 +1541,7 @@
     "core.nopasswordchangeforced": "Nepakeitus slaptažodžio, negalima tęsti.",
     "core.nopermissions": "Atsiprašome, tačiau šiuo metu jūs neturite teisės atlikti šio veiksmo",
     "core.noresults": "Nėra rezultatų",
+    "core.noselection": "Nėra pasirinkimo",
     "core.notapplicable": "netaikoma",
     "core.notenrolledprofile": "Profilis nepasiekiamas, nes šis naudotojas neįsiregistravęs į šiuos kursus.",
     "core.notice": "Įspėjimas",

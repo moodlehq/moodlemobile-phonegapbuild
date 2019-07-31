@@ -1,6 +1,6 @@
 webpackJsonp([50],{
 
-/***/ 2011:
+/***/ 2010:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,7 +13,7 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/splash-screen/index.js
-var splash_screen = __webpack_require__(728);
+var splash_screen = __webpack_require__(729);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
@@ -296,7 +296,7 @@ var common = __webpack_require__(8);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);

@@ -1042,6 +1042,7 @@
     "core.none": "Холӣ",
     "core.nopermissions": "Бубахшед, аммо Шумо ба ин кор ҳақ надоред ({{$a}})",
     "core.noresults": "Натиҷаҳо нестанд",
+    "core.noselection": "Интихоб нест",
     "core.notapplicable": "вуҷуд надорад",
     "core.notenrolledprofile": "Ин профиль дастрас нест, чунки истифодабаранда ба ин курс номнавис нашудааст.",
     "core.notice": "Огоҳӣ",

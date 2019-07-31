@@ -1,6 +1,6 @@
 webpackJsonp([90],{
 
-/***/ 2045:
+/***/ 2044:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,7 +46,7 @@ var user = __webpack_require__(43);
 var lesson = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/addon/mod/lesson/providers/helper.ts
-var helper = __webpack_require__(715);
+var helper = __webpack_require__(716);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/user-retake/user-retake.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -477,7 +477,7 @@ var gesture_controller = __webpack_require__(40);
 var dom_controller = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/directives/user-link.ts
-var user_link = __webpack_require__(705);
+var user_link = __webpack_require__(706);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(217);
@@ -513,7 +513,7 @@ var navbar_ngfactory = __webpack_require__(1455);
 var navbar = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(700);
+var back_button = __webpack_require__(701);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1456);
@@ -695,7 +695,7 @@ var missing_translation_handler = __webpack_require__(356);
 var translate_store = __webpack_require__(461);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(699);
+var ionic_angular_module = __webpack_require__(700);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(264);

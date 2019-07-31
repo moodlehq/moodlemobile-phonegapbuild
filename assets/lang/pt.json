@@ -1678,6 +1678,7 @@
     "core.nopermissionerror": "Desculpe, mas não tem permissões para executar esta operação",
     "core.nopermissions": "Atualmente, não tem permissões para realizar a operação ({{$a}})",
     "core.noresults": "Sem resultados",
+    "core.noselection": "Sem seleção",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Este perfil não está ativo porque o utilizador não está inscrito nesta disciplina.",
     "core.notice": "Aviso",

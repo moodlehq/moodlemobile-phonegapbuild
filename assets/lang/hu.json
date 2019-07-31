@@ -1352,6 +1352,7 @@
     "core.none": "Nincs",
     "core.nopermissions": "Ehhez ({{$a}}) jelenleg nincs engedélye.",
     "core.noresults": "Nincs eredmény",
+    "core.noselection": "Nincs semmi kiválasztva",
     "core.notenrolledprofile": "Ez a profil nem elérhető, mert a felhasználó nem vette fel a kurzust.",
     "core.notice": "Tájékoztatás",
     "core.notingroup": "Az oldal megtekintéséhez egy csoporthoz kell tartoznia.",

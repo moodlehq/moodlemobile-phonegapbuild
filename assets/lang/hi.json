@@ -690,6 +690,7 @@
     "core.nopasswordchangeforced": "आप अपना पासवर्ड बदले बिना आगे नहीं बढ़ सकते।",
     "core.nopermissionerror": "क्षमा करें, लेकिन आपके पास वर्तमान में ऐसा करने की अनुमति नहीं है",
     "core.noresults": "परिणाम",
+    "core.noselection": "कोई चयन नहीं",
     "core.notapplicable": "n/a",
     "core.notsent": "नहीं भेजा गया",
     "core.numwords": "{{$a}} शब्द",

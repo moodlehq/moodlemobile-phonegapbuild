@@ -1541,6 +1541,7 @@
     "core.none": "Nessuno",
     "core.nopermissions": "Non sei autorizzato a svolgere questa azione ({{$a}})",
     "core.noresults": "Nessun risultato",
+    "core.noselection": "Nessuna selezione",
     "core.notapplicable": "n/d",
     "core.notenrolledprofile": "Questo profilo non è disponibile perché questo utente non è iscritto a questo corso.",
     "core.notice": "Nota",

@@ -1498,6 +1498,7 @@
     "core.nopermissionerror": "Diemžēl jums pašlaik nav atļauju to darīt",
     "core.nopermissions": "Atvainojiet, bet pašlaik jums nav pilnvaru šīs darbības veikšanai ({{$a}})",
     "core.noresults": "Nav rezultātu",
+    "core.noselection": "Nekas nav izvēlēts",
     "core.notapplicable": "n/a",
     "core.notenrolledprofile": "Šis profils nav pieejams, jo lietotājs nav reģistrējies šajā kursā.",
     "core.notice": "Paziņojums",
