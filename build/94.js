@@ -1,6 +1,6 @@
 webpackJsonp([94],{
 
-/***/ 1974:
+/***/ 1976:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -180,7 +180,7 @@ var course_blocks_ngfactory = __webpack_require__(1461);
 var unsupported_module_ngfactory = __webpack_require__(1462);
 
 // EXTERNAL MODULE: ./src/addon/mod/imscp/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1515);
+var index_ngfactory = __webpack_require__(1516);
 
 // EXTERNAL MODULE: ./src/addon/mod/imscp/components/toc-popover/toc-popover.ngfactory.js
 var toc_popover_ngfactory = __webpack_require__(1540);
