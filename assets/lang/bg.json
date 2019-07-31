@@ -892,6 +892,7 @@
     "core.comments.addcomment": "Добавяне на коментар ...",
     "core.comments.comments": "Коментари",
     "core.comments.nocomments": "Няма коментари",
+    "core.comments.savecomment": "Записване на коментара",
     "core.completion-alt-auto-y": "Завършен: {{$a}}",
     "core.completion-alt-manual-n": "Не е завършена дейността: {{$a}}. Изберете я за да я отбележите за завършена.",
     "core.completion-alt-manual-y": "Завършена е дейността: {{$a}}. Изберете я за да я отбележите за незавършена.",
