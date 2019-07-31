@@ -40,7 +40,7 @@ var sites = __webpack_require__(1);
 var configconstants = __webpack_require__(119);
 
 // EXTERNAL MODULE: ./src/core/pushnotifications/providers/pushnotifications.ts
-var pushnotifications = __webpack_require__(143);
+var pushnotifications = __webpack_require__(142);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/about/about.ts
 // (C) Copyright 2015 Martin Dougiamas

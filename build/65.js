@@ -37,7 +37,7 @@ var events = __webpack_require__(11);
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var providers_comments = __webpack_require__(142);
+var providers_comments = __webpack_require__(143);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/offline.ts
 var offline = __webpack_require__(376);

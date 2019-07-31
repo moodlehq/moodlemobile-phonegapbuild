@@ -64,7 +64,7 @@ var sync = __webpack_require__(314);
 var fields_delegate = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(142);
+var comments = __webpack_require__(143);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/entry/entry.ts
 // (C) Copyright 2015 Martin Dougiamas

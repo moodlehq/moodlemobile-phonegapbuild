@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(31);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/pushnotifications/providers/pushnotifications.ts
-var pushnotifications = __webpack_require__(143);
+var pushnotifications = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./src/addon/messageoutput/airnotifier/providers/airnotifier.ts
 var airnotifier = __webpack_require__(482);
