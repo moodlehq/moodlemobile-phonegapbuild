@@ -1,6 +1,6 @@
 webpackJsonp([45],{
 
-/***/ 2015:
+/***/ 2016:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -118,10 +118,16 @@ var site_CoreLoginSitePage = /** @class */ (function () {
                 return _this.sitesProvider.newSite(data.siteUrl, data.token, data.privateToken).then(function () {
                     return _this.loginHelper.goToSiteInitialPage();
                 }, function (error) {
-                    _this.domUtils.showErrorModal(error);
+                    _this.loginHelper.treatUserTokenError(siteData.url, error, siteData.username, siteData.password);
+                    if (error.loggedout) {
+                        _this.navCtrl.setRoot('CoreLoginSitesPage');
+                    }
                 });
             }, function (error) {
                 _this.loginHelper.treatUserTokenError(siteData.url, error, siteData.username, siteData.password);
+                if (error.loggedout) {
+                    _this.navCtrl.setRoot('CoreLoginSitesPage');
+                }
             }).finally(function () {
                 modal.dismiss();
             });

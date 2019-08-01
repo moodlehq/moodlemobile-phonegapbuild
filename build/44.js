@@ -1,6 +1,6 @@
 webpackJsonp([44],{
 
-/***/ 2016:
+/***/ 2017:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -83,6 +83,9 @@ var sites_CoreLoginSitesPage = /** @class */ (function () {
     CoreLoginSitesPage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.sitesProvider.getSortedSites().then(function (sites) {
+            if (sites.length == 0) {
+                _this.loginHelper.goToAddSite(true);
+            }
             // Remove protocol from the url to show more url text.
             _this.sites = sites.map(function (site) {
                 site.siteUrl = site.siteUrl.replace(/^https?:\/\//, '');

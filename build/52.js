@@ -1,6 +1,6 @@
 webpackJsonp([52],{
 
-/***/ 2052:
+/***/ 2053:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -225,6 +225,9 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
             });
         }).catch(function (error) {
             _this.loginHelper.treatUserTokenError(siteUrl, error, username, password);
+            if (error.loggedout) {
+                _this.navCtrl.setRoot('CoreLoginSitesPage');
+            }
         }).finally(function () {
             modal.dismiss();
         });

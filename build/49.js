@@ -1,6 +1,6 @@
 webpackJsonp([49],{
 
-/***/ 2011:
+/***/ 2012:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -118,7 +118,9 @@ var reconnect_CoreLoginReconnectPage = /** @class */ (function () {
      */
     CoreLoginReconnectPage.prototype.cancel = function () {
         var _this = this;
-        this.sitesProvider.logout().finally(function () {
+        this.sitesProvider.logout().catch(function () {
+            // Ignore errors (shouldn't happen).
+        }).finally(function () {
             _this.navCtrl.setRoot('CoreLoginSitesPage');
         });
     };
@@ -153,13 +155,21 @@ var reconnect_CoreLoginReconnectPage = /** @class */ (function () {
                     // Go to the site initial page.
                     return _this.loginHelper.goToSiteInitialPage(_this.navCtrl, _this.pageName, _this.pageParams);
                 }).catch(function (error) {
+                    if (error.loggedout) {
+                        _this.loginHelper.treatUserTokenError(siteUrl, error, username, password);
+                    }
+                    else {
+                        _this.domUtils.showErrorModalDefault(error, 'core.login.errorupdatesite', true);
+                    }
                     // Error, go back to login page.
-                    _this.domUtils.showErrorModalDefault(error, 'core.login.errorupdatesite', true);
                     _this.cancel();
                 });
             });
         }).catch(function (error) {
             _this.loginHelper.treatUserTokenError(siteUrl, error, username, password);
+            if (error.loggedout) {
+                _this.cancel();
+            }
         }).finally(function () {
             modal.dismiss();
         });

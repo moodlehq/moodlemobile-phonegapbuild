@@ -1,6 +1,6 @@
 webpackJsonp([50],{
 
-/***/ 2010:
+/***/ 2011:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -132,16 +132,7 @@ var init_CoreLoginInitPage = /** @class */ (function () {
                 });
             }
         }
-        else {
-            return this.sitesProvider.hasSites().then(function (hasSites) {
-                if (hasSites) {
-                    return _this.navCtrl.setRoot('CoreLoginSitesPage');
-                }
-                else {
-                    return _this.loginHelper.goToAddSite(true);
-                }
-            });
-        }
+        return this.navCtrl.setRoot('CoreLoginSitesPage');
     };
     CoreLoginInitPage = __decorate([
         Object(core["m" /* Component */])({
