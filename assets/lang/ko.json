@@ -1472,6 +1472,8 @@
     "core.submit": "제출",
     "core.success": "성공",
     "core.tablet": "태블릿",
+    "core.tag.tag": "태그",
+    "core.tag.tags": "태그",
     "core.teachers": "선생님",
     "core.thereisdatatosync": "동기화 할 오프라인 {{$a}}이 있습니다.",
     "core.thisdirection": "ltr",

@@ -1183,6 +1183,7 @@
     "core.strftimetime": "%H:%M",
     "core.submit": "Изпълняване",
     "core.success": "Успешно",
+    "core.tag.tags": "Етикети",
     "core.thisdirection": "ltr",
     "core.time": "Време",
     "core.timesup": "Времето изтече!",

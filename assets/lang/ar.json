@@ -1075,6 +1075,8 @@
     "core.strftimetime": "%I:%M %p",
     "core.submit": "سلم",
     "core.success": "نجاح",
+    "core.tag.tag": "علامة",
+    "core.tag.tags": "علامات",
     "core.teachers": "معلمون",
     "core.thisdirection": "rtl",
     "core.time": "الوقت",

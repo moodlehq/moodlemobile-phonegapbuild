@@ -441,6 +441,7 @@
     "core.strftimerecentfull": "%a, %d %b %Y, %I:%M %p",
     "core.strftimetime": "%I:%M %p",
     "core.tablet": "ಟ್ಯಾಬ್ಲೆಟ್",
+    "core.tag.tags": "ಕುಣಿಕೆಗಳು",
     "core.teachers": "ಶಿಕ್ಷಕರು",
     "core.thereisdatatosync": "ಕೆಲವು ಆಫ್‌ಲೈನ್‌ {{$a}} ನವೀಕರಿಸಬೇಕು",
     "core.thisdirection": "ltr",
