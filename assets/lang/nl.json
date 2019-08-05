@@ -1788,6 +1788,7 @@
     "core.settings.errorsyncsite": "Fout bij het synchroniseren van sitegegevens. Controleer je internetverbinding en probeer opnieuw.",
     "core.settings.estimatedfreespace": "Geschatte vrije ruimte",
     "core.settings.filesystemroot": "Root bestandssysteem",
+    "core.settings.fontsizecharacter": "A",
     "core.settings.general": "Algemeen",
     "core.settings.language": "Taal",
     "core.settings.license": "Licentie",
