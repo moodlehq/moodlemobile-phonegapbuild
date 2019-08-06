@@ -494,7 +494,13 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
         // Send the data.
         var modal = this.domUtils.showModalLoading('core.sending', true);
         this.calendarProvider.submitEvent(this.eventId, data).then(function (result) {
-            _this.returnToList(result.event);
+            var numberOfRepetitions = formData.repeat ? formData.repeats :
+                (data.repeateditall && _this.event.othereventscount ? _this.event.othereventscount + 1 : 1);
+            _this.calendarHelper.invalidateRepeatedEventsOnCalendar(result.event, numberOfRepetitions).catch(function () {
+                // Ignore errors.
+            }).then(function () {
+                _this.returnToList(result.event);
+            });
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'Error sending data.');
         }).finally(function () {

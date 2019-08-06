@@ -453,22 +453,27 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
         this.domUtils.showConfirm(message, title, undefined, undefined, options).then(function (deleteAll) {
             var modal = _this.domUtils.showModalLoading('core.sending', true);
             _this.calendarProvider.deleteEvent(_this.event.id, _this.event.name, deleteAll).then(function (sent) {
-                // Trigger an event.
-                _this.eventsProvider.trigger(calendar["a" /* AddonCalendarProvider */].DELETED_EVENT_EVENT, {
-                    eventId: _this.eventId,
-                    sent: sent
-                }, _this.sitesProvider.getCurrentSiteId());
-                if (sent) {
-                    _this.domUtils.showToast('addon.calendar.eventcalendareventdeleted', true, 3000, undefined, false);
-                    // Event deleted, close the view.
-                    if (!_this.svComponent || !_this.svComponent.isOn()) {
-                        _this.navCtrl.pop();
+                _this.calendarHelper.invalidateRepeatedEventsOnCalendar(_this.event, deleteAll ? _this.event.eventcount : 1)
+                    .catch(function () {
+                    // Ignore errors.
+                }).then(function () {
+                    // Trigger an event.
+                    _this.eventsProvider.trigger(calendar["a" /* AddonCalendarProvider */].DELETED_EVENT_EVENT, {
+                        eventId: _this.eventId,
+                        sent: sent
+                    }, _this.sitesProvider.getCurrentSiteId());
+                    if (sent) {
+                        _this.domUtils.showToast('addon.calendar.eventcalendareventdeleted', true, 3000, undefined, false);
+                        // Event deleted, close the view.
+                        if (!_this.svComponent || !_this.svComponent.isOn()) {
+                            _this.navCtrl.pop();
+                        }
                     }
-                }
-                else {
-                    // Event deleted in offline, just mark it as deleted.
-                    _this.event.deleted = true;
-                }
+                    else {
+                        // Event deleted in offline, just mark it as deleted.
+                        _this.event.deleted = true;
+                    }
+                });
             }).catch(function (error) {
                 _this.domUtils.showErrorModalDefault(error, 'Error deleting event.');
             }).finally(function () {

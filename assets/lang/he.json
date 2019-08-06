@@ -1125,6 +1125,7 @@
     "core.course.couldnotloadsectioncontent": "אין אפשרות לטעון ולהציג את תוכן יחידת ההוראה. יש לנסות שוב מאוחר יותר.",
     "core.course.couldnotloadsections": "אין אפשרות לטעון ולהציג את יחידות ההוראה, יש לנסות שוב מאוחר יותר.",
     "core.course.coursesummary": "תקציר הקורס",
+    "core.course.downloadcourse": "הורדת הקורס",
     "core.course.hiddenfromstudents": "מוסתר מסטודנטים",
     "core.course.hiddenoncoursepage": "זמין לסטודנטים, אך אינו מוצג בעמוד הראשי של הקורס",
     "core.course.nocontentavailable": "אין תוכן זמין כרגע.",
