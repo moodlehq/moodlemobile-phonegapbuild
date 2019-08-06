@@ -1,6 +1,6 @@
 webpackJsonp([88],{
 
-/***/ 2005:
+/***/ 2006:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,7 +74,7 @@ var navigation_modal_AddonModQuizNavigationModalPage = /** @class */ (function (
             selector: 'page-addon-mod-quiz-navigation-modal',
             templateUrl: 'navigation-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */]])
     ], AddonModQuizNavigationModalPage);
     return AddonModQuizNavigationModalPage;
 }());

@@ -1,6 +1,6 @@
 webpackJsonp([28],{
 
-/***/ 2059:
+/***/ 2060:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63,7 +63,7 @@ var image_CoreViewerImagePage = /** @class */ (function () {
             selector: 'page-core-viewer-image',
             templateUrl: 'image.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */], ionic_angular["t" /* NavParams */], _ngx_translate_core["c" /* TranslateService */]])
+        __metadata("design:paramtypes", [ionic_angular["G" /* ViewController */], ionic_angular["t" /* NavParams */], _ngx_translate_core["c" /* TranslateService */]])
     ], CoreViewerImagePage);
     return CoreViewerImagePage;
 }());

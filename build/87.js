@@ -1,6 +1,6 @@
 webpackJsonp([87],{
 
-/***/ 2006:
+/***/ 2007:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -145,7 +145,7 @@ var preflight_modal_AddonModQuizPreflightModalPage = /** @class */ (function () 
             templateUrl: 'preflight-modal.html',
         }),
         __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], esm5_forms["d" /* FormBuilder */], _ngx_translate_core["c" /* TranslateService */], sites["a" /* CoreSitesProvider */],
-            ionic_angular["F" /* ViewController */], access_rules_delegate["a" /* AddonModQuizAccessRuleDelegate */],
+            ionic_angular["G" /* ViewController */], access_rules_delegate["a" /* AddonModQuizAccessRuleDelegate */],
             core["C" /* Injector */], dom["a" /* CoreDomUtilsProvider */]])
     ], AddonModQuizPreflightModalPage);
     return AddonModQuizPreflightModalPage;

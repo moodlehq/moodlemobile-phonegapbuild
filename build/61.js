@@ -1,6 +1,6 @@
 webpackJsonp([61],{
 
-/***/ 2028:
+/***/ 2029:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66,7 +66,7 @@ var self_enrol_password_CoreCoursesSelfEnrolPasswordPage = /** @class */ (functi
             selector: 'page-core-courses-self-enrol-password',
             templateUrl: 'self-enrol-password.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["G" /* ViewController */]])
     ], CoreCoursesSelfEnrolPasswordPage);
     return CoreCoursesSelfEnrolPasswordPage;
 }());

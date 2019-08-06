@@ -1,6 +1,6 @@
 webpackJsonp([44],{
 
-/***/ 2042:
+/***/ 2043:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113,7 +113,7 @@ var ratings_CoreRatingRatingsPage = /** @class */ (function () {
             selector: 'page-core-rating-ratings',
             templateUrl: 'ratings.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], dom["a" /* CoreDomUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */], dom["a" /* CoreDomUtilsProvider */],
             rating["a" /* CoreRatingProvider */]])
     ], CoreRatingRatingsPage);
     return CoreRatingRatingsPage;

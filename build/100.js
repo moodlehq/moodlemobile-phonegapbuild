@@ -75,7 +75,7 @@ var sort_order_selector_AddonModForumSortOrderSelectorPage = /** @class */ (func
             selector: 'page-addon-mod-forum-sort-order-selector',
             templateUrl: 'sort-order-selector.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */]])
     ], AddonModForumSortOrderSelectorPage);
     return AddonModForumSortOrderSelectorPage;
 }());

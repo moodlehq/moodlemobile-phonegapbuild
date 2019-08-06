@@ -1,6 +1,6 @@
 webpackJsonp([50],{
 
-/***/ 2037:
+/***/ 2038:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55,7 +55,7 @@ var site_help_CoreLoginSiteHelpPage = /** @class */ (function () {
             selector: 'page-core-login-site-help',
             templateUrl: 'site-help.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["G" /* ViewController */]])
     ], CoreLoginSiteHelpPage);
     return CoreLoginSiteHelpPage;
 }());

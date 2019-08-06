@@ -1,6 +1,6 @@
 webpackJsonp([76],{
 
-/***/ 2014:
+/***/ 2015:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96,7 +96,7 @@ var phase_AddonModWorkshopPhaseInfoPage = /** @class */ (function () {
             selector: 'page-addon-mod-workshop-phase-info',
             templateUrl: 'phase.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], utils["a" /* CoreUtilsProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */], utils["a" /* CoreUtilsProvider */]])
     ], AddonModWorkshopPhaseInfoPage);
     return AddonModWorkshopPhaseInfoPage;
 }());

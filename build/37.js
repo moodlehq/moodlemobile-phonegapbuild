@@ -1,6 +1,6 @@
 webpackJsonp([37],{
 
-/***/ 2049:
+/***/ 2050:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -206,7 +206,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
             selector: 'page-core-shared-files-list',
             templateUrl: 'list.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */], ionic_angular["t" /* NavParams */], sharedfiles["a" /* CoreSharedFilesProvider */],
+        __metadata("design:paramtypes", [ionic_angular["G" /* ViewController */], ionic_angular["t" /* NavParams */], sharedfiles["a" /* CoreSharedFilesProvider */],
             sites["a" /* CoreSitesProvider */], utils_text["a" /* CoreTextUtilsProvider */], _ngx_translate_core["c" /* TranslateService */],
             file["a" /* CoreFileProvider */], events["a" /* CoreEventsProvider */], ionic_angular["s" /* NavController */]])
     ], CoreSharedFilesListPage);

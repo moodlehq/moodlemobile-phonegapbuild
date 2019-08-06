@@ -1,6 +1,6 @@
 webpackJsonp([65],{
 
-/***/ 2022:
+/***/ 2023:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -105,7 +105,7 @@ var section_selector_CoreCourseSectionSelectorPage = /** @class */ (function () 
             selector: 'page-core-course-section-selector',
             templateUrl: 'section-selector.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], helper["a" /* CoreCourseHelperProvider */], ionic_angular["F" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], helper["a" /* CoreCourseHelperProvider */], ionic_angular["G" /* ViewController */]])
     ], CoreCourseSectionSelectorPage);
     return CoreCourseSectionSelectorPage;
 }());

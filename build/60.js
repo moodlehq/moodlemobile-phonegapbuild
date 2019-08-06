@@ -380,7 +380,7 @@ var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
             selector: 'page-core-emulator-capture-media',
             templateUrl: 'capture-media.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */], ionic_angular["t" /* NavParams */], dom["a" /* CoreDomUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["G" /* ViewController */], ionic_angular["t" /* NavParams */], dom["a" /* CoreDomUtilsProvider */],
             time["a" /* CoreTimeUtilsProvider */], file["a" /* CoreFileProvider */],
             utils_text["a" /* CoreTextUtilsProvider */], core["j" /* ChangeDetectorRef */]])
     ], CoreEmulatorCaptureMediaPage);

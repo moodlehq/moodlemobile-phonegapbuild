@@ -1,6 +1,6 @@
 webpackJsonp([51],{
 
-/***/ 2036:
+/***/ 2037:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57,7 +57,7 @@ var site_error_CoreLoginSiteErrorPage = /** @class */ (function () {
             selector: 'page-core-login-site-error',
             templateUrl: 'site-error.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["F" /* ViewController */], ionic_angular["t" /* NavParams */]])
+        __metadata("design:paramtypes", [ionic_angular["G" /* ViewController */], ionic_angular["t" /* NavParams */]])
     ], CoreLoginSiteErrorPage);
     return CoreLoginSiteErrorPage;
 }());

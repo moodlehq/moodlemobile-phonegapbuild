@@ -239,7 +239,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
             selector: 'page-addon-mod-data-search',
             templateUrl: 'search.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */], esm5_forms["d" /* FormBuilder */], utils_utils["a" /* CoreUtilsProvider */],
             dom["a" /* CoreDomUtilsProvider */], fields_delegate["a" /* AddonModDataFieldsDelegate */],
             utils_text["a" /* CoreTextUtilsProvider */], helper["a" /* AddonModDataHelperProvider */],
             tag["a" /* CoreTagProvider */]])

@@ -71,7 +71,7 @@ var toc_AddonModBookTocPage = /** @class */ (function () {
             selector: 'page-addon-mod-book-toc',
             templateUrl: 'toc.html'
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */]])
     ], AddonModBookTocPage);
     return AddonModBookTocPage;
 }());

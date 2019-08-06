@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 2044:
+/***/ 2045:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -185,8 +185,8 @@ var general_CoreSettingsGeneralPage = /** @class */ (function () {
         });
     };
     __decorate([
-        Object(core["_9" /* ViewChild */])(ionic_angular["z" /* Segment */]),
-        __metadata("design:type", ionic_angular["z" /* Segment */])
+        Object(core["_9" /* ViewChild */])(ionic_angular["A" /* Segment */]),
+        __metadata("design:type", ionic_angular["A" /* Segment */])
     ], CoreSettingsGeneralPage.prototype, "segment", void 0);
     CoreSettingsGeneralPage = __decorate([
         Object(core["m" /* Component */])({

@@ -141,7 +141,7 @@ var edit_feedback_modal_AddonModAssignEditFeedbackModalPage = /** @class */ (fun
             selector: 'page-addon-mod-assign-edit-feedback-modal',
             templateUrl: 'edit-feedback-modal.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], dom["a" /* CoreDomUtilsProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */], dom["a" /* CoreDomUtilsProvider */],
             _ngx_translate_core["c" /* TranslateService */], feedback_delegate["a" /* AddonModAssignFeedbackDelegate */]])
     ], AddonModAssignEditFeedbackModalPage);
     return AddonModAssignEditFeedbackModalPage;

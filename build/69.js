@@ -1,6 +1,6 @@
 webpackJsonp([69],{
 
-/***/ 2019:
+/***/ 2020:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,7 +103,7 @@ var add_CoreCommentsAddPage = /** @class */ (function () {
             selector: 'page-core-comments-add',
             templateUrl: 'add.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], app["a" /* CoreAppProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */], app["a" /* CoreAppProvider */],
             dom["a" /* CoreDomUtilsProvider */], comments["a" /* CoreCommentsProvider */]])
     ], CoreCommentsAddPage);
     return CoreCommentsAddPage;

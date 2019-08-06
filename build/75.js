@@ -1,6 +1,6 @@
 webpackJsonp([75],{
 
-/***/ 2015:
+/***/ 2016:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,7 +100,7 @@ var add_AddonNotesAddPage = /** @class */ (function () {
             selector: 'page-addon-notes-add',
             templateUrl: 'add.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */], app["a" /* CoreAppProvider */],
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */], app["a" /* CoreAppProvider */],
             dom["a" /* CoreDomUtilsProvider */], notes["a" /* AddonNotesProvider */]])
     ], AddonNotesAddPage);
     return AddonNotesAddPage;

@@ -139,7 +139,7 @@ var users_AddonModChatUsersPage = /** @class */ (function () {
             templateUrl: 'users.html',
         }),
         __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], network["a" /* Network */], core["M" /* NgZone */], app["a" /* CoreAppProvider */],
-            sites["a" /* CoreSitesProvider */], ionic_angular["F" /* ViewController */],
+            sites["a" /* CoreSitesProvider */], ionic_angular["G" /* ViewController */],
             dom["a" /* CoreDomUtilsProvider */], chat["a" /* AddonModChatProvider */]])
     ], AddonModChatUsersPage);
     return AddonModChatUsersPage;

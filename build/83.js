@@ -1,6 +1,6 @@
 webpackJsonp([83],{
 
-/***/ 2009:
+/***/ 2010:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -82,7 +82,7 @@ var toc_AddonModScormTocPage = /** @class */ (function () {
             selector: 'page-addon-mod-scorm-toc',
             templateUrl: 'toc.html'
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["F" /* ViewController */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], ionic_angular["G" /* ViewController */]])
     ], AddonModScormTocPage);
     return AddonModScormTocPage;
 }());
