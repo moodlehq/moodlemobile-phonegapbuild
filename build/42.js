@@ -108,7 +108,7 @@ var general_CoreSettingsGeneralPage = /** @class */ (function () {
         langProvider.getCurrentLanguage().then(function (currentLanguage) {
             _this.selectedLanguage = currentLanguage;
         });
-        this.configProvider.get(constants["a" /* CoreConstants */].SETTINGS_FONT_SIZE, configconstants["a" /* CoreConfigConstants */].font_sizes[0]).then(function (fontSize) {
+        this.configProvider.get(constants["a" /* CoreConstants */].SETTINGS_FONT_SIZE, configconstants["a" /* CoreConfigConstants */].font_sizes[0].toString()).then(function (fontSize) {
             _this.selectedFontSize = fontSize;
             _this.fontSizes = configconstants["a" /* CoreConfigConstants */].font_sizes.map(function (size) {
                 return {
