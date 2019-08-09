@@ -193,7 +193,7 @@ var translate_service = __webpack_require__(18);
 var file_ngfactory = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(180);
+var file = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -301,7 +301,7 @@ var button_button = __webpack_require__(42);
 var icon = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);

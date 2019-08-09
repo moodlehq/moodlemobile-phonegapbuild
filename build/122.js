@@ -1,6 +1,6 @@
 webpackJsonp([122],{
 
-/***/ 1974:
+/***/ 1973:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -394,7 +394,7 @@ var nav_push_anchor = __webpack_require__(273);
 var file_ngfactory = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(180);
+var file = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -499,7 +499,7 @@ var split_view = __webpack_require__(26);
 var iframe = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(101);

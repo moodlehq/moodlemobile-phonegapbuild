@@ -43,7 +43,7 @@ var course = __webpack_require__(13);
 var helper = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/core/course/providers/format-delegate.ts
-var format_delegate = __webpack_require__(173);
+var format_delegate = __webpack_require__(174);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/course-preview/course-preview.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -656,7 +656,7 @@ var translate_pipe = __webpack_require__(28);
 var user_avatar_ngfactory = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
-var user_avatar = __webpack_require__(177);
+var user_avatar = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
 var avatar = __webpack_require__(167);
@@ -668,7 +668,7 @@ var item_divider = __webpack_require__(93);
 var file_ngfactory = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(180);
+var file = __webpack_require__(181);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
 var file_helper = __webpack_require__(134);
@@ -707,7 +707,7 @@ var gesture_controller = __webpack_require__(40);
 var dom_controller = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(181);
+var directives_link = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
 var format_date = __webpack_require__(244);
@@ -743,7 +743,7 @@ var toolbar_title = __webpack_require__(364);
 var toolbar = __webpack_require__(267);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(101);
@@ -767,7 +767,7 @@ var loading = __webpack_require__(47);
 var nav_params = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(178);
+var modal_controller = __webpack_require__(179);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/course-preview/course-preview.ngfactory.js
 /**

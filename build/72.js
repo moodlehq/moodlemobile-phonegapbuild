@@ -1,6 +1,6 @@
 webpackJsonp([72],{
 
-/***/ 2076:
+/***/ 2077:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34,7 +34,7 @@ var delegate = __webpack_require__(387);
 var local_notifications = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(182);
+var config = __webpack_require__(170);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
@@ -567,7 +567,7 @@ var navbar_buttons = __webpack_require__(87);
 var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(25);

@@ -22,7 +22,7 @@ var app = __webpack_require__(9);
 var constants = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(182);
+var config = __webpack_require__(170);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var file = __webpack_require__(53);
@@ -401,7 +401,7 @@ var toolbar_title = __webpack_require__(364);
 var toolbar = __webpack_require__(267);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(25);

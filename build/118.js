@@ -40,7 +40,7 @@ var providers_assign = __webpack_require__(73);
 var assign_offline = __webpack_require__(129);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/helper.ts
-var helper = __webpack_require__(179);
+var helper = __webpack_require__(180);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(26);
@@ -472,7 +472,7 @@ var badge = __webpack_require__(152);
 var user_avatar_ngfactory = __webpack_require__(208);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
-var user_avatar = __webpack_require__(177);
+var user_avatar = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(19);
@@ -550,7 +550,7 @@ var split_view_ngfactory = __webpack_require__(470);
 var fileuploader = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);

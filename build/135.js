@@ -298,7 +298,15 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     AddonCalendarDayPage.prototype.fetchEvents = function () {
         var _this = this;
         // Don't pass courseId and categoryId, we'll filter them locally.
-        return this.calendarProvider.getDayEvents(this.year, this.month, this.day).then(function (result) {
+        return this.calendarProvider.getDayEvents(this.year, this.month, this.day).catch(function (error) {
+            if (!_this.appProvider.isOnline()) {
+                // Allow navigating to non-cached days in offline (behave as if using emergency cache).
+                return Promise.resolve({ events: [] });
+            }
+            else {
+                return Promise.reject(error);
+            }
+        }).then(function (result) {
             var promises = [];
             // Calculate the period name. We don't use the one in result because it's in server's language.
             _this.periodName = _this.timeUtils.userDate(new Date(_this.year, _this.month - 1, _this.day).getTime(), 'core.strftimedaydate');
@@ -328,7 +336,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     AddonCalendarDayPage.prototype.mergeEvents = function () {
         var _this = this;
         this.hasOffline = false;
-        if (!this.offlineEditedEventsIds.length && !this.deletedEvents.length) {
+        if (!Object.keys(this.offlineEvents).length && !this.deletedEvents.length) {
             // No offline events, nothing to merge.
             return this.onlineEvents;
         }
@@ -913,7 +921,7 @@ var context_menu_item_ngfactory = __webpack_require__(86);
 var context_menu_item = __webpack_require__(78);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(176);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(101);
