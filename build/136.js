@@ -221,7 +221,7 @@ var toolbar_item = __webpack_require__(469);
 var entries = __webpack_require__(519);
 
 // EXTERNAL MODULE: ./src/addon/blog/providers/blog.ts
-var blog = __webpack_require__(202);
+var blog = __webpack_require__(203);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -308,7 +308,7 @@ var translate_store = __webpack_require__(467);
 var ionic_angular_module = __webpack_require__(710);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(108);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
 var components_components_module = __webpack_require__(29);
