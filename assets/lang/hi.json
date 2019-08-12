@@ -489,6 +489,7 @@
     "core.courses.nocoursesyet": "इस वर्ग में कोई कोर्स उपलब्ध नहीं है",
     "core.courses.notenrollable": "आप इस पाठ्यक्रम में अपना नामांकन नहीं कर सकते।",
     "core.courses.password": "नामांकन की कुंजी",
+    "core.courses.reload": "सीमा से अधिक लादना",
     "core.courses.removefromfavourites": "इस कोर्स को अनस्टार करें",
     "core.courses.search": "खोज",
     "core.courses.searchcourses": "कोर्स की खोज करें",
