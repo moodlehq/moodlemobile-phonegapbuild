@@ -755,7 +755,7 @@
     "addon.mod_workshop.deletesubmission": "Leadás törlése",
     "addon.mod_workshop.editsubmission": "Leadott munka szerkesztése",
     "addon.mod_workshop.feedbackauthor": "Visszajelzés a szerzőnek",
-    "addon.mod_workshop.feedbackby": "{{$a}} visszajezése",
+    "addon.mod_workshop.feedbackby": "{{$a}} visszajelzése",
     "addon.mod_workshop.feedbackreviewer": "Visszajelzés az ellenőrnek",
     "addon.mod_workshop.givengrades": "Adott pontok",
     "addon.mod_workshop.gradecalculated": "A leadott munkára adott kiszámított pont",

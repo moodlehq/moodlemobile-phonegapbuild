@@ -430,7 +430,7 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
     AddonCalendarEditEventPage.prototype.submit = function () {
         var _this = this;
         // Validate data.
-        var formData = this.eventForm.value, timeStartDate = this.timeUtils.datetimeToDate(formData.timestart), timeUntilDate = this.timeUtils.datetimeToDate(formData.timedurationuntil), timeDurationMinutes = parseInt(formData.timedurationminutes || '', 10);
+        var formData = this.eventForm.value, timeStartDate = new Date(formData.timestart), timeUntilDate = this.timeUtils.datetimeToDate(formData.timedurationuntil), timeDurationMinutes = parseInt(formData.timedurationminutes || '', 10);
         var error;
         if (formData.eventtype == calendar["a" /* AddonCalendarProvider */].TYPE_COURSE && !formData.courseid) {
             error = 'core.selectacourse';
