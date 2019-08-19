@@ -23,6 +23,7 @@
     "addon.messages.contactlistempty": "Die Kontaktliste ist leer.",
     "addon.messages.contactname": "Name",
     "addon.messages.deleteallconfirm": "Möchtest du die Kommunikation wirklich löschen?",
+    "addon.messages.deleteallselfconfirm": "Möchtest du diese persönliche Kommunikation wirklich löschen?",
     "addon.messages.deletemessage": "Mitteilung löschen",
     "addon.messages.deletemessageconfirmation": "Möchtest du diese Mitteilung wirklich löschen? Die Mitteilung wird nur in deinem Verlauf gelöscht, aber nicht bei der Person, die die Mitteilung gesendet oder empfangen hat..",
     "addon.messages.errordeletemessage": "Fehler beim Löschen der Mitteilung",

@@ -581,7 +581,7 @@
     "addon.mod_lesson.detailedstats": "Tarkemmat tiedot",
     "addon.mod_lesson.didnotanswerquestion": "Ei vastannut tähän kysymykseen.",
     "addon.mod_lesson.displayofgrade": "Arvosanan näyttäminen (vain opiskelijoille)",
-    "addon.mod_lesson.displayscorewithessays": "Olet ansainnut {{$a.score}} {{$a.tempmaxgrade}} :sta automaattisesti arvioiduista kysymyksistä.<br /> Esseekysymyksesi {{$a.essayquestions}} arvioidaan ja lisätään<br />lopulliseen tulokseesi myöhemmin.<br /><br />Tämänhetkinen tuloksesi ilman esseekysymyksiä on {{$a.score}} {{$a.grade}} :stä.",
+    "addon.mod_lesson.displayscorewithessays": "<p>Olet ansainnut {{$a.score}} / {{$a.tempmaxgrade}} automaattisesti arvioiduista kysymyksistä.</p>\n<p>Esseekysymyksesi {{$a.essayquestions}} arvioidaan ja lisätään lopulliseen tulokseesi myöhemmin.</p>\n<p>Tämänhetkinen tuloksesi ilman esseekysymyksiä on {{$a.score}} / {{$a.grade}}.</p>",
     "addon.mod_lesson.displayscorewithoutessays": "Tuloksesi on {{$a.score}} ({{$a.grade}}:sta).",
     "addon.mod_lesson.emptypassword": "Salasana ei voi olla tyhjä",
     "addon.mod_lesson.enterpassword": "Syötä salasana:",

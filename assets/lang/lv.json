@@ -1165,7 +1165,6 @@
     "core.comments.nocomments": "Nav komentāru",
     "core.comments.savecomment": "Saglabāt komentāru",
     "core.commentscount": "Komentāri ({{$a}})",
-    "core.commentsnotworking": "Komentārus nevar saņemt",
     "core.completion-alt-auto-fail": "Izpildīta: {{$a}} (netika iegūts sekmīgs vērtējums)",
     "core.completion-alt-auto-n": "Nav izpildīta: {{$a}}",
     "core.completion-alt-auto-pass": "Izpildīta: {{$a}} (iegūts sekmīgs vērtējums)",
