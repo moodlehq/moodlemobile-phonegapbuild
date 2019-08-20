@@ -355,7 +355,7 @@ var unsupported_module_ngfactory = __webpack_require__(1484);
 var tag_area_ngfactory = __webpack_require__(1487);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1497);
+var index_ngfactory = __webpack_require__(1492);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
 var label = __webpack_require__(63);

@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 2071:
+/***/ 2070:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -500,7 +500,7 @@ var unsupported_module_ngfactory = __webpack_require__(1484);
 var tag_area_ngfactory = __webpack_require__(1487);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1497);
+var index_ngfactory = __webpack_require__(1492);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(28);

@@ -28,7 +28,7 @@ var messages = __webpack_require__(153);
 var messages_offline = __webpack_require__(373);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/sync.ts
-var sync = __webpack_require__(500);
+var sync = __webpack_require__(501);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
 var user = __webpack_require__(43);
