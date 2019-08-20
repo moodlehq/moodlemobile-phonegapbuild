@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/components.module.ts + 2 modules
-var components_module = __webpack_require__(471);
+var components_module = __webpack_require__(472);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);
@@ -249,7 +249,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
 
 //# sourceMappingURL=search.js.map
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(472);
+var compile_html_module = __webpack_require__(473);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/search/search.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -354,7 +354,7 @@ var unsupported_module_ngfactory = __webpack_require__(1484);
 var tag_area_ngfactory = __webpack_require__(1487);
 
 // EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ngfactory.js
-var comments_ngfactory = __webpack_require__(477);
+var comments_ngfactory = __webpack_require__(478);
 
 // EXTERNAL MODULE: ./src/core/tag/components/feed/feed.ngfactory.js
 var feed_ngfactory = __webpack_require__(1489);
@@ -396,7 +396,7 @@ var app = __webpack_require__(34);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -621,7 +621,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

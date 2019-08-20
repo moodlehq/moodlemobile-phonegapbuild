@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(6);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/device/index.js
-var _ionic_native_device = __webpack_require__(485);
+var _ionic_native_device = __webpack_require__(486);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
@@ -326,7 +326,7 @@ var navbar = __webpack_require__(221);
 var app_app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform_platform = __webpack_require__(16);
@@ -459,7 +459,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(268);

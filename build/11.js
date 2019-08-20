@@ -370,7 +370,7 @@ var components_module = __webpack_require__(29);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/core/user/components/components.module.ts
-var components_components_module = __webpack_require__(479);
+var components_components_module = __webpack_require__(480);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -637,7 +637,7 @@ var navbar_ngfactory = __webpack_require__(1477);
 var navbar = __webpack_require__(221);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1478);
@@ -840,7 +840,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);
@@ -905,7 +905,7 @@ var CoreLoginCredentialsPageModuleNgFactory = core["_28" /* ɵcmf */](email_sign
 /* unused harmony export View_CoreUserProfileFieldComponent_Host_0 */
 /* unused harmony export CoreUserProfileFieldComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(712);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(713);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(19);

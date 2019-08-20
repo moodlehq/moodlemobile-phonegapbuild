@@ -64,10 +64,10 @@ var calendar = __webpack_require__(212);
 var calendar_offline = __webpack_require__(365);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/helper.ts
-var helper = __webpack_require__(713);
+var helper = __webpack_require__(471);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar-sync.ts
-var calendar_sync = __webpack_require__(473);
+var calendar_sync = __webpack_require__(474);
 
 // CONCATENATED MODULE: ./src/addon/calendar/pages/edit-event/edit-event.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -485,7 +485,7 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
             data.timedurationminutes = formData.timedurationminutes;
         }
         if (formData.repeat) {
-            data.repeats = formData.repeats;
+            data.repeats = Number(formData.repeats);
         }
         if (this.event && this.event.repeatid) {
             data.repeatid = this.event.repeatid;
@@ -493,14 +493,19 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
         }
         // Send the data.
         var modal = this.domUtils.showModalLoading('core.sending', true);
+        var event;
         this.calendarProvider.submitEvent(this.eventId, data).then(function (result) {
-            var numberOfRepetitions = formData.repeat ? formData.repeats :
-                (data.repeateditall && _this.event.othereventscount ? _this.event.othereventscount + 1 : 1);
-            _this.calendarHelper.invalidateRepeatedEventsOnCalendar(result.event, numberOfRepetitions).catch(function () {
-                // Ignore errors.
-            }).then(function () {
-                _this.returnToList(result.event);
-            });
+            event = result.event;
+            if (result.sent) {
+                // Event created or edited, invalidate right days & months.
+                var numberOfRepetitions = formData.repeat ? formData.repeats :
+                    (data.repeateditall && _this.event.othereventscount ? _this.event.othereventscount + 1 : 1);
+                _this.calendarHelper.invalidateRepeatedEventsOnCalendarForEvent(result.event, numberOfRepetitions).catch(function () {
+                    // Ignore errors.
+                });
+            }
+        }).then(function () {
+            _this.returnToList(event);
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'Error sending data.');
         }).finally(function () {
@@ -852,7 +857,7 @@ var navbar = __webpack_require__(221);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1478);
@@ -1104,7 +1109,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

@@ -543,7 +543,7 @@ var navbar_ngfactory = __webpack_require__(1477);
 var navbar = __webpack_require__(221);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1478);
@@ -594,10 +594,10 @@ var popover_controller = __webpack_require__(65);
 var tab = __webpack_require__(72);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(475);
+var tabs_ngfactory = __webpack_require__(476);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(476);
+var tab_ngfactory = __webpack_require__(477);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/dashboard/dashboard.ngfactory.js
 /**
@@ -734,7 +734,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);
@@ -981,7 +981,7 @@ var events = __webpack_require__(11);
 var module_ngfactory = __webpack_require__(1498);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ts
-var module_module = __webpack_require__(478);
+var module_module = __webpack_require__(479);
 
 // EXTERNAL MODULE: ./src/core/course/providers/module-prefetch-delegate.ts
 var module_prefetch_delegate = __webpack_require__(48);

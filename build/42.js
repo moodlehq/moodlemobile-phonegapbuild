@@ -297,7 +297,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1482);
 var option_option = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/segment/segment-button.js
-var segment_button = __webpack_require__(488);
+var segment_button = __webpack_require__(489);
 
 // CONCATENATED MODULE: ./node_modules/ionic-angular/components/segment/segment-button.ngfactory.js
 /**
@@ -389,7 +389,7 @@ var app_app = __webpack_require__(34);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1478);
@@ -551,7 +551,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

@@ -46,7 +46,7 @@ var glossary = __webpack_require__(199);
 var offline = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/helper.ts
-var helper = __webpack_require__(503);
+var helper = __webpack_require__(504);
 
 // CONCATENATED MODULE: ./src/addon/mod/glossary/pages/edit/edit.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -463,7 +463,7 @@ var navbar = __webpack_require__(221);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1478);
@@ -544,7 +544,7 @@ var rich_text_editor = __webpack_require__(245);
 var auto_rows = __webpack_require__(376);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(481);
+var attachments_ngfactory = __webpack_require__(482);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(311);
@@ -703,7 +703,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

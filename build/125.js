@@ -344,7 +344,7 @@ var dom_controller = __webpack_require__(33);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
-var progress_bar_ngfactory = __webpack_require__(483);
+var progress_bar_ngfactory = __webpack_require__(484);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
 var progress_bar = __webpack_require__(314);
@@ -377,7 +377,7 @@ var navbar_ngfactory = __webpack_require__(1477);
 var app_app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(192);
@@ -512,7 +512,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(268);

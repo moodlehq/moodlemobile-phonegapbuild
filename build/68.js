@@ -43,7 +43,7 @@ var providers_comments = __webpack_require__(143);
 var offline = __webpack_require__(382);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/sync.ts
-var providers_sync = __webpack_require__(517);
+var providers_sync = __webpack_require__(518);
 
 // CONCATENATED MODULE: ./src/core/comments/pages/viewer/viewer.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -488,7 +488,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1481);
 var bs_tooltip_ngfactory = __webpack_require__(1482);
 
 // EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ngfactory.js
-var comments_ngfactory = __webpack_require__(477);
+var comments_ngfactory = __webpack_require__(478);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(45);
@@ -614,7 +614,7 @@ var navbar = __webpack_require__(221);
 var app_app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1478);
@@ -836,7 +836,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(268);

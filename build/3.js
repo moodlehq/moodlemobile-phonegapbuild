@@ -551,7 +551,7 @@ var navbar_ngfactory = __webpack_require__(1477);
 var navbar = __webpack_require__(221);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(711);
+var back_button = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(1478);
@@ -593,10 +593,10 @@ var split_view_ngfactory = __webpack_require__(470);
 var fileuploader = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(475);
+var tabs_ngfactory = __webpack_require__(476);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(476);
+var tab_ngfactory = __webpack_require__(477);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/contacts/contacts.ngfactory.js
 /**
@@ -693,7 +693,7 @@ var missing_translation_handler = __webpack_require__(362);
 var translate_store = __webpack_require__(467);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(710);
+var ionic_angular_module = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(268);
