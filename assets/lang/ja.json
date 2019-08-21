@@ -619,6 +619,7 @@
     "addon.mod_imscp.deploymenterror": "コンテンツパッケージエラー!",
     "addon.mod_imscp.modulenameplural": "IMSコンテンツパッケージ",
     "addon.mod_imscp.showmoduledescription": "説明の表示",
+    "addon.mod_imscp.toc": "TOC",
     "addon.mod_lesson.answer": "答え",
     "addon.mod_lesson.attempt": "受験: {{$a}}",
     "addon.mod_lesson.attemptheader": "受験",

@@ -577,6 +577,7 @@
     "addon.mod_imscp.deploymenterror": "Пакет содержимого IMS с ошибкой!",
     "addon.mod_imscp.modulenameplural": "Пакеты IMS содержимого",
     "addon.mod_imscp.showmoduledescription": "Показать описание",
+    "addon.mod_imscp.toc": "Оглавление",
     "addon.mod_lesson.answer": "Ответ",
     "addon.mod_lesson.attempt": "Попытка: {{$a}}",
     "addon.mod_lesson.attemptheader": "Попытка",

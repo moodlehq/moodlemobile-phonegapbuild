@@ -619,6 +619,7 @@
     "addon.mod_imscp.deploymenterror": "Σφάλμα πακέτου περιεχομένου!",
     "addon.mod_imscp.modulenameplural": "Πακέτο περιοχομένου IMS",
     "addon.mod_imscp.showmoduledescription": "Εμφάνιση περιγραφής",
+    "addon.mod_imscp.toc": "Πίνακας περιεχομένων (TOC: Table Of Contents)",
     "addon.mod_lesson.answer": "Απάντηση",
     "addon.mod_lesson.attempt": "Προσπάθεια: {{$a}}",
     "addon.mod_lesson.attemptheader": "Προσπάθεια",

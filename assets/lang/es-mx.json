@@ -639,6 +639,7 @@
     "addon.mod_imscp.deploymenterror": "¡Error en paquete de contenidos!",
     "addon.mod_imscp.modulenameplural": "Paquetes de contenido IMS",
     "addon.mod_imscp.showmoduledescription": "Mostrar descripción",
+    "addon.mod_imscp.toc": "TOC",
     "addon.mod_lesson.answer": "Respuesta",
     "addon.mod_lesson.attempt": "Intento: {{$a}}",
     "addon.mod_lesson.attemptheader": "Intento",

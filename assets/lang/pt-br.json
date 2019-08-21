@@ -611,6 +611,7 @@
     "addon.mod_imscp.deploymenterror": "Erro no conte!",
     "addon.mod_imscp.modulenameplural": "Conteúdo dos pacotes IMS",
     "addon.mod_imscp.showmoduledescription": "Mostrar descrição",
+    "addon.mod_imscp.toc": "TOC",
     "addon.mod_lesson.answer": "Resposta",
     "addon.mod_lesson.attempt": "Tentativa: {{$a}}",
     "addon.mod_lesson.attemptheader": "Tentativa",

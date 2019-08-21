@@ -533,6 +533,7 @@
     "addon.mod_imscp.deploymenterror": "שגיאה בחבילת התוכן",
     "addon.mod_imscp.modulenameplural": "חבילות תוכן IMS",
     "addon.mod_imscp.showmoduledescription": "הצגת תיאור",
+    "addon.mod_imscp.toc": "TOC",
     "addon.mod_lesson.answer": "תשובה",
     "addon.mod_lesson.attempt": "ניסיון: {{$a}}",
     "addon.mod_lesson.attemptheader": "ניסיון",

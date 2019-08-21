@@ -318,6 +318,7 @@
     "addon.mod_glossary.modulenameplural": "مسردات",
     "addon.mod_imscp.deploymenterror": "خطاء في محتوى الحزمة",
     "addon.mod_imscp.showmoduledescription": "اظهر الوصف",
+    "addon.mod_imscp.toc": "قائمة المحتويات",
     "addon.mod_lesson.answer": "أجب",
     "addon.mod_lesson.attempt": "محاولة:  {{$a}}",
     "addon.mod_lesson.averagescore": "متوسط الدرجة",

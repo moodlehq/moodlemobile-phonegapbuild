@@ -595,6 +595,7 @@
     "addon.mod_imscp.deploymenterror": "Fejl på indholdspakke!",
     "addon.mod_imscp.modulenameplural": "IMS-pakker",
     "addon.mod_imscp.showmoduledescription": "Vis beskrivelse",
+    "addon.mod_imscp.toc": "Indholdsfortegnelse",
     "addon.mod_lesson.answer": "Svar",
     "addon.mod_lesson.attempt": "Forsøg: {{$a}}",
     "addon.mod_lesson.attemptheader": "Forsøg",

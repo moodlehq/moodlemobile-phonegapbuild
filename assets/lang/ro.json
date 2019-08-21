@@ -424,6 +424,7 @@
     "addon.mod_glossary.tagarea_glossary_entries": "Tab-uri vizibile Postări în glosar",
     "addon.mod_imscp.modulenameplural": "Conținutul pachetelor IMS",
     "addon.mod_imscp.showmoduledescription": "Arată descrierea",
+    "addon.mod_imscp.toc": "TOC",
     "addon.mod_lesson.answer": "Răspuns",
     "addon.mod_lesson.attempt": "Încercarea cu numărul: {{$a}}",
     "addon.mod_lesson.attemptheader": "Încercare",

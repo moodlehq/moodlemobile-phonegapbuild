@@ -580,6 +580,7 @@
     "addon.mod_imscp.deploymenterror": "Si è verificato un errore nel pacchetto",
     "addon.mod_imscp.modulenameplural": "IMS content package",
     "addon.mod_imscp.showmoduledescription": "Visualizza descrizione",
+    "addon.mod_imscp.toc": "TOC",
     "addon.mod_lesson.answer": "Risposta",
     "addon.mod_lesson.attempt": "Tentativo: {{$a}}",
     "addon.mod_lesson.attemptheader": "Tentativo",

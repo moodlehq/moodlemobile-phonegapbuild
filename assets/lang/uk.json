@@ -496,6 +496,7 @@
     "addon.mod_imscp.deploymenterror": "Помилка пакування вмісту!",
     "addon.mod_imscp.modulenameplural": "IMS контент пакети",
     "addon.mod_imscp.showmoduledescription": "Показати опис",
+    "addon.mod_imscp.toc": "Зміст",
     "addon.mod_lesson.answer": "Відповідь",
     "addon.mod_lesson.attempt": "Спроба: {{$a}}",
     "addon.mod_lesson.attemptheader": "Спроба",

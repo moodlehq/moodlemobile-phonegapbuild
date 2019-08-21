@@ -535,6 +535,7 @@
     "addon.mod_imscp.deploymenterror": "Satura pakotnes kļūda!",
     "addon.mod_imscp.modulenameplural": "IMS satura pakotnes",
     "addon.mod_imscp.showmoduledescription": "Parādīt aprakstu",
+    "addon.mod_imscp.toc": "Satura rādītājs",
     "addon.mod_lesson.answer": "Atbilde",
     "addon.mod_lesson.attempt": "Mēģinājums: {{$a}}",
     "addon.mod_lesson.attemptsremaining": "Jums vēl ir {{$a}} mēģinājums(-i).",

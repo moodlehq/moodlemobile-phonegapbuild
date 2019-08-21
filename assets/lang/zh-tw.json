@@ -565,6 +565,7 @@
     "addon.mod_imscp.deploymenterror": "內容包有錯誤！",
     "addon.mod_imscp.modulenameplural": "IMS內容包",
     "addon.mod_imscp.showmoduledescription": "顯示說明",
+    "addon.mod_imscp.toc": "內容列表",
     "addon.mod_lesson.answer": "答案",
     "addon.mod_lesson.attempt": "作答：{{$a}}",
     "addon.mod_lesson.attemptheader": "作答",

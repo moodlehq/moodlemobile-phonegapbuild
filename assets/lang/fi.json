@@ -563,6 +563,7 @@
     "addon.mod_imscp.deploymenterror": "Sisällön pakkaamisvirhe!",
     "addon.mod_imscp.modulenameplural": "IMS-sisältöpaketit",
     "addon.mod_imscp.showmoduledescription": "Näytä kuvaus",
+    "addon.mod_imscp.toc": "Sisällysluettelo",
     "addon.mod_lesson.answer": "Vastaus",
     "addon.mod_lesson.attempt": "Suorituskerta: {{$a}}",
     "addon.mod_lesson.attemptheader": "Suorituskerta",

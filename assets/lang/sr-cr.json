@@ -626,6 +626,7 @@
     "addon.mod_imscp.deploymenterror": "Грешка приликом учитавања пакета!",
     "addon.mod_imscp.modulenameplural": "IMS пакети",
     "addon.mod_imscp.showmoduledescription": "Прикажи опис",
+    "addon.mod_imscp.toc": "Садржај",
     "addon.mod_lesson.answer": "Одговор",
     "addon.mod_lesson.attempt": "Покушај: {{$a}}",
     "addon.mod_lesson.attemptheader": "Покушај",

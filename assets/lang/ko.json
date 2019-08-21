@@ -409,6 +409,7 @@
     "addon.mod_imscp.deploymenterror": "콘텐츠 패키지 오류!",
     "addon.mod_imscp.modulenameplural": "IMS 콘덴츠팩키지",
     "addon.mod_imscp.showmoduledescription": "설명 표시",
+    "addon.mod_imscp.toc": "TOC",
     "addon.mod_lesson.answer": "답안",
     "addon.mod_lesson.attempt": "{{$a}} 번째 시도",
     "addon.mod_lesson.attemptsremaining": "{{$a}} 번의 시도 남음",

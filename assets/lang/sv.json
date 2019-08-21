@@ -525,6 +525,7 @@
     "addon.mod_imscp.deploymenterror": "Fel med innehållspaket!",
     "addon.mod_imscp.modulenameplural": "Innehållspaket av typ IMS",
     "addon.mod_imscp.showmoduledescription": "Visa beskrivning",
+    "addon.mod_imscp.toc": "Index över innehåll",
     "addon.mod_lesson.answer": "Svar",
     "addon.mod_lesson.attempt": "Försök: {{$a}}",
     "addon.mod_lesson.attemptsremaining": "Du har {{$a}} återstående försök",

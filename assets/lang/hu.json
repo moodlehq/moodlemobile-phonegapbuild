@@ -542,6 +542,7 @@
     "addon.mod_glossary.tagarea_glossary_entries": "Szójegyzék egységei",
     "addon.mod_imscp.deploymenterror": "Hiba a tartalomcsomagban!",
     "addon.mod_imscp.modulenameplural": "IMS tartalomcsomagok",
+    "addon.mod_imscp.toc": "Tartalomjegyzék",
     "addon.mod_lesson.answer": "Válasz",
     "addon.mod_lesson.attempt": "Próbálkozás: {{$a}}",
     "addon.mod_lesson.attemptheader": "Próbálkozás",

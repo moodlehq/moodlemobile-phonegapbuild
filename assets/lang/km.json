@@ -570,6 +570,7 @@
     "addon.mod_imscp.deploymenterror": "កំហុសទាក់ទងនឹងកញ្ចប់មាតិកា",
     "addon.mod_imscp.modulenameplural": "កញ្ចប់មាតិកា IMS",
     "addon.mod_imscp.showmoduledescription": "បង្ហាញពីការពិពណ៍នា",
+    "addon.mod_imscp.toc": "តារាងមាតិកា",
     "addon.mod_lesson.answer": "ចម្លើយ",
     "addon.mod_lesson.attempt": "ការឆ្លើយ ៖ {{$a}}",
     "addon.mod_lesson.attemptheader": "ការសាកល្បង",

@@ -604,6 +604,7 @@
     "addon.mod_imscp.deploymenterror": "Feil i pakkearkivet!",
     "addon.mod_imscp.modulenameplural": "IMS innholdspakker",
     "addon.mod_imscp.showmoduledescription": "Vis beskrivelse",
+    "addon.mod_imscp.toc": "Innholdsoversikt",
     "addon.mod_lesson.answer": "Svaralternativ",
     "addon.mod_lesson.attempt": "Forsøk: {{$a}}",
     "addon.mod_lesson.attemptheader": "Forsøk",

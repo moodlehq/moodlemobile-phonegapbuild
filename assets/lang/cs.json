@@ -636,6 +636,7 @@
     "addon.mod_imscp.deploymenterror": "Chyba v balíčku!",
     "addon.mod_imscp.modulenameplural": "Balíček IMS",
     "addon.mod_imscp.showmoduledescription": "Zobrazit popis",
+    "addon.mod_imscp.toc": "Tabulka obsahu",
     "addon.mod_lesson.answer": "Odpověď",
     "addon.mod_lesson.attempt": "Pokus: {{$a}}",
     "addon.mod_lesson.attemptheader": "Pokus",

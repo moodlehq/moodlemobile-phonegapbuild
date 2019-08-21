@@ -636,6 +636,7 @@
     "addon.mod_imscp.deploymenterror": "Erreur dans le contenu du paquetage !",
     "addon.mod_imscp.modulenameplural": "Paquetages IMS Content",
     "addon.mod_imscp.showmoduledescription": "Afficher la description",
+    "addon.mod_imscp.toc": "TDM",
     "addon.mod_lesson.answer": "Réponse",
     "addon.mod_lesson.attempt": "Tentative : {{$a}}",
     "addon.mod_lesson.attemptheader": "Tentative",

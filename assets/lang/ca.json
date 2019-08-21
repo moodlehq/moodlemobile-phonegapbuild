@@ -634,6 +634,7 @@
     "addon.mod_imscp.deploymenterror": "Error en el contingut del paquet!",
     "addon.mod_imscp.modulenameplural": "Paquets de contingut IMS",
     "addon.mod_imscp.showmoduledescription": "Mostra la descripció",
+    "addon.mod_imscp.toc": "Índex",
     "addon.mod_lesson.answer": "Resposta",
     "addon.mod_lesson.attempt": "Intent: {{$a}}",
     "addon.mod_lesson.attemptheader": "Intent",

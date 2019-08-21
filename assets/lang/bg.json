@@ -397,6 +397,7 @@
     "addon.mod_glossary.modulenameplural": "Речници",
     "addon.mod_imscp.deploymenterror": "Грешка в съдържанието на пакета!",
     "addon.mod_imscp.modulenameplural": "IMS пакети",
+    "addon.mod_imscp.toc": "Съдържание",
     "addon.mod_lesson.answer": "Отговор",
     "addon.mod_lesson.attempt": "{{$a}} опит",
     "addon.mod_lesson.attemptsremaining": "Имате оставащ(и) {{$a}} опит(a)",

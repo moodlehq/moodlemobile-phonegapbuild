@@ -636,6 +636,7 @@
     "addon.mod_imscp.deploymenterror": "Fehler im IMS-Content!",
     "addon.mod_imscp.modulenameplural": "IMS-Content",
     "addon.mod_imscp.showmoduledescription": "Beschreibung anzeigen",
+    "addon.mod_imscp.toc": "Inhaltsverzeichnis",
     "addon.mod_lesson.answer": "Antwort",
     "addon.mod_lesson.attempt": "Versuch: {{$a}}",
     "addon.mod_lesson.attemptheader": "Versuch",

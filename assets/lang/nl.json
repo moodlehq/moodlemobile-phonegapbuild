@@ -636,6 +636,7 @@
     "addon.mod_imscp.deploymenterror": "Inhoud pakket fout!",
     "addon.mod_imscp.modulenameplural": "IMS inhoudspakketten",
     "addon.mod_imscp.showmoduledescription": "Toon beschrijving",
+    "addon.mod_imscp.toc": "Inhoud",
     "addon.mod_lesson.answer": "Antwoord",
     "addon.mod_lesson.attempt": "Poging: {{$a}}",
     "addon.mod_lesson.attemptheader": "Poging",

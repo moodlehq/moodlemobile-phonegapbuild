@@ -539,6 +539,7 @@
     "addon.mod_glossary.tagarea_glossary_entries": "Wpisy w słowniku",
     "addon.mod_imscp.deploymenterror": "Błąd pakietu treści!",
     "addon.mod_imscp.modulenameplural": "Pakiety treści IMS",
+    "addon.mod_imscp.toc": "Spis treści",
     "addon.mod_lesson.answer": "Odpowiedź",
     "addon.mod_lesson.attempt": "Podejście: {{$a}}",
     "addon.mod_lesson.attemptheader": "Próba",

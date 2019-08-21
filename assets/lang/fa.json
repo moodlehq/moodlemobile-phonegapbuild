@@ -468,6 +468,7 @@
     "addon.mod_glossary.linking": "پیوند دادن خودکار",
     "addon.mod_glossary.modulenameplural": "واژه‌نامه‌ها",
     "addon.mod_imscp.showmoduledescription": "نمایش توضیحات",
+    "addon.mod_imscp.toc": "فهرست",
     "addon.mod_lesson.answer": "جواب",
     "addon.mod_lesson.attempt": "تلاش: {{$a}}",
     "addon.mod_lesson.attemptsremaining": "می‌توانید {{$a}} بار دیگر تلاش کنید",

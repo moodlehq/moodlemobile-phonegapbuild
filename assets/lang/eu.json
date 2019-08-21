@@ -636,6 +636,7 @@
     "addon.mod_imscp.deploymenterror": "Errorea eduki-paketea egitean!",
     "addon.mod_imscp.modulenameplural": "IMS eduki-paketeak",
     "addon.mod_imscp.showmoduledescription": "Deskribapena erakutsi",
+    "addon.mod_imscp.toc": "TOC",
     "addon.mod_lesson.answer": "Erantzuna",
     "addon.mod_lesson.attempt": "Saiakera: {{$a}}",
     "addon.mod_lesson.attemptheader": "Saiakera",

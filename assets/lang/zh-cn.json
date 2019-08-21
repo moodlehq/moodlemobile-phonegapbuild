@@ -563,6 +563,7 @@
     "addon.mod_imscp.deploymenterror": "内容包有错！",
     "addon.mod_imscp.modulenameplural": "IMS 内容包",
     "addon.mod_imscp.showmoduledescription": "显示描述",
+    "addon.mod_imscp.toc": "目录",
     "addon.mod_lesson.answer": "答案",
     "addon.mod_lesson.attempt": "尝试：{{$a}}",
     "addon.mod_lesson.attemptheader": "尝试",

@@ -450,6 +450,7 @@
     "addon.mod_imscp.deploymenterror": "İçerik paketi hatası!",
     "addon.mod_imscp.modulenameplural": "IMS İçerik paketleri",
     "addon.mod_imscp.showmoduledescription": "Açıklamayı göster",
+    "addon.mod_imscp.toc": "İçindekiler",
     "addon.mod_lesson.answer": "Cevap",
     "addon.mod_lesson.attempt": "Uygulama: {{$a}}",
     "addon.mod_lesson.attemptheader": "Deneme(Teşebbüs)",
