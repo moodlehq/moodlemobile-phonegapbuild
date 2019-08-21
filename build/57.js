@@ -1,6 +1,6 @@
 webpackJsonp([57],{
 
-/***/ 2031:
+/***/ 2032:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -218,7 +218,7 @@ var split_view = __webpack_require__(26);
 var fileuploader = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./src/core/grades/components/course/course.ts
-var course = __webpack_require__(498);
+var course = __webpack_require__(497);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
 var grades = __webpack_require__(162);

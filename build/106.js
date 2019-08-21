@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(31);
 var components_module = __webpack_require__(715);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/components/index/index.ts
-var index = __webpack_require__(496);
+var index = __webpack_require__(501);
 
 // CONCATENATED MODULE: ./src/addon/mod/feedback/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -185,7 +185,7 @@ var unsupported_module_ngfactory = __webpack_require__(1484);
 var tag_area_ngfactory = __webpack_require__(1487);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1492);
+var index_ngfactory = __webpack_require__(1497);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(468);
