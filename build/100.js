@@ -1,6 +1,6 @@
 webpackJsonp([100],{
 
-/***/ 2071:
+/***/ 2072:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -550,7 +550,7 @@ var attachments_ngfactory = __webpack_require__(482);
 var attachments = __webpack_require__(311);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var fileuploader_providers_helper = __webpack_require__(141);
+var fileuploader_providers_helper = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(71);

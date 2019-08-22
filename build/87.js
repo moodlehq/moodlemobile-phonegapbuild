@@ -1,6 +1,6 @@
 webpackJsonp([87],{
 
-/***/ 2005:
+/***/ 2006:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,7 +25,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/access-rules-delegate.ts
-var access_rules_delegate = __webpack_require__(124);
+var access_rules_delegate = __webpack_require__(125);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/preflight-modal/preflight-modal.ts
 // (C) Copyright 2015 Martin Dougiamas

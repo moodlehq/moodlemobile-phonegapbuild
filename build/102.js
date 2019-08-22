@@ -1,6 +1,6 @@
 webpackJsonp([102],{
 
-/***/ 2087:
+/***/ 2088:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -766,7 +766,7 @@ var attachments = __webpack_require__(311);
 var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/helper.ts
-var providers_helper = __webpack_require__(141);
+var providers_helper = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
 var col = __webpack_require__(118);

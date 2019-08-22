@@ -1,6 +1,6 @@
 webpackJsonp([131],{
 
-/***/ 1963:
+/***/ 1964:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -171,7 +171,7 @@ var select_popover_component_ngfactory = __webpack_require__(1474);
 var toast_component_ngfactory = __webpack_require__(1475);
 
 // EXTERNAL MODULE: ./src/pipes/duration.ts
-var duration = __webpack_require__(1525);
+var duration = __webpack_require__(1526);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);

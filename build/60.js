@@ -1,6 +1,6 @@
 webpackJsonp([60],{
 
-/***/ 2079:
+/***/ 2080:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -510,7 +510,7 @@ var seconds_to_hms = __webpack_require__(1518);
 var logger = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./src/components/chrono/chrono.ts
-var chrono = __webpack_require__(1526);
+var chrono = __webpack_require__(1527);
 
 // CONCATENATED MODULE: ./src/components/chrono/chrono.ngfactory.js
 /**

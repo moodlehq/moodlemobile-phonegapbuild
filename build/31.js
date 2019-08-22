@@ -1,6 +1,6 @@
 webpackJsonp([31],{
 
-/***/ 2057:
+/***/ 2058:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -153,7 +153,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1481);
 var participants_ngfactory = __webpack_require__(1517);
 
 // EXTERNAL MODULE: ./src/core/user/components/tag-area/tag-area.ngfactory.js
-var tag_area_ngfactory = __webpack_require__(1523);
+var tag_area_ngfactory = __webpack_require__(1524);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(468);

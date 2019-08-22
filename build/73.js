@@ -1,6 +1,6 @@
 webpackJsonp([73],{
 
-/***/ 2075:
+/***/ 2076:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -674,7 +674,7 @@ var date_day_or_time = __webpack_require__(308);
 var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/pipes/create-links.ts
-var create_links = __webpack_require__(1561);
+var create_links = __webpack_require__(1562);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(468);

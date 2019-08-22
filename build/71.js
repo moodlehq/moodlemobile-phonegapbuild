@@ -1,6 +1,6 @@
 webpackJsonp([71],{
 
-/***/ 2017:
+/***/ 2018:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -349,7 +349,7 @@ var card_header = __webpack_require__(310);
 var card_content = __webpack_require__(372);
 
 // EXTERNAL MODULE: ./src/pipes/bytes-to-size.ts
-var bytes_to_size = __webpack_require__(1524);
+var bytes_to_size = __webpack_require__(1525);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);

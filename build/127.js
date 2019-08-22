@@ -1,6 +1,6 @@
 webpackJsonp([127],{
 
-/***/ 1967:
+/***/ 1968:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -151,7 +151,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1480);
 var bs_tooltip_ngfactory = __webpack_require__(1481);
 
 // EXTERNAL MODULE: ./src/addon/competency/components/course/course.ngfactory.js
-var course_ngfactory = __webpack_require__(1530);
+var course_ngfactory = __webpack_require__(1531);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(468);

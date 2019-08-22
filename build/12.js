@@ -1,6 +1,6 @@
 webpackJsonp([12],{
 
-/***/ 1994:
+/***/ 1995:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -378,7 +378,7 @@ var list_ngfactory = __webpack_require__(490);
 var list = __webpack_require__(317);
 
 // EXTERNAL MODULE: ./src/core/rating/components/rate/rate.ngfactory.js
-var rate_ngfactory = __webpack_require__(2109);
+var rate_ngfactory = __webpack_require__(2110);
 
 // EXTERNAL MODULE: ./src/core/rating/components/rate/rate.ts
 var rate = __webpack_require__(1495);
@@ -390,7 +390,7 @@ var rating = __webpack_require__(224);
 var offline = __webpack_require__(196);
 
 // EXTERNAL MODULE: ./src/core/rating/components/aggregate/aggregate.ngfactory.js
-var aggregate_ngfactory = __webpack_require__(2110);
+var aggregate_ngfactory = __webpack_require__(2111);
 
 // EXTERNAL MODULE: ./src/core/rating/components/aggregate/aggregate.ts
 var aggregate = __webpack_require__(1494);
@@ -629,7 +629,7 @@ var AddonModForumDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](entry_m
 
 /***/ }),
 
-/***/ 2109:
+/***/ 2110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -714,7 +714,7 @@ var CoreRatingRateComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core
 
 /***/ }),
 
-/***/ 2110:
+/***/ 2111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

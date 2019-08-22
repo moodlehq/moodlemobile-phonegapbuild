@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 2070:
+/***/ 2071:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55,7 +55,7 @@ var course = __webpack_require__(13);
 var providers_helper = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var login_providers_helper = __webpack_require__(127);
+var login_providers_helper = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var contentlinks_providers_helper = __webpack_require__(14);
@@ -593,7 +593,7 @@ var radio_button_ngfactory = __webpack_require__(184);
 var radio_button = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-group.js
-var radio_group = __webpack_require__(137);
+var radio_group = __webpack_require__(138);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(91);
@@ -620,7 +620,7 @@ var select_select = __webpack_require__(102);
 var deep_linker = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ngfactory.js
-var recaptcha_ngfactory = __webpack_require__(2117);
+var recaptcha_ngfactory = __webpack_require__(2118);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ts
 var recaptcha = __webpack_require__(1505);
@@ -945,7 +945,7 @@ var AddonModFeedbackFormPageModuleNgFactory = core["_28" /* ɵcmf */](form_modul
 
 /***/ }),
 
-/***/ 2117:
+/***/ 2118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

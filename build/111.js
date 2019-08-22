@@ -1,6 +1,6 @@
 webpackJsonp([111],{
 
-/***/ 2067:
+/***/ 2068:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64,7 +64,7 @@ var helper = __webpack_require__(213);
 var offline = __webpack_require__(287);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
-var fields_delegate = __webpack_require__(122);
+var fields_delegate = __webpack_require__(123);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
 var tag = __webpack_require__(155);
@@ -545,7 +545,7 @@ var app = __webpack_require__(34);
 var deep_linker = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/components/style/style.ngfactory.js
-var style_ngfactory = __webpack_require__(1536);
+var style_ngfactory = __webpack_require__(1537);
 
 // EXTERNAL MODULE: ./src/components/style/style.ts
 var style = __webpack_require__(488);

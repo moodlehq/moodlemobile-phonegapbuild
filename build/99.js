@@ -1,6 +1,6 @@
 webpackJsonp([99],{
 
-/***/ 1995:
+/***/ 1996:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -183,10 +183,10 @@ var unsupported_module_ngfactory = __webpack_require__(1483);
 var tag_area_ngfactory = __webpack_require__(1486);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1538);
+var index_ngfactory = __webpack_require__(1539);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/components/mode-picker/mode-picker.ngfactory.js
-var mode_picker_ngfactory = __webpack_require__(1563);
+var mode_picker_ngfactory = __webpack_require__(1564);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(468);

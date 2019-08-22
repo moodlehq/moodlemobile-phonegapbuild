@@ -1,6 +1,6 @@
 webpackJsonp([112],{
 
-/***/ 1985:
+/***/ 1986:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -183,7 +183,7 @@ var unsupported_module_ngfactory = __webpack_require__(1483);
 var tag_area_ngfactory = __webpack_require__(1486);
 
 // EXTERNAL MODULE: ./src/addon/mod/choice/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1533);
+var index_ngfactory = __webpack_require__(1534);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(468);

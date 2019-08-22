@@ -1,6 +1,6 @@
 webpackJsonp([55],{
 
-/***/ 2080:
+/***/ 2081:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var helper = __webpack_require__(127);
+var helper = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);
@@ -109,6 +109,12 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
             this.siteChecked = true;
             this.pageLoaded = true;
         }
+    };
+    /**
+     * View enter.
+     */
+    CoreLoginCredentialsPage.prototype.ionViewDidEnter = function () {
+        this.viewLeft = false;
     };
     /**
      * View left.
