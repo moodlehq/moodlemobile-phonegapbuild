@@ -445,7 +445,7 @@ var spinner = __webpack_require__(112);
 var tab_highlight = __webpack_require__(519);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
-var split_pane = __webpack_require__(215);
+var split_pane = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

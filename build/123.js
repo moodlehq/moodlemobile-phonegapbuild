@@ -391,7 +391,7 @@ var nav_controller = __webpack_require__(19);
 var nav_push_anchor = __webpack_require__(273);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(210);
+var file_ngfactory = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(180);
@@ -508,7 +508,7 @@ var keyboard = __webpack_require__(109);
 var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(208);
+var refresher_content_ngfactory = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(166);

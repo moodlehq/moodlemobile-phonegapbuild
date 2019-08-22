@@ -25,7 +25,7 @@ var directives_module = __webpack_require__(31);
 var pipes_module = __webpack_require__(108);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar.ts
-var calendar = __webpack_require__(212);
+var calendar = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/helper.ts
 var helper = __webpack_require__(471);
@@ -70,7 +70,7 @@ var groups = __webpack_require__(67);
 var split_view = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
-var _ionic_native_network = __webpack_require__(211);
+var _ionic_native_network = __webpack_require__(212);
 
 // CONCATENATED MODULE: ./src/addon/calendar/pages/event/event.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -828,7 +828,7 @@ var refresher = __webpack_require__(151);
 var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(208);
+var refresher_content_ngfactory = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(166);

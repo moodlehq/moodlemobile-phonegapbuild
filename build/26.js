@@ -25,7 +25,7 @@ var components_module = __webpack_require__(29);
 var components_components_module = __webpack_require__(714);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
-var _ionic_native_network = __webpack_require__(211);
+var _ionic_native_network = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/feedback.ts
 var feedback = __webpack_require__(136);

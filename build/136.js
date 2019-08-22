@@ -43,7 +43,7 @@ var dom = __webpack_require__(4);
 var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar.ts
-var calendar = __webpack_require__(212);
+var calendar = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar-offline.ts
 var calendar_offline = __webpack_require__(365);
@@ -61,7 +61,7 @@ var courses = __webpack_require__(51);
 var providers_helper = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
-var _ionic_native_network = __webpack_require__(211);
+var _ionic_native_network = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./node_modules/moment/moment.js
 var moment = __webpack_require__(15);
@@ -930,7 +930,7 @@ var keyboard = __webpack_require__(109);
 var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(208);
+var refresher_content_ngfactory = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(166);

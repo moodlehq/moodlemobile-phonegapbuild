@@ -1,6 +1,6 @@
 webpackJsonp([92],{
 
-/***/ 2033:
+/***/ 2011:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -183,7 +183,7 @@ var unsupported_module_ngfactory = __webpack_require__(1483);
 var tag_area_ngfactory = __webpack_require__(1486);
 
 // EXTERNAL MODULE: ./src/addon/mod/lti/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1550);
+var index_ngfactory = __webpack_require__(1547);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(468);
@@ -285,7 +285,7 @@ var refresher = __webpack_require__(151);
 var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(208);
+var refresher_content_ngfactory = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(166);

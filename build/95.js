@@ -190,7 +190,7 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(210);
+var file_ngfactory = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(180);

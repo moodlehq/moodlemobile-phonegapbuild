@@ -37,7 +37,7 @@ var dom = __webpack_require__(4);
 var chat = __webpack_require__(274);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/network/index.js
-var network = __webpack_require__(211);
+var network = __webpack_require__(212);
 
 // CONCATENATED MODULE: ./src/addon/mod/chat/pages/users/users.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -267,7 +267,7 @@ var item_reorder = __webpack_require__(28);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(209);
+var user_avatar_ngfactory = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
 var user_avatar = __webpack_require__(178);
