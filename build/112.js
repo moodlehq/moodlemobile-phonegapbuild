@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(31);
 var components_module = __webpack_require__(739);
 
 // EXTERNAL MODULE: ./src/addon/mod/choice/components/index/index.ts
-var index = __webpack_require__(497);
+var index = __webpack_require__(498);
 
 // CONCATENATED MODULE: ./src/addon/mod/choice/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

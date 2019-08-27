@@ -877,7 +877,7 @@ var item_reorder = __webpack_require__(28);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/core/tag/components/list/list.ngfactory.js
-var list_ngfactory = __webpack_require__(492);
+var list_ngfactory = __webpack_require__(493);
 
 // EXTERNAL MODULE: ./src/core/tag/components/list/list.ts
 var list = __webpack_require__(318);

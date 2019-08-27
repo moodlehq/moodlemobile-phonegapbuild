@@ -648,7 +648,7 @@
     "addon.mod_lesson.reviewquestioncontinue": "No, voglio andare alla prossima domanda",
     "addon.mod_lesson.secondpluswrong": "Non proprio. Vuoi riprovare?",
     "addon.mod_lesson.submit": "Invia",
-    "addon.mod_lesson.teacherjumpwarning": "In questa lezione stai utilizzando un salto a {{$a.cluster}} o un salto a {{$a.unseen}}.  Sarà invece utilizzato il salto alla Pagina seguente. Per verificare i salti devi collegarti con il ruolo di studente.",
+    "addon.mod_lesson.teacherjumpwarning": "Stai utilizzando un salto a {{$a.cluster}} o un salto a {{$a.unseen}}.  Sarà invece utilizzato il salto alla Pagina seguente. Per verificare i salti devi collegarti con il ruolo di studente.",
     "addon.mod_lesson.teacherongoingwarning": "Durante lo svolgimento della lezione il punteggio ottenuto viene visualizzato solo agli studenti. Esegui il Login come studente per verificare tale punteggio",
     "addon.mod_lesson.teachertimerwarning": "Il timer funziona solamente per gli studenti. Prova il timer facendo il login come studente.",
     "addon.mod_lesson.thatsthecorrectanswer": "Risposta corretta",

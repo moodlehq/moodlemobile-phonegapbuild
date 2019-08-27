@@ -48,6 +48,9 @@ var helper = __webpack_require__(131);
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ts
 var question = __webpack_require__(1501);
 
+// EXTERNAL MODULE: ./src/app/app.component.ts
+var app_component = __webpack_require__(488);
+
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz.ts
 var quiz = __webpack_require__(161);
 
@@ -299,11 +302,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Page that allows attempting a quiz.
  */
 var player_AddonModQuizPlayerPage = /** @class */ (function () {
-    function AddonModQuizPlayerPage(navParams, logger, translate, eventsProvider, sitesProvider, syncProvider, domUtils, popoverCtrl, timeUtils, quizProvider, quizHelper, quizSync, questionHelper, cdr, modalCtrl, navCtrl) {
+    function AddonModQuizPlayerPage(navParams, logger, translate, eventsProvider, sitesProvider, syncProvider, domUtils, popoverCtrl, timeUtils, quizProvider, quizHelper, quizSync, questionHelper, cdr, modalCtrl, navCtrl, mmApp) {
         this.translate = translate;
         this.eventsProvider = eventsProvider;
         this.sitesProvider = sitesProvider;
@@ -316,6 +320,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
         this.questionHelper = questionHelper;
         this.cdr = cdr;
         this.navCtrl = navCtrl;
+        this.mmApp = mmApp;
         this.component = quiz["a" /* AddonModQuizProvider */].COMPONENT; // Component to link the files to.
         this.preflightData = {}; // Preflight data to attempt the quiz.
         this.forceLeave = false; // If true, don't perform any check when leaving the view.
@@ -382,6 +387,12 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
             });
         }
         return Promise.resolve();
+    };
+    /**
+     * Runs when the page is about to leave and no longer be the active page.
+     */
+    AddonModQuizPlayerPage.prototype.ionViewWillLeave = function () {
+        this.mmApp.closeModal();
     };
     /**
      * Abort the quiz.
@@ -856,7 +867,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
             time["a" /* CoreTimeUtilsProvider */], quiz["a" /* AddonModQuizProvider */],
             providers_helper["a" /* AddonModQuizHelperProvider */], quiz_sync["a" /* AddonModQuizSyncProvider */],
             helper["a" /* CoreQuestionHelperProvider */], core["j" /* ChangeDetectorRef */],
-            ionic_angular["q" /* ModalController */], ionic_angular["s" /* NavController */]])
+            ionic_angular["q" /* ModalController */], ionic_angular["s" /* NavController */], app_component["a" /* MoodleMobileApp */]])
     ], AddonModQuizPlayerPage);
     return AddonModQuizPlayerPage;
 }());
@@ -1201,6 +1212,7 @@ var modal_controller = __webpack_require__(168);
 
 
 
+
 var styles_AddonModQuizPlayerPage = [];
 var RenderType_AddonModQuizPlayerPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonModQuizPlayerPage, data: {} });
 
@@ -1288,7 +1300,7 @@ function View_AddonModQuizPlayerPage_0(_l) { return core["_57" /* ɵvid */](0, [
         var pd_0 = (_co.showConnectionError($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](19, 1097728, [[3, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](22, 0, null, 0, 1, "ion-icon", [["name", "alert"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](23, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_AddonModQuizPlayerPage_2)), core["_30" /* ɵdid */](27, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](32, 0, null, null, 34, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](33, 4374528, [[1, 4]], 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModQuizPlayerPage_3)), core["_30" /* ɵdid */](37, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](39, 0, null, 1, 26, "core-loading", [], [[2, "core-has-fixed-timer", null]], null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](40, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModQuizPlayerPage_6)), core["_30" /* ɵdid */](44, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModQuizPlayerPage_9)), core["_30" /* ɵdid */](48, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModQuizPlayerPage_10)), core["_30" /* ɵdid */](52, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModQuizPlayerPage_17)), core["_30" /* ɵdid */](56, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModQuizPlayerPage_20)), core["_30" /* ɵdid */](60, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModQuizPlayerPage_29)), core["_30" /* ɵdid */](64, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 7, 0); var currVal_2 = _co.quiz; _ck(_v, 12, 0, currVal_2); var currVal_6 = "alert"; _ck(_v, 23, 0, currVal_6); var currVal_7 = (_co.navigation && _co.navigation.length); _ck(_v, 27, 0, currVal_7); var currVal_10 = (((((_co.loaded && _co.endTime) && _co.questions) && _co.questions.length) && !_co.quizAborted) && !_co.showSummary); _ck(_v, 37, 0, currVal_10); var currVal_12 = _co.loaded; _ck(_v, 40, 0, currVal_12); var currVal_13 = ((((!_co.endTime && _co.questions) && _co.questions.length) && !_co.quizAborted) && !_co.showSummary); _ck(_v, 44, 0, currVal_13); var currVal_14 = !_co.attempt; _ck(_v, 48, 0, currVal_14); var currVal_15 = (((_co.questions && _co.questions.length) && !_co.quizAborted) && !_co.showSummary); _ck(_v, 52, 0, currVal_15); var currVal_16 = (((_co.questions && _co.questions.length) && !_co.quizAborted) && !_co.showSummary); _ck(_v, 56, 0, currVal_16); var currVal_17 = (((!_co.quizAborted && _co.showSummary) && _co.summaryQuestions) && _co.summaryQuestions.length); _ck(_v, 60, 0, currVal_17); var currVal_18 = (_co.attempt && (((!_co.questions || !_co.questions.length) && !_co.showSummary) || _co.quizAborted)); _ck(_v, 64, 0, currVal_18); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 6)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 6)._sbPadding; _ck(_v, 5, 0, currVal_0, currVal_1); var currVal_3 = !_co.autoSaveError; var currVal_4 = core["_56" /* ɵunv */](_v, 18, 1, core["_44" /* ɵnov */](_v, 20).transform("core.error")); _ck(_v, 18, 0, currVal_3, currVal_4); var currVal_5 = core["_44" /* ɵnov */](_v, 23)._hidden; _ck(_v, 22, 0, currVal_5); var currVal_8 = core["_44" /* ɵnov */](_v, 33).statusbarPadding; var currVal_9 = core["_44" /* ɵnov */](_v, 33)._hasRefresher; _ck(_v, 32, 0, currVal_8, currVal_9); var currVal_11 = _co.endTime; _ck(_v, 39, 0, currVal_11); }); }
-function View_AddonModQuizPlayerPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-quiz-player", [], null, null, null, View_AddonModQuizPlayerPage_0, RenderType_AddonModQuizPlayerPage)), core["_30" /* ɵdid */](1, 245760, null, 0, player_AddonModQuizPlayerPage, [nav_params["a" /* NavParams */], providers_logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], popover_controller["a" /* PopoverController */], time["a" /* CoreTimeUtilsProvider */], quiz["a" /* AddonModQuizProvider */], providers_helper["a" /* AddonModQuizHelperProvider */], quiz_sync["a" /* AddonModQuizSyncProvider */], helper["a" /* CoreQuestionHelperProvider */], core["j" /* ChangeDetectorRef */], modal_controller["a" /* ModalController */], nav_controller["a" /* NavController */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_AddonModQuizPlayerPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-quiz-player", [], null, null, null, View_AddonModQuizPlayerPage_0, RenderType_AddonModQuizPlayerPage)), core["_30" /* ɵdid */](1, 245760, null, 0, player_AddonModQuizPlayerPage, [nav_params["a" /* NavParams */], providers_logger["a" /* CoreLoggerProvider */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], sync["a" /* CoreSyncProvider */], dom["a" /* CoreDomUtilsProvider */], popover_controller["a" /* PopoverController */], time["a" /* CoreTimeUtilsProvider */], quiz["a" /* AddonModQuizProvider */], providers_helper["a" /* AddonModQuizHelperProvider */], quiz_sync["a" /* AddonModQuizSyncProvider */], helper["a" /* CoreQuestionHelperProvider */], core["j" /* ChangeDetectorRef */], modal_controller["a" /* ModalController */], nav_controller["a" /* NavController */], app_component["a" /* MoodleMobileApp */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 var AddonModQuizPlayerPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-quiz-player", player_AddonModQuizPlayerPage, View_AddonModQuizPlayerPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=player.ngfactory.js.map

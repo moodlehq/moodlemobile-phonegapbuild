@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var pushnotifications = __webpack_require__(130);
 
 // EXTERNAL MODULE: ./src/addon/messageoutput/airnotifier/providers/airnotifier.ts
-var airnotifier = __webpack_require__(493);
+var airnotifier = __webpack_require__(494);
 
 // CONCATENATED MODULE: ./src/addon/messageoutput/airnotifier/pages/devices/devices.ts
 // (C) Copyright 2015 Martin Dougiamas

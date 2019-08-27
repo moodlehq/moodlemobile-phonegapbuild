@@ -1,6 +1,6 @@
 webpackJsonp([111],{
 
-/***/ 2069:
+/***/ 2070:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -548,7 +548,7 @@ var deep_linker = __webpack_require__(55);
 var style_ngfactory = __webpack_require__(1538);
 
 // EXTERNAL MODULE: ./src/components/style/style.ts
-var style = __webpack_require__(490);
+var style = __webpack_require__(491);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ngfactory.js
 var compile_html_ngfactory = __webpack_require__(218);

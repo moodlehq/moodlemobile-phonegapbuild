@@ -151,7 +151,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1482);
 var bs_tooltip_ngfactory = __webpack_require__(1483);
 
 // EXTERNAL MODULE: ./src/addon/notes/components/list/list.ngfactory.js
-var list_ngfactory = __webpack_require__(1550);
+var list_ngfactory = __webpack_require__(1551);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(365);
@@ -202,7 +202,7 @@ var translate_pipe = __webpack_require__(27);
 var toolbar_item = __webpack_require__(366);
 
 // EXTERNAL MODULE: ./src/addon/notes/components/list/list.ts
-var list = __webpack_require__(527);
+var list = __webpack_require__(528);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);

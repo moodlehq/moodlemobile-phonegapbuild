@@ -184,7 +184,7 @@ var dom_controller = __webpack_require__(33);
 var submission_ngfactory = __webpack_require__(1568);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/submission/submission.ts
-var submission_submission = __webpack_require__(526);
+var submission_submission = __webpack_require__(527);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/offline.ts
 var offline = __webpack_require__(184);

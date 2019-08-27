@@ -358,7 +358,7 @@ var course_blocks = __webpack_require__(381);
 var block_providers_helper = __webpack_require__(382);
 
 // EXTERNAL MODULE: ./src/core/course/components/format/format.ts
-var format = __webpack_require__(494);
+var format = __webpack_require__(495);
 
 // EXTERNAL MODULE: ./src/core/course/providers/format-delegate.ts
 var format_delegate = __webpack_require__(175);

@@ -22,7 +22,7 @@ var directives_module = __webpack_require__(31);
 var components_module = __webpack_require__(749);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/index/index.ts
-var index = __webpack_require__(514);
+var index = __webpack_require__(515);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/index/index.ts
 // (C) Copyright 2015 Martin Dougiamas

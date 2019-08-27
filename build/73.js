@@ -1,6 +1,6 @@
 webpackJsonp([73],{
 
-/***/ 2077:
+/***/ 2078:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -203,7 +203,7 @@ var utils = __webpack_require__(2);
 var providers_notifications = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./src/addon/notifications/providers/helper.ts
-var helper = __webpack_require__(519);
+var helper = __webpack_require__(520);
 
 // EXTERNAL MODULE: ./src/core/pushnotifications/providers/delegate.ts
 var providers_delegate = __webpack_require__(136);

@@ -218,7 +218,7 @@ var split_view = __webpack_require__(26);
 var fileuploader = __webpack_require__(68);
 
 // EXTERNAL MODULE: ./src/core/grades/components/course/course.ts
-var course = __webpack_require__(499);
+var course = __webpack_require__(500);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
 var grades = __webpack_require__(163);

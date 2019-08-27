@@ -372,7 +372,7 @@ var mimetype = __webpack_require__(66);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/core/tag/components/list/list.ngfactory.js
-var list_ngfactory = __webpack_require__(492);
+var list_ngfactory = __webpack_require__(493);
 
 // EXTERNAL MODULE: ./src/core/tag/components/list/list.ts
 var list = __webpack_require__(318);

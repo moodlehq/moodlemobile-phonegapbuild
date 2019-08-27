@@ -1,6 +1,6 @@
 webpackJsonp([68],{
 
-/***/ 2079:
+/***/ 2080:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43,7 +43,7 @@ var providers_comments = __webpack_require__(144);
 var offline = __webpack_require__(384);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/sync.ts
-var providers_sync = __webpack_require__(520);
+var providers_sync = __webpack_require__(521);
 
 // CONCATENATED MODULE: ./src/core/comments/pages/viewer/viewer.ts
 // (C) Copyright 2015 Martin Dougiamas

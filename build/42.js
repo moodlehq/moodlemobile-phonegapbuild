@@ -297,7 +297,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1483);
 var option_option = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/segment/segment-button.js
-var segment_button = __webpack_require__(491);
+var segment_button = __webpack_require__(492);
 
 // CONCATENATED MODULE: ./node_modules/ionic-angular/components/segment/segment-button.ngfactory.js
 /**

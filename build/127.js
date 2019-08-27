@@ -1,6 +1,6 @@
 webpackJsonp([127],{
 
-/***/ 1970:
+/***/ 1969:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -199,7 +199,7 @@ var toolbar = __webpack_require__(245);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/addon/competency/components/course/course.ts
-var course = __webpack_require__(523);
+var course = __webpack_require__(524);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(9);
