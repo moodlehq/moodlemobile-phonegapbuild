@@ -1,6 +1,6 @@
 webpackJsonp([26],{
 
-/***/ 2073:
+/***/ 2072:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55,7 +55,7 @@ var course = __webpack_require__(14);
 var providers_helper = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var login_providers_helper = __webpack_require__(119);
+var login_providers_helper = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var contentlinks_providers_helper = __webpack_require__(13);
@@ -560,10 +560,10 @@ var filepool = __webpack_require__(17);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content_content = __webpack_require__(25);
+var content_content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(37);
@@ -590,7 +590,7 @@ var item_content = __webpack_require__(32);
 var radio_button_ngfactory = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
-var radio_button = __webpack_require__(145);
+var radio_button = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-group.js
 var radio_group = __webpack_require__(138);
@@ -611,7 +611,7 @@ var checkbox_checkbox = __webpack_require__(196);
 var option_option = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(121);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(103);
@@ -644,7 +644,7 @@ var button_ngfactory = __webpack_require__(44);
 var button_button = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(157);
+var grid = __webpack_require__(156);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(117);

@@ -1,6 +1,6 @@
 webpackJsonp([32],{
 
-/***/ 2058:
+/***/ 2057:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31,7 +31,7 @@ var utils_text = __webpack_require__(10);
 var helper = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(156);
+var tag = __webpack_require__(155);
 
 // CONCATENATED MODULE: ./src/core/tag/pages/search/search.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -281,7 +281,7 @@ var option_option = __webpack_require__(102);
 var col = __webpack_require__(118);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(121);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(103);
@@ -314,7 +314,7 @@ var translate_service = __webpack_require__(18);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(122);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(110);
@@ -359,7 +359,7 @@ var toolbar = __webpack_require__(245);
 var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);
@@ -368,7 +368,7 @@ var dom_controller = __webpack_require__(33);
 var keyboard = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(152);
+var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(39);
@@ -380,7 +380,7 @@ var refresher_content_ngfactory = __webpack_require__(210);
 var refresher_content = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(157);
+var grid = __webpack_require__(156);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(117);

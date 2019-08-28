@@ -1,6 +1,6 @@
 webpackJsonp([133],{
 
-/***/ 2064:
+/***/ 2063:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31,7 +31,7 @@ var common = __webpack_require__(8);
 var events = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
-var local_notifications = __webpack_require__(155);
+var local_notifications = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -1398,7 +1398,7 @@ var context_menu = __webpack_require__(74);
 var card = __webpack_require__(83);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(122);
+var empty_box_ngfactory = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(110);
@@ -1452,10 +1452,10 @@ var contentlinks_providers_helper = __webpack_require__(13);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(37);
@@ -1604,7 +1604,7 @@ var content_ngfactory = __webpack_require__(178);
 var keyboard = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(152);
+var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(210);
@@ -1628,7 +1628,7 @@ var navbar_buttons_ngfactory = __webpack_require__(95);
 var navbar_buttons = __webpack_require__(87);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(157);
+var grid = __webpack_require__(156);
 
 // CONCATENATED MODULE: ./src/addon/calendar/components/calendar/calendar.ngfactory.js
 /**

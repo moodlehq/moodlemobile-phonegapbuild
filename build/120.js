@@ -22,7 +22,7 @@ var events = __webpack_require__(11);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages.ts
-var providers_messages = __webpack_require__(154);
+var providers_messages = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages-offline.ts
 var messages_offline = __webpack_require__(375);
@@ -37,7 +37,7 @@ var utils_utils = __webpack_require__(2);
 var delegate = __webpack_require__(136);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user.ts
 var providers_user = __webpack_require__(43);
@@ -846,7 +846,7 @@ var spinner_ngfactory = __webpack_require__(128);
 var spinner = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(153);
+var avatar = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(215);
@@ -891,7 +891,7 @@ var utils_text = __webpack_require__(10);
 var helper = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(37);
@@ -969,7 +969,7 @@ var dom_controller = __webpack_require__(33);
 var keyboard = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(152);
+var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(39);

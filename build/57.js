@@ -212,7 +212,7 @@ var translate_pipe = __webpack_require__(27);
 var split_view_ngfactory = __webpack_require__(472);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(68);

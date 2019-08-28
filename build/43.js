@@ -1,6 +1,6 @@
 webpackJsonp([43],{
 
-/***/ 2046:
+/***/ 2045:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25,19 +25,19 @@ var app = __webpack_require__(9);
 var file = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
-var init = __webpack_require__(146);
+var init = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/providers/lang.ts
 var lang = __webpack_require__(170);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
-var local_notifications = __webpack_require__(155);
+var local_notifications = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(120);
+var configconstants = __webpack_require__(119);
 
 // EXTERNAL MODULE: ./src/core/pushnotifications/providers/pushnotifications.ts
 var pushnotifications = __webpack_require__(130);
@@ -290,10 +290,10 @@ var helper = __webpack_require__(13);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
 var utils_text = __webpack_require__(10);

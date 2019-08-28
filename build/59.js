@@ -221,7 +221,7 @@ var helper = __webpack_require__(169);
 var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/course/course.ngfactory.js
 /**

@@ -28,7 +28,7 @@ var delegate = __webpack_require__(58);
 var helper = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var providers_helper = __webpack_require__(119);
+var providers_helper = __webpack_require__(122);
 
 // CONCATENATED MODULE: ./src/core/contentlinks/pages/choose-site/choose-site.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -267,7 +267,7 @@ var item_reorder = __webpack_require__(28);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(153);
+var avatar = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(215);
@@ -306,10 +306,10 @@ var utils_text = __webpack_require__(10);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(37);

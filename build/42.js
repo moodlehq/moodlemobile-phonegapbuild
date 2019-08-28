@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 2047:
+/***/ 2046:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37,13 +37,13 @@ var lang = __webpack_require__(170);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
-var local_notifications = __webpack_require__(155);
+var local_notifications = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/core/pushnotifications/providers/pushnotifications.ts
 var pushnotifications = __webpack_require__(130);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(120);
+var configconstants = __webpack_require__(119);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/general/general.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -404,13 +404,13 @@ var toolbar = __webpack_require__(245);
 var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(121);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(103);

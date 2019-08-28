@@ -654,7 +654,7 @@ var platform = __webpack_require__(16);
 var app = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content_content = __webpack_require__(25);
+var content_content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);
@@ -717,7 +717,7 @@ var providers_app = __webpack_require__(9);
 var providers_helper = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
 var iframe = __webpack_require__(37);

@@ -1,6 +1,6 @@
 webpackJsonp([41],{
 
-/***/ 2048:
+/***/ 2047:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16,10 +16,10 @@ var ionic_angular = __webpack_require__(6);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/settings/providers/delegate.ts
-var delegate = __webpack_require__(319);
+var delegate = __webpack_require__(320);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(26);
+var split_view = __webpack_require__(25);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/list/list.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -270,7 +270,7 @@ var fileuploader = __webpack_require__(68);
 var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);

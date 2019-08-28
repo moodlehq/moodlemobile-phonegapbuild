@@ -1,6 +1,6 @@
 webpackJsonp([109],{
 
-/***/ 2072:
+/***/ 2071:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -40,7 +40,7 @@ var fields_delegate = __webpack_require__(123);
 var helper = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(156);
+var tag = __webpack_require__(155);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/search/search.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -429,7 +429,7 @@ var icon = __webpack_require__(46);
 var content_ngfactory = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(25);
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);
@@ -468,7 +468,7 @@ var input = __webpack_require__(84);
 var label = __webpack_require__(63);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(121);
+var select_ngfactory = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(103);
@@ -483,7 +483,7 @@ var radio_group = __webpack_require__(138);
 var radio_button_ngfactory = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
-var radio_button = __webpack_require__(145);
+var radio_button = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ngfactory.js
 var compile_html_ngfactory = __webpack_require__(218);
@@ -492,7 +492,7 @@ var compile_html_ngfactory = __webpack_require__(218);
 var compile_html = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
-var compile = __webpack_require__(147);
+var compile = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(71);
