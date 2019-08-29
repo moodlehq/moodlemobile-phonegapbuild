@@ -1491,7 +1491,7 @@ var loading_ngfactory = __webpack_require__(50);
 var loading = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ngfactory.js
-var navigation_bar_ngfactory = __webpack_require__(759);
+var navigation_bar_ngfactory = __webpack_require__(760);
 
 // EXTERNAL MODULE: ./src/components/navigation-bar/navigation-bar.ts
 var navigation_bar = __webpack_require__(392);

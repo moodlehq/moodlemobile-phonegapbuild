@@ -61,7 +61,7 @@ var quiz_sync = __webpack_require__(255);
 var providers_helper = __webpack_require__(250);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/connection-error/connection-error.ts
-var connection_error = __webpack_require__(761);
+var connection_error = __webpack_require__(762);
 
 // EXTERNAL MODULE: ./node_modules/rxjs/Rx.js
 var Rx = __webpack_require__(148);

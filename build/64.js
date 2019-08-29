@@ -346,7 +346,7 @@ var course = __webpack_require__(14);
 var badge = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./src/components/download-refresh/download-refresh.ngfactory.js
-var download_refresh_ngfactory = __webpack_require__(758);
+var download_refresh_ngfactory = __webpack_require__(759);
 
 // EXTERNAL MODULE: ./src/components/download-refresh/download-refresh.ts
 var download_refresh = __webpack_require__(391);
