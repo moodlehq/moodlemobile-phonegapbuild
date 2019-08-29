@@ -456,7 +456,8 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
                 var promise;
                 if (sent) {
                     // Event deleted, invalidate right days & months.
-                    promise = _this.calendarHelper.invalidateRepeatedEventsOnCalendarForEvent(_this.event, deleteAll ? _this.event.eventcount : 1).catch(function () {
+                    promise = _this.calendarHelper.refreshAfterChangeEvent(_this.event, deleteAll ? _this.event.eventcount : 1)
+                        .catch(function () {
                         // Ignore errors.
                     });
                 }

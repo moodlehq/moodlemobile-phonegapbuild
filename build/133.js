@@ -1,6 +1,6 @@
 webpackJsonp([133],{
 
-/***/ 2063:
+/***/ 2064:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -298,14 +298,16 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * Refresh events.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
+     * @param {boolean} [afterChange] Whether the refresh is done after an event has changed or has been synced.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonCalendarCalendarComponent.prototype.refreshData = function (sync, showErrors) {
+    AddonCalendarCalendarComponent.prototype.refreshData = function (afterChange) {
         var _this = this;
         var promises = [];
-        promises.push(this.calendarProvider.invalidateMonthlyEvents(this.year, this.month));
+        // Don't invalidate monthly events after a change, it has already been handled.
+        if (!afterChange) {
+            promises.push(this.calendarProvider.invalidateMonthlyEvents(this.year, this.month));
+        }
         promises.push(this.coursesProvider.invalidateCategories(0, true));
         promises.push(this.calendarProvider.invalidateTimeFormat());
         this.categoriesRetrieved = false; // Get categories again.
@@ -742,14 +744,16 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * Refresh events.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
+     * @param {boolean} [afterChange] Whether the refresh is done after an event has changed or has been synced.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonCalendarUpcomingEventsComponent.prototype.refreshData = function (sync, showErrors) {
+    AddonCalendarUpcomingEventsComponent.prototype.refreshData = function (afterChange) {
         var _this = this;
         var promises = [];
-        promises.push(this.calendarProvider.invalidateAllUpcomingEvents());
+        // Don't invalidate upcoming events after a change, it has already been handled.
+        if (!afterChange) {
+            promises.push(this.calendarProvider.invalidateAllUpcomingEvents());
+        }
         promises.push(this.coursesProvider.invalidateCategories(0, true));
         promises.push(this.calendarProvider.invalidateLookAhead());
         promises.push(this.calendarProvider.invalidateTimeFormat());
@@ -1003,37 +1007,37 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
         this.newEventObserver = eventsProvider.on(calendar["a" /* AddonCalendarProvider */].NEW_EVENT_EVENT, function (data) {
             if (data && data.event) {
                 _this.loaded = false;
-                _this.refreshData(true, false);
+                _this.refreshData(true, false, true);
             }
         }, this.currentSiteId);
         // Listen for new event discarded event. When it does, reload the data.
         this.discardedObserver = eventsProvider.on(calendar["a" /* AddonCalendarProvider */].NEW_EVENT_DISCARDED_EVENT, function () {
             _this.loaded = false;
-            _this.refreshData(true, false);
+            _this.refreshData(true, false, true);
         }, this.currentSiteId);
         // Listen for events edited. When an event is edited, reload the data.
         this.editEventObserver = eventsProvider.on(calendar["a" /* AddonCalendarProvider */].EDIT_EVENT_EVENT, function (data) {
             if (data && data.event) {
                 _this.loaded = false;
-                _this.refreshData(true, false);
+                _this.refreshData(true, false, true);
             }
         }, this.currentSiteId);
         // Refresh data if calendar events are synchronized automatically.
         this.syncObserver = eventsProvider.on(calendar_sync["a" /* AddonCalendarSyncProvider */].AUTO_SYNCED, function (data) {
             _this.loaded = false;
-            _this.refreshData();
+            _this.refreshData(false, false, true);
         }, this.currentSiteId);
         // Refresh data if calendar events are synchronized manually but not by this page.
         this.manualSyncObserver = eventsProvider.on(calendar_sync["a" /* AddonCalendarSyncProvider */].MANUAL_SYNCED, function (data) {
             if (data && data.source != 'index') {
                 _this.loaded = false;
-                _this.refreshData();
+                _this.refreshData(false, false, true);
             }
         }, this.currentSiteId);
         // Update the events when an event is deleted.
         this.deleteEventObserver = eventsProvider.on(calendar["a" /* AddonCalendarProvider */].DELETED_EVENT_EVENT, function (data) {
             _this.loaded = false;
-            _this.refreshData();
+            _this.refreshData(false, false, true);
         }, this.currentSiteId);
         // Update the "hasOffline" property if an event deleted in offline is restored.
         this.undeleteEventObserver = eventsProvider.on(calendar["a" /* AddonCalendarProvider */].UNDELETED_EVENT_EVENT, function (data) {
@@ -1137,19 +1141,20 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
      *
      * @param {boolean} [sync] Whether it should try to synchronize offline events.
      * @param {boolean} [showErrors] Whether to show sync errors to the user.
+     * @param {boolean} [afterChange] Whether the refresh is done after an event has changed or has been synced.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonCalendarIndexPage.prototype.refreshData = function (sync, showErrors) {
+    AddonCalendarIndexPage.prototype.refreshData = function (sync, showErrors, afterChange) {
         var _this = this;
         this.syncIcon = 'spinner';
         var promises = [];
         promises.push(this.calendarProvider.invalidateAllowedEventTypes());
         // Refresh the sub-component.
         if (this.showCalendar && this.calendarComponent) {
-            promises.push(this.calendarComponent.refreshData());
+            promises.push(this.calendarComponent.refreshData(afterChange));
         }
         else if (!this.showCalendar && this.upcomingEventsComponent) {
-            promises.push(this.upcomingEventsComponent.refreshData());
+            promises.push(this.upcomingEventsComponent.refreshData(afterChange));
         }
         return Promise.all(promises).finally(function () {
             return _this.fetchData(sync, showErrors);

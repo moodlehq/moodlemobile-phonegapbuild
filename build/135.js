@@ -500,7 +500,7 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
                 // Event created or edited, invalidate right days & months.
                 var numberOfRepetitions = formData.repeat ? formData.repeats :
                     (data.repeateditall && _this.event.othereventscount ? _this.event.othereventscount + 1 : 1);
-                _this.calendarHelper.invalidateRepeatedEventsOnCalendarForEvent(result.event, numberOfRepetitions).catch(function () {
+                return _this.calendarHelper.refreshAfterChangeEvent(result.event, numberOfRepetitions).catch(function () {
                     // Ignore errors.
                 });
             }

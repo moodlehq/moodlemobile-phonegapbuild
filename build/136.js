@@ -150,31 +150,31 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
         this.newEventObserver = eventsProvider.on(calendar["a" /* AddonCalendarProvider */].NEW_EVENT_EVENT, function (data) {
             if (data && data.event) {
                 _this.loaded = false;
-                _this.refreshData(true, false);
+                _this.refreshData(true, false, true);
             }
         }, this.currentSiteId);
         // Listen for new event discarded event. When it does, reload the data.
         this.discardedObserver = eventsProvider.on(calendar["a" /* AddonCalendarProvider */].NEW_EVENT_DISCARDED_EVENT, function () {
             _this.loaded = false;
-            _this.refreshData(true, false);
+            _this.refreshData(true, false, true);
         }, this.currentSiteId);
         // Listen for events edited. When an event is edited, reload the data.
         this.editEventObserver = eventsProvider.on(calendar["a" /* AddonCalendarProvider */].EDIT_EVENT_EVENT, function (data) {
             if (data && data.event) {
                 _this.loaded = false;
-                _this.refreshData(true, false);
+                _this.refreshData(true, false, true);
             }
         }, this.currentSiteId);
         // Refresh data if calendar events are synchronized automatically.
         this.syncObserver = eventsProvider.on(calendar_sync["a" /* AddonCalendarSyncProvider */].AUTO_SYNCED, function (data) {
             _this.loaded = false;
-            _this.refreshData();
+            _this.refreshData(false, false, true);
         }, this.currentSiteId);
         // Refresh data if calendar events are synchronized manually but not by this page.
         this.manualSyncObserver = eventsProvider.on(calendar_sync["a" /* AddonCalendarSyncProvider */].MANUAL_SYNCED, function (data) {
             if (data && (data.source != 'day' || data.year != _this.year || data.month != _this.month || data.day != _this.day)) {
                 _this.loaded = false;
-                _this.refreshData();
+                _this.refreshData(false, false, true);
             }
         }, this.currentSiteId);
         // Update the events when an event is deleted.
@@ -186,7 +186,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
             }
             else {
                 _this.loaded = false;
-                _this.refreshData();
+                _this.refreshData(false, false, true);
             }
         }, this.currentSiteId);
         // Listen for events "undeleted" (offline).
@@ -418,14 +418,18 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
      *
      * @param {boolean} [sync] Whether it should try to synchronize offline events.
      * @param {boolean} [showErrors] Whether to show sync errors to the user.
+     * @param {boolean} [afterChange] Whether the refresh is done after an event has changed or has been synced.
      * @return {Promise<any>} Promise resolved when done.
      */
-    AddonCalendarDayPage.prototype.refreshData = function (sync, showErrors) {
+    AddonCalendarDayPage.prototype.refreshData = function (sync, showErrors, afterChange) {
         var _this = this;
         this.syncIcon = 'spinner';
         var promises = [];
+        // Don't invalidate day events after a change, it has already been handled.
+        if (!afterChange) {
+            promises.push(this.calendarProvider.invalidateDayEvents(this.year, this.month, this.day));
+        }
         promises.push(this.calendarProvider.invalidateAllowedEventTypes());
-        promises.push(this.calendarProvider.invalidateDayEvents(this.year, this.month, this.day));
         promises.push(this.coursesProvider.invalidateCategories(0, true));
         promises.push(this.calendarProvider.invalidateTimeFormat());
         return Promise.all(promises).finally(function () {
