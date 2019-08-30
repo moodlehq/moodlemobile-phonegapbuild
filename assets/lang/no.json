@@ -820,7 +820,7 @@
     "addon.mod_workshop.createsubmission": "Begynn å forberede din innlevering",
     "addon.mod_workshop.deletesubmission": "Slett innlevering",
     "addon.mod_workshop.editsubmission": "Rediger innlevering",
-    "addon.mod_workshop.feedbackauthor": "Tilbakemelding fra forfatter",
+    "addon.mod_workshop.feedbackauthor": "Tilbakemelding til forfatteren",
     "addon.mod_workshop.feedbackby": "Tilbakemelding fra {{$a}}",
     "addon.mod_workshop.feedbackreviewer": "Tilbakemelding fra den som vurderer",
     "addon.mod_workshop.givengrades": "Gitte karakterer",

@@ -709,6 +709,7 @@
     "addon.mod_quiz.attemptquiznow": "Tentar responder o questionário agora",
     "addon.mod_quiz.attemptstate": "Estado",
     "addon.mod_quiz.cannotsubmitquizdueto": "A tentativa do questionário não pode ser enviada pelas seguintes razões:",
+    "addon.mod_quiz.clearchoice": "Limpar minha escolha",
     "addon.mod_quiz.comment": "Comentário",
     "addon.mod_quiz.completedon": "Concluída em",
     "addon.mod_quiz.confirmclose": "Uma vez enviada, você não poderá alterar as respostas para esta tentativa.",
