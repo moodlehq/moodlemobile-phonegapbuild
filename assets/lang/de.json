@@ -37,7 +37,7 @@
     "addon.block_completionstatus.pluginname": "Bearbeitungsstand",
     "addon.block_glossaryrandom.pluginname": "Glossareintrag",
     "addon.block_learningplans.pluginname": "Lernpläne",
-    "addon.block_myoverview.all": "Alle",
+    "addon.block_myoverview.all": "Alle (außer verborgene)",
     "addon.block_myoverview.favourites": "Als Favorit markiert",
     "addon.block_myoverview.future": "Künftige",
     "addon.block_myoverview.hiddencourses": "Verborgene",

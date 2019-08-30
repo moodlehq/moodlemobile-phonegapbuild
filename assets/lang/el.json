@@ -37,7 +37,7 @@
     "addon.block_completionstatus.pluginname": "Κατάσταση ολοκλήρωσης μαθήματος",
     "addon.block_glossaryrandom.pluginname": "Τυχαία λέξη από γλωσσάριο",
     "addon.block_learningplans.pluginname": "Σχέδια μάθησης",
-    "addon.block_myoverview.all": "Όλα",
+    "addon.block_myoverview.all": "Όλα (εκτός από τα κρυφά)",
     "addon.block_myoverview.favourites": "Με αστερίσκο",
     "addon.block_myoverview.future": "Μελλοντικά",
     "addon.block_myoverview.hiddencourses": "Κρυμμένα",

@@ -23,7 +23,7 @@
     "addon.block_completionstatus.pluginname": "Status på progression på kurset",
     "addon.block_glossaryrandom.pluginname": "Tilfældigt ordbogsopslag",
     "addon.block_learningplans.pluginname": "Læringsplaner",
-    "addon.block_myoverview.all": "Alle",
+    "addon.block_myoverview.all": "Alle (bortset fra skjulte)",
     "addon.block_myoverview.favourites": "Fremhævede",
     "addon.block_myoverview.future": "Fremtidige",
     "addon.block_myoverview.hiddencourses": "Skjulte",

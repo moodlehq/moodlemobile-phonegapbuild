@@ -37,7 +37,7 @@
     "addon.block_completionstatus.pluginname": "Ikastaro-osaketaren egoera",
     "addon.block_glossaryrandom.pluginname": "Glosarioko ausazko sarrera",
     "addon.block_learningplans.pluginname": "Ikasketa-planak",
-    "addon.block_myoverview.all": "Guztiak",
+    "addon.block_myoverview.all": "Guztiak (ezkutukoak izan ezik)",
     "addon.block_myoverview.favourites": "Nabarmendua",
     "addon.block_myoverview.future": "Etorkizunean",
     "addon.block_myoverview.hiddencourses": "Ezkutuan",

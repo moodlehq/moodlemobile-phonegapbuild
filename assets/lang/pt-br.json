@@ -37,7 +37,7 @@
     "addon.block_completionstatus.pluginname": "Andamento do curso",
     "addon.block_glossaryrandom.pluginname": "Entrada aleatória do glossário",
     "addon.block_learningplans.pluginname": "Planos de aprendizagem",
-    "addon.block_myoverview.all": "Todos",
+    "addon.block_myoverview.all": "Todos (exceto ocultos)",
     "addon.block_myoverview.favourites": "Favoritos",
     "addon.block_myoverview.future": "Não iniciados",
     "addon.block_myoverview.hiddencourses": "Oculto",

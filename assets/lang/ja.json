@@ -37,7 +37,7 @@
     "addon.block_completionstatus.pluginname": "コース完了ステータス",
     "addon.block_glossaryrandom.pluginname": "ランダム用語集エントリ",
     "addon.block_learningplans.pluginname": "学習プラン",
-    "addon.block_myoverview.all": "すべて",
+    "addon.block_myoverview.all": "すべて (非表示を除く)",
     "addon.block_myoverview.favourites": "星付き",
     "addon.block_myoverview.future": "未来",
     "addon.block_myoverview.hiddencourses": "非表示",

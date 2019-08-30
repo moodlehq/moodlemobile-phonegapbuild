@@ -37,7 +37,7 @@
     "addon.block_completionstatus.pluginname": "Achèvement de cours",
     "addon.block_glossaryrandom.pluginname": "Article d'un glossaire",
     "addon.block_learningplans.pluginname": "Plans de formation",
-    "addon.block_myoverview.all": "Tout",
+    "addon.block_myoverview.all": "Tout (sauf cours cachés)",
     "addon.block_myoverview.favourites": "Favoris",
     "addon.block_myoverview.future": "À venir",
     "addon.block_myoverview.hiddencourses": "Cachés",

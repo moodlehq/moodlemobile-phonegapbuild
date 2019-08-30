@@ -32,7 +32,7 @@
     "addon.block_completionstatus.pluginname": "Kursų baigimo statusas",
     "addon.block_glossaryrandom.pluginname": "Atsitiktinis žodyno įrašas",
     "addon.block_learningplans.pluginname": "Mokymosi planai",
-    "addon.block_myoverview.all": "Visi",
+    "addon.block_myoverview.all": "Visi (išskyrus paslėptus)",
     "addon.block_myoverview.favourites": "Pažymėti žvaigždute",
     "addon.block_myoverview.future": "Būsimi",
     "addon.block_myoverview.hiddencourses": "Paslėpti",

@@ -37,7 +37,7 @@
     "addon.block_completionstatus.pluginname": "Kurzusteljesítés állapota",
     "addon.block_glossaryrandom.pluginname": "Véletlenszerű fogalom",
     "addon.block_learningplans.pluginname": "Tanulási tervek",
-    "addon.block_myoverview.all": "Összes",
+    "addon.block_myoverview.all": "Mind (a rejtettek kivételével)",
     "addon.block_myoverview.favourites": "Bejelölve",
     "addon.block_myoverview.future": "Jövőbeni",
     "addon.block_myoverview.hiddencourses": "Rejtett",

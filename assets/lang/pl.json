@@ -37,7 +37,7 @@
     "addon.block_completionstatus.pluginname": "Status ukończenia kursu",
     "addon.block_glossaryrandom.pluginname": "Losowe pojęcie ze słownika",
     "addon.block_learningplans.pluginname": "Plany nauki",
-    "addon.block_myoverview.all": "Wszystkie",
+    "addon.block_myoverview.all": "Wszystkie (bez ukrytych)",
     "addon.block_myoverview.favourites": "Oznaczone gwiazdką",
     "addon.block_myoverview.future": "Nadchodzące",
     "addon.block_myoverview.hiddencourses": "Ukryte",

@@ -27,7 +27,7 @@
     "addon.block_completionstatus.pluginname": "Состояние завершения курса",
     "addon.block_glossaryrandom.pluginname": "Случайная запись из глоссария",
     "addon.block_learningplans.pluginname": "Учебные планы",
-    "addon.block_myoverview.all": "Все",
+    "addon.block_myoverview.all": "Все (кроме скрытых)",
     "addon.block_myoverview.favourites": "Помеченные",
     "addon.block_myoverview.future": "Предстоящие",
     "addon.block_myoverview.hiddencourses": "Скрытые",
