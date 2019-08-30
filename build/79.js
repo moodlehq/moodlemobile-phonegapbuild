@@ -1,6 +1,6 @@
 webpackJsonp([79],{
 
-/***/ 2014:
+/***/ 2015:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -212,7 +212,7 @@ var tag_area_ngfactory = __webpack_require__(1488);
 var feed_ngfactory = __webpack_require__(1490);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1549);
+var index_ngfactory = __webpack_require__(1550);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/subwiki-picker/subwiki-picker.ngfactory.js
 var subwiki_picker_ngfactory = __webpack_require__(1567);
