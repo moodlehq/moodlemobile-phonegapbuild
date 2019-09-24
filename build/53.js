@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 1921:
+/***/ 2036:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,15 +10,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var core = __webpack_require__(0);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
-var ionic_angular = __webpack_require__(8);
+var ionic_angular = __webpack_require__(6);
 
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(3);
+// EXTERNAL MODULE: ./node_modules/@ionic-native/splash-screen/index.js
+var splash_screen = __webpack_require__(740);
+
+// EXTERNAL MODULE: ./src/providers/app.ts
+var app = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./src/providers/init.ts
+var init = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
 
-// CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.ts
+// EXTERNAL MODULE: ./src/core/constants.ts
+var constants = __webpack_require__(40);
+
+// EXTERNAL MODULE: ./src/core/login/providers/helper.ts
+var helper = __webpack_require__(122);
+
+// CONCATENATED MODULE: ./src/core/login/pages/init/init.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -44,36 +56,98 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
+
 /**
- * Page that displays a course grades.
+ * Page that displays a "splash screen" while the app is being initialized.
  */
-var coursesplit_CoreGradesCourseSplitPage = /** @class */ (function () {
-    function CoreGradesCourseSplitPage(navParams, sitesProvider) {
-        this.courseId = navParams.get('courseId');
-        this.userId = navParams.get('userId') || sitesProvider.getCurrentSiteUserId();
-        this.gradeId = navParams.get('gradeId');
+var init_CoreLoginInitPage = /** @class */ (function () {
+    function CoreLoginInitPage(navCtrl, appProvider, initDelegate, sitesProvider, loginHelper, splashScreen) {
+        this.navCtrl = navCtrl;
+        this.appProvider = appProvider;
+        this.initDelegate = initDelegate;
+        this.sitesProvider = sitesProvider;
+        this.loginHelper = loginHelper;
+        this.splashScreen = splashScreen;
     }
-    CoreGradesCourseSplitPage = __decorate([
+    /**
+     * View loaded.
+     */
+    CoreLoginInitPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        // Wait for the app to be ready.
+        this.initDelegate.ready().then(function () {
+            // Check if there was a pending redirect.
+            var redirectData = _this.appProvider.getRedirect();
+            if (redirectData.siteId) {
+                // Unset redirect data.
+                _this.appProvider.storeRedirect('', '', '');
+                // Only accept the redirect if it was stored less than 20 seconds ago.
+                if (Date.now() - redirectData.timemodified < 20000) {
+                    if (redirectData.siteId != constants["a" /* CoreConstants */].NO_SITE_ID) {
+                        // The redirect is pointing to a site, load it.
+                        return _this.sitesProvider.loadSite(redirectData.siteId, redirectData.page, redirectData.params)
+                            .then(function (loggedIn) {
+                            if (loggedIn) {
+                                return _this.loginHelper.goToSiteInitialPage(_this.navCtrl, redirectData.page, redirectData.params, { animate: false });
+                            }
+                        }).catch(function () {
+                            // Site doesn't exist.
+                            return _this.loadPage();
+                        });
+                    }
+                    else {
+                        // No site to load, open the page.
+                        return _this.loginHelper.goToNoSitePage(_this.navCtrl, redirectData.page, redirectData.params);
+                    }
+                }
+            }
+            return _this.loadPage();
+        }).then(function () {
+            // If we hide the splash screen now, the init view is still seen for an instant. Wait a bit to make sure it isn't seen.
+            setTimeout(function () {
+                _this.splashScreen.hide();
+            }, 100);
+        });
+    };
+    /**
+     * Load the right page.
+     *
+     * @return {Promise<any>} Promise resolved when done.
+     */
+    CoreLoginInitPage.prototype.loadPage = function () {
+        var _this = this;
+        if (this.sitesProvider.isLoggedIn()) {
+            if (!this.loginHelper.isSiteLoggedOut()) {
+                // User is logged in, go to site initial page.
+                return this.loginHelper.goToSiteInitialPage();
+            }
+            else {
+                // The site is marked as logged out. Logout and try again.
+                return this.sitesProvider.logout().then(function () {
+                    return _this.loadPage();
+                });
+            }
+        }
+        return this.navCtrl.setRoot('CoreLoginSitesPage');
+    };
+    CoreLoginInitPage = __decorate([
         Object(core["m" /* Component */])({
-            selector: 'page-core-grades-course-split',
-            templateUrl: 'coursesplit.html',
+            selector: 'page-core-login-init',
+            templateUrl: 'init.html',
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */]])
-    ], CoreGradesCourseSplitPage);
-    return CoreGradesCourseSplitPage;
+        __metadata("design:paramtypes", [ionic_angular["s" /* NavController */], app["a" /* CoreAppProvider */], init["a" /* CoreInitDelegate */],
+            sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */],
+            splash_screen["a" /* SplashScreen */]])
+    ], CoreLoginInitPage);
+    return CoreLoginInitPage;
 }());
 
-//# sourceMappingURL=coursesplit.js.map
-// EXTERNAL MODULE: ./src/components/components.module.ts
-var components_module = __webpack_require__(24);
-
-// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(29);
-
-// EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_components_module = __webpack_require__(687);
-
-// CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ts
+//# sourceMappingURL=init.js.map
+// CONCATENATED MODULE: ./src/core/login/pages/init/init.module.ts
 // (C) Copyright 2015 Martin Dougiamas
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -87,7 +161,7 @@ var components_components_module = __webpack_require__(687);
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-var coursesplit_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+var init_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -96,143 +170,84 @@ var coursesplit_module___decorate = (this && this.__decorate) || function (decor
 
 
 
-
-
-
-
-var coursesplit_module_CoreGradesCourseSplitPageModule = /** @class */ (function () {
-    function CoreGradesCourseSplitPageModule() {
+var init_module_CoreLoginInitPageModule = /** @class */ (function () {
+    function CoreLoginInitPageModule() {
     }
-    CoreGradesCourseSplitPageModule = coursesplit_module___decorate([
+    CoreLoginInitPageModule = init_module___decorate([
         Object(core["I" /* NgModule */])({
             declarations: [
-                coursesplit_CoreGradesCourseSplitPage
+                init_CoreLoginInitPage,
             ],
             imports: [
-                components_components_module["a" /* CoreGradesComponentsModule */],
-                components_module["a" /* CoreComponentsModule */],
-                directives_module["a" /* CoreDirectivesModule */],
-                ionic_angular["l" /* IonicPageModule */].forChild(coursesplit_CoreGradesCourseSplitPage),
-                _ngx_translate_core["b" /* TranslateModule */].forChild()
+                ionic_angular["l" /* IonicPageModule */].forChild(init_CoreLoginInitPage),
             ],
         })
-    ], CoreGradesCourseSplitPageModule);
-    return CoreGradesCourseSplitPageModule;
+    ], CoreLoginInitPageModule);
+    return CoreLoginInitPageModule;
 }());
 
-//# sourceMappingURL=coursesplit.module.js.map
+//# sourceMappingURL=init.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1365);
+var action_sheet_component_ngfactory = __webpack_require__(1471);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1366);
+var alert_component_ngfactory = __webpack_require__(1472);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1367);
+var app_root_ngfactory = __webpack_require__(1473);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1368);
+var loading_component_ngfactory = __webpack_require__(1474);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1369);
+var modal_component_ngfactory = __webpack_require__(1475);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1370);
+var picker_component_ngfactory = __webpack_require__(1476);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1371);
+var popover_component_ngfactory = __webpack_require__(1477);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1372);
+var select_popover_component_ngfactory = __webpack_require__(1478);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1373);
+var toast_component_ngfactory = __webpack_require__(1479);
 
-// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1376);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(178);
 
-// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1377);
-
-// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1378);
-
-// EXTERNAL MODULE: ./src/core/grades/components/course/course.ngfactory.js
-var course_ngfactory = __webpack_require__(1408);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(447);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
-var config = __webpack_require__(6);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
-var view_controller = __webpack_require__(37);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(1374);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(207);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app = __webpack_require__(32);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(21);
-
-// EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(676);
+var config = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(14);
+var platform = __webpack_require__(16);
 
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(33);
 
-// EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(12);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app_app = __webpack_require__(34);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(1375);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(101);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(350);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(38);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(253);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(19);
 
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(27);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
+var spinner_ngfactory = __webpack_require__(128);
 
-// EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
-var split_view_ngfactory = __webpack_require__(449);
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
+var spinner = __webpack_require__(112);
 
-// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(34);
-
-// EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(66);
-
-// EXTERNAL MODULE: ./src/core/grades/components/course/course.ts
-var course = __webpack_require__(470);
-
-// EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
-var grades = __webpack_require__(154);
-
-// EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(63);
-
-// EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(164);
-
-// EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
-
-// CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.ngfactory.js
+// CONCATENATED MODULE: ./src/core/login/pages/init/init.ngfactory.js
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -257,56 +272,28 @@ var providers_app = __webpack_require__(9);
 
 
 
+var styles_CoreLoginInitPage = [];
+var RenderType_CoreLoginInitPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreLoginInitPage, data: {} });
 
+function View_CoreLoginInitPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 8, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](1, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app_app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, 1, 4, "div", [["class", "core-bglogo"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](5, 0, null, null, 1, "ion-spinner", [], [[2, "spinner-paused", null]], null, null, spinner_ngfactory["b" /* View_Spinner_0 */], spinner_ngfactory["a" /* RenderType_Spinner */])), core["_30" /* ɵdid */](6, 114688, null, 0, spinner["a" /* Spinner */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { _ck(_v, 6, 0); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 1).statusbarPadding; var currVal_1 = core["_44" /* ɵnov */](_v, 1)._hasRefresher; _ck(_v, 0, 0, currVal_0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 6)._paused; _ck(_v, 5, 0, currVal_2); }); }
+function View_CoreLoginInitPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-login-init", [], null, null, null, View_CoreLoginInitPage_0, RenderType_CoreLoginInitPage)), core["_30" /* ɵdid */](1, 49152, null, 0, init_CoreLoginInitPage, [nav_controller["a" /* NavController */], app["a" /* CoreAppProvider */], init["a" /* CoreInitDelegate */], sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], splash_screen["a" /* SplashScreen */]], null, null)], null, null); }
+var CoreLoginInitPageNgFactory = core["_27" /* ɵccf */]("page-core-login-init", init_CoreLoginInitPage, View_CoreLoginInitPage_Host_0, {}, {}, []);
 
-
-
-
-
-
-
-
-
-var styles_CoreGradesCourseSplitPage = [];
-var RenderType_CoreGradesCourseSplitPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreGradesCourseSplitPage, data: {} });
-
-function View_CoreGradesCourseSplitPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 12, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 8, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](9, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](14, 0, null, null, 5, "core-split-view", [], null, null, null, split_view_ngfactory["b" /* View_CoreSplitViewComponent_0 */], split_view_ngfactory["a" /* RenderType_CoreSplitViewComponent */])), core["_30" /* ɵdid */](15, 245760, null, 0, split_view["a" /* CoreSplitViewComponent */], [[2, nav_controller["a" /* NavController */]], core["t" /* ElementRef */], fileuploader["a" /* CoreFileUploaderProvider */], platform["a" /* Platform */], translate_service["a" /* TranslateService */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_31" /* ɵeld */](17, 0, null, 0, 1, "core-grades-course", [["class", "core-avoid-header"]], null, null, null, course_ngfactory["c" /* View_CoreGradesCourseComponent_0 */], course_ngfactory["b" /* RenderType_CoreGradesCourseComponent */])), core["_30" /* ɵdid */](18, 114688, null, 0, course["a" /* CoreGradesCourseComponent */], [grades["a" /* CoreGradesProvider */], dom["a" /* CoreDomUtilsProvider */], nav_params["a" /* NavParams */], helper["a" /* CoreGradesHelperProvider */], [2, nav_controller["a" /* NavController */]], providers_app["a" /* CoreAppProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], { courseId: [0, "courseId"], userId: [1, "userId"], gradeId: [2, "gradeId"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); _ck(_v, 15, 0); var currVal_3 = _co.courseId; var currVal_4 = _co.userId; var currVal_5 = _co.gradeId; _ck(_v, 18, 0, currVal_3, currVal_4, currVal_5); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("core.grades.grades")); _ck(_v, 9, 0, currVal_2); }); }
-function View_CoreGradesCourseSplitPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-grades-course-split", [], null, null, null, View_CoreGradesCourseSplitPage_0, RenderType_CoreGradesCourseSplitPage)), core["_30" /* ɵdid */](1, 49152, null, 0, coursesplit_CoreGradesCourseSplitPage, [nav_params["a" /* NavParams */], sites["a" /* CoreSitesProvider */]], null, null)], null, null); }
-var CoreGradesCourseSplitPageNgFactory = core["_27" /* ɵccf */]("page-core-grades-course-split", coursesplit_CoreGradesCourseSplitPage, View_CoreGradesCourseSplitPage_Host_0, {}, {}, []);
-
-//# sourceMappingURL=coursesplit.ngfactory.js.map
+//# sourceMappingURL=init.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
-var common = __webpack_require__(7);
+var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);
 
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(346);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(347);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(349);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(348);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(446);
-
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(675);
-
-// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(103);
+var ionic_angular_module = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(254);
+var module_loader = __webpack_require__(269);
 
-// CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ngfactory.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreGradesCourseSplitPageModuleNgFactory", function() { return CoreGradesCourseSplitPageModuleNgFactory; });
+// CONCATENATED MODULE: ./src/core/login/pages/init/init.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginInitPageModuleNgFactory", function() { return CoreLoginInitPageModuleNgFactory; });
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
@@ -330,24 +317,9 @@ var module_loader = __webpack_require__(254);
 
 
 
+var CoreLoginInitPageModuleNgFactory = core["_28" /* ɵcmf */](init_module_CoreLoginInitPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], CoreLoginInitPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["w" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, init_module_CoreLoginInitPageModule, init_module_CoreLoginInitPageModule, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], init_CoreLoginInitPage, [])]); });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var CoreGradesCourseSplitPageModuleNgFactory = core["_28" /* ɵcmf */](coursesplit_module_CoreGradesCourseSplitPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], course_ngfactory["a" /* CoreGradesCourseComponentNgFactory */], CoreGradesCourseSplitPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["v" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, components_components_module["a" /* CoreGradesComponentsModule */], components_components_module["a" /* CoreGradesComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, coursesplit_module_CoreGradesCourseSplitPageModule, coursesplit_module_CoreGradesCourseSplitPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], coursesplit_CoreGradesCourseSplitPage, [])]); });
-
-//# sourceMappingURL=coursesplit.module.ngfactory.js.map
+//# sourceMappingURL=init.module.ngfactory.js.map
 
 /***/ })
 
