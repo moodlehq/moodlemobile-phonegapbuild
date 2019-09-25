@@ -1,6 +1,6 @@
 webpackJsonp([56],{
 
-/***/ 2034:
+/***/ 2036:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81,7 +81,7 @@ var grade_CoreGradesGradePage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     CoreGradesGradePage.prototype.fetchData = function () {
         var _this = this;
@@ -94,7 +94,7 @@ var grade_CoreGradesGradePage = /** @class */ (function () {
     /**
      * Refresh data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreGradesGradePage.prototype.refreshGrade = function (refresher) {
         var _this = this;

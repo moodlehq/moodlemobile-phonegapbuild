@@ -62,7 +62,7 @@ var index_AddonModAssignIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the assign instance.
      *
-     * @param {any} assign Assign instance.
+     * @param assign Assign instance.
      */
     AddonModAssignIndexPage.prototype.updateData = function (assign) {
         this.title = assign.name || this.title;

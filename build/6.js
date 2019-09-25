@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 2067:
+/***/ 2068:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -125,7 +125,7 @@ var edit_AddonModAssignEditPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModAssignEditPage.prototype.ionViewCanLeave = function () {
         var _this = this;
@@ -145,7 +145,7 @@ var edit_AddonModAssignEditPage = /** @class */ (function () {
     /**
      * Fetch assignment data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModAssignEditPage.prototype.fetchAssignment = function () {
         var _this = this;
@@ -209,7 +209,7 @@ var edit_AddonModAssignEditPage = /** @class */ (function () {
     /**
      * Get the input data.
      *
-     * @return {any} Input data.
+     * @return Input data.
      */
     AddonModAssignEditPage.prototype.getInputData = function () {
         return this.domUtils.getDataFromForm(document.forms['addon-mod_assign-edit-form']);
@@ -217,7 +217,7 @@ var edit_AddonModAssignEditPage = /** @class */ (function () {
     /**
      * Check if data has changed.
      *
-     * @return {Promise<boolean>} Promise resolved with boolean: whether data has changed.
+     * @return Promise resolved with boolean: whether data has changed.
      */
     AddonModAssignEditPage.prototype.hasDataChanged = function () {
         var _this = this;
@@ -249,8 +249,8 @@ var edit_AddonModAssignEditPage = /** @class */ (function () {
     /**
      * Get data to submit based on the input data.
      *
-     * @param {any} inputData The input data.
-     * @return {Promise<any>} Promise resolved with the data to submit.
+     * @param inputData The input data.
+     * @return Promise resolved with the data to submit.
      */
     AddonModAssignEditPage.prototype.prepareSubmissionData = function (inputData) {
         var _this = this;
@@ -289,7 +289,7 @@ var edit_AddonModAssignEditPage = /** @class */ (function () {
     /**
      * Save the submission.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModAssignEditPage.prototype.saveSubmission = function () {
         var _this = this;

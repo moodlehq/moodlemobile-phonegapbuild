@@ -1,6 +1,6 @@
 webpackJsonp([91],{
 
-/***/ 2004:
+/***/ 2006:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var index_AddonModPageIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the page instance.
      *
-     * @param {any} page Page instance.
+     * @param page Page instance.
      */
     AddonModPageIndexPage.prototype.updateData = function (page) {
         this.title = page.name || this.title;
@@ -183,7 +183,7 @@ var unsupported_module_ngfactory = __webpack_require__(1485);
 var tag_area_ngfactory = __webpack_require__(1488);
 
 // EXTERNAL MODULE: ./src/addon/mod/page/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1543);
+var index_ngfactory = __webpack_require__(1544);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(365);

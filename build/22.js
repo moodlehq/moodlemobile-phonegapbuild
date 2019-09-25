@@ -1,6 +1,6 @@
 webpackJsonp([22],{
 
-/***/ 2026:
+/***/ 2028:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -73,7 +73,7 @@ var available_courses_CoreCoursesAvailableCoursesPage = /** @class */ (function 
     /**
      * Load the courses.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     CoreCoursesAvailableCoursesPage.prototype.loadCourses = function () {
         var _this = this;
@@ -89,7 +89,7 @@ var available_courses_CoreCoursesAvailableCoursesPage = /** @class */ (function 
     /**
      * Refresh the courses.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreCoursesAvailableCoursesPage.prototype.refreshCourses = function (refresher) {
         var _this = this;

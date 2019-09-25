@@ -114,7 +114,7 @@ var user_retake_AddonModLessonUserRetakePage = /** @class */ (function () {
     /**
      * Change the retake displayed.
      *
-     * @param {number} retakeNumber The new retake number.
+     * @param retakeNumber The new retake number.
      */
     AddonModLessonUserRetakePage.prototype.changeRetake = function (retakeNumber) {
         var _this = this;
@@ -129,7 +129,7 @@ var user_retake_AddonModLessonUserRetakePage = /** @class */ (function () {
     /**
      * Pull to refresh.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModLessonUserRetakePage.prototype.doRefresh = function (refresher) {
         this.refreshData().finally(function () {
@@ -139,7 +139,7 @@ var user_retake_AddonModLessonUserRetakePage = /** @class */ (function () {
     /**
      * Get lesson and retake data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModLessonUserRetakePage.prototype.fetchData = function () {
         var _this = this;
@@ -196,7 +196,7 @@ var user_retake_AddonModLessonUserRetakePage = /** @class */ (function () {
     /**
      * Refreshes data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModLessonUserRetakePage.prototype.refreshData = function () {
         var _this = this;
@@ -215,8 +215,8 @@ var user_retake_AddonModLessonUserRetakePage = /** @class */ (function () {
     /**
      * Set the retake to view and load its data.
      *
-     * @param {number}retakeNumber Retake number to set.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param retakeNumber Retake number to set.
+     * @return Promise resolved when done.
      */
     AddonModLessonUserRetakePage.prototype.setRetake = function (retakeNumber) {
         var _this = this;

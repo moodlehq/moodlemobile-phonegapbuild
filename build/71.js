@@ -1,6 +1,6 @@
 webpackJsonp([71],{
 
-/***/ 2019:
+/***/ 2021:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -139,7 +139,7 @@ var course_storage_AddonStorageManagerCourseStoragePage = /** @class */ (functio
      *
      * (This works by deleting data for each module in the section that has data.)
      *
-     * @param {any} section Section object with information about section and modules
+     * @param section Section object with information about section and modules
      */
     AddonStorageManagerCourseStoragePage.prototype.deleteForSection = function (section) {
         var modules = [];
@@ -153,7 +153,7 @@ var course_storage_AddonStorageManagerCourseStoragePage = /** @class */ (functio
     /**
      * The user has requested a delete for a module's data
      *
-     * @param {any} module Module details
+     * @param module Module details
      */
     AddonStorageManagerCourseStoragePage.prototype.deleteForModule = function (module) {
         if (module.totalSize > 0) {
@@ -163,7 +163,7 @@ var course_storage_AddonStorageManagerCourseStoragePage = /** @class */ (functio
     /**
      * Deletes the specified modules, showing the loading overlay while it happens.
      *
-     * @param {any[]} modules Modules to delete
+     * @param modules Modules to delete
      * @return Promise<void> Once deleting has finished
      */
     AddonStorageManagerCourseStoragePage.prototype.deleteModules = function (modules) {

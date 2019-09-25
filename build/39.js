@@ -1,6 +1,6 @@
 webpackJsonp([39],{
 
-/***/ 2050:
+/***/ 2051:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -115,7 +115,7 @@ var synchronization_CoreSettingsSynchronizationPage = /** @class */ (function ()
     /**
      * Syncrhonizes a site.
      *
-     * @param {string} siteId Site ID.
+     * @param siteId Site ID.
      */
     CoreSettingsSynchronizationPage.prototype.synchronize = function (siteId) {
         var _this = this;
@@ -129,8 +129,8 @@ var synchronization_CoreSettingsSynchronizationPage = /** @class */ (function ()
     /**
      * Returns true if site is beeing synchronized.
      *
-     * @param {string} siteId Site ID.
-     * @return {boolean} True if site is beeing synchronized, false otherwise.
+     * @param siteId Site ID.
+     * @return True if site is beeing synchronized, false otherwise.
      */
     CoreSettingsSynchronizationPage.prototype.isSynchronizing = function (siteId) {
         return !!this.settingsHelper.getSiteSyncPromise(siteId);

@@ -63,7 +63,7 @@ var index_AddonModBookIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the book instance.
      *
-     * @param {any} book Book instance.
+     * @param book Book instance.
      */
     AddonModBookIndexPage.prototype.updateData = function (book) {
         this.title = book.name || this.title;

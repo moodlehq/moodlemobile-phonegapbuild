@@ -1,6 +1,6 @@
 webpackJsonp([116],{
 
-/***/ 1985:
+/***/ 1984:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var index_AddonModChatIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the chat instance.
      *
-     * @param {any} chat Chat instance.
+     * @param chat Chat instance.
      */
     AddonModChatIndexPage.prototype.updateData = function (chat) {
         this.title = chat.name || this.title;

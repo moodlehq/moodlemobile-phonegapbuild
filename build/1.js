@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 2065:
+/***/ 2066:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -133,10 +133,10 @@ var search_AddonMessagesSearchPage = /** @class */ (function () {
     /**
      * Start a new search or load more results.
      *
-     * @param {string} query Text to search for.
-     * @param {strings} loadMore Load more contacts, noncontacts or messages. If undefined, start a new search.
-     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
-     * @return {Promise<any>} Resolved when done.
+     * @param query Text to search for.
+     * @param loadMore Load more contacts, noncontacts or messages. If undefined, start a new search.
+     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
+     * @return Resolved when done.
      */
     AddonMessagesSearchPage.prototype.search = function (query, loadMore, infiniteComplete) {
         var _this = this;
@@ -242,8 +242,8 @@ var search_AddonMessagesSearchPage = /** @class */ (function () {
     /**
      * Open a conversation in the split view.
      *
-     * @param {any} result User or message.
-     * @param {boolean} [onInit=false] Whether the tser was selected on initial load.
+     * @param result User or message.
+     * @param onInit Whether the tser was selected on initial load.
      */
     AddonMessagesSearchPage.prototype.openConversation = function (result, onInit) {
         if (onInit === void 0) { onInit = false; }
@@ -262,8 +262,8 @@ var search_AddonMessagesSearchPage = /** @class */ (function () {
     /**
      * Set the highlight values for each entry.
      *
-     * @param {any[]} results Results to highlight.
-     * @param {boolean} isUser Whether the results are from a user search or from a message search.
+     * @param results Results to highlight.
+     * @param isUser Whether the results are from a user search or from a message search.
      */
     AddonMessagesSearchPage.prototype.setHighlight = function (results, isUser) {
         var _this = this;
@@ -986,9 +986,9 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @param {boolean} [refreshUnreadCounts=true] Whteher to refresh unread counts.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @param refreshUnreadCounts Whteher to refresh unread counts.
+     * @return Promise resolved when done.
      */
     AddonMessagesDiscussionsComponent.prototype.refreshData = function (refresher, refreshUnreadCounts) {
         var _this = this;
@@ -1009,7 +1009,7 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
     /**
      * Fetch discussions.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonMessagesDiscussionsComponent.prototype.fetchData = function () {
         var _this = this;
@@ -1049,8 +1049,8 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
     /**
      * Search messages cotaining text.
      *
-     * @param  {string}       query Text to search for.
-     * @return {Promise<any>}       Resolved when done.
+     * @param query Text to search for.
+     * @return Resolved when done.
      */
     AddonMessagesDiscussionsComponent.prototype.searchMessage = function (query) {
         var _this = this;
@@ -1069,9 +1069,9 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
     /**
      * Navigate to a particular discussion.
      *
-     * @param {number} discussionUserId Discussion Id to load.
-     * @param {number} [messageId]      Message to scroll after loading the discussion. Used when searching.
-     * @param {boolean} [onlyWithSplitView=false]  Only go to Discussion if split view is on.
+     * @param discussionUserId Discussion Id to load.
+     * @param messageId Message to scroll after loading the discussion. Used when searching.
+     * @param onlyWithSplitView Only go to Discussion if split view is on.
      */
     AddonMessagesDiscussionsComponent.prototype.gotoDiscussion = function (discussionUserId, messageId, onlyWithSplitView) {
         if (onlyWithSplitView === void 0) { onlyWithSplitView = false; }
@@ -1202,8 +1202,8 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
     /**
      * Fetch contacts.
      *
-     * @param {boolean} [refresh=false] True if we are refreshing contacts, false if we are loading more.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh True if we are refreshing contacts, false if we are loading more.
+     * @return Promise resolved when done.
      */
     AddonMessagesConfirmedContactsComponent.prototype.fetchData = function (refresh) {
         var _this = this;
@@ -1233,8 +1233,8 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
     /**
      * Refresh contacts.
      *
-     * @param {any} [refresher] Refresher.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @return Promise resolved when done.
      */
     AddonMessagesConfirmedContactsComponent.prototype.refreshData = function (refresher) {
         // No need to invalidate contacts, we always try to get the latest.
@@ -1245,8 +1245,8 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
     /**
      * Load more contacts.
      *
-     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
-     * @return {Promise<any>} Resolved when done.
+     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
+     * @return Resolved when done.
      */
     AddonMessagesConfirmedContactsComponent.prototype.loadMore = function (infiniteComplete) {
         return this.fetchData().finally(function () {
@@ -1256,8 +1256,8 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
     /**
      * Notify that a contact has been selected.
      *
-     * @param {number} userId User id.
-     * @param {boolean} [onInit=false] Whether the contact is selected on initial load.
+     * @param userId User id.
+     * @param onInit Whether the contact is selected on initial load.
      */
     AddonMessagesConfirmedContactsComponent.prototype.selectUser = function (userId, onInit) {
         if (onInit === void 0) { onInit = false; }
@@ -1373,8 +1373,8 @@ var AddonMessagesContactRequestsComponent = /** @class */ (function () {
     /**
      * Fetch contact requests.
      *
-     * @param {boolean} [refresh=false] True if we are refreshing contact requests, false if we are loading more.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh True if we are refreshing contact requests, false if we are loading more.
+     * @return Promise resolved when done.
      */
     AddonMessagesContactRequestsComponent.prototype.fetchData = function (refresh) {
         var _this = this;
@@ -1404,8 +1404,8 @@ var AddonMessagesContactRequestsComponent = /** @class */ (function () {
     /**
      * Refresh contact requests.
      *
-     * @param {any} [refresher] Refresher.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @return Promise resolved when done.
      */
     AddonMessagesContactRequestsComponent.prototype.refreshData = function (refresher) {
         // Refresh the number of contacts requests to update badges.
@@ -1418,8 +1418,8 @@ var AddonMessagesContactRequestsComponent = /** @class */ (function () {
     /**
      * Load more contact requests.
      *
-     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
-     * @return {Promise<any>} Resolved when done.
+     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
+     * @return Resolved when done.
      */
     AddonMessagesContactRequestsComponent.prototype.loadMore = function (infiniteComplete) {
         return this.fetchData().finally(function () {
@@ -1429,8 +1429,8 @@ var AddonMessagesContactRequestsComponent = /** @class */ (function () {
     /**
      * Notify that a contact has been selected.
      *
-     * @param {number} userId User id.
-     * @param {boolean} [onInit=false] Whether the contact is selected on initial load.
+     * @param userId User id.
+     * @param onInit Whether the contact is selected on initial load.
      */
     AddonMessagesContactRequestsComponent.prototype.selectUser = function (userId, onInit) {
         if (onInit === void 0) { onInit = false; }
@@ -1572,8 +1572,8 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @return Promise resolved when done.
      */
     AddonMessagesContactsComponent.prototype.refreshData = function (refresher) {
         var _this = this;
@@ -1595,7 +1595,7 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
     /**
      * Fetch contacts.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonMessagesContactsComponent.prototype.fetchData = function () {
         var _this = this;
@@ -1616,8 +1616,8 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
     };
     /**
      * Sort user list by fullname
-     * @param  {any[]} list List to sort.
-     * @return {any[]}      Sorted list.
+     * @param list List to sort.
+     * @return Sorted list.
      */
     AddonMessagesContactsComponent.prototype.sortUsers = function (list) {
         return list.sort(function (a, b) {
@@ -1642,8 +1642,8 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
     /**
      * Search users from the UI.
      *
-     * @param  {string}       query Text to search for.
-     * @return {Promise<any>}       Resolved when done.
+     * @param query Text to search for.
+     * @return Resolved when done.
      */
     AddonMessagesContactsComponent.prototype.search = function (query) {
         var _this = this;
@@ -1657,8 +1657,8 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
     /**
      * Perform the search of users.
      *
-     * @param  {string}       query Text to search for.
-     * @return {Promise<any>}       Resolved when done.
+     * @param query Text to search for.
+     * @return Resolved when done.
      */
     AddonMessagesContactsComponent.prototype.performSearch = function (query) {
         var _this = this;
@@ -1674,8 +1674,8 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
     /**
      * Navigate to a particular discussion.
      *
-     * @param {number} discussionUserId Discussion Id to load.
-     * @param {boolean} [onlyWithSplitView=false]  Only go to Discussion if split view is on.
+     * @param discussionUserId Discussion Id to load.
+     * @param onlyWithSplitView Only go to Discussion if split view is on.
      */
     AddonMessagesContactsComponent.prototype.gotoDiscussion = function (discussionUserId, onlyWithSplitView) {
         if (onlyWithSplitView === void 0) { onlyWithSplitView = false; }

@@ -998,7 +998,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModWorkshopSubmissionPage.prototype.ionViewCanLeave = function () {
         var assessmentHasChanged = this.assessmentStrategy && this.assessmentStrategy.hasDataChanged();
@@ -1023,7 +1023,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
     /**
      * Function called when we receive an event of submission changes.
      *
-     * @param {any} data Event data received.
+     * @param data Event data received.
      */
     AddonModWorkshopSubmissionPage.prototype.eventReceived = function (data) {
         if (this.workshopId === data.workshopId) {
@@ -1035,7 +1035,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
     /**
      * Fetch the submission data.
      *
-     * @return {Promise<void>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopSubmissionPage.prototype.fetchSubmissionData = function () {
         var _this = this;
@@ -1165,7 +1165,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
     /**
      * Check if data has changed.
      *
-     * @return {boolean} True if changed, false otherwise.
+     * @return True if changed, false otherwise.
      */
     AddonModWorkshopSubmissionPage.prototype.hasEvaluationChanged = function () {
         if (!this.loaded || !this.access.canoverridegrades) {
@@ -1186,7 +1186,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
     /**
      * Convenience function to refresh all the data.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopSubmissionPage.prototype.refreshAllData = function () {
         var _this = this;
@@ -1206,7 +1206,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
     /**
      * Pull to refresh.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModWorkshopSubmissionPage.prototype.refreshSubmission = function (refresher) {
         if (this.loaded) {
@@ -1251,7 +1251,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
     /**
      * Sends the evaluation to be saved on the server.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopSubmissionPage.prototype.sendEvaluation = function () {
         var _this = this;
@@ -1306,7 +1306,7 @@ var AddonModWorkshopSubmissionPage = /** @class */ (function () {
     /**
      * Undo the submission delete action.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopSubmissionPage.prototype.undoDeleteSubmission = function () {
         var _this = this;

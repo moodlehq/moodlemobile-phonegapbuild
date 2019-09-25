@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 2037:
+/***/ 2038:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,7 +116,7 @@ var init_CoreLoginInitPage = /** @class */ (function () {
     /**
      * Load the right page.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     CoreLoginInitPage.prototype.loadPage = function () {
         var _this = this;

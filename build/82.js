@@ -1,6 +1,6 @@
 webpackJsonp([82],{
 
-/***/ 2012:
+/***/ 2014:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var index_AddonModSurveyIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the survey instance.
      *
-     * @param {any} survey Survey instance.
+     * @param survey Survey instance.
      */
     AddonModSurveyIndexPage.prototype.updateData = function (survey) {
         this.title = survey.name || this.title;
@@ -183,7 +183,7 @@ var unsupported_module_ngfactory = __webpack_require__(1485);
 var tag_area_ngfactory = __webpack_require__(1488);
 
 // EXTERNAL MODULE: ./src/addon/mod/survey/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1547);
+var index_ngfactory = __webpack_require__(1548);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(365);

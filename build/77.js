@@ -1,6 +1,6 @@
 webpackJsonp([77],{
 
-/***/ 2015:
+/***/ 2017:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63,7 +63,7 @@ var index_AddonModWorkshopIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the workshop instance.
      *
-     * @param {any} workshop Workshop instance.
+     * @param workshop Workshop instance.
      */
     AddonModWorkshopIndexPage.prototype.updateData = function (workshop) {
         this.title = workshop.name || this.title;

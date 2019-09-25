@@ -164,7 +164,7 @@ var assessment_AddonModWorkshopAssessmentPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModWorkshopAssessmentPage.prototype.ionViewCanLeave = function () {
         if (this.forceLeave || !this.evaluating) {
@@ -179,7 +179,7 @@ var assessment_AddonModWorkshopAssessmentPage = /** @class */ (function () {
     /**
      * Fetch the assessment data.
      *
-     * @return {Promise<void>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopAssessmentPage.prototype.fetchAssessmentData = function () {
         var _this = this;
@@ -282,7 +282,7 @@ var assessment_AddonModWorkshopAssessmentPage = /** @class */ (function () {
     /**
      * Check if data has changed.
      *
-     * @return {boolean} True if changed, false otherwise.
+     * @return True if changed, false otherwise.
      */
     AddonModWorkshopAssessmentPage.prototype.hasEvaluationChanged = function () {
         if (!this.loaded || !this.evaluating) {
@@ -305,7 +305,7 @@ var assessment_AddonModWorkshopAssessmentPage = /** @class */ (function () {
     /**
      * Convenience function to refresh all the data.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopAssessmentPage.prototype.refreshAllData = function () {
         var _this = this;
@@ -325,7 +325,7 @@ var assessment_AddonModWorkshopAssessmentPage = /** @class */ (function () {
     /**
      * Pull to refresh.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModWorkshopAssessmentPage.prototype.refreshAssessment = function (refresher) {
         if (this.loaded) {
@@ -353,7 +353,7 @@ var assessment_AddonModWorkshopAssessmentPage = /** @class */ (function () {
     /**
      * Sends the evaluation to be saved on the server.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopAssessmentPage.prototype.sendEvaluation = function () {
         var _this = this;

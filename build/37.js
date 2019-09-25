@@ -1,6 +1,6 @@
 webpackJsonp([37],{
 
-/***/ 2052:
+/***/ 2053:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -102,7 +102,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
     /**
      * Load the files.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     CoreSharedFilesListPage.prototype.loadFiles = function () {
         var _this = this;
@@ -126,7 +126,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
     /**
      * Refresh the list of files.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreSharedFilesListPage.prototype.refreshFiles = function (refresher) {
         this.loadFiles().finally(function () {
@@ -136,7 +136,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
     /**
      * Called when a file is deleted. Remove the file from the list.
      *
-     * @param {number} index Position of the file.
+     * @param index Position of the file.
      */
     CoreSharedFilesListPage.prototype.fileDeleted = function (index) {
         this.files.splice(index, 1);
@@ -144,8 +144,8 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
     /**
      * Called when a file is renamed. Update the list.
      *
-     * @param {number} index Position of the file.
-     * @param {any} data Data containing the new FileEntry.
+     * @param index Position of the file.
+     * @param data Data containing the new FileEntry.
      */
     CoreSharedFilesListPage.prototype.fileRenamed = function (index, data) {
         this.files[index] = data.file;
@@ -153,7 +153,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
     /**
      * Open a subfolder.
      *
-     * @param {any} folder The folder to open.
+     * @param folder The folder to open.
      */
     CoreSharedFilesListPage.prototype.openFolder = function (folder) {
         var path = this.textUtils.concatenatePaths(this.path, folder.name);
@@ -177,7 +177,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
     /**
      * Change site loaded.
      *
-     * @param {string} id Site to load.
+     * @param id Site to load.
      */
     CoreSharedFilesListPage.prototype.changeSite = function (id) {
         this.siteId = id;
@@ -188,7 +188,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
     /**
      * A file was picked.
      *
-     * @param {any} file Picked file.
+     * @param file Picked file.
      */
     CoreSharedFilesListPage.prototype.filePicked = function (file) {
         this.viewCtrl.dismiss(file);

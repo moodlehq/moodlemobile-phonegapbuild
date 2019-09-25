@@ -1,6 +1,6 @@
 webpackJsonp([111],{
 
-/***/ 2070:
+/***/ 2071:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -155,7 +155,7 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not and ask to confirm the lost of data.
      *
-     * @return {boolean | Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModDataEditPage.prototype.ionViewCanLeave = function () {
         var _this = this;
@@ -179,7 +179,7 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
     /**
      * Fetch the entry data.
      *
-     * @return {Promise<any>}         Resolved when done.
+     * @return Resolved when done.
      */
     AddonModDataEditPage.prototype.fetchEntryData = function () {
         var _this = this;
@@ -213,8 +213,8 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
     /**
      * Saves data.
      *
-     * @param {Event} e Event.
-     * @return {Promise<any>} Resolved when done.
+     * @param e Event.
+     * @return Resolved when done.
      */
     AddonModDataEditPage.prototype.save = function (e) {
         var _this = this;
@@ -289,8 +289,8 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
     /**
      * Set group to see the database.
      *
-     * @param  {number}       groupId Group identifier to set.
-     * @return {Promise<any>}         Resolved when done.
+     * @param groupId Group identifier to set.
+     * @return Resolved when done.
      */
     AddonModDataEditPage.prototype.setGroup = function (groupId) {
         this.selectedGroup = groupId;
@@ -300,7 +300,7 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
     /**
      * Displays Edit Search Fields.
      *
-     * @return {string}  Generated HTML.
+     * @return Generated HTML.
      */
     AddonModDataEditPage.prototype.displayEditFields = function () {
         this.jsData = {
@@ -336,7 +336,7 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
     /**
      * Return to the entry list (previous page) discarding temp data.
      *
-     * @return {Promise<any>}  Resolved when done.
+     * @return Resolved when done.
      */
     AddonModDataEditPage.prototype.returnToEntryList = function () {
         var _this = this;

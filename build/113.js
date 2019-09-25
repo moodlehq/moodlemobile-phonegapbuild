@@ -114,7 +114,7 @@ var users_AddonModChatUsersPage = /** @class */ (function () {
     /**
      * Add "To user:".
      *
-     * @param {any} user User object.
+     * @param user User object.
      */
     AddonModChatUsersPage.prototype.talkTo = function (user) {
         this.viewCtrl.dismiss({ talkTo: user.fullname });
@@ -122,7 +122,7 @@ var users_AddonModChatUsersPage = /** @class */ (function () {
     /**
      * Beep a user.
      *
-     * @param {any} user User object.
+     * @param user User object.
      */
     AddonModChatUsersPage.prototype.beepTo = function (user) {
         this.viewCtrl.dismiss({ beepTo: user.id });

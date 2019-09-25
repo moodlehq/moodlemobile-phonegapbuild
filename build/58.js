@@ -1,6 +1,6 @@
 webpackJsonp([58],{
 
-/***/ 2032:
+/***/ 2034:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91,7 +91,7 @@ var courses_CoreGradesCoursesPage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @return {Promise<any>}     Resolved when done.
+     * @return Resolved when done.
      */
     CoreGradesCoursesPage.prototype.fetchData = function () {
         var _this = this;
@@ -106,7 +106,7 @@ var courses_CoreGradesCoursesPage = /** @class */ (function () {
     /**
      * Refresh data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreGradesCoursesPage.prototype.refreshGrades = function (refresher) {
         var _this = this;
@@ -118,7 +118,7 @@ var courses_CoreGradesCoursesPage = /** @class */ (function () {
     };
     /**
      * Navigate to the grades of the selected course.
-     * @param {number} courseId  Course Id where to navigate.
+     * @param courseId Course Id where to navigate.
      */
     CoreGradesCoursesPage.prototype.gotoCourseGrades = function (courseId) {
         this.courseId = courseId;

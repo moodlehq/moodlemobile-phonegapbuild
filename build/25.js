@@ -170,7 +170,7 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModLessonPlayerPage.prototype.ionViewCanLeave = function () {
         if (this.forceLeave) {
@@ -193,7 +193,7 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * A button was clicked.
      *
-     * @param {any} data Button data.
+     * @param data Button data.
      */
     AddonModLessonPlayerPage.prototype.buttonClicked = function (data) {
         this.processPage(data);
@@ -201,11 +201,11 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Call a function and go offline if allowed and the call fails.
      *
-     * @param {Function} func Function to call.
-     * @param {any[]} args Arguments to pass to the function.
-     * @param {number} offlineParamPos Position of the offline parameter in the args.
-     * @param {number} [jumpsParamPos] Position of the jumps parameter in the args.
-     * @return {Promise<any>} Promise resolved in success, rejected otherwise.
+     * @param func Function to call.
+     * @param args Arguments to pass to the function.
+     * @param offlineParamPos Position of the offline parameter in the args.
+     * @param jumpsParamPos Position of the jumps parameter in the args.
+     * @return Promise resolved in success, rejected otherwise.
      */
     AddonModLessonPlayerPage.prototype.callFunction = function (func, args, offlineParamPos, jumpsParamPos) {
         var _this = this;
@@ -231,8 +231,8 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Change the page from menu or when continuing from a feedback page.
      *
-     * @param {number} pageId Page to load.
-     * @param {boolean} [ignoreCurrent] If true, allow loading current page.
+     * @param pageId Page to load.
+     * @param ignoreCurrent If true, allow loading current page.
      */
     AddonModLessonPlayerPage.prototype.changePage = function (pageId, ignoreCurrent) {
         var _this = this;
@@ -251,7 +251,7 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Get the lesson data and load the page.
      *
-     * @return {Promise<boolean>} Promise resolved with true if success, resolved with false otherwise.
+     * @return Promise resolved with true if success, resolved with false otherwise.
      */
     AddonModLessonPlayerPage.prototype.fetchLessonData = function () {
         var _this = this;
@@ -329,8 +329,8 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Finish the retake.
      *
-     * @param {boolean} [outOfTime] Whether the retake is finished because the user ran out of time.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param outOfTime Whether the retake is finished because the user ran out of time.
+     * @return Promise resolved when done.
      */
     AddonModLessonPlayerPage.prototype.finishRetake = function (outOfTime) {
         var _this = this;
@@ -391,8 +391,8 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Jump to a certain page after performing an action.
      *
-     * @param {number} pageId The page to load.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param pageId The page to load.
+     * @return Promise resolved when done.
      */
     AddonModLessonPlayerPage.prototype.jumpToPage = function (pageId) {
         if (pageId === 0) {
@@ -413,8 +413,8 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Start or continue a retake.
      *
-     * @param {number} pageId The page to load.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param pageId The page to load.
+     * @return Promise resolved when done.
      */
     AddonModLessonPlayerPage.prototype.launchRetake = function (pageId) {
         var _this = this;
@@ -453,7 +453,7 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Load the lesson menu.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModLessonPlayerPage.prototype.loadMenu = function () {
         var _this = this;
@@ -476,8 +476,8 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Load a certain page.
      *
-     * @param {number} pageId The page to load.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param pageId The page to load.
+     * @return Promise resolved when done.
      */
     AddonModLessonPlayerPage.prototype.loadPage = function (pageId) {
         var _this = this;
@@ -527,8 +527,8 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Process a page, sending some data.
      *
-     * @param {any} data The data to send.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param data The data to send.
+     * @return Promise resolved when done.
      */
     AddonModLessonPlayerPage.prototype.processPage = function (data) {
         var _this = this;
@@ -593,7 +593,7 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Review the lesson.
      *
-     * @param {number} pageId Page to load.
+     * @param pageId Page to load.
      */
     AddonModLessonPlayerPage.prototype.reviewLesson = function (pageId) {
         var _this = this;
@@ -609,7 +609,7 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
     /**
      * Submit a question.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     AddonModLessonPlayerPage.prototype.submitQuestion = function (e) {
         var _this = this;

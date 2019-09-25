@@ -1,6 +1,6 @@
 webpackJsonp([105],{
 
-/***/ 1993:
+/***/ 1994:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -127,8 +127,8 @@ var respondents_AddonModFeedbackRespondentsPage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @param {boolean} [refresh] Empty events array first.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh Empty events array first.
+     * @return Promise resolved when done.
      */
     AddonModFeedbackRespondentsPage.prototype.fetchData = function (refresh) {
         var _this = this;
@@ -154,8 +154,8 @@ var respondents_AddonModFeedbackRespondentsPage = /** @class */ (function () {
     /**
      * Load Group attempts.
      *
-     * @param  {number} [groupId]   If defined it will change group if not, it will load more attempts for the same group.
-     * @return {Promise<any>}       Resolved with the attempts loaded.
+     * @param groupId If defined it will change group if not, it will load more attempts for the same group.
+     * @return Resolved with the attempts loaded.
      */
     AddonModFeedbackRespondentsPage.prototype.loadGroupAttempts = function (groupId) {
         var _this = this;
@@ -192,7 +192,7 @@ var respondents_AddonModFeedbackRespondentsPage = /** @class */ (function () {
     /**
      * Navigate to a particular attempt.
      *
-     * @param {any} attempt Attempt object to load.
+     * @param attempt Attempt object to load.
      */
     AddonModFeedbackRespondentsPage.prototype.gotoAttempt = function (attempt) {
         this.attemptId = attempt.id;
@@ -207,7 +207,7 @@ var respondents_AddonModFeedbackRespondentsPage = /** @class */ (function () {
     /**
      * Change selected group or load more attempts.
      *
-     * @param {number} [groupId] Group ID selected. If not defined, it will load more attempts.
+     * @param groupId Group ID selected. If not defined, it will load more attempts.
      */
     AddonModFeedbackRespondentsPage.prototype.loadAttempts = function (groupId) {
         var _this = this;
@@ -218,7 +218,7 @@ var respondents_AddonModFeedbackRespondentsPage = /** @class */ (function () {
     /**
      * Refresh the attempts.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModFeedbackRespondentsPage.prototype.refreshFeedback = function (refresher) {
         var _this = this;

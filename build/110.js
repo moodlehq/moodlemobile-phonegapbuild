@@ -63,7 +63,7 @@ var index_AddonModDataIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the data instance.
      *
-     * @param {any} data Data instance.
+     * @param data Data instance.
      */
     AddonModDataIndexPage.prototype.updateData = function (data) {
         this.title = data.name || this.title;

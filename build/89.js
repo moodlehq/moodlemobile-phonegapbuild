@@ -1,6 +1,6 @@
 webpackJsonp([89],{
 
-/***/ 2006:
+/***/ 2008:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var index_AddonModQuizIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the quiz instance.
      *
-     * @param {any} quiz Quiz instance.
+     * @param quiz Quiz instance.
      */
     AddonModQuizIndexPage.prototype.updateData = function (quiz) {
         this.title = quiz.name || this.title;
@@ -195,7 +195,7 @@ var unsupported_module_ngfactory = __webpack_require__(1485);
 var tag_area_ngfactory = __webpack_require__(1488);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1544);
+var index_ngfactory = __webpack_require__(1545);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/components/connection-error/connection-error.ngfactory.js
 var connection_error_ngfactory = __webpack_require__(1566);

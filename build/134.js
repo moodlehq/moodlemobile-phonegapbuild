@@ -196,9 +196,9 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
     /**
      * Fetches the event and updates the view.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether it should try to synchronize offline events.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarEventPage.prototype.fetchEvent = function (sync, showErrors) {
         var _this = this;
@@ -338,7 +338,7 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
     /**
      * Add a reminder for this event.
      *
-     * @param {Event} e    Click event.
+     * @param e Click event.
      */
     AddonCalendarEventPage.prototype.addNotificationTime = function (e) {
         var _this = this;
@@ -362,8 +362,8 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
     /**
      * Cancel the selected notification.
      *
-     * @param {number} id  Reminder ID.
-     * @param {Event} e    Click event.
+     * @param id Reminder ID.
+     * @param e Click event.
      */
     AddonCalendarEventPage.prototype.cancelNotification = function (id, e) {
         var _this = this;
@@ -378,10 +378,10 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @param {Function} [done] Function to call when done.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @param done Function to call when done.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarEventPage.prototype.doRefresh = function (refresher, done, showErrors) {
         if (this.eventLoaded) {
@@ -395,9 +395,9 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
     /**
      * Refresh the event.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether it should try to synchronize offline events.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarEventPage.prototype.refreshEvent = function (sync, showErrors) {
         var _this = this;
@@ -512,8 +512,8 @@ var event_AddonCalendarEventPage = /** @class */ (function () {
     /**
      * Check the result of an automatic sync or a manual sync not done by this page.
      *
-     * @param {boolean} isManual Whether it's a manual sync.
-     * @param {any} data Sync result.
+     * @param isManual Whether it's a manual sync.
+     * @param data Sync result.
      */
     AddonCalendarEventPage.prototype.checkSyncResult = function (isManual, data) {
         var _this = this;

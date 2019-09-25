@@ -1,6 +1,6 @@
 webpackJsonp([106],{
 
-/***/ 1992:
+/***/ 1993:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -101,8 +101,8 @@ var nonrespondents_AddonModFeedbackNonRespondentsPage = /** @class */ (function 
     /**
      * Fetch all the data required for the view.
      *
-     * @param {boolean} [refresh] Empty events array first.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh Empty events array first.
+     * @return Promise resolved when done.
      */
     AddonModFeedbackNonRespondentsPage.prototype.fetchData = function (refresh) {
         var _this = this;
@@ -126,8 +126,8 @@ var nonrespondents_AddonModFeedbackNonRespondentsPage = /** @class */ (function 
     /**
      * Load Group responses.
      *
-     * @param  {number} [groupId]   If defined it will change group if not, it will load more users for the same group.
-     * @return {Promise<any>}       Resolved with the attempts loaded.
+     * @param groupId If defined it will change group if not, it will load more users for the same group.
+     * @return Resolved with the attempts loaded.
      */
     AddonModFeedbackNonRespondentsPage.prototype.loadGroupUsers = function (groupId) {
         var _this = this;
@@ -157,7 +157,7 @@ var nonrespondents_AddonModFeedbackNonRespondentsPage = /** @class */ (function 
     /**
      * Change selected group or load more users.
      *
-     * @param {number} [groupId] Group ID selected. If not defined, it will load more users.
+     * @param groupId Group ID selected. If not defined, it will load more users.
      */
     AddonModFeedbackNonRespondentsPage.prototype.loadAttempts = function (groupId) {
         var _this = this;
@@ -168,7 +168,7 @@ var nonrespondents_AddonModFeedbackNonRespondentsPage = /** @class */ (function 
     /**
      * Refresh the attempts.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModFeedbackNonRespondentsPage.prototype.refreshFeedback = function (refresher) {
         var _this = this;

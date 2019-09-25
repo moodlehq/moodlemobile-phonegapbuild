@@ -167,7 +167,7 @@ var edit_AddonModGlossaryEditPage = /** @class */ (function () {
     /**
      * Definition changed.
      *
-     * @param {string} text The new text.
+     * @param text The new text.
      */
     AddonModGlossaryEditPage.prototype.onDefinitionChange = function (text) {
         this.entry.definition = text;
@@ -175,7 +175,7 @@ var edit_AddonModGlossaryEditPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModGlossaryEditPage.prototype.ionViewCanLeave = function () {
         var _this = this;

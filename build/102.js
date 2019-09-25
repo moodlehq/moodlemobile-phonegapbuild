@@ -187,8 +187,8 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
     /**
      * Fetch if forum uses groups and the groups it uses.
      *
-     * @param  {boolean} [refresh] Whether we're refreshing data.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh Whether we're refreshing data.
+     * @return Promise resolved when done.
      */
     AddonModForumNewDiscussionPage.prototype.fetchDiscussionData = function (refresh) {
         var _this = this;
@@ -305,8 +305,8 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
     /**
      * Validate which of the groups returned by getActivityAllowedGroups in visible groups should be shown to post to.
      *
-     * @param  {any[]} forumGroups Forum groups.
-     * @return {Promise<any[]>} Promise resolved with the list of groups.
+     * @param forumGroups Forum groups.
+     * @return Promise resolved with the list of groups.
      */
     AddonModForumNewDiscussionPage.prototype.validateVisibleGroups = function (forumGroups) {
         var _this = this;
@@ -351,9 +351,9 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
     /**
      * Filter forum groups, returning only those that are inside user groups.
      *
-     * @param  {any[]} forumGroups Forum groups.
-     * @param  {any[]} userGroups User groups.
-     * @return {any[]} Filtered groups.
+     * @param forumGroups Forum groups.
+     * @param userGroups User groups.
+     * @return Filtered groups.
      */
     AddonModForumNewDiscussionPage.prototype.filterGroups = function (forumGroups, userGroups) {
         var filtered = [];
@@ -368,9 +368,9 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
     /**
      * Add the "All participants" option to a list of groups if the user can add a discussion to all participants.
      *
-     * @param  {any[]}   groups Groups.
-     * @param  {boolean} check  True to check if the user can add a discussion to all participants.
-     * @return {Promise<any[]>} Promise resolved with the list of groups.
+     * @param groups Groups.
+     * @param check True to check if the user can add a discussion to all participants.
+     * @return Promise resolved with the list of groups.
      */
     AddonModForumNewDiscussionPage.prototype.addAllParticipantsOption = function (groups, check) {
         var _this = this;
@@ -408,7 +408,7 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
     /**
      * Pull to refresh.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModForumNewDiscussionPage.prototype.refreshGroups = function (refresher) {
         var _this = this;
@@ -426,8 +426,8 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
     /**
      * Convenience function to update or return to discussions depending on device.
      *
-     * @param {number} [discussionIds] Ids of the new discussions.
-     * @param {number} [discTimecreated] The time created of the discussion (if offline).
+     * @param discussionIds Ids of the new discussions.
+     * @param discTimecreated The time created of the discussion (if offline).
      */
     AddonModForumNewDiscussionPage.prototype.returnToDiscussions = function (discussionIds, discTimecreated) {
         var data = {
@@ -462,7 +462,7 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
     /**
      * Message changed.
      *
-     * @param {string} text The new text.
+     * @param text The new text.
      */
     AddonModForumNewDiscussionPage.prototype.onMessageChange = function (text) {
         this.newDiscussion.message = text;
@@ -539,7 +539,7 @@ var new_discussion_AddonModForumNewDiscussionPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModForumNewDiscussionPage.prototype.ionViewCanLeave = function () {
         var _this = this;

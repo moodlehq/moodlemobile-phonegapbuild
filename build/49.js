@@ -1,6 +1,6 @@
 webpackJsonp([49],{
 
-/***/ 2041:
+/***/ 2042:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92,7 +92,7 @@ var site_policy_CoreLoginSitePolicyPage = /** @class */ (function () {
     /**
      * Fetch the site policy URL.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     CoreLoginSitePolicyPage.prototype.fetchSitePolicy = function () {
         var _this = this;

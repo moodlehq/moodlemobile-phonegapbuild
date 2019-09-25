@@ -67,7 +67,7 @@ var edit_feedback_modal_AddonModAssignEditFeedbackModalPage = /** @class */ (fun
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModAssignEditFeedbackModalPage.prototype.ionViewCanLeave = function () {
         var _this = this;
@@ -83,7 +83,7 @@ var edit_feedback_modal_AddonModAssignEditFeedbackModalPage = /** @class */ (fun
     /**
      * Close modal.
      *
-     * @param {any} data Data to return to the page.
+     * @param data Data to return to the page.
      */
     AddonModAssignEditFeedbackModalPage.prototype.closeModal = function (data) {
         this.viewCtrl.dismiss(data);
@@ -91,7 +91,7 @@ var edit_feedback_modal_AddonModAssignEditFeedbackModalPage = /** @class */ (fun
     /**
      * Done editing.
      *
-     * @param {Event} e Click event.
+     * @param e Click event.
      */
     AddonModAssignEditFeedbackModalPage.prototype.done = function (e) {
         e.preventDefault();
@@ -103,7 +103,7 @@ var edit_feedback_modal_AddonModAssignEditFeedbackModalPage = /** @class */ (fun
     /**
      * Get the input data.
      *
-     * @return {any} Object with the data.
+     * @return Object with the data.
      */
     AddonModAssignEditFeedbackModalPage.prototype.getInputData = function () {
         return this.domUtils.getDataFromForm(document.forms['addon-mod_assign-edit-feedback-form']);
@@ -111,7 +111,7 @@ var edit_feedback_modal_AddonModAssignEditFeedbackModalPage = /** @class */ (fun
     /**
      * Check if data has changed.
      *
-     * @return {Promise<boolean>} Promise resolved with boolean: whether the data has changed.
+     * @return Promise resolved with boolean: whether the data has changed.
      */
     AddonModAssignEditFeedbackModalPage.prototype.hasDataChanged = function () {
         return this.feedbackDelegate.hasPluginDataChanged(this.assign, this.userId, this.plugin, this.getInputData(), this.userId)

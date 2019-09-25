@@ -1,6 +1,6 @@
 webpackJsonp([88],{
 
-/***/ 2007:
+/***/ 2009:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55,8 +55,8 @@ var navigation_modal_AddonModQuizNavigationModalPage = /** @class */ (function (
     /**
      * Load a certain page.
      *
-     * @param {number} page The page to load.
-     * @param {number} [slot] Slot of the question to scroll to.
+     * @param page The page to load.
+     * @param slot Slot of the question to scroll to.
      */
     AddonModQuizNavigationModalPage.prototype.loadPage = function (page, slot) {
         this.pageInstance.changePage && this.pageInstance.changePage(page, true, slot);

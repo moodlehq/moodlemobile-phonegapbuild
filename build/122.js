@@ -77,7 +77,7 @@ var devices_AddonMessageOutputAirnotifierDevicesPage = /** @class */ (function (
     /**
      * Fetches the list of devices.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonMessageOutputAirnotifierDevicesPage.prototype.fetchDevices = function () {
         var _this = this;
@@ -121,7 +121,7 @@ var devices_AddonMessageOutputAirnotifierDevicesPage = /** @class */ (function (
     /**
      * Refresh the list of devices.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonMessageOutputAirnotifierDevicesPage.prototype.refreshDevices = function (refresher) {
         var _this = this;
@@ -134,8 +134,8 @@ var devices_AddonMessageOutputAirnotifierDevicesPage = /** @class */ (function (
     /**
      * Enable or disable a certain device.
      *
-     * @param {any} device The device object.
-     * @param {boolean} enable True to enable the device, false to disable it.
+     * @param device The device object.
+     * @param enable True to enable the device, false to disable it.
      */
     AddonMessageOutputAirnotifierDevicesPage.prototype.enableDevice = function (device, enable) {
         var _this = this;

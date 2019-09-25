@@ -1,6 +1,6 @@
 webpackJsonp([32],{
 
-/***/ 2058:
+/***/ 2059:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -105,7 +105,7 @@ var search_CoreTagSearchPage = /** @class */ (function () {
     /**
      * Fetch tag collections.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     CoreTagSearchPage.prototype.fetchCollections = function () {
         var _this = this;
@@ -121,7 +121,7 @@ var search_CoreTagSearchPage = /** @class */ (function () {
     /**
      * Fetch tags.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     CoreTagSearchPage.prototype.fetchTags = function () {
         var _this = this;
@@ -139,7 +139,7 @@ var search_CoreTagSearchPage = /** @class */ (function () {
     /**
      * Refresh data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreTagSearchPage.prototype.refreshData = function (refresher) {
         var _this = this;
@@ -155,8 +155,8 @@ var search_CoreTagSearchPage = /** @class */ (function () {
     /**
      * Search tags.
      *
-     * @param {string} query Search query.
-     * @return {Promise<any>} Resolved when done.
+     * @param query Search query.
+     * @return Resolved when done.
      */
     CoreTagSearchPage.prototype.searchTags = function (query) {
         var _this = this;

@@ -1,6 +1,6 @@
 webpackJsonp([104],{
 
-/***/ 1994:
+/***/ 1995:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63,7 +63,7 @@ var index_AddonModFolderIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the folder instance.
      *
-     * @param {any} folder Folder instance.
+     * @param folder Folder instance.
      */
     AddonModFolderIndexPage.prototype.updateData = function (folder) {
         this.title = folder.name || this.title;

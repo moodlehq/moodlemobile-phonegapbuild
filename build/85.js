@@ -1,6 +1,6 @@
 webpackJsonp([85],{
 
-/***/ 2010:
+/***/ 2012:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var index_AddonModScormIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the SCORM instance.
      *
-     * @param {any} scorm SCORM instance.
+     * @param scorm SCORM instance.
      */
     AddonModScormIndexPage.prototype.updateData = function (scorm) {
         this.title = scorm.name || this.title;
@@ -195,7 +195,7 @@ var unsupported_module_ngfactory = __webpack_require__(1485);
 var tag_area_ngfactory = __webpack_require__(1488);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1546);
+var index_ngfactory = __webpack_require__(1547);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(365);

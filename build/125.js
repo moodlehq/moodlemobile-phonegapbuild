@@ -1,6 +1,6 @@
 webpackJsonp([125],{
 
-/***/ 1972:
+/***/ 1971:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,7 +98,7 @@ var planlist_AddonCompetencyPlanListPage = /** @class */ (function () {
     /**
      * Fetches the learning plans and updates the view.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCompetencyPlanListPage.prototype.fetchLearningPlans = function () {
         var _this = this;
@@ -125,7 +125,7 @@ var planlist_AddonCompetencyPlanListPage = /** @class */ (function () {
     /**
      * Refreshes the learning plans.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonCompetencyPlanListPage.prototype.refreshLearningPlans = function (refresher) {
         var _this = this;
@@ -138,7 +138,7 @@ var planlist_AddonCompetencyPlanListPage = /** @class */ (function () {
     /**
      * Opens a learning plan.
      *
-     * @param {number} planId Learning plan to load.
+     * @param planId Learning plan to load.
      */
     AddonCompetencyPlanListPage.prototype.openPlan = function (planId) {
         this.planId = planId;

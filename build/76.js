@@ -1,6 +1,6 @@
 webpackJsonp([76],{
 
-/***/ 2016:
+/***/ 2018:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80,7 +80,7 @@ var phase_AddonModWorkshopPhaseInfoPage = /** @class */ (function () {
     /**
      * Open task.
      *
-     * @param {any} task Task to be done.
+     * @param task Task to be done.
      */
     AddonModWorkshopPhaseInfoPage.prototype.runTask = function (task) {
         if (task.code == 'submit') {

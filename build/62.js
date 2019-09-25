@@ -188,8 +188,8 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
     /**
      * Check if the user can access as guest.
      *
-     * @return {Promise<boolean>} Promise resolved if can access as guest, rejected otherwise. Resolve param indicates if
-     *                            password is required for guest access.
+     * @return Promise resolved if can access as guest, rejected otherwise. Resolve param indicates if
+     *         password is required for guest access.
      */
     CoreCoursesCoursePreviewPage.prototype.canAccessAsGuest = function () {
         if (!this.isGuestEnabled) {
@@ -218,7 +218,7 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
     /**
      * Convenience function to get course. We use this to determine if a user can see the course or not.
      *
-     * @param {boolean} refresh Whether the user is refreshing the data.
+     * @param refresh Whether the user is refreshing the data.
      */
     CoreCoursesCoursePreviewPage.prototype.getCourse = function (refresh) {
         var _this = this;
@@ -345,7 +345,7 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
     /**
      * User clicked in a self enrol button.
      *
-     * @param {number} instanceId The instance ID of the enrolment method.
+     * @param instanceId The instance ID of the enrolment method.
      */
     CoreCoursesCoursePreviewPage.prototype.selfEnrolClicked = function (instanceId) {
         var _this = this;
@@ -358,9 +358,9 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
     /**
      * Self enrol in a course.
      *
-     * @param {string} password Password to use.
-     * @param {number} instanceId The instance ID.
-     * @return {Promise<any>} Promise resolved when self enrolled.
+     * @param password Password to use.
+     * @param instanceId The instance ID.
+     * @return Promise resolved when self enrolled.
      */
     CoreCoursesCoursePreviewPage.prototype.selfEnrolInCourse = function (password, instanceId) {
         var _this = this;
@@ -394,7 +394,7 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] The refresher if this was triggered by a Pull To Refresh.
+     * @param refresher The refresher if this was triggered by a Pull To Refresh.
      */
     CoreCoursesCoursePreviewPage.prototype.refreshData = function (refresher) {
         var _this = this;
@@ -420,7 +420,7 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
     /**
      * Update the course status icon and title.
      *
-     * @param {string} status Status to show.
+     * @param status Status to show.
      */
     CoreCoursesCoursePreviewPage.prototype.updateCourseStatus = function (status) {
         var statusData = this.courseHelper.getCourseStatusIconAndTitleFromStatus(status);
@@ -430,8 +430,8 @@ var course_preview_CoreCoursesCoursePreviewPage = /** @class */ (function () {
     /**
      * Wait for the user to be enrolled in the course.
      *
-     * @param {boolean} first If it's the first call (true) or it's a recursive call (false).
-     * @return {Promise<any>} Promise resolved when enrolled or timeout.
+     * @param first If it's the first call (true) or it's a recursive call (false).
+     * @return Promise resolved when enrolled or timeout.
      */
     CoreCoursesCoursePreviewPage.prototype.waitForEnrolled = function (first) {
         var _this = this;

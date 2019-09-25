@@ -1,6 +1,6 @@
 webpackJsonp([33],{
 
-/***/ 2057:
+/***/ 2058:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91,7 +91,7 @@ var index_CoreTagIndexPage = /** @class */ (function () {
     /**
      * Fetch first page of tag index per area.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     CoreTagIndexPage.prototype.fetchData = function () {
         var _this = this;
@@ -125,7 +125,7 @@ var index_CoreTagIndexPage = /** @class */ (function () {
     /**
      * Refresh data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreTagIndexPage.prototype.refreshData = function (refresher) {
         var _this = this;
@@ -138,7 +138,7 @@ var index_CoreTagIndexPage = /** @class */ (function () {
     /**
      * Navigate to an index area.
      *
-     * @param {any} area Area.
+     * @param area Area.
      */
     CoreTagIndexPage.prototype.openArea = function (area) {
         this.selectedAreaId = area.id;

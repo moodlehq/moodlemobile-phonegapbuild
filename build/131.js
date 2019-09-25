@@ -73,7 +73,7 @@ var settings_AddonCalendarSettingsPage = /** @class */ (function () {
     /**
      * Update default time.
      *
-     * @param {number} newTime New time.
+     * @param newTime New time.
      */
     AddonCalendarSettingsPage.prototype.updateDefaultTime = function (newTime) {
         this.calendarProvider.setDefaultNotificationTime(newTime);

@@ -121,9 +121,9 @@ var review_AddonModQuizReviewPage = /** @class */ (function () {
     /**
      * Change the current page. If slot is supplied, try to scroll to that question.
      *
-     * @param {number} page Page to load. -1 means all questions in same page.
-     * @param {boolean} [fromModal] Whether the page was selected using the navigation modal.
-     * @param {number} [slot] Slot of the question to scroll to.
+     * @param page Page to load. -1 means all questions in same page.
+     * @param fromModal Whether the page was selected using the navigation modal.
+     * @param slot Slot of the question to scroll to.
      */
     AddonModQuizReviewPage.prototype.changePage = function (page, fromModal, slot) {
         var _this = this;
@@ -153,7 +153,7 @@ var review_AddonModQuizReviewPage = /** @class */ (function () {
     /**
      * Convenience function to get the quiz data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizReviewPage.prototype.fetchData = function () {
         var _this = this;
@@ -175,8 +175,8 @@ var review_AddonModQuizReviewPage = /** @class */ (function () {
     /**
      * Load a page questions.
      *
-     * @param {number} page The page to load.
-     * @return {Promise<void>} Promise resolved when done.
+     * @param page The page to load.
+     * @return Promise resolved when done.
      */
     AddonModQuizReviewPage.prototype.loadPage = function (page) {
         var _this = this;
@@ -202,7 +202,7 @@ var review_AddonModQuizReviewPage = /** @class */ (function () {
     /**
      * Load data to navigate the questions using the navigation modal.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizReviewPage.prototype.loadNavigation = function () {
         var _this = this;
@@ -219,7 +219,7 @@ var review_AddonModQuizReviewPage = /** @class */ (function () {
     /**
      * Refreshes data.
      *
-     * @param {any} refresher Refresher
+     * @param refresher Refresher
      */
     AddonModQuizReviewPage.prototype.refreshData = function (refresher) {
         var _this = this;
@@ -236,7 +236,7 @@ var review_AddonModQuizReviewPage = /** @class */ (function () {
     /**
      * Scroll to a certain question.
      *
-     * @param {number} slot Slot of the question to scroll to.
+     * @param slot Slot of the question to scroll to.
      */
     AddonModQuizReviewPage.prototype.scrollToQuestion = function (slot) {
         this.domUtils.scrollToElementBySelector(this.content, '#addon-mod_quiz-question-' + slot);
@@ -244,7 +244,7 @@ var review_AddonModQuizReviewPage = /** @class */ (function () {
     /**
      * Calculate review summary data.
      *
-     * @param {any} data Result of getAttemptReview.
+     * @param data Result of getAttemptReview.
      */
     AddonModQuizReviewPage.prototype.setSummaryCalculatedData = function (data) {
         var _this = this;

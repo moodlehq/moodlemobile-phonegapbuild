@@ -187,8 +187,8 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Adds a new message to the message list.
      *
-     * @param {any} message Message to be added.
-     * @param {boolean} [keep=true] If set the keep flag or not.
+     * @param message Message to be added.
+     * @param keep If set the keep flag or not.
      */
     AddonMessagesDiscussionPage.prototype.addMessage = function (message, keep) {
         if (keep === void 0) { keep = true; }
@@ -206,7 +206,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Remove a message if it shouldn't be in the list anymore.
      *
-     * @param {string} hash Hash of the message to be removed.
+     * @param hash Hash of the message to be removed.
      */
     AddonMessagesDiscussionPage.prototype.removeMessage = function (hash) {
         if (this.keepMessageMap[hash]) {
@@ -241,7 +241,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Convenience function to fetch the conversation data.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonMessagesDiscussionPage.prototype.fetchData = function () {
         var _this = this;
@@ -338,7 +338,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Convenience function to fetch messages.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonMessagesDiscussionPage.prototype.fetchMessages = function () {
         var _this = this;
@@ -389,7 +389,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Format and load a list of messages into the view.
      *
-     * @param {any[]} messages Messages to load.
+     * @param messages Messages to load.
      */
     AddonMessagesDiscussionPage.prototype.loadMessages = function (messages) {
         var _this = this;
@@ -433,9 +433,9 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Get the conversation.
      *
-     * @param {number} conversationId Conversation ID.
-     * @param {number} userId User ID.
-     * @return {Promise<boolean>} Promise resolved with a boolean: whether the conversation exists or not.
+     * @param conversationId Conversation ID.
+     * @param userId User ID.
+     * @return Promise resolved with a boolean: whether the conversation exists or not.
      */
     AddonMessagesDiscussionPage.prototype.getConversation = function (conversationId, userId) {
         var _this = this;
@@ -511,9 +511,9 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Get the messages of the conversation. Used if group messaging is supported.
      *
-     * @param {number} pagesToLoad Number of "pages" to load.
-     * @param  {number} [offset=0] Offset for message list.
-     * @return {Promise<any[]>} Promise resolved with the list of messages.
+     * @param pagesToLoad Number of "pages" to load.
+     * @param offset Offset for message list.
+     * @return Promise resolved with the list of messages.
      */
     AddonMessagesDiscussionPage.prototype.getConversationMessages = function (pagesToLoad, offset) {
         var _this = this;
@@ -544,12 +544,12 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Get a discussion. Can load several "pages".
      *
-     * @param  {number}  pagesToLoad          Number of pages to load.
-     * @param  {number}  [lfReceivedUnread=0] Number of unread received messages already fetched, so fetch will be done from this.
-     * @param  {number}  [lfReceivedRead=0]   Number of read received messages already fetched, so fetch will be done from this.
-     * @param  {number}  [lfSentUnread=0]     Number of unread sent messages already fetched, so fetch will be done from this.
-     * @param  {number}  [lfSentRead=0]       Number of read sent messages already fetched, so fetch will be done from this.
-     * @return {Promise<any>}  Resolved when done.
+     * @param pagesToLoad Number of pages to load.
+     * @param lfReceivedUnread Number of unread received messages already fetched, so fetch will be done from this.
+     * @param lfReceivedRead Number of read received messages already fetched, so fetch will be done from this.
+     * @param lfSentUnread Number of unread sent messages already fetched, so fetch will be done from this.
+     * @param lfSentRead Number of read sent messages already fetched, so fetch will be done from this.
+     * @return Resolved when done.
      */
     AddonMessagesDiscussionPage.prototype.getDiscussionMessages = function (pagesToLoad, lfReceivedUnread, lfReceivedRead, lfSentUnread, lfSentRead) {
         var _this = this;
@@ -758,7 +758,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     };
     /**
      * Wait until fetching is false.
-     * @return {Promise<void>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonMessagesDiscussionPage.prototype.waitForFetch = function () {
         var _this = this;
@@ -804,7 +804,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Copy message to clipboard.
      *
-     * @param {any} message Message to be copied.
+     * @param message Message to be copied.
      */
     AddonMessagesDiscussionPage.prototype.copyMessage = function (message) {
         var text = this.textUtils.decodeHTMLEntities(message.smallmessage || message.text || '');
@@ -813,8 +813,8 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Function to delete a message.
      *
-     * @param {any} message  Message object to delete.
-     * @param {number} index Index where the message is to delete it from the view.
+     * @param message Message object to delete.
+     * @param index Index where the message is to delete it from the view.
      */
     AddonMessagesDiscussionPage.prototype.deleteMessage = function (message, index) {
         var _this = this;
@@ -848,8 +848,8 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Function to load previous messages.
      *
-     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
-     * @return {Promise<any>} Resolved when done.
+     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
+     * @return Resolved when done.
      */
     AddonMessagesDiscussionPage.prototype.loadPrevious = function (infiniteComplete) {
         var _this = this;
@@ -938,7 +938,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Sends a message to the server.
      *
-     * @param {string} text Message text.
+     * @param text Message text.
      */
     AddonMessagesDiscussionPage.prototype.sendMessage = function (text) {
         var _this = this;
@@ -1016,9 +1016,9 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
      * Check date should be shown on message list for the current message.
      * If date has changed from previous to current message it should be shown.
      *
-     * @param {any} message       Current message where to show the date.
-     * @param {any} [prevMessage] Previous message where to compare the date with.
-     * @return {boolean}  If date has changed and should be shown.
+     * @param message Current message where to show the date.
+     * @param prevMessage Previous message where to compare the date with.
+     * @return If date has changed and should be shown.
      */
     AddonMessagesDiscussionPage.prototype.showDate = function (message, prevMessage) {
         if (!prevMessage) {
@@ -1032,9 +1032,9 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
      * Check if the user info should be displayed for the current message.
      * User data is only displayed for group conversations if the previous message was from another user.
      *
-     * @param {any} message Current message where to show the user info.
-     * @param {any} [prevMessage] Previous message.
-     * @return {boolean} Whether user data should be shown.
+     * @param message Current message where to show the user info.
+     * @param prevMessage Previous message.
+     * @return Whether user data should be shown.
      */
     AddonMessagesDiscussionPage.prototype.showUserData = function (message, prevMessage) {
         return this.isGroup && message.useridfrom != this.currentUserId && this.members[message.useridfrom] &&
@@ -1043,9 +1043,9 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Check if a css tail should be shown.
      *
-     * @param {any} message Current message where to show the user info.
-     * @param {any} [nextMessage] Next message.
-     * @return {boolean} Whether user data should be shown.
+     * @param message Current message where to show the user info.
+     * @param nextMessage Next message.
+     * @return Whether user data should be shown.
      */
     AddonMessagesDiscussionPage.prototype.showTail = function (message, nextMessage) {
         return !nextMessage || nextMessage.useridfrom != message.useridfrom || nextMessage.showDate;
@@ -1091,7 +1091,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Change the favourite state of the current conversation.
      *
-     * @param {Function} [done] Function to call when done.
+     * @param done Function to call when done.
      */
     AddonMessagesDiscussionPage.prototype.changeFavourite = function (done) {
         var _this = this;
@@ -1116,7 +1116,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Change the mute state of the current conversation.
      *
-     * @param {Function} [done] Function to call when done.
+     * @param done Function to call when done.
      */
     AddonMessagesDiscussionPage.prototype.changeMute = function (done) {
         var _this = this;
@@ -1183,7 +1183,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Displays a confirmation modal to block the user of the individual conversation.
      *
-     * @return {Promise<any>} Promise resolved when user is blocked or dialog is cancelled.
+     * @return Promise resolved when user is blocked or dialog is cancelled.
      */
     AddonMessagesDiscussionPage.prototype.blockUser = function () {
         var _this = this;
@@ -1210,7 +1210,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Delete the conversation.
      *
-     * @param {Function} [done] Function to call when done.
+     * @param done Function to call when done.
      */
     AddonMessagesDiscussionPage.prototype.deleteConversation = function (done) {
         var _this = this;
@@ -1234,7 +1234,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Displays a confirmation modal to unblock the user of the individual conversation.
      *
-     * @return {Promise<any>} Promise resolved when user is unblocked or dialog is cancelled.
+     * @return Promise resolved when user is unblocked or dialog is cancelled.
      */
     AddonMessagesDiscussionPage.prototype.unblockUser = function () {
         var _this = this;
@@ -1261,7 +1261,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Displays a confirmation modal to send a contact request to the other user of the individual conversation.
      *
-     * @return {Promise<any>} Promise resolved when the request is sent or the dialog is cancelled.
+     * @return Promise resolved when the request is sent or the dialog is cancelled.
      */
     AddonMessagesDiscussionPage.prototype.createContactRequest = function () {
         var _this = this;
@@ -1288,7 +1288,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Confirms the contact request of the other user of the individual conversation.
      *
-     * @return {Promise<any>} Promise resolved when the request is confirmed.
+     * @return Promise resolved when the request is confirmed.
      */
     AddonMessagesDiscussionPage.prototype.confirmContactRequest = function () {
         var _this = this;
@@ -1308,7 +1308,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Declines the contact request of the other user of the individual conversation.
      *
-     * @return {Promise<any>} Promise resolved when the request is confirmed.
+     * @return Promise resolved when the request is confirmed.
      */
     AddonMessagesDiscussionPage.prototype.declineContactRequest = function () {
         var _this = this;
@@ -1328,7 +1328,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
     /**
      * Displays a confirmation modal to remove the other user of the conversation from contacts.
      *
-     * @return {Promise<any>} Promise resolved when the request is sent or the dialog is cancelled.
+     * @return Promise resolved when the request is sent or the dialog is cancelled.
      */
     AddonMessagesDiscussionPage.prototype.removeContact = function () {
         var _this = this;

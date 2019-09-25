@@ -147,7 +147,7 @@ var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
      * Initialize the audio drawer. This code has been extracted from MDN's example on MediaStream Recording:
      * https://github.com/mdn/web-dictaphone
      *
-     * @param {MediaStream} stream Stream returned by getUserMedia.
+     * @param stream Stream returned by getUserMedia.
      */
     CoreEmulatorCaptureMediaPage.prototype.initAudioDrawer = function (stream) {
         var skip = true, running = false;
@@ -277,7 +277,7 @@ var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
     /**
      * Close the modal, returning some data (success).
      *
-     * @param {any} data Data to return.
+     * @param data Data to return.
      */
     CoreEmulatorCaptureMediaPage.prototype.dismissWithData = function (data) {
         this.viewCtrl.dismiss(data, 'success');
@@ -285,9 +285,9 @@ var capture_media_CoreEmulatorCaptureMediaPage = /** @class */ (function () {
     /**
      * Close the modal, returning an error.
      *
-     * @param {number} code Error code. Will not be used if it's a Camera capture.
-     * @param {string} message Error message.
-     * @param {string} [cameraMessage] A specific message to use if it's a Camera capture. If not set, message will be used.
+     * @param code Error code. Will not be used if it's a Camera capture.
+     * @param message Error message.
+     * @param cameraMessage A specific message to use if it's a Camera capture. If not set, message will be used.
      */
     CoreEmulatorCaptureMediaPage.prototype.dismissWithError = function (code, message, cameraMessage) {
         var isCamera = this.isImage && !this.isCaptureImage, error = isCamera ? (cameraMessage || message) : { code: code, message: message };

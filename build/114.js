@@ -105,8 +105,8 @@ var sessions_AddonModChatSessionsPage = /** @class */ (function () {
     /**
      * Fetch chat sessions.
      *
-     * @param {number} [showLoading] Display a loading modal.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param showLoading Display a loading modal.
+     * @return Promise resolved when done.
      */
     AddonModChatSessionsPage.prototype.fetchSessions = function (showLoading) {
         var _this = this;
@@ -150,7 +150,7 @@ var sessions_AddonModChatSessionsPage = /** @class */ (function () {
     /**
      * Refresh chat sessions.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModChatSessionsPage.prototype.refreshSessions = function (refresher) {
         var _this = this;
@@ -167,7 +167,7 @@ var sessions_AddonModChatSessionsPage = /** @class */ (function () {
     /**
      * Navigate to a session.
      *
-     * @param {any} session Chat session.
+     * @param session Chat session.
      */
     AddonModChatSessionsPage.prototype.openSession = function (session) {
         this.selectedSessionStart = session.sessionstart;
@@ -184,8 +184,8 @@ var sessions_AddonModChatSessionsPage = /** @class */ (function () {
     /**
      * Show more session users.
      *
-     * @param {any} session Chat session.
-     * @param {Event} $event The event.
+     * @param session Chat session.
+     * @param $event The event.
      */
     AddonModChatSessionsPage.prototype.showMoreUsers = function (session, $event) {
         session.sessionusers = session.allsessionusers;

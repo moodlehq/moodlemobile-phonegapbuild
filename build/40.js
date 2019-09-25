@@ -1,6 +1,6 @@
 webpackJsonp([40],{
 
-/***/ 2049:
+/***/ 2050:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94,7 +94,7 @@ var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
     /**
      * Convenience function to calculate each site's usage, and the total usage.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     CoreSettingsSpaceUsagePage.prototype.calculateSizeUsage = function () {
         var _this = this;
@@ -131,7 +131,7 @@ var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
     /**
      * Convenience function to calculate space usage.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     CoreSettingsSpaceUsagePage.prototype.fetchData = function () {
         var _this = this;
@@ -143,7 +143,7 @@ var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreSettingsSpaceUsagePage.prototype.refreshData = function (refresher) {
         this.fetchData().finally(function () {
@@ -153,8 +153,8 @@ var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
     /**
      * Convenience function to update site size, along with total usage.
      *
-     * @param {any} site Site object with space usage.
-     * @param {number} newUsage New space usage of the site in bytes.
+     * @param site Site object with space usage.
+     * @param newUsage New space usage of the site in bytes.
      */
     CoreSettingsSpaceUsagePage.prototype.updateSiteUsage = function (site, newUsage) {
         var oldUsage = site.spaceUsage;
@@ -164,8 +164,8 @@ var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
     /**
      * Calculate the number of rows to be deleted on a site.
      *
-     * @param  {any}             site Site object.
-     * @return {Promise<number>}      If there are rows to delete or not.
+     * @param site Site object.
+     * @return If there are rows to delete or not.
      */
     CoreSettingsSpaceUsagePage.prototype.calcSiteClearRows = function (site) {
         var clearTables = this.sitesProvider.getSiteTableSchemasToClear();
@@ -182,7 +182,7 @@ var space_usage_CoreSettingsSpaceUsagePage = /** @class */ (function () {
     /**
      * Deletes files of a site and the tables that can be cleared.
      *
-     * @param {any} siteData Site object with space usage.
+     * @param siteData Site object with space usage.
      */
     CoreSettingsSpaceUsagePage.prototype.deleteSiteStorage = function (siteData) {
         var _this = this;

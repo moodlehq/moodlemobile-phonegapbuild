@@ -1,6 +1,6 @@
 webpackJsonp([14],{
 
-/***/ 2071:
+/***/ 2072:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -183,9 +183,9 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
     /**
      * Fetch the entry data.
      *
-     * @param  {boolean} [refresh] Whether to refresh the current data or not.
-     * @param  {boolean} [isPtr] Whether is a pull to refresh action.
-     * @return {Promise<any>} Resolved when done.
+     * @param refresh Whether to refresh the current data or not.
+     * @param isPtr Whether is a pull to refresh action.
+     * @return Resolved when done.
      */
     AddonModDataEntryPage.prototype.fetchEntryData = function (refresh, isPtr) {
         var _this = this;
@@ -236,8 +236,8 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
     /**
      * Go to selected entry without changing state.
      *
-     * @param  {number} offset Entry offset.
-     * @return {Promise<any>} Resolved when done.
+     * @param offset Entry offset.
+     * @return Resolved when done.
      */
     AddonModDataEntryPage.prototype.gotoEntry = function (offset) {
         this.offset = offset;
@@ -249,8 +249,8 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
     /**
      * Refresh all the data.
      *
-     * @param  {boolean} [isPtr] Whether is a pull to refresh action.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param isPtr Whether is a pull to refresh action.
+     * @return Promise resolved when done.
      */
     AddonModDataEntryPage.prototype.refreshAllData = function (isPtr) {
         var _this = this;
@@ -274,8 +274,8 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @return Promise resolved when done.
      */
     AddonModDataEntryPage.prototype.refreshDatabase = function (refresher) {
         if (this.entryLoaded) {
@@ -287,8 +287,8 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
     /**
      * Set group to see the database.
      *
-     * @param  {number}       groupId Group identifier to set.
-     * @return {Promise<any>}         Resolved when done.
+     * @param groupId Group identifier to set.
+     * @return Resolved when done.
      */
     AddonModDataEntryPage.prototype.setGroup = function (groupId) {
         this.selectedGroup = groupId;
@@ -301,7 +301,7 @@ var entry_AddonModDataEntryPage = /** @class */ (function () {
     /**
      * Convenience function to fetch the entry and set next/previous entries.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModDataEntryPage.prototype.setEntryFromOffset = function () {
         var _this = this;

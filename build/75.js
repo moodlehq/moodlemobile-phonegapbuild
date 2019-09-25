@@ -1,6 +1,6 @@
 webpackJsonp([75],{
 
-/***/ 2035:
+/***/ 2019:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68,7 +68,7 @@ var add_AddonNotesAddPage = /** @class */ (function () {
     /**
      * Send the note or store it offline.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     AddonNotesAddPage.prototype.addNote = function (e) {
         var _this = this;

@@ -165,7 +165,7 @@ var dashboard_CoreCoursesDashboardPage = /** @class */ (function () {
     /**
      * Convenience function to fetch the dashboard data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     CoreCoursesDashboardPage.prototype.loadDashboardContent = function () {
         var _this = this;
@@ -196,7 +196,7 @@ var dashboard_CoreCoursesDashboardPage = /** @class */ (function () {
     /**
      * Refresh the dashboard data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreCoursesDashboardPage.prototype.refreshDashboard = function (refresher) {
         var _this = this;
@@ -217,7 +217,7 @@ var dashboard_CoreCoursesDashboardPage = /** @class */ (function () {
     /**
      * Refresh the dashboard data and My Courses.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreCoursesDashboardPage.prototype.refreshMyCourses = function (refresher) {
         var _this = this;
@@ -244,7 +244,7 @@ var dashboard_CoreCoursesDashboardPage = /** @class */ (function () {
     /**
      * Convenience function to switch download enabled.
      *
-     * @param {boolean} enable If enable or disable.
+     * @param enable If enable or disable.
      */
     CoreCoursesDashboardPage.prototype.switchDownload = function (enable) {
         this.downloadEnabled = (this.downloadCourseEnabled || this.downloadCoursesEnabled) && enable;

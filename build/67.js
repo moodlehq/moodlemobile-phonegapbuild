@@ -1,6 +1,6 @@
 webpackJsonp([67],{
 
-/***/ 2022:
+/***/ 2024:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -125,7 +125,7 @@ var choose_site_CoreContentLinksChooseSitePage = /** @class */ (function () {
     /**
      * Perform the action on a certain site.
      *
-     * @param {string} siteId Site ID.
+     * @param siteId Site ID.
      */
     CoreContentLinksChooseSitePage.prototype.siteClicked = function (siteId) {
         if (this.isRootURL) {

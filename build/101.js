@@ -1,6 +1,6 @@
 webpackJsonp([101],{
 
-/***/ 1996:
+/***/ 1997:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65,7 +65,7 @@ var sort_order_selector_AddonModForumSortOrderSelectorPage = /** @class */ (func
     /**
      * Select a sort order.
      *
-     * @param {any} sortOrder Selected sort order.
+     * @param sortOrder Selected sort order.
      */
     AddonModForumSortOrderSelectorPage.prototype.selectSortOrder = function (sortOrder) {
         this.viewCtrl.dismiss(sortOrder);

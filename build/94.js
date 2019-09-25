@@ -1,6 +1,6 @@
 webpackJsonp([94],{
 
-/***/ 2003:
+/***/ 2004:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -47,8 +47,8 @@ var password_modal_AddonModLessonPasswordModalPage = /** @class */ (function () 
     /**
      * Send the password back.
      *
-     * @param {Event} e Event.
-     * @param {HTMLInputElement} password The input element.
+     * @param e Event.
+     * @param password The input element.
      */
     AddonModLessonPasswordModalPage.prototype.submitPassword = function (e, password) {
         e.preventDefault();

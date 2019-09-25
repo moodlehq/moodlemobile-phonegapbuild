@@ -55,7 +55,7 @@ var toc_AddonModBookTocPage = /** @class */ (function () {
     /**
      * Function called when a course is clicked.
      *
-     * @param {string} id ID of the clicked chapter.
+     * @param id ID of the clicked chapter.
      */
     AddonModBookTocPage.prototype.loadChapter = function (id) {
         this.viewCtrl.dismiss(id);

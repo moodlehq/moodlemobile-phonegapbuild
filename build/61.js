@@ -1,6 +1,6 @@
 webpackJsonp([61],{
 
-/***/ 2030:
+/***/ 2032:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,8 +53,8 @@ var self_enrol_password_CoreCoursesSelfEnrolPasswordPage = /** @class */ (functi
     /**
      * Submit password.
      *
-     * @param {Event} e Event.
-     * @param {string} password Password to submit.
+     * @param e Event.
+     * @param password Password to submit.
      */
     CoreCoursesSelfEnrolPasswordPage.prototype.submitPassword = function (e, password) {
         e.preventDefault();

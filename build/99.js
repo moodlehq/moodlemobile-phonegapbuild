@@ -1,6 +1,6 @@
 webpackJsonp([99],{
 
-/***/ 1998:
+/***/ 1999:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var index_AddonModGlossaryIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the glossary instance.
      *
-     * @param {any} glossary Glossary instance.
+     * @param glossary Glossary instance.
      */
     AddonModGlossaryIndexPage.prototype.updateData = function (glossary) {
         this.title = glossary.name || this.title;

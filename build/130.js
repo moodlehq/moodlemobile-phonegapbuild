@@ -95,7 +95,7 @@ var competencies_AddonCompetencyCompetenciesPage = /** @class */ (function () {
     /**
      * Fetches the competencies and updates the view.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCompetencyCompetenciesPage.prototype.fetchCompetencies = function () {
         var _this = this;
@@ -128,7 +128,7 @@ var competencies_AddonCompetencyCompetenciesPage = /** @class */ (function () {
     /**
      * Opens a competency.
      *
-     * @param {number} competencyId
+     * @param competencyId
      */
     AddonCompetencyCompetenciesPage.prototype.openCompetency = function (competencyId) {
         this.competencyId = competencyId;
@@ -144,7 +144,7 @@ var competencies_AddonCompetencyCompetenciesPage = /** @class */ (function () {
     /**
      * Refreshes the competencies.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonCompetencyCompetenciesPage.prototype.refreshCompetencies = function (refresher) {
         var _this = this;

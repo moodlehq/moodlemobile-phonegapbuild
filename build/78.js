@@ -150,7 +150,7 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModWorkshopEditSubmissionPage.prototype.ionViewCanLeave = function () {
         var _this = this;
@@ -176,7 +176,7 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
     /**
      * Fetch the submission data.
      *
-     * @return {Promise<void>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopEditSubmissionPage.prototype.fetchSubmissionData = function () {
         var _this = this;
@@ -257,7 +257,7 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
     /**
      * Get the form input data.
      *
-     * @return {any} Object with all the info.
+     * @return Object with all the info.
      */
     AddonModWorkshopEditSubmissionPage.prototype.getInputData = function () {
         var submissionId = this.submission.id || 'newsub';
@@ -277,7 +277,7 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
     /**
      * Check if data has changed.
      *
-     * @return {boolean} True if changed or false if not.
+     * @return True if changed or false if not.
      */
     AddonModWorkshopEditSubmissionPage.prototype.hasDataChanged = function () {
         if (!this.loaded) {
@@ -299,7 +299,7 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
     /**
      * Pull to refresh.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModWorkshopEditSubmissionPage.prototype.refreshSubmission = function (refresher) {
         var _this = this;
@@ -336,7 +336,7 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
     /**
      * Send submission and save.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonModWorkshopEditSubmissionPage.prototype.saveSubmission = function () {
         var _this = this;

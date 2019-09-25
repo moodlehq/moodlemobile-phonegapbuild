@@ -207,7 +207,7 @@ var menu_CoreMainMenuPage = /** @class */ (function () {
     /**
      * Handle a redirect.
      *
-     * @param {any} data Data received.
+     * @param data Data received.
      */
     CoreMainMenuPage.prototype.handleRedirect = function (data) {
         var _this = this;

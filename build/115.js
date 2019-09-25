@@ -1,6 +1,6 @@
 webpackJsonp([115],{
 
-/***/ 1984:
+/***/ 1985:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84,7 +84,7 @@ var session_messages_AddonModChatSessionMessagesPage = /** @class */ (function (
     /**
      * Fetch session messages.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModChatSessionMessagesPage.prototype.fetchMessages = function () {
         var _this = this;
@@ -102,7 +102,7 @@ var session_messages_AddonModChatSessionMessagesPage = /** @class */ (function (
     /**
      * Refresh session messages.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModChatSessionMessagesPage.prototype.refreshMessages = function (refresher) {
         var _this = this;
@@ -115,9 +115,9 @@ var session_messages_AddonModChatSessionMessagesPage = /** @class */ (function (
     /**
      * Check if the date should be displayed between messages (when the day changes at midnight for example).
      *
-     * @param  {any} message     New message object.
-     * @param  {any} prevMessage Previous message object.
-     * @return {boolean} True if messages are from diferent days, false othetwise.
+     * @param message New message object.
+     * @param prevMessage Previous message object.
+     * @return True if messages are from diferent days, false othetwise.
      */
     AddonModChatSessionMessagesPage.prototype.showDate = function (message, prevMessage) {
         if (!prevMessage) {

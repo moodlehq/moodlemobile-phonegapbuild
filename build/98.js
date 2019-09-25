@@ -1,6 +1,6 @@
 webpackJsonp([98],{
 
-/***/ 1999:
+/***/ 2000:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var index_AddonModImscpIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the imscp instance.
      *
-     * @param {any} imscp Imscp instance.
+     * @param imscp Imscp instance.
      */
     AddonModImscpIndexPage.prototype.updateData = function (imscp) {
         this.title = imscp.name || this.title;

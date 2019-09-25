@@ -104,7 +104,7 @@ var issued_badge_AddonBadgesIssuedBadgePage = /** @class */ (function () {
     /**
      * Fetch the issued badge required for the view.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonBadgesIssuedBadgePage.prototype.fetchIssuedBadge = function () {
         var _this = this;
@@ -136,7 +136,7 @@ var issued_badge_AddonBadgesIssuedBadgePage = /** @class */ (function () {
     /**
      * Refresh the badges.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonBadgesIssuedBadgePage.prototype.refreshBadges = function (refresher) {
         var _this = this;

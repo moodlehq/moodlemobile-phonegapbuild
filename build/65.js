@@ -1,6 +1,6 @@
 webpackJsonp([65],{
 
-/***/ 2024:
+/***/ 2026:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93,7 +93,7 @@ var section_selector_CoreCourseSectionSelectorPage = /** @class */ (function () 
     /**
      * Select a section.
      *
-     * @param {any} section Selected section object.
+     * @param section Selected section object.
      */
     CoreCourseSectionSelectorPage.prototype.selectSection = function (section) {
         if (section.uservisible !== false) {

@@ -1,6 +1,6 @@
 webpackJsonp([12],{
 
-/***/ 1997:
+/***/ 1998:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -99,8 +99,8 @@ var entry_AddonModGlossaryEntryPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @return Promise resolved when done.
      */
     AddonModGlossaryEntryPage.prototype.doRefresh = function (refresher) {
         var _this = this;
@@ -115,8 +115,8 @@ var entry_AddonModGlossaryEntryPage = /** @class */ (function () {
     /**
      * Convenience function to get the glossary entry.
      *
-     * @param {boolean} [refresh] Whether we're refreshing data.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh Whether we're refreshing data.
+     * @return Promise resolved when done.
      */
     AddonModGlossaryEntryPage.prototype.fetchEntry = function (refresh) {
         var _this = this;

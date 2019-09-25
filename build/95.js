@@ -1,6 +1,6 @@
 webpackJsonp([95],{
 
-/***/ 2002:
+/***/ 2003:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -60,7 +60,7 @@ var menu_modal_AddonModLessonMenuModalPage = /** @class */ (function () {
     /**
      * Load a certain page.
      *
-     * @param {number} pageId The page ID to load.
+     * @param pageId The page ID to load.
      */
     AddonModLessonMenuModalPage.prototype.loadPage = function (pageId) {
         this.pageInstance.changePage && this.pageInstance.changePage(pageId);

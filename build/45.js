@@ -1,6 +1,6 @@
 webpackJsonp([45],{
 
-/***/ 2044:
+/***/ 2045:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -129,7 +129,7 @@ var more_CoreMainMenuMorePage = /** @class */ (function () {
     /**
      * Open a handler.
      *
-     * @param {CoreMainMenuHandlerData} handler Handler to open.
+     * @param handler Handler to open.
      */
     CoreMainMenuMorePage.prototype.openHandler = function (handler) {
         this.navCtrl.push(handler.page, handler.pageParams);
@@ -137,7 +137,7 @@ var more_CoreMainMenuMorePage = /** @class */ (function () {
     /**
      * Open an embedded custom item.
      *
-     * @param {CoreMainMenuCustomItem} item Item to open.
+     * @param item Item to open.
      */
     CoreMainMenuMorePage.prototype.openItem = function (item) {
         this.navCtrl.push('CoreViewerIframePage', { title: item.label, url: item.url });

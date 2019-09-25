@@ -1,6 +1,6 @@
 webpackJsonp([38],{
 
-/***/ 2051:
+/***/ 2052:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96,7 +96,7 @@ var choose_site_CoreSharedFilesChooseSitePage = /** @class */ (function () {
     /**
      * Store the file in a certain site.
      *
-     * @param {string} siteId Site ID.
+     * @param siteId Site ID.
      */
     CoreSharedFilesChooseSitePage.prototype.storeInSite = function (siteId) {
         var _this = this;

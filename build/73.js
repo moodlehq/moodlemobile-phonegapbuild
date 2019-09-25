@@ -108,8 +108,8 @@ var actions_AddonNotificationsActionsComponent = /** @class */ (function () {
     /**
      * Default action. Open in browser.
      *
-     * @param {string} siteId Site ID to use.
-     * @param {NavController} [navCtrl] NavController.
+     * @param siteId Site ID to use.
+     * @param navCtrl NavController.
      */
     AddonNotificationsActionsComponent.prototype.defaultAction = function (siteId, navCtrl) {
         var url = (this.data && this.data.appurl) || this.contextUrl;
@@ -289,8 +289,8 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
     /**
      * Convenience function to get notifications. Gets unread notifications first.
      *
-     * @param {boolean} refreh Whether we're refreshing data.
-     * @return {Promise<any>} Resolved when done.
+     * @param refreh Whether we're refreshing data.
+     * @return Resolved when done.
      */
     AddonNotificationsListPage.prototype.fetchNotifications = function (refresh) {
         var _this = this;
@@ -331,7 +331,7 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
     /**
      * Mark notifications as read.
      *
-     * @param {any[]} notifications Array of notification objects.
+     * @param notifications Array of notification objects.
      */
     AddonNotificationsListPage.prototype.markNotificationsAsRead = function (notifications) {
         var _this = this;
@@ -372,7 +372,7 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
     /**
      * Refresh notifications.
      *
-     * @param {any} [refresher] Refresher.
+     * @param refresher Refresher.
      * @return Promise<any> Promise resolved when done.
      */
     AddonNotificationsListPage.prototype.refreshNotifications = function (refresher) {
@@ -388,7 +388,7 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
     /**
      * Load more results.
      *
-     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
+     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
      */
     AddonNotificationsListPage.prototype.loadMoreNotifications = function (infiniteComplete) {
         this.fetchNotifications().finally(function () {
@@ -398,7 +398,7 @@ var list_AddonNotificationsListPage = /** @class */ (function () {
     /**
      * Formats the text of a notification.
      *
-     * @param {any} notification The notification object.
+     * @param notification The notification object.
      */
     AddonNotificationsListPage.prototype.formatText = function (notification) {
         var text = notification.mobiletext.replace(/-{4,}/ig, '');

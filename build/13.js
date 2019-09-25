@@ -229,7 +229,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModForumDiscussionPage.prototype.ionViewCanLeave = function () {
         var _this = this;
@@ -249,7 +249,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Convenience function to get the forum.
      *
-     * @return {Promise<any>} Promise resolved with the forum.
+     * @return Promise resolved with the forum.
      */
     AddonModForumDiscussionPage.prototype.fetchForum = function () {
         if (this.courseId && this.cmId) {
@@ -266,10 +266,10 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Convenience function to get the posts.
      *
-     * @param  {boolean} [sync]            Whether to try to synchronize the discussion.
-     * @param  {boolean} [showErrors]      Whether to show errors in a modal.
-     * @param  {boolean} [forceMarkAsRead] Whether to mark all posts as read.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether to try to synchronize the discussion.
+     * @param showErrors Whether to show errors in a modal.
+     * @param forceMarkAsRead Whether to mark all posts as read.
+     * @return Promise resolved when done.
      */
     AddonModForumDiscussionPage.prototype.fetchPosts = function (sync, showErrors, forceMarkAsRead) {
         var _this = this;
@@ -430,8 +430,8 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Tries to synchronize the posts discussion.
      *
-     * @param  {boolean} showErrors Whether to show errors in a modal.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param showErrors Whether to show errors in a modal.
+     * @return Promise resolved when done.
      */
     AddonModForumDiscussionPage.prototype.syncDiscussion = function (showErrors) {
         var _this = this;
@@ -465,10 +465,10 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any}       [refresher] Refresher.
-     * @param {Function}  [done] Function to call when done.
-     * @param {boolean}   [showErrors=false] If show errors to the user of hide them.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @param done Function to call when done.
+     * @param showErrors If show errors to the user of hide them.
+     * @return Promise resolved when done.
      */
     AddonModForumDiscussionPage.prototype.doRefresh = function (refresher, done, showErrors) {
         if (showErrors === void 0) { showErrors = false; }
@@ -483,9 +483,9 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Refresh posts.
      *
-     * @param  {boolean} [sync]       Whether to try to synchronize the discussion.
-     * @param  {boolean} [showErrors] Whether to show errors in a modal.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether to try to synchronize the discussion.
+     * @param showErrors Whether to show errors in a modal.
+     * @return Promise resolved when done.
      */
     AddonModForumDiscussionPage.prototype.refreshPosts = function (sync, showErrors) {
         var _this = this;
@@ -507,8 +507,8 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Function to change posts sorting
      *
-     * @param  {SortType} type Sort type.
-     * @return {Promise<any>} Promised resolved when done.
+     * @param type Sort type.
+     * @return Promised resolved when done.
      */
     AddonModForumDiscussionPage.prototype.changeSort = function (type) {
         this.discussionLoaded = false;
@@ -519,7 +519,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Lock or unlock the discussion.
      *
-     * @param {boolean} locked True to lock the discussion, false to unlock.
+     * @param locked True to lock the discussion, false to unlock.
      */
     AddonModForumDiscussionPage.prototype.setLockState = function (locked) {
         var _this = this;
@@ -543,7 +543,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Pin or unpin the discussion.
      *
-     * @param {boolean} pinned True to pin the discussion, false to unpin it.
+     * @param pinned True to pin the discussion, false to unpin it.
      */
     AddonModForumDiscussionPage.prototype.setPinState = function (pinned) {
         var _this = this;
@@ -567,7 +567,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
     /**
      * Star or unstar the discussion.
      *
-     * @param {boolean} starred True to star the discussion, false to unstar it.
+     * @param starred True to star the discussion, false to unstar it.
      */
     AddonModForumDiscussionPage.prototype.toggleFavouriteState = function (starred) {
         var _this = this;

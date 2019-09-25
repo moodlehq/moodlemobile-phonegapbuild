@@ -230,7 +230,7 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
     /**
      * Refresh the user.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreUserProfilePage.prototype.refreshUser = function (refresher) {
         var _this = this;
@@ -260,8 +260,8 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
     /**
      * A handler was clicked.
      *
-     * @param {Event} event Click event.
-     * @param {CoreUserProfileHandlerData} handler Handler that was clicked.
+     * @param event Click event.
+     * @param handler Handler that was clicked.
      */
     CoreUserProfilePage.prototype.handlerClicked = function (event, handler) {
         // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.

@@ -62,7 +62,7 @@ var index_AddonModChoiceIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the choice instance.
      *
-     * @param {any} choice Choice instance.
+     * @param choice Choice instance.
      */
     AddonModChoiceIndexPage.prototype.updateData = function (choice) {
         this.title = choice.name || this.title;

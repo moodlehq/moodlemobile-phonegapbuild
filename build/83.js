@@ -1,6 +1,6 @@
 webpackJsonp([83],{
 
-/***/ 2011:
+/***/ 2013:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -63,7 +63,7 @@ var toc_AddonModScormTocPage = /** @class */ (function () {
     /**
      * Function called when a SCO is clicked.
      *
-     * @param {any} sco Clicked SCO.
+     * @param sco Clicked SCO.
      */
     AddonModScormTocPage.prototype.loadSco = function (sco) {
         if (!sco.prereq || !sco.isvisible || !sco.launch) {

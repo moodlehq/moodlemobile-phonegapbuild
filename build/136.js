@@ -233,9 +233,9 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether it should try to synchronize offline events.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarDayPage.prototype.fetchData = function (sync, showErrors) {
         var _this = this;
@@ -293,7 +293,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Fetch the events for current day.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCalendarDayPage.prototype.fetchEvents = function () {
         var _this = this;
@@ -333,7 +333,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Merge online events with the offline events of that period.
      *
-     * @return {any[]} Merged events.
+     * @return Merged events.
      */
     AddonCalendarDayPage.prototype.mergeEvents = function () {
         var _this = this;
@@ -386,7 +386,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Sort events by timestart.
      *
-     * @param {any[]} events List to sort.
+     * @param events List to sort.
      */
     AddonCalendarDayPage.prototype.sortEvents = function (events) {
         return events.sort(function (a, b) {
@@ -399,10 +399,10 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @param {Function} [done] Function to call when done.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @param done Function to call when done.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarDayPage.prototype.doRefresh = function (refresher, done, showErrors) {
         if (this.loaded) {
@@ -416,10 +416,10 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @param {boolean} [afterChange] Whether the refresh is done after an event has changed or has been synced.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether it should try to synchronize offline events.
+     * @param showErrors Whether to show sync errors to the user.
+     * @param afterChange Whether the refresh is done after an event has changed or has been synced.
+     * @return Promise resolved when done.
      */
     AddonCalendarDayPage.prototype.refreshData = function (sync, showErrors, afterChange) {
         var _this = this;
@@ -439,7 +439,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Load categories to be able to filter events.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCalendarDayPage.prototype.loadCategories = function () {
         var _this = this;
@@ -456,8 +456,8 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Try to synchronize offline events.
      *
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarDayPage.prototype.sync = function (showErrors) {
         var _this = this;
@@ -482,7 +482,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Navigate to a particular event.
      *
-     * @param {number} eventId Event to load.
+     * @param eventId Event to load.
      */
     AddonCalendarDayPage.prototype.gotoEvent = function (eventId) {
         if (eventId < 0) {
@@ -498,7 +498,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Show the context menu.
      *
-     * @param {MouseEvent} event Event.
+     * @param event Event.
      */
     AddonCalendarDayPage.prototype.openCourseFilter = function (event) {
         var _this = this;
@@ -517,7 +517,7 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Open page to create/edit an event.
      *
-     * @param {number} [eventId] Event ID to edit.
+     * @param eventId Event ID to edit.
      */
     AddonCalendarDayPage.prototype.openEdit = function (eventId) {
         var params = {};
@@ -621,9 +621,9 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     /**
      * Find an event and mark it as deleted.
      *
-     * @param {number} eventId Event ID.
-     * @param {boolean} deleted Whether to mark it as deleted or not.
-     * @return {boolean} Whether the event was found.
+     * @param eventId Event ID.
+     * @param deleted Whether to mark it as deleted or not.
+     * @return Whether the event was found.
      */
     AddonCalendarDayPage.prototype.markAsDeleted = function (eventId, deleted) {
         var event = this.onlineEvents.find(function (event) {
@@ -637,8 +637,8 @@ var day_AddonCalendarDayPage = /** @class */ (function () {
     };
     /**
      * Returns if the event is in the past or not.
-     * @param  {any}     event Event object.
-     * @return {boolean}       True if it's in the past.
+     * @param event Event object.
+     * @return True if it's in the past.
      */
     AddonCalendarDayPage.prototype.isEventPast = function (event) {
         return (event.timestart + event.timeduration) < this.currentTime;

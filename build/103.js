@@ -1,6 +1,6 @@
 webpackJsonp([103],{
 
-/***/ 1995:
+/***/ 1996:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var index_AddonModForumIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the forum instance.
      *
-     * @param {any} forum Forum instance.
+     * @param forum Forum instance.
      */
     AddonModForumIndexPage.prototype.updateData = function (forum) {
         this.title = forum.name || this.title;

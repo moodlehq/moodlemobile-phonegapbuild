@@ -1,6 +1,6 @@
 webpackJsonp([41],{
 
-/***/ 2048:
+/***/ 2049:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72,8 +72,8 @@ var list_CoreSettingsListPage = /** @class */ (function () {
     /**
      * Open a handler.
      *
-     * @param {string} page Page to open.
-     * @param {any} params Params of the page to open.
+     * @param page Page to open.
+     * @param params Params of the page to open.
      */
     CoreSettingsListPage.prototype.openHandler = function (page, params) {
         this.selectedPage = page;

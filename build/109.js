@@ -1,6 +1,6 @@
 webpackJsonp([109],{
 
-/***/ 2072:
+/***/ 1990:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -124,7 +124,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
     /**
      * Displays Advanced Search Fields.
      *
-     * @return {string}         Generated HTML.
+     * @return Generated HTML.
      */
     AddonModDataSearchPage.prototype.renderAdvancedSearchFields = function () {
         this.jsData = {
@@ -163,8 +163,8 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
     /**
      * Retrieve the entered data in search in a form.
      *
-     * @param {any} searchedData Array with the entered form values.
-     * @return {any[]}          Array with the answers.
+     * @param searchedData Array with the entered form values.
+     * @return Array with the answers.
      */
     AddonModDataSearchPage.prototype.getSearchDataFromForm = function (searchedData) {
         var _this = this;
@@ -200,7 +200,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
     /**
      * Close modal.
      *
-     * @param {any} [data] Data to return to the page.
+     * @param data Data to return to the page.
      */
     AddonModDataSearchPage.prototype.closeModal = function (data) {
         this.viewCtrl.dismiss(data);
@@ -208,7 +208,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
     /**
      * Toggles between advanced to normal search.
      *
-     * @param {boolean} advanced True for advanced, false for basic.
+     * @param advanced True for advanced, false for basic.
      */
     AddonModDataSearchPage.prototype.changeAdvanced = function (advanced) {
         this.search.searchingAdvanced = advanced;
@@ -216,7 +216,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
     /**
      * Done editing.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     AddonModDataSearchPage.prototype.searchEntries = function (e) {
         e.preventDefault();

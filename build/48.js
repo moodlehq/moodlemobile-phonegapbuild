@@ -1,6 +1,6 @@
 webpackJsonp([48],{
 
-/***/ 2042:
+/***/ 2043:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -95,8 +95,8 @@ var site_CoreLoginSitePage = /** @class */ (function () {
     /**
      * Try to connect to a site.
      *
-     * @param {Event} e Event.
-     * @param {string} url The URL to connect to.
+     * @param e Event.
+     * @param url The URL to connect to.
      */
     CoreLoginSitePage.prototype.connect = function (e, url) {
         var _this = this;
@@ -155,7 +155,7 @@ var site_CoreLoginSitePage = /** @class */ (function () {
     /**
      * The filter has changed.
      *
-     * @param {any} Received Event.
+     * @param Received Event.
      */
     CoreLoginSitePage.prototype.filterChanged = function (event) {
         var newValue = event.target.value && event.target.value.trim().toLowerCase();
@@ -178,8 +178,8 @@ var site_CoreLoginSitePage = /** @class */ (function () {
     /**
      * Show an error that aims people to solve the issue.
      *
-     * @param {string} url The URL the user was trying to connect to.
-     * @param {any} error Error to display.
+     * @param url The URL the user was trying to connect to.
+     * @param error Error to display.
      */
     CoreLoginSitePage.prototype.showLoginIssue = function (url, error) {
         var modal = this.modalCtrl.create('CoreLoginSiteErrorPage', {

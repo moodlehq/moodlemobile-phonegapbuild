@@ -1,6 +1,6 @@
 webpackJsonp([34],{
 
-/***/ 2056:
+/***/ 2057:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106,8 +106,8 @@ var index_area_CoreTagIndexAreaPage = /** @class */ (function () {
     /**
      * Fetch next page of the tag index area.
      *
-     * @param {boolean} [refresh=false] Whether to refresh the data or fetch a new page.
-     * @return {Promise<any>} Resolved when done.
+     * @param refresh Whether to refresh the data or fetch a new page.
+     * @return Resolved when done.
      */
     CoreTagIndexAreaPage.prototype.fetchData = function (refresh) {
         var _this = this;
@@ -142,8 +142,8 @@ var index_area_CoreTagIndexAreaPage = /** @class */ (function () {
     /**
      * Load more items.
      *
-     * @param {any} infiniteComplete Infinite scroll complete function.
-     * @return {Promise<any>} Resolved when done.
+     * @param infiniteComplete Infinite scroll complete function.
+     * @return Resolved when done.
      */
     CoreTagIndexAreaPage.prototype.loadMore = function (infiniteComplete) {
         return this.fetchData().finally(function () {
@@ -153,7 +153,7 @@ var index_area_CoreTagIndexAreaPage = /** @class */ (function () {
     /**
      * Refresh data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreTagIndexAreaPage.prototype.refreshData = function (refresher) {
         var _this = this;

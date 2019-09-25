@@ -1,6 +1,6 @@
 webpackJsonp([44],{
 
-/***/ 2045:
+/***/ 2046:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79,7 +79,7 @@ var ratings_CoreRatingRatingsPage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     CoreRatingRatingsPage.prototype.fetchData = function () {
         var _this = this;
@@ -92,7 +92,7 @@ var ratings_CoreRatingRatingsPage = /** @class */ (function () {
     /**
      * Refresh data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreRatingRatingsPage.prototype.refreshRatings = function (refresher) {
         var _this = this;

@@ -1,6 +1,6 @@
 webpackJsonp([133],{
 
-/***/ 2064:
+/***/ 2065:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -165,8 +165,8 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * Fetch contacts.
      *
-     * @param {boolean} [refresh=false] True if we are refreshing events.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh True if we are refreshing events.
+     * @return Promise resolved when done.
      */
     AddonCalendarCalendarComponent.prototype.fetchData = function (refresh) {
         var _this = this;
@@ -209,7 +209,7 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * Fetch the events for current month.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCalendarCalendarComponent.prototype.fetchEvents = function () {
         var _this = this;
@@ -255,7 +255,7 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * Load categories to be able to filter events.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCalendarCalendarComponent.prototype.loadCategories = function () {
         var _this = this;
@@ -298,8 +298,8 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * Refresh events.
      *
-     * @param {boolean} [afterChange] Whether the refresh is done after an event has changed or has been synced.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param afterChange Whether the refresh is done after an event has changed or has been synced.
+     * @return Promise resolved when done.
      */
     AddonCalendarCalendarComponent.prototype.refreshData = function (afterChange) {
         var _this = this;
@@ -346,8 +346,8 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * An event was clicked.
      *
-     * @param {any} calendarEvent Calendar event..
-     * @param {MouseEvent} event Mouse event.
+     * @param calendarEvent Calendar event..
+     * @param event Mouse event.
      */
     AddonCalendarCalendarComponent.prototype.eventClicked = function (calendarEvent, event) {
         this.onEventClicked.emit(calendarEvent.id);
@@ -356,7 +356,7 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * A day was clicked.
      *
-     * @param {number} day Day.
+     * @param day Day.
      */
     AddonCalendarCalendarComponent.prototype.dayClicked = function (day) {
         this.onDayClicked.emit({ day: day, month: this.month, year: this.year });
@@ -450,7 +450,7 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * Sort events by timestart.
      *
-     * @param {any[]} events List to sort.
+     * @param events List to sort.
      */
     AddonCalendarCalendarComponent.prototype.sortEvents = function (events) {
         return events.sort(function (a, b) {
@@ -463,7 +463,7 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     /**
      * Undelete a certain event.
      *
-     * @param {number} eventId Event ID.
+     * @param eventId Event ID.
      */
     AddonCalendarCalendarComponent.prototype.undeleteEvent = function (eventId) {
         if (!this.weeks) {
@@ -482,8 +482,8 @@ var calendar_AddonCalendarCalendarComponent = /** @class */ (function () {
     };
     /**
      * Returns if the event is in the past or not.
-     * @param  {any}     event Event object.
-     * @return {boolean}       True if it's in the past.
+     * @param event Event object.
+     * @return True if it's in the past.
      */
     AddonCalendarCalendarComponent.prototype.isEventPast = function (event) {
         return (event.timestart + event.timeduration) < this.currentTime;
@@ -641,8 +641,8 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * Fetch data.
      *
-     * @param {boolean} [refresh=false] True if we are refreshing events.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh True if we are refreshing events.
+     * @return Promise resolved when done.
      */
     AddonCalendarUpcomingEventsComponent.prototype.fetchData = function (refresh) {
         var _this = this;
@@ -680,7 +680,7 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * Fetch upcoming events.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCalendarUpcomingEventsComponent.prototype.fetchEvents = function () {
         var _this = this;
@@ -707,7 +707,7 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * Load categories to be able to filter events.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCalendarUpcomingEventsComponent.prototype.loadCategories = function () {
         var _this = this;
@@ -744,8 +744,8 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * Refresh events.
      *
-     * @param {boolean} [afterChange] Whether the refresh is done after an event has changed or has been synced.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param afterChange Whether the refresh is done after an event has changed or has been synced.
+     * @return Promise resolved when done.
      */
     AddonCalendarUpcomingEventsComponent.prototype.refreshData = function (afterChange) {
         var _this = this;
@@ -765,7 +765,7 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * An event was clicked.
      *
-     * @param {any} event Event.
+     * @param event Event.
      */
     AddonCalendarUpcomingEventsComponent.prototype.eventClicked = function (event) {
         this.onEventClicked.emit(event.id);
@@ -773,7 +773,7 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * Merge online events with the offline events of that period.
      *
-     * @return {any[]} Merged events.
+     * @return Merged events.
      */
     AddonCalendarUpcomingEventsComponent.prototype.mergeEvents = function () {
         var _this = this;
@@ -809,7 +809,7 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * Sort events by timestart.
      *
-     * @param {any[]} events List to sort.
+     * @param events List to sort.
      */
     AddonCalendarUpcomingEventsComponent.prototype.sortEvents = function (events) {
         return events.sort(function (a, b) {
@@ -822,7 +822,7 @@ var upcoming_events_AddonCalendarUpcomingEventsComponent = /** @class */ (functi
     /**
      * Undelete a certain event.
      *
-     * @param {number} eventId Event ID.
+     * @param eventId Event ID.
      */
     AddonCalendarUpcomingEventsComponent.prototype.undeleteEvent = function (eventId) {
         var event = this.onlineEvents.find(function (event) {
@@ -1066,9 +1066,9 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether it should try to synchronize offline events.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarIndexPage.prototype.fetchData = function (sync, showErrors) {
         var _this = this;
@@ -1122,10 +1122,10 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @param {Function} [done] Function to call when done.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @param done Function to call when done.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarIndexPage.prototype.doRefresh = function (refresher, done, showErrors) {
         if (this.loaded) {
@@ -1139,10 +1139,10 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @param {boolean} [afterChange] Whether the refresh is done after an event has changed or has been synced.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether it should try to synchronize offline events.
+     * @param showErrors Whether to show sync errors to the user.
+     * @param afterChange Whether the refresh is done after an event has changed or has been synced.
+     * @return Promise resolved when done.
      */
     AddonCalendarIndexPage.prototype.refreshData = function (sync, showErrors, afterChange) {
         var _this = this;
@@ -1163,7 +1163,7 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
     /**
      * Navigate to a particular event.
      *
-     * @param {number} eventId Event to load.
+     * @param eventId Event to load.
      */
     AddonCalendarIndexPage.prototype.gotoEvent = function (eventId) {
         if (eventId < 0) {
@@ -1179,7 +1179,7 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
     /**
      * View a certain day.
      *
-     * @param {any} data Data with the year, month and day.
+     * @param data Data with the year, month and day.
      */
     AddonCalendarIndexPage.prototype.gotoDay = function (data) {
         var params = {
@@ -1195,7 +1195,7 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
     /**
      * Show the context menu.
      *
-     * @param {MouseEvent} event Event.
+     * @param event Event.
      */
     AddonCalendarIndexPage.prototype.openCourseFilter = function (event) {
         var _this = this;
@@ -1213,7 +1213,7 @@ var index_AddonCalendarIndexPage = /** @class */ (function () {
     /**
      * Open page to create/edit an event.
      *
-     * @param {number} [eventId] Event ID to edit.
+     * @param eventId Event ID to edit.
      */
     AddonCalendarIndexPage.prototype.openEdit = function (eventId) {
         var params = {};

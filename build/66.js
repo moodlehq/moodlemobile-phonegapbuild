@@ -1,6 +1,6 @@
 webpackJsonp([66],{
 
-/***/ 2023:
+/***/ 2025:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -95,7 +95,7 @@ var list_mod_type_CoreCourseListModTypePage = /** @class */ (function () {
     /**
      * Fetches the data.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     CoreCourseListModTypePage.prototype.fetchData = function () {
         var _this = this;
@@ -138,7 +138,7 @@ var list_mod_type_CoreCourseListModTypePage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreCourseListModTypePage.prototype.refreshData = function (refresher) {
         var _this = this;

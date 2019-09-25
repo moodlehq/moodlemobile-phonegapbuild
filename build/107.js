@@ -1,6 +1,6 @@
 webpackJsonp([107],{
 
-/***/ 1991:
+/***/ 1992:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64,7 +64,7 @@ var index_AddonModFeedbackIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the feedback instance.
      *
-     * @param {any} feedback Feedback instance.
+     * @param feedback Feedback instance.
      */
     AddonModFeedbackIndexPage.prototype.updateData = function (feedback) {
         this.title = feedback.name || this.title;

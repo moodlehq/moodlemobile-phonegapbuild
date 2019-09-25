@@ -1,6 +1,6 @@
 webpackJsonp([69],{
 
-/***/ 2021:
+/***/ 2023:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71,7 +71,7 @@ var add_CoreCommentsAddPage = /** @class */ (function () {
     /**
      * Send the comment or store it offline.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     CoreCommentsAddPage.prototype.addComment = function (e) {
         var _this = this;

@@ -158,7 +158,7 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
     /**
      * Convenience function to get wiki page data.
      *
-     * @return {Promise<boolean>} Promise resolved with boolean: whether it was successful.
+     * @return Promise resolved with boolean: whether it was successful.
      */
     AddonModWikiEditPage.prototype.fetchWikiPageData = function () {
         var _this = this;
@@ -263,7 +263,7 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
     /**
      * Navigate to a new offline page.
      *
-     * @param {string} title Page title.
+     * @param title Page title.
      */
     AddonModWikiEditPage.prototype.goToNewOfflinePage = function (title) {
         if (this.courseId && (this.module.id || this.wikiId)) {
@@ -289,8 +289,8 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
     /**
      * Check if we need to navigate to a new state.
      *
-     * @param {string} title Page title.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param title Page title.
+     * @return Promise resolved when done.
      */
     AddonModWikiEditPage.prototype.gotoPage = function (title) {
         var _this = this;
@@ -329,7 +329,7 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
     /**
      * Check if data has changed.
      *
-     * @return {boolean} Whether data has changed.
+     * @return Whether data has changed.
      */
     AddonModWikiEditPage.prototype.hasDataChanged = function () {
         var values = this.pageForm.value;
@@ -338,7 +338,7 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModWikiEditPage.prototype.ionViewCanLeave = function () {
         if (this.forceLeave) {
@@ -362,7 +362,7 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
     /**
      * In case we are NOT editing an offline page, check if the page loaded in previous view is different than this view.
      *
-     * @return {boolean} Whether previous view wiki page is different than current page.
+     * @return Whether previous view wiki page is different than current page.
      */
     AddonModWikiEditPage.prototype.previousViewIsDifferentPageOnline = function () {
         // We cannot precisely detect when the state is the same but this is close to it.
@@ -373,8 +373,8 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
     /**
      * In case we're editing an offline page, check if the page loaded in previous view is different than this view.
      *
-     * @param {string} title The current page title.
-     * @return {boolean} Whether previous view wiki page is different than current page.
+     * @param title The current page title.
+     * @return Whether previous view wiki page is different than current page.
      */
     AddonModWikiEditPage.prototype.previousViewPageIsDifferentOffline = function (title) {
         // We cannot precisely detect when the state is the same but this is close to it.
@@ -487,8 +487,8 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
     /**
      * Fetch module information to redirect when needed.
      *
-     * @param {number} wikiId Wiki ID.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param wikiId Wiki ID.
+     * @return Promise resolved when done.
      */
     AddonModWikiEditPage.prototype.retrieveModuleInfo = function (wikiId) {
         var _this = this;

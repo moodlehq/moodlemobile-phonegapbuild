@@ -74,7 +74,7 @@ var conversation_info_AddonMessagesConversationInfoPage = /** @class */ (functio
     /**
      * Fetch the required data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonMessagesConversationInfoPage.prototype.fetchData = function () {
         var _this = this;
@@ -90,8 +90,8 @@ var conversation_info_AddonMessagesConversationInfoPage = /** @class */ (functio
     /**
      * Get conversation members.
      *
-     * @param {boolean} [loadingMore} Whether we are loading more data or just the first ones.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param loadingMore Whether we are loading more data or just the first ones.
+     * @return Promise resolved when done.
      */
     AddonMessagesConversationInfoPage.prototype.fetchMembers = function (loadingMore) {
         var _this = this;
@@ -110,8 +110,8 @@ var conversation_info_AddonMessagesConversationInfoPage = /** @class */ (functio
     /**
      * Function to load more members.
      *
-     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
-     * @return {Promise<any>} Resolved when done.
+     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
+     * @return Resolved when done.
      */
     AddonMessagesConversationInfoPage.prototype.loadMoreMembers = function (infiniteComplete) {
         var _this = this;
@@ -125,8 +125,8 @@ var conversation_info_AddonMessagesConversationInfoPage = /** @class */ (functio
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @return Promise resolved when done.
      */
     AddonMessagesConversationInfoPage.prototype.refreshData = function (refresher) {
         var _this = this;
@@ -142,7 +142,7 @@ var conversation_info_AddonMessagesConversationInfoPage = /** @class */ (functio
     /**
      * Close modal.
      *
-     * @param {number} [userId] User conversation to load.
+     * @param userId User conversation to load.
      */
     AddonMessagesConversationInfoPage.prototype.closeModal = function (userId) {
         this.viewCtrl.dismiss(userId);

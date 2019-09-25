@@ -127,8 +127,8 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
      * Check if a site uses local_mobile, requires SSO login, etc.
      * This should be used only if a fixed URL is set, otherwise this check is already performed in CoreLoginSitePage.
      *
-     * @param {string} siteUrl Site URL to check.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param siteUrl Site URL to check.
+     * @return Promise resolved when done.
      */
     CoreLoginCredentialsPage.prototype.checkSite = function (siteUrl) {
         var _this = this;
@@ -186,7 +186,7 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
     /**
      * Tries to authenticate the user.
      *
-     * @param {Event} [e] Event.
+     * @param e Event.
      */
     CoreLoginCredentialsPage.prototype.login = function (e) {
         var _this = this;
@@ -247,7 +247,7 @@ var credentials_CoreLoginCredentialsPage = /** @class */ (function () {
     /**
      * An OAuth button was clicked.
      *
-     * @param {any} provider The provider that was clicked.
+     * @param provider The provider that was clicked.
      */
     CoreLoginCredentialsPage.prototype.oauthClicked = function (provider) {
         if (!this.loginHelper.openBrowserForOAuthLogin(this.siteUrl, provider, this.siteConfig.launchurl)) {

@@ -1,6 +1,6 @@
 webpackJsonp([96],{
 
-/***/ 2001:
+/***/ 2002:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -64,7 +64,7 @@ var index_AddonModLessonIndexPage = /** @class */ (function () {
     /**
      * Update some data based on the lesson instance.
      *
-     * @param {any} lesson Lesson instance.
+     * @param lesson Lesson instance.
      */
     AddonModLessonIndexPage.prototype.updateData = function (lesson) {
         this.title = lesson.name || this.title;

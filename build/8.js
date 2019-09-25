@@ -91,12 +91,12 @@ var auto_save_AddonModQuizAutoSave = /** @class */ (function () {
     /**
      * Constructor.
      *
-     * @param {string} formName Name of the form where the answers are stored.
-     * @param {string} buttonSelector Selector to find the button to show the connection error.
-     * @param {CoreLoggerProvider} loggerProvider CoreLoggerProvider instance.
-     * @param {PopoverController} popoverCtrl PopoverController instance.
-     * @param {CoreQuestionHelperProvider} questionHelper CoreQuestionHelperProvider instance.
-     * @param {AddonModQuizProvider} quizProvider AddonModQuizProvider instance.
+     * @param formName Name of the form where the answers are stored.
+     * @param buttonSelector Selector to find the button to show the connection error.
+     * @param loggerProvider CoreLoggerProvider instance.
+     * @param popoverCtrl PopoverController instance.
+     * @param questionHelper CoreQuestionHelperProvider instance.
+     * @param quizProvider AddonModQuizProvider instance.
      */
     function AddonModQuizAutoSave(formName, buttonSelector, loggerProvider, popoverCtrl, questionHelper, quizProvider) {
         var _this = this;
@@ -126,10 +126,10 @@ var auto_save_AddonModQuizAutoSave = /** @class */ (function () {
     /**
      * Check if the answers have changed in a page.
      *
-     * @param {any} quiz Quiz.
-     * @param {any} attempt Attempt.
-     * @param {any} preflightData Preflight data.
-     * @param {boolean} [offline] Whether the quiz is being attempted in offline mode.
+     * @param quiz Quiz.
+     * @param attempt Attempt.
+     * @param preflightData Preflight data.
+     * @param offline Whether the quiz is being attempted in offline mode.
      */
     AddonModQuizAutoSave.prototype.checkChanges = function (quiz, attempt, preflightData, offline) {
         if (this.autoSaveTimeout) {
@@ -159,7 +159,7 @@ var auto_save_AddonModQuizAutoSave = /** @class */ (function () {
     /**
      * Get answers from a form.
      *
-     * @return {any} Answers.
+     * @return Answers.
      */
     AddonModQuizAutoSave.prototype.getAnswers = function () {
         return this.questionHelper.getAnswersFromForm(document.forms[this.formName]);
@@ -175,7 +175,7 @@ var auto_save_AddonModQuizAutoSave = /** @class */ (function () {
      * Returns an observable that will notify when an error happens or stops.
      * It will send true when there's an error, and false when the error has been ammended.
      *
-     * @return {BehaviorSubject<boolean>} Observable.
+     * @return Observable.
      */
     AddonModQuizAutoSave.prototype.onError = function () {
         return this.errorObservable;
@@ -183,10 +183,10 @@ var auto_save_AddonModQuizAutoSave = /** @class */ (function () {
     /**
      * Schedule an auto save process if it's not scheduled already.
      *
-     * @param {any} quiz Quiz.
-     * @param {any} attempt Attempt.
-     * @param {any} preflightData Preflight data.
-     * @param {boolean} [offline] Whether the quiz is being attempted in offline mode.
+     * @param quiz Quiz.
+     * @param attempt Attempt.
+     * @param preflightData Preflight data.
+     * @param offline Whether the quiz is being attempted in offline mode.
      */
     AddonModQuizAutoSave.prototype.setAutoSaveTimer = function (quiz, attempt, preflightData, offline) {
         var _this = this;
@@ -230,10 +230,10 @@ var auto_save_AddonModQuizAutoSave = /** @class */ (function () {
     /**
      * Start a process to periodically check changes in answers.
      *
-     * @param {any} quiz Quiz.
-     * @param {any} attempt Attempt.
-     * @param {any} preflightData Preflight data.
-     * @param {boolean} [offline] Whether the quiz is being attempted in offline mode.
+     * @param quiz Quiz.
+     * @param attempt Attempt.
+     * @param preflightData Preflight data.
+     * @param offline Whether the quiz is being attempted in offline mode.
      */
     AddonModQuizAutoSave.prototype.startCheckChangesProcess = function (quiz, attempt, preflightData, offline) {
         var _this = this;
@@ -368,7 +368,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModQuizPlayerPage.prototype.ionViewCanLeave = function () {
         var _this = this;
@@ -403,7 +403,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * A behaviour button in a question was clicked (Check, Redo, ...).
      *
-     * @param {any} button Clicked button.
+     * @param button Clicked button.
      */
     AddonModQuizPlayerPage.prototype.behaviourButtonClicked = function (button) {
         var _this = this;
@@ -436,9 +436,9 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Change the current page. If slot is supplied, try to scroll to that question.
      *
-     * @param {number} page Page to load. -1 means summary.
-     * @param {boolean} [fromModal] Whether the page was selected using the navigation modal.
-     * @param {number} [slot] Slot of the question to scroll to.
+     * @param page Page to load. -1 means summary.
+     * @param fromModal Whether the page was selected using the navigation modal.
+     * @param slot Slot of the question to scroll to.
      */
     AddonModQuizPlayerPage.prototype.changePage = function (page, fromModal, slot) {
         var _this = this;
@@ -500,7 +500,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Convenience function to get the quiz data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizPlayerPage.prototype.fetchData = function () {
         var _this = this;
@@ -557,9 +557,9 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Finish an attempt, either by timeup or because the user clicked to finish it.
      *
-     * @param {boolean} [userFinish] Whether the user clicked to finish the attempt.
-     * @param {boolean} [timeUp] Whether the quiz time is up.
-     * @return {Promise<void>} Promise resolved when done.
+     * @param userFinish Whether the user clicked to finish the attempt.
+     * @param timeUp Whether the quiz time is up.
+     * @return Promise resolved when done.
      */
     AddonModQuizPlayerPage.prototype.finishAttempt = function (userFinish, timeUp) {
         var _this = this;
@@ -593,7 +593,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Fix sequence checks of current page.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizPlayerPage.prototype.fixSequenceChecks = function () {
         var _this = this;
@@ -613,7 +613,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Get the input answers.
      *
-     * @return {any} Object with the answers.
+     * @return Object with the answers.
      */
     AddonModQuizPlayerPage.prototype.getAnswers = function () {
         return this.questionHelper.getAnswersFromForm(document.forms['addon-mod_quiz-player-form']);
@@ -635,8 +635,8 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Load a page questions.
      *
-     * @param {number} page The page to load.
-     * @return {Promise<void>} Promise resolved when done.
+     * @param page The page to load.
+     * @return Promise resolved when done.
      */
     AddonModQuizPlayerPage.prototype.loadPage = function (page) {
         var _this = this;
@@ -671,7 +671,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Load attempt summary.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizPlayerPage.prototype.loadSummary = function () {
         var _this = this;
@@ -692,7 +692,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Load data to navigate the questions using the navigation modal.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizPlayerPage.prototype.loadNavigation = function () {
         var _this = this;
@@ -708,7 +708,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Open the navigation modal.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizPlayerPage.prototype.openNavigation = function () {
         var _this = this;
@@ -737,10 +737,10 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Process attempt.
      *
-     * @param {boolean} [userFinish] Whether the user clicked to finish the attempt.
-     * @param {boolean} [timeUp] Whether the quiz time is up.
-     * @return {Promise<any>} Promise resolved when done.
-     * @param {boolean} [retrying] Whether we're retrying the change.
+     * @param userFinish Whether the user clicked to finish the attempt.
+     * @param timeUp Whether the quiz time is up.
+     * @return Promise resolved when done.
+     * @param retrying Whether we're retrying the change.
      */
     AddonModQuizPlayerPage.prototype.processAttempt = function (userFinish, timeUp, retrying) {
         var _this = this;
@@ -772,7 +772,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Scroll to a certain question.
      *
-     * @param {number} slot Slot of the question to scroll to.
+     * @param slot Slot of the question to scroll to.
      */
     AddonModQuizPlayerPage.prototype.scrollToQuestion = function (slot) {
         this.domUtils.scrollToElementBySelector(this.content, '#addon-mod_quiz-question-' + slot);
@@ -780,7 +780,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Show connection error.
      *
-     * @param {Event} ev Click event.
+     * @param ev Click event.
      */
     AddonModQuizPlayerPage.prototype.showConnectionError = function (ev) {
         this.autoSave.showAutoSaveError(ev);
@@ -810,7 +810,7 @@ var player_AddonModQuizPlayerPage = /** @class */ (function () {
     /**
      * Start or continue an attempt.
      *
-     * @return {Promise<any>} [description]
+     * @return [description]
      */
     AddonModQuizPlayerPage.prototype.startOrContinueAttempt = function () {
         var _this = this;

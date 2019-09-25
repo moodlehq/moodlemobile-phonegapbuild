@@ -99,7 +99,7 @@ var user_badges_AddonBadgesUserBadgesPage = /** @class */ (function () {
     /**
      * Fetch all the badges required for the view.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonBadgesUserBadgesPage.prototype.fetchBadges = function () {
         var _this = this;
@@ -113,7 +113,7 @@ var user_badges_AddonBadgesUserBadgesPage = /** @class */ (function () {
     /**
      * Refresh the badges.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonBadgesUserBadgesPage.prototype.refreshBadges = function (refresher) {
         var _this = this;
@@ -126,7 +126,7 @@ var user_badges_AddonBadgesUserBadgesPage = /** @class */ (function () {
     /**
      * Navigate to a particular badge.
      *
-     * @param {string} badgeHash Badge to load.
+     * @param badgeHash Badge to load.
      */
     AddonBadgesUserBadgesPage.prototype.loadIssuedBadge = function (badgeHash) {
         this.badgeHash = badgeHash;

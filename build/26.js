@@ -172,7 +172,7 @@ var form_AddonModFeedbackFormPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean | Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModFeedbackFormPage.prototype.ionViewCanLeave = function () {
         if (this.forceLeave) {
@@ -192,7 +192,7 @@ var form_AddonModFeedbackFormPage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModFeedbackFormPage.prototype.fetchData = function () {
         var _this = this;
@@ -232,7 +232,7 @@ var form_AddonModFeedbackFormPage = /** @class */ (function () {
     /**
      * Fetch access information.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModFeedbackFormPage.prototype.fetchAccessData = function () {
         var _this = this;
@@ -287,8 +287,8 @@ var form_AddonModFeedbackFormPage = /** @class */ (function () {
     /**
      * Function to allow page navigation through the questions form.
      *
-     * @param  {boolean}       goPrevious If true it will go back to the previous page, if false, it will go forward.
-     * @return {Promise<void>}            Resolved when done.
+     * @param goPrevious If true it will go back to the previous page, if false, it will go forward.
+     * @return Resolved when done.
      */
     AddonModFeedbackFormPage.prototype.gotoPage = function (goPrevious) {
         var _this = this;

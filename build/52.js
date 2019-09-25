@@ -1,6 +1,6 @@
 webpackJsonp([52],{
 
-/***/ 2038:
+/***/ 2039:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,7 +116,7 @@ var reconnect_CoreLoginReconnectPage = /** @class */ (function () {
     /**
      * Cancel reconnect.
      *
-     * @param {Event} [e] Event.
+     * @param e Event.
      */
     CoreLoginReconnectPage.prototype.cancel = function (e) {
         if (e) {
@@ -128,7 +128,7 @@ var reconnect_CoreLoginReconnectPage = /** @class */ (function () {
     /**
      * Tries to authenticate the user.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     CoreLoginReconnectPage.prototype.login = function (e) {
         var _this = this;
@@ -184,7 +184,7 @@ var reconnect_CoreLoginReconnectPage = /** @class */ (function () {
     /**
      * An OAuth button was clicked.
      *
-     * @param {any} provider The provider that was clicked.
+     * @param provider The provider that was clicked.
      */
     CoreLoginReconnectPage.prototype.oauthClicked = function (provider) {
         if (!this.loginHelper.openBrowserForOAuthLogin(this.siteUrl, provider, this.siteConfig.launchurl)) {

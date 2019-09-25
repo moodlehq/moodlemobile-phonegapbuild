@@ -1,6 +1,6 @@
 webpackJsonp([20],{
 
-/***/ 2029:
+/***/ 2031:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -62,7 +62,7 @@ var search_CoreCoursesSearchPage = /** @class */ (function () {
     /**
      * Search a new text.
      *
-     * @param {string} text The text to search.
+     * @param text The text to search.
      */
     CoreCoursesSearchPage.prototype.search = function (text) {
         this.currentSearch = text;
@@ -76,7 +76,7 @@ var search_CoreCoursesSearchPage = /** @class */ (function () {
     /**
      * Load more results.
      *
-     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
+     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
      */
     CoreCoursesSearchPage.prototype.loadMoreResults = function (infiniteComplete) {
         this.searchCourses().finally(function () {
@@ -86,7 +86,7 @@ var search_CoreCoursesSearchPage = /** @class */ (function () {
     /**
      * Search courses or load the next page of current search.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     CoreCoursesSearchPage.prototype.searchCourses = function () {
         var _this = this;

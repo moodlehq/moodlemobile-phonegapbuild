@@ -1,6 +1,6 @@
 webpackJsonp([119],{
 
-/***/ 2068:
+/***/ 2069:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -140,7 +140,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
     /**
      * Fetch assignment data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModAssignSubmissionListPage.prototype.fetchAssignment = function () {
         var _this = this;
@@ -168,8 +168,8 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
     /**
      * Set group to see the summary.
      *
-     * @param  {number}       groupId Group ID.
-     * @return {Promise<any>}         Resolved when done.
+     * @param groupId Group ID.
+     * @return Resolved when done.
      */
     AddonModAssignSubmissionListPage.prototype.setGroup = function (groupId) {
         var _this = this;
@@ -258,7 +258,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
     /**
      * Load a certain submission.
      *
-     * @param {any} submission The submission to load.
+     * @param submission The submission to load.
      */
     AddonModAssignSubmissionListPage.prototype.loadSubmission = function (submission) {
         if (this.selectedSubmissionId === submission.submitid && this.splitviewCtrl.isOn()) {
@@ -276,7 +276,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
     /**
      * Refresh all the data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModAssignSubmissionListPage.prototype.refreshAllData = function () {
         var _this = this;
@@ -295,7 +295,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
     /**
      * Refresh the list.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModAssignSubmissionListPage.prototype.refreshList = function (refresher) {
         this.refreshAllData().finally(function () {

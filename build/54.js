@@ -1,6 +1,6 @@
 webpackJsonp([54],{
 
-/***/ 2036:
+/***/ 2037:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74,7 +74,7 @@ var forgotten_password_CoreLoginForgottenPasswordPage = /** @class */ (function 
     /**
      * Request to reset the password.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     CoreLoginForgottenPasswordPage.prototype.resetPassword = function (e) {
         var _this = this;

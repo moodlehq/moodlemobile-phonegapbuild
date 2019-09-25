@@ -98,7 +98,7 @@ var submission_review_AddonModAssignSubmissionReviewPage = /** @class */ (functi
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonModAssignSubmissionReviewPage.prototype.ionViewCanLeave = function () {
         if (!this.submissionComponent || this.forceLeave) {
@@ -122,7 +122,7 @@ var submission_review_AddonModAssignSubmissionReviewPage = /** @class */ (functi
     /**
      * Get the submission.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModAssignSubmissionReviewPage.prototype.fetchSubmission = function () {
         var _this = this;
@@ -148,7 +148,7 @@ var submission_review_AddonModAssignSubmissionReviewPage = /** @class */ (functi
     /**
      * Refresh all the data.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModAssignSubmissionReviewPage.prototype.refreshAllData = function () {
         var _this = this;
@@ -167,7 +167,7 @@ var submission_review_AddonModAssignSubmissionReviewPage = /** @class */ (functi
     /**
      * Refresh the data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModAssignSubmissionReviewPage.prototype.refreshSubmission = function (refresher) {
         this.refreshAllData().finally(function () {

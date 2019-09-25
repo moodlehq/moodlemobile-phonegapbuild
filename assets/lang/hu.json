@@ -1317,7 +1317,7 @@
     "core.mainmenu.help": "Súgó",
     "core.mainmenu.logout": "Kilépés",
     "core.mainmenu.website": "Weboldal",
-    "core.maxsizeandattachments": "Új állományok maximális mérete: {{$a.size}}, maximális csatolt állomány: {{$a.attachments}}",
+    "core.maxsizeandattachments": "Állományok maximális mérete: {{$a.size}}, maximális csatolt állomány: {{$a.attachments}}",
     "core.min": "p",
     "core.mins": "perc",
     "core.misc": "Egyéb",

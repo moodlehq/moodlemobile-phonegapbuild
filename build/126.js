@@ -1,6 +1,6 @@
 webpackJsonp([126],{
 
-/***/ 1971:
+/***/ 1970:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -98,7 +98,7 @@ var plan_AddonCompetencyPlanPage = /** @class */ (function () {
     /**
      * Fetches the learning plan and updates the view.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCompetencyPlanPage.prototype.fetchLearningPlan = function () {
         var _this = this;
@@ -119,7 +119,7 @@ var plan_AddonCompetencyPlanPage = /** @class */ (function () {
     /**
      * Navigates to a particular competency.
      *
-     * @param {number} competencyId
+     * @param competencyId
      */
     AddonCompetencyPlanPage.prototype.openCompetency = function (competencyId) {
         var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
@@ -133,7 +133,7 @@ var plan_AddonCompetencyPlanPage = /** @class */ (function () {
     /**
      * Refreshes the learning plan.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonCompetencyPlanPage.prototype.refreshLearningPlan = function (refresher) {
         var _this = this;

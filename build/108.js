@@ -1,6 +1,6 @@
 webpackJsonp([108],{
 
-/***/ 1990:
+/***/ 1991:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94,7 +94,7 @@ var attempt_AddonModFeedbackAttemptPage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModFeedbackAttemptPage.prototype.fetchData = function () {
         var _this = this;

@@ -280,10 +280,10 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Fetch all the data required for the view.
      *
-     * @param {boolean} [refresh] Empty events array first.
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh Empty events array first.
+     * @param sync Whether it should try to synchronize offline events.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarListPage.prototype.fetchData = function (refresh, sync, showErrors) {
         var _this = this;
@@ -348,8 +348,8 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Fetches the events and updates the view.
      *
-     * @param {boolean} [refresh] Empty events array first.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh Empty events array first.
+     * @return Promise resolved when done.
      */
     AddonCalendarListPage.prototype.fetchEvents = function (refresh) {
         var _this = this;
@@ -414,8 +414,8 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Function to load more events.
      *
-     * @param {any} [infiniteComplete] Infinite scroll complete function. Only used from core-infinite-loading.
-     * @return {Promise<any>} Resolved when done.
+     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
+     * @return Resolved when done.
      */
     AddonCalendarListPage.prototype.loadMoreEvents = function (infiniteComplete) {
         return this.fetchEvents().finally(function () {
@@ -425,7 +425,7 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Get filtered events.
      *
-     * @return {any[]} Filtered events.
+     * @return Filtered events.
      */
     AddonCalendarListPage.prototype.getFilteredEvents = function () {
         var _this = this;
@@ -439,8 +439,8 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     };
     /**
      * Returns if the current state should load categories or not.
-     * @param {any[]} events Events to parse.
-     * @return {boolean}  True if categories should be loaded.
+     * @param events Events to parse.
+     * @return True if categories should be loaded.
      */
     AddonCalendarListPage.prototype.shouldLoadCategories = function (events) {
         if (this.categoriesRetrieved || this.getCategories) {
@@ -454,7 +454,7 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Load categories to be able to filter events.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCalendarListPage.prototype.loadCategories = function () {
         var _this = this;
@@ -472,8 +472,8 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Merge a period of online events with the offline events of that period.
      *
-     * @param {any[]} onlineEvents Online events.
-     * @return {any[]} Merged events.
+     * @param onlineEvents Online events.
+     * @return Merged events.
      */
     AddonCalendarListPage.prototype.mergeEvents = function (onlineEvents) {
         var _this = this;
@@ -513,7 +513,7 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Sort events by timestart.
      *
-     * @param {any[]} events List to sort.
+     * @param events List to sort.
      */
     AddonCalendarListPage.prototype.sortEvents = function (events) {
         return events.sort(function (a, b) {
@@ -526,10 +526,10 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} [refresher] Refresher.
-     * @param {Function} [done] Function to call when done.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresher Refresher.
+     * @param done Function to call when done.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarListPage.prototype.doRefresh = function (refresher, done, showErrors) {
         if (this.eventsLoaded) {
@@ -543,9 +543,9 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Refresh the events.
      *
-     * @param {boolean} [sync] Whether it should try to synchronize offline events.
-     * @param {boolean} [showErrors] Whether to show sync errors to the user.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param sync Whether it should try to synchronize offline events.
+     * @param showErrors Whether to show sync errors to the user.
+     * @return Promise resolved when done.
      */
     AddonCalendarListPage.prototype.refreshEvents = function (sync, showErrors) {
         var _this = this;
@@ -565,9 +565,9 @@ var list_AddonCalendarListPage = /** @class */ (function () {
      * Check date should be shown on event list for the current event.
      * If date has changed from previous to current event it should be shown.
      *
-     * @param {any} event       Current event where to show the date.
-     * @param {any} [prevEvent] Previous event where to compare the date with.
-     * @return {boolean}  If date has changed and should be shown.
+     * @param event Current event where to show the date.
+     * @param prevEvent Previous event where to compare the date with.
+     * @return If date has changed and should be shown.
      */
     AddonCalendarListPage.prototype.showDate = function (event, prevEvent) {
         if (!prevEvent) {
@@ -580,8 +580,8 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Check if event ends the same date or not.
      *
-     * @param {any} event Event info.
-     * @return {boolean}  If date has changed and should be shown.
+     * @param event Event info.
+     * @return If date has changed and should be shown.
      */
     AddonCalendarListPage.prototype.endsSameDay = function (event) {
         if (!event.timeduration) {
@@ -594,7 +594,7 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Show the context menu.
      *
-     * @param {MouseEvent} event Event.
+     * @param event Event.
      */
     AddonCalendarListPage.prototype.openCourseFilter = function (event) {
         var _this = this;
@@ -614,7 +614,7 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Open page to create/edit an event.
      *
-     * @param {number} [eventId] Event ID to edit.
+     * @param eventId Event ID to edit.
      */
     AddonCalendarListPage.prototype.openEdit = function (eventId) {
         this.eventId = undefined;
@@ -636,7 +636,7 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Navigate to a particular event.
      *
-     * @param {number} eventId Event to load.
+     * @param eventId Event to load.
      */
     AddonCalendarListPage.prototype.gotoEvent = function (eventId) {
         this.eventId = eventId;
@@ -653,8 +653,8 @@ var list_AddonCalendarListPage = /** @class */ (function () {
     /**
      * Find an event and mark it as deleted.
      *
-     * @param {number} eventId Event ID.
-     * @param {boolean} deleted Whether to mark it as deleted or not.
+     * @param eventId Event ID.
+     * @param deleted Whether to mark it as deleted or not.
      */
     AddonCalendarListPage.prototype.markAsDeleted = function (eventId, deleted) {
         var event = this.onlineEvents.find(function (event) {

@@ -200,8 +200,8 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Treat the site config, checking if it's valid and extracting the data we're interested in.
      *
-     * @param {any} siteConfig Site config to treat.
-     * @return {boolean} True if success.
+     * @param siteConfig Site config to treat.
+     * @return True if success.
      */
     CoreLoginEmailSignupPage.prototype.treatSiteConfig = function (siteConfig) {
         if (siteConfig && siteConfig.registerauth == 'email' && !this.loginHelper.isEmailSignupDisabled(siteConfig)) {
@@ -222,7 +222,7 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Pull to refresh.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreLoginEmailSignupPage.prototype.refreshSettings = function (refresher) {
         this.fetchData().finally(function () {
@@ -232,7 +232,7 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Create account.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     CoreLoginEmailSignupPage.prototype.create = function (e) {
         var _this = this;
@@ -296,8 +296,8 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Escape mail to avoid special characters to be treated as a RegExp.
      *
-     * @param  {string} text Initial mail.
-     * @return {string}      Escaped mail.
+     * @param text Initial mail.
+     * @return Escaped mail.
      */
     CoreLoginEmailSignupPage.prototype.escapeMail = function (text) {
         return this.textUtils.escapeForRegex(text);
@@ -317,7 +317,7 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Verify Age.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     CoreLoginEmailSignupPage.prototype.verifyAge = function (e) {
         var _this = this;

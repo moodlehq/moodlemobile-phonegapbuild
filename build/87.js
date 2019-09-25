@@ -1,6 +1,6 @@
 webpackJsonp([87],{
 
-/***/ 2008:
+/***/ 2010:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113,7 +113,7 @@ var preflight_modal_AddonModQuizPreflightModalPage = /** @class */ (function () 
     /**
      * Check that the data is valid and send it back.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     AddonModQuizPreflightModalPage.prototype.sendData = function (e) {
         e.preventDefault();

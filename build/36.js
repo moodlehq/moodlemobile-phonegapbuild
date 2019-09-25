@@ -1,6 +1,6 @@
 webpackJsonp([36],{
 
-/***/ 2054:
+/***/ 2055:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -59,7 +59,7 @@ var module_index_CoreSitePluginsModuleIndexPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreSitePluginsModuleIndexPage.prototype.refreshData = function (refresher) {
         this.content.doRefresh().finally(function () {
@@ -99,7 +99,7 @@ var module_index_CoreSitePluginsModuleIndexPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     CoreSitePluginsModuleIndexPage.prototype.ionViewCanLeave = function () {
         return this.content.callComponentFunction('ionViewCanLeave');

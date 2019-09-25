@@ -131,7 +131,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
     /**
      * Fetches preference data.
      *
-     * @return {Promise<any>} Resolved when done.
+     * @return Resolved when done.
      */
     AddonNotificationsSettingsPage.prototype.fetchPreferences = function () {
         var _this = this;
@@ -166,7 +166,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
     /**
      * Load a processor.
      *
-     * @param {any} processor Processor object.
+     * @param processor Processor object.
      */
     AddonNotificationsSettingsPage.prototype.loadProcessor = function (processor) {
         if (!processor) {
@@ -199,7 +199,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
     /**
      * The selected processor was changed.
      *
-     * @param {string} name Name of the selected processor.
+     * @param name Name of the selected processor.
      */
     AddonNotificationsSettingsPage.prototype.changeProcessor = function (name) {
         var _this = this;
@@ -212,7 +212,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
     /**
      * Refresh the list of preferences.
      *
-     * @param {any} [refresher] Refresher.
+     * @param refresher Refresher.
      */
     AddonNotificationsSettingsPage.prototype.refreshPreferences = function (refresher) {
         var _this = this;
@@ -225,7 +225,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
     /**
      * Open extra preferences.
      *
-     * @param {AddonMessageOutputHandlerData} handlerData
+     * @param handlerData
      */
     AddonNotificationsSettingsPage.prototype.openExtraPreferences = function (handlerData) {
         // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.
@@ -235,8 +235,8 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
     /**
      * Change the value of a certain preference.
      *
-     * @param {any} notification Notification object.
-     * @param {string} state State name, ['loggedin', 'loggedoff'].
+     * @param notification Notification object.
+     * @param state State name, ['loggedin', 'loggedoff'].
      */
     AddonNotificationsSettingsPage.prototype.changePreference = function (notification, state) {
         var _this = this;
@@ -288,7 +288,7 @@ var settings_AddonNotificationsSettingsPage = /** @class */ (function () {
     /**
      * Change the notification sound setting.
      *
-     * @param {enabled} enabled True to enable the notification sound, false to disable it.
+     * @param enabled True to enable the notification sound, false to disable it.
      */
     AddonNotificationsSettingsPage.prototype.changeNotificationSound = function (enabled) {
         var _this = this;

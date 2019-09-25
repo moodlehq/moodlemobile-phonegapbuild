@@ -1,6 +1,6 @@
 webpackJsonp([128],{
 
-/***/ 1969:
+/***/ 1968:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91,7 +91,7 @@ var competencysummary_AddonCompetencyCompetencySummaryPage = /** @class */ (func
     /**
      * Fetches the competency summary and updates the view.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonCompetencyCompetencySummaryPage.prototype.fetchCompetency = function () {
         var _this = this;
@@ -104,7 +104,7 @@ var competencysummary_AddonCompetencyCompetencySummaryPage = /** @class */ (func
     /**
      * Refreshes the competency summary.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonCompetencyCompetencySummaryPage.prototype.refreshCompetency = function (refresher) {
         var _this = this;
@@ -117,7 +117,7 @@ var competencysummary_AddonCompetencyCompetencySummaryPage = /** @class */ (func
     /**
      * Opens the summary of a competency.
      *
-     * @param {number} competencyId
+     * @param competencyId
      */
     AddonCompetencyCompetencySummaryPage.prototype.openCompetencySummary = function (competencyId) {
         // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.

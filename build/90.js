@@ -1,6 +1,6 @@
 webpackJsonp([90],{
 
-/***/ 2005:
+/***/ 2007:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -83,7 +83,7 @@ var attempt_AddonModQuizAttemptPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonModQuizAttemptPage.prototype.doRefresh = function (refresher) {
         this.refreshData().finally(function () {
@@ -93,7 +93,7 @@ var attempt_AddonModQuizAttemptPage = /** @class */ (function () {
     /**
      * Get quiz data and attempt data.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizAttemptPage.prototype.fetchQuizData = function () {
         var _this = this;
@@ -108,7 +108,7 @@ var attempt_AddonModQuizAttemptPage = /** @class */ (function () {
     /**
      * Get the attempt data.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizAttemptPage.prototype.fetchAttempt = function () {
         var _this = this;
@@ -171,7 +171,7 @@ var attempt_AddonModQuizAttemptPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @return {Promise<void>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModQuizAttemptPage.prototype.refreshData = function () {
         var _this = this;

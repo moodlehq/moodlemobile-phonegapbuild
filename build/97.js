@@ -1,6 +1,6 @@
 webpackJsonp([97],{
 
-/***/ 2000:
+/***/ 2001:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56,7 +56,7 @@ var toc_AddonModImscpTocPage = /** @class */ (function () {
     /**
      * Function called when an item is clicked.
      *
-     * @param {string} id ID of the clicked item.
+     * @param id ID of the clicked item.
      */
     AddonModImscpTocPage.prototype.loadItem = function (id) {
         this.viewCtrl.dismiss(id);
@@ -64,8 +64,8 @@ var toc_AddonModImscpTocPage = /** @class */ (function () {
     /**
      * Get dummy array for padding.
      *
-     * @param {number} n Array length.
-     * @return {number[]} Dummy array with n elements.
+     * @param n Array length.
+     * @return Dummy array with n elements.
      */
     AddonModImscpTocPage.prototype.getNumberForPadding = function (n) {
         return new Array(n);

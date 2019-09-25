@@ -121,7 +121,7 @@ var list_AddonFilesListPage = /** @class */ (function () {
     /**
      * Refresh the data.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonFilesListPage.prototype.refreshData = function (refresher) {
         this.refreshFiles().finally(function () {
@@ -175,7 +175,7 @@ var list_AddonFilesListPage = /** @class */ (function () {
     /**
      * Fetch the files.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonFilesListPage.prototype.fetchFiles = function () {
         var _this = this;
@@ -223,7 +223,7 @@ var list_AddonFilesListPage = /** @class */ (function () {
     /**
      * Refresh the displayed files.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     AddonFilesListPage.prototype.refreshFiles = function () {
         var _this = this;

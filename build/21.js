@@ -1,6 +1,6 @@
 webpackJsonp([21],{
 
-/***/ 2027:
+/***/ 2029:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -84,7 +84,7 @@ var categories_CoreCoursesCategoriesPage = /** @class */ (function () {
     /**
      * Fetch the categories.
      *
-     * @return {Promise<any>} Promise resolved when done.
+     * @return Promise resolved when done.
      */
     CoreCoursesCategoriesPage.prototype.fetchCategories = function () {
         var _this = this;
@@ -120,7 +120,7 @@ var categories_CoreCoursesCategoriesPage = /** @class */ (function () {
     /**
      * Refresh the categories.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreCoursesCategoriesPage.prototype.refreshCategories = function (refresher) {
         var _this = this;
@@ -138,7 +138,7 @@ var categories_CoreCoursesCategoriesPage = /** @class */ (function () {
     /**
      * Open a category.
      *
-     * @param {number} categoryId The category ID.
+     * @param categoryId The category ID.
      */
     CoreCoursesCategoriesPage.prototype.openCategory = function (categoryId) {
         this.navCtrl.push('CoreCoursesCategoriesPage', { categoryId: categoryId });

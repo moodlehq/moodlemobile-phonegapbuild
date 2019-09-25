@@ -194,8 +194,8 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
     /**
      * Fetch the data needed to render the form.
      *
-     * @param {boolean} [refresh] Whether it's refreshing data.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param refresh Whether it's refreshing data.
+     * @return Promise resolved when done.
      */
     AddonCalendarEditEventPage.prototype.fetchData = function (refresh) {
         var _this = this;
@@ -308,9 +308,9 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
     /**
      * Load an event data into the form.
      *
-     * @param {any} event Event data.
-     * @param {boolean} isOffline Whether the data is from offline or not.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param event Event data.
+     * @param isOffline Whether the data is from offline or not.
+     * @return Promise resolved when done.
      */
     AddonCalendarEditEventPage.prototype.loadEventData = function (event, isOffline) {
         var courseId = event.course ? event.course.id : event.courseid;
@@ -356,7 +356,7 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
     /**
      * Pull to refresh.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     AddonCalendarEditEventPage.prototype.refreshData = function (refresher) {
         var _this = this;
@@ -386,7 +386,7 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
     /**
      * A course was selected, get its groups.
      *
-     * @param {number} courseId Course ID.
+     * @param courseId Course ID.
      */
     AddonCalendarEditEventPage.prototype.groupCourseSelected = function (courseId) {
         var _this = this;
@@ -405,8 +405,8 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
     /**
      * Load groups of a certain course.
      *
-     * @param {number} courseId Course ID.
-     * @return {Promise<any>} Promise resolved when done.
+     * @param courseId Course ID.
+     * @return Promise resolved when done.
      */
     AddonCalendarEditEventPage.prototype.loadGroups = function (courseId) {
         var _this = this;
@@ -515,7 +515,7 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
     /**
      * Convenience function to update or return to event list depending on device.
      *
-     * @param {number} [event] Event.
+     * @param event Event.
      */
     AddonCalendarEditEventPage.prototype.returnToList = function (event) {
         // Unblock the sync because the view will be destroyed and the sync process could be triggered before ngOnDestroy.
@@ -568,7 +568,7 @@ var edit_event_AddonCalendarEditEventPage = /** @class */ (function () {
     /**
      * Check if we can leave the page or not.
      *
-     * @return {boolean|Promise<void>} Resolved if we can leave it, rejected if not.
+     * @return Resolved if we can leave it, rejected if not.
      */
     AddonCalendarEditEventPage.prototype.ionViewCanLeave = function () {
         if (this.calendarHelper.hasEventDataChanged(this.eventForm.value, this.originalData)) {

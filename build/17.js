@@ -1,6 +1,6 @@
 webpackJsonp([17],{
 
-/***/ 2059:
+/***/ 2060:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113,7 +113,7 @@ var about_CoreUserAboutPage = /** @class */ (function () {
     /**
      * Refresh the user.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreUserAboutPage.prototype.refreshUser = function (refresher) {
         var _this = this;
