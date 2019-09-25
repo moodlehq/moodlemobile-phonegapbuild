@@ -1,6 +1,6 @@
 webpackJsonp([128],{
 
-/***/ 1968:
+/***/ 1969:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -79,8 +79,7 @@ var competencysummary_AddonCompetencyCompetencySummaryPage = /** @class */ (func
     AddonCompetencyCompetencySummaryPage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.fetchCompetency().then(function () {
-            var name = _this.competency.competency && _this.competency.competency.competency &&
-                _this.competency.competency.competency.shortname;
+            var name = _this.competency.competency && _this.competency.competency.shortname;
             _this.competencyProvider.logCompetencyView(_this.competencyId, name).catch(function () {
                 // Ignore errors.
             });

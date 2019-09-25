@@ -173,7 +173,7 @@ var chat_AddonModChatChatPage = /** @class */ (function () {
     /**
      * Convenience function to login the user.
      *
-     * @return Resolved when done.
+     * @return Promise resolved when done.
      */
     AddonModChatChatPage.prototype.loginUser = function () {
         var _this = this;

@@ -231,7 +231,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
                                     submission.status);
                             }
                             else {
-                                submission.statusTranslated = false;
+                                submission.statusTranslated = '';
                             }
                             if (notSynced) {
                                 submission.gradingStatusTranslationId = 'addon.mod_assign.gradenotsynced';
@@ -243,7 +243,7 @@ var submission_list_AddonModAssignSubmissionListPage = /** @class */ (function (
                                     _this.assignProvider.getSubmissionGradingStatusTranslationId(submission.gradingstatus);
                             }
                             else {
-                                submission.gradingStatusTranslationId = false;
+                                submission.gradingStatusTranslationId = '';
                             }
                             showSubmissions.push(submission);
                         });

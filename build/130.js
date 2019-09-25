@@ -86,7 +86,7 @@ var competencies_AddonCompetencyCompetenciesPage = /** @class */ (function () {
         this.fetchCompetencies().then(function () {
             if (!_this.competencyId && _this.splitviewCtrl.isOn() && _this.competencies.length > 0) {
                 // Take first and load it.
-                _this.openCompetency(_this.competencies[0].id);
+                _this.openCompetency(_this.competencies[0].competency.id);
             }
         }).finally(function () {
             _this.competenciesLoaded = true;
@@ -110,12 +110,13 @@ var competencies_AddonCompetencyCompetenciesPage = /** @class */ (function () {
             promise = Promise.reject(null);
         }
         return promise.then(function (response) {
-            if (response.competencycount <= 0) {
-                return Promise.reject(_this.translate.instant('addon.competency.errornocompetenciesfound'));
-            }
             if (_this.planId) {
-                _this.title = response.plan.name;
-                _this.userId = response.plan.userid;
+                var resp = response;
+                if (resp.competencycount <= 0) {
+                    return Promise.reject(_this.translate.instant('addon.competency.errornocompetenciesfound'));
+                }
+                _this.title = resp.plan.name;
+                _this.userId = resp.plan.userid;
             }
             else {
                 _this.title = _this.translate.instant('addon.competency.coursecompetencies');

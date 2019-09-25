@@ -1526,6 +1526,9 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
         this.loadingMessage = '';
         this.hasContacts = false;
         this.contacts = {
+            online: [],
+            offline: [],
+            strangers: [],
             search: []
         };
         this.searchString = '';
@@ -1666,7 +1669,7 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
             _this.hasContacts = result.length > 0;
             _this.searchString = query;
             _this.contactTypes = ['search'];
-            _this.contacts['search'] = _this.sortUsers(result);
+            _this.contacts.search = _this.sortUsers(result);
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingcontacts', true);
         });

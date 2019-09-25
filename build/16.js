@@ -301,11 +301,12 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
                     if (!_this.title && _this.messages.length) {
                         // Didn't receive the fullname via argument. Try to get it from messages.
                         // It's possible that name cannot be resolved when no messages were yet exchanged.
-                        if (_this.messages[0].useridto != _this.currentUserId) {
-                            _this.title = _this.messages[0].usertofullname || '';
+                        var firstMessage = _this.messages[0];
+                        if (firstMessage.useridto != _this.currentUserId) {
+                            _this.title = firstMessage.usertofullname || '';
                         }
                         else {
-                            _this.title = _this.messages[0].userfromfullname || '';
+                            _this.title = firstMessage.userfromfullname || '';
                         }
                     }
                 });
@@ -445,13 +446,14 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
             promise = Promise.resolve(conversationId);
         }
         else {
+            var subPromise = void 0;
             if (userId == this.currentUserId && this.messagesProvider.isSelfConversationEnabled()) {
-                promise = this.messagesProvider.getSelfConversation();
+                subPromise = this.messagesProvider.getSelfConversation();
             }
             else {
-                promise = this.messagesProvider.getConversationBetweenUsers(userId, undefined, true);
+                subPromise = this.messagesProvider.getConversationBetweenUsers(userId, undefined, true);
             }
-            promise = promise.then(function (conversation) {
+            promise = subPromise.then(function (conversation) {
                 fallbackConversation = conversation;
                 return conversation.id;
             });
@@ -617,7 +619,8 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
                 for (var x in this.messages) {
                     var message = this.messages[x];
                     // If an unread message is found, mark all messages as read.
-                    if (message.useridfrom != this.currentUserId && message.read == 0) {
+                    if (message.useridfrom != this.currentUserId &&
+                        message.read == 0) {
                         messageUnreadFound = true;
                         break;
                     }
@@ -712,7 +715,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
                     if (!message.pending && message.useridfrom != this.currentUserId) {
                         found++;
                         if (found == this.conversation.unreadcount) {
-                            this.unreadMessageFrom = parseInt(message.id, 10);
+                            this.unreadMessageFrom = Number(message.id);
                             break;
                         }
                     }
@@ -727,7 +730,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
                     var unreadFrom = message.read == 0 && previousMessageRead;
                     if (unreadFrom) {
                         // Save where the label is placed.
-                        this.unreadMessageFrom = parseInt(message.id, 10);
+                        this.unreadMessageFrom = Number(message.id);
                         break;
                     }
                     previousMessageRead = message.read != 0;
@@ -947,6 +950,7 @@ var discussion_AddonMessagesDiscussionPage = /** @class */ (function () {
         this.showDelete = false;
         this.scrollBottom = true;
         message = {
+            id: null,
             pending: true,
             sending: true,
             useridfrom: this.currentUserId,

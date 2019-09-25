@@ -95,7 +95,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
             type: null,
             favourites: true,
             count: 0,
-            unread: 0
+            unread: 0,
         };
         this.group = {
             type: providers_messages["a" /* AddonMessagesProvider */].MESSAGE_CONVERSATION_TYPE_GROUP,
@@ -463,7 +463,7 @@ var group_conversations_AddonMessagesGroupConversationsPage = /** @class */ (fun
      *
      * @param option The option to fetch data for.
      * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
-     * @return Resolved when done.
+     * @return Promise resolved when done.
      */
     AddonMessagesGroupConversationsPage.prototype.loadMoreConversations = function (option, infiniteComplete) {
         var _this = this;

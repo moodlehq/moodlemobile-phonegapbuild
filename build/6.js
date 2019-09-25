@@ -320,7 +320,7 @@ var edit_AddonModAssignEditPage = /** @class */ (function () {
                 }
                 else {
                     // Try to send it to server.
-                    promise = _this.assignProvider.saveSubmission(_this.assign.id, _this.courseId, pluginData, _this.allowOffline, _this.userSubmission.timemodified, _this.assign.submissiondrafts, _this.userId);
+                    promise = _this.assignProvider.saveSubmission(_this.assign.id, _this.courseId, pluginData, _this.allowOffline, _this.userSubmission.timemodified, !!_this.assign.submissiondrafts, _this.userId);
                 }
                 return promise.then(function () {
                     // Clear temporary data from plugins.

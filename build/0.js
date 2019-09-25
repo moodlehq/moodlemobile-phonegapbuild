@@ -109,7 +109,7 @@ var settings_AddonMessagesSettingsPage = /** @class */ (function () {
     /**
      * Fetches preference data.
      *
-     * @return Resolved when done.
+     * @return Promise resolved when done.
      */
     AddonMessagesSettingsPage.prototype.fetchPreferences = function () {
         var _this = this;
@@ -122,13 +122,11 @@ var settings_AddonMessagesSettingsPage = /** @class */ (function () {
                     component.notifications = component.notifications.filter(function (notification) {
                         return notification.preferencekey == messages["a" /* AddonMessagesProvider */].NOTIFICATION_PREFERENCES_KEY;
                     });
-                    for (var _b = 0, _c = component.notifications; _b < _c.length; _b++) {
-                        var notification = _c[_b];
-                        for (var _d = 0, _e = notification.processors; _d < _e.length; _d++) {
-                            var processor = _e[_d];
+                    component.notifications.forEach(function (notification) {
+                        notification.processors.forEach(function (processor) {
                             processor.checked = processor.loggedin.checked || processor.loggedoff.checked;
-                        }
-                    }
+                        });
+                    });
                 }
             }
             _this.preferences = preferences;
@@ -1527,6 +1525,9 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
         this.loadingMessage = '';
         this.hasContacts = false;
         this.contacts = {
+            online: [],
+            offline: [],
+            strangers: [],
             search: []
         };
         this.searchString = '';
@@ -1667,7 +1668,7 @@ var AddonMessagesContactsComponent = /** @class */ (function () {
             _this.hasContacts = result.length > 0;
             _this.searchString = query;
             _this.contactTypes = ['search'];
-            _this.contacts['search'] = _this.sortUsers(result);
+            _this.contacts.search = _this.sortUsers(result);
         }).catch(function (error) {
             _this.domUtils.showErrorModalDefault(error, 'addon.messages.errorwhileretrievingcontacts', true);
         });

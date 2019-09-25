@@ -114,8 +114,7 @@ var edit_feedback_modal_AddonModAssignEditFeedbackModalPage = /** @class */ (fun
      * @return Promise resolved with boolean: whether the data has changed.
      */
     AddonModAssignEditFeedbackModalPage.prototype.hasDataChanged = function () {
-        return this.feedbackDelegate.hasPluginDataChanged(this.assign, this.userId, this.plugin, this.getInputData(), this.userId)
-            .catch(function () {
+        return this.feedbackDelegate.hasPluginDataChanged(this.assign, this.submission, this.plugin, this.getInputData(), this.userId).catch(function () {
             // Ignore errors.
             return true;
         });
