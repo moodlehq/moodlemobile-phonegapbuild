@@ -71,7 +71,7 @@ var components_module = __webpack_require__(29);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_components_module = __webpack_require__(724);
+var components_components_module = __webpack_require__(725);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -221,7 +221,7 @@ var fileuploader = __webpack_require__(68);
 var course = __webpack_require__(500);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
-var grades = __webpack_require__(163);
+var grades = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -230,7 +230,7 @@ var dom = __webpack_require__(4);
 var nav_params = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(169);
+var helper = __webpack_require__(170);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(9);

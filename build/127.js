@@ -208,7 +208,7 @@ var providers_app = __webpack_require__(9);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(157);
+var competency = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/helper.ts
 var helper = __webpack_require__(371);

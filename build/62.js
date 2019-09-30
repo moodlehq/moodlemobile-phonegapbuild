@@ -587,7 +587,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1482);
 var bs_tooltip_ngfactory = __webpack_require__(1483);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(215);
+var external_content = __webpack_require__(224);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(5);
@@ -701,7 +701,7 @@ var spinner = __webpack_require__(112);
 var list = __webpack_require__(82);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);
@@ -755,7 +755,7 @@ var refresher = __webpack_require__(151);
 var refresher_content_ngfactory = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(167);
+var refresher_content = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -767,7 +767,7 @@ var loading = __webpack_require__(47);
 var nav_params = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(168);
+var modal_controller = __webpack_require__(169);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/course-preview/course-preview.ngfactory.js
 /**

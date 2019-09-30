@@ -1,6 +1,6 @@
 webpackJsonp([66],{
 
-/***/ 2025:
+/***/ 2024:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31,7 +31,7 @@ var helper = __webpack_require__(36);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
-var constants = __webpack_require__(40);
+var constants = __webpack_require__(39);
 
 // CONCATENATED MODULE: ./src/core/course/pages/list-mod-type/list-mod-type.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -381,13 +381,13 @@ var keyboard = __webpack_require__(101);
 var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(167);
+var refresher_content = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);

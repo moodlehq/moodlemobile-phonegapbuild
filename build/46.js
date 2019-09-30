@@ -34,7 +34,7 @@ var ion_tabs = __webpack_require__(719);
 var mainmenu = __webpack_require__(487);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/delegate.ts
-var delegate = __webpack_require__(165);
+var delegate = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/delegate.ts
 var providers_delegate = __webpack_require__(58);
@@ -354,7 +354,7 @@ var config = __webpack_require__(7);
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/transitions/transition-controller.js
 var transition_controller = __webpack_require__(201);
@@ -445,7 +445,7 @@ var spinner = __webpack_require__(112);
 var tab_highlight = __webpack_require__(522);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
-var split_pane = __webpack_require__(219);
+var split_pane = __webpack_require__(218);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(6);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
-var constants = __webpack_require__(40);
+var constants = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(11);
@@ -28,10 +28,10 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(171);
+var config = __webpack_require__(157);
 
 // EXTERNAL MODULE: ./src/core/settings/providers/helper.ts
-var helper = __webpack_require__(728);
+var helper = __webpack_require__(723);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/synchronization/synchronization.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -390,7 +390,7 @@ var toggle = __webpack_require__(368);
 var haptic = __webpack_require__(195);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(22);

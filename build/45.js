@@ -22,7 +22,7 @@ var events = __webpack_require__(11);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/delegate.ts
-var delegate = __webpack_require__(165);
+var delegate = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/mainmenu.ts
 var mainmenu = __webpack_require__(487);
@@ -388,7 +388,7 @@ var keyboard = __webpack_require__(101);
 var list = __webpack_require__(82);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/directives/user-link.ts
 var user_link = __webpack_require__(477);

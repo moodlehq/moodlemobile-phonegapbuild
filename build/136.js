@@ -819,7 +819,7 @@ var icon_ngfactory = __webpack_require__(111);
 var icon_icon = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(224);
+var note = __webpack_require__(223);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -876,7 +876,7 @@ var iframe = __webpack_require__(37);
 var list = __webpack_require__(82);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);
@@ -888,7 +888,7 @@ var fab_container_ngfactory = __webpack_require__(277);
 var fab = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
-var fab_container = __webpack_require__(217);
+var fab_container = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
 var fab_ngfactory = __webpack_require__(278);
@@ -948,7 +948,7 @@ var refresher = __webpack_require__(151);
 var refresher_content_ngfactory = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(167);
+var refresher_content = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
 var grid = __webpack_require__(156);

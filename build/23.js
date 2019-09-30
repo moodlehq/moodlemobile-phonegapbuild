@@ -49,7 +49,7 @@ var course = __webpack_require__(14);
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(169);
+var helper = __webpack_require__(170);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/workshop.ts
 var workshop = __webpack_require__(173);
@@ -620,7 +620,7 @@ var platform = __webpack_require__(16);
 var list = __webpack_require__(82);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(33);
@@ -683,7 +683,7 @@ var refresher = __webpack_require__(151);
 var refresher_content_ngfactory = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(167);
+var refresher_content = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);

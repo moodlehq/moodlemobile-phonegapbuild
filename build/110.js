@@ -289,13 +289,13 @@ var keyboard = __webpack_require__(101);
 var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(167);
+var refresher_content = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(27);
@@ -304,7 +304,7 @@ var translate_pipe = __webpack_require__(27);
 var data = __webpack_require__(97);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
-var providers_helper = __webpack_require__(216);
+var providers_helper = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/prefetch-handler.ts
 var prefetch_handler = __webpack_require__(396);
@@ -316,7 +316,7 @@ var time = __webpack_require__(24);
 var groups = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(168);
+var modal_controller = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(71);

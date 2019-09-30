@@ -37,7 +37,7 @@ var events = __webpack_require__(11);
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var providers_comments = __webpack_require__(160);
+var providers_comments = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/offline.ts
 var offline = __webpack_require__(384);
@@ -593,7 +593,7 @@ var fab_container_ngfactory = __webpack_require__(277);
 var fab = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab-container.js
-var fab_container = __webpack_require__(217);
+var fab_container = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/fab/fab.ngfactory.js
 var fab_ngfactory = __webpack_require__(278);
@@ -665,13 +665,13 @@ var keyboard = __webpack_require__(101);
 var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(167);
+var refresher_content = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(50);
@@ -689,7 +689,7 @@ var infinite_loading = __webpack_require__(271);
 var nav_params = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(168);
+var modal_controller = __webpack_require__(169);
 
 // CONCATENATED MODULE: ./src/core/comments/pages/viewer/viewer.ngfactory.js
 /**

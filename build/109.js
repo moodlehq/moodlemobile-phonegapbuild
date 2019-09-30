@@ -37,7 +37,7 @@ var utils_text = __webpack_require__(10);
 var fields_delegate = __webpack_require__(123);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
-var helper = __webpack_require__(216);
+var helper = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
 var tag = __webpack_require__(155);
@@ -441,7 +441,7 @@ var keyboard = __webpack_require__(101);
 var list = __webpack_require__(82);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -486,7 +486,7 @@ var radio_button_ngfactory = __webpack_require__(185);
 var radio_button = __webpack_require__(144);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ngfactory.js
-var compile_html_ngfactory = __webpack_require__(218);
+var compile_html_ngfactory = __webpack_require__(217);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
 var compile_html = __webpack_require__(189);

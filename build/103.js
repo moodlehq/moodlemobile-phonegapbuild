@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/components/components.module.ts
-var components_module = __webpack_require__(726);
+var components_module = __webpack_require__(727);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/components/index/index.ts
 var index = __webpack_require__(506);
@@ -273,7 +273,7 @@ var iframe = __webpack_require__(37);
 var toolbar_item = __webpack_require__(366);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(168);
+var modal_controller = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(67);
@@ -282,7 +282,7 @@ var groups = __webpack_require__(67);
 var user = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(162);
+var forum = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
 var providers_helper = __webpack_require__(276);

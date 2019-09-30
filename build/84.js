@@ -1500,7 +1500,7 @@ var navigation_bar = __webpack_require__(392);
 var nav_params = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(168);
+var modal_controller = __webpack_require__(169);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.ngfactory.js
 /**

@@ -1,6 +1,6 @@
 webpackJsonp([74],{
 
-/***/ 2020:
+/***/ 2019:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -151,7 +151,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1482);
 var bs_tooltip_ngfactory = __webpack_require__(1483);
 
 // EXTERNAL MODULE: ./src/addon/notes/components/list/list.ngfactory.js
-var list_ngfactory = __webpack_require__(1551);
+var list_ngfactory = __webpack_require__(1550);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(365);
@@ -214,7 +214,7 @@ var utils_text = __webpack_require__(10);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(168);
+var modal_controller = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./src/addon/notes/providers/notes.ts
 var notes = __webpack_require__(256);

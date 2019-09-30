@@ -236,7 +236,7 @@ var sites = __webpack_require__(1);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(160);
+var comments = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
 var tag = __webpack_require__(155);
