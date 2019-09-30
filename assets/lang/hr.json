@@ -800,6 +800,7 @@
     "addon.mod_workshop.submissiongrade": "Ocjena za predani rad",
     "addon.mod_workshop.submissiongradeof": "Ocjena za predani rad (od {{$a}})",
     "addon.mod_workshop.submissionrequiredcontent": "Morate upisati tekst ili dodati datoteku.",
+    "addon.mod_workshop.submissionsreport": "Izvješće o predanim radovima na radionici",
     "addon.mod_workshop.submissiontitle": "Naslov",
     "addon.mod_workshop.switchphase10": "Prebaci na fazu uređivanja postavki radionice",
     "addon.mod_workshop.switchphase20": "Prebaci na fazu predaje radova",

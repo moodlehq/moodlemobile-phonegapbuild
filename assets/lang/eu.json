@@ -1535,7 +1535,7 @@
     "core.help": "Laguntza",
     "core.hide": "Ezkutatu",
     "core.hour": "ordu",
-    "core.hours": "ordu(ak)",
+    "core.hours": "ordu",
     "core.humanreadablesize": "{{size}} {{unit}}",
     "core.image": "Irudia",
     "core.imageviewer": "Irudi ikuskatzailea",

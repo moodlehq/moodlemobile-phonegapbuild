@@ -183,7 +183,13 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
             return _this.commentsProvider.getComments(_this.contextLevel, _this.instanceId, _this.componentName, _this.itemId, _this.area, _this.page).then(function (response) {
                 _this.canAddComments = _this.addDeleteCommentsAvailable && response.canpost;
                 var comments = response.comments.sort(function (a, b) { return b.timecreated - a.timecreated; });
-                _this.canLoadMore = comments.length > 0 && comments.length >= providers_comments["a" /* CoreCommentsProvider */].pageSize;
+                if (typeof response.count != 'undefined') {
+                    _this.canLoadMore = (_this.comments.length + comments.length) > response.count;
+                }
+                else {
+                    // Old style.
+                    _this.canLoadMore = response.comments.length > 0 && response.comments.length >= providers_comments["a" /* CoreCommentsProvider */].pageSize;
+                }
                 return Promise.all(comments.map(function (comment) {
                     // Get the user profile image.
                     return _this.userProvider.getProfile(comment.userid, undefined, true).then(function (user) {
