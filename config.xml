@@ -73,6 +73,7 @@
     <gap:splash src="splash.png" />
 
     <platform name="android">
+        <resource-file src="MainActivity.java" target="app/src/main/java/com/moodle/moodlemobile/MainActivity.java" />
         <resource-file src="google-services.json" target="app/google-services.json" />
         <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
         <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
@@ -167,7 +168,7 @@
     </gap:plugin>
 
     <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:launchMode='singleTop']" mode="merge">
-        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true"></activity>
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true" android:name="MainActivity"></activity>
     </edit-config>
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
         <application android:usesCleartextTraffic="true" />
