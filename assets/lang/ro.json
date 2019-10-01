@@ -274,6 +274,7 @@
     "addon.mod_chat.errorwhilegettingchatusers": "A apărut o eroare la obținerea listei cu utilizatorii din chat.",
     "addon.mod_chat.errorwhileretrievingmessages": "A apărut o eroare la primirea mesajelor de pe server.",
     "addon.mod_chat.errorwhilesendingmessage": "A apărut o eroare la trimiterea mesajului.",
+    "addon.mod_chat.messagebeepseveryone": "{{$a}} trimite o atenţionare la toţi utilizatorii!",
     "addon.mod_chat.messagebeepsyou": "{{$a}} v-a trimis o atenţionare!",
     "addon.mod_chat.messageenter": "{{$a}} a intrat în această cameră de discuţii",
     "addon.mod_chat.messageexit": "{{$a}} a ieşit din această cameră de discuţii",

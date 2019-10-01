@@ -67,6 +67,7 @@
     "addon.mod_chat.errorwhileretrievingmessages": "Fehler beim Abrufen der Mitteilungen vom Server",
     "addon.mod_chat.errorwhilesendingmessage": "Fehler beim Senden der Mitteilung",
     "addon.mod_chat.messagebeepsyou": "{{$a}} hat dich angepiepst!",
+    "addon.mod_chat.messageyoubeep": "Du hast {{$a}} angepiepst",
     "addon.mod_chat.mustbeonlinetosendmessages": "Du musst online sein, um Mitteilungen zu senden.",
     "addon.mod_chat.nosessionsfound": "Keine Sessions",
     "addon.mod_chat.showincompletesessions": "Unvollständige Sessions anzeigen",
