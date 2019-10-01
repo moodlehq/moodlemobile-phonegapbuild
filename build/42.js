@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 2048:
+/***/ 2049:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var app = __webpack_require__(9);
 var constants = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(157);
+var config = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var file = __webpack_require__(53);
@@ -37,7 +37,7 @@ var lang = __webpack_require__(171);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
-var local_notifications = __webpack_require__(154);
+var local_notifications = __webpack_require__(155);
 
 // EXTERNAL MODULE: ./src/core/pushnotifications/providers/pushnotifications.ts
 var pushnotifications = __webpack_require__(130);
@@ -323,7 +323,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1483);
 var option_option = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/segment/segment-button.js
-var segment_button = __webpack_require__(492);
+var segment_button = __webpack_require__(490);
 
 // CONCATENATED MODULE: ./node_modules/ionic-angular/components/segment/segment-button.ngfactory.js
 /**
@@ -382,7 +382,7 @@ var select_ngfactory = __webpack_require__(120);
 var select_select = __webpack_require__(103);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app_app = __webpack_require__(34);
+var app_app = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
 var deep_linker = __webpack_require__(55);
@@ -400,13 +400,13 @@ var toggle = __webpack_require__(368);
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/tap-click/haptic.js
-var haptic = __webpack_require__(195);
+var haptic = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(33);
+var dom_controller = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(365);
@@ -415,7 +415,7 @@ var toolbar_header = __webpack_require__(365);
 var view_controller = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(713);
+var navbar_ngfactory = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(209);
@@ -427,22 +427,22 @@ var nav_controller = __webpack_require__(19);
 var back_button = __webpack_require__(471);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(714);
+var toolbar_title_ngfactory = __webpack_require__(712);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
 var toolbar_title = __webpack_require__(309);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(245);
+var toolbar = __webpack_require__(244);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(178);
+var content_ngfactory = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(101);
+var keyboard = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/segment/segment.js
 var segment = __webpack_require__(757);
@@ -592,7 +592,7 @@ var missing_translation_handler = __webpack_require__(363);
 var translate_store = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(712);
+var ionic_angular_module = __webpack_require__(710);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(109);

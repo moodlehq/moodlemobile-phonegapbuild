@@ -1,6 +1,6 @@
 webpackJsonp([46],{
 
-/***/ 2085:
+/***/ 2086:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31,10 +31,10 @@ var events = __webpack_require__(11);
 var ion_tabs = __webpack_require__(719);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/mainmenu.ts
-var mainmenu = __webpack_require__(487);
+var mainmenu = __webpack_require__(485);
 
 // EXTERNAL MODULE: ./src/core/mainmenu/providers/delegate.ts
-var delegate = __webpack_require__(166);
+var delegate = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/delegate.ts
 var providers_delegate = __webpack_require__(58);
@@ -345,7 +345,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1483);
 var ion_tab = __webpack_require__(1530);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app_app = __webpack_require__(34);
+var app_app = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(7);
@@ -363,7 +363,7 @@ var transition_controller = __webpack_require__(201);
 var deep_linker = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(33);
+var dom_controller = __webpack_require__(34);
 
 // CONCATENATED MODULE: ./src/components/ion-tabs/ion-tab.ngfactory.js
 /**
@@ -442,7 +442,7 @@ var spinner_ngfactory = __webpack_require__(128);
 var spinner = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab-highlight.js
-var tab_highlight = __webpack_require__(522);
+var tab_highlight = __webpack_require__(520);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
 var split_pane = __webpack_require__(218);
@@ -460,7 +460,7 @@ var view_controller = __webpack_require__(38);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(101);
+var keyboard = __webpack_require__(100);
 
 // CONCATENATED MODULE: ./src/components/ion-tabs/ion-tabs.ngfactory.js
 /**
@@ -574,7 +574,7 @@ var missing_translation_handler = __webpack_require__(363);
 var translate_store = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(712);
+var ionic_angular_module = __webpack_require__(710);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(31);

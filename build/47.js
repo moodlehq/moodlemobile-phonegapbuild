@@ -1,6 +1,6 @@
 webpackJsonp([47],{
 
-/***/ 2044:
+/***/ 2045:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27,7 +27,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ngx_translate_core_src_translate_service__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ngx_translate_core_src_translate_store__ = __webpack_require__(470);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__directives_directives_module__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic_angular_module__ = __webpack_require__(712);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic_angular_module__ = __webpack_require__(710);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ngx_translate_core_index__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ionic_angular_util_module_loader__ = __webpack_require__(269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__sites__ = __webpack_require__(397);
