@@ -207,7 +207,7 @@ var app = __webpack_require__(33);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -300,7 +300,7 @@ var resource = __webpack_require__(233);
 var course = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/addon/mod/resource/providers/prefetch-handler.ts
-var prefetch_handler = __webpack_require__(403);
+var prefetch_handler = __webpack_require__(402);
 
 // EXTERNAL MODULE: ./src/addon/mod/resource/providers/helper.ts
 var providers_helper = __webpack_require__(295);
@@ -393,7 +393,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);

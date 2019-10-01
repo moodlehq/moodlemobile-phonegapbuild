@@ -288,6 +288,7 @@
     "addon.mod_forum.erroremptymessage": "Мактубча холӣ буда наметавонад",
     "addon.mod_forum.erroremptysubject": "Мавзӯи мактубча холӣ буда наметавонад",
     "addon.mod_forum.group": "Гурӯҳ",
+    "addon.mod_forum.lastpost": "Хабари охирин",
     "addon.mod_forum.message": "Паём",
     "addon.mod_forum.modeflatnewestfirst": "Ҳамвор, дар пеш навҳо",
     "addon.mod_forum.modeflatoldestfirst": "Ҳамвор, дар пеш кӯҳнаҳо",

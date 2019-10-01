@@ -565,6 +565,7 @@
     "addon.mod_forum.favouriteupdated": "Ваша опција за означавање звездицом је ажурирана.",
     "addon.mod_forum.forumnodiscussionsyet": "Још нема тема за дискусију на овом форуму.",
     "addon.mod_forum.group": "Група",
+    "addon.mod_forum.lastpost": "Последња порука",
     "addon.mod_forum.lockdiscussion": "Закључај ову дискусију",
     "addon.mod_forum.lockupdated": "Опција за закључавања је ажурирана.",
     "addon.mod_forum.message": "Порука",

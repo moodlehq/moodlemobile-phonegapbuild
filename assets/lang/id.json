@@ -165,6 +165,7 @@
     "addon.mod_forum.errorgetgroups": "Terjadi kesalahan saat mendapatkan pengaturan grup.",
     "addon.mod_forum.forumnodiscussionsyet": "Tidak ada topik diskusi di forum ini.",
     "addon.mod_forum.group": "Grup",
+    "addon.mod_forum.lastpost": "Post terakhir",
     "addon.mod_forum.message": "Pesan",
     "addon.mod_forum.modeflatnewestfirst": "Tampilkan tanggapan secara secara flat, dari yang terbaru",
     "addon.mod_forum.modeflatoldestfirst": "Tampilkan tanggapan secara secara flat, dari yang terlama",

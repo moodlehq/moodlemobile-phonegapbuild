@@ -558,6 +558,7 @@
     "addon.mod_forum.favouriteupdated": "あなたの星オプションが更新されました。",
     "addon.mod_forum.forumnodiscussionsyet": "このフォーラムにはまだディスカッショントピックがありません",
     "addon.mod_forum.group": "グループ",
+    "addon.mod_forum.lastpost": "最新の投稿",
     "addon.mod_forum.lockdiscussion": "このディスカッションをロックする",
     "addon.mod_forum.lockupdated": "ロックオプションが更新されました。",
     "addon.mod_forum.message": "メッセージ",

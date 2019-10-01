@@ -382,6 +382,7 @@
     "addon.mod_forum.errorgetgroups": "Eroare la obținerea setărilor pentru grup.",
     "addon.mod_forum.forumnodiscussionsyet": "Nu există subiecte deschise în acest forum.",
     "addon.mod_forum.group": "Grup",
+    "addon.mod_forum.lastpost": "Ultima intervenţie",
     "addon.mod_forum.message": "Mesaj",
     "addon.mod_forum.modeflatnewestfirst": "Arată replicile liniar, mai întâi cele recente",
     "addon.mod_forum.modeflatoldestfirst": "Arată replicile liniar, mai întâi cele vechi",

@@ -560,6 +560,7 @@
     "addon.mod_forum.errorposttoallgroups": "Não foi possível criar nova discussão em todos os grupos.",
     "addon.mod_forum.forumnodiscussionsyet": "Não existem tópicos neste fórum ainda",
     "addon.mod_forum.group": "Grupo",
+    "addon.mod_forum.lastpost": "Última mensagem",
     "addon.mod_forum.lockdiscussion": "Bloquear esta discussão",
     "addon.mod_forum.message": "Mensagem",
     "addon.mod_forum.modeflatnewestfirst": "Mostrar respostas começando pela mais recente",

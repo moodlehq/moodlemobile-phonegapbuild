@@ -477,7 +477,7 @@ var gesture_controller = __webpack_require__(40);
 var dom_controller = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/user-link.ts
-var user_link = __webpack_require__(477);
+var user_link = __webpack_require__(476);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(211);
@@ -489,7 +489,7 @@ var user_avatar = __webpack_require__(178);
 var avatar = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
-var progress_bar_ngfactory = __webpack_require__(484);
+var progress_bar_ngfactory = __webpack_require__(483);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ts
 var progress_bar = __webpack_require__(315);
@@ -513,7 +513,7 @@ var navbar_ngfactory = __webpack_require__(711);
 var navbar = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(712);
@@ -692,7 +692,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);

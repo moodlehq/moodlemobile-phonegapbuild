@@ -501,6 +501,7 @@
     "addon.mod_forum.erroremptymessage": "A hozzászólás szövege nem lehet üres.",
     "addon.mod_forum.erroremptysubject": "A hozzászólás tárgya nem lehet üres.",
     "addon.mod_forum.favouriteupdated": "Megjelölését frissítettük.",
+    "addon.mod_forum.lastpost": "Utolsó hozzászólás",
     "addon.mod_forum.lockdiscussion": "Megbeszélés zárolása",
     "addon.mod_forum.lockupdated": "Zárolását frissítettük.",
     "addon.mod_forum.message": "Üzenet",

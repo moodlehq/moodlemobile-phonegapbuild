@@ -449,6 +449,7 @@
     "addon.mod_forum.errorgetgroups": "Помилка отримання групових налаштувань.",
     "addon.mod_forum.forumnodiscussionsyet": "Відсутні обговорення в даному форумі.",
     "addon.mod_forum.group": "Група",
+    "addon.mod_forum.lastpost": "Останнє повідомлення",
     "addon.mod_forum.message": "Повідомлення",
     "addon.mod_forum.modeflatnewestfirst": "Показувати відповіді простим списком, найновіші спочатку",
     "addon.mod_forum.modeflatoldestfirst": "Показувати відповіді простим списком, найстаріші спочатку",

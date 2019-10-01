@@ -558,6 +558,7 @@
     "addon.mod_forum.favouriteupdated": "Η επιλογή σας για αστερίσκο ενημερώθηκε.",
     "addon.mod_forum.forumnodiscussionsyet": "Δεν υπάρχουν ακόμα θέματα συζήτησης σε αυτό το forum.",
     "addon.mod_forum.group": "Ομάδα",
+    "addon.mod_forum.lastpost": "Τελευταία δημοσίευση",
     "addon.mod_forum.lockdiscussion": "Κλείδωμα αυτής της συζήτησης",
     "addon.mod_forum.lockupdated": "Η επιλογή κλειδώματος ενημερώθηκε.",
     "addon.mod_forum.message": "Μήνυμα",

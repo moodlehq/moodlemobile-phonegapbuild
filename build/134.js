@@ -49,7 +49,7 @@ var utils_utils = __webpack_require__(2);
 var calendar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/helper.ts
-var helper = __webpack_require__(473);
+var helper = __webpack_require__(472);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar-offline.ts
 var calendar_offline = __webpack_require__(367);
@@ -927,7 +927,7 @@ var components_module_AddonCalendarComponentsModule = /** @class */ (function ()
 
 //# sourceMappingURL=components.module.js.map
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar-sync.ts
-var calendar_sync = __webpack_require__(476);
+var calendar_sync = __webpack_require__(475);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/helper.ts
 var providers_helper = __webpack_require__(182);
@@ -1581,7 +1581,7 @@ var navbar = __webpack_require__(209);
 var app_app = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(712);
@@ -1849,7 +1849,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);

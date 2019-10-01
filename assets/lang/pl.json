@@ -498,6 +498,7 @@
     "addon.mod_forum.erroremptymessage": "Wiadomość nie może być pusta",
     "addon.mod_forum.erroremptysubject": "Tytuł wpisu nie może być pusty.",
     "addon.mod_forum.favouriteupdated": "Twoja opcja gwiazdki została zapisana.",
+    "addon.mod_forum.lastpost": "Ostatni wpis",
     "addon.mod_forum.lockdiscussion": "Zablokuj ta dyskusje",
     "addon.mod_forum.lockupdated": "Opcja zablokowania została zapisana.",
     "addon.mod_forum.message": "Wiadomość",

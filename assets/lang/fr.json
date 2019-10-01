@@ -575,6 +575,7 @@
     "addon.mod_forum.favouriteupdated": "Le réglage favori a été modifié.",
     "addon.mod_forum.forumnodiscussionsyet": "Il n'y a pas encore de discussion dans ce forum.",
     "addon.mod_forum.group": "Groupe",
+    "addon.mod_forum.lastpost": "Dernier message",
     "addon.mod_forum.lockdiscussion": "Verrouiller cette discussion",
     "addon.mod_forum.lockupdated": "Le réglage verrouillé a été modifié.",
     "addon.mod_forum.message": "Message",

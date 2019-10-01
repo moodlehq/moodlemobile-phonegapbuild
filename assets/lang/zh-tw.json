@@ -519,6 +519,7 @@
     "addon.mod_forum.errorgetgroups": "讀取群組設定發生錯誤",
     "addon.mod_forum.forumnodiscussionsyet": "這個討論區還沒有討論主題",
     "addon.mod_forum.group": "群組",
+    "addon.mod_forum.lastpost": "最新貼文",
     "addon.mod_forum.message": "訊息",
     "addon.mod_forum.modeflatnewestfirst": "以平舖方式呈現回應的貼文，最晚貼出的在前",
     "addon.mod_forum.modeflatoldestfirst": "以平舖方式呈現回應的貼文，最早貼出的在前",

@@ -493,6 +493,7 @@
     "addon.mod_forum.errorgetgroups": "שגיאה בטעינת הגדרות קבוצה.",
     "addon.mod_forum.forumnodiscussionsyet": "עדיין לא קיימים נושאי דיונים בפורום זה.",
     "addon.mod_forum.group": "קבוצה",
+    "addon.mod_forum.lastpost": "הודעה אחרונה",
     "addon.mod_forum.lockdiscussion": "נעילת הדיון",
     "addon.mod_forum.message": "הודעה",
     "addon.mod_forum.modeflatnewestfirst": "הצגת תגובות בצורה שטוחה, החדשות ביותר ראשונות",

@@ -505,6 +505,7 @@
     "addon.mod_forum.erroremptymessage": "Tijelo poruke ne može biti prazno",
     "addon.mod_forum.erroremptysubject": "Naslov poruke ne može biti prazan",
     "addon.mod_forum.group": "Grupa",
+    "addon.mod_forum.lastpost": "Zadnja poruka",
     "addon.mod_forum.lockdiscussion": "Zaključaj raspravu",
     "addon.mod_forum.message": "Poruka",
     "addon.mod_forum.modeflatnewestfirst": "Prikaz odgovora, počevši s najnovijim",

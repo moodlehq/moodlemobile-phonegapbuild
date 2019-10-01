@@ -210,7 +210,7 @@ var app = __webpack_require__(33);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -297,7 +297,7 @@ var sync = __webpack_require__(251);
 var module_prefetch_delegate = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/prefetch-handler.ts
-var prefetch_handler = __webpack_require__(399);
+var prefetch_handler = __webpack_require__(398);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
 var providers_offline = __webpack_require__(197);
@@ -385,7 +385,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);

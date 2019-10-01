@@ -482,6 +482,7 @@
     "addon.mod_forum.errorgetgroups": "Fel vid hämtning av gruppinställningar",
     "addon.mod_forum.forumnodiscussionsyet": "Det finns inga diskussionsämnen ännu i detta forum.",
     "addon.mod_forum.group": "Grupp",
+    "addon.mod_forum.lastpost": "Senaste inlägg",
     "addon.mod_forum.message": "Meddelande",
     "addon.mod_forum.modeflatnewestfirst": "Visa svarslista, med det senaste först",
     "addon.mod_forum.modeflatoldestfirst": "Visa svarslista, med det äldsta först",

@@ -575,6 +575,7 @@
     "addon.mod_forum.favouriteupdated": "L'opció de destacat s'ha actualitzat.",
     "addon.mod_forum.forumnodiscussionsyet": "Encara no hi ha temes de debat en aquest fòrum",
     "addon.mod_forum.group": "Grup",
+    "addon.mod_forum.lastpost": "Darrer missatge",
     "addon.mod_forum.lockdiscussion": "Bloqueja aquest debat",
     "addon.mod_forum.lockupdated": "La opció de bloqueig s'ha actualitzat.",
     "addon.mod_forum.message": "Missatge",

@@ -579,6 +579,7 @@
     "addon.mod_forum.favouriteupdated": "A opção de marcar com estrela foi atualizada.",
     "addon.mod_forum.forumnodiscussionsyet": "Ainda não existem tópicos de discussão neste fórum.",
     "addon.mod_forum.group": "Grupo",
+    "addon.mod_forum.lastpost": "Última mensagem",
     "addon.mod_forum.lockdiscussion": "Bloquear esta conversação",
     "addon.mod_forum.lockupdated": "A opção de bloquear foi atualizada.",
     "addon.mod_forum.message": "Mensagem",

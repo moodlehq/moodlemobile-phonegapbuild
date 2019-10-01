@@ -575,6 +575,7 @@
     "addon.mod_forum.favouriteupdated": "Ihre Markierungsoption wurde aktualisiert.",
     "addon.mod_forum.forumnodiscussionsyet": "Keine Themen im Forum",
     "addon.mod_forum.group": "Gruppe",
+    "addon.mod_forum.lastpost": "Letzter Beitrag",
     "addon.mod_forum.lockdiscussion": "Dieses Thema sperren",
     "addon.mod_forum.lockupdated": "Die Sperroption wurde aktualisiert.",
     "addon.mod_forum.message": "Mitteilung",

@@ -525,6 +525,7 @@
     "addon.mod_forum.errorgetgroups": "Klaida gaunant grupės nustatymus.",
     "addon.mod_forum.forumnodiscussionsyet": "Pokalbio temų forume dar nėra.",
     "addon.mod_forum.group": "Grupė",
+    "addon.mod_forum.lastpost": "Paskutinis skelbimas",
     "addon.mod_forum.lockdiscussion": "Užrakinti šią diskusiją",
     "addon.mod_forum.message": "Žinutės tekstas",
     "addon.mod_forum.modeflatnewestfirst": "Rodyti atsakymus standartiškai, pirmiausia rodant naujausią",

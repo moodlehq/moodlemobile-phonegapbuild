@@ -431,6 +431,7 @@
     "addon.mod_forum.errorgetgroups": "خطا در دریافت تنظیمات گروه",
     "addon.mod_forum.forumnodiscussionsyet": "هنوز هیچ مباحثه ای در این تالار شروع نشده است.",
     "addon.mod_forum.group": "گروه",
+    "addon.mod_forum.lastpost": "آخرین مطلب",
     "addon.mod_forum.message": "متن",
     "addon.mod_forum.modeflatnewestfirst": "نمایش مطالب به صورت مسطح (از جدید به قدیمی)",
     "addon.mod_forum.modeflatoldestfirst": "نمایش مطالب به صورت مسطح (از قدیمی به جدید)",

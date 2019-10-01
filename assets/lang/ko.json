@@ -363,6 +363,7 @@
     "addon.mod_forum.errorgetgroups": "그룹 설정을 가져 오는 중 오류가 발생했습니다.",
     "addon.mod_forum.forumnodiscussionsyet": "이 포럼에는 아직 토론이 없습니다.",
     "addon.mod_forum.group": "그룹",
+    "addon.mod_forum.lastpost": "최근 게시",
     "addon.mod_forum.message": "메세지",
     "addon.mod_forum.modeflatnewestfirst": "새 답글부터 내용 보기",
     "addon.mod_forum.modeflatoldestfirst": "옛 답글부터 내용 보기",

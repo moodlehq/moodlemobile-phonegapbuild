@@ -515,6 +515,7 @@
     "addon.mod_forum.errorgetgroups": "获取组设置时出错。",
     "addon.mod_forum.forumnodiscussionsyet": "此讨论区中还没有讨论话题。",
     "addon.mod_forum.group": "组",
+    "addon.mod_forum.lastpost": "最后回帖",
     "addon.mod_forum.message": "正文",
     "addon.mod_forum.modeflatnewestfirst": "列表显示回帖内容，新帖在前",
     "addon.mod_forum.modeflatoldestfirst": "列表显示回帖内容，旧帖在前",

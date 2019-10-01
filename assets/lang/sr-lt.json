@@ -565,6 +565,7 @@
     "addon.mod_forum.favouriteupdated": "Vaša opcija za označavanje zvezdicom je ažurirana.",
     "addon.mod_forum.forumnodiscussionsyet": "Greška prilikom preuzimanja podešavanja grupa.",
     "addon.mod_forum.group": "Grupa",
+    "addon.mod_forum.lastpost": "Poslednja poruka",
     "addon.mod_forum.lockdiscussion": "Zaključaj ovu diskusiju",
     "addon.mod_forum.lockupdated": "Opcija za zaključavanja je ažurirana.",
     "addon.mod_forum.message": "Poruka",

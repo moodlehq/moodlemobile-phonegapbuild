@@ -180,6 +180,7 @@
     "addon.mod_forum.errorgetgroups": "समूह सेटिंग्स प्राप्त करने में त्रुटि।",
     "addon.mod_forum.forumnodiscussionsyet": "इस फोरम में अभी कोई चर्चा नहीं हुई है।",
     "addon.mod_forum.group": "समूह",
+    "addon.mod_forum.lastpost": "पिछली पोस्ट",
     "addon.mod_forum.message": "सन्देश",
     "addon.mod_forum.modulenameplural": "फ़ोरम",
     "addon.mod_forum.numdiscussions": "{{numdiscussions}} चर्चाएँ",

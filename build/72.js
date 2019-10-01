@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var helper = __webpack_require__(723);
 
 // EXTERNAL MODULE: ./src/addon/messageoutput/providers/delegate.ts
-var delegate = __webpack_require__(389);
+var delegate = __webpack_require__(388);
 
 // EXTERNAL MODULE: ./src/providers/local-notifications.ts
 var local_notifications = __webpack_require__(155);
@@ -543,7 +543,7 @@ var navbar = __webpack_require__(209);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(712);
@@ -768,7 +768,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);

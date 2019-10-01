@@ -575,6 +575,7 @@
     "addon.mod_forum.favouriteupdated": "Uw favoriet-optie is bijgewerkt.",
     "addon.mod_forum.forumnodiscussionsyet": "Er zijn nog geen discussies in dit forum.",
     "addon.mod_forum.group": "Groep",
+    "addon.mod_forum.lastpost": "Laatste bericht",
     "addon.mod_forum.lockdiscussion": "Vergrendel deze discussie",
     "addon.mod_forum.lockupdated": "De vergrendelingsoptie is bijgewerkt.",
     "addon.mod_forum.message": "Bericht",

@@ -526,6 +526,7 @@
     "addon.mod_forum.favouriteupdated": "Ваши пометки были обновлены.",
     "addon.mod_forum.forumnodiscussionsyet": "В этом форуме ещё нет тем для обсуждения.",
     "addon.mod_forum.group": "Группа",
+    "addon.mod_forum.lastpost": "Последнее сообщение",
     "addon.mod_forum.message": "Сообщение",
     "addon.mod_forum.modeflatnewestfirst": "Плоско, впереди новые",
     "addon.mod_forum.modeflatoldestfirst": "Плоско, впереди старые",

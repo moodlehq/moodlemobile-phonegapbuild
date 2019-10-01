@@ -578,6 +578,7 @@
     "addon.mod_forum.favouriteupdated": "Zure gogoko-aukera eguneratu da.",
     "addon.mod_forum.forumnodiscussionsyet": "Oraindik ez dago elkarrizketarik foro honetan.",
     "addon.mod_forum.group": "Taldea",
+    "addon.mod_forum.lastpost": "Azken mezua",
     "addon.mod_forum.lockdiscussion": "Blokeatu eztabaida",
     "addon.mod_forum.lockupdated": "Blokeatze-aukera eguneratu da.",
     "addon.mod_forum.message": "Mezua",

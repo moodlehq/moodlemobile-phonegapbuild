@@ -417,6 +417,7 @@
     "addon.mod_forum.erroremptysubject": "Gönderi konusu boş olamaz.",
     "addon.mod_forum.forumnodiscussionsyet": "Bu forum da henuz hiç tartışma başlığı yok",
     "addon.mod_forum.group": "Grup",
+    "addon.mod_forum.lastpost": "Son mesaj",
     "addon.mod_forum.message": "Mesaj",
     "addon.mod_forum.modeflatnewestfirst": "Yanıtları yeniler önce olacak şekilde düz göster",
     "addon.mod_forum.modeflatoldestfirst": "Yanıtları eskiler önce olacak şekilde düz göster",

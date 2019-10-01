@@ -578,6 +578,7 @@
     "addon.mod_forum.favouriteupdated": "Su opción de estrella ha sido actualizada.",
     "addon.mod_forum.forumnodiscussionsyet": "Todavía no hay tópicos de discusión en este foro.",
     "addon.mod_forum.group": "Grupo",
+    "addon.mod_forum.lastpost": "Último mensaje",
     "addon.mod_forum.lockdiscussion": "Bloquear esta discusión",
     "addon.mod_forum.lockupdated": "La opción para bloquear ha sido actualizada.",
     "addon.mod_forum.message": "Mensaje",

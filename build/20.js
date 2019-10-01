@@ -286,7 +286,7 @@ var navbar = __webpack_require__(209);
 var app = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -316,7 +316,7 @@ var keyboard = __webpack_require__(100);
 var search_box_ngfactory = __webpack_require__(1500);
 
 // EXTERNAL MODULE: ./src/components/search-box/search-box.ts
-var search_box = __webpack_require__(483);
+var search_box = __webpack_require__(482);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -400,7 +400,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);

@@ -850,7 +850,7 @@ var file_helper = __webpack_require__(135);
 var mimetype = __webpack_require__(66);
 
 // EXTERNAL MODULE: ./src/components/local-file/local-file.ngfactory.js
-var local_file_ngfactory = __webpack_require__(376);
+var local_file_ngfactory = __webpack_require__(375);
 
 // EXTERNAL MODULE: ./src/components/local-file/local-file.ts
 var local_file = __webpack_require__(279);
@@ -916,7 +916,7 @@ var checkbox_checkbox = __webpack_require__(195);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ngfactory.js
-var attachments_ngfactory = __webpack_require__(482);
+var attachments_ngfactory = __webpack_require__(481);
 
 // EXTERNAL MODULE: ./src/components/attachments/attachments.ts
 var attachments = __webpack_require__(314);
@@ -976,7 +976,7 @@ var avatar = __webpack_require__(152);
 var user_avatar = __webpack_require__(178);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-content.js
-var card_content = __webpack_require__(374);
+var card_content = __webpack_require__(484);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/components/post/post.ts
 var post = __webpack_require__(1536);
@@ -1148,7 +1148,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
 var toolbar_item = __webpack_require__(366);
@@ -1350,7 +1350,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);

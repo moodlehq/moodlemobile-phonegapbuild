@@ -64,10 +64,10 @@ var calendar = __webpack_require__(214);
 var calendar_offline = __webpack_require__(367);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/helper.ts
-var helper = __webpack_require__(473);
+var helper = __webpack_require__(472);
 
 // EXTERNAL MODULE: ./src/addon/calendar/providers/calendar-sync.ts
-var calendar_sync = __webpack_require__(476);
+var calendar_sync = __webpack_require__(475);
 
 // CONCATENATED MODULE: ./src/addon/calendar/pages/edit-event/edit-event.ts
 // (C) Copyright 2015 Martin Dougiamas
@@ -857,7 +857,7 @@ var navbar = __webpack_require__(209);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(712);
@@ -1106,7 +1106,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);

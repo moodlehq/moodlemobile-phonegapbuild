@@ -543,6 +543,7 @@
     "addon.mod_forum.errorgetgroups": "Fejl ved hentning af gruppeindstillinger.",
     "addon.mod_forum.forumnodiscussionsyet": "Der er endnu ingen indlæg i dette forum.",
     "addon.mod_forum.group": "Gruppe",
+    "addon.mod_forum.lastpost": "Seneste indlæg",
     "addon.mod_forum.message": "Meddelelse",
     "addon.mod_forum.modeflatnewestfirst": "Kronologisk visning med seneste indlæg først",
     "addon.mod_forum.modeflatoldestfirst": "Kronologisk visning med første indlæg først",

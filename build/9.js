@@ -22,7 +22,7 @@ var components_module = __webpack_require__(29);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/components.module.ts
-var components_components_module = __webpack_require__(481);
+var components_components_module = __webpack_require__(480);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/pages/submission/submission.ts
 var submission = __webpack_require__(2124);
@@ -399,7 +399,7 @@ var navbar_ngfactory = __webpack_require__(711);
 var navbar = __webpack_require__(209);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(712);
@@ -602,7 +602,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);
@@ -711,7 +711,7 @@ var AddonModWorkshopSubmissionPageModuleNgFactory = core["_28" /* ɵcmf */](subm
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_events__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_ionic_angular_platform_platform__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__angular_common__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments_ngfactory__ = __webpack_require__(482);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_attachments_attachments_ngfactory__ = __webpack_require__(481);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_attachments_attachments__ = __webpack_require__(314);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__providers_app__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__core_fileuploader_providers_fileuploader__ = __webpack_require__(68);
@@ -730,7 +730,7 @@ var AddonModWorkshopSubmissionPageModuleNgFactory = core["_28" /* ɵcmf */](subm
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__components_file_file__ = __webpack_require__(180);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__providers_file_helper__ = __webpack_require__(135);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__providers_utils_mimetype__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_local_file_local_file_ngfactory__ = __webpack_require__(376);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_local_file_local_file_ngfactory__ = __webpack_require__(375);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__components_local_file_local_file__ = __webpack_require__(279);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__providers_file__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__providers_utils_time__ = __webpack_require__(24);

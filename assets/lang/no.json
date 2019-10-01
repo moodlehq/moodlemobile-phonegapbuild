@@ -543,6 +543,7 @@
     "addon.mod_forum.favouriteupdated": "Ditt favorittvalg har blitt oppdatert",
     "addon.mod_forum.forumnodiscussionsyet": "Det er foreløpig ingen diskusjonsemner i dette forumet.",
     "addon.mod_forum.group": "Gruppe",
+    "addon.mod_forum.lastpost": "Siste innlegg",
     "addon.mod_forum.lockdiscussion": "Lås denne diskusjonen",
     "addon.mod_forum.lockupdated": "Låsevalget har blitt oppdatert",
     "addon.mod_forum.message": "Melding",

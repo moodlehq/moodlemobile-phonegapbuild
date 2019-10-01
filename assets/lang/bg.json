@@ -364,6 +364,7 @@
     "addon.mod_forum.erroremptymessage": "Мнението не може да бъде празно",
     "addon.mod_forum.erroremptysubject": "Темата на мнението не може да бъде празна.",
     "addon.mod_forum.forumnodiscussionsyet": "Няма теми за обсъждане в този форум",
+    "addon.mod_forum.lastpost": "Последно мнение",
     "addon.mod_forum.lockdiscussion": "Заключване на тази дискусия",
     "addon.mod_forum.lockupdated": "Настройките за заключване бяха променени.",
     "addon.mod_forum.message": "Вашето мнение",

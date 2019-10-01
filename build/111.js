@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/components.module.ts + 2 modules
-var components_module = __webpack_require__(474);
+var components_module = __webpack_require__(473);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/components/index/index.ts
 var index = __webpack_require__(497);
@@ -184,7 +184,7 @@ var unsupported_module_ngfactory = __webpack_require__(1485);
 var tag_area_ngfactory = __webpack_require__(1488);
 
 // EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ngfactory.js
-var comments_ngfactory = __webpack_require__(478);
+var comments_ngfactory = __webpack_require__(477);
 
 // EXTERNAL MODULE: ./src/core/tag/components/feed/feed.ngfactory.js
 var feed_ngfactory = __webpack_require__(1490);
@@ -214,7 +214,7 @@ var app = __webpack_require__(33);
 var nav_controller = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(470);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -307,7 +307,7 @@ var data = __webpack_require__(96);
 var providers_helper = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/prefetch-handler.ts
-var prefetch_handler = __webpack_require__(396);
+var prefetch_handler = __webpack_require__(395);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(24);
@@ -408,7 +408,7 @@ var translate_parser = __webpack_require__(364);
 var missing_translation_handler = __webpack_require__(363);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(469);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(710);
@@ -426,7 +426,7 @@ var block_components_components_module = __webpack_require__(270);
 var course_components_components_module = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.module.ts
-var compile_html_module = __webpack_require__(475);
+var compile_html_module = __webpack_require__(474);
 
 // EXTERNAL MODULE: ./src/core/comments/components/components.module.ts
 var comments_components_components_module = __webpack_require__(370);

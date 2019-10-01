@@ -515,6 +515,7 @@
     "addon.mod_forum.errorgetgroups": "Virhe haettaessa ryhmäasetuksia.",
     "addon.mod_forum.forumnodiscussionsyet": "Tällä keskustelualueella ei ole vielä viestejä.",
     "addon.mod_forum.group": "Ryhmä",
+    "addon.mod_forum.lastpost": "Viimeisin viesti",
     "addon.mod_forum.message": "Viesti",
     "addon.mod_forum.modeflatnewestfirst": "Näytä vastaukset peräkkäin, uusin ensin",
     "addon.mod_forum.modeflatoldestfirst": "Näytä vastaukset peräkkäin, vanhin ensin",

@@ -485,6 +485,7 @@
     "addon.mod_forum.errorposttoallgroups": "Nevar izveidot jaunu diskusiju visās grupās.",
     "addon.mod_forum.forumnodiscussionsyet": "Šajā forumā vēl nav diskusiju.",
     "addon.mod_forum.group": "Grupa",
+    "addon.mod_forum.lastpost": "Pēdējā publicētā ziņa",
     "addon.mod_forum.message": "Ziņojums",
     "addon.mod_forum.modeflatnewestfirst": "Rādīt atbildes plakani, jaunāko vispirms",
     "addon.mod_forum.modeflatoldestfirst": "Rādīt atbildes plakani, vecāko vispirms",

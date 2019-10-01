@@ -509,6 +509,7 @@
     "addon.mod_forum.favouriteupdated": "ជម្រើសដាក់ផ្កាយរបស់អ្នកត្រូវបានកែសម្រួលថ្មី។",
     "addon.mod_forum.forumnodiscussionsyet": "មិនទាន់មានការពិភាក្សានៅឡើយទេនៅក្នុងវេទិកានេះ។",
     "addon.mod_forum.group": "ក្រុម",
+    "addon.mod_forum.lastpost": "ប្រកាសចុងក្រោយ",
     "addon.mod_forum.lockdiscussion": "បិទកិច្ចពិភាក្សានេះ",
     "addon.mod_forum.lockupdated": "ជម្រើសបិទត្រូវបានកែសម្រួលថ្មី។",
     "addon.mod_forum.message": "សារ",

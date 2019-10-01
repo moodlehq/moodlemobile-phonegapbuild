@@ -579,6 +579,7 @@
     "addon.mod_forum.favouriteupdated": "Vaše volba hvězdičky byla aktualizována.",
     "addon.mod_forum.forumnodiscussionsyet": "V tomto diskusním fóru nejsou žádná témata",
     "addon.mod_forum.group": "Skupina",
+    "addon.mod_forum.lastpost": "Poslední příspěvek",
     "addon.mod_forum.lockdiscussion": "Uzamknout tuto diskusi",
     "addon.mod_forum.lockupdated": "Možnost zámku byla aktualizována.",
     "addon.mod_forum.message": "Zpráva",
