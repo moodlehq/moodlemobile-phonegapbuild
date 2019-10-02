@@ -300,7 +300,7 @@
     "addon.mod_assign.addattempt": "別の提出を許可する",
     "addon.mod_assign.addnewattempt": "新しい提出を追加する",
     "addon.mod_assign.addnewattemptfromprevious": "前回の提出をもとに新しい提出を追加する",
-    "addon.mod_assign.addsubmission": "課題を追加する",
+    "addon.mod_assign.addsubmission": "提出物をアップロード・入力する",
     "addon.mod_assign.allowsubmissionsanddescriptionfromdatesummary": "課題詳細および提出フォームは <strong>{{$a}}</strong> から利用できます。",
     "addon.mod_assign.allowsubmissionsfromdate": "開始日時",
     "addon.mod_assign.allowsubmissionsfromdatesummary": "この課題は <strong>{{$a}}</strong> から提出を受け付けます。",
