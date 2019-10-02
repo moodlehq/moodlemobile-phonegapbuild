@@ -19,7 +19,7 @@ var components_module = __webpack_require__(29);
 var directives_module = __webpack_require__(31);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/menu-modal/menu-modal.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -81,7 +81,7 @@ var menu_modal_AddonModLessonMenuModalPage = /** @class */ (function () {
 var _ngx_translate_core = __webpack_require__(3);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/menu-modal/menu-modal.module.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -190,7 +190,7 @@ var translate_pipe = __webpack_require__(27);
 var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(212);
+var file_ngfactory = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(180);
@@ -271,7 +271,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(33);

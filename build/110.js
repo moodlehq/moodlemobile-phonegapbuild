@@ -43,7 +43,7 @@ var helper = __webpack_require__(215);
 var tag = __webpack_require__(156);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/search/search.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -252,7 +252,7 @@ var search_AddonModDataSearchPage = /** @class */ (function () {
 var compile_html_module = __webpack_require__(474);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/search/search.module.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -387,7 +387,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(33);
@@ -480,7 +480,7 @@ var deep_linker = __webpack_require__(55);
 var radio_group = __webpack_require__(138);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.ngfactory.js
-var radio_button_ngfactory = __webpack_require__(184);
+var radio_button_ngfactory = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/radio/radio-button.js
 var radio_button = __webpack_require__(144);
@@ -489,7 +489,7 @@ var radio_button = __webpack_require__(144);
 var compile_html_ngfactory = __webpack_require__(217);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
-var compile_html = __webpack_require__(188);
+var compile_html = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
 var compile = __webpack_require__(146);

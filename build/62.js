@@ -46,7 +46,7 @@ var helper = __webpack_require__(36);
 var format_delegate = __webpack_require__(174);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/course-preview/course-preview.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -500,7 +500,7 @@ var directives_module = __webpack_require__(31);
 var pipes_module = __webpack_require__(109);
 
 // CONCATENATED MODULE: ./src/core/courses/pages/course-preview/course-preview.module.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -653,7 +653,7 @@ var user_link = __webpack_require__(476);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(211);
+var user_avatar_ngfactory = __webpack_require__(212);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
 var user_avatar = __webpack_require__(178);
@@ -665,7 +665,7 @@ var avatar = __webpack_require__(152);
 var item_divider = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(212);
+var file_ngfactory = __webpack_require__(213);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(180);
@@ -707,7 +707,7 @@ var gesture_controller = __webpack_require__(40);
 var dom_controller = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(181);
+var directives_link = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
 var format_date = __webpack_require__(245);
@@ -725,7 +725,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(33);
@@ -752,7 +752,7 @@ var keyboard = __webpack_require__(100);
 var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(210);
+var refresher_content_ngfactory = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(169);

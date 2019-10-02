@@ -1,6 +1,6 @@
 webpackJsonp([11],{
 
-/***/ 2085:
+/***/ 2086:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var utils_text = __webpack_require__(10);
 var utils_utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/providers/ws.ts
-var ws = __webpack_require__(202);
+var ws = __webpack_require__(203);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
 var helper = __webpack_require__(122);
@@ -37,13 +37,13 @@ var helper = __webpack_require__(122);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user-profile-field-delegate.ts
-var user_profile_field_delegate = __webpack_require__(186);
+var user_profile_field_delegate = __webpack_require__(187);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
 var configconstants = __webpack_require__(119);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -133,7 +133,8 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
      */
     CoreLoginEmailSignupPage.prototype.completeFormGroup = function () {
         this.signupForm.addControl('city', this.fb.control(this.settings.defaultcity || ''));
-        this.signupForm.addControl('country', this.fb.control(this.settings.country || ''));
+        this.signUpCountryControl = this.fb.control(this.settings.country || '');
+        this.signupForm.addControl('country', this.signUpCountryControl);
         // Add the name fields.
         for (var i in this.settings.namefields) {
             this.signupForm.addControl(this.settings.namefields[i], this.fb.control('', esm5_forms["u" /* Validators */].required));
@@ -330,6 +331,9 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
         params.age = parseInt(params.age, 10); // Use just the integer part.
         this.wsProvider.callAjax('core_auth_is_minor', params, { siteUrl: this.siteUrl }).then(function (result) {
             if (!result.status) {
+                if (_this.countryControl.value) {
+                    _this.signUpCountryControl.setValue(_this.countryControl.value);
+                }
                 // Not a minor, go ahead!
                 _this.ageDigitalConsentVerification = false;
             }
@@ -372,7 +376,7 @@ var directives_module = __webpack_require__(31);
 var components_components_module = __webpack_require__(479);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.module.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -597,13 +601,13 @@ var lang = __webpack_require__(171);
 var modal_controller = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(181);
+var directives_link = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.ngfactory.js
 var checkbox_ngfactory = __webpack_require__(248);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
-var checkbox_checkbox = __webpack_require__(195);
+var checkbox_checkbox = __webpack_require__(196);
 
 // EXTERNAL MODULE: ./src/components/show-password/show-password.ngfactory.js
 var show_password_ngfactory = __webpack_require__(724);
@@ -633,7 +637,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(470);
@@ -660,7 +664,7 @@ var keyboard = __webpack_require__(100);
 var refresher = __webpack_require__(151);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(210);
+var refresher_content_ngfactory = __webpack_require__(211);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(169);
@@ -905,12 +909,12 @@ var CoreLoginCredentialsPageModuleNgFactory = core["_28" /* ɵcmf */](email_sign
 /* unused harmony export CoreUserProfileFieldComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(713);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_profile_field__ = __webpack_require__(1510);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_user_profile_field_delegate__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_user_profile_field_delegate__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_utils__ = __webpack_require__(2);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.

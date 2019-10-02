@@ -1,6 +1,6 @@
 webpackJsonp([112],{
 
-/***/ 2072:
+/***/ 2073:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -70,7 +70,7 @@ var fields_delegate = __webpack_require__(123);
 var tag = __webpack_require__(156);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/edit/edit.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -379,7 +379,7 @@ var edit_AddonModDataEditPage = /** @class */ (function () {
 
 //# sourceMappingURL=edit.js.map
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/edit/edit.module.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -554,7 +554,7 @@ var style = __webpack_require__(489);
 var compile_html_ngfactory = __webpack_require__(217);
 
 // EXTERNAL MODULE: ./src/core/compile/components/compile-html/compile-html.ts
-var compile_html = __webpack_require__(188);
+var compile_html = __webpack_require__(189);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
 var compile = __webpack_require__(146);
@@ -572,7 +572,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(470);

@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 2037:
+/***/ 2039:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -31,7 +31,7 @@ var constants = __webpack_require__(39);
 var helper = __webpack_require__(122);
 
 // CONCATENATED MODULE: ./src/core/login/pages/init/init.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -148,7 +148,7 @@ var init_CoreLoginInitPage = /** @class */ (function () {
 
 //# sourceMappingURL=init.js.map
 // CONCATENATED MODULE: ./src/core/login/pages/init/init.module.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.

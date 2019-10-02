@@ -55,7 +55,7 @@ var wiki_offline = __webpack_require__(286);
 var wiki_sync = __webpack_require__(287);
 
 // CONCATENATED MODULE: ./src/addon/mod/wiki/pages/edit/edit.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -539,7 +539,7 @@ var edit_AddonModWikiEditPage = /** @class */ (function () {
 
 //# sourceMappingURL=edit.js.map
 // CONCATENATED MODULE: ./src/addon/mod/wiki/pages/edit/edit.module.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -678,7 +678,7 @@ var view_controller = __webpack_require__(38);
 var navbar_ngfactory = __webpack_require__(711);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(210);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(19);
