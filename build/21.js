@@ -331,7 +331,7 @@ var item_divider = __webpack_require__(102);
 var translate_pipe = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-list-item/course-list-item.ngfactory.js
-var course_list_item_ngfactory = __webpack_require__(2117);
+var course_list_item_ngfactory = __webpack_require__(2118);
 
 // EXTERNAL MODULE: ./src/core/courses/components/course-list-item/course-list-item.ts
 var course_list_item = __webpack_require__(1495);
@@ -561,7 +561,7 @@ var CoreCoursesCategoriesPageModuleNgFactory = core["_28" /* ɵcmf */](categorie
 
 /***/ }),
 
-/***/ 2117:
+/***/ 2118:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

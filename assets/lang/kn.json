@@ -328,6 +328,7 @@
     "core.loadmore": "ಹೆಚ್ಚು ತೋರಿಸಿ",
     "core.location": "ಕ್ಷೇತ್ರ",
     "core.login.authenticating": "ದೃಢೀಕರಿಸಲಾಗುತ್ತಿದೆ",
+    "core.login.changepassword": "ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸು",
     "core.login.checksiteversion": "ನಿಮ್ಮ ತಾಣವು ಮೂಡಲ್‌ 2.4 ಅಥವಾ ನಂತರದ ಆವೃತ್ತಿಯನ್ನು ಬಳಸುತ್ತಿದೆಯೆಂದು ಪರೀಕ್ಷಿಸಿ",
     "core.login.confirmdeletesite": "ನೀವು {{sitename}} ತಾಣವನ್ನು ಅಳಿಸಲು ಇಚ್ಛಿಸುತ್ತೀರೆ?",
     "core.login.connect": "ಸಂಪರ್ಕ !",

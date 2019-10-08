@@ -357,6 +357,7 @@
     "core.login.errorupdatesite": "Fehler bei der Authentifizierung",
     "core.login.findyoursite": "Website suchen",
     "core.login.firsttime": "Bist du zum ersten Mal auf dieser Webseite?",
+    "core.login.forcepasswordchangenotice": "Bitte ändere dein Kennwort, bevor du weiterarbeitest.",
     "core.login.helpmelogin": "<p>Auf der Welt gibt es viele tausend Websites mit Moodle. Diese App kann aber nur mit Websites verbunden werden, die für den Zugriff mit der mobilen Moodle App freigegeben wurden.</p><p>Falls du dich nicht mit deiner Website verbinden kannst, frage den Administrator der Website und bitte ihn, die Anleitung zu lesen. <a href=\"https://docs.moodle.org/de/Moodle_App\" target=\"_blank\"> https://docs.moodle.org/de/Moodle_App </a></p><p>Um die App mit einer Demoseite auszuprobieren, schreibe <i>teacher</i> oder <i>student</i> in das Feld <i>Website-Adresse</i> und tippe dann auf <b>Verbinden</b>.</p>",
     "core.login.invalidaccount": "Prüfe deine Anmeldedaten oder frage den Administrator der Website.",
     "core.login.invaliddate": "Ungültiges Datum",

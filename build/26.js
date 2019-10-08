@@ -623,7 +623,7 @@ var select_select = __webpack_require__(104);
 var deep_linker = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ngfactory.js
-var recaptcha_ngfactory = __webpack_require__(2123);
+var recaptcha_ngfactory = __webpack_require__(2124);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ts
 var recaptcha = __webpack_require__(1509);
@@ -949,7 +949,7 @@ var AddonModFeedbackFormPageModuleNgFactory = core["_28" /* ɵcmf */](form_modul
 
 /***/ }),
 
-/***/ 2123:
+/***/ 2124:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
