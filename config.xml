@@ -16,6 +16,10 @@
         Moodle Mobile team
     </author>
 
+    <edit-config target="CFBundleVersion" file="*-Info.plist" mode="merge">
+        <string>3.8.0.0</string>
+    </edit-config>
+
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
         <string>3.8.0</string>
     </edit-config>
