@@ -257,10 +257,12 @@ var dashboard_CoreCoursesDashboardPage = /** @class */ (function () {
     CoreCoursesDashboardPage.prototype.loadFallbackBlocks = function () {
         this.blocks = [
             {
-                name: 'myoverview'
+                name: 'myoverview',
+                visible: true
             },
             {
-                name: 'timeline'
+                name: 'timeline',
+                visible: true
             }
         ];
     };
