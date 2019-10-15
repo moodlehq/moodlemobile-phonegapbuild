@@ -69,7 +69,7 @@
     "addon.calendar.allday": "Koko päivä",
     "addon.calendar.calendar": "Kalenteri",
     "addon.calendar.calendarevents": "Kalenteritapahtumat",
-    "addon.calendar.confirmeventdelete": "Haluatko varmasti poistaa tämän tapahtuman",
+    "addon.calendar.confirmeventdelete": "Haluatko varmasti poistaa tapahtuman \"{{$a}}\"?",
     "addon.calendar.confirmeventseriesdelete": "Tapahtuma \"{{$a.name}}\" on osa tapahtumasarjaa. Haluatko poistaa vain tämän tapahtuman vai kaikki {{$a.count}} tapahtumaa sarjassa?",
     "addon.calendar.daynext": "Seuraava päivä",
     "addon.calendar.dayprev": "Edellinen päivä",

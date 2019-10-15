@@ -711,7 +711,7 @@
     "addon.mod_lesson.reviewquestioncontinue": "Non, je veux passer à la question suivante",
     "addon.mod_lesson.secondpluswrong": "Pas tout à fait. Voulez-vous essayer à nouveau ?",
     "addon.mod_lesson.submit": "Envoyer",
-    "addon.mod_lesson.teacherjumpwarning": "Un lien {{$a.cluster}} ou un lien {{$a.unseen}} est utilisé dans cette leçon. Un lien « Page suivante » sera utilisé à sa place. Veuillez vous connecter en tant qu'étudiant pour tester ces liens.",
+    "addon.mod_lesson.teacherjumpwarning": "Un lien {{$a.cluster}} ou un lien {{$a.unseen}} est utilisé dans cette leçon. Un lien « Page suivante » sera utilisé à sa place. Veuillez vous connecter en tant qu'étudiant pour tester ces liens.",
     "addon.mod_lesson.teacherongoingwarning": "Le score actuel n'est affiché que pour les étudiants. Veuillez vous connecter en tant qu'étudiant pour tester le score actuel.",
     "addon.mod_lesson.teachertimerwarning": "Le chronomètre ne fonctionne que pour les étudiants. Veuillez vous connecter en tant qu'étudiant pour tester le chronomètre.",
     "addon.mod_lesson.thatsthecorrectanswer": "C'est une réponse correcte",

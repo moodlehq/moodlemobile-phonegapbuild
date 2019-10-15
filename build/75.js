@@ -1,6 +1,6 @@
 webpackJsonp([75],{
 
-/***/ 2023:
+/***/ 2022:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -151,7 +151,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1484);
 var bs_tooltip_ngfactory = __webpack_require__(1485);
 
 // EXTERNAL MODULE: ./src/addon/notes/components/list/list.ngfactory.js
-var list_ngfactory = __webpack_require__(1553);
+var list_ngfactory = __webpack_require__(1552);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(366);
