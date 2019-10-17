@@ -3,36 +3,49 @@ dist: xenial
 group: edge
 
 language: node_js
-node_js: stable
+node_js: 11
+
+matrix:
+  include:
+  - os: linux
+    if: branch = master
+  - os: linux
+    if: branch = integration
+  - os: linux
+    if: branch = desktop
+    env:
+    - ELECTRON_CACHE=$HOME/.cache/electron
+    - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+  - os: osx
+    osx_image: xcode10.2
+    if: branch = desktop
+    env:
+    - ELECTRON_CACHE=$HOME/.cache/electron
+    - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+  - os: windows
+    if: branch = desktop
+    env:
+    - ELECTRON_CACHE=$HOME/.cache/electron
+    - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
+    - ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true
+    - DEBUG=electron-windows-store
 
 branches:
   only:
   - master
   - integration
+  - desktop
 
 notifications:
   email: false
 
 cache:
   directories:
-    - node_modules
-
-before_script:
-  - npm install -g pgb-cli
+  - node_modules
+  - $HOME/.cache/electron
+  - $HOME/.cache/electron-builder
+  - $HOME/.npm/_prebuilds
 
 script:
-  - if [ "$TRAVIS_BRANCH" == 'master' ] ; then APP_ID=$MASTER_APP ; else APP_ID=$INT_APP ; fi
-  - if [ "$TRAVIS_BRANCH" == 'master' ] ; then IOS_KEY=$MASTER_IOS_KEY ; else IOS_KEY=$INT_IOS_KEY ; fi
-  - if [ "$TRAVIS_BRANCH" == 'master' ] ; then IOS_UNLOCK=$MASTER_IOS_UNLOCK ; else IOS_UNLOCK=$INT_IOS_UNLOCK ; fi
-  - echo "{\"authtoken\":\"$PGB_TOKEN\"}" > ~/.pgbrc
-  - echo "{\"keystore_password\":\"$ANDROID_KEYSTORE\",\"key_password\":\"$ANDROID_UNLOCK\"}" | pgb unlock android $ANDROID_KEY
-  - echo "{\"key_password\":\"$IOS_UNLOCK\"}" | pgb unlock ios $IOS_KEY
-  - pgb clone --exit-code --no-progress $APP_ID ios-key=$IOS_KEY android-key=$ANDROID_KEY
-  - if [ "$TRAVIS_BRANCH" != 'master' ] ; then exit 0 ; fi
-  - git clone -q https://$GIT_TOKEN@github.com/$GIT_ORG_PRIVATE/bma-apps-builds.git ../apps
-  - cd ../apps
-  - pgb download $APP_ID android android.apk
-  - pgb download $APP_ID ios ios.ipa
-  - git add .
-  - git commit -m "Travis build $TRAVIS_BUILD_NUMBER"
-  - git push
+  - chmod +x scripts/build.sh
+  - scripts/build.sh
