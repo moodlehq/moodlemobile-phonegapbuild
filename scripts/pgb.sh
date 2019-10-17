@@ -7,13 +7,18 @@ npm install -g pgb-cli
 
 echo "{\"authtoken\":\"$PGB_TOKEN\"}" > ~/.pgbrc
 
+# Retrieve keys
+pgb keys --json > /tmp/pgbkeys.json
+
+ANDROID_KEY=`jq -r '.keys .android .all | map(select(.title | startswith("moodlemobile")))[0].id' /tmp/pgbkeys.json`
+
 if [ "$TRAVIS_BRANCH" == 'master' ] ; then
     APP_ID=$MASTER_APP
-    IOS_KEY=$MASTER_IOS_KEY
+    IOS_KEY=`jq  -r '.keys .ios .all | map(select(.title | startswith("moodlemobile")) | select(.role | contains("dist")))[0].id' /tmp/pgbkeys.json`
     IOS_UNLOCK=$MASTER_IOS_UNLOCK
 else
     APP_ID=$INT_APP
-    IOS_KEY=$INT_IOS_KEY
+    IOS_KEY=`jq -r '.keys .ios .all | map(select(.title | startswith("moodlemobile")) | select(.role | contains("dev")))[0].id' /tmp/pgbkeys.json`
     IOS_UNLOCK=$INT_IOS_UNLOCK
 fi
 

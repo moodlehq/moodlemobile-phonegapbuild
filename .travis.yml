@@ -47,5 +47,5 @@ cache:
   - $HOME/.npm/_prebuilds
 
 script:
-- chmod +x scripts/build.sh
-- scripts/build.sh
+  - chmod +x scripts/build.sh
+  - scripts/build.sh
