@@ -972,7 +972,7 @@
     "addon.mod_workshop_assessment_numerrors.dimensioncommentfor": "Iruzkina {{$a}}rentzat",
     "addon.mod_workshop_assessment_numerrors.dimensiongradefor": "Kalifikazioa {{$a}}-(e)rako",
     "addon.mod_workshop_assessment_numerrors.dimensionnumber": "{{$a}}. baieztapena",
-    "addon.mod_workshop_assessment_rubric.dimensionnumber": "{{$a}} irizpidea",
+    "addon.mod_workshop_assessment_rubric.dimensionnumber": "{{$a}}. irizpidea",
     "addon.mod_workshop_assessment_rubric.mustchooseone": "Elementu hauetako bat aukeratu behar duzu",
     "addon.notes.addnewnote": "Gehitu ohar berria",
     "addon.notes.coursenotes": "Ikastaroaren oharrak",

@@ -395,7 +395,7 @@
     "addon.mod_assign.submissionstatus_submitted": "S'ha tramès per a qualificar",
     "addon.mod_assign.submissionstatusheading": "Estat de la tramesa",
     "addon.mod_assign.submissionteam": "Grup",
-    "addon.mod_assign.submitassignment": "Trametre tasca",
+    "addon.mod_assign.submitassignment": "Tramet la tasca",
     "addon.mod_assign.submitassignment_help": "Un cop s'hagi tramès la tasca no podreu fer més canvis",
     "addon.mod_assign.submittedearly": "La tasca s'ha tramès {{$a}} abans del límit",
     "addon.mod_assign.submittedlate": "La tasca s'ha tramès {{$a}} tard",
