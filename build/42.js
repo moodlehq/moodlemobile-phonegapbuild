@@ -90,6 +90,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var general_CoreSettingsGeneralPage = /** @class */ (function () {
     function CoreSettingsGeneralPage(appProvider, configProvider, fileProvider, eventsProvider, langProvider, domUtils, pushNotificationsProvider, localNotificationsProvider, settingsHelper) {
         var _this = this;
+        this.appProvider = appProvider;
         this.configProvider = configProvider;
         this.eventsProvider = eventsProvider;
         this.langProvider = langProvider;
@@ -109,8 +110,9 @@ var general_CoreSettingsGeneralPage = /** @class */ (function () {
         }
         if (!configconstants["a" /* CoreConfigConstants */].forceColorScheme) {
             var defaultColorScheme = 'light';
-            if (window.matchMedia('(prefers-color-scheme: dark)').matches ||
-                window.matchMedia('(prefers-color-scheme: light)').matches) {
+            // Auto is not working on iOS right now until we update Webkit.
+            if (!this.appProvider.isIOS() && (window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                window.matchMedia('(prefers-color-scheme: light)').matches)) {
                 this.colorSchemes.push('auto');
                 defaultColorScheme = 'auto';
             }
