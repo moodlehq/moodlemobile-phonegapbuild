@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 2071:
+/***/ 2073:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -121,16 +121,21 @@ var init_CoreLoginInitPage = /** @class */ (function () {
     CoreLoginInitPage.prototype.loadPage = function () {
         var _this = this;
         if (this.sitesProvider.isLoggedIn()) {
-            if (!this.loginHelper.isSiteLoggedOut()) {
-                // User is logged in, go to site initial page.
-                return this.loginHelper.goToSiteInitialPage();
-            }
-            else {
-                // The site is marked as logged out. Logout and try again.
+            if (this.loginHelper.isSiteLoggedOut()) {
                 return this.sitesProvider.logout().then(function () {
                     return _this.loadPage();
                 });
             }
+            return this.sitesProvider.getCurrentSite().getPublicConfig().catch(function () {
+                return {};
+            }).then(function (config) {
+                return _this.sitesProvider.checkRequiredMinimumVersion(config).then(function () {
+                    // User is logged in, go to site initial page.
+                    return _this.loginHelper.goToSiteInitialPage();
+                }).catch(function () {
+                    return _this.loadPage();
+                });
+            });
         }
         return this.navCtrl.setRoot('CoreLoginSitesPage');
     };
@@ -188,31 +193,31 @@ var init_module_CoreLoginInitPageModule = /** @class */ (function () {
 
 //# sourceMappingURL=init.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1503);
+var action_sheet_component_ngfactory = __webpack_require__(1504);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1504);
+var alert_component_ngfactory = __webpack_require__(1505);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1505);
+var app_root_ngfactory = __webpack_require__(1506);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1506);
+var loading_component_ngfactory = __webpack_require__(1507);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1507);
+var modal_component_ngfactory = __webpack_require__(1508);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1508);
+var picker_component_ngfactory = __webpack_require__(1509);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1509);
+var popover_component_ngfactory = __webpack_require__(1510);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1510);
+var select_popover_component_ngfactory = __webpack_require__(1511);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1511);
+var toast_component_ngfactory = __webpack_require__(1512);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(181);

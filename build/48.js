@@ -1,6 +1,6 @@
 webpackJsonp([48],{
 
-/***/ 2076:
+/***/ 2078:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -135,16 +135,20 @@ var site_CoreLoginSitePage = /** @class */ (function () {
         else {
             // Not a demo site.
             this.sitesProvider.checkSite(url).then(function (result) {
-                if (result.warning) {
-                    _this.domUtils.showErrorModal(result.warning, true, 4000);
-                }
-                if (_this.loginHelper.isSSOLoginNeeded(result.code)) {
-                    // SSO. User needs to authenticate in a browser.
-                    _this.loginHelper.confirmAndOpenBrowserForSSOLogin(result.siteUrl, result.code, result.service, result.config && result.config.launchurl);
-                }
-                else {
-                    _this.navCtrl.push('CoreLoginCredentialsPage', { siteUrl: result.siteUrl, siteConfig: result.config });
-                }
+                return _this.sitesProvider.checkRequiredMinimumVersion(result.config).then(function () {
+                    if (result.warning) {
+                        _this.domUtils.showErrorModal(result.warning, true, 4000);
+                    }
+                    if (_this.loginHelper.isSSOLoginNeeded(result.code)) {
+                        // SSO. User needs to authenticate in a browser.
+                        _this.loginHelper.confirmAndOpenBrowserForSSOLogin(result.siteUrl, result.code, result.service, result.config && result.config.launchurl);
+                    }
+                    else {
+                        _this.navCtrl.push('CoreLoginCredentialsPage', { siteUrl: result.siteUrl, siteConfig: result.config });
+                    }
+                }).catch(function () {
+                    // Ignore errors.
+                });
             }, function (error) {
                 _this.showLoginIssue(url, error);
             }).finally(function () {
@@ -252,31 +256,31 @@ var site_module_CoreLoginSitePageModule = /** @class */ (function () {
 
 //# sourceMappingURL=site.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1503);
+var action_sheet_component_ngfactory = __webpack_require__(1504);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1504);
+var alert_component_ngfactory = __webpack_require__(1505);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1505);
+var app_root_ngfactory = __webpack_require__(1506);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1506);
+var loading_component_ngfactory = __webpack_require__(1507);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1507);
+var modal_component_ngfactory = __webpack_require__(1508);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1508);
+var picker_component_ngfactory = __webpack_require__(1509);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1509);
+var popover_component_ngfactory = __webpack_require__(1510);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1510);
+var select_popover_component_ngfactory = __webpack_require__(1511);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1511);
+var toast_component_ngfactory = __webpack_require__(1512);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(24);
@@ -315,7 +319,7 @@ var utils = __webpack_require__(2);
 var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
-var input = __webpack_require__(85);
+var input = __webpack_require__(86);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -354,7 +358,7 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.ngfactory.js
-var searchbar_ngfactory = __webpack_require__(1555);
+var searchbar_ngfactory = __webpack_require__(1556);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/searchbar/searchbar.js
 var searchbar = __webpack_require__(384);
