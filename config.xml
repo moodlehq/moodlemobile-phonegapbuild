@@ -2,22 +2,22 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:android = "http://schemas.android.com/apk/res/android"
-        id        = "com.moodle.moodlemobile"
-        versionCode = "37100"
-        android-versionCode="37100"
-        version   = "3.7.1">
-    <name>Moodle</name>
+        id        = "id.kandel.gasingschool"
+        versionCode = "5"
+        android-versionCode="5"
+        version   = "1.2.0">
+    <name>Gasing School</name>
 
     <description>
-        Moodle official app
+        Gasing School app.
     </description>
 
-    <author href="http://moodle.com" email="mobile@moodle.com">
-        Moodle Mobile team
+    <author href="http://gasingschool.com" email="support@gasingschool.com">
+        Kandel
     </author>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
-        <string>3.7.1</string>
+        <string>1.2.0</string>
     </edit-config>
 
     <gap:platform name="ios" />
@@ -167,7 +167,7 @@
     </gap:plugin>
 
     <edit-config file="AndroidManifest.xml" target="/manifest/application/activity[@android:launchMode='singleTop']" mode="merge">
-        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="true"></activity>
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|screenLayout|smallestScreenSize" android:debuggable="false"></activity>
     </edit-config>
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
         <application android:usesCleartextTraffic="true" />
