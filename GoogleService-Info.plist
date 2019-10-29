@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>694767596569-c2cjrca92k99f6nkp3363lsb7ljhdgdr.apps.googleusercontent.com</string>
+	<string>150945210205-o3f5l8c5gc65u7ul99ui8j7peea0dgiq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.694767596569-c2cjrca92k99f6nkp3363lsb7ljhdgdr</string>
+	<string>com.googleusercontent.apps.150945210205-o3f5l8c5gc65u7ul99ui8j7peea0dgiq</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA-77ZjkxII6GV97CC9rdUl83rzdEXu_rM</string>
+	<string>AIzaSyAy0u8CKvXXSI80yFUs8IYK11OX2Ua1pm0</string>
 	<key>GCM_SENDER_ID</key>
-	<string>694767596569</string>
+	<string>150945210205</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.moodle.moodlemobile</string>
+	<string>id.kandel.gasingschool</string>
 	<key>PROJECT_ID</key>
-	<string>moodlemobile-push</string>
+	<string>gasing-school</string>
 	<key>STORAGE_BUCKET</key>
-	<string>moodlemobile-push.appspot.com</string>
+	<string>gasing-school.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:694767596569:ios:a4cdad4d168c9d1a</string>
+	<string>1:150945210205:android:9bbb54997e86dfef7b52b4</string>
 	<key>DATABASE_URL</key>
 	<string>https://moodlemobile-push.firebaseio.com</string>
 </dict>
