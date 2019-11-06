@@ -1303,7 +1303,7 @@
     "core.comments.commentscount": "Comentários ({{$a}})",
     "core.comments.deletecommentbyon": "Excluír o comentário publicado por {{$a.user}} em {{$a.time}}",
     "core.comments.eventcommentcreated": "Comentário criado",
-    "core.comments.eventcommentdeleted": "Comentário apagado",
+    "core.comments.eventcommentdeleted": "Comentário excluído",
     "core.comments.nocomments": "Nenhum comentário",
     "core.comments.savecomment": "Salvar comentário",
     "core.commentscount": "Comentários ({{$a}})",

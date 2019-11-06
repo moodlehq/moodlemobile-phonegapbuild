@@ -588,7 +588,7 @@
     "addon.mod_forum.message": "Mitteilung",
     "addon.mod_forum.modeflatnewestfirst": "Anzeige nach Zeit (neu > alt)",
     "addon.mod_forum.modeflatoldestfirst": "Anzeige nach Zeit (alt > neu)",
-    "addon.mod_forum.modenested": "Anzeige geschachtelt",
+    "addon.mod_forum.modenested": "Anzeige in geschachtelter Form",
     "addon.mod_forum.modulenameplural": "Foren",
     "addon.mod_forum.numdiscussions": "{{numdiscussions}} Themen",
     "addon.mod_forum.numreplies": "{{numreplies}} Antworten",

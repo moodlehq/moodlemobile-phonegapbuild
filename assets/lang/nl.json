@@ -403,7 +403,7 @@
     "addon.mod_assign.submittedlate": "Opdracht was {{$a}} te laat ingestuurd",
     "addon.mod_assign.timemodified": "Laatst gewijzigd",
     "addon.mod_assign.timeremaining": "Resterende tijd",
-    "addon.mod_assign.ungroupedusers": "De insteling \"Groeplidmaatschap vereist om een inzending te maken\" is ingeschakeld en sommige gebruikers zijn niet toegewezen aan een groep of zijn lid van meerdere groepen. Dit zal het hen onmogelijk maken om hun opdracht in te sturen.",
+    "addon.mod_assign.ungroupedusers": "De instelling \"Groeplidmaatschap vereist om een inzending te maken\" is ingeschakeld en sommige gebruikers zijn niet toegewezen aan een groep of zijn lid van meerdere groepen. Dit zal het onmogelijk maken hun opdracht in te sturen.",
     "addon.mod_assign.unlimitedattempts": "Onbeperkt",
     "addon.mod_assign.userswhoneedtosubmit": "Leerlingen die nog moeten insturen: {{$a}}",
     "addon.mod_assign.userwithid": "Gebruiker met Id {{id}}",
