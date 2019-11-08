@@ -220,7 +220,7 @@
     "addon.messages.acceptandaddcontact": "Accetta ed aggiungi ai contatti",
     "addon.messages.addcontact": "Aggiungi contatto",
     "addon.messages.addcontactconfirm": "Sei sicuro di aggiungere {{$a}} ai contatti?",
-    "addon.messages.addtofavourites": "Contrassegna",
+    "addon.messages.addtofavourites": "Contrassegna conversazione",
     "addon.messages.addtoyourcontacts": "Aggiungi ai contatti",
     "addon.messages.blocknoncontacts": "Evita messaggi da parte di utenti che non fanno parte dei miei contatti",
     "addon.messages.blockuser": "Blocca utente",
