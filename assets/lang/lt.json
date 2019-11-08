@@ -798,6 +798,7 @@
     "addon.mod_scorm.organizations": "Organizacijos",
     "addon.mod_scorm.passed": "Pavyko",
     "addon.mod_scorm.reviewmode": "Peržiūros režimas",
+    "addon.mod_scorm.score": "Balas",
     "addon.mod_scorm.scormstatusnotdownloaded": "SCORM neatsiųsta. Programa automatiškai atsisiųs ją atidarius.",
     "addon.mod_scorm.scormstatusoutdated": "SCORM pakeista nuo paskutiniojo atsisiuntimo. Programa automatiškai atsisiųs ją atidarius.",
     "addon.mod_scorm.suspended": "Sulaikyta",

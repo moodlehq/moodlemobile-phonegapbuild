@@ -624,6 +624,7 @@
     "addon.mod_scorm.organizations": "조직들",
     "addon.mod_scorm.passed": "통과됨",
     "addon.mod_scorm.reviewmode": "재검토 모드",
+    "addon.mod_scorm.score": "점수",
     "addon.mod_scorm.scormstatusnotdownloaded": "이 SCORM 패키지가 다운로드되지 않았습니다. 열 때 자동으로 다운로드됩니다.",
     "addon.mod_scorm.scormstatusoutdated": "이 SCORM 패키지는 마지막 다운로드 이후 수정되었습니다. 열 때 자동으로 다운로드됩니다.",
     "addon.mod_scorm.suspended": "보류됨",

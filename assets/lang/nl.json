@@ -866,6 +866,7 @@
     "addon.mod_scorm.organizations": "Organisaties",
     "addon.mod_scorm.passed": "Geslaagd",
     "addon.mod_scorm.reviewmode": "Nalezen",
+    "addon.mod_scorm.score": "Score",
     "addon.mod_scorm.scormstatusnotdownloaded": "Deze SCORM is niet gedownload. Het zal automatisch gedownload worden als je het opent.",
     "addon.mod_scorm.scormstatusoutdated": "Deze SCORM is gewijzigd sinds de laatste download. Het zal automatisch gedownload worden wanneer je het opent.",
     "addon.mod_scorm.suspended": "Onderbroken",

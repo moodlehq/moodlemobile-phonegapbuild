@@ -786,6 +786,7 @@
     "addon.mod_scorm.organizations": "ការរៀបចំ",
     "addon.mod_scorm.passed": "បានហុច",
     "addon.mod_scorm.reviewmode": "របៀបពិនិត្យឡើងវិញ",
+    "addon.mod_scorm.score": "ពិន្ទុ",
     "addon.mod_scorm.scormstatusnotdownloaded": "កញ្ចប់ SCORM នេះគឺមិនត្រុវបានទាញយក។ វានឹងទាញយកដោយស្វ័យប្រវត្តិនៅពេលដែលអ្នកបើកវា",
     "addon.mod_scorm.scormstatusoutdated": "កញ្ចប់ SCORM គឺត្រូវបានបញ្ចាក់តាំងពីកាទាញយកលើកចុងក្រោយ។ វានឹងទាញយកដោយស្វ័យប្រវត្តនៅពេលដែលអោយបើវា",
     "addon.mod_scorm.suspended": "បានផ្អាក",

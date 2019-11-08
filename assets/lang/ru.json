@@ -804,6 +804,7 @@
     "addon.mod_scorm.organizations": "Организаций",
     "addon.mod_scorm.passed": "Выполнено успешно",
     "addon.mod_scorm.reviewmode": "Режим просмотра",
+    "addon.mod_scorm.score": "Балл",
     "addon.mod_scorm.scormstatusnotdownloaded": "Данный пакет SCORM не загружен. Он загрузится автоматически, когда вы откроете его.",
     "addon.mod_scorm.scormstatusoutdated": "Данный пакет SCORM был изменён с момента последней загрузки. Он будет автоматически загружен, когда вы откроете его.",
     "addon.mod_scorm.suspended": "Приостановлено",

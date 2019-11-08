@@ -739,6 +739,7 @@
     "addon.mod_scorm.organizations": "Organisationer",
     "addon.mod_scorm.passed": "Genomförd",
     "addon.mod_scorm.reviewmode": "Läge för granskning",
+    "addon.mod_scorm.score": "Resultat",
     "addon.mod_scorm.scormstatusnotdownloaded": "Detta SCORM är inte nedladdat. Det kommer att laddas ner automatiskt när du öppnar den",
     "addon.mod_scorm.scormstatusoutdated": "Detta SCORM har modifierats sedan sista nedladdningen. Det kommer att laddas ner automatiskt när du öppnar den",
     "addon.mod_scorm.suspended": "Avstängd",

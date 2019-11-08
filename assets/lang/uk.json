@@ -718,6 +718,7 @@
     "addon.mod_scorm.organizations": "Організації",
     "addon.mod_scorm.passed": "Пропущено",
     "addon.mod_scorm.reviewmode": "Режим перегляду",
+    "addon.mod_scorm.score": "Оцінка",
     "addon.mod_scorm.scormstatusnotdownloaded": "Цей SCORM не завантажений. Він буде автоматично завантажуватися при його відкритті.",
     "addon.mod_scorm.scormstatusoutdated": "Цей SCORM був змінений з моменту останнього завантаження. Він буде автоматично завантажуватися при її відкритті.",
     "addon.mod_scorm.suspended": "Заблокований",

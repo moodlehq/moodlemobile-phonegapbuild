@@ -818,6 +818,7 @@
     "addon.mod_scorm.organizations": "Organisationer",
     "addon.mod_scorm.passed": "Bestået",
     "addon.mod_scorm.reviewmode": "Gennemsynstilstand",
+    "addon.mod_scorm.score": "Score",
     "addon.mod_scorm.scormstatusnotdownloaded": "Denne SCORM er ikke downloadet. Den bliver automatisk downloadet når du åbner den.",
     "addon.mod_scorm.scormstatusoutdated": "Denne SCORM er ændret efter den sidste download. Den bliver automatisk downloadet når du åbner den.",
     "addon.mod_scorm.suspended": "Suspenderet",

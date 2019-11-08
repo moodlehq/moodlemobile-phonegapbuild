@@ -781,6 +781,7 @@
     "addon.mod_scorm.organizations": "组织",
     "addon.mod_scorm.passed": "已通过",
     "addon.mod_scorm.reviewmode": "复习模式",
+    "addon.mod_scorm.score": "成绩",
     "addon.mod_scorm.scormstatusnotdownloaded": "这个SCORM没有被下载。当你打开它时，它会自动下载。",
     "addon.mod_scorm.scormstatusoutdated": "自上次下载以来，这个SCORM已经被修改过了。当你打开它时，它会自动下载。",
     "addon.mod_scorm.suspended": "已暂停",

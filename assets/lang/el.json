@@ -842,6 +842,7 @@
     "addon.mod_scorm.organizations": "Οργανισμοί",
     "addon.mod_scorm.passed": "Πέρασε",
     "addon.mod_scorm.reviewmode": "Κατάσταση ανασκόπησης",
+    "addon.mod_scorm.score": "Σκορ",
     "addon.mod_scorm.scormstatusnotdownloaded": "Αυτό το SCORM δεν έχει κατέβει. Θα κατέβει αυτόματα όταν το ανοίξετε.",
     "addon.mod_scorm.scormstatusoutdated": "Αυτό το SCORM έχει τροποποιηθεί από την τελευταία λήψη. Θα κατέβει αυτόματα όταν το ανοίξετε.",
     "addon.mod_scorm.suspended": "Σε αναστολή",

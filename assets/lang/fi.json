@@ -822,6 +822,7 @@
     "addon.mod_scorm.organizations": "Organisaatiot",
     "addon.mod_scorm.passed": "Hyväksytty",
     "addon.mod_scorm.reviewmode": "Esikatselutila",
+    "addon.mod_scorm.score": "Tulos",
     "addon.mod_scorm.scormstatusnotdownloaded": "Tätä SCORM-pakettia ei ole vielä ladattu laitteellesi. Se ladataan automaattisesti kun avaat sen.",
     "addon.mod_scorm.scormstatusoutdated": "Tätä SCORM-pakettia on muutettu sen jälkeen, kun se on viimeksi ladattu laitteellesi. Se ladataan automaattisesti uudelleen kun avaat sen.",
     "addon.mod_scorm.suspended": "Keskytetty",

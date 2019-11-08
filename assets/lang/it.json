@@ -797,6 +797,7 @@
     "addon.mod_scorm.organizations": "Organizzazioni",
     "addon.mod_scorm.passed": "Superato",
     "addon.mod_scorm.reviewmode": "Modalità revisione",
+    "addon.mod_scorm.score": "Punteggio",
     "addon.mod_scorm.scormstatusnotdownloaded": "Questo SCORM non è stato scaricato, lo sarà non appena lo aprirai.",
     "addon.mod_scorm.scormstatusoutdated": "Questo SCORM è stato modificato dall'ultimo scaricamento e sarà scaricato nuovamente non appena lo aprirai.",
     "addon.mod_scorm.suspended": "Sospeso",

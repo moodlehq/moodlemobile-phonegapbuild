@@ -866,6 +866,7 @@
     "addon.mod_scorm.organizations": "Organizace",
     "addon.mod_scorm.passed": "Splněno",
     "addon.mod_scorm.reviewmode": "Režim opakovaného náhledu",
+    "addon.mod_scorm.score": "Bodový zisk",
     "addon.mod_scorm.scormstatusnotdownloaded": "Tento SCORM není stažen. Bude automaticky stažen, když jej otevřete.",
     "addon.mod_scorm.scormstatusoutdated": "Tento SCORM byl od posledního stažení změněn. Bude automaticky stažen, když jej otevřete.",
     "addon.mod_scorm.suspended": "Pozastaveno",

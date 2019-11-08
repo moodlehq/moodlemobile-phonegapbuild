@@ -860,6 +860,7 @@
     "addon.mod_scorm.organizations": "Organisations",
     "addon.mod_scorm.passed": "Réussi",
     "addon.mod_scorm.reviewmode": "Mode relecture",
+    "addon.mod_scorm.score": "Résultat",
     "addon.mod_scorm.scormstatusnotdownloaded": "Ce paquetage SCORM n'est pas téléchargé. Il sera téléchargé automatiquement dès que vous l'ouvrirez.",
     "addon.mod_scorm.scormstatusoutdated": "Ce paquetage SCORM a été modifié depuis son dernier téléchargement. Il sera téléchargé automatiquement dès que vous l'ouvrirez.",
     "addon.mod_scorm.suspended": "Suspendu",

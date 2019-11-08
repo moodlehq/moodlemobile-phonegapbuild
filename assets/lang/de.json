@@ -866,6 +866,7 @@
     "addon.mod_scorm.organizations": "Organisationen",
     "addon.mod_scorm.passed": "Abgeschlossen",
     "addon.mod_scorm.reviewmode": "Rückblick-Modus",
+    "addon.mod_scorm.score": "Bewertung",
     "addon.mod_scorm.scormstatusnotdownloaded": "Dieses Lernpaket ist noch nicht geladen. Es wird automatisch heruntergeladen, wenn Sie es öffnen.",
     "addon.mod_scorm.scormstatusoutdated": "Dieses Lernpaket wurde seit dem Herunterladen verändert. Es wird automatisch geladen, wenn Sie es öffnen.",
     "addon.mod_scorm.suspended": "Ausgeschlossen",

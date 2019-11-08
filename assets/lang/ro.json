@@ -582,6 +582,7 @@
     "addon.mod_scorm.organizations": "Organizaţii",
     "addon.mod_scorm.passed": "Admis",
     "addon.mod_scorm.reviewmode": "Mod Verificare",
+    "addon.mod_scorm.score": "Punctaj",
     "addon.mod_scorm.scormstatusnotdownloaded": "Acest SCORM nu a fost descărcat. Va fi descărcat automat când îl veți deschide.",
     "addon.mod_scorm.scormstatusoutdated": "Acest SCORM a fost modificat de la ultima descărcare. Va fi redescărcat automat când îl veți deschide.",
     "addon.mod_scorm.suspended": "Suspendat",

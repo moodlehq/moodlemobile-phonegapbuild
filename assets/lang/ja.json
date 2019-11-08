@@ -842,6 +842,7 @@
     "addon.mod_scorm.organizations": "組織",
     "addon.mod_scorm.passed": "合格",
     "addon.mod_scorm.reviewmode": "レビューモード",
+    "addon.mod_scorm.score": "評点",
     "addon.mod_scorm.scormstatusnotdownloaded": "このSCORMはダウンロードされていません。これを開くときに、自動的にダウンロードされます。",
     "addon.mod_scorm.scormstatusoutdated": "このSCORMは最後にダウンロードされた後に更新されています。開くときに、自動的に新しいものがダウンロードされます。",
     "addon.mod_scorm.suspended": "一時停止",

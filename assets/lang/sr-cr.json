@@ -850,6 +850,7 @@
     "addon.mod_scorm.organizations": "Организације",
     "addon.mod_scorm.passed": "Положено",
     "addon.mod_scorm.reviewmode": "Режим прегледа",
+    "addon.mod_scorm.score": "Резултат",
     "addon.mod_scorm.scormstatusnotdownloaded": "Овај SCORM пакет није преузет. Биће аутоматски преузет када га отворите.",
     "addon.mod_scorm.scormstatusoutdated": "Овај SCORM пакет је мењан од последњег преузимања. Биће аутоматски преузет када га отворите.",
     "addon.mod_scorm.suspended": "Суспендовано",

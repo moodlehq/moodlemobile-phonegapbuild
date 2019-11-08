@@ -860,6 +860,7 @@
     "addon.mod_scorm.organizations": "Organitzacions",
     "addon.mod_scorm.passed": "S'ha passat",
     "addon.mod_scorm.reviewmode": "Mode de revisió",
+    "addon.mod_scorm.score": "Puntuació",
     "addon.mod_scorm.scormstatusnotdownloaded": "Aquest SCORM no s'ha descarregat. Ho farà automàticament quan l'obriu.",
     "addon.mod_scorm.scormstatusoutdated": "Aquest SCORM s'ha modificat des de la darrera descàrrega. Es descarregarà automàticament quan l'obriu.",
     "addon.mod_scorm.suspended": "Suspès",

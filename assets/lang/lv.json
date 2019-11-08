@@ -754,6 +754,7 @@
     "addon.mod_scorm.organizations": "Organizācijas",
     "addon.mod_scorm.passed": "Nokārtots",
     "addon.mod_scorm.reviewmode": "Pārskatīšanas režīms",
+    "addon.mod_scorm.score": "Punktu skaits",
     "addon.mod_scorm.scormstatusnotdownloaded": "Šī SCORM pakotne nav lejupielādēta. Kad to atvērsiet, tā tiks automātiski lejupielādēta.",
     "addon.mod_scorm.scormstatusoutdated": "Šī SCORM pakotne ir modificēta kopš pēdējās lejupielādes. Kad to atvērsiet, tā tiks automātiski lejupielādēta.",
     "addon.mod_scorm.suspended": "Atlikts",

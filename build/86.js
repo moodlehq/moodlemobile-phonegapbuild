@@ -1066,6 +1066,10 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
                         .then(function (data) {
                         _this.userData = data;
                     }));
+                    // Get access information.
+                    promises.push(_this.scormProvider.getAccessInformation(_this.scorm.id).then(function (accessInfo) {
+                        _this.accessInfo = accessInfo;
+                    }));
                     return Promise.all(promises);
                 });
             }).catch(function (error) {
@@ -1204,7 +1208,8 @@ var player_AddonModScormPlayerPage = /** @class */ (function () {
             mode: this.mode,
             selected: this.currentSco && this.currentSco.id,
             moduleId: this.scorm.coursemodule,
-            courseId: this.scorm.course
+            courseId: this.scorm.course,
+            accessInfo: this.accessInfo
         }, { cssClass: 'core-modal-lateral',
             showBackdrop: true,
             enableBackdropDismiss: true,

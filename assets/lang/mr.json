@@ -345,6 +345,7 @@
     "addon.mod_scorm.organizations": "संघटना",
     "addon.mod_scorm.passed": "यशस्वी",
     "addon.mod_scorm.reviewmode": "रीव्ह्यु पद्धती",
+    "addon.mod_scorm.score": "गुण",
     "addon.mod_scorm.scormstatusnotdownloaded": "हे SCORM डाउनलोड झाले नाही. आपण ते उघडता तेव्हा ते स्वयंचलितपणे डाउनलोड केले जाईल.",
     "addon.mod_scorm.scormstatusoutdated": "शेवटचे डाउनलोड झाल्यापासून हे SCORM सुधारित केले गेले आहे. आपण ते उघडता तेव्हा ते स्वयंचलितपणे डाउनलोड केले जाईल.",
     "addon.mod_scorm.suspended": "स्थगित",
