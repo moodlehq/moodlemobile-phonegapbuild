@@ -400,6 +400,7 @@
     "addon.mod_assign.timemodified": "Poslednje izmene",
     "addon.mod_assign.timeremaining": "Preostalo vreme",
     "addon.mod_assign.ungroupedusers": "Podešavanje 'Neophodna je grupa za predaju rada' je omogućeno, ali neki korisnici nisu članovi nijedne grupe, ili su članovi više od jedne grupe, tako da ne mogu da predaju rad.",
+    "addon.mod_assign.ungroupedusersoptional": "Podešavanje \"Polaznici predaju u grupama\" je omogućeno a neki korisnici ili nisu članovi nijedne grupe ili su članovi više grupa. Molimo uzmite u obzir da će ti polaznici predati rešenje zadatka kao članovi \"Podrazumevane grupe\".",
     "addon.mod_assign.unlimitedattempts": "Neograničeno",
     "addon.mod_assign.userswhoneedtosubmit": "Korisnici koji treba da predaju rešenje: {{$a}}",
     "addon.mod_assign.userwithid": "Korisnik sa ID oznakom  {{id}}",

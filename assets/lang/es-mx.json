@@ -408,6 +408,7 @@
     "addon.mod_assign.timemodified": "Última modificación",
     "addon.mod_assign.timeremaining": "Tiempo restante",
     "addon.mod_assign.ungroupedusers": "La configuración de 'Requerir grupo para hacer envío' está activada y algunos usuarios, o no son miembros de ningún grupo, o son miembros de más de un grupo, por lo que no pueden hacer envíos.",
+    "addon.mod_assign.ungroupedusersoptional": "La configuración 'Estudiantes envían en grupos' está habilitada y algunos usuarios, o no son miembros de ningún grupo, o son miembros de más de un grupo. Por favor tenga en cuenta  que estos estudiantes enviarán como miembros del 'Grupo predeterminado'.",
     "addon.mod_assign.unlimitedattempts": "Ilimitados",
     "addon.mod_assign.userswhoneedtosubmit": "Usuarios que necesitan enviar: {{$a}}",
     "addon.mod_assign.userwithid": "Usuario con ID {{id}}",

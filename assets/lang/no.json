@@ -389,6 +389,7 @@
     "addon.mod_assign.timemodified": "Sist endret",
     "addon.mod_assign.timeremaining": "Tid som gjenstår",
     "addon.mod_assign.ungroupedusers": "Innstillingen 'Krev gruppe for å levere' er slått på, men noen brukere er enten ikke medlem av noen grupper eller medlem i flere grupper. Dette vil forhindre dem fra å levere inn noe.",
+    "addon.mod_assign.ungroupedusersoptional": "Innstillingen 'Studenter kan levere i grupper' er aktivert og noen brukere er enten ikke medlemmer av noen gruppe eller i mer enn en gruppe. Vennligst vær klar over at disse studentene vil foreta innleveringen som medlem av 'Standard gruppe'.",
     "addon.mod_assign.unlimitedattempts": "Ubegrenset",
     "addon.mod_assign.userswhoneedtosubmit": "Brukere som må levere: {{$a}}",
     "addon.mod_assign.viewsubmission": "Vis innlevering",

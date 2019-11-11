@@ -409,6 +409,7 @@
     "addon.mod_assign.timemodified": "Laatst gewijzigd",
     "addon.mod_assign.timeremaining": "Resterende tijd",
     "addon.mod_assign.ungroupedusers": "De instelling \"Groeplidmaatschap vereist om een inzending te maken\" is ingeschakeld en sommige gebruikers zijn niet toegewezen aan een groep of zijn lid van meerdere groepen. Dit zal het onmogelijk maken hun opdracht in te sturen.",
+    "addon.mod_assign.ungroupedusersoptional": "De instelling 'Leerlingen sturen groepsopdracht in' is ingeschakeld en sommige gebruikers maken geen deel uit van een groep of zijn lid van meer dan één groep. Houd er rekening mee dat deze leerlingen zich aanmelden als leden van de 'Standaardgroep'.",
     "addon.mod_assign.unlimitedattempts": "Onbeperkt",
     "addon.mod_assign.userswhoneedtosubmit": "Leerlingen die nog moeten insturen: {{$a}}",
     "addon.mod_assign.userwithid": "Gebruiker met Id {{id}}",

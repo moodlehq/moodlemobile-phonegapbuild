@@ -407,6 +407,7 @@
     "addon.mod_assign.timemodified": "Dernière modification",
     "addon.mod_assign.timeremaining": "Temps restant",
     "addon.mod_assign.ungroupedusers": "Le réglage « Requiert un groupe pour remettre un devoir » est activé et certains utilisateurs ne sont membres d'aucun groupe ou membres de plusieurs groupes. Cette situation les empêchera de remettre un travail.",
+    "addon.mod_assign.ungroupedusersoptional": "Le réglage « Les étudiants remettent leur travail en groupe » est activé et certains utilisateurs ne font partie d'aucun groupe ou sont membres de plusieurs groupes. Veuillez prendre note que ces étudiants remettront leur travail en tant que membre du « Groupe par défaut ».",
     "addon.mod_assign.unlimitedattempts": "Illimité",
     "addon.mod_assign.userswhoneedtosubmit": "Utilisateurs devant valider l'envoi du devoir : {{$a}}",
     "addon.mod_assign.userwithid": "Utilisateur d'ID {{id}}",

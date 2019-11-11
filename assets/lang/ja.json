@@ -395,6 +395,7 @@
     "addon.mod_assign.timemodified": "最終更新日時",
     "addon.mod_assign.timeremaining": "残り時間",
     "addon.mod_assign.ungroupedusers": "設定「提出にグループを必要とする」が有効にされているため、そして何名かのユーザがグループのメンバーではないため、または2つ以上のグループメンバーであるため、提出することはできません。",
+    "addon.mod_assign.ungroupedusersoptional": "設定「学生がグループで提出する」が有効にされていますが、何名かのユーザはグループに属していないか、2つ以上のグループに属しています。これらの学生が「デフォルトグループ」のメンバーとして提出することをご了承ください。",
     "addon.mod_assign.unlimitedattempts": "無制限",
     "addon.mod_assign.userswhoneedtosubmit": "提出が必要なユーザ: {{$a}}",
     "addon.mod_assign.userwithid": "ID {{id}} を持つユーザ",

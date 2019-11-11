@@ -408,6 +408,7 @@
     "addon.mod_assign.timemodified": "Azken aldaketa",
     "addon.mod_assign.timeremaining": "Geratzen den denbora",
     "addon.mod_assign.ungroupedusers": "'Behartu taldeko kidea izatea bidalketa egiteko' ezarpena gaituta dago eta erabiltzaile batzuk ez dira inongo taldeko kide edo talde bat baino gehiagoko kideak dira, eta beraz erabiltzaile horiek ezingo dute bidalketarik egin.",
+    "addon.mod_assign.ungroupedusersoptional": "'Ikasleek taldeka bidaliko dute' ezarpena gaituta dago eta erabiltzaile batzuk ez dira ezein taldeko kide, edo talde anitzetako kideak dira. Kontuan izan ikasle hauek 'Talde lehenetsia'-ren kide gisa egingo dituztela bidalketak.",
     "addon.mod_assign.unlimitedattempts": "Mugarik gabea",
     "addon.mod_assign.userswhoneedtosubmit": "Bidalketa egin behar duten erabiltzaileak: {{$a}}",
     "addon.mod_assign.userwithid": "{{id}} IDa duen erabiltzailea",

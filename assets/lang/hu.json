@@ -357,6 +357,7 @@
     "addon.mod_assign.timemodified": "Utolsó módosítás",
     "addon.mod_assign.timeremaining": "Hátralévő idő",
     "addon.mod_assign.ungroupedusers": "A 'Csoport számára leadás előírása' be van kapcsolva, de egyes felhasználók nincsenek csoporthoz - vagy több csoporthoz vannak - hozzárendelve, így nem adhatnak le munkát.",
+    "addon.mod_assign.ungroupedusersoptional": "Be van kapcsolva a csoportos tanulói leadás, egyes felhasználók azonban vagy nem csoporttagok, vagy egynél több csoport tagjai. Ezek a tanulók az Alapcsoport tagjaiként fogják leadni munkájukat!",
     "addon.mod_assign.unlimitedattempts": "Korlátlan",
     "addon.mod_assign.userswhoneedtosubmit": "Leadásra kötelezett tanulók: {{$a}}",
     "addon.mod_assign.viewsubmission": "Leadott munka megtekintése",

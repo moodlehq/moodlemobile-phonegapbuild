@@ -409,6 +409,7 @@
     "addon.mod_assign.timemodified": "Naposledy změněno",
     "addon.mod_assign.timeremaining": "Zbývá",
     "addon.mod_assign.ungroupedusers": "Nastavení \"Vyžadovat zařazení do skupiny\" je zapnuto a někteří uživatelé nejsou  zařazeni do skupiny, bude jim to bránit v odevzdání úkolu.",
+    "addon.mod_assign.ungroupedusersoptional": "Nastavení „Skupinové řešení“ je povoleno a někteří uživatelé buď nejsou členy žádné skupiny, nebo jsou členy více než jedné skupiny. Mějte prosím na paměti, že tito studenti budou přihlášeni jako členové „Výchozí skupiny“.",
     "addon.mod_assign.unlimitedattempts": "Bez omezení",
     "addon.mod_assign.userswhoneedtosubmit": "Uživatelé, kteří potřebují odevzdat úkol:  {{$a}}",
     "addon.mod_assign.userwithid": "Uživatel s ID {{id}}",

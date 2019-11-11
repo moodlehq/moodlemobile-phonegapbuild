@@ -409,6 +409,7 @@
     "addon.mod_assign.timemodified": "Última modificação",
     "addon.mod_assign.timeremaining": "Tempo restante",
     "addon.mod_assign.ungroupedusers": "A configuração 'Requer grupo para submeter trabalho' está ativa e existem utilizadores que não pertencem a nenhum grupo, ou que se encontram inscritos em mais do que um, o que fará com que estes fiquem impossibilitados de submeter os seus trabalhos.",
+    "addon.mod_assign.ungroupedusersoptional": "A configuração 'Os alunos submetem em grupos' está ativada e alguns utilizadores não são membros de nenhum grupo ou são membros de mais de um grupo. Tenha em atenção de que estes alunos submeterão como membros do 'Grupo predefinido'.",
     "addon.mod_assign.unlimitedattempts": "Ilimitado",
     "addon.mod_assign.userswhoneedtosubmit": "Utilizadores que têm de submeter: {{$a}}",
     "addon.mod_assign.userwithid": "Utilizador com ID {{id}}",
