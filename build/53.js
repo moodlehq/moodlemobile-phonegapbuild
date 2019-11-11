@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 2079:
+/***/ 2084:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,19 +13,19 @@ var core = __webpack_require__(0);
 var ionic_angular = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/@ionic-native/splash-screen/index.js
-var splash_screen = __webpack_require__(751);
+var splash_screen = __webpack_require__(753);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
-var init = __webpack_require__(151);
+var init = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/core/constants.ts
-var constants = __webpack_require__(41);
+var constants = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
 var helper = __webpack_require__(125);
@@ -193,34 +193,34 @@ var init_module_CoreLoginInitPageModule = /** @class */ (function () {
 
 //# sourceMappingURL=init.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1510);
+var action_sheet_component_ngfactory = __webpack_require__(1513);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1511);
+var alert_component_ngfactory = __webpack_require__(1514);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1512);
+var app_root_ngfactory = __webpack_require__(1515);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1513);
+var loading_component_ngfactory = __webpack_require__(1516);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1514);
+var modal_component_ngfactory = __webpack_require__(1517);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1515);
+var picker_component_ngfactory = __webpack_require__(1518);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1516);
+var popover_component_ngfactory = __webpack_require__(1519);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1517);
+var select_popover_component_ngfactory = __webpack_require__(1520);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1518);
+var toast_component_ngfactory = __webpack_require__(1521);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(181);
+var content_ngfactory = __webpack_require__(183);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(28);
@@ -232,13 +232,13 @@ var config = __webpack_require__(7);
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(35);
+var dom_controller = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app_app = __webpack_require__(34);
+var app_app = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(104);
+var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(39);

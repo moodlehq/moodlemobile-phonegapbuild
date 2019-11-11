@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 2015:
+/***/ 2020:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16,19 +16,19 @@ var ionic_angular = __webpack_require__(5);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages.ts
-var messages = __webpack_require__(158);
+var messages = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ts
-var tabs = __webpack_require__(200);
+var tabs = __webpack_require__(201);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/contacts/contacts.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -162,10 +162,10 @@ var components_module = __webpack_require__(27);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(113);
+var pipes_module = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/addon/messages/components/components.module.ts
-var components_components_module = __webpack_require__(2144);
+var components_components_module = __webpack_require__(2149);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/contacts/contacts.module.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -218,49 +218,49 @@ var contacts_module_AddonMessagesContactsPageModule = /** @class */ (function ()
 
 //# sourceMappingURL=contacts.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1510);
+var action_sheet_component_ngfactory = __webpack_require__(1513);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1511);
+var alert_component_ngfactory = __webpack_require__(1514);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1512);
+var app_root_ngfactory = __webpack_require__(1515);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1513);
+var loading_component_ngfactory = __webpack_require__(1516);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1514);
+var modal_component_ngfactory = __webpack_require__(1517);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1515);
+var picker_component_ngfactory = __webpack_require__(1518);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1516);
+var popover_component_ngfactory = __webpack_require__(1519);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1517);
+var select_popover_component_ngfactory = __webpack_require__(1520);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1518);
+var toast_component_ngfactory = __webpack_require__(1521);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1519);
+var context_menu_popover_ngfactory = __webpack_require__(1522);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1520);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1523);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1521);
+var recaptchamodal_ngfactory = __webpack_require__(1524);
 
 // EXTERNAL MODULE: ./src/components/bs-tooltip/bs-tooltip.ngfactory.js
-var bs_tooltip_ngfactory = __webpack_require__(1522);
+var bs_tooltip_ngfactory = __webpack_require__(1525);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(108);
+var icon_ngfactory = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
-var icon = __webpack_require__(95);
+var icon = __webpack_require__(88);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
 var config = __webpack_require__(7);
@@ -281,13 +281,13 @@ var item_reorder = __webpack_require__(26);
 var item_content = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(215);
+var user_avatar_ngfactory = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(157);
+var avatar = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
-var user_avatar = __webpack_require__(182);
+var user_avatar = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -314,7 +314,7 @@ var translate_pipe = __webpack_require__(24);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(181);
+var content_ngfactory = __webpack_require__(183);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(28);
@@ -323,40 +323,40 @@ var content = __webpack_require__(28);
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(35);
+var dom_controller = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app_app = __webpack_require__(34);
+var app_app = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(104);
+var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
 var view_controller = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(156);
+var refresher = __webpack_require__(157);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(214);
+var refresher_content_ngfactory = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
-var loading_ngfactory = __webpack_require__(54);
+var loading_ngfactory = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
 var loading = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(94);
+var list = __webpack_require__(87);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ngfactory.js
-var infinite_loading_ngfactory = __webpack_require__(373);
+var infinite_loading_ngfactory = __webpack_require__(374);
 
 // EXTERNAL MODULE: ./src/components/infinite-loading/infinite-loading.ts
 var infinite_loading = __webpack_require__(275);
@@ -365,7 +365,7 @@ var infinite_loading = __webpack_require__(275);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/addon/messages/components/confirmed-contacts/confirmed-contacts.ts
-var confirmed_contacts = __webpack_require__(2146);
+var confirmed_contacts = __webpack_require__(2151);
 
 // CONCATENATED MODULE: ./src/addon/messages/components/confirmed-contacts/confirmed-contacts.ngfactory.js
 /**
@@ -437,7 +437,7 @@ var AddonMessagesConfirmedContactsComponentNgFactory = core["_27" /* ɵccf */]("
 
 //# sourceMappingURL=confirmed-contacts.ngfactory.js.map
 // EXTERNAL MODULE: ./src/addon/messages/components/contact-requests/contact-requests.ts
-var contact_requests = __webpack_require__(2147);
+var contact_requests = __webpack_require__(2152);
 
 // CONCATENATED MODULE: ./src/addon/messages/components/contact-requests/contact-requests.ngfactory.js
 /**
@@ -507,40 +507,40 @@ var AddonMessagesContactRequestsComponentNgFactory = core["_27" /* ɵccf */]("ad
 
 //# sourceMappingURL=contact-requests.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(369);
+var toolbar_header = __webpack_require__(372);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
 var navbar_ngfactory = __webpack_require__(719);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(213);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(476);
+var back_button = __webpack_require__(477);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(720);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(312);
+var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
 var toolbar = __webpack_require__(248);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(370);
+var toolbar_item = __webpack_require__(373);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(40);
+var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon_icon = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
-var context_menu_ngfactory = __webpack_require__(89);
+var context_menu_ngfactory = __webpack_require__(91);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
 var context_menu = __webpack_require__(77);
@@ -552,16 +552,16 @@ var popover_controller = __webpack_require__(69);
 var tab = __webpack_require__(75);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ngfactory.js
-var split_view_ngfactory = __webpack_require__(477);
+var split_view_ngfactory = __webpack_require__(478);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
-var fileuploader = __webpack_require__(71);
+var fileuploader = __webpack_require__(72);
 
 // EXTERNAL MODULE: ./src/components/tabs/tabs.ngfactory.js
-var tabs_ngfactory = __webpack_require__(725);
+var tabs_ngfactory = __webpack_require__(726);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ngfactory.js
-var tab_ngfactory = __webpack_require__(726);
+var tab_ngfactory = __webpack_require__(727);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/contacts/contacts.ngfactory.js
 /**
@@ -643,19 +643,19 @@ var AddonMessagesContactsPageNgFactory = core["_27" /* ɵccf */]("page-addon-mes
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(365);
+var translate_loader = __webpack_require__(368);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(366);
+var translate_compiler = __webpack_require__(369);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(368);
+var translate_parser = __webpack_require__(371);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(367);
+var missing_translation_handler = __webpack_require__(370);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(475);
+var translate_store = __webpack_require__(476);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
 var ionic_angular_module = __webpack_require__(718);
@@ -709,7 +709,7 @@ var AddonMessagesContactsPageModuleNgFactory = core["_28" /* ɵcmf */](contacts_
 
 /***/ }),
 
-/***/ 2144:
+/***/ 2149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -720,11 +720,11 @@ var AddonMessagesContactsPageModuleNgFactory = core["_28" /* ɵcmf */](contacts_
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_discussions_discussions__ = __webpack_require__(2145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_confirmed_contacts_confirmed_contacts__ = __webpack_require__(2146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_contact_requests_contact_requests__ = __webpack_require__(2147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_contacts_contacts__ = __webpack_require__(2148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_discussions_discussions__ = __webpack_require__(2150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_confirmed_contacts_confirmed_contacts__ = __webpack_require__(2151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_contact_requests_contact_requests__ = __webpack_require__(2152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_contacts_contacts__ = __webpack_require__(2153);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -790,7 +790,7 @@ var AddonMessagesComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2145:
+/***/ 2150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -798,13 +798,13 @@ var AddonMessagesComponentsModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_events__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_messages__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_messages__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_dom__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_utils__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_app__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_pushnotifications_providers_delegate__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_pushnotifications_providers_delegate__ = __webpack_require__(142);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -1056,16 +1056,16 @@ var AddonMessagesDiscussionsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2146:
+/***/ 2151:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonMessagesConfirmedContactsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_messages__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_messages__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(4);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
@@ -1237,16 +1237,16 @@ var AddonMessagesConfirmedContactsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2147:
+/***/ 2152:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonMessagesContactRequestsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_events__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_messages__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_messages__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(4);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
@@ -1410,7 +1410,7 @@ var AddonMessagesContactRequestsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2148:
+/***/ 2153:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1419,10 +1419,10 @@ var AddonMessagesContactRequestsComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_sites__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_messages__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_messages__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_app__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_events__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_events__ = __webpack_require__(10);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
