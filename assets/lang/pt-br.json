@@ -1830,7 +1830,7 @@
     "core.sorry": "Desculpe...",
     "core.sort": "Ordenar",
     "core.sortby": "Ordenar por",
-    "core.strftimedate": "%d %B %Y",
+    "core.strftimedate": "%d de %B de %Y",
     "core.strftimedatefullshort": "%d/%m/%y",
     "core.strftimedateshort": "%d %B",
     "core.strftimedatetime": "%d %B %Y, %H:%M %p",

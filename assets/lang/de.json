@@ -911,7 +911,7 @@
     "addon.mod_wiki.wrongversionlock": "Jemand anderes hat die Seite aktualisiert, während Sie daran gearbeitet haben. Deswegen ist der von Ihnen verwendete Seiteninhalt veraltet.",
     "addon.mod_workshop.alreadygraded": "Bereits bewertet",
     "addon.mod_workshop.areainstructauthors": "Aufgabenstellung",
-    "addon.mod_workshop.areainstructreviewers": "Hinweise zur Bewertung",
+    "addon.mod_workshop.areainstructreviewers": "Hinweise zur Beurteilung",
     "addon.mod_workshop.assess": "Beurteilen",
     "addon.mod_workshop.assessedsubmission": "Beurteilte Einreichung",
     "addon.mod_workshop.assessmentform": "Beurteilungsbogen",

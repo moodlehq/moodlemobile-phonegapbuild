@@ -1301,7 +1301,7 @@
     "assets.mimetypes.image": "Imagem ({{$a.MIMETYPE2}})",
     "assets.mimetypes.image/vnd.microsoft.icon": "Ícone Windows",
     "assets.mimetypes.text/css": "Ficheiros CSS",
-    "assets.mimetypes.text/csv": "Valores separados por virgulas",
+    "assets.mimetypes.text/csv": "Valores separados por vírgulas",
     "assets.mimetypes.text/html": "Documento HTML",
     "assets.mimetypes.text/plain": "Ficheiro de texto",
     "assets.mimetypes.text/rtf": "Documento RTF",
