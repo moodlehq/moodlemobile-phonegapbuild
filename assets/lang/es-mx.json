@@ -616,7 +616,7 @@
     "addon.mod_forum.unlockdiscussion": "Des-bloquear esta discusión",
     "addon.mod_forum.unpindiscussion": "Quitar fijación de esta discusión",
     "addon.mod_forum.unread": "No leído",
-    "addon.mod_forum.unreadpostsnumber": "{{$a}} mensajes no leídos",
+    "addon.mod_forum.unreadpostsnumber": "{{$a}} mensaje(s) no leído(s)",
     "addon.mod_glossary.addentry": "Añadir una nueva entrada",
     "addon.mod_glossary.aliases": "Palabra(s) clave",
     "addon.mod_glossary.attachment": "Adjunto",
