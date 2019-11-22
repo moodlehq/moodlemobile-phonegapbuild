@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Случајни појам из речника",
     "addon.block_learningplans.pluginname": "Планови учења",
     "addon.block_myoverview.all": "Сви (осим скривених)",
+    "addon.block_myoverview.allincludinghidden": "Сви",
     "addon.block_myoverview.favourites": "Означен звездицом",
     "addon.block_myoverview.future": "Будући",
     "addon.block_myoverview.hiddencourses": "Скривени",

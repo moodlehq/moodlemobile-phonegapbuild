@@ -24,6 +24,7 @@
     "addon.block_glossaryrandom.pluginname": "Termeni aleatori din Glosar",
     "addon.block_learningplans.pluginname": "Planuri de învățare",
     "addon.block_myoverview.all": "Toate",
+    "addon.block_myoverview.allincludinghidden": "Toate",
     "addon.block_myoverview.future": "Viitoare",
     "addon.block_myoverview.hiddencourses": "Ascuns",
     "addon.block_myoverview.inprogress": "În desfășurare",

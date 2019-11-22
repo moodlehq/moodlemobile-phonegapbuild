@@ -25,6 +25,7 @@
     "addon.block_glossaryrandom.pluginname": "מונח אקראי מאגרון־המונחים",
     "addon.block_learningplans.pluginname": "תוכניות־לימוד",
     "addon.block_myoverview.all": "כולם (למעט מוסתרים)",
+    "addon.block_myoverview.allincludinghidden": "הכל",
     "addon.block_myoverview.favourites": "מסומן בכוכבית",
     "addon.block_myoverview.future": "עתידי",
     "addon.block_myoverview.hiddencourses": "מוסתר",

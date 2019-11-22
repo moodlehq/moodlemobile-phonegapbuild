@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Glossareintrag",
     "addon.block_learningplans.pluginname": "Lernpläne",
     "addon.block_myoverview.all": "Alle (außer aus Darstellung entfernte)",
+    "addon.block_myoverview.allincludinghidden": "Alle",
     "addon.block_myoverview.favourites": "Als Favorit markiert",
     "addon.block_myoverview.future": "Künftige",
     "addon.block_myoverview.hiddencourses": "Aus Darstellung entfernte",

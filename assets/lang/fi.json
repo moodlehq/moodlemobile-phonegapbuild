@@ -28,6 +28,7 @@
     "addon.block_glossaryrandom.pluginname": "Satunnainen hakusana sanastosta",
     "addon.block_learningplans.pluginname": "Opintosuunnitelmat",
     "addon.block_myoverview.all": "Kaikki (paitsi näkymästä poistetut)",
+    "addon.block_myoverview.allincludinghidden": "Kaikki",
     "addon.block_myoverview.favourites": "Suosikit",
     "addon.block_myoverview.future": "Tulevat kurssit",
     "addon.block_myoverview.hiddencourses": "Piilotetut",

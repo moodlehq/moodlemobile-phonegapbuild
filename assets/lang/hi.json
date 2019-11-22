@@ -13,6 +13,7 @@
     "addon.block_glossaryrandom.pluginname": "रैंडम शब्दावली प्रविष्टि",
     "addon.block_learningplans.pluginname": "सीखने की योजना",
     "addon.block_myoverview.all": "सब",
+    "addon.block_myoverview.allincludinghidden": "सब",
     "addon.block_myoverview.favourites": "तारांकित",
     "addon.block_myoverview.future": "भविष्य",
     "addon.block_myoverview.hiddencourses": "छिपा हुआ",

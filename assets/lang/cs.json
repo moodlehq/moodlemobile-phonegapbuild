@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Heslo ze slovníku",
     "addon.block_learningplans.pluginname": "Studijní plány",
     "addon.block_myoverview.all": "Všechny (kromě odstraněných)",
+    "addon.block_myoverview.allincludinghidden": "Vše",
     "addon.block_myoverview.favourites": "Označené hvězdičkou",
     "addon.block_myoverview.future": "Budoucí",
     "addon.block_myoverview.hiddencourses": "Odstraněné z přehledu",

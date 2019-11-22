@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Termo aleatório do glossário",
     "addon.block_learningplans.pluginname": "Planos de aprendizagem",
     "addon.block_myoverview.all": "Todas (excepto as removidas da visualização)",
+    "addon.block_myoverview.allincludinghidden": "Tudo",
     "addon.block_myoverview.favourites": "Com estrela",
     "addon.block_myoverview.future": "Próximos 30 dias",
     "addon.block_myoverview.hiddencourses": "Removidas da visualização",

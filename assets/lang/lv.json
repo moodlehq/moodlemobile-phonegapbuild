@@ -23,6 +23,7 @@
     "addon.block_completionstatus.pluginname": "Kursa izpildes statuss",
     "addon.block_glossaryrandom.pluginname": "Gadījuma vārdnīcas šķirklis",
     "addon.block_learningplans.pluginname": "Mācību plāni",
+    "addon.block_myoverview.allincludinghidden": "Visi",
     "addon.block_myoverview.favourites": "Atzīmēti",
     "addon.block_myoverview.future": "Nākotnē",
     "addon.block_myoverview.hiddencourses": "Paslēpti",

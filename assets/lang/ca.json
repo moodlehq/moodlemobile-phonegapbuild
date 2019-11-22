@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Entrada aleatòria de glossari",
     "addon.block_learningplans.pluginname": "Plans d'aprenentatge",
     "addon.block_myoverview.all": "Tots (excepte els amagats)",
+    "addon.block_myoverview.allincludinghidden": "Tots",
     "addon.block_myoverview.favourites": "Destacats",
     "addon.block_myoverview.future": "Futurs",
     "addon.block_myoverview.hiddencourses": "Amagats",

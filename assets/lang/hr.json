@@ -36,6 +36,7 @@
     "addon.block_glossaryrandom.pluginname": "Slučajni odabir iz rječnika",
     "addon.block_learningplans.pluginname": "Planovi učenja",
     "addon.block_myoverview.all": "Svi",
+    "addon.block_myoverview.allincludinghidden": "Svi",
     "addon.block_myoverview.favourites": "Označeno zvjezdicom",
     "addon.block_myoverview.future": "Buduće",
     "addon.block_myoverview.hiddencourses": "Skriveno",

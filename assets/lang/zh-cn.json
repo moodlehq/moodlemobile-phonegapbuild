@@ -25,6 +25,7 @@
     "addon.block_glossaryrandom.pluginname": "随机词汇条目",
     "addon.block_learningplans.pluginname": "学习计划",
     "addon.block_myoverview.all": "全部（除隐藏外）",
+    "addon.block_myoverview.allincludinghidden": "所有",
     "addon.block_myoverview.favourites": "带星号标记的",
     "addon.block_myoverview.future": "尚未开始的",
     "addon.block_myoverview.hiddencourses": "隐藏的",

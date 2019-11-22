@@ -21,6 +21,7 @@
     "addon.block_glossaryrandom.pluginname": "ធាតុសទ្ទានុក្រមចៃដន្យ",
     "addon.block_learningplans.pluginname": "ផែនការសិក្សា",
     "addon.block_myoverview.all": "ទាំងអស់",
+    "addon.block_myoverview.allincludinghidden": "ទាំងអស់",
     "addon.block_myoverview.favourites": "បានដាក់ផ្កាយ",
     "addon.block_myoverview.future": "អនាគត",
     "addon.block_myoverview.hiddencourses": "បានលាក់",

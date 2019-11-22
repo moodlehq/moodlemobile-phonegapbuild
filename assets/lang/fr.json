@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Article d'un glossaire",
     "addon.block_learningplans.pluginname": "Plans de formation",
     "addon.block_myoverview.all": "Tout (sauf cours retirés de l'affichage)",
+    "addon.block_myoverview.allincludinghidden": "Tout",
     "addon.block_myoverview.favourites": "Favoris",
     "addon.block_myoverview.future": "À venir",
     "addon.block_myoverview.hiddencourses": "Retirés de l'affichage",

@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Slučajni pojam iz rečnika",
     "addon.block_learningplans.pluginname": "Planovi učenja",
     "addon.block_myoverview.all": "Svi (osim skrivenih)",
+    "addon.block_myoverview.allincludinghidden": "Svi",
     "addon.block_myoverview.favourites": "Označen zvezdicom",
     "addon.block_myoverview.future": "Budući",
     "addon.block_myoverview.hiddencourses": "Skriveni",

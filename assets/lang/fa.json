@@ -24,6 +24,7 @@
     "addon.block_glossaryrandom.pluginname": "واژهٔ تصادفی فرهنگ",
     "addon.block_learningplans.pluginname": "برنامه‌های یادگیری",
     "addon.block_myoverview.all": "همه (به جز موارد حذف شده)",
+    "addon.block_myoverview.allincludinghidden": "همه",
     "addon.block_myoverview.favourites": "ستاره‌دار",
     "addon.block_myoverview.future": "آینده",
     "addon.block_myoverview.hiddencourses": "برای نمایش حذف شد",

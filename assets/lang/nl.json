@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Willekeurig woordenlijstitem",
     "addon.block_learningplans.pluginname": "Studieplannen",
     "addon.block_myoverview.all": "Alles (behalve verborgen)",
+    "addon.block_myoverview.allincludinghidden": "Alle",
     "addon.block_myoverview.favourites": "Favoriet",
     "addon.block_myoverview.future": "Toekomst",
     "addon.block_myoverview.hiddencourses": "Verborgen",

@@ -38,6 +38,7 @@
     "addon.block_glossaryrandom.pluginname": "Voce casuale di glossario",
     "addon.block_learningplans.pluginname": "Piani di formazione",
     "addon.block_myoverview.all": "Tutti (eccetto quelli eliminati dalla visualizzazione)",
+    "addon.block_myoverview.allincludinghidden": "Tutti",
     "addon.block_myoverview.favourites": "Preferiti",
     "addon.block_myoverview.future": "Futuri",
     "addon.block_myoverview.hiddencourses": "Eliminati dalla visualizzazione",

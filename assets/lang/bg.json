@@ -20,6 +20,7 @@
     "addon.block_glossaryrandom.pluginname": "Случайна дефиниция",
     "addon.block_learningplans.pluginname": "Учебни планове",
     "addon.block_myoverview.all": "Всички (без изключените от изгледа)",
+    "addon.block_myoverview.allincludinghidden": "Всички",
     "addon.block_myoverview.favourites": "Отбичени",
     "addon.block_myoverview.future": "Бъдещи",
     "addon.block_myoverview.hiddencourses": "Премахнати от изгледа",

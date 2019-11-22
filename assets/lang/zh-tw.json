@@ -24,6 +24,7 @@
     "addon.block_glossaryrandom.pluginname": "隨機詞彙條目",
     "addon.block_learningplans.pluginname": "學習計畫",
     "addon.block_myoverview.all": "全部(不含隱藏的)",
+    "addon.block_myoverview.allincludinghidden": "全部",
     "addon.block_myoverview.favourites": "標記星號的",
     "addon.block_myoverview.future": "未來",
     "addon.block_myoverview.hiddencourses": "隱藏",
