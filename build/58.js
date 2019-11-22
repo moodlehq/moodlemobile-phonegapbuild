@@ -1,6 +1,6 @@
 webpackJsonp([58],{
 
-/***/ 2082:
+/***/ 2083:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -65,13 +65,13 @@ var coursesplit_CoreGradesCourseSplitPage = /** @class */ (function () {
 
 //# sourceMappingURL=coursesplit.js.map
 // EXTERNAL MODULE: ./src/components/components.module.ts
-var components_module = __webpack_require__(27);
+var components_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_components_module = __webpack_require__(737);
+var components_components_module = __webpack_require__(738);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/coursesplit/coursesplit.module.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -161,7 +161,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1525);
 var bs_tooltip_ngfactory = __webpack_require__(1526);
 
 // EXTERNAL MODULE: ./src/core/grades/components/course/course.ngfactory.js
-var course_ngfactory = __webpack_require__(1559);
+var course_ngfactory = __webpack_require__(1560);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(372);
@@ -212,7 +212,7 @@ var translate_pipe = __webpack_require__(24);
 var split_view_ngfactory = __webpack_require__(478);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(29);
+var split_view = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(72);

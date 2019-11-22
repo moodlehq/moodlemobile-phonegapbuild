@@ -1,6 +1,6 @@
 webpackJsonp([30],{
 
-/***/ 2133:
+/***/ 2135:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var providers_user = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./src/core/user/providers/helper.ts
-var helper = __webpack_require__(738);
+var helper = __webpack_require__(739);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -43,7 +43,7 @@ var providers_helper = __webpack_require__(150);
 var user_delegate = __webpack_require__(103);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(29);
+var split_view = __webpack_require__(28);
 
 // CONCATENATED MODULE: ./src/core/user/pages/profile/profile.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -296,7 +296,7 @@ var profile_CoreUserProfilePage = /** @class */ (function () {
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
-var components_module = __webpack_require__(27);
+var components_module = __webpack_require__(29);
 
 // CONCATENATED MODULE: ./src/core/user/pages/profile/profile.module.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -456,7 +456,7 @@ var dom_controller = __webpack_require__(34);
 var user_avatar_ngfactory = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ts
-var user_avatar = __webpack_require__(184);
+var user_avatar = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -504,10 +504,10 @@ var toolbar_title = __webpack_require__(314);
 var toolbar = __webpack_require__(248);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(183);
+var content_ngfactory = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(28);
+var content = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(107);

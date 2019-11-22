@@ -86,6 +86,7 @@
     "addon.mod_folder.emptyfilelist": "Keine Dateien",
     "addon.mod_forum.cannotadddiscussionall": "Du darfst kein neues Thema für alle Teilnehmer/innen hinzufügen.",
     "addon.mod_forum.couldnotadd": "Dein Beitrag wurde nicht abgeschickt.",
+    "addon.mod_forum.couldnotupdate": "Der Beitrag wurde nicht geändert.",
     "addon.mod_forum.deletesure": "Möchtest du diesen Beitrag wirklich löschen?",
     "addon.mod_forum.erroremptymessage": "Du hast keinen Text geschrieben.",
     "addon.mod_forum.erroremptysubject": "Du hast den Betreff vergessen.",

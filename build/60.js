@@ -1,6 +1,6 @@
 webpackJsonp([60],{
 
-/***/ 2080:
+/***/ 2081:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67,7 +67,7 @@ var course_CoreGradesCoursePage = /** @class */ (function () {
 
 //# sourceMappingURL=course.js.map
 // EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_module = __webpack_require__(737);
+var components_module = __webpack_require__(738);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/course/course.module.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -155,7 +155,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1525);
 var bs_tooltip_ngfactory = __webpack_require__(1526);
 
 // EXTERNAL MODULE: ./src/core/grades/components/course/course.ngfactory.js
-var course_ngfactory = __webpack_require__(1559);
+var course_ngfactory = __webpack_require__(1560);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(372);
@@ -221,7 +221,7 @@ var helper = __webpack_require__(175);
 var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(29);
+var split_view = __webpack_require__(28);
 
 // CONCATENATED MODULE: ./src/core/grades/pages/course/course.ngfactory.js
 /**
@@ -292,7 +292,7 @@ var ionic_angular_module = __webpack_require__(719);
 var pipes_module = __webpack_require__(106);
 
 // EXTERNAL MODULE: ./src/components/components.module.ts
-var components_components_module = __webpack_require__(27);
+var components_components_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
 var module_loader = __webpack_require__(273);

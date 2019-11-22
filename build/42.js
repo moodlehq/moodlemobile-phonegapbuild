@@ -1,6 +1,6 @@
 webpackJsonp([42],{
 
-/***/ 2096:
+/***/ 2097:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -46,7 +46,7 @@ var pushnotifications = __webpack_require__(134);
 var configconstants = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/core/settings/providers/helper.ts
-var helper = __webpack_require__(733);
+var helper = __webpack_require__(734);
 
 // CONCATENATED MODULE: ./src/core/settings/pages/general/general.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -231,7 +231,7 @@ var general_CoreSettingsGeneralPage = /** @class */ (function () {
 
 //# sourceMappingURL=general.js.map
 // EXTERNAL MODULE: ./src/components/components.module.ts
-var components_module = __webpack_require__(27);
+var components_module = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
 var directives_module = __webpack_require__(31);
@@ -438,10 +438,10 @@ var toolbar_title = __webpack_require__(314);
 var toolbar = __webpack_require__(248);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(183);
+var content_ngfactory = __webpack_require__(184);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(28);
+var content = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
 var keyboard = __webpack_require__(107);
