@@ -176,6 +176,7 @@
     "addon.mod_folder.emptyfilelist": "दिखाने के लिए फाइलें नहीं हैं।",
     "addon.mod_forum.addanewtopic": "नया विषय जोड़िये",
     "addon.mod_forum.advanced": "उन्नत",
+    "addon.mod_forum.delete": "डिलीट",
     "addon.mod_forum.discussion": "चर्चा",
     "addon.mod_forum.errorgetforum": "फ़ोरम डेटा प्राप्त करने में त्रुटि।",
     "addon.mod_forum.errorgetgroups": "समूह सेटिंग्स प्राप्त करने में त्रुटि।",
