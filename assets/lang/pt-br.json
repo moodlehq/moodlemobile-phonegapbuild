@@ -1,5 +1,5 @@
 {
-    "addon.badges.alignment": "Competência",
+    "addon.badges.alignment": "Alinhamento",
     "addon.badges.badgedetails": "Detalhes do emblema",
     "addon.badges.badges": "Emblemas",
     "addon.badges.bendorsement": "Endosso",
@@ -19,7 +19,7 @@
     "addon.badges.issuername": "Nome do emissor",
     "addon.badges.issuerurl": "URL do emissor",
     "addon.badges.language": "Idioma",
-    "addon.badges.noalignment": "Este emblema não possui nenhuma competência especificada.",
+    "addon.badges.noalignment": "Este emblema não possui habilidades ou padrões externos especificados.",
     "addon.badges.nobadges": "Não há emblemas disponíveis.",
     "addon.badges.norelated": "Este emblema não possui nenhum emblema relacionado.",
     "addon.badges.recipientdetails": "Detalhes do usuário a receber o emblema",
