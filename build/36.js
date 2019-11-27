@@ -316,7 +316,7 @@ var refresher_content_ngfactory = __webpack_require__(215);
 var refresher_content = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/core/siteplugins/providers/siteplugins.ts
 var siteplugins = __webpack_require__(56);

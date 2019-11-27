@@ -22,7 +22,7 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(23);
+var time = __webpack_require__(24);
 
 // CONCATENATED MODULE: ./src/core/emulator/pages/capture-media/capture-media.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -492,7 +492,7 @@ var button_button = __webpack_require__(41);
 var config = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);

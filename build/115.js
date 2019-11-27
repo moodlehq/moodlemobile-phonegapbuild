@@ -243,7 +243,7 @@ var utils_text = __webpack_require__(11);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(25);
+var url = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(6);
@@ -300,7 +300,7 @@ var refresher_content_ngfactory = __webpack_require__(215);
 var refresher_content = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/addon/mod/choice/providers/choice.ts
 var choice = __webpack_require__(296);
@@ -312,7 +312,7 @@ var offline = __webpack_require__(297);
 var sync = __webpack_require__(298);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(23);
+var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(69);

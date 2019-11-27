@@ -234,7 +234,7 @@ var translate_service = __webpack_require__(17);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -282,7 +282,7 @@ var utils_text = __webpack_require__(11);
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(25);
+var url = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(6);
@@ -336,7 +336,7 @@ var empty_box = __webpack_require__(114);
 var date_day_or_time = __webpack_require__(378);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(23);
+var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(184);

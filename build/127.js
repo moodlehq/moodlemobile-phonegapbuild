@@ -196,7 +196,7 @@ var toolbar_title = __webpack_require__(314);
 var toolbar = __webpack_require__(248);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/addon/coursecompletion/components/report/report.ts
 var report = __webpack_require__(528);

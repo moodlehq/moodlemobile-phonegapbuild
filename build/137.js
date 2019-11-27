@@ -61,7 +61,7 @@ var local_notifications = __webpack_require__(142);
 var course = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(23);
+var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(71);
@@ -686,7 +686,7 @@ var platform = __webpack_require__(16);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(25);
+var url = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
 var logger = __webpack_require__(6);
@@ -722,7 +722,7 @@ var card = __webpack_require__(89);
 var icon_icon = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
 var note = __webpack_require__(249);

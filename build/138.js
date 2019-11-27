@@ -40,7 +40,7 @@ var sync = __webpack_require__(78);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(23);
+var time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils_utils = __webpack_require__(2);
@@ -714,7 +714,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1526);
 var option_option = __webpack_require__(108);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(24);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
 var translate_service = __webpack_require__(17);
@@ -810,7 +810,7 @@ var radio_button = __webpack_require__(145);
 var rich_text_editor_ngfactory = __webpack_require__(316);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(25);
+var url = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(18);
