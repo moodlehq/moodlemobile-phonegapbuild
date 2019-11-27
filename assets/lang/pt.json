@@ -375,7 +375,7 @@
     "addon.mod_assign.noattempt": "Nenhuma submissão",
     "addon.mod_assign.nomoresubmissionsaccepted": "Apenas disponível aos alunos a quem tenha sido concedida uma extensão do prazo.",
     "addon.mod_assign.noonlinesubmissions": "Este trabalho não requer que submeta nada online.",
-    "addon.mod_assign.nosubmission": "Ainda não foi submetido nada neste trabalho",
+    "addon.mod_assign.nosubmission": "Sem submissão",
     "addon.mod_assign.notallparticipantsareshown": "Não são mostrados os participantes sem submissão.",
     "addon.mod_assign.noteam": "Não está inscrito em nenhum grupo",
     "addon.mod_assign.noteam_desc": "Este trabalho requer submissão em grupos. Como não é membro de qualquer grupo, não é possível criar uma submissão. Por favor, contacte o seu professor para ser adicionado a um grupo.",

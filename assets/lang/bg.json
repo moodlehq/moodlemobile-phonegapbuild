@@ -561,6 +561,7 @@
     "addon.mod_quiz.attemptnumber": "Опит",
     "addon.mod_quiz.attemptquiznow": "Започване на теста сега",
     "addon.mod_quiz.attemptstate": "Състояние",
+    "addon.mod_quiz.clearchoice": "Премахване на моя избор",
     "addon.mod_quiz.comment": "Коментар",
     "addon.mod_quiz.completedon": "Приключен на",
     "addon.mod_quiz.confirmclose": "След като веднъж предадете този опит, Вие повече няма да можете да променяте отговорите си за този опит.",

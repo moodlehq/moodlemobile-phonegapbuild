@@ -341,6 +341,7 @@
     "addon.mod_assign.grade": "Nota",
     "addon.mod_assign.graded": "Avaliado",
     "addon.mod_assign.gradedby": "Avaliado por",
+    "addon.mod_assign.gradedfollowupsubmit": "Avaliado - envio recebido posteriormente",
     "addon.mod_assign.gradedon": "Avaliado em",
     "addon.mod_assign.gradelocked": "Esta nota está bloqueada ou sobreposta no livro de notas.",
     "addon.mod_assign.gradenotsynced": "Avaliação não sincronizada",
