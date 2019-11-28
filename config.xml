@@ -4,7 +4,8 @@
         xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "com.moodle.moodlemobile"
         versionCode = "38000"
-        android-versionCode="38000"
+        android-versionCode = "38000"
+        ios-CFBundleVersion = "3.8.0.0"
         version   = "3.8.0">
     <name>Moodle</name>
 
@@ -15,10 +16,6 @@
     <author href="http://moodle.com" email="mobile@moodle.com">
         Moodle Mobile team
     </author>
-
-    <edit-config target="CFBundleVersion" file="*-Info.plist" mode="merge">
-        <string>3.8.0.0</string>
-    </edit-config>
 
     <edit-config target="CFBundleShortVersionString" file="*-Info.plist" mode="merge">
         <string>3.8.0</string>
