@@ -289,7 +289,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);
@@ -313,7 +313,7 @@ var offline = __webpack_require__(190);
 var groups = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
 var workshop_providers_helper = __webpack_require__(203);

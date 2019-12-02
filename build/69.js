@@ -1,6 +1,6 @@
 webpackJsonp([69],{
 
-/***/ 2129:
+/***/ 2142:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
-var time = __webpack_require__(24);
+var utils_time = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(10);
@@ -37,7 +37,7 @@ var events = __webpack_require__(10);
 var user = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var providers_comments = __webpack_require__(168);
+var providers_comments = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/offline.ts
 var offline = __webpack_require__(390);
@@ -94,6 +94,7 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
         this.modalCtrl = modalCtrl;
         this.commentsProvider = commentsProvider;
         this.offlineComments = offlineComments;
+        this.eventsProvider = eventsProvider;
         this.commentsSync = commentsSync;
         this.textUtils = textUtils;
         this.timeUtils = timeUtils;
@@ -159,27 +160,8 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
         return promise.catch(function () {
             // Ignore errors.
         }).then(function () {
-            return _this.offlineComments.getComment(_this.contextLevel, _this.instanceId, _this.componentName, _this.itemId, _this.area).then(function (offlineComment) {
-                _this.offlineComment = offlineComment;
-                if (offlineComment && !_this.currentUser) {
-                    return _this.userProvider.getProfile(_this.currentUserId, undefined, true).then(function (user) {
-                        _this.currentUser = user;
-                        _this.offlineComment.profileimageurl = user.profileimageurl;
-                        _this.offlineComment.fullname = user.fullname;
-                        _this.offlineComment.userid = user.id;
-                    }).catch(function () {
-                        // Ignore errors.
-                    });
-                }
-                else if (offlineComment) {
-                    _this.offlineComment.profileimageurl = _this.currentUser.profileimageurl;
-                    _this.offlineComment.fullname = _this.currentUser.fullname;
-                    _this.offlineComment.userid = _this.currentUser.id;
-                }
-                return _this.offlineComments.getDeletedComments(_this.contextLevel, _this.instanceId, _this.componentName, _this.itemId, _this.area);
-            });
-        }).then(function (deletedComments) {
-            _this.hasOffline = !!_this.offlineComment || deletedComments.length > 0;
+            return _this.loadOfflineData();
+        }).then(function () {
             // Get comments data.
             return _this.commentsProvider.getComments(_this.contextLevel, _this.instanceId, _this.componentName, _this.itemId, _this.area, _this.page).then(function (response) {
                 _this.canAddComments = _this.addDeleteCommentsAvailable && response.canpost;
@@ -191,26 +173,9 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
                     // Old style.
                     _this.canLoadMore = response.comments.length > 0 && response.comments.length >= providers_comments["a" /* CoreCommentsProvider */].pageSize;
                 }
-                return Promise.all(comments.map(function (comment) {
-                    // Get the user profile image.
-                    return _this.userProvider.getProfile(comment.userid, undefined, true).then(function (user) {
-                        comment.profileimageurl = user.profileimageurl;
-                        return comment;
-                    }).catch(function () {
-                        // Ignore errors.
-                        return comment;
-                    });
-                }));
+                return Promise.all(comments.map(function (comment) { return _this.loadCommentProfile(comment); }));
             }).then(function (comments) {
                 _this.comments = _this.comments.concat(comments);
-                deletedComments && deletedComments.forEach(function (deletedComment) {
-                    var comment = _this.comments.find(function (comment) {
-                        return comment.id == deletedComment.commentid;
-                    });
-                    if (comment) {
-                        comment.deleted = deletedComment.deleted;
-                    }
-                });
                 _this.canDeleteComments = _this.addDeleteCommentsAvailable && (_this.hasOffline || _this.comments.some(function (comment) {
                     return !!comment.delete;
                 }));
@@ -251,9 +216,10 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
      */
     CoreCommentsViewerPage.prototype.refreshComments = function (showErrors, refresher) {
         var _this = this;
+        this.commentsLoaded = false;
         this.refreshIcon = 'spinner';
         this.syncIcon = 'spinner';
-        return this.commentsProvider.invalidateCommentsData(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area).finally(function () {
+        return this.invalidateComments().finally(function () {
             _this.page = 0;
             _this.comments = [];
             return _this.fetchComments(true, showErrors).finally(function () {
@@ -309,11 +275,24 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
         var modal = this.modalCtrl.create('CoreCommentsAddPage', params);
         modal.onDidDismiss(function (data) {
             if (data && data.comments) {
-                _this.comments = data.comments.concat(_this.comments);
-                _this.canDeleteComments = _this.addDeleteCommentsAvailable;
+                _this.invalidateComments();
+                return Promise.all(data.comments.map(function (comment) { return _this.loadCommentProfile(comment); })).then(function (addedComments) {
+                    // Add the comment to the top.
+                    _this.comments = addedComments.concat(_this.comments);
+                    _this.canDeleteComments = _this.addDeleteCommentsAvailable;
+                    _this.eventsProvider.trigger(providers_comments["a" /* CoreCommentsProvider */].COMMENTS_COUNT_CHANGED_EVENT, {
+                        contextLevel: _this.contextLevel,
+                        instanceId: _this.instanceId,
+                        component: _this.componentName,
+                        itemId: _this.itemId,
+                        area: _this.area,
+                        countChange: addedComments.length,
+                    }, _this.sitesProvider.getCurrentSiteId());
+                });
             }
             else if (data && !data.comments) {
-                _this.fetchComments(false);
+                // Comments added in offline mode.
+                return _this.loadOfflineData();
             }
         });
         modal.present();
@@ -322,28 +301,117 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
      * Delete a comment.
      *
      * @param e Click event.
-     * @param comment Comment to delete.
+     * @param deleteComment Comment to delete.
      */
-    CoreCommentsViewerPage.prototype.deleteComment = function (e, comment) {
+    CoreCommentsViewerPage.prototype.deleteComment = function (e, deleteComment) {
         var _this = this;
         e.preventDefault();
         e.stopPropagation();
-        var time = this.timeUtils.userDate((comment.lastmodified || comment.timecreated) * 1000, 'core.strftimerecentfull');
-        comment.contextlevel = this.contextLevel;
-        comment.instanceid = this.instanceId;
-        comment.component = this.componentName;
-        comment.itemid = this.itemId;
-        comment.area = this.area;
-        this.domUtils.showDeleteConfirm('core.comments.deletecommentbyon', { $a: { user: comment.fullname || '', time: time } }).then(function () {
-            _this.commentsProvider.deleteComment(comment).then(function () {
+        var time = this.timeUtils.userDate((deleteComment.lastmodified || deleteComment.timecreated) * 1000, 'core.strftimerecentfull');
+        deleteComment.contextlevel = this.contextLevel;
+        deleteComment.instanceid = this.instanceId;
+        deleteComment.component = this.componentName;
+        deleteComment.itemid = this.itemId;
+        deleteComment.area = this.area;
+        this.domUtils.showDeleteConfirm('core.comments.deletecommentbyon', { $a: { user: deleteComment.fullname || '', time: time } }).then(function () {
+            _this.commentsProvider.deleteComment(deleteComment).then(function (deletedOnline) {
                 _this.showDelete = false;
-                _this.refreshComments(true);
+                if (deletedOnline) {
+                    var index = _this.comments.findIndex(function (comment) { return comment.id == deleteComment.id; });
+                    if (index >= 0) {
+                        _this.comments.splice(index, 1);
+                    }
+                }
+                else {
+                    _this.loadOfflineData();
+                }
+                _this.eventsProvider.trigger(providers_comments["a" /* CoreCommentsProvider */].COMMENTS_COUNT_CHANGED_EVENT, {
+                    contextLevel: _this.contextLevel,
+                    instanceId: _this.instanceId,
+                    component: _this.componentName,
+                    itemId: _this.itemId,
+                    area: _this.area,
+                    countChange: -1,
+                }, _this.sitesProvider.getCurrentSiteId());
+                _this.invalidateComments();
                 _this.domUtils.showToast('core.comments.eventcommentdeleted', true, 3000);
             }).catch(function (error) {
                 _this.domUtils.showErrorModalDefault(error, 'Delete comment failed.');
             });
         }).catch(function () {
             // User cancelled, nothing to do.
+        });
+    };
+    /**
+     * Invalidate comments.
+     *
+     * @return Resolved when done.
+     */
+    CoreCommentsViewerPage.prototype.invalidateComments = function () {
+        return this.commentsProvider.invalidateCommentsData(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area);
+    };
+    /**
+     * Loads the profile info onto the comment object.
+     *
+     * @param  comment Comment object.
+     * @return Promise resolved with modified comment when done.
+     */
+    CoreCommentsViewerPage.prototype.loadCommentProfile = function (comment) {
+        // Get the user profile image.
+        return this.userProvider.getProfile(comment.userid, undefined, true).then(function (user) {
+            comment.profileimageurl = user.profileimageurl;
+            comment.fullname = user.fullname;
+            comment.userid = user.id;
+            return comment;
+        }).catch(function () {
+            // Ignore errors.
+            return comment;
+        });
+    };
+    /**
+     * Load offline comments.
+     *
+     * @return Promise resolved when done.
+     */
+    CoreCommentsViewerPage.prototype.loadOfflineData = function () {
+        var _this = this;
+        var promises = [];
+        var hasDeletedComments = false;
+        // Load the only offline comment allowed if any.
+        promises.push(this.offlineComments.getComment(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area).then(function (offlineComment) {
+            if (offlineComment && !_this.currentUser) {
+                offlineComment.userid = _this.currentUserId;
+                _this.loadCommentProfile(offlineComment).then(function (comment) {
+                    // Save this fields for further requests.
+                    if (comment.fullname) {
+                        _this.currentUser = {};
+                        _this.currentUser.profileimageurl = comment.profileimageurl;
+                        _this.currentUser.fullname = comment.fullname;
+                        _this.currentUser.userid = comment.userid;
+                    }
+                });
+            }
+            else if (offlineComment) {
+                offlineComment.profileimageurl = _this.currentUser.profileimageurl;
+                offlineComment.fullname = _this.currentUser.fullname;
+                offlineComment.userid = _this.currentUser.id;
+            }
+            _this.offlineComment = offlineComment;
+        }));
+        // Load deleted comments offline.
+        promises.push(this.offlineComments.getDeletedComments(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area).then(function (deletedComments) {
+            hasDeletedComments = deletedComments && deletedComments.length > 0;
+            hasDeletedComments && deletedComments.forEach(function (deletedComment) {
+                var comment = _this.comments.find(function (comment) {
+                    return comment.id == deletedComment.commentid;
+                });
+                if (comment) {
+                    comment.deleted = deletedComment.deleted;
+                }
+            });
+        }));
+        return Promise.all(promises).then(function () {
+            _this.hasOffline = !!_this.offlineComment || hasDeletedComments;
         });
     };
     /**
@@ -383,11 +451,18 @@ var viewer_CoreCommentsViewerPage = /** @class */ (function () {
             templateUrl: 'viewer.html',
             animations: [animations["b" /* coreSlideInOut */]]
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */], user["a" /* CoreUserProvider */],
-            dom["a" /* CoreDomUtilsProvider */], _ngx_translate_core["c" /* TranslateService */], ionic_angular["q" /* ModalController */],
-            providers_comments["a" /* CoreCommentsProvider */], offline["a" /* CoreCommentsOfflineProvider */],
-            events["a" /* CoreEventsProvider */], providers_sync["a" /* CoreCommentsSyncProvider */],
-            utils_text["a" /* CoreTextUtilsProvider */], time["a" /* CoreTimeUtilsProvider */]])
+        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */],
+            sites["a" /* CoreSitesProvider */],
+            user["a" /* CoreUserProvider */],
+            dom["a" /* CoreDomUtilsProvider */],
+            _ngx_translate_core["c" /* TranslateService */],
+            ionic_angular["q" /* ModalController */],
+            providers_comments["a" /* CoreCommentsProvider */],
+            offline["a" /* CoreCommentsOfflineProvider */],
+            events["a" /* CoreEventsProvider */],
+            providers_sync["a" /* CoreCommentsSyncProvider */],
+            utils_text["a" /* CoreTextUtilsProvider */],
+            utils_time["a" /* CoreTimeUtilsProvider */]])
     ], CoreCommentsViewerPage);
     return CoreCommentsViewerPage;
 }());
@@ -558,7 +633,7 @@ var app = __webpack_require__(9);
 var split_view = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
 var common = __webpack_require__(8);
@@ -672,7 +747,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);
@@ -699,7 +774,7 @@ var infinite_loading = __webpack_require__(275);
 var nav_params = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // CONCATENATED MODULE: ./src/core/comments/pages/viewer/viewer.ngfactory.js
 /**
@@ -819,7 +894,7 @@ function View_CoreCommentsViewerPage_11(_l) { return core["_57" /* ɵvid */](0, 
         var pd_0 = (_co.addComment($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, fab_ngfactory["b" /* View_FabButton_0 */], fab_ngfactory["a" /* RenderType_FabButton */])), core["_30" /* ɵdid */](7, 49152, [[15, 4]], 0, fab_fab["a" /* FabButton */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 0, 1, "ion-icon", [["name", "add"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](11, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "]))], function (_ck, _v) { _ck(_v, 1, 0); var currVal_2 = "add"; _ck(_v, 11, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 6, 0, core["_44" /* ɵnov */](_v, 8).transform("core.comments.addcomment")); _ck(_v, 6, 0, currVal_0); var currVal_1 = core["_44" /* ɵnov */](_v, 11)._hidden; _ck(_v, 10, 0, currVal_1); }); }
-function View_CoreCommentsViewerPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, common["h" /* LowerCasePipe */], []), core["_47" /* ɵpid */](0, format_date["a" /* CoreFormatDatePipe */], [logger["a" /* CoreLoggerProvider */], time["a" /* CoreTimeUtilsProvider */]]), core["_52" /* ɵqud */](402653184, 1, { content: 0 }), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 32, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](4, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, null, 28, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](7, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](8, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](11, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_31" /* ɵeld */](12, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](13, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */], filter["a" /* CoreFilterProvider */], providers_helper["a" /* CoreFilterHelperProvider */], delegate["a" /* CoreFilterDelegate */]], { text: [0, "text"], contextLevel: [1, "contextLevel"], contextInstanceId: [2, "contextInstanceId"], courseId: [3, "courseId"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, 2, 18, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](16, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreCommentsViewerPage_1)), core["_30" /* ɵdid */](20, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](22, 0, null, null, 10, "core-context-menu", [], null, null, null, context_menu_ngfactory["b" /* View_CoreContextMenuComponent_0 */], context_menu_ngfactory["a" /* RenderType_CoreContextMenuComponent */])), core["_30" /* ɵdid */](23, 245760, null, 0, context_menu["a" /* CoreContextMenuComponent */], [translate_service["a" /* TranslateService */], popover_controller["a" /* PopoverController */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */], [2, tab["a" /* CoreTabComponent */]], utils["a" /* CoreUtilsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](25, 0, null, 0, 2, "core-context-menu-item", [], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
+function View_CoreCommentsViewerPage_0(_l) { return core["_57" /* ɵvid */](0, [core["_47" /* ɵpid */](0, common["h" /* LowerCasePipe */], []), core["_47" /* ɵpid */](0, format_date["a" /* CoreFormatDatePipe */], [logger["a" /* CoreLoggerProvider */], utils_time["a" /* CoreTimeUtilsProvider */]]), core["_52" /* ɵqud */](402653184, 1, { content: 0 }), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 32, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](4, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](6, 0, null, null, 28, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](7, 49152, null, 0, navbar["a" /* Navbar */], [app_app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](8, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](10, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](11, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_31" /* ɵeld */](12, 0, null, 0, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](13, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], app["a" /* CoreAppProvider */], helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */], filter["a" /* CoreFilterProvider */], providers_helper["a" /* CoreFilterHelperProvider */], delegate["a" /* CoreFilterDelegate */]], { text: [0, "text"], contextLevel: [1, "contextLevel"], contextInstanceId: [2, "contextInstanceId"], courseId: [3, "courseId"] }, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, 2, 18, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](16, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 2, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreCommentsViewerPage_1)), core["_30" /* ɵdid */](20, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](22, 0, null, null, 10, "core-context-menu", [], null, null, null, context_menu_ngfactory["b" /* View_CoreContextMenuComponent_0 */], context_menu_ngfactory["a" /* RenderType_CoreContextMenuComponent */])), core["_30" /* ɵdid */](23, 245760, null, 0, context_menu["a" /* CoreContextMenuComponent */], [translate_service["a" /* TranslateService */], popover_controller["a" /* PopoverController */], core["t" /* ElementRef */], dom["a" /* CoreDomUtilsProvider */], [2, tab["a" /* CoreTabComponent */]], utils["a" /* CoreUtilsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](25, 0, null, 0, 2, "core-context-menu-item", [], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
         var pd_0 = (_co.refreshComments(false) !== false);
         ad = (pd_0 && ad);
     } return ad; }, context_menu_item_ngfactory["b" /* View_CoreContextMenuItemComponent_0 */], context_menu_item_ngfactory["a" /* RenderType_CoreContextMenuItemComponent */])), core["_30" /* ɵdid */](26, 770048, null, 0, context_menu_item["a" /* CoreContextMenuItemComponent */], [context_menu["a" /* CoreContextMenuComponent */]], { content: [0, "content"], iconAction: [1, "iconAction"], closeOnClick: [2, "closeOnClick"], priority: [3, "priority"], hidden: [4, "hidden"] }, { action: "action" }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](29, 0, null, 0, 2, "core-context-menu-item", [], null, [[null, "action"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("action" === en)) {
@@ -832,7 +907,7 @@ function View_CoreCommentsViewerPage_0(_l) { return core["_57" /* ɵvid */](0, [
         var pd_0 = (_co.loadMore($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, infinite_loading_ngfactory["b" /* View_CoreInfiniteLoadingComponent_0 */], infinite_loading_ngfactory["a" /* RenderType_CoreInfiniteLoadingComponent */])), core["_30" /* ɵdid */](64, 573440, null, 0, infinite_loading["a" /* CoreInfiniteLoadingComponent */], [[2, content["a" /* Content */]], dom["a" /* CoreDomUtilsProvider */]], { enabled: [0, "enabled"], error: [1, "error"] }, { action: "action" }), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n\n    "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreCommentsViewerPage_11)), core["_30" /* ɵdid */](68, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 8, 0); var currVal_2 = _co.title; var currVal_3 = _co.contextLevel; var currVal_4 = _co.instanceId; var currVal_5 = _co.courseId; _ck(_v, 13, 0, currVal_2, currVal_3, currVal_4, currVal_5); var currVal_6 = _co.canDeleteComments; _ck(_v, 20, 0, currVal_6); _ck(_v, 23, 0); var currVal_7 = core["_56" /* ɵunv */](_v, 26, 0, core["_44" /* ɵnov */](_v, 27).transform("core.refresh")); var currVal_8 = _co.refreshIcon; var currVal_9 = true; var currVal_10 = 100; var currVal_11 = !(_co.commentsLoaded && !_co.hasOffline); _ck(_v, 26, 0, currVal_7, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_12 = core["_56" /* ɵunv */](_v, 30, 0, core["_44" /* ɵnov */](_v, 31).transform("core.settings.synchronizenow")); var currVal_13 = _co.syncIcon; var currVal_14 = false; var currVal_15 = 100; var currVal_16 = !(_co.commentsLoaded && _co.hasOffline); _ck(_v, 30, 0, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16); var currVal_21 = _co.commentsLoaded; _ck(_v, 41, 0, currVal_21); var currVal_23 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 44, 0, core["_44" /* ɵnov */](_v, 45).transform("core.pulltorefresh")), ""); _ck(_v, 44, 0, currVal_23); var currVal_24 = _co.commentsLoaded; _ck(_v, 49, 0, currVal_24); var currVal_25 = (!_co.comments || !_co.comments.length); _ck(_v, 52, 0, currVal_25); var currVal_26 = _co.hasOffline; _ck(_v, 55, 0, currVal_26); var currVal_27 = _co.offlineComment; _ck(_v, 58, 0, currVal_27); var currVal_28 = _co.comments; _ck(_v, 61, 0, currVal_28); var currVal_29 = _co.canLoadMore; var currVal_30 = _co.loadMoreError; _ck(_v, 64, 0, currVal_29, currVal_30); var currVal_31 = _co.canAddComments; _ck(_v, 68, 0, currVal_31); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 7)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 7)._sbPadding; _ck(_v, 6, 0, currVal_0, currVal_1); var currVal_17 = core["_44" /* ɵnov */](_v, 38).statusbarPadding; var currVal_18 = core["_44" /* ɵnov */](_v, 38)._hasRefresher; _ck(_v, 37, 0, currVal_17, currVal_18); var currVal_19 = (core["_44" /* ɵnov */](_v, 41).state !== "inactive"); var currVal_20 = core["_44" /* ɵnov */](_v, 41)._top; _ck(_v, 40, 0, currVal_19, currVal_20); var currVal_22 = core["_44" /* ɵnov */](_v, 44).r.state; _ck(_v, 43, 0, currVal_22); }); }
-function View_CoreCommentsViewerPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-comments-viewer", [], null, null, null, View_CoreCommentsViewerPage_0, RenderType_CoreCommentsViewerPage)), core["_30" /* ɵdid */](1, 180224, null, 0, viewer_CoreCommentsViewerPage, [nav_params["a" /* NavParams */], sites["a" /* CoreSitesProvider */], user["a" /* CoreUserProvider */], dom["a" /* CoreDomUtilsProvider */], translate_service["a" /* TranslateService */], modal_controller["a" /* ModalController */], providers_comments["a" /* CoreCommentsProvider */], offline["a" /* CoreCommentsOfflineProvider */], events["a" /* CoreEventsProvider */], providers_sync["a" /* CoreCommentsSyncProvider */], utils_text["a" /* CoreTextUtilsProvider */], time["a" /* CoreTimeUtilsProvider */]], null, null)], null, null); }
+function View_CoreCommentsViewerPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-comments-viewer", [], null, null, null, View_CoreCommentsViewerPage_0, RenderType_CoreCommentsViewerPage)), core["_30" /* ɵdid */](1, 180224, null, 0, viewer_CoreCommentsViewerPage, [nav_params["a" /* NavParams */], sites["a" /* CoreSitesProvider */], user["a" /* CoreUserProvider */], dom["a" /* CoreDomUtilsProvider */], translate_service["a" /* TranslateService */], modal_controller["a" /* ModalController */], providers_comments["a" /* CoreCommentsProvider */], offline["a" /* CoreCommentsOfflineProvider */], events["a" /* CoreEventsProvider */], providers_sync["a" /* CoreCommentsSyncProvider */], utils_text["a" /* CoreTextUtilsProvider */], utils_time["a" /* CoreTimeUtilsProvider */]], null, null)], null, null); }
 var CoreCommentsViewerPageNgFactory = core["_27" /* ɵccf */]("page-core-comments-viewer", viewer_CoreCommentsViewerPage, View_CoreCommentsViewerPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=viewer.ngfactory.js.map

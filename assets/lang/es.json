@@ -323,7 +323,7 @@
     "addon.mod_assign.allowsubmissionsfromdate": "Permitir entregas desde",
     "addon.mod_assign.allowsubmissionsfromdatesummary": "Esta tarea aceptará entregas desde el <strong>{{$a}}</strong>",
     "addon.mod_assign.applytoteam": "Aplicar las mismas calificaciones y comentarios al grupo completo",
-    "addon.mod_assign.assignmentisdue": "La tarea ha vencido",
+    "addon.mod_assign.assignmentisdue": "Tarea pendiente",
     "addon.mod_assign.attemptnumber": "Número del intento",
     "addon.mod_assign.attemptreopenmethod": "Permitir reapertura",
     "addon.mod_assign.attemptreopenmethod_manual": "Manual",

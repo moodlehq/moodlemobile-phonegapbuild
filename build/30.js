@@ -1,6 +1,6 @@
 webpackJsonp([30],{
 
-/***/ 2135:
+/***/ 2134:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -417,7 +417,7 @@ var spinner_ngfactory = __webpack_require__(132);
 var spinner = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(163);
+var grid = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -468,7 +468,7 @@ var utils = __webpack_require__(2);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
 var empty_box_ngfactory = __webpack_require__(124);
@@ -513,7 +513,7 @@ var content = __webpack_require__(27);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher_refresher = __webpack_require__(157);
+var refresher_refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);

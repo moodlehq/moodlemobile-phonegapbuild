@@ -288,7 +288,7 @@ var delegate = __webpack_require__(36);
 var toolbar_item = __webpack_require__(373);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/providers/groups.ts
 var groups = __webpack_require__(71);

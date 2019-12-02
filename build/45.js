@@ -415,7 +415,7 @@ var user_avatar_ngfactory = __webpack_require__(216);
 var user_avatar = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
 var note = __webpack_require__(249);

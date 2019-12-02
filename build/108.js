@@ -427,7 +427,7 @@ var providers_app = __webpack_require__(9);
 var events = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(46);
@@ -499,7 +499,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);

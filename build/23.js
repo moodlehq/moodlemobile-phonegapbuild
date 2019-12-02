@@ -527,7 +527,7 @@ var app = __webpack_require__(9);
 var split_view = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(25);
@@ -686,7 +686,7 @@ var content_ngfactory = __webpack_require__(184);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);
@@ -980,7 +980,7 @@ var AddonModWorkshopAssessmentPageModuleNgFactory = core["_28" /* ɵcmf */](asse
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__core_filter_providers_delegate__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_file_file_ngfactory__ = __webpack_require__(250);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_file_file__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__providers_file_helper__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__providers_file_helper__ = __webpack_require__(162);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__providers_utils_mimetype__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_local_file_local_file_ngfactory__ = __webpack_require__(745);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_local_file_local_file__ = __webpack_require__(384);

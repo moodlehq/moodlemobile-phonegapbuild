@@ -1,6 +1,6 @@
 webpackJsonp([137],{
 
-/***/ 2137:
+/***/ 2136:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -761,7 +761,7 @@ var card_content = __webpack_require__(489);
 var datetime_ngfactory = __webpack_require__(769);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/datetime/datetime.js + 1 modules
-var datetime = __webpack_require__(322);
+var datetime = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-controller.js
 var picker_controller = __webpack_require__(261);
@@ -836,7 +836,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);

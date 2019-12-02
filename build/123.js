@@ -22,7 +22,7 @@ var events = __webpack_require__(10);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages.ts
-var providers_messages = __webpack_require__(159);
+var providers_messages = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages-offline.ts
 var messages_offline = __webpack_require__(381);
@@ -846,7 +846,7 @@ var spinner_ngfactory = __webpack_require__(132);
 var spinner = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(227);
@@ -978,7 +978,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);

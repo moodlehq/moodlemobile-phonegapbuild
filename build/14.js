@@ -64,10 +64,10 @@ var sync = __webpack_require__(327);
 var fields_delegate = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(168);
+var comments = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./src/core/comments/components/comments/comments.ts
-var comments_comments = __webpack_require__(323);
+var comments_comments = __webpack_require__(322);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/entry/entry.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -602,7 +602,7 @@ var compile_html_ngfactory = __webpack_require__(220);
 var compile_html = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
-var compile = __webpack_require__(153);
+var compile = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -626,7 +626,7 @@ var aggregate_ngfactory = __webpack_require__(2162);
 var aggregate = __webpack_require__(1538);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(28);
@@ -641,7 +641,7 @@ var button_ngfactory = __webpack_require__(46);
 var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(163);
+var grid = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(119);
@@ -719,7 +719,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);
@@ -1078,7 +1078,7 @@ var CoreRatingRateComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__aggregate__ = __webpack_require__(1538);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__ = __webpack_require__(161);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_rating__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_sites__ = __webpack_require__(1);
 /**

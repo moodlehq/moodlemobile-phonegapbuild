@@ -19,7 +19,7 @@ var app = __webpack_require__(9);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(168);
+var comments = __webpack_require__(152);
 
 // CONCATENATED MODULE: ./src/core/comments/pages/add/add.ts
 // (C) Copyright 2015 Moodle Pty Ltd.

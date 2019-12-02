@@ -31,7 +31,7 @@ var utils_text = __webpack_require__(11);
 var helper = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(162);
+var tag = __webpack_require__(163);
 
 // CONCATENATED MODULE: ./src/core/tag/pages/search/search.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -368,7 +368,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);
@@ -380,7 +380,7 @@ var refresher_content_ngfactory = __webpack_require__(215);
 var refresher_content = __webpack_require__(174);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(163);
+var grid = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(119);

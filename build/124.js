@@ -16,7 +16,7 @@ var ionic_angular = __webpack_require__(5);
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages.ts
-var messages = __webpack_require__(159);
+var messages = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -348,7 +348,7 @@ var user_avatar_ngfactory = __webpack_require__(216);
 var user_avatar = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(372);
@@ -399,7 +399,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);

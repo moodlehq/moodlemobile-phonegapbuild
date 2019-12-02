@@ -268,7 +268,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);
@@ -479,7 +479,7 @@ var CoreCoursesMyCoursesPageModuleNgFactory = core["_28" /* ɵcmf */](my_courses
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_loading_loading_ngfactory__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_loading_loading__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_utils_utils__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_ionic_angular_components_grid_grid__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_ionic_angular_components_grid_grid__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27_ionic_angular_components_grid_row__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__my_courses__ = __webpack_require__(1536);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__course_providers_options_delegate__ = __webpack_require__(100);

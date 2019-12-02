@@ -34,7 +34,7 @@ var dom = __webpack_require__(4);
 var split_view = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(165);
+var competency = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/helper.ts
 var helper = __webpack_require__(376);
@@ -354,7 +354,7 @@ var app = __webpack_require__(9);
 var events = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(49);
@@ -444,7 +444,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);

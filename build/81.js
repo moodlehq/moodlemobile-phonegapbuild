@@ -320,7 +320,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);
@@ -353,10 +353,10 @@ var user = __webpack_require__(45);
 var popover_controller = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(162);
+var tag = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(69);

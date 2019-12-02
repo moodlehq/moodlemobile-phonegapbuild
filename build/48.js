@@ -415,7 +415,7 @@ var keyboard = __webpack_require__(107);
 var nav_params = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // CONCATENATED MODULE: ./src/core/login/pages/site/site.ngfactory.js
 /**

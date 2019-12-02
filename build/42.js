@@ -22,7 +22,7 @@ var app = __webpack_require__(9);
 var constants = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(164);
+var config = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
 var file = __webpack_require__(57);

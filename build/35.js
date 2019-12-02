@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/core/siteplugins/components/plugin-content/plugin-content.ts
-var plugin_content = __webpack_require__(154);
+var plugin_content = __webpack_require__(155);
 
 // CONCATENATED MODULE: ./src/core/siteplugins/pages/plugin-page/plugin-page.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -311,7 +311,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);

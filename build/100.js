@@ -294,7 +294,7 @@ var imscp = __webpack_require__(262);
 var course = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/addon/mod/imscp/providers/prefetch-handler.ts
 var prefetch_handler = __webpack_require__(407);

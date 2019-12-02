@@ -580,7 +580,7 @@ var content_ngfactory = __webpack_require__(184);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);
@@ -598,7 +598,7 @@ var loading = __webpack_require__(50);
 var nav_params = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/review/review.ngfactory.js
 /**

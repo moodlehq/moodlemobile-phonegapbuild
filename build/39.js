@@ -28,7 +28,7 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(164);
+var config = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./src/core/settings/providers/helper.ts
 var helper = __webpack_require__(734);

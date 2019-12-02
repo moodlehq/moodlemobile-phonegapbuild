@@ -310,7 +310,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1525);
 var bs_tooltip_ngfactory = __webpack_require__(1526);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(227);
@@ -457,7 +457,7 @@ var input_ngfactory = __webpack_require__(110);
 var input = __webpack_require__(90);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(163);
+var grid = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(119);

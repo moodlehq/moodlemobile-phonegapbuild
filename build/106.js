@@ -438,7 +438,7 @@ var utils = __webpack_require__(2);
 var item_divider = __webpack_require__(98);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(163);
+var grid = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(119);

@@ -40,7 +40,7 @@ var fields_delegate = __webpack_require__(127);
 var helper = __webpack_require__(218);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(162);
+var tag = __webpack_require__(163);
 
 // CONCATENATED MODULE: ./src/addon/mod/data/pages/search/search.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -492,7 +492,7 @@ var compile_html_ngfactory = __webpack_require__(220);
 var compile_html = __webpack_require__(194);
 
 // EXTERNAL MODULE: ./src/core/compile/providers/compile.ts
-var compile = __webpack_require__(153);
+var compile = __webpack_require__(154);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(69);

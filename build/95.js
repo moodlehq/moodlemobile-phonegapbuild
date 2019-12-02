@@ -495,7 +495,7 @@ var user_avatar_ngfactory = __webpack_require__(216);
 var user_avatar = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/components/progress-bar/progress-bar.ngfactory.js
 var progress_bar_ngfactory = __webpack_require__(488);
@@ -540,7 +540,7 @@ var content_ngfactory = __webpack_require__(184);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);

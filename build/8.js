@@ -1090,7 +1090,7 @@ var esm5_forms = __webpack_require__(22);
 var col = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(163);
+var grid = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(119);
@@ -1141,7 +1141,7 @@ var nav_params = __webpack_require__(69);
 var popover_controller = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // CONCATENATED MODULE: ./src/addon/mod/quiz/pages/player/player.ngfactory.js
 /**

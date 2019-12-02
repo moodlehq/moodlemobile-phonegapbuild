@@ -403,7 +403,7 @@ var utils = __webpack_require__(2);
 var filepool = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
-var file_helper = __webpack_require__(161);
+var file_helper = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
 var mimetype = __webpack_require__(67);
@@ -487,7 +487,7 @@ var content_ngfactory = __webpack_require__(184);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);

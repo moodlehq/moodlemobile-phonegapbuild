@@ -706,6 +706,7 @@
     "addon.mod_quiz.attemptnumber": "Tentativo",
     "addon.mod_quiz.attemptquiznow": "Tenta il quiz adesso",
     "addon.mod_quiz.attemptstate": "Stato",
+    "addon.mod_quiz.clearchoice": "Annulla la scelta",
     "addon.mod_quiz.comment": "Commento",
     "addon.mod_quiz.completedon": "Terminato",
     "addon.mod_quiz.confirmclose": "Stai per completare questo tentativo. Una volta chiuso il tentativo non potrai più modificare le risposte.",

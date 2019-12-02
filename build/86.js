@@ -1,6 +1,6 @@
 webpackJsonp([86],{
 
-/***/ 2139:
+/***/ 2138:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1516,7 +1516,7 @@ var navigation_bar = __webpack_require__(398);
 var nav_params = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(160);
+var modal_controller = __webpack_require__(161);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.ngfactory.js
 /**

@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(162);
+var tag = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/area-delegate.ts
 var area_delegate = __webpack_require__(205);
@@ -334,7 +334,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(107);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(157);
+var refresher = __webpack_require__(158);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(42);

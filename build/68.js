@@ -267,7 +267,7 @@ var item_reorder = __webpack_require__(26);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(158);
+var avatar = __webpack_require__(159);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(227);
