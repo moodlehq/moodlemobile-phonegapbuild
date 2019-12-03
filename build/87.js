@@ -237,7 +237,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(49);
@@ -315,7 +315,7 @@ var refresher_content = __webpack_require__(174);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm.ts
-var scorm = __webpack_require__(232);
+var scorm = __webpack_require__(235);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/helper.ts
 var scorm_providers_helper = __webpack_require__(389);

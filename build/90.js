@@ -202,7 +202,7 @@ var translate_service = __webpack_require__(17);
 var common = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(99);
+var icon_ngfactory = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(88);
@@ -241,7 +241,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
 var toolbar_item = __webpack_require__(373);

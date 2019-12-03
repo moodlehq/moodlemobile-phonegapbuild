@@ -1,6 +1,6 @@
 webpackJsonp([110],{
 
-/***/ 2038:
+/***/ 2037:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -227,7 +227,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(49);
@@ -305,7 +305,7 @@ var refresher_content = __webpack_require__(174);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/feedback.ts
-var feedback = __webpack_require__(144);
+var feedback = __webpack_require__(133);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/offline.ts
 var offline = __webpack_require__(299);
@@ -317,7 +317,7 @@ var groups = __webpack_require__(71);
 var sync = __webpack_require__(287);
 
 // EXTERNAL MODULE: ./src/addon/mod/feedback/providers/helper.ts
-var feedback_providers_helper = __webpack_require__(253);
+var feedback_providers_helper = __webpack_require__(254);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(24);

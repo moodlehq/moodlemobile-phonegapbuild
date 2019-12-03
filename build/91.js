@@ -240,7 +240,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(49);
@@ -321,13 +321,13 @@ var translate_pipe = __webpack_require__(25);
 var quiz = __webpack_require__(169);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/helper.ts
-var quiz_providers_helper = __webpack_require__(254);
+var quiz_providers_helper = __webpack_require__(255);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz-offline.ts
 var quiz_offline = __webpack_require__(263);
 
 // EXTERNAL MODULE: ./src/addon/mod/quiz/providers/quiz-sync.ts
-var quiz_sync = __webpack_require__(259);
+var quiz_sync = __webpack_require__(260);
 
 // EXTERNAL MODULE: ./src/core/question/providers/behaviour-delegate.ts
 var behaviour_delegate = __webpack_require__(116);

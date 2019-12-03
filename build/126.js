@@ -382,7 +382,7 @@ var item_reorder = __webpack_require__(26);
 var item_content = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/nav/nav-push.js
-var nav_push = __webpack_require__(228);
+var nav_push = __webpack_require__(231);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -391,7 +391,7 @@ var nav_controller = __webpack_require__(21);
 var nav_push_anchor = __webpack_require__(280);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
-var file_ngfactory = __webpack_require__(250);
+var file_ngfactory = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
 var file = __webpack_require__(217);
@@ -439,7 +439,7 @@ var loading = __webpack_require__(50);
 var fab_container_ngfactory = __webpack_require__(283);
 
 // EXTERNAL MODULE: ./src/directives/fab.ts
-var fab = __webpack_require__(256);
+var fab = __webpack_require__(257);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
 var content = __webpack_require__(27);
@@ -478,7 +478,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(184);

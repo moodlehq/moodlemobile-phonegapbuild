@@ -40,7 +40,7 @@ var time = __webpack_require__(24);
 var ion_tabs = __webpack_require__(730);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm.ts
-var providers_scorm = __webpack_require__(232);
+var providers_scorm = __webpack_require__(235);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/helper.ts
 var helper = __webpack_require__(389);
@@ -1396,7 +1396,7 @@ var translate_service = __webpack_require__(17);
 var icon = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(132);
+var spinner_ngfactory = __webpack_require__(131);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(115);
@@ -1453,7 +1453,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(49);

@@ -37,7 +37,7 @@ var groups = __webpack_require__(71);
 var providers_assign = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/assign-offline.ts
-var assign_offline = __webpack_require__(133);
+var assign_offline = __webpack_require__(132);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/helper.ts
 var helper = __webpack_require__(186);
@@ -466,7 +466,7 @@ var deep_linker = __webpack_require__(58);
 var esm5_forms = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(141);
+var badge = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(216);
@@ -514,7 +514,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(49);

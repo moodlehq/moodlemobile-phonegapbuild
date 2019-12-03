@@ -193,7 +193,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(25);
@@ -217,7 +217,7 @@ var sites = __webpack_require__(1);
 var modal_controller = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/addon/notes/providers/notes.ts
-var notes = __webpack_require__(260);
+var notes = __webpack_require__(261);
 
 // EXTERNAL MODULE: ./src/addon/notes/providers/notes-sync.ts
 var notes_sync = __webpack_require__(337);

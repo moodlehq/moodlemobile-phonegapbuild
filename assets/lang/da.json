@@ -1357,6 +1357,7 @@
     "core.course.couldnotloadsectioncontent": "Kunne ikke indlæse sektionens indhold, prøv igen senere.",
     "core.course.couldnotloadsections": "Kunne ikke indlæse sektionerne, prøv igen senere.",
     "core.course.coursesummary": "Kursusbeskrivelse",
+    "core.course.downloadcourse": "Download kursus",
     "core.course.errordownloadingcourse": "Fejl i forbindelse med download af kurset.",
     "core.course.errordownloadingsection": "Fejl ved indlæsning af sektion.",
     "core.course.errorgetmodule": "Fejl under indhentning af aktivitetsdata.",

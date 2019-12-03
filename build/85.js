@@ -19,7 +19,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var directives_module = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/addon/mod/scorm/providers/scorm.ts
-var scorm = __webpack_require__(232);
+var scorm = __webpack_require__(235);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/toc/toc.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -271,7 +271,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
 var toolbar_item = __webpack_require__(373);

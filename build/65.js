@@ -232,7 +232,7 @@ var button_button = __webpack_require__(41);
 var col = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(99);
+var icon_ngfactory = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon = __webpack_require__(88);
@@ -241,7 +241,7 @@ var icon = __webpack_require__(88);
 var icon_icon = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
-var external_content = __webpack_require__(227);
+var external_content = __webpack_require__(230);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
 var filepool = __webpack_require__(18);
@@ -328,13 +328,13 @@ var delegate = __webpack_require__(36);
 var toolbar_item = __webpack_require__(373);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
-var item_divider = __webpack_require__(98);
+var item_divider = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./src/core/course/components/module/module.ngfactory.js + 1 modules
 var module_ngfactory = __webpack_require__(1541);
@@ -352,7 +352,7 @@ var course_providers_helper = __webpack_require__(38);
 var course = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
-var badge = __webpack_require__(141);
+var badge = __webpack_require__(142);
 
 // EXTERNAL MODULE: ./src/components/download-refresh/download-refresh.ngfactory.js
 var download_refresh_ngfactory = __webpack_require__(774);
@@ -545,7 +545,7 @@ var tabs_ngfactory = __webpack_require__(727);
 var nav_params = __webpack_require__(69);
 
 // EXTERNAL MODULE: ./src/core/course/providers/options-delegate.ts
-var options_delegate = __webpack_require__(100);
+var options_delegate = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./src/core/courses/providers/courses.ts
 var courses = __webpack_require__(51);

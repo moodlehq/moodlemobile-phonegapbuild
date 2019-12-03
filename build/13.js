@@ -49,25 +49,25 @@ var fileuploader = __webpack_require__(72);
 var split_view = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/rating.ts
-var rating = __webpack_require__(229);
+var rating = __webpack_require__(232);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/offline.ts
 var offline = __webpack_require__(202);
 
 // EXTERNAL MODULE: ./src/core/rating/providers/sync.ts
-var providers_sync = __webpack_require__(235);
+var providers_sync = __webpack_require__(237);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/forum.ts
-var forum = __webpack_require__(126);
+var forum = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/offline.ts
-var providers_offline = __webpack_require__(231);
+var providers_offline = __webpack_require__(234);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/helper.ts
 var helper = __webpack_require__(282);
 
 // EXTERNAL MODULE: ./src/addon/mod/forum/providers/sync.ts
-var forum_providers_sync = __webpack_require__(255);
+var forum_providers_sync = __webpack_require__(256);
 
 // CONCATENATED MODULE: ./src/addon/mod/forum/pages/discussion/discussion.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -233,8 +233,8 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
             }
         });
         this.changeDiscObserver = this.eventsProvider.on(forum["a" /* AddonModForumProvider */].CHANGE_DISCUSSION_EVENT, function (data) {
-            if ((_this.forum && _this.forum.id === data.forumId) || data.cmId === _this.cmId) {
-                _this.forumProvider.invalidateDiscussionsList(_this.forum.id).finally(function () {
+            if ((_this.forumId && _this.forumId === data.forumId) || data.cmId === _this.cmId) {
+                _this.forumProvider.invalidateDiscussionsList(_this.forumId).finally(function () {
                     if (typeof data.locked != 'undefined') {
                         _this.discussion.locked = data.locked;
                     }
@@ -383,7 +383,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
                 _this.forum = forum;
                 _this.availabilityMessage = _this.forumHelper.getAvailabilityMessage(forum);
                 var promises = [];
-                promises.push(_this.forumProvider.getAccessInformation(_this.forum.id).then(function (accessInfo) {
+                promises.push(_this.forumProvider.getAccessInformation(_this.forumId).then(function (accessInfo) {
                     _this.accessInfo = accessInfo;
                     // Disallow replying if cut-off date is reached and the user has not the capability to override it.
                     // Just in case the posts were fetched from WS when the cut-off date was not reached but it is now.
@@ -395,11 +395,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
                 }));
                 // Fetch the discussion if not passed as parameter.
                 if (!_this.discussion) {
-                    promises.push(_this.forumHelper.getDiscussionById(forum.id, _this.discussionId).then(function (discussion) {
-                        _this.discussion = discussion;
-                    }).catch(function () {
-                        // Ignore errors.
-                    }));
+                    promises.push(_this.loadDiscussion(_this.forumId, _this.discussionId));
                 }
                 return Promise.all(promises);
             }).catch(function () {
@@ -461,6 +457,26 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
                 });
             }
         });
+    };
+    /**
+     * Convenience function to load discussion.
+     *
+     * @param  forumId Forum ID.
+     * @param  discussionId Discussion ID.
+     * @return Promise resolved when done.
+     */
+    AddonModForumDiscussionPage.prototype.loadDiscussion = function (forumId, discussionId) {
+        var _this = this;
+        // Fetch the discussion if not passed as parameter.
+        if (!this.discussion && forumId) {
+            return this.forumHelper.getDiscussionById(forumId, discussionId).then(function (discussion) {
+                _this.discussion = discussion;
+                _this.discussionId = _this.discussion.discussion;
+            }).catch(function () {
+                // Ignore errors.
+            });
+        }
+        return Promise.resolve();
     };
     /**
      * Tries to synchronize the posts discussion.
@@ -813,7 +829,7 @@ var toolbar_title = __webpack_require__(314);
 var config = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
 var navbar = __webpack_require__(214);
@@ -879,13 +895,13 @@ var card = __webpack_require__(89);
 var icon = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(99);
+var icon_ngfactory = __webpack_require__(100);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
 var icon_icon = __webpack_require__(88);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
-var note = __webpack_require__(249);
+var note = __webpack_require__(250);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
 var button_ngfactory = __webpack_require__(46);
@@ -954,7 +970,7 @@ var modal_controller = __webpack_require__(161);
 var label = __webpack_require__(65);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.ngfactory.js
-var checkbox_ngfactory = __webpack_require__(252);
+var checkbox_ngfactory = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
 var checkbox_checkbox = __webpack_require__(200);
@@ -993,10 +1009,10 @@ var app_app = __webpack_require__(35);
 var rich_text_editor_ngfactory = __webpack_require__(316);
 
 // EXTERNAL MODULE: ./src/components/rich-text-editor/rich-text-editor.ts
-var rich_text_editor = __webpack_require__(251);
+var rich_text_editor = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
-var item_divider = __webpack_require__(98);
+var item_divider = __webpack_require__(99);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
 var grid = __webpack_require__(164);
@@ -1008,7 +1024,7 @@ var row = __webpack_require__(119);
 var col = __webpack_require__(120);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
-var format_date = __webpack_require__(226);
+var format_date = __webpack_require__(229);
 
 // EXTERNAL MODULE: ./src/providers/utils/time.ts
 var time = __webpack_require__(24);
@@ -1511,7 +1527,7 @@ var AddonModForumDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](discuss
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__rate__ = __webpack_require__(1539);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_utils_dom__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_events__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_rating__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_rating__ = __webpack_require__(232);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_offline__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_sites__ = __webpack_require__(1);
 /**
@@ -1589,7 +1605,7 @@ var CoreRatingRateComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__aggregate__ = __webpack_require__(1538);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_rating__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_rating__ = __webpack_require__(232);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_sites__ = __webpack_require__(1);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.

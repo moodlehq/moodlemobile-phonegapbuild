@@ -1,6 +1,6 @@
 webpackJsonp([101],{
 
-/***/ 2046:
+/***/ 2045:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -228,7 +228,7 @@ var toolbar_title_ngfactory = __webpack_require__(721);
 var toolbar_title = __webpack_require__(314);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(248);
+var toolbar = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(49);
@@ -288,7 +288,7 @@ var popover_controller = __webpack_require__(70);
 var glossary = __webpack_require__(204);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/offline.ts
-var offline = __webpack_require__(258);
+var offline = __webpack_require__(259);
 
 // EXTERNAL MODULE: ./src/addon/mod/glossary/providers/prefetch-handler.ts
 var prefetch_handler = __webpack_require__(406);
