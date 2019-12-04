@@ -99,6 +99,18 @@
         <resource-file src="resources/android/icon/drawable-mdpi-smallicon.png" target="app/src/main/res/mipmap-mdpi/smallicon.png" />
         <resource-file src="resources/android/icon/drawable-hdpi-smallicon.png" target="app/src/main/res/mipmap-hdpi/smallicon.png" />
         <resource-file src="resources/android/icon/drawable-xhdpi-smallicon.png" target="app/src/main/res/mipmap-xhdpi/smallicon.png" />
+
+        <!--
+            This should be added by the file-opener2 plugin, but it's not working at the moment. This can be removed
+            once the following issue is resolved and the plugin is updated to include the fix:
+            https://github.com/pwlin/cordova-plugin-file-opener2/issues/246
+        -->
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <provider android:authorities="${applicationId}.opener.provider" android:exported="false" android:grantUriPermissions="true" android:name="io.github.pwlin.cordova.plugins.fileopener2.FileProvider">
+                <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/opener_paths" />
+            </provider>
+        </config-file>
+
     </platform>
 
     <platform name="ios">
@@ -167,7 +179,7 @@
     </gap:plugin>
     <gap:plugin name="cordova-plugin-device" source="npm" spec="^2.0.3" />
     <gap:plugin name="cordova-plugin-file" source="npm" spec="^6.0.2" />
-    <gap:plugin name="cordova-plugin-file-opener2" source="npm" spec="2.0.19" />
+    <gap:plugin name="cordova-plugin-file-opener2" source="npm" spec="2.2.1" />
     <gap:plugin name="cordova-plugin-file-transfer" source="npm" spec="^1.7.1" />
     <gap:plugin name="cordova-plugin-geolocation" source="npm" spec="^4.0.2">
         <param name="GEOLOCATION_USAGE_DESCRIPTION" value="We need your location so you can attach it as part of your submissions." />
