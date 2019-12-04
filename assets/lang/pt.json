@@ -450,7 +450,7 @@
     "addon.mod_chat.nosessionsfound": "Nenhuma sessão encontrada",
     "addon.mod_chat.saidto": "disse a",
     "addon.mod_chat.send": "Enviar",
-    "addon.mod_chat.sessionstart": "A próxima sessão de chat irá iniciar em {{$a.date}}, ({{$a.fromnow}} a partir de agora)",
+    "addon.mod_chat.sessionstart": "A próxima sessão de chat será {{$a.date}} (daqui a {{$a.fromnow}})",
     "addon.mod_chat.showincompletesessions": "Mostrar sessões incompletas",
     "addon.mod_chat.talk": "Falar",
     "addon.mod_chat.viewreport": "Ver gravações de sessões anteriores",
