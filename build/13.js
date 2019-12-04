@@ -416,7 +416,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
                 }
                 _this.posts = posts;
                 _this.ratingInfo = ratingInfo;
-                _this.postSubjects = _this.posts.reduce(function (postSubjects, post) {
+                _this.postSubjects = _this.getAllPosts().reduce(function (postSubjects, post) {
                     postSubjects[post.id] = post.subject;
                     return postSubjects;
                 }, (_a = {}, _a[_this.discussion.id] = _this.discussion.subject, _a));
@@ -672,6 +672,29 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
      */
     AddonModForumDiscussionPage.prototype.ngOnDestroy = function () {
         this.onlineObserver && this.onlineObserver.unsubscribe();
+    };
+    /**
+     * Get all the posts contained in the discussion.
+     *
+     * @return Array containing all the posts of the discussion.
+     */
+    AddonModForumDiscussionPage.prototype.getAllPosts = function () {
+        return [].concat.apply([], this.posts.map(this.flattenPostHierarchy.bind(this)));
+    };
+    /**
+     * Flatten a post's hierarchy into an array.
+     *
+     * @param parent Parent post.
+     * @return Array containing all the posts within the hierarchy (including the parent).
+     */
+    AddonModForumDiscussionPage.prototype.flattenPostHierarchy = function (parent) {
+        var posts = [parent];
+        var children = parent.children || [];
+        for (var _i = 0, children_1 = children; _i < children_1.length; _i++) {
+            var child = children_1[_i];
+            posts.push.apply(posts, this.flattenPostHierarchy(child));
+        }
+        return posts;
     };
     __decorate([
         Object(core["_9" /* ViewChild */])(ionic_angular["f" /* Content */]),
