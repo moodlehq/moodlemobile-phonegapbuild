@@ -648,6 +648,7 @@
     "addon.mod_survey.ipreferthat": "Аз предпочинтам",
     "addon.mod_survey.modulenameplural": "Анкети",
     "addon.mod_survey.responses": "Отговори",
+    "addon.mod_survey.surveycompletednograph": "Вие сте завършили тази анкета.",
     "addon.mod_url.modulenameplural": "URL-и",
     "addon.mod_url.pointingtourl": "URL адрес към който този сочи този ресурс",
     "addon.mod_wiki.cannoteditpage": "Вие не може да редактирате тази страница.",
