@@ -25,7 +25,7 @@
     "addon.badges.recipientdetails": "Infos détenteur",
     "addon.badges.relatedbages": "Badges associés",
     "addon.badges.version": "Version",
-    "addon.badges.warnexpired": "(Ce badge est arrivé à échéance !)",
+    "addon.badges.warnexpired": " (Ce badge est arrivé à échéance !)",
     "addon.block_activitymodules.pluginname": "Activités",
     "addon.block_badges.pluginname": "Derniers badges",
     "addon.block_blogmenu.pluginname": "Menu blog",
