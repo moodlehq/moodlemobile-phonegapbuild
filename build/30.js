@@ -411,10 +411,10 @@ var icon_icon = __webpack_require__(88);
 var row = __webpack_require__(119);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(131);
+var spinner_ngfactory = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
-var spinner = __webpack_require__(115);
+var spinner = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
 var grid = __webpack_require__(164);
@@ -474,7 +474,7 @@ var avatar = __webpack_require__(159);
 var empty_box_ngfactory = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(114);
+var empty_box = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(372);

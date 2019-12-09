@@ -554,10 +554,10 @@ var translate_pipe = __webpack_require__(25);
 var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(131);
+var spinner_ngfactory = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
-var spinner = __webpack_require__(115);
+var spinner = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
 var user_avatar_ngfactory = __webpack_require__(216);
@@ -678,7 +678,7 @@ var AddonNotificationsActionsComponentNgFactory = core["_27" /* ɵccf */]("addon
 var empty_box_ngfactory = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(114);
+var empty_box = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./src/pipes/date-day-or-time.ts
 var date_day_or_time = __webpack_require__(378);

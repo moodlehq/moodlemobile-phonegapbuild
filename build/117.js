@@ -380,7 +380,7 @@ var card_content = __webpack_require__(489);
 var empty_box_ngfactory = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(114);
+var empty_box = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./src/pipes/format-date.ts
 var format_date = __webpack_require__(229);

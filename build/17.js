@@ -336,7 +336,7 @@ var delegate = __webpack_require__(36);
 var empty_box_ngfactory = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(114);
+var empty_box = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(372);

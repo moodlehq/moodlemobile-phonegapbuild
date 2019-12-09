@@ -743,7 +743,7 @@ var CoreSiteHomeNewsComponentNgFactory = core["_27" /* ɵccf */]("core-sitehome-
 var empty_box_ngfactory = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(114);
+var empty_box = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./src/core/block/components/course-blocks/course-blocks.ngfactory.js
 var course_blocks_ngfactory = __webpack_require__(1527);

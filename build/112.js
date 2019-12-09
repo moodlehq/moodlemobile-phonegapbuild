@@ -34,7 +34,7 @@ var dom = __webpack_require__(4);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
-var fields_delegate = __webpack_require__(126);
+var fields_delegate = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/helper.ts
 var helper = __webpack_require__(218);

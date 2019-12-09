@@ -64,7 +64,7 @@ var helper = __webpack_require__(218);
 var offline = __webpack_require__(294);
 
 // EXTERNAL MODULE: ./src/addon/mod/data/providers/fields-delegate.ts
-var fields_delegate = __webpack_require__(126);
+var fields_delegate = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
 var tag = __webpack_require__(163);

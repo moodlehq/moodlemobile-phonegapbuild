@@ -286,7 +286,7 @@ var list = __webpack_require__(87);
 var empty_box_ngfactory = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(114);
+var empty_box = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./src/components/dynamic-component/dynamic-component.ngfactory.js
 var dynamic_component_ngfactory = __webpack_require__(722);

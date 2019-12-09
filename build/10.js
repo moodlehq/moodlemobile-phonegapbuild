@@ -512,7 +512,7 @@ var common = __webpack_require__(8);
 var empty_box_ngfactory = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(114);
+var empty_box = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
 var loading_ngfactory = __webpack_require__(54);
@@ -844,7 +844,7 @@ var CoreCoursesDashboardPageModuleNgFactory = core["_28" /* ɵcmf */](dashboard_
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ionic_angular_components_popover_popover_controller__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__user_providers_user__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_empty_box_empty_box_ngfactory__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_empty_box_empty_box__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_empty_box_empty_box__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__angular_common__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_loading_loading_ngfactory__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_loading_loading__ = __webpack_require__(50);
@@ -1247,7 +1247,7 @@ var CoreSiteHomeNewsComponentNgFactory = core["_27" /* ɵccf */]("core-sitehome-
 var empty_box_ngfactory = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
-var empty_box = __webpack_require__(114);
+var empty_box = __webpack_require__(115);
 
 // EXTERNAL MODULE: ./src/core/block/components/course-blocks/course-blocks.ngfactory.js
 var course_blocks_ngfactory = __webpack_require__(1527);
