@@ -1587,7 +1587,7 @@
     "core.loading": "Indlæser",
     "core.loadmore": "Indlæs mere",
     "core.location": "Sted",
-    "core.login.auth_email": "E-mailbaseret godkendelse",
+    "core.login.auth_email": "E-mailbaseret selvregistrering",
     "core.login.authenticating": "Godkender",
     "core.login.cancel": "Annuller",
     "core.login.changepassword": "Skift adgangskode",
