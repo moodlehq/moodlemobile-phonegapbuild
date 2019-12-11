@@ -1619,7 +1619,7 @@
     "core.login.invalidaccount": "Kontroller venligst dine loginoplysninger eller spørg webstedets administrator om at kontrollere webstedets konfiguration.",
     "core.login.invaliddate": "Ugyldig dato",
     "core.login.invalidemail": "Ugyldig e-mailadresse",
-    "core.login.invalidmoodleversion": "Ugyldig Moodle version. Der kræves minimum 2.4.",
+    "core.login.invalidmoodleversion": "<p>Ugyldig Moodle version. Moodleappen fungerer kun sammen med Moodle version {{$a}} eller højere.</p>\n<p>Du kan kontakte din Moodle-administrator og bede om at få Moodle opdateret.</p>\n<p>Hvis du ikke ved hvordan du gør det, kan du kontakte din lærer.</p>",
     "core.login.invalidsite": "Denne webadresse er ugyldig.",
     "core.login.invalidtime": "Ugyldigt klokkeslæt",
     "core.login.invalidurl": "Ugyldig URL specificeret",

@@ -1611,7 +1611,7 @@
     "core.login.invalidurl": "Se ha especificado una URL no válida",
     "core.login.invalidvaluemax": "El valor máximo es {{$a}}",
     "core.login.invalidvaluemin": "El valor mínimo es {{$a}}",
-    "core.login.legacymoodleversion": "Está tratando de conectarse a una versión de Moodle no permitida. Por favor, descargue la aplicación de Moodle Classic para acceder a este sitio Moodle.",
+    "core.login.legacymoodleversion": "Está tratando de conectarse a una versión de Moodle no soportada. Por favor, descargue la aplicación de Moodle Classic para acceder a este sitio Moodle.",
     "core.login.legacymoodleversiondesktop": "Está intentando conectarse a <b>{{$a}}</b>.<br><br>Este sitio está ejecutando una versión antigua no soportada de Moodle, la cual no funcionará con esta aplicación de Moodle Desktop.<br><br>Si este es su sitio, por favor póngase en contacto con su Moodle Partner local para obtener asistencia para actualizarlo.<br><br>Vea <a href=\"https://moodle.com/contact\">nuestra página de contacto</a> para solicitar asistencia.",
     "core.login.legacymoodleversiondesktopdownloadold": "<br><br>Alternativamente, puede continuar accediendo a este sitio usando una versión no soportada de la App que puede descargarse desde aquí.",
     "core.login.localmobileunexpectedresponse": "Las características adicionales de Moodle Mobile han devuelto una respuesta inesperada, debe autenticarse utilizando el servicio estándar de Mobile.",

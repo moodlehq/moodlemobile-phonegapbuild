@@ -1699,7 +1699,7 @@
     "core.login.invalidurl": "O URL é inválido",
     "core.login.invalidvaluemax": "O valor máximo é {{$a}}",
     "core.login.invalidvaluemin": "O valor mínimo é {{$a}}",
-    "core.login.legacymoodleversion": "Está a tentar ligar-se a uma versão do Moodle não suportada. Por favor, descarregue a aplicação clássica do Moodle para aceder a este site Moodle.",
+    "core.login.legacymoodleversion": "Está a tentar ligar-se a uma versão do Moodle não suportada. Por favor, descarregue a aplicação Clássica do Moodle para aceder a este site Moodle.",
     "core.login.legacymoodleversiondesktop": "Está a tentar ligar-se a <b>{{$ a}}</b>.<br><br>O site está a usar uma versão desatualizada do Moodle que não funcionará com esta aplicação Moodle.<br><br>Se for o seu site, entre em contacto com o seu parceiro Moodle local para obter assistência e atualizá-lo.<br>br>Consulte a nossa <a href=\"https://moodle.com/contact\">página de contacto</a> para enviar um pedido de assistência.",
     "core.login.legacymoodleversiondesktopdownloadold": "<br><br>Como alternativa, pode aceder a este site usando uma versão não suportada da aplicação que pode ser descarregada aqui.",
     "core.login.localmobileunexpectedresponse": "Ocorreu um erro inesperado na verificação de Moodle Mobile Additional Features. Será autenticado através do serviço Mobile padrão.",
