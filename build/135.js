@@ -448,8 +448,6 @@ var list_AddonCalendarListPage = /** @class */ (function () {
             infiniteComplete && infiniteComplete();
         });
     };
-    /**
-     */
     AddonCalendarListPage.prototype.filterEvents = function () {
         this.filteredEvents = this.calendarHelper.getFilteredEvents(this.events, this.filter, this.categories);
     };

@@ -1114,7 +1114,7 @@
     "core.back": "Tillbaka",
     "core.block.blocks": "Block",
     "core.cancel": "Avbryt",
-    "core.cannotconnect": "Kan inte ansluta: Kontrollera att webbadressen är korrekt och att din webbplats använder Moodle 2.4 eller senare",
+    "core.cannotconnect": "Kan inte ansluta: Kontrollera att webbadressen är korrekt och att din webbplats använder Moodle {{$a}} eller senare",
     "core.cannotdownloadfiles": "Nedladdning av filer är inaktiverad. Vänligen kontakta webbsidans administratör.",
     "core.category": "Kategori",
     "core.choose": "Välj",

@@ -1320,7 +1320,7 @@
     "core.back": "Retour",
     "core.block.blocks": "Blocs",
     "core.cancel": "Annuler",
-    "core.cannotconnect": "Connexion impossible : vérifiez que l'URL a été saisie correctement et que votre site utilise Moodle 2.4 ou ultérieur.",
+    "core.cannotconnect": "Connexion impossible : vérifiez que l'URL a été saisie correctement et que votre site utilise Moodle {{$a}} ou ultérieur.",
     "core.cannotdownloadfiles": "Le téléchargement de fichiers est désactivé. Veuillez contacter l'administrateur de la plateforme.",
     "core.captureaudio": "Enregistrer un son",
     "core.capturedimage": "Photo prise",

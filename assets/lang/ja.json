@@ -1293,7 +1293,7 @@
     "core.back": "戻る",
     "core.block.blocks": "ブロック",
     "core.cancel": "キャンセル",
-    "core.cannotconnect": "接続できません：正しいURLを入力しているか、サイトのMoodleが2.4以降であることを確認してください。",
+    "core.cannotconnect": "接続できません：正しいURLを入力しているか、サイトのMoodleが{{$a}}以降であることを確認してください。",
     "core.cannotdownloadfiles": "ダウンロードしようとしているファイルは、あなたのモバイルサービスでは無効になっています。あなたのサイト管理者に連絡してください。",
     "core.category": "カテゴリ",
     "core.choose": "選択",

@@ -1300,7 +1300,7 @@
     "core.back": "Tilbage",
     "core.block.blocks": "Blokke",
     "core.cancel": "Annuller",
-    "core.cannotconnect": "Kan ikke tilslutte: kontroller at webadressen er rigtig og at dit websted bruger Moodle 2.4 eller nyere.",
+    "core.cannotconnect": "Kan ikke tilslutte: Kontroller at webadressen er rigtig og at dit websted bruger Moodle {{$a}} eller nyere.",
     "core.cannotdownloadfiles": "Download af filer er deaktiveret i din mobilservice. Kontakt dit websteds administrator.",
     "core.captureaudio": "Optag lyd",
     "core.capturedimage": "Billede taget",

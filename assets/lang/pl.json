@@ -1140,7 +1140,7 @@
     "core.back": "Wstecz",
     "core.block.blocks": "Bloki",
     "core.cancel": "Anuluj",
-    "core.cannotconnect": "Nie można się połączyć: Sprawdź, czy poprawnie wpisałeś adres URL i że witryna korzysta z Moodle 2.4 lub nowszego.",
+    "core.cannotconnect": "Nie można się połączyć: Sprawdź, czy poprawnie wpisałeś adres URL i że witryna korzysta z Moodle {{$a}} lub nowszego.",
     "core.category": "Kategoria",
     "core.choose": "Wybierz",
     "core.choosedots": "Wybierz ...",
