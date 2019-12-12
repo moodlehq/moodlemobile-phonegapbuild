@@ -1296,7 +1296,7 @@
     "core.back": "Voltar",
     "core.block.blocks": "Blocos",
     "core.cancel": "Cancelar",
-    "core.cannotconnect": "Não é possível conectar-se: Verifique se digitou a URL corretamente e se seu site usa o Moodle 2.4 ou posterior.",
+    "core.cannotconnect": "Não foi possível conectar: Verifique se você digitou a URL corretamente e se seu site usa o Moodle {{$a}} ou posterior.",
     "core.cannotdownloadfiles": "Download de arquivos está desabilitado no seu serviço Mobile. Por favor, contate o administrador do site.",
     "core.captureaudio": "Gravar áudio",
     "core.capturedimage": "Fotografado",

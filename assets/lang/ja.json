@@ -1578,7 +1578,7 @@
     "core.login.invalidaccount": "あなたがログインするのに必要な情報を再確認し、サイト管理者にサイトの設定と合致しているか確認するよう依頼してください。",
     "core.login.invaliddate": "日付が正しくありません",
     "core.login.invalidemail": "無効なメールアドレスです。",
-    "core.login.invalidmoodleversion": "Moodleのバージョンが古すぎます。少なくともこれより新しいMoodleである必要があります：",
+    "core.login.invalidmoodleversion": "<p>無効なMoodleサイトバージョンです。MoodleアプリはMoodleシステム {{$a}} 以降のみサポートします。</p>\n<p>あなたのサイト管理者に連絡してMoodleシステムの更新を依頼できます。</p>\n<p>「サイト管理者」はあなたの学校/大学/法人または教育機関でMoodleを管理する人です。サイト管理者への連絡方法が分からない場合、あなたの教師/指導者にご連絡ください。</p>",
     "core.login.invalidsite": "サイトURLが正しくありません。",
     "core.login.invalidurl": "無効なURLが指定されました。",
     "core.login.login": "ログイン",

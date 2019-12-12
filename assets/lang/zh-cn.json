@@ -1202,7 +1202,7 @@
     "core.back": "返回",
     "core.block.blocks": "版块",
     "core.cancel": "取消",
-    "core.cannotconnect": "无法连接：请确认您已经正确输入网址，并且您的网站使用了Moodle 2.4或更高版本。",
+    "core.cannotconnect": "无法连接：请确认您已经正确输入网址，并且您的网站使用了Moodle {{$a}}或更高版本。",
     "core.cannotdownloadfiles": "在您的移动服务中禁用了文件下载。请联系你的网站管理员。",
     "core.captureaudio": "录制音频",
     "core.capturedimage": "拍摄照片。",

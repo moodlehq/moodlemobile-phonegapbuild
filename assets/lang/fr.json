@@ -1679,7 +1679,7 @@
     "core.login.invalidaccount": "Veuillez vérifier vos données de connexion ou demander à l'administrateur de votre site de vérifier sa configuration.",
     "core.login.invaliddate": "Date invalide",
     "core.login.invalidemail": "Adresse de courriel incorrecte",
-    "core.login.invalidmoodleversion": "Version de Moodle non valide. La version minimale requise est 2.4.",
+    "core.login.invalidmoodleversion": "<p>Version de Moodle non valide. L'app Moodle ne fonctionne qu'avec Moodle {{$a}} ou une version ultérieure.</p>\n<p>Veuillez contacter l'administrateur de votre site et lui demander de mettre à jour son système Moodle.</p>",
     "core.login.invalidsite": "Cette URL n'est pas valide.",
     "core.login.invalidtime": "Temps non valide",
     "core.login.invalidurl": "URL spécifié non valide",
