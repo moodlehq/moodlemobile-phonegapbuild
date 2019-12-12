@@ -1326,7 +1326,7 @@
     "core.back": "Atzera",
     "core.block.blocks": "Blokeak",
     "core.cancel": "Utzi",
-    "core.cannotconnect": "Ezin izan da konektatu: URLa ondo idatzi duzula eta zure Moodle-ak 2.4 edo goragoko bertsioa erabiltzen duela egiaztatu ezazu.",
+    "core.cannotconnect": "Ezin izan da konektatu: URLa ondo idatzi duzula eta zure Moodle-ak {{$a}} edo goragoko bertsioa erabiltzen duela egiaztatu ezazu.",
     "core.cannotdownloadfiles": "Fitxategiak jaistea ezgaituta dago. Mesedez,  jar zaitez harremanetan zure guneko kudeatzailearekin.",
     "core.captureaudio": "Grabatu audioa",
     "core.capturedimage": "Argazkia atera da.",
