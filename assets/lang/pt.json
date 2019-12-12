@@ -1693,7 +1693,7 @@
     "core.login.invalidaccount": "Por favor, verifique os detalhes dos seus dados de utilizador ou peça ao administrador do site para verificar as configurações do site.",
     "core.login.invaliddate": "Data inválida",
     "core.login.invalidemail": "Endereço de e-mail inválido",
-    "core.login.invalidmoodleversion": "A versão do Moodle é inválida. É necessária a versão 2.4 ou superior.",
+    "core.login.invalidmoodleversion": "A versão do Moodle é inválida. É necessária a versão {{$a}} ou superior.",
     "core.login.invalidsite": "O URL do site é inválido.",
     "core.login.invalidtime": "Hora inválida",
     "core.login.invalidurl": "O URL é inválido",

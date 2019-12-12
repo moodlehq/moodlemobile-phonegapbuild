@@ -347,7 +347,7 @@ var edit_submission_AddonModWorkshopEditSubmissionPage = /** @class */ (function
         }
         var noText = this.textUtils.htmlIsBlank(inputData.content);
         var noFiles = !inputData.attachmentfiles.length;
-        if (this.textRequired && noText || this.fileRequired && noFiles || noText && noFiles) {
+        if ((this.textRequired && noText) || (this.fileRequired && noFiles) || (noText && noFiles)) {
             this.domUtils.showAlertTranslated('core.notice', 'addon.mod_workshop.submissionrequiredcontent');
             return Promise.reject(null);
         }

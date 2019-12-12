@@ -841,7 +841,7 @@
     "core.back": "العودة",
     "core.block.blocks": "كتل",
     "core.cancel": "إلغاء",
-    "core.cannotconnect": "لا يمكن الاتصال: تحقق من أنك كتبت عنوان URL بشكل صحيح وأنك تستخدم موقع موودل 2.4 أو أحدث.",
+    "core.cannotconnect": "لا يمكن الاتصال: تحقق من أنك كتبت عنوان URL بشكل صحيح وأنك تستخدم موقع موودل {{$a}} أو أحدث.",
     "core.category": "التصنيف",
     "core.choose": "اختر",
     "core.choosedots": "اختر...",

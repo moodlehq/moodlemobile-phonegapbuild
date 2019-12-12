@@ -1350,7 +1350,7 @@
     "core.login.instructions": "Upute",
     "core.login.invaliddate": "Neispravan datum",
     "core.login.invalidemail": "Nevažeća adresa e-pošte",
-    "core.login.invalidmoodleversion": "Moodle inačica treba biti barem 2.4.",
+    "core.login.invalidmoodleversion": "Moodle inačica treba biti barem {{$a}}.",
     "core.login.invalidsite": "URL sjedišta nije valjan.",
     "core.login.invalidtime": "Neispravno vrijeme",
     "core.login.invalidurl": "Zadan je neispravan URL",

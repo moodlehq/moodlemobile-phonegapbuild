@@ -1510,7 +1510,7 @@
     "core.login.invalidaccount": "Пожалуйста, проверьте свои регистрационные данные или обратитесь к администратору сайта, чтобы он проверил настройки сайта.",
     "core.login.invaliddate": "Неверная дата",
     "core.login.invalidemail": "Некорректный формат адреса электронной почты",
-    "core.login.invalidmoodleversion": "Неверная версия Moodle. Минимальная требуемая версия - 2.4.",
+    "core.login.invalidmoodleversion": "Неверная версия Moodle. Минимальная требуемая версия - {{$a}}.",
     "core.login.invalidsite": "URL-адрес сайта недействителен.",
     "core.login.invalidtime": "Некорректное время",
     "core.login.invalidurl": "Указан неправильный URL-адрес.",

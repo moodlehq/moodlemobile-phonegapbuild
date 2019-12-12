@@ -1693,7 +1693,7 @@
     "core.login.invalidaccount": "Zure erabiltzaile eta pasahitza egiaztatu itzazu edo zure guneko administratzaileari guneko ezarpenak egiaztatzeko eskatu.",
     "core.login.invaliddate": "Data ezegokia",
     "core.login.invalidemail": "Helbide elektroniko baliogabea",
-    "core.login.invalidmoodleversion": "Moodle bertsio baliogabea. Gutxieneko bertsioa 2.4 da.",
+    "core.login.invalidmoodleversion": "Moodle bertsio baliogabea. Gutxieneko bertsioa {{$a}} da.",
     "core.login.invalidsite": "Guneko URLa ez da zuzena",
     "core.login.invalidtime": "Ordu baliogabea",
     "core.login.invalidurl": "Balio ez duen URLa ezarri da",

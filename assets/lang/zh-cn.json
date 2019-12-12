@@ -1445,7 +1445,7 @@
     "core.login.invalidaccount": "请检查您的登录信息，或请您的网站管理员检查网站设置。",
     "core.login.invaliddate": "无效日期",
     "core.login.invalidemail": "Email地址无效",
-    "core.login.invalidmoodleversion": "无效的Moodle版本。最低版本要求是2.4。",
+    "core.login.invalidmoodleversion": "无效的Moodle版本。最低版本要求是{{$a}}。",
     "core.login.invalidsite": "网站URL是无效的。",
     "core.login.invalidtime": "无效的时间",
     "core.login.invalidurl": "无效的 URL",
