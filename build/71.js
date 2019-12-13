@@ -200,7 +200,7 @@ var empty_box = __webpack_require__(116);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
+var translate_service = __webpack_require__(18);
 
 // CONCATENATED MODULE: ./src/components/split-view/placeholder/placeholder.ngfactory.js
 /**
@@ -242,7 +242,7 @@ var CoreSplitViewPlaceholderPageNgFactory = core["_27" /* ɵccf */]("core-placeh
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(22);
+var esm5_forms = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
 var translate_loader = __webpack_require__(371);
@@ -263,7 +263,7 @@ var translate_store = __webpack_require__(477);
 var ionic_angular_module = __webpack_require__(724);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(31);
+var directives_module = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
 var pipes_module = __webpack_require__(108);

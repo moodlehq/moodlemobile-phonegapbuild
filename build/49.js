@@ -164,7 +164,7 @@ var _ngx_translate_core = __webpack_require__(3);
 var components_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(31);
+var directives_module = __webpack_require__(32);
 
 // CONCATENATED MODULE: ./src/core/login/pages/site-policy/site-policy.module.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -267,7 +267,7 @@ var iframe = __webpack_require__(261);
 var logger = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
-var utils_iframe = __webpack_require__(44);
+var utils_iframe = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
 var platform_browser = __webpack_require__(80);
@@ -276,7 +276,7 @@ var platform_browser = __webpack_require__(80);
 var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(23);
+var url = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(27);
@@ -303,7 +303,7 @@ var back_button = __webpack_require__(478);
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
+var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(10);
@@ -342,7 +342,7 @@ var loading = __webpack_require__(51);
 var list = __webpack_require__(89);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(42);
+var gesture_controller = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -453,7 +453,7 @@ var CoreLoginSitePolicyPageNgFactory = core["_27" /* ɵccf */]("page-core-login-
 
 //# sourceMappingURL=site-policy.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(22);
+var esm5_forms = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
 var translate_loader = __webpack_require__(371);

@@ -218,7 +218,7 @@ var list_CoreSharedFilesListPage = /** @class */ (function () {
 var components_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(31);
+var directives_module = __webpack_require__(32);
 
 // CONCATENATED MODULE: ./src/core/sharedfiles/pages/list/list.module.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -327,7 +327,7 @@ var button_button = __webpack_require__(41);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
+var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(47);
@@ -375,7 +375,7 @@ var list = __webpack_require__(89);
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(42);
+var gesture_controller = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
 var dom_controller = __webpack_require__(34);
@@ -444,13 +444,13 @@ var select_select = __webpack_require__(111);
 var deep_linker = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(22);
+var esm5_forms = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/components/site-picker/site-picker.ts
 var site_picker = __webpack_require__(1584);
 
 // EXTERNAL MODULE: ./src/core/filter/providers/filter.ts
-var filter = __webpack_require__(43);
+var filter = __webpack_require__(42);
 
 // CONCATENATED MODULE: ./src/components/site-picker/site-picker.ngfactory.js
 /**

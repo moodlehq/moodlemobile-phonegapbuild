@@ -28,7 +28,7 @@ var configconstants = __webpack_require__(123);
 var helper = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(22);
+var esm5_forms = __webpack_require__(23);
 
 // CONCATENATED MODULE: ./src/core/login/pages/site/site.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -209,7 +209,7 @@ var site_CoreLoginSitePage = /** @class */ (function () {
 var _ngx_translate_core = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(31);
+var directives_module = __webpack_require__(32);
 
 // CONCATENATED MODULE: ./src/core/login/pages/site/site.module.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -286,7 +286,7 @@ var toast_component_ngfactory = __webpack_require__(1532);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
+var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -367,7 +367,7 @@ var searchbar = __webpack_require__(388);
 var list = __webpack_require__(89);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(42);
+var gesture_controller = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
 var toolbar_header = __webpack_require__(375);
