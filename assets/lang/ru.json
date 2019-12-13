@@ -520,7 +520,7 @@
     "addon.mod_forum.addanewquestion": "Добавить новый вопрос",
     "addon.mod_forum.addanewtopic": "Добавить новую тему",
     "addon.mod_forum.addtofavourites": "Пометить это обсуждение",
-    "addon.mod_forum.advanced": "Относится к дополнительным настройкам",
+    "addon.mod_forum.advanced": "Расширенная форма ответа",
     "addon.mod_forum.cannotadddiscussion": "Нужно быть участником группы, чтобы добавлять обсуждения на этот форум.",
     "addon.mod_forum.cannotadddiscussionall": "У вас нет привилегий для добавления новой темы обсуждения для всех участников.",
     "addon.mod_forum.cannotcreatediscussion": "Невозможно создать новое обсуждение",

@@ -1,6 +1,6 @@
 webpackJsonp([25],{
 
-/***/ 2159:
+/***/ 2158:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -143,7 +143,11 @@ var player_AddonModLessonPlayerPage = /** @class */ (function () {
         // Create the navigation modal.
         this.menuModal = modalCtrl.create('AddonModLessonMenuModalPage', {
             page: this
-        });
+        }, { cssClass: 'core-modal-lateral',
+            showBackdrop: true,
+            enableBackdropDismiss: true,
+            enterAnimation: 'core-modal-lateral-transition',
+            leaveAnimation: 'core-modal-lateral-transition' });
     }
     /**
      * Component being initialized.

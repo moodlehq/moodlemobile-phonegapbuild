@@ -1,6 +1,6 @@
 webpackJsonp([13],{
 
-/***/ 2158:
+/***/ 2157:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -360,6 +360,11 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
             });
         }).then(function () {
             var posts = offlineReplies.concat(onlinePosts);
+            var startingPost = _this.forumProvider.extractStartingPost(posts);
+            if (startingPost) {
+                // Update discussion data from first post.
+                _this.discussion = Object.assign(_this.discussion || {}, startingPost);
+            }
             // If sort type is nested, normal sorting is disabled and nested posts will be displayed.
             if (_this.sort == 'nested') {
                 // Sort first by creation date to make format tree work.
@@ -393,7 +398,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
                         });
                     }
                 }));
-                // Fetch the discussion if not passed as parameter.
+                // The discussion object was not passed as parameter and there is no starting post. Should not happen.
                 if (!_this.discussion) {
                     promises.push(_this.loadDiscussion(_this.forumId, _this.discussionId));
                 }
@@ -401,13 +406,8 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
             }).catch(function () {
                 // Ignore errors.
             }).then(function () {
-                var startingPost = _this.forumProvider.extractStartingPost(posts);
-                if (startingPost) {
-                    // Update discussion data from first post.
-                    _this.discussion = Object.assign(_this.discussion || {}, startingPost);
-                }
-                else if (!_this.discussion) {
-                    // The discussion object was not passed as parameter and there is no starting post.
+                if (!_this.discussion) {
+                    // The discussion object was not passed as parameter and there is no starting post. Should not happen.
                     return Promise.reject('Invalid forum discussion.');
                 }
                 if (_this.discussion.userfullname && _this.discussion.parent == 0 && _this.forum.type == 'single') {
