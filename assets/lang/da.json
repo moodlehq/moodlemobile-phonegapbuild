@@ -1652,7 +1652,7 @@
     "core.login.profileinvaliddata": "Ugyldig værdi",
     "core.login.recaptchaincorrect": "Svaret på sikkerhedsspørgsmålet er forkert.",
     "core.login.reconnect": "Genopret forbindelse",
-    "core.login.reconnectdescription": "Din godkendelse er ugyldigt eller udløbet, du skal genoprette forbindelsen til webstedet.",
+    "core.login.reconnectdescription": "Din godkendelse er ugyldig eller udløbet, du skal forbinde til webstedet igen.",
     "core.login.reconnectssodescription": "Din godkendelse er ugyldig eller udløbet, du skal genoprette forbindelsen til webstedet. Du skal logge på webstedet via en browser.",
     "core.login.resendemail": "Gensend mail",
     "core.login.security_question": "Sikkerhedsspørgsmål",
