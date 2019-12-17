@@ -28,13 +28,13 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var helper = __webpack_require__(127);
+var helper = __webpack_require__(128);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
 var esm5_forms = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(123);
+var configconstants = __webpack_require__(124);
 
 // CONCATENATED MODULE: ./src/core/login/pages/credentials/credentials.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -393,7 +393,7 @@ var nav_controller = __webpack_require__(21);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(47);
@@ -417,7 +417,7 @@ var url = __webpack_require__(22);
 var logger = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(17);
+var filepool = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(15);
@@ -459,7 +459,7 @@ var item_content = __webpack_require__(33);
 var input_ngfactory = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
-var input = __webpack_require__(91);
+var input = __webpack_require__(92);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(35);
@@ -495,7 +495,7 @@ var view_controller = __webpack_require__(39);
 var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(215);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
 var back_button = __webpack_require__(478);

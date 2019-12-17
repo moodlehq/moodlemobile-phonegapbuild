@@ -417,10 +417,10 @@ var recaptchamodal_ngfactory = __webpack_require__(1535);
 var bs_tooltip_ngfactory = __webpack_require__(1536);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ngfactory.js
-var context_menu_item_ngfactory = __webpack_require__(93);
+var context_menu_item_ngfactory = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ts
-var context_menu_item = __webpack_require__(83);
+var context_menu_item = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
 var context_menu = __webpack_require__(78);
@@ -429,10 +429,10 @@ var context_menu = __webpack_require__(78);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
-var context_menu_ngfactory = __webpack_require__(92);
+var context_menu_ngfactory = __webpack_require__(93);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
 var popover_controller = __webpack_require__(71);
@@ -492,7 +492,7 @@ var esm5_forms = __webpack_require__(23);
 var option_option = __webpack_require__(110);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(125);
+var select_ngfactory = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(111);
@@ -507,7 +507,7 @@ var deep_linker = __webpack_require__(59);
 var col = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(122);
+var spinner_ngfactory = __webpack_require__(123);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(103);
@@ -522,7 +522,7 @@ var row = __webpack_require__(120);
 var list_header = __webpack_require__(323);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
-var card = __webpack_require__(90);
+var card = __webpack_require__(91);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
 var item_divider = __webpack_require__(102);
@@ -537,7 +537,7 @@ var view_controller = __webpack_require__(39);
 var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(215);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -579,7 +579,7 @@ var keyboard = __webpack_require__(109);
 var refresher = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(216);
+var refresher_content_ngfactory = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(175);

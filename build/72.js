@@ -328,19 +328,19 @@ var button_ngfactory = __webpack_require__(45);
 var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(97);
+var icon_ngfactory = __webpack_require__(90);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
-var icon_icon = __webpack_require__(86);
+var icon_icon = __webpack_require__(83);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
-var card = __webpack_require__(90);
+var card = __webpack_require__(91);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card-header.js
 var card_header = __webpack_require__(321);
@@ -367,7 +367,7 @@ var view_controller = __webpack_require__(39);
 var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(215);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app = __webpack_require__(35);

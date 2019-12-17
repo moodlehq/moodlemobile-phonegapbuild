@@ -45,6 +45,9 @@ var utils_utils = __webpack_require__(2);
 // EXTERNAL MODULE: ./src/core/fileuploader/providers/fileuploader.ts
 var fileuploader = __webpack_require__(73);
 
+// EXTERNAL MODULE: ./src/core/user/providers/user.ts
+var user = __webpack_require__(46);
+
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
 var split_view = __webpack_require__(27);
 
@@ -113,11 +116,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
+
 /**
  * Page that displays a forum discussion.
  */
 var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
-    function AddonModForumDiscussionPage(navParams, network, zone, appProvider, eventsProvider, sitesProvider, domUtils, utils, translate, uploaderProvider, forumProvider, forumOffline, forumHelper, forumSync, ratingOffline, svComponent, navCtrl) {
+    function AddonModForumDiscussionPage(navParams, network, zone, appProvider, eventsProvider, sitesProvider, domUtils, utils, translate, uploaderProvider, forumProvider, forumOffline, forumHelper, forumSync, ratingOffline, userProvider, svComponent, navCtrl) {
         var _this = this;
         this.appProvider = appProvider;
         this.eventsProvider = eventsProvider;
@@ -131,12 +135,13 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
         this.forumHelper = forumHelper;
         this.forumSync = forumSync;
         this.ratingOffline = ratingOffline;
+        this.userProvider = userProvider;
         this.svComponent = svComponent;
         this.navCtrl = navCtrl;
         this.forum = {};
         this.accessInfo = {};
         this.discussionLoaded = false;
-        this.sort = 'flat-oldest';
+        this.sort = 'nested';
         this.replyData = {
             replyingTo: 0,
             isEditing: false,
@@ -178,7 +183,26 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
      */
     AddonModForumDiscussionPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        this.sitesProvider.getCurrentSite().getLocalSiteConfig('AddonModForumDiscussionSort', this.sort).then(function (value) {
+        this.sitesProvider.getCurrentSite().getLocalSiteConfig('AddonModForumDiscussionSort').catch(function () {
+            _this.userProvider.getUserPreference('forum_displaymode').catch(function () {
+                // Ignore errors.
+            }).then(function (value) {
+                var sortValue = value && parseInt(value, 10);
+                switch (sortValue) {
+                    case 1:
+                        _this.sort = 'flat-oldest';
+                        break;
+                    case -1:
+                        _this.sort = 'flat-newest';
+                        break;
+                    case 3:
+                        _this.sort = 'nested';
+                        break;
+                    case 2: // Threaded not implemented.
+                    default:
+                }
+            });
+        }).then(function (value) {
             _this.sort = value;
         }).finally(function () {
             _this.fetchPosts(true, false, true).then(function () {
@@ -705,7 +729,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
             selector: 'page-addon-mod-forum-discussion',
             templateUrl: 'discussion.html',
         }),
-        __param(15, Object(core["N" /* Optional */])()),
+        __param(16, Object(core["N" /* Optional */])()),
         __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */],
             _ionic_native_network["a" /* Network */],
             core["M" /* NgZone */],
@@ -721,6 +745,7 @@ var discussion_AddonModForumDiscussionPage = /** @class */ (function () {
             helper["a" /* AddonModForumHelperProvider */],
             forum_providers_sync["a" /* AddonModForumSyncProvider */],
             offline["a" /* CoreRatingOfflineProvider */],
+            user["a" /* CoreUserProvider */],
             split_view["a" /* CoreSplitViewComponent */],
             ionic_angular["s" /* NavController */]])
     ], AddonModForumDiscussionPage);
@@ -855,7 +880,7 @@ var config = __webpack_require__(8);
 var toolbar = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(215);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(48);
@@ -864,7 +889,7 @@ var format_text = __webpack_require__(48);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -876,7 +901,7 @@ var url = __webpack_require__(22);
 var logger = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(17);
+var filepool = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
 var providers_helper = __webpack_require__(15);
@@ -900,10 +925,10 @@ var filter_providers_helper = __webpack_require__(31);
 var delegate = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ngfactory.js
-var context_menu_item_ngfactory = __webpack_require__(93);
+var context_menu_item_ngfactory = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ts
-var context_menu_item = __webpack_require__(83);
+var context_menu_item = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
 var context_menu = __webpack_require__(78);
@@ -912,16 +937,16 @@ var context_menu = __webpack_require__(78);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
-var card = __webpack_require__(90);
+var card = __webpack_require__(91);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(97);
+var icon_ngfactory = __webpack_require__(90);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
-var icon_icon = __webpack_require__(86);
+var icon_icon = __webpack_require__(83);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/note/note.js
 var note = __webpack_require__(252);
@@ -936,7 +961,7 @@ var button_button = __webpack_require__(41);
 var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./src/components/user-avatar/user-avatar.ngfactory.js
-var user_avatar_ngfactory = __webpack_require__(217);
+var user_avatar_ngfactory = __webpack_require__(216);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
 var avatar = __webpack_require__(161);
@@ -1023,7 +1048,7 @@ var dom_controller = __webpack_require__(34);
 var input_ngfactory = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
-var input = __webpack_require__(91);
+var input = __webpack_require__(92);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(35);
@@ -1247,7 +1272,7 @@ var navbar_buttons_ngfactory = __webpack_require__(98);
 var navbar_buttons = __webpack_require__(87);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
-var context_menu_ngfactory = __webpack_require__(92);
+var context_menu_ngfactory = __webpack_require__(93);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
 var tab = __webpack_require__(76);
@@ -1262,7 +1287,7 @@ var keyboard = __webpack_require__(109);
 var refresher = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(216);
+var refresher_content_ngfactory = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(175);
@@ -1283,6 +1308,7 @@ var nav_params = __webpack_require__(70);
  * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
  * tslint:disable
  */ 
+
 
 
 
@@ -1423,7 +1449,7 @@ function View_AddonModForumDiscussionPage_0(_l) { return core["_57" /* ɵvid */]
         var pd_0 = (_co.doRefresh($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), core["_30" /* ɵdid */](74, 212992, null, 0, refresher["a" /* Refresher */], [platform["a" /* Platform */], content["a" /* Content */], core["M" /* NgZone */], gesture_controller["l" /* GestureController */]], { enabled: [0, "enabled"] }, { ionRefresh: "ionRefresh" }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](76, 0, null, null, 2, "ion-refresher-content", [], [[1, "state", 0]], null, null, refresher_content_ngfactory["b" /* View_RefresherContent_0 */], refresher_content_ngfactory["a" /* RenderType_RefresherContent */])), core["_30" /* ɵdid */](77, 114688, null, 0, refresher_content["a" /* RefresherContent */], [refresher["a" /* Refresher */], config["a" /* Config */]], { pullingText: [0, "pullingText"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n\n    "])), (_l()(), core["_31" /* ɵeld */](81, 0, null, 1, 24, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](82, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils_utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_4)), core["_30" /* ɵdid */](86, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_5)), core["_30" /* ɵdid */](90, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_6)), core["_30" /* ɵdid */](93, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_7)), core["_30" /* ɵdid */](96, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_8)), core["_30" /* ɵdid */](99, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_AddonModForumDiscussionPage_11)), core["_30" /* ɵdid */](102, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_26" /* ɵand */](0, [["nestedPosts", 2]], 0, 0, null, View_AddonModForumDiscussionPage_14)), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 6, 0); var currVal_2 = _co.discussion; _ck(_v, 9, 0, currVal_2); _ck(_v, 20, 0); _ck(_v, 24, 0); var currVal_3 = ((_co.discussionLoaded && !_co.postHasOffline) && _co.isOnline); _ck(_v, 27, 0, currVal_3); var currVal_4 = (((_co.discussionLoaded && !_co.isSplitViewOn) && _co.postHasOffline) && _co.isOnline); _ck(_v, 30, 0, currVal_4); var currVal_5 = core["_56" /* ɵunv */](_v, 33, 0, core["_44" /* ɵnov */](_v, 34).transform("addon.mod_forum.modeflatoldestfirst")); var currVal_6 = "arrow-round-down"; var currVal_7 = 500; var currVal_8 = (_co.sort == "flat-oldest"); _ck(_v, 33, 0, currVal_5, currVal_6, currVal_7, currVal_8); var currVal_9 = core["_56" /* ɵunv */](_v, 37, 0, core["_44" /* ɵnov */](_v, 38).transform("addon.mod_forum.modeflatnewestfirst")); var currVal_10 = "arrow-round-up"; var currVal_11 = 450; var currVal_12 = (_co.sort == "flat-newest"); _ck(_v, 37, 0, currVal_9, currVal_10, currVal_11, currVal_12); var currVal_13 = core["_56" /* ɵunv */](_v, 41, 0, core["_44" /* ɵnov */](_v, 42).transform("addon.mod_forum.modenested")); var currVal_14 = "swap"; var currVal_15 = 400; var currVal_16 = (_co.sort == "nested"); _ck(_v, 41, 0, currVal_13, currVal_14, currVal_15, currVal_16); var currVal_17 = core["_56" /* ɵunv */](_v, 45, 0, core["_44" /* ɵnov */](_v, 46).transform("addon.mod_forum.lockdiscussion")); var currVal_18 = "fa-lock"; var currVal_19 = 300; var currVal_20 = ((!_co.discussion || !_co.discussion.canlock) || _co.discussion.locked); _ck(_v, 45, 0, currVal_17, currVal_18, currVal_19, currVal_20); var currVal_21 = core["_56" /* ɵunv */](_v, 49, 0, core["_44" /* ɵnov */](_v, 50).transform("addon.mod_forum.unlockdiscussion")); var currVal_22 = "fa-unlock"; var currVal_23 = 300; var currVal_24 = ((!_co.discussion || !_co.discussion.canlock) || !_co.discussion.locked); _ck(_v, 49, 0, currVal_21, currVal_22, currVal_23, currVal_24); var currVal_25 = core["_56" /* ɵunv */](_v, 53, 0, core["_44" /* ɵnov */](_v, 54).transform("addon.mod_forum.pindiscussion")); var currVal_26 = "fa-map-pin"; var currVal_27 = 250; var currVal_28 = ((!_co.discussion || !_co.canPin) || _co.discussion.pinned); _ck(_v, 53, 0, currVal_25, currVal_26, currVal_27, currVal_28); var currVal_29 = core["_56" /* ɵunv */](_v, 57, 0, core["_44" /* ɵnov */](_v, 58).transform("addon.mod_forum.unpindiscussion")); var currVal_30 = "fa-map-pin"; var currVal_31 = true; var currVal_32 = 250; var currVal_33 = ((!_co.discussion || !_co.canPin) || !_co.discussion.pinned); _ck(_v, 57, 0, currVal_29, currVal_30, currVal_31, currVal_32, currVal_33); var currVal_34 = core["_56" /* ɵunv */](_v, 61, 0, core["_44" /* ɵnov */](_v, 62).transform("addon.mod_forum.addtofavourites")); var currVal_35 = "fa-star"; var currVal_36 = 200; var currVal_37 = ((!_co.discussion || !_co.discussion.canfavourite) || _co.discussion.starred); _ck(_v, 61, 0, currVal_34, currVal_35, currVal_36, currVal_37); var currVal_38 = core["_56" /* ɵunv */](_v, 65, 0, core["_44" /* ɵnov */](_v, 66).transform("addon.mod_forum.removefromfavourites")); var currVal_39 = "fa-star"; var currVal_40 = true; var currVal_41 = 200; var currVal_42 = ((!_co.discussion || !_co.discussion.canfavourite) || !_co.discussion.starred); _ck(_v, 65, 0, currVal_38, currVal_39, currVal_40, currVal_41, currVal_42); var currVal_47 = _co.discussionLoaded; _ck(_v, 74, 0, currVal_47); var currVal_49 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 77, 0, core["_44" /* ɵnov */](_v, 78).transform("core.pulltorefresh")), ""); _ck(_v, 77, 0, currVal_49); var currVal_50 = _co.discussionLoaded; _ck(_v, 82, 0, currVal_50); var currVal_51 = (_co.postHasOffline || _co.hasOfflineRatings); _ck(_v, 86, 0, currVal_51); var currVal_52 = _co.availabilityMessage; _ck(_v, 90, 0, currVal_52); var currVal_53 = (_co.discussion && _co.discussion.locked); _ck(_v, 93, 0, currVal_53); var currVal_54 = _co.discussion; _ck(_v, 96, 0, currVal_54); var currVal_55 = (_co.sort != "nested"); _ck(_v, 99, 0, currVal_55); var currVal_56 = (_co.sort == "nested"); _ck(_v, 102, 0, currVal_56); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 5)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 5)._sbPadding; _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_43 = core["_44" /* ɵnov */](_v, 71).statusbarPadding; var currVal_44 = core["_44" /* ɵnov */](_v, 71)._hasRefresher; _ck(_v, 70, 0, currVal_43, currVal_44); var currVal_45 = (core["_44" /* ɵnov */](_v, 74).state !== "inactive"); var currVal_46 = core["_44" /* ɵnov */](_v, 74)._top; _ck(_v, 73, 0, currVal_45, currVal_46); var currVal_48 = core["_44" /* ɵnov */](_v, 77).r.state; _ck(_v, 76, 0, currVal_48); }); }
-function View_AddonModForumDiscussionPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-forum-discussion", [], null, null, null, View_AddonModForumDiscussionPage_0, RenderType_AddonModForumDiscussionPage)), core["_30" /* ɵdid */](1, 180224, null, 0, discussion_AddonModForumDiscussionPage, [nav_params["a" /* NavParams */], _ionic_native_network["a" /* Network */], core["M" /* NgZone */], app["a" /* CoreAppProvider */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_utils["a" /* CoreUtilsProvider */], translate_service["a" /* TranslateService */], fileuploader["a" /* CoreFileUploaderProvider */], forum["a" /* AddonModForumProvider */], providers_offline["a" /* AddonModForumOfflineProvider */], helper["a" /* AddonModForumHelperProvider */], forum_providers_sync["a" /* AddonModForumSyncProvider */], offline["a" /* CoreRatingOfflineProvider */], [2, split_view["a" /* CoreSplitViewComponent */]], nav_controller["a" /* NavController */]], null, null)], null, null); }
+function View_AddonModForumDiscussionPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-mod-forum-discussion", [], null, null, null, View_AddonModForumDiscussionPage_0, RenderType_AddonModForumDiscussionPage)), core["_30" /* ɵdid */](1, 180224, null, 0, discussion_AddonModForumDiscussionPage, [nav_params["a" /* NavParams */], _ionic_native_network["a" /* Network */], core["M" /* NgZone */], app["a" /* CoreAppProvider */], events["a" /* CoreEventsProvider */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_utils["a" /* CoreUtilsProvider */], translate_service["a" /* TranslateService */], fileuploader["a" /* CoreFileUploaderProvider */], forum["a" /* AddonModForumProvider */], providers_offline["a" /* AddonModForumOfflineProvider */], helper["a" /* AddonModForumHelperProvider */], forum_providers_sync["a" /* AddonModForumSyncProvider */], offline["a" /* CoreRatingOfflineProvider */], user["a" /* CoreUserProvider */], [2, split_view["a" /* CoreSplitViewComponent */]], nav_controller["a" /* NavController */]], null, null)], null, null); }
 var AddonModForumDiscussionPageNgFactory = core["_27" /* ɵccf */]("page-addon-mod-forum-discussion", discussion_AddonModForumDiscussionPage, View_AddonModForumDiscussionPage_Host_0, {}, {}, []);
 
 //# sourceMappingURL=discussion.ngfactory.js.map
@@ -1540,8 +1566,8 @@ var AddonModForumDiscussionPageModuleNgFactory = core["_28" /* ɵcmf */](discuss
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_item_item_content__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ionic_angular_components_label_label__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ngx_translate_core_src_translate_pipe__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core_src_translate_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__node_modules_ionic_angular_components_select_select_ngfactory__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__node_modules_ionic_angular_components_select_select_ngfactory__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_select_select__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ionic_angular_components_app_app__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic_angular_navigation_deep_linker__ = __webpack_require__(59);
@@ -1623,7 +1649,7 @@ var CoreRatingRateComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ionic_angular_components_item_item_reorder__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ionic_angular_components_item_item_content__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core_src_translate_pipe__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core_src_translate_service__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__aggregate__ = __webpack_require__(1548);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(10);

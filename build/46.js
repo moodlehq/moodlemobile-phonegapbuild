@@ -394,7 +394,7 @@ var CoreIonTabComponentNgFactory = core["_27" /* ɵccf */]("core-ion-tab", ion_t
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(47);
@@ -436,7 +436,7 @@ var TabButtonNgFactory = core["_27" /* ɵccf */](".tab-button", tab_button["a" /
 
 //# sourceMappingURL=tab-button.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(122);
+var spinner_ngfactory = __webpack_require__(123);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(103);
@@ -445,7 +445,7 @@ var spinner = __webpack_require__(103);
 var tab_highlight = __webpack_require__(526);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
-var split_pane = __webpack_require__(222);
+var split_pane = __webpack_require__(221);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);

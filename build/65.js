@@ -130,10 +130,10 @@ var unsupported_module_ngfactory = __webpack_require__(1538);
 var tag_area_ngfactory = __webpack_require__(1541);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ngfactory.js
-var context_menu_item_ngfactory = __webpack_require__(93);
+var context_menu_item_ngfactory = __webpack_require__(94);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ts
-var context_menu_item = __webpack_require__(83);
+var context_menu_item = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
 var context_menu = __webpack_require__(78);
@@ -142,7 +142,7 @@ var context_menu = __webpack_require__(78);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/components/navbar-buttons/navbar-buttons.ngfactory.js
 var navbar_buttons_ngfactory = __webpack_require__(98);
@@ -157,7 +157,7 @@ var logger = __webpack_require__(6);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ngfactory.js
-var context_menu_ngfactory = __webpack_require__(92);
+var context_menu_ngfactory = __webpack_require__(93);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
 var popover_controller = __webpack_require__(71);
@@ -205,7 +205,7 @@ var refresher = __webpack_require__(160);
 var gesture_controller = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(216);
+var refresher_content_ngfactory = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
 var refresher_content = __webpack_require__(175);
@@ -232,10 +232,10 @@ var button_button = __webpack_require__(41);
 var col = __webpack_require__(121);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
-var icon_ngfactory = __webpack_require__(97);
+var icon_ngfactory = __webpack_require__(90);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ts
-var icon = __webpack_require__(86);
+var icon = __webpack_require__(83);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon_icon = __webpack_require__(47);
@@ -244,7 +244,7 @@ var icon_icon = __webpack_require__(47);
 var external_content = __webpack_require__(231);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(17);
+var filepool = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -283,7 +283,7 @@ var platform_browser = __webpack_require__(80);
 var list = __webpack_require__(89);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ngfactory.js
-var empty_box_ngfactory = __webpack_require__(126);
+var empty_box_ngfactory = __webpack_require__(127);
 
 // EXTERNAL MODULE: ./src/components/empty-box/empty-box.ts
 var empty_box = __webpack_require__(116);
@@ -331,7 +331,7 @@ var toolbar_item = __webpack_require__(376);
 var toolbar = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(215);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
 var item_divider = __webpack_require__(102);
@@ -467,7 +467,7 @@ function View_CoreCourseFormatComponent_1(_l) { return core["_57" /* ɵvid */](0
         ad = (pd_0 && ad);
     } return ad; }, context_menu_item_ngfactory["b" /* View_CoreContextMenuItemComponent_0 */], context_menu_item_ngfactory["a" /* RenderType_CoreContextMenuItemComponent */])), core["_30" /* ɵdid */](8, 770048, null, 0, context_menu_item["a" /* CoreContextMenuItemComponent */], [context_menu["a" /* CoreContextMenuComponent */]], { content: [0, "content"], iconAction: [1, "iconAction"], priority: [2, "priority"], hidden: [3, "hidden"] }, { action: "action" }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); _ck(_v, 5, 0); var currVal_0 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("core.course.sections")); var currVal_1 = "menu"; var currVal_2 = 500; var currVal_3 = ((!_co.displaySectionSelector || !_co.sections) || !_co.sections.length); _ck(_v, 8, 0, currVal_0, currVal_1, currVal_2, currVal_3); }, null); }
 function View_CoreCourseFormatComponent_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 0, null, null, null, null, null, null, null))], null, null); }
-function View_CoreCourseFormatComponent_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 23, "div", [["class", "safe-padding-horizontal row"], ["ion-row", ""], ["justify-content-between", ""], ["padding", ""], ["text-wrap", ""]], [[2, "core-section-download", null]], null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 14, "button", [["aria-controls", "core-course-section-selector"], ["aria-haspopup", "true"], ["class", "core-button-select button-no-uppercase col"], ["color", "light"], ["float-start", ""], ["icon-end", ""], ["icon-start", ""], ["id", "core-course-section-button"], ["ion-button", ""], ["ion-col", ""]], [[1, "aria-label", 0], [1, "aria-expanded", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+function View_CoreCourseFormatComponent_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 23, "div", [["class", "safe-padding-horizontal core-button-selector-row row"], ["ion-row", ""], ["justify-content-between", ""], ["padding", ""], ["text-wrap", ""]], [[2, "core-section-download", null]], null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 14, "button", [["aria-controls", "core-course-section-selector"], ["aria-haspopup", "true"], ["class", "core-button-select button-no-uppercase col"], ["color", "light"], ["float-start", ""], ["icon-end", ""], ["icon-start", ""], ["id", "core-course-section-button"], ["ion-button", ""], ["ion-col", ""]], [[1, "aria-label", 0], [1, "aria-expanded", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.showSectionSelector($event) !== false);
         ad = (pd_0 && ad);
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](4, 1097728, null, 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"] }, null), core["_30" /* ɵdid */](5, 16384, null, 0, col["a" /* Col */], [], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                        "])), (_l()(), core["_31" /* ɵeld */](8, 0, null, 0, 1, "core-icon", [["name", "fa-folder"]], null, null, null, icon_ngfactory["b" /* View_CoreIconComponent_0 */], icon_ngfactory["a" /* RenderType_CoreIconComponent */])), core["_30" /* ɵdid */](9, 704512, null, 0, icon["a" /* CoreIconComponent */], [core["t" /* ElementRef */], config["a" /* Config */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                        "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 0, 2, "span", [["class", "core-button-select-text"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](12, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                        "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, 0, 1, "ion-icon", [["ios", "md-arrow-dropdown"], ["name", "arrow-dropdown"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](16, 147456, null, 0, icon_icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"], ios: [1, "ios"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 2, null, View_CoreCourseFormatComponent_3)), core["_30" /* ɵdid */](21, 540672, null, 0, common["r" /* NgTemplateOutlet */], [core["_11" /* ViewContainerRef */]], { ngTemplateOutletContext: [0, "ngTemplateOutletContext"], ngTemplateOutlet: [1, "ngTemplateOutlet"] }, null), core["_48" /* ɵpod */](22, { section: 0 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "]))], function (_ck, _v) { var _co = _v.component; var currVal_3 = "light"; _ck(_v, 4, 0, currVal_3); var currVal_4 = "fa-folder"; _ck(_v, 9, 0, currVal_4); var currVal_7 = "arrow-dropdown"; var currVal_8 = "md-arrow-dropdown"; _ck(_v, 16, 0, currVal_7, currVal_8); var currVal_9 = _ck(_v, 22, 0, _co.selectedSection); var currVal_10 = core["_44" /* ɵnov */](_v.parent, 50); _ck(_v, 21, 0, currVal_9, currVal_10); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.downloadEnabled; _ck(_v, 0, 0, currVal_0); var currVal_1 = ((core["_56" /* ɵunv */](_v, 3, 0, core["_44" /* ɵnov */](_v, 6).transform("core.course.sections")) + ": ") + (_co.selectedSection && (_co.selectedSection.formattedName || _co.selectedSection.name))); var currVal_2 = _co.sectionSelectorExpanded; _ck(_v, 3, 0, currVal_1, currVal_2); var currVal_5 = core["_56" /* ɵunv */](_v, 12, 0, core["_44" /* ɵnov */](_v, 13).transform(((_co.selectedSection && (_co.selectedSection.formattedName || _co.selectedSection.name)) || "core.course.sections"))); _ck(_v, 12, 0, currVal_5); var currVal_6 = core["_44" /* ɵnov */](_v, 16)._hidden; _ck(_v, 15, 0, currVal_6); }); }
