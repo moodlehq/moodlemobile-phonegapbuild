@@ -1,6 +1,6 @@
 webpackJsonp([43],{
 
-/***/ 2106:
+/***/ 2105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var _ionic_native_device = __webpack_require__(493);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
-var file = __webpack_require__(56);
+var file = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
 var init = __webpack_require__(155);
@@ -37,7 +37,7 @@ var local_notifications = __webpack_require__(146);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(123);
+var configconstants = __webpack_require__(124);
 
 // EXTERNAL MODULE: ./src/core/pushnotifications/providers/pushnotifications.ts
 var pushnotifications = __webpack_require__(138);
@@ -269,7 +269,7 @@ var item_divider = __webpack_require__(102);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
 var item_content = __webpack_require__(33);
@@ -323,7 +323,7 @@ var view_controller = __webpack_require__(39);
 var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(215);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(35);

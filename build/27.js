@@ -1,6 +1,6 @@
 webpackJsonp([27],{
 
-/***/ 2123:
+/***/ 2122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -175,7 +175,7 @@ var bs_tooltip_ngfactory = __webpack_require__(1536);
 var file_ngfactory = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(218);
+var file = __webpack_require__(217);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -187,13 +187,13 @@ var utils = __webpack_require__(2);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(17);
+var filepool = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
-var file_helper = __webpack_require__(134);
+var file_helper = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
 var mimetype = __webpack_require__(66);
@@ -202,7 +202,7 @@ var mimetype = __webpack_require__(66);
 var events = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/providers/plugin-file-delegate.ts
-var plugin_file_delegate = __webpack_require__(57);
+var plugin_file_delegate = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/card/card.js
 var card = __webpack_require__(91);
@@ -223,7 +223,7 @@ var view_controller = __webpack_require__(39);
 var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(215);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(35);
@@ -238,7 +238,7 @@ var back_button = __webpack_require__(478);
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
 var toolbar_title_ngfactory = __webpack_require__(726);

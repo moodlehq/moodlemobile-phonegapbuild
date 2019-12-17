@@ -1,6 +1,6 @@
 webpackJsonp([68],{
 
-/***/ 2082:
+/***/ 2081:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var delegate = __webpack_require__(62);
 var helper = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var providers_helper = __webpack_require__(127);
+var providers_helper = __webpack_require__(128);
 
 // CONCATENATED MODULE: ./src/core/contentlinks/pages/choose-site/choose-site.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
@@ -276,7 +276,7 @@ var external_content = __webpack_require__(231);
 var logger = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(17);
+var filepool = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
@@ -294,7 +294,7 @@ var utils = __webpack_require__(2);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(48);
@@ -336,7 +336,7 @@ var view_controller = __webpack_require__(39);
 var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(215);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(35);
