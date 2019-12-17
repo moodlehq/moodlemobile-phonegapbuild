@@ -1330,6 +1330,7 @@
     "core.login.instructions": "Instrukcje",
     "core.login.invaliddate": "Nieprawidłowa data",
     "core.login.invalidemail": "Niewłaściwy adres e-mail",
+    "core.login.invalidmoodleversion": "<p>Niewłaściwa wersja platformy Moodle. Aplikacja mobilna wspiera tylko platformę Moodle w wersji {{$a}} i późniejszych.</p>\n<p>Możesz skontaktować się z administratorem i poprosić aktualizację platformy Moodle.</p>\n<p>Administratorzy są osobami, które zarządzają Moodlem w twojej organizacji. Jeśli nie wiesz jak skontaktować się z nimi, skontaktuej się ze swoim nauczycielem/wykładowcą/trenerem.</p>",
     "core.login.invalidsite": "Adres URL witryny jest nieprawidłowy.",
     "core.login.invalidurl": "Określono niepoprawny URL",
     "core.login.invalidvaluemin": "Minimalna wartość to {{$a}}",

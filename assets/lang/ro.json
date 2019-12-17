@@ -957,7 +957,7 @@
     "core.back": "Înapoi",
     "core.block.blocks": "Blocuri",
     "core.cancel": "Anulează",
-    "core.cannotconnect": "A apărut o eroare conectare: verificați dacă ați scris corect adresa URL căutată și dacă siteul folosește cel puțin versiune de Moodle {{$a}}",
+    "core.cannotconnect": "A apărut o eroare le conectare: verificați dacă ați scris corect adresa URL căutată și dacă siteul folosește aplicația Moodle {{$a}}",
     "core.cannotdownloadfiles": "Descărcarea de fișiere este dezactivată pentru serviciul mobil. Contactați administratorul siteului.",
     "core.category": "Categorie",
     "core.choose": "Alege",

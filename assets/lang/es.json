@@ -1605,7 +1605,7 @@
     "core.login.invalidaccount": "Por favor, verifique sus datos de acceso, o consulte con el administrador para revisar la configuración del sitio.",
     "core.login.invaliddate": "Fecha no válida",
     "core.login.invalidemail": "Dirección de correo no válida",
-    "core.login.invalidmoodleversion": "Versión de Moodle inválida. La versión mínima requerida es {{$a}}.",
+    "core.login.invalidmoodleversion": "<p>Versión inválida de sitio Moodle. La App Moodle solamente soporta sistemas Moodle {{$a}} en adelante.</p>\n<p>Puede ponerse en contacto con el administrador de sus sitio y pedirle que actualice su sistema Moodle.</p>\n<p>Los \"Administradores del sitio\" son las personas que gestionan el Moodle en su escuela/universidad/compañía o su organización educativa. Si no sabe a quien contactar, por favor póngase en contacto con sus profesores/entrenadores.</p>",
     "core.login.invalidsite": "La URL del sitio es inválida.",
     "core.login.invalidtime": "Hora incorrecta",
     "core.login.invalidurl": "Se ha especificado una URL no válida",

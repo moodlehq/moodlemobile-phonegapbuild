@@ -451,7 +451,7 @@
     "addon.mod_choice.noresultsviewable": "Não é possível visualizar os resultados neste momento.",
     "addon.mod_choice.notopenyet": "Esta atividade será acessível a partir de {{$a}}",
     "addon.mod_choice.numberofuser": "Número de respostas",
-    "addon.mod_choice.numberofuserinpercentage": "Percentagem de respostas",
+    "addon.mod_choice.numberofuserinpercentage": "Porcentagem de respostas",
     "addon.mod_choice.previewonly": "Esta é somente uma previsualização das opções dessa atividade. Você somente poderá enviar sua escolha a partir de {{$a}}",
     "addon.mod_choice.publishinfoanonafter": "Resultados anônimos serão publicados após sua resposta.",
     "addon.mod_choice.publishinfoanonclose": "Resultados anônimos serão publicados após a atividade ser fechada.",
