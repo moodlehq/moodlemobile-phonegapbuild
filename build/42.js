@@ -25,7 +25,7 @@ var constants = __webpack_require__(40);
 var config = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./src/providers/file.ts
-var file = __webpack_require__(57);
+var file = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
 var events = __webpack_require__(10);
@@ -43,7 +43,7 @@ var local_notifications = __webpack_require__(146);
 var pushnotifications = __webpack_require__(138);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(124);
+var configconstants = __webpack_require__(123);
 
 // EXTERNAL MODULE: ./src/core/settings/providers/helper.ts
 var helper = __webpack_require__(739);
@@ -354,7 +354,7 @@ var common = __webpack_require__(7);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
+var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
@@ -378,7 +378,7 @@ var item_content = __webpack_require__(33);
 var label = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(126);
+var select_ngfactory = __webpack_require__(125);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
 var select_select = __webpack_require__(111);
@@ -420,7 +420,7 @@ var view_controller = __webpack_require__(39);
 var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(214);
+var navbar = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);

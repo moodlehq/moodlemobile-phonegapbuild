@@ -187,13 +187,13 @@ var item_divider = __webpack_require__(102);
 var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
+var translate_service = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/components/file/file.ngfactory.js
 var file_ngfactory = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./src/components/file/file.ts
-var file = __webpack_require__(217);
+var file = __webpack_require__(218);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);
@@ -205,13 +205,13 @@ var utils = __webpack_require__(2);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(18);
+var filepool = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/file-helper.ts
-var file_helper = __webpack_require__(122);
+var file_helper = __webpack_require__(134);
 
 // EXTERNAL MODULE: ./src/providers/utils/mimetype.ts
 var mimetype = __webpack_require__(66);
@@ -223,13 +223,13 @@ var events = __webpack_require__(10);
 var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/plugin-file-delegate.ts
-var plugin_file_delegate = __webpack_require__(56);
+var plugin_file_delegate = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
 var item_content = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.ngfactory.js
-var spinner_ngfactory = __webpack_require__(123);
+var spinner_ngfactory = __webpack_require__(122);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/spinner/spinner.js
 var spinner = __webpack_require__(103);
@@ -283,7 +283,7 @@ var view_controller = __webpack_require__(39);
 var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(214);
+var navbar = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
 var app_app = __webpack_require__(35);
