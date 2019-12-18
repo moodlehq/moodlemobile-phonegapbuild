@@ -1,6 +1,6 @@
 webpackJsonp([70],{
 
-/***/ 2081:
+/***/ 2080:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var app = __webpack_require__(9);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(155);
+var comments = __webpack_require__(154);
 
 // CONCATENATED MODULE: ./src/core/comments/pages/add/add.ts
 // (C) Copyright 2015 Moodle Pty Ltd.

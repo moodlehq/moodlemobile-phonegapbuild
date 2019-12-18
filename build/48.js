@@ -1,6 +1,6 @@
 webpackJsonp([48],{
 
-/***/ 2102:
+/***/ 2101:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -415,7 +415,7 @@ var keyboard = __webpack_require__(109);
 var nav_params = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(164);
+var modal_controller = __webpack_require__(163);
 
 // CONCATENATED MODULE: ./src/core/login/pages/site/site.ngfactory.js
 /**

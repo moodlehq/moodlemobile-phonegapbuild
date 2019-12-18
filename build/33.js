@@ -1,6 +1,6 @@
 webpackJsonp([33],{
 
-/***/ 2117:
+/***/ 2116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22,7 +22,7 @@ var dom = __webpack_require__(4);
 var split_view = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(165);
+var tag = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/area-delegate.ts
 var area_delegate = __webpack_require__(207);
@@ -354,7 +354,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(161);
+var refresher = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(44);

@@ -1,6 +1,6 @@
 webpackJsonp([78],{
 
-/***/ 2075:
+/***/ 2074:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -289,7 +289,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(161);
+var refresher = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(44);
@@ -313,7 +313,7 @@ var offline = __webpack_require__(191);
 var groups = __webpack_require__(72);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(164);
+var modal_controller = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/providers/helper.ts
 var workshop_providers_helper = __webpack_require__(205);

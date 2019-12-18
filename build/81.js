@@ -1,6 +1,6 @@
 webpackJsonp([81],{
 
-/***/ 2073:
+/***/ 2072:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -212,7 +212,7 @@ var tag_area_ngfactory = __webpack_require__(1541);
 var feed_ngfactory = __webpack_require__(1542);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/index/index.ngfactory.js
-var index_ngfactory = __webpack_require__(1605);
+var index_ngfactory = __webpack_require__(1604);
 
 // EXTERNAL MODULE: ./src/addon/mod/wiki/components/subwiki-picker/subwiki-picker.ngfactory.js
 var subwiki_picker_ngfactory = __webpack_require__(1622);
@@ -320,7 +320,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(161);
+var refresher = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(44);
@@ -353,10 +353,10 @@ var user = __webpack_require__(46);
 var popover_controller = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(165);
+var tag = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(164);
+var modal_controller = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(70);

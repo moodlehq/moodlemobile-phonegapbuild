@@ -1,6 +1,6 @@
 webpackJsonp([52],{
 
-/***/ 2098:
+/***/ 2097:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -310,7 +310,7 @@ var recaptchamodal_ngfactory = __webpack_require__(1535);
 var bs_tooltip_ngfactory = __webpack_require__(1536);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(162);
+var avatar = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(231);
@@ -457,7 +457,7 @@ var input_ngfactory = __webpack_require__(112);
 var input = __webpack_require__(92);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(166);
+var grid = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(120);

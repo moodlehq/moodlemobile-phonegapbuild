@@ -199,7 +199,7 @@ var view_controller = __webpack_require__(39);
 var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(161);
+var refresher = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(44);
@@ -373,7 +373,7 @@ var format = __webpack_require__(499);
 var format_delegate = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(164);
+var modal_controller = __webpack_require__(163);
 
 // CONCATENATED MODULE: ./src/core/course/components/format/format.ngfactory.js
 /**

@@ -1,6 +1,6 @@
 webpackJsonp([96],{
 
-/***/ 2061:
+/***/ 2060:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

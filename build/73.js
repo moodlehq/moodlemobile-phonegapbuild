@@ -1,6 +1,6 @@
 webpackJsonp([73],{
 
-/***/ 2139:
+/***/ 2138:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34,7 +34,7 @@ var delegate = __webpack_require__(397);
 var local_notifications = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(167);
+var config = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
@@ -576,7 +576,7 @@ var content = __webpack_require__(29);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(161);
+var refresher = __webpack_require__(160);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);
