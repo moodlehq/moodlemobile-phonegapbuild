@@ -274,7 +274,7 @@ var item_reorder = __webpack_require__(26);
 var item_content = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(161);
+var avatar = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/directives/external-content.ts
 var external_content = __webpack_require__(231);
@@ -361,7 +361,7 @@ var content = __webpack_require__(29);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(160);
+var refresher = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);

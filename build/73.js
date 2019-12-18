@@ -1,6 +1,6 @@
 webpackJsonp([73],{
 
-/***/ 2138:
+/***/ 2139:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34,7 +34,7 @@ var delegate = __webpack_require__(397);
 var local_notifications = __webpack_require__(146);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var config = __webpack_require__(166);
+var config = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var app = __webpack_require__(9);
@@ -423,7 +423,7 @@ var context_menu_item_ngfactory = __webpack_require__(94);
 var context_menu_item = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
-var context_menu = __webpack_require__(78);
+var context_menu = __webpack_require__(79);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(25);
@@ -438,7 +438,7 @@ var context_menu_ngfactory = __webpack_require__(93);
 var popover_controller = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
-var tab = __webpack_require__(76);
+var tab = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -576,7 +576,7 @@ var content = __webpack_require__(29);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(160);
+var refresher = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);

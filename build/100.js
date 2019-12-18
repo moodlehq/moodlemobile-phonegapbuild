@@ -1,6 +1,6 @@
 webpackJsonp([100],{
 
-/***/ 2056:
+/***/ 2057:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -294,7 +294,7 @@ var imscp = __webpack_require__(239);
 var course = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(163);
+var modal_controller = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/addon/mod/imscp/providers/prefetch-handler.ts
 var prefetch_handler = __webpack_require__(408);

@@ -34,7 +34,7 @@ var dom = __webpack_require__(4);
 var groups = __webpack_require__(72);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/assign.ts
-var providers_assign = __webpack_require__(77);
+var providers_assign = __webpack_require__(78);
 
 // EXTERNAL MODULE: ./src/addon/mod/assign/providers/assign-offline.ts
 var assign_offline = __webpack_require__(135);
@@ -484,7 +484,7 @@ var utils = __webpack_require__(2);
 var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(161);
+var avatar = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
 var icon = __webpack_require__(47);
@@ -568,7 +568,7 @@ var dom_controller = __webpack_require__(34);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(160);
+var refresher = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(44);

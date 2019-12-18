@@ -1,6 +1,6 @@
 webpackJsonp([86],{
 
-/***/ 2148:
+/***/ 2149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var events = __webpack_require__(10);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/sync.ts
-var sync = __webpack_require__(79);
+var sync = __webpack_require__(80);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -1414,7 +1414,7 @@ var logger = __webpack_require__(6);
 var utils_iframe = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(80);
+var platform_browser = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);
@@ -1516,7 +1516,7 @@ var navigation_bar = __webpack_require__(399);
 var nav_params = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(163);
+var modal_controller = __webpack_require__(164);
 
 // CONCATENATED MODULE: ./src/addon/mod/scorm/pages/player/player.ngfactory.js
 /**

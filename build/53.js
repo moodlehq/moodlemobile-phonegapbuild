@@ -1,6 +1,6 @@
 webpackJsonp([53],{
 
-/***/ 2096:
+/***/ 2097:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19,7 +19,7 @@ var splash_screen = __webpack_require__(759);
 var app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/providers/init.ts
-var init = __webpack_require__(155);
+var init = __webpack_require__(156);
 
 // EXTERNAL MODULE: ./src/providers/sites.ts
 var sites = __webpack_require__(1);

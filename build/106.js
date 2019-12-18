@@ -1,6 +1,6 @@
 webpackJsonp([106],{
 
-/***/ 2051:
+/***/ 2052:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -438,7 +438,7 @@ var utils = __webpack_require__(2);
 var item_divider = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(165);
+var grid = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(120);

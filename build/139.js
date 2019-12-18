@@ -800,7 +800,7 @@ var context_menu_item_ngfactory = __webpack_require__(94);
 var context_menu_item = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
-var context_menu = __webpack_require__(78);
+var context_menu = __webpack_require__(79);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(25);
@@ -959,7 +959,7 @@ var context_menu_ngfactory = __webpack_require__(93);
 var popover_controller = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
-var tab = __webpack_require__(76);
+var tab = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
 var content_ngfactory = __webpack_require__(185);
@@ -968,7 +968,7 @@ var content_ngfactory = __webpack_require__(185);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(160);
+var refresher = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);
@@ -977,7 +977,7 @@ var refresher_content_ngfactory = __webpack_require__(215);
 var refresher_content = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(165);
+var grid = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(120);

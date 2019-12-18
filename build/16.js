@@ -22,7 +22,7 @@ var events = __webpack_require__(10);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages.ts
-var messages = __webpack_require__(162);
+var messages = __webpack_require__(163);
 
 // EXTERNAL MODULE: ./src/addon/messages/providers/messages-offline.ts
 var messages_offline = __webpack_require__(384);
@@ -1511,7 +1511,7 @@ var user_avatar = __webpack_require__(186);
 var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(161);
+var avatar = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/components/icon/icon.ngfactory.js
 var icon_ngfactory = __webpack_require__(90);
@@ -1601,7 +1601,7 @@ var send_message_form_ngfactory = __webpack_require__(2178);
 var send_message_form = __webpack_require__(1552);
 
 // EXTERNAL MODULE: ./src/providers/config.ts
-var providers_config = __webpack_require__(166);
+var providers_config = __webpack_require__(167);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-footer.js
 var toolbar_footer = __webpack_require__(748);
@@ -1655,13 +1655,13 @@ var navbar_buttons = __webpack_require__(87);
 var context_menu_ngfactory = __webpack_require__(93);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
-var context_menu = __webpack_require__(78);
+var context_menu = __webpack_require__(79);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-controller.js
 var popover_controller = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
-var tab = __webpack_require__(76);
+var tab = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-item.ngfactory.js
 var context_menu_item_ngfactory = __webpack_require__(94);
@@ -1697,7 +1697,7 @@ var gesture_controller = __webpack_require__(44);
 var nav_params = __webpack_require__(70);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(163);
+var modal_controller = __webpack_require__(164);
 
 // CONCATENATED MODULE: ./src/addon/messages/pages/discussion/discussion.ngfactory.js
 /**
@@ -2016,7 +2016,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ionic_angular_components_icon_icon__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__send_message_form__ = __webpack_require__(1552);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_utils_text__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_config__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_config__ = __webpack_require__(167);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_events__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_sites__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_app__ = __webpack_require__(9);

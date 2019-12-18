@@ -1,6 +1,6 @@
 webpackJsonp([49],{
 
-/***/ 2100:
+/***/ 2101:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -270,7 +270,7 @@ var logger = __webpack_require__(6);
 var utils_iframe = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(80);
+var platform_browser = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
 var nav_controller = __webpack_require__(21);

@@ -136,7 +136,7 @@ var context_menu_item_ngfactory = __webpack_require__(94);
 var context_menu_item = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu.ts
-var context_menu = __webpack_require__(78);
+var context_menu = __webpack_require__(79);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
 var translate_pipe = __webpack_require__(25);
@@ -163,7 +163,7 @@ var context_menu_ngfactory = __webpack_require__(93);
 var popover_controller = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./src/components/tabs/tab.ts
-var tab = __webpack_require__(76);
+var tab = __webpack_require__(77);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils = __webpack_require__(2);
@@ -199,7 +199,7 @@ var view_controller = __webpack_require__(39);
 var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(160);
+var refresher = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
 var gesture_controller = __webpack_require__(44);
@@ -277,7 +277,7 @@ var progress_bar_ngfactory = __webpack_require__(489);
 var progress_bar = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(80);
+var platform_browser = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(89);
@@ -373,7 +373,7 @@ var format = __webpack_require__(499);
 var format_delegate = __webpack_require__(182);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(163);
+var modal_controller = __webpack_require__(164);
 
 // CONCATENATED MODULE: ./src/core/course/components/format/format.ngfactory.js
 /**

@@ -236,10 +236,10 @@ var sites = __webpack_require__(1);
 var utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/core/comments/providers/comments.ts
-var comments = __webpack_require__(154);
+var comments = __webpack_require__(155);
 
 // EXTERNAL MODULE: ./src/core/tag/providers/tag.ts
-var tag = __webpack_require__(164);
+var tag = __webpack_require__(165);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
 var nav_params = __webpack_require__(70);

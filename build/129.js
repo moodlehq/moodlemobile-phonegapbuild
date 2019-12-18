@@ -1,6 +1,6 @@
 webpackJsonp([129],{
 
-/***/ 2123:
+/***/ 2027:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34,7 +34,7 @@ var dom = __webpack_require__(4);
 var split_view = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/competency.ts
-var competency = __webpack_require__(167);
+var competency = __webpack_require__(168);
 
 // EXTERNAL MODULE: ./src/addon/competency/providers/helper.ts
 var helper = __webpack_require__(379);
@@ -293,7 +293,7 @@ var utils = __webpack_require__(2);
 var events = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/avatar/avatar.js
-var avatar = __webpack_require__(161);
+var avatar = __webpack_require__(162);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
 var format_text = __webpack_require__(48);
@@ -356,7 +356,7 @@ var progress_bar_ngfactory = __webpack_require__(489);
 var progress_bar = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(80);
+var platform_browser = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
 var badge = __webpack_require__(145);
@@ -392,7 +392,7 @@ var content_ngfactory = __webpack_require__(185);
 var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(160);
+var refresher = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
 var refresher_content_ngfactory = __webpack_require__(215);

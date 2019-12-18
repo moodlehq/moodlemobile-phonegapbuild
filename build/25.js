@@ -37,7 +37,7 @@ var providers_logger = __webpack_require__(6);
 var sites = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/providers/sync.ts
-var sync = __webpack_require__(79);
+var sync = __webpack_require__(80);
 
 // EXTERNAL MODULE: ./src/providers/utils/dom.ts
 var dom = __webpack_require__(4);
@@ -869,7 +869,7 @@ var checkbox_checkbox = __webpack_require__(202);
 var option_option = __webpack_require__(110);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
-var grid = __webpack_require__(165);
+var grid = __webpack_require__(166);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
 var row = __webpack_require__(120);
@@ -896,7 +896,7 @@ var progress_bar_ngfactory = __webpack_require__(489);
 var progress_bar = __webpack_require__(322);
 
 // EXTERNAL MODULE: ./node_modules/@angular/platform-browser/esm5/platform-browser.js
-var platform_browser = __webpack_require__(80);
+var platform_browser = __webpack_require__(76);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
 var list = __webpack_require__(89);
@@ -953,7 +953,7 @@ var nav_params = __webpack_require__(70);
 var popover_controller = __webpack_require__(71);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(163);
+var modal_controller = __webpack_require__(164);
 
 // CONCATENATED MODULE: ./src/addon/mod/lesson/pages/player/player.ngfactory.js
 /**
