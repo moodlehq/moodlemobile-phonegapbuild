@@ -1,89 +1,30 @@
 webpackJsonp([56],{
 
-/***/ 2133:
+/***/ 2095:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCommentsViewerPageModule", function() { return CoreCommentsViewerPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__viewer__ = __webpack_require__(2284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_components_module__ = __webpack_require__(290);
-// (C) Copyright 2015 Moodle Pty Ltd.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
 
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
 
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
+var ionic_angular = __webpack_require__(5);
 
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
+var _ngx_translate_core = __webpack_require__(3);
 
+// EXTERNAL MODULE: ./src/providers/sites.ts
+var sites = __webpack_require__(1);
 
+// EXTERNAL MODULE: ./src/core/login/providers/helper.ts
+var helper = __webpack_require__(128);
 
+// EXTERNAL MODULE: ./src/providers/utils/dom.ts
+var dom = __webpack_require__(4);
 
-
-var CoreCommentsViewerPageModule = /** @class */ (function () {
-    function CoreCommentsViewerPageModule() {
-    }
-    CoreCommentsViewerPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__viewer__["a" /* CoreCommentsViewerPage */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
-                __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__["a" /* CorePipesModule */],
-                __WEBPACK_IMPORTED_MODULE_7__components_components_module__["a" /* CoreCommentsComponentsModule */],
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__viewer__["a" /* CoreCommentsViewerPage */]),
-                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
-            ],
-        })
-    ], CoreCommentsViewerPageModule);
-    return CoreCommentsViewerPageModule;
-}());
-
-//# sourceMappingURL=viewer.module.js.map
-
-/***/ }),
-
-/***/ 2284:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCommentsViewerPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__classes_animations__ = __webpack_require__(425);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_sites__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_utils_time__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_events__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__core_user_providers_user__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_comments__ = __webpack_require__(121);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_offline__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sync__ = __webpack_require__(462);
+// CONCATENATED MODULE: ./src/core/login/pages/change-password/change-password.ts
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -111,400 +52,375 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-
-
-
-
-
-
-
 /**
- * Page that displays comments.
+ * Page that shows instructions to change the password.
  */
-var CoreCommentsViewerPage = /** @class */ (function () {
-    function CoreCommentsViewerPage(navParams, sitesProvider, userProvider, domUtils, translate, modalCtrl, commentsProvider, offlineComments, eventsProvider, commentsSync, textUtils, timeUtils) {
-        var _this = this;
-        this.sitesProvider = sitesProvider;
-        this.userProvider = userProvider;
-        this.domUtils = domUtils;
+var change_password_CoreLoginChangePasswordPage = /** @class */ (function () {
+    function CoreLoginChangePasswordPage(translate, sitesProvider, loginHelper, domUtls) {
         this.translate = translate;
-        this.modalCtrl = modalCtrl;
-        this.commentsProvider = commentsProvider;
-        this.offlineComments = offlineComments;
-        this.eventsProvider = eventsProvider;
-        this.commentsSync = commentsSync;
-        this.textUtils = textUtils;
-        this.timeUtils = timeUtils;
-        this.comments = [];
-        this.commentsLoaded = false;
-        this.canLoadMore = false;
-        this.loadMoreError = false;
-        this.canAddComments = false;
-        this.canDeleteComments = false;
-        this.showDelete = false;
-        this.hasOffline = false;
-        this.refreshIcon = 'spinner';
-        this.syncIcon = 'spinner';
-        this.addDeleteCommentsAvailable = false;
-        this.contextLevel = navParams.get('contextLevel');
-        this.instanceId = navParams.get('instanceId');
-        this.componentName = navParams.get('componentName');
-        this.itemId = navParams.get('itemId');
-        this.area = navParams.get('area') || '';
-        this.title = navParams.get('title') || this.translate.instant('core.comments.comments');
-        this.courseId = navParams.get('courseId');
-        this.page = 0;
-        // Refresh data if comments are synchronized automatically.
-        this.syncObserver = eventsProvider.on(__WEBPACK_IMPORTED_MODULE_12__providers_sync__["a" /* CoreCommentsSyncProvider */].AUTO_SYNCED, function (data) {
-            if (data.contextLevel == _this.contextLevel && data.instanceId == _this.instanceId &&
-                data.componentName == _this.componentName && data.itemId == _this.itemId && data.area == _this.area) {
-                // Show the sync warnings.
-                _this.showSyncWarnings(data.warnings);
-                // Refresh the data.
-                _this.commentsLoaded = false;
-                _this.refreshIcon = 'spinner';
-                _this.syncIcon = 'spinner';
-                _this.domUtils.scrollToTop(_this.content);
-                _this.page = 0;
-                _this.comments = [];
-                _this.fetchComments(false);
-            }
-        }, sitesProvider.getCurrentSiteId());
+        this.sitesProvider = sitesProvider;
+        this.loginHelper = loginHelper;
+        this.domUtls = domUtls;
+        this.changingPassword = false;
+        this.logoutLabel = this.loginHelper.getLogoutLabel();
     }
     /**
-     * View loaded.
+     * Show a help modal.
      */
-    CoreCommentsViewerPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        this.commentsProvider.isAddCommentsAvailable().then(function (enabled) {
-            // Is implicit the user can delete if he can add.
-            _this.addDeleteCommentsAvailable = enabled;
-        });
-        this.currentUserId = this.sitesProvider.getCurrentSiteUserId();
-        this.fetchComments(true);
+    CoreLoginChangePasswordPage.prototype.showHelp = function () {
+        this.domUtls.showAlert(this.translate.instant('core.help'), this.translate.instant('core.login.changepasswordhelp'));
     };
     /**
-     * Fetches the comments.
-     *
-     * @param sync When to resync comments.
-     * @param showErrors When to display errors or not.
-     * @return Resolved when done.
+     * Open the change password page in a browser.
      */
-    CoreCommentsViewerPage.prototype.fetchComments = function (sync, showErrors) {
-        var _this = this;
-        this.loadMoreError = false;
-        var promise = sync ? this.syncComments(showErrors) : Promise.resolve();
-        return promise.catch(function () {
-            // Ignore errors.
-        }).then(function () {
-            // Get comments data.
-            return _this.commentsProvider.getComments(_this.contextLevel, _this.instanceId, _this.componentName, _this.itemId, _this.area, _this.page).then(function (response) {
-                _this.canAddComments = _this.addDeleteCommentsAvailable && response.canpost;
-                var comments = response.comments.sort(function (a, b) { return b.timecreated - a.timecreated; });
-                if (typeof response.count != 'undefined') {
-                    _this.canLoadMore = (_this.comments.length + comments.length) > response.count;
-                }
-                else {
-                    // Old style.
-                    _this.canLoadMore = response.comments.length > 0 && response.comments.length >= __WEBPACK_IMPORTED_MODULE_10__providers_comments__["a" /* CoreCommentsProvider */].pageSize;
-                }
-                return Promise.all(comments.map(function (comment) { return _this.loadCommentProfile(comment); }));
-            }).then(function (comments) {
-                _this.comments = _this.comments.concat(comments);
-                _this.canDeleteComments = _this.addDeleteCommentsAvailable && (_this.hasOffline || _this.comments.some(function (comment) {
-                    return !!comment.delete;
-                }));
-            });
-        }).then(function () {
-            return _this.loadOfflineData();
-        }).catch(function (error) {
-            _this.loadMoreError = true; // Set to prevent infinite calls with infinite-loading.
-            if (error && _this.componentName == 'assignsubmission_comments') {
-                _this.domUtils.showAlertTranslated('core.notice', 'core.comments.commentsnotworking');
-            }
-            else {
-                _this.domUtils.showErrorModalDefault(error, _this.translate.instant('core.error') + ': get_comments');
-            }
-        }).finally(function () {
-            _this.commentsLoaded = true;
-            _this.refreshIcon = 'refresh';
-            _this.syncIcon = 'sync';
-        });
+    CoreLoginChangePasswordPage.prototype.openChangePasswordPage = function () {
+        this.loginHelper.openInAppForEdit(this.sitesProvider.getCurrentSiteId(), '/login/change_password.php', undefined, true);
+        this.changingPassword = true;
     };
     /**
-     * Function to load more commemts.
-     *
-     * @param infiniteComplete Infinite scroll complete function. Only used from core-infinite-loading.
-     * @return Resolved when done.
+     * Login the user.
      */
-    CoreCommentsViewerPage.prototype.loadMore = function (infiniteComplete) {
-        this.page++;
-        this.canLoadMore = false;
-        return this.fetchComments(true).finally(function () {
-            infiniteComplete && infiniteComplete();
-        });
+    CoreLoginChangePasswordPage.prototype.login = function () {
+        this.loginHelper.goToSiteInitialPage();
+        this.changingPassword = false;
     };
     /**
-     * Refresh the comments.
-     *
-     * @param showErrors Whether to display errors or not.
-     * @param refresher Refresher.
-     * @return Resolved when done.
+     * Logout the user.
      */
-    CoreCommentsViewerPage.prototype.refreshComments = function (showErrors, refresher) {
-        var _this = this;
-        this.commentsLoaded = false;
-        this.refreshIcon = 'spinner';
-        this.syncIcon = 'spinner';
-        return this.invalidateComments().finally(function () {
-            _this.page = 0;
-            _this.comments = [];
-            return _this.fetchComments(true, showErrors).finally(function () {
-                refresher && refresher.complete();
-            });
-        });
+    CoreLoginChangePasswordPage.prototype.logout = function () {
+        this.sitesProvider.logout();
+        this.changingPassword = false;
     };
-    /**
-     * Show sync warnings if any.
-     *
-     * @param warnings the warnings
-     */
-    CoreCommentsViewerPage.prototype.showSyncWarnings = function (warnings) {
-        var message = this.textUtils.buildMessage(warnings);
-        if (message) {
-            this.domUtils.showErrorModal(message);
-        }
-    };
-    /**
-     * Tries to synchronize comments.
-     *
-     * @param showErrors Whether to display errors or not.
-     * @return Promise resolved if sync is successful, rejected otherwise.
-     */
-    CoreCommentsViewerPage.prototype.syncComments = function (showErrors) {
-        var _this = this;
-        return this.commentsSync.syncComments(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area).then(function (warnings) {
-            _this.showSyncWarnings(warnings);
-        }).catch(function (error) {
-            if (showErrors) {
-                _this.domUtils.showErrorModalDefault(error, 'core.errorsync', true);
-            }
-            return Promise.reject(null);
-        });
-    };
-    /**
-     * Add a new comment to the list.
-     *
-     * @param e Event.
-     */
-    CoreCommentsViewerPage.prototype.addComment = function (e) {
-        var _this = this;
-        e.preventDefault();
-        e.stopPropagation();
-        var params = {
-            contextLevel: this.contextLevel,
-            instanceId: this.instanceId,
-            componentName: this.componentName,
-            itemId: this.itemId,
-            area: this.area,
-            content: this.hasOffline ? this.offlineComment.content : ''
-        };
-        var modal = this.modalCtrl.create('CoreCommentsAddPage', params);
-        modal.onDidDismiss(function (data) {
-            if (data && data.comments) {
-                _this.invalidateComments();
-                return Promise.all(data.comments.map(function (comment) { return _this.loadCommentProfile(comment); })).then(function (addedComments) {
-                    // Add the comment to the top.
-                    _this.comments = addedComments.concat(_this.comments);
-                    _this.canDeleteComments = _this.addDeleteCommentsAvailable;
-                    _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_10__providers_comments__["a" /* CoreCommentsProvider */].COMMENTS_COUNT_CHANGED_EVENT, {
-                        contextLevel: _this.contextLevel,
-                        instanceId: _this.instanceId,
-                        component: _this.componentName,
-                        itemId: _this.itemId,
-                        area: _this.area,
-                        countChange: addedComments.length,
-                    }, _this.sitesProvider.getCurrentSiteId());
-                });
-            }
-            else if (data && !data.comments) {
-                // Comments added in offline mode.
-                return _this.loadOfflineData();
-            }
-        });
-        modal.present();
-    };
-    /**
-     * Delete a comment.
-     *
-     * @param e Click event.
-     * @param deleteComment Comment to delete.
-     */
-    CoreCommentsViewerPage.prototype.deleteComment = function (e, deleteComment) {
-        var _this = this;
-        e.preventDefault();
-        e.stopPropagation();
-        var time = this.timeUtils.userDate((deleteComment.lastmodified || deleteComment.timecreated) * 1000, 'core.strftimerecentfull');
-        deleteComment.contextlevel = this.contextLevel;
-        deleteComment.instanceid = this.instanceId;
-        deleteComment.component = this.componentName;
-        deleteComment.itemid = this.itemId;
-        deleteComment.area = this.area;
-        this.domUtils.showDeleteConfirm('core.comments.deletecommentbyon', { $a: { user: deleteComment.fullname || '', time: time } }).then(function () {
-            _this.commentsProvider.deleteComment(deleteComment).then(function (deletedOnline) {
-                _this.showDelete = false;
-                if (deletedOnline) {
-                    var index = _this.comments.findIndex(function (comment) { return comment.id == deleteComment.id; });
-                    if (index >= 0) {
-                        _this.comments.splice(index, 1);
-                        _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_10__providers_comments__["a" /* CoreCommentsProvider */].COMMENTS_COUNT_CHANGED_EVENT, {
-                            contextLevel: _this.contextLevel,
-                            instanceId: _this.instanceId,
-                            component: _this.componentName,
-                            itemId: _this.itemId,
-                            area: _this.area,
-                            countChange: -1,
-                        }, _this.sitesProvider.getCurrentSiteId());
-                    }
-                }
-                else {
-                    _this.loadOfflineData();
-                }
-                _this.invalidateComments();
-                _this.domUtils.showToast('core.comments.eventcommentdeleted', true, 3000);
-            }).catch(function (error) {
-                _this.domUtils.showErrorModalDefault(error, 'Delete comment failed.');
-            });
-        }).catch(function () {
-            // User cancelled, nothing to do.
-        });
-    };
-    /**
-     * Invalidate comments.
-     *
-     * @return Resolved when done.
-     */
-    CoreCommentsViewerPage.prototype.invalidateComments = function () {
-        return this.commentsProvider.invalidateCommentsData(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area);
-    };
-    /**
-     * Loads the profile info onto the comment object.
-     *
-     * @param  comment Comment object.
-     * @return Promise resolved with modified comment when done.
-     */
-    CoreCommentsViewerPage.prototype.loadCommentProfile = function (comment) {
-        // Get the user profile image.
-        return this.userProvider.getProfile(comment.userid, undefined, true).then(function (user) {
-            comment.profileimageurl = user.profileimageurl;
-            comment.fullname = user.fullname;
-            comment.userid = user.id;
-            return comment;
-        }).catch(function () {
-            // Ignore errors.
-            return comment;
-        });
-    };
-    /**
-     * Load offline comments.
-     *
-     * @return Promise resolved when done.
-     */
-    CoreCommentsViewerPage.prototype.loadOfflineData = function () {
-        var _this = this;
-        var promises = [];
-        var hasDeletedComments = false;
-        // Load the only offline comment allowed if any.
-        promises.push(this.offlineComments.getComment(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area).then(function (offlineComment) {
-            if (offlineComment && !_this.currentUser) {
-                offlineComment.userid = _this.currentUserId;
-                _this.loadCommentProfile(offlineComment).then(function (comment) {
-                    // Save this fields for further requests.
-                    if (comment.fullname) {
-                        _this.currentUser = {};
-                        _this.currentUser.profileimageurl = comment.profileimageurl;
-                        _this.currentUser.fullname = comment.fullname;
-                        _this.currentUser.userid = comment.userid;
-                    }
-                });
-            }
-            else if (offlineComment) {
-                offlineComment.profileimageurl = _this.currentUser.profileimageurl;
-                offlineComment.fullname = _this.currentUser.fullname;
-                offlineComment.userid = _this.currentUser.id;
-            }
-            _this.offlineComment = offlineComment;
-        }));
-        // Load deleted comments offline.
-        promises.push(this.offlineComments.getDeletedComments(this.contextLevel, this.instanceId, this.componentName, this.itemId, this.area).then(function (deletedComments) {
-            hasDeletedComments = deletedComments && deletedComments.length > 0;
-            hasDeletedComments && deletedComments.forEach(function (deletedComment) {
-                var comment = _this.comments.find(function (comment) {
-                    return comment.id == deletedComment.commentid;
-                });
-                if (comment) {
-                    comment.deleted = deletedComment.deleted;
-                }
-            });
-        }));
-        return Promise.all(promises).then(function () {
-            _this.hasOffline = !!_this.offlineComment || hasDeletedComments;
-        });
-    };
-    /**
-     * Restore a comment.
-     *
-     * @param e Click event.
-     * @param comment Comment to delete.
-     */
-    CoreCommentsViewerPage.prototype.undoDeleteComment = function (e, comment) {
-        var _this = this;
-        e.preventDefault();
-        e.stopPropagation();
-        this.offlineComments.undoDeleteComment(comment.id).then(function () {
-            comment.deleted = false;
-            _this.showDelete = false;
-        });
-    };
-    /**
-     * Toggle delete.
-     */
-    CoreCommentsViewerPage.prototype.toggleDelete = function () {
-        this.showDelete = !this.showDelete;
-    };
-    /**
-     * Page destroyed.
-     */
-    CoreCommentsViewerPage.prototype.ngOnDestroy = function () {
-        this.syncObserver && this.syncObserver.off();
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
-    ], CoreCommentsViewerPage.prototype, "content", void 0);
-    CoreCommentsViewerPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-comments-viewer',template:/*ion-inline-start:"/home/travis/build/moodlehq/moodlemobile2/src/core/comments/pages/viewer/viewer.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title><core-format-text [text]="title" [contextLevel]="contextLevel" [contextInstanceId]="instanceId" [courseId]="courseId"></core-format-text></ion-title>\n        <ion-buttons end>\n            <button *ngIf="canDeleteComments" item-end ion-button icon-only clear (click)="toggleDelete($event)" [attr.aria-label]="\'core.delete\' | translate">\n                <ion-icon name="create" ios="md-create"></ion-icon>\n            </button>\n            <core-context-menu>\n                <core-context-menu-item [hidden]="!(commentsLoaded && !hasOffline)" [priority]="100" [content]="\'core.refresh\' | translate" (action)="refreshComments(false)" [iconAction]="refreshIcon" [closeOnClick]="true"></core-context-menu-item>\n                <core-context-menu-item [hidden]="!(commentsLoaded && hasOffline)" [priority]="100" [content]="\'core.settings.synchronizenow\' | translate" (action)="refreshComments(true)" [iconAction]="syncIcon" [closeOnClick]="false"></core-context-menu-item>\n            </core-context-menu>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="commentsLoaded" (ionRefresh)="refreshComments(false, $event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="commentsLoaded">\n        <core-empty-box *ngIf="!comments || !comments.length" icon="chatbubbles" [message]="\'core.comments.nocomments\' | translate"></core-empty-box>\n\n        <div class="core-warning-card" icon-start *ngIf="hasOffline">\n            <ion-icon name="warning"></ion-icon>\n            {{ \'core.thereisdatatosync\' | translate:{$a: \'core.comments.comments\' | translate | lowercase } }}\n        </div>\n\n        <ion-card *ngIf="offlineComment" (click)="addComment($event)">\n            <ion-item text-wrap>\n                <ion-avatar core-user-avatar [user]="offlineComment" item-start></ion-avatar>\n                <h2>{{ offlineComment.fullname }}</h2>\n                <p>\n                    <ion-icon name="time"></ion-icon> {{ \'core.notsent\' | translate }}\n                </p>\n                <button *ngIf="showDelete" item-end ion-button icon-only clear [@coreSlideInOut]="\'fromRight\'" color="danger" (click)="deleteComment($event, offlineComment)" [attr.aria-label]="\'core.delete\' | translate">\n                    <ion-icon name="trash"></ion-icon>\n                </button>\n            </ion-item>\n            <ion-item text-wrap>\n                <core-format-text clean="true" [text]="offlineComment.content" [contextLevel]="contextLevel" [contextInstanceId]="instanceId" [courseId]="courseId"></core-format-text>\n            </ion-item>\n        </ion-card>\n\n        <ion-card *ngFor="let comment of comments">\n            <ion-item text-wrap>\n                <ion-avatar core-user-avatar [user]="comment" item-start></ion-avatar>\n                <h2>{{ comment.fullname }}</h2>\n                <p *ngIf="!comment.deleted">{{ comment.timecreated * 1000 | coreFormatDate: \'strftimerecentfull\' }}</p>\n                <p *ngIf="comment.deleted">\n                    <ion-icon name="trash"></ion-icon> <span text-wrap>{{ \'core.deletedoffline\' | translate }}</span>\n                </p>\n                <button *ngIf="showDelete && !comment.deleted && comment.delete" item-end ion-button icon-only clear [@coreSlideInOut]="\'fromRight\'" color="danger" (click)="deleteComment($event, comment)" [attr.aria-label]="\'core.delete\' | translate">\n                    <ion-icon name="trash"></ion-icon>\n                </button>\n                <button *ngIf="showDelete && comment.deleted" item-end ion-button icon-only clear color="danger" (click)="undoDeleteComment($event, comment)" [attr.aria-label]="\'core.restore\' | translate">\n                    <ion-icon name="undo"></ion-icon>\n                </button>\n            </ion-item>\n            <ion-item text-wrap>\n                <core-format-text [text]="comment.content" [contextLevel]="contextLevel" [contextInstanceId]="instanceId" [courseId]="courseId"></core-format-text>\n            </ion-item>\n        </ion-card>\n\n        <core-infinite-loading [enabled]="canLoadMore" (action)="loadMore($event)" [error]="loadMoreError"></core-infinite-loading>\n    </core-loading>\n\n    <ion-fab core-fab bottom end *ngIf="canAddComments">\n        <button ion-fab (click)="addComment($event)" [attr.aria-label]="\'core.comments.addcomment\' | translate">\n            <ion-icon name="add"></ion-icon>\n        </button>\n    </ion-fab>\n</ion-content>\n'/*ion-inline-end:"/home/travis/build/moodlehq/moodlemobile2/src/core/comments/pages/viewer/viewer.html"*/,
-            animations: [__WEBPACK_IMPORTED_MODULE_3__classes_animations__["b" /* coreSlideInOut */]]
+    CoreLoginChangePasswordPage = __decorate([
+        Object(core["m" /* Component */])({
+            selector: 'page-core-change-password',
+            templateUrl: 'change-password.html',
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_4__providers_sites__["a" /* CoreSitesProvider */],
-            __WEBPACK_IMPORTED_MODULE_9__core_user_providers_user__["a" /* CoreUserProvider */],
-            __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_10__providers_comments__["a" /* CoreCommentsProvider */],
-            __WEBPACK_IMPORTED_MODULE_11__providers_offline__["a" /* CoreCommentsOfflineProvider */],
-            __WEBPACK_IMPORTED_MODULE_8__providers_events__["a" /* CoreEventsProvider */],
-            __WEBPACK_IMPORTED_MODULE_12__providers_sync__["a" /* CoreCommentsSyncProvider */],
-            __WEBPACK_IMPORTED_MODULE_6__providers_utils_text__["a" /* CoreTextUtilsProvider */],
-            __WEBPACK_IMPORTED_MODULE_7__providers_utils_time__["a" /* CoreTimeUtilsProvider */]])
-    ], CoreCommentsViewerPage);
-    return CoreCommentsViewerPage;
+        __metadata("design:paramtypes", [_ngx_translate_core["c" /* TranslateService */], sites["a" /* CoreSitesProvider */],
+            helper["a" /* CoreLoginHelperProvider */], dom["a" /* CoreDomUtilsProvider */]])
+    ], CoreLoginChangePasswordPage);
+    return CoreLoginChangePasswordPage;
 }());
 
-//# sourceMappingURL=viewer.js.map
+//# sourceMappingURL=change-password.js.map
+// EXTERNAL MODULE: ./src/components/components.module.ts
+var components_module = __webpack_require__(28);
+
+// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
+var directives_module = __webpack_require__(32);
+
+// CONCATENATED MODULE: ./src/core/login/pages/change-password/change-password.module.ts
+// (C) Copyright 2015 Moodle Pty Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var change_password_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+var change_password_module_CoreLoginChangePasswordPageModule = /** @class */ (function () {
+    function CoreLoginChangePasswordPageModule() {
+    }
+    CoreLoginChangePasswordPageModule = change_password_module___decorate([
+        Object(core["I" /* NgModule */])({
+            declarations: [
+                change_password_CoreLoginChangePasswordPage
+            ],
+            imports: [
+                components_module["a" /* CoreComponentsModule */],
+                directives_module["a" /* CoreDirectivesModule */],
+                ionic_angular["l" /* IonicPageModule */].forChild(change_password_CoreLoginChangePasswordPage),
+                _ngx_translate_core["b" /* TranslateModule */].forChild()
+            ]
+        })
+    ], CoreLoginChangePasswordPageModule);
+    return CoreLoginChangePasswordPageModule;
+}());
+
+//# sourceMappingURL=change-password.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(1524);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(1525);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(1526);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
+var loading_component_ngfactory = __webpack_require__(1527);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(1528);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(1529);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(1530);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
+var select_popover_component_ngfactory = __webpack_require__(1531);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(1532);
+
+// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
+var context_menu_popover_ngfactory = __webpack_require__(1533);
+
+// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
+var course_picker_menu_popover_ngfactory = __webpack_require__(1534);
+
+// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
+var recaptchamodal_ngfactory = __webpack_require__(1535);
+
+// EXTERNAL MODULE: ./src/components/bs-tooltip/bs-tooltip.ngfactory.js
+var bs_tooltip_ngfactory = __webpack_require__(1536);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
+var item_ngfactory = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
+var item = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
+var util_form = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
+var item_reorder = __webpack_require__(26);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
+var item_content = __webpack_require__(33);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
+var translate_pipe = __webpack_require__(25);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
+var translate_service = __webpack_require__(17);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
+var button_ngfactory = __webpack_require__(45);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(41);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(375);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
+var navbar_ngfactory = __webpack_require__(725);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(214);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(35);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(21);
+
+// EXTERNAL MODULE: ./src/directives/back-button.ts
+var back_button = __webpack_require__(478);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./src/providers/events.ts
+var events = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
+var toolbar_title_ngfactory = __webpack_require__(726);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
+var toolbar_title = __webpack_require__(316);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(251);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(376);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(34);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(109);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
+var list = __webpack_require__(89);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(44);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(7);
+
+// CONCATENATED MODULE: ./src/core/login/pages/change-password/change-password.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_CoreLoginChangePasswordPage = [];
+var RenderType_CoreLoginChangePasswordPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreLoginChangePasswordPage, data: {} });
+
+function View_CoreLoginChangePasswordPage_1(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 19, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 2, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 3, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 4, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 2, 2, "h2", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](8, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 2, 2, "p", [["padding-vertical", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](12, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](15, 0, null, 2, 3, "button", [["block", ""], ["ion-button", ""], ["text-wrap", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.openChangePasswordPage() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](16, 1097728, [[3, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](17, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "]))], function (_ck, _v) { var currVal_2 = ""; _ck(_v, 16, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("core.login.forcepasswordchangenotice")); _ck(_v, 8, 0, currVal_0); var currVal_1 = core["_56" /* ɵunv */](_v, 12, 0, core["_44" /* ɵnov */](_v, 13).transform("core.login.changepasswordinstructions")); _ck(_v, 12, 0, currVal_1); var currVal_3 = core["_56" /* ɵunv */](_v, 17, 0, core["_44" /* ɵnov */](_v, 18).transform("core.login.changepasswordbutton")); _ck(_v, 17, 0, currVal_3); }); }
+function View_CoreLoginChangePasswordPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 15, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 5, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 6, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 7, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 2, 2, "p", [["padding-bottom", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](8, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](11, 0, null, 2, 3, "button", [["block", ""], ["ion-button", ""], ["text-wrap", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.login() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](12, 1097728, [[6, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](13, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "]))], function (_ck, _v) { var currVal_1 = ""; _ck(_v, 12, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 8, 0, core["_44" /* ɵnov */](_v, 9).transform("core.login.changepasswordreconnectinstructions")); _ck(_v, 8, 0, currVal_0); var currVal_2 = core["_56" /* ɵunv */](_v, 13, 0, core["_44" /* ɵnov */](_v, 14).transform("core.login.reconnect")); _ck(_v, 13, 0, currVal_2); }); }
+function View_CoreLoginChangePasswordPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 25, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 21, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](9, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 2, 11, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](13, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](16, 0, null, null, 6, "button", [["icon-only", ""], ["ion-button", ""]], [[1, "aria-label", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.showHelp() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](17, 1097728, [[1, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 0, 1, "ion-icon", [["name", "help-circle"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](21, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](27, 0, null, null, 29, "ion-content", [["class", "core-center-view"], ["padding", ""]], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_30" /* ɵdid */](28, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["t" /* ElementRef */], core["V" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["M" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n    "])), (_l()(), core["_31" /* ɵeld */](30, 0, null, 1, 25, "ion-list", [], null, null, null, null, null)), core["_30" /* ɵdid */](31, 16384, null, 0, list["a" /* List */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], platform["a" /* Platform */], gesture_controller["l" /* GestureController */], dom_controller["a" /* DomController */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginChangePasswordPage_1)), core["_30" /* ɵdid */](34, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginChangePasswordPage_2)), core["_30" /* ɵdid */](37, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_31" /* ɵeld */](39, 0, null, null, 15, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](40, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 8, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 9, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 10, { _icons: 1 }), core["_30" /* ɵdid */](44, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](46, 0, null, 2, 2, "p", [["padding-bottom", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](47, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_31" /* ɵeld */](50, 0, null, 2, 3, "button", [["block", ""], ["color", "light"], ["ion-button", ""], ["text-wrap", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.logout() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](51, 1097728, [[9, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](52, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n        "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, 1, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_5 = "help-circle"; _ck(_v, 21, 0, currVal_5); var currVal_8 = !_co.changingPassword; _ck(_v, 34, 0, currVal_8); var currVal_9 = _co.changingPassword; _ck(_v, 37, 0, currVal_9); var currVal_11 = "light"; var currVal_12 = ""; _ck(_v, 51, 0, currVal_11, currVal_12); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("core.login.changepassword")); _ck(_v, 9, 0, currVal_2); var currVal_3 = core["_56" /* ɵunv */](_v, 16, 0, core["_44" /* ɵnov */](_v, 18).transform("core.help")); _ck(_v, 16, 0, currVal_3); var currVal_4 = core["_44" /* ɵnov */](_v, 21)._hidden; _ck(_v, 20, 0, currVal_4); var currVal_6 = core["_44" /* ɵnov */](_v, 28).statusbarPadding; var currVal_7 = core["_44" /* ɵnov */](_v, 28)._hasRefresher; _ck(_v, 27, 0, currVal_6, currVal_7); var currVal_10 = core["_56" /* ɵunv */](_v, 47, 0, core["_44" /* ɵnov */](_v, 48).transform("core.login.changepasswordlogoutinstructions")); _ck(_v, 47, 0, currVal_10); var currVal_13 = core["_56" /* ɵunv */](_v, 52, 0, core["_44" /* ɵnov */](_v, 53).transform(_co.logoutLabel)); _ck(_v, 52, 0, currVal_13); }); }
+function View_CoreLoginChangePasswordPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-change-password", [], null, null, null, View_CoreLoginChangePasswordPage_0, RenderType_CoreLoginChangePasswordPage)), core["_30" /* ɵdid */](1, 49152, null, 0, change_password_CoreLoginChangePasswordPage, [translate_service["a" /* TranslateService */], sites["a" /* CoreSitesProvider */], helper["a" /* CoreLoginHelperProvider */], dom["a" /* CoreDomUtilsProvider */]], null, null)], null, null); }
+var CoreLoginChangePasswordPageNgFactory = core["_27" /* ɵccf */]("page-core-change-password", change_password_CoreLoginChangePasswordPage, View_CoreLoginChangePasswordPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=change-password.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
+var translate_loader = __webpack_require__(371);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
+var translate_compiler = __webpack_require__(372);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
+var translate_parser = __webpack_require__(374);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
+var missing_translation_handler = __webpack_require__(373);
+
+// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
+var translate_store = __webpack_require__(477);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(724);
+
+// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
+var pipes_module = __webpack_require__(108);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(274);
+
+// CONCATENATED MODULE: ./src/core/login/pages/change-password/change-password.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginChangePasswordPageModuleNgFactory", function() { return CoreLoginChangePasswordPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var CoreLoginChangePasswordPageModuleNgFactory = core["_28" /* ɵcmf */](change_password_module_CoreLoginChangePasswordPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], bs_tooltip_ngfactory["a" /* CoreBSTooltipComponentNgFactory */], CoreLoginChangePasswordPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["w" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreComponentsModule */], components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, change_password_module_CoreLoginChangePasswordPageModule, change_password_module_CoreLoginChangePasswordPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], change_password_CoreLoginChangePasswordPage, [])]); });
+
+//# sourceMappingURL=change-password.module.ngfactory.js.map
 
 /***/ })
 
