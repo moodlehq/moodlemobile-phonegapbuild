@@ -1,6 +1,6 @@
 webpackJsonp([11],{
 
-/***/ 2084:
+/***/ 2143:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10,7 +10,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 var core = __webpack_require__(0);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
-var ionic_angular = __webpack_require__(6);
+var ionic_angular = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
 var _ngx_translate_core = __webpack_require__(3);
@@ -22,28 +22,28 @@ var sites = __webpack_require__(1);
 var dom = __webpack_require__(4);
 
 // EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(10);
+var utils_text = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/providers/utils/utils.ts
 var utils_utils = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./src/providers/ws.ts
-var ws = __webpack_require__(202);
+var ws = __webpack_require__(222);
 
 // EXTERNAL MODULE: ./src/core/login/providers/helper.ts
-var helper = __webpack_require__(122);
+var helper = __webpack_require__(128);
 
 // EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(22);
+var esm5_forms = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/core/user/providers/user-profile-field-delegate.ts
-var user_profile_field_delegate = __webpack_require__(187);
+var user_profile_field_delegate = __webpack_require__(193);
 
 // EXTERNAL MODULE: ./src/configconstants.ts
-var configconstants = __webpack_require__(119);
+var configconstants = __webpack_require__(124);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -133,7 +133,8 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
      */
     CoreLoginEmailSignupPage.prototype.completeFormGroup = function () {
         this.signupForm.addControl('city', this.fb.control(this.settings.defaultcity || ''));
-        this.signupForm.addControl('country', this.fb.control(this.settings.country || ''));
+        this.signUpCountryControl = this.fb.control(this.settings.country || '');
+        this.signupForm.addControl('country', this.signUpCountryControl);
         // Add the name fields.
         for (var i in this.settings.namefields) {
             this.signupForm.addControl(this.settings.namefields[i], this.fb.control('', esm5_forms["u" /* Validators */].required));
@@ -191,17 +192,16 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
                     _this.namefieldsErrors[field] = _this.loginHelper.getErrorMessages('core.login.missing' + field);
                 });
             }
-            return _this.utils.getCountryList().then(function (countries) {
+            return _this.utils.getCountryListSorted().then(function (countries) {
                 _this.countries = countries;
-                _this.countriesKeys = Object.keys(countries);
             });
         });
     };
     /**
      * Treat the site config, checking if it's valid and extracting the data we're interested in.
      *
-     * @param {any} siteConfig Site config to treat.
-     * @return {boolean} True if success.
+     * @param siteConfig Site config to treat.
+     * @return True if success.
      */
     CoreLoginEmailSignupPage.prototype.treatSiteConfig = function (siteConfig) {
         if (siteConfig && siteConfig.registerauth == 'email' && !this.loginHelper.isEmailSignupDisabled(siteConfig)) {
@@ -222,7 +222,7 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Pull to refresh.
      *
-     * @param {any} refresher Refresher.
+     * @param refresher Refresher.
      */
     CoreLoginEmailSignupPage.prototype.refreshSettings = function (refresher) {
         this.fetchData().finally(function () {
@@ -232,7 +232,7 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Create account.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     CoreLoginEmailSignupPage.prototype.create = function (e) {
         var _this = this;
@@ -296,8 +296,8 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Escape mail to avoid special characters to be treated as a RegExp.
      *
-     * @param  {string} text Initial mail.
-     * @return {string}      Escaped mail.
+     * @param text Initial mail.
+     * @return Escaped mail.
      */
     CoreLoginEmailSignupPage.prototype.escapeMail = function (text) {
         return this.textUtils.escapeForRegex(text);
@@ -317,7 +317,7 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
     /**
      * Verify Age.
      *
-     * @param {Event} e Event.
+     * @param e Event.
      */
     CoreLoginEmailSignupPage.prototype.verifyAge = function (e) {
         var _this = this;
@@ -331,6 +331,9 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
         params.age = parseInt(params.age, 10); // Use just the integer part.
         this.wsProvider.callAjax('core_auth_is_minor', params, { siteUrl: this.siteUrl }).then(function (result) {
             if (!result.status) {
+                if (_this.countryControl.value) {
+                    _this.signUpCountryControl.setValue(_this.countryControl.value);
+                }
                 // Not a minor, go ahead!
                 _this.ageDigitalConsentVerification = false;
             }
@@ -364,16 +367,16 @@ var email_signup_CoreLoginEmailSignupPage = /** @class */ (function () {
 
 //# sourceMappingURL=email-signup.js.map
 // EXTERNAL MODULE: ./src/components/components.module.ts
-var components_module = __webpack_require__(29);
+var components_module = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(31);
+var directives_module = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/core/user/components/components.module.ts
-var components_components_module = __webpack_require__(482);
+var components_components_module = __webpack_require__(487);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.module.ts
-// (C) Copyright 2015 Martin Dougiamas
+// (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -421,253 +424,262 @@ var email_signup_module_CoreLoginCredentialsPageModule = /** @class */ (function
 
 //# sourceMappingURL=email-signup.module.js.map
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1471);
+var action_sheet_component_ngfactory = __webpack_require__(1524);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1472);
+var alert_component_ngfactory = __webpack_require__(1525);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1473);
+var app_root_ngfactory = __webpack_require__(1526);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1474);
+var loading_component_ngfactory = __webpack_require__(1527);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1475);
+var modal_component_ngfactory = __webpack_require__(1528);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1476);
+var picker_component_ngfactory = __webpack_require__(1529);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1477);
+var popover_component_ngfactory = __webpack_require__(1530);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1478);
+var select_popover_component_ngfactory = __webpack_require__(1531);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1479);
+var toast_component_ngfactory = __webpack_require__(1532);
 
 // EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1480);
+var context_menu_popover_ngfactory = __webpack_require__(1533);
 
 // EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1481);
+var course_picker_menu_popover_ngfactory = __webpack_require__(1534);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1482);
+var recaptchamodal_ngfactory = __webpack_require__(1535);
 
 // EXTERNAL MODULE: ./src/components/bs-tooltip/bs-tooltip.ngfactory.js
-var bs_tooltip_ngfactory = __webpack_require__(1483);
+var bs_tooltip_ngfactory = __webpack_require__(1536);
 
 // EXTERNAL MODULE: ./src/core/user/components/participants/participants.ngfactory.js
-var participants_ngfactory = __webpack_require__(1519);
+var participants_ngfactory = __webpack_require__(1571);
 
 // EXTERNAL MODULE: ./src/core/user/components/tag-area/tag-area.ngfactory.js
-var tag_area_ngfactory = __webpack_require__(1525);
+var tag_area_ngfactory = __webpack_require__(1580);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.ngfactory.js
-var button_ngfactory = __webpack_require__(44);
+var button_ngfactory = __webpack_require__(45);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
-var button_button = __webpack_require__(42);
+var button_button = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
-var config = __webpack_require__(7);
+var config = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(27);
+var translate_pipe = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(18);
+var translate_service = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
-var icon = __webpack_require__(46);
+var icon = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/option/option.js
-var option_option = __webpack_require__(102);
+var option_option = __webpack_require__(110);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.ngfactory.js + 1 modules
 var item_ngfactory = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item.js
-var item = __webpack_require__(21);
+var item = __webpack_require__(20);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/form.js
-var util_form = __webpack_require__(20);
+var util_form = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-reorder.js + 1 modules
-var item_reorder = __webpack_require__(28);
+var item_reorder = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-divider.js
-var item_divider = __webpack_require__(93);
+var item_divider = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/item/item-content.js
-var item_content = __webpack_require__(32);
+var item_content = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/components/mark-required/mark-required.ngfactory.js
-var mark_required_ngfactory = __webpack_require__(88);
+var mark_required_ngfactory = __webpack_require__(95);
 
 // EXTERNAL MODULE: ./src/components/mark-required/mark-required.ts
-var mark_required = __webpack_require__(80);
+var mark_required = __webpack_require__(85);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/label/label.js
-var label = __webpack_require__(63);
+var label = __webpack_require__(67);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.ngfactory.js
-var input_ngfactory = __webpack_require__(104);
+var input_ngfactory = __webpack_require__(112);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/input/input.js
-var input = __webpack_require__(84);
+var input = __webpack_require__(92);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
 var platform = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app = __webpack_require__(34);
+var app = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
-var content = __webpack_require__(26);
+var content = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
-var dom_controller = __webpack_require__(33);
+var dom_controller = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.ngfactory.js
-var select_ngfactory = __webpack_require__(120);
+var select_ngfactory = __webpack_require__(126);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select.js
-var select_select = __webpack_require__(103);
+var select_select = __webpack_require__(111);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
-var deep_linker = __webpack_require__(55);
+var deep_linker = __webpack_require__(59);
 
 // EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
-var common = __webpack_require__(8);
+var common = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./src/directives/format-text.ts
-var format_text = __webpack_require__(41);
+var format_text = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./src/providers/utils/url.ts
-var url = __webpack_require__(23);
+var url = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/providers/logger.ts
-var logger = __webpack_require__(5);
+var logger = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./src/providers/filepool.ts
-var filepool = __webpack_require__(17);
+var filepool = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/providers/app.ts
 var providers_app = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/core/contentlinks/providers/helper.ts
-var providers_helper = __webpack_require__(13);
+var providers_helper = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(19);
+var nav_controller = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(25);
+var split_view = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/providers/utils/iframe.ts
-var iframe = __webpack_require__(37);
+var iframe = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(11);
+var events = __webpack_require__(10);
+
+// EXTERNAL MODULE: ./src/core/filter/providers/filter.ts
+var filter = __webpack_require__(42);
+
+// EXTERNAL MODULE: ./src/core/filter/providers/helper.ts
+var filter_providers_helper = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./src/core/filter/providers/delegate.ts
+var delegate = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/components/input-errors/input-errors.ngfactory.js
-var input_errors_ngfactory = __webpack_require__(98);
+var input_errors_ngfactory = __webpack_require__(105);
 
 // EXTERNAL MODULE: ./src/components/input-errors/input-errors.ts
-var input_errors = __webpack_require__(89);
+var input_errors = __webpack_require__(96);
 
 // EXTERNAL MODULE: ./src/core/user/components/user-profile-field/user-profile-field.ngfactory.js
-var user_profile_field_ngfactory = __webpack_require__(2118);
+var user_profile_field_ngfactory = __webpack_require__(2177);
 
 // EXTERNAL MODULE: ./src/core/user/components/user-profile-field/user-profile-field.ts
-var user_profile_field = __webpack_require__(1509);
+var user_profile_field = __webpack_require__(1560);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ngfactory.js
-var recaptcha_ngfactory = __webpack_require__(2120);
+var recaptcha_ngfactory = __webpack_require__(2179);
 
 // EXTERNAL MODULE: ./src/components/recaptcha/recaptcha.ts
-var recaptcha = __webpack_require__(1507);
+var recaptcha = __webpack_require__(1558);
 
 // EXTERNAL MODULE: ./src/providers/lang.ts
-var lang = __webpack_require__(170);
+var lang = __webpack_require__(153);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(168);
+var modal_controller = __webpack_require__(164);
 
 // EXTERNAL MODULE: ./src/directives/link.ts
-var directives_link = __webpack_require__(182);
+var directives_link = __webpack_require__(177);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.ngfactory.js
-var checkbox_ngfactory = __webpack_require__(248);
+var checkbox_ngfactory = __webpack_require__(255);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/checkbox/checkbox.js
-var checkbox_checkbox = __webpack_require__(196);
+var checkbox_checkbox = __webpack_require__(202);
 
 // EXTERNAL MODULE: ./src/components/show-password/show-password.ngfactory.js
-var show_password_ngfactory = __webpack_require__(723);
+var show_password_ngfactory = __webpack_require__(741);
 
 // EXTERNAL MODULE: ./src/components/show-password/show-password.ts
-var show_password = __webpack_require__(373);
+var show_password = __webpack_require__(382);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ngfactory.js
-var loading_ngfactory = __webpack_require__(50);
+var loading_ngfactory = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/components/loading/loading.ts
-var loading = __webpack_require__(47);
+var loading = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/list/list.js + 1 modules
-var list = __webpack_require__(82);
+var list = __webpack_require__(89);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
-var gesture_controller = __webpack_require__(39);
+var gesture_controller = __webpack_require__(44);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(365);
+var toolbar_header = __webpack_require__(375);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
-var view_controller = __webpack_require__(38);
+var view_controller = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(713);
+var navbar_ngfactory = __webpack_require__(725);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(209);
+var navbar = __webpack_require__(214);
 
 // EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(471);
+var back_button = __webpack_require__(478);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(714);
+var toolbar_title_ngfactory = __webpack_require__(726);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(309);
+var toolbar_title = __webpack_require__(316);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(245);
+var toolbar = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(366);
+var toolbar_item = __webpack_require__(376);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
-var content_ngfactory = __webpack_require__(178);
+var content_ngfactory = __webpack_require__(185);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
-var keyboard = __webpack_require__(101);
+var keyboard = __webpack_require__(109);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher.js
-var refresher = __webpack_require__(151);
+var refresher = __webpack_require__(161);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.ngfactory.js
-var refresher_content_ngfactory = __webpack_require__(210);
+var refresher_content_ngfactory = __webpack_require__(215);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/components/refresher/refresher-content.js
-var refresher_content = __webpack_require__(167);
+var refresher_content = __webpack_require__(175);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(71);
+var nav_params = __webpack_require__(70);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.ngfactory.js
 /**
@@ -754,6 +766,9 @@ var nav_params = __webpack_require__(71);
 
 
 
+
+
+
 var styles_CoreLoginEmailSignupPage = [];
 var RenderType_CoreLoginEmailSignupPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreLoginEmailSignupPage, data: {} });
 
@@ -761,7 +776,7 @@ function View_CoreLoginEmailSignupPage_1(_l) { return core["_57" /* ɵvid */](0,
         var pd_0 = (_co.showAuthInstructions() !== false);
         ad = (pd_0 && ad);
     } return ad; }, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](1, 1097728, [[2, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n                "])), (_l()(), core["_31" /* ɵeld */](4, 0, null, 0, 1, "ion-icon", [["name", "help-circle"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_30" /* ɵdid */](5, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n            "]))], function (_ck, _v) { var currVal_2 = "help-circle"; _ck(_v, 5, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = core["_56" /* ɵunv */](_v, 0, 0, core["_44" /* ɵnov */](_v, 2).transform("core.login.instructions")); _ck(_v, 0, 0, currVal_0); var currVal_1 = core["_44" /* ɵnov */](_v, 5)._hidden; _ck(_v, 4, 0, currVal_1); }); }
-function View_CoreLoginEmailSignupPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-option", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[12, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.countries[_v.context.$implicit]; _ck(_v, 2, 0, currVal_1); }); }
+function View_CoreLoginEmailSignupPage_4(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-option", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[12, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit.code; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = _v.context.$implicit.name; _ck(_v, 2, 0, currVal_1); }); }
 function View_CoreLoginEmailSignupPage_3(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 99, "form", [["ion-list", ""], ["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "ngSubmit"], [null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("submit" === en)) {
         var pd_0 = (core["_44" /* ɵnov */](_v, 2).onSubmit($event) !== false);
         ad = (pd_0 && ad);
@@ -777,13 +792,13 @@ function View_CoreLoginEmailSignupPage_3(_l) { return core["_57" /* ɵvid */](0,
     } if (("keyup.space" === en)) {
         var pd_1 = (core["_44" /* ɵnov */](_v, 52)._keyup() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](52, 1228800, null, 1, select_select["a" /* Select */], [app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], { placeholder: [0, "placeholder"] }, null), core["_52" /* ɵqud */](603979776, 12, { options: 1 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](56, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](58, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](60, 0, null, null, 3, "ion-option", [["value", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](61, 16384, [[12, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](62, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_4)), core["_30" /* ɵdid */](66, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](71, 0, null, null, 11, "ion-item", [["class", "item item-block"], ["padding", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](72, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 13, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 14, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 15, { _icons: 1 }), core["_30" /* ɵdid */](76, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](78, 0, null, 2, 3, "button", [["block", ""], ["ion-button", ""], ["type", "submit"]], [[8, "disabled", 0]], null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](79, 1097728, [[14, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](80, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_31" /* ɵeld */](84, 0, null, null, 14, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](85, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 16, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 17, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 18, { _icons: 1 }), core["_30" /* ɵdid */](89, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](91, 0, null, 2, 2, "p", [["class", "item-heading"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](92, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](95, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](96, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.ageVerificationForm; _ck(_v, 2, 0, currVal_7); var currVal_9 = "true"; _ck(_v, 26, 0, currVal_9); var currVal_18 = "age"; _ck(_v, 32, 0, currVal_18); var currVal_19 = "number"; var currVal_20 = "off"; var currVal_21 = "0"; _ck(_v, 35, 0, currVal_19, currVal_20, currVal_21); var currVal_22 = "true"; _ck(_v, 46, 0, currVal_22); var currVal_32 = core["_56" /* ɵunv */](_v, 52, 0, core["_44" /* ɵnov */](_v, 54).transform("core.login.selectacountry")); _ck(_v, 52, 0, currVal_32); var currVal_33 = "country"; _ck(_v, 56, 0, currVal_33); var currVal_34 = ""; _ck(_v, 61, 0, currVal_34); var currVal_36 = _co.countriesKeys; _ck(_v, 66, 0, currVal_36); var currVal_38 = ""; _ck(_v, 79, 0, currVal_38); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 4).ngClassUntouched; var currVal_1 = core["_44" /* ɵnov */](_v, 4).ngClassTouched; var currVal_2 = core["_44" /* ɵnov */](_v, 4).ngClassPristine; var currVal_3 = core["_44" /* ɵnov */](_v, 4).ngClassDirty; var currVal_4 = core["_44" /* ɵnov */](_v, 4).ngClassValid; var currVal_5 = core["_44" /* ɵnov */](_v, 4).ngClassInvalid; var currVal_6 = core["_44" /* ɵnov */](_v, 4).ngClassPending; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_8 = core["_56" /* ɵunv */](_v, 14, 0, core["_44" /* ɵnov */](_v, 15).transform("core.agelocationverification")); _ck(_v, 14, 0, currVal_8); var currVal_10 = core["_56" /* ɵunv */](_v, 28, 0, core["_44" /* ɵnov */](_v, 29).transform("core.whatisyourage")); _ck(_v, 28, 0, currVal_10); var currVal_11 = core["_44" /* ɵnov */](_v, 34).ngClassUntouched; var currVal_12 = core["_44" /* ɵnov */](_v, 34).ngClassTouched; var currVal_13 = core["_44" /* ɵnov */](_v, 34).ngClassPristine; var currVal_14 = core["_44" /* ɵnov */](_v, 34).ngClassDirty; var currVal_15 = core["_44" /* ɵnov */](_v, 34).ngClassValid; var currVal_16 = core["_44" /* ɵnov */](_v, 34).ngClassInvalid; var currVal_17 = core["_44" /* ɵnov */](_v, 34).ngClassPending; _ck(_v, 31, 0, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17); var currVal_23 = core["_56" /* ɵunv */](_v, 48, 0, core["_44" /* ɵnov */](_v, 49).transform("core.wheredoyoulive")); _ck(_v, 48, 0, currVal_23); var currVal_24 = core["_44" /* ɵnov */](_v, 52)._disabled; var currVal_25 = core["_44" /* ɵnov */](_v, 58).ngClassUntouched; var currVal_26 = core["_44" /* ɵnov */](_v, 58).ngClassTouched; var currVal_27 = core["_44" /* ɵnov */](_v, 58).ngClassPristine; var currVal_28 = core["_44" /* ɵnov */](_v, 58).ngClassDirty; var currVal_29 = core["_44" /* ɵnov */](_v, 58).ngClassValid; var currVal_30 = core["_44" /* ɵnov */](_v, 58).ngClassInvalid; var currVal_31 = core["_44" /* ɵnov */](_v, 58).ngClassPending; _ck(_v, 51, 0, currVal_24, currVal_25, currVal_26, currVal_27, currVal_28, currVal_29, currVal_30, currVal_31); var currVal_35 = core["_56" /* ɵunv */](_v, 62, 0, core["_44" /* ɵnov */](_v, 63).transform("core.login.selectacountry")); _ck(_v, 62, 0, currVal_35); var currVal_37 = !_co.ageVerificationForm.valid; _ck(_v, 78, 0, currVal_37); var currVal_39 = core["_56" /* ɵunv */](_v, 80, 0, core["_44" /* ɵnov */](_v, 81).transform("core.proceed")); _ck(_v, 80, 0, currVal_39); var currVal_40 = core["_56" /* ɵunv */](_v, 92, 0, core["_44" /* ɵnov */](_v, 93).transform("core.whyisthisrequired")); _ck(_v, 92, 0, currVal_40); var currVal_41 = core["_56" /* ɵunv */](_v, 96, 0, core["_44" /* ɵnov */](_v, 97).transform("core.explanationdigitalminor")); _ck(_v, 96, 0, currVal_41); }); }
+    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](52, 1228800, null, 1, select_select["a" /* Select */], [app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], { placeholder: [0, "placeholder"] }, null), core["_52" /* ɵqud */](603979776, 12, { options: 1 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](56, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](58, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](60, 0, null, null, 3, "ion-option", [["value", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](61, 16384, [[12, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](62, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_4)), core["_30" /* ɵdid */](66, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](71, 0, null, null, 11, "ion-item", [["class", "item item-block"], ["padding", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](72, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 13, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 14, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 15, { _icons: 1 }), core["_30" /* ɵdid */](76, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](78, 0, null, 2, 3, "button", [["block", ""], ["ion-button", ""], ["type", "submit"]], [[8, "disabled", 0]], null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](79, 1097728, [[14, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { block: [0, "block"] }, null), (_l()(), core["_55" /* ɵted */](80, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_31" /* ɵeld */](84, 0, null, null, 14, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](85, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 16, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 17, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 18, { _icons: 1 }), core["_30" /* ɵdid */](89, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](91, 0, null, 2, 2, "p", [["class", "item-heading"]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](92, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](95, 0, null, 2, 2, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](96, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.ageVerificationForm; _ck(_v, 2, 0, currVal_7); var currVal_9 = "true"; _ck(_v, 26, 0, currVal_9); var currVal_18 = "age"; _ck(_v, 32, 0, currVal_18); var currVal_19 = "number"; var currVal_20 = "off"; var currVal_21 = "0"; _ck(_v, 35, 0, currVal_19, currVal_20, currVal_21); var currVal_22 = "true"; _ck(_v, 46, 0, currVal_22); var currVal_32 = core["_56" /* ɵunv */](_v, 52, 0, core["_44" /* ɵnov */](_v, 54).transform("core.login.selectacountry")); _ck(_v, 52, 0, currVal_32); var currVal_33 = "country"; _ck(_v, 56, 0, currVal_33); var currVal_34 = ""; _ck(_v, 61, 0, currVal_34); var currVal_36 = _co.countries; _ck(_v, 66, 0, currVal_36); var currVal_38 = ""; _ck(_v, 79, 0, currVal_38); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = core["_44" /* ɵnov */](_v, 4).ngClassUntouched; var currVal_1 = core["_44" /* ɵnov */](_v, 4).ngClassTouched; var currVal_2 = core["_44" /* ɵnov */](_v, 4).ngClassPristine; var currVal_3 = core["_44" /* ɵnov */](_v, 4).ngClassDirty; var currVal_4 = core["_44" /* ɵnov */](_v, 4).ngClassValid; var currVal_5 = core["_44" /* ɵnov */](_v, 4).ngClassInvalid; var currVal_6 = core["_44" /* ɵnov */](_v, 4).ngClassPending; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_8 = core["_56" /* ɵunv */](_v, 14, 0, core["_44" /* ɵnov */](_v, 15).transform("core.agelocationverification")); _ck(_v, 14, 0, currVal_8); var currVal_10 = core["_56" /* ɵunv */](_v, 28, 0, core["_44" /* ɵnov */](_v, 29).transform("core.whatisyourage")); _ck(_v, 28, 0, currVal_10); var currVal_11 = core["_44" /* ɵnov */](_v, 34).ngClassUntouched; var currVal_12 = core["_44" /* ɵnov */](_v, 34).ngClassTouched; var currVal_13 = core["_44" /* ɵnov */](_v, 34).ngClassPristine; var currVal_14 = core["_44" /* ɵnov */](_v, 34).ngClassDirty; var currVal_15 = core["_44" /* ɵnov */](_v, 34).ngClassValid; var currVal_16 = core["_44" /* ɵnov */](_v, 34).ngClassInvalid; var currVal_17 = core["_44" /* ɵnov */](_v, 34).ngClassPending; _ck(_v, 31, 0, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17); var currVal_23 = core["_56" /* ɵunv */](_v, 48, 0, core["_44" /* ɵnov */](_v, 49).transform("core.wheredoyoulive")); _ck(_v, 48, 0, currVal_23); var currVal_24 = core["_44" /* ɵnov */](_v, 52)._disabled; var currVal_25 = core["_44" /* ɵnov */](_v, 58).ngClassUntouched; var currVal_26 = core["_44" /* ɵnov */](_v, 58).ngClassTouched; var currVal_27 = core["_44" /* ɵnov */](_v, 58).ngClassPristine; var currVal_28 = core["_44" /* ɵnov */](_v, 58).ngClassDirty; var currVal_29 = core["_44" /* ɵnov */](_v, 58).ngClassValid; var currVal_30 = core["_44" /* ɵnov */](_v, 58).ngClassInvalid; var currVal_31 = core["_44" /* ɵnov */](_v, 58).ngClassPending; _ck(_v, 51, 0, currVal_24, currVal_25, currVal_26, currVal_27, currVal_28, currVal_29, currVal_30, currVal_31); var currVal_35 = core["_56" /* ɵunv */](_v, 62, 0, core["_44" /* ɵnov */](_v, 63).transform("core.login.selectacountry")); _ck(_v, 62, 0, currVal_35); var currVal_37 = !_co.ageVerificationForm.valid; _ck(_v, 78, 0, currVal_37); var currVal_39 = core["_56" /* ɵunv */](_v, 80, 0, core["_44" /* ɵnov */](_v, 81).transform("core.proceed")); _ck(_v, 80, 0, currVal_39); var currVal_40 = core["_56" /* ɵunv */](_v, 92, 0, core["_44" /* ɵnov */](_v, 93).transform("core.whyisthisrequired")); _ck(_v, 92, 0, currVal_40); var currVal_41 = core["_56" /* ɵunv */](_v, 96, 0, core["_44" /* ɵnov */](_v, 97).transform("core.explanationdigitalminor")); _ck(_v, 96, 0, currVal_41); }); }
 function View_CoreLoginEmailSignupPage_6(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "p", [["class", "item-heading"], ["padding", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.siteUrl; _ck(_v, 1, 0, currVal_0); }); }
-function View_CoreLoginEmailSignupPage_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [["class", "item-heading"], ["padding", ""]], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], providers_app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.siteName; _ck(_v, 2, 0, currVal_0); }, null); }
+function View_CoreLoginEmailSignupPage_7(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [["class", "item-heading"], ["padding", ""]], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 16777216, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], providers_app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */], filter["a" /* CoreFilterProvider */], filter_providers_helper["a" /* CoreFilterHelperProvider */], delegate["a" /* CoreFilterDelegate */], core["_11" /* ViewContainerRef */]], { text: [0, "text"], filter: [1, "filter"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.siteName; var currVal_1 = false; _ck(_v, 2, 0, currVal_0, currVal_1); }, null); }
 function View_CoreLoginEmailSignupPage_8(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.siteUrl; _ck(_v, 1, 0, currVal_0); }); }
 function View_CoreLoginEmailSignupPage_9(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "p", [["class", "core-input-footnote"], ["item-content", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["\n                    ", "\n                "]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.settings.passwordpolicy; _ck(_v, 1, 0, currVal_0); }); }
 function View_CoreLoginEmailSignupPage_10(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 22, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](1, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 40, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 41, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 42, { _icons: 1 }), core["_30" /* ɵdid */](5, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 1, 4, "ion-label", [["core-mark-required", "true"], ["stacked", ""]], null, null, null, mark_required_ngfactory["b" /* View_CoreMarkRequiredComponent_0 */], mark_required_ngfactory["a" /* RenderType_CoreMarkRequiredComponent */])), core["_30" /* ɵdid */](8, 4308992, null, 0, mark_required["a" /* CoreMarkRequiredComponent */], [core["t" /* ElementRef */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], utils_utils["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), core["_30" /* ɵdid */](9, 16384, [[40, 4]], 0, label["a" /* Label */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [8, null], [8, ""], [8, null], [8, null]], null, null), (_l()(), core["_55" /* ɵted */](10, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, 3, 5, "ion-input", [["autocorrect", "off"], ["name", "nameField"], ["type", "text"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], null, null, input_ngfactory["b" /* View_TextInput_0 */], input_ngfactory["a" /* RenderType_TextInput */])), core["_30" /* ɵdid */](14, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [8, null]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](16, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), core["_30" /* ɵdid */](17, 5423104, null, 0, input["a" /* TextInput */], [config["a" /* Config */], platform["a" /* Platform */], util_form["a" /* Form */], app["a" /* App */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, content["a" /* Content */]], [2, item["a" /* Item */]], [2, esm5_forms["m" /* NgControl */]], dom_controller["a" /* DomController */]], { type: [0, "type"], autocorrect: [1, "autocorrect"], placeholder: [2, "placeholder"] }, null), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 3, 1, "core-input-errors", [["item-content", ""]], null, null, null, input_errors_ngfactory["b" /* View_CoreInputErrorsComponent_0 */], input_errors_ngfactory["a" /* RenderType_CoreInputErrorsComponent */])), core["_30" /* ɵdid */](21, 638976, null, 0, input_errors["a" /* CoreInputErrorsComponent */], [translate_service["a" /* TranslateService */]], { formControl: [0, "formControl"], errorMessages: [1, "errorMessages"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = "true"; _ck(_v, 8, 0, currVal_0); var currVal_9 = core["_34" /* ɵinlineInterpolate */](1, "", _v.context.$implicit, ""); _ck(_v, 14, 0, currVal_9); var currVal_10 = "text"; var currVal_11 = "off"; var currVal_12 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 17, 2, core["_44" /* ɵnov */](_v, 18).transform(("core.user." + _v.context.$implicit))), ""); _ck(_v, 17, 0, currVal_10, currVal_11, currVal_12); var currVal_13 = _co.signupForm.controls[_v.context.$implicit]; var currVal_14 = _co.namefieldsErrors[_v.context.$implicit]; _ck(_v, 21, 0, currVal_13, currVal_14); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 11).transform(("core.user." + _v.context.$implicit))); _ck(_v, 10, 0, currVal_1); var currVal_2 = core["_44" /* ɵnov */](_v, 16).ngClassUntouched; var currVal_3 = core["_44" /* ɵnov */](_v, 16).ngClassTouched; var currVal_4 = core["_44" /* ɵnov */](_v, 16).ngClassPristine; var currVal_5 = core["_44" /* ɵnov */](_v, 16).ngClassDirty; var currVal_6 = core["_44" /* ɵnov */](_v, 16).ngClassValid; var currVal_7 = core["_44" /* ɵnov */](_v, 16).ngClassInvalid; var currVal_8 = core["_44" /* ɵnov */](_v, 16).ngClassPending; _ck(_v, 13, 0, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8); }); }
-function View_CoreLoginEmailSignupPage_11(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-option", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[49, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.countries[_v.context.$implicit]; _ck(_v, 2, 0, currVal_1); }); }
+function View_CoreLoginEmailSignupPage_11(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "ion-option", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, [[49, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var currVal_0 = _v.context.$implicit.code; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var currVal_1 = _v.context.$implicit.name; _ck(_v, 2, 0, currVal_1); }); }
 function View_CoreLoginEmailSignupPage_13(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "core-user-profile-field", [["edit", "true"], ["registerAuth", "email"], ["signup", "true"]], null, null, null, user_profile_field_ngfactory["b" /* View_CoreUserProfileFieldComponent_0 */], user_profile_field_ngfactory["a" /* RenderType_CoreUserProfileFieldComponent */])), core["_30" /* ɵdid */](1, 114688, null, 0, user_profile_field["a" /* CoreUserProfileFieldComponent */], [user_profile_field_delegate["a" /* CoreUserProfileFieldDelegate */], utils_utils["a" /* CoreUtilsProvider */], core["C" /* Injector */]], { field: [0, "field"], signup: [1, "signup"], edit: [2, "edit"], form: [3, "form"], registerAuth: [4, "registerAuth"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit; var currVal_1 = "true"; var currVal_2 = "true"; var currVal_3 = _co.signupForm; var currVal_4 = "email"; _ck(_v, 1, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4); }, null); }
 function View_CoreLoginEmailSignupPage_12(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 12, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 6, "ion-item-divider", [["class", "item item-divider"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](3, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 50, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 51, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 52, { _icons: 1 }), core["_30" /* ɵdid */](7, 16384, null, 0, item_divider["a" /* ItemDivider */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_55" /* ɵted */](8, 2, ["", ""])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_13)), core["_30" /* ɵdid */](11, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], function (_ck, _v) { var currVal_1 = _v.context.$implicit.fields; _ck(_v, 11, 0, currVal_1); }, function (_ck, _v) { var currVal_0 = _v.context.$implicit.name; _ck(_v, 8, 0, currVal_0); }); }
 function View_CoreLoginEmailSignupPage_14(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 23, null, null, null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 9, "ion-item-divider", [["class", "item item-divider"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](3, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 53, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 54, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 55, { _icons: 1 }), core["_30" /* ɵdid */](7, 16384, null, 0, item_divider["a" /* ItemDivider */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), (_l()(), core["_31" /* ɵeld */](8, 0, null, 2, 3, "span", [], null, null, null, mark_required_ngfactory["b" /* View_CoreMarkRequiredComponent_0 */], mark_required_ngfactory["a" /* RenderType_CoreMarkRequiredComponent */])), core["_30" /* ɵdid */](9, 4308992, null, 0, mark_required["a" /* CoreMarkRequiredComponent */], [core["t" /* ElementRef */], translate_service["a" /* TranslateService */], utils_text["a" /* CoreTextUtilsProvider */], utils_utils["a" /* CoreUtilsProvider */]], { coreMarkRequired: [0, "coreMarkRequired"] }, null), (_l()(), core["_55" /* ɵted */](10, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](13, 0, null, null, 9, "ion-item", [["class", "item item-block"], ["text-wrap", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](14, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 56, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 57, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 58, { _icons: 1 }), core["_30" /* ɵdid */](18, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](20, 0, null, 2, 1, "core-recaptcha", [], null, null, null, recaptcha_ngfactory["b" /* View_CoreRecaptchaComponent_0 */], recaptcha_ngfactory["a" /* RenderType_CoreRecaptchaComponent */])), core["_30" /* ɵdid */](21, 114688, null, 0, recaptcha["a" /* CoreRecaptchaComponent */], [sites["a" /* CoreSitesProvider */], lang["a" /* CoreLangProvider */], utils_text["a" /* CoreTextUtilsProvider */], modal_controller["a" /* ModalController */]], { model: [0, "model"], publicKey: [1, "publicKey"], siteUrl: [2, "siteUrl"] }, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = true; _ck(_v, 9, 0, currVal_0); var currVal_2 = _co.captcha; var currVal_3 = _co.settings.recaptchapublickey; var currVal_4 = _co.siteUrl; _ck(_v, 21, 0, currVal_2, currVal_3, currVal_4); }, function (_ck, _v) { var currVal_1 = core["_56" /* ɵunv */](_v, 10, 0, core["_44" /* ɵnov */](_v, 11).transform("core.login.security_question")); _ck(_v, 10, 0, currVal_1); }); }
@@ -806,9 +821,9 @@ function View_CoreLoginEmailSignupPage_5(_l) { return core["_57" /* ɵvid */](0,
     } if (("keyup.space" === en)) {
         var pd_1 = (core["_44" /* ɵnov */](_v, 186)._keyup() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](186, 1228800, null, 1, select_select["a" /* Select */], [app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], { placeholder: [0, "placeholder"] }, null), core["_52" /* ɵqud */](603979776, 49, { options: 1 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](190, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](192, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](194, 0, null, null, 3, "ion-option", [["value", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](195, 16384, [[49, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](196, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_11)), core["_30" /* ɵdid */](200, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_12)), core["_30" /* ɵdid */](206, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_14)), core["_30" /* ɵdid */](210, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_15)), core["_30" /* ɵdid */](214, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](217, 0, null, null, 11, "ion-item", [["class", "item item-block"], ["padding", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](218, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 68, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 69, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 70, { _icons: 1 }), core["_30" /* ɵdid */](222, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](224, 0, null, 2, 3, "button", [["block", ""], ["color", "primary"], ["ion-button", ""], ["type", "submit"]], null, null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](225, 1097728, [[69, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](226, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.signupForm; _ck(_v, 2, 0, currVal_7); var currVal_8 = !_co.siteName; _ck(_v, 15, 0, currVal_8); var currVal_9 = _co.siteName; _ck(_v, 19, 0, currVal_9); var currVal_10 = _co.siteName; _ck(_v, 22, 0, currVal_10); var currVal_12 = "true"; _ck(_v, 43, 0, currVal_12); var currVal_21 = "username"; _ck(_v, 49, 0, currVal_21); var currVal_22 = "text"; var currVal_23 = "off"; var currVal_24 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 52, 2, core["_44" /* ɵnov */](_v, 53).transform("core.login.username")), ""); _ck(_v, 52, 0, currVal_22, currVal_23, currVal_24); var currVal_25 = _co.signupForm.controls.username; var currVal_26 = _co.usernameErrors; _ck(_v, 56, 0, currVal_25, currVal_26); var currVal_27 = "true"; _ck(_v, 67, 0, currVal_27); var currVal_29 = "password"; _ck(_v, 73, 0, currVal_29); var currVal_37 = "password"; _ck(_v, 76, 0, currVal_37); var currVal_38 = "password"; var currVal_39 = false; var currVal_40 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 79, 2, core["_44" /* ɵnov */](_v, 80).transform("core.login.password")), ""); _ck(_v, 79, 0, currVal_38, currVal_39, currVal_40); var currVal_41 = _co.settings.passwordpolicy; _ck(_v, 84, 0, currVal_41); var currVal_42 = _co.signupForm.controls.password; var currVal_43 = _co.passwordErrors; _ck(_v, 87, 0, currVal_42, currVal_43); var currVal_45 = "true"; _ck(_v, 108, 0, currVal_45); var currVal_54 = "email"; _ck(_v, 114, 0, currVal_54); var currVal_55 = "email"; var currVal_56 = "off"; var currVal_57 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 117, 2, core["_44" /* ɵnov */](_v, 118).transform("core.user.email")), ""); _ck(_v, 117, 0, currVal_55, currVal_56, currVal_57); var currVal_58 = _co.signupForm.controls.email; var currVal_59 = _co.emailErrors; _ck(_v, 121, 0, currVal_58, currVal_59); var currVal_60 = "true"; _ck(_v, 132, 0, currVal_60); var currVal_70 = _co.escapeMail(_co.signupForm.controls.email.value); _ck(_v, 138, 0, currVal_70); var currVal_71 = "email2"; _ck(_v, 140, 0, currVal_71); var currVal_72 = "email"; var currVal_73 = "off"; var currVal_74 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 143, 2, core["_44" /* ɵnov */](_v, 144).transform("core.user.emailagain")), ""); _ck(_v, 143, 0, currVal_72, currVal_73, currVal_74); var currVal_75 = _co.signupForm.controls.email2; var currVal_76 = _co.email2Errors; _ck(_v, 147, 0, currVal_75, currVal_76); var currVal_77 = _co.settings.namefields; _ck(_v, 151, 0, currVal_77); var currVal_86 = "city"; _ck(_v, 166, 0, currVal_86); var currVal_87 = "text"; var currVal_88 = "off"; var currVal_89 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 169, 2, core["_44" /* ɵnov */](_v, 170).transform("core.user.city")), ""); _ck(_v, 169, 0, currVal_87, currVal_88, currVal_89); var currVal_90 = "core-login-signup-country"; _ck(_v, 181, 0, currVal_90); var currVal_100 = core["_56" /* ɵunv */](_v, 186, 0, core["_44" /* ɵnov */](_v, 188).transform("core.login.selectacountry")); _ck(_v, 186, 0, currVal_100); var currVal_101 = "country"; _ck(_v, 190, 0, currVal_101); var currVal_102 = ""; _ck(_v, 195, 0, currVal_102); var currVal_104 = _co.countriesKeys; _ck(_v, 200, 0, currVal_104); var currVal_105 = _co.categories; _ck(_v, 206, 0, currVal_105); var currVal_106 = _co.settings.recaptchapublickey; _ck(_v, 210, 0, currVal_106); var currVal_107 = _co.settings.sitepolicy; _ck(_v, 214, 0, currVal_107); var currVal_108 = "primary"; var currVal_109 = ""; _ck(_v, 225, 0, currVal_108, currVal_109); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4).ngClassUntouched; var currVal_1 = core["_44" /* ɵnov */](_v, 4).ngClassTouched; var currVal_2 = core["_44" /* ɵnov */](_v, 4).ngClassPristine; var currVal_3 = core["_44" /* ɵnov */](_v, 4).ngClassDirty; var currVal_4 = core["_44" /* ɵnov */](_v, 4).ngClassValid; var currVal_5 = core["_44" /* ɵnov */](_v, 4).ngClassInvalid; var currVal_6 = core["_44" /* ɵnov */](_v, 4).ngClassPending; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_11 = core["_56" /* ɵunv */](_v, 32, 0, core["_44" /* ɵnov */](_v, 33).transform("core.login.createuserandpass")); _ck(_v, 32, 0, currVal_11); var currVal_13 = core["_56" /* ɵunv */](_v, 45, 0, core["_44" /* ɵnov */](_v, 46).transform("core.login.username")); _ck(_v, 45, 0, currVal_13); var currVal_14 = core["_44" /* ɵnov */](_v, 51).ngClassUntouched; var currVal_15 = core["_44" /* ɵnov */](_v, 51).ngClassTouched; var currVal_16 = core["_44" /* ɵnov */](_v, 51).ngClassPristine; var currVal_17 = core["_44" /* ɵnov */](_v, 51).ngClassDirty; var currVal_18 = core["_44" /* ɵnov */](_v, 51).ngClassValid; var currVal_19 = core["_44" /* ɵnov */](_v, 51).ngClassInvalid; var currVal_20 = core["_44" /* ɵnov */](_v, 51).ngClassPending; _ck(_v, 48, 0, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18, currVal_19, currVal_20); var currVal_28 = core["_56" /* ɵunv */](_v, 69, 0, core["_44" /* ɵnov */](_v, 70).transform("core.login.password")); _ck(_v, 69, 0, currVal_28); var currVal_30 = core["_44" /* ɵnov */](_v, 78).ngClassUntouched; var currVal_31 = core["_44" /* ɵnov */](_v, 78).ngClassTouched; var currVal_32 = core["_44" /* ɵnov */](_v, 78).ngClassPristine; var currVal_33 = core["_44" /* ɵnov */](_v, 78).ngClassDirty; var currVal_34 = core["_44" /* ɵnov */](_v, 78).ngClassValid; var currVal_35 = core["_44" /* ɵnov */](_v, 78).ngClassInvalid; var currVal_36 = core["_44" /* ɵnov */](_v, 78).ngClassPending; _ck(_v, 75, 0, currVal_30, currVal_31, currVal_32, currVal_33, currVal_34, currVal_35, currVal_36); var currVal_44 = core["_56" /* ɵunv */](_v, 97, 0, core["_44" /* ɵnov */](_v, 98).transform("core.login.supplyinfo")); _ck(_v, 97, 0, currVal_44); var currVal_46 = core["_56" /* ɵunv */](_v, 110, 0, core["_44" /* ɵnov */](_v, 111).transform("core.user.email")); _ck(_v, 110, 0, currVal_46); var currVal_47 = core["_44" /* ɵnov */](_v, 116).ngClassUntouched; var currVal_48 = core["_44" /* ɵnov */](_v, 116).ngClassTouched; var currVal_49 = core["_44" /* ɵnov */](_v, 116).ngClassPristine; var currVal_50 = core["_44" /* ɵnov */](_v, 116).ngClassDirty; var currVal_51 = core["_44" /* ɵnov */](_v, 116).ngClassValid; var currVal_52 = core["_44" /* ɵnov */](_v, 116).ngClassInvalid; var currVal_53 = core["_44" /* ɵnov */](_v, 116).ngClassPending; _ck(_v, 113, 0, currVal_47, currVal_48, currVal_49, currVal_50, currVal_51, currVal_52, currVal_53); var currVal_61 = core["_56" /* ɵunv */](_v, 134, 0, core["_44" /* ɵnov */](_v, 135).transform("core.user.emailagain")); _ck(_v, 134, 0, currVal_61); var currVal_62 = (core["_44" /* ɵnov */](_v, 138).pattern ? core["_44" /* ɵnov */](_v, 138).pattern : null); var currVal_63 = core["_44" /* ɵnov */](_v, 142).ngClassUntouched; var currVal_64 = core["_44" /* ɵnov */](_v, 142).ngClassTouched; var currVal_65 = core["_44" /* ɵnov */](_v, 142).ngClassPristine; var currVal_66 = core["_44" /* ɵnov */](_v, 142).ngClassDirty; var currVal_67 = core["_44" /* ɵnov */](_v, 142).ngClassValid; var currVal_68 = core["_44" /* ɵnov */](_v, 142).ngClassInvalid; var currVal_69 = core["_44" /* ɵnov */](_v, 142).ngClassPending; _ck(_v, 137, 0, currVal_62, currVal_63, currVal_64, currVal_65, currVal_66, currVal_67, currVal_68, currVal_69); var currVal_78 = core["_56" /* ɵunv */](_v, 162, 0, core["_44" /* ɵnov */](_v, 163).transform("core.user.city")); _ck(_v, 162, 0, currVal_78); var currVal_79 = core["_44" /* ɵnov */](_v, 168).ngClassUntouched; var currVal_80 = core["_44" /* ɵnov */](_v, 168).ngClassTouched; var currVal_81 = core["_44" /* ɵnov */](_v, 168).ngClassPristine; var currVal_82 = core["_44" /* ɵnov */](_v, 168).ngClassDirty; var currVal_83 = core["_44" /* ɵnov */](_v, 168).ngClassValid; var currVal_84 = core["_44" /* ɵnov */](_v, 168).ngClassInvalid; var currVal_85 = core["_44" /* ɵnov */](_v, 168).ngClassPending; _ck(_v, 165, 0, currVal_79, currVal_80, currVal_81, currVal_82, currVal_83, currVal_84, currVal_85); var currVal_91 = core["_56" /* ɵunv */](_v, 182, 0, core["_44" /* ɵnov */](_v, 183).transform("core.user.country")); _ck(_v, 182, 0, currVal_91); var currVal_92 = core["_44" /* ɵnov */](_v, 186)._disabled; var currVal_93 = core["_44" /* ɵnov */](_v, 192).ngClassUntouched; var currVal_94 = core["_44" /* ɵnov */](_v, 192).ngClassTouched; var currVal_95 = core["_44" /* ɵnov */](_v, 192).ngClassPristine; var currVal_96 = core["_44" /* ɵnov */](_v, 192).ngClassDirty; var currVal_97 = core["_44" /* ɵnov */](_v, 192).ngClassValid; var currVal_98 = core["_44" /* ɵnov */](_v, 192).ngClassInvalid; var currVal_99 = core["_44" /* ɵnov */](_v, 192).ngClassPending; _ck(_v, 185, 0, currVal_92, currVal_93, currVal_94, currVal_95, currVal_96, currVal_97, currVal_98, currVal_99); var currVal_103 = core["_56" /* ɵunv */](_v, 196, 0, core["_44" /* ɵnov */](_v, 197).transform("core.login.selectacountry")); _ck(_v, 196, 0, currVal_103); var currVal_110 = core["_56" /* ɵunv */](_v, 226, 0, core["_44" /* ɵnov */](_v, 227).transform("core.login.createaccount")); _ck(_v, 226, 0, currVal_110); }); }
+    } return ad; }, select_ngfactory["b" /* View_Select_0 */], select_ngfactory["a" /* RenderType_Select */])), core["_30" /* ɵdid */](186, 1228800, null, 1, select_select["a" /* Select */], [app["a" /* App */], util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item["a" /* Item */]], deep_linker["a" /* DeepLinker */]], { placeholder: [0, "placeholder"] }, null), core["_52" /* ɵqud */](603979776, 49, { options: 1 }), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), core["_50" /* ɵprd */](1024, null, esm5_forms["l" /* NG_VALUE_ACCESSOR */], function (p0_0) { return [p0_0]; }, [select_select["a" /* Select */]]), core["_30" /* ɵdid */](190, 671744, null, 0, esm5_forms["f" /* FormControlName */], [[3, esm5_forms["b" /* ControlContainer */]], [8, null], [8, null], [2, esm5_forms["l" /* NG_VALUE_ACCESSOR */]]], { name: [0, "name"] }, null), core["_50" /* ɵprd */](2048, null, esm5_forms["m" /* NgControl */], null, [esm5_forms["f" /* FormControlName */]]), core["_30" /* ɵdid */](192, 16384, null, 0, esm5_forms["n" /* NgControlStatus */], [esm5_forms["m" /* NgControl */]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_31" /* ɵeld */](194, 0, null, null, 3, "ion-option", [["value", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](195, 16384, [[49, 4]], 0, option_option["a" /* Option */], [core["t" /* ElementRef */]], { value: [0, "value"] }, null), (_l()(), core["_55" /* ɵted */](196, null, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                    "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_11)), core["_30" /* ɵdid */](200, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_12)), core["_30" /* ɵdid */](206, 802816, null, 0, common["j" /* NgForOf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */], core["E" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_14)), core["_30" /* ɵdid */](210, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_26" /* ɵand */](16777216, null, null, 1, null, View_CoreLoginEmailSignupPage_15)), core["_30" /* ɵdid */](214, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n            "])), (_l()(), core["_31" /* ɵeld */](217, 0, null, null, 11, "ion-item", [["class", "item item-block"], ["padding", ""]], null, null, null, item_ngfactory["b" /* View_Item_0 */], item_ngfactory["a" /* RenderType_Item */])), core["_30" /* ɵdid */](218, 1097728, null, 3, item["a" /* Item */], [util_form["a" /* Form */], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, item_reorder["a" /* ItemReorder */]]], null, null), core["_52" /* ɵqud */](335544320, 68, { contentLabel: 0 }), core["_52" /* ɵqud */](603979776, 69, { _buttons: 1 }), core["_52" /* ɵqud */](603979776, 70, { _icons: 1 }), core["_30" /* ɵdid */](222, 16384, null, 0, item_content["a" /* ItemContent */], [], null, null), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n                "])), (_l()(), core["_31" /* ɵeld */](224, 0, null, 2, 3, "button", [["block", ""], ["color", "primary"], ["ion-button", ""], ["type", "submit"]], null, null, null, button_ngfactory["b" /* View_Button_0 */], button_ngfactory["a" /* RenderType_Button */])), core["_30" /* ɵdid */](225, 1097728, [[69, 4]], 0, button_button["a" /* Button */], [[8, ""], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], { color: [0, "color"], block: [1, "block"] }, null), (_l()(), core["_55" /* ɵted */](226, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 2, ["\n            "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n        "]))], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.signupForm; _ck(_v, 2, 0, currVal_7); var currVal_8 = !_co.siteName; _ck(_v, 15, 0, currVal_8); var currVal_9 = _co.siteName; _ck(_v, 19, 0, currVal_9); var currVal_10 = _co.siteName; _ck(_v, 22, 0, currVal_10); var currVal_12 = "true"; _ck(_v, 43, 0, currVal_12); var currVal_21 = "username"; _ck(_v, 49, 0, currVal_21); var currVal_22 = "text"; var currVal_23 = "off"; var currVal_24 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 52, 2, core["_44" /* ɵnov */](_v, 53).transform("core.login.username")), ""); _ck(_v, 52, 0, currVal_22, currVal_23, currVal_24); var currVal_25 = _co.signupForm.controls.username; var currVal_26 = _co.usernameErrors; _ck(_v, 56, 0, currVal_25, currVal_26); var currVal_27 = "true"; _ck(_v, 67, 0, currVal_27); var currVal_29 = "password"; _ck(_v, 73, 0, currVal_29); var currVal_37 = "password"; _ck(_v, 76, 0, currVal_37); var currVal_38 = "password"; var currVal_39 = false; var currVal_40 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 79, 2, core["_44" /* ɵnov */](_v, 80).transform("core.login.password")), ""); _ck(_v, 79, 0, currVal_38, currVal_39, currVal_40); var currVal_41 = _co.settings.passwordpolicy; _ck(_v, 84, 0, currVal_41); var currVal_42 = _co.signupForm.controls.password; var currVal_43 = _co.passwordErrors; _ck(_v, 87, 0, currVal_42, currVal_43); var currVal_45 = "true"; _ck(_v, 108, 0, currVal_45); var currVal_54 = "email"; _ck(_v, 114, 0, currVal_54); var currVal_55 = "email"; var currVal_56 = "off"; var currVal_57 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 117, 2, core["_44" /* ɵnov */](_v, 118).transform("core.user.email")), ""); _ck(_v, 117, 0, currVal_55, currVal_56, currVal_57); var currVal_58 = _co.signupForm.controls.email; var currVal_59 = _co.emailErrors; _ck(_v, 121, 0, currVal_58, currVal_59); var currVal_60 = "true"; _ck(_v, 132, 0, currVal_60); var currVal_70 = _co.escapeMail(_co.signupForm.controls.email.value); _ck(_v, 138, 0, currVal_70); var currVal_71 = "email2"; _ck(_v, 140, 0, currVal_71); var currVal_72 = "email"; var currVal_73 = "off"; var currVal_74 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 143, 2, core["_44" /* ɵnov */](_v, 144).transform("core.user.emailagain")), ""); _ck(_v, 143, 0, currVal_72, currVal_73, currVal_74); var currVal_75 = _co.signupForm.controls.email2; var currVal_76 = _co.email2Errors; _ck(_v, 147, 0, currVal_75, currVal_76); var currVal_77 = _co.settings.namefields; _ck(_v, 151, 0, currVal_77); var currVal_86 = "city"; _ck(_v, 166, 0, currVal_86); var currVal_87 = "text"; var currVal_88 = "off"; var currVal_89 = core["_34" /* ɵinlineInterpolate */](1, "", core["_56" /* ɵunv */](_v, 169, 2, core["_44" /* ɵnov */](_v, 170).transform("core.user.city")), ""); _ck(_v, 169, 0, currVal_87, currVal_88, currVal_89); var currVal_90 = "core-login-signup-country"; _ck(_v, 181, 0, currVal_90); var currVal_100 = core["_56" /* ɵunv */](_v, 186, 0, core["_44" /* ɵnov */](_v, 188).transform("core.login.selectacountry")); _ck(_v, 186, 0, currVal_100); var currVal_101 = "country"; _ck(_v, 190, 0, currVal_101); var currVal_102 = ""; _ck(_v, 195, 0, currVal_102); var currVal_104 = _co.countries; _ck(_v, 200, 0, currVal_104); var currVal_105 = _co.categories; _ck(_v, 206, 0, currVal_105); var currVal_106 = _co.settings.recaptchapublickey; _ck(_v, 210, 0, currVal_106); var currVal_107 = _co.settings.sitepolicy; _ck(_v, 214, 0, currVal_107); var currVal_108 = "primary"; var currVal_109 = ""; _ck(_v, 225, 0, currVal_108, currVal_109); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4).ngClassUntouched; var currVal_1 = core["_44" /* ɵnov */](_v, 4).ngClassTouched; var currVal_2 = core["_44" /* ɵnov */](_v, 4).ngClassPristine; var currVal_3 = core["_44" /* ɵnov */](_v, 4).ngClassDirty; var currVal_4 = core["_44" /* ɵnov */](_v, 4).ngClassValid; var currVal_5 = core["_44" /* ɵnov */](_v, 4).ngClassInvalid; var currVal_6 = core["_44" /* ɵnov */](_v, 4).ngClassPending; _ck(_v, 0, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_11 = core["_56" /* ɵunv */](_v, 32, 0, core["_44" /* ɵnov */](_v, 33).transform("core.login.createuserandpass")); _ck(_v, 32, 0, currVal_11); var currVal_13 = core["_56" /* ɵunv */](_v, 45, 0, core["_44" /* ɵnov */](_v, 46).transform("core.login.username")); _ck(_v, 45, 0, currVal_13); var currVal_14 = core["_44" /* ɵnov */](_v, 51).ngClassUntouched; var currVal_15 = core["_44" /* ɵnov */](_v, 51).ngClassTouched; var currVal_16 = core["_44" /* ɵnov */](_v, 51).ngClassPristine; var currVal_17 = core["_44" /* ɵnov */](_v, 51).ngClassDirty; var currVal_18 = core["_44" /* ɵnov */](_v, 51).ngClassValid; var currVal_19 = core["_44" /* ɵnov */](_v, 51).ngClassInvalid; var currVal_20 = core["_44" /* ɵnov */](_v, 51).ngClassPending; _ck(_v, 48, 0, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18, currVal_19, currVal_20); var currVal_28 = core["_56" /* ɵunv */](_v, 69, 0, core["_44" /* ɵnov */](_v, 70).transform("core.login.password")); _ck(_v, 69, 0, currVal_28); var currVal_30 = core["_44" /* ɵnov */](_v, 78).ngClassUntouched; var currVal_31 = core["_44" /* ɵnov */](_v, 78).ngClassTouched; var currVal_32 = core["_44" /* ɵnov */](_v, 78).ngClassPristine; var currVal_33 = core["_44" /* ɵnov */](_v, 78).ngClassDirty; var currVal_34 = core["_44" /* ɵnov */](_v, 78).ngClassValid; var currVal_35 = core["_44" /* ɵnov */](_v, 78).ngClassInvalid; var currVal_36 = core["_44" /* ɵnov */](_v, 78).ngClassPending; _ck(_v, 75, 0, currVal_30, currVal_31, currVal_32, currVal_33, currVal_34, currVal_35, currVal_36); var currVal_44 = core["_56" /* ɵunv */](_v, 97, 0, core["_44" /* ɵnov */](_v, 98).transform("core.login.supplyinfo")); _ck(_v, 97, 0, currVal_44); var currVal_46 = core["_56" /* ɵunv */](_v, 110, 0, core["_44" /* ɵnov */](_v, 111).transform("core.user.email")); _ck(_v, 110, 0, currVal_46); var currVal_47 = core["_44" /* ɵnov */](_v, 116).ngClassUntouched; var currVal_48 = core["_44" /* ɵnov */](_v, 116).ngClassTouched; var currVal_49 = core["_44" /* ɵnov */](_v, 116).ngClassPristine; var currVal_50 = core["_44" /* ɵnov */](_v, 116).ngClassDirty; var currVal_51 = core["_44" /* ɵnov */](_v, 116).ngClassValid; var currVal_52 = core["_44" /* ɵnov */](_v, 116).ngClassInvalid; var currVal_53 = core["_44" /* ɵnov */](_v, 116).ngClassPending; _ck(_v, 113, 0, currVal_47, currVal_48, currVal_49, currVal_50, currVal_51, currVal_52, currVal_53); var currVal_61 = core["_56" /* ɵunv */](_v, 134, 0, core["_44" /* ɵnov */](_v, 135).transform("core.user.emailagain")); _ck(_v, 134, 0, currVal_61); var currVal_62 = (core["_44" /* ɵnov */](_v, 138).pattern ? core["_44" /* ɵnov */](_v, 138).pattern : null); var currVal_63 = core["_44" /* ɵnov */](_v, 142).ngClassUntouched; var currVal_64 = core["_44" /* ɵnov */](_v, 142).ngClassTouched; var currVal_65 = core["_44" /* ɵnov */](_v, 142).ngClassPristine; var currVal_66 = core["_44" /* ɵnov */](_v, 142).ngClassDirty; var currVal_67 = core["_44" /* ɵnov */](_v, 142).ngClassValid; var currVal_68 = core["_44" /* ɵnov */](_v, 142).ngClassInvalid; var currVal_69 = core["_44" /* ɵnov */](_v, 142).ngClassPending; _ck(_v, 137, 0, currVal_62, currVal_63, currVal_64, currVal_65, currVal_66, currVal_67, currVal_68, currVal_69); var currVal_78 = core["_56" /* ɵunv */](_v, 162, 0, core["_44" /* ɵnov */](_v, 163).transform("core.user.city")); _ck(_v, 162, 0, currVal_78); var currVal_79 = core["_44" /* ɵnov */](_v, 168).ngClassUntouched; var currVal_80 = core["_44" /* ɵnov */](_v, 168).ngClassTouched; var currVal_81 = core["_44" /* ɵnov */](_v, 168).ngClassPristine; var currVal_82 = core["_44" /* ɵnov */](_v, 168).ngClassDirty; var currVal_83 = core["_44" /* ɵnov */](_v, 168).ngClassValid; var currVal_84 = core["_44" /* ɵnov */](_v, 168).ngClassInvalid; var currVal_85 = core["_44" /* ɵnov */](_v, 168).ngClassPending; _ck(_v, 165, 0, currVal_79, currVal_80, currVal_81, currVal_82, currVal_83, currVal_84, currVal_85); var currVal_91 = core["_56" /* ɵunv */](_v, 182, 0, core["_44" /* ɵnov */](_v, 183).transform("core.user.country")); _ck(_v, 182, 0, currVal_91); var currVal_92 = core["_44" /* ɵnov */](_v, 186)._disabled; var currVal_93 = core["_44" /* ɵnov */](_v, 192).ngClassUntouched; var currVal_94 = core["_44" /* ɵnov */](_v, 192).ngClassTouched; var currVal_95 = core["_44" /* ɵnov */](_v, 192).ngClassPristine; var currVal_96 = core["_44" /* ɵnov */](_v, 192).ngClassDirty; var currVal_97 = core["_44" /* ɵnov */](_v, 192).ngClassValid; var currVal_98 = core["_44" /* ɵnov */](_v, 192).ngClassInvalid; var currVal_99 = core["_44" /* ɵnov */](_v, 192).ngClassPending; _ck(_v, 185, 0, currVal_92, currVal_93, currVal_94, currVal_95, currVal_96, currVal_97, currVal_98, currVal_99); var currVal_103 = core["_56" /* ɵunv */](_v, 196, 0, core["_44" /* ɵnov */](_v, 197).transform("core.login.selectacountry")); _ck(_v, 196, 0, currVal_103); var currVal_110 = core["_56" /* ɵunv */](_v, 226, 0, core["_44" /* ɵnov */](_v, 227).transform("core.login.createaccount")); _ck(_v, 226, 0, currVal_110); }); }
 function View_CoreLoginEmailSignupPage_2(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 10, "core-loading", [], null, null, null, loading_ngfactory["b" /* View_CoreLoadingComponent_0 */], loading_ngfactory["a" /* RenderType_CoreLoadingComponent */])), core["_30" /* ɵdid */](1, 638976, null, 0, loading["a" /* CoreLoadingComponent */], [translate_service["a" /* TranslateService */], core["t" /* ElementRef */], events["a" /* CoreEventsProvider */], utils_utils["a" /* CoreUtilsProvider */]], { hideUntil: [0, "hideUntil"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreLoginEmailSignupPage_3)), core["_30" /* ɵdid */](5, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n\n        "])), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n        "])), (_l()(), core["_26" /* ɵand */](16777216, null, 0, 1, null, View_CoreLoginEmailSignupPage_5)), core["_30" /* ɵdid */](9, 16384, null, 0, common["k" /* NgIf */], [core["_11" /* ViewContainerRef */], core["_6" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_55" /* ɵted */](-1, 0, ["\n    "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.settingsLoaded; _ck(_v, 1, 0, currVal_0); var currVal_1 = ((_co.settingsLoaded && _co.settings) && _co.ageDigitalConsentVerification); _ck(_v, 5, 0, currVal_1); var currVal_2 = ((_co.settingsLoaded && _co.settings) && !_co.ageDigitalConsentVerification); _ck(_v, 9, 0, currVal_2); }, null); }
-function View_CoreLoginEmailSignupPage_17(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [["class", "item-heading padding"]], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 0, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], providers_app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */]], { text: [0, "text"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.siteName; _ck(_v, 2, 0, currVal_0); }, null); }
+function View_CoreLoginEmailSignupPage_17(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 2, "p", [["class", "item-heading padding"]], null, null, null, null, null)), (_l()(), core["_31" /* ɵeld */](1, 16777216, null, null, 1, "core-format-text", [], null, null, null, null, null)), core["_30" /* ɵdid */](2, 540672, null, 0, format_text["a" /* CoreFormatTextDirective */], [core["t" /* ElementRef */], sites["a" /* CoreSitesProvider */], dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], translate_service["a" /* TranslateService */], platform["a" /* Platform */], utils_utils["a" /* CoreUtilsProvider */], url["a" /* CoreUrlUtilsProvider */], logger["a" /* CoreLoggerProvider */], filepool["a" /* CoreFilepoolProvider */], providers_app["a" /* CoreAppProvider */], providers_helper["a" /* CoreContentLinksHelperProvider */], [2, nav_controller["a" /* NavController */]], [2, content["a" /* Content */]], [2, split_view["a" /* CoreSplitViewComponent */]], iframe["a" /* CoreIframeUtilsProvider */], events["a" /* CoreEventsProvider */], filter["a" /* CoreFilterProvider */], filter_providers_helper["a" /* CoreFilterHelperProvider */], delegate["a" /* CoreFilterDelegate */], core["_11" /* ViewContainerRef */]], { text: [0, "text"], filter: [1, "filter"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.siteName; var currVal_1 = false; _ck(_v, 2, 0, currVal_0, currVal_1); }, null); }
 function View_CoreLoginEmailSignupPage_18(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.supportName; _ck(_v, 1, 0, currVal_0); }); }
 function View_CoreLoginEmailSignupPage_19(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](1, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.supportEmail; _ck(_v, 1, 0, currVal_0); }); }
 function View_CoreLoginEmailSignupPage_20(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 6, "div", [["padding", ""]], null, null, null, null, null)), (_l()(), core["_55" /* ɵted */](-1, null, ["\n                "])), (_l()(), core["_31" /* ɵeld */](2, 0, null, null, 3, "button", [["block", ""], ["ion-button", ""]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
@@ -825,28 +840,28 @@ var CoreLoginEmailSignupPageNgFactory = core["_27" /* ɵccf */]("page-core-login
 
 //# sourceMappingURL=email-signup.ngfactory.js.map
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(361);
+var translate_loader = __webpack_require__(371);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(362);
+var translate_compiler = __webpack_require__(372);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(364);
+var translate_parser = __webpack_require__(374);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(363);
+var missing_translation_handler = __webpack_require__(373);
 
 // EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(470);
+var translate_store = __webpack_require__(477);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(712);
+var ionic_angular_module = __webpack_require__(724);
 
 // EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(109);
+var pipes_module = __webpack_require__(108);
 
 // EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(269);
+var module_loader = __webpack_require__(274);
 
 // CONCATENATED MODULE: ./src/core/login/pages/email-signup/email-signup.module.ngfactory.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginCredentialsPageModuleNgFactory", function() { return CoreLoginCredentialsPageModuleNgFactory; });
@@ -896,7 +911,7 @@ var CoreLoginCredentialsPageModuleNgFactory = core["_28" /* ɵcmf */](email_sign
 
 /***/ }),
 
-/***/ 2118:
+/***/ 2177:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -905,13 +920,13 @@ var CoreLoginCredentialsPageModuleNgFactory = core["_28" /* ɵcmf */](email_sign
 /* unused harmony export View_CoreUserProfileFieldComponent_Host_0 */
 /* unused harmony export CoreUserProfileFieldComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(715);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__ = __webpack_require__(727);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_logger__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_profile_field__ = __webpack_require__(1509);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_user_profile_field_delegate__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__user_profile_field__ = __webpack_require__(1560);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_user_profile_field_delegate__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_utils_utils__ = __webpack_require__(2);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
@@ -933,13 +948,13 @@ var RenderType_CoreUserProfileFieldComponent = __WEBPACK_IMPORTED_MODULE_0__angu
 
 function View_CoreUserProfileFieldComponent_0(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 1, "core-dynamic-component", [], null, null, null, __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__["b" /* View_CoreDynamicComponent_0 */], __WEBPACK_IMPORTED_MODULE_1__components_dynamic_component_dynamic_component_ngfactory__["a" /* RenderType_CoreDynamicComponent */])), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 901120, null, 0, __WEBPACK_IMPORTED_MODULE_2__components_dynamic_component_dynamic_component__["a" /* CoreDynamicComponent */], [__WEBPACK_IMPORTED_MODULE_3__providers_logger__["a" /* CoreLoggerProvider */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* ComponentFactoryResolver */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* KeyValueDiffers */], [2, __WEBPACK_IMPORTED_MODULE_4_ionic_angular_navigation_nav_controller__["a" /* NavController */]], __WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* ChangeDetectorRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_dom__["a" /* CoreDomUtilsProvider */]], { component: [0, "component"], data: [1, "data"] }, null), (_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.componentClass; var currVal_1 = _co.data; _ck(_v, 1, 0, currVal_0, currVal_1); }, null); }
 function View_CoreUserProfileFieldComponent_Host_0(_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_57" /* ɵvid */](0, [(_l()(), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_31" /* ɵeld */](0, 0, null, null, 1, "core-user-profile-field", [], null, null, null, View_CoreUserProfileFieldComponent_0, RenderType_CoreUserProfileFieldComponent)), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_30" /* ɵdid */](1, 114688, null, 0, __WEBPACK_IMPORTED_MODULE_6__user_profile_field__["a" /* CoreUserProfileFieldComponent */], [__WEBPACK_IMPORTED_MODULE_7__providers_user_profile_field_delegate__["a" /* CoreUserProfileFieldDelegate */], __WEBPACK_IMPORTED_MODULE_8__providers_utils_utils__["a" /* CoreUtilsProvider */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injector */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
-var CoreUserProfileFieldComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf */]("core-user-profile-field", __WEBPACK_IMPORTED_MODULE_6__user_profile_field__["a" /* CoreUserProfileFieldComponent */], View_CoreUserProfileFieldComponent_Host_0, { field: "field", signup: "signup", edit: "edit", form: "form", registerAuth: "registerAuth" }, {}, []);
+var CoreUserProfileFieldComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵccf */]("core-user-profile-field", __WEBPACK_IMPORTED_MODULE_6__user_profile_field__["a" /* CoreUserProfileFieldComponent */], View_CoreUserProfileFieldComponent_Host_0, { field: "field", signup: "signup", edit: "edit", form: "form", registerAuth: "registerAuth", contextLevel: "contextLevel", contextInstanceId: "contextInstanceId", courseId: "courseId" }, {}, []);
 
 //# sourceMappingURL=user-profile-field.ngfactory.js.map
 
 /***/ }),
 
-/***/ 2120:
+/***/ 2179:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -948,18 +963,18 @@ var CoreUserProfileFieldComponentNgFactory = __WEBPACK_IMPORTED_MODULE_0__angula
 /* unused harmony export View_CoreRecaptchaComponent_Host_0 */
 /* unused harmony export CoreRecaptchaComponentNgFactory */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_components_button_button_ngfactory__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_components_button_button__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_config_config__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core_src_translate_pipe__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core_src_translate_service__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_icon_icon__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__recaptcha__ = __webpack_require__(1507);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_ionic_angular_components_button_button_ngfactory__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular_components_button_button__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_config_config__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ngx_translate_core_src_translate_pipe__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ionic_angular_components_icon_icon__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__recaptcha__ = __webpack_require__(1558);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_sites__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_lang__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_utils_text__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_lang__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_utils_text__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ionic_angular_components_modal_modal_controller__ = __webpack_require__(164);
 /**
  * @fileoverview This file was generated by the Angular template compiler. Do not edit.
  *
