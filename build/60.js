@@ -1,27 +1,84 @@
 webpackJsonp([60],{
 
-/***/ 2091:
+/***/ 2120:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotificationsSettingsPageModule", function() { return AddonNotificationsSettingsPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__settings__ = __webpack_require__(2269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+// (C) Copyright 2015 Moodle Pty Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
-// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
-var core = __webpack_require__(0);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
-var ionic_angular = __webpack_require__(5);
 
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(3);
 
-// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(32);
 
-// EXTERNAL MODULE: ./src/providers/sites.ts
-var sites = __webpack_require__(1);
 
-// CONCATENATED MODULE: ./src/core/grades/pages/course/course.ts
+var AddonNotificationsSettingsPageModule = /** @class */ (function () {
+    function AddonNotificationsSettingsPageModule() {
+    }
+    AddonNotificationsSettingsPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonNotificationsSettingsPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__settings__["a" /* AddonNotificationsSettingsPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], AddonNotificationsSettingsPageModule);
+    return AddonNotificationsSettingsPageModule;
+}());
+
+//# sourceMappingURL=settings.module.js.map
+
+/***/ }),
+
+/***/ 2269:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonNotificationsSettingsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_notifications__ = __webpack_require__(181);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_user_providers_user__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_settings_providers_helper__ = __webpack_require__(994);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__addon_messageoutput_providers_delegate__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_config__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__providers_app__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__core_constants__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_events__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_sites__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__ = __webpack_require__(83);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -44,50 +101,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
-/**
- * Page that displays a course grades.
- */
-var course_CoreGradesCoursePage = /** @class */ (function () {
-    function CoreGradesCoursePage(navParams, sitesProvider) {
-        this.courseId = navParams.get('courseId');
-        this.userId = navParams.get('userId') || sitesProvider.getCurrentSiteUserId();
-    }
-    CoreGradesCoursePage = __decorate([
-        Object(core["m" /* Component */])({
-            selector: 'page-core-grades-course',
-            templateUrl: 'course.html',
-        }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */], sites["a" /* CoreSitesProvider */]])
-    ], CoreGradesCoursePage);
-    return CoreGradesCoursePage;
-}());
-
-//# sourceMappingURL=course.js.map
-// EXTERNAL MODULE: ./src/core/grades/components/components.module.ts
-var components_module = __webpack_require__(743);
-
-// CONCATENATED MODULE: ./src/core/grades/pages/course/course.module.ts
-// (C) Copyright 2015 Moodle Pty Ltd.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var course_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
 };
 
 
@@ -95,252 +110,247 @@ var course_module___decorate = (this && this.__decorate) || function (decorators
 
 
 
-var course_module_CoreGradesCoursePageModule = /** @class */ (function () {
-    function CoreGradesCoursePageModule() {
+
+
+
+
+
+
+
+
+/**
+ * Page that displays notifications settings.
+ */
+var AddonNotificationsSettingsPage = /** @class */ (function () {
+    function AddonNotificationsSettingsPage(notificationsProvider, domUtils, settingsHelper, userProvider, navCtrl, messageOutputDelegate, appProvider, configProvider, eventsProvider, localNotificationsProvider, sitesProvider, svComponent) {
+        var _this = this;
+        this.notificationsProvider = notificationsProvider;
+        this.domUtils = domUtils;
+        this.settingsHelper = settingsHelper;
+        this.userProvider = userProvider;
+        this.navCtrl = navCtrl;
+        this.messageOutputDelegate = messageOutputDelegate;
+        this.configProvider = configProvider;
+        this.eventsProvider = eventsProvider;
+        this.localNotificationsProvider = localNotificationsProvider;
+        this.sitesProvider = sitesProvider;
+        this.svComponent = svComponent;
+        this.processorHandlers = [];
+        this.notifPrefsEnabled = notificationsProvider.isNotificationPreferencesEnabled();
+        this.canChangeSound = localNotificationsProvider.canDisableSound();
+        if (this.canChangeSound) {
+            configProvider.get(__WEBPACK_IMPORTED_MODULE_10__core_constants__["a" /* CoreConstants */].SETTINGS_NOTIFICATION_SOUND, true).then(function (enabled) {
+                _this.notificationSound = !!enabled;
+            });
+        }
     }
-    CoreGradesCoursePageModule = course_module___decorate([
-        Object(core["I" /* NgModule */])({
-            declarations: [
-                course_CoreGradesCoursePage
-            ],
-            imports: [
-                directives_module["a" /* CoreDirectivesModule */],
-                components_module["a" /* CoreGradesComponentsModule */],
-                ionic_angular["l" /* IonicPageModule */].forChild(course_CoreGradesCoursePage),
-                _ngx_translate_core["b" /* TranslateModule */].forChild()
-            ],
-        })
-    ], CoreGradesCoursePageModule);
-    return CoreGradesCoursePageModule;
+    /**
+     * View loaded.
+     */
+    AddonNotificationsSettingsPage.prototype.ionViewDidLoad = function () {
+        if (this.notifPrefsEnabled) {
+            this.fetchPreferences();
+        }
+        else {
+            this.preferencesLoaded = true;
+        }
+    };
+    /**
+     * Fetches preference data.
+     *
+     * @return Resolved when done.
+     */
+    AddonNotificationsSettingsPage.prototype.fetchPreferences = function () {
+        var _this = this;
+        return this.notificationsProvider.getNotificationPreferences().then(function (preferences) {
+            if (!_this.currentProcessor) {
+                // Initialize current processor. Load "Mobile" (airnotifier) if available.
+                _this.currentProcessor = _this.settingsHelper.getProcessor(preferences.processors, 'airnotifier');
+            }
+            if (!_this.currentProcessor) {
+                // Shouldn't happen.
+                return Promise.reject('No processor found');
+            }
+            preferences.enableall = !preferences.disableall;
+            _this.preferences = preferences;
+            _this.loadProcessor(_this.currentProcessor);
+            // Get display data of message output handlers (thery are displayed in the context menu),
+            _this.processorHandlers = [];
+            if (preferences.processors) {
+                preferences.processors.forEach(function (processor) {
+                    processor.supported = _this.messageOutputDelegate.hasHandler(processor.name, true);
+                    if (processor.hassettings && processor.supported) {
+                        _this.processorHandlers.push(_this.messageOutputDelegate.getDisplayData(processor));
+                    }
+                });
+            }
+        }).catch(function (message) {
+            _this.domUtils.showErrorModal(message);
+        }).finally(function () {
+            _this.preferencesLoaded = true;
+        });
+    };
+    /**
+     * Load a processor.
+     *
+     * @param processor Processor object.
+     */
+    AddonNotificationsSettingsPage.prototype.loadProcessor = function (processor) {
+        if (!processor) {
+            return;
+        }
+        this.currentProcessor = processor;
+        this.components = this.settingsHelper.getProcessorComponents(processor.name, this.preferences.components);
+    };
+    /**
+     * Update preferences after a certain time. The purpose is to store the updated data, it won't be reflected in the view.
+     */
+    AddonNotificationsSettingsPage.prototype.updatePreferencesAfterDelay = function () {
+        var _this = this;
+        // Cancel pending updates.
+        clearTimeout(this.updateTimeout);
+        this.updateTimeout = setTimeout(function () {
+            _this.updateTimeout = null;
+            _this.updatePreferences();
+        }, 5000);
+    };
+    /**
+     * Update preferences. The purpose is to store the updated data, it won't be reflected in the view.
+     */
+    AddonNotificationsSettingsPage.prototype.updatePreferences = function () {
+        var _this = this;
+        this.notificationsProvider.invalidateNotificationPreferences().finally(function () {
+            _this.notificationsProvider.getNotificationPreferences();
+        });
+    };
+    /**
+     * The selected processor was changed.
+     *
+     * @param name Name of the selected processor.
+     */
+    AddonNotificationsSettingsPage.prototype.changeProcessor = function (name) {
+        var _this = this;
+        this.preferences.processors.forEach(function (processor) {
+            if (processor.name == name) {
+                _this.loadProcessor(processor);
+            }
+        });
+    };
+    /**
+     * Refresh the list of preferences.
+     *
+     * @param refresher Refresher.
+     */
+    AddonNotificationsSettingsPage.prototype.refreshPreferences = function (refresher) {
+        var _this = this;
+        this.notificationsProvider.invalidateNotificationPreferences().finally(function () {
+            _this.fetchPreferences().finally(function () {
+                refresher && refresher.complete();
+            });
+        });
+    };
+    /**
+     * Open extra preferences.
+     *
+     * @param handlerData
+     */
+    AddonNotificationsSettingsPage.prototype.openExtraPreferences = function (handlerData) {
+        // Decide which navCtrl to use. If this page is inside a split view, use the split view's master nav.
+        var navCtrl = this.svComponent ? this.svComponent.getMasterNav() : this.navCtrl;
+        navCtrl.push(handlerData.page, handlerData.pageParams);
+    };
+    /**
+     * Change the value of a certain preference.
+     *
+     * @param notification Notification object.
+     * @param state State name, ['loggedin', 'loggedoff'].
+     */
+    AddonNotificationsSettingsPage.prototype.changePreference = function (notification, state) {
+        var _this = this;
+        var processorState = notification.currentProcessor[state];
+        var preferenceName = notification.preferencekey + '_' + processorState.name;
+        var value;
+        notification.processors.forEach(function (processor) {
+            if (processor[state].checked) {
+                if (!value) {
+                    value = processor.name;
+                }
+                else {
+                    value += ',' + processor.name;
+                }
+            }
+        });
+        if (!value) {
+            value = 'none';
+        }
+        processorState.updating = true;
+        this.userProvider.updateUserPreference(preferenceName, value).then(function () {
+            // Update the preferences since they were modified.
+            _this.updatePreferencesAfterDelay();
+        }).catch(function (message) {
+            // Show error and revert change.
+            _this.domUtils.showErrorModal(message);
+            notification.currentProcessor[state].checked = !notification.currentProcessor[state].checked;
+        }).finally(function () {
+            processorState.updating = false;
+        });
+    };
+    /**
+     * Enable all notifications changed.
+     */
+    AddonNotificationsSettingsPage.prototype.enableAll = function (enable) {
+        var _this = this;
+        var modal = this.domUtils.showModalLoading('core.sending', true);
+        this.userProvider.updateUserPreferences([], !enable).then(function () {
+            // Update the preferences since they were modified.
+            _this.updatePreferencesAfterDelay();
+        }).catch(function (message) {
+            // Show error and revert change.
+            _this.domUtils.showErrorModal(message);
+            _this.preferences.enableall = !_this.preferences.enableall;
+        }).finally(function () {
+            modal.dismiss();
+        });
+    };
+    /**
+     * Change the notification sound setting.
+     *
+     * @param enabled True to enable the notification sound, false to disable it.
+     */
+    AddonNotificationsSettingsPage.prototype.changeNotificationSound = function (enabled) {
+        var _this = this;
+        this.configProvider.set(__WEBPACK_IMPORTED_MODULE_10__core_constants__["a" /* CoreConstants */].SETTINGS_NOTIFICATION_SOUND, enabled ? 1 : 0).finally(function () {
+            var siteId = _this.sitesProvider.getCurrentSiteId();
+            _this.eventsProvider.trigger(__WEBPACK_IMPORTED_MODULE_11__providers_events__["a" /* CoreEventsProvider */].NOTIFICATION_SOUND_CHANGED, { enabled: enabled }, siteId);
+            _this.localNotificationsProvider.rescheduleAll();
+        });
+    };
+    /**
+     * Page destroyed.
+     */
+    AddonNotificationsSettingsPage.prototype.ngOnDestroy = function () {
+        // If there is a pending action to update preferences, execute it right now.
+        if (this.updateTimeout) {
+            clearTimeout(this.updateTimeout);
+            this.updatePreferences();
+        }
+    };
+    AddonNotificationsSettingsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-addon-notifications-settings',template:/*ion-inline-start:"/home/travis/build/moodlehq/moodlemobile2/src/addon/notifications/pages/settings/settings.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.notifications.notificationpreferences\' | translate }}</ion-title>\n        <ion-buttons end>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-navbar-buttons>\n    <core-context-menu *ngIf="processorHandlers.length > 0">\n        <core-context-menu-item *ngFor="let handler of processorHandlers" [priority]="handler.priority" [content]="handler.label | translate" (action)="openExtraPreferences(handler)" [iconAction]="handler.icon"></core-context-menu-item>\n    </core-context-menu>\n</core-navbar-buttons>\n<ion-content>\n    <ion-refresher [enabled]="preferencesLoaded && notifPrefsEnabled" (ionRefresh)="refreshPreferences($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="preferencesLoaded">\n        <!-- If notification preferences aren\'t enabled, show only the notification sound setting. -->\n        <ion-item *ngIf="canChangeSound && !notifPrefsEnabled">\n            <ion-label>{{ \'addon.notifications.playsound\' | translate }}</ion-label>\n            <ion-toggle [(ngModel)]="notificationSound" (ionChange)="changeNotificationSound(notificationSound)"></ion-toggle>\n        </ion-item>\n\n        <ng-container *ngIf="notifPrefsEnabled">\n            <ion-card>\n                <ion-item text-wrap *ngIf="preferences">\n                    <ion-label>{{ \'addon.notifications.notifications\' | translate }}</ion-label>\n                    <ion-toggle [(ngModel)]="preferences.enableall" (ionChange)="enableAll(preferences.enableall)"></ion-toggle>\n                </ion-item>\n                <ion-item text-wrap *ngIf="canChangeSound">\n                    <ion-label>{{ \'addon.notifications.playsound\' | translate }}</ion-label>\n                    <ion-toggle [(ngModel)]="notificationSound" (ionChange)="changeNotificationSound(notificationSound)"></ion-toggle>\n                </ion-item>\n            </ion-card>\n\n            <!-- Show processor selector. -->\n            <div padding class="safe-padding-horizontal">\n                <ion-select *ngIf="preferences && preferences.processors && preferences.processors.length > 0" [ngModel]="currentProcessor.name" (ngModelChange)="changeProcessor($event)" interface="action-sheet" class="core-button-select">\n                    <ion-option *ngFor="let processor of preferences.processors" [value]="processor.name">{{ processor.displayname }}</ion-option>\n                </ion-select>\n            </div>\n\n            <ion-card list *ngFor="let component of components">\n                <ion-item-divider text-wrap>\n                    <ion-row no-padding>\n                        <ion-col no-padding>{{ component.displayname }}</ion-col>\n                        <ion-col col-2 text-center no-padding class="hidden-phone">{{ \'core.settings.loggedin\' | translate }}</ion-col>\n                        <ion-col col-2 text-center no-padding class="hidden-phone">{{ \'core.settings.loggedoff\' | translate }}</ion-col>\n                    </ion-row>\n                </ion-item-divider>\n                <ng-container *ngFor="let notification of component.notifications">\n                    <!-- Tablet view -->\n                    <ion-row text-wrap class="hidden-phone" align-items-center>\n                        <ion-col margin-horizontal>{{ notification.displayname }}</ion-col>\n                        <ion-col col-2 text-center *ngFor="let state of [\'loggedin\', \'loggedoff\']">\n                            <!-- If notifications enabled, show toggle. -->\n                            <ion-spinner [hidden]="!preferences.enableall || !(notification.currentProcessor[state] && notification.currentProcessor[state].updating)"></ion-spinner>\n                            <ion-toggle *ngIf="preferences.enableall && !notification.currentProcessor.locked" [(ngModel)]="notification.currentProcessor[state].checked" (ionChange)="changePreference(notification, state)" [disabled]="notification.currentProcessor[state].updating">\n                            </ion-toggle>\n                            <div padding class="text-gray" *ngIf="preferences.enableall && notification.currentProcessor.locked">{{\'core.settings.locked\' | translate }}</div>\n                            <!-- If notifications are disabled, show "Disabled" instead of toggle. -->\n                            <span *ngIf="!preferences.enableall">{{ \'core.settings.disabled\' | translate }}</span>\n                        </ion-col>\n                    </ion-row>\n                    <!-- Phone view -->\n                    <ion-list-header text-wrap no-margin class="hidden-tablet">{{ notification.displayname }}</ion-list-header>\n                    <!-- If notifications enabled, show toggles. If notifications are disabled, show "Disabled" instead of toggle. -->\n                    <ion-item *ngFor="let state of [\'loggedin\', \'loggedoff\']" text-wrap class="hidden-tablet">\n                        <ion-label>{{ \'core.settings.\' + state | translate }}</ion-label>\n                        <ion-spinner item-end *ngIf="preferences.enableall && (notification.currentProcessor[state] && notification.currentProcessor[state].updating)"></ion-spinner>\n                        <ion-toggle item-end *ngIf="preferences.enableall && !notification.currentProcessor.locked" [(ngModel)]="notification.currentProcessor[state].checked" (ionChange)="changePreference(notification, state)" [disabled]="notification.currentProcessor[state].updating">\n                        </ion-toggle>\n                        <ion-note item-end *ngIf="preferences.enableall && notification.currentProcessor.locked">{{\'core.settings.locked\' | translate }}</ion-note>\n                        <ion-note item-end *ngIf="!preferences.enableall">{{ \'core.settings.disabled\' | translate }}</ion-note>\n                    </ion-item>\n                </ng-container>\n            </ion-card>\n        </ng-container>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"/home/travis/build/moodlehq/moodlemobile2/src/addon/notifications/pages/settings/settings.html"*/,
+        }),
+        __param(11, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* Optional */])()),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_notifications__["a" /* AddonNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_dom__["a" /* CoreDomUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_5__core_settings_providers_helper__["a" /* CoreSettingsHelper */], __WEBPACK_IMPORTED_MODULE_3__core_user_providers_user__["a" /* CoreUserProvider */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__addon_messageoutput_providers_delegate__["a" /* AddonMessageOutputDelegate */],
+            __WEBPACK_IMPORTED_MODULE_9__providers_app__["a" /* CoreAppProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_config__["a" /* CoreConfigProvider */], __WEBPACK_IMPORTED_MODULE_11__providers_events__["a" /* CoreEventsProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_local_notifications__["a" /* CoreLocalNotificationsProvider */], __WEBPACK_IMPORTED_MODULE_12__providers_sites__["a" /* CoreSitesProvider */],
+            __WEBPACK_IMPORTED_MODULE_13__components_split_view_split_view__["a" /* CoreSplitViewComponent */]])
+    ], AddonNotificationsSettingsPage);
+    return AddonNotificationsSettingsPage;
 }());
 
-//# sourceMappingURL=course.module.js.map
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1524);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1525);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1526);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1527);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1528);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1529);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1530);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1531);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1532);
-
-// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1533);
-
-// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1534);
-
-// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1535);
-
-// EXTERNAL MODULE: ./src/components/bs-tooltip/bs-tooltip.ngfactory.js
-var bs_tooltip_ngfactory = __webpack_require__(1536);
-
-// EXTERNAL MODULE: ./src/core/grades/components/course/course.ngfactory.js
-var course_ngfactory = __webpack_require__(1570);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(375);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
-var config = __webpack_require__(8);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
-var view_controller = __webpack_require__(39);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(725);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(214);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app = __webpack_require__(35);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(21);
-
-// EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(478);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(16);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
-
-// EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(10);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(726);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(316);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(251);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(25);
-
-// EXTERNAL MODULE: ./src/core/grades/components/course/course.ts
-var course = __webpack_require__(504);
-
-// EXTERNAL MODULE: ./src/core/grades/providers/grades.ts
-var grades = __webpack_require__(171);
-
-// EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(70);
-
-// EXTERNAL MODULE: ./src/core/grades/providers/helper.ts
-var helper = __webpack_require__(176);
-
-// EXTERNAL MODULE: ./src/providers/app.ts
-var providers_app = __webpack_require__(9);
-
-// EXTERNAL MODULE: ./src/components/split-view/split-view.ts
-var split_view = __webpack_require__(27);
-
-// CONCATENATED MODULE: ./src/core/grades/pages/course/course.ngfactory.js
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var styles_CoreGradesCoursePage = [];
-var RenderType_CoreGradesCoursePage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_CoreGradesCoursePage, data: {} });
-
-function View_CoreGradesCoursePage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 12, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 8, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](9, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](14, 0, null, null, 1, "core-grades-course", [["class", "core-avoid-header"]], null, null, null, course_ngfactory["c" /* View_CoreGradesCourseComponent_0 */], course_ngfactory["b" /* RenderType_CoreGradesCourseComponent */])), core["_30" /* ɵdid */](15, 114688, null, 0, course["a" /* CoreGradesCourseComponent */], [grades["a" /* CoreGradesProvider */], dom["a" /* CoreDomUtilsProvider */], nav_params["a" /* NavParams */], helper["a" /* CoreGradesHelperProvider */], [2, nav_controller["a" /* NavController */]], providers_app["a" /* CoreAppProvider */], [2, split_view["a" /* CoreSplitViewComponent */]]], { courseId: [0, "courseId"], userId: [1, "userId"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_3 = _co.courseId; var currVal_4 = _co.userId; _ck(_v, 15, 0, currVal_3, currVal_4); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("core.grades.grades")); _ck(_v, 9, 0, currVal_2); }); }
-function View_CoreGradesCoursePage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-core-grades-course", [], null, null, null, View_CoreGradesCoursePage_0, RenderType_CoreGradesCoursePage)), core["_30" /* ɵdid */](1, 49152, null, 0, course_CoreGradesCoursePage, [nav_params["a" /* NavParams */], sites["a" /* CoreSitesProvider */]], null, null)], null, null); }
-var CoreGradesCoursePageNgFactory = core["_27" /* ɵccf */]("page-core-grades-course", course_CoreGradesCoursePage, View_CoreGradesCoursePage_Host_0, {}, {}, []);
-
-//# sourceMappingURL=course.ngfactory.js.map
-// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
-var common = __webpack_require__(7);
-
-// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(23);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(371);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(372);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(374);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(373);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(477);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(724);
-
-// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(108);
-
-// EXTERNAL MODULE: ./src/components/components.module.ts
-var components_components_module = __webpack_require__(28);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(274);
-
-// CONCATENATED MODULE: ./src/core/grades/pages/course/course.module.ngfactory.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreGradesCoursePageModuleNgFactory", function() { return CoreGradesCoursePageModuleNgFactory; });
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var CoreGradesCoursePageModuleNgFactory = core["_28" /* ɵcmf */](course_module_CoreGradesCoursePageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], bs_tooltip_ngfactory["a" /* CoreBSTooltipComponentNgFactory */], course_ngfactory["a" /* CoreGradesCourseComponentNgFactory */], CoreGradesCoursePageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["w" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_components_module["a" /* CoreComponentsModule */], components_components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* CoreGradesComponentsModule */], components_module["a" /* CoreGradesComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, course_module_CoreGradesCoursePageModule, course_module_CoreGradesCoursePageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], course_CoreGradesCoursePage, [])]); });
-
-//# sourceMappingURL=course.module.ngfactory.js.map
+//# sourceMappingURL=settings.js.map
 
 /***/ })
 

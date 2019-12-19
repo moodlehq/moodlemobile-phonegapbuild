@@ -1,70 +1,128 @@
 webpackJsonp([47],{
 
-/***/ 2103:
+/***/ 2070:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreLoginSitesPageModuleNgFactory", function() { return CoreLoginSitesPageModuleNgFactory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoreCoursesMyCoursesPageModule", function() { return CoreCoursesMyCoursesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sites_module__ = __webpack_require__(780);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__node_modules_ionic_angular_components_action_sheet_action_sheet_component_ngfactory__ = __webpack_require__(1524);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__node_modules_ionic_angular_components_alert_alert_component_ngfactory__ = __webpack_require__(1525);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__node_modules_ionic_angular_components_app_app_root_ngfactory__ = __webpack_require__(1526);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__node_modules_ionic_angular_components_loading_loading_component_ngfactory__ = __webpack_require__(1527);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__node_modules_ionic_angular_components_modal_modal_component_ngfactory__ = __webpack_require__(1528);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__node_modules_ionic_angular_components_picker_picker_component_ngfactory__ = __webpack_require__(1529);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__node_modules_ionic_angular_components_popover_popover_component_ngfactory__ = __webpack_require__(1530);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__node_modules_ionic_angular_components_select_select_popover_component_ngfactory__ = __webpack_require__(1531);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_toast_toast_component_ngfactory__ = __webpack_require__(1532);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__sites_ngfactory__ = __webpack_require__(1624);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_forms__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ngx_translate_core_src_translate_loader__ = __webpack_require__(371);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ngx_translate_core_src_translate_compiler__ = __webpack_require__(372);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ngx_translate_core_src_translate_parser__ = __webpack_require__(374);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ngx_translate_core_src_missing_translation_handler__ = __webpack_require__(373);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ngx_translate_core_src_translate_service__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ngx_translate_core_src_translate_store__ = __webpack_require__(477);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__directives_directives_module__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ionic_angular_module__ = __webpack_require__(724);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ngx_translate_core_index__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23_ionic_angular_util_module_loader__ = __webpack_require__(274);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__sites__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__my_courses__ = __webpack_require__(2217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_components_module__ = __webpack_require__(192);
+// (C) Copyright 2015 Moodle Pty Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+var CoreCoursesMyCoursesPageModule = /** @class */ (function () {
+    function CoreCoursesMyCoursesPageModule() {
+    }
+    CoreCoursesMyCoursesPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__my_courses__["a" /* CoreCoursesMyCoursesPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_4__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__components_components_module__["a" /* CoreCoursesComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__my_courses__["a" /* CoreCoursesMyCoursesPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], CoreCoursesMyCoursesPageModule);
+    return CoreCoursesMyCoursesPageModule;
+}());
+
+//# sourceMappingURL=my-courses.module.js.map
+
+/***/ }),
+
+/***/ 2217:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoreCoursesMyCoursesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_my_courses_my_courses__ = __webpack_require__(999);
+// (C) Copyright 2015 Moodle Pty Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
 /**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
+ * Page that displays the list of courses the user is enrolled in.
+ */
+var CoreCoursesMyCoursesPage = /** @class */ (function () {
+    function CoreCoursesMyCoursesPage(navCtrl) {
+        this.navCtrl = navCtrl;
+    }
+    /**
+     * Go to search courses.
+     */
+    CoreCoursesMyCoursesPage.prototype.openSearch = function () {
+        this.navCtrl.push('CoreCoursesSearchPage');
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2__components_my_courses_my_courses__["a" /* CoreCoursesMyCoursesComponent */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__components_my_courses_my_courses__["a" /* CoreCoursesMyCoursesComponent */])
+    ], CoreCoursesMyCoursesPage.prototype, "mcComponent", void 0);
+    CoreCoursesMyCoursesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-core-courses-my-courses',template:/*ion-inline-start:"/home/travis/build/moodlehq/moodlemobile2/src/core/courses/pages/my-courses/my-courses.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.courses.mycourses\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="mcComponent && mcComponent.searchEnabled" ion-button icon-only (click)="openSearch()" [attr.aria-label]="\'core.courses.searchcourses\' | translate">\n                <ion-icon name="search"></ion-icon>\n            </button>\n            <core-context-menu *ngIf="mcComponent">\n                <core-context-menu-item [hidden]="!mcComponent.downloadAllCoursesEnabled || !mcComponent.courses || mcComponent.courses.length < 2" [priority]="800" [content]="\'core.courses.downloadcourses\' | translate" (action)="mcComponent.prefetchCourses()" [iconAction]="mcComponent.prefetchCoursesData.icon" [closeOnClick]="false" [badge]="mcComponent.prefetchCoursesData.badge"></core-context-menu-item>\n                <core-context-menu-item [hidden]="!mcComponent.courses || mcComponent.courses.length <= 5" [priority]="700" [content]="\'core.courses.filtermycourses\' | translate" (action)="mcComponent.switchFilter()" [iconAction]="\'funnel\'"></core-context-menu-item>\n            </core-context-menu>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="mcComponent && mcComponent.coursesLoaded" (ionRefresh)="mcComponent.refreshCourses($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n\n    <core-courses-my-courses></core-courses-my-courses>\n</ion-content>\n'/*ion-inline-end:"/home/travis/build/moodlehq/moodlemobile2/src/core/courses/pages/my-courses/my-courses.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
+    ], CoreCoursesMyCoursesPage);
+    return CoreCoursesMyCoursesPage;
+}());
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var CoreLoginSitesPageModuleNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_28" /* ɵcmf */](__WEBPACK_IMPORTED_MODULE_1__sites_module__["a" /* CoreLoginSitesPageModule */], [], function (_l) { return __WEBPACK_IMPORTED_MODULE_0__angular_core__["_40" /* ɵmod */]([__WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* ComponentFactoryResolver */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [__WEBPACK_IMPORTED_MODULE_2__node_modules_ionic_angular_components_action_sheet_action_sheet_component_ngfactory__["a" /* ActionSheetCmpNgFactory */], __WEBPACK_IMPORTED_MODULE_3__node_modules_ionic_angular_components_alert_alert_component_ngfactory__["a" /* AlertCmpNgFactory */], __WEBPACK_IMPORTED_MODULE_4__node_modules_ionic_angular_components_app_app_root_ngfactory__["a" /* IonicAppNgFactory */], __WEBPACK_IMPORTED_MODULE_5__node_modules_ionic_angular_components_loading_loading_component_ngfactory__["a" /* LoadingCmpNgFactory */], __WEBPACK_IMPORTED_MODULE_6__node_modules_ionic_angular_components_modal_modal_component_ngfactory__["a" /* ModalCmpNgFactory */], __WEBPACK_IMPORTED_MODULE_7__node_modules_ionic_angular_components_picker_picker_component_ngfactory__["a" /* PickerCmpNgFactory */], __WEBPACK_IMPORTED_MODULE_8__node_modules_ionic_angular_components_popover_popover_component_ngfactory__["a" /* PopoverCmpNgFactory */], __WEBPACK_IMPORTED_MODULE_9__node_modules_ionic_angular_components_select_select_popover_component_ngfactory__["a" /* SelectPopoverNgFactory */], __WEBPACK_IMPORTED_MODULE_10__node_modules_ionic_angular_components_toast_toast_component_ngfactory__["a" /* ToastCmpNgFactory */], __WEBPACK_IMPORTED_MODULE_11__sites_ngfactory__["a" /* CoreLoginSitesPageNgFactory */]]], [3, __WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* ComponentFactoryResolver */]], __WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModuleRef */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](4608, __WEBPACK_IMPORTED_MODULE_12__angular_common__["m" /* NgLocalization */], __WEBPACK_IMPORTED_MODULE_12__angular_common__["l" /* NgLocaleLocalization */], [__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* LOCALE_ID */], [2, __WEBPACK_IMPORTED_MODULE_12__angular_common__["w" /* ɵa */]]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](4608, __WEBPACK_IMPORTED_MODULE_13__angular_forms__["x" /* ɵi */], __WEBPACK_IMPORTED_MODULE_13__angular_forms__["x" /* ɵi */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](4608, __WEBPACK_IMPORTED_MODULE_13__angular_forms__["d" /* FormBuilder */], __WEBPACK_IMPORTED_MODULE_13__angular_forms__["d" /* FormBuilder */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](4608, __WEBPACK_IMPORTED_MODULE_14__ngx_translate_core_src_translate_loader__["b" /* TranslateLoader */], __WEBPACK_IMPORTED_MODULE_14__ngx_translate_core_src_translate_loader__["a" /* TranslateFakeLoader */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](4608, __WEBPACK_IMPORTED_MODULE_15__ngx_translate_core_src_translate_compiler__["a" /* TranslateCompiler */], __WEBPACK_IMPORTED_MODULE_15__ngx_translate_core_src_translate_compiler__["b" /* TranslateFakeCompiler */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](4608, __WEBPACK_IMPORTED_MODULE_16__ngx_translate_core_src_translate_parser__["b" /* TranslateParser */], __WEBPACK_IMPORTED_MODULE_16__ngx_translate_core_src_translate_parser__["a" /* TranslateDefaultParser */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](4608, __WEBPACK_IMPORTED_MODULE_17__ngx_translate_core_src_missing_translation_handler__["b" /* MissingTranslationHandler */], __WEBPACK_IMPORTED_MODULE_17__ngx_translate_core_src_missing_translation_handler__["a" /* FakeMissingTranslationHandler */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](4608, __WEBPACK_IMPORTED_MODULE_18__ngx_translate_core_src_translate_service__["a" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_18__ngx_translate_core_src_translate_service__["a" /* TranslateService */], [__WEBPACK_IMPORTED_MODULE_19__ngx_translate_core_src_translate_store__["a" /* TranslateStore */], __WEBPACK_IMPORTED_MODULE_14__ngx_translate_core_src_translate_loader__["b" /* TranslateLoader */], __WEBPACK_IMPORTED_MODULE_15__ngx_translate_core_src_translate_compiler__["a" /* TranslateCompiler */], __WEBPACK_IMPORTED_MODULE_16__ngx_translate_core_src_translate_parser__["b" /* TranslateParser */], __WEBPACK_IMPORTED_MODULE_17__ngx_translate_core_src_missing_translation_handler__["b" /* MissingTranslationHandler */], __WEBPACK_IMPORTED_MODULE_18__ngx_translate_core_src_translate_service__["b" /* USE_DEFAULT_LANG */], __WEBPACK_IMPORTED_MODULE_18__ngx_translate_core_src_translate_service__["c" /* USE_STORE */]]), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_20__directives_directives_module__["a" /* CoreDirectivesModule */], __WEBPACK_IMPORTED_MODULE_20__directives_directives_module__["a" /* CoreDirectivesModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_12__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_12__angular_common__["b" /* CommonModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_13__angular_forms__["v" /* ɵba */], __WEBPACK_IMPORTED_MODULE_13__angular_forms__["v" /* ɵba */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_13__angular_forms__["i" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_13__angular_forms__["i" /* FormsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_13__angular_forms__["s" /* ReactiveFormsModule */], __WEBPACK_IMPORTED_MODULE_13__angular_forms__["s" /* ReactiveFormsModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_21_ionic_angular_module__["a" /* IonicModule */], __WEBPACK_IMPORTED_MODULE_21_ionic_angular_module__["a" /* IonicModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_21_ionic_angular_module__["b" /* IonicPageModule */], __WEBPACK_IMPORTED_MODULE_21_ionic_angular_module__["b" /* IonicPageModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_22__ngx_translate_core_index__["b" /* TranslateModule */], __WEBPACK_IMPORTED_MODULE_22__ngx_translate_core_index__["b" /* TranslateModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](512, __WEBPACK_IMPORTED_MODULE_1__sites_module__["a" /* CoreLoginSitesPageModule */], __WEBPACK_IMPORTED_MODULE_1__sites_module__["a" /* CoreLoginSitesPageModule */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](256, __WEBPACK_IMPORTED_MODULE_23_ionic_angular_util_module_loader__["a" /* LAZY_LOADED_TOKEN */], __WEBPACK_IMPORTED_MODULE_24__sites__["a" /* CoreLoginSitesPage */], []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](256, __WEBPACK_IMPORTED_MODULE_18__ngx_translate_core_src_translate_service__["c" /* USE_STORE */], undefined, []), __WEBPACK_IMPORTED_MODULE_0__angular_core__["_41" /* ɵmpd */](256, __WEBPACK_IMPORTED_MODULE_18__ngx_translate_core_src_translate_service__["b" /* USE_DEFAULT_LANG */], undefined, [])]); });
-
-//# sourceMappingURL=sites.module.ngfactory.js.map
+//# sourceMappingURL=my-courses.js.map
 
 /***/ })
 

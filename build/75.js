@@ -1,24 +1,85 @@
 webpackJsonp([75],{
 
-/***/ 2078:
+/***/ 2116:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonModQuizReviewPageModule", function() { return AddonModQuizReviewPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_question_components_components_module__ = __webpack_require__(1002);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__review__ = __webpack_require__(2263);
+// (C) Copyright 2015 Moodle Pty Ltd.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
-// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
-var core = __webpack_require__(0);
 
-// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 3 modules
-var ionic_angular = __webpack_require__(5);
 
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/index.js + 1 modules
-var _ngx_translate_core = __webpack_require__(3);
 
-// EXTERNAL MODULE: ./src/directives/directives.module.ts + 2 modules
-var directives_module = __webpack_require__(32);
 
-// CONCATENATED MODULE: ./src/addon/notes/pages/list/list.ts
+
+
+
+var AddonModQuizReviewPageModule = /** @class */ (function () {
+    function AddonModQuizReviewPageModule() {
+    }
+    AddonModQuizReviewPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_7__review__["a" /* AddonModQuizReviewPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_3__components_components_module__["a" /* CoreComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_4__directives_directives_module__["a" /* CoreDirectivesModule */],
+                __WEBPACK_IMPORTED_MODULE_5__pipes_pipes_module__["a" /* CorePipesModule */],
+                __WEBPACK_IMPORTED_MODULE_6__core_question_components_components_module__["a" /* CoreQuestionComponentsModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_7__review__["a" /* AddonModQuizReviewPage */]),
+                __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["b" /* TranslateModule */].forChild()
+            ],
+        })
+    ], AddonModQuizReviewPageModule);
+    return AddonModQuizReviewPageModule;
+}());
+
+//# sourceMappingURL=review.module.js.map
+
+/***/ }),
+
+/***/ 2263:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddonModQuizReviewPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_utils_text__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_utils_time__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__core_question_providers_helper__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_quiz__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_helper__ = __webpack_require__(195);
 // (C) Copyright 2015 Moodle Pty Ltd.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -43,315 +104,257 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
+
+
+
+
 /**
- * Page that displays a list of notes.
+ * Page that allows reviewing a quiz attempt.
  */
-var list_AddonNotesListPage = /** @class */ (function () {
-    function AddonNotesListPage(params) {
-        this.userId = params.get('userId');
-        this.courseId = params.get('courseId');
+var AddonModQuizReviewPage = /** @class */ (function () {
+    function AddonModQuizReviewPage(navParams, modalCtrl, translate, domUtils, timeUtils, quizProvider, quizHelper, questionHelper, textUtils) {
+        this.translate = translate;
+        this.domUtils = domUtils;
+        this.timeUtils = timeUtils;
+        this.quizProvider = quizProvider;
+        this.quizHelper = quizHelper;
+        this.questionHelper = questionHelper;
+        this.textUtils = textUtils;
+        this.component = __WEBPACK_IMPORTED_MODULE_7__providers_quiz__["a" /* AddonModQuizProvider */].COMPONENT; // Component to link the files to.
+        this.quizId = navParams.get('quizId');
+        this.courseId = navParams.get('courseId');
+        this.attemptId = navParams.get('attemptId');
+        this.currentPage = navParams.get('page') || -1;
+        this.showAll = this.currentPage == -1;
+        // Create the navigation modal.
+        this.navigationModal = modalCtrl.create('AddonModQuizNavigationModalPage', {
+            isReview: true,
+            page: this
+        }, { cssClass: 'core-modal-lateral',
+            showBackdrop: true,
+            enableBackdropDismiss: true,
+            enterAnimation: 'core-modal-lateral-transition',
+            leaveAnimation: 'core-modal-lateral-transition' });
     }
-    AddonNotesListPage = __decorate([
-        Object(core["m" /* Component */])({
-            selector: 'page-addon-notes-list-page',
-            templateUrl: 'list.html',
+    /**
+     * Component being initialized.
+     */
+    AddonModQuizReviewPage.prototype.ngOnInit = function () {
+        var _this = this;
+        this.fetchData().then(function () {
+            _this.quizProvider.logViewAttemptReview(_this.attemptId, _this.quizId, _this.quiz.name).catch(function (error) {
+                // Ignore errors.
+            });
+        }).finally(function () {
+            _this.loaded = true;
+        });
+    };
+    /**
+     * Change the current page. If slot is supplied, try to scroll to that question.
+     *
+     * @param page Page to load. -1 means all questions in same page.
+     * @param fromModal Whether the page was selected using the navigation modal.
+     * @param slot Slot of the question to scroll to.
+     */
+    AddonModQuizReviewPage.prototype.changePage = function (page, fromModal, slot) {
+        var _this = this;
+        if (typeof slot != 'undefined' && (this.attempt.currentpage == -1 || page == this.currentPage)) {
+            // Scrol to a certain question in the current page.
+            this.scrollToQuestion(slot);
+            return;
+        }
+        else if (page == this.currentPage) {
+            // If the user is navigating to the current page and no question specified, we do nothing.
+            return;
+        }
+        this.loaded = false;
+        this.domUtils.scrollToTop(this.content);
+        this.loadPage(page).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'addon.mod_quiz.errorgetquestions', true);
+        }).finally(function () {
+            _this.loaded = true;
+            if (typeof slot != 'undefined') {
+                // Scroll to the question. Give some time to the questions to render.
+                setTimeout(function () {
+                    _this.scrollToQuestion(slot);
+                }, 2000);
+            }
+        });
+    };
+    /**
+     * Convenience function to get the quiz data.
+     *
+     * @return Promise resolved when done.
+     */
+    AddonModQuizReviewPage.prototype.fetchData = function () {
+        var _this = this;
+        return this.quizProvider.getQuizById(this.courseId, this.quizId).then(function (quizData) {
+            _this.quiz = quizData;
+            _this.componentId = _this.quiz.coursemodule;
+            return _this.quizProvider.getCombinedReviewOptions(_this.quizId).then(function (result) {
+                _this.options = result;
+                // Load the navigation data.
+                return _this.loadNavigation().then(function () {
+                    // Load questions.
+                    return _this.loadPage(_this.currentPage);
+                });
+            });
+        }).catch(function (error) {
+            _this.domUtils.showErrorModalDefault(error, 'addon.mod_quiz.errorgetquiz', true);
+        });
+    };
+    /**
+     * Load a page questions.
+     *
+     * @param page The page to load.
+     * @return Promise resolved when done.
+     */
+    AddonModQuizReviewPage.prototype.loadPage = function (page) {
+        var _this = this;
+        return this.quizProvider.getAttemptReview(this.attemptId, page).then(function (data) {
+            _this.attempt = data.attempt;
+            _this.attempt.currentpage = page;
+            _this.currentPage = page;
+            // Set the summary data.
+            _this.setSummaryCalculatedData(data);
+            _this.questions = data.questions;
+            _this.nextPage = page == -1 ? undefined : page + 1;
+            _this.previousPage = page - 1;
+            _this.questions.forEach(function (question) {
+                // Get the readable mark for each question.
+                question.readableMark = _this.quizHelper.getQuestionMarkFromHtml(question.html);
+                // Extract the question info box.
+                _this.questionHelper.extractQuestionInfoBox(question, '.info');
+                // Set the preferred behaviour.
+                question.preferredBehaviour = _this.quiz.preferredbehaviour;
+            });
+        });
+    };
+    /**
+     * Load data to navigate the questions using the navigation modal.
+     *
+     * @return Promise resolved when done.
+     */
+    AddonModQuizReviewPage.prototype.loadNavigation = function () {
+        var _this = this;
+        // Get all questions in single page to retrieve all the questions.
+        return this.quizProvider.getAttemptReview(this.attemptId, -1).then(function (data) {
+            var lastQuestion = data.questions[data.questions.length - 1];
+            data.questions.forEach(function (question) {
+                question.stateClass = _this.questionHelper.getQuestionStateClass(question.state);
+            });
+            _this.navigation = data.questions;
+            _this.numPages = lastQuestion ? lastQuestion.page + 1 : 0;
+        });
+    };
+    /**
+     * Refreshes data.
+     *
+     * @param refresher Refresher
+     */
+    AddonModQuizReviewPage.prototype.refreshData = function (refresher) {
+        var _this = this;
+        var promises = [];
+        promises.push(this.quizProvider.invalidateQuizData(this.courseId));
+        promises.push(this.quizProvider.invalidateCombinedReviewOptionsForUser(this.quizId));
+        promises.push(this.quizProvider.invalidateAttemptReview(this.attemptId));
+        Promise.all(promises).finally(function () {
+            return _this.fetchData();
+        }).finally(function () {
+            refresher.complete();
+        });
+    };
+    /**
+     * Scroll to a certain question.
+     *
+     * @param slot Slot of the question to scroll to.
+     */
+    AddonModQuizReviewPage.prototype.scrollToQuestion = function (slot) {
+        this.domUtils.scrollToElementBySelector(this.content, '#addon-mod_quiz-question-' + slot);
+    };
+    /**
+     * Calculate review summary data.
+     *
+     * @param data Result of getAttemptReview.
+     */
+    AddonModQuizReviewPage.prototype.setSummaryCalculatedData = function (data) {
+        var _this = this;
+        this.attempt.readableState = this.quizProvider.getAttemptReadableStateName(this.attempt.state);
+        if (this.attempt.state == __WEBPACK_IMPORTED_MODULE_7__providers_quiz__["a" /* AddonModQuizProvider */].ATTEMPT_FINISHED) {
+            this.showCompleted = true;
+            this.additionalData = data.additionaldata;
+            var timeTaken = this.attempt.timefinish - this.attempt.timestart;
+            if (timeTaken) {
+                // Format time taken.
+                this.attempt.timeTaken = this.timeUtils.formatTime(timeTaken);
+                // Calculate overdue time.
+                if (this.quiz.timelimit && timeTaken > this.quiz.timelimit + 60) {
+                    this.attempt.overTime = this.timeUtils.formatTime(timeTaken - this.quiz.timelimit);
+                }
+            }
+            // Treat grade.
+            if (this.options.someoptions.marks >= __WEBPACK_IMPORTED_MODULE_7__providers_quiz__["a" /* AddonModQuizProvider */].QUESTION_OPTIONS_MARK_AND_MAX &&
+                this.quizProvider.quizHasGrades(this.quiz)) {
+                if (data.grade === null || typeof data.grade == 'undefined') {
+                    this.attempt.readableGrade = this.quizProvider.formatGrade(data.grade, this.quiz.decimalpoints);
+                }
+                else {
+                    // Show raw marks only if they are different from the grade (like on the entry page).
+                    if (this.quiz.grade != this.quiz.sumgrades) {
+                        this.attempt.readableMark = this.translate.instant('addon.mod_quiz.outofshort', { $a: {
+                                grade: this.quizProvider.formatGrade(this.attempt.sumgrades, this.quiz.decimalpoints),
+                                maxgrade: this.quizProvider.formatGrade(this.quiz.sumgrades, this.quiz.decimalpoints)
+                            } });
+                    }
+                    // Now the scaled grade.
+                    var gradeObject = {
+                        grade: this.quizProvider.formatGrade(data.grade, this.quiz.decimalpoints),
+                        maxgrade: this.quizProvider.formatGrade(this.quiz.grade, this.quiz.decimalpoints)
+                    };
+                    if (this.quiz.grade != 100) {
+                        gradeObject.percent = this.textUtils.roundToDecimals(this.attempt.sumgrades * 100 / this.quiz.sumgrades, 0);
+                        this.attempt.readableGrade = this.translate.instant('addon.mod_quiz.outofpercent', { $a: gradeObject });
+                    }
+                    else {
+                        this.attempt.readableGrade = this.translate.instant('addon.mod_quiz.outof', { $a: gradeObject });
+                    }
+                }
+            }
+            // Treat additional data.
+            this.additionalData.forEach(function (data) {
+                // Remove help links from additional data.
+                data.content = _this.domUtils.removeElementFromHtml(data.content, '.helptooltip');
+            });
+        }
+    };
+    /**
+     * Switch mode: all questions in same page OR one page at a time.
+     */
+    AddonModQuizReviewPage.prototype.switchMode = function () {
+        this.showAll = !this.showAll;
+        // Load all questions or first page, depending on the mode.
+        this.loadPage(this.showAll ? -1 : 0);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
+    ], AddonModQuizReviewPage.prototype, "content", void 0);
+    AddonModQuizReviewPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-addon-mod-quiz-review',template:/*ion-inline-start:"/home/travis/build/moodlehq/moodlemobile2/src/addon/mod/quiz/pages/review/review.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'addon.mod_quiz.review\' | translate }}</ion-title>\n\n        <ion-buttons end>\n            <button *ngIf="navigation && navigation.length" ion-button icon-only [attr.aria-label]="\'addon.mod_quiz.opentoc\' | translate" (click)="navigationModal.present()">\n                <ion-icon name="bookmark"></ion-icon>\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content>\n    <ion-refresher [enabled]="loaded" (ionRefresh)="refreshData($event)">\n        <ion-refresher-content pullingText="{{ \'core.pulltorefresh\' | translate }}"></ion-refresher-content>\n    </ion-refresher>\n    <core-loading [hideUntil]="loaded">\n\n        <!-- Review summary -->\n        <ion-card *ngIf="attempt">\n            <ion-card-header text-wrap>\n                <div class="safe-padding-horizontal">\n                    <h2 *ngIf="attempt.preview">{{ \'addon.mod_quiz.reviewofpreview\' | translate }}</h2>\n                    <h2 *ngIf="!attempt.preview">{{ \'addon.mod_quiz.reviewofattempt\' | translate:{$a: attempt.attempt} }}</h2>\n                </div>\n            </ion-card-header>\n            <ion-list>\n                <ion-item text-wrap no-lines>\n                    <h2>{{ \'addon.mod_quiz.startedon\' | translate }}</h2>\n                    <p>{{ attempt.timestart * 1000 | coreFormatDate }}</p>\n                </ion-item>\n                <ion-item text-wrap no-lines>\n                    <h2>{{ \'addon.mod_quiz.attemptstate\' | translate }}</h2>\n                    <p>{{ attempt.readableState }}</p>\n                </ion-item>\n                <ion-item text-wrap no-lines *ngIf="showCompleted">\n                    <h2>{{ \'addon.mod_quiz.completedon\' | translate }}</h2>\n                    <p>{{ attempt.timefinish * 1000 | coreFormatDate }}</p>\n                </ion-item>\n                <ion-item text-wrap no-lines *ngIf="attempt.timeTaken">\n                    <h2>{{ \'addon.mod_quiz.timetaken\' | translate }}</h2>\n                    <p>{{ attempt.timeTaken }}</p>\n                </ion-item>\n                <ion-item text-wrap no-lines *ngIf="attempt.overTime">\n                    <h2>{{ \'addon.mod_quiz.overdue\' | translate }}</h2>\n                    <p>{{ attempt.overTime }}</p>\n                </ion-item>\n                <ion-item text-wrap no-lines *ngIf="attempt.readableMark">\n                    <h2>{{ \'addon.mod_quiz.marks\' | translate }}</h2>\n                    <p>{{ attempt.readableMark }}</p>\n                </ion-item>\n                <ion-item text-wrap no-lines *ngIf="attempt.readableGrade">\n                    <h2>{{ \'addon.mod_quiz.grade\' | translate }}</h2>\n                    <p>{{ attempt.readableGrade }}</p>\n                </ion-item>\n                <ion-item text-wrap no-lines *ngFor="let data of additionalData">\n                    <h2>{{ data.title }}</h2>\n                    <core-format-text [component]="component" [componentId]="componentId" [text]="data.content" contextLevel="module" [contextInstanceId]="quiz.coursemodule" [courseId]="courseId"></core-format-text>\n                </ion-item>\n            </ion-list>\n        </ion-card>\n\n        <!-- Questions -->\n        <div *ngIf="attempt && questions.length">\n            <!-- Arrows to go to next/previous. -->\n            <ng-container *ngTemplateOutlet="navArrows"></ng-container>\n\n            <!-- Questions. -->\n            <div *ngFor="let question of questions">\n                <ion-card id="addon-mod_quiz-question-{{question.slot}}">\n                    <!-- "Header" of the question. -->\n                    <ion-item-divider>\n                        <h2 *ngIf="question.number" class="inline">{{ \'core.question.questionno\' | translate:{$a: question.number} }}</h2>\n                        <h2 *ngIf="!question.number" class="inline">{{ \'core.question.information\' | translate }}</h2>\n                        <ion-note text-wrap item-end *ngIf="question.status || question.readableMark">\n                            <p *ngIf="question.status">{{question.status}}</p>\n                            <p *ngIf="question.readableMark">{{question.readableMark}}</p>\n                        </ion-note>\n                    </ion-item-divider>\n                    <!-- Body of the question. -->\n                    <core-question text-wrap [question]="question" [component]="component" [componentId]="componentId" [attemptId]="attempt.id" [usageId]="attempt.uniqueid" [offlineEnabled]="false" contextLevel="module" [contextInstanceId]="quiz.coursemodule" [courseId]="courseId"></core-question>\n                </ion-card>\n            </div>\n\n            <!-- Arrows to go to next/previous. -->\n            <ng-container *ngTemplateOutlet="navArrows"></ng-container>\n        </div>\n    </core-loading>\n</ion-content>\n\n<!-- Arrows to go to next/previous. -->\n<ng-template #navArrows>\n    <ion-row align-items-center>\n        <ion-col text-start>\n            <a ion-button icon-only color="light" *ngIf="previousPage >= 0" (click)="changePage(previousPage)" [title]="\'core.previous\' | translate">\n                <ion-icon name="arrow-back" md="ios-arrow-back"></ion-icon>\n            </a>\n        </ion-col>\n        <ion-col text-end>\n            <a ion-button icon-only color="light" *ngIf="nextPage >= -1" (click)="changePage(nextPage)" [title]="\'core.next\' | translate">\n                <ion-icon name="arrow-forward" md="ios-arrow-forward"></ion-icon>\n            </a>\n        </ion-col>\n    </ion-row>\n</ng-template>\n'/*ion-inline-end:"/home/travis/build/moodlehq/moodlemobile2/src/addon/mod/quiz/pages/review/review.html"*/,
         }),
-        __metadata("design:paramtypes", [ionic_angular["t" /* NavParams */]])
-    ], AddonNotesListPage);
-    return AddonNotesListPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* ModalController */], __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_3__providers_utils_dom__["a" /* CoreDomUtilsProvider */], __WEBPACK_IMPORTED_MODULE_5__providers_utils_time__["a" /* CoreTimeUtilsProvider */],
+            __WEBPACK_IMPORTED_MODULE_7__providers_quiz__["a" /* AddonModQuizProvider */], __WEBPACK_IMPORTED_MODULE_8__providers_helper__["a" /* AddonModQuizHelperProvider */],
+            __WEBPACK_IMPORTED_MODULE_6__core_question_providers_helper__["a" /* CoreQuestionHelperProvider */], __WEBPACK_IMPORTED_MODULE_4__providers_utils_text__["a" /* CoreTextUtilsProvider */]])
+    ], AddonModQuizReviewPage);
+    return AddonModQuizReviewPage;
 }());
 
-//# sourceMappingURL=list.js.map
-// EXTERNAL MODULE: ./src/addon/notes/components/components.module.ts
-var components_module = __webpack_require__(773);
-
-// CONCATENATED MODULE: ./src/addon/notes/pages/list/list.module.ts
-// (C) Copyright 2015 Moodle Pty Ltd.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-var list_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-var list_module_AddonNotesListPageModule = /** @class */ (function () {
-    function AddonNotesListPageModule() {
-    }
-    AddonNotesListPageModule = list_module___decorate([
-        Object(core["I" /* NgModule */])({
-            declarations: [
-                list_AddonNotesListPage
-            ],
-            imports: [
-                directives_module["a" /* CoreDirectivesModule */],
-                components_module["a" /* AddonNotesComponentsModule */],
-                ionic_angular["l" /* IonicPageModule */].forChild(list_AddonNotesListPage),
-                _ngx_translate_core["b" /* TranslateModule */].forChild()
-            ]
-        })
-    ], AddonNotesListPageModule);
-    return AddonNotesListPageModule;
-}());
-
-//# sourceMappingURL=list.module.js.map
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
-var action_sheet_component_ngfactory = __webpack_require__(1524);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
-var alert_component_ngfactory = __webpack_require__(1525);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
-var app_root_ngfactory = __webpack_require__(1526);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js
-var loading_component_ngfactory = __webpack_require__(1527);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
-var modal_component_ngfactory = __webpack_require__(1528);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
-var picker_component_ngfactory = __webpack_require__(1529);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
-var popover_component_ngfactory = __webpack_require__(1530);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js
-var select_popover_component_ngfactory = __webpack_require__(1531);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
-var toast_component_ngfactory = __webpack_require__(1532);
-
-// EXTERNAL MODULE: ./src/components/context-menu/context-menu-popover.ngfactory.js
-var context_menu_popover_ngfactory = __webpack_require__(1533);
-
-// EXTERNAL MODULE: ./src/components/course-picker-menu/course-picker-menu-popover.ngfactory.js
-var course_picker_menu_popover_ngfactory = __webpack_require__(1534);
-
-// EXTERNAL MODULE: ./src/components/recaptcha/recaptchamodal.ngfactory.js
-var recaptchamodal_ngfactory = __webpack_require__(1535);
-
-// EXTERNAL MODULE: ./src/components/bs-tooltip/bs-tooltip.ngfactory.js
-var bs_tooltip_ngfactory = __webpack_require__(1536);
-
-// EXTERNAL MODULE: ./src/addon/notes/components/list/list.ngfactory.js
-var list_ngfactory = __webpack_require__(1606);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
-var toolbar_header = __webpack_require__(375);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
-var config = __webpack_require__(8);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
-var view_controller = __webpack_require__(39);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.ngfactory.js
-var navbar_ngfactory = __webpack_require__(725);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
-var navbar = __webpack_require__(214);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
-var app = __webpack_require__(35);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
-var nav_controller = __webpack_require__(21);
-
-// EXTERNAL MODULE: ./src/directives/back-button.ts
-var back_button = __webpack_require__(478);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
-var platform = __webpack_require__(16);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.service.js
-var translate_service = __webpack_require__(17);
-
-// EXTERNAL MODULE: ./src/providers/events.ts
-var events = __webpack_require__(10);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.ngfactory.js
-var toolbar_title_ngfactory = __webpack_require__(726);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-title.js
-var toolbar_title = __webpack_require__(316);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
-var toolbar = __webpack_require__(251);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.pipe.js
-var translate_pipe = __webpack_require__(25);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
-var toolbar_item = __webpack_require__(376);
-
-// EXTERNAL MODULE: ./src/addon/notes/components/list/list.ts
-var list = __webpack_require__(533);
-
-// EXTERNAL MODULE: ./src/providers/utils/dom.ts
-var dom = __webpack_require__(4);
-
-// EXTERNAL MODULE: ./src/providers/utils/text.ts
-var utils_text = __webpack_require__(11);
-
-// EXTERNAL MODULE: ./src/providers/sites.ts
-var sites = __webpack_require__(1);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-controller.js
-var modal_controller = __webpack_require__(164);
-
-// EXTERNAL MODULE: ./src/addon/notes/providers/notes.ts
-var notes = __webpack_require__(264);
-
-// EXTERNAL MODULE: ./src/addon/notes/providers/notes-sync.ts
-var notes_sync = __webpack_require__(339);
-
-// EXTERNAL MODULE: ./src/core/user/providers/user.ts
-var user = __webpack_require__(46);
-
-// EXTERNAL MODULE: ./src/addon/notes/providers/notes-offline.ts
-var notes_offline = __webpack_require__(306);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
-var nav_params = __webpack_require__(70);
-
-// CONCATENATED MODULE: ./src/addon/notes/pages/list/list.ngfactory.js
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var styles_AddonNotesListPage = [];
-var RenderType_AddonNotesListPage = core["_29" /* ɵcrt */]({ encapsulation: 2, styles: styles_AddonNotesListPage, data: {} });
-
-function View_AddonNotesListPage_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 16, "ion-header", [], null, null, null, null, null)), core["_30" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_31" /* ɵeld */](3, 0, null, null, 12, "ion-navbar", [["class", "toolbar"], ["core-back-button", ""]], [[8, "hidden", 0], [2, "statusbar-padding", null]], null, null, navbar_ngfactory["b" /* View_Navbar_0 */], navbar_ngfactory["a" /* RenderType_Navbar */])), core["_30" /* ɵdid */](4, 49152, null, 0, navbar["a" /* Navbar */], [app["a" /* App */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]], config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */]], null, null), core["_30" /* ɵdid */](5, 212992, null, 0, back_button["a" /* CoreBackButtonDirective */], [navbar["a" /* Navbar */], platform["a" /* Platform */], translate_service["a" /* TranslateService */], events["a" /* CoreEventsProvider */]], null, null), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](7, 0, null, 3, 3, "ion-title", [], null, null, null, toolbar_title_ngfactory["b" /* View_ToolbarTitle_0 */], toolbar_title_ngfactory["a" /* RenderType_ToolbarTitle */])), core["_30" /* ɵdid */](8, 49152, null, 0, toolbar_title["a" /* ToolbarTitle */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), (_l()(), core["_55" /* ɵted */](9, 0, ["", ""])), core["_47" /* ɵpid */](131072, translate_pipe["a" /* TranslatePipe */], [translate_service["a" /* TranslateService */], core["j" /* ChangeDetectorRef */]]), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n        "])), (_l()(), core["_31" /* ɵeld */](12, 0, null, 2, 2, "ion-buttons", [["end", ""]], null, null, null, null, null)), core["_30" /* ɵdid */](13, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["t" /* ElementRef */], core["V" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_52" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_55" /* ɵted */](-1, 3, ["\n    "])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_31" /* ɵeld */](18, 0, null, null, 1, "addon-notes-list", [["class", "core-avoid-header"]], null, null, null, list_ngfactory["c" /* View_AddonNotesListComponent_0 */], list_ngfactory["b" /* RenderType_AddonNotesListComponent */])), core["_30" /* ɵdid */](19, 245760, null, 0, list["a" /* AddonNotesListComponent */], [dom["a" /* CoreDomUtilsProvider */], utils_text["a" /* CoreTextUtilsProvider */], sites["a" /* CoreSitesProvider */], events["a" /* CoreEventsProvider */], modal_controller["a" /* ModalController */], notes["a" /* AddonNotesProvider */], notes_sync["a" /* AddonNotesSyncProvider */], user["a" /* CoreUserProvider */], notes_offline["a" /* AddonNotesOfflineProvider */]], { courseId: [0, "courseId"], userId: [1, "userId"] }, null), (_l()(), core["_55" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var _co = _v.component; _ck(_v, 5, 0); var currVal_3 = _co.courseId; var currVal_4 = _co.userId; _ck(_v, 19, 0, currVal_3, currVal_4); }, function (_ck, _v) { var currVal_0 = core["_44" /* ɵnov */](_v, 4)._hidden; var currVal_1 = core["_44" /* ɵnov */](_v, 4)._sbPadding; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = core["_56" /* ɵunv */](_v, 9, 0, core["_44" /* ɵnov */](_v, 10).transform("addon.notes.notes")); _ck(_v, 9, 0, currVal_2); }); }
-function View_AddonNotesListPage_Host_0(_l) { return core["_57" /* ɵvid */](0, [(_l()(), core["_31" /* ɵeld */](0, 0, null, null, 1, "page-addon-notes-list-page", [], null, null, null, View_AddonNotesListPage_0, RenderType_AddonNotesListPage)), core["_30" /* ɵdid */](1, 49152, null, 0, list_AddonNotesListPage, [nav_params["a" /* NavParams */]], null, null)], null, null); }
-var AddonNotesListPageNgFactory = core["_27" /* ɵccf */]("page-addon-notes-list-page", list_AddonNotesListPage, View_AddonNotesListPage_Host_0, {}, {}, []);
-
-//# sourceMappingURL=list.ngfactory.js.map
-// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
-var common = __webpack_require__(7);
-
-// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
-var esm5_forms = __webpack_require__(23);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.loader.js
-var translate_loader = __webpack_require__(371);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.compiler.js
-var translate_compiler = __webpack_require__(372);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.parser.js
-var translate_parser = __webpack_require__(374);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/missing-translation-handler.js
-var missing_translation_handler = __webpack_require__(373);
-
-// EXTERNAL MODULE: ./node_modules/@ngx-translate/core/src/translate.store.js
-var translate_store = __webpack_require__(477);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
-var ionic_angular_module = __webpack_require__(724);
-
-// EXTERNAL MODULE: ./src/pipes/pipes.module.ts + 2 modules
-var pipes_module = __webpack_require__(108);
-
-// EXTERNAL MODULE: ./src/components/components.module.ts
-var components_components_module = __webpack_require__(28);
-
-// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
-var module_loader = __webpack_require__(274);
-
-// CONCATENATED MODULE: ./src/addon/notes/pages/list/list.module.ngfactory.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddonNotesListPageModuleNgFactory", function() { return AddonNotesListPageModuleNgFactory; });
-/**
- * @fileoverview This file was generated by the Angular template compiler. Do not edit.
- *
- * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
- * tslint:disable
- */ 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AddonNotesListPageModuleNgFactory = core["_28" /* ɵcmf */](list_module_AddonNotesListPageModule, [], function (_l) { return core["_40" /* ɵmod */]([core["_41" /* ɵmpd */](512, core["o" /* ComponentFactoryResolver */], core["_21" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], context_menu_popover_ngfactory["a" /* CoreContextMenuPopoverComponentNgFactory */], course_picker_menu_popover_ngfactory["a" /* CoreCoursePickerMenuPopoverComponentNgFactory */], recaptchamodal_ngfactory["a" /* CoreRecaptchaModalComponentNgFactory */], bs_tooltip_ngfactory["a" /* CoreBSTooltipComponentNgFactory */], list_ngfactory["a" /* AddonNotesListComponentNgFactory */], AddonNotesListPageNgFactory]], [3, core["o" /* ComponentFactoryResolver */]], core["K" /* NgModuleRef */]]), core["_41" /* ɵmpd */](4608, common["m" /* NgLocalization */], common["l" /* NgLocaleLocalization */], [core["G" /* LOCALE_ID */], [2, common["w" /* ɵa */]]]), core["_41" /* ɵmpd */](4608, esm5_forms["x" /* ɵi */], esm5_forms["x" /* ɵi */], []), core["_41" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_41" /* ɵmpd */](4608, translate_loader["b" /* TranslateLoader */], translate_loader["a" /* TranslateFakeLoader */], []), core["_41" /* ɵmpd */](4608, translate_compiler["a" /* TranslateCompiler */], translate_compiler["b" /* TranslateFakeCompiler */], []), core["_41" /* ɵmpd */](4608, translate_parser["b" /* TranslateParser */], translate_parser["a" /* TranslateDefaultParser */], []), core["_41" /* ɵmpd */](4608, missing_translation_handler["b" /* MissingTranslationHandler */], missing_translation_handler["a" /* FakeMissingTranslationHandler */], []), core["_41" /* ɵmpd */](4608, translate_service["a" /* TranslateService */], translate_service["a" /* TranslateService */], [translate_store["a" /* TranslateStore */], translate_loader["b" /* TranslateLoader */], translate_compiler["a" /* TranslateCompiler */], translate_parser["b" /* TranslateParser */], missing_translation_handler["b" /* MissingTranslationHandler */], translate_service["b" /* USE_DEFAULT_LANG */], translate_service["c" /* USE_STORE */]]), core["_41" /* ɵmpd */](512, directives_module["a" /* CoreDirectivesModule */], directives_module["a" /* CoreDirectivesModule */], []), core["_41" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["v" /* ɵba */], esm5_forms["v" /* ɵba */], []), core["_41" /* ɵmpd */](512, esm5_forms["i" /* FormsModule */], esm5_forms["i" /* FormsModule */], []), core["_41" /* ɵmpd */](512, esm5_forms["s" /* ReactiveFormsModule */], esm5_forms["s" /* ReactiveFormsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_41" /* ɵmpd */](512, _ngx_translate_core["b" /* TranslateModule */], _ngx_translate_core["b" /* TranslateModule */], []), core["_41" /* ɵmpd */](512, pipes_module["a" /* CorePipesModule */], pipes_module["a" /* CorePipesModule */], []), core["_41" /* ɵmpd */](512, components_components_module["a" /* CoreComponentsModule */], components_components_module["a" /* CoreComponentsModule */], []), core["_41" /* ɵmpd */](512, components_module["a" /* AddonNotesComponentsModule */], components_module["a" /* AddonNotesComponentsModule */], []), core["_41" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_41" /* ɵmpd */](512, list_module_AddonNotesListPageModule, list_module_AddonNotesListPageModule, []), core["_41" /* ɵmpd */](256, translate_service["c" /* USE_STORE */], undefined, []), core["_41" /* ɵmpd */](256, translate_service["b" /* USE_DEFAULT_LANG */], undefined, []), core["_41" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], list_AddonNotesListPage, [])]); });
-
-//# sourceMappingURL=list.module.ngfactory.js.map
+//# sourceMappingURL=review.js.map
 
 /***/ })
 
