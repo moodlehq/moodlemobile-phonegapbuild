@@ -230,6 +230,11 @@
       <string>We need your location so you can attach it as part of your submissions.</string>
     </edit-config>
 
+    <!-- Make gps location optional, otherwise apps that don't support it won't be able to install the app. -->
+    <edit-config file="AndroidManifest.xml" mode="overwrite" target="/manifest/uses-feature[@android:name='android.hardware.location.gps']">
+        <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    </edit-config>
+
     <!-- Disable firebase analytics. -->
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
         <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true" />
