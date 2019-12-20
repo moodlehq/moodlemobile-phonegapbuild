@@ -5,7 +5,7 @@
         id        = "com.moodle.moodlemobile"
         versionCode = "38000"
         android-versionCode = "38000"
-        ios-CFBundleVersion = "3.8.0.0"
+        ios-CFBundleVersion = "3.8.0.1"
         version   = "3.8.0">
     <name>Moodle</name>
 
