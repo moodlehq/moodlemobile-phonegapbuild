@@ -1595,7 +1595,7 @@ var empty_box_ngfactory = __webpack_require__(127);
 var empty_box = __webpack_require__(116);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ngfactory.js
-var send_message_form_ngfactory = __webpack_require__(2178);
+var send_message_form_ngfactory = __webpack_require__(2181);
 
 // EXTERNAL MODULE: ./src/components/send-message-form/send-message-form.ts
 var send_message_form = __webpack_require__(1552);
@@ -1989,7 +1989,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 
 /***/ }),
 
-/***/ 2178:
+/***/ 2181:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

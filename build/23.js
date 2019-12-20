@@ -1,6 +1,6 @@
 webpackJsonp([23],{
 
-/***/ 2136:
+/***/ 2135:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -560,7 +560,7 @@ var avatar = __webpack_require__(162);
 var badge = __webpack_require__(145);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ngfactory.js
-var assessment_strategy_ngfactory = __webpack_require__(2181);
+var assessment_strategy_ngfactory = __webpack_require__(2180);
 
 // EXTERNAL MODULE: ./src/addon/mod/workshop/components/assessment-strategy/assessment-strategy.ts
 var assessment_strategy = __webpack_require__(1554);
@@ -923,7 +923,7 @@ var AddonModWorkshopAssessmentPageModuleNgFactory = core["_28" /* ɵcmf */](asse
 
 /***/ }),
 
-/***/ 2181:
+/***/ 2180:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
