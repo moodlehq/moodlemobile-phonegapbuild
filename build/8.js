@@ -1072,7 +1072,7 @@ var item_reorder = __webpack_require__(26);
 var item_divider = __webpack_require__(102);
 
 // EXTERNAL MODULE: ./src/core/question/components/question/question.ngfactory.js
-var question_ngfactory = __webpack_require__(2179);
+var question_ngfactory = __webpack_require__(2180);
 
 // EXTERNAL MODULE: ./src/core/question/providers/delegate.ts
 var providers_delegate = __webpack_require__(74);
@@ -1419,7 +1419,7 @@ var ToolbarNgFactory = __WEBPACK_IMPORTED_MODULE_0__angular_core__["_27" /* ɵcc
 
 /***/ }),
 
-/***/ 2179:
+/***/ 2180:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
